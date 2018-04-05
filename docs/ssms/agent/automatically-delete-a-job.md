@@ -3,8 +3,11 @@ title: "Automatically Delete a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -20,9 +23,15 @@ ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Automatically Delete a Job
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] to automatically delete jobs when they succeed, fail, or complete by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or SQL Server Management Objects.  
   
 Job responses ensure that database administrators know when jobs complete and how frequently they run. Typical job responses include:  

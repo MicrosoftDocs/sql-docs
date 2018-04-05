@@ -2,12 +2,15 @@
 title: "AttributeTranslation Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: a0e29941-ef08-42ad-ab9c-b2efd7910895
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AttributeTranslation Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents a translation associated with an [Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) element  
   
 ## Syntax  

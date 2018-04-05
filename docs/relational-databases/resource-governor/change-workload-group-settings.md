@@ -2,9 +2,12 @@
 title: "Change Workload Group Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "resource-governor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "Resource Governor, workload group alter"
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Change Workload Group Settings
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  

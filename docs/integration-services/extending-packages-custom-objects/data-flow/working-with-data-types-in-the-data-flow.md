@@ -2,11 +2,14 @@
 title: "Working with Data Types in the Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,7 +22,8 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Working with Data Types in the Data Flow
   When developing a custom data flow component in Integration Services, you work constantly with data types, copying data into and out of data flow buffers and transforming values. The information in this topic helps you to choose the correct [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, and to use the correct methods when working with them.  
@@ -154,10 +158,6 @@ manager: "jhubbard"
   
 > [!NOTE]  
 >  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> method does not return a value for the DT_DBTIMESTAMPOFFSET data type, and a <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> occurs. You must convert the DT_DBTIMESTAMPOFFSET data type to one of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data type. For a list of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data types, see the table in the previous section, "Mapping between Integration Services and Managed Data Types." For information about converting data types, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   

@@ -2,9 +2,12 @@
 title: "Data File Auto Shrink Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Data File Auto Shrink event class"
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Data File Auto Shrink Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Data File Auto Shrink** event class indicates that the data file has been shrunk. This event is not triggered if the data file shrinks because of an explicit ALTER DATABASE statement. Include the **Data File Auto Shrink** event class in traces that monitor the data file size changes.  
   
  When the **Data File Auto Shrink** event class is included in a trace, the amount of overhead incurred is low unless the data file frequently shrinks.  

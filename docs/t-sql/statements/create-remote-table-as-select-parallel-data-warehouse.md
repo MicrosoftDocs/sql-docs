@@ -1,11 +1,13 @@
 ---
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/10/2017"
+ms.prod: ""
+ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,10 +16,11 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Selects data from a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in a SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use this for scenarios that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
   
@@ -83,7 +86,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  WITH *common_table_expression*  
  Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT <select_criteria>  
+ SELECT \<select_criteria> 
  The query predicate that specifies which data will populate the new remote table. For information on the SELECT statement, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## Permissions  
@@ -164,3 +167,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
   
+

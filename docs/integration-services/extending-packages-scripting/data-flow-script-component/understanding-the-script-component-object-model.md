@@ -2,11 +2,14 @@
 title: "Understanding the Script Component Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,7 +22,8 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Understanding the Script Component Object Model
   As discussed in [Coding and Debugging the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), the Script component project contains three project items:  

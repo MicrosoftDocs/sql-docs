@@ -2,20 +2,25 @@
 title: "SQL Server Properties (Service Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server Properties (Service Tab)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use the **Service**tab on the **MSSQLSERVER Properties** dialog box to view or specify the following options.  
   
 ## Options  

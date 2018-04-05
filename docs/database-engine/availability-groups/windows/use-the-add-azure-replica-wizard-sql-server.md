@@ -2,9 +2,12 @@
 title: "Use the Add Azure Replica Wizard (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use the Add Azure Replica Wizard (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the Add Azure Replica Wizard to help you create a new Windows Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.  
   
 -   **Before you begin:**  

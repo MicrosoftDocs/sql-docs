@@ -1,11 +1,13 @@
 ---
 title: "Securables | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/18/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +22,13 @@ helpviewer_keywords:
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Securables
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Securables are the resources to which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] authorization system regulates access. For example, a table is a securable. Some securables can be contained within others, creating nested hierarchies called "scopes" that can themselves be secured. The securable scopes are **server**, **database**, and **schema**.  
   

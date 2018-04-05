@@ -1,13 +1,16 @@
 ---
 title: "Locking and Unlocking Databases (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,7 +24,8 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Locking and Unlocking Databases (XMLA)
   You can lock and unlock databases using, respectively, the [Lock](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) and [Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) commands in XML for Analysis (XMLA). Typically, other XMLA commands automatically lock and unlock objects as needed to complete the command during execution. You can explicitly lock or unlock a database to perform multiple commands within a single transaction, such as a [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command, while preventing other applications from committing a write transaction to the database.  

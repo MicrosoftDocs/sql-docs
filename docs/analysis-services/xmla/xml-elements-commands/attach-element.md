@@ -2,12 +2,15 @@
 title: "Attach Element | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "Attach command"
 ms.assetid: a315d1f1-e220-4296-97cb-6d35606b9640
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attach Element
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Attaches a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database that was previously detached from the current server instance or from another instance, to the current server instance.  
   
 ## Syntax  

@@ -3,8 +3,11 @@ title: "When to Use Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # When to Use Procedures
 There are a number of advantages to using procedures, all based on the fact that using procedures moves SQL statements from the application to the data source. What is left in the application is an interoperable procedure call. These advantages include:  

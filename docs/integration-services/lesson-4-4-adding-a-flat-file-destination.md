@@ -2,9 +2,12 @@
 title: "Step 4: Adding a Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 4-4 - Adding a Flat File Destination
 The error output of the Lookup Currency Key transformation redirects to the Script transformation any data rows that failed the lookup operation. To enhance information about the errors that occurred, the Script transformation runs a script that gets the description of errors.  

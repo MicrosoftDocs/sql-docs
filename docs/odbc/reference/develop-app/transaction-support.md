@@ -3,8 +3,11 @@ title: "Transaction Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Transaction Support
 The degree of support for transactions is driver-defined. ODBC is designed to be implemented on a single-user or desktop database that has no need to manage multiple updates to its data. Moreover, some databases that support transactions do so only for the Data Manipulation Language (DML) statements of SQL; there are restrictions or special transaction semantics regarding the use of Data Definition Language (DDL) when a transaction is active. That is, there may be transaction support for multiple simultaneous updates to tables but not for changing the number and definition of tables during a transaction.  

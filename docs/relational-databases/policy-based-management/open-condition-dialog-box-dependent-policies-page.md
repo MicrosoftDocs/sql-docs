@@ -2,9 +2,12 @@
 title: "Open Condition Dialog Box, Dependent Policies Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.swb.dmf.condition.referencingpolicies.f1"
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Open Condition Dialog Box, Dependent Policies Page
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management condition. For more information about how conditions relate to facets and policies, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## Options  

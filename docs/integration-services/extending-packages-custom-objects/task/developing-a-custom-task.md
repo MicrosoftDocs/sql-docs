@@ -2,11 +2,14 @@
 title: "Developing a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -28,7 +31,8 @@ ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 caps.latest.revision: 67
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Developing a Custom Task
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] uses tasks to perform units of work in support of the extraction, transformation, and loading of data. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes a variety of tasks that perform the most frequently used actions, from executing an SQL statement to downloading a file from an FTP site. If the included tasks and supported actions do not completely meet your requirements, you can create a custom task.  
@@ -84,10 +88,6 @@ manager: "jhubbard"
   
  [Developing a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Discusses how to program custom data flow sources, transformations, and destinations.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Extending the Package with the Script Task](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   

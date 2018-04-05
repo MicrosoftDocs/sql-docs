@@ -2,18 +2,22 @@
 title: "Data Quality Client Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Data Quality Client Application
   The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application enables you to perform data quality operations using a standalone tool. This application enables you to create knowledge bases, create and run data quality projects, and perform administrative tasks.  

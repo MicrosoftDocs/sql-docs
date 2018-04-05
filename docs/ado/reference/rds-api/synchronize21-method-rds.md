@@ -1,12 +1,14 @@
 ---
 title: "Synchronize21 Method (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +18,8 @@ ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Synchronize21 Method (RDS)
 Synchronize the given recordset with the database specified by the connection string for use with ADO 2.1.  

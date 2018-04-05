@@ -2,12 +2,15 @@
 title: "Analysis Services Scripting Language XML Data Type Hierarchy (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -27,9 +30,11 @@ ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Type Hierarchy (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The following table displays the inheritance hierarchy of data types in Analysis Services Scripting Language (ASSL).  
   
 ## Syntax  

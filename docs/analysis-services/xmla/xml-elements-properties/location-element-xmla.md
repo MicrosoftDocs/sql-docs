@@ -2,12 +2,15 @@
 title: "Location Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,11 +28,13 @@ helpviewer_keywords:
   - "Location element"
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Location Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains information about a remote server for the parent [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), or [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) command.  
   
 ## Syntax  

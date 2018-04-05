@@ -2,9 +2,12 @@
 title: "Audit DBCC Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Audit DBCC event class"
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Audit DBCC Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Audit DBCC** event class occurs whenever a DBCC command is issued.  
   
 ## Audit DBCC Event Class Data Columns  

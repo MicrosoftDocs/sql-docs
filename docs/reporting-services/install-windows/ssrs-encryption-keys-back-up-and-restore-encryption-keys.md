@@ -2,11 +2,14 @@
 title: "Back Up and Restore Reporting Services Encryption Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # SSRS Encryption Keys - Back Up and Restore Encryption Keys
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
   

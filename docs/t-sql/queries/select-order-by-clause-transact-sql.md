@@ -1,10 +1,13 @@
 ---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "12/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -39,12 +42,13 @@ helpviewer_keywords:
   - "FETCH clause"
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 caps.latest.revision: 68
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -54,9 +58,12 @@ manager: "jhubbard"
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY is not supported in SELECT/INTO or CREATE TABLE AS SELECT (CTAS) statements in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -102,9 +109,7 @@ ORDER BY order_by_expression
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifies the number of rows to skip before it starts to return rows from the query expression. The value can be an integer constant or expression that is greater than or equal to zero.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -115,9 +120,7 @@ ORDER BY order_by_expression
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -128,7 +131,7 @@ ORDER BY order_by_expression
  In query execution plans, the offset row count value is displayed in the **Rows** or **Top** attribute of the TOP query operator.  
   
 ## Best Practices  
- Avoid specifying integers in the ORDER BY clause as positional representations of the columns in the select list. For example, although a statement such as `SELECT ProductID, Name FROM Production.Production ORDER BY 2` is valid, the statement is not as easily understood by others compared with specifying the actual column name. In addition, changes to the select list, such as changing the column order or adding new columns, will require modifying the ORDER BY clause in order to avoid unexpected results.  
+ Avoid specifying integers in the ORDER BY clause as positional representations of the columns in the select list. For example, although a statement such as `SELECT ProductID, Name FROM Production.Production ORDER BY 2` is valid, the statement is not as easily understood by others compared with specifying the actual column name. In addition, changes to the select list, such as changing the column order or adding new columns, requires modifying the ORDER BY clause in order to avoid unexpected results.  
   
  In a SELECT TOP (*N*) statement, always use an ORDER BY clause. This is the only way to predictably indicate which rows are affected by TOP. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
@@ -156,9 +159,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Additionally, when the statement includes a UNION, EXCEPT, or INTERSECT operator, the column names or column aliases must be specified in the select list of the first (left-side) query.  
+ Additionally, when the statement includes a UNION, EXCEPT, or INTERSECT operator, the column names, or column aliases must be specified in the select list of the first (left-side) query.  
   
- In a query that uses UNION, EXCEPT, or INTERSECT operators, ORDER BY is allowed only at the end of the statement. This restriction applies only to when you specify UNION, EXCEPT and INTERSECT in a top-level query and not in a subquery. See the Examples section that follows.  
+ In a query that uses UNION, EXCEPT, or INTERSECT operators, ORDER BY is allowed only at the end of the statement. This restriction applies only to when you specify UNION, EXCEPT, and INTERSECT in a top-level query and not in a subquery. See the Examples section that follows.  
   
  The ORDER BY clause is not valid in views, inline functions, derived tables, and subqueries, unless either the TOP or OFFSET and FETCH clauses are also specified. When ORDER BY is used in these objects, the clause is used only to determine the rows returned by the TOP clause or OFFSET and FETCH clauses. The ORDER BY clause does not guarantee ordered results when these constructs are queried, unless ORDER BY is also specified in the query itself.  
   
@@ -264,8 +267,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### B. Specifying a ascending order  
- The following example orders the result set by the `Name` column in ascending order. Note that the characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
+#### B. Specifying an ascending order  
+ The following example orders the result set by the `Name` column in ascending order. The characters are sorted alphabetically, not numerically. That is, 10 sorts before 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -310,7 +313,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a> Specifying a conditional order  
- The following examples uses the CASE expression in an ORDER BY clause to conditionally determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
+ The following examples use the CASE expression in an ORDER BY clause to conditionally determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -354,9 +357,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limiting the number of rows returned  
  The following examples use OFFSET and FETCH to limit the number of rows returned by a query.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
@@ -483,7 +484,25 @@ GO
   
 ```  
   
-### Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT  
+ When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates ordering of a result set by the numerical `EmployeeKey` column in ascending order.  
   
 ```  
@@ -522,24 +541,6 @@ ORDER BY LastName;
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
 WHERE LastName LIKE 'A%'  
 ORDER BY LastName, FirstName;  
-```  
-  
-###  <a name="Union"></a> Using ORDER BY with UNION, EXCEPT, and INTERSECT  
- When a query uses the UNION, EXCEPT, or INTERSECT operators, the ORDER BY clause must be specified at the end of the statement and the results of the combined queries are sorted. The following example returns all products that are red or yellow and sorts this combined list by the column `ListPrice`.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
 ```  
   
 ## See Also  

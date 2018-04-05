@@ -2,12 +2,15 @@
 title: "Formatting the Legend on a Chart (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -31,7 +34,8 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Chart Legend - Formatting (Report Builder)
   The chart legend contains descriptions for each category in a chart. A legend always contains one or more legend items, where each legend item consists of a colored box that represents the series, and a text string that describes the series, as indicated in the following illustration.  

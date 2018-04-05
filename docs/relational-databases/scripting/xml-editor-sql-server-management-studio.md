@@ -2,9 +2,12 @@
 title: "XML Editor (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "XML Designer [SQL Server Management Studio]"
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # XML Editor (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Provides a set of visual tools for working with XML Schemas, ADO.NET datasets, and XML documents. The XML Designer supports the XML Schema Definition (XSD) language defined by the World Wide Web Consortium (WC3). The designer does not support DTDs (document type definitions) or other XML schema languages, such as XDR (XML-Data Reduced).  
   
  To display the designer, add a dataset, XML Schema, or XML file to your project or open any of the file types listed in the table below.  
@@ -93,7 +98,7 @@ manager: "jhubbard"
 -   Generate an XML Schema from an XML document  
   
 ## XML View  
- XML view provides an editor for editing raw XML and provides IntelliSense and color coding. Statement completion is available when working on .xsd files and .xml files that have an associated schema. Type \< to initiate a tag and you will be presented with a list of elements that are valid at that location. After you type the element name and press the SPACEBAR, you will be presented with a list of attributes that the element supports.  
+ XML view provides an editor for editing raw XML and provides IntelliSense and color coding. Statement completion is available when working on .xsd files and .xml files that have an associated schema. Type < to initiate a tag and you will be presented with a list of elements that are valid at that location. After you type the element name and press the SPACEBAR, you will be presented with a list of attributes that the element supports.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense options are not available on the toolbar. When in the XML Editor, to access the options, on the **Edit** menu, click **IntelliSense**.  

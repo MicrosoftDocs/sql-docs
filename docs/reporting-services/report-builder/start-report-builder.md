@@ -1,13 +1,16 @@
 ---
 title: "Start Report Builder | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,10 +22,13 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 caps.latest.revision: 56
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
+
 # Start Report Builder
-  Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a stand-alone report authoring environment. With it, you can create paginated reports and publish them to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installed in native or SharePoint integrated mode.  
   
  The first time you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint integrated mode, you're prompted to download it from the Microsoft Download Center. 
  
@@ -30,7 +36,7 @@ manager: "erikre"
  
  You or an administrator can also [install Report Builder on your computer from the Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=219138). See "Install Report Builder with Systems Manager Server" in [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) for more details.
  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] isn't installed when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; you need to  download and install it separately.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] isn't installed when you install SQL Server Reporting Services; you need to download and install it separately.  
   
  When you start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from the web portal or SharePoint site, if an earlier version of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] opens, contact your administrator, who can update the version on the web portal or SharePoint site.  
   
@@ -61,9 +67,10 @@ manager: "erikre"
      [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] opens, and you can create a paginated report or open a report on the report server.  
   
      **Note** If the **New Document** menu does not list **Report Builder Report**, **Report Builder Model**, or **Report Data Source**, their content types need to be added to the SharePoint library. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
-  
-## See Also  
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
-  
-  
+
+## Next steps
+
+[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+[Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

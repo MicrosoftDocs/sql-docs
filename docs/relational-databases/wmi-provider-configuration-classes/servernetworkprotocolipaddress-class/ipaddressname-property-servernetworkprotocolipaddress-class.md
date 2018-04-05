@@ -2,9 +2,12 @@
 title: "IpAddressName Property (ServerNetworkProtocolIPAddress Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "IpAddressName property"
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # IpAddressName Property (ServerNetworkProtocolIPAddress Class)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Gets the name of the IP address.  
   
 ## Syntax  

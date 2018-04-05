@@ -3,8 +3,11 @@ title: "SELECT Examples (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -31,12 +34,13 @@ helpviewer_keywords:
   - "WHERE clause, SELECT statement"
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # SELECT Examples (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   This topic provides examples of using the [SELECT](../../t-sql/queries/select-transact-sql.md) statement.  
   

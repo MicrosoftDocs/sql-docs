@@ -2,13 +2,16 @@
 title: "Creating Query-Scoped Calculated Members (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Calculated Members - Query-Scoped Calculated Members
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   If a calculated member is only required for a single Multidimensional Expressions (MDX) query, you can define that calculated member by using the WITH keyword. A calculated member that is created by using the WITH keyword no longer exists after the query has finished running.  
   
  As discussed in this topic, the syntax of the WITH keyword is quite flexible, even allowing a calculated member to be based on another calculated member.  

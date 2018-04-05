@@ -3,8 +3,11 @@ title: "Updating Data with SQLSetPos | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Updating Data with SQLSetPos
 Applications can update or delete any row in the rowset with **SQLSetPos**. Calling **SQLSetPos** is a convenient alternative to constructing and executing an SQL statement. It lets an ODBC driver support positioned updates even when the data source does not support positioned SQL statements. It is part of the paradigm of achieving complete database access by means of function calls.  

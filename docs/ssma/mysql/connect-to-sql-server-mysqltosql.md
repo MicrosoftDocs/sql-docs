@@ -1,10 +1,13 @@
 ---
 title: "Connect to SQL Server (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Connect to SQL Server (MySQLToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

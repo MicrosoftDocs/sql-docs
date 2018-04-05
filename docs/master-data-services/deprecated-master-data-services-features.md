@@ -2,18 +2,22 @@
 title: "Deprecated Master Data Services Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
+author: "leolimsft"
+ms.author: "lle"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Deprecated Master Data Services Features
   This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  

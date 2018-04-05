@@ -3,8 +3,11 @@ title: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "overriding connection values"
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   

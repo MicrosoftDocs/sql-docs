@@ -2,12 +2,15 @@
 title: "Microsoft Decision Trees Algorithm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -25,9 +28,11 @@ ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 72
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Microsoft Decision Trees Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a classification and regression algorithm for use in predictive modeling of both discrete and continuous attributes.  
   
  For discrete attributes, the algorithm makes predictions based on the relationships between input columns in a dataset. It uses the values, known as states, of those columns to predict the states of a column that you designate as predictable. Specifically, the algorithm identifies the input columns that are correlated with the predictable column. For example, in a scenario to predict which customers are likely to purchase a bicycle, if nine out of ten younger customers buy a bicycle, but only two out of ten older customers do so, the algorithm infers that age is a good predictor of bicycle purchase. The decision tree makes predictions based on this tendency toward a particular outcome.  

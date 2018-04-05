@@ -2,12 +2,15 @@
 title: "OLE DB for OLAP Schema Rowsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,9 +24,11 @@ ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # OLE DB for OLAP Schema Rowsets
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider supports the following OLE DB for OLAP schema rowsets.  
   
 > [!NOTE]  

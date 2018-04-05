@@ -1,12 +1,15 @@
 ---
 title: "Adding Records | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -18,7 +21,8 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Adding Records to a Recordset
 Use the **AddNew** method to create and initialize a new record in an existing **Recordset**. You can use the **Supports** method with a **CursorOptionEnum** value of **adAddNew** to verify whether you can add records to the current **Recordset** object.

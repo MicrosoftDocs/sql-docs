@@ -1,12 +1,15 @@
 ---
 title: "Error Object | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Error Object
 Contains details about data access errors that pertain to a single operation involving the provider.  

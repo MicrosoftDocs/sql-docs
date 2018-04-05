@@ -1,12 +1,15 @@
 ---
 title: "Parameter Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,7 +18,8 @@ ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Parameter Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -2,9 +2,12 @@
 title: "Identifiers (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -23,7 +26,8 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Identifiers (SSIS)
   In expressions, identifiers are columns and variables that are available to the operation. Expressions can use regular and qualified identifiers.  

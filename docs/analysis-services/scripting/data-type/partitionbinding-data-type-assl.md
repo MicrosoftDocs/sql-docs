@@ -2,12 +2,15 @@
 title: "PartitionBinding Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # PartitionBinding Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents a binding to a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  
   
 ## Syntax  

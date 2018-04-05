@@ -1,10 +1,13 @@
 ---
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +29,13 @@ helpviewer_keywords:
   - "queues [Service Broker], creating"
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.  
   
@@ -40,7 +44,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE QUEUE <object>  
    [ WITH  
      [ STATUS = { ON | OFF }  [ , ] ]  
@@ -52,7 +55,7 @@ CREATE QUEUE <object>
            EXECUTE AS { SELF | 'user_name' | OWNER }   
             ) [ , ] ]  
      [ POISON_MESSAGE_HANDLING (  
-       [ STATUS = { ON | OFF } )  
+         [ STATUS = { ON | OFF } ] ) ] 
     ]  
      [ ON { filegroup | [ DEFAULT ] } ]  
 [ ; ]  
@@ -163,7 +166,7 @@ CREATE QUEUE <object>
 |message_type_name|**nvarchar(256)**|Name of the message type that describes the message.|  
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|  
-|message_body|**varbinary(MAX)**|Content of the message.|  
+|message_body|**varbinary(max)**|Content of the message.|  
 |message_id|**uniqueidentifier**|Unique identifier for the message.|  
   
 ## Permissions  

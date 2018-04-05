@@ -2,12 +2,15 @@
 title: "Name Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Name Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains the name of the parent element.  
   
 ## Syntax  
@@ -67,7 +72,7 @@ manager: "erikre"
   
      However, if you set the **Name** property directly, the same validation checks are not performed, possibly resulting in XML validation errors. Whether an error actually occurs depends on which control character appears in the name.  
   
-     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] will ignore control characters in an object name to avoid breaking older solutions.  
+     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, SQL Server 2016 Analysis Services and later will ignore control characters in an object name to avoid breaking older solutions.  
   
 -   The following reserved values cannot be used:  
   

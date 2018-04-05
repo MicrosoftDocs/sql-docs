@@ -2,9 +2,12 @@
 title: "Overview: Importing Data from Tables (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "staging process [Master Data Services]"
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Overview: Importing Data from Tables (Master Data Services)
   Once you've created a model for your data in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can start adding data and make changes to data.   You use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] staging tables, stored procedures and Master Data Manager .  

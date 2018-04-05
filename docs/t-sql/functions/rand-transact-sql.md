@@ -3,8 +3,11 @@ title: "RAND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "random float value"
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # RAND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Returns a pseudo-random **float** value from 0 through 1, exclusive.  
   

@@ -3,8 +3,11 @@ title: "sqlsrv_execute | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +48,7 @@ sqlsrv_execute( resource $stmt)
 A Boolean value: **true** if the statement was successfully executed. Otherwise, **false**.  
   
 ## Example  
-The following example executes a statement that updates a field in the *Sales.SalesOrderDetail* table in the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example executes a statement that updates a field in the *Sales.SalesOrderDetail* table in the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database. The example assumes that SQL Server and the AdventureWorks database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -98,7 +102,9 @@ sqlsrv_close( $conn);
 ```  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [sqlsrv_query](../../connect/php/sqlsrv-query.md)  
   

@@ -3,8 +3,11 @@ title: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "sp_syspolicy_unsubscribe_from_policy_category"
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Deletes a policy category subscription for the current database.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

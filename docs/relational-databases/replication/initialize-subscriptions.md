@@ -2,9 +2,12 @@
 title: "Initialize Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.rep.newsubwizard.initializesubscriptions.f1"
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Initialize Subscriptions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Subscribers must be initialized before they can begin receiving replicated data. An initial dataset is not required, but the Subscriber must at least have the schema for each replicated object and any metadata tables and procedures required by replication.  
   
 ## Options  

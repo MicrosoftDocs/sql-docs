@@ -1,10 +1,13 @@
 ---
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/05/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,18 +25,16 @@ helpviewer_keywords:
   - "default languages"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SET LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Specifies the language environment for the session. The session language determines the **datetime** formats and system messages.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

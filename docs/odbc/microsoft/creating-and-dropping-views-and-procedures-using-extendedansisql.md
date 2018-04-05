@@ -3,8 +3,11 @@ title: "Creating and Dropping Views and Procedures Using ExtendedAnsiSQL | Micro
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating and Dropping Views and Procedures Using ExtendedAnsiSQL
 When the ExtendedAnsiSQL flag is turned on, Jet 4.0 supports the ability to create and drop views and procedures through SQL. These views and procedures will not be visible through Access.

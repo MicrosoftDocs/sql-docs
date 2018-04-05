@@ -2,9 +2,12 @@
 title: "Extending the Package with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -24,7 +27,8 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 caps.latest.revision: 57
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Extending the Package with the Script Task
   The Script task extends the run-time capabilities of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages with custom code written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# that is compiled and executed at package run time. The Script task simplifies the development of a custom run-time task when the tasks included with [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] do not fully satisfy your requirements. The Script task writes all the required infrastructure code for you, letting you focus exclusively on the code that is required for your custom processing.  
@@ -61,10 +65,6 @@ manager: "jhubbard"
   
  [Script Task Examples](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
  Provides simple examples that demonstrate several possible uses for a Script task.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Script Task](../../../integration-services/control-flow/script-task.md)   

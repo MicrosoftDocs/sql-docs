@@ -2,12 +2,15 @@
 title: "Implementing a Security Extension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "extensions [Reporting Services], custom security"
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 caps.latest.revision: 40
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Implementing a Security Extension
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Authentication is the primary system for securing reports in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In certain cases, however, you may need to extend the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] security system to accommodate custom security in your enterprise. You can do this using the development platform provided by the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API. This section will present an overview of security extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

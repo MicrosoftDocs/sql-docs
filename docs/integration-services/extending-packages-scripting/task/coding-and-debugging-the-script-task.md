@@ -2,9 +2,12 @@
 title: "Coding and Debugging the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -26,7 +29,8 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 81
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Coding and Debugging the Script Task
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  
@@ -230,7 +234,7 @@ To open Help, press F1.
  To debug the code in your Script task, set at least one breakpoint in the code, and then close the VSTA IDE to run the package in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. When package execution enters the Script task, the VSTA IDE reopens and displays your code in read-only mode. After execution reaches your breakpoint, you can examine variable values and step through the remaining code.  
   
 > [!WARNING]  
->  You can debug the Script task when you run the package in 64-bit mode.  
+>  You cannot debug the Script task when you run the package in 64-bit mode.  
   
 > [!NOTE]  
 >  You must execute the package to debug into your Script task. If you execute only the individual task, breakpoints in the Script task code are ignored.  
@@ -244,10 +248,6 @@ To open Help, press F1.
 ## External Resources  
   
 -   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), on blogs.msdn.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Referencing Other Assemblies in Scripting Solutions](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

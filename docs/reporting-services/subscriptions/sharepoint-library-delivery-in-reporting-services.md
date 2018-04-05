@@ -2,12 +2,15 @@
 title: "SharePoint Library Delivery in Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "subscriptions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], SharePoint library delivery"
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # SharePoint Library Delivery in Reporting Services
   A report server that is configured for SharePoint integration includes a delivery extension that you can use to send a report to a SharePoint library.  
@@ -67,13 +71,13 @@ manager: "erikre"
  Note that you cannot specify output formats that are for internal use only, or that are not supported for report servers that run in SharePoint integrated mode. These formats include Null, RGDI and HTMLOWC.  
   
  File name and extension  
- Specify the file name and extension of the report as you want it to appear in the target library. If you do not specify a file extension, the report server will create one based on the report output format. This value is required. The file name must not include the following characters: : \ / * ? " \< > | # { } %  
+ Specify the file name and extension of the report as you want it to appear in the target library. If you do not specify a file extension, the report server will create one based on the report output format. This value is required. The file name must not include the following characters: : \ / * ? " < > | # { } %  
   
  Title  
  Specifies an optional **Title** property for the report in the target library. This is a standard property for all items stored in a library. Users can specify whether to show or hide this property when viewing library contents on a SharePoint site.  
   
  Path  
- Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: http://mySharePointWeb/MySite/MyDocLib; where "http://mySharePointWeb" indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
+ Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: `http://mySharePointWeb/MySite/MyDocLib`; where `http://mySharePointWeb` indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
   
  You cannot specify a page, site, or list. The target container must be a library in the same site or farm.  
   

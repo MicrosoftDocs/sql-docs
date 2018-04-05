@@ -1,12 +1,15 @@
 ---
 title: "NamedParameters Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # NamedParameters Property (ADO)
 Indicates whether parameter names should be passed to the provider.  

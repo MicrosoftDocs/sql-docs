@@ -2,9 +2,12 @@
 title: "catalog.create_customized_logging_level | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,22 +16,22 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.create_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Creates a new customized logging level. For more info about customized logging levels, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## Syntax  
   
-```tsql  
-create_customized_logging_level [ @level_name = ] level_name  
+```sql  
+catalog.create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  
     , [ @event_value = ] event_value  
-    , [ @level_id = ] level_id OUT  
-  
+    , [ @level_id = ] level_id OUT   
 ```  
   
 ## Arguments  

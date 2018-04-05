@@ -1,111 +1,73 @@
 ---
-# required metadata
-
-title: What's New for SQL Server vNext CTP 1.3 on Linux | Microsoft Docs
-description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
+title: What's New for SQL Server 2017 on Linux | Microsoft Docs
+description: This article highlights what's new for SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
-ms.date: 03/23/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: ""
+ms.suite: "sql"
+ms.custom: "sql-linux"
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.workload: "On Demand"
 ---
-# What's new for SQL Server vNext on Linux
+# What's new for SQL Server 2017 on Linux
 
-This topic describes what's new for SQL Server vNext running on Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-## CTP 1.4
-The CTP 1.4 release contains the following improvements and fixes:
+This article describes the major features and services available for SQL Server 2017 running on Linux.
 
-- Enabled the [SQL Server Agent](sql-server-linux-setup-sql-agent.md).
-    - Enabled T-SQL Jobs functionality.
-- Fixed timezone bugs:
-    - Timezone support for Asia/Kolkata.
-    - Fixed GETDATE() function.
-- Network Async I/0 Improvements:
-    - Significant improvements to In-Memory OLTP workload performance.
-- Docker image now includes SQL Server command-line utilities. (sqlcmd/bcp).
-- Enabled Virtual Device Interface (VDI) support for backups.
-- Location of TempDB can now be modified after installation using `ALTER DATABASE`.
+> [!NOTE]
+> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
 
-## CTP 1.3
-The CTP 1.3 release contains the following improvements and fixes:
+## SQL Server Database Engine
 
-- Enabled [Full-text Search](sql-server-linux-setup-full-text-search.md) feature.
-- Enabled Always On [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for High Availability.
-- Additional functionality in **mssql-conf**:
-    - First time set-up using **mssql-conf**. See the use of mssql-conf in the [installation guides](sql-server-linux-setup.md#platforms).
-    - Enabling Availability Groups. See the [Availability Groups topic](sql-server-linux-availability-group-overview.md).
-- Fixed native Linux path support for In-memory OLTP filegroups.
-- Enabled dm_os_host_info DMV functionality.
+- Enabled the core SQL Server Database Engine capabilities.
+- Support for native Linux paths.
+- IPV6 support.
+- Support for database files on NFS.
+- Enabled [Transparent Layer Security](sql-server-linux-encrypted-connections.md) (TLS) encryption.
+- Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
+- [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for high availability.
+- [Full-text Search](sql-server-linux-setup-full-text-search.md) support.
 
-## CTP 1.2
-The CTP 1.2 release contains the following improvements and fixes:
+## SQL Server Agent
 
-- Support for [SUSE Linux Enterprise Server v12 SP2](sql-server-linux-setup-suse-linux-enterprise-server.md).
-- Bug fixes for core engine and stability improvements.
-- Docker image: 
-    - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.
-    - Removed `/opt/mssql/data` as the default volume.
-- Updated to .NET 4.6.2.
+- Enabled [SQL Server Agent](sql-server-linux-setup-sql-agent.md) support for the following tasks:
+  - [Transact-SQL jobs](sql-server-linux-run-sql-server-agent-job.md)
+  - [DB mail](sql-server-linux-db-mail-sql-agent.md)
+  - [Log shipping](sql-server-linux-use-log-shipping.md)
 
-## CTP 1.1
-The CTP 1.1 release contains the following improvements and fixes:
+## SQL Server Integration Services (SSIS)
 
-- Support for Red Hat Enterprise Linux version 7.3.
-- Support for Ubuntu 16.10.
-- Upgraded Docker OS layer to Ubuntu 16.04.
-- Fixed telemetry issues in Docker image.
-- Fixed SQL Server Setup script related bugs.
-- Enhanced performance for natively compiled T-SQL modules, including:
-    - **OPENJSON**, **FOR JSON**, **JSON** built-ins.
-    - Computed Columns (Only indexes are allowed on persisted computed columns, but not on non-persisted computed columns for in-memory tables).
-    - **CROSS APPLY** operations.
-- New language features:
-    - String functions: **TRIM**, **CONCAT_WS**, **TRANSLATE** and **STRING_AGG** with support for **WITHIN GROUP (ORDER BY)**.
-    - **BULK IMPORT** now supports CSV format and Azure Blob Storage as File Source.
+- Ability to run SSIS packages on Linux. For more information, see [Configure SQL Server Integration Services on Linux with ssis-conf](sql-server-linux-configure-ssis.md).
 
-Under compatibility mode 140:
+## Other improvements
 
-- Improved the performance of updates to non-clustered columnstore indexes in the case when the row is in the delta store. Changed from delete and insert operations to update. Also changed the plan shape used from wide to narrow.
-- Batch mode queries now support "memory grant feedback loops". This will improve concurrency and throughput on systems running repeated queries that use batch mode. This can allow more queries to run on systems that are otherwise blocking on memory before starting queries.
-- Improved performance in batch mode parallelism by ignoring trivial plan for batch mode plans to allow for parallel plans to be picked instead against columnstores. 
+- Command-line configuration tool, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
+- Unattended installation support with [environment variables](sql-server-linux-configure-environment-variables.md).
+- Cross-platform [Visual Studio Code mssql-server extension](sql-server-linux-develop-use-vscode.md).
+- Cross-platform script generator, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
+- Cross-platform Dynamic Management View (DMV) monitor, [DBFS tool](https://github.com/Microsoft/dbfs).
 
-[Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
-- Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
-- **CREATE** or **ALTER** operators for programmability objects.
-- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
-- SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
-- Support for TempDB file count, file size and file growth settings.
-- Extended diagnostics in showplan XML.
-- Lightweight per-operator query execution profiling.
-- New Dynamic Management Function **sys.dm_exec_query_statistics_xml**.
-- New Dynamic Management Function for incremental statistics.
-- Removed noisy In-memory related logging messages from errorlog.
-- Improved AlwaysOn Latency Diagnostics.
-- Cleaned up Manual Change Tracking.
-- **DROP TABLE** support for replication.
-- **BULK INSERT** into heaps with **AUTO TABLOCK** under TF 715.
-- Parallel **INSERT..SELECT** changes for local temp tables.
+## Next steps
 
-Learn more about these fixes in the [Service Pack 1 Release description](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/).
+To install SQL Server on Linux, use one of the following tutorials:
 
-Many database engine improvements apply to both Windows and Linux. The only exception would be for database engine features that are currently not supported on Linux. For more information, see [What's New in SQL Server vNext (Database Engine)](https://msdn.microsoft.com/library/mt775028).
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## See also
+To see other improvements introduced in SQL Server 2017, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
-For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server vNext on Linux](sql-server-linux-release-notes.md).
+> [!TIP]
+> For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,12 +1,15 @@
 ---
 title: "UpdateBatch and CancelBatch Methods Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # UpdateBatch and CancelBatch Methods Example (VB)
 This example demonstrates the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method in conjunction with the [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) method.  

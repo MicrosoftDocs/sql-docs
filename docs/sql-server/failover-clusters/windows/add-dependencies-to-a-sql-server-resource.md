@@ -2,9 +2,12 @@
 title: "Add Dependencies to a SQL Server Resource | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "failover-clusters"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -19,8 +22,10 @@ caps.latest.revision: 33
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Dependencies to a SQL Server Resource
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to add dependencies to an Always On Failover Cluster Instance (FCI) resource by using the Failover Cluster Manager snap-in. The Failover Cluster Manager snap-in is the cluster management application for the Windows Server Failover Clustering (WSFC) service.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  

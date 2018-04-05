@@ -1,11 +1,13 @@
 ---
 title: "DROP DEFAULT (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.custom: ""
+ms.date: "05/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +22,13 @@ helpviewer_keywords:
   - "defaults [SQL Server], removing"
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DROP DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes one or more user-defined defaults from the current database.  
   
@@ -37,15 +40,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]  
 ```  
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the default only if it already exists.  
   

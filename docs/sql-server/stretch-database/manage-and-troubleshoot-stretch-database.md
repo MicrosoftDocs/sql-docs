@@ -1,12 +1,13 @@
 ---
 title: "Manage and troubleshoot Stretch Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "stretch-database"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -20,12 +21,14 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Manage and troubleshoot Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  To manage and troubleshoot Stretch Database, use the tools and methods described in this topic .  
+
+  To manage and troubleshoot Stretch Database, use the tools and methods described in this article .  
 ## Manage local data  
   
 ###  <a name="LocalInfo"></a> Get info about local databases and tables enabled for Stretch Database  
@@ -33,7 +36,7 @@ manager: "jhubbard"
  
  To see how much space a Stretch-enabled table is using in SQL Server, run the following statement.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -60,7 +63,7 @@ GO
  
 To see how much space a Stretch-enabled table is using in Azure, run the following statement.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -114,7 +117,7 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
   
 For example, the following query returns local results only.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

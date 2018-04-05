@@ -2,9 +2,12 @@
 title: "Configure IIS for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Web synchronization, IIS servers"
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 88
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Configure IIS for Web Synchronization
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The procedures in this topic make up the second step in configuring Web synchronization for merge replication. You perform this step after you enable a publication for Web synchronization. For an overview of the configuration process, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). After you complete the procedures in this topic, continue to the third step, configuring a subscription to use Web synchronization. This third step is described in the following topics:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
@@ -127,7 +132,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The Web site that you specify provides access to the components that are used by Web synchronization. The Web site does not provide access to other data or Web pages unless you configure the site to do so.  
   
--   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is https://*server.domain.com* and you specify an alias of 'websync1', the address to access the replisapi.dll component is https://*server.domain.com*/websync1/replisapi.dll.  
+-   Creates a virtual directory and its associated alias. The alias is used when accessing the Web synchronization components. For example, if the IIS address is `https://server.domain.com` and you specify an alias of 'websync1', the address to access the replisapi.dll component is `https://server.domain.com/websync1/replisapi.dll`.  
   
 -   Uses Basic Authentication. We recommend using Basic Authentication because Basic Authentication enables you to run IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher/Distributor on separate computers (the recommended configuration) without requiring Kerberos delegation. Using SSL with Basic Authentication makes sure that logins, passwords, and all data are encrypted in transit. (SSL is required, regardless of the type of authentication that is used.) For more information about best practices for Web synchronization, see the section "Security Best Practices for Web Synchronization" in [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
@@ -321,7 +326,7 @@ manager: "jhubbard"
   
     5.  Click **OK**.  
   
-2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: https://server.domain.com/directory/replisapi.dll?diag.  
+2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  If the certificate that you specified for IIS is not recognized by the Windows operating system, the **Security Alert** dialog box appears. This alert might occur because the certificate is a test certificate or the certificate was issued by a certification authority (CA) that Windows does not recognize.  
   

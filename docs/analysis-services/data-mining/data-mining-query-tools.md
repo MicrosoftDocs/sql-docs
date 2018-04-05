@@ -2,12 +2,15 @@
 title: "Data Mining Query Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -22,9 +25,11 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Query Tools
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   All data mining queries use the Data Mining Extensions (DMX) language. DMX can be used to create models for all kinds of machine learning tasks, including classification, risk analysis, generation of recommendations, and linear regression. You can also write DMX queries to get information about the patterns and statistics that were generated when you processed the model.  
   
  You can write your own DMX, or you can build basic DMX using a tool such as the **Prediction Query Builder** and then modify it. Both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provide tools that help you build DMX prediction queries. This topic describes how to create and execute data mining queries using these tools.  

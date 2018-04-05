@@ -2,12 +2,15 @@
 title: "Source Element (ComAssembly) (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Source Element (ComAssembly) (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains the file name or programmatic identifier (ProgID) for a Component Object Model (COM) component.  
   
 ## Syntax  

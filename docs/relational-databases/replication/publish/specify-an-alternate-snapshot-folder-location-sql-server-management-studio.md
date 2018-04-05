@@ -2,9 +2,12 @@
 title: "Specify an Alternate Snapshot Folder Location (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "alternate snapshot folders [SQL Server replication]"
 ms.assetid: 9293f0eb-5531-47ec-b6e2-0392823ce5cc
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Specify an Alternate Snapshot Folder Location (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Specify an alternate snapshot location on the **Snapshot** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### To specify an alternate snapshot location  

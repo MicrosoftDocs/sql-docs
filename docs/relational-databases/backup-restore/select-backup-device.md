@@ -2,9 +2,12 @@
 title: "Select Backup Device | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.swb.selectbackupdevice.f1"
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Select Backup Device
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Select Backup Device** dialog box to select a logical backup device for the restore operation.  
   
  A logical backup device is a user-defined logical device that corresponds to a physical device, either a tape drive or a disk drive, that is provided by the operating system.  

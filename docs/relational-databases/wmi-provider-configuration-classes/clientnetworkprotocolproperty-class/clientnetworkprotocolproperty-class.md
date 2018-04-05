@@ -2,11 +2,14 @@
 title: "ClientNetworkProtocolProperty Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "ClientNetworkProtocolProperty class"
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ClientNetworkProtocolProperty Class
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The [ClientNetworkProtocolProperty Class](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) represents properties of a client network protocol.  
   
  With the [ClientNetworkProtocolProperty Class](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md), you can perform the following tasks:  

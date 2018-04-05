@@ -1,10 +1,13 @@
 ---
 title: "Join Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,17 +26,18 @@ helpviewer_keywords:
   - "hints [SQL Server], join"
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints, including <join_hint>, be used only as a last resort by experienced developers and database administrators.  
+>  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints, including \<join_hint>, be used only as a last resort by experienced developers and database administrators.
   
  **Applies to:**  
   

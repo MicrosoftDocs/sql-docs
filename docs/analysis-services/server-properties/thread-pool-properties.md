@@ -2,11 +2,14 @@
 title: "Thread Pool Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,9 +23,11 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Thread Pool Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses multi-threading for many operations, improving overall server performance by running multiple jobs in parallel. To manage threads more efficiently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses thread pools to preallocate threads and facilitate thread availability for the next job.  
   
  Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] maintains its own set of thread pools. There are differences in how tabular and multidimensional instances use thread pools. For example, only multidimensional instances use the **IOProcess** thread pool. As such, the **PerNumaNode** property, described in this topic, is not meaningful for Tabular instances. In the [Property Reference](#bkmk_propref) section below, mode requirements are called out for each property.

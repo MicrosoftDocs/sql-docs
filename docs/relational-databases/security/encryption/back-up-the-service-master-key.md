@@ -2,9 +2,12 @@
 title: "Back Up the Service Master Key | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Back Up the Service Master Key
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to back-up the Service Master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
   
  **In This Topic**  
@@ -62,13 +67,12 @@ manager: "jhubbard"
 7.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Creates a backup of the "AdventureWorks2012" master key.  
-    -- Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2012;  
-    GO  
-    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'   
-        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
-    GO  
+    -- Creates a backup of the service master key.
+    USE master;
+    GO
+    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'
+        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+    GO
     ```  
   
     > [!NOTE]  

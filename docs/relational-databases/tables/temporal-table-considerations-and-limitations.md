@@ -1,11 +1,13 @@
 ---
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/24/2017"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "05/22/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -14,10 +16,11 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Temporal Table Considerations and Limitations
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning.  
   
@@ -51,7 +54,9 @@ manager: "jhubbard"
   
 -   Direct modification of the data in a history table is not permitted.  
   
--   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there’s no such  limitation.  
+-   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there’s no such  limitation. 
+
+    **NOTE:** This limitation applies to SQL Server 2016 only. CASCADE options are supported in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 2.0.  
   
 -   **INSTEAD OF** triggers are not permitted on either the current or the history table to avoid invalidating the DML logic. **AFTER** triggers are permitted only on the current table. They are blocked on the history table to avoid invalidating the DML logic.  
   
@@ -92,9 +97,7 @@ manager: "jhubbard"
   
 -   A history table cannot be configured as current table in a chain of history tables.  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Considerations%20and%20Limitations%20page)  
-  
+
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

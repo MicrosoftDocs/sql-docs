@@ -2,12 +2,15 @@
 title: "Mining Model Content (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -24,9 +27,11 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Mining Model Content (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After you have designed and processed a mining model using data from the underlying mining structure, the mining model is complete and contains *mining model content*. You can use this content to make predictions or analyze your data.  
   
  Mining model content includes metadata about the model, statistics about the data, and patterns discovered by the mining algorithm. Depending on the algorithm that was used, the model content may include regression formulas, the definitions of rules and itemsets, or weights and other statistics.  
@@ -71,7 +76,7 @@ manager: "jhubbard"
  The following table lists the different types of nodes that are output in data mining models. Because each algorithm processes information differently, each model generates only a few specific kinds of nodes. If you change the algorithm, the type of nodes may change. Also, if you reprocess the model, the content of each node may change.  
   
 > [!NOTE]  
->  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
+>  If you use a different data mining service, or if you create your own plug-in algorithms, additional custom node types may be available.  
   
 |NODE_TYPE ID|Node Label|Node Contents|  
 |-------------------|----------------|-------------------|  

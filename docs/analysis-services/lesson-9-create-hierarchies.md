@@ -1,12 +1,15 @@
 ---
 title: "Lesson 10: Create Hierarchies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/10/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 9: Create Hierarchies
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will create hierarchies. Hierarchies are groups of columns arranged in levels; for example, a Geography hierarchy might have sub-levels for Country, State, County, and City. Hierarchies can appear separate from other columns in a reporting client application field list, making them easier for client users to navigate and include in a report. To learn more, see [Hierarchies](../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 To create hierarchies, you'll use the model designer in *Diagram View*. Creating and managing hierarchies is not supported in Data View.  
@@ -69,7 +75,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 5.  Finally, in the **DimDate** table, create a **ProductionCalendar** hierarchy. Include the following columns:  
     *  CalendarYear
     *  WeekNumberOfYear
-    *  DayOfWeek
+    *  DayNumberOfWeek
   
  ## What's next?
 Go to the next lesson: [Lesson 10: Create Partitions](../analysis-services/lesson-10-create-partitions.md). 

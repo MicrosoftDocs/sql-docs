@@ -1,12 +1,15 @@
 ---
 title: "Indexes Collection (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Indexes Collection (ADOX)
 Contains all [Index](../../../ado/reference/adox-api/index-object-adox.md) objects of a table.  

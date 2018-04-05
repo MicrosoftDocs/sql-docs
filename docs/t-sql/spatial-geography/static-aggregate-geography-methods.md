@@ -3,8 +3,11 @@ title: "Static Aggregate Geography Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,12 +18,13 @@ helpviewer_keywords:
   - "Aggregate Geography Methods [SQL Server]"
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Static Aggregate Geography Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following aggregate methods as extensions to the static geography methods of the Open Geospatial Consortium (OGC).  
   

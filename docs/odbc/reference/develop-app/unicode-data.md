@@ -3,8 +3,11 @@ title: "Unicode Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Unicode Data
 SQL Unicode data types are provided to describe data that resides in Unicode natively on the DBMS. A C Unicode data type is provided to allow an application to bind data to a Unicode buffer. The Driver Manager can convert data from a Unicode C type (SQL_C_WCHAR) to make it function with an ANSI driver.  

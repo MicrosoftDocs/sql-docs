@@ -1,12 +1,15 @@
 ---
 title: "Customization File UserList Section | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Customization File UserList Section
 The **userlist** section pertains to the **connect** section with the same section *identifier* parameter.  

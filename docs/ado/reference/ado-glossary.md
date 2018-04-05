@@ -3,10 +3,13 @@ title: "ADO Glossary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
-ms.technology: “drivers”
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
+ms.technology: "drivers"
 ms.topic: "article"
 helpviewer_keywords: 
   - "ADO, glossary"
@@ -14,7 +17,7 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # ADO Glossary
 This topic defines terms relevant to ADO.  

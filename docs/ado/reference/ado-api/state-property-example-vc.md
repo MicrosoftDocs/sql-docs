@@ -1,12 +1,15 @@
 ---
 title: "State Property Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # State Property Example (VC++)
 This example uses the [State](../../../ado/reference/ado-api/state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  

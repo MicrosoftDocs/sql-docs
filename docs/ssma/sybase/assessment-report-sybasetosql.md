@@ -3,8 +3,11 @@ title: "Assessment Report (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Assessment Report (SybaseToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

@@ -1,12 +1,15 @@
 ---
 title: "Report Builder Tutorials | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,13 +18,17 @@ ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Report Builder Tutorials
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Use the following Report Builder tutorials to learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.  
   
 [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-To use these tutorials, you must have read-only access to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.  
+To use these tutorials, you must have read-only access to a SQL Server database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.  
   
 For help with these prerequisites, contact your report server administrator.  
   
@@ -66,12 +73,11 @@ Follow the steps in this tutorial to learn how to create reports for a drillthro
   
 [Tutorial: Introducing Expressions](../reporting-services/tutorial-introducing-expressions.md)  
 Follow the steps in this tutorial to learn how to use expressions to concatenate, calculate, and lookup field values and show them a report. You will also learn how to conditionally display different images and indicator states using expressions.  
-  
-## See Also  
-[Report Design View &#40;Report Builder&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
-[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Create a Quick Chart Report Offline &#40;Report Builder&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
 
+## Next steps
+
+[Report Design View](../reporting-services/report-builder/report-design-view-report-builder.md)  
+[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Tutorial: Create a Quick Chart Report Offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

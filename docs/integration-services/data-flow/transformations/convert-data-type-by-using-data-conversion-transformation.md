@@ -2,9 +2,12 @@
 title: "Convert Data Type by Using Data Conversion Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Convert Data Type by Using Data Conversion Transformation
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  
@@ -45,7 +49,7 @@ manager: "jhubbard"
   
 9. Optionally, depending on the selected data type, update the values in the **Length**, the **Precision**, the **Scale**, and the **Code Page** columns.  
   
-10. To configure the error output, click **Configure Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. To configure the error output, click **Configure Error Output**. For more information, see [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Click **OK**.  
   

@@ -3,8 +3,11 @@ title: "Specifying Axis in a Path Expression Step | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "parent axis"
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   An axis step in a path expression includes the following components:  
   

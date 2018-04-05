@@ -2,22 +2,27 @@
 title: "Obtain a FAST_FORWARD Cursor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-ole-db-how-to"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Obtain a FAST_FORWARD Cursor
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   To obtain a forward-only, read-only cursor, set the rowset properties DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT, and DBPROP_OWNUPDATEDELETE to VARIANT_TRUE.  

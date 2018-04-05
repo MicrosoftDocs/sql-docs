@@ -2,9 +2,12 @@
 title: "SetStrValue Method (ClientNetworkProtocolProperty Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "SetStrValue method"
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SetStrValue Method (ClientNetworkProtocolProperty Class)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Sets the string value of the current property referenced by the [PropertyIdx Property (ClientNetworkProtocolProperty Class)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) value.  
   
 ## Syntax  

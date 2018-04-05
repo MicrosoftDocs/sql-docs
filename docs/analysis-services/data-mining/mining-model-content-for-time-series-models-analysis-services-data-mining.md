@@ -2,12 +2,15 @@
 title: "Mining Model Content for Time Series Models (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
   
  For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -56,7 +61,7 @@ manager: "jhubbard"
   
  If the node does not have any children, this means that no significant conditions were found that would justify dividing the cases into further subgroups. The branch ends at this point and the node is termed a *leaf node*. The leaf node contains the attributes, coefficients, and values that are the building blocks of the ARTXP formula.  
   
- Some branches may have additional splits, similar to a decision trees model. For example, the branch of the tree that represents sales for the Europe region splits into two branches. A split occurs when a condition is found that causes a significant difference between the two groups. The parent node tells you the name of the attribute that caused the split, such as [Amount], and how many cases there are in the parent node. The leaf nodes provide more detail: the value of the attribute, such as [Sales] >10,000 vs. [Sales] \< 10,000), the number of cases that support each condition, and the ARTXP formula.  
+ Some branches may have additional splits, similar to a decision trees model. For example, the branch of the tree that represents sales for the Europe region splits into two branches. A split occurs when a condition is found that causes a significant difference between the two groups. The parent node tells you the name of the attribute that caused the split, such as [Amount], and how many cases there are in the parent node. The leaf nodes provide more detail: the value of the attribute, such as [Sales] >10,000 vs. [Sales] < 10,000), the number of cases that support each condition, and the ARTXP formula.  
   
 > [!NOTE]  
 >  If you want to view the formulas, you can find the complete regression formula at the leaf node level, but not in an intermediate or root node.  

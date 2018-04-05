@@ -1,11 +1,13 @@
 ---
 title: "View or Change the Properties of a Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "01/05/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,12 +19,13 @@ helpviewer_keywords:
   - "viewing databases"
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # View or Change the Properties of a Database
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to view or change the properties of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. After you change a database property, the modification takes effect immediately.  
   
@@ -72,7 +75,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
   
-    ```tsql  
+    ```sql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
@@ -84,7 +87,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
   
-    ```tsql  
+    ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
@@ -97,7 +100,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) catalog view to view several properties of the current database.  
   
-    ```tsql  
+    ```sql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
@@ -128,8 +131,8 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window. The following example sets MAXDOP for a secondary database to the value for the primary database.  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
 ## See Also  

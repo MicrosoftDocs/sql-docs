@@ -3,8 +3,11 @@ title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/13/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "sp_change_users_login"
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Maps an existing database user to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) instead.  
   

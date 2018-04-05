@@ -2,9 +2,12 @@
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2013) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "power-view"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,11 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2013)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topics describes the deployment and configuration of middle-tier enhancements to the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] including [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration** tool to complete the following:  
   
 -   Deploy SharePoint solution files.  
@@ -25,18 +30,6 @@ manager: "erikre"
 -   Configure an Excel Services Application to use an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode. For information on backend services and installing a [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in SharePoint mode, see [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  For information on installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
-  
- This topic contains the following sections:  
-  
- [Run Power Pivot for SharePoint 2013 configuration](#bkmk_run_configuration_tool)  
-  
- [Verify Power Pivot Configuration](#bkmk_verify_powerpivot)  
-  
- [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2013 configuration  
  **Note:** The [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup wizard installs two different configuration tools for [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. They each support a different version of SharePoint.  

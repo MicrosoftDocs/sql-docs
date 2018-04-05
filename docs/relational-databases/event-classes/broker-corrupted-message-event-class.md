@@ -2,9 +2,12 @@
 title: "Broker:Corrupted Message Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Broker:Corrupted Message event class"
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Broker:Corrupted Message Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a **Broker:Corrupted Message** event when Service Broker receives a corrupted message.  
   
 ## Broker:Corrupted Message Event Class Data Columns  

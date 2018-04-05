@@ -3,8 +3,11 @@ title: "STDistance (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "STDistance (geometry Data Type)"
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # STDistance (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the shortest distance between a point in a **geometry** instance and a point in another **geometry** instance.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

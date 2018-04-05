@@ -1,12 +1,15 @@
 ---
 title: "Refresh Method (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Refresh Method (ADO)
 Updates the objects in a collection to reflect objects available from, and specific to, the provider.  

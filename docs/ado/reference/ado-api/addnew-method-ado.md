@@ -1,12 +1,15 @@
 ---
 title: "AddNew Method (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # AddNew Method (ADO)
 Creates a new record for an updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

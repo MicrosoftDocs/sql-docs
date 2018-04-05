@@ -2,12 +2,15 @@
 title: "Mining Model Content for Decision Tree Models  | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
   
 ##  <a name="bkmk_Top"></a> Understanding the Structure of a Decision Trees Model  
@@ -179,7 +184,7 @@ manager: "jhubbard"
 |Age >= 30|Age >= 30 and Gender = Male|  
 ||Age >= 30 and Gender = Female|  
 |Age < 30|Age < 30 and Gender = Male|  
-||Age \< 30 and Gender = Female|  
+||Age < 30 and Gender = Female|  
   
  When you use a decision tree model for prediction, the model takes the attributes that you provide to it as arguments and follows the path of the attributes down through the tree. In general, all predictions go to a leaf, and the interior nodes are used only for classification.  
   
@@ -194,7 +199,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Displays the attribute that distinguishes that particular node relative to the parent node. The node caption defines a sub-segment of the population based the split condition. For example, if the split was on [Age] and it was a three-way split, the node captions for the three child nodes might be "[Age] < 40", "40 <= [Age] \< 50", "[Age] >= 50".|  
+|**NODE_CAPTION**|Displays the attribute that distinguishes that particular node relative to the parent node. The node caption defines a sub-segment of the population based the split condition. For example, if the split was on [Age] and it was a three-way split, the node captions for the three child nodes might be "[Age] < 40", "40 <= [Age] < 50", "[Age] >= 50".|  
 |**NODE_DESCRIPTION**|Contains a full list of the attributes that distinguish that node from other nodes, starting from the model parent node. For example, Product name = Apple and Color = Red.|  
   
  [Top](#bkmk_Top)  
@@ -286,7 +291,7 @@ manager: "jhubbard"
   
 |Split condition|Result in node|  
 |---------------------|--------------------|  
-|if n \< 5|Relationship can be expressed as equation 1|  
+|if n < 5|Relationship can be expressed as equation 1|  
 |if n between 5 and 10|No equation|  
 |if n > 10|Relationship can be expressed as equation 2|  
   

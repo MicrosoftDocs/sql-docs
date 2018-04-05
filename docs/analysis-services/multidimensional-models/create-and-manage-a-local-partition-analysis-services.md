@@ -2,13 +2,16 @@
 title: "Create and Manage a Local Partition (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create and Manage a Local Partition (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can create additional partitions for a measure group to improve processing performance. Having multiple partitions allows you to allocate fact data across a corresponding number of physical data files on local as well as remote servers. In Analysis Services, partitions can be processed independently and in parallel, giving you more control over processing workloads on the server.  
   
  Partitions can be created in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] during model design, or after the solution is deployed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or XMLA. We recommend that you choose one approach only. If you alternate between tools, you might find that changes made to a deployed database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are overwritten when you subsequently redeploy the solution from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

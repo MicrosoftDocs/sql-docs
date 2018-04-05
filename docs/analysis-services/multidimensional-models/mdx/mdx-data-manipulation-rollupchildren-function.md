@@ -2,13 +2,16 @@
 title: "Working with the RollupChildren Function (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +23,11 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - RollupChildren Function
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The Multidimensional Expressions (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) function rolls up the children of a member, applying a different unary operator to each child, and returns the value of this rollup as a number. The unary operator can be supplied by a member property associated with the child member, or the operator can be a string expression provided directly to the function.  
   
 ## RollupChildren Function Examples  

@@ -2,20 +2,25 @@
 title: "SQL Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SQL Trace
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In SQL Trace, events are gathered if they are instances of event classes listed in the trace definition. These events can be filtered out of the trace or queued for their destination. The destination can be a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), which can use the trace information in applications that manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  

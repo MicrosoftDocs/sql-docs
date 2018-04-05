@@ -2,21 +2,29 @@
 title: "Invoke-ProcessDimension cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessDimension cmdlet
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Process a dimension using a specific processing type variable.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessDimension [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
@@ -96,8 +104,5 @@ manager: "erikre"
 > [!NOTE]  
 >  Sometimes a dimension that processed successfully appears as ‘unprocessed’ when you list the dimensions folder in the PowerShell window. To verify whether a dimension was actually processed, check the dimension properties in SQL Server Management Studio.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

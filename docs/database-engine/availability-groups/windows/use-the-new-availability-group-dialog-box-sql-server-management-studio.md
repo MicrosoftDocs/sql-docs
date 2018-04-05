@@ -2,9 +2,12 @@
 title: "Use the New Availability Group Dialog Box (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 caps.latest.revision: 40
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use the New Availability Group Dialog Box (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains information about how to use the **New Availability Group** dialog box of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to create an Always On availability group on instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that are enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  

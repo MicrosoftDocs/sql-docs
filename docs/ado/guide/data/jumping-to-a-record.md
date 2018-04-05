@@ -1,12 +1,15 @@
 ---
 title: "Jumping to a Record | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Jumping to a Record
 The [Move](../../../ado/reference/ado-api/move-method-ado.md) method allows you to move forward or backward in the **Recordset** a specified number of records by using the following syntax:  

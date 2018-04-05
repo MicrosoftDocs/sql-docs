@@ -1,12 +1,15 @@
 ---
 title: "Cancel Method (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Cancel Method (RDS)
 Cancels execution of a pending, asynchronous method call.  

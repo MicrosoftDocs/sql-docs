@@ -1,12 +1,15 @@
 ---
 title: "Append Method (ADOX Indexes) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Append Method (ADOX Indexes)
 Adds a new [Index](../../../ado/reference/adox-api/index-object-adox.md) object to the [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  

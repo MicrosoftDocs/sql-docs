@@ -1,10 +1,13 @@
 ---
 title: "DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2016"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,12 +32,13 @@ helpviewer_keywords:
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DBCC CHECKIDENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and, if it is needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
    
@@ -100,11 +104,11 @@ DBCC CHECKIDENT
 ## Result Sets  
  Whether or not any of the options are specified for a table that contains an identity column, DBCC CHECKIDENT returns the following message for all operations except when specifying a new seed value.  
   
- `Checking identity information: current identity value '<current identity value>', current column value '<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
+`Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
  When DBCC CHECKIDENT is used to specify a new seed value by using RESEED *new_reseed_value*, the following message is returned.  
   
- `Checking identity information: current identity value '<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
+`Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
 ## Permissions  
  Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
@@ -142,15 +146,27 @@ DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);
 GO  
   
 ```  
+### D. Resetting the identity value on an empty table
+ The following example forces the current identity value in the `ErrorLogID` column in the `ErrorLog` table to a value of 1, after deleting all records from table. Because the table has no existing rows, the next row inserted will use 1 as the value, that is, the new current identity value, without adding the increment value defined for the column.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+TRUNCATE TABLE dbo.ErrorLog
+GO
+DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
+GO  
+  
+```  
   
 ## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
- [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
+[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
+[IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
+[IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
   
   

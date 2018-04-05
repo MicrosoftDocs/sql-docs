@@ -2,12 +2,15 @@
 title: "IsInitialized Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "IsInitialized property"
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsInitialized
   Indicates whether the report server instance is initialized. Read-only.  

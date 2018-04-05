@@ -1,13 +1,16 @@
 ---
 title: "Programming AMO Complementary Classes and Methods | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -25,7 +28,8 @@ ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Programming AMO Complementary Classes and Methods
   This topic contains the following sections:  

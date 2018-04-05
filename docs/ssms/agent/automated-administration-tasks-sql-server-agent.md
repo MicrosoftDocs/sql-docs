@@ -3,8 +3,11 @@ title: "Automated Administration Tasks (SQL Server Agent) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,15 @@ ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Automated Administration Tasks (SQL Server Agent)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows you to automate administrative tasks. To automate administration, you define predictable administrative tasks and then specify the conditions under which each task occurs. Using automated administration to handle routine tasks and events frees your time to perform other administrative functions.  
   
 ## In This Section  

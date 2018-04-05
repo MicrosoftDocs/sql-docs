@@ -2,9 +2,12 @@
 title: "Set a Maximum File Size for a Trace File (SQL Server Profiler) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "size [SQL Server], trace files"
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Set a Maximum File Size for a Trace File (SQL Server Profiler)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the following procedure to set the maximum file size for a trace file.  
   
 ### To set a maximum file size for a trace file  

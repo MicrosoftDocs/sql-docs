@@ -1,12 +1,15 @@
 ---
 title: "Cell Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,7 +18,8 @@ ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Cell Object Properties, Methods, and Events
 ## Properties/Collections  

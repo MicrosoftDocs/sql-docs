@@ -2,11 +2,14 @@
 title: "Using IMultipleResults to Process Multiple Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-ole-db-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "multiple-rowset results"
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Using IMultipleResults to Process Multiple Result Sets
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Consumers use the **IMultipleResults** interface to process results returned by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider command execution. When the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider submits a command for execution, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statements and returns any results.  

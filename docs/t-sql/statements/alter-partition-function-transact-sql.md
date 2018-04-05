@@ -3,8 +3,11 @@ title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +29,13 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], merging"
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Alters a partition function by splitting or merging its boundary values. By executing ALTER PARTITION FUNCTION, one partition of any table or index that uses the partition function can be split into two partitions, or two partitions can be merged into one less partition.  
   
@@ -110,7 +114,7 @@ ALTER PARTITION FUNCTION partition_function_name()
 ### A. Splitting a partition of a partitioned table or index into two partitions  
  The following example creates a partition function to partition a table or index into four partitions. `ALTER PARTITION FUNCTION` splits one of the partitions into two to create a total of five partitions.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  
@@ -128,7 +132,7 @@ SPLIT RANGE (500);
 ### B. Merging two partitions of a partitioned table into one partition  
  The following example creates the same partition function as above, and then merges two of the partitions into one partition, for a total of three partitions.  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT * FROM sys.partition_functions  
     WHERE name = 'myRangePF1')  
 DROP PARTITION FUNCTION myRangePF1;  

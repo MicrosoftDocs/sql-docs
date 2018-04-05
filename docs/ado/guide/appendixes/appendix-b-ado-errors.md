@@ -1,12 +1,15 @@
 ---
 title: "Appendix B: ADO Errors | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -15,7 +18,8 @@ ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Appendix B: ADO Error Codes
 See the following topics for more information about particular error messages:

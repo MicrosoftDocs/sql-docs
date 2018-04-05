@@ -1,12 +1,15 @@
 ---
 title: "Cancel Method Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Cancel Method Example (VB)
 This example uses the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method to cancel a command executing on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object if the connection is busy.  

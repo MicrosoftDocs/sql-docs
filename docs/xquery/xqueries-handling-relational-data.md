@@ -3,8 +3,11 @@ title: "XQueries Handling Relational Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "XQuery, relational data"
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # XQueries Handling Relational Data
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   You specify XQuery against an **xml** type column or variable by using one of the [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md). These include **query()**, **value()**, **exist()**, or **modify()**. The XQuery is executed against the XML instance identified in the query generating the XML.  
   

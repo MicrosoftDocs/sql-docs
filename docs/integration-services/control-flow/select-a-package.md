@@ -2,9 +2,12 @@
 title: "Select a Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Select a Package
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  

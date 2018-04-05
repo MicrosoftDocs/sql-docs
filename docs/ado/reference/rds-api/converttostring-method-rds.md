@@ -1,12 +1,15 @@
 ---
 title: "ConvertToString Method (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ConvertToString Method (RDS)
 Converts a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to a MIME string that represents the recordset data.  

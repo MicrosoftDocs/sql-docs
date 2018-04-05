@@ -3,8 +3,11 @@ title: "Selecting and Configuring Objects to Test (SybaseToSQL) | Microsoft Docs
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "Tester Component,Selecting Objects"
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  

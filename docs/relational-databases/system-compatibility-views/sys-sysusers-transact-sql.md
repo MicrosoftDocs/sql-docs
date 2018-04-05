@@ -3,8 +3,11 @@ title: "sys.sysusers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "sys.sysusers compatibility view"
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.sysusers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contains one row for each [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, Windows group, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] role in the database.  
   

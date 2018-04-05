@@ -3,8 +3,11 @@ title: "Expression Context and Query Evaluation (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "dynamic context [XQuery]"
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Expression Context and Query Evaluation (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The context of an expression is the information that is used to analyze and evaluate it. Following are the two phases in which XQuery is evaluated:  
   
@@ -59,7 +63,7 @@ manager: "jhubbard"
   
     -   Any namespaces defined using WITH XMLNAMESPACES. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (http://someURI). However, in the WHERE clause, the query prolog overrides the binding.  
+    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`http://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
   
         ```  
         WITH XMLNAMESPACES ('http://someURI' AS pd)  

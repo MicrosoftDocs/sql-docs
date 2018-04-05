@@ -2,9 +2,12 @@
 title: "Table Element for Schema (DTA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "dta"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Table element [DTA]"
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Table Element for Schema (DTA)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Specifies the table for tuning.  
   
 ## Syntax  

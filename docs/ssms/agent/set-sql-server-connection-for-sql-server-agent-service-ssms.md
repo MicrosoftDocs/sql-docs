@@ -3,8 +3,11 @@ title: "Set the SQL Server Connection for the SQL Server Agent Service | Microso
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,15 @@ ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 This topic describes how to set the connection between [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent and the [!INCLUDE[ssDE](../../includes/ssde_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can connect to a local instance of SQL Server by using Windows Authentication.  
   
 **In This Topic**  

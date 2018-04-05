@@ -1,14 +1,17 @@
 ---
-title: "Rename a Table or Column (SSAS Tabular) | Microsoft Docs"
+title: "Rename a Table or Column | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/22/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -17,9 +20,11 @@ ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Rename a Table or Column (SSAS Tabular)
+# Rename a Table or Column 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   You can change the name of a table during the import process by typing a **Friendly Name** in the **Select Tables and Views** page of the **Table Import Wizard**. You can also change table and column names if you import data by specifying a query on the **Specify a SQL Query** page of the **Table Import Wizard**.  
   
  After you have added the data to the model, the name (or title) of a table appears on the table tab, at the bottom of the model designer. You can change the name of your table to give it a more appropriate name. You can also rename a column after the data has been added to the model. This option is especially important when you have imported data from multiple sources, and want to ensure that columns in different tables have names that are easy to distinguish.  
@@ -51,13 +56,13 @@ manager: "erikre"
 -   Analysis Services reserved keywords, including Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) function names and operators.  
   
 ## Effect of Renaming on Existing Tables, Columns, and Calculations  
- Whenever you change the name of a table, you change the name of the underlying table object, which may contain multiple columns or measures. Therefore, any columns that are in the table, and any relationships that use the table, must be updated to use the new name in their definitions. This update happens automatically in some cases. Measures are not updated automatically.  
+ Whenever you change the name of a table, you change the name of the underlying table object, which may contain multiple columns or measures. Any columns that are in the table, and any relationships that use the table, must be updated to use the new name in their definitions. This update happens automatically in most cases.
   
- Moreover, any calculations that use the renamed table, or that use columns from the renamed table, must also be updated, and the data derived from those calculations must be refreshed and recalculated. Depending on how many tables and calculations are affected, this can take some time to complete. Therefore, the best time to rename tables is either during the import process, or before you start to build complex relationships and calculations.  
+ Any calculations that use the renamed table, or that use columns from the renamed table, must also be updated, and the data derived from those calculations must be refreshed and recalculated. Depending on how many tables and calculations are affected, this can take some time to complete. Therefore, the best time to rename tables is either during the import process, or before you start to build complex relationships and calculations.  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Import from Power Pivot &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [Import from Analysis Services &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
+ [Tables and Columns](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
+ [Import from Power Pivot](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
+ [Import from Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
   
   

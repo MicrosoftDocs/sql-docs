@@ -3,8 +3,11 @@ title: "Validation Warnings Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Validation Warnings Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This dialog box appears if you attempt to save modifications with potentially damaging side effects, or if the database commit operation is likely to fail. This dialog box indicates what those side effects might be or why the commit operation might fail. It gives you the chance to continue with the modification or cancel the operation.  
   
 > [!NOTE]  

@@ -2,9 +2,12 @@
 title: "dtexec Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "packages"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # dtexec Utility
   The **dtexec** command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The **dtexec** utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The **dtexec** utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
@@ -45,7 +49,7 @@ manager: "jhubbard"
 -   [Examples](#example)  
   
 ##  <a name="server"></a> Integration Services Server and Project File  
- When you use **dtexec** to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, **dtexec** calls the [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ When you use **dtexec** to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, **dtexec** calls the [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
  The following is an example of executing a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -53,7 +57,7 @@ manager: "jhubbard"
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- When you use **dtexec** to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ When you use **dtexec** to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  You can use **dtexec** with third-party scheduling tools to schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -173,7 +177,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
-    > **NOTE:**  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+    > **NOTE:**  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
      The *displayoptions* values are as follows:  
   
@@ -211,7 +215,7 @@ dtexec /option [value] [/option [value]]...
   
      For several examples of the **/ConsoleLog** option, see the **Remarks** section.  
   
--   **/D[ts]** *package_path*: (Optional). Loads a package from the SSIS Package Store. Packages that are stored in the SSIS Package Store, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D[ts]** *package_path*: (Optional). Loads a package from the SSIS Package Store. Packages that are stored in the SSIS Package Store, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -256,10 +260,9 @@ dtexec /option [value] [/option [value]]...
      You use **/Env[Reference]** option together with the **/ISServer** and the **/Server** options.  
   
      This parameter is used by SQL Server Agent.  
-  
--   **/F[ile]** *filespec*: (Optional). Loads a package that is saved in the file system. Packages that are saved in the file system, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)  
-  
-     The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
+  --   **/F[ile]** *filespec*: (Optional). Loads a package that is saved in the file system. Packages that are saved in the file system, are deployed using the legacy package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
+
+  The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
   
      The **/File** option cannot be used together with the **/DTS** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
@@ -407,7 +410,7 @@ dtexec /option [value] [/option [value]]...
   
      The **/Ser[ver]** option is required when the **/ISServer** option is specified.  
   
--   **/SQ[L]** *package_path*: Loads a package that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in **msdb** database. Packages that are stored in the **msdb** database, are deployed using the package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/SQ[L]** *package_path*: Loads a package that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in **msdb** database. Packages that are stored in the **msdb** database, are deployed using the package deployment model. To run packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model, use the **/ISServer** option. For more information about the package and project deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -443,7 +446,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** *packageID*: (Optional). Verifies the GUID of the package to be executed by comparing it to the value specified in the *package_id* argument.  
   
--   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > **IMPORTANT!!** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
   
@@ -626,9 +629,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 /Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
-  
-## Related Tasks  
- [Run a Package in SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
   
 ## Related Content  
  Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  

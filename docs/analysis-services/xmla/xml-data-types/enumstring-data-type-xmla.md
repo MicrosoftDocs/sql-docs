@@ -2,12 +2,15 @@
 title: "EnumString Data Type (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -27,9 +30,11 @@ ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EnumString Data Type (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a derived data type that represents a set of named constants for a given enumerator.  
   
 ## Syntax  

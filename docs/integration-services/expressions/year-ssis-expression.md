@@ -2,9 +2,12 @@
 title: "YEAR (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # YEAR (SSIS Expression)
   Returns an integer that represents the year datepart of a date.  

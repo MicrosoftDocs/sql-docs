@@ -1,10 +1,13 @@
 ---
 title: "Edit Type Mapping (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Edit Type Mapping (MySQLToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

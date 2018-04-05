@@ -1,12 +1,15 @@
 ---
 title: "ADO Collections | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

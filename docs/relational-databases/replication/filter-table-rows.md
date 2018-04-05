@@ -2,9 +2,12 @@
 title: "Filter Table Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.rep.newpubwizard.filtertablerows.f1"
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Filter Table Rows
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Filter Table Rows** page allows you to:  
   
 -   Apply static row filters to table articles in snapshot, transactional, and merge publications.  

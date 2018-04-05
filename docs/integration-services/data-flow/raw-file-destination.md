@@ -2,15 +2,20 @@
 title: "Raw File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.rawfiledest.f1"
+  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+  - "sql13.dts.designer.rawfiledestinationcolumns.f1"
 helpviewer_keywords: 
   - "append options [Integration Services]"
   - "destinations [Integration Services], Raw File"
@@ -21,7 +26,8 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Raw File Destination
   The Raw File destination writes raw data to a file. Because the format of the data is native to the destination, the data requires no translation and little parsing. This means that the Raw File destination can write data more quickly than other destinations such as the Flat File and the OLE DB destinations.  
@@ -129,6 +135,90 @@ manager: "jhubbard"
   
 ## Related Content  
  Blog entry, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com.  
+  
+## Raw File Destination Editor (Connection Manager Page)
+  Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  
+  
+ **What do you want to do?**  
+  
+-   [Open the Raw File Destination Editor](#open)  
+  
+-   [Set options on the Connection Manager tab](#connection)  
+  
+-   [Set options on the Columns tab](#mapping)  
+  
+###  <a name="open"></a> Open the Raw File Destination Editor  
+  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Right-click the component and then click **Edit**.  
+  
+###  <a name="connection"></a> Set options on the Connection Manager tab  
+ **Access mode**  
+ Select how the file name is specified. Select **File name** to enter the file name and path directly, of **File name from variable** to specify a variable that contains the file name.  
+  
+ **File name** or **Variable name**  
+ Enter the name and path of the raw file, or select the variable that contains the file name.  
+  
+ **Write option**  
+ Select the method used to create and write to the file.  
+  
+ **Generate initial raw file**  
+ Click the button to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. The file contains the columns that you selected on the **Columns** page of the **Raw File Destination Editor**. You can point the Raw File source to this metadata-only file.  
+  
+ When you click **Generate initial raw file**, a message box appears. Click **OK** to proceed with creating the file. Click **Cancel** to select a different list of columns on the **Columns** page.  
+  
+###  <a name="mapping"></a> Set options on the Columns tab  
+ **Available Input Columns**  
+ Select one or more input columns to write to the raw file.  
+  
+ **Input Column**  
+ An input column is automatically added to this table when you select it under **Available Input Columns**, or you can select the input column directly in this table.  
+  
+ **Output Alias**  
+ Specify an alternate name to use for the output column.  
+  
+## Raw File Destination Editor (Columns Page)
+  Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  
+  
+ **What do you want to do?**  
+  
+-   [Open the Raw File Destination Editor](#open)  
+  
+-   [Set options on the Connection Manager tab](#connection)  
+  
+-   [Set options on the Columns tab](#mapping)  
+  
+###  <a name="open"></a> Open the Raw File Destination Editor  
+  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Right-click the component and then click **Edit**.  
+  
+###  <a name="connection"></a> Set options on the Connection Manager tab  
+ **Access mode**  
+ Select how the file name is specified. Select **File name** to enter the file name and path directly, of **File name from variable** to specify a variable that contains the file name.  
+  
+ **File name** or **Variable name**  
+ Enter the name and path of the raw file, or select the variable that contains the file name.  
+  
+ **Write option**  
+ Select the method used to create and write to the file.  
+  
+ **Generate initial raw file**  
+ Click the button to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. You can point the Raw File source to the metadata-only file.  
+  
+ When you click the button, a list of the columns appears. You can click cancel and modify the columns or click OK to proceed with creating the file.  
+  
+###  <a name="mapping"></a> Set options on the Columns tab  
+ **Available Input Columns**  
+ Select one or more input columns to write to the raw file.  
+  
+ **Input Column**  
+ An input column is automatically added to this table when you select it under **Available Input Columns**, or you can select the input column directly in this table.  
+  
+ **Output Alias**  
+ Specify an alternate name to use for the output column.  
   
 ## See Also  
  [Raw File Source](../../integration-services/data-flow/raw-file-source.md)   

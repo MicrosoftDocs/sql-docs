@@ -3,8 +3,11 @@ title: "Constructing Interoperable SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Constructing Interoperable SQL Statements
 As mentioned in the previous sections, interoperable applications should use the ODBC SQL grammar. Beyond using this grammar, however, a number of additional problems are faced by interoperable applications. For example, what does an application do if it wants to use a feature, such as outer joins, that is not supported by all data sources?  

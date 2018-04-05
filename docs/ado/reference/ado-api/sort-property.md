@@ -1,12 +1,15 @@
 ---
 title: "Sort Property | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -24,7 +27,8 @@ ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Sort Property
 Indicates one or more field names on which the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  

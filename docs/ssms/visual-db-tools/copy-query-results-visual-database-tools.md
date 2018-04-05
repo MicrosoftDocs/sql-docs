@@ -3,8 +3,11 @@ title: "Copy Query Results (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Copy Query Results (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can copy the result set as tab-separated text from the **Results** pane. You may copy the entire result set or any number of contiguous or non-contiguous rows or cells.  
   
 ### To copy result-set text from the Results pane  

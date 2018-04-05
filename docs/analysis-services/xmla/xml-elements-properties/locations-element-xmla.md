@@ -2,12 +2,15 @@
 title: "Locations Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,11 +28,13 @@ helpviewer_keywords:
   - "Locations element"
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Locations Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains a collection of [Location](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) elements used by the parent [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) , or [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) command.  
   
 ## Syntax  

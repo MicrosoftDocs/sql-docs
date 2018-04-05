@@ -1,10 +1,13 @@
 ---
 title: "insert (XML DML) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,16 +23,13 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -214,7 +214,7 @@ GO
 ```  
   
 ### F. Inserting data using a CDATA section  
- When you insert text that includes characters that are not valid in XML, such as \< or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, '<' is saved as &lt;.  
+ When you insert text that includes characters that are not valid in XML, such as < or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, '<' is saved as &lt;.  
   
 ```  
 USE AdventureWorks;  

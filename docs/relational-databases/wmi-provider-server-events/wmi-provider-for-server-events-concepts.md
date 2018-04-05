@@ -2,11 +2,14 @@
 title: "WMI Provider for Server Events Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "events [WMI]"
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # WMI Provider for Server Events Concepts
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The WMI Provider for Server Events lets you use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  

@@ -2,22 +2,27 @@
 title: "Power Pivot Management Dashboard and Usage Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Management Dashboard and Usage Data
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Management Dashboard is a collection of predefined reports and web parts in SharePoint Central Administration that help you administer a SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint deployment. The Management Dashboard provides information related to server health, workbook activity, and data refresh. The dashboard uses data from the SharePoint usage data collection.  
   
   

@@ -3,8 +3,11 @@ title: "Block Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Block Cursors
 Many applications spend a significant amount of time bringing data across the network. Part of this time is spent actually bringing the data across the network, and part of it is spent on network overhead, such as the call made by the driver to request a row of data. The latter time can be reduced if the application makes efficient use of *block,* or *fat,* *cursors,* which can return more than one row at a time.  

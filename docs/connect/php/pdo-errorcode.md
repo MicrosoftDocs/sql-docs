@@ -3,8 +3,11 @@ title: "PDO::errorCode | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,9 +35,9 @@ mixed PDO::errorCode();
 PDO::errorCode returns a five-char SQLSTATE as a string or NULL if there was no operation on the database handle.  
   
 ## Remarks  
-PDO::errorCode in the PDO_SQLSRV driver will return warnings on some successful operations. For example, on a successful connection, PDO::errorCode will return "01000" indicating SQL_SUCCESS_WITH_INFO.  
+PDO::errorCode in the PDO_SQLSRV driver returns warnings on some successful operations. For example, on a successful connection, PDO::errorCode returns "01000" indicating SQL_SUCCESS_WITH_INFO.  
   
-PDO::errorCode only retrieves error codes for operations performed directly on the database connection. If you create a PDOStatement instance through PDO::prepare or PDO::query and generate an error on the statement object, PDO::errorCode will not retrieve that error. You must call PDOStatement::errorCode to return the error code for an operation performed on a particular statement object.  
+PDO::errorCode only retrieves error codes for operations performed directly on the database connection. If you create a PDOStatement instance through PDO::prepare or PDO::query and an error is generated on the statement object, PDO::errorCode does not retrieve that error. You must call PDOStatement::errorCode to return the error code for an operation performed on a particular statement object.  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -51,6 +55,7 @@ print $conn->errorCode();
 ```  
   
 ## See Also  
-[PDO Class](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO Class](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

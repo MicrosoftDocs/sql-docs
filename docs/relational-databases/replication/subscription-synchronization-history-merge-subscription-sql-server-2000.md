@@ -2,9 +2,12 @@
 title: "Subscription, Synchronization History (Merge Subscription, SQL Server 2000) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.rep.monitor.subscription.downlevelsynchhistory.f1"
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Subscription, Synchronization History (Merge Subscription, SQL Server 2000)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Synchronization History** tab displays detailed information on the Merge Agent, including status, history, informational messages, and any error messages.  
   
 ## Options  

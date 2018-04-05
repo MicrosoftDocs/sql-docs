@@ -2,9 +2,12 @@
 title: "Degree of Parallelism (7.0 Insert) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Degree of Parallelism event class"
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Degree of Parallelism (7.0 Insert) Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Degree of Parallelism (7.0 Insert)** event class occurs each time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes a SELECT, INSERT, UPDATE, or DELETE statement.  
   
  When this event class is included in a trace, the amount of entailed overhead may significantly impede performance if these events occur frequently. To minimize overhead incurred, limit use of this event class to traces that briefly monitor specific problems.  

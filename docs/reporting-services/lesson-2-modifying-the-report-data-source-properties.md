@@ -2,20 +2,24 @@
 title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 2: Modifying the Report Data Source Properties
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use web portal to select a report that will be delivered to recipients. The data-driven subscription that you will define will distribute the **Sales Order** report created in the tutorial [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In the steps that follow, you will modify the data source connection information used by the report to get data. Only reports that use **stored credentials** to access a report data source can be distributed through a data-driven subscription. Stored credentials are necessary for unattended report processing.  

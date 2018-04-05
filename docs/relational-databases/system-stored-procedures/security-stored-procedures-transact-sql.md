@@ -1,10 +1,13 @@
 ---
 title: "Security Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,28 +23,30 @@ helpviewer_keywords:
   - "security [SQL Server], stored procedures"
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Security Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used to manage security. Some of these stored procedures are deprecated but continue to be available to support backward compatibility. The topics for deprecated procedures will list their replacement.  
 
 |||  
 |-|-|  
-|[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (Deprecated)|[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) |
-|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)|[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (Deprecated) |
-|[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (Deprecated)|[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (Deprecated) |
-|[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (Deprecated)|[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (Deprecated) |
-|[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (Deprecated)|[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) (Deprecated) |
-|[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) (Deprecated)|[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |
-|[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) |
-|[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (Deprecated)|[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |
-|[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (Deprecated)|[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (Deprecated) |
-|[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (Deprecated)|[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (Deprecated) |
-|[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (Deprecated) |
+[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (Deprecated)|
+|[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
+|[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (Deprecated) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (Deprecated)
+|[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (Deprecated) |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (Deprecated)
+|[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (Deprecated) |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (Deprecated)
+|[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) (Deprecated) |[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) (Deprecated)
+|[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
+|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) |[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (Deprecated)
+|[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (Deprecated)
+|[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (Deprecated) |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (Deprecated)
+|[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (Deprecated) |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (Deprecated) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (Deprecated) |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (Deprecated) |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (Deprecated) |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (Deprecated) |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (Deprecated) |

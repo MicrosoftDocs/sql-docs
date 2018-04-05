@@ -2,9 +2,12 @@
 title: "Replication over the Internet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "Internet [SQL Server replication], publishing"
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Replication over the Internet
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replicating data over the Internet allows remote, disconnected users to access data when they need it using a connection to the Internet. Replicate data over the Internet using:  
   
 -   A Virtual Private Network (VPN). For more information, see [Publish Data over the Internet Using VPN](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  

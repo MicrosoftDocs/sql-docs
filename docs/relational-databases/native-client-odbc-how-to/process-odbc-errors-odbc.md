@@ -2,22 +2,27 @@
 title: "Process ODBC Errors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [ODBC]"
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Process ODBC Errors (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Two ODBC function calls can be used to retrieve ODBC messages: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). To obtain primary ODBC-related information in the **SQLState**, **pfNative**, and **ErrorMessage** diagnostic fields, call [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) until it returns SQL_NO_DATA. For each diagnostic record, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) can be called to retrieve individual fields. All driver-specific fields must be retrieved using **SQLGetDiagField**.  

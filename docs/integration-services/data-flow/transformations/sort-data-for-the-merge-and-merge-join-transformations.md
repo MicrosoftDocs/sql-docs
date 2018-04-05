@@ -2,9 +2,12 @@
 title: "Sort Data for the Merge and Merge Join Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Sort Data for the Merge and Merge Join Transformations
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], the Merge and Merge Join transformations require sorted data for their inputs. The input data must be sorted physically, and sort options must be set on the outputs and the output columns in the source or in the upstream transformation. If the sort options indicate that the data is sorted, but the data is not actually sorted, the results of the merge or merge join operation are unpredictable.  

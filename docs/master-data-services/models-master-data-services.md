@@ -2,9 +2,12 @@
 title: "Models (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ helpviewer_keywords:
   - "models [Master Data Services]"
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Models (Master Data Services)
   Models are the highest level of data organization in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. A model defines the structure of data in your master data management solution. A model contains the following objects:  

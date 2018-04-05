@@ -2,13 +2,16 @@
 title: "Creating Query-Scoped Cell Calculations (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Cell Calculations - Query-Scoped Cell Calculations
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   You use the **WITH** keyword in Multidimensional Expressions (MDX) to describe calculated cells within the context of a query. The **WITH** keyword has the following syntax:  
   
 ```  

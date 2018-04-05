@@ -1,23 +1,31 @@
 ---
 title: "SQL Server Data Mining Add-Ins for Office | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "12/18/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # SQL Server Data Mining Add-Ins for Office
+
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Data Mining Add-ins for Office is a lightweight set of tools for predictive analytics that lets you use data in Excel to build analytical models for prediction, recommendation, or exploration.  
+  
+> [!IMPORTANT]
+> The data mining add-in for Office is not supported in Office 2016 or later.
   
  The wizards and data management tools in the add-ins provide step-by-step instruction for these common data mining tasks:  
   

@@ -1,12 +1,14 @@
 ---
 title: "RDS Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +18,8 @@ ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # RDS Events
 > [!IMPORTANT]

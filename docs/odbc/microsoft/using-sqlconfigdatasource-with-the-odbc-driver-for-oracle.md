@@ -3,8 +3,11 @@ title: "Using SQLConfigDatasource with the ODBC Driver for Oracle | Microsoft Do
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Using SQLConfigDatasource with the ODBC Driver for Oracle
 > [!IMPORTANT]  

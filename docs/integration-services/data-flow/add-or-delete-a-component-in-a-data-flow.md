@@ -2,9 +2,12 @@
 title: "Add or Delete a Component in a Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Add or Delete a Component in a Data Flow
   Data flow components are sources, destinations, and transformations in a data flow. Before you can add components to a data flow, the control flow in the package must include a Data Flow task.  
@@ -51,7 +55,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Connect Components in a Data Flow](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   
   

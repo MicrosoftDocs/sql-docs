@@ -3,8 +3,11 @@ title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,15 +30,18 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # BULK INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Imports a data file into a database table or view in a user-specified format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -265,19 +271,15 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  The following format file uses the `SQLFLT8` data type to map the second data field to the second column:  
   
- `<?xml version="1.0"?>`  
-  
- `<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
-  
- `<RECORD>`  
-  
- `<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/>`  
-  
- `<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW>`  
-  
- `<COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/>`  
-  
- `<COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT>`  
+ ```
+ <?xml version="1.0"?> 
+ <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <RECORD> 
+ <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
+ <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
+ <COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/> 
+ <COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT> 
+ ```
   
  To use this format file (using the file name `C:\t_floatformat-c-xml.xml`) to import the test data into the test table, issue the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
@@ -332,7 +334,7 @@ Before [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, comma-sep
  For more information about this and other security considerations for using BULK INSERT, see [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### Permissions  
- Requires INSERT and ADMINISTER BULK OPERATIONS permissions. Additionally, ALTER TABLE permission is required if one or more of the following is true:  
+ Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Database, INSERT and ADMINISTER DATABASE BULK OPERATIONS permissions are required. Additionally, ALTER TABLE permission is required if one or more of the following is true:  
   
 -   Constraints exist and the CHECK_CONSTRAINTS option is not specified.  
   
@@ -412,7 +414,7 @@ WITH (FORMAT = 'CSV');
 ### F. Importing data from a file in Azure blob storage   
 The following example shows how to load data from a csv file in an Azure blob storage location, which has been configured as an external data source. This requires a database scoped credential using a shared access signature.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',

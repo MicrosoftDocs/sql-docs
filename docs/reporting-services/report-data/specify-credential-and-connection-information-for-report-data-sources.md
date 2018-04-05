@@ -2,12 +2,15 @@
 title: "Specify Credential and Connection Information for Report Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -30,9 +33,10 @@ helpviewer_keywords:
   - "Windows integrated security [Reporting Services]"
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: 61
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Specify Credential and Connection Information for Report Data Sources
   A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When sending a connection request over the network, the report server will either impersonate a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data Source Configuration and Network Connections](#DataSourceConfigurationConnections) further on in this topic.  

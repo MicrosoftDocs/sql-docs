@@ -2,9 +2,12 @@
 title: "Reinitialize Subscription(s) - One Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Reinitialize Subscription(s) dialog box"
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Reinitialize Subscription(s) - One Subscription
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Reinitialize Subscription(s)** dialog box allows you to mark a subscription for reinitialization. Reinitialization involves applying a snapshot to the Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  
   
 ## Options  

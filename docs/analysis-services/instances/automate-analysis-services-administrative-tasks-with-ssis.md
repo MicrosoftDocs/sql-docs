@@ -2,13 +2,16 @@
 title: "Automate Analysis Services Administrative Tasks with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Automate Analysis Services Administrative Tasks with SSIS
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enables you to automate execution of DDL scripts, cube and mining model processing tasks, and data mining query tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can be thought of as a collection of control flow and maintenance tasks, which can be linked to form sequential and parallel data processing jobs.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is designed to perform data cleaning operations during data processing tasks, and to bring together data from different data sources. When working with cubes and mining models, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can transform non-numeric data to numeric data, and can ensure that data values fall within expected bounds, thus creating clean data from which to populate fact tables and dimensions.  
@@ -42,6 +47,5 @@ manager: "erikre"
  [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)  
   
   

@@ -1,12 +1,15 @@
 ---
 title: "ParentCatalog Property (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -43,7 +46,8 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ParentCatalog Property (ADOX)
 Specifies the parent catalog of a Table, User, or Column object to provide access to provider-specific properties.  

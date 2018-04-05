@@ -3,8 +3,11 @@ title: "SQL_ARD_TYPE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL_ARD_TYPE
 The SQL_ARD_TYPE type identifier is used to indicate that the data in a buffer will be of the type specified in the SQL_DESC_CONCISE_TYPE field of the ARD. SQL_ARD_TYPE is entered in the *TargetType* argument of a call to **SQLGetData** instead of a specific data type and enables an application to change the data type of the buffer by changing the descriptor field. This value ties the data type of the *\*TargetValuePtr* buffer to the descriptor field. (SQL_ARD_TYPE is not entered in a call to **SQLBindCol** or **SQLBindParameter** because the type of the bound buffer is already tied to the SQL_DESC_TYPE and SQL_DESC_CONCISE_TYPE fields and can be changed at any time by changing either of those fields.)  

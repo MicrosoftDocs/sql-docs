@@ -2,12 +2,15 @@
 title: "Keyboard Shortcuts (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,7 +20,8 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Keyboard Shortcuts (Report Builder)
   When you create and edit paginated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  

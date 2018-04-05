@@ -3,8 +3,11 @@ title: "Create and Attach Schedules to Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,15 @@ ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create and Attach Schedules to Jobs
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 Scheduling [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs means defining the condition or conditions that cause the job to begin running without user interaction. You can schedule a job to run automatically by creating a new schedule for the job, or by attaching an existing schedule to the job.  
   
 There are two ways to create a schedule:  

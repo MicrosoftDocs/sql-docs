@@ -2,11 +2,14 @@
 title: "Server Properties in Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,9 +24,11 @@ ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Server Properties in Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrator can modify default server configuration properties of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Each instance has its own configuration properties, which are set independently of other instances on the same server.  
   
  To configure the server, use SQL Server Management Studio or edit the msmdsrv.ini file of a specific instance.  

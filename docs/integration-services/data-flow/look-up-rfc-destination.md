@@ -2,9 +2,12 @@
 title: "Look Up RFC Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Look Up RFC Destination
   Use the **Look Up RFC Destination** dialog box to look up an RFC destination that is defined in the SAP Netweaver BW system. When the list of available RFC destinations appears, select the destination that you want, and the component will populate the associated options with the required values.  

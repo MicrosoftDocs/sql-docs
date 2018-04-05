@@ -2,18 +2,22 @@
 title: "Shortcut Query Files (MDS Add-in for Excel) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "microsoft-excel-add-in"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Shortcut Query Files (MDS Add-in for Excel)
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use shortcut query files to quickly connect and load frequently-used data. You can also use them when you want to share MDS data with others. Instead of saving the worksheet and emailing it, you should save a shortcut query file and email that instead. This ensures that you are both connecting to the MDS repository to get the latest data.  

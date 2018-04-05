@@ -1,22 +1,27 @@
 ---
 title: "Sequence command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2017"
-ms.prod: "sql-server-2016"
+ms.date: "03/12/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Sequence command (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Use the **Sequence** command to run a consecutive set of operations in batch mode on an instance of Analysis Services.  The entire command and all of its component parts must complete in order for the transaction to succeed.  
   
  The following commands can be run sequentially, except for the **Refresh** command which runs in parallel to process multiple objects concurrently.  
@@ -38,8 +43,6 @@ manager: "erikre"
 -   [Attach command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
   
 -   [Detach command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
-  
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
   
 ## Request  
  **maxParallelism** is an optional property that determines whether **Refresh** operations run sequentially or in parallel.  
@@ -84,7 +87,7 @@ manager: "erikre"
         {   
           "refresh": {   
             "type": "calculate",   
-            "object": {   
+            "objects": {   
              "database": "salesdatabase"   
             }   
           }   
@@ -109,8 +112,6 @@ manager: "erikre"
  You cannot generate a ready-made script  for this command from SSMS. Instead, you can start with an example or write your own.  
   
  The [\[MS-SSAS-T\]: SQL Server Analysis Services Tabular (SQL Server Technical Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) document includes section 3.1.5.2.2 that describes the structure of JSON tabular metadata commands and objects. Currently, that document covers commands and capabilities not yet implemented in TMSL script. Refer to the topic ([Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) for clarification on what is supported.  
-  
- For instructions on how to leverage TMSL script in practical solutions, see [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md).  
   
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

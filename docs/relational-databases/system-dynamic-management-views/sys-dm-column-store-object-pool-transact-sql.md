@@ -3,8 +3,11 @@ title: "sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,10 +18,11 @@ ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_column_store_object_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Returns counts of different types of object memory pool usage for columnstore index objects.  
   
@@ -37,9 +41,9 @@ manager: "jhubbard"
 |`object_load_time`|`datetime`|Clock-time for when object_id was brought into the object pool.|  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
 
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
  
 ## See Also  
   

@@ -2,12 +2,15 @@
 title: "Secure Development (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -18,9 +21,10 @@ helpviewer_keywords:
   - "security [Reporting Services], strategies"
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Secure Development (Reporting Services)
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides a robust security system that can run code in tightly constrained, administrator-defined security contexts. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] uses the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] security system, known as code access security (or evidence-based security). Under code access security, a user may be trusted to access a resource, but if the code the user executes is not trusted, access to the resource will be denied.  

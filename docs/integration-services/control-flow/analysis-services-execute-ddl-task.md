@@ -2,15 +2,20 @@
 title: "Analysis Services Execute DDL Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.asexecuteddltask.f1"
+  - "sql13.dts.designer.asexecuteddltask.general.f1"
+  - "sql13.dts.designer.asexecuteddltask.ddl.f1"
 helpviewer_keywords: 
   - "Analysis Services Execute DDL task"
   - "DDL"
@@ -18,7 +23,8 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Analysis Services Execute DDL Task
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task runs data definition language (DDL) statements that can create, drop, or alter mining models and multidimensional objects such as cubes and dimensions. For example, a DDL statement can create a partition in the **Adventure Works** cube, or delete a dimension in [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], the sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -214,11 +220,7 @@ manager: "jhubbard"
 ## Configuration of the Analysis Services Execute DDL Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Analysis Services Execute DDL Task Editor &#40;General Page&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Analysis Services Execute DDL Task Editor &#40;DDL Page&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -231,4 +233,52 @@ manager: "jhubbard"
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## Analysis Services Execute DDL Task Editor (General Page)
+  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task.  
+  
+### Options  
+ **Name**  
+ Provide a unique name for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task.  
+  
+## Analysis Services Execute DDL Task Editor (DDL Page)
+  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.  
+  
+### Static Options  
+ **Connection**  
+ Select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.  
+  
+ **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ Specify the source type of the DDL statements. This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Direct Input**|Set the source to the DDL statement stored in the **SourceDirect** text box. Selecting this value displays the dynamic options in the following section.|  
+|**File Connection**|Set the source to a file that contains the DDL statement. Selecting this value displays the dynamic options in the following section.|  
+|**Variable**|Set the source to a variable. Selecting this value displays the dynamic options in the following section.|  
+  
+### Dynamic Options  
+  
+#### SourceType = Direct Input  
+ **Source**  
+ Type the DDL statements or click the ellipsis **(…)** and then type the statements in the **DDL Statements** dialog box.  
+  
+#### SourceType = File Connection  
+ **Source**  
+ Select a File connection in the list, or click \<**New connection...**> and use the **File Connection Manager** dialog box to create a new connection.  
+  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### SourceType = Variable  
+ **Source**  
+ Select a variable in the list, or click \<**New variable...**> and use the **Add Variable** dialog box to create a new variable.  
+  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
   

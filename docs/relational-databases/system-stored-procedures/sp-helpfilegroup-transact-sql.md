@@ -3,8 +3,11 @@ title: "sp_helpfilegroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "sp_helpfilegroup"
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_helpfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the names and attributes of filegroups associated with the current database.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### A. Returning all filegroups in a database  
  The following example returns information about the filegroups in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -84,7 +84,7 @@ GO
 ### B. Returning all files in a filegroup  
  The following example returns information for all files in the `PRIMARY` filegroup in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

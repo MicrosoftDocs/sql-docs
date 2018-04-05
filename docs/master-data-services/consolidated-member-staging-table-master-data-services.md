@@ -2,9 +2,12 @@
 title: "Consolidated Member Staging Table (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ helpviewer_keywords:
   - "attributes staging table [Master Data Services]"
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Consolidated Member Staging Table (Master Data Services)
   Use the consolidated members staging table (stg.name_Consolidated) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete consolidated members. You can also use it to update attribute values for consolidated members.  

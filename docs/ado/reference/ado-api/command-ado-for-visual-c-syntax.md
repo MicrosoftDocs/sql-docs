@@ -1,12 +1,15 @@
 ---
 title: "Command (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Command (ADO for Visual C++ Syntax)
 ## Methods  

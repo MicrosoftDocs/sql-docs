@@ -3,8 +3,11 @@ title: "sys.fulltext_languages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,10 +26,11 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   This catalog view contains one row per language whose word breakers are registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the LCID and name of the language. When word breakers are registered for a language, its other linguistic resources—stemmers, noise words (stopwords), and thesaurus files—become available to full-text indexing/querying operations. The value of **name** or **lcid** can be specified in the full-text queries and full-text index [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
    

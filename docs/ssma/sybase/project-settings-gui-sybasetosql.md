@@ -3,8 +3,11 @@ title: "Project Settings (GUI) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Project Settings (GUI) (SybaseToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and whether to show the assessment report after conversion or not.  

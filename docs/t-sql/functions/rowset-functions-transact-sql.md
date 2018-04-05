@@ -3,8 +3,11 @@ title: "Rowset Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,12 +20,13 @@ helpviewer_keywords:
   - "rowsets [SQL Server]"
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Rowset Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The following rowset functions return an object that can be used in place of a table reference in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   

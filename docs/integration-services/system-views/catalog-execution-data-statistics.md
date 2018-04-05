@@ -2,9 +2,12 @@
 title: "catalog.execution_data_statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.execution_data_statistics
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This view displays a row each time a data flow component sends data to a downstream component, for a given package execution. The information in this view can be used to compute the data throughput for a component.  
   
@@ -40,7 +44,7 @@ manager: "jhubbard"
   
 -   By default, when an execution is started, the information about the number of rows that are sent is not logged.  
   
--   To view this data for a given package execution, set the logging level to **Verbose**. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
+-   To view this data for a given package execution, set the logging level to **Verbose**. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ## Permissions  
  This view requires one of the following permissions:  

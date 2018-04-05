@@ -1,11 +1,13 @@
 ---
 title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.custom: ""
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +28,13 @@ helpviewer_keywords:
   - "DML triggers, removing"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Removes one or more DML or DDL triggers from the current database.  
   
@@ -40,47 +43,26 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      -- SQL Server Syntax  
-  
-Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
+-- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  
   
-Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE or UPDATE statement (DDL Trigger)  
+-- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE or UPDATE statement (DDL Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] trigger_name [ ,...n ]   
 ON { DATABASE | ALL SERVER }   
 [ ; ]  
   
-Trigger on a LOGON event (Logon Trigger)  
+-- Trigger on a LOGON event (Logon Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] trigger_name [ ,...n ]   
 ON ALL SERVER  
-  
 ```  
-  
-```  
-  
-      -- Windows Azure SQL Database Syntax  
-  
-Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
-  
-DROP TRIGGER [schema_name.]trigger_name [ ,...n ] [ ; ]   
-  
-Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE or UPDATE statement (DDL Trigger)   
-  
-DROP TRIGGER trigger_name [ ,...n ]   
-ON { DATABASE }   
-[ ; ]  
-  
-```  
+
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Conditionally drops the trigger only if it already exists.  
   
@@ -94,9 +76,7 @@ ON { DATABASE }
  Indicates the scope of the DDL trigger applies to the current database. DATABASE must be specified if it was also specified when the trigger was created or modified.  
   
  ALL SERVER  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indicates the scope of the DDL trigger applies to the current server. ALL SERVER must be specified if it was also specified when the trigger was created or modified. ALL SERVER also applies to logon triggers.  
   
@@ -131,7 +111,6 @@ ON { DATABASE }
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
-  
 ```  
   
 ### B. Dropping a DDL trigger  
@@ -143,7 +122,6 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 ```  
 DROP TRIGGER safety  
 ON DATABASE;  
-  
 ```  
   
 ## See Also  

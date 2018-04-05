@@ -1,12 +1,15 @@
 ---
 title: "Execute Method (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Execute Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.5 and later.  

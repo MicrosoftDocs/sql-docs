@@ -2,9 +2,12 @@
 title: "Data Profiling Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,7 +22,8 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Data Profiling Task
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  
@@ -38,7 +42,7 @@ manager: "jhubbard"
  After using the task to compute data profiles and save them in a file, you can use the stand-alone Data Profile Viewer to review the profile output. The Data Profile Viewer also supports drilldown capability to help you understand data quality issues tha are identified in the profile output. For more information, see [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that the database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that the database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
 >   
 >  The drilldown capability, that is available in the Data Profile Viewer, sends live queries to the original data source.  
   
@@ -107,7 +111,7 @@ manager: "jhubbard"
 -   **Quick Profile** You can select Quick Profile to configure the task quickly. A Quick Profile profiles a table or view by using all the default profiles and default settings.  
   
 ## Custom Logging Messages Available on the Data Profililng Task  
- The following table lists the custom log entries for the Data Profiling task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the Data Profiling task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

@@ -3,8 +3,11 @@ title: "Open Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Open Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can open an existing query in Query and View Designer by using the **Open** command.  
   
 ### To open a query in all panes  

@@ -3,8 +3,11 @@ title: "sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contains one row for each by-name dependency on a user-defined entity in the current database. This includes dependences between natively compiled, scalar user-defined functions and other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modules. A dependency between two entities is created when one entity, called the *referenced entity*, appears by name in a persisted SQL expression of another entity, called the *referencing entity*. For example, when a table is referenced in the definition of a view, the view, as the referencing entity, depends on the table, the referenced entity. If the table is dropped, the view is unusable.  
   

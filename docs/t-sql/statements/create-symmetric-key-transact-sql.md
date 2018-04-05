@@ -1,10 +1,13 @@
 ---
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server]"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 caps.latest.revision: 72
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Generates a symmetric key and specifies its properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,37 +43,31 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  
-    WITH <key_options> [ , ... n ]  
-    |  
-    ENCRYPTION BY <encrypting_mechanism> [ , ... n ]  
+    WITH 
+      [
+          <key_options> [ , ... n ]  
+        | ENCRYPTION BY <encrypting_mechanism> [ , ... n ] 
+      ]
   
 <key_options> ::=  
-    KEY_SOURCE = 'pass_phrase'  
-    |  
-    ALGORITHM = <algorithm>  
-    |  
-    IDENTITY_VALUE = 'identity_phrase'  
-    |  
-    PROVIDER_KEY_NAME = 'key_name_in_provider'   
-    |  
-    CREATION_DISPOSITION = {CREATE_NEW | OPEN_EXISTING }  
+      KEY_SOURCE = 'pass_phrase'  
+    | ALGORITHM = <algorithm>  
+    | IDENTITY_VALUE = 'identity_phrase'  
+    | PROVIDER_KEY_NAME = 'key_name_in_provider'   
+    | CREATION_DISPOSITION = {CREATE_NEW | OPEN_EXISTING }  
   
 <algorithm> ::=  
     DES | TRIPLE_DES | TRIPLE_DES_3KEY | RC2 | RC4 | RC4_128  
     | DESX | AES_128 | AES_192 | AES_256   
   
 <encrypting_mechanism> ::=  
-    CERTIFICATE certificate_name   
-    |  
-    PASSWORD = 'password'   
-    |  
-    SYMMETRIC KEY symmetric_key_name   
-    |  
-    ASYMMETRIC KEY asym_key_name  
+      CERTIFICATE certificate_name   
+    | PASSWORD = 'password'   
+    | SYMMETRIC KEY symmetric_key_name   
+    | ASYMMETRIC KEY asym_key_name  
 ```  
   
 ## Arguments  
@@ -98,7 +96,7 @@ CREATE SYMMETRIC KEY key_name
 >  This option is not available in a contained database.  
   
  CREATION_DISPOSITION **=** CREATE_NEW  
- Creates a new key can on the Extensible Key Management device.  If a key already exists on the device, the statement fails with error.  
+ Creates a new key on the Extensible Key Management device.  If a key already exists on the device, the statement fails with error.  
   
  CREATION_DISPOSITION **=** OPEN_EXISTING  
  Maps a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] symmetric key to an existing Extensible Key Management key. If CREATION_DISPOSITION = OPEN_EXISTING is not provided, this defaults to CREATE_NEW.  
@@ -107,28 +105,30 @@ CREATE SYMMETRIC KEY key_name
  Specifies the name of the certificate that will be used to encrypt the symmetric key. The certificate must already exist in the database.  
   
  **'** *password* **'**  
- Specifies a password from which to derive a TRIPLE_DES key with which to secure the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You should always use strong passwords.  
+ Specifies a password from which to derive a TRIPLE_DES key with which to secure the symmetric key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Always use strong passwords.  
   
  *symmetric_key_name*  
- Specifies a symmetric key to be used to encrypt the key that is being created. The specified key must already exist in the database, and the key must be open.  
+ Specifies a symmetric key, used to encrypt the key that is being created. The specified key must already exist in the database, and the key must be open.  
   
  *asym_key_name*  
- Specifies an asymmetric key to be used to encrypt the key that is being created. This asymmetric key must already exist in the database.  
+ Specifies an asymmetric key, used to encrypt the key that is being created. This asymmetric key must already exist in the database.  
   
  \<algorithm>  
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
+Specify the encrypting algorithm.   
+> [!WARNING]  
+> Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended), you must set the database to database compatibility level 120 or lower.  
   
 ## Remarks  
  When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  
   
 > [!CAUTION]  
->  When a symmetric key is encrypted with a password instead of the public key of the database master key, the TRIPLE DES encryption algorithm is used. Because of this, keys that are created with a strong encryption algorithm, such as AES, are themselves secured by a weaker algorithm.  
+>  When a symmetric key is encrypted with a password instead of a certificate (or another key), the TRIPLE DES encryption algorithm is used to encrypt the password. Because of this, keys that are created with a strong encryption algorithm, such as AES, are themselves secured by a weaker algorithm.  
   
  The optional password can be used to encrypt the symmetric key before distributing the key to multiple users.  
   
  Temporary keys are owned by the user that creates them. Temporary keys are only valid for the current session.  
   
- IDENTITY_VALUE generates a GUID with which to tag data that is encrypted with the new symmetric key. This tagging can be used to match keys to encrypted data. The GUID generated by a specific phrase will always be the same. After a phrase has been used to generate a GUID, the phrase cannot be reused as long as there is at least one session that is actively using the phrase. IDENTITY_VALUE is an optional clause; however, we recommend using it when you are storing data encrypted with a temporary key.  
+ IDENTITY_VALUE generates a GUID with which to tag data that is encrypted with the new symmetric key. This tagging can be used to match keys to encrypted data. The GUID generated by a specific phrase is always the same. After a phrase has been used to generate a GUID, the phrase cannot be reused as long as there is at least one session that is actively using the phrase. IDENTITY_VALUE is an optional clause; however, we recommend using it when you are storing data encrypted with a temporary key.  
   
  There is no default encryption algorithm.  
   
@@ -142,14 +142,12 @@ CREATE SYMMETRIC KEY key_name
  **Clarification regarding DES algorithms:**  
   
 -   DESX was incorrectly named. Symmetric keys created with ALGORITHM = DESX actually use the TRIPLE DES cipher with a 192-bit key. The DESX algorithm is not provided. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
 -   Symmetric keys created with ALGORITHM = TRIPLE_DES_3KEY use TRIPLE DES with a 192-bit key.  
-  
 -   Symmetric keys created with ALGORITHM = TRIPLE_DES use TRIPLE DES with a 128-bit key.  
   
  **Deprecation of the RC4 algorithm:**  
   
- Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data will result in the same RC4 key because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well known error that will result in very weak encryption. Therefore we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+ Repeated use of the same RC4 or RC4_128 KEY_GUID on different blocks of data, results in the same RC4 key because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide a salt automatically. Using the same RC4 key repeatedly is a well known error that will result in very weak encryption. Therefore we have deprecated the RC4 and RC4_128 keywords. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!WARNING]  
 >  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  

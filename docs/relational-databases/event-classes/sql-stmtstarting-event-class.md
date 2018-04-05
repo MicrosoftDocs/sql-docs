@@ -2,9 +2,12 @@
 title: "SQL:StmtStarting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "SQL:StmtStarting event class"
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL:StmtStarting Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The SQL:StmtStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has started.  
   
 ## SQL:StmtStarting Event Class Data Columns  

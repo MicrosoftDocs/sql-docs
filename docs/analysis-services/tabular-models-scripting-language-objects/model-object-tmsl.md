@@ -1,27 +1,32 @@
 ---
 title: "Model object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Model object (TMSL)
-  Defines a Tabular model at compatibility level 1200 or greater. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Defines a Tabular model. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
   
  Model definitions are too large to reproduce the entire syntax in one topic. For this reason, a  partial syntax highlighting the main parts can be found below, with links to child objects.  
   
- Perhaps the best way to understand a model definition is to start with a Tabular model that you know well, upgrade it to compatibility level 1200, and then use the **View Code** option in SQL Server Data Tools to view its definition. Remember to install a JSON editor so that you can view the code. You can get a JSON editor in Visual Studio by [downloading the Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) or other edition of Visual Studio.  
+ Perhaps the best way to understand a model definition is to start with a Tabular model that you know well. Use the **View Code** option in SQL Server Data Tools to view its definition. Remember to install a JSON editor so that you can view the code. You can get a JSON editor in Visual Studio by [downloading the Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) or other edition of Visual Studio.  
   
 > [!NOTE]  
 >  In any script, only one database at the time can be referenced. For any object other than database itself, the Database property is optional if you specify the model. There is one-to-one mapping between a Model and a Database that can be used to deduce the Database name if it's not explicitly provided.   

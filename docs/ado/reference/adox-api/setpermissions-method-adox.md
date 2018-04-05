@@ -1,12 +1,15 @@
 ---
 title: "SetPermissions Method (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -21,7 +24,8 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SetPermissions Method (ADOX)
 Specifies the permissions for a [group](../../../ado/reference/adox-api/group-object-adox.md) or [user](../../../ado/reference/adox-api/user-object-adox.md) on an object.  

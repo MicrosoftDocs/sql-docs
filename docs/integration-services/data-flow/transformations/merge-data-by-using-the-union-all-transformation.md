@@ -2,9 +2,12 @@
 title: "Merge Data by Using the Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,7 +22,8 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Merge Data by Using the Union All Transformation
   To add and configure a Union All transformation, the package must already include at least one Data Flow task and two data sources.  

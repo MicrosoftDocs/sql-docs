@@ -2,22 +2,27 @@
 title: "SPN registration for an Analysis Services instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # SPN registration for an Analysis Services instance
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A Service Principle Name (SPN) uniquely identifies a service instance in an Active Directory domain when Kerberos is used to mutually authenticate client and service identities. An SPN is associated with the logon account under which the service instance runs.  
   
  For client applications connecting to Analysis Services via Kerberos authentication, the Analysis Services client libraries construct an SPN using the host name from the connection string and other well-known variables, such as the service class, that are fixed in any given release of Analysis Services.  

@@ -3,8 +3,11 @@ title: "RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # RESTORE DATABASE (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   

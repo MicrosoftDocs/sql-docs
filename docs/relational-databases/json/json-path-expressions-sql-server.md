@@ -1,11 +1,12 @@
 ---
 title: "JSON Path Expressions (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "01/23/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -17,12 +18,13 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # JSON Path Expressions (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Use JSON paths to reference the properties of JSON objects. JSON paths use a syntax similar to Javascript.  
+ Use JSON path expressions to reference the properties of JSON objects.  
   
  You have to provide a path expression when you call the following functions.  
   
@@ -37,16 +39,25 @@ manager: "jhubbard"
 ## Parts of a path expression
  A path expression has two components.  
   
-1.  The optional [path mode](#PATHMODE), **lax** or **strict**.  
+1.  The optional [path mode](#PATHMODE), with a value of **lax** or **strict**.  
   
 2.  The [path](#PATH) itself.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  At the beginning of the path expression, optionally declare the path mode by specifying the keyword **lax** or **strict**. The default is **lax**.  
   
--   In **lax** mode, the functions return empty values if the path expression contains an error. For example, if you request the value **$.name**, and the JSON text doesn't contain a **name** key, the function returns null.  
+-   In **lax** mode, the function returns empty values if the path expression contains an error. For example, if you request the value **$.name**, and the JSON text doesn't contain a **name** key, the function returns null, but does not raise an error.  
   
--   In **strict** mode, the functions raise errors if the path expression contains an error.  
+-   In **strict** mode, the function raises an error if the path expression contains an error.  
+
+The following query explicitly specifies `lax` mode in the path expression.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  After the optional path mode declaration, specify the path itself.  
@@ -59,7 +70,7 @@ manager: "jhubbard"
   
     -   Array elements. For example, `$.product[3]`. Arrays are zero-based.  
   
-    -   The dot operator (`.`) indicates a member of an object.  
+    -   The dot operator (`.`) indicates a member of an object. For example, in `$.people[1].surname`, `surname` is a child of `people`.
   
 ## Examples  
  The examples in this section reference the following JSON text.  
@@ -87,15 +98,31 @@ manager: "jhubbard"
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## How built-in functions handle duplicate paths  
- If the JSON text contains duplicate properties - for example, two keys with the same name on the same level - the JSON_VALUE and JSON_QUERY functions return the first value that matches the path. To parse a JSON object that contains duplicate keys, use OPENJSON, as shown in the following example.  
+ If the JSON text contains duplicate properties - for example, two keys with the same name on the same level - the **JSON_VALUE** and **JSON_QUERY** functions return only the first value that matches the path. To parse a JSON object that contains duplicate keys and return all values, use **OPENJSON**, as shown in the following example.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 
 SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   

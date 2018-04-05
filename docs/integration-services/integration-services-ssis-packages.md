@@ -2,9 +2,12 @@
 title: "Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -23,7 +26,8 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 72
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Integration Services (SSIS) Packages
   A package is an organized collection of connections, control flow elements, data flow elements, event handlers, variables, parameters, and configurations, that you assemble using either the graphical design tools that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, or build programmatically.  You then save the completed package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, or the file system, or you can deploy the ssISnoversion project to the [!INCLUDE[ssIS](../includes/ssis-md.md)] server. The package is the unit of work that is retrieved, executed, and saved.  
@@ -74,13 +78,13 @@ manager: "jhubbard"
  The package includes checkpoint properties that you can use to restart the package when one or more of its tasks fail. For example, if a package has two Data Flow tasks that update two different tables and the second task fails, the package can be rerun without repeating the first Data Flow task. Restarting a package can save time for long-running packages. Restarting means you can start the package from the failed task instead of having to rerun the whole package. For more information, see [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### Securing Packages  
- A package can be signed with a digital signature and encrypted by using a password or a user key. A digital signature authenticates the source of the package. However, you must also configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check the digital signature when the package loads. For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md) and [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ A package can be signed with a digital signature and encrypted by using a password or a user key. A digital signature authenticates the source of the package. However, you must also configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check the digital signature when the package loads. For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) and [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 ### Supporting Transactions  
  Setting a transaction attribute on the package enables tasks, containers, and connections in the package to join the transaction. Transaction attributes ensure that the package and its elements succeed or fail as a unit. Packages can also run other packages and enroll other packages in transactions, so that you can run multiple packages as a single unit of work. For more information, see [Integration Services Transactions](../integration-services/integration-services-transactions.md).  
   
 ## Custom log entries available on the package  
- The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

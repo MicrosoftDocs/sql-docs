@@ -2,11 +2,14 @@
 title: "Initialize a Report Server (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,10 @@ helpviewer_keywords:
   - "verifying report server initializations"
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # SSRS Encryption Keys - Initialize a Report Server
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], an initialized server is one that can encrypt and decrypt data in a report server database. Initialization is a requirement for report server operation. Initialization occurs when the Report Server service is started for the first time. It also occurs when you join the report server to the existing deployment, or when you manually recreate the keys as part of the recovery process. For more information about how and why encryption keys are used, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  

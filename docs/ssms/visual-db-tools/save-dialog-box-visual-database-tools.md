@@ -3,8 +3,11 @@ title: "Save Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Save Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Appears when you save your work in Table Designer and that work affects other tables. This dialog box lets you confirm the tables that will be saved.  
   
 > [!NOTE]  

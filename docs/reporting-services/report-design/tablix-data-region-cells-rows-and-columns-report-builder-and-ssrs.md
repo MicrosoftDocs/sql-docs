@@ -2,12 +2,15 @@
 title: "Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,7 +22,8 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS
   To control how the rows and columns of a tablix data region display data in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you must understand how to specify rows and columns for detail data, for group data, and for labels and totals. In many cases, you can use the default structures for a table, matrix, or list to display your data. For more information, see [Tables &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md),  [Matrixes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), or [Lists](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  

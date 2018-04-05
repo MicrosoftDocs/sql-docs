@@ -2,9 +2,12 @@
 title: "Save Traces and Trace Templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "sql-server-profiler"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,11 +23,13 @@ helpviewer_keywords:
   - "SQL Server Profiler, templates"
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Save Traces and Trace Templates
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  
   
 ## Saving Traces  

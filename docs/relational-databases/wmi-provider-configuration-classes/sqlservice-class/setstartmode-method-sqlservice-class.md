@@ -2,9 +2,12 @@
 title: "SetStartMode Method (SqlService Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "SetStartMode method"
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SetStartMode Method (SqlService Class)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Modifies the start mode of the service instance.  
   
 ## Syntax  

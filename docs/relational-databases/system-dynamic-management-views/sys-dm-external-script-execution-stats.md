@@ -2,11 +2,14 @@
 title: "sys.dm_external_script_execution_stats | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "r-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,10 +25,11 @@ ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_external_script_execution_stats
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 
   Returns one row for each type of external script request. The external script requests are grouped by the supported external script language. One row is generated for each registered external script functions. Arbitrary external script functions are not recorded unless sent by a parent process, such as `rxExec`.
@@ -58,9 +62,9 @@ Therefore, the counters tracked by this DMV are kept running, and state for sys.
    
   
 ### R Counter Values
- Currently the only external script language supported in [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] is R. External script requests for the R language are handled by [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. For more information about how external script requests interact with SQL Server, see [Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md). 
+ Currently the only external script language supported in [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] is R. External script requests for the R language are handled by [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
 
-For SQL Server R Services, this DMV tracks how many R calls are made on an instance. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
+For R, this DMV tracks the number of R calls that are made on an instance. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
  
 For the R language, the counter values displayed in the *counter_name* field represent the names of registered ScaleR functions. The values in the *counter_value* field represent the cumulative number of instances that the specific ScaleR function. 
 

@@ -3,8 +3,11 @@ title: "Introduction to SQL Server Management Studio for BI | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Introduction to SQL Server Management Studio for Business Intelligence
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], the administrative tasks associated with each of these technologies are slightly different.  
   
 > [!NOTE]  

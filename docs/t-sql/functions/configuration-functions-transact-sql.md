@@ -1,10 +1,13 @@
 ---
 title: "Configuration Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,14 +21,15 @@ helpviewer_keywords:
   - "configuration functions [SQL Server]"
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Configuration Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  The following scalar functions return information about current configuration option settings:  
+The following scalar functions return information about current configuration option settings:
   
 |||  
 |-|-|  
@@ -38,9 +42,9 @@ manager: "jhubbard"
 |[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
 |[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
   
- All configuration functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+All configuration functions are nondeterministic. This means these functions do not always return the same results every time they are called, even with the same set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
-## See Also  
- [Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
+## See also
+[Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

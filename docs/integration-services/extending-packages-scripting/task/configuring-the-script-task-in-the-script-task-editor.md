@@ -2,9 +2,12 @@
 title: "Configuring the Script Task in the Script Task Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,8 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Configuring the Script Task in the Script Task Editor
   Before you write custom code in the Script task, you configure its principal properties in the three pages of the **Script Task Editor**. You can configure additional task properties that are not unique to the Script task by using the Properties window.  
@@ -58,10 +62,6 @@ manager: "jhubbard"
   
 ## Expressions Page of the Script Task Editor  
  On the **Expressions** page of the **Script Task Editor**, you can use expressions to provide values for the properties of the Script task listed above and for many other task properties. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from [!INCLUDE[msCoName](../../../includes/msconame-md.md)], as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Coding and Debugging the Script Task](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  

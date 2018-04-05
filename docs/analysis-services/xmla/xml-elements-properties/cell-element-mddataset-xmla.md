@@ -2,12 +2,15 @@
 title: "Cell Element (MDDataSet) (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,11 +28,13 @@ helpviewer_keywords:
   - "Cell element"
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cell Element (MDDataSet) (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains information about a single cell contained by a parent [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) element.  
   
 ## Syntax  

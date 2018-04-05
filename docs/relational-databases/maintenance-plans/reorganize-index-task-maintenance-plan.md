@@ -1,10 +1,13 @@
 ---
 title: "Reorganize Index Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "07/21/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Reorganize Index Task dialog box"
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Reorganize Index Task (Maintenance Plan)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases.  
   
 ## Options  
@@ -56,12 +61,17 @@ manager: "jhubbard"
   
  **Compact large objects**  
  Deallocate space for tables and views when possible. This option uses `ALTER INDEX LOB_COMPACTION = ON`.  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
  **View T-SQL**  
  View the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.  
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
+
   
 ## New Connection Dialog Box  
  **Connection name**  

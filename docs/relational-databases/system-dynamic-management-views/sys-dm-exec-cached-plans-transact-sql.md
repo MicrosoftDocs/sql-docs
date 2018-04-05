@@ -1,10 +1,13 @@
 ---
 title: "sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_exec_cached_plans dynamic management view"
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.dm_exec_cached_plans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns a row for each query plan that is cached by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for faster query execution. You can use this dynamic management view to find cached query plans, cached query text, the amount of memory taken by cached plans, and the reuse count of the cached plans.  
   
@@ -49,11 +53,11 @@ manager: "jhubbard"
   
  <sup>1</sup>  
   
-## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+## Permissions
+
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Examples  
   
 ### A. Returning the batch text of cached entries that are reused  
@@ -80,7 +84,7 @@ GO
 ```  
   
 ### C. Returning the SET options with which the plan was compiled  
- The following example returns the SET options with which the plan was compiled. The `sql`_`handle` for the plan is also returned. The PIVOT operator is used to output the `set`\_`options` and `sql`\_`handle` attributes as columns rather than as rows. For more information about the value returned in `set`\_`options`, see [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ The following example returns the SET options with which the plan was compiled. The `sql_handle` for the plan is also returned. The PIVOT operator is used to output the `set_options` and `sql_handle` attributes as columns rather than as rows. For more information about the value returned in `set_options`, see [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
@@ -99,7 +103,7 @@ GO
   
 ```  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
-    omo.memory_object_address, pages_allocated_count, type, page_size_in_bytes   
+    omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   
 JOIN sys.dm_os_memory_objects AS omo   
     ON ecp.memory_object_address = omo.memory_object_address   

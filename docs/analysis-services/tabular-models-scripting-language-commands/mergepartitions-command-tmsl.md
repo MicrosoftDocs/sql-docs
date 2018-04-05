@@ -1,25 +1,28 @@
 ---
 title: "MergePartitions command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MergePartitions command (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Merges the data of one or more source partitions into a target partition, and then deletes the source partition. The SQL Query of the target partition will not be updated as part of the merge. To ensure that subsequent processing of the partition retrieves all of the data, you should revise the query so that it selects all of the data in the merged partition.  
-  
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
   
 ## Request  
  You must specify the database, table, and source and target partitions. You can only merge partitions from the same table.  
@@ -64,11 +67,9 @@ manager: "erikre"
  You can generate a ready-made script  for this command from SSMS.  For example, you can click the **Script** in Partition Management dialog box.  
   
  The [\[MS-SSAS-T\]: QL Server Analysis Services Tabular (SQL Server Technical Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) document includes section 3.1.5.2.2 that describes the structure of JSON tabular metadata commands and objects. Currently, that document covers commands and capabilities not yet implemented in TMSL script. Refer to the topic [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for clarification on what is supported  
-  
- For instructions on how to leverage TMSL script in practical solutions, see [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md).  
-  
+
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

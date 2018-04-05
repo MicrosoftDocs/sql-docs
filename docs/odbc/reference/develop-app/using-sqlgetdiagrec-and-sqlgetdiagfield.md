@@ -3,8 +3,11 @@ title: "Using SQLGetDiagRec and SQLGetDiagField | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using SQLGetDiagRec and SQLGetDiagField
 Applications call **SQLGetDiagRec** or **SQLGetDiagField** to retrieve diagnostic information. These functions accept an environment, connection, statement, or descriptor handle and return diagnostics from the function that last used that handle. The diagnostics logged on a particular handle are discarded when a new function is called using that handle. If the function returned multiple diagnostic records, the application calls these functions multiple times; the total number of status records is retrieved by calling **SQLGetDiagField** for the header record (record 0) with the SQL_DIAG_NUMBER option.  
@@ -42,10 +46,12 @@ GetSQLStmt(SQLStmt);
   
 // Execute the SQL statement and return any errors or warnings.  
 rc1 = SQLExecDirect(hstmt, SQLStmt, SQL_NTS);  
-if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {  
-   // Get the status records.  
+if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {
+   SQLLEN numRecs = 0;
+   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
+   // Get the status records.
    i = 1;  
-   while ((rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
+   while (i <= numRecs && (rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
             Msg, sizeof(Msg), &MsgLen)) != SQL_NO_DATA) {  
       DisplayError(SqlState,NativeError,Msg,MsgLen);  
       i++;  

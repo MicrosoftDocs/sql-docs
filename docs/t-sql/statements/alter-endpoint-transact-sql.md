@@ -3,8 +3,11 @@ title: "ALTER ENDPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "endpoints [SQL Server], modifying"
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # ALTER ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Enables modifying an existing endpoint in the following ways:  
   

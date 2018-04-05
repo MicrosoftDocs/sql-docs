@@ -2,12 +2,15 @@
 title: "Using URL Access in a Windows Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "application-integration"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,9 +23,10 @@ helpviewer_keywords:
   - "URL access [Reporting Services], Windows applications"
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 caps.latest.revision: 48
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Integrating Reporting Services Using URL Access - Windows Application
   Although URL access to a report server is optimized for a Web environment, you can also use URL access to embed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. However, URL access that involves Windows Forms still requires that you use Web browser technology. You can use the following integration scenarios with URL access and Windows Forms:  

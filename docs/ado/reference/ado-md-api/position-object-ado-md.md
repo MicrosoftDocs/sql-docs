@@ -1,12 +1,15 @@
 ---
 title: "Position Object (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Position Object (ADO MD)
 Represents a set of one or more members of different dimensions that defines a point along an axis.  

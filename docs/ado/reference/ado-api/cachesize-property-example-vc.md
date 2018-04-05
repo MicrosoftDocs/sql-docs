@@ -1,12 +1,15 @@
 ---
 title: "CacheSize Property Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CacheSize Property Example (VC++)
 This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  

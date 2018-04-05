@@ -2,9 +2,12 @@
 title: "Connect Components in a Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Connect Components in a Data Flow
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  
@@ -49,7 +53,7 @@ You construct the data flow in a package on the design surface of the **Data Flo
   
 ## See Also  
  [Add or Delete a Component in a Data Flow](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   
   

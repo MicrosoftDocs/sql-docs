@@ -3,8 +3,11 @@ title: "SET NOCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "SET NOCOUNT statement"
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # SET NOCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
   

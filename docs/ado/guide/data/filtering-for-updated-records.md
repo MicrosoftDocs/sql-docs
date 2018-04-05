@@ -1,12 +1,15 @@
 ---
 title: "Filtering for Updated Records | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,7 +18,8 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Filtering for Updated Records
 Before you call UpdateBatch, you can use the Recordset Filter property to view only those records that have been changed since the Recordset was opened or the last call to UpdateBatch. To do this, set Filter equal to adFilterPendingRecords to determine how many records will be updated, as shown in the code example in the next section.  

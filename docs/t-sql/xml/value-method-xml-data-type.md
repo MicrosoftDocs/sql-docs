@@ -1,10 +1,13 @@
 ---
 title: "value() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # value() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Performs an XQuery against the XML and returns a value of SQL type. This method returns a scalar value.  
   
  You typically use this method to extract a value from an XML instance stored in an **xml** type column, parameter, or variable. In this way, you can specify SELECT queries that combine or compare XML data with data in non-XML columns.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

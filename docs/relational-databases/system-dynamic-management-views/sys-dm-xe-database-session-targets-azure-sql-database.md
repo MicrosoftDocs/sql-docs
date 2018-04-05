@@ -1,13 +1,13 @@
 ---
 title: "sys.dm_xe_database_session_targets (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,10 +16,11 @@ ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_xe_database_session_targets (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns information about session targets.  
   

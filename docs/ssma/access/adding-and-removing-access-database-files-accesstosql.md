@@ -1,10 +1,13 @@
 ---
 title: "Adding and Removing Access Database Files (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -33,9 +36,10 @@ helpviewer_keywords:
   - "searching for database files"
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Adding and Removing Access Database Files (AccessToSQL)
 To migrate Access data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must add one or more Access databases to the SSMA project. These databases must be Access 97 or later versions. If you have databases from an earlier version of Access, you must convert the databases to a newer version. You do this by opening and saving the databases in Access 97 or a later version before you add them to SSMA.  

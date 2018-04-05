@@ -2,9 +2,12 @@
 title: "DQS Administration | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "dqs,adminstration"
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DQS Administration
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) allows you to administer and manage various DQS activities performed on [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configure server-level properties related to DQS activities, configure the Reference Data Service settings, and configure DQS log settings. These things are done through the **Administration** feature in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Depending upon your security access (role) in DQS, you are granted/denied access to certain functionalities in this area.  

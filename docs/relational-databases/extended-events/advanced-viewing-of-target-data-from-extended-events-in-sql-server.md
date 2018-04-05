@@ -3,20 +3,22 @@ title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Mic
 ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "xevents"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Advanced Viewing of Target Data from Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 This article illustrates how you can use the advanced features of SQL Server Management Studio (SSMS.exe) to view the target data from extended events in rich detail. The article explains how to:
@@ -137,7 +139,8 @@ The target data is displayed in a tabbed pane in SSMS. This is shown in the foll
 ![your target > View Target Data](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **View Target Data** displays the *accumulated data from multiple .XEL files* from the given event session. Each **Start**-**Stop** cycle creates a file with a later time-derived integer embedded in its name, but each file shares the same root name.
+> [!NOTE] 
+> **View Target Data** displays the *accumulated data from multiple .XEL files* from the given event session. Each **Start**-**Stop** cycle creates a file with a later time-derived integer embedded in its name, but each file shares the same root name.
 
 
 

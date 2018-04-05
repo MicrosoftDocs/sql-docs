@@ -3,8 +3,11 @@ title: "Index Related Dynamic Management Views and Functions (Transact-SQL) | Mi
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], index"
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Index Related Dynamic Management Views and Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section contains the following dynamic management objects.  
   

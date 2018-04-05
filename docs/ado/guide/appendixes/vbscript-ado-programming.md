@@ -1,12 +1,15 @@
 ---
 title: "VBScript ADO Programming | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  

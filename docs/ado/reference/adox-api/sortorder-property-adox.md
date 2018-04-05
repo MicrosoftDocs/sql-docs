@@ -1,12 +1,15 @@
 ---
 title: "SortOrder Property (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -22,7 +25,8 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SortOrder Property (ADOX)
 Indicates the sort sequence for the column (index columns only).  

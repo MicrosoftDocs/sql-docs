@@ -2,27 +2,32 @@
 title: "Remote Processing (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Remote Processing (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can run scheduled or unattended processing on a remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, where the processing request originates from one computer but executes on another computer on the same network.  
   
 ## Prerequisites  
   
--   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that is processing the model. For example, if processing is on a [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] instance, then the computer from which the request originates must have the client library corresponding to [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. See [Data providers used for Analysis Services connections](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md).  
+-   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that is processing the model.
   
 -   On the remote server, **Allow remote connections to this computer** must be enabled, and the account issuing the processing request must be listed as an allowed user.  
   

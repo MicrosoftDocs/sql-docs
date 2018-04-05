@@ -2,9 +2,12 @@
 title: "Troubleshoot Database Mirroring Configuration (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Troubleshoot Database Mirroring Configuration (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic provides information to help you troubleshoot problems in setting up a database mirroring session.  
   
 > [!NOTE]  

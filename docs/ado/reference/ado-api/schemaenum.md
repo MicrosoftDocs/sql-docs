@@ -1,12 +1,15 @@
 ---
 title: "SchemaEnum | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SchemaEnum
 Specifies the type of schema **Recordset** that the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method retrieves.  

@@ -1,4 +1,6 @@
 # [Database Mirroring Endpoint](the-database-mirroring-endpoint-sql-server.md)  
+
+# Endpoint Areas
 ## [Transport Security for Database Mirroring and Always On Availability Groups](transport-security-database-mirroring-always-on-availability.md)  
 ## [Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
 ## [Set Up Login Accounts for Database Mirroring or Always On Availability Groups](set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -6,6 +8,7 @@
 ## [Use Certificates for a Database Mirroring Endpoint (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
 ### [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md)  
 ### [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)  
+
 # [Database Mirroring](database-mirroring-sql-server.md)  
 ## [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
 ## [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  

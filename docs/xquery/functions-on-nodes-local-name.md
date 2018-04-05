@@ -3,8 +3,11 @@ title: "local-name Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "local-name function"
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Functions on Nodes - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns the local part of the name of *$arg* as an xs:string that will either be the zero-length string or will have the lexical form of an xs:NCName. If the argument is not provided, the default is the context node.  
   

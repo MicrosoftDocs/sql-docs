@@ -2,9 +2,12 @@
 title: "sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: "sql-data-warehouse"
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,10 +18,11 @@ ms.assetid: 639a7475-7c92-41e0-a8ab-ad630eb5aea3
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.pdw_table_distribution_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Holds distribution information for tables.  
   

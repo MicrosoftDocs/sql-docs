@@ -2,23 +2,28 @@
 title: "IsDefaultMeasure Element (XML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
   - "SQL Server 2016 Preview"
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # IsDefaultMeasure Element (XML)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Indicates that it is possible to obtain the default measure for this entity by navigating this relationship to the other table and fetching the member that has the attribute, DefaultMeasure.  
   
 ## Syntax  

@@ -1,12 +1,16 @@
 ---
 title: "Parallel Element (XMLA) | Microsoft Docs"
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -24,11 +28,13 @@ helpviewer_keywords:
   - "Parallel element"
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Parallel Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Specifies how many processing jobs can run in parallel using the parent [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
   
 ## Syntax  

@@ -2,9 +2,12 @@
 title: "Set the Propagation Method for Data Changes to Transactional Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "propagating data changes [SQL Server replication]"
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Set the Propagation Method for Data Changes to Transactional Articles
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to set the propagation method for data changes to transactional articles in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  By default, transactional replication propagates changes to Subscribers using a set of stored procedures for each article. You can replace these procedures with custom procedures. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  

@@ -2,9 +2,12 @@
 title: "Log File Auto Shrink Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Log File Auto Shrink event class"
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Log File Auto Shrink Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Log File Auto Shrink** event class indicates that the log file shrank automatically. This event is not triggered if the log file shrinks because of an explicit ALTER DATABASE statement.  
   
  Include the **Log File Auto Shrink** event class in traces that monitor the shrinking of the log file. When thisevent class is included in a trace the amount of overhead incurred will be low unless the file frequently shrinks.  

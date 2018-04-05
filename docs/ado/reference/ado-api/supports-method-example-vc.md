@@ -1,12 +1,15 @@
 ---
 title: "Supports Method Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Supports Method Example (VC++)
 This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport function is required for this example to run.  

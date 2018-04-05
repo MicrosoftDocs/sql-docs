@@ -2,9 +2,12 @@
 title: "Glossary of Terms for Oracle Publishing | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Oracle publishing [SQL Server replication], glossary"
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Glossary of Terms for Oracle Publishing
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You should be familiar with the following Oracle terms when configuring and administering Oracle publishing. For a complete list of Oracle terms, see the Oracle online documentation.  
   
  Index Organized Tables (IOT)  

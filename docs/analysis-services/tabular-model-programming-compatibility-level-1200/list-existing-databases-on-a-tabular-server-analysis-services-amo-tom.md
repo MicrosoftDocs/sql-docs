@@ -2,28 +2,33 @@
 title: "List existing databases on a Tabular server (Analysis Services AMO-TOM) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
 caps.latest.revision: 2
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # List existing databases on a Tabular server (Analysis Services AMO-TOM)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 When you have a **Server** object that is connected to an Analysis Services instance, you can iterate over **Server.Databases** collection to list all databases hosted by the Anlaysis Services instance. 
 
-The **Server.Databases** collection contains one **Database** object for every database hosted on the server, regardless of server mode (Multidimensional or Tabular) or database type (Multidimensional, Tabular pre-1200, or Tabular 1200 and above). 
+The **Server.Databases** collection contains one **Database** object for every database hosted on the server, regardless of server mode (Multidimensional or Tabular) or database type (Multidimensional, Tabular pre-1200, or Tabular 1200 and higher). 
 
 You can check the type of database through **Database.StorageEngineUsed** property.  
 
-Tabular 1200 databases will return a non-null **Database.Model** property that gives access to all Tabular metadata objects: Tables, Columns, Relationships, and so on.  
+Tabular 1200 and higher databases will return a non-null **Database.Model** property that gives access to all Tabular metadata objects: Tables, Columns, Relationships, and so on.  
 
 For Multidimensional or Tabular 1103 and below, the Database.Model property will be null. In this case, non-tabular metadata will be available under Multidimensional properties (such as Database.Cubes and Database.Dimensions), but those properties are only exposed by Microsoft.AnalysisServices.Database class (from AMO), not by Microsoft.AnalysisServices.Tabular.Database (for TOM). For more information about which Database class to use, see [Install, distribute, and reference the TOM client library](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md).
 
@@ -33,7 +38,7 @@ The following table summarizes expected behaviors when you connect to a server o
 
 mode | Database.model | Database.StorageEngineUsed
 -----|----------------|---------------------------
-Tabular 1200 | Returns the name of the model| StorageEngineUsed.TabularMetadata 
+Tabular 1200, 1400 | Returns the name of the model| StorageEngineUsed.TabularMetadata 
 Tabular 1103, 1100, 1050 | Returns null | StorageEngineUsed.InMemory 
 Multidimensional | Returns null | StorageEngineUsed.Traditional 
 

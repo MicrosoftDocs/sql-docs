@@ -1,12 +1,15 @@
 ---
 title: "CursorType Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CursorType Property (ADO)
 Indicates the type of cursor used in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

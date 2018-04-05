@@ -1,12 +1,15 @@
 ---
 title: "Internet Explorer Error Codes | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -16,7 +19,8 @@ ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Internet Explorer Error Codes for Remote Data Service
 The following table lists Microsoft® Internet Explorer error codes related to Remote Data Service usage. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.

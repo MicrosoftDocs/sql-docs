@@ -1,12 +1,15 @@
 ---
 title: "Type Property Example (Property) (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Type Property Example (Property) (VB)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

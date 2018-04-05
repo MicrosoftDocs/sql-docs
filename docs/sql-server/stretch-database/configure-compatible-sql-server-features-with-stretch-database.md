@@ -2,10 +2,12 @@
 title: "Configure compatible SQL Server features with Stretch Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "stretch-database"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -14,10 +16,12 @@ ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Configure compatible SQL Server features with Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 Take simple steps to configure the following SQL Server features to work with Stretch Database.
 -   Always On
@@ -46,3 +50,4 @@ If TDE is enabled on your local database, it will not be automatically enabled o
 If you're using temporal tables, you can enable Stretch Database on the history table, but not on the current table.
 -   For guidance about using temporal tables with Stretch Database, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   To filter rows to migrate from the history table by using a sliding window, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+-   You can't enable Stretch Database on the temporal history table if the table is memory-optimized. Memory-optimized tables are not supported.

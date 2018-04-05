@@ -1,3 +1,5 @@
+# [SQL Server Driver Extensions - Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)
+
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)
 # [bcp_colfmt](bcp-colfmt.md)
@@ -16,4 +18,3 @@
 # [bcp_setbulkmode](bcp-setbulkmode.md)
 # [bcp_setcolfmt](bcp-setcolfmt.md)
 # [bcp_writefmt](bcp-writefmt.md)
-# [SQL Server Driver Extensions - Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)

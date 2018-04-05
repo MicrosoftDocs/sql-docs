@@ -2,19 +2,23 @@
 title: "Pie Charts (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Pie Charts (Report Builder and SSRS)
   Pie charts and doughnut charts display data as a proportion of the whole. Pie charts are most commonly used to make comparisons between groups. Pie and doughnut charts, along with pyramid and funnel charts, comprise a group of charts known as shape charts. Shape charts have no axes. When a numeric field is dropped on a shape chart, the chart calculates the percentage of each value to the total. For more information on shape charts, see [Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  

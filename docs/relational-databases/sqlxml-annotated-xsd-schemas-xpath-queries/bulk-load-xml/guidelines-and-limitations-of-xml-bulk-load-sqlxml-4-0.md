@@ -2,9 +2,12 @@
 title: "Guidelines and Limitations of XML Bulk Load (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When you use XML Bulk Load, you should be familiar with the following guidelines and limitations:  
   
 -   Inline schemas are not supported.  
@@ -163,7 +168,7 @@ manager: "jhubbard"
   
 -   SchemaGen only provides basic functionality for generating the relational schema from annotated XSD. The user should modify the generated tables manually, if needed.  
   
--   Where more than relationship exists between tables,SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] error.  
+-   Where more than one relationship exists between tables, SchemaGen tries to create a single relationship that includes all the keys involved between the two tables. This limitation might be the cause of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] error.  
   
 -   When you are bulk loading XML data into a database, there must be at least one attribute or child element in the mapping schema that is mapped to a database column.  
   

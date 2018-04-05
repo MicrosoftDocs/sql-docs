@@ -1,25 +1,26 @@
 ---
 title: "PolyBase installation | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "02/23/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "polybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "PolyBase, installation"
-ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # PolyBase installation
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   To install a trial version of  SQL Server, go to [SQL Server evaluations](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
@@ -29,13 +30,13 @@ manager: "jhubbard"
   
 -   Microsoft .NET Framework 4.5.  
   
--   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit) (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.  
+-   Oracle Java SE RunTime Environment (JRE) version 7.51 or 8 (64-bit) (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present. JRE 9 or higher does not work unless you have SQL Server 2017 Cumulative Update 4 or higher. You can install JRE 8, install PolyBase, and then upgrade to JRE 9. 
   
 -   Minimum memory: 4GB  
   
 -   Minimum hard disk space: 2GB  
   
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
   
  **Notes**  
   
@@ -46,7 +47,8 @@ Before you start installing PolyBase on your SQL Server Instances, it is good to
 For a PolyBase Scaleout group, you will need to make sure that: 
 - All of the machines are on the same domain.
 - You use the same service account and password during installation.
-- That your SQL Server Instances can communicate with one another over the network.
+- Your SQL Server Instances can communicate with one another over the network.
+- The SQL Server Instances are all the same version of SQL Server.
 
 Once you have installed PolyBase as either stand alone or in a scaleout group, you cannot change. You will have to uninstall and reinstall the feature to change this setting.
 
@@ -60,7 +62,7 @@ Once you have installed PolyBase as either stand alone or in a scaleout group, y
   
 4.  On the Server Configuration Page, configure the **SQL Server PolyBase Engine Service** and SQL Server PolyBase Data Movement Service to run under the same account.  
   
-    > **IMPORTANT!!** In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account.  
+    > **IMPORTANT!** In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account.  
     > See Scaling out PolyBase.  
   
 5.  On the **PolyBase Configuration Page**, select one of the two options. See [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) for more information.  
@@ -111,7 +113,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### How to confirm installation  
  Run the following command. If PolyBase is installed, returns 1; otherwise, 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   

@@ -1,12 +1,15 @@
 ---
 title: "FilterValue Property (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # FilterValue Property (RDS)
 Indicates the value with which to filter records.  

@@ -1,12 +1,15 @@
 ---
 title: "Append and CreateParameter Methods Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Append and CreateParameter Methods Example (VC++)
 This example uses the [Append](../../../ado/reference/ado-api/append-method-ado.md) and [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  

@@ -1,26 +1,5 @@
 # [Overview](system-dynamic-management-views.md)  
 
-# Stretch Database
-## [sys.dm_db_rda_migration_status](stretch-database-sys-dm-db-rda-migration-status.md)  
-## [sys.dm_db_rda_schema_update_status](stretch-database-sys-dm-db-rda-schema-update-status.md)  
-
-# Spatial data
-## [sys.dm_db_objects_disabled_on_compatibility_level_change](spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)  
-
-# Query Notifications
-## [sys.dm_qn_subscriptions](query-notifications-sys-dm-qn-subscriptions.md)  
-
-# Database Mirroring
-## [sys.dm_db_mirroring_auto_page_repair](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
-## [sys.dm_db_mirroring_connections](database-mirroring-sys-dm-db-mirroring-connections.md)  
-
-# Change Data Capture
-## [sys.dm_cdc_errors](change-data-capture-sys-dm-cdc-errors.md)  
-## [sys.dm_cdc_log_scan_sessions](change-data-capture-sys-dm-cdc-log-scan-sessions.md)  
-
-# Change tracking
-## [sys.dm_tran_commit_table](change-tracking-sys-dm-tran-commit-table.md)
-
 # [Always On Availability Groups](always-on-availability-groups-dynamic-management-views-functions.md)  
 ## [sys.dm_hadr_auto_page_repair](sys-dm-hadr-auto-page-repair-transact-sql.md)  
 ## [sys.dm_hadr_availability_group_states](sys-dm-hadr-availability-group-states-transact-sql.md)  
@@ -36,6 +15,13 @@
 ## [sys.dm_hadr_name_id_map](sys-dm-hadr-name-id-map-transact-sql.md)  
 ## [sys.dm_tcp_listener_states](sys-dm-tcp-listener-states-transact-sql.md)  
 
+# Change Data Capture
+## [sys.dm_cdc_errors](change-data-capture-sys-dm-cdc-errors.md)  
+## [sys.dm_cdc_log_scan_sessions](change-data-capture-sys-dm-cdc-log-scan-sessions.md)  
+
+# Change tracking
+## [sys.dm_tran_commit_table](change-tracking-sys-dm-tran-commit-table.md)
+
 # [Common Language Runtime](common-language-runtime-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_clr_appdomains](sys-dm-clr-appdomains-transact-sql.md)  
 ## [sys.dm_clr_loaded_assemblies](sys-dm-clr-loaded-assemblies-transact-sql.md)  
@@ -45,7 +31,9 @@
 # [Database](database-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_file_space_usage](sys-dm-db-file-space-usage-transact-sql.md)  
 ## [sys.dm_db_fts_index_physical_stats](sys-dm-db-fts-index-physical-stats-transact-sql.md)  
+## [sys.dm_db_log_info](sys-dm-db-log-info-transact-sql.md)  
 ## [sys.dm_db_log_space_usage](sys-dm-db-log-space-usage-transact-sql.md)  
+## [sys.dm_db_log_stats](sys-dm-db-log-stats-transact-sql.md)  
 ## [sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)](sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)  
 ## [sys.dm_db_partition_stats](sys-dm-db-partition-stats-transact-sql.md)  
 ## [sys.dm_db_persisted_sku_features](sys-dm-db-persisted-sku-features-transact-sql.md)  
@@ -56,6 +44,10 @@
 ## [sys.dm_operation_status (Azure SQL Database)](sys-dm-operation-status-azure-sql-database.md)  
 ## [sys.dm_database_copies (Azure SQL Database)](sys-dm-database-copies-azure-sql-database.md)  
 ## [sys.dm_db_resource_stats (Azure SQL Database)](sys-dm-db-resource-stats-azure-sql-database.md)  
+
+# Database Mirroring
+## [sys.dm_db_mirroring_auto_page_repair](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)  
+## [sys.dm_db_mirroring_connections](database-mirroring-sys-dm-db-mirroring-connections.md)  
 
 # [Execution](execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_exec_background_job_queue](sys-dm-exec-background-job-queue-transact-sql.md)  
@@ -82,6 +74,8 @@
 ## [sys.dm_exec_procedure_stats](sys-dm-exec-procedure-stats-transact-sql.md)  
 ## [sys.dm_exec_query_memory_grants](sys-dm-exec-query-memory-grants-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_info](sys-dm-exec-query-optimizer-info-transact-sql.md)  
+## [sys.dm_exec_query_optimizer_memory_gateways](sys-dm-exec-query-optimizer-memory-gateways.md)
+## [sys.dm_exec_query_parallel_workers](sys-dm-exec-query-parallel-workers-transact-sql.md)
 ## [sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql.md)  
 ## [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-transact-sql.md)  
 ## [sys.dm_exec_query_resource_semaphores](sys-dm-exec-query-resource-semaphores-transact-sql.md)  
@@ -96,8 +90,8 @@
 ## [sys.dm_exec_valid_use_hints](sys-dm-exec-valid-use-hints-transact-sql.md)  
 ## [sys.dm_exec_xml_handles](sys-dm-exec-xml-handles-transact-sql.md)  
 ## [sys.dm_external_script_execution_stats](sys-dm-external-script-execution-stats.md)  
-## [sys.dm_external_script_requests](sys-dm-external-script-requests.md) 
- 
+## [sys.dm_external_script_requests](sys-dm-external-script-requests.md)
+
 # [Extended Events](extended-events-dynamic-management-views.md)  
 ## [sys.dm_xe_database_sessions (Azure SQL Database)](sys-dm-xe-database-sessions-azure-sql-database.md)  
 ## [sys.dm_xe_database_session_targets (Azure SQL Database)](sys-dm-xe-database-session-targets-azure-sql-database.md)  
@@ -149,22 +143,15 @@
 ## [sys.dm_db_missing_index_columns](sys-dm-db-missing-index-columns-transact-sql.md)  
 ## [sys.dm_db_missing_index_details](sys-dm-db-missing-index-details-transact-sql.md)  
 ## [sys.dm_db_missing_index_groups](sys-dm-db-missing-index-groups-transact-sql.md)  
-## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md) 
- 
+## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md)
+
 # [I O](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_io_backup_tapes](sys-dm-io-backup-tapes-transact-sql.md)  
 ## [sys.dm_io_cluster_shared_drives](sys-dm-io-cluster-shared-drives-transact-sql.md)  
 ## [sys.dm_io_pending_io_requests](sys-dm-io-pending-io-requests-transact-sql.md)  
 ## [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md)  
-## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md) 
- 
-# [Linux Process](linux-process-dynamic-management-views-transact-sql.md)  
-## [sys.dm_linux_proc_all_stat](sys-dm-linux-proc-all-stat-transact-sql.md)  
-## [sys.dm_linux_proc_cpuinfo](sys-dm-linux-proc-cpuinfo-transact-sql.md)  
-## [sys.dm_linux_proc_meminfo](sys-dm-linux-proc-meminfo-transact-sql.md)  
-## [sys.dm_linux_proc_sql_maps](sys-dm-linux-proc-sql-maps-transact-sql.md)  
-## [sys.dm_linux_proc_sql_threads](sys-dm-linux-proc-sql-threads-transact-sql.md) 
- 
+## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md)
+
 # [Memory-Optimized Table](memory-optimized-table-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_stats](sys-dm-db-xtp-checkpoint-stats-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_files](sys-dm-db-xtp-checkpoint-files-transact-sql.md)  
@@ -181,17 +168,23 @@
 ## [sys.dm_xtp_gc_stats](sys-dm-xtp-gc-stats-transact-sql.md)  
 ## [sys.dm_xtp_system_memory_consumers](sys-dm-xtp-system-memory-consumers-transact-sql.md)  
 ## [sys.dm_xtp_transaction_stats](sys-dm-xtp-transaction-stats-transact-sql.md)  
+
 # [Object](object-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_db_incremental_stats_properties](sys-dm-db-incremental-stats-properties-transact-sql.md)  
 ## [sys.dm_db_stats_histogram](sys-dm-db-stats-histogram-transact-sql.md)  
 ## [sys.dm_db_stats_properties](sys-dm-db-stats-properties-transact-sql.md)  
 ## [sys.dm_sql_referenced_entities](sys-dm-sql-referenced-entities-transact-sql.md)  
 ## [sys.dm_sql_referencing_entities](sys-dm-sql-referencing-entities-transact-sql.md)  
+
+# Query Notifications
+## [sys.dm_qn_subscriptions](query-notifications-sys-dm-qn-subscriptions.md)  
+
 # [Replication](replication-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_repl_articles](sys-dm-repl-articles-transact-sql.md)  
 ## [sys.dm_repl_schemas](sys-dm-repl-schemas-transact-sql.md)  
 ## [sys.dm_repl_tranhash](sys-dm-repl-tranhash-transact-sql.md)  
 ## [sys.dm_repl_traninfo](sys-dm-repl-traninfo-transact-sql.md)  
+
 # [Resource Governor](resource-governor-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_resource_governor_configuration](sys-dm-resource-governor-configuration-transact-sql.md)  
 ## [sys.dm_resource_governor_external_resource_pool_affinity](sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
@@ -199,6 +192,7 @@
 ## [sys.dm_resource_governor_resource_pools](sys-dm-resource-governor-resource-pools-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pool_volumes](sys-dm-resource-governor-resource-pool-volumes-transact-sql.md)  
 ## [sys.dm_resource_governor_workload_groups](sys-dm-resource-governor-workload-groups-transact-sql.md)  
+
 # [Security-Related](security-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_audit_actions](sys-dm-audit-actions-transact-sql.md)  
 ## [sys.dm_audit_class_type_map](sys-dm-audit-class-type-map-transact-sql.md)  
@@ -208,15 +202,20 @@
 ## [sys.dm_cryptographic_provider_sessions](sys-dm-cryptographic-provider-sessions-transact-sql.md)  
 ## [sys.dm_database_encryption_keys](sys-dm-database-encryption-keys-transact-sql.md)  
 ## [sys.dm_server_audit_status](sys-dm-server-audit-status-transact-sql.md)  
+
 # [Server-Related](server-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_server_memory_dumps](sys-dm-server-memory-dumps-transact-sql.md)  
 ## [sys.dm_server_services](sys-dm-server-services-transact-sql.md)  
 ## [sys.dm_server_registry](sys-dm-server-registry-transact-sql.md)  
+
 # [Service Broker](service-broker-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_broker_activated_tasks](sys-dm-broker-activated-tasks-transact-sql.md)  
 ## [sys.dm_broker_connections](sys-dm-broker-connections-transact-sql.md)  
 ## [sys.dm_broker_forwarded_messages](sys-dm-broker-forwarded-messages-transact-sql.md)  
 ## [sys.dm_broker_queue_monitors](sys-dm-broker-queue-monitors-transact-sql.md)  
+
+# Spatial data
+## [sys.dm_db_objects_disabled_on_compatibility_level_change](spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)  
 # [SQL Data Warehouse and Parallel Data Warehouse](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 ## [sys.dm_pdw_component_health_active_alerts](sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
 ## [sys.dm_pdw_component_health_alerts](sys-dm-pdw-component-health-alerts-transact-sql.md)  
@@ -246,6 +245,7 @@
 ## [sys.dm_pdw_sys_info](sys-dm-pdw-sys-info-transact-sql.md)  
 ## [sys.dm_pdw_wait_stats](sys-dm-pdw-wait-stats-transact-sql.md)  
 ## [sys.dm_pdw_waits](sys-dm-pdw-waits-transact-sql.md)  
+
 # [SQL Server Operating System](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_os_buffer_descriptors](sys-dm-os-buffer-descriptors-transact-sql.md)  
 ## [sys.dm_os_buffer_pool_extension_configuration](sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
@@ -282,6 +282,11 @@
 ## [sys.dm_os_wait_stats](sys-dm-os-wait-stats-transact-sql.md)  
 ## [sys.dm_os_windows_info](sys-dm-os-windows-info-transact-sql.md)  
 ## [sys.dm_os_workers](sys-dm-os-workers-transact-sql.md)  
+
+# Stretch Database
+## [sys.dm_db_rda_migration_status](stretch-database-sys-dm-db-rda-migration-status.md)  
+## [sys.dm_db_rda_schema_update_status](stretch-database-sys-dm-db-rda-schema-update-status.md)  
+
 # [Transactions](transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_tran_active_snapshot_database_transactions](sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)  
 ## [sys.dm_tran_active_transactions](sys-dm-tran-active-transactions-transact-sql.md)  
@@ -292,4 +297,5 @@
 ## [sys.dm_tran_session_transactions](sys-dm-tran-session-transactions-transact-sql.md)  
 ## [sys.dm_tran_top_version_generators](sys-dm-tran-top-version-generators-transact-sql.md)  
 ## [sys.dm_tran_transactions_snapshot](sys-dm-tran-transactions-snapshot-transact-sql.md)  
-## [sys.dm_tran_version_store](sys-dm-tran-version-store-transact-sql.md)  
+## [sys.dm_tran_version_store](sys-dm-tran-version-store-transact-sql.md)
+## [sys.dm_tran_version_store_space_usage](sys-dm-tran-version-store-space-usage.md)

@@ -1,8 +1,9 @@
-# [Overview](catalog-views-transact-sql.md)  
-## [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)  
-## [Schemas - sys.schemas](schemas-catalog-views-sys-schemas.md)  
-## [Messages (for errors) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-## [Extended Properties - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
+# [Overview](catalog-views-transact-sql.md)
+
+# [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)  
+# [Schemas - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [Messages (for errors) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [Extended Properties - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # Change tracking
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
@@ -35,9 +36,6 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
 # [CLR Assembly](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
@@ -147,6 +145,8 @@
 ## [sys.event_notifications](sys-event-notifications-transact-sql.md)  
 ## [sys.event_notification_event_types](sys-event-notification-event-types-transact-sql.md)  
 ## [sys.extended_procedures](sys-extended-procedures-transact-sql.md)  
+## [sys.external_libraries](sys-external-libraries-transact-sql.md)
+## [sys.external_library_files](sys-external-library-files-transact-sql.md)
 ## [sys.foreign_keys](sys-foreign-keys-transact-sql.md)  
 ## [sys.foreign_key_columns](sys-foreign-key-columns-transact-sql.md)  
 ## [sys.function_order_columns](sys-function-order-columns-transact-sql.md)  
@@ -154,6 +154,7 @@
 ## [sys.identity_columns](sys-identity-columns-transact-sql.md)  
 ## [sys.indexes](sys-indexes-transact-sql.md)  
 ## [sys.index_columns](sys-index-columns-transact-sql.md)  
+## [sys.index_resumable_operations](sys-index-resumable-operations.md)
 ## [sys.internal_partitions](sys-internal-partitions-transact-sql.md)  
 ## [sys.internal_tables](sys-internal-tables-transact-sql.md)  
 ## [sys.key_constraints](sys-key-constraints-transact-sql.md)  
@@ -220,6 +221,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [Scalar Types](scalar-types-catalog-views-transact-sql.md)  
@@ -319,6 +321,7 @@
 ## [sys.pdw_nodes_partitions](sys-pdw-nodes-partitions-transact-sql.md)  
 ## [sys.pdw_nodes_pdw_physical_databases](sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
 ## [sys.pdw_nodes_tables](sys-pdw-nodes-tables-transact-sql.md)  
+## [sys.pdw_replicated_table_cache_state](sys-pdw-replicated-table-cache-state-transact-sql.md)
 ## [sys.pdw_table_distribution_properties](sys-pdw-table-distribution-properties-transact-sql.md)  
 ## [sys.pdw_table_mappings](sys-pdw-table-mappings-transact-sql.md)  
 

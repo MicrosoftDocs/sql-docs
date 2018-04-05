@@ -1,13 +1,16 @@
 ---
 title: "Reporting Services Tutorials (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
-ms.prod: "sql-server-2016"
+ms.date: "11/07/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -18,9 +21,13 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 39
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Reporting Services Tutorials (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.  
   
   
@@ -38,8 +45,8 @@ These tutorials introduce you a variety of visualizations you can create in Repo
   
   
 ## See Also  
-* [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
-* [Reporting Services Samples on CodePlex](http://go.microsoft.com/fwlink/?LinkId=198283)  
+* [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)  
+* [Reporting Services Samples on the TechNet wiki](http://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
  
   

@@ -2,9 +2,12 @@
 title: "Showplan All for Query Compile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Showplan All for Query Compile event class"
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Showplan All for Query Compile Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Showplan All for Query Compile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiles a SQL statement. Include this event class to identify the Showplan operators. The information included is a subset of the information available in the Showplan XML For Query Compile event class.  
   
  The Showplan All for Query Compileevent class displays complete, compile-time data, and so traces that contain Showplan All for Query Compile may incur significant performance overhead. To minimize this, limit use of this event class to traces monitoring specific problems for brief periods of time.  

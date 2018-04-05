@@ -3,8 +3,11 @@ title: "Combine Conditions When OR Has Precedence (Visual Database Tools) | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,11 @@ ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 To link conditions with OR and give them precedence over conditions linked with AND, you must repeat the AND condition for each OR condition.  
   
 For example, imagine that you want to find all employees who have been with the company more than five years and have lower-level jobs or are retired. This query requires three conditions, a single condition linked to two additional conditions with AND:  

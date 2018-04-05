@@ -3,8 +3,11 @@ title: "BREAK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "BREAK keyword"
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # BREAK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Exits the innermost loop in a WHILE statement or an IF…ELSE statement inside a WHILE loop. Any statements appearing after the END keyword, marking the end of the loop, are executed. BREAK is frequently, but not always, started by an IF test.  
   
@@ -35,7 +39,7 @@ manager: "jhubbard"
 ```  
 -- Uses AdventureWorks  
   
-WHILE ((SELECT AVG(ListPrice) FROM dbo.DimProduct) \< $300)  
+WHILE ((SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300)  
 BEGIN  
     UPDATE DimProduct  
         SET ListPrice = ListPrice * 2;  

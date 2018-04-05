@@ -2,11 +2,14 @@
 title: "Using XML Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -31,11 +34,13 @@ helpviewer_keywords:
   - "COLUMNS rowset"
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Using XML Data Types
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced an **xml** data type that enables you to store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when creating a table; as a variable type, a parameter type, or a function-return type; or in CAST and CONVERT functions.  

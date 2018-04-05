@@ -2,12 +2,15 @@
 title: "Best Practices for Reporting Services Exception Handling | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service-net-framework-exception-handling"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], best practices"
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 caps.latest.revision: 34
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Best Practices for Reporting Services Exception Handling
   When developing [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] applications, there are several methodologies you can use to eliminate or reduce the occurrence of exceptions. When exceptions do occur, provide clear and concise error messages to the user, and add adequate exception handling to prevent your applications from ending unexpectedly.  

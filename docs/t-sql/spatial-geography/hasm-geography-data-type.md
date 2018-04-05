@@ -1,10 +1,13 @@
 ---
 title: "HasM (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "HasM geography"
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # HasM (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns 1 (true) if a spatial object contains at least one M value; otherwise, it returns 0 (false).  
   
@@ -31,7 +35,7 @@ manager: "jhubbard"
   
 ```  
   
-.HasM()  
+.HasM  
 ```  
   
 ## Return Types  
@@ -43,7 +47,7 @@ manager: "jhubbard"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  
 SELECT @p.HasM   
 --Returns: 1 (true)  

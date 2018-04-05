@@ -3,8 +3,11 @@ title: "Create Update Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create Update Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can change the contents of multiple rows in one operation by using an Update query. For example, in a `titles` table you can use an Update query to add 10% to the price of all books for a particular publisher.  
   
 When you create an Update query, you specify:  

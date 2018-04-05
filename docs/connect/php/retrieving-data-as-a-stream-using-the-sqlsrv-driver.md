@@ -3,8 +3,11 @@ title: "Retrieving Data as a Stream Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Retrieving Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,6 +51,7 @@ The following steps summarize how to retrieve data as a stream:
 |[How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Demonstrates how to retrieve binary data as a stream.|  
   
 ## See Also  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

@@ -2,11 +2,14 @@
 title: "Working with Variables Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -27,7 +30,8 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Working with Variables Programmatically
   Variables are a way to dynamically set values and control processes in packages, containers, tasks, and event handlers. Variables can also be used by precedence constraints to control the direction of the flow of data to different tasks. Variables have a variety of uses:  
@@ -227,10 +231,6 @@ End Module
   
 ## Configuration Files  
  If a configuration file includes a custom variable, the variable can be updated at run time. What this means is that when the package runs, the value of the variable originally in the package is replaced with a new value from the configuration file. This replacement technique is useful when a package is deployed to multiple servers that require different variable values. For example, a variable can specify the number of times a **Foreach Loop** container repeats its workflow, or list the recipients that an event handler sends e-mail to when an error is raised, or change the number of errors that can occur before the package fails. These variables are dynamically provided in configuration files for each environment. Therefore, only variables that are read/write are allowed in configuration files. For more information, see [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   

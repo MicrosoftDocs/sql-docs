@@ -2,12 +2,15 @@
 title: "Data Mining Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -28,9 +31,11 @@ ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 48
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Data Mining Concepts
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data mining is the process of discovering actionable information from large sets of data. Data mining uses mathematical analysis to derive patterns and trends that exist in data. Typically, these patterns cannot be discovered by traditional data exploration because the relationships are too complex or because there is too much data.  
   
  These patterns and trends can be collected and defined as a *data mining model*. Mining models can be applied to specific scenarios, such as:  
@@ -148,7 +153,7 @@ manager: "jhubbard"
   
  Before you deploy a model into a production environment, you will want to test how well the model performs. Also, when you build a model, you typically create multiple models with different configurations and test all models to see which yields the best results for your problem and your data.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides tools that help you separate your data into training and testing datasets so that you can accurately assess the performance of all models on the same data. You use the training dataset to build the model, and the testing dataset to test the accuracy of the model by creating prediction queries. In [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], this partitioning can be done automatically while building the mining model. For more information, see [Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides tools that help you separate your data into training and testing datasets so that you can accurately assess the performance of all models on the same data. You use the training dataset to build the model, and the testing dataset to test the accuracy of the model by creating prediction queries. This partitioning can be done automatically while building the mining model. For more information, see [Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  You can explore the trends and patterns that the algorithms discover by using the viewers in Data Mining Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. For more information, see [Data Mining Model Viewers](../../analysis-services/data-mining/data-mining-model-viewers.md). You can also test how well the models create predictions by using tools in the designer such as the lift chart and classification matrix. To verify whether the model is specific to your data, or may be used to make inferences on the general population, you can use the statistical technique called *cross-validation* to automatically create subsets of the data and test the model against each subset. For more information, see [Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   

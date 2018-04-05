@@ -1,3 +1,5 @@
+# [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)
+
 # [Additional Table-Valued Parameter Metadata](additional-table-valued-parameter-metadata.md)
 # [Binding and Data Transfer of Table-Valued Parameters and Column Values](binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)
 # [Cross-Version Compatibility](cross-version-compatibility.md)
@@ -11,5 +13,4 @@
 # [Table-Valued Parameter Descriptor Fields](table-valued-parameter-descriptor-fields.md)
 # [Table-Valued Parameter Diagnostic Record Fields](table-valued-parameter-diagnostic-record-fields.md)
 # [Table-Valued Parameter Metadata for Prepared Statements](table-valued-parameter-metadata-for-prepared-statements.md)
-# [Table-Valued Parameters (ODBC)](table-valued-parameters-odbc.md)
 # [Uses of ODBC Table-Valued Parameters](uses-of-odbc-table-valued-parameters.md)

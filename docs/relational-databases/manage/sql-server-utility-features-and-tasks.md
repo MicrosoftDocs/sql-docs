@@ -2,9 +2,12 @@
 title: "SQL Server Utility Features and Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "Multi-server management [SQL Server]"
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server Utility Features and Tasks
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] customers have a requirement to manage their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment as a whole, addressed in this release through the concept of application and multiserver management in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ## Benefits of the SQL Server Utility  

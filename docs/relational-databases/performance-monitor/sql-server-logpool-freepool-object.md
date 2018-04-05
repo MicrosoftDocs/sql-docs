@@ -2,9 +2,12 @@
 title: "SQL Server, LogPool FreePool Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server, LogPool FreePool Object
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 The **SQLServer:LogPool FreePool** performance object provides counters for statistics for the free pool inside the Log Pool.
 
 This following table describes the SQL Server **LogPool FreePool** performance objects.

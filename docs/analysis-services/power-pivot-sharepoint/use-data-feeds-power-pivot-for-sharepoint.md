@@ -2,22 +2,27 @@
 title: "Use Data Feeds (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Use Data Feeds (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data feeds are one or more data streams that are generated from an online data source and streamed to a destination document or application. If you are using [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, data feeds can help you get existing corporate or business data from arbitrary data sources into the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] window in your Excel 2010 workbook. After you import a data feed to a workbook, you can reference it later in any data refresh operations that you schedule on a SharePoint server.  
   
  How you use a data feed depends on whether you are using built-in export features in applications that support Atom data feeds, or creating and using custom data services. Applications that are able to publish and read Atom XML data provide seamless data transfer that hides the mechanics of data feeds and data services from users. To a user, he or she is simply moving data from one application to another.  
@@ -82,7 +87,7 @@ manager: "erikre"
   
     1.  **Base URL** is optional. You should specify it if a data service document provides multiple feeds. Base URL should specify the portion of the URL that is common to all the feeds (for example, the server name and site). If you are creating a data service document to a Reporting Services report, the base URL would be the report server URL and report.  
   
-    2.  **Web Service URL** is required. Without the Base URL, this value must include http:// or https:// in the address. If you specified a Base URL, the Web service URL is the portion that follows the Base URL. For example, if the full URL is http://adventure-works/inventory/today.aspx, the Base URL would be http://adventure-works/inventory, and the Web service URL would be /today.aspx.  
+    2.  **Web Service URL** is required. Without the Base URL, this value must include `http://` or `https://` in the address. If you specified a Base URL, the Web service URL is the portion that follows the Base URL. For example, if the full URL is `http://adventure-works/inventory/today.aspx`, the Base URL would be `http://adventure-works/inventory`, and the Web service URL would be /today.aspx.  
   
          The Web service URL can include parameters that filter or select a subset of data. The application or service that provides the feed must support the parameters that you specify in the URL.  
   

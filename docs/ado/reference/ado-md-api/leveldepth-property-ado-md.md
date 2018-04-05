@@ -1,12 +1,15 @@
 ---
 title: "LevelDepth Property (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # LevelDepth Property (ADO MD)
 Indicates the number of levels between the root of the hierarchy and a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

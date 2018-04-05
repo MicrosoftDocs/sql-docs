@@ -3,8 +3,11 @@ title: "Upgrade Database Diagrams from Previous Editions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -21,9 +24,11 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### To upgrade legacy database diagrams  

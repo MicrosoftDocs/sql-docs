@@ -1,23 +1,26 @@
 ---
 title: "Scalar User-Defined Functions for In-Memory OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Scalar User-Defined Functions for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create and drop natively compiled, scalar user-defined functions. You can also alter these user-defined functions. Native compilation improves performance of the evaluation of user-defined functions in Transact-SQL.  
   
@@ -44,7 +47,7 @@ manager: "jhubbard"
   
  The following sample shows a scalar UDF from the [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) sample database.  
   
-```tsql  
+```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
 RETURNS varchar(8)   
 WITH NATIVE_COMPILATION, SCHEMABINDING  

@@ -2,12 +2,15 @@
 title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -21,7 +24,8 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 caps.latest.revision: 41
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Report Parameters (Report Builder and Report Designer)
   This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
@@ -149,9 +153,9 @@ manager: "erikre"
 |Visible|Select this option to display the report parameter at the top of the report when it is run. This option allows users to select parameter values at run time.|  
 |Hidden|Select this option to hide the report parameter in the published report. The report parameter values can still be set on a report URL, in a subscription definition, or on the report server.|  
 |Internal|Select this option to hide the report parameter. In the published report, the report parameter can only be viewed in the report definition.|  
-|Available values|If you have specified available values for a parameter, the valid values always appear as a drop-down list. For example, if you provide available values for a **DateTime** parameter, a drop-down list for dates appears in the parameter pane instead of a calendar control.<br /><br /> To ensure that a list of values is consistent among a report and subreports, you can set an option on the data source to use a single transaction for all queries in the datasets that are associated with a data source.<br /><br /> **\*\* Security Note \*\*** In any report that includes a parameter of data type **Text**, be sure to use an available values list (also known as a valid values list) and ensure that any user running the report has only the permissions necessary to view the data in the report. For more information, see [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md).|  
+|Available values|If you have specified available values for a parameter, the valid values always appear as a drop-down list. For example, if you provide available values for a **DateTime** parameter, a drop-down list for dates appears in the parameter pane instead of a calendar control.<br /><br /> To ensure that a list of values is consistent among a report and subreports, you can set an option on the data source to use a single transaction for all queries in the datasets that are associated with a data source.<br /><br /> **Security Note** In any report that includes a parameter of data type **Text**, be sure to use an available values list (also known as a valid values list) and ensure that any user running the report has only the permissions necessary to view the data in the report. For more information, see [Security &#40;Report Builder&#41;](../../reporting-services/report-builder/security-report-builder.md).|  
 |Default values|Set default values from a query or from a static list.<br /><br /> When each parameter has a default value, the report runs automatically on first view.|  
-|Advanced|Set the report definition attribute **UsedInQuery**, a value that indicates whether this parameter directly or indirectly affects the data in a report.<br /><br /> **Automatically determine when to refresh**<br /> Choose this option when you want the report processor to determine a setting for this value. The value is **True** if the report processor detects a dataset query with a direct or indirect reference to this parameter, or if the report has subreports.<br /><br /> **Always refresh**<br /> Choose this option when the report parameter is used directly or indirectly in a dataset query or parameter expression. This option sets **UsedInQuery** to True.<br /><br /> **Never refresh**<br /> Choose this option when the report parameter is not used directly or indirectly in a dataset query or parameter expression. This option sets **UsedInQuery** to False.<br /><br /> **\*\* Caution \*\*** Use **Never Refresh** with caution. On the report server, **UsedInQuery** is used to help control cache options for report data and for rendered reports, and parameter options for snapshot reports. If you set **Never Refresh** incorrectly, you could cause incorrect report data or reports to be cached, or cause a snapshot report to have inconsistent data. For more information, see [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  
+|Advanced|Set the report definition attribute **UsedInQuery**, a value that indicates whether this parameter directly or indirectly affects the data in a report.<br /><br /> **Automatically determine when to refresh**<br /> Choose this option when you want the report processor to determine a setting for this value. The value is **True** if the report processor detects a dataset query with a direct or indirect reference to this parameter, or if the report has subreports.<br /><br /> **Always refresh**<br /> Choose this option when the report parameter is used directly or indirectly in a dataset query or parameter expression. This option sets **UsedInQuery** to True.<br /><br /> **Never refresh**<br /> Choose this option when the report parameter is not used directly or indirectly in a dataset query or parameter expression. This option sets **UsedInQuery** to False.<br /><br /> **Caution** Use **Never Refresh** with caution. On the report server, **UsedInQuery** is used to help control cache options for report data and for rendered reports, and parameter options for snapshot reports. If you set **Never Refresh** incorrectly, you could cause incorrect report data or reports to be cached, or cause a snapshot report to have inconsistent data. For more information, see [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> Dataset Query  
  To filter data in the dataset query, you can include a restriction clause that limits the retrieved data by specifying values to include or exclude from the result set.  

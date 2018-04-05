@@ -1,22 +1,27 @@
 ---
 title: "Tables object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tables object (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines the tables contained in a model. Tables in a model are either bound to tables in an external database from which data is imported or queried, or a calculated table constructed from a DAX expression. Within a table, one or more **Partition** objects describe the source of the data.  Between tables, a **Relationship** object specifies the cardinality, filter direction, and other properties of the relationship.  
   
 ## Object Definition  

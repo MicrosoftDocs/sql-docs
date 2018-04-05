@@ -2,9 +2,12 @@
 title: "Specify How Changes Are Propagated for Transactional Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "transactional replication, propagation methods"
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Transactional Articles - Specify How Changes Are Propagated
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Transactional replication allows you to specify how data changes are propagated from the Publisher to Subscribers. For each published table, you can specify one of four ways that each operation (INSERT, UPDATE, or DELETE) should be propagated to the Subscriber:  
   
 -   Specify that transactional replication should script out and subsequently call a stored procedure to propagate changes to Subscribers (the default).  

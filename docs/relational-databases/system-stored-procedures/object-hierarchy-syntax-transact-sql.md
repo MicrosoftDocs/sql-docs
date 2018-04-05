@@ -3,8 +3,11 @@ title: "Object Hierarchy Syntax (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,12 +18,13 @@ helpviewer_keywords:
   - "objects [SQL Server], hierarchy syntax"
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Object Hierarchy Syntax (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The *propertyname* parameter of sp_OAGetProperty and sp_OASetProperty and the *methodname* parameter of sp_OAMethod support an object hierarchy syntax that is similar to that of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. When this special syntax is used, these parameters have the following general form.  
   

@@ -1,10 +1,13 @@
 ---
 title: "DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,21 +26,20 @@ helpviewer_keywords:
   - "flushing distributed query cache"
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DBCC FREESESSIONCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-  
-```  
-  
+```sql
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
@@ -49,9 +51,9 @@ DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
  Requires membership in the **sysadmin** fixed server role.  
   
 ## Examples  
- The following example flushes the distributed query cache.  
+The following example flushes the distributed query cache.
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC FREESESSIONCACHE WITH NO_INFOMSGS;  
@@ -59,6 +61,6 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

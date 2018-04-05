@@ -3,8 +3,11 @@ title: "DENSE_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the rank of rows within the partition of a result set, without any gaps in the ranking. The rank of a row is one plus the number of distinct ranks that come before the row in question.  
   
@@ -35,16 +39,14 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
-DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] \< order_by_clause > )  
+DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
 ## Arguments  
- <partition_by_clause>  
+ \<partition_by_clause>  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the DENSE_RANK function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- <order_by_clause>  
+ \<order_by_clause>  
  Determines the order in which the DENSE_RANK function is applied to the rows in a partition.  
   
 ## Return Types  
@@ -124,9 +126,49 @@ BusinessEntityID Rate                  RankBySalary
 274              48.101                8  
 ```  
   
+## C. Four ranking functions used in the same query  
+ The following shows the four ranking functions used in the same query. For function specific examples, see each ranking function.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT p.FirstName, p.LastName  
+    ,ROW_NUMBER() OVER (ORDER BY a.PostalCode) AS "Row Number"  
+    ,RANK() OVER (ORDER BY a.PostalCode) AS Rank  
+    ,DENSE_RANK() OVER (ORDER BY a.PostalCode) AS "Dense Rank"  
+    ,NTILE(4) OVER (ORDER BY a.PostalCode) AS Quartile  
+    ,s.SalesYTD  
+    ,a.PostalCode  
+FROM Sales.SalesPerson AS s   
+    INNER JOIN Person.Person AS p   
+        ON s.BusinessEntityID = p.BusinessEntityID  
+    INNER JOIN Person.Address AS a   
+        ON a.AddressID = p.BusinessEntityID  
+WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
+|Michael|Blythe|1|1|1|1|4557045.0459|98027|  
+|Linda|Mitchell|2|1|1|1|5200475.2313|98027|  
+|Jillian|Carson|3|1|1|1|3857163.6332|98027|  
+|Garrett|Vargas|4|1|1|1|1764938.9859|98027|  
+|Tsvi|Reiter|5|1|1|2|2811012.7151|98027|  
+|Shu|Ito|6|6|2|2|3018725.4858|98055|  
+|José|Saraiva|7|6|2|2|3189356.2465|98055|  
+|David|Campbell|8|6|2|3|3587378.4257|98055|  
+|Tete|Mensa-Annan|9|6|2|3|1931620.1835|98055|  
+|Lynn|Tsoflias|10|6|2|3|1758385.926|98055|  
+|Rachel|Valdez|11|6|2|4|2241204.0424|98055|  
+|Jae|Pak|12|6|2|4|5015682.3752|98055|  
+|Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
+
+
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C: Ranking rows within a partition  
+### D: Ranking rows within a partition  
  The following example ranks the sales representatives in each sales territory according to their total sales. The rowset is partitioned by `SalesTerritoryGroup` and sorted by `SalesAmountQuota`.  
   
 ```  
@@ -143,38 +185,25 @@ GROUP BY LastName,SalesTerritoryGroup;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Pak               10514000.0000  Europe               1`  
-  
- `Varkey Chudukatil  5557000.0000  Europe               2`  
-  
- `Valdez             2287000.0000  Europe               3`  
-  
- `Carson            12198000.0000  North America        1`  
-  
- `Mitchell          11786000.0000  North America        2`  
-  
- `Blythe            11162000.0000  North America        3`  
-  
- `Reiter             8541000.0000  North America        4`  
-  
- `Ito                7804000.0000  North America        5`  
-  
- `Saraiva            7098000.0000  North America        6`  
-  
- `Vargas             4365000.0000  North America        7`  
-  
- `Campbell           4025000.0000  North America        8`  
-  
- `Ansman-Wolfe       3551000.0000  North America        9`  
-  
- `Mensa-Annan        2753000.0000  North America        10`  
-  
- `Tsoflias           1687000.0000  Pacific              1`  
-  
+```
+ LastName          TotalSales     SalesTerritoryGroup  RankResult  
+----------------  -------------  -------------------  --------  
+Pak               10514000.0000  Europe               1  
+Varkey Chudukatil  5557000.0000  Europe               2  
+Valdez             2287000.0000  Europe               3  
+Carson            12198000.0000  North America        1  
+Mitchell          11786000.0000  North America        2  
+Blythe            11162000.0000  North America        3  
+Reiter             8541000.0000  North America        4  
+Ito                7804000.0000  North America        5  
+Saraiva            7098000.0000  North America        6  
+Vargas             4365000.0000  North America        7  
+Campbell           4025000.0000  North America        8  
+Ansman-Wolfe       3551000.0000  North America        9  
+Mensa-Annan        2753000.0000  North America        10  
+Tsoflias           1687000.0000  Pacific              1 
+```  
+
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   

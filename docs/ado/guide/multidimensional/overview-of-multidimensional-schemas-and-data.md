@@ -1,12 +1,15 @@
 ---
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,7 +18,8 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Overview of Multidimensional Schemas and Data
 ## Understanding Multidimensional Schemas  

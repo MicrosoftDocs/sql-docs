@@ -1,10 +1,13 @@
 ---
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2016"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This statement is used to perform the following Resource Governor actions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -45,16 +49,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER RESOURCE GOVERNOR   
-    { DISABLE | RECONFIGURE }  
-|  
-    WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  
-|  
-    RESET STATISTICS  
-|   
-    WITH ( MAX_OUTSTANDING_IO_PER_VOLUME = value )   
-  
+      { DISABLE | RECONFIGURE }  
+    | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  
+    | RESET STATISTICS  
+    | WITH ( MAX_OUTSTANDING_IO_PER_VOLUME = value )   
 [ ; ]  
 ```  
   
@@ -97,9 +96,7 @@ ALTER RESOURCE GOVERNOR
  Resets statistics on all workload groups and resource pools. For more information, see [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) and [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Sets the maximum queued I/O operations per disk volume. These I/O operations can be reads or writes of any size.  The maximum value for MAX_OUTSTANDING_IO_PER_VOLUME is 100. It is not a percent. This setting is designed to tune IO resource governance to the IO characteristics of a disk volume. We recommend that you experiment with different values and consider using a calibration tool such as IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     or SQLIO (deprecated) to identify the max value for your storage subsystem. This setting provides a system-level safety check that allows SQL Server to meet the minimum IOPS for resource pools even if other pools have the MAX_IOPS_PER_VOLUME set to unlimited. For more information about MAX_IOPS_PER_VOLUME, see [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   

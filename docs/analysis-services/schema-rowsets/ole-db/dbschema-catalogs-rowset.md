@@ -2,12 +2,15 @@
 title: "DBSCHEMA_CATALOGS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -21,9 +24,11 @@ ms.assetid: f02dc75d-5442-4eea-b33a-567dc816be7a
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DBSCHEMA_CATALOGS Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Identifies the physical attributes associated with catalogs accessible from the database management system (DBMS).  
   
 ## Rowset Columns  

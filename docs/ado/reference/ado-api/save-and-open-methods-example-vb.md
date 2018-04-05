@@ -1,12 +1,15 @@
 ---
 title: "Save and Open Methods Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Save and Open Methods Example (VB)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods can be used together.  

@@ -2,9 +2,12 @@
 title: "ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "GetStatus method"
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ISSAsynchStatus::GetStatus (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Returns the status of an asynchronously executing operation.  

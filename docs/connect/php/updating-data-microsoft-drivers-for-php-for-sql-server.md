@@ -1,10 +1,13 @@
 ---
 title: "Updating Data (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Updating Data (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,6 +41,7 @@ The steps for using the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)
 |[How to: Perform Transactions](../../connect/php/how-to-perform-transactions.md)|Describes how to use **sqlsrv** functions to perform transactions.|  
   
 ## See Also  
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

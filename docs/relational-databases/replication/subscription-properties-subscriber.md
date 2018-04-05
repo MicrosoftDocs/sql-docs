@@ -2,9 +2,12 @@
 title: "Subscription Properties - Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Subscription Properties dialog box"
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Subscription Properties - Subscriber
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Subscription Properties** dialog box at the Subscriber allows you to view and set properties for pull subscriptions.  
   
  Each property in the **Subscription Properties** dialog box includes a description. Click a property to see its description displayed at the bottom of the dialog box. This topic provides additional information on a number of properties. The properties are grouped into the following categories:  

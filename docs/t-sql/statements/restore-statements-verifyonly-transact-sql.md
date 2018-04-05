@@ -1,10 +1,13 @@
 ---
 title: "RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "03/30/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,15 +26,18 @@ helpviewer_keywords:
   - "checking backups"
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Verifies the backup but does not restore it, and checks to see that the backup set is complete and the entire backup is readable. However, RESTORE VERIFYONLY does not attempt to verify the structure of the data contained in the backup volumes. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY has been enhanced to do additional checking on the data to increase the probability of detecting errors. The goal is to be as close to an actual restore operation as practical. For more information, see the Remarks.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  If the backup is valid, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] returns a success message.  
   
 > [!NOTE]  

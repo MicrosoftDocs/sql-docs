@@ -1,26 +1,31 @@
 ---
 title: "What&#39;s New in Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 caps.latest.revision: 97
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # What&#39;s New in Analysis Services
-[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] includes many new enhancements providing improved performance, easier solution authoring, automated database management,   enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
+
+SQL Server 2016 Analysis Services includes many new enhancements providing improved performance, easier solution authoring, automated database management, enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
 
 ## Azure Analysis Services
-Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## What's new in SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
@@ -37,12 +42,12 @@ In particular, SQL Server 2016 SP1 Analysis Services features improvements in th
 Performance and scalability testing showed significant gains in query throughput when running SQL Server 2016 SP1 Analysis Services on large multi-node enterprise servers.
 
 
-## What's new in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]
+## What's new in SQL Server 2016 Analysis Services
 
 While most enhancements in this release are specific to tabular models, a number of enhancements have been made to multidimensional models; for example, distinct count ROLAP optimization for data sources like DB2 and Oracle, drill-through multi-selection support with Excel 2016, and Excel query optimizations.    
 
 #### Get the latest tools
-In addition to installing a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, in order to take full advantage of all the enhancements in this release, be sure to install the latest versions of SSDT and SSMS.    
+In order to take full advantage of all the enhancements in this release, be sure to install the latest versions of SSDT and SSMS.    
 - [Download SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -68,7 +73,7 @@ New in this release is a built-in approach for enabling bi-directional cross fil
  ### Calculated tables in SSDT    
 A *calculated table* is a model-only construction based on a DAX expression or query in SSDT. When deployed in a database, a calculated table is indistinguishable from regular tables.    
 
- There are several uses for calculated tables, including the creation of new tables to expose an existing table in a specific role. The classic example is a Date table that operates in multiple contexts (order date, ship date, and so forth). By creating a calculated table for a given role, you can now activate a table relationship to facilitate queries or data interaction using the calculated table. Another use for calculated tables is to combine parts of existing tables into an entirely new table that exists only in the model.  See [Create a Calculated Table &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) to learn more.    
+ There are several uses for calculated tables, including the creation of new tables to expose an existing table in a specific role. The classic example is a Date table that operates in multiple contexts (order date, ship date, and so forth). By creating a calculated table for a given role, you can now activate a table relationship to facilitate queries or data interaction using the calculated table. Another use for calculated tables is to combine parts of existing tables into an entirely new table that exists only in the model.  See [Create a Calculated Table](../analysis-services/tabular-models/create-a-calculated-table-ssas-tabular.md) to learn more.    
  ### Formula fixup    
  With formula fixup on a tabular 1200 model,  SSDT will automatically update any measures that is referencing a column or table that was renamed.    
  ### Support for Visual Studio configuration manager    
@@ -78,7 +83,7 @@ A *calculated table* is a model-only construction based on a DAX expression or q
  ### Administer Tabular 1200 models in SSMS    
  In this release, an Analysis Services instance in Tabular server mode can run tabular models at any compatibility level (1100, 1103, 1200). The latest [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) is updated to display properties and provide database model administration for tabular models at the 1200 compatibility level.    
  ### Parallel processing for multiple table partitions in tabular models    
- This release includes new parallel processing functionality for tables with two or more partitions, increasing processing performance. There are no configuration settings for this feature. For more information about configuring partitions and processing tables, see [Tabular Model Partitions &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ This release includes new parallel processing functionality for tables with two or more partitions, increasing processing performance. There are no configuration settings for this feature. For more information about configuring partitions and processing tables, see [Tabular Model Partitions](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### Add computer accounts as Administrators in SSMS    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators can now use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to configure computer accounts to be members of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrators group. In the **Select Users or Groups** dialog, set the **Locations** for the computers domain and then add the **Computers** object type. For more information, see [Grant server admin rights to an  Analysis Services instance](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### DBCC for Analysis Services    
@@ -157,7 +162,8 @@ You can now save incomplete DAX measures directly in a tabular 1200 model projec
     
  Existing applications are unaffected by the new assemblies. However, should you choose to rebuild applications using the new AMO assembly for any reason, be sure to add a reference to Microsoft.AnalysisServices.Core.    
     
- Similarly, PowerShell scripts that load and call into AMO must now load Microsoft.AnalysisServices.Core.dll. Be sure to update any scripts prior to pointing them to [!INCLUDE[ssASCurrent_md](../includes/ssascurrent-md.md)].    
+ Similarly, PowerShell scripts that load and call into AMO must now load Microsoft.AnalysisServices.Core.dll. Be sure to update any scripts.  
+
 ### JSON editor for BIM files
 Code View in Visual Studio 2015 now renders the BIM file in JSON format for tabular 1200 models. The version of Visual Studio determines whether the BIM file is rendered in JSON via the built-in JSON Editor, or as simple text.
 
@@ -191,11 +197,12 @@ This release sees significant enhancements in DirectQuery for tabular 1200 model
 -   Extra  control over defining sample datasets used for model design and testing.    
 -   Row level security (RLS) is now supported for tabular 1200 models in DirectQuery mode. Previously, the presence of RLS prevented deploying a tabular model in DirectQuery mode.    
 -   Calculated columns are now supported for tabular 1200 models in DirectQuery mode. Previously, the presence of calculated columns prevented deploying a tabular model in DirectQuery mode.    
--   Performance optimizations include redundant join elimination for VertiPaq and DirectQuery.    
+-   Performance optimizations include redundant join elimination for VertiPaq and DirectQuery. 
+
 ### New data sources for DirectQuery mode    
- Data sources supported for tabular 110x models in DirectQuery mode now include Oracle, Teradata and Microsoft Analytics Platform (formerly known as Parallel Data Warehouse).    
+ Data sources supported for tabular 1200 models in DirectQuery mode now include Oracle, Teradata and Microsoft Analytics Platform (formerly known as Parallel Data Warehouse).    
     
-To learn more, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
+To learn more, see [DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## See Also
 [Analysis Services team blog](http://blogs.msdn.microsoft.com/analysisservices/)    

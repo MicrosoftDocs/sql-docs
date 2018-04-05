@@ -2,12 +2,15 @@
 title: "Report Parameters Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "parameters [Reporting Services], methods"
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
 caps.latest.revision: 38
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Report Parameters Methods
   You can use these methods to set and retrieve parameters for reports.  

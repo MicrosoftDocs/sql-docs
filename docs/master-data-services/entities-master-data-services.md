@@ -2,9 +2,12 @@
 title: "Entities (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ helpviewer_keywords:
   - "entities [Master Data Services]"
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Entities (Master Data Services)
   Entities are objects that are contained in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] models. Each entity contains members, which are the rows of master data that you manage.  

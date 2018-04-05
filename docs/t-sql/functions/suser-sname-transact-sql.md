@@ -1,10 +1,13 @@
 ---
 title: "SUSER_SNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +29,13 @@ helpviewer_keywords:
   - "names [SQL Server], logins"
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SUSER_SNAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the login name associated with a security identification number (SID).  
   
@@ -40,16 +44,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
 ## Arguments  
  *server_user_sid*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Is the optional login security identification number. *server_user_sid* is **varbinary(85)**. *server_user_sid* can be the security identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group. If *server_user_sid* is not specified, information about the current user is returned. If the parameter contains the word NULL will return NULL.  
   
@@ -79,9 +79,7 @@ GO
 ### B. Using SUSER_SNAME with a Windows user security ID  
  The following example returns the login name associated with a Windows security identification number.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -108,9 +106,7 @@ GO
 ### D. Calling SUSER_SNAME in combination with EXECUTE AS  
  This example shows the behavior of SUSER_SNAME when called from an impersonated context.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME();  
@@ -126,11 +122,11 @@ GO
   
  Here is the result.  
   
- `sa`  
-  
- `WanidaBenShoof`  
-  
- `sa`  
+ ```
+sa  
+WanidaBenShoof  
+sa
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

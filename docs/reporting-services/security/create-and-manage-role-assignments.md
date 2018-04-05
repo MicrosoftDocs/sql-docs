@@ -2,12 +2,15 @@
 title: "Create and Manage Role Assignments | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,9 @@ helpviewer_keywords:
   - "deleting role assignments"
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Create and Manage Role Assignments
   A *role assignment* is a security policy that determines whether a user or group can access a specific report server item or perform an operation. A role assignment consists of a single user or group account name and one or more role definitions.  

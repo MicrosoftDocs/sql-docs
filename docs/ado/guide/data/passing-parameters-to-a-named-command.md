@@ -1,12 +1,15 @@
 ---
 title: "Passing Parameters to a Named Command | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Passing Parameters to a Named Command
 Just as the result of the command is passed out as an *out* variable of the named command, parameters for a parameterized command can been passed in as *in* variables to the named command.  

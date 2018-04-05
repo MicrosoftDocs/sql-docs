@@ -3,8 +3,11 @@ title: "IDENT_SEED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "IDENT_SEED function"
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # IDENT_SEED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the original seed value (returned as **numeric**(**@@**MAXPRECISION,0)) that was specified when an identity column in a table or a view was created. Changing the current value of an identity column by using DBCC CHECKIDENT does not change the value returned by this function.  
   
@@ -77,23 +81,17 @@ GO
   
  Here is a partial result set.  
   
- `TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED`  
-  
- `------------       ---------------------------  -----------`  
-  
- `Person             Address                                1`  
-  
- `Production         ProductReview                          1`  
-  
- `Production         TransactionHistory                100000`  
-  
- `Person             AddressType                            1`  
-  
- `Production         ProductSubcategory                     1`  
-  
- `Person             vAdditionalContactInfo                 1`  
-  
- `dbo                AWBuildVersion                         1`  
+ ```
+ TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED  
+------------       ---------------------------  -----------  
+Person             Address                                1  
+Production         ProductReview                          1  
+Production         TransactionHistory                100000  
+Person             AddressType                            1  
+Production         ProductSubcategory                     1  
+Person             vAdditionalContactInfo                 1  
+dbo                AWBuildVersion                         1
+```  
   
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

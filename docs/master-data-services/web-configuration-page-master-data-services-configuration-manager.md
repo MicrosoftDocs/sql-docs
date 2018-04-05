@@ -2,9 +2,12 @@
 title: "Web Configuration Page (Master Data Services Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ f1_keywords:
   - "sql13.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  

@@ -2,12 +2,15 @@
 title: "HierarchyUniqueNameStyle Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -23,9 +26,11 @@ ms.assetid: 2ac57825-e9e5-4ec4-9856-fa2326d2c43f
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # HierarchyUniqueNameStyle Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Determines how unique names are generated for hierarchies that are contained within the [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md).  
   
 ## Syntax  

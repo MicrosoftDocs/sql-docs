@@ -2,9 +2,12 @@
 title: "Finish the Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Finish the Slowly Changing Dimension Wizard
   Use the **Finish the Slowly Changing Dimension Wizard** dialog box to verify your choices before the wizard builds support for slowly changing dimensions.  

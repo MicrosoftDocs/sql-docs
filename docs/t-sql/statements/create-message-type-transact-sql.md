@@ -1,10 +1,13 @@
 ---
 title: "CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,12 +32,13 @@ helpviewer_keywords:
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new message type. A message type defines the name of a message and the validation that [!INCLUDE[ssSB](../../includes/sssb-md.md)] performs on messages that have that name. Both sides of a conversation must define the same message types.  
   
@@ -43,14 +47,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  
                     | EMPTY   
                     | WELL_FORMED_XML  
-                    | VALID_XML WITH SCHEMA COLLECTION   
-                                                    schema_collection_name  
+                    | VALID_XML WITH SCHEMA COLLECTION schema_collection_name  
                    } ]  
 [ ; ]  
 ```  

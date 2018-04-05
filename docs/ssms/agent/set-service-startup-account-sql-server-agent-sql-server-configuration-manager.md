@@ -3,8 +3,11 @@ title: "Set the Service Startup Account for SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,15 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service startup account defines the Windows account that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs as, as well as its network permissions. This topic describes how to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 **In This Topic**  

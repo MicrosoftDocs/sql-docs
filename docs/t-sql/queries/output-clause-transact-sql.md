@@ -1,10 +1,13 @@
 ---
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -31,12 +34,13 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: 94
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # OUTPUT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information from, or expressions based on, each row affected by an INSERT, UPDATE, DELETE, or MERGE statement. These results can be returned to the processing application for use in such things as confirmation messages, archiving, and other such application requirements. The results can also be inserted into a table or table variable. Additionally, you can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view.  
   
@@ -94,7 +98,7 @@ manager: "jhubbard"
   
 -   Have CHECK constraints or enabled rules.  
   
- *column_list*  
+*column_list*  
  Is an optional list of column names on the target table of the INTO clause. It is analogous to the column list allowed in the [INSERT](../../t-sql/statements/insert-transact-sql.md) statement.  
   
  *scalar_expression*  
@@ -137,14 +141,14 @@ DELETE Sales.ShoppingCartItem
  Is available only for the MERGE statement. Specifies a column of type **nvarchar(10)** in the OUTPUT clause in a MERGE statement that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row.  
   
 ## Remarks  
- The OUTPUT <dml_select_list> clause and the OUTPUT <dml_select_list> INTO { **@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
+ The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
   
 > [!NOTE]  
 >  Unless specified otherwise, references to the OUTPUT clause refer to both the OUTPUT clause and the OUTPUT INTO clause.  
   
  The OUTPUT clause may be useful to retrieve the value of identity or computed columns after an INSERT or UPDATE operation.  
   
- When a computed column is included in the <dml_select_list>, the corresponding column in the output table or table variable is not a computed column. The values in the new column are the values that were computed at the time the statement was executed.  
+ When a computed column is included in the \<dml_select_list>, the corresponding column in the output table or table variable is not a computed column. The values in the new column are the values that were computed at the time the statement was executed.  
   
  There is no guarantee that the order in which the changes are applied to the table and the order in which the rows are inserted into the output table or table variable will correspond.  
   
@@ -197,9 +201,9 @@ DELETE Sales.ShoppingCartItem
   
     -   The target cannot be a remote table or partitioned view.  
   
-    -   The source itself cannot contain a <dml_table_source> clause.  
+    -   The source itself cannot contain a \<dml_table_source> clause.  
   
--   The OUTPUT INTO clause is not supported in INSERT statements that contain a <dml_table_source> clause.  
+-   The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause.  
   
 -   @@ROWCOUNT returns the rows inserted only by the outer INSERT statement.  
   
@@ -207,7 +211,7 @@ DELETE Sales.ShoppingCartItem
   
 -   Query notifications treat the statement as a single entity, and the type of any message that is created will be the type of the nested DML, even if the significant change is from the outer INSERT statement itself.  
   
--   In the <dml_table_source> clause, the SELECT and WHERE clauses cannot include subqueries, aggregate functions, ranking functions, full-text predicates, user-defined functions that perform data access, or the TEXTPTR function.  
+-   In the \<dml_table_source> clause, the SELECT and WHERE clauses cannot include subqueries, aggregate functions, ranking functions, full-text predicates, user-defined functions that perform data access, or the TEXTPTR function.  
 
 ## Parallelism
  An OUTPUT clause that returns results to the client will always use a serial plan.
@@ -305,9 +309,9 @@ DROP TABLE dbo.table1;
 >  Use the READPAST table hint in UPDATE and DELETE statements if your scenario allows for multiple applications to perform a destructive read from one table. This prevents locking issues that can come up if another application is already reading the first qualifying record in the table.  
   
 ## Permissions  
- SELECT permissions are required on any columns retrieved through <dml_select_list> or used in <scalar_expression>.  
+ SELECT permissions are required on any columns retrieved through \<dml_select_list> or used in \<scalar_expression>.  
   
- INSERT permissions are required on any tables specified in <output_table>.  
+ INSERT permissions are required on any tables specified in \<output_table>.  
   
 ## Examples  
   
@@ -542,11 +546,11 @@ GO
   
  Here is the result set generated on April 12, 2004 ('`2004-04-12'`). Notice that the `ScrapReasonIDActual` and `ModifiedDate` columns reflect the values generated by the trigger operation instead of the values provided in the `INSERT` statement.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### I. Using OUTPUT INTO with identity and computed columns  
  The following example creates the `EmployeeSales` table and then inserts several rows into it using an `INSERT` statement with a `SELECT` statement to retrieve data from source tables. The `EmployeeSales` table contains an identity column (`EmployeeID`) and a computed column (`ProjectedSales`).  

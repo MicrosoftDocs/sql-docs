@@ -2,9 +2,12 @@
 title: "Extract Data by Using the OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Extract Data by Using the OLE DB Source
   To add and configure an OLE DB source, the package must already include at least one Data Flow task.  
@@ -54,7 +58,7 @@ manager: "jhubbard"
   
 8.  Optionally, update the names of output columns by editing values in the **Output Column** list.  
   
-9. To configure the error output, click **Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. To configure the error output, click **Error Output**. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. You can click **Preview** to view up to 200 rows of the data extracted by the OLE DB source.  
   

@@ -3,8 +3,11 @@ title: "Column Size, Decimal Digits, Transfer Octet Length, Display Size | Micro
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -25,6 +28,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Column Size, Decimal Digits, Transfer Octet Length, and Display Size - ODBC
 Data types are characterized by their column (or parameter) size, decimal digits, length, and display size. The following ODBC functions return these attributes for a parameter in an SQL statement or for an SQL data type on a data source. Each ODBC function returns a different set of these attributes, as follows:  

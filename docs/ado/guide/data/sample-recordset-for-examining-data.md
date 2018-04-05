@@ -1,12 +1,15 @@
 ---
 title: "Sample Recordset for Examining Data | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Sample Recordset for Examining Data
 First, let's look at the **Recordset** object as returned using the following SQL query, executed against the Northwind sample data base in Microsoft SQL Server.  

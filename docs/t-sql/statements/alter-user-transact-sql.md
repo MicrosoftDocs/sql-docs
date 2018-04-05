@@ -1,11 +1,13 @@
 ---
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/04/2015"
+ms.custom: ""
+ms.date: "05/05/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +28,13 @@ helpviewer_keywords:
   - "modifying default schemas"
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 caps.latest.revision: 75
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # ALTER USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renames a database user or changes its default schema.  
   
@@ -118,9 +121,7 @@ ALTER USER userName
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this user. Setting the default schema to NULL removes a default schema from a Windows group.   The NULL option cannot be used with a Windows user.  
   
  PASSWORD **=** '*password*'  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the password for the user that is being changed. Passwords are case-sensitive.  
   
@@ -128,9 +129,7 @@ ALTER USER userName
 >  This option is available only for contained users. See [Contained Databases](../../relational-databases/databases/contained-databases.md) and [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) for more information.  
   
  OLD_PASSWORD **=***'oldpassword'*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  The current user password that will be replaced by '*password*'. Passwords are case-sensitive. *OLD_PASSWORD* is required to change a password, unless you have **ALTER ANY USER** permission. Requiring *OLD_PASSWORD* prevents users with **IMPERSONATION** permission from changing the password.  
   
@@ -138,9 +137,7 @@ ALTER USER userName
 >  This option is available only for contained users.  
   
  DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<language name> | \<language alias> }*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies a default language to be assigned to the user. If this option is set to NONE, the default language is set to the current default language of the database. If the default language of the database is later changed, the default language of the user will remain unchanged. *DEFAULT_LANGUAGE* can be the local ID (lcid), the name of the language, or the language alias.  
   
@@ -148,9 +145,7 @@ ALTER USER userName
 >  This option may only be specified in a contained database and only for contained users.  
   
  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
   
@@ -185,7 +180,7 @@ ALTER USER userName
   
  Otherwise, the user will not be renamed unless the caller additionally invokes the NAME clause.  
   
- The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, a certificate, or an asymmetric key cannot contain the backslash character (\\).  
+The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, a certificate, or an asymmetric key cannot contain the backslash character (\\).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -205,12 +200,13 @@ ALTER USER userName
  To change the default schema or language requires **ALTER** permission on the user. Users can change their own default schema or language.  
   
 ## Examples  
-  
+
+All examples are executed in a user database.  
+
 ### A. Changing the name of a database user  
  The following example changes the name of the database user `Mary5` to `Mary51`.  
   
-```tsql  
-USE AdventureWorks2012;  
+```  
 ALTER USER Mary5 WITH NAME = Mary51;  
 GO  
 ```  
@@ -218,8 +214,7 @@ GO
 ### B. Changing the default schema of a user  
  The following example changes the default schema of the user `Mary51` to `Purchasing`.  
   
-```tsql  
-USE AdventureWorks2012;  
+```  
 ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
 GO  
 ```  
@@ -227,13 +222,9 @@ GO
 ### C. Changing several options at once  
  The following example changes several options for a contained database user in one statement.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
-USE AdventureWorks2012;  
-GO   
+```  
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
@@ -242,24 +233,6 @@ WITH  NAME = Philipe
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Changing the name of a database user  
- The following example changes the name of the database user `Mary5` to `Mary51`.  
-  
-```  
--- Uses AdventureWorks  
-  
-ALTER USER Mary5 WITH NAME = Mary51;  
-GO   
-```  
-  
-### E. Changing the default schema  
- The following example changes the default schema of the database user `Contoso\Mary` to `Sales`.  
-  
-```  
-ALTER USER [Contoso\Mary] WITH DEFAULT_SCHEMA = Sales;  
-```  
   
 ## See Also  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

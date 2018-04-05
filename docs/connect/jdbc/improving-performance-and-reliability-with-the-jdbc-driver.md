@@ -1,10 +1,14 @@
+
 ---
 title: "Improving Performance and Reliability with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +18,7 @@ caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Improving Performance and Reliability with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,6 +36,7 @@ manager: "jhubbard"
 |[Working with Statements and Result Sets](../../connect/jdbc/working-with-statements-and-result-sets.md)|Describes techniques for improving performance when using the Statement or ResultSet objects.|  
 |[Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md)|Describes an adaptive buffering feature, which is designed to retrieve any kind of large-value data without the overhead of server cursors.|  
 |[Sparse Columns](../../connect/jdbc/sparse-columns.md)|Discusses the JDBC driver's support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sparse columns.|  
+|[Prepared Statement Metadata Caching for the JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discusses the techniques for improving performance with prepared statement queries.|
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -3,8 +3,11 @@ title: "Behavioral Changes and ODBC 3.x Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Behavioral Changes and ODBC 3.x Drivers
 The environment attribute SQL_ATTR_ODBC_VERSION indicates to the driver whether it needs to exhibit ODBC 2.*x* behavior or ODBC 3*.x* behavior. How the SQL_ATTR_ODBC_VERSION environment attribute is set depends on the application. ODBC 3*.x* applications must call **SQLSetEnvAttr** to set this attribute after they call **SQLAllocHandle** to allocate an environment handle and before they call **SQLAllocHandle** to allocate a connection handle. If they fail to do this, the Driver Manager returns SQLSTATE HY010 (Function sequence error) on the latter call to **SQLAllocHandle**.  

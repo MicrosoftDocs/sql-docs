@@ -2,12 +2,15 @@
 title: "Configure Basic Authentication on the Report Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,9 +18,9 @@ helpviewer_keywords:
   - "Basic authentication"
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 28
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Configure Basic Authentication on the Report Server
   By default, Reporting Services accepts requests that specify Negotiate and NTLM authentication. If your deployment includes client applications or browsers that use Basic authentication, you must add Basic authentication to the list of supported types. In addition, if you want to use Report Builder, you must enable Anonymous access to the Report Builder files.  

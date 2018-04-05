@@ -1,12 +1,15 @@
 ---
 title: "Streams and Persistence | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Streams and Persistence
 The [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object [Save](../../../ado/reference/ado-api/save-method.md) method stores, or *persists*, a **Recordset** in a file, and the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method restores the **Recordset** from that file.  

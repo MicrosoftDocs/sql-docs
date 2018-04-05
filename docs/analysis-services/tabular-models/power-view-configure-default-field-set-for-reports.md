@@ -1,14 +1,17 @@
 ---
-title: "Configure Default Field Set for Power View Reports (SSAS Tabular) | Microsoft Docs"
+title: "Configure Default Field Set for Power View Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -17,9 +20,11 @@ ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power View - Configure Default Field Set for Reports
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A default field set is a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list. Tabular model authors can create a default field set to eliminate redundant steps for report authors who use the model for their reports. For example, if you know that most report authors who work with customer contact information always want to see a contact name, a primary phone number, an email address, and a company name, you can pre-select those columns so that they are always added to the report canvas when the author clicks the Customer Contact table.  
   
 > [!NOTE]  
@@ -43,6 +48,6 @@ manager: "erikre"
 6.  Repeat these steps for other tables in your workbook.  
   
 ## Next Step  
- After you create a default field set, you can further influence the report design experience by specifying default labels, default images, default group behavior, or whether rows that contain the same value are grouped together in one row or listed individually. For more information, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
+ After you create a default field set, you can further influence the report design experience by specifying default labels, default images, default group behavior, or whether rows that contain the same value are grouped together in one row or listed individually. For more information, see [Configure Table Behavior Properties for Power View Reports](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   

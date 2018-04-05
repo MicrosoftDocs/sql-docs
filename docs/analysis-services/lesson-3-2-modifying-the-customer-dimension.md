@@ -2,11 +2,14 @@
 title: "Modifying the Customer Dimension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 3-2 - Modifying the Customer Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 There are many different ways that you can increase the usability and functionality of the dimensions in a cube. In the tasks in this topic, you modify the Customer dimension.  
   
 ## Renaming Attributes  

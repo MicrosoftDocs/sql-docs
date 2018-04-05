@@ -1,10 +1,13 @@
 ---
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,10 +18,11 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 caps.latest.revision: 14
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
   
@@ -37,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
@@ -102,7 +104,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
   
- **<function_option>::=**  
+ **\<function_option>::=** 
   
  Specifies that the function will have one or more of the following options.  
   
@@ -195,4 +197,5 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
  [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
+
 

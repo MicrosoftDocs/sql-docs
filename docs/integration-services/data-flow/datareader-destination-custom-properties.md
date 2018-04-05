@@ -2,9 +2,12 @@
 title: "DataReader Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DataReader Destination Custom Properties
   The DataReader destination has both custom properties and the properties common to all data flow components.  

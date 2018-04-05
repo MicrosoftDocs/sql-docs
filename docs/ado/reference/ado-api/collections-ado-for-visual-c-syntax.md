@@ -1,12 +1,15 @@
 ---
 title: "Collections (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Collections (ADO for Visual C++ Syntax)
 ## Parameters  

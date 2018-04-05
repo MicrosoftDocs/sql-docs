@@ -3,8 +3,11 @@ title: "executeBatch Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # executeBatch Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +46,7 @@ public int[] executeBatch()
   
 ## Remarks  
  This executeBatch method is specified by the executeBatch method in the java.sql.Statement interface.  
-  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0 is compliant with the JDBC 4.0 recommendation that a call to the CallableStatement.executeBatch method (inherited from PreparedStatement) will throw a BatchUpdateException if the stored procedure accepts OUT or INOUT parameters or returns something other than an update count.  
-  
+    
  This method overrides [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  
   
 ## See Also  

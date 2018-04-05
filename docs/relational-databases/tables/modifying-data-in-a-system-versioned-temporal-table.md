@@ -1,11 +1,13 @@
 ---
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -14,10 +16,11 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Modifying Data in a System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Data in a system-versioned temporal table is modified using regular DML statements with one important difference: period column data cannot be directly modified. When data is updated, it is versioned, with the previous version of each updated row is inserted into the history table. When data is deleted, the delete is logical, with the row moved into the history table from the current table - it is not permanently deleted.  
   
@@ -183,9 +186,6 @@ WHEN NOT MATCHED THEN
    VALUES (source.DeptName);  
   
 ```  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Modifying%20Data%20in%20a%20System-Versioned%20Temporal%20Table%20page)  
   
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   

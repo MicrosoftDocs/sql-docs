@@ -2,11 +2,14 @@
 title: "Command Events Data Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,9 +18,11 @@ ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Command Events Data Columns
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The following table lists the data columns for each event class in the **Command Events** event category.  
   
  The **Command Events** event category has the following event classes:  

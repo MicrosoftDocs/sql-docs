@@ -1,12 +1,14 @@
 ---
 title: "RDS Objects | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +18,8 @@ ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # RDS Objects
 > [!IMPORTANT]

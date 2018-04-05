@@ -2,20 +2,25 @@
 title: "Use Utility Explorer to Manage the SQL Server Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use Utility Explorer to Manage the SQL Server Utility
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utility Explorer, a component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connects to [!INCLUDE[ssDE](../../includes/ssde-md.md)] instances to provide a tree view of all the objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. The Utility Explorer content pane provides several ways to view summary and detailed data about the health state of managed instances of SQL Server. Utility Explorer also provides a user interface to view and manage policy definitions. The capabilities of Utility Explorer vary slightly depending on the objects in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, but generally include objects, data, and policies managed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## Create Utility Control Point  

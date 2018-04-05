@@ -2,12 +2,15 @@
 title: "Scripting and PowerShell with Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "tools"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "scripting [Reporting Services]"
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Scripting and PowerShell with Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a wide range of development and management scenarios through script, including the rs.exe command line utility, PowerShell cmdlets for SharePoint mode report servers, and leveraging the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] object model from PowerShell for both Native and SharePoint mode.  

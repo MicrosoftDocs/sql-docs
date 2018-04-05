@@ -2,12 +2,15 @@
 title: "QueryBinding Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # QueryBinding Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents the association of a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element with a [QueryDefinition](../../../analysis-services/scripting/properties/querydefinition-element-assl.md) element.  
   
 ## Syntax  

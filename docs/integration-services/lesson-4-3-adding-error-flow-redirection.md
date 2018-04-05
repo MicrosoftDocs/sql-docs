@@ -2,9 +2,12 @@
 title: "Step 3: Adding Error Flow Redirection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 4-3 - Adding Error Flow Redirection
 As demonstrated in the previous task, the Lookup Currency Key transformation cannot generate a match when the transformation tries to process the corrupted sample flat file, which produced an error. Because the transformation uses the default settings for error output, any error causes the transformation to fail. When the transformation fails, the rest of the package also fails.  
@@ -28,7 +32,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 To enhance the usefulness of the error output, before the package writes the failed rows to the file, you will use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
   
-### To configure an error output  
+## To configure an error output  
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Script Component** onto the design surface of the **Data Flow** tab. Place **Script** to the right of the **Lookup Currency Key** transformation.  
   
@@ -56,14 +60,14 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb  
     Row.ErrorDescription =   
       Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
     ```  
   
     [Visual C#]  
   
-    ```  
+    ```cs
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
@@ -71,7 +75,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
   
       Row.ErrorDescription =   
@@ -82,7 +86,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual C#]  
   
-    ```  
+    ```cs
     public override void Input0_ProcessInputRow(Input0Buffer Row)  
         {  
   

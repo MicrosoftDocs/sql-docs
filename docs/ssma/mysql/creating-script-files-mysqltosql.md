@@ -1,10 +1,13 @@
 ---
 title: "Creating Script Files (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 caps.latest.revision: 22
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Creating Script Files (MySQLToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

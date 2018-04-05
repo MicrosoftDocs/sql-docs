@@ -2,20 +2,25 @@
 title: "Deploy Power Pivot Solutions to SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Deploy Power Pivot Solutions to SharePoint
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Use the following instructions to manually deploy two solution packages that add [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] features to a SharePoint Server 2010 environment. Deploying the solutions is a required step for configuring [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on a SharePoint 2010 server. To view the complete list of required steps, see [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Alternatively, you can use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to deploy the solutions. Using the configuration tool is easier and more efficient for a single server installation, but you might want to use Central Administration and PowerShell if you prefer using a familiar tool or if you are configuring multiple features at the same time. For more information about using the configuration tool, see [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  

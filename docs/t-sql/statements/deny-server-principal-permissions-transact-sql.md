@@ -1,10 +1,13 @@
 ---
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,25 +25,22 @@ helpviewer_keywords:
   - "logins [SQL Server], denying access"
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DENY Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Denies permissions granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -67,7 +67,7 @@ DENY permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Specifies the server role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role to which the permission is being granted.  
   
  TO *SQL_Server_login*  
@@ -97,9 +97,9 @@ DENY permission [ ,...n ] }
 ## Remarks  
  Permissions at the server scope can be denied only when the current database is master.  
   
- Information about server permissions can be viewed in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view. Information about server principals can viewed in the [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) catalog view.  
+ Information about server permissions is available in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view. Information about server principals is available in the [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) catalog view.  
   
- The DENY statement will fail if CASCADE is not specified when you are denying a permission to a principal that was granted that permission with GRANT OPTION.  
+ The DENY statement fails if CASCADE is not specified when you are denying a permission to a principal that was granted that permission with GRANT OPTION.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins and server roles are server-level securables. The most specific and limited permissions that can be denied on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role are listed in the following table, together with the more general permissions that include them by implication.  
   

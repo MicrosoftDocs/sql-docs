@@ -1,12 +1,15 @@
 ---
 title: "MaxRecords Property Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # MaxRecords Property Example (VB)
 This example uses the [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) property to open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  

@@ -2,11 +2,14 @@
 title: "Lesson 12: Create Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 11: Create Roles
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will create roles. Roles provide model database object and data security by limiting access to only those Windows users which are role members. Each role is defined with a single permission: None, Read, Read and Process, Process, or Administrator. Roles can be defined during model authoring by using Role Manager. After a model has been deployed, you can manage roles by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To learn more, see [Roles](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  
@@ -77,7 +83,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 1.  Click **New**.  
   
-2.  Rename the role to **Administrator Administrator**.  
+2.  Rename the role to **Administrator**.  
   
 3.  Give this role **Administrator** permission.  
   

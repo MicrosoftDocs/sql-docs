@@ -1,23 +1,28 @@
 ---
-title: "LANGUAGE and FORMAT_STRING on FORMATED_VALUE | Microsoft Docs"
+title: "LANGUAGE and FORMAT_STRING on FORMATTED_VALUE | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Cell Properties - FORMATTED_VALUE Property
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The FORMATTED_VALUE property is built on the interactions of the VALUE, FORMAT_STRING and LANGUAGE properties of the cell. This topic explains how these properties interact to build the FORMATTED_VALUE property.  
   
 ## VALUE, FORMAT_STRING, LANGUAGE properties  

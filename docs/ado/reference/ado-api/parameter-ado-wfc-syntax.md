@@ -1,12 +1,15 @@
 ---
 title: "Parameter (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Parameter (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

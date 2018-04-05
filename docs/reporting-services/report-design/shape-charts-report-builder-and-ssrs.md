@@ -2,19 +2,23 @@
 title: "Shape Charts (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Shape Charts (Report Builder and SSRS)
   A shape chart displays value data as percentages of a whole. Shape charts are typically used to show proportional comparisons between different values in a set. Categories are represented by individual segments of the shape. The size of the segment is determined by the value. Shape charts are similar in use to pie charts, except that they order categories from largest to smallest.  

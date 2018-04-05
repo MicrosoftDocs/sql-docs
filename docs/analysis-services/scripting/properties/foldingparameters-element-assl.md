@@ -2,12 +2,15 @@
 title: "FoldingParameters Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "Schema"
@@ -25,9 +28,11 @@ ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # FoldingParameters Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Specifies the parameters used by the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server when it performs cross-validation of mining models.  
   
 > [!NOTE]  

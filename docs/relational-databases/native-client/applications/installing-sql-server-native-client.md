@@ -2,11 +2,16 @@
 title: "Installing SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client|applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -22,9 +27,13 @@ helpviewer_keywords:
   - "removing SQL Server Native Client"
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 caps.latest.revision: 44
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Installing SQL Server Native Client
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+ > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/en-US/library/ms131321(SQL.120).aspx).
+
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]. 

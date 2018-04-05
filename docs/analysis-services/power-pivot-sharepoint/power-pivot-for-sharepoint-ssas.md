@@ -2,22 +2,27 @@
 title: "Power Pivot for SharePoint (SSAS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Power Pivot for SharePoint (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mode provides server hosting of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data is an analytical data model that you build using one of the following:  
   
 -   The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 add-in  

@@ -2,9 +2,12 @@
 title: "FileTable Compatibility with Other SQL Server Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "blob"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-blob"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "FileTables [SQL Server], using with other features"
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # FileTable Compatibility with Other SQL Server Features
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> AlwaysOn Availability Groups and FileTables  

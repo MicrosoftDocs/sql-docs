@@ -2,12 +2,15 @@
 title: "Cube Cells (Analysis Services - Multidimensional Data) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -32,9 +35,11 @@ ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cube Cells (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A cube is composed of cells, organized by measure groups and dimensions. A cell represents the unique logical intersection in a cube of one member from every dimension in the cube. For example, the cube described by the following diagram contains one measure group that has two measures, organized along three dimensions named Source, Route, and Time.  
   
  ![Cube diagram identifying a single cell](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "Cube diagram identifying a single cell")  

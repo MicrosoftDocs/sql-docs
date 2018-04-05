@@ -3,8 +3,11 @@ title: "Solutions (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-solutions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,11 @@ ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Solutions (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] solution is a collection of one or more related projects. Projects are containers that developers use to organize related files, such as sets of commonly used administration scripts.  
   
 ## Solution Overview  

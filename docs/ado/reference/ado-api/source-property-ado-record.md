@@ -1,12 +1,15 @@
 ---
 title: "Source Property (ADO Record) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -23,7 +26,8 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Source Property (ADO Record)
 Indicates the data source or object represented by the [Record](../../../ado/reference/ado-api/record-object-ado.md).  

@@ -2,9 +2,12 @@
 title: "Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.rep.newpubwizard.articles.f1"
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Articles
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   On the **Articles** page, you specify which database objects to include as articles in the publication. If you are publishing a database object that depends on one or more other database objects, you must publish all referenced objects. For example, if you publish a view that depends on a table, you must publish the table also.  
   
  Objects that cannot be published have a red icon next to them, with an explanation in the information panel at the bottom of the wizard page. The following objects cannot be published:  

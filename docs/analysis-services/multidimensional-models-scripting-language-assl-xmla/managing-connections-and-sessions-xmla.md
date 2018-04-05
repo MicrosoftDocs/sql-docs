@@ -1,13 +1,16 @@
 ---
 title: "Managing Connections and Sessions (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -23,7 +26,8 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Managing Connections and Sessions (XMLA)
   *Statefulness* is a condition during which the server preserves the identity and context of a client between method calls. *Statelessness* is a condition during which the server does not remember the identity and context of a client after a method call finishes.  

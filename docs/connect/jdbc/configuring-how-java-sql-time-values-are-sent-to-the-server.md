@@ -3,8 +3,11 @@ title: "Configuring How java.sql.Time Values are Sent to the Server | Microsoft 
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configuring How java.sql.Time Values are Sent to the Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -3,10 +3,13 @@ title: "Referencing the ADO Libraries In a Visual Basic 6 Application | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
-ms.technology: “drivers”
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
+ms.technology: "drivers"
 ms.topic: "article"
 dev_langs: 
   - "VB"
@@ -18,7 +21,8 @@ ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Referencing the ADO Libraries In a Visual Basic 6 Application
 To import the ADO libraries into a Microsoft Visual Basic 6 application, you must set a reference in the Visual Basic project.  

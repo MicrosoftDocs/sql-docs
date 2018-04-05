@@ -1,13 +1,16 @@
 ---
 title: "Retrieving Data Using the XmlReader | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,7 +23,8 @@ ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Retrieving Data Using the XmlReader
   The **XmlReader** class, part of the **System.Xml** namespace for the Microsoft .NET Framework Class Library, is similar to the <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> class in that the **XmlReader** class also provides fast, non-cached, forward-only access to data. If there is no need for an in-memory, analytical view of the data using the <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object, the **XmlReader** object is perfect for retrieving XML data, especially for large quantities of data. Because **XmlReader** streams data, **XmlReader** does not have to retrieve and cache all the data before exposing the data to the caller, as would be the case if a <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> object were used to convert the XML for Analysis response into an analytical object model representation.  

@@ -2,9 +2,12 @@
 title: "sys.dm_pdw_hadoop_operations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: "sql-data-warehouse"
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,10 +18,11 @@ ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_pdw_hadoop_operations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contains a row for each map-reduce job that is pushed down to Hadoop as part of running a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] query on an external Hadoop table. Each map-reduce job represents one of the predicates in the query. This is only used when predicate pushdown is enabled for queries on Hadoop external tables.  
   

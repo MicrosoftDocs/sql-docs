@@ -2,12 +2,15 @@
 title: "Errors and Events Reference (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,10 @@ helpviewer_keywords:
   - "events [Reporting Services]"
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Errors and Events Reference (Reporting Services)
   This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  

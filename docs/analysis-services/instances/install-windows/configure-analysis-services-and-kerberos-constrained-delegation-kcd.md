@@ -2,25 +2,26 @@
 title: "Configure Analysis Services and Kerberos Constrained Delegation (KCD) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Analysis Services and Kerberos Constrained Delegation (KCD)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Kerberos constrained delegation (KCD) is an authentication protocol you can configure with Windows authentication to delegate client credentials from service to service throughout your environment. KCD requires additional infrastructure, for example a Domain Controller, and additional configuration of your environment. KCD is a requirement in some scenarios that involve [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data with SharePoint 2016. In SharePoint 2016, Excel Services has moved outside the SharePoint farm to a separate and new server, the **Office Online Server**. Because the Office Online Server is separate, there is an increased need for a way to delegate client credentials in the typical two hop scenarios.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ## Overview  
  KCD enables an account to impersonate another account for the purpose of providing access to resources. The impersonating account would be a service account assigned to a web application or the computer account of a web server while the impersonated account would be a user account requiring access to resources. KCD operates at the service level, so that selected services on a server can be granted access by the impersonating account, while other services on the same server, or services on other servers are denied for access.  

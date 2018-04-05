@@ -2,12 +2,15 @@
 title: "DISCOVER_PARTITION_DIMENSION_STAT Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: bf4626b3-4d6b-4795-bb01-df335fb9c09a
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PARTITION_DIMENSION_STAT Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Returns statistics on the dimension that is associated with a partition  
   
  **Applies to:** tabular models, multidimensional models  

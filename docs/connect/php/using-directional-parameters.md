@@ -3,8 +3,11 @@ title: "Using Directional Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using Directional Parameters
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,5 +36,6 @@ The topics in this section describe how to use directional parameters when calli
   
 ## See Also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
+
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
   

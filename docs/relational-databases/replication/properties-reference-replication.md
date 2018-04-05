@@ -2,9 +2,12 @@
 title: "Properties Reference (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "F1 Help [SQL Server replication]"
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Properties Reference (Replication)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section of the documentation provides information on the following replication wizards and dialog boxes:  
   
 -   [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  

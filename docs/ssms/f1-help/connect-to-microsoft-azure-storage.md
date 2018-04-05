@@ -1,30 +1,43 @@
 ---
 title: "Connect to Microsoft Azure Storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
-ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
+  - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
+ms.assetid:
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Connect to Microsoft Azure Storage
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use the **Windows Azure Storage Connection** dialog to specify a storage account and validate your connection to Windows Azure.  
   
 ## Options  
 Specify the following information about your Windows Azure account, and then click **Next** to continue.  
   
-1.  **Storage Account** - Specify the storage account name.  
-  
+1.  **Storage Account** - Specify the storage account name.
+
+   >[!NOTE]
+   > You can only connect to [General-purpose Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/storage-introduction#introducing-the-azure-storage-services). Connecting to other types of storage accounts can result in an error similar to the following:
+   >
+   >  The value for one of the HTTP headers is not in the correct format. (Microsoft.SqlServer.StorageClient).
+   >
+   >  The remote server returned an error: (400) Bad Request. (System)
+
 2.  **Account Key** - Specify the account key for the specified storage account.  
   
 3.  **Use secure endpoints (HTTPS)** – This option utilizes encrypted communication and secure identification of a network web server.  

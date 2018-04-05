@@ -2,9 +2,12 @@
 title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to a **PostgreSQL** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. 
@@ -39,6 +43,10 @@ Here's the generic screen that you see immediately after selecting the .NET Fram
 ![Connect to PostgreSQL with ODBC before](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ### Options to specify (PostgreSQL ODBC driver)
+
+> [!NOTE]
+> The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
+
 To connect to PostgreSQL with the PostgreSQL ODBC driver, assemble a connection string that includes the following settings and their values. The format of a complete connection string immediately follows the list of settings.
 
 > [!TIP]
@@ -62,24 +70,25 @@ The **Uid** (user id) and **Pwd** (password) to connect.
 ### Connection string format
 Here's the format of a typical connection string. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
 The following example uses this connection string.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Here's the screen that you see after entering the connection string.
 
 ![Connect to PostgreSQL with ODBC](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 
-> [!NOTE]
-> The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
-
 ## Other data providers and more info
-For info about how to connect to PostgreSQL with a data provider that's not listed here, see [PostgreSQL connection strings](https://www.connectionstrings.com/PostgreSQL/). This third-party site also contains more info about the data providers and the connection parameters described on this page.
+For info about how to connect to PostgreSQL with a data provider that's not listed here, see [PostgreSQL connection strings](https://www.connectionstrings.com/postgresql/). This third-party site also contains more info about the data providers and the connection parameters described on this page.
 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

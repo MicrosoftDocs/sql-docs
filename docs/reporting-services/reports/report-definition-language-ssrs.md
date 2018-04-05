@@ -2,12 +2,15 @@
 title: "Report Definition Language (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reports"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -21,9 +24,10 @@ helpviewer_keywords:
   - "reports [Reporting Services], definitions"
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Report Definition Language (SSRS)
   Report Definition Language (RDL) is an XML representation of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report definition. A report definition contains data retrieval and layout information for a report. RDL is composed of XML elements that match an XML grammar created for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. You can add your own custom functions for controlling report item values, styles, and formatting by accessing code assemblies within report definition files.  
@@ -44,7 +48,7 @@ manager: "erikre"
   
  For example, the schema includes the RDL element **ReportParameters**, which is the complex type **ReportParametersType**. By convention, a complex type for an element is the name of the element follow by the word **Type**. A **ReportParameters** element can be contained by the **Report** element (a complex type), and can contain **ReportParameter** elements. A **ReportParameterType** is a simple type that can only be one of the following values: **Boolean**, **DateTime**, **Integer**, **Float**, or **String**. For more information about XML Schema datatypes, see [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871).  
   
- The RDL XSD is available in the ReportDefinition.xsd file, located in the Extras folder on the product CD-ROM. It is also available on the report server through the following URL: http://servername/reportserver/reportdefinition.xsd.  
+ The RDL XSD is available in the ReportDefinition.xsd file, located in the Extras folder on the product CD-ROM. It is also available on the report server through the following URL: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Creating RDL  
  Because of the open and extensible nature of RDL, a variety of tools and applications can be built that generate RDL based on its XML schema.  

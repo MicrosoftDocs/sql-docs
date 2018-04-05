@@ -2,9 +2,12 @@
 title: "Prereqs Migrating Log Shipping to Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -16,10 +19,11 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 caps.latest.revision: 24
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Prereqs Migrating Log Shipping to Always On Availability Groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes the prerequisites for converting a log shipping primary database along with one or more of its secondary databases to an Always On primary database and secondary database(s).  
   

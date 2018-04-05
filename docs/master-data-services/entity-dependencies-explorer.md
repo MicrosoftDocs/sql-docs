@@ -2,9 +2,12 @@
 title: "Entity Dependencies Explorer | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ keywords:
   - "master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Entity Dependencies Explorer
   

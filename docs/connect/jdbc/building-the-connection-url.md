@@ -3,8 +3,11 @@ title: "Building the Connection URL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 53
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Building the Connection URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -103,7 +107,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Alternatively you can set the java.libary.path system property to specify the directory of the sqljdbc_auth.dll. For example, if the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:  
   
- `-Djava.library.path=C:\Microsoft JDBC Driver 4.0 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
+ `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
 ## Connecting with IPv6 Addresses  
  The JDBC driver supports the use of IPv6 addresses with the connection properties collection, and with the serverName connection string property. The initial serverName value, such as jdbc:*sqlserver*://*serverName*, is not supported for IPv6 addresses in connection strings. Using a name for *serverName* instead of a raw IPv6 address will work in every case in the connection. The following examples provide more information.  

@@ -2,9 +2,12 @@
 title: "Create a Model Administrator (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ helpviewer_keywords:
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create a Model Administrator (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a model administrator when you want a group or user to have all permissions to all objects in one or more models.  

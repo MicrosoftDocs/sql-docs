@@ -3,8 +3,11 @@ title: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_nonclustered_index_stats"
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats includes statistics about operations on nonclustered indexes in memory-optimized tables. sys.dm_db_xtp_nonclustered_index_stats contains one row for each nonclustered index on a memory-optimized table in the current database.  
   
@@ -36,10 +40,6 @@ manager: "jhubbard"
  Large numbers of retries are indicative of concurrency issues; call [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support.  
   
  For more information about memory-optimized, nonclustered indexes, see [SQL Server In-Memory OLTP Internals Overview](http://t.co/T6zToWc6y6), page 17.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

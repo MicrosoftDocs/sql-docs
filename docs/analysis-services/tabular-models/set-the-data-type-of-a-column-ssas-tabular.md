@@ -1,23 +1,28 @@
 ---
-title: "Set the Data Type of a Column (SSAS Tabular) | Microsoft Docs"
+title: "Set the Data Type of a Column | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
-# Set the Data Type of a Column (SSAS Tabular)
+# Set the Data Type of a Column 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   When you import data or paste data into a model, the model designer will automatically detect and apply data types. After you have added the data to the model, you can manually modify the data type of a column to change how data is stored. If you just want to change the format of how the data is displayed without changing the way it is stored, you can do that instead.  
   
 ### To change the data type or display format for a column  
@@ -73,9 +78,9 @@ manager: "erikre"
   
  If the data type is supported, but the model designer finds values that are not supported within the new data type, you will get another error, and will need to correct the data values before proceeding.  
   
- For detailed information about the data types used in business intelligence semantic models, how they are implicitly converted, and how different data types are used in formulas, see [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ For detailed information about the data types used in business intelligence semantic models, how they are implicitly converted, and how different data types are used in formulas, see [Data Types Supported](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ## See Also  
- [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
+ [Data Types Supported](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   

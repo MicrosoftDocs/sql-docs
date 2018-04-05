@@ -1,10 +1,13 @@
 ---
 title: "CREATE ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/23/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,12 +30,13 @@ helpviewer_keywords:
   - "CREATE ROLE statement"
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a new database role in the current database.  
   
@@ -41,8 +45,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
@@ -73,12 +75,12 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 -   To assign ownership of a role to an application role, requires ALTER permission on the application role.  
   
 ## Examples  
-  
+The following examples all use the AdventureWorks database.   
+
 ### A. Creating a database role that is owned by a database user  
  The following example creates the database role `buyers` that is owned by user `BenMiller`.  
   
 ```  
-USE AdventureWorks2012;  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -87,29 +89,6 @@ GO
  The following example creates the database role `auditors` that is owned the `db_securityadmin` fixed database role.  
   
 ```  
-USE AdventureWorks2012;  
-CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Creating a database role that is owned by a database user  
- The following example creates the database role `buyers` that is owned by user `BenMiller`.  
-  
-```  
--- Uses AdventureWorks  
-  
-CREATE ROLE buyers AUTHORIZATION BenMiller;  
-GO  
-```  
-  
-### D. Creating a database role that is owned by a fixed database role  
- The following example creates the database role `auditors` that is owned the `db_securityadmin` fixed database role.  
-  
-```  
--- Uses AdventureWorks  
-  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

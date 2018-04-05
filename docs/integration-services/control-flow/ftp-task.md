@@ -2,22 +2,28 @@
 title: "FTP Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.ftptask.f1"
+  - "sql13.dts.designer.ftptask.general.f1"
+  - "sql13.dts.designer.ftptask.filetransfer.f1"
 helpviewer_keywords: 
   - "FTP task [Integration Services]"
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # FTP Task
   The FTP task downloads and uploads data files and manages directories on servers. For example, a package can download data files from a remote server or an Internet location as part of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package workflow. You can use the FTP task for the following purposes:  
@@ -58,7 +64,7 @@ manager: "jhubbard"
 |Delete remote files|Deletes a file on the FTP server.|  
   
 ## Custom Log Entries Available on the FTP Task  
- The following table lists the custom log entries for the FTP task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the FTP task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  
@@ -72,9 +78,99 @@ manager: "jhubbard"
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
+## FTP Task Editor (General Page)
+  Use the **General** page of the **FTP Task Editor** dialog box to specify the FTP connection manager that connects to the FTP server that the task communicates with. You can also name and describe the FTP task.  
+  
+### Options  
+ **FtpConnection**  
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
+  
+> [!IMPORTANT]  
+>  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
+  
+ **Related Topics**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+ **StopOnFailure**  
+ Indicate whether the FTP task terminates if an FTP operation fails.  
+  
+ **Name**  
+ Provide a unique name for the FTP task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the FTP task.  
+  
+## FTP Task Editor (File Transfer Page)
+  Use the **File Transfer** page of the **FTP Task Editor** dialog box to configure the FTP operation that the task performs.  
+  
+### Options  
+ **IsRemotePathVariable**  
+ Indicate whether the remote path is stored in a variable. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|The destination path is stored in a variable. Selecting the value displays the dynamic option, **RemoteVariable**.|  
+|**False**|The destination path is specified in a File connection manager. Selecting the value displays the dynamic option, **RemotePath**.|  
+  
+ **OverwriteFileAtDestination**  
+ Specify whether a file at the destination can be overwritten.  
+  
+ **IsLocalPathVariable**  
+ Indicate whether the local path is stored in a variable. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|The destination path is stored in a variable. Selecting the value displays the dynamic option, **LocalVariable**.|  
+|**False**|The destination path is specified in a File connection manager. Selecting the value displays the dynamic option, **LocalPath**.|  
+  
+ **Operation**  
+ Select the FTP operation to perform. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Send files**|Send files. Selecting this value displays the dynamic options, **LocalVariable**, **LocalPathRemoteVariable** and **RemotePath**.|  
+|**Receive files**|Receive files. Selecting this value displays the dynamic options, **LocalVariable**, **LocalPathRemoteVariable** and **RemotePath**.|  
+|**Create local directory**|Create a local directory. Selecting this value displays the dynamic options, **LocalVariable** and **LocalPath**.|  
+|**Create remote directory**|Create a remote directory. Selecting this value displays the dynamic options, **RemoteVariable** and **RemotelPath**.|  
+|**Remove local directory**|Removes a local directory. Selecting this value displays the dynamic options, **LocalVariable** and **LocalPath**.|  
+|**Remove remote directory**|Remove a remote directory. Selecting this value displays the dynamic options, **RemoteVariable** and **RemotePath**.|  
+|**Delete local files**|Delete local files. Selecting this value displays the dynamic options, **LocalVariable** and **LocalPath**.|  
+|**Delete remote files**|Delete remote files. Selecting this value displays the dynamic options, **RemoteVariable** and **RemotePath**.|  
+  
+ **IsTransferASCII**  
+ Indicate whether files transferred to and from the remote FTP server should be transferred in ASCII mode.  
+  
+### IsRemotePathVariable Dynamic Options  
+  
+#### IsRemotePathVariable = True  
+ **RemoteVariable**  
+ Select an existing user-defined variable, or click \<**New variable...**> to create a user-defined variable.  
+  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), Add Variable  
+  
+#### IsRemotePathVariable = False  
+ **RemotePath**  
+ Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
+  
+ **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+  
+### IsLocalPathVariable Dynamic Options  
+  
+#### IsLocalPathVariable = True  
+ **LocalVariable**  
+ Select an existing user-defined variable, or click \<**New variable...**> to create a variable.  
+  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), Add Variable  
+  
+#### IsLocalPathVariable = False  
+ **LocalPath**  
+ Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
+  
+ **Related Topics**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+  
 ## See Also  
- [FTP Task Editor &#40;General Page&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP Task Editor &#40;File Transfer Page&#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
   

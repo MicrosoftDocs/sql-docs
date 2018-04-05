@@ -2,12 +2,15 @@
 title: "Analysis Services DMX Query Designer User Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "query designers [DMX]"
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services DMX Query Designer User Interface
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  

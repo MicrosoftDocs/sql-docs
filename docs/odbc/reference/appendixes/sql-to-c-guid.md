@@ -3,8 +3,11 @@ title: "SQL to C: GUID | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL to C: GUID
 The identifier for the GUID ODBC SQL data type is:  
@@ -29,7 +33,7 @@ The identifier for the GUID ODBC SQL data type is:
 |C type identifier|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*BufferLength* > Character byte length|Data|36|n/a|  
-||*BufferLength* \< 37|Undefined|Undefined|22003|  
+||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_WCHAR|*BufferLength* > Character length|Data|36|n/a|  
 ||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_BINARY|Byte length of data \<= *BufferLength*|Data|Length of data in bytes|n/a|  

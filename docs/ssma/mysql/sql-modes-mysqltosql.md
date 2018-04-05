@@ -1,10 +1,13 @@
 ---
 title: "SQL Modes (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Modes (MySQLToSQL)
 The SSMA for MySQL can operate in different SQL Modes, and can apply these modes differently for different clients.  

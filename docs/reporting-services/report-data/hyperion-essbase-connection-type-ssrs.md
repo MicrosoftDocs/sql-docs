@@ -2,19 +2,23 @@
 title: "Hyperion Essbase Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Hyperion Essbase Connection Type (SSRS)
   To include data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. This built-in data source type is based on the data extension for [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], which enables you to retrieve multidimensional data from a [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] external data source.  

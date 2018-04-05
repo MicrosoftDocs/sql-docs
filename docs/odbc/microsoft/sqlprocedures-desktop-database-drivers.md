@@ -3,8 +3,11 @@ title: "SQLProcedures (Desktop Database Drivers) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLProcedures (Desktop Database Drivers)
 **SQLProcedures** will only return rows for those procedures that have at least one argument. Procedures that have no arguments are treated as views.  

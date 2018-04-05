@@ -2,9 +2,12 @@
 title: "Direct the CDC Stream According to the Type of Change | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Direct the CDC Stream According to the Type of Change
   To add and configure a CDC splitter Transformation, the package must contain at least one Data Flow task and a CDC source.  

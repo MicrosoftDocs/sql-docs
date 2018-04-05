@@ -3,8 +3,11 @@ title: "Driver-Specific Types - Data, Descriptor, Information, Diagnostic | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes
 Drivers can allocate driver-specific values for the following:  

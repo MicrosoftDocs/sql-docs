@@ -2,9 +2,12 @@
 title: "MSdistpublishers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -20,11 +23,13 @@ helpviewer_keywords:
   - "MSdistpublishers system table"
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # MSdistpublishers (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The **MSdistpublishers** table contains one row for each remote Publisher supported by the local Distributor. This table is stored in the **msdb** database.  
   
 |Column name|Data type|Description|  

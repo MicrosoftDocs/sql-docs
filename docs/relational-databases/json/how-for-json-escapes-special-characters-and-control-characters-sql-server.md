@@ -1,11 +1,12 @@
 ---
 title: "How FOR JSON escapes special characters and control characters (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -16,10 +17,11 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # How FOR JSON escapes special characters and control characters (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how the **FOR JSON** clause of a SQL Server **SELECT** statement escapes special characters and represents control characters in the JSON output.  
 
@@ -55,7 +57,7 @@ If the source data contains control characters, the **FOR JSON** clause encodes 
   
  Query:  
   
-```tsql  
+```sql  
 SELECT  
   'VALUE\    /  
   "' as [KEY\/"],  
@@ -75,6 +77,22 @@ FOR JSON PATH
 	"31": "\u001f"
 }
 ```  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

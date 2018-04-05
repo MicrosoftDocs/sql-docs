@@ -1,10 +1,13 @@
 ---
 title: "Command Line Options in SSMA Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -24,9 +27,10 @@ helpviewer_keywords:
   - "Command line options, XML output option"
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

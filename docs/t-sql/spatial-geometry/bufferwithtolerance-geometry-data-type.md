@@ -1,10 +1,13 @@
 ---
 title: "BufferWithTolerance (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "BufferWithTolerance (geometry Data Type)"
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # BufferWithTolerance (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns a geometric object that represents the union of all point values whose distance from a **geometry** instance is less than or equal to a specified value, allowing for a specified tolerance.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns a geometric object that represents the union of all point values whose distance from a **geometry** instance is less than or equal to a specified value, allowing for a specified tolerance.
   
 ## Syntax  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  When *distance* = 0 then a copy of the calling **geometry** instance is returned.  
   
- When *distance* \< 0 then  
+ When *distance* < 0 then  
   
 -   An empty **GeometryCollection** instance is returned when the dimensions of the instance are 0 or 1.  
   
@@ -98,3 +98,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
+

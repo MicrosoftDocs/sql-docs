@@ -1,10 +1,13 @@
 ---
 title: "DENY Database Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,12 +30,13 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DENY Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Denies permissions granted on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -42,7 +46,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -75,16 +78,14 @@ DENY permission [ ,...n ]
  Specifies the class and name of the role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  APPLICATION ROLE ::*application_role*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the class and name of the application role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
  CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- AS <database_principal>  
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to revoke the permission.  
   
  *Database_user*  
@@ -94,39 +95,21 @@ DENY permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to a certificate.  
+  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to an asymmetric key.  
+  Specifies a database user mapped to an asymmetric key.  
   
  *Database_user_with_no_login*  
  Specifies a database user with no corresponding server-level principal.  
@@ -191,9 +174,7 @@ GO
 ### C. Denying IMPERSONATE permission on a user to an application role  
  The following example denies `IMPERSONATE` permission on user `HamithaL` to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] application role `AccountsPayable17`.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

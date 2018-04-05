@@ -2,12 +2,13 @@
 title: "Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,10 +18,11 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Extended Events
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
 

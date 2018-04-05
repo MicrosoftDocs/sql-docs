@@ -2,9 +2,12 @@
 title: "Detect and Resolve Merge Replication Conflicts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -20,11 +23,13 @@ helpviewer_keywords:
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: 0d033c76-e8c9-4e35-ab95-4d335abb18c1
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Advanced Merge Replication - Resolve Merge Replication Conflicts
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver to determine which data will be accepted and propagated to other sites.  
   
 > [!NOTE]  

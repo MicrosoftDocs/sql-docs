@@ -3,8 +3,11 @@ title: "Installer DLL API Reference Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Installer DLL API Reference Function
 This section describes the syntax of the functions in the installer DLL API. The installer DLL API consists of 20 functions. Three of these functions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, and **SQLWriteDSNToIni**, are called only by setup DLLs. The other functions are called by the setup and administration programs.  

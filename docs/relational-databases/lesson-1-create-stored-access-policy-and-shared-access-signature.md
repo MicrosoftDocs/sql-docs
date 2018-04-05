@@ -1,11 +1,13 @@
 ---
 title: "Lesson 1: Create stored access policy and shared access signature | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -16,9 +18,11 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 22
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 1: Create stored access policy and shared access signature
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this lesson, you will use an [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure blob container using a stored access policy.  
   
 > [!NOTE]  
@@ -56,7 +60,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
 2.  Edit and then execute the following script.  
   
     ```  
-    \<#   
+    <#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -69,7 +73,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    \<#   
+    <#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -95,7 +99,7 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    \<#  
+    <#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  
@@ -109,21 +113,12 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
   
     # Creates a new container in blob storage  
     $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
-    $cbc = $container.CloudBlobContainer  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $permissions = $cbc.GetPermissions();  
-    $policyName = $policyName  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-    $policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-    $policy.Permissions = "Read,Write,List,Delete"  
-    $permissions.SharedAccessPolicies.Add($policyName, $policy)  
-    $cbc.SetPermissions($permissions);  
-  
+    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+
     # Gets the Shared Access Signature for the policy  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

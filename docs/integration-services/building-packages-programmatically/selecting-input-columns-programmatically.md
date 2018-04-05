@@ -2,11 +2,14 @@
 title: "Selecting Input Columns Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -26,7 +29,8 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 caps.latest.revision: 49
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Selecting Input Columns Programmatically
   After you have programmatically connected components, select the columns from upstream components that you will transform or pass through to downstream components. If you do not select input columns for your component, the component does not receive any rows from the data flow task.  
@@ -208,11 +212,7 @@ Module Module1
   End Sub  
   
 End Module  
-```  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
+```
   
 ## See Also  
  [Saving a Package Programmatically](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  

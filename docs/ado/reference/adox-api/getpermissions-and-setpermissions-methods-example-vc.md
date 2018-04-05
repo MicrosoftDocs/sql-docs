@@ -1,12 +1,15 @@
 ---
 title: "GetPermissions and SetPermissions Methods Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # GetPermissions and SetPermissions Methods Example (VC++)
 This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  

@@ -1,10 +1,13 @@
 ---
 title: "SQL Server Connector Maintenance &amp; Troubleshooting | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2016"
-ms.prod: "sql-server-2016"
+ms.date: "04/05/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,12 +16,13 @@ helpviewer_keywords:
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Supplemental information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -46,7 +50,7 @@ manager: "jhubbard"
   
      Import the new asymmetric key.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -57,7 +61,7 @@ manager: "jhubbard"
   
      Create a new login to be associated with the new asymmetric key (as shown under the TDE instructions).  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -66,7 +70,7 @@ manager: "jhubbard"
   
      Create a new credential to be mapped to the login.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -79,14 +83,14 @@ manager: "jhubbard"
   
      Choose the database whose database encryption key you would like to re-encrypt.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      Re-encrypt the database encryption key.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -125,7 +129,7 @@ If you are currently using Version 1.0.0.440 or older, follow these steps to upd
   
 6.  Run the following statement to alter the EKM Provider to start using the newest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. Make sure that the file path is pointing to where you downloaded the newest version. (This step can be skipped if the new version is being installed in the same location as the original version.) 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -160,9 +164,14 @@ Key backups can be restored across Azure regions, as long as they remain in the 
  The asymmetric key in the key vault is used to protect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption keys. Only the public portion of the asymmetric key ever leaves the vault; the private portion is never exported by the vault. All cryptographic operations using the asymmetric key are done within the Azure Key Vault service, and are protected by the service’s security.  
   
  **What is a Key URI?**  
- Every key in Azure Key Vault has a Uniform Resource Identifier (URI), which you can use to reference the key in your application. Use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** to get the current version, and use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** to get a specific version.  
+ Every key in Azure Key Vault has a Uniform Resource Identifier (URI), which you can use to reference the key in your application. Use the format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` to get the current version, and use the format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` to get a specific version.  
   
 ### On Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+**What are the endpoints that the SQL Server Connector needs access to?** 
+ The Connector talks to two endpoints, which need to be whitelisted. The only port required for outbound communication to these other services is 443 for Https:
+-  login.microsoftonline.com/*:443
+-  *.vault.azure.net/*:443
   
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
@@ -177,7 +186,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
   
 -   To create an asymmetric key, requires `CREATE ASYMMETRIC KEY` permission.  
 
-### How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?
+**How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 

@@ -1,10 +1,13 @@
 ---
 title: "sqlsrv_fetch_array | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ caps.latest.revision: 52
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -80,7 +84,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 If a result set contains multiple columns without names, the value of the last unnamed column will be assigned to the empty string ("") key.  
   
 ## Example  
-The following example retrieves each row of a result set as an associative **array**. The example assumes that the SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example retrieves each row of a result set as an associative **array**. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -123,7 +127,7 @@ The following example retrieves each row of a result set as a numerically indexe
   
 The example retrieves product information from the *Purchasing.PurchaseOrderDetail* table of the AdventureWorks database for products that have a specified date and a stocked quantity (*StockQty*) less than a specified value.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -179,8 +183,11 @@ The **sqlsrv_fetch_array** function always returns data according to the [Defaul
 If a field with no name is retrieved, the associative key for the array element will be an empty string (""). For more information, see [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 ## See Also  
-[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -3,8 +3,11 @@ title: "CREATE DEFAULT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "DEFAULT definition"
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates an object called a default. When bound to a column or an alias data type, a default specifies a value to be inserted into the column to which the object is bound (or into all columns, in the case of an alias data type), when no value is explicitly supplied during an insert.  
   
@@ -90,7 +94,7 @@ AS constant_expression [ ; ]
 ### A. Creating a simple character default  
  The following example creates a character default called `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -101,7 +105,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Because a default named `phonedflt` does not exist, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement fails. This example is for illustration only.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

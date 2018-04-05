@@ -2,12 +2,15 @@
 title: "DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: 8dda2ef7-202a-454b-93f9-a2b29c2d277c
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Returns basic information about the trace provider, such as its name and description.  
   
  **Applies to:** tabular models, multidimensional models  

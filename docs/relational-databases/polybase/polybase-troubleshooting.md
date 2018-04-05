@@ -1,11 +1,13 @@
 ---
 title: "PolyBase troubleshooting | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "8/29/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "polybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
@@ -19,11 +21,11 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # PolyBase troubleshooting
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To troubleshoot PolyBase, use the techniques found in this topic.  
   
 ## Catalog views  
@@ -64,7 +66,7 @@ manager: "jhubbard"
   
      Record the execution ID of the longest running query.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -83,7 +85,7 @@ manager: "jhubbard"
   
     -   DMS: implies a PolyBase Data Movement Service operation. Proceed with Step 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -99,7 +101,7 @@ manager: "jhubbard"
   
          Use the execution ID and step index recorded in the previous steps. Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -112,7 +114,7 @@ manager: "jhubbard"
   
          Use the execution ID and step index recorded in the previous steps.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -126,7 +128,7 @@ manager: "jhubbard"
   
      Use the execution ID and step index recorded in the previous steps.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   
@@ -218,11 +220,26 @@ manager: "jhubbard"
  ## Known Limitations
  
  PolyBase has the following limitations: 
- - The maximum possible row size, including the full length of variable length columns, can not exceed 1 MB. 
+ - The maximum possible row size, including the full length of variable length columns, can not exceed 32 KB in SQL Server or 1 MB in     Azure SQL Data Warehouse. 
  - PolyBase doesn’t support the Hive 0.12+ data types (i.e. Char(), VarChar())   
  - When exporting data into an ORC File Format from SQL Server or Azure SQL Data Warehouse text heavy columns can be limited to as few as 50 columns due to java out of memory errors. To work around this, export only a subset of the columns.
-- [PolyBase doesn't install when you add a node to a SQL Server 2016 Failover Cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Cannot Read or Write data encrypted at rest in Hadoop. This includes HDFS Encrypted Zones or Transparent Encryption.
+ - PolyBase cannot connect to a Hortonworks instance if KNOX is enabled. 
+ - If you are using Hive tables with transactional = true, PolyBase cannot access the data in the Hive table's directory. 
+
+
+[PolyBase doesn't install when you add a node to a SQL Server 2016 Failover Cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## Hadoop Name Node High Availability
+PolyBase does not interface with Name Node HA services like Zookeeper or Knox today. However, there is a proven workaround that can be used to provide the functionality. 
+
+Work Around:
+Use DNS name to reroute connections to the active Name Node. In order to do this, you will need to ensure that the External Data Source is using a DNS name to communicate with the Name Node. When Name Node Failover occurs, you will need to change the IP address associated with the DNS name used in the External Data Source definition. This will reroute all new connections to the correct Name Node. Existing connections will fail when failover occurs. To automate this process, a "heartbeat" can ping the active Name Node. If the heart beat fails, one can assume a failover has occured and automatically switch to the secondaries IP address.
+
+
 ## Error messages and possible solutions
 
 To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions").
+
+## See also
+[Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)

@@ -2,9 +2,12 @@
 title: "Audit Add DB User Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Audit Add DB User event class"
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Audit Add DB User Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Audit Add DB User** event class occurs whenever a login is added or removed as a database user to a database. This event class is used for the **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**, and **sp_dropuser** stored procedures.  
   
  This event class may be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is recommended that you use the **Audit Database Principal Management** event class instead.  

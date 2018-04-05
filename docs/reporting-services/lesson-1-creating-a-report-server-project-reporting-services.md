@@ -2,20 +2,27 @@
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 57
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
+
+ > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] within Visual Studio. 
 
 To create a report with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], first you need a report server project where you can save your report definition (.rdl) file and other resource files you need for your report. 
@@ -38,7 +45,7 @@ In the following lessons, you define a data source for your report, define a dat
 
 5. Click **Report Server Project** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Note**: If you don't see the **Business Intelligence** or **Report Server Project** options, you need to update SSDT with the Business Intelligence templates. See [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+   >**Note**: If you don't see the **Business Intelligence** or **Report Server Project** options, you need to update SSDT with the Business Intelligence templates. See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  In **Name**, type **Tutorial**.  
 

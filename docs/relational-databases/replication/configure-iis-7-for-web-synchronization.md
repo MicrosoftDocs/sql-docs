@@ -2,9 +2,12 @@
 title: "Configure IIS 7 for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -14,12 +17,13 @@ helpviewer_keywords:
   - "Web synchronization, IIS 7 servers"
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Configure IIS 7 for Web Synchronization
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The procedures in this topic will guide you through the process of manually configuring [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) version 7 and higher for use with Web synchronization for merge replication. 
   
@@ -280,7 +284,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
     4.  If a proxy server is used, click **Use a proxy server for your LAN** and **Bypass proxy server for local addresses**, and then click **OK**.  
   
-2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  At the Subscriber, in Internet Explorer, connect to the server in diagnostic mode by appending `?diag` to the address for the replisapi.dll. For example: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
     >  In the example above, **server.domain.com** should be replaced with the exact **Issued To** name listed under the **Server Certificates** section in IIS Manager.  

@@ -1,12 +1,15 @@
 ---
 title: "Supports Method Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Supports Method Example (VB)
 This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport procedure is required for this procedure to run.  

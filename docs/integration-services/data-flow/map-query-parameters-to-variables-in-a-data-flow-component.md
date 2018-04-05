@@ -2,9 +2,12 @@
 title: "Map Query Parameters to Variables in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -18,7 +21,8 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Map Query Parameters to Variables in a Data Flow Component
   When you configure the OLE DB source to use parameterized queries, you can map the parameters to variables.  

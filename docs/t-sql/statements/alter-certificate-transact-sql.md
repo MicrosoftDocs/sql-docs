@@ -1,10 +1,13 @@
 ---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "certificates [SQL Server], modifying"
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Changes the private key used to encrypt a certificate, or adds one if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -40,18 +44,14 @@ manager: "jhubbard"
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER CERTIFICATE certificate_name   
-    REMOVE PRIVATE KEY  
-    |  
-    WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
-    |  
-    WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
+      REMOVE PRIVATE KEY  
+    | WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
+    | WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
   
 <private_key_spec> ::=   
-    FILE = 'path_to_private_key'   
-    |  
-    DECRYPTION BY PASSWORD = 'key_password'   
-    |  
-    ENCRYPTION BY PASSWORD = 'password'   
+      FILE = 'path_to_private_key'   
+    | DECRYPTION BY PASSWORD = 'key_password'   
+    | ENCRYPTION BY PASSWORD = 'password'   
 ```  
   
 ```  
@@ -59,13 +59,11 @@ ALTER CERTIFICATE certificate_name
   
 ALTER CERTIFICATE certificate_name   
 {  
-    REMOVE PRIVATE KEY  
-    |  
-    WITH PRIVATE KEY (   
+      REMOVE PRIVATE KEY  
+    | WITH PRIVATE KEY (   
         FILE = '<path_to_private_key>',  
-        DECRYPTION BY PASSWORD = '<key password>'  
-    )}  
-  
+        DECRYPTION BY PASSWORD = '<key password>' )
+}  
 ```  
   
 ## Arguments  
@@ -140,17 +138,6 @@ GO
 ```  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Importing a private key for a certificate that is already present in the database  
-  
-```  
-ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = '\\ServerA7\importedkeys\Shipping13',  
-    DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
 GO  
 ```  
   

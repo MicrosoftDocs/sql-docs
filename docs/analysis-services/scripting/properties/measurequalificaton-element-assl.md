@@ -2,12 +2,15 @@
 title: "MeasureQualificaton Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -23,9 +26,11 @@ ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MeasureQualificaton Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Determines whether a prefix is applied to measures in the [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  
   
 ## Syntax  

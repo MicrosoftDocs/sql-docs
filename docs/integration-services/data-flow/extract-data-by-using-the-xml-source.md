@@ -2,9 +2,12 @@
 title: "Extract Data by Using the XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Extract Data by Using the XML Source
   To add and configure an XML source, the package must already include at least one Data Flow task.  
@@ -53,7 +57,7 @@ manager: "jhubbard"
   
 8.  To update the names of output columns, click **Columns** and edit the values in the **Output Column** list.  
   
-9. To configure the error output, click **Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. To configure the error output, click **Error Output**. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Click **OK**.  
   

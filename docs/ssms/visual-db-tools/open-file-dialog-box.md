@@ -3,8 +3,11 @@ title: "Open File Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Open File Dialog Box
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use the **Open File** dialog box to open an existing file from disk. You can also use this dialog box to open an already opened file using different language encoding options.  
   
 To access this dialog box, select **Open** from the **File** menu and then choose **File**. This dialog box also appears when you are opening files from other elements, such as the **External Tools** dialog box. From the **File** menu, select **Open**, and then choose **Project/Solution** to open the similar **Open Project** dialog box.  

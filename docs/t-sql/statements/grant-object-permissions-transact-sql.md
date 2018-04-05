@@ -1,10 +1,13 @@
 ---
 title: "GRANT Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,25 +19,23 @@ helpviewer_keywords:
   - "GRANT statement, objects"
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # GRANT Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Grants permissions on a table, view, table-valued function, stored procedure, extended stored procedure, scalar function, aggregate function, service queue, or synonym.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 GRANT <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
     TO <database_principal> [ ,...n ]   
@@ -62,20 +63,16 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  Granting ALL does not grant all possible permissions. Granting ALL is equivalent to granting all [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 permissions applicable to the specified object. The meaning of ALL varies as follows:  
   
- Scalar function permissions: EXECUTE, REFERENCES.  
+- Scalar function permissions: EXECUTE, REFERENCES.  
+- Table-valued function permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Stored procedure permissions: EXECUTE.  
+- Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Table-valued function permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- Stored procedure permissions: EXECUTE.  
-  
- Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- PRIVILEGES  
+PRIVILEGES  
  Included for [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 compliance. Does not change the behavior of ALL.  
   
- *column*  
+*column*  
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being granted. The parentheses ( ) are required. Only SELECT, REFERENCES, and UPDATE permissions can be granted on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  
@@ -84,13 +81,13 @@ GRANT <permission> [ ,...n ] ON
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
  Specifies the object on which the permission is being granted. The OBJECT phrase is optional if *schema_name* is specified. If the OBJECT phrase is used, the scope qualifier (::) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
   
- TO <database_principal>  
+ TO \<database_principal>  
  Specifies the principal to which the permission is being granted.  
   
  WITH GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS <database_principal>  
+ AS \<database_principal> 
  Specifies a principal from which the principal executing this query derives its right to grant the permission.  
   
  *Database_user*  
@@ -163,7 +160,6 @@ GRANT <permission> [ ,...n ] ON
  The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -182,7 +178,6 @@ GO
  The following example grants `REFERENCES` permission on column `BusinessEntityID` in view `HumanResources.vEmployee` to user `Wanida` with `GRANT OPTION`.  
   
 ```  
-USE AdventureWorks2012;  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -192,7 +187,6 @@ GO
  The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -201,7 +195,6 @@ GO
  The following example grants `SELECT` permission to user `AdventureWorks2012\RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -210,7 +203,6 @@ GO
  The following example creates a role and then grants `EXECUTE` permission to the role on procedure `uspGetBillOfMaterials` in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  
@@ -228,3 +220,4 @@ GO
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
+

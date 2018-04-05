@@ -2,22 +2,28 @@
 title: "Use Analysis Services Templates in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Use Analysis Services Templates in SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides a set of templates to help you quickly create XMLA scripts, DMX or MDX queries, create KPIs in a cube or tabular model, script backup and restore operations, and perform many other tasks. Templates are located in the **Template Explorer** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  This topic includes a list of the templates for multidimensional models and tabular models, and provides examples of how to build an MDX query and XMLA statement by using the Metadata Explorer and the Template Explorer.  

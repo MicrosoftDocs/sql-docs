@@ -2,9 +2,12 @@
 title: "Data Types and XML Bulk Load Behavior (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Data Types and XML Bulk Load Behavior (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The data types that are specified in the mapping schema (XSD or XDR type and **sql:datatype**) are generally ignored, except in the following cases:  
   
  In XSD:  

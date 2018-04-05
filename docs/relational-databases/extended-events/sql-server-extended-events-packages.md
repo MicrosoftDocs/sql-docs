@@ -2,12 +2,13 @@
 title: "SQL Server Extended Events Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,10 +18,11 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server Extended Events Packages
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   A package is a container for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
   

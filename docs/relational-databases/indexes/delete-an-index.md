@@ -2,9 +2,12 @@
 title: "Delete an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "index deletions [SQL Server]"
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Delete an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

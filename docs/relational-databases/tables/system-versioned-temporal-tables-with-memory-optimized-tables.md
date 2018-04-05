@@ -1,11 +1,13 @@
 ---
 title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -14,10 +16,11 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   System-versioned temporal tables for [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) are designed to provide cost-effective solution for scenarios where [data audit and point in time analysis](http://msdn.microsoft.com/library/mt631669.aspx) are required on top of data collected with In-Memory OLTP workloads. They provide high transactional throughput, lock-free concurrency and at the same time, ability to store large amount of history data that can be easily queried.  
   
@@ -58,7 +61,7 @@ manager: "jhubbard"
   
 -   The table replicates the schema of current temporal table plus one BIGINT column. This additional column guarantees the uniqueness of the rows moved to internal history buffer.  
   
--   The additional column has the following name format: **Change_ID[_\< suffix>]**, where *_\<suffix>* is optionally added in the case where the table already has a *Change_ID* column.  
+-   The additional column has the following name format: **Change_ID[_< suffix>]**, where *_\<suffix>* is optionally added in the case where the table already has a *Change_ID* column.  
   
 -   The maximum row size for a system-versioned memory-optimized table is reduced by 8 bytes because of the additional BIGINT column in staging table. The new maximum is now 8052 bytes.  
   
@@ -75,9 +78,6 @@ manager: "jhubbard"
   
  You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) and specifying the schema and table name:   
 **sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. With this user-executed command, the same data movement process is invoked as when data flush task is invoked by the system on internal schedule.  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20System-Versioned%20Temporal%20Tables%20with%20Memory-Optimized%20Tables%20page)  
   
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   

@@ -1,29 +1,33 @@
 ---
 title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
+ms.date: "09/20/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
-  - "report servers [Reporting Services], databases"
-  - "report server database"
-  - "databases [Reporting Services], creating"
-ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
-# SSRS Report Server - Create a Report Server Database
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Native mode** uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data. The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are referred to as the "report server database" or "report server catalog".  
-  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that is used for data alerting metadata. The three databases are created for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and the database names by default include a guid that represents the service application. The following are example names of the three SharePoint mode databases:  
-  
+
+# Create a Report Server Database
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Native mode** uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data. The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are referred to as the "report server database" or "report server catalog".
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that is used for data alerting metadata. The three databases are created for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and the database names by default include a guid that represents the service application. The following are example names of the three SharePoint mode databases:
+
 -   ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
 -   ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
@@ -68,9 +72,9 @@ manager: "erikre"
   
 ## Database Server Edition Requirements  
  When creating a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see the “Report Server Database Server Edition Requirements” section of [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
-  
-## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
-  
-  
 
+## Next steps
+
+[Reporting Services Configuration Manager](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

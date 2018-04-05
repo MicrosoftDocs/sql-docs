@@ -1,12 +1,15 @@
 ---
 title: "Number Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Number Property (ADO)
 Indicates the number that uniquely identifies an [Error](../../../ado/reference/ado-api/error-object.md) object.  

@@ -1,14 +1,17 @@
 ---
-title: "Create and Manage Roles (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/22/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -18,12 +21,14 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Create and Manage Roles (SSAS Tabular)
+# Create and manage roles 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When a model is deployed, database administrators can manage roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- The tasks in this topic describe how to create and manage roles during model authoring by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For information about managing roles in a deployed model database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ The tasks in this article describe how to create and manage roles during model authoring by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For information about managing roles in a deployed model database, see [Tabular Model Roles](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ## Tasks  
  To create, edit, copy, and delete roles, you will use the **Role Manager** dialog box. To view the **Role Manager** dialog box, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Role Manager**.  
@@ -57,16 +62,16 @@ manager: "erikre"
 7.  To add members to the role, click the **Members** tab, and then click **Add**.  
   
     > [!NOTE]  
-    >  Role members can also be added to a deployed model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Manage Roles by using SSMS &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md).  
+    >  Role members can also be added to a deployed model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Manage Roles by using SSMS](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md).  
   
 8.  In the **Select Users or Groups** dialog box, enter Windows user or Windows group objects as members.  
   
 9. Click **Ok**.  
   
-## See Also  
- [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+## See also  
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME Function (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
  [CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   

@@ -2,19 +2,23 @@
 title: "Reporting Services Concepts (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 37
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Reporting Services Concepts (SSRS)
   This topic provides a brief summary of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] concepts.  
@@ -34,7 +38,7 @@ manager: "erikre"
  Report server items include paginated and mobile reports, KPIs, shared data sources, shared datasets, and other items that you can publish, upload, or save to a report server. Organize items in the report server hierarchical folder structure on a native report server, or in SharePoint content libraries on a SharePoint site. For more information, see [Report Server Content Management &#40;SSRS Native Mode&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### Folders
- On a native report server, folders provide the hierarchical navigation structure and path of all addressable items stored in a report server. You use the folder hierarchy and site and folder permissions to help control access to report server items, known as *item-level security*. By default, role assignments that you define for specific folders are inherited by child folders in the folder hierarchy. If you assign specific roles to a folder, the inheritance rules no longer apply. The folder structure consists of a root node named **Home**, and reserved folders that support the optional **My Reports** feature. In a browser, the root node is the name of the report server virtual directory, for example, http://myreportserver/reports. For more information, see [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
+ On a native report server, folders provide the hierarchical navigation structure and path of all addressable items stored in a report server. You use the folder hierarchy and site and folder permissions to help control access to report server items, known as *item-level security*. By default, role assignments that you define for specific folders are inherited by child folders in the folder hierarchy. If you assign specific roles to a folder, the inheritance rules no longer apply. The folder structure consists of a root node named **Home**, and reserved folders that support the optional **My Reports** feature. In a browser, the root node is the name of the report server virtual directory, for example, `http://myreportserver/reports`. For more information, see [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders).  
   
  On a SharePoint site, use SharePoint folders in document libraries and content libraries to organize items.  
   

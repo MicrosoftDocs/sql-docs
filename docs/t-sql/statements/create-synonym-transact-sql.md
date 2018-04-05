@@ -1,10 +1,13 @@
 ---
 title: "CREATE SYNONYM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # CREATE SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a new synonym.  
   
@@ -37,21 +41,19 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      -- SQL Server Syntax  
+-- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
   
 <object> :: =  
 {  
     [ server_name.[ database_name ] . [ schema_name_2 ]. object_name   
-  |  database_name . [ schema_name_2 ].| schema_name_2. ] object_name  
+  | database_name . [ schema_name_2 ].| schema_name_2. ] object_name  
 }  
 ```  
   
 ```  
-  
-      -- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   
@@ -69,9 +71,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  Is the name of the new synonym.  
   
  *server_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Is the name of the server on which base object is located.  
   
@@ -120,16 +120,12 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  The following example first creates a synonym for the base object, `Product` in the `AdventureWorks2012` database, and then queries the synonym.  
   
 ```  
-USE tempdb;  
-GO  
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
 GO  
   
 -- Query the Product table by using the synonym.  
-USE tempdb;  
-GO  
 SELECT ProductID, Name   
 FROM MyProduct  
 WHERE ProductID < 5;  
@@ -138,28 +134,22 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

@@ -2,9 +2,12 @@
 title: "Comparing String Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -19,7 +22,8 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Comparing String Data
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  

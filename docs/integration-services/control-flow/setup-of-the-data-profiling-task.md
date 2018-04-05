@@ -2,9 +2,12 @@
 title: "Setup of the Data Profiling Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Setup of the Data Profiling Task
   Before you can review a profile of the source data, the first step is to set up and run the Data Profiling task. You create this task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. To configure the Data Profiling task, you use the Data Profiling Task Editor. This editor enables you to select where to output the profiles, and which profiles to compute. After you set up the task, you run the package to compute the data profiles.  
@@ -42,7 +46,7 @@ manager: "jhubbard"
  For more information, see [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) and [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md).  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## Selection and Configuration of the Profiles to be Computed  
  After you have set up the output file, you have to select which data profiles to compute. The Data Profiling Task can compute eight different data profiles. Five of these profiles analyze individual columns, and the remaining three analyze multiple columns or relationships between columns and tables. In a single Data Profiling task, you can compute multiple profiles for multiple columns or combinations of columns in multiple tables or views.  

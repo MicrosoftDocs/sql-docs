@@ -1,12 +1,15 @@
 ---
 title: "Handling SMO Exceptions | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/06/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "smo"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,11 +19,14 @@ helpviewer_keywords:
   - "inner exceptions [SMO]"
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Handling SMO Exceptions
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   In managed code, exceptions are thrown when an error occurs. SMO methods and properties do not report success or failure in the return value. Instead, exceptions can be caught and handled by an exception handler.  
   
  Different exception classes exist in the SMO. Information about the exception can be extracted from the exception properties such as the **Message** property that gives a text message about the exception.  
@@ -38,7 +44,7 @@ manager: "jhubbard"
  The diagram shows the flow of exceptions through the layers of the application.  
   
 ## Example  
- To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) or [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md).  
+ To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## Catching an Exception in Visual Basic  
  This code example shows how to use the **Try…Catch…Finally**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] statement to catch a SMO exception. All SMO exceptions have the type SmoException, and are listed in the SMO reference. The sequence of inner exceptions is displayed to show the root of the error. For more information, see the [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET documentation.  

@@ -2,9 +2,12 @@
 title: "Integration Services (SSIS) Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Integration Services (SSIS) Package and Project Parameters
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
@@ -37,7 +41,7 @@ manager: "jhubbard"
   
 -   [Configure Dialog Box](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/execute-package-dialog-box.md)  
+-   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### Parameter Values  
  You can assign up to three different types of values to a parameter. When a package execution is started, a single value is used for the parameter, and the parameter is resolved to its final literal value.  
@@ -81,7 +85,7 @@ manager: "jhubbard"
  [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  Sets the value of a parameter for an instance of execution in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog.  
   
- You can also use the **Execute Package** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] modify the parameter value. For more information, see [Execute Package Dialog Box](../integration-services/packages/execute-package-dialog-box.md).  
+ You can also use the **Execute Package** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] modify the parameter value. For more information, see [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
   
  You can also use the dtexec **/Parameter** option to modify a parameter value. For more information, see [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
@@ -100,7 +104,7 @@ manager: "jhubbard"
 ## Create parameters
 You use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create project parameters and package parameters. The following procedures provide step-by-step instructions for creating package/project parameters.  
   
-> **NOTE:** If you are converting a project that you created using an earlier version of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to the project deployment model, you can use the **Integration Services Project Conversion Wizard** to create parameters based on configurations. For more information, see [Deploy Projects to Integration Services Server](../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+> **NOTE:** If you are converting a project that you created using an earlier version of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to the project deployment model, you can use the **Integration Services Project Conversion Wizard** to create parameters based on configurations. For more information, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### Create package parameters  
   

@@ -2,10 +2,12 @@
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,16 +18,18 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features available. It is a fully parallelized operation that creates a new table based on the output of a SELECT statement. CTAS is the simplest and fastest way to create a copy of a table.   
  
  For example, use CTAS to:  
   
--   Re-create a table with a different hash distribution column.   
+-   Re-create a table with a different hash distribution column.
+-   Re-create a table as replicated.   
 -   Create a columnstore index on just some of the columns in the table.  
 -   Query or import external data.  
 
@@ -39,8 +43,6 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 ## Syntax   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
@@ -54,7 +56,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
       | DISTRIBUTION = ROUND_ROBIN 
-      | DISTRIBUTION = REPLICATE -- Only available in Parallel Data Warehouse
+      | DISTRIBUTION = REPLICATE
     }   
 
 <table_option> ::= 
@@ -144,7 +146,9 @@ For details, see [Limitations and Restrictions](https://msdn.microsoft.com/libra
 
 For a hash-distributed table, you can use CTAS to choose a different distribution column to achieve better performance for joins and aggregations. If choosing a different distribution column is not your goal, you will have the best CTAS performance if you specify the same distribution column since this will avoid re-distributing the rows. 
 
-If you are using CTAS to create a small table and performance is not a factor, you can specify `ROUND_ROBIN` to avoid having to decide on a distribution column.
+If you are using CTAS to create table and performance is not a factor, you can specify `ROUND_ROBIN` to avoid having to decide on a distribution column.
+
+To avoid data movement in subsequent queries, you can specify `REPLICATE` at the cost of increased storage for loading a full copy of the table on each Compute node.  
 
 
 <a name="examples-copy-table-bk"></a>
@@ -304,12 +308,12 @@ WITH
     CLUSTERED COLUMNSTORE INDEX,  
     DISTRIBUTION = ROUND_ROBIN  
   )  
-AS SELECT * FROM [dbo].DimSalesTerritory; 
+AS SELECT * FROM [dbo].[DimSalesTerritory]; 
 
 -- Switch table names
 
 RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
-RENAME OBJECT [dbo].myTable TO [DimSalesTerritory];
+RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 
 DROP TABLE [dbo].[DimSalesTerritory_old];
 
@@ -325,17 +329,43 @@ WITH
     CLUSTERED COLUMNSTORE INDEX,  
     DISTRIBUTION = HASH(SalesTerritoryKey) 
   )  
-AS SELECT * FROM [dbo].DimSalesTerritory; 
+AS SELECT * FROM [dbo].[DimSalesTerritory]; 
 
 -- Switch table names
 
 RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
-RENAME OBJECT [dbo].myTable TO [DimSalesTerritory];
+RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
-### D. Use CTAS to create a table with fewer columns.  
+<a name="ctas-change-to-replicated-bk"></a>
+
+### D. Use CTAS to convert a table to a replicated table  
+Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse 
+
+This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since DimSalesTerritory is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
+
+```
+-- DimSalesTerritory is hash-distributed.
+-- Copy it to a replicated table.
+CREATE TABLE [dbo].[myTable]   
+WITH   
+  (   
+    CLUSTERED COLUMNSTORE INDEX,  
+    DISTRIBUTION = REPLICATE 
+  )  
+AS SELECT * FROM [dbo].[DimSalesTerritory]; 
+
+-- Switch table names
+
+RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
+RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
+
+DROP TABLE [dbo].[DimSalesTerritory_old];
+```
+ 
+### E. Use CTAS to create a table with fewer columns
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse 
 
 The following example creates a round-robin distributed table named `myTable (c, ln)`. The new table only has two columns. It uses the column aliases in the SELECT statement for the names of the columns.  
@@ -358,7 +388,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 <a name="ctas-query-hint-bk"></a>
 
-### E. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
+### F. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse
   
 This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] applies the hash join strategy when it generates the query plan for each individual distribution. For more information on the hash join query hint, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
@@ -381,7 +411,7 @@ OPTION ( HASH JOIN );
 
 <a name="ctas-azure-blob-storage-bk"></a>
 
-### F. Use CTAS to import data from Azure Blob storage  
+### G. Use CTAS to import data from Azure Blob storage  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is the same as the syntax for selecting data from a regular table.  
@@ -416,7 +446,7 @@ AS SELECT * FROM ClickStreamExt
 
 <a name="ctas-import-Hadoop-bk"></a>
   
-### G. Use CTAS to import Hadoop data from an external table  
+### H. Use CTAS to import Hadoop data from an external table  
 Applies to: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 To import data from an external table, simply use CREATE TABLE AS SELECT to select from the external table. The syntax to select data from an external table into [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] is the same as the syntax for selecting data from a regular table.  
@@ -457,12 +487,13 @@ AS SELECT * FROM ClickStreamExt
 
 Use CTAS to work around some unsupported features. Besides being able to run your code on the data warehouse, rewriting existing code to use CTAS will usually improve performance. This is a result of its fully parallelized design. 
 
-> [AZURE.NOTE] Try to think "CTAS first". If you think you can solve a problem using `CTAS` then that is generally the best way to approach it - even if you are writing more data as a result.
+> [!NOTE]
+> Try to think "CTAS first". If you think you can solve a problem using `CTAS` then that is generally the best way to approach it - even if you are writing more data as a result.
 >
 
 <a name="ctas-replace-select-into-bk"></a>
 
-### H. Use CTAS instead of SELECT..INTO  
+### I. Use CTAS instead of SELECT..INTO  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SQL Server code typically uses SELECT..INTO to populate a table with the results of a SELECT statement. This is an example of a SQL Server SELECT..INTO statement.
@@ -489,7 +520,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### I. Use CTAS and implicit joins to replace ANSI joins in the `FROM` clause of an `UPDATE` statement  
+### J. Use CTAS and implicit joins to replace ANSI joins in the `FROM` clause of an `UPDATE` statement  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.
@@ -572,7 +603,7 @@ DROP TABLE CTAS_acs
 
 <a name="ctas-replace-ansi-joins-bk"></a>
 
-### J. Use CTAS to specify which data to keep instead of using ANSI joins in the FROM clause of a DELETE statement  
+### K. Use CTAS to specify which data to keep instead of using ANSI joins in the FROM clause of a DELETE statement  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 Sometimes the best approach for deleting data is to use `CTAS`. Rather than deleting the data simply select the data you want to keep. This especially true for `DELETE` statements that use ansi joining syntax since SQL Data Warehouse does not support ANSI joins in the `FROM` clause of a `DELETE` statement.
@@ -600,7 +631,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 
 <a name="ctas-simplify-merge-bk"></a>
 
-### K. Use CTAS to simplify merge statements  
+### L. Use CTAS to simplify merge statements  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 Merge statements can be replaced, at least in part, by using `CTAS`. You can consolidate the `INSERT` and the `UPDATE` into a single statement. Any deleted records would need to be closed off in a second statement.
@@ -639,7 +670,7 @@ RENAME OBJECT dbo.[DimpProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### L. Explicitly state data type and nullability of output  
+### M. Explicitly state data type and nullability of output  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 When migrating SQL Server code to SQL Data Warehouse, you might find you run across this type of coding pattern:
@@ -716,7 +747,8 @@ Note the following:
 - ISNULL is the outermost function
 - The second part of the ISNULL is a constant i.e. 0
 
-> [AZURE.NOTE] For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.
+> [!NOTE]
+> For the nullability to be correctly set it is vital to use `ISNULL` and not `COALESCE`. `COALESCE` is not a deterministic function and so the result of the expression will always be NULLable. `ISNULL` is different. It is deterministic. Therefore when the second part of the `ISNULL` function is a constant or a literal then the resulting value will be NOT NULL.
 
 This tip is not just useful for ensuring the integrity of your calculations. It is also important for table partition switching. Imagine you have this table defined as your fact:
 

@@ -2,12 +2,15 @@
 title: "results Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,14 +28,16 @@ helpviewer_keywords:
   - "results element"
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # results Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains a collection of [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elements returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method using the [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
   
 ## Syntax  
   

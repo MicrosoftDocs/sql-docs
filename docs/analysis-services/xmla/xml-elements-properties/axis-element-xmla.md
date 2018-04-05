@@ -2,12 +2,15 @@
 title: "Axis Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -24,11 +27,13 @@ helpviewer_keywords:
   - "Axis element"
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Axis Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Contains a set of tuples used to represent a single axis in a multidimensional dataset contained by an [Axes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  
   
 ## Syntax  

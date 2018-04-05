@@ -2,11 +2,14 @@
 title: "Invoking CLR User-Defined Aggregate Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 dev_langs: 
@@ -19,11 +22,13 @@ helpviewer_keywords:
   - "user-defined functions [CLR integration]"
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 53
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CLR User-Defined Aggregate - Invoking Functions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statements, you can invoke common language runtime (CLR) user-defined aggregates, subject to all the rules that apply to system aggregate functions.  
   
  The following additional rules apply:  

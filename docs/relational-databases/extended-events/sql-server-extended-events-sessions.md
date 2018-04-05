@@ -2,12 +2,13 @@
 title: "SQL Server Extended Events Sessions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,10 +19,11 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server Extended Events Sessions
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events session is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process hosting the Extended Events engine. The following aspects of an Extended Events session provide a context for understanding the Extended Events infrastructure and the general processing that takes place:  
   

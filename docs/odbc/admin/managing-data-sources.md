@@ -3,8 +3,11 @@ title: "Managing Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Managing Data Sources
 After you have installed an ODBC driver from the driver's setup program, you can define one or more data sources for it. The data source name (DSN) should provide a unique description of the data; for example, *Payroll* or *Accounts Payable*. The user and system data sources that are defined for all currently installed drivers are listed in the **User DSN** or **System DSN** tabs of the **ODBC Data Source Administrator** dialog box. The file data sources in a given directory are listed in the **File DSN** tab; the directory to be shown is entered in the **Look in** box in the **File DSN** tab.  

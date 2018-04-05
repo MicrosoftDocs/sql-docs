@@ -1,10 +1,13 @@
 ---
 title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,12 +20,13 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Revokes permissions granted or denied on an endpoint.  
   
@@ -52,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON ENDPOINT **::***endpoint_name*  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
- { FROM | TO } <server_principal>  
+ { FROM | TO } \<server_principal> 
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login from which the permission is being revoked.  
   
  *SQL_Server_login*  
@@ -131,3 +135,4 @@ GO
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

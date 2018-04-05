@@ -3,8 +3,11 @@ title: "SQL Server Management Studio - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,11 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SQL Server Management Studio - License Terms
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### Available Languages:  
 [Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [German](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
@@ -105,11 +110,13 @@ As described below, using some features also operates as your consent to the tra
   
 **11.   LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.  
   
-**12.   DISCLAIMER OF WARRANTY. The software is licensed “as-is.” You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.**  
+**12.	The software may include preview, beta, or other pre-release features, or software, offered by Microsoft, as described in the documentation. PREVIEWS ARE PROVIDED "AS-IS," "WITH ALL FAULTS," AND "AS AVAILABLE," AND ARE EXCLUDED FROM THE SERVICE LEVEL AGREEMENTS AND LIMITED WARRANTY. Previews may not be covered by customer support. Previews may be subject to reduced or different security, compliance and privacy commitments. We may change or discontinue Previews at any time without notice. We also may choose not to release a Preview into "General Availability."**
+
+**13.   DISCLAIMER OF WARRANTY. The software is licensed "as-is." You bear the risk of using it. Microsoft gives no express warranties, guarantees or conditions. You may have additional consumer rights or statutory guarantees under your local laws which this agreement cannot change. To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.**  
   
 **FOR AUSTRALIA – You have statutory guarantees under the Australian Consumer Law and nothing in these terms is intended to affect those rights.**  
   
-**13.   LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00. You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.**  
+**14.   LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00. You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.**  
 This limitation applies to  
 * anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and  
 * claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.  

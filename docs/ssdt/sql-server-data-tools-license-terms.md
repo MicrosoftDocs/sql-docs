@@ -3,8 +3,11 @@ title: "SQL Server Data Tools - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -14,8 +17,10 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Data Tools - License Terms
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## MICROSOFT SOFTWARE LICENSE TERMS  
   
 **MICROSOFT SQL SERVER DATA TOOLS**  

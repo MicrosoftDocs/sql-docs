@@ -3,8 +3,11 @@ title: "Save Selected Tables on a Diagram (Visual Database Tools) | Microsoft Do
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can save a specific table or a set of tables if you do not want to save all the changes you made in a database diagram.  
   
 ### To save selected tables  

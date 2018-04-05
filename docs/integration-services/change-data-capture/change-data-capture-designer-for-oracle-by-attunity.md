@@ -2,9 +2,12 @@
 title: "Change Data Capture Designer for Oracle by Attunity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Change Data Capture Designer for Oracle by Attunity
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  

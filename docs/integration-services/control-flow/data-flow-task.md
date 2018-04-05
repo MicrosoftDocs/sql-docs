@@ -2,9 +2,12 @@
 title: "Data Flow Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,8 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Data Flow Task
   The Data Flow task encapsulates the data flow engine that moves data between sources and destinations, and lets the user transform, clean, and modify data as it is moved. Addition of a Data Flow task to a package control flow makes it possible for the package to extract, transform, and load data.  
@@ -42,7 +46,7 @@ manager: "jhubbard"
  ![Data flows](../../integration-services/control-flow/media/mw-dts-09.gif "Data flows")  
   
 ## Log Entries  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md). The Data Flow task includes the following custom log entries:  
   
 |Log entry|Description|  
 |---------------|-----------------|  

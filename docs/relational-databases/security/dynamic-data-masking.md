@@ -2,21 +2,25 @@
 title: "Dynamic Data Masking | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Dynamic Data Masking
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ![Dynamic data masking](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -24,10 +28,10 @@ Dynamic data masking limits (DDM) sensitive data exposure by masking it to non-p
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. DDM can be configured on the database to hide sensitive data in the result sets of queries over designated database fields, while the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
-* 	A central data masking policy acts directly on sensitive fields in the database.
-* 	Designate privileged users or roles that do have access to the sensitive data.
-* 	DDM features full masking and partial masking functions, as well as a random mask for numeric data.
-* 	Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
+* A central data masking policy acts directly on sensitive fields in the database.
+* Designate privileged users or roles that do have access to the sensitive data.
+* DDM features full masking and partial masking functions, as well as a random mask for numeric data.
+* Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
 
 As an example, a call center support person may identify callers by several digits of their social security number or credit card number, but those data items should not be fully exposed to the support person. A masking rule can be defined that masks all but the last four digits of any social security number or credit card number in the result set of any query. For another example, by using the appropriate data mask to protect personally identifiable information (PII) data, a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 
@@ -41,7 +45,7 @@ As an example, a call center support person may identify callers by several digi
 |Function|Description|Examples|  
 |--------------|-----------------|--------------|  
 |Default|Full masking according to the data types of the designated fields.<br /><br /> For string data types, use XXXX or fewer Xs if the size of the field is less than 4 characters (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> For numeric data types use a zero value (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> For date and time data types use 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />For binary data types use a single byte of ASCII value 0 (**binary**, **varbinary**, **image**).|Example column definition syntax: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Example alter syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Masking method which exposes the first letter of an email address and the constant suffix ".com", in the form of an email address. . `aXXX@XXXX.com`.|Example definition syntax: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Example alter syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`)|  
+|Email|Masking method which exposes the first letter of an email address and the constant suffix ".com", in the form of an email address. . `aXXX@XXXX.com`.|Example definition syntax: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Example alter syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Random|A random masking function for use on any numeric type to mask the original value with a random value within a specified range.|Example definition syntax: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Example alter syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Custom String|Masking method which exposes the first and last letters and adds a custom padding string in the middle. `prefix,[padding],suffix`<br /><br /> Note: If the original value is too short to complete the entire mask, part of the prefix or suffix will not be exposed.|Example definition syntax: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Example alter syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Additional examples:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
@@ -100,7 +104,7 @@ As an example, consider a database principal that has sufficient privileges to r
 
 ```
 SELECT ID, Name, Salary FROM Employees
-WHERE Salary > 99999 and Salary \< 100001;
+WHERE Salary > 99999 and Salary < 100001;
 ```
 
 >    |  Id | Name| Salary |   

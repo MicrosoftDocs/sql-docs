@@ -1,11 +1,13 @@
 ---
 title: "Delete a Model (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -15,9 +17,10 @@ helpviewer_keywords:
   - "models [Master Data Services], deleting models"
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Delete a Model (Master Data Services)
   Delete a model to remove the model and all of its data from [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

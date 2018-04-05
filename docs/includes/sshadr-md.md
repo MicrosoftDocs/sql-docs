@@ -1,1 +1,1 @@
- Always On Availability Groups 
+ Always On availability groups 

@@ -1,12 +1,15 @@
 ---
 title: "Execute21 Method (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Execute21 Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.1.  

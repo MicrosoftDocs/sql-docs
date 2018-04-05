@@ -1,12 +1,15 @@
 ---
 title: "CubeDefs Collection (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CubeDefs Collection (ADO MD)
 Contains the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  

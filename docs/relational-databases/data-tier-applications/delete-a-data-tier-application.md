@@ -2,9 +2,12 @@
 title: "Delete a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-tier-applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,13 @@ helpviewer_keywords:
   - "delete DAC"
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Delete a Data-tier Application
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can delete a data-tier application by using either the Delete Data-tier Application wizard or a Windows PowerShell script. You can specify whether the associated database is retained, detached, or dropped.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
@@ -101,7 +106,7 @@ manager: "jhubbard"
   
  The data and log files for the database are permanently deleted.  
   
- **\< Previous** - Returns to the **Introduction** page.  
+ **< Previous** - Returns to the **Introduction** page.  
   
  **Next >** - Proceeds to the **Summary** page.  
   
@@ -114,7 +119,7 @@ manager: "jhubbard"
   
  **Review your selection summary** - Review the DAC, database, and deletion method displayed in the box. If the information is correct, select either **Next** or **Finish** to delete the DAC. If the DAC and database information is not correct, select **Cancel** and select the correct DAC. If the deletion method is not correct, select **Previous** to return to the **Choose Method** page and select a different method.  
   
- **\< Previous** - Returns to the **Choose Method** page to choose a different delete method.  
+ **< Previous** - Returns to the **Choose Method** page to choose a different delete method.  
   
  **Next >** - Deletes the DAC instance using the method you chose on the previous page, and proceeds to the **Delete Data-tier Application** page.  
   

@@ -2,18 +2,22 @@
 title: "Data Matching | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Data Matching
   The [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) data matching process enables you to reduce data duplication and improve data accuracy in a data source. Matching analyzes the degree of duplication in all records of a single data source, returning weighted probabilities of a match between each set of records compared. You can then decide which records are matches and take the appropriate action on the source data.  

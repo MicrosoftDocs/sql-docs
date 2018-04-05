@@ -1,22 +1,27 @@
 ---
 title: "DataSources object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DataSources object (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a connection to a data source used by the model either during import to add data to the model, or in pass through queries via DirectQuery mode.  Models in DirectQuery mode can only have one **DataSource** object.  
   
  Unless you are creating, replacing, or altering the  data source object itself, any data source referenced in your script (such as in partition script) must be an existing **DataSource** object in your model.  
@@ -180,7 +185,7 @@ manager: "erikre"
   
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

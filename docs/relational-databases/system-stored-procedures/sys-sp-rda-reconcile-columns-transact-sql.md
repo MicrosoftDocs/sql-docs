@@ -3,8 +3,11 @@ title: "sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -20,10 +23,11 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.sp_rda_reconcile_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Reconciles the columns in the remote Azure table to the columns in the the Stretch-enabled SQL Server table.  
     
@@ -58,7 +62,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## Example  
  To reconcile the the columns in the remote Azure table, run the following statement.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

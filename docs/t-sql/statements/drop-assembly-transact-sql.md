@@ -1,11 +1,13 @@
 ---
 title: "DROP ASSEMBLY (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.custom: ""
+ms.date: "05/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +26,13 @@ helpviewer_keywords:
   - "WITH NO DEPENDENTS option"
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an assembly and all its associated files from the current database. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) and modified by using [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
@@ -38,7 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]  
 [ WITH NO DEPENDENTS ]  
 [ ; ]  
@@ -46,9 +48,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the assembly only if it already exists.  
   

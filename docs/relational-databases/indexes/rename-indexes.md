@@ -2,9 +2,12 @@
 title: "Rename Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -15,12 +18,13 @@ helpviewer_keywords:
   - "indexes [SQL Server], renaming"
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Rename Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to rename an index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Renaming an index replaces the current index name with the new name that you provide. The specified name must be unique within the table or view. For example, two tables can have an index named **XPK_1**, but the same table cannot have two indexes named **XPK_1**. You cannot create an index with the same name as an existing disabled index. Renaming an index does not cause the index to be rebuilt.  
   

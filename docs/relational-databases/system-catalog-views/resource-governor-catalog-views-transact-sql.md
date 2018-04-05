@@ -3,8 +3,11 @@ title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "catalog views [SQL Server]"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Resource Governor Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This section contains Resource Governor information for the following catalog views. These views are optimized for performance and utility. When possible, use these catalog views to access Resource Governor metadata.  
   

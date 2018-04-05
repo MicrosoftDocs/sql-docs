@@ -2,20 +2,25 @@
 title: "High availability and Scalability in Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # High availability and Scalability in Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This article describes the most commonly used techniques for making Analysis Services databases  high available and scalable. While each objective could be addressed separately, in reality they often go hand in hand: a scalable deployment for large query or processing workloads typically comes with expectations of high availability.  
   
  The reverse case is not always true, however. High availability, without scale, can be the sole objective when stringent service level agreements exist for mission-critical, but moderate, query workloads.  

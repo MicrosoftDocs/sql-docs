@@ -1,11 +1,13 @@
 ---
 title: "DROP SCHEMA (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.custom: ""
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +25,13 @@ helpviewer_keywords:
   - "removing schemas"
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DROP SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes a schema from the database.  
   
@@ -50,9 +53,7 @@ DROP SCHEMA schema_name
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the schema only if it already exists.  
   
@@ -73,8 +74,6 @@ DROP SCHEMA schema_name
  The following example starts with a single `CREATE SCHEMA` statement. The statement creates the schema `Sprockets` that is owned by `Krishna` and a table `Sprockets.NineProngs`, and then grants `SELECT` permission to `Anibal` and denies `SELECT` permission to `Hung-Fu`.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  
     GRANT SELECT TO Anibal   
@@ -90,31 +89,9 @@ DROP SCHEMA Sprockets;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example creates the schema `Sprockets` and a table `Sprockets.NineProngs`.  
-  
-```  
--- Uses AdventureWorks  
-  
-CREATE SCHEMA Sprockets;  
-CREATE TABLE NineProngs (source int, cost int, partnumber int);  
-GO  
-```  
-  
- The following statements drop the schema. Note that you must first drop the table that is contained by the schema.  
-  
-```  
-DROP TABLE Sprockets.NineProngs;  
-DROP SCHEMA Sprockets;  
-GO  
-```  
   
 ## See Also  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-
-

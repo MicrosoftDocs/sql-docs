@@ -2,11 +2,14 @@
 title: "Sparse Columns Support in SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "sparse columns, OLE DB"
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Sparse Columns Support in SQL Server Native Client
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports sparse columns. For more information about sparse columns in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Use Sparse Columns](../../../relational-databases/tables/use-sparse-columns.md) and [Use Column Sets](../../../relational-databases/tables/use-column-sets.md).  

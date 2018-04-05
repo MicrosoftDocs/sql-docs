@@ -2,9 +2,12 @@
 title: "Point | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "geometry data type [SQL Server], spatial data"
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Point
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data, a **Point** is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  
   
 ## Geography Data Type  

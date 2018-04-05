@@ -2,12 +2,15 @@
 title: "RefreshPolicy Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RefreshPolicy Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Determines how often the dynamic part of the dimension or measure group (as specified by the [Persistence](../../../analysis-services/scripting/properties/persistence-element-assl.md) element) is checked for changes.  
   
 ## Syntax  

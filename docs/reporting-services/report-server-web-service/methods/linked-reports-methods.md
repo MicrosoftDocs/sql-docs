@@ -2,12 +2,15 @@
 title: "Linked Reports Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "methods [Reporting Services], linked reports"
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 caps.latest.revision: 35
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Linked Reports Methods
   You can use these methods to create and manage linked items.  

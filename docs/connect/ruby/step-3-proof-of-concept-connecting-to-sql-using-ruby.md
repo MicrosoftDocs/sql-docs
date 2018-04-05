@@ -1,10 +1,13 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using Ruby | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ruby"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,9 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Step 3: Proof of concept connecting to SQL using Ruby
-[!INCLUDE[Driver_Ruby_Download](../../includes/driver_ruby_download.md)]
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   
@@ -53,7 +56,7 @@ In the code sample, the [TinyTds::Result](https://github.com/rails-sqlserver/tin
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement safely, pass parameters which protect your application from [SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerability, and retrieve the auto-generated [Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
 To use TinyTDS with Azure, it is recommended that you execute several `SET` statements to change how the current session handles specific information. Recommended `SET` statements are provided in the code sample. For example, `SET ANSI_NULL_DFLT_ON` will allow new columns created to allow null values even if the nullability status of the column is not explicitly stated.  
   
@@ -80,6 +83,4 @@ To align with the Microsoft SQL Server [datetime](http://msdn.microsoft.com/libr
     results.each do |row|  
     puts row  
     end  
-```  
-  
-  
+```

@@ -1,11 +1,13 @@
 ---
 title: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -30,12 +32,13 @@ helpviewer_keywords:
   - "CREATE COLUMN ENCRYPTION KEY statement"
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Creates a column encryption key with the initial set of values, encrypted with the specified column master keys. This is a metadata operation. A CEK can have up to two values which allows for a column master key rotation. Creating a CEK is required before any column in the database can be encrypted using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. CEK's can also be created by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Before creating a CEK, you must define a CMK by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.  
   

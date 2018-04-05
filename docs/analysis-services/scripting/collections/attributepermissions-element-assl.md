@@ -2,12 +2,15 @@
 title: "AttributePermissions Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AttributePermissions Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains the collection of attribute permissions for an individual [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element on a specific dimension of a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  
   
 ## Syntax  

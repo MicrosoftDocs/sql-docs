@@ -3,8 +3,11 @@ title: "Getting the Driver Version | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Getting the Driver Version
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,17 +28,17 @@ manager: "jhubbard"
   
 -   The version is displayed in the readme.txt file of the product distribution.  
   
- In addition, the JDBC driver name can be returned from the [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It will return, for example, "Microsoft JDBC Driver 4.0 for SQL Server".  
+ In addition, the JDBC driver name can be returned from the [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) method call on the SQLServerDatabaseMetaData class. It will return, for example, "Microsoft JDBC Driver 6.4 for SQL Server".  
   
  The following is an example of the output from calls to the methods of the SQLServerDatabaseMetaData class:  
   
- `getDriverName = Microsoft JDBC Driver 4.0 for SQL Server`  
+ `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   
- `getDriverMajorVersion = 4`  
+ `getDriverMajorVersion = 6`  
   
- `getDriverMinorVersion = 0`  
+ `getDriverMinorVersion = 4`  
   
- `getDriverVersion = 4.0.` *xxx.x*  
+ `getDriverVersion = 6.4.` *xxx.x*  
   
  Where "xxx.x" is the final version number.  
   

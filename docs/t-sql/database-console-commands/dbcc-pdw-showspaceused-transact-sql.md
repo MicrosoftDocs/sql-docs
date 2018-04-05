@@ -1,11 +1,13 @@
 ---
 title: "DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/17/2017"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "t-sql|database-console-commands"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,20 +18,19 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DBCC PDW_SHOWSPACEUSED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.  
+Displays the number of rows, disk space reserved, and disk space used for a specific table, or for all tables in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+```sql
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  
@@ -44,10 +45,10 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  The one, two, or three-part name of the table to be displayed. For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional. When no table name is specified, the information is displayed for the current database.  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission.  
+Requires VIEW SERVER STATE permission.
   
 ## Result Sets  
- This is the result set for all tables.  
+This is the result set for all tables.
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  
@@ -57,7 +58,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
 |pdw_node_id|int|Compute node that is being used for the data.|  
   
- This is the result set for one table.  
+This is the result set for one table.
   
 |Column|Data Type|Description|Range|  
 |------------|---------------|-----------------|-----------|  
@@ -70,11 +71,10 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |distribution_id|int|Distribution that is used for reporting the space usage.|Value is -1 for replicated tables.|  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### A. DBCC PDW_SHOWSPACEUSED Basic Syntax  
- The following examples show multiple ways to display the number of rows, disk space reserved, and disk space used by the FactInternetSales table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
+The following examples show multiple ways to display the number of rows, disk space reserved, and disk space used by the FactInternetSales table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DBCC PDW_SHOWSPACEUSED ( "AdventureWorksPDW2012.dbo.FactInternetSales" );  
@@ -86,10 +86,13 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 ### B. Show the disk space used by all tables in the current database  
  The following example shows the disk space reserved and used by all user tables and system tables in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
-  
+ ## See also
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
+
   

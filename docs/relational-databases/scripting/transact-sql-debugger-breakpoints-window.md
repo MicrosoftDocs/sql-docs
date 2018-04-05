@@ -2,9 +2,12 @@
 title: "Breakpoints Window | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Breakpoints Window [Transact-SQL]"
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Breakpoints Window
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The **Breakpoints** window lists all the breakpoints that are set in the current [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. To manage the breakpoints, use the toolbar in the **Breakpoints** window. Breakpoints are locations in the code where execution pauses in debug mode so that you can view debugging data.  
   
 ## Task List  

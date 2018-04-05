@@ -2,9 +2,12 @@
 title: "Perform an Incremental Load of Multiple Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Perform an Incremental Load of Multiple Tables
   In the topic, [Improving Incremental Loads with Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), the diagram illustrates a basic package that performs an incremental load on just one table. However, loading one table is not as common as having to perform an incremental load of multiple tables.  
@@ -43,7 +47,7 @@ manager: "jhubbard"
   
 4.  Use multiple Execute Package tasks to execute child packages for each table to be loaded. Pass the endpoints calculated in the parent package to each child package by using Parent Package Variable configurations.  
   
-     For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 #### To create child packages to perform those steps that have to be done for each source table  
   

@@ -3,8 +3,11 @@ title: "Check Constraint Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Check Constraint Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This dialog box appears when you right-click a table definition grid in Table Designer and click **Check Constraints**. The dialog box contains a set of properties for non-unique constraints attached to the tables in your database. Properties applying to unique constraints appear in the **Indexes/Keys** dialog box.  
   
 > [!NOTE]  

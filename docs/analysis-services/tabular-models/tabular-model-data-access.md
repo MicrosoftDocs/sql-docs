@@ -2,25 +2,30 @@
 title: "Tabular Model Data Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tabular Model Data Access
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- This topic describes the clients, query languages, and programmatic interfaces that work with tabular models.  
+ This article describes the clients, query languages, and programmatic interfaces that work with tabular models.  
   
 ## Clients  
  The following Microsoft client applications support native connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model databases.  
@@ -31,7 +36,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
 ### Excel  
  You can connect to tabular model databases from Excel, using the data visualization and analysis capabilities in Excel to work with your data. To access the data, you define an Analysis Services data connection, specify a server that runs in tabular server mode, and then choose the database you want to use. For more information, see [Connect to or import data from SQL Server Analysis Services](http://go.microsoft.com/fwlink/?linkID=215150).  
   
- Excel is also the recommended application for browsing tabular models in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The tool includes an **Analyze in Excel** option that starts a new instance of Excel, creates an Excel workbook, and opens a data connection from the workbook to the model workspace database. When browsing tabular model data in Excel, be aware that Excel issues queries against the model using the Excel PivotTable client. Accordingly, operations within the Excel workbook result in MDX queries being sent to the workspace database, not DAX queries. If you are using SQL Profiler or another monitoring tool to monitor queries, you can expect to see MDX and not DAX in the profiler trace. For more information about the Analyze in Excel feature, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Excel is also the recommended application for browsing tabular models in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The tool includes an **Analyze in Excel** option that starts a new instance of Excel, creates an Excel workbook, and opens a data connection from the workbook to the model workspace database. When browsing tabular model data in Excel, be aware that Excel issues queries against the model using the Excel PivotTable client. Accordingly, operations within the Excel workbook result in MDX queries being sent to the workspace database, not DAX queries. If you are using SQL Profiler or another monitoring tool to monitor queries, you can expect to see MDX and not DAX in the profiler trace. For more information about the Analyze in Excel feature, see [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ### Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] is a Reporting Services reporting client application that runs in a SharePoint 2010 environment. It combines data exploration, query design, and presentation layout into an integrated ad-hoc reporting experience. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] can use tabular models as data sources, regardless of whether the model is hosted on an instance of Analysis Services running in tabular mode, or retrieved from a relational data store by using DirectQuery mode. To connect to a tabular model in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], you must create a connection file that contains the server location and database name. You can create a Reporting Services shared data source or a BI semantic model connection file in SharePoint. For more information about BI semantic model connections, see [Power Pivot BI Semantic Model Connection &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
@@ -82,11 +87,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
  The principal interfaces that are used for interacting with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are the schema rowsets, XMLA, and the query clients and query tools provided by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ### Data and Metadata  
- You can retrieve data and metadata from tabular models in managed applications using ADOMD.NET. For examples of applications that create and modify objects in a tabular model, see the following resources:  
-  
--   Tabular Model AMO Sample on Codeplex  
-  
--   AdventureWorks samples on CodePlex  
+ You can retrieve data and metadata from tabular models in managed applications using ADOMD.NET. 
   
 -   [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
@@ -99,13 +100,6 @@ You can connect to an on-premises Analysis Services tabular model database from 
 ### Manipulate Analysis Services Objects  
  You can create, modify, delete, and process tabular models and objects in them, including tables, columns, perspectives, measures, and partitions, using XMLA commands, or by using AMO. Both AMO and XMLA have been updated to support additional properties that are used in tabular models for enhanced reporting and modeling.  
   
- For examples of how tabular objects can be scripted using AMO and XMLA, see the following resources:  
-  
--   Tabular Model AMO Sample on Codeplex  
-  
--   AdventureWorks Samples on CodePlex  
-  
- You can use PowerShell to manage and monitor instances of Analysis Services, as well as for creating and monitoring security used for tabular model access. For more information, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md).  
   
 ### Schema Rowsets  
  Client applications can use the schema rowsets to examine the metadata of tabular models and to retrieve support and monitoring information from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. In this release of SQL Server new schema rowsets have been added and existing schema rowsets extended to support features related to tabular models and to enhance monitoring and performance analysis across [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -128,7 +122,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
   
 -   [MDSCHEMA_HIERARCHIES Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     New **STRUCTURE_TYPE** enumeration supports identification of user-defined hierarchies created in tabular models. For more information, see [Hierarchies &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+     New **STRUCTURE_TYPE** enumeration supports identification of user-defined hierarchies created in tabular models. For more information, see [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
  There are no updates to the OLE DB for Data Mining schema rowsets in this release.  
   
@@ -136,7 +130,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
 >  You cannot use MDX or DMX queries in a database that has been deployed in DirectQuery mode; therefore, if you need to execute a query against a DirectQuery model using the schema rowsets, you should use XMLA, and not the associated DMV. For DMVs that return results for the server as a whole, such as SELECT * from $system.DBSCHEMA_CATALOGS or DISCOVER_TRACES, you can execute the query in the content of a database that is deployed in a cached mode.  
   
 ## See Also  
- [Connect to a Tabular Model Database &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [Connect to a tabular model database ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Power Pivot Data Access](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   

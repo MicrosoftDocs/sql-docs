@@ -3,8 +3,11 @@ title: "Retrieving Output Parameters Using SQLGetData | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Retrieving Output Parameters Using SQLGetData
 Before ODBC 3.8, an application could only retrieve the output parameters of a query with a bound output buffer. However, it is difficult to allocate a very large buffer when the size of the parameter value is very large (for example, a large image). ODBC 3.8 introduces a new way to retrieve output parameters in parts. An application can now call **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. This is similar to retrieving large column data.  

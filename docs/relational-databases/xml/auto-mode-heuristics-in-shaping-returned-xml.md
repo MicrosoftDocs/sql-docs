@@ -2,9 +2,12 @@
 title: "AUTO Mode Heuristics in Shaping Returned XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "AUTO FOR XML mode, heuristics in shaping returned XML"
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # AUTO Mode Heuristics in Shaping Returned XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   AUTO mode determines the shape of returned XML based on the query. In determining how elements are to be nested, AUTO mode heuristics compare column values in adjacent rows. Columns of all types, except **ntext**, **text**, **image**, and **xml**, are compared. Columns of type **(n)varchar(max)** and **varbinary(max)** are compared.  
   
  The following example illustrates the AUTO mode heuristics that determine the shape of the resulting XML:  

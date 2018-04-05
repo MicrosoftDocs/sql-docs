@@ -3,8 +3,11 @@ title: "EXCEPT and INTERSECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "INTERSECT operator"
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns distinct rows by comparing the results of two queries.  
   
@@ -47,8 +51,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  

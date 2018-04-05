@@ -2,13 +2,16 @@
 title: "Create a Time Dimension by Generating a Time Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -23,9 +26,11 @@ ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Create a Time Dimension by Generating a Time Table
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the Dimension Wizard in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to create a time dimension when no time table is available in the source database. You do this by selecting one of the following options on the **Select Creation Method** page:  
   
 -   **Generate a time table in the data source** Select this option when you have permission to create objects in the underlying data source. The wizard will then generate a time table and store this table in the data source. The wizard then creates the time dimension from this time table.  

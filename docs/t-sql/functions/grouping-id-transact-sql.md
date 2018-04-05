@@ -3,8 +3,11 @@ title: "GROUPING_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "GROUPING_ID function"
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Is a function that computes the level of grouping. GROUPING_ID can be used only in the SELECT \<select> list, HAVING, or ORDER BY clauses when GROUP BY is specified.  
   
@@ -38,17 +42,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## Arguments  
- <column_expression>  
+ \<column_expression>  
  Is a *column_expression* in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   
 ## Return Type  
  **int**  
   
 ## Remarks  
- The GROUPING_ID <column_expression> must exactly match the expression in the GROUP BY list. For example, if you are grouping by DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, \<*column name*>)); or if you are grouping by \<*column name*>, use GROUPING_ID (\<*column name*>).  
+ The GROUPING_ID \<column_expression> must exactly match the expression in the GROUP BY list. For example, if you are grouping by DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, \<*column name*>)); or if you are grouping by \<*column name*>, use GROUPING_ID (\<*column name*>).  
   
 ## Comparing GROUPING_ID () to GROUPING ()  
- GROUPING_ID (<column_expression> [ **,**...*n* ]) inputs the equivalent of the GROUPING (<column_expression>) return for each column in its column list in each output row as a string of ones and zeros. GROUPING_ID interprets that string as a base-2 number and returns the equivalent integer. For example consider the following statement: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. The following table shows the GROUPING_ID () input and output values.  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) inputs the equivalent of the GROUPING (\<column_expression>) return for each column in its column list in each output row as a string of ones and zeros. GROUPING_ID interprets that string as a base-2 number and returns the equivalent integer. For example consider the following statement: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. The following table shows the GROUPING_ID () input and output values.  
   
 |Columns aggregated|GROUPING_ID (a, b, c) input = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () output|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -64,7 +68,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  Each GROUPING_ID argument must be an element of the GROUP BY list. GROUPING_ID () returns an **integer** bitmap whose lowest N bits may be lit. A lit **bit** indicates the corresponding argument is not a grouping column for the given output row. The lowest-order **bit** corresponds to argument N, and the N-1<sup>th</sup> lowest-order **bit** corresponds to argument 1.  
   
 ## GROUPING_ID () Equivalents  
- For a single grouping query, GROUPING (<column_expression>) is equivalent to GROUPING_ID (<column_expression>), and both return 0.  
+ For a single grouping query, GROUPING (\<column_expression>) is equivalent to GROUPING_ID (\<column_expression>), and both return 0.  
   
  For example, the following statements are equivalent:  
   

@@ -2,12 +2,15 @@
 title: "Expression Uses in Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Expression Uses in Reports (Report Builder and SSRS)
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  

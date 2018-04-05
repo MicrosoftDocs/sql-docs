@@ -2,22 +2,24 @@
 title: "Alter an Extended Events Session | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "extended-events"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.suite: "sql"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Alter an Extended Events Session
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   After you create an Extended Events session, you can alter it according to your needs using the **SQL Server Extended Events Wizard**.  
   

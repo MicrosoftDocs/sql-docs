@@ -3,8 +3,11 @@ title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns information about jobs that are used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to perform automated activities in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

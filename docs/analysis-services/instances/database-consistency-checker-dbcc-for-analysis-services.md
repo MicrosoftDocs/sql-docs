@@ -1,24 +1,28 @@
 ---
 title: "Database Consistency Checker (DBCC) for Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Consistency Checker (DBCC) for Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC provides on-demand database validation for Multidimensional and Tabular databases on an Analysis Services instance. You can execute DBCC in an MDX or XMLA query window in SQL Server Management Studio (SSMS) and trace the DBCC output in either SQL Server Profiler or xEvent sessions in SSMS.  
 The command takes an object definition and returns either an empty result set or detailed error information if the object is corrupted.   In this article, you’ll learn how to run the command, interpret results, and address any problems that arise.  
   
@@ -31,7 +35,7 @@ The command takes an object definition and returns either an empty result set or
   
 -   Multidimensional + pre-SQL Server 2016 Tabular 1100 or 1103 compatibility level databases are described in Multidimensional modeling constructs like **cubeID**, **measuregroupID**, and **partitionID**.  
   
--   Metadata for new Tabular model databases at compatibility level 1200  consist of descriptors like **TableName** and **PartitionName**.  
+-   Metadata for new Tabular model databases at compatibility level 1200 and higher consist of descriptors like **TableName** and **PartitionName**.  
   
  DBCC for Analysis Services will execute on any Analysis Services database at any compatibility level, as long as the database is running on a  SQL Server 2016 instance. Just make sure you're using the right command syntax for each database type.  
   
@@ -41,8 +45,8 @@ The command takes an object definition and returns either an empty result set or
 ## Permission requirements  
  You must be an Analysis Services database or server administrator (a member of the server role) to run the command. See [Grant database permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) or [Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for instructions.  
   
-## Command syntax for Tabular 1200 databases  
- Tabular databases at the 1200 compatibility level use tabular metadata for object definitions. The complete DBCC syntax for a tabular database created at a SQL Server 2016 functional level is illustrated in the following example.  
+## Command syntax 
+ Tabular databases at the 1200 and higher compatibility levels use tabular metadata for object definitions. The complete DBCC syntax for a tabular database created at a SQL Server 2016 functional level is illustrated in the following example.  
   
  Key differences between the two syntaxes include a newer XMLA namespace, no \<Object> element, and  no \<Model> element (there is still only one model per database).  
   

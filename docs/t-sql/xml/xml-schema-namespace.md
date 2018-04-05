@@ -1,10 +1,13 @@
 ---
 title: "xml_schema_namespace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "07/27/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,15 +27,15 @@ ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
-|  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
@@ -62,10 +65,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  You cannot use this function to construct XML schema documents from the **sys.sys** XML schema collection.  
   
 ## Examples  
- The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks2012` database.  
+ The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks` database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
 GO  

@@ -2,9 +2,12 @@
 title: "SAP BW Source Editor (Columns Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SAP BW Source Editor (Columns Page)
   Use the **Columns** page of the **SAP BW Source Editor** to map an output column to each external (source) column.  

@@ -2,11 +2,14 @@
 title: "Upgrade Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
@@ -14,15 +17,19 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Upgrade Power Pivot for SharePoint
-  This topic summarizes the steps required to upgrade a deployment of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  This article summarizes the steps required to upgrade a deployment of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] to [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. The specific steps depend on the version of SharePoint your environment is currently running and include the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Add-in (**spPowerPivot.msi**).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
  For release notes, see [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124).  
   
- **In this topic:**  
+ **In this article:**  
   
  [Prerequisites](#bkmk_prereq)  
   
@@ -46,7 +53,7 @@ manager: "erikre"
   
 -   If you are upgrading a multi-server SharePoint 2010 farm that has two or more [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instances, you must fully upgrade each server **before** continuing to the next server. A full upgrade includes running SQL Server Setup to upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] program files, followed by SharePoint upgrade actions that configure the upgraded services. Server availability will be limited until you run upgrade actions in the appropriate [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool or Windows PowerShell.  
   
--   All instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service and Analysis Services in a SharePoint 2010 farm must be the same version. For information on how to verify the version, see the section [Verify the Versions of Power Pivot Components and Services](#bkmk_verify_versions) in this topic.  
+-   All instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service and Analysis Services in a SharePoint 2010 farm must be the same version. For information on how to verify the version, see the section [Verify the Versions of Power Pivot Components and Services](#bkmk_verify_versions) in this article.  
   
 -   The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tools are one of the SQL Server shared features and all shared features upgrade at the same time. If during an upgrade process you select other SQL Server instances or features that require a shared feature upgrade, then the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool will also be upgraded. You may have issues if the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool is upgraded but your [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance is not. For more information about SQL Server shared features, see [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -131,7 +138,7 @@ manager: "erikre"
   
     -   [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-5.  Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this topic and the following section.  
+5.  Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.  
   
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Upgrade an Existing SharePoint 2010 Farm  
  To upgrade [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployed in SharePoint 2010, do the following:  
@@ -199,7 +206,7 @@ manager: "erikre"
   
 8.  **Repeat the process** for each SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) service in the farm: 1) Run SQL Server setup 2) Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration tool.  
   
-9. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this topic and the following section.  
+9. Verify that upgrade succeeded by performing the post-upgrade steps and by checking the version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm. For more information, see [Post-upgrade verification tasks](#verify) in this article and the following section.  
   
 10. **Troubleshooting errors**  
   
@@ -311,7 +318,7 @@ Get-PowerPivotSystemService
   
  After you upgrade the first server, additional servers that are not yet upgraded **will become unavailable**. Availability is restored after all servers run at the same level.  
   
- SQL Server Setup upgrades the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files in place on the physical computer, but to upgrade the solutions in use by the farm, you must use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool described in a previous section of this topic..  
+ SQL Server Setup upgrades the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution files in place on the physical computer, but to upgrade the solutions in use by the farm, you must use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool described in a previous section of this article..  
   
 ##  <a name="qfe"></a> Applying a QFE to a Power Pivot instance in the farm  
  Patching a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint server updates existing program files with a newer version that includes a fix for a specific problem. When applying a QFE to a multi-server topology, there is no primary server that you must begin with. You can start with any server as long as you apply the same QFE to the other [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servers in the farm.  

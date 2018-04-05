@@ -1,14 +1,17 @@
 ---
 title: "Connect to Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/23/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,10 +20,14 @@ ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Connect to Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Use the information in this section to learn about connection string properties, client libraries used for connections, which authentication methods are supported by Analysis Services, and how to set up or clear connections before taking a server offline.  
+
+To learn about connecting to Azure Analysis Services, see [Connect to a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect).
   
 ## Analysis Services connections  
  Analysis Services uses TCP as the network protocol and XML for Analysis (XMLA) as a communication protocol. At the lowest level, all of the client libraries provided with Analysis Services implementing XMLA-over-TCP. Although it is possible to build applications based on raw XMLA, most applications and application developers use client libraries to take advantage of the object models and coding efficiencies that they provide. For client connections to Analysis Services, you can use IIS as an intermediary connection if you cannot use TCP across the stack. One advantage of using HTTP access via IIS is the ability to connect from applications that pass credentials on the connection string.  
@@ -43,6 +50,5 @@ manager: "erikre"
 ## See Also  
  [Post-install Configuration &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)  
   
   

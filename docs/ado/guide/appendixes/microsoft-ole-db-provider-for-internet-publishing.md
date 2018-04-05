@@ -1,12 +1,15 @@
 ---
 title: "Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -17,7 +20,8 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Microsoft OLE DB Provider for Internet Publishing Overview
 The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resources served by Microsoft FrontPage or Microsoft Internet Information Server. Resources include web source files such as HTML files, or Windows 2000 web folders.

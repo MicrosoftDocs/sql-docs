@@ -2,9 +2,12 @@
 title: "Step 2: Converting the Project to the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 6-2 - Converting the Project to the Project Deployment Model
 In this task, you will use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  

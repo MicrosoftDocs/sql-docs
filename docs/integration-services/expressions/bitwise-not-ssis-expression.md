@@ -2,9 +2,12 @@
 title: "~ (Bitwise Not) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "expressions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,7 +19,8 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ~ (Bitwise Not) (SSIS Expression)
   Performs a bitwise negation of an integer. This operator can be applied to signed and unsigned integer data types.  

@@ -2,11 +2,14 @@
 title: "Data Mining Stored Procedures (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,14 +18,16 @@ ms.assetid: a751856d-33bd-4788-9593-317b2826132d
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Stored Procedures (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports stored procedures that can be written in any managed language. The managed languages that are supported include [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, C#, and managed C++. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can call the stored procedures directly by using the **CALL** statement, or as part of a Data Mining Extensions (DMX) query.  
   
  For more information about calling [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stored procedures, see [Calling Stored Procedures](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md).  
   
- For general information about the programmability of [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], see [Data Mining Programming](../../analysis-services/data-mining-programming.md).  
+ For general information about programmability, see [Data Mining Programming](../../analysis-services/data-mining-programming.md).  
   
  For additional information about how to program data mining objects, see the article, "[SQL Server Data Mining Programmability](http://go.microsoft.com/fwlink/?LinkId=93735)", in the MSDN library.  
   
@@ -38,9 +43,6 @@ manager: "erikre"
 -   [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
 -   [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
-  
-## Reference  
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)  
   
 ## See Also  
  [Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)   

@@ -2,9 +2,12 @@
 title: "Complete Word (IntelliSense) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "Complete Word option [IntelliSense]"
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Complete Word (IntelliSense)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  
   
  There are four ways to invoke the Complete Word feature:  

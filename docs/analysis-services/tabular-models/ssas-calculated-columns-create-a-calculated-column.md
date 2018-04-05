@@ -1,14 +1,17 @@
 ---
-title: "Create a Calculated Column (SSAS Tabular) | Microsoft Docs"
+title: "Create a Calculated Column| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/10/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -17,10 +20,12 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# SSAS Calculated Columns - Create a Calculated Column
-  Calculated columns allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The values in each row of a calculated column are calculated and populated when you create a valid formula and then click ENTER. The calculated column can then be added to a reporting or analysis application just as would any other column of data. This topic describes how to create a new calculated column by using the DAX formula bar in the model designer.  
+# Create a Calculated Column
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Calculated columns allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The values in each row of a calculated column are calculated and populated when you create a valid formula and then click ENTER. The calculated column can then be added to a reporting or analysis application just as would any other column of data. This article describes how to create a new calculated column by using the DAX formula bar in the model designer.  
   
 #### To create a new calculated column  
   
@@ -46,7 +51,7 @@ manager: "erikre"
 >  You can use DAX Formula AutoComplete in the middle of an existing formula with nested functions. The text immediately before the insertion point is used to display values in the drop-down list, and all of the text after the insertion point remains unchanged.  
   
 ## See Also  
- [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
+ [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

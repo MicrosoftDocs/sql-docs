@@ -2,9 +2,12 @@
 title: "Lesson 2: Creating a Subscription to the Transactional Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 2: Creating a Subscription to the Transactional Publication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this lesson, you will create a subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Transactional Replication](../../relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### To create the subscription  

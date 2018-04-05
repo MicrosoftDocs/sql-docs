@@ -2,9 +2,12 @@
 title: "Set Package Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -28,7 +31,8 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Set Package Properties
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  
@@ -125,7 +129,7 @@ manager: "jhubbard"
 |**UpdateObjects**|Indicates whether the package is updated to use newer versions of the objects it contains, if newer versions are available. For example, if this property is set to **True**, a package that includes a Bulk Insert task is updated to use the newer version of the Bulk Insert task that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides. The default value of this property is **False**.|  
   
 ###  <a name="Security"></a> Security  
- The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Property|Description|  
 |--------------|-----------------|  

@@ -2,19 +2,23 @@
 title: "Display Row and Column Headers on Multiple Pages (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
   You can control whether to repeat row and column headers on every page of a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report for a tablix data region (a table, matrix, or list) that spans multiple pages.

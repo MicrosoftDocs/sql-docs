@@ -3,8 +3,11 @@ title: "Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "server-general"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Parameters
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Parameters are used to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function: 
 
 *  Input parameters allow the caller to pass a data value to the stored procedure or function.

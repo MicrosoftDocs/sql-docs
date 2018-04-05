@@ -3,8 +3,11 @@ title: "SQL Server Agent Error Log | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,15 @@ ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SQL Server Agent Error Log
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent creates an error log that records warnings and errors by default. The following warnings and errors are displayed in the log:  
   
 -   Warning messages that provide information about potential problems, such as "Job \<*job_name*> was deleted while it was running."  

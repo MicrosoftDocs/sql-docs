@@ -2,12 +2,15 @@
 title: "UnknownMemberTranslation Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # UnknownMemberTranslation Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Contains a translation for the caption of the [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) element for a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element.  
   
 ## Syntax  

@@ -2,10 +2,12 @@
 title: "sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,12 +16,13 @@ dev_langs:
   - "TSQL"
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_pdw_resource_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Displays wait information for all resource types in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   

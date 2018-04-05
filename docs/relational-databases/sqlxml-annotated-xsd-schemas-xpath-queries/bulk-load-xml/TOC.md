@@ -1,3 +1,5 @@
+# [Performing Bulk Load of XML Data (SQLXML 4.0)](performing-bulk-load-of-xml-data-sqlxml-4-0.md)
+
 # [Annotation Interpretation - Other Annotations](annotation-interpretation-other-annotations.md)
 # [Annotation Interpretation - sql:limit-field and sql:limit-value](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)
 # [Annotation Interpretation - sql:mapped](annotation-interpretation-sql-mapped.md)
@@ -7,7 +9,6 @@
 # [Data Types and XML Bulk Load Behavior (SQLXML 4.0)](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)
 # [Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)
 # [Introduction to XML Bulk Load (SQLXML 4.0)](introduction-to-xml-bulk-load-sqlxml-4-0.md)
-# [Performing Bulk Load of XML Data (SQLXML 4.0)](performing-bulk-load-of-xml-data-sqlxml-4-0.md)
 # [Record Generation Process (SQLXML 4.0)](record-generation-process-sqlxml-4-0.md)
 # [SQL Server XML Bulk Load Object Model (SQLXML 4.0)](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)
 # [XML Bulk Load Examples (SQLXML 4.0)](xml-bulk-load-examples-sqlxml-4-0.md)

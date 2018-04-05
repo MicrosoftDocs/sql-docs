@@ -2,22 +2,27 @@
 title: "Introduction to the Tabular Object Model (TOM) in Analysis Services AMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Introduction to the Tabular Object Model (TOM) in Analysis Services AMO
-  The Tabular object model (TOM) is an extension of the Analysis Services Management Object (AMO) client library, created to support programming scenarios for Tabular models built at compatibility level 1200 and later. As with AMO, TOM provides a programmatic way to handle administrative functions like creating models, importing and refreshing data, and assigning roles and permissions.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  The Tabular object model (TOM) is an extension of the Analysis Services Management Object (AMO) client library, created to support programming scenarios for Tabular models built at compatibility level 1200 and higher. As with AMO, TOM provides a programmatic way to handle administrative functions like creating models, importing and refreshing data, and assigning roles and permissions.  
   
 TOM exposes native tabular metadata, such as **model**, **tables**, **columns**, and **relationships** objects.  A high-level view of the object model tree, provided below, illustrates how the component parts are related.  
   
@@ -46,11 +51,11 @@ In contrast, when you manage objects that are part of Tabular metadata (such as 
 
 ### TOM and XMLA
 
-On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](https://msdn.microsoft.com/library/ms128525.aspx), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
+On the wire, TOM uses the XMLA protocol to communicate with the Analysis Services server and to manage objects. When managing non-tabular objects, TOM uses [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), the Analysis Services Scripting Language extension of XMLA. When managing tabular objects, TOM uses the MS-SSAS tabular protocol, also an extension of XMLA. See [MS-SSAS-T SQL Server Analysis Services Tabular protocol documentation](https://msdn.microsoft.com/library/mt719260.aspx) for more information.
 
 ### TOM and JSON
 
-Tabular metadata, which is structured as JSON documents, has a new command and object model definition syntax via the Tabular Model Scripting Language [TMSL](https://msdn.microsoft.com/library/mt614797.aspx). The scripting language uses JSON for the body of requests and responses.
+Tabular metadata, which is structured as JSON documents, has a new command and object model definition syntax via the Tabular Model Scripting Language [TMSL](../tabular-model-scripting-language-tmsl-reference.md). The scripting language uses JSON for the body of requests and responses.
 
 Although both TMSL and TOM expose same objects (**Table**, **Column**, and so forth) and the same operations (**Create**, **Delete**, **Refresh**), TOM does not use TMSL on the wire (it uses the MS-SSAS tabular protocol instead, as previously noted).
 

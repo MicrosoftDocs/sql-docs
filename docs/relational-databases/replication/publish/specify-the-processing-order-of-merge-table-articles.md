@@ -2,9 +2,12 @@
 title: "Specify the Processing Order of Merge Table Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], article processing order"
 ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Specify the Processing Order of Merge Table Articles
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Merge replication enables you to specify the order in which articles are processed by the Merge Agent during the synchronization process. You can assign an order to each article programmatically when creating an article using replication stored procedures. Articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify the Processing Order of Merge Articles](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  
   
 ### To specify the processing order for a new merge article  

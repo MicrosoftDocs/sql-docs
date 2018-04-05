@@ -2,9 +2,12 @@
 title: "catalog.set_environment_variable_protection (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,21 +16,21 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.set_environment_variable_protection (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Sets the sensitivity bit of an environment variable in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
-```tsql  
-set_environment_variable_protection [ @folder_name = ] folder_name  
+```sql  
+catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
     , [ @is_sensitive = ] is_sensitive  
-  
 ```  
   
 ## Arguments  

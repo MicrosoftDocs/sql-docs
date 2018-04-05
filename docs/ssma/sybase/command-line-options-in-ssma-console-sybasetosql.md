@@ -3,8 +3,11 @@ title: "Command Line Options in SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "Sybase Console,Command Line Options"
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of command line options to execute and control SSMA activities. The ensuing sections detail the same.  

@@ -1,24 +1,26 @@
 ---
 title: "SESSION_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "02/23/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 2a0d500a-f6c8-490f-9abd-3ae824986404
-caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SESSION_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Returns the ID of the current [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] session.  
   
@@ -39,7 +41,7 @@ SESSION_ID ( )
   
  The session ID begins with the alphabetical characters 'SID'. These are case-sensitive and must be capitalized when session ID is used in [!INCLUDE[DWsql](../../includes/dwsql-md.md)] commands.  
   
- You can query the view [sys.dm_pdw_exec_sessions](http://msdn.microsoft.com/en-us/5b656c55-427f-4306-8bd9-9d7987c203d9) to retrieve the same information as this function.  
+ You can query the view [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) to retrieve the same information as this function.  
   
 ## Examples  
  The following example returns the current session ID.  

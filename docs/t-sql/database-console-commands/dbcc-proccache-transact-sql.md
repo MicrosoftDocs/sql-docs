@@ -1,10 +1,13 @@
 ---
 title: "DBCC PROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/24/2017"
+ms.date: "11/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|database-console-commands"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,21 +25,21 @@ helpviewer_keywords:
   - "DBCC PROCCACHE statement"
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Displays information in a table format about the procedure cache.  
+Displays information in a table format about the procedure cache.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 DBCC PROCCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
@@ -48,20 +51,14 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  Suppresses all informational messages that have severity levels 0 through 10.  
   
 ## Remarks  
- The procedure cache is used to cache the compiled and executable plans to speed up the execution of batches. The entries in a procedure cache are at a batch level. The procedure cache includes the following entries:  
-  
+The procedure cache is used to cache the compiled and executable plans to speed up the execution of batches. The entries in a procedure cache are at a batch level. The procedure cache includes the following entries:
 -   Compiled plans  
-  
 -   Execution plans  
-  
 -   Algebrizer tree  
-  
 -   Extended procedures  
   
-  
-  
 ## Result Sets  
- The following table describes the columns of the result set.  
+The following table describes the columns of the result set.
   
 |Column name|Description|  
 |-----------------|-----------------|  
@@ -73,9 +70,9 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 |**proc cache active**|For backward compatibility only. Total number of entries that are currently being used.|  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.  
+Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

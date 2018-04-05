@@ -3,8 +3,11 @@ title: "distinct-values Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "fn:distinct-values function"
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Functions on Sequences - distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes duplicate values from the sequence specified by *$arg*. If *$arg* is an empty sequence, the function returns the empty sequence.  
   

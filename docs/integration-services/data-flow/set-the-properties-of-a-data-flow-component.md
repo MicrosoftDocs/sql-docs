@@ -2,9 +2,12 @@
 title: "Set the Properties of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 caps.latest.revision: 50
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Set the Properties of a Data Flow Component
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  

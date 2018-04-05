@@ -2,9 +2,12 @@
 title: "Add File Connection Manager Dialog Box UI Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "connection-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Add File Connection Manager Dialog Box UI Reference
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  

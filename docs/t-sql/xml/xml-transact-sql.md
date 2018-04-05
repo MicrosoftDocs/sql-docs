@@ -1,10 +1,13 @@
 ---
 title: "xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "xml data type [SQL Server], about xml data type"
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,11 +60,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
 ## Examples  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
-DECLARE @y xml (Sales.IndividualSurveySchemaCollection);  
-SET @y =  (SELECT TOP 1 Demographics FROM Sales.Individual);  
-SELECT @y;  
+DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+SELECT @DemographicData;  
 GO  
 ```  
   

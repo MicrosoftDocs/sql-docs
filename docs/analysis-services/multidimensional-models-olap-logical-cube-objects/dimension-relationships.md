@@ -2,12 +2,15 @@
 title: "Dimension Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -26,9 +29,11 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Dimension Relationships
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dimension usage defines the relationships between a cube dimension and the measure groups in a cube. A cube dimension is an instance of a database dimension that is used in a specific cube. A cube can, and frequently does, have cube dimensions that are not directly related to a measure group, but which might be indirectly related to the measure group through another dimension or measure group. When you add a database dimension or measure group to a cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tries to determine dimension usage by examining relationships between the dimension tables and fact tables in the cube's data source view, and by examining the relationships between attributes in dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically sets the dimension usage settings for the relationships that it can detect.  
   
  A relationship between a dimension and a measure group consists of the dimension and fact tables participating in the relationship and a granularity attribute that specifies the granularity of the dimension in the particular measure group.  

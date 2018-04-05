@@ -2,9 +2,12 @@
 title: "Determine Whether the Change Data Is Ready | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Determine Whether the Change Data Is Ready
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the second task is to ensure that the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have processed all the changes up to the selected endpoint.  
@@ -247,7 +251,7 @@ manager: "jhubbard"
   
 #### To configure an optional Script task to log an error condition  
   
-1.  If you want to report the error or timeout by writing a message to the log, configure logging for the package. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  If you want to report the error or timeout by writing a message to the log, configure logging for the package. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Inside the For Loop container, add a Script task.  
   

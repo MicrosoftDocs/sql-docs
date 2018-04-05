@@ -3,8 +3,11 @@ title: "ALTER DATABASE (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER DATABASE (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Use this statement to manage disk space allocations for a database as it grows or shrinks in size.  
   
@@ -59,7 +63,7 @@ ALTER DATABASE database_name
  Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
  ENCRYPTION { ON | OFF }  
- Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/en-us/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] when [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## Permissions  
  Requires the ALTER permission on the database.  
@@ -73,7 +77,7 @@ ALTER DATABASE database_name
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
   
 ## Locking Behavior  
- Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/en-us/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
+ Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) statement on the database.  
   
 ## Performance  
  Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
@@ -123,7 +127,7 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
- For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

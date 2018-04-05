@@ -2,13 +2,16 @@
 title: "Unary Operators in Parent-Child Dimensions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Parent-Child Dimension Attributes - Unary Operators
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In a dimension that contains a parent-child relationship in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you specify a unary (or custom rollup) operator column that determines the custom rollup for all noncalculated members of the parent attribute. The unary operator is applied to members whenever the values of the parent members are evaluated. The **UnaryOperatorColumn** on a parent attribute (**Usage**=Parent) specifies the column of a table in the data source view that contains unary operators. Values for the custom rollup operators that are stored in this column are applied to each member of the attribute.  
   
  You can create and specify a named calculation on a dimension table in the data source view as a unary operator column. The simplest expression, such as '+', returns the same operator for all members. But you can use any expression as long as it returns an operator for every member.  

@@ -1,10 +1,13 @@
 ---
 title: "sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "08/18/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "monitoring server health"
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_os_child_instances (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a row for each user instance that has been created from the parent server instance.  
   

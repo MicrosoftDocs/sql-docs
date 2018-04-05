@@ -1,12 +1,15 @@
 ---
 title: "ADO Event Instantiation by Language | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ADO Event Instantiation by Language
 Each programming language creates instances of ADO events differently. All of the following examples create a **ConnectComplete** event handler.  

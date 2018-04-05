@@ -1,10 +1,13 @@
 ---
 title: "CUME_DIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2015"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,41 +22,42 @@ helpviewer_keywords:
   - "analytic functions, CUME_DIST"
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Calculates the cumulative distribution of a value in a group of values in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That is, CUME_DIST computes the relative position of a specified value in a group of values. For a row *r*, assuming ascending ordering, the CUME_DIST of *r* is the number of rows with values lower than or equal to the value of *r*, divided by the number of rows evaluated in the partition or query result set. CUME_DIST is similar to the PERCENT_RANK function.  
+Calculates the cumulative distribution of a value in a group of values in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. That is, CUME_DIST computes the relative position of a specified value in a group of values. For a row *r*, assuming ascending ordering, the CUME_DIST of *r* is the number of rows with values lower than or equal to the value of *r*, divided by the number of rows evaluated in the partition or query result set. CUME_DIST is similar to the PERCENT_RANK function.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
+```sql
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
   
 ```  
   
 ## Arguments  
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. The \<rows or range clause> of the OVER syntax cannot be specified in a CUME_DIST function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. The \<rows or range clause> of the OVER syntax cannot be specified in a CUME_DIST function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
-## Return Types  
- **float(53)**  
+## Return types
+**float(53)**
   
-## General Remarks  
- The range of values returned by CUME_DIST is greater than 0 and less than or equal to 1. Tie values always evaluate to the same cumulative distribution value. NULL values are included by default and are treated as the lowest possible values.  
+## Remarks  
+The range of values returned by CUME_DIST is greater than 0 and less than or equal to 1. Tie values always evaluate to the same cumulative distribution value. NULL values are included by default and are treated as the lowest possible values.
   
- CUME_DIST is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+CUME_DIST is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## Examples  
- The following example uses the CUME_DIST function to compute the salary percentile for each employee within a given department. The value returned by the CUME_DIST function represents the percent of employees that have a salary less than or equal to the current employee in the same department. The PERCENT_RANK function computes the percent rank of the employee's salary within a department. The PARTITION BY clause is specified to partition the rows in the result set by department. The ORDER BY clause in the OVER clause logically orders the rows in each partition. The ORDER BY clause in the SELECT statement determines the display order of the result set.  
+The following example uses the CUME_DIST function to compute the salary percentile for each employee within a given department. The value returned by the CUME_DIST function represents the percent of employees that have a salary less than or equal to the current employee in the same department. The PERCENT_RANK function computes the percent rank of the employee's salary within a department. The PARTITION BY clause is specified to partition the rows in the result set by department. The ORDER BY clause in the OVER clause logically orders the rows in each partition. The ORDER BY clause in the SELECT statement determines the display order of the result set.
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate,   
@@ -66,9 +70,9 @@ WHERE Department IN (N'Information Services',N'Document Control')
 ORDER BY Department, Rate DESC;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
   
 Department             LastName               Rate                  CumeDist               PctRank  
 ---------------------- ---------------------- --------------------- ---------------------- ----------------------  
@@ -90,7 +94,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## See Also  
- [PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)  
+## See also
+[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

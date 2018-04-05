@@ -1,12 +1,13 @@
 ---
 title: "Pause and resume data migration (Stretch Database) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "stretch-database"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -19,10 +20,12 @@ ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Pause and resume data migration (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   To pause or resume data migration to Azure, select **Stretch** for a table in SQL Server Management Studio, and then select **Pause** to pause data migration or **Resume** to resume data migration. You can also use Transact-SQL to pause or resume data migration.  
   
@@ -39,7 +42,7 @@ manager: "jhubbard"
 ### Use Transact-SQL to pause data migration  
  Run the following command.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -58,7 +61,7 @@ GO
 ### Use Transact-SQL to resume data migration  
  Run the following command.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   

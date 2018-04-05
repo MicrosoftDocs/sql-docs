@@ -3,8 +3,11 @@ title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_resource_pools dynamic management view"
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_resource_governor_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Returns information about the current resource pool state, the current configuration of resource pools, and resource pool statistics.  
   

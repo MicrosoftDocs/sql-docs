@@ -2,15 +2,20 @@
 title: "Raw File Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.rawfilesource.f1"
+  - "sql13.dts.designer.rawfilesourceconnectionmanager.f1"
+  - "sql13.dts.designer.rawfilesourcecolumns.f1"
 helpviewer_keywords: 
   - "sources [Integration Services], Raw File"
   - "raw data [Integration Services]"
@@ -19,7 +24,8 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Raw File Source
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing. This means that the Raw File source can read data more quickly than other sources such as the Flat File and the OLE DB sources.  
@@ -51,6 +57,10 @@ manager: "jhubbard"
   
 -   Blog entry, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com  
   
+## Raw File Source Editor (Connection Manager Page)
+  The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
+## Raw File Source Editor (Columns Page)
+  The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
 ## See Also  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  

@@ -1,10 +1,13 @@
 ---
 title: "SORT_IN_TEMPDB Option For Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/24/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "index creation [SQL Server], tempdb database"
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SORT_IN_TEMPDB Option For Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   When you create or rebuild an index, by setting the SORT_IN_TEMPDB option to ON you can direct the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to use **tempdb** to store the intermediate sort results that are used to build the index. Although this option increases the amount of temporary disk space that is used to create an index, the option could reduce the time that is required to create or rebuild an index when **tempdb** is on a set of disks different from that of the user database. For more information about **tempdb**, see [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   

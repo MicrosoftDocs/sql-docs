@@ -1,10 +1,13 @@
 ---
 title: "bcp Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/26/2016"
-ms.prod: "sql-server-2016"
+ms.date: "02/12/2018"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "bcp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -28,12 +31,21 @@ helpviewer_keywords:
   - "column exporting [SQL Server]"
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 222
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # bcp Utility
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+ > For content related to previous versions of SQL Server, see [bcp Utility](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
+
+ > For the latest version of the bcp utility, see [Microsoft Command Line Utilities 14.0 for SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+
+ > For using bcp on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
+
+ > For detailed information about using bcp with Azure SQL Data Warehouse, see [Load data with bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
   
@@ -55,6 +67,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#E">-E</a>]
     [<a href="#f">-f format_file</a>]
     [<a href="#F">-F first_row</a>]
+    [<a href="#G">-G Azure Active Directory Authentication</a>]
     [<a href="#h">-h"hint [,...n]"</a>]
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
@@ -167,10 +180,49 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  If *format_file* begins with a hyphen (-) or a forward slash (/), do not include a space between **-f** and the *format_file* value.  
   
- **-F** ***first_row***<a name="F"></a>  
+**-F** ***first_row***<a name="F"></a>  
  Specifies the number of the first row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (<) or equal to (=) the total number rows. In the absence of this parameter, the default is the first row of the file.  
   
  *first_row* can be a positive integer with a value up to 2^63-1. **-F** *first_row* is 1-based.  
+
+**-G**<a name="G"></a>  
+ This switch is used by the client when connecting to Azure SQL Database or Azure SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. The -G switch requires [version 14.0.3008.27 or later](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute bcp -v. For more information, see [Use Azure Active Directory Authentication for authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+
+> [!TIP]
+>  To check if your version of bcp includes support for Azure Active Directory Authentication (AAD) type **bcp --** (bcp\<space>\<dash>\<dash>) and verify that you see -G in the list of available arguments.
+
+- **Azure Active Directory Username and Password:** 
+
+    When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options. 
+
+    The following example exports data using Azure AD Username and Password where user and password is an AAD credential. The example exports table `bcptest` from database `testdb` from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data1.dat`:
+    ``` 
+    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ``` 
+
+    The following example imports data using Azure AD Username and Password where user and password is an AAD credential. The example imports data from file `c:\last\data1.dat` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD User/Password:
+    ```
+    bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
+    ```
+
+
+
+- **Azure Active Directory Integrated** 
+ 
+    For Azure Active Directory Integrated authentication, provide the **-G** option without a user name or password. This configuration assumes that the current Windows user account (the account the bcp command is running under) is federated with Azure AD: 
+
+    The following example exports data using Azure AD Integrated account. The example exports table `bcptest` from database `testdb` using Azure AD Integrated from Azure server `aadserver.database.windows.net` and stores the data in file `c:\last\data2.dat`:
+
+    ```
+    bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
+    The following example imports data using Azure AD Integrated auth. The example imports data from file `c:\last\data2.txt` into table `bcptest` for database `testdb` on Azure server `aadserver.database.windows.net` using Azure AD Integrated auth:
+
+    ```
+    bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
+    ```
+
   
 **-h** ***"load hints***[ ,... *n*]**"**<a name="h"></a>
 Specifies the hint or hints to be used during a bulk import of data into a table or view.  
@@ -428,7 +480,7 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
   
 -   B. Copying table rows into a data file (with a trusted connection)  
   
--   C. Copying table rows into a data file (with Mixed-mode Authentication)  
+-   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copying table rows into a data file (with Mixed-mode Authentication)  
   
 -   D. Copying data from a file to a table  
   
@@ -446,18 +498,18 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
 ### **Example Test Conditions**
 The examples below make use of the `WideWorldImporters` sample database for SQL Server (starting 2016) and Azure SQL Database.  `WideWorldImporters` can be downloaded from [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  See [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) for the syntax to restore the sample database.  Except where specified otherwise, the examples assume that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  A directory named `D:\BCP` will be used in many of the examples.
 
-The script below creates an empty copy of the `WorlWideImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint.  Run the following T-SQL script in SQL Server Management Studio (SSMS)
+The script below creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint.  Run the following T-SQL script in SQL Server Management Studio (SSMS)
 
 ```tsql  
-USE WorlWideImporters;  
+USE WideWorldImporters;  
 GO  
 
 SET NOCOUNT ON;
 
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Warehouse.StockItemTransactions_bcp')		
 BEGIN
-	SELECT * INTO WorlWideImporters.Warehouse.StockItemTransactions_bcp
-	FROM WorlWideImporters.Warehouse.StockItemTransactions  
+	SELECT * INTO WideWorldImporters.Warehouse.StockItemTransactions_bcp
+	FROM WideWorldImporters.Warehouse.StockItemTransactions  
 	WHERE 1 = 2;  
 
 	ALTER TABLE Warehouse.StockItemTransactions_bcp 
@@ -469,7 +521,7 @@ END
 > [!NOTE]
 > Truncate the `StockItemTransactions_bcp` table as needed.
 >
-> TRUNCATE TABLE WorlWideImporters.Warehouse.StockItemTransactions_bcp;
+> TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### A.  Identify **bcp** utility version
 At a command prompt, enter the following command:
@@ -478,14 +530,14 @@ bcp -v
 ```
   
 ### B. Copying table rows into a data file (with a trusted connection)  
-The following examples illustrates the **out** option on the `WorlWideImporters.Warehouse.StockItemTransactions` table.
+The following examples illustrates the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.
 
 - **Basic**  
 This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.
 
   At a command prompt, enter the following command:
   ```
-  bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
+  bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
  
  - **Expanded**  
@@ -493,30 +545,30 @@ This example creates a data file named `StockItemTransactions_native.bcp` and co
 
     At a command prompt, enter the following command:
     ```
-    bcp WorlWideImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
+    bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ``` 
  
 Review `Error_out.log` and `Output_out.log`.  `Error_out.log` should be blank.  Compare the file sizes between `StockItemTransactions_character.bcp` and `StockItemTransactions_native.bcp`. 
    
 ### C. Copying table rows into a data file (with mixed-mode authentication)  
-The following example illustrates the **out** option on the `WorlWideImporters.Warehouse.StockItemTransactions` table.  This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.  
+The following example illustrates the **out** option on the `WideWorldImporters.Warehouse.StockItemTransactions` table.  This example creates a data file named `StockItemTransactions_character.bcp` and copies the table data into it using **character** format.  
   
  The example assumes that you are using mixed-mode authentication, you must use the **-U** switch to specify your login ID. Also, unless you are connecting to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer, use the **-S** switch to specify the system name and, optionally, an instance name.  
 
 At a command prompt, enter the following command: \(The system will prompt you for your password.\)
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
+bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
   
 ### D. Copying data from a file to a table  
-The following examples illustrate the **in** option on the `WorlWideImporters.Warehouse.StockItemTransactions_bcp` table using files created above.
+The following examples illustrate the **in** option on the `WideWorldImporters.Warehouse.StockItemTransactions_bcp` table using files created above.
   
 - **Basic**  
 This example uses the `StockItemTransactions_character.bcp` data file previously created.
 
   At a command prompt, enter the following command:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
   ```  
 
 - **Expanded**  
@@ -524,7 +576,7 @@ This example uses the `StockItemTransactions_native.bcp` data file previously cr
   
   At a command prompt, enter the following command:
   ```  
-  bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
   ```    
   Review `Error_in.log` and `Output_in.log`.
    
@@ -534,39 +586,39 @@ To copy a specific column, you can use the **queryout** option.  The following e
 At a command prompt, enter the following command:
   
 ```  
-bcp "SELECT StockItemTransactionID FROM WorlWideImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
+bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```  
   
 ### F. Copying a specific row into a data file  
-To copy a specific row, you can use the **queryout** option. The following example copies only the row for the person named `Amy Trefl` from the `WorlWideImporters.Application.People` table into a data file `Amy_Trefl_c.bcp`.  Note: the **-d** switch is used identify the database.
+To copy a specific row, you can use the **queryout** option. The following example copies only the row for the person named `Amy Trefl` from the `WideWorldImporters.Application.People` table into a data file `Amy_Trefl_c.bcp`.  Note: the **-d** switch is used identify the database.
   
 At a command prompt, enter the following command: 
 ```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WorlWideImporters -c -T
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```  
   
 ### G. Copying data from a query to a data file  
-To copy the result set from a Transact-SQL statement to a data file, use the **queryout** option.  The following example copies the names from the `WorlWideImporters.Application.People` table, ordered by full name, into the `People.txt` data file.  Note: the **-t** switch is used to create a comma delimited file.
+To copy the result set from a Transact-SQL statement to a data file, use the **queryout** option.  The following example copies the names from the `WideWorldImporters.Application.People` table, ordered by full name, into the `People.txt` data file.  Note: the **-t** switch is used to create a comma delimited file.
   
 At a command prompt, enter the following command:
 ```  
-bcp "SELECT FullName, PreferredName FROM WorlWideImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
+bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```  
   
 ### H. Creating format files  
-The following example creates three different format files for the `Warehouse.StockItemTransactions` table in the `WorlWideImporters` database.  Review the contents of each created file.
+The following example creates three different format files for the `Warehouse.StockItemTransactions` table in the `WideWorldImporters` database.  Review the contents of each created file.
   
 At a command prompt, enter the following commands:
   
 ```  
 REM non-XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
 REM non-XML native format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_n.fmt -n -T
 
 REM XML character format
-bcp WorlWideImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
+bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
  
 ```  
   
@@ -580,7 +632,7 @@ To use a previously created format file when importing data into an instance of 
   
 At a command prompt, enter the following command:
 ```  
-bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
 ```  
   
 > [!NOTE]  

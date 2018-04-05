@@ -1,5 +1,6 @@
-# [Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0)](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)
 # [Sample XPath Queries (SQLXML 4.0)](sample-xpath-queries-sqlxml-4-0.md)
+
+# [Sample Annotated XSD Schema for XPath Examples (SQLXML 4.0)](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)
 # [Specifying Arithmetic Operators in XPath Queries (SQLXML 4.0)](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)
 # [Specifying Axes in XPath Queries (SQLXML 4.0)](specifying-axes-in-xpath-queries-sqlxml-4-0.md)
 # [Specifying Boolean Functions in XPath Queries (SQLXML 4.0)](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)

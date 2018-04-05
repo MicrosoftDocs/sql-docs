@@ -1,10 +1,13 @@
 ---
 title: "DENY Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], databases"
 ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DENY Database Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Denies permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY <permission> [ ,...n ]    
     TO <database_principal> [ ,...n ] [ CASCADE ]  
     [ AS <database_principal> ]  
@@ -64,7 +67,7 @@ DENY <permission> [ ,...n ]
  CASCADE  
  Indicates that the permission will also be denied to principals to which the specified principal granted it.  
   
- AS <database_principal>  
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to deny the permission.  
   
  *Database_user*  
@@ -74,39 +77,21 @@ DENY <permission> [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
- *Database_user_mapped_to_Windows_User*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to a Windows user.  
+ *Database_user_mapped_to_Windows_User*   
+  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to a Windows group.  
+  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to a certificate.  
+  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
- Specifies a database user mapped to an asymmetric key.  
+  Specifies a database user mapped to an asymmetric key.  
   
  *Database_user_with_no_login*  
  Specifies a database user with no corresponding server-level principal.  
@@ -129,7 +114,7 @@ DENY <permission> [ ,...n ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
@@ -140,7 +125,7 @@ DENY <permission> [ ,...n ]
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|  
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|  
-|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY SECURITY POLICY<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|  
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|  
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|  
@@ -203,11 +188,7 @@ DENY <permission> [ ,...n ]
   
 ### A. Denying permission to create certificates  
  The following example denies `CREATE CERTIFICATE` permission on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to user `MelanieK`.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
+
 ```  
 USE AdventureWorks2012;  
 DENY CREATE CERTIFICATE TO MelanieK;  
@@ -217,9 +198,7 @@ GO
 ### B. Denying REFERENCES permission to an application role  
  The following example denies `REFERENCES` permission on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to application role `AuditMonitor`.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  

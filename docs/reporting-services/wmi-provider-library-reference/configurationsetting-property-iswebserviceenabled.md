@@ -2,12 +2,15 @@
 title: "IsWebServiceEnabled Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "IsWebServiceEnabled property"
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsWebServiceEnabled
   Indicates whether the Report Server Web service is enabled. Read-only.  

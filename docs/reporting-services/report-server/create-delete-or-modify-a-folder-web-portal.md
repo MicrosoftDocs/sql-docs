@@ -2,18 +2,22 @@
 title: "Create, Delete, or Modify a Folder (web portal) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create, Delete, or Modify a Folder (web portal)
   You can create folders to organize and manage the items you publish to a report server. Creating folders can help users find reports of interest to them. For content managers, folders provide a framework for applying permissions. You can create role assignments on specific folders to restrict access to reports that are in development or that should not be widely distributed.  
@@ -26,7 +30,7 @@ manager: "erikre"
   
      The **Create a new folder in** dialog opens.  
   
-3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : @ & = + , $ / * \< > |. You cannot type a series of folder names to create several folders at once.  
+3.  Type a folder name. A folder name can include spaces, but cannot include reserved characters that are used for URL encoding: ; ? : @ & = + , $ / * < > |. You cannot type a series of folder names to create several folders at once.  
   
 4.  Select **Create**.  
   

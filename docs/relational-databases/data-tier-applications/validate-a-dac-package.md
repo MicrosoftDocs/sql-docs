@@ -2,9 +2,12 @@
 title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-tier-applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "view DAC"
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Validate a DAC Package
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
@@ -134,7 +139,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### View Upgrade Actions Example (PowerShell)  
  **View Upgrade Actions Example (PowerShell)**  
   
- The following example reports the Transact-SQL statements that would be run to upgrading a DAC named MyApplicaiton to the schema defined in a MyApplicationVNext.dacpac file.  
+ The following example reports the Transact-SQL statements that would be run to upgrading a DAC named MyApplicaiton to the schema defined in a MyApplication2017.dacpac file.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -147,7 +152,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

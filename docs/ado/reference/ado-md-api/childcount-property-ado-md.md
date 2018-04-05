@@ -1,12 +1,15 @@
 ---
 title: "ChildCount Property (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ChildCount Property (ADO MD)
 Indicates the number of members for which the current [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object is the parent in a hierarchy.  

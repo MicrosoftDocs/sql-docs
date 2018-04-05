@@ -2,9 +2,12 @@
 title: "Creating a Valid Connection String Using TCP IP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "aliases [SQL Server], TCP/IP"
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Creating a Valid Connection String Using TCP IP
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   To create a valid connection string using TCP/IP, you must:  
   
 -   Specify an **Alias Name**.  

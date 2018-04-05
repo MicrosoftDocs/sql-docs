@@ -1,10 +1,13 @@
 ---
 title: "GRANT Availability Group Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,27 +21,24 @@ helpviewer_keywords:
   - "permissions [SQL Server], availability group"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Grants permissions on an Always On availability group.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
-        TO \< server_principal >  [ ,...n ]  
+        TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
     [ AS SQL_Server_login ]   
   
@@ -56,7 +56,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  ON AVAILABILITY GROUP **::***availability_group_name*  
  Specifies the availability group on which the permission is being granted. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being granted.  
   
  *SQL_Server_login*  
@@ -92,7 +92,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ For a chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions, see [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster).  
   
 ## Permissions  
  Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  

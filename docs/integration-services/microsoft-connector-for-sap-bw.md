@@ -2,9 +2,12 @@
 title: "Microsoft Connector for SAP BW | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Microsoft Connector for SAP BW
   The [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW consists of a set of three components that let you extract data from, or load data into, an SAP Netweaver BW version 7 system.  

@@ -1,28 +1,34 @@
 ---
-title: "Troubleshoot a Reporting Services Installation | Microsoft Docs"
+title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/17/2018"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
-# Troubleshoot a Reporting Services Installation
+
+# Troubleshoot a Reporting Services installation
+
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this topic to address the conditions that are most likely to cause installation errors.  
   
  For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] see [Troubleshoot SSRS issues and errors.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Review the [Online Release Notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
+ Review the [Online release notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
-##  <a name="bkmk_setuplogs"></a> Check Setup Logs  
+##  <a name="bkmk_setuplogs"></a> Check setup logs  
  Setup errors are recorded in log files in the **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** folder. A subfolder is created each time you run Setup. The subfolder name is the time and date you ran Setup. For instructions on how to view the Setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 -   The log files include a collection of files.  
@@ -33,7 +39,7 @@ manager: "erikre"
   
 -   Open the *_RS\_\*_ComponentUpdateSetup.log to view [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] setup information.  
   
-##  <a name="bkmk_prereq"></a> Check Prerequisites  
+##  <a name="bkmk_prereq"></a> Check prerequisites  
  Setup checks prerequisites automatically. However, if you are troubleshooting setup problems, it is helpful to know which requirements Setup is checking for.  
   
 -   Account requirements for running Setup include membership in the local Administrators group. Setup must have permission to add files, registry settings, create local security groups, and set permissions. If you are installing a default configuration, Setup must have permission to create a report server database on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on which you are installing.  
@@ -48,7 +54,7 @@ manager: "erikre"
   
  Setup no longer checks for Internet Information Services (IIS) or [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires MDAC 2.0 and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0; Setup will install these if they are not already installed.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot Problems with SharePoint Mode installations  
+##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot oroblems with SharePoint mode installations  
   
 -   [Reporting Services Configuration Manager Does not start](#bkmk_configmanager_notstart)  
   
@@ -65,16 +71,17 @@ manager: "erikre"
 -   [You see an error Message when you try to create a new Report Builder Report](#bkmk_reportbuilder_newreport_error)  
   
 -   [You see an error message that RS_SHP is not supported with PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
-  
-###  <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager Does not start  
- **Description:** This issue is by design in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is architected for the SharePoint service architecture. The Configuration Manager is no longer needed to configure and administer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
+
+### <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager does not start
+
+ **Description:** This issue is by design in SQL Server 2012 and later. Reporting Services is architected for the SharePoint service architecture. The Configuration Manager is no longer needed to configure and administer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   
  **Workaround:** Use SharePoint Central Administration to configure a report server in SharePoint mode. For more information, see [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a> You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SSRS in SharePoint mode  
- **Description:** If after successfully installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode and the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint 2013/2016, you do not see “SQL Server Reporting Services” in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
+###  <a name="bkmk_no_ssrs_service"></a> You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2016 SSRS in SharePoint mode  
+ **Description:** If after successfully installing SQL Server 2016 Reporting Services in SharePoint mode and the SQL Server 2016 Reporting Services Add-in for SharePoint 2013/2016, you do not see “SQL Server Reporting Services” in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
   
 -   SharePoint 2013/2016 Central Administration -> "Application Management" -> "Manage Services on Server" page  
   
@@ -113,7 +120,7 @@ manager: "erikre"
   
 -   Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode from the SQL Server installation media.  
   
- **Note:** If the **SharePoint 2013/2016 Management Shell** is open when you complete one of the workarounds, close and reopen the management shell.  
+ If the **SharePoint 2013/2016 Management Shell** is open when you complete one of the workarounds, close and reopen the management shell.  
   
  For more information, see the following:  
   
@@ -188,7 +195,7 @@ manager: "erikre"
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> Troubleshoot Problems with the Native Mode Installations  
+##  <a name="bkmk_tshoot_native"></a> Troubleshoot problems with the native mode installations  
   
 ###  <a name="PerfCounters"></a> Performance counters are not visible after upgrading to Windows Vista or Windows Server 2008  
  If you upgrade the operating system to [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] or [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
@@ -245,13 +252,15 @@ manager: "erikre"
 >  When you use Custom authentication, it is recommended that you migrate your installation rather than performing an upgrade. For more information about migrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  By default, these properties do not exist in the [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] configuration. If you configured these properties in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and you continue to require the functionality that they provide, you must manually add them to the **RSReportServer.config** file following the upgrade process. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
-  
-###  <a name="WindowsAuthBreaksAfterUpgrade"></a> 401-Unauthorized error when using Windows authentication after an upgrade from SQL Server 2005 to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+
+### <a name="WindowsAuthBreaksAfterUpgrade"></a> 401-Unauthorized error when using Windows authentication after an upgrade from SQL Server 2005 to SQL Server 2016
+
  If you upgrade from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], and you use NTLM authentication with a built-in account for the Report Server service account, you might encounter a 401-Unauthorized error when you access the report server or the web portal after the upgrade.  
   
  This happens because of a change in the default [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] configuration for Windows authentication. Negotiate is configured when the Report Server service account is either Network Service or Local System. NTLM is configured when the Report Server service account is not one of those built-in accounts. To fix this issue after you upgrade, you can edit the RSReportServer.config file and configure the **AuthenticationType** to be **RSWindowsNTLM**. For more information, see [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
-  
-###  <a name="Uninstall32BitBreaks64Bit"></a> Uninstalling 32-bit instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services in side-by-side deployment with a 64-bit instance breaks the 64-bit instance  
+
+### <a name="Uninstall32BitBreaks64Bit"></a> Uninstalling 32-bit instance of SQL Server 2016 Reporting Services in side-by-side deployment with a 64-bit instance breaks the 64-bit instance
+
  When you install a 32-bit instance and a 64-bit instance of [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] side-by-side on a computer, and you uninstall the 32-bit instance, four [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] registry keys are removed. This breaks the 64-bit instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] registry keys that are removed when you uninstall the 32-bit instance are:  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2016 Windows Service\Performance:Counter Types`  
@@ -261,13 +270,13 @@ manager: "erikre"
 > [!CAUTION]  
 >  Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
   
-##  <a name="bkmk_additional"></a> Additional Resources  
- The following are additional resources you can review to assist you with trouble shooting issues:  
+##  <a name="bkmk_additional"></a> Additional resources  
+ The following are additional resources you can review to assist you with troubleshooting issues:  
   
--   TechNet Wiki: Trouble Shooting topics [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint Integrated Mode](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Forum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+-   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   
   

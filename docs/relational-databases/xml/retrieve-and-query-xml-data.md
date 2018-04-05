@@ -2,9 +2,12 @@
 title: "Retrieve and Query XML Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "xml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "XML instance retrieval"
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Retrieve and Query XML Data
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  
   
 ##  <a name="features"></a> Features of an XML Instance That Are Not Preserved  

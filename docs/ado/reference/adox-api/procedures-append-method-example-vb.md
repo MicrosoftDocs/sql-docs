@@ -1,12 +1,15 @@
 ---
 title: "Procedures Append Method Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Procedures Append Method Example (VB)
 The following code demonstrates how to use a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) method to create a new procedure in the underlying data source.  

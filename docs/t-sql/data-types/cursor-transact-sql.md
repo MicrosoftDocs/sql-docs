@@ -1,10 +1,13 @@
 ---
 title: "cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "7/23/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,41 +18,37 @@ helpviewer_keywords:
   - "cursor data type"
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  A data type for variables or stored procedure OUTPUT parameters that contain a reference to a cursor.  
+A data type for variables or stored procedure OUTPUT parameters that contain a reference to a cursor.
   
 ## Remarks  
- The operations that can reference variables and parameters having a **cursor** data type are:  
-  
+The operations that can reference variables and parameters having a **cursor** data type are:
 -   The DECLARE *@local_variable* and SET *@local_variable* statements.  
-  
 -   The OPEN, FETCH, CLOSE, and DEALLOCATE cursor statements.  
-  
 -   Stored procedure output parameters.  
-  
 -   The CURSOR_STATUS function.  
-  
 -   The **sp_cursor_list**, **sp_describe_cursor**, **sp_describe_cursor_tables**, and **sp_describe_cursor_columns** system stored procedures.  
   
-     The **cursor_name** output column of **sp_cursor_list** and **sp_describe_cursor** returns the name of the cursor variable.  
+The **cursor_name** output column of **sp_cursor_list** and **sp_describe_cursor** returns the name of the cursor variable.
   
- Any variables created with the **cursor** data type are nullable.  
+Any variables created with the **cursor** data type are nullable.
   
- The **cursor** data type cannot be used for a column in a CREATE TABLE statement.  
+The **cursor** data type cannot be used for a column in a CREATE TABLE statement.
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+## See also
+[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+[CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
+[Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)
   
   

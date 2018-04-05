@@ -1,20 +1,24 @@
 ---
 title: "Troubleshoot Reports: Map Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/17/2018"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Troubleshoot Reports: Map Reports (Report Builder and SSRS)
   Issues with maps in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report might occur when you add a map or map layer to your report, when you customize an existing map or map layer in your report, when you preview a map in a report, or when you publish a report with a map. Use this topic to help troubleshoot these issues.  
@@ -22,9 +26,9 @@ manager: "erikre"
    ## Need more help?  
    
   Try:  
- *  MSDN forum for [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)  
- * [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016) on Stack Overflow  
- * Log an issue or suggestion at [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+ * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) on Stack Overflow  
+ * Log an issue or suggestion at [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+
   
 ##  <a name="Embedded"></a> Report Definition Size Issues  
  Use this section to help solve issues that relate to report definition size.  

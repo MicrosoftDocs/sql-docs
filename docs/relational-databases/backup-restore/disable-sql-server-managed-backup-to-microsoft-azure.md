@@ -2,20 +2,25 @@
 title: "Disable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to disable or pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at both the database and instance levels.  
   
 ##  <a name="DatabaseDisable"></a> Disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database  
@@ -69,7 +74,8 @@ SELECT db_name
        FROM   
   
        msdb.managed_backup.fn_backup_db_config (NULL)  
-       WHERE is_managed_backup_enabled = 1  
+       WHERE is_managed_backup_enabled = 1 
+       AND is_dropped = 0
   
        --Select DBName from @DBNames  
   

@@ -3,8 +3,11 @@ title: "Use Tokens in Job Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,15 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Use Tokens in Job Steps
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent allows you to use tokens in [!INCLUDE[tsql](../../includes/tsql_md.md)] job step scripts. Using tokens when you write your job steps gives you the same flexibility that variables provide when you write software programs. After you insert a token in a job step script, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent replaces the token at run time, before the job step is executed by the [!INCLUDE[tsql](../../includes/tsql_md.md)] subsystem.  
   
 > [!IMPORTANT]  
@@ -64,8 +73,8 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(A-ERR)**|Error number. If the job is run by an alert, the error number value automatically replaces this token in the job step.|  
 |**(A-SEV)**|Error severity. If the job is run by an alert, the error severity value automatically replaces this token in the job step.|  
 |**(A-MSG)**|Message text. If the job is run by an alert, the message text value automatically replaces this token in the job step.|  
-|**(AGENT_JOB_NAME)**|The name of the job.|  
-|**(AGENT_STEP_NAME)**|The name of the step.|  
+|**(JOBNAME)**|The name of the job.|  
+|**(STEPNAME)**|The name of the step.|  
 |**(DATE)**|Current date (in YYYYMMDD format).|  
 |**(INST)**|Instance name. For a default instance, this token will have the default instance name: MSSQLSERVER.|  
 |**(JOBID)**|Job ID.|  

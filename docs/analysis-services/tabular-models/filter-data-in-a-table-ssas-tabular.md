@@ -1,14 +1,17 @@
 ---
-title: "Filter Data in a Table (SSAS Tabular) | Microsoft Docs"
+title: "Filter Data in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Filter Data in a Table (SSAS Tabular)
+# Filter Data in a Table 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   You can apply filters when you import data to control the rows that are loaded into a table. After you have imported the data, you cannot delete individual rows. However, you can apply custom filters to control the way that rows are displayed. Rows that do not meet the filtering criteria are hidden. You can filter by one or more columns. Filters are additive, which means that each additional filter is based on the current filter and further reduces the subset of data.  
   
 > [!NOTE]  
@@ -52,8 +57,8 @@ manager: "erikre"
 2.  Click on the **Column** menu, and then click **Clear All Filters**.  
   
 ## See Also  
- [Filter and Sort Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Filter and Sort Data](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

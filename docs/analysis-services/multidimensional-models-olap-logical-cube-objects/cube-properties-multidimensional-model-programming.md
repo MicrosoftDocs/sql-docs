@@ -2,12 +2,15 @@
 title: "Cube Properties - Multidimensional Model Programming | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -37,9 +40,11 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cube Properties - Multidimensional Model Programming
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cubes have a number of properties that you can set to affect cube-wide behavior. These properties are summarized in the following table.  
   
 > [!NOTE]  
@@ -65,7 +70,7 @@ manager: "erikre"
 |**ScriptErrorHandlingMode**|Determines error handling. Options are **IgnoreNone** or **IgnoreAll**|  
 |**Source**|Displays the data source view used for the cube.|  
 |**StorageLocation**|Specifies the file system storage location for the cube. If none is specified, the location is inherited from the database that contains the cube object.|  
-|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP****.**|  
+|**StorageMode**|Specifies the storage mode for the cube. Values are **MOLAP**, **ROLAP**, or **HOLAP**.|  
 |**Visible**|Determines the visibility of the cube.|  
   
 > [!NOTE]  

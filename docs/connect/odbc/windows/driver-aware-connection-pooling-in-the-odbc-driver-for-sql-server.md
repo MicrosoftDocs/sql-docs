@@ -3,8 +3,11 @@ title: "Driver-Aware Connection Pooling in the ODBC Driver for SQL Server | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -1,12 +1,15 @@
 ---
 title: "Delete Method Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Delete Method Example (VB)
 This example uses the [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) method to remove a specified record from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

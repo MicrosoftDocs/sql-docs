@@ -2,8 +2,12 @@
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -19,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_db_xtp_checkpoint_files dynamic management view"
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Displays information about checkpoint files, including file size, physical location and the transaction ID.  
   

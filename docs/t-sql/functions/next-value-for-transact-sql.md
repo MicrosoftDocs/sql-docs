@@ -3,8 +3,11 @@ title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "sequence number object, NEXT VALUE FOR function"
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Generates a sequence number from the specified sequence object.  
   
@@ -192,13 +196,13 @@ SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstUse`  
+ ```
+FirstUse  
+1  
   
- `1`  
-  
- `SecondUse`  
-  
- `2`  
+SecondUse  
+2
+```  
   
 ### B. Setting a variable to the next sequence value  
  The following example demonstrates three ways to set a variable to the next value of a sequence number.  

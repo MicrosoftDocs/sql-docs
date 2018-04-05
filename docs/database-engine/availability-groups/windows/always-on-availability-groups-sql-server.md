@@ -2,9 +2,12 @@
 title: "Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -19,26 +22,18 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 caps.latest.revision: 35
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.  
   
  An availability group fails over at the level of an availability replica. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file, deletion of a database, or corruption of a transaction log.  
-  
- **In this Topic:**  
-  
--   [Benefits](#Benefits)  
-  
--   [Terms and Definitions](#TermsAndDefinitions)  
-  
--   [Interoperability and Coexistence with Other Database Engine Features](#Interoperability)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
+ 
+ >[NOTE]
+ >Always On availability groups is the full, formal name for this availability feature. The abbreviation is AG, not AOAG or AAG. 
   
 ##  <a name="Benefits"></a> Benefits  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a rich set of options that improve database availability and that enable improved resource use. The key components are as follows:  
@@ -95,28 +90,28 @@ manager: "jhubbard"
     -   PowerShell cmdlets. For more information, see [Overview of PowerShell Cmdlets for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Terms and Definitions  
- availability group  
+ **availability group**  
  A container for a set of databases, *availability databases*, that fail over together.  
   
- availability database  
+ **availability database**  
  A database that belongs to an availability group. For each availability database, the availability group maintains a single read-write copy (the *primary database*) and one to eight read-only copies (*secondary databases*).  
   
- primary database  
+ **primary database**  
  The read-write copy of an availability database.  
   
- secondary database  
+ **secondary database**  
  A read-only copy of an availability database.  
   
- availability replica  
+ **availability replica**  
  An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to eight *secondary replicas*.  
   
- primary replica  
+ **primary replica**  
  The availability replica that makes the primary databases available for read-write connections from clients and, also, sends transaction log records for each primary database to every secondary replica.  
   
- secondary replica  
+ **secondary replica**  
  An availability replica that maintains a secondary copy of each availability database, and serves as a potential failover targets for the availability group. Optionally, a secondary replica can support read-only access to secondary databases can support creating backups on secondary databases.  
   
- availability group listener  
+ **availability group listener**  
  A server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
   
 > [!NOTE]  
@@ -131,7 +126,7 @@ manager: "jhubbard"
   
 -   [Contained databases](../../../relational-databases/databases/contained-databases.md)  
   
--   [Database encryption](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [Database encryption](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Database snapshots](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

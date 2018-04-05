@@ -1,13 +1,16 @@
 ---
 title: "Programming AMO OLAP Basic Objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,7 +24,8 @@ ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Basic Objects
   Creating complex [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects is simple and straightforward but requires attention to detail. This topic explains the programming details of OLAP basic objects. This topic contains the following sections:  

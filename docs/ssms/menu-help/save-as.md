@@ -3,8 +3,11 @@ title: "Save As | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Save As
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Used to save an instance of the current item at a specified location in a specified file format. Click **Save** *<file>* **As** on the **File** menu (where *<file>* is the name of the current item), or press ALT+F, A in the Code Editor.  
   
 ## Central Panel  

@@ -1,12 +1,15 @@
 ---
 title: "DrilledDown Property (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DrilledDown Property (ADO MD)
 Indicates whether children immediately follow the [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) on the axis.  

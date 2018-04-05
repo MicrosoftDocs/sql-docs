@@ -200,4 +200,7 @@
 ## [SystemGetCrossValidationResults](systemgetcrossvalidationresults-analysis-services-data-mining.md)  
 ## [SystemGetClusterCrossValidationResults](systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
 ## [SystemGetAccuracyResults](systemgetaccuracyresults-analysis-services-data-mining.md)  
-## [SystemGetClusterAccuracyResults](systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+## [SystemGetClusterAccuracyResults](systemgetclusteraccuracyresults-analysis-services-data-mining.md)
+
+# Reference
+## [DMX](../../dmx/data-mining-extensions-dmx-reference.md)

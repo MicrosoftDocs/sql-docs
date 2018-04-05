@@ -2,12 +2,15 @@
 title: "Choose the Column to Use for Testing a Mining Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Choose the Column to Use for Testing a Mining Model
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Before you can measure the accuracy of a mining model, you must decide which outcome it is that you want to assess. Most data mining models require that you choose at least one column to use as the predictable attribute when you create the model. Therefore, when you test the accuracy of the model, you generally must select that attribute to test.  
   
  The following list describes some additional considerations for choosing the predictable attribute to use in testing:  

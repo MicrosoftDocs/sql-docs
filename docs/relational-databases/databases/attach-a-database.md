@@ -2,9 +2,12 @@
 title: "Attach a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "attaching databases [SQL Server]"
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Attach a Database
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to attach a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a SQL Server database.  
   
@@ -38,7 +42,7 @@ manager: "jhubbard"
 ###  <a name="Recommendations"></a> Is Attach the best choice?  
  We recommend that you move databases by using the ALTER DATABASE planned relocation procedure instead of using detach and attach, when moving database files within the same instance. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md). 
  
-We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it possible to accidently delete files.
+We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidently delete files.
   
 ###  <a name="Security"></a> Security  
  File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](http://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 

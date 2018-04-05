@@ -2,9 +2,12 @@
 title: "System Data Collection Set Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-collection"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,13 @@ helpviewer_keywords:
   - "disk usage reports [SQL Server]"
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # System Data Collection Set Reports
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The data collector provides an historical report for each of the System Data collection sets. Each of the following reports uses data that is stored in the management data warehouse:  
   
 -   [Disk Usage Summary](#Disk)  

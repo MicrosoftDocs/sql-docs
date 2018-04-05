@@ -2,9 +2,12 @@
 title: "Administrators (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "models [Master Data Services], administrators"
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Administrators (Master Data Services)
   This article describes the types of administrators in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: model administrators, entity administrators, and super user.  

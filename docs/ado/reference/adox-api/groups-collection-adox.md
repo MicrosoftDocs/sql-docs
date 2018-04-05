@@ -1,12 +1,15 @@
 ---
 title: "Groups Collection (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Groups Collection (ADOX)
 Contains all stored [Group](../../../ado/reference/adox-api/group-object-adox.md) objects of a catalog or user.  

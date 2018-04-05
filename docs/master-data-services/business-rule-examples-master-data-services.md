@@ -2,18 +2,22 @@
 title: "Business Rule Examples (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Business Rule Examples (Master Data Services)
 This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
@@ -151,8 +155,7 @@ For instructions on setting up the Web site, see [Master Data Services Installat
 3. Click the entity to which the rule applies, as listed in the tables above, and then click **Business Rules**.  
 4. Click the name of the business rule that you want to view. The UI expands to show the **If**, **Then** and **Else** statements.  
   
-## Did this Article Help You? We’re Listening   
-What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com).   
+ 
   
   
   

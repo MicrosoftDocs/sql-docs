@@ -2,9 +2,12 @@
 title: "sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "sp_validate_replica_hosts_as_publishers"
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **sp_validate_replica_hosts_as_publishers** is an extension of **sp_validate_redirected_publisher** that allows all secondary replicas to be validated, rather than just the current primary replica. **sp_validate_replicat_hosts_as_publisher** validates an entire Always On replication topology. **sp_validate_replica_hosts_as_publishers** must be executed directly on the distributor by using a remote desktop session to avoid a double-hop security error (21892).  
   

@@ -2,9 +2,12 @@
 title: "Extensible Key Management (EKM) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "EKM, described"
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Extensible Key Management (EKM)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides data encryption capabilities together with *Extensible Key Management* (EKM), using the *Microsoft Cryptographic API* (MSCAPI) provider for encryption and key generation. Encryption keys for data and key encryption are created in transient key containers, and they must be exported from a provider before they are stored in the database. This approach enables key management that includes an encryption key hierarchy and key backup, to be handled by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  With the growing demand for regulatory compliance and concern for data privacy, organizations are taking advantage of encryption as a way to provide a "defense in depth" solution. This approach is often impractical using only database encryption management tools. Hardware vendors provide products that address enterprise key management by using *Hardware Security Modules* (HSM). HSM devices store encryption keys on hardware or software modules. This is a more secure solution because the encryption keys do not reside with encryption data.  

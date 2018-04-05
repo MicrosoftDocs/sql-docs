@@ -1,4 +1,4 @@
-2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
+2. On all cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
@@ -8,7 +8,7 @@
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
 
-3. On both cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
+3. On all cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -28,7 +28,7 @@
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -36,7 +36,7 @@
 
    ​
 
-3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on all nodes.
 
    ```bash
    sudo systemctl enable pcsd
@@ -44,7 +44,7 @@
    sudo systemctl enable pacemaker
    ```
 
-4. Install the FCI resource agent for SQL Server. Run the following commands on both nodes. 
+4. Install the FCI resource agent for SQL Server. Run the following commands on all nodes. 
 
    ```bash
    sudo yum install mssql-server-ha

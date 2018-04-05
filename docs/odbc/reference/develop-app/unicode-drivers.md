@@ -3,8 +3,11 @@ title: "Unicode Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Unicode Drivers
 Whether a driver should be a Unicode driver or an ANSI driver depends entirely on the nature of the data source. If the data source supports Unicode data, the driver should be a Unicode driver. If the data source only supports ANSI data, the driver should remain an ANSI driver.  

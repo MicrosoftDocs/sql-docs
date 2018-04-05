@@ -2,11 +2,14 @@
 title: "Lesson 7: Create Measures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 6: Create Measures
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will create measures to be included in your model. Similar to the calculated columns you created in the previous lesson, a measure is a calculation created by using a DAX formula. However, unlike calculated columns, measures are evaluated based on a user selected *filter*; for example, a particular column or slicer added to the Row Labels field in a PivotTable. A value for each cell in the filter is then calculated by the applied measure. Measures are powerful, flexible calculations that you will want to include in almost all tabular models to perform dynamic calculations on numerical data. To learn more, see [Measures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
 To create measures, you will use the *Measure Grid*. By default, each table has an empty measure grid; however, you typically will not create measures for every table. The measure grid appears below a table in the model designer when in Data View. To hide or show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  

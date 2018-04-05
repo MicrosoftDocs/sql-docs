@@ -3,8 +3,11 @@ title: "Setting Project Options (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "Project Options Setting"
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Setting Project Options (SybaseToSQL)
 For each SSMA project, you can set project level options. These options specify object conversion, object loading, SQL azure, user interface, and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, verify that the configuration options are appropriate for the project.  

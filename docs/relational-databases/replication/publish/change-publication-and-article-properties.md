@@ -2,9 +2,12 @@
 title: "Change Publication and Article Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Change Publication and Article Properties
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After a publication has been created, most publication and article properties can be changed, but some require that the snapshot be regenerated and/or subscriptions be reinitialized. This topic provides information about all properties that require one or both of these actions if they are changed.  
   
 ## Publication Properties for Snapshot and Transactional Replication  

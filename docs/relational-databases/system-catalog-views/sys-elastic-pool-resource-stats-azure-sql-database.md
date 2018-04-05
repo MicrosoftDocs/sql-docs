@@ -1,13 +1,13 @@
 ---
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "09/30/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "system-catalog-views"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +23,13 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns resource usage statistics for all the elastic database pools in a logical server. For each elastic database pool, there is one row for each 15 second reporting window (four rows per minute). This includes CPU, IO, Log, storage consumption and concurrent request/session utilization by all databases in the pool. This data is retained for 14 days. 
   

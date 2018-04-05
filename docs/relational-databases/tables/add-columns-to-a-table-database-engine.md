@@ -2,9 +2,12 @@
 title: "Add Columns to a Table (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -15,12 +18,16 @@ helpviewer_keywords:
   - "adding columns"
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Add Columns to a Table (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+ > For content related to previous versions of SQL Server, see [Add Columns to a Table (Database Engine)](https://msdn.microsoft.com/en-US/library/ms190238(SQL.120).aspx).
+
 
   This topic describes how to add new columns to a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 

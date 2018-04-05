@@ -2,9 +2,12 @@
 title: "catalog.move_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,17 +16,18 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.move_project - SSISDB Database
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Moves a project from one folder to another within the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
-```tsql  
-move_project [ @source_folder = ] source_folder  
+```sql  
+catalog.move_project [ @source_folder = ] source_folder  
     , [ @project_name = ] project_name  
     , [ @destination_folder = ] destination_folder  
 ```  

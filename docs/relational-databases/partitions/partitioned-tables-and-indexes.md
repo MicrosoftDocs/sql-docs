@@ -2,9 +2,12 @@
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "partitions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-partition"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], about partitioned indexes"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Partitioned Tables and Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
@@ -62,8 +67,8 @@ manager: "jhubbard"
 -   The index key is unique and it does not contain the partitioning column of the table.  
   
 -   You want the base table to participate in collocated joins with more tables using different join columns.  
-  
- Partition elimination  
+
+ Partition elimination
  The process by which the query optimizer accesses only the relevant partitions to satisfy the filter criteria of the query.  
   
 ## Performance Guidelines  

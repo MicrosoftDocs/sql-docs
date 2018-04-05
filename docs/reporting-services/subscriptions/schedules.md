@@ -2,12 +2,15 @@
 title: "Schedules | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "subscriptions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "automatic report processing"
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides **shared schedules** and **report-specific schedules** to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.

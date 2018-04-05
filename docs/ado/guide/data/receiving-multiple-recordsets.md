@@ -1,12 +1,15 @@
 ---
 title: "Receiving Multiple Recordsets | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Receiving Multiple Recordsets
 The [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) supports returning multiple **Recordset** objects for a single command containing multiple SQL statements, one **Recordset** per SQL statement. The order in which the **Recordset**s are returned follows the order in which the SQL statements are placed in the command text.  

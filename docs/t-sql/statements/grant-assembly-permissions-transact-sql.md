@@ -1,10 +1,13 @@
 ---
 title: "GRANT Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,12 +20,13 @@ helpviewer_keywords:
   - "GRANT statement, assemblies"
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # GRANT Assembly Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Grants permissions on an assembly.  
   
@@ -31,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -49,41 +52,27 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  Specifies the principal to which the permission is being granted. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
- GRANT OPTION  
+GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS *granting_principal*  
+AS *granting_principal*  
  Specifies a principal from which the principal executing this query derives its right to grant the permission. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
 ## Remarks  

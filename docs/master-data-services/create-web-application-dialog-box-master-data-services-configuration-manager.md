@@ -2,9 +2,12 @@
 title: "Create Web Application Dialog Box (Master Data Services Configuration Manager) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ f1_keywords:
   - "sql13.mds.configmanager.createapp.f1"
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create Web Application Dialog Box (Master Data Services Configuration Manager)
   Use the **Create Web Application** dialog box to create the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application. This web application is created in the site that you selected on the **Web Configuration** page.  

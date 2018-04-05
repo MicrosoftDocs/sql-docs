@@ -2,12 +2,15 @@
 title: "HoldoutMaxPercent Element | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apitype: "Schema"
@@ -21,9 +24,11 @@ ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # HoldoutMaxPercent Element
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Specifies the maximum percentage of cases in the data source that will be used for the holdout partition that contains the test set of a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element. The remaining cases are used for training. A value of 0 indicates that there is no limit to the number of cases that can be held out as the test set.  
   
 ## Syntax  

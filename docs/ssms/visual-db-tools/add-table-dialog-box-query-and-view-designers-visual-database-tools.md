@@ -3,8 +3,11 @@ title: "Add Table Dialog Box (Query and View Designers) (Visual DB tools) | Micr
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This dialog box lets you add tables, views, user-defined functions, or synonyms to a query or view.  
   
 > [!NOTE]  

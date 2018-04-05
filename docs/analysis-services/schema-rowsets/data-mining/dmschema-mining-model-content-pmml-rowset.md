@@ -2,12 +2,15 @@
 title: "DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -21,9 +24,11 @@ ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Returns the XML structure of the mining model. The format of the XML string follows the Predictive Model Markup Language (PMML 2.1) standard.  
   
 ## Rowset Columns  

@@ -3,8 +3,11 @@ title: "Customize (Commands Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Customize (Commands Page)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This dialog box enables you to add and remove commands on toolbars and menus as well as change the images used for toolbar buttons or menu commands. You can access the **Commands** page by clicking **Customize** on the **Tools** menu and then clicking **Commands**.  
   
 ## UIElement List  

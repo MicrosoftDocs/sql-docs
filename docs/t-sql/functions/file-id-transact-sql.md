@@ -3,8 +3,11 @@ title: "FILE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "file names [SQL Server], FILE_ID"
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # FILE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the file identification (ID) number for the given logical file name in the current database.  
   
@@ -59,7 +63,7 @@ FILE_ID ( file_name )
 ## Examples  
  The following example returns the file ID for the `AdventureWorks_Data` file.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_ID('AdventureWorks2012_Data')AS 'File ID';  

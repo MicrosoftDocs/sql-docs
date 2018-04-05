@@ -2,9 +2,12 @@
 title: "Database Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ f1_keywords:
   - "sql13.swb.databaseproperties.segments.f1"
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Database Properties (General Page)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this page to view or modify properties for the selected database.  
   
 ## Options  

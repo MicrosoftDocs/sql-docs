@@ -2,12 +2,15 @@
 title: "Supplying Web Service Method Arguments | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], methods"
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 caps.latest.revision: 38
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Supplying Web Service Method Arguments
   A Report Server Web service method sends a request to the service at a given URL using SOAP over HTTP. The service receives the request, processes it, and then returns a response. These requests and responses are in the form of XML documents.  

@@ -2,9 +2,12 @@
 title: "Integration Services Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,8 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 98
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Integration Services Data Types
   When data enters a data flow in a package, the source that extracts the data converts the data to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type. Numeric data is assigned a numeric data type, string data is assigned a character data type, and dates are assigned a date data type. Other data, such as GUIDs and Binary Large Object Blocks (BLOBs), are also assigned appropriate [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data types. If data has a data type that is not convertible to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type, an error occurs.  

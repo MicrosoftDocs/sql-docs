@@ -13,7 +13,6 @@
 ## [New-RestoreLocation cmdlet](new-restorelocation-cmdlet.md)  
 ## [Remove-RoleMember cmdlet](remove-rolemember-cmdlet.md)  
 ## [Restore-ASDatabase cmdlet](restore-asdatabase-cmdlet.md)  
-## [AMO PowerShell Example](amo-powershell-example.md)  
 # [PowerShell Reference for Power Pivot for SharePoint](powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [Get-PowerPivotServiceApplication cmdlet](get-powerpivotserviceapplication-cmdlet.md)  
 ## [Get-PowerPivotSystemServiceInstance cmdlet](get-powerpivotsystemserviceinstance-cmdlet.md)  

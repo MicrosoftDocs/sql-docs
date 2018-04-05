@@ -2,9 +2,12 @@
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -24,11 +27,13 @@ helpviewer_keywords:
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use the Full-Text Indexing Wizard
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Full-Text Indexing Wizard in SSMS walks you through a series of steps designed to help you create a full-text index.  
   
 ## Create a  Full-Text index 
@@ -94,11 +99,11 @@ manager: "jhubbard"
      Specify the filegroup on which to create the full-text index.  
   
      e. Select a value:  
-    |Value|Description|  
-    |-----------|-----------------|
-      |**<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the table or view is partitioned, the primary filegroup is used|
+      |Value|Description|  
+      |-----------|-----------------|
+      |**<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the       table or view is partitioned, the primary filegroup is used|
       |**PRIMARY**|Select to use the primary filegroup for the new full-text index.|
-             *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup for the new full-text index.|  
+      *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup       for the new full-text index.|   
   
      
  11. **Select full-text stoplist**  

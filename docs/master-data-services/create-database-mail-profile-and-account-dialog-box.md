@@ -2,9 +2,12 @@
 title: "Create Database Mail Profile and Account Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ f1_keywords:
   - "sql13.mds.configmanager.dbmailprofileacct.f1"
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create Database Mail Profile and Account Dialog Box
   Use the **Create Database Mail Profile and Account** dialog box to create a Database Mail profile and a Database Mail account for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. This profile will be used to notify users and groups by email when business rule validation fails.  

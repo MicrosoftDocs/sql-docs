@@ -2,9 +2,12 @@
 title: "Restore Database (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -13,12 +16,13 @@ f1_keywords:
   - "sql13.swb.restoredb.general.f1"
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 caps.latest.revision: 89
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Restore Database (General Page)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **General** page to specify information about the target and source databases for a database-restore operation.  
     

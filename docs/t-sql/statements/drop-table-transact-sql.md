@@ -1,11 +1,13 @@
 ---
 title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.custom: ""
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -38,12 +40,13 @@ helpviewer_keywords:
   - "dropping permissions"
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Removes one or more table definitions and all data, indexes, triggers, constraints, and permission specifications for those tables. Any view or stored procedure that references the dropped table must be explicitly dropped by using [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) or [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). To report the dependencies on a table, use [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
@@ -73,9 +76,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Windows Azure SQL Database does not support four-part names.  
   
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the table only if it already exists.  
   
@@ -141,9 +142,7 @@ SELECT * FROM #temptable;
   
 ### D. Dropping a table using IF EXISTS  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  The following example creates a table named T1. Then the second statement drops the table. The third statement performs no action because the table is already deleted, however it does not cause an error.  
   
@@ -155,29 +154,6 @@ GO
 DROP TABLE IF EXISTS T1;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Using basic syntax  
-  
-```  
-DROP TABLE SalesPerson;  
-DROP TABLE dbo.SalesPerson;  
-DROP TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-### F. Dropping a table from the current database  
- The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
-  
-```  
-DROP TABLE ProductVendor1;  
-```  
-  
-### G. Dropping a table from another database  
- The following example drops the `SalesPerson` table in the `EasternDivision` database.  
-  
-```  
-DROP TABLE EasternDivision.dbo.SalesPerson;  
-```  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
@@ -191,6 +167,3 @@ DROP TABLE EasternDivision.dbo.SalesPerson;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
-  
-
-

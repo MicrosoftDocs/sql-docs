@@ -2,11 +2,14 @@
 title: "Creating a Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -23,7 +26,8 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Creating a Package Programmatically
   The <xref:Microsoft.SqlServer.Dts.Runtime.Package> object is the top-level container for all other objects in an [!INCLUDE[ssIS](../../includes/ssis-md.md)] project solution. As the top-level container, the package is the first object created, and subsequent objects are added to it, and then executed within the context of the package. The package itself does not move or transform data. The package relies on the tasks it contains to perform the work. Tasks perform most of the work performed by a package, and define the functionality of a package. A package is created and executed with just three lines of code, but various tasks and <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> objects are added to give additional functionality to your package. This section discusses how to programmatically create a package. It does not provide information about how to create the tasks or the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. These are covered in later sections.  
@@ -153,10 +157,6 @@ End Module
 -   Blog entry, [API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), on blogs.msdn.com.  
   
 -   Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Adding Tasks Programmatically](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

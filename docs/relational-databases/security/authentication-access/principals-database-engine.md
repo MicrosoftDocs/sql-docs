@@ -2,9 +2,12 @@
 title: "Principals (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,12 +32,13 @@ helpviewer_keywords:
   - "##MS_SQLReplicationSigningCertificate##"
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Principals (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restictions on server-level principals in SQL Database or SQL Data Warehouse. 
   
@@ -58,7 +62,7 @@ manager: "jhubbard"
 
 ## dbo User and dbo Schema
 
-The `dbo` use is a special user principal in each database. All SQL Server administrators, members of the `sysadmin` fixed server role, `sa` login, and owners of the database, enter databases as the `dbo` user. The `dbo` user has all permissions in the database and cannot be limited or dropped. `dbo` stands for database owner, but the `dbo`user account is not the same as the `db_owner` fixed database role, and the `db_owner` fixed database role is not the same as the user account that is recorded as the owner of the database.     
+The `dbo` user is a special user principal in each database. All SQL Server administrators, members of the `sysadmin` fixed server role, `sa` login, and owners of the database, enter databases as the `dbo` user. The `dbo` user has all permissions in the database and cannot be limited or dropped. `dbo` stands for database owner, but the `dbo`user account is not the same as the `db_owner` fixed database role, and the `db_owner` fixed database role is not the same as the user account that is recorded as the owner of the database.     
 The `dbo` user owns the `dbo` schema. The `dbo` schema is the default schema for all users, unless some other schema is specified.  The `dbo` schema cannot be dropped.
   
 ## public Server Role and Database Role  
@@ -77,6 +81,8 @@ Every login belongs to the `public` fixed server role, and every database user b
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ These principal accounts do not have passwords that can be changed by administrators as they are based on certificates issued to Microsoft.
   
 ## The guest User  
  Each database includes a `guest`. Permissions granted to the `guest` user are inherited by users who have access to the database, but who do not have a user account in the database. The `guest` user cannot be dropped, but it can be disabled by revoking it's CONNECT permission. The CONNECT permission can be revoked by executing `REVOKE CONNECT FROM GUEST;` within any database other than `master` or `tempdb`.  

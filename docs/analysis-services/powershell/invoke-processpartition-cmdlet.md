@@ -2,21 +2,29 @@
 title: "Invoke-ProcessPartition cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessPartition cmdlet
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Process a partition using a specific processing type variable.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessPartition [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [-CubeName] <System.String> [-MeasureGroupName] <System.String> [<CommonParameters>]`  
@@ -115,8 +123,5 @@ manager: "erikre"
   
  This command processes the partition Total_Orders_2003 in the Sales Orders measure group of the AWTEST database.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

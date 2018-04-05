@@ -3,9 +3,22 @@
 # [Replication Backward Compatibility](replication-backward-compatibility.md)  
 ## [Deprecated Features in SQL Server Replication](deprecated-features-in-sql-server-replication.md)  
 ## [Breaking Changes in SQL Server Replication](breaking-changes-in-sql-server-replication.md)  
+
+# Replication Areas
+## [Administration of Replication](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [Developer Concepts](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [Monitoring Replication](./monitor/monitoring-replication.md)
+## [Non-SQL Heterogeneous Database Replication](./non-sql/heterogeneous-database-replication.md)
+## [Publish Data and Database Objects](./publish/publish-data-and-database-objects.md)
+## [Security for Replication](./security/security-overview-replication.md)
+
 # [Replication Features and Tasks](replication-features-and-tasks.md)  
 ## [Types of Replication](types-of-replication.md)  
 ### [Snapshot Replication](snapshot-replication.md)  
+### [Merge Replication](./merge/merge-replication.md)
+### [Transactional Replication](./transactional/transactional-replication.md) 
+
 ## [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replication to SQL Database](replication-to-sql-database.md)  
 ## [Republish Data](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md)  
 ### [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)  
 ## [Scripting Replication](scripting-replication.md)  
-
-# [Developer Concepts](concepts/index.md)
 
 # [Technical Reference](technical-reference-replication.md)  
 ## [Properties Reference](properties-reference-replication.md)  

@@ -2,21 +2,29 @@
 title: "Remove-PowerPivotServiceApplication cmdlet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Remove-PowerPivotServiceApplication cmdlet
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Deletes a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

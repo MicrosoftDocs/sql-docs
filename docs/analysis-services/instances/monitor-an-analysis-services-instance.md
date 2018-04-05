@@ -2,13 +2,16 @@
 title: "Monitor an Analysis Services Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +23,11 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Monitor an Analysis Services Instance
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can monitor the performance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
   
 > [!NOTE]  
@@ -39,6 +44,6 @@ manager: "erikre"
   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Performance Counters &#40;SSAS&#41;](../../analysis-services/instances/performance-counters-ssas.md)  
+ [Performance Counters ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   

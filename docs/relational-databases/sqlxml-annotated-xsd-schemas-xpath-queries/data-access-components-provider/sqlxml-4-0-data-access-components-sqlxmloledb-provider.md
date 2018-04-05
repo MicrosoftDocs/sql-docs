@@ -2,9 +2,12 @@
 title: "SQLXML 4.0 Data Access Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -20,9 +23,11 @@ ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQLXML 4.0 Data Access Components - SQLXMLOLEDB Provider
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   SQLXMLOLEDB Provider  

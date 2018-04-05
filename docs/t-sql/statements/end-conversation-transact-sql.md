@@ -1,10 +1,13 @@
 ---
 title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,18 +28,15 @@ helpviewer_keywords:
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ends one side of an existing conversation.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,9 +71,9 @@ END CONVERSATION conversation_handle
   
  If [!INCLUDE[ssSB](../../includes/sssb-md.md)] has not already processed an end dialog or error message for the conversation, [!INCLUDE[ssSB](../../includes/sssb-md.md)] notifies the remote side of the conversation that the conversation has ended. The messages that [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends to the remote service depend on the options specified:  
   
--   If the conversation ends without errors, and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type **http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog** to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] adds this message to the transmission queue in conversation order. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends all messages for this conversation that are currently in the transmission queue before sending this message.  
+-   If the conversation ends without errors, and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] adds this message to the transmission queue in conversation order. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends all messages for this conversation that are currently in the transmission queue before sending this message.  
   
--   If the conversation ends with an error and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type **http://schemas.microsoft.com/SQL/ServiceBroker/Error** to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] drops any other messages for this conversation currently in the transmission queue.  
+-   If the conversation ends with an error and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/Error` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] drops any other messages for this conversation currently in the transmission queue.  
   
 -   The WITH CLEANUP clause allows a database administrator to remove conversations that cannot complete normally. This option removes all messages and catalog view entries for the conversation. Notice that, in this case, the remote side of the conversation receives no indication that the conversation has ended, and may not receive messages that have been sent by an application but not yet transmitted over the network. Avoid this option unless the conversation cannot complete normally.  
   

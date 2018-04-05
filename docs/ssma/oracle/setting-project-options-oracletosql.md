@@ -1,10 +1,13 @@
 ---
 title: "Setting Project Options (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ helpviewer_keywords:
   - "Configuration Options and Modes"
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Setting Project Options (OracleToSQL)
 For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verify that the configuration options are appropriate for the project.  

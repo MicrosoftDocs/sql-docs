@@ -1,13 +1,17 @@
 ---
-title: "Table Properties (SSAS Tabular) | Microsoft Docs"
+title: "Table Properties | Microsoft Docs"
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -16,10 +20,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Table Properties (SSAS Tabular)
-  This topic describes tabular model table properties. The properties described here are different from those in the Edit Table Properties dialog box, which define which columns from the source are imported.  
+# Table Properties 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  This article describes tabular model table properties. The properties described here are different from those in the Edit Table Properties dialog box, which define which columns from the source are imported.  
   
  Sections in this topic:  
   
@@ -41,7 +47,7 @@ manager: "erikre"
   
  **Reporting Properties**  
   
- For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
+ For detailed descriptions and configuration information for reporting properties, see [Power View reporting properties](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  

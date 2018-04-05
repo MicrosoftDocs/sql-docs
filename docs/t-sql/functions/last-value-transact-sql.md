@@ -3,8 +3,11 @@ title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # LAST_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Returns the last value in an ordered set of values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

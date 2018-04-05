@@ -3,8 +3,11 @@ title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,15 +27,18 @@ helpviewer_keywords:
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a server-level credential. A credential is a record that contains the authentication information that is required to connect to a resource outside SQL Server. Most credentials include a Windows user and password. For example, saving a database backup to some location might require SQL Server to provide special credentials to access that location. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  To make the credential  at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -146,7 +152,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
   
 ```  
 USE master  
-CREATE CREDENTIAL 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>' -- this name must match the container path, start with https and must not contain a trailing forward slash.  
+CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.  
    WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
    , SECRET = 'sharedaccesssignature' –- this is the shared access signature token   
 GO    

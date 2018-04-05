@@ -3,8 +3,11 @@ title: "Elements Used in SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  
@@ -39,7 +43,7 @@ The following elements are used in the SQL statements listed previously.
   
  *column-name* ::= [*table-name*.]*column-identifier*  
   
- *comparison-operator* ::= \< &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
  *comparison-predicate* ::= *expression* comparison-operator expression  
   

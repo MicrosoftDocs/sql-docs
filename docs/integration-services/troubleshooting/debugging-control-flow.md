@@ -2,13 +2,18 @@
 title: "Debugging Control Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.setbreakpoints.f1"
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
   - "breakpoints [Integration Services]"
@@ -20,7 +25,8 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Debugging Control Flow
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features and tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
@@ -72,7 +78,7 @@ manager: "jhubbard"
   
 #### To set breakpoints  
   
--   [Debug a Package by Setting Breakpoints on a Task or a Container](../../integration-services/troubleshooting/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Debug a Package by Setting Breakpoints on a Task or a Container](#debug)  
   
 ## Progress Reporting  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer includes two types of progress reporting: color-coding on the design surface of the **Control Flow** tab, and progress messages on the **Progress** tab.  
@@ -109,8 +115,53 @@ manager: "jhubbard"
 |Breakpoints|Lists the breakpoints in a package and provides options to enable and delete breakpoints.|  
 |Output|Displays status messages for features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immediate|Used to debug and evaluate expressions and print variable values.|  
+
+## <a name="debug"></a> Debug a Package by Setting Breakpoints on a Task or a Container
+  This procedure describes how to set breakpoints in a package, a task, a For Loop container, a Foreach Loop container, or a Sequence container.  
+  
+### To set breakpoints in a package, a task, or a container  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
+  
+2.  Double-click the package in which you want to set breakpoints.  
+  
+3.  In SSIS Designer, do the following:  
+  
+    -   To set breakpoints in the package object, click the **Control Flow** tab, place the cursor anywhere on the background of the design surface, right-click, and then click **Edit Breakpoints**.  
+  
+    -   To set breakpoints in a package control flow, click the **Control Flow** tab, right-click a task, a For Loop container, a Foreach Loop container, or a Sequence container, and then click **Edit Breakpoints**.  
+  
+    -   To set breakpoints in an event handler, click the **Event Handler** tab, right-click a task, a For Loop container, a Foreach Loop container, or a Sequence container, and then click **Edit Breakpoints**.  
+  
+4.  In the **Set Breakpoints \<container name>** dialog box, select the breakpoints to enable.  
+  
+5.  Optionally, modify the hit count type and the hit count number for each breakpoint.  
+  
+6.  To save the package, click **Save Selected Items** on the **File** menu.  
+
+## Set Breakpoints
+  Use the **Set Breakpoints** dialog box to specify the events on which to enable breakpoints and to control the behavior of the breakpoint.  
+  
+### Options  
+ **Enabled**  
+ Select to enable a breakpoint on an event.  
+  
+ **Break Condition**  
+ View a list of available events on which to set breakpoints.  
+  
+ **Hit Count Type**  
+ Specify when the breakpoint takes effect.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Always**|Execution is always suspended when the breakpoint is hit.|  
+|**Hit count equals**|Execution is suspended when the number of times the breakpoint has occurred is equal to the hit count.|  
+|**Hit greater or equal**|Execution is suspended when the number of times the breakpoint has occurred is equal to or greater than the hit count.|  
+|**Hit count multiple**|Execution is suspended when a multiple of the hit count occurs. For example, if you set this option to 5, execution is suspended every fifth time.|  
+  
+ **Hit Count**  
+ Specify the number of hits at which to trigger a break. This option is not available if the breakpoint is always in effect.  
   
 ## See Also  
  [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
-  
-  
+ [Debug a Script by Setting Breakpoints in a Script Task and Script Component](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

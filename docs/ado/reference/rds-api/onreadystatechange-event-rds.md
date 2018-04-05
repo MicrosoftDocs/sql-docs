@@ -1,12 +1,15 @@
 ---
 title: "onReadyStateChange Event (RDS) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -16,7 +19,8 @@ ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # onReadyStateChange Event (RDS)
 The **onReadyStateChange** event is called whenever the value of the [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) property changes.  

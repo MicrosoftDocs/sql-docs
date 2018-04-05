@@ -2,9 +2,12 @@
 title: "Add a User (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ helpviewer_keywords:
   - "adding users [Master Data Services]"
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Add a User (Master Data Services)
   Add a user to the **Users** list in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the list can access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you must give the user permission to one or more functional areas and model objects.  

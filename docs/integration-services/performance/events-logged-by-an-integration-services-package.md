@@ -2,9 +2,12 @@
 title: "Events Logged by an Integration Services Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -16,14 +19,15 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Events Logged by an Integration Services Package
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package logs various event messages to the Windows Application event log. A package logs these messages when the package starts, when the package stops, and when certain problems occur.  
   
  This topic provides information about the common event messages that a package logs to the Application event log. By default, a package logs some of these messages even if you have not enabled logging on the package. However, there are other messages that the package will log only if you have enabled logging on the package. Regardless of whether the package logs these messages by default or because logging has been enabled, the Event Source for the messages is SQLISPackage.  
   
- For general information about how to run SSIS packages, see [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708.aspx).  
+ For general information about how to run SSIS packages, see [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md).  
   
  For information about how to troubleshoot running packages, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
@@ -72,11 +76,32 @@ manager: "jhubbard"
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Event Name: %1%r Message: %9%r Operator: %2%r Source Name: %3%r Source ID: %4%r Execution ID: %5%r Start Time: %6%r End Time: %7%r Data Code: %8|This message reports an error that has occurred.|  
 |12249|DTS_MSG_EVENTLOGENTRY_WARNING|Event Name: %1%r Message: %9%r Operator: %2%r Source Name: %3%r Source ID: %4%r Execution ID: %5%r Start Time: %6%r End Time: %7%r Data Code: %8|This message reports a warning that has occurred.|  
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|Event Name: %1%r Message: %9%r Operator: %2%r Source Name: %3%r Source ID: %4%r Execution ID: %5%r Start Time: %6%r End Time: %7%r Data Code: %8|This message reports informational that is not associated with an error or a warning.|  
+
+## View Log Entries in the Log Events Window
+  This procedure describes how to run a package and view the log entries it writes. You can view the log entries in real time. The log entries that are written to the **Log Events** window can also be copied and saved for further analysis.  
   
-## Related Tasks  
- For information about how to view log entries in real time, see [View Log Entries in the Log Events Window](../../integration-services/performance/view-log-entries-in-the-log-events-window.md).  
+ It is not necessary to write the log entries to a log to write the entries to the **Log Events** window.  
   
-## See Also  
- [Events Logged by the Integration Services Service](../../integration-services/service/events-logged-by-the-integration-services-service.md)  
+### To view log entries  
   
+1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want.  
   
+2.  On the **SSIS** menu, click **Log Events**. You can optionally display the **Log Events** window by mapping the View.LogEvents command to a key combination of your choosing on the **Keyboard** page of the **Options** dialog box.  
+  
+3.  On the **Debug** menu, click **Start Debugging**.  
+  
+     As the runtime encounters the events and custom messages that are enabled for logging, log entries for each event or message are written to the **Log Events** window.  
+  
+4.  On the **Debug** menu, click **Stop Debugging**.  
+  
+     The log entries remain available in the **Log Events** window until you rerun the package, run a different package, or close [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  
+5.  View the log entries in the **Log Events** window.  
+  
+6.  Optionally, click the log entries to copy, right-click, and then click **Copy**.  
+  
+7.  Optionally, double-click a log entry, and in the **Log Entry** dialog box, view the details for a single log entry.  
+  
+8.  In the **Log Entry** dialog box, click the up and down arrows to display the previous or next log entry, and click the copy icon to copy the log entry.  
+  
+9. Open a text editor, paste, and then save the log entry to a text file.

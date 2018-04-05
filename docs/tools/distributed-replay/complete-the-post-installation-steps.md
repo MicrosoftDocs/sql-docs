@@ -2,9 +2,12 @@
 title: "Complete the Post-Installation Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,11 @@ ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
 caps.latest.revision: 8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Complete the Post-Installation Steps
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After you install Distributed Replay you must modify the Distributed Replay controller and client services accounts.  
   
 ### To complete the post-installation steps  

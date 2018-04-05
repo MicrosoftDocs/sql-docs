@@ -1,12 +1,15 @@
 ---
 title: "Writing Your Own Customized Handler | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Writing Your Own Customized Handler
 You may want to write your own handler if you are an IIS server administrator who wants the default RDS support, but more control over user requests and access rights.  

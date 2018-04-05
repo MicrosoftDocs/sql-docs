@@ -2,9 +2,12 @@
 title: "Spatial Indexes Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "spatial indexes [SQL Server]"
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Spatial Indexes Overview
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports spatial data and spatial indexes. A *spatial index* is a type of extended index that allows you to index a spatial column. A spatial column is a table column that contains data of a spatial data type, such as **geometry** or **geography**.  
   
 > [!IMPORTANT]  
@@ -60,7 +65,7 @@ manager: "jhubbard"
 >  The grid densities of a spatial index are visible in the level_1_grid, level_2_grid, level_3_grid, and level_4_grid columns of the [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view when the database compatibility level is set to 100 or lower. The **GEOMETRY_AUTO_GRID**/**GEOGRAPHY_AUTO_GRID** tessellation scheme options do not populate these columns. sys.spatial_index_tessellations catalog view has **NULL** values for these columns when the auto grid options are used.  
   
 ###  <a name="tessellation"></a> Tessellation  
- After decomposition of an indexed space into a grid hierarchy, the spatial index reads the data from the spatial column, row by row. After reading the data for a spatial object (or instance), the spatial index performs a *tessellation process* for that object. The tessellation processfits the object into the grid hierarchy by associating the object with a set of grid cells that it touches (*touched cells*). Starting at level 1 of the grid hierarchy, the tessellation process proceeds *breadth first* across the level. Potentially, the process can continue through all four levels, one level at a time.  
+ After decomposition of an indexed space into a grid hierarchy, the spatial index reads the data from the spatial column, row by row. After reading the data for a spatial object (or instance), the spatial index performs a *tessellation process* for that object. The tessellation process fits the object into the grid hierarchy by associating the object with a set of grid cells that it touches (*touched cells*). Starting at level 1 of the grid hierarchy, the tessellation process proceeds *breadth first* across the level. Potentially, the process can continue through all four levels, one level at a time.  
   
  The output of the tessellation process is a set of touched cells that are recorded in the spatial index for the object. By referring to these recorded cells, the spatial index can locate the object in space relative to other objects in the spatial column that are also stored in the index.  
   

@@ -1,12 +1,15 @@
 ---
 title: "Precision Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Precision Property (ADO)
 Indicates the degree of precision for numeric values in a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or for numeric [Field](../../../ado/reference/ado-api/field-object.md) objects.  

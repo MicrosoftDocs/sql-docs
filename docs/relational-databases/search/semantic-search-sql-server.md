@@ -2,9 +2,12 @@
 title: "Semantic Search (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Semantic Search (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Statistical Semantic Search provides deep insight into unstructured documents stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases by extracting and indexing statistically relevant *key phrases*. Then it uses these key phrases to identify and index *documents that are similar or related*.  
   
 ##  <a name="whatcanido"></a> What can you do with Semantic Search?  
@@ -33,7 +38,7 @@ Statistical Semantic Search provides deep insight into unstructured documents st
  
  This query calls the [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) function.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -71,7 +76,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  This query calls the [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) function.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

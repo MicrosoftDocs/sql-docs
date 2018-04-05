@@ -2,12 +2,15 @@
 title: "KPI Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # KPI Element (CSDLBI)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   The Kpi element defines a calculation that can be used as a Key Performance Indicator (KPI). In a business intelligence data model, KPIs are based on measures, and as such the definition of the KPI contains all the metadata associated with measures, as well as information needed for presentation of the KPI values, including a default graphic.  
   
  The Kpi element does not specify the formula, which is contained in the measure definition, but rather specifies the additional metadata that is associated with measures that are used as KPIs. Once you have designated a measure as a KPI, you cannot use it as a measure in other contexts.  

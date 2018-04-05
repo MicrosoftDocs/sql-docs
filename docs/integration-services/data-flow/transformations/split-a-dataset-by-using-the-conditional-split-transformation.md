@@ -2,9 +2,12 @@
 title: "Split a Dataset by Using the Conditional Split Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 caps.latest.revision: 40
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Split a Dataset by Using the Conditional Split Transformation
   To add and configure a Conditional Split transformation, the package must already include at least one Data Flow task and a source.  
@@ -51,7 +55,7 @@ manager: "jhubbard"
   
 9. Optionally, modify the name of the default output for data rows that do not match any condition.  
   
-10. To configure an error output, click **Configure Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. To configure an error output, click **Configure Error Output**. For more information, see [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Click **OK**.  
   

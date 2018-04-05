@@ -2,18 +2,22 @@
 title: "Adding Knowledge to a Knowledge Base | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Adding Knowledge to a Knowledge Base
   This topic describes the ways in which you can add knowledge to a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Before you can perform data quality operations, you have to have knowledge about the data. You acquire that knowledge by building and maintaining a data quality knowledge base, and adding to it knowledge related to a specific type of data source. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  

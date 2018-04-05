@@ -3,8 +3,11 @@ title: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "pdw, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -28,14 +31,15 @@ helpviewer_keywords:
   - "database encryption key, create"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
- Creates an encryption key that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ Creates an encryption key that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -91,7 +95,7 @@ A database encryption key is automatically created for a [!INCLUDE[ssSDS](../../
 Requires CONTROL permission on the database and VIEW DEFINITION permission on the certificate or asymmetric key that is used to encrypt the database encryption key.  
   
 ## Examples  
-For additional examples using TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [Enable TDE on SQL Server Using EKM](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), and [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+For additional examples using TDE, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), [Enable TDE on SQL Server Using EKM](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), and [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
   
@@ -104,22 +108,8 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-For additional examples using TDE, see [Transparent Data Encryption (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
-  
-The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
-  
-```  
--- Uses AdventureWorks  
-  
-CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
-GO  
-```  
-  
 ## See Also  
-[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)   
+[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)   
 [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   

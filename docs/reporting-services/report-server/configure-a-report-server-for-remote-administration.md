@@ -1,12 +1,16 @@
 ---
 title: "Configure a Report Server for Remote Administration | Microsoft Docs"
 ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,9 +21,10 @@ helpviewer_keywords:
   - "remote server administration [Reporting Services]"
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Configure a Report Server for Remote Administration
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can configure report server instances locally or remotely. To configure a remote report server instance, you can use the Reporting Services Configuration tool or write custom code that uses the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider. The Reporting Services Configuration tool provides a graphical interface to the WMI provider so that you can configure a report server without having to write code. When you start the tool, you can specify a remote server to connect to.  

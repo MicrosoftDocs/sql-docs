@@ -1,22 +1,27 @@
 ---
 title: "Relationships object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Relationships object (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a relationship between a source and target table, with the ability to specify cardinality, and the direction of query and security filters.  
   
 ## Object definition  

@@ -1,10 +1,13 @@
 ---
 title: "SET ARITHIGNORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "divide-by-zero errors"
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SET ARITHIGNORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Controls whether error messages are returned from overflow or divide-by-zero errors during a query.  
   
@@ -37,19 +41,17 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## Remarks  
  The SET ARITHIGNORE setting only controls whether an error message is returned. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns a NULL in a calculation involving an overflow or divide-by-zero error, regardless of this setting. The SET ARITHABORT setting can be used to determine whether the query is terminated. This setting does not affect errors occurring during INSERT, UPDATE, and DELETE statements.  
   

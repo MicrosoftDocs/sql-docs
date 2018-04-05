@@ -2,9 +2,12 @@
 title: "Map Columns to Composite Domains | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Map Columns to Composite Domains
   A composite domain consists of two or more single domains. You can map multiple columns to the domain, or you can map a single column with delimited values to the domain.  

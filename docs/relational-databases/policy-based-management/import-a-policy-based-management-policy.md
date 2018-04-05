@@ -2,9 +2,12 @@
 title: "Import a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Policy-Based Management, import policy"
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Import a Policy-Based Management Policy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to import a Policy-Based Management policy instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
@@ -35,7 +40,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ships with policies that can be used to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, these policies are not installed on the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], but they can be imported from the default location of C:\Program Files\Microsoft SQL Server\130\Tools\Policies\DatabaseEngine\1033.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ships with policies that can be used to monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, these policies are not installed on the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], but they can be imported from the default location of C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 or C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 on 64-bit installs.
   
 ###  <a name="Security"></a> Security  
   

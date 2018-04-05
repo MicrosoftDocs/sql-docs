@@ -1,12 +1,15 @@
 ---
 title: "ConnectComplete and Disconnect Events (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -22,7 +25,8 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ConnectComplete and Disconnect Events (ADO)
 The **ConnectComplete** event is called after a connection starts. The **Disconnect** event is called after a connection ends.  

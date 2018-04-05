@@ -3,8 +3,11 @@ title: "Installing SSMA Components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-sybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Installing SSMA Components on SQL Server (SybaseToSQL)
 In addition to installing SSMA, for using Server side data migration, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. These components include the SSMA extension pack, which supports data migration, and Sybase providers to enable server-to-server connectivity.  

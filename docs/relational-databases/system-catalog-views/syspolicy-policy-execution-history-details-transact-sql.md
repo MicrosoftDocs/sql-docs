@@ -3,8 +3,11 @@ title: "syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft Do
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "syspolicy_policy_execution_history_details view"
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays the condition expressions that were executed, the targets of the expressions, the result of each execution, and details about errors if any occurred. The following table describes the columns in the syspolicy_execution_history_details view.  
   

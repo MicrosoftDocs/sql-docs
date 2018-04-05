@@ -1,10 +1,13 @@
 ---
 title: "RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rewinds and closes specified tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option. This command is supported only for tape devices.  
   
@@ -54,7 +58,7 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## Arguments  
- **<backup_device> ::=**  
+ **\<backup_device> ::=** 
   
  Specifies the logical or physical backup devices to use for the restore operation.  
   
@@ -103,3 +107,4 @@ FROM <backup_device> [ ,...n ]
  [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
+

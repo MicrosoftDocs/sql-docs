@@ -1,28 +1,33 @@
 ---
-title: "Specify Mark as Date Table for use with Time Intelligence (SSAS Tabular) | Microsoft Docs"
+title: "Specify Mark as Date Table| Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Specify Mark as Date Table for use with Time Intelligence (SSAS Tabular)
-  In order to use time intelligence functions in DAX formulas, you must specify a date table and a unique identifier (datetime) column of the Date data type. Once a column in the date table is specified as a unique identifier, you can create relationships between columns in the date table and any fact tables.  
+# Specify Mark as Date Table for use with time-intelligence
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  In order to use time-intelligence functions in DAX formulas, you must specify a date table and a unique identifier (datetime) column of the Date data type. Once a column in the date table is specified as a unique identifier, you can create relationships between columns in the date table and any fact tables.  
   
- When using time intelligence functions, the following rules apply:  
+ When using time-intelligence functions, the following rules apply:  
   
--   When using DAX time intelligence functions, never specify a datetime column from a fact table. Always create a separate date table in your model with at least one datetime column of Date data type and with unique values.  
+-   When using DAX time-intelligence functions, never specify a datetime column from a fact table. Always create a separate date table in your model with at least one datetime column of Date data type and with unique values.  
   
 -   Make sure your date table has a continuous date range.  
   
@@ -51,7 +56,7 @@ manager: "erikre"
 4.  If necessary, create any relationships between fact tables and the date table.  
   
 ## See Also  
- [Calculations &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Time Intelligence Functions (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Calculations](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
+ [Time-intelligence Functions (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

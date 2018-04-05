@@ -2,11 +2,14 @@
 title: "CLR Integration Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "database objects [CLR integration], security"
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CLR Integration Security
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The security model of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) manages and secures access between different types of CLR and non-CLR objects running within [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These objects may be called by a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement or another CLR object running in the server. The calls between objects are referred to as links. The types of security checks performed on these objects depend on the types of links involved.  
   
  The CLR integration security model has the following goals:  

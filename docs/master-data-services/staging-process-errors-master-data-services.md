@@ -2,9 +2,12 @@
 title: "Staging Process Errors (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ helpviewer_keywords:
   - "staging process [Master Data Services], error messages"
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Staging Process Errors (Master Data Services)
   When the staging process is complete, all processed records in the staging tables have a value in the ErrorCode column. These values are listed in the following table.  

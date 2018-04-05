@@ -1,12 +1,15 @@
 ---
 title: "ADO Error Codes | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "02/15/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -15,7 +18,8 @@ ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Capture ADO Error Codes
 In addition to the provider errors returned in the [Error](../../../ado/reference/ado-api/error-object.md) objects of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic, or the **try-catch** block in Microsoft Visual C++®, to capture ADO errors.

@@ -2,9 +2,12 @@
 title: "Maintenance Plan (Subplan Properties) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ f1_keywords:
   - "sql13.swb.maint.subplanproperties.f1"
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Maintenance Plan (Subplan Properties)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Maintenance Plan (Subplan Properties)** dialog box to specify a name, description, and schedule for a maintenance plan subplan. Click **Subplan Properties** on the maintenance plan **Design** tab or double-click a subplan in the designer grid to display this dialog box.  
   
 ## Options  

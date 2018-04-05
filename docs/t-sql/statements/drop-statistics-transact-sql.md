@@ -3,8 +3,11 @@ title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "statistical information [SQL Server], removing"
 ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DROP STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Drops statistics for multiple collections within the specified tables in the current database.  
   

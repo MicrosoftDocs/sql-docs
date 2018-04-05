@@ -1,12 +1,15 @@
 ---
 title: "FieldStatusEnum | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # FieldStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.md) of a [Field Object](../../../ado/reference/ado-api/field-object.md).  

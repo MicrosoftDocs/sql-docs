@@ -3,8 +3,11 @@ title: "sys.http_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,18 +23,19 @@ helpviewer_keywords:
   - "sys.http_endpoints catalog view"
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.http_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contains a row for each endpoint created in the server that uses the HTTP protocol.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\< inherited columns>**||Inherits columns from [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< inherited columns>**||Inherits columns from [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**site**|**nvarchar(128)**|Name of the host computer for the site, as specified in the SITE = option.|  
 |**url_path**|**nvarchar(4000)**|Path-only portion of the URL for this HTTP endpoint, as specified by the PATH= option.|  
 |**is_clear_port_enabled**|**bit**|1 = Clear port is enabled using the PORT = CLEAR option.|  

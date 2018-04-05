@@ -1,10 +1,13 @@
 ---
 title: "TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,37 +23,36 @@ helpviewer_keywords:
   - "TERTIARY_WEIGHTS function"
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns a binary string of weights for each character in a non-Unicode string expression defined with an SQL tertiary collation.  
+Returns a binary string of weights for each character in a non-Unicode string expression defined with an SQL tertiary collation.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```sql
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
 ## Arguments  
- *non_Unicode_character_string_expression*  
- Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char**, **varchar**, or **varchar(max)** defined on a tertiary SQL collation. For a list of these collations, see Remarks.  
+*non_Unicode_character_string_expression*  
+Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char**, **varchar**, or **varchar(max)** defined on a tertiary SQL collation. For a list of these collations, see Remarks.
   
-## Return Types  
- TERTIARY_WEIGHTS returns **varbinary** when *non_Unicode_character_string_expression* is **char** or **varchar**, and returns **varbinary(max)** when *non_Unicode_character_string_expression* is **varchar(max)**.  
+## Return types
+TERTIARY_WEIGHTS returns **varbinary** when *non_Unicode_character_string_expression* is **char** or **varchar**, and returns **varbinary(max)** when *non_Unicode_character_string_expression* is **varchar(max)**.
   
 ## Remarks  
- TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is not defined with an SQL tertiary collation. The following table shows the SQL tertiary collations.  
+TERTIARY_WEIGHTS returns NULL when *non_Unicode_character_string_expression* is not defined with an SQL tertiary collation. The following table shows the SQL tertiary collations.
   
 |Sort order ID|SQL collation|  
-|-------------------|-------------------|  
+|---|---|
 |33|SQL_Latin1_General_Pref_CP437_CI_AS|  
 |34|SQL_Latin1_General_CP437_CI_AI|  
 |43|SQL_Latin1_General_Pref_CP850_CI_AS|  
@@ -84,19 +86,19 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
- TERTIARY_WEIGHTS is intended for use in the definition of a computed column that is defined on the values of a **char**, **varchar**, or **varchar(max)** column. Defining an index on both the computed column and the **char**, **varchar**, or **varchar(max)** column can improve performance when the **char**, **varchar**, or **varchar(max)** column is specified in the ORDER BY clause of a query.  
+TERTIARY_WEIGHTS is intended for use in the definition of a computed column that is defined on the values of a **char**, **varchar**, or **varchar(max)** column. Defining an index on both the computed column and the **char**, **varchar**, or **varchar(max)** column can improve performance when the **char**, **varchar**, or **varchar(max)** column is specified in the ORDER BY clause of a query.
   
 ## Examples  
- The following example creates a computed column in a table that applies the `TERTIARY_WEIGHTS` function to the values of a `char` column.  
+The following example creates a computed column in a table that applies the `TERTIARY_WEIGHTS` function to the values of a `char` column.
   
-```  
+```sql
 CREATE TABLE TertColTable  
 (Col1 char(15) COLLATE SQL_Latin1_General_Pref_CP437_CI_AS,  
 Col2 AS TERTIARY_WEIGHTS(Col1));  
 GO   
 ```  
   
-## See Also  
- [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)  
+## See also
+[ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

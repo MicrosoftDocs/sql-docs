@@ -1,3 +1,5 @@
+# [XML Elements - Commands](xml-elements-commands.md)
+
 # [Alter Element (XMLA)](alter-element-xmla.md)
 # [Attach Element](attach-element.md)
 # [Backup Element (XMLA)](backup-element-xmla.md)
@@ -24,4 +26,3 @@
 # [Unlock Element (XMLA)](unlock-element-xmla.md)
 # [Update Element (XMLA)](update-element-xmla.md)
 # [UpdateCells Element (XMLA)](updatecells-element-xmla.md)
-# [XML Elements - Commands](xml-elements-commands.md)

@@ -2,9 +2,12 @@
 title: "Strategies for Backing Up and Restoring Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], backup and restore"
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Strategies for Backing Up and Restoring Merge Replication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   For merge replication, back up the following databases regularly:  
   
 -   The publication database at the Publisher  

@@ -1,10 +1,13 @@
 ---
 title: "REVOKE Type Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,12 +20,13 @@ helpviewer_keywords:
   - "type permissions [SQL Server]"
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # REVOKE Type Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revokes permissions on a type.  
   
@@ -56,7 +60,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
  Specifies the type on which the permission is being revoked. The scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  
   
- { FROM | TO } <database_principal>  
+ { FROM | TO } \<database_principal> 
  Specifies the principal from which the permission is being revoked.  
   
  GRANT OPTION  
@@ -71,7 +75,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  A cascaded revocation of a permission granted WITH GRANT OPTION will revoke both GRANT and DENY of that permission.  
   
- AS <database_principal>  
+ AS \<database_principal> 
  Specifies a principal from which the principal executing this query derives its right to revoke the permission.  
   
  *Database_user*  
@@ -81,37 +85,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies a database user mapped to an asymmetric key.  
   
@@ -155,3 +149,4 @@ GO
  [Securables](../../relational-databases/security/securables.md)  
   
   
+

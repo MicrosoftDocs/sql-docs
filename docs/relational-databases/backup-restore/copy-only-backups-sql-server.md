@@ -1,10 +1,13 @@
 ---
 title: "Copy-Only Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
+ms.date: "03/30/2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -15,12 +18,16 @@ helpviewer_keywords:
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Copy-Only Backups (SQL Server)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  The types of copy-only backups are as follows:  
   
@@ -57,7 +64,7 @@ In this example, a copy-only backup of the `Sales` database will be backed up to
 ###  <a name="TsqlProcedure"></a>B.  Using Transact-SQL  
 This example creates a copy-only backup for the `Sales` database utilizing the COPY_ONLY parameter.  A copy-only backup of the transaction log is taken as well.
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;

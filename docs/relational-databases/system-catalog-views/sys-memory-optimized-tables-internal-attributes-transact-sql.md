@@ -3,8 +3,11 @@ title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microso
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,10 +25,11 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 caps.latest.revision: 13
 author: "jodebrui"
 ms.author: "jodebrui"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contains a row for each internal memory-optimized table used for storing user memory-optimized tables. Each user table corresponds to one or more internal tables. A single table is used for the core data storage. Additional internal tables are used to support features such as temporal, columnstore index and off-row (LOB) storage for memory-optimized tables.
  

@@ -2,20 +2,25 @@
 title: "Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 2d0a9834-db91-403f-847c-79a8f49fc916
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   **Summary:** This white paper provides SharePoint administrators and architects detailed step-by-step instructions for deploying and configuring a Microsoft BI demo environment based on the Preview releases of SharePoint Server 2016, Office Online Server, and the SQL Server 2016 BI stack for SharePoint 2016. Following a brief introduction of important architecture changes and corresponding system dependencies, it outlines software and configuration requirements and a recommended deployment path to enable and verify BI capabilities in three main stages. This white paper also addresses known issues that exist in the SharePoint Server 2016 Beta 2, Office Online Server Preview and SQL Server 2016 CTP 3.1 releases and suggests appropriate workarounds. These workarounds will no longer be necessary in the final versions of the products. Check for an updated version of this white paper when deploying RTM releases.  
   
  **Writer:** Kay Unkroth  

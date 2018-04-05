@@ -1,10 +1,13 @@
 ---
 title: "Connecting to Oracle Database (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -13,9 +16,10 @@ helpviewer_keywords:
   - "Refreshing Oracle Metadata"
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "On Demand"
 ---
 # Connecting to Oracle Database (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you must connect to the Oracle database that you want to migrate. When you connect, SSMA obtains metadata about all Oracle schemas, and then displays it in the Oracle Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

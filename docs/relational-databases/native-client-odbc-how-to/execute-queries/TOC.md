@@ -1,5 +1,5 @@
-# [Execute a Statement Directly (ODBC)](execute-a-statement-directly-odbc.md)
 # [Executing Queries How-to Topics (ODBC)](executing-queries-how-to-topics-odbc.md)
+# [Execute a Statement Directly (ODBC)](execute-a-statement-directly-odbc.md)
 # [Prepare and Execute a Statement (ODBC)](prepare-and-execute-a-statement-odbc.md)
 # [Set Cursor Options (ODBC)](set-cursor-options-odbc.md)
 # [Use a Statement (ODBC)](use-a-statement-odbc.md)

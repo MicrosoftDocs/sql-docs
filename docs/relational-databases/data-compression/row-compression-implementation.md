@@ -2,9 +2,12 @@
 title: "Row Compression Implementation | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "compression"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-data-compression"
 ms.tgt_pltfrm: ""
@@ -14,12 +17,13 @@ helpviewer_keywords:
   - "row compression [Database Engine]"
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Row Compression Implementation
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic summarizes how [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements row compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   

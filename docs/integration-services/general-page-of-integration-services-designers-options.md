@@ -2,9 +2,12 @@
 title: "General Page of Integration Services Designers Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # General Page of Integration Services Designers Options
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  
@@ -28,7 +32,7 @@ manager: "jhubbard"
   
  If you set the **BlockedSignatureStates** registry value, this registry value overrides the **Check digital signature when loading a package** option. For more information, see [Implement a Signing Policy by Setting a Registry Value](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
   
- For more information about digital certificates and packages, see [Identify the Source of Packages with Digital Signatures](../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+ For more information about digital certificates and packages, see [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  **Show warning if package is unsigned**  
  Select to display a warning when loading a package that is not signed.  

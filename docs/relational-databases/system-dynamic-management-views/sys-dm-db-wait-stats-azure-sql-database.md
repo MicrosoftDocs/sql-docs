@@ -1,13 +1,13 @@
 ---
 title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +24,13 @@ helpviewer_keywords:
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns information about all the waits encountered by threads that executed during operation. You can use this aggregated view to diagnose performance issues with [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and also with specific queries and batches.  
   

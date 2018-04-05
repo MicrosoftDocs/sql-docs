@@ -2,13 +2,16 @@
 title: "Create Analysis Services Scripts in Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,12 @@ ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create Analysis Services Scripts in Management Studio
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes script generation features, templates, and editors that you can use to script Analysis Services objects and tasks.  
   
 ## Script Analysis Services Tasks in Management Studio  
@@ -65,7 +71,6 @@ manager: "erikre"
     >  Typically, you would select **File** if you want to create multiple different versions of the file.  
   
 ## See Also  
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
  [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

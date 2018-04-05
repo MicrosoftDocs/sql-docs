@@ -1,11 +1,12 @@
 ---
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -16,10 +17,11 @@ ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   To include null values in the JSON output of the **FOR JSON** clause, specify the **INCLUDE_NULL_VALUES** option.  
   
@@ -36,7 +38,7 @@ manager: "jhubbard"
   
  **Query**  
   
-```tsql  
+```sql  
 SELECT name, surname  
 FROM emp  
 FOR JSON AUTO, INCLUDE_NULL_VALUES    
@@ -53,7 +55,23 @@ FOR JSON AUTO, INCLUDE_NULL_VALUES
 	"surname": "Doe"
 }] 
 ```  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
   
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   

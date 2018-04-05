@@ -2,13 +2,16 @@
 title: "Create a Date type Dimension | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -22,9 +25,11 @@ ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Dimensions - Create a Date type Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a time dimension is a dimension type whose attributes represent time periods, such as years, semesters, quarters, months, and days. The periods in a time dimension provide time-based levels of granularity for analysis and reporting. The attributes are organized in hierarchies, and the granularity of the time dimension is determined largely by the business and reporting requirements for historical data. For example, most financial and sales data in business intelligence applications use a monthly or quarterly granularity.  
   
  Typically, cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incorporate a time dimension in one form or another. A cube may include more than one time dimension, or several hierarchies from the same time dimension, depending on the granularity of the data and the reporting requirements. However, not all cubes require a time dimension. Some OLAP applications, such as activity-based costing, do not require a time dimension, because .costing in an activity-based dimension is based on activity instead of time.  

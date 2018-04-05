@@ -2,9 +2,12 @@
 title: "Data in Data Flows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "data-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,8 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Data in Data Flows
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  
@@ -36,6 +40,6 @@ manager: "jhubbard"
  The expression evaluator also compares data values when it evaluates the expressions that variables, precedence constraints, and transformations use.  
   
 ## Data Flow Troubleshooting  
- Once you have deployed a package to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, you can analyze the data flow in the package during execution to check performance or look for other issues. Standard reports are available that allow you to view package status and history, and you can query database views that provide detailed information about package execution. You also can dynamically add and remove data taps during execution to target specific components of your package. For more information, see [Analysis of Data Flow](../../integration-services/performance/analysis-of-data-flow.md).  
+ Once you have deployed a package to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, you can analyze the data flow in the package during execution to check performance or look for other issues. Standard reports are available that allow you to view package status and history, and you can query database views that provide detailed information about package execution. You also can dynamically add and remove data taps during execution to target specific components of your package. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   

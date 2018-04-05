@@ -2,21 +2,26 @@
 title: "Add a data source to Tabular model (Analysis Services AMO-TOM) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Add a data source to Tabular model (Analysis Services AMO-TOM)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 The **DataSource** class in the Microsoft.AnalysisServices.Tabular namespace is an abstraction of a Tabular model’s data source that specifies the type and location of imported data during a data refresh operation. 
 
 You can add a data source to the Tabular model by instantiating an object of a class derived from **DataSource**, and then add it to the **DataSources** collection of the Model object. To commit changes to the server, call either **Model.SaveChanges()** or **Database.Update(UpdateOptions.ExpandFull)**. 

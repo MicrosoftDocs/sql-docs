@@ -1,10 +1,13 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/18/2016"
-ms.prod: "sql-server-2016"
+ms.date: "05/22/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Encrypt a Column of Data
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
   
@@ -49,7 +53,14 @@ manager: "jhubbard"
 -   Some permission on the key and must not have been denied VIEW DEFINITION permission.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
+
+To use the following examples you must have a database master key. If your database does not already have a database master key, create one by executing the following statement providing your password:   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+Always backup your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+
 #### To encrypt a column of data using a simple symmetric encryption  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -60,11 +71,7 @@ manager: "jhubbard"
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -123,13 +130,6 @@ manager: "jhubbard"
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

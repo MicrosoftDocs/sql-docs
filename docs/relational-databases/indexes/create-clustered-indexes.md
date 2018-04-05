@@ -2,9 +2,12 @@
 title: "Create Clustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -17,12 +20,13 @@ helpviewer_keywords:
   - "indexes [SQL Server], clustered"
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Create Clustered Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   You can create clustered indexes on tables by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. With few exceptions, every table should have a clustered index. Besides improving query performance, a clustered index can be rebuilt or reorganized on demand to control table fragmentation. A clustered index can also be created on a view. (Clustered indexes are defined in the topic [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).)  
   

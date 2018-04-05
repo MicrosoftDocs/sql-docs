@@ -2,9 +2,12 @@
 title: "Query and Text Editors (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -28,11 +31,13 @@ helpviewer_keywords:
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Query and Text Editors (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   You can use one of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors to interactively edit and test a [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, or XML/A script, or to edit an XML or plain text file. Each editor is supported by a language-specific service that colors keywords, and checks for syntax and usage errors. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor includes a [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger that you can use to help fix problems in [!INCLUDE[tsql](../../includes/tsql-md.md)] code.  
   
 ## SQL Server Management Studio Editors  

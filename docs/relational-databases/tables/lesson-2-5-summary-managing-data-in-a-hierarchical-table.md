@@ -2,9 +2,12 @@
 title: "Summary: Managing Data in a Hierarchical Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "managing data in a table"
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Lesson 2-5 - Summary - Managing Data in a Hierarchical Table
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 The **hierarchyid** data type lets you easily create tables that reflect hierarchical data, and then create depth-first and breadth-first indexes to efficiently access the table. Use the hierarchical methods to query and manipulate the data.  
   
 ## Return to the Start of the Tutorial  

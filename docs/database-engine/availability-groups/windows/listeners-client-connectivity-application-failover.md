@@ -2,9 +2,12 @@
 title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -20,9 +23,11 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 48
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Listeners, Client Connectivity, Application Failover
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic contains information about considerations for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] client connectivity and application-failover functionality.  
   
 > [!NOTE]  
@@ -59,7 +64,7 @@ manager: "jhubbard"
   
  An availability group listener consists of a Domain Name System (DNS) listener name, listener port designation, and one or more IP addresses. Only the TCP protocol is supported by availability group listener.  The DNS name of the listener must also be unique in the domain and in NetBIOS.  When you create a new availability group listener it becomes a resource in a cluster with an associated virtual network name (VNN), virtual IP (VIP), and availability group dependency. A client uses DNS to resolve the VNN into multiple IP addresses and then tries to connect to each address, until a connection request succeeds or until the connection requests time out.  
   
- If read-only routing is configured for one or more[readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
+ If read-only routing is configured for one or more [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
   
  For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -113,7 +118,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  *Read-only routing* refers to the ability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to route incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. An incoming connection referencing an availability group listener name can automatically be routed to a read-only replica if the following are true:  
   
 -   At least one secondary replica is set to read-only access, and each read-only secondary replica and the primary replica are configured to support read-only routing. For more information, see [To Configure Availability Replicas for Read-Only Routing](#ConfigureARsForROR), later in this section.  
-  
+
+-   The connection string references a database involved in the Availability Group. An alternative to this would be the login used in the connection has the database configured as its default database. For more information, see [this article on how the algorithm works with read-only routing](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). For more information, see [Read-Only Application Intent and Read-Only Routing](#ReadOnlyAppIntent), later in this section.  
   
 ###  <a name="ConfigureARsForROR"></a> To Configure Availability Replicas for Read-Only Routing  
@@ -144,7 +151,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- In this connection string example, the client is attempting to connect to an availability group listener named `AGListener` on port 1433 (you may also omit the port if the availability group listener is listening on 1433).  The connection string has the **ApplicationIntent** property set to **ReadOnly**, making this a *read-intent connection string*.  Without this setting, the server would not have attempted a read-only routing of the connection.  
+ In this connection string example, the client is attempting to connect to the AdventureWorks database via an availability group listener named `AGListener` on port 1433 (you may also omit the port if the availability group listener is listening on 1433).  The connection string has the **ApplicationIntent** property set to **ReadOnly**, making this a *read-intent connection string*.  Without this setting, the server would not have attempted a read-only routing of the connection.  
   
  The primary database of the availability group processes the incoming read-only routing request and attempts to locate an online, read-only replica that is joined to the primary replica and is configured for read-only routing.  The client receives back connection information from the primary replica server and connects to the identified read-only replica.  
   
@@ -185,7 +192,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- An example of a for the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
+ An example of the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   
 ```  
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  

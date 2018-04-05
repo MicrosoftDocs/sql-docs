@@ -2,13 +2,16 @@
 title: "Building Subcubes in MDX (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -22,9 +25,11 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Building Subcubes in MDX (MDX)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A subcube is a subset of a cube on representing a filtered view of the underlying data. By limiting the cube to a subcube, you can improve query performance.  
   
  To define a subcube, you use the [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) statement, as described in this topic.  

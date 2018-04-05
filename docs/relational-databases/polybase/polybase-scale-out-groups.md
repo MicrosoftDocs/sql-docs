@@ -1,11 +1,13 @@
 ---
 title: "PolyBase scale-out groups | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "polybase"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-polybase"
 ms.tgt_pltfrm: ""
@@ -18,11 +20,11 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # PolyBase scale-out groups
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A standalone SQL Server instance with PolyBase can become a performance bottleneck when dealing with massive data sets in Hadoop or Azure Blob Storage. The PolyBase Group feature allows you to create a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.  
   
  See [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) and [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).  
@@ -35,7 +37,7 @@ manager: "jhubbard"
  The head node contains the SQL Server instance to which PolyBase queries are submitted. Each PolyBase group can have only one head node. A head node is a logical group of SQL Database Engine, PolyBase Engine and PolyBase Data Movement Service on the SQL Server instance.  
   
 ### Compute node  
- A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes.  
+ A compute node contains the SQL Server instance that assists with scale-out query processing on external data. A compute node is a logical group of SQL Server and the PolyBase data movement service on the SQL Server instance. A PolyBase group can have multiple compute nodes.  The head node and the compute nodes must all run the same version of SQL Server.
   
 ### Distributed query processing  
  PolyBase queries are submitted to the SQL Server on the head node. The part of the query that refers to external tables is handed-off to the PolyBase engine.  
@@ -57,7 +59,7 @@ manager: "jhubbard"
   
 ### Steps  
   
-1.  Install SQL Server with PolyBase on N machines.  
+1.  Install the same version of SQL Server with PolyBase on N machines.  
   
 2.  Select one SQL Server instance as the head node. A head node can only be designated on an instance running SQL Server Enterprise.  
   

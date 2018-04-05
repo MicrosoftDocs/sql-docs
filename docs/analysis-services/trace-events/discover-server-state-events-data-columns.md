@@ -2,11 +2,14 @@
 title: "Discover Server State Events Data Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -15,9 +18,11 @@ ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Discover Server State Events Data Columns
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Discover Server State event category has the following event classes:  
   
 |**Event ID**|**Event Name**|**Event Description**|  

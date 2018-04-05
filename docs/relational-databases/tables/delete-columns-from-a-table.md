@@ -1,10 +1,13 @@
 ---
 title: "Delete Columns from a Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/11/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -16,17 +19,18 @@ helpviewer_keywords:
   - "dropping columns"
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Delete Columns from a Table
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!CAUTION]  
->  When you delete a column from a table, it and all the data it contains are deleted from the database. This action cannot be undone.  
+>  When you delete a column from a table, it and all the data it contains are deleted.
   
  **In This Topic**  
   
@@ -60,7 +64,9 @@ manager: "jhubbard"
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  In **Object Explorer**, right-click the table from which you want to delete columns and choose **Delete**.  
+2.  In **Object Explorer**, locate the table from which you want to delete columns, and expand to expose the column names. 
+
+3.  Right-click the column that you want to delete, and choose **Delete**.  
   
 3.  In **Delete Object** dialog box, click **OK**.  
   

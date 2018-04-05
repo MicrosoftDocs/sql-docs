@@ -2,9 +2,12 @@
 title: "Modify an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "index changes [SQL Server]"
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "barbkess"
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Modify an Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

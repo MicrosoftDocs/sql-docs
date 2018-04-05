@@ -1,13 +1,13 @@
 ---
 title: "sys.dm_xe_database_session_events (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,10 +16,11 @@ ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns information about session events. Events are discrete execution points. Predicates can be applied to events to stop them from firing if the event does not contain the required information.  
   

@@ -2,9 +2,12 @@
 title: "catalog.rename_customized_logging_level | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,19 +16,19 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.rename_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Renames an existing customized logging level. For more info about customized logging levels, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## Syntax  
   
-```tsql  
-rename_customized_logging_level [ @old_name = ] old_name  
+```sql  
+catalog.rename_customized_logging_level [ @old_name = ] old_name  
     , [ @new_name = ] new_name  
-  
 ```  
   
 ## Arguments  

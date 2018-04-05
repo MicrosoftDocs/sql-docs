@@ -2,9 +2,12 @@
 title: "Availability Group - Add Database to Group Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Availability Group - Add Database to Group Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing Always On availability group.  
   
 > [!NOTE]  

@@ -2,9 +2,12 @@
 title: "Publish Data and Database Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -42,11 +45,13 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server replication]"
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Publish Data and Database Objects
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
 |Database object|Snapshot replication and transactional replication|Merge replication|  
@@ -168,7 +173,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article as long as the number for the function is lower than the number for the table.  
   
--   Publication names cannot include the following characters: % * [ ] | : " ? \ / \< >.  
+-   Publication names cannot include the following characters: % * [ ] | : " ? \ / < >.  
   
 ### Limitations on Publishing Objects  
   

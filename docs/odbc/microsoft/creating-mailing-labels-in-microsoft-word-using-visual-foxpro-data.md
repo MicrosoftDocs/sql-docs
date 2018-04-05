@@ -3,8 +3,11 @@ title: "Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data | Mic
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data
 You can use Visual FoxPro data in a Microsoft Word for Windows 95 or Windows 98 document. For example, you might want to create mailing labels from the customer information stored in a Visual FoxPro table.  

@@ -2,13 +2,16 @@
 title: "Specifying the Contents of a Query Axis (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Query and Slicer Axes - Specify the Contents of a Query Axis
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Query axes specify the edges of a cellset returned by a Multidimensional Expressions (MDX) SELECT statement. Specifying the edges of a cellset lets you restrict the returned data that is visible to the client.  
   
  To specify query axes, you use the `<SELECT query axis clause>` to assign a set to a particular query axis. Each `<SELECT query axis clause>` value defines one query axis. The number of axes in the dataset is equal to the number of `<SELECT query axis clause>` values in the SELECT statement.  

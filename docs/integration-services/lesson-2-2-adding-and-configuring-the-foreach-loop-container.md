@@ -2,9 +2,12 @@
 title: "Step 2: Adding and Configuring the Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Adding and Configuring the Foreach Loop Container
 In this task, you will add the ability to loop through a folder of flat files and apply the same data flow transformation used in Lesson 1 to each of those flat files. You do this by adding and configuring a Foreach Loop container to the control flow.  
@@ -61,11 +65,11 @@ After you have made these modifications to the package, when the package is run,
   
     This sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Click the **DOWNLOADS** tab.  
   
-    3.  Click the  HYPERLINK "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
+    3.  Click the link for the [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) file.  
   
 6.  In the **Files** box, type **Currency_\*.txt**.  
   

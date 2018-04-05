@@ -1,10 +1,13 @@
 ---
 title: "GRANT Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/17/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,25 +21,22 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # GRANT Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Grants permissions on an endpoint.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -56,7 +56,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  ON ENDPOINT **::***endpoint_name*  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being granted.  
   
  *SQL_Server_login*  

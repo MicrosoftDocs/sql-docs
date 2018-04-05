@@ -2,11 +2,14 @@
 title: "Using a Modified Version of the Analysis Services Tutorial Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,24 +18,27 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Lesson 4-1 - Using a Modified Version of the Analysis Services Tutorial Project
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 The remaining lessons in this tutorial are based on an enhanced version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project that you completed in the first three lessons. Additional tables and named calculations have been added to the **Adventure Works DW 2012** data source view, additional dimensions have been added to the project, and these new dimensions have been added to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. In addition, a second measure group has been added, which contains measures from a second fact table. This enhanced project will enable you to continue learning how to add functionality to your business intelligence application without having to repeat the skills you have already learned.  
   
 Before you can continue with the tutorial, you must download, extract, load and process the enhanced version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project.  Use the instructions in this lesson to ensure you have performed all the steps.  
   
 ## Downloading and Extracting the Project File  
   
-1.  [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to go to the download page that provides the sample projects that go with this tutorial. The tutorial projects are included in the **Analysis Services Tutorial SQL Server 2012** download.  
+1.  [Click here](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) to go to the download page that provides the sample projects that go with this tutorial. The tutorial projects are included in the **adventure-works-multidimensional-tutorial-projects.zip** download.  
   
-2.  Click **Analysis Services Tutorial SQL Server 2012** to download the package that contains the projects for this tutorial.  
+2.  Click **adventure-works-multidimensional-tutorial-projects.zip** to download the package that contains the projects for this tutorial.  
   
     By default, a .zip file is saved to the Downloads folder. You must move the .zip file to a location that has a shorter path (for example, create a C:\Tutorials folder to store the files).  You can then extract the files contained in the .zip file. If you attempt to unzip the files from the Downloads folder, which has a longer path, you will only get Lesson 1.  
   
 3.  Create a subfolder at or near the root drive, for example, C:\Tutorial.  
   
-4.  Move the **Analysis Services Tutorial SQL Server 2012.zip** file to the subfolder.  
+4.  Move the **adventure-works-multidimensional-tutorial-projects.zip** file to the subfolder.  
   
 5.  Right-click the file and select **Extract All**.  
   

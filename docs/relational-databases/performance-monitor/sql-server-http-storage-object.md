@@ -2,20 +2,25 @@
 title: "SQL Server, HTTP_STORAGE_OBJECT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SQL Server, HTTP_STORAGE_OBJECT
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SQLServer:HTTP_STORAGE_OBJECT** performance object consists of performance counters that monitor Windows Azure Storage account. Using [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) feature, you can store database files in Windows Azure Storage Blobs. This performance object treats each Windows Azure Storage account as a different drive.  
   
 |Counter Name|Description|  

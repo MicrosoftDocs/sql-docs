@@ -2,9 +2,12 @@
 title: "View and Modify Distributor and Publisher Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "Distributors [SQL Server replication], properties"
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # View and Modify Distributor and Publisher Properties
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to view and modify Distributor and Publisher properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
@@ -74,7 +79,7 @@ manager: "jhubbard"
   
 2.  Right-click the **Replication** folder, and then click **Publisher Properties**.  
   
-3.  View and modify properties in the **Publisher Properties - \< Publisher >** dialog box.  
+3.  View and modify properties in the **Publisher Properties - < Publisher >** dialog box.  
   
     -   A user in the **sysadmin** fixed server role can enable databases for replication on the **Publication Databases** page. Enabling a database does not publish that database; rather, it allows any user in the **db_owner** fixed database role for that database to create one or more publications in the database.  
   

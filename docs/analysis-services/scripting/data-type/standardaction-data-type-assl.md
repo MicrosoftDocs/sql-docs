@@ -2,12 +2,15 @@
 title: "StandardAction Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # StandardAction Data Type (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines a derived data type that represents any [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element other than a [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) element or a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  
   
 ## Syntax  

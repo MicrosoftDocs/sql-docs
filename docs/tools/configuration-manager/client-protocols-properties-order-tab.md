@@ -2,9 +2,12 @@
 title: "Client Protocols Properties (Order Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "configuration-manager"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,12 +16,14 @@ helpviewer_keywords:
   - "client protocols [SQL Server]"
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Client Protocols Properties (Order Tab)
-  Use the **Order**page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  Use the **Order** page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  
   
  Click a protocol, and then click **Enable** or **Disable** to move the selected protocol to the **Disabled Protocols** or **Enabled Protocols** list.  
   
@@ -29,10 +34,10 @@ manager: "jhubbard"
   
 ## Options  
  **Disabled Protocols**  
- Lists protocols which are installed but are not currently used.  
+ Lists the protocols that are installed but are not currently used.  
   
  **Enabled Protocols**  
- Lists protocols which are available for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients on this computer.  
+ Lists the protocols that are available for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients on this computer.  
   
  **>**  
  Enables the currently highlighted protocol in the **Disabled Protocols** box, moving it to the **Enabled Protocols** box.  

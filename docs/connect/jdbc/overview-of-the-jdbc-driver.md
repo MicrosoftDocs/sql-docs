@@ -1,10 +1,13 @@
 ---
 title: "Overview of the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/18/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,12 @@ caps.latest.revision: 57
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Overview of the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  The Microsoft JDBC Driver 6.0 for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides robust data access to SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, and Azure SQL Database.  
+  The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides robust data access to SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, and Azure SQL Database.  
   
  The topics in this section provide a general overview of the JDBC driver, including the system requirements needed to use it, how it can be used, and where you can go for more information.  
   
@@ -36,8 +40,10 @@ manager: "jhubbard"
 |[Finding Additional JDBC Driver Information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describes where to find additional resources about the Microsoft JDBC driver, including links to external resources.|  
 |[Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Support matrix and support lifecycle policy for the Microsoft JDBC driver for SQL Server.|  
 |[Frequently Asked Questions &#40;FAQ&#41; for JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Frequently asked questions about the Microsoft JDBC driver.|  
-  
+|[Feature dependencies of Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Feature dependencies of Microsoft JDBC Driver for SQL Server.|
+
 ## See Also  
+ [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)  
  [JDBC Driver API Reference](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

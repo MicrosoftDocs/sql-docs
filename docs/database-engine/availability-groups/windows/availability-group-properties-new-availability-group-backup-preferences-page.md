@@ -2,9 +2,12 @@
 title: "Properties: New Availability Group (Backup Preferences Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this dialog box to view and change the backup preferences of the selected availability group.  
   
  **To view availability group properties**  

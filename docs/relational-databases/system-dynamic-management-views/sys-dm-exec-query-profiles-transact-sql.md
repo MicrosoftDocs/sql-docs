@@ -3,8 +3,11 @@ title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_exec_query_profiles dynamic management view"
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Monitors real time query progress while the query is in execution. For example, use this DMV to determine which part of the query is running slow. Join this DMV with other system DMVs using the columns identified in the description field. Or, join this DMV with other performance counters (such as Performance Monitor, xperf) by using the timestamp columns.  
   
@@ -80,7 +84,7 @@ manager: "jhubbard"
   
 -   If there is a parallel scan, this DMV reports counters for each of the parallel threads working on the scan.
  
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the legacy query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the standard query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
 
 >[!NOTE]
 > CPU and elapsed times are not supported under the lightweight query execution statistics profiling infrastructure to reduce performance impact.
@@ -88,10 +92,10 @@ manager: "jhubbard"
  SET STATISTICS XML ON and SET STATISTICS PROFILE ON always use the legacy query execution statistics profiling infrastructure.
   
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+   
 ## Examples  
  Step 1: Login to a session in which you plan to run the query you will analyze with sys.dm_exec_query_profiles. To configure the query for profiling use SET STATISTICS PROFILE ON. Run your query in this same session.  
   

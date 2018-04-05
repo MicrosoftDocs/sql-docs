@@ -1,10 +1,13 @@
 ---
 title: "Converting DB2 Schemas (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Converting DB2 Schemas (DB2ToSQL)
 After you have connected to DB2, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  

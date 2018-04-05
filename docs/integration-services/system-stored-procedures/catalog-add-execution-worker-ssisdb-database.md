@@ -3,27 +3,31 @@ title: "catalog.add_execution_worker (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # catalog.add_execution_worker (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
 
 ## Syntax
 
-```tsql
-add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+```sql
+catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 
 ## Arguments
@@ -60,5 +64,5 @@ The worker agent id of a Scale Out Worker. The *workeragent_id* is **uniqueIdent
 - The execution is not in Scale Out.
 
 ## See Also
-[Execute packages in Scale Out](~/integration-services/packages/run-integration-services-ssis-packages.md).
+[Execute packages in Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

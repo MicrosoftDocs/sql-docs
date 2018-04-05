@@ -2,20 +2,25 @@
 title: "Scalability | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Scalability
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQL Server 2016 contains scalability enhancements to the on-disk storage for memory-optimized tables.  
   
 -   **Multiple threads to persist memory-optimized tables**  

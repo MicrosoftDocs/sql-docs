@@ -3,8 +3,11 @@ title: "Tool Windows in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Tool Windows in SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] provides many powerful tool windows for all phases of development and administration. Some tools can be used on any [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] component, and others are for certain components only. The following table identifies the tools that can be used for all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 |||  

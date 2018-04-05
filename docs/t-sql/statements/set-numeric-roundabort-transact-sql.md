@@ -1,10 +1,13 @@
 ---
 title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "12/04/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,30 +27,24 @@ helpviewer_keywords:
   - "SET NUMERIC_ROUNDABORT statement"
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SET NUMERIC_ROUNDABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies the level of error reporting generated when rounding in an expression causes a loss of precision.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SET NUMERIC_ROUNDABORT { ON | OFF }   
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET NUMERIC_ROUNDABORT ON;  
-```  
+
+## Syntax
+
+```
+
+SET NUMERIC_ROUNDABORT { ON | OFF }
+```
   
 ## Remarks  
  When SET NUMERIC_ROUNDABORT is ON, an error is generated after a loss of precision occurs in an expression. When OFF, losses of precision do not generate error messages and the result is rounded to the precision of the column or variable storing the result.  
@@ -56,16 +53,16 @@ SET NUMERIC_ROUNDABORT ON;
   
  If SET NUMERIC_ROUNDABORT is ON, SET ARITHABORT determines the severity of the generated error. This table shows the effects of these two settings when a loss of precision occurs.  
   
-|Setting|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|  
-|-------------|--------------------------------|---------------------------------|  
+|Setting|SET NUMERIC_ROUNDABORT ON|SET NUMERIC_ROUNDABORT OFF|
+|-------------|--------------------------------|---------------------------------|
 |SET ARITHABORT ON|Error is generated; no result set returned.|No errors or warnings; result is rounded.|  
 |SET ARITHABORT OFF|Warning is returned; expression returns NULL.|No errors or warnings; result is rounded.|  
+
+ The setting of SET NUMERIC_ROUNDABORT is set at execute or run time and not at parse time.
+
+ SET NUMERIC_ROUNDABORT must be OFF when you are creating or changing indexes on computed columns or indexed views. If SET NUMERIC_ROUNDABORT is ON, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
- The setting of SET NUMERIC_ROUNDABORT is set at execute or run time and not at parse time.  
-  
- SET NUMERIC_ROUNDABORT must be OFF when you are creating or changing indexes on computed columns or indexed views. If SET NUMERIC_ROUNDABORT is ON, CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
-  
- To view the current setting for this setting, run the following query.  
+ To view the current setting for this setting, run the following query:
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  

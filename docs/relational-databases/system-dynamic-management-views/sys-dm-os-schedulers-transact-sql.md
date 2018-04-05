@@ -3,8 +3,11 @@ title: "sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.dm_os_schedulers dynamic management view"
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.dm_os_schedulers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns one row per scheduler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks.  
   
@@ -60,10 +64,11 @@ manager: "jhubbard"
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Exposes the scheduler quantum used by SQLOS.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
-## Permissions  
+## Permissions
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
-  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Examples  
   
 ### A. Monitoring hidden and nonhidden schedulers  
@@ -120,7 +125,7 @@ active_workers_count work_queue_count
   
  The output provides the following information:  
   
--   There are five schedules. Two schedulers have an ID value \< 1048576. Schedulers with ID >= 1048576are known as hidden schedulers. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node  
+-   There are five schedules. Two schedulers have an ID value < 1048576. Schedulers with ID >= 1048576are known as hidden schedulers. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node  
   
 -   There are 23 active tasks in the output. These tasks include user requests in addition to resource management tasks that have been started by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Examples of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tasks are RESOURCE MONITOR (one per NUMA node), LAZY WRITER (one per NUMA node), LOCK MONITOR, CHECKPOINT, and LOG WRITER.  
   

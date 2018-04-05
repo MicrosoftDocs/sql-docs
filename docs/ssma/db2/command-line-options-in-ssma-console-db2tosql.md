@@ -1,10 +1,13 @@
 ---
 title: "Command Line Options in SSMA Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (DB2ToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

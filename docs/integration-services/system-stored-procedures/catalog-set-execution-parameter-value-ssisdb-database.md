@@ -2,9 +2,12 @@
 title: "catalog.set_execution_parameter_value (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # catalog.set_execution_parameter_value (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Sets the value of a parameter for an instance of execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
@@ -24,12 +28,11 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-set_execution_parameter_value [ @execution_id = execution_id  
+```sql  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## Arguments  
@@ -77,9 +80,9 @@ set_execution_parameter_value [ @execution_id = execution_id
 |0|None<br /><br /> Logging is turned off. Only the package execution status is logged.|  
 |1|Basic<br /><br /> All events are logged, except custom and diagnostic events. This is the default value.|  
 |2|Performance<br /><br /> Only performance statistics, and OnError and OnWarning events, are logged.|  
-|3|Verbose<br /><br /> All events are logged, including custom and diagnostic events. <br />Custom events include those events that are logged by Integration Services tasks. For more information, see [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md)|  
+|3|Verbose<br /><br /> All events are logged, including custom and diagnostic events. <br />Custom events include those events that are logged by Integration Services tasks. For more information, see [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|Runtime lineage<br /><br /> Collects the data required to track lineage in the data flow.|  
-|100|Custom logging level<br /><br /> Specify the settings in the CUSTOMIZED_LOGGING_LEVEL parameter. For more info about the values that you can specify, see [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> For more info about customized logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).|  
+|100|Custom logging level<br /><br /> Specify the settings in the CUSTOMIZED_LOGGING_LEVEL parameter. For more info about the values that you can specify, see [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> For more info about customized logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
  To specify that the Integration Services server generates dump files when any error occurs during a package execution, set the following parameter values for an execution instance that hasn’t run.  
   
@@ -111,16 +114,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## Example  
  The following example specifies that the Integration Services server generates dump files when any error occurs during a package execution.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## Example  
  The following example specifies that the Integration Services server generates dump files when events occur during a package execution, and specifies the event that causes the server to generate the files.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   

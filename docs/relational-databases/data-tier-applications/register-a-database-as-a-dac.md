@@ -2,9 +2,12 @@
 title: "Register a Database As a DAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-tier-applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-data-tier-apps"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,13 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], register"
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Register a Database As a DAC
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use either the **Register Data-tier Application Wizard** or a Windows PowerShell script to build a data-tier application (DAC) definition that describes the objects in an existing database, and register the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
@@ -82,7 +87,7 @@ manager: "jhubbard"
   
  **Description.** - Optional. Text that explains the purpose of the DAC. When deploying a DAC, the description is stored in the **msdb** database and can later be viewed under the **Data-tier Applications** node in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Previous** - Returns you to the **Introduction** page.  
+ **< Previous** - Returns you to the **Introduction** page.  
   
  **Next >** - Verifies that a DAC can be built from the objects in the database, and displays the results in the **Validation and Summary** page.  
   
@@ -98,7 +103,7 @@ manager: "jhubbard"
 ### Retrieving Objects  
  **Retrieving database and server objects.** - Displays a progress bar as the wizard retrieves all of the required objects from the database and the instance of the Database Engine.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   
@@ -109,7 +114,7 @@ manager: "jhubbard"
 ### Validating Objects  
  **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. *SchemaName***.***ObjectName* identify which object is currently being verified.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   
@@ -122,7 +127,7 @@ manager: "jhubbard"
   
  **Save Report** - Select this button to save a copy of the validation report to an HTML file. The default folder is a **SQL Server Management Studio\DAC Packages** folder in the Documents folder of your Windows account.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   

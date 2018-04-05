@@ -2,12 +2,15 @@
 title: "DatabasePermission Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DatabasePermission Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines the default permissions in a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element for a specific [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element.  
   
 ## Syntax  

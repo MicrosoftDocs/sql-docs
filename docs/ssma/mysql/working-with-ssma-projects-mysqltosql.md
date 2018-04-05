@@ -1,10 +1,13 @@
 ---
 title: "Working with SSMA Projects (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "Working with SSMA projects, Save project"
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 caps.latest.revision: 20
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Working with SSMA Projects (MySQLToSQL)
 To migrate MySQL databases to SQL Server or SQL Azure, you must first create an SSMA project. The project is a file that contains the following information:  

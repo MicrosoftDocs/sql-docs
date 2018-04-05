@@ -3,8 +3,11 @@ title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "table permissions [SQL Server]"
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # DENY Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Denies permissions on a member of the OBJECT class of securables. These are the members of the OBJECT class: tables, views, table-valued functions, stored procedures, extended stored procedures, scalar functions, aggregate functions, service queues, and synonyms.  
 
@@ -31,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         TO <database_principal> [ ,...n ]   
@@ -59,20 +62,16 @@ DENY <permission> [ ,...n ] ON
  ALL  
  Denying ALL does not deny all possible permissions. Denying ALL is equivalent to denying all ANSI-92 permissions applicable to the specified object. The meaning of ALL varies as follows:  
   
- Scalar function permissions: EXECUTE, REFERENCES.  
+ - Scalar function permissions: EXECUTE, REFERENCES.  
+ - Table-valued function permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Stored Procedure permissions: EXECUTE.  
+ - Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Table-valued function permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- Stored Procedure permissions: EXECUTE.  
-  
- Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-  
- PRIVILEGES  
+PRIVILEGES  
  Included for ANSI-92 compliance. Does not change the behavior of ALL.  
   
- *column*  
+*column*  
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being denied. The parentheses **( )** are required. Only SELECT, REFERENCES, and UPDATE permissions can be denied on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  
@@ -81,13 +80,13 @@ DENY <permission> [ ,...n ] ON
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Specifies the object on which the permission is being denied. The OBJECT phrase is optional if *schema_name* is specified. If the OBJECT phrase is used, the scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  
   
- TO <database_principal>  
+ TO \<database_principal>  
  Specifies the principal to which the permission is being denied.  
   
  CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- AS <database_principal>  
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to deny the permission.  
   
  *Database_user*  
@@ -140,12 +139,12 @@ DENY <permission> [ ,...n ] ON
  If you use the AS clause, the specified principal must own the object on which permissions are being denied.  
   
 ## Examples  
+The following examples use the AdventureWorks database.
   
 ### A. Denying SELECT permission on a table  
- The following example denies `SELECT` permission to the user `RosaQdM` on the table `Person.Address` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example denies `SELECT` permission to the user `RosaQdM` on the table `Person.Address`.  
   
 ```  
-USE AdventureWorks2012;  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -154,7 +153,6 @@ GO
  The following example denies `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.  
   
 ```  
-USE AdventureWorks2012;  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -164,7 +162,6 @@ GO
  The following example denies `REFERENCES` permission on the column `BusinessEntityID` in the view `HumanResources.vEmployee` to the user `Wanida` with `CASCADE`.  
   
 ```  
-USE AdventureWorks2012;  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

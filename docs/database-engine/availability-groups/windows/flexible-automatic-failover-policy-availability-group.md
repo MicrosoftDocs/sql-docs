@@ -2,9 +2,12 @@
 title: "Flexible Automatic Failover Policy - Availability Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Flexible Automatic Failover Policy - Availability Group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A flexible failover policy provides granular control over the conditions that cause [automatic failover](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
   
  The flexible failover policy of an availability group is defined by its failure-condition level and health-check timeout threshold. On detecting that an availability group has exceeded its failure condition level or its health-check timeout threshold, the availability group's resource DLL responds back to the Windows Server Failover Clustering (WSFC) cluster. The WSFC cluster then initiates an automatic failover to the secondary replica.  
@@ -58,7 +63,7 @@ manager: "jhubbard"
 |Two|On server unresponsive. Specifies that an automatic failover is initiated when one of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified health check timeout threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|2|**OnServerUnresponsive**|  
 |Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default level.|3|**OnCriticalServerError**|  
 |Four|On moderate server error. Specifies that an automatic failover is initiated on moderate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal resource pool.|4|**OnModerateServerError**|  
-|Five|On any qualified failure conditions. Specifies that an automatic failover is initiated on any qualified failure conditions, including:<br /><br /> Exhaustion of SQL Engine worker-threads.<br /><br /> Detection of an unsolvable deadlock.<br /><br /> <br /><br /> This is the most restrictive level.|5|**OnAnyQualifiedFailureConditions**|  
+|Five|On any qualified failure conditions. Specifies that an automatic failover is initiated on any qualified failure conditions, including:<br /><br /> Detection of Scheduler deadlock.<br /><br /> Detection of an unsolvable deadlock.<br /><br /> <br /><br /> This is the most restrictive level.|5|**OnAnyQualifiedFailureConditions**|  
   
 > [!NOTE]  
 >  Lack of response by an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to client requests is irrelevant to availability groups.  

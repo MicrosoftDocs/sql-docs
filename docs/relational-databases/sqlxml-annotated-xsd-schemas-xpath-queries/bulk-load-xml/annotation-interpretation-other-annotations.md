@@ -2,9 +2,12 @@
 title: "Other Annotations (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -24,9 +27,11 @@ ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Annotation Interpretation - Other Annotations
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In addition to the annotations discussed in the previous topics in this section, XML Bulk Load interprets these other annotations, as follows:  
   
  **sql:id-prefix**  

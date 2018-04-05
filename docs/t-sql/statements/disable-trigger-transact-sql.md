@@ -1,10 +1,13 @@
 ---
 title: "DISABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Disables a trigger.  
   
@@ -38,7 +42,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -63,9 +66,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
  ALL SERVER  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -83,26 +84,20 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  To disable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a user must have CONTROL SERVER permission on the server. To disable a DDL trigger with database scope (ON DATABASE), at a minimum, a user must have ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
+The following examples are described in the AdventureWorks2012 database.
   
 ### A. Disabling a DML trigger on a table  
  The following example disables trigger `uAddress` that was created on table `Address`.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
-  
 ```  
   
 ### B. Disabling a DDL trigger  
  The following example creates a DDL trigger `safety` with database scope, and then disables it.  
   
 ```  
-IF EXISTS (SELECT * FROM sys.triggers  
-    WHERE parent_class = 0 AND name = 'safety')  
-DROP TRIGGER safety ON DATABASE;  
-GO  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -112,18 +107,14 @@ AS
 GO  
 DISABLE TRIGGER safety ON DATABASE;  
 GO  
-  
 ```  
   
 ### C. Disabling all triggers that were defined with the same scope  
  The following example disables all DDL triggers that were created at the server scope.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
-  
 ```  
   
 ## See Also  

@@ -2,9 +2,12 @@
 title: "Replication Security Best Practices | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "Internet [SQL Server replication], security"
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Replication Security Best Practices
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replication moves data in distributed environments ranging from intranets on a single domain to applications that access data between untrusted domains and over the Internet. It is important to understand the best approach for securing replication connections under these different circumstances.  
   
  The following information is relevant to replication in all environments:  

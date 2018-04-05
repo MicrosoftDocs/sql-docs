@@ -2,12 +2,15 @@
 title: "CSDLBI Attributes for Report Design | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CSDLBI Attributes for Report Design
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] query design.  
   
 ## Model Attributes  

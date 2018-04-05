@@ -2,9 +2,12 @@
 title: "Create a Composite Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ f1_keywords:
   - "sql13.dqs.dm.cdproperties.f1"
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create a Composite Domain
   This topic describes how to create a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of one or more single domains that apply to a single data field. For more information on composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  

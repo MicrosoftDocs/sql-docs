@@ -2,20 +2,25 @@
 title: "In-Memory OLTP Garbage Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # In-Memory OLTP Garbage Collection
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A data row is considered stale if it was deleted by a transaction that is no longer active. A stale row is eligible for garbage collection. The following are characteristics of garbage collection in [!INCLUDE[hek_2](../../includes/hek-2-md.md)]:  
   
 -   Non-blocking. Garbage collection is distributed over time with minimal impact on the workload.  

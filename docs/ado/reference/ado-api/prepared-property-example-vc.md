@@ -1,12 +1,15 @@
 ---
 title: "Prepared Property Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Prepared Property Example (VC++)
 This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects — one prepared and one not prepared.  

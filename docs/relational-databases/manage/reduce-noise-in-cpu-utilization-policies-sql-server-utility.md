@@ -2,9 +2,12 @@
 title: "Reduce Noise in CPU Utilization Policies (SQL Server Utility) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.SWB.UE.ReduceNoise.F1"
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  
   
 ## How frequently should processor utilization be in violation before it is reported as overutilized?  

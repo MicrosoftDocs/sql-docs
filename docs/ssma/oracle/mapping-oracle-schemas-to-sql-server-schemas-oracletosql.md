@@ -1,19 +1,23 @@
 ---
 title: "Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "On Demand"
 ---
 # Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL)
 In Oracle, each database has one or more schemas. By default, SSMA migrates all objects in an Oracle schema to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database named for the schema. However, you can customize the mapping between Oracle schemas and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases.  

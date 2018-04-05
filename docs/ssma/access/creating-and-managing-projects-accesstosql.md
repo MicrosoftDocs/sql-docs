@@ -1,10 +1,13 @@
 ---
 title: "Creating and Managing Projects (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-access"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -22,9 +25,10 @@ helpviewer_keywords:
   - "saving projects"
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 caps.latest.revision: 22
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Creating and Managing Projects (AccessToSQL)
 To migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you must first create an SSMA project. The project is a file that contains metadata about the Access databases that you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure that will receive the migrated objects and data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connection information, and project settings.  

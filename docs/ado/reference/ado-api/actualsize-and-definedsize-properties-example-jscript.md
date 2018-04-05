@@ -1,12 +1,15 @@
 ---
 title: "ActualSize and DefinedSize Properties Example (JScript) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -18,7 +21,8 @@ ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ActualSize and DefinedSize Properties Example (JScript)
 This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field. Cut and paste the following code to Notepad or another text editor, and save it as **ActualSizeJS.asp**.  

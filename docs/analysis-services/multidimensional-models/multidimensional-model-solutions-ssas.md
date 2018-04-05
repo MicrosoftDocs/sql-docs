@@ -2,13 +2,16 @@
 title: "Multidimensional Model Solutions (SSAS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,14 +21,16 @@ ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Multidimensional Model Solutions (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
     
 ## In This Section  
  The following topics provide guidance on designing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects.  
   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
  Describes how to define an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
  [Supported Data Sources &#40;SSAS - Multidimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

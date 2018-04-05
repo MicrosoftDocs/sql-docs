@@ -2,11 +2,14 @@
 title: "Developing Custom Objects for Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-custom-objects"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -18,7 +21,8 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Developing Custom Objects for Integration Services
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
@@ -109,10 +113,6 @@ manager: "jhubbard"
 ## External Resources  
   
 -   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

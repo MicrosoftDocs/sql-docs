@@ -1,11 +1,13 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "06/29/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -39,12 +41,13 @@ helpviewer_keywords:
   - "groups [SQL Server], roles"
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Database-Level Roles
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   To easily manage the permissions in your databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several *roles* which are security principals that group other principals. They are like ***groups*** in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating system. Database-level roles are database-wide in their permissions scope.  
 
@@ -61,11 +64,11 @@ To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBE
 
 The permissions of user-defined database roles can be customized by using the GRANT, DENY, and REVOKE statements. For more information, see [Permissions (Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-For a list of all the permissions, see the [Database Engine Permissions](http://go.microsoft.com/fwlink/?LinkId=229142) poster. (Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. (Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
 
 ## Fixed-Database Roles
   
- The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. The permissions assigned to the fixed-database roles cannot be changed.   
+ The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. Except for the **public** database role, the permissions assigned to the fixed-database roles cannot be changed.   
   
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
@@ -81,7 +84,7 @@ For a list of all the permissions, see the [Database Engine Permissions](http://
 
 The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -100,7 +103,7 @@ These database roles exist only in the virtual master database. Their permission
   
 |msdb role name|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Members of these database roles can administer and use [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are upgraded from an earlier version might contain an older version of the role that was named using Data Transformation Services (DTS) instead of [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Members of these database roles can administer and use [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are upgraded from an earlier version might contain an older version of the role that was named using Data Transformation Services (DTS) instead of [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Members of these database roles can administer and use the data collector. For more information, see [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Members of the **db_ PolicyAdministratorRole** database role can perform all configuration and maintenance activities on Policy-Based Management policies and conditions. For more information, see [Administer Servers by Using Policy-Based Management](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Members of these database roles can administer and use registered server groups.|  

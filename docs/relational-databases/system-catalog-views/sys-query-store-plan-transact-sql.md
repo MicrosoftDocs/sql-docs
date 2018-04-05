@@ -1,11 +1,13 @@
 ---
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
+ms.custom: ""
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +24,13 @@ helpviewer_keywords:
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contains information about each execution plan associated with a query.  
   
@@ -35,7 +38,7 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Primary key.|  
 |**query_id**|**bigint**|Foreign key. Joins to [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together have are in the same group.<br /><br /> 0 means plan is not in a group.|  
+|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together are in the same group.<br /><br /> 0 means plan is not in a group.|  
 |**engine_version**|**nvarchar(32)**|Version of the engine used to compile the plan in **'major.minor.build.revision'** format.|  
 |**compatibility_level**|**smallint**|Database compatibility level of the database referenced in the query.|  
 |**query_plan_hash**|**binary(8)**|MD5 hash of the individual plan.|  
@@ -51,10 +54,32 @@ manager: "jhubbard"
 |**count_compiles**|**bigint**|Plan compilation statistics.|  
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
-|**last_execution_time**|**datetimeoffset**|Last execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
   
+## Plan forcing limitations
+Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
+However, there are some limitations that can prevent a plan to be enforced. 
+
+First, if the plan contains following constructions:
+* Insert bulk statement.
+* Insert bulk statement.
+* Reference to an external table
+* Distributed query or full-text operations
+* Use of Global queries 
+* Cursors
+* Invalid star join specification 
+
+Second, when objects that plan relies on, are no longer available:
+* Database (if Database, where plan originated, does not exist anymore)
+* Index (no longer there or disabled)
+
+Finally, problems with the plan itself:
+* Not legal for query
+* Query Optimizer exceeded number of allowed operations
+* Incorrectly formed plan XML
+
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
   
@@ -64,6 +89,7 @@ manager: "jhubbard"
  [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

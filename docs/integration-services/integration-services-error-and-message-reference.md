@@ -2,9 +2,12 @@
 title: "Integration Services Error and Message Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Integration Services Error and Message Reference
   The following tables list predefined [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors, warnings, and informational messages, in ascending numerical order within each category, along with their numeric codes and symbolic names. Each of these errors is defined as a field in the <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> class in the <xref:Microsoft.SqlServer.Dts.Runtime> namespace.  
@@ -356,7 +360,7 @@ manager: "jhubbard"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Object name "%1" is not valid. Name must begin with an alphabetical character.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Object name "%1" is not valid. Name must begin with an alphabetical character or underscore "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Object name "%1" is not valid. Name must contain only alphanumeric characters or underscores "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Object name "%1" is not valid. The name cannot contain any of the following characters: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Object name "%1" is not valid. The name cannot contain any of the following characters: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Failed to load the value property "%1" using default persistence.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Connection manager "%1" is not of type "%2"|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" is empty|  

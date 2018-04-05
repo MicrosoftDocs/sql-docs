@@ -2,19 +2,23 @@
 title: "Save Reports to a Report Server (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Save Reports to a Report Server (Report Builder)
   In Report Builder, you can save a report definition to a report server (also known as publishing a report). When the report is saved to a report server, other users can view the report. Each time you run the published report, you will retrieve the most current data. To save a static copy of a rendered report, export the report to a different file format and save it or use the report history feature to save versions of rendered reports.  

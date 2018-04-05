@@ -1,10 +1,13 @@
 ---
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2016"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "CREATE WORKLOAD GROUP statement"
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 caps.latest.revision: 47
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a Resource Governor workload group and associates the workload group with a Resource Governor resource pool. Resource Governor is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -34,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -59,13 +62,11 @@ CREATE WORKLOAD GROUP group_name
  Specifies the relative importance of a request in the workload group. Importance is one of the following, with MEDIUM being the default:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (default)    
 -   HIGH  
   
 > [!NOTE]  
->  Internally each importance setting is stored as a number that is used for calculations.  
+> Internally each importance setting is stored as a number that is used for calculations.  
   
  IMPORTANCE is local to the resource pool; workload groups of different importance inside the same resource pool affect each other, but do not affect workload groups in another resource pool.  
   
@@ -73,7 +74,7 @@ CREATE WORKLOAD GROUP group_name
  Specifies the maximum amount of memory that a single request can take from the pool. This percentage is relative to the resource pool size specified by MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  The amount specified only refers to query execution grant memory.  
+> The amount specified only refers to query execution grant memory.  
   
  *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 100. The default setting for *value* is 25.  
   
@@ -96,7 +97,10 @@ CREATE WORKLOAD GROUP group_name
  Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.  
   
 > [!NOTE]  
->  Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> By default, Resource Governor will not prevent a request from continuing if the maximum time is exceeded. However, an event will be generated. For more information, see [CPU Threshold Exceeded Event Class](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifies the maximum time, in seconds, that a query can wait for a memory grant (work buffer memory) to become available.  

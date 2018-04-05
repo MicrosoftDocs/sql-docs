@@ -2,9 +2,12 @@
 title: "XSD Annotations (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # XSD Annotations (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following table lists the XSD annotations that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and compares them with the XDR annotations that were introduced in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
 |XSD annotation|Description|Topic link|XDR annotation|  

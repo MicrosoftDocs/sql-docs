@@ -2,12 +2,15 @@
 title: "Logical Architecture (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +23,11 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Logical Architecture (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data mining is a process that involves the interaction of multiple components.  
   
 -   You access sources of data in a SQL Server database or any other data source to use for training, testing, or prediction.  
@@ -58,7 +63,7 @@ manager: "jhubbard"
   
  When you need to use the data in the data mining solution, Analysis Services reads the data from the source and generates a cache of aggregates and other information. By default this cache is persisted so that training data can be reused to support additional models. If you need to delete the cache, change the **CacheMode** property on the mining structure object to the value, **ClearAfterProcessing**. For more information, see [AMO Data Mining Classes](../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] also provides the ability to separate your data into training and testing data sets, so that you can test your mining models on a representative, randomly selected set of data. The data is not actually stored separately; rather, case data in the structure cache is marked with a property that indicates whether that particular case is used for training or for testing. If the cache is deleted, that information cannot be retrieved.  
+ Analysis Services also provides the ability to separate your data into training and testing data sets, so that you can test your mining models on a representative, randomly selected set of data. The data is not actually stored separately; rather, case data in the structure cache is marked with a property that indicates whether that particular case is used for training or for testing. If the cache is deleted, that information cannot be retrieved.  
   
  For more information, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   

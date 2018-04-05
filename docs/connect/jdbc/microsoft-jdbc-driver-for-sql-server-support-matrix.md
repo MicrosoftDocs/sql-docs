@@ -1,10 +1,13 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft JDBC Driver for SQL Server Support Matrix
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -21,25 +25,25 @@ manager: "jhubbard"
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   
 ## Microsoft JDBC Driver Support Lifecycle Matrix and Policy  
- The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0 and 4.x have five year Mainstream support from the driver release date. Mainstream support is defined on the  Microsoft support lifecycle website.  
+ The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x and 6.x have five year Mainstream support from the driver release date. Mainstream support is defined on the  Microsoft support lifecycle website.  
   
  Extended and custom support options are not available for the Microsoft JDBC Driver.  
     
  The following Microsoft JDBC Drivers are supported, until the indicated End of Support date.  
   
-|||||  
+|Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Driver Name|Driver Package Version|Applicable JAR(s)|End of Support|
-|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2026|    
+|Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|January 22, 2023|    
+|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|June 30, 2022|    
+|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|August 24, 2020|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|December 12, 2019|  
-|Microsoft JDBC Driver 4.0 for SQL Server|4.0|sqljdbc4.jar|March 6, 2017|  
   
  The following Microsoft JDBC Drivers are no longer supported.  
-  
-||||  
-|-|-|-|  
-|Driver Name|Driver Package Version|End of Support|  
+ 
+|Driver Name|Driver Package Version|End of Mainstream Support|  
+|-|-|-|
+|Microsoft JDBC Driver 4.0 for SQL Server|4.0|March 6, 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|April 23, 2015|  
 |Microsoft SQL Server JDBC Driver 2.0|2.0|December 31, 2012|  
 |Microsoft SQL Server 2005 JDBC Driver 1.2|1.2|June 25, 2011|  
@@ -49,18 +53,21 @@ manager: "jhubbard"
   
 ## SQL Version Compatibility  
   
-|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-|  
-|6.0|Y|Y|Y|Y|Y|Y|Y|  
-|4.2|Y|Y|Y|Y|Y|Y|Y|  
-|4.1|Y|Y|Y|Y|Y|Y|Y|  
-|4.0|Y|Y|Y|Y|Y|Y|Y|  
-|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|  
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.1|N|N|N|N|N|N|N|  
-|1.0|N|N|N|N|N|N|N|  
-|2000|N|N|N|N|N|N|N|  
+|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (Extended Private Preview)|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
   
@@ -74,9 +81,11 @@ manager: "jhubbard"
   
 ## Java and JDBC Specification Support  
   
-||||  
+|JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|JDBC Driver Version|JRE Versions|JDBC API Version|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (partially)|  
+|6.2|1.7, 1.8|4.1, 4.2|  
+|6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
 |4.2|1.7, 1.8|4.1, 4.2|  
 |4.1|1.7|4.0|  

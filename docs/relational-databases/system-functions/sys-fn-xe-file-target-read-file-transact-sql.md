@@ -1,10 +1,13 @@
 ---
 title: "sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/24/2016"
+ms.date: "06/22/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,17 +25,18 @@ helpviewer_keywords:
   - "sys.fn_xe_file_target_read_file function"
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sys.fn_xe_file_target_read_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Reads files that are created by the Extended Events asynchronous file target. One event, in XML format, is returned per row.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accepts trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only supports trace results in XEL format. We recommend that you use SQL Server Management Studio to read trace results in XEL format.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use SQL Server Management Studio to read trace results in XEL format.    
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,6 +76,8 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|The event contents, in XML format. Is not nullable.|  
 |file_name|**nvarchar(260)**|The name of the file that contains the event. Is not nullable.|  
 |file_offset|**bigint**|The offset of the block in the file that contains the event. Is not nullable.|  
+|timestamp_utc|**datetime2**|**Applies to**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
+
   
 ## Remarks  
  Reading large result sets by executing **sys.fn_xe_file_target_read_file** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] may result in an error. Use the **Results to File** mode (**Ctrl+Shift+F**) to export large result sets to a file and read the file with another tool instead.  

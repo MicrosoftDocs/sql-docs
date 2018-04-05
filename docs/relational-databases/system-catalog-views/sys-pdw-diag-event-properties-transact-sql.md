@@ -3,9 +3,11 @@ title: "sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.service: ""
+ms.component: "system-catalog-views"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,10 +18,11 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 caps.latest.revision: 7
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.pdw_diag_event_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Holds information about which properties are associated with diagnostic events.  
   

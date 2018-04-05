@@ -1,14 +1,17 @@
 ---
-title: "Create and Manage Perspectives (SSAS Tabular) | Microsoft Docs"
+title: "Create and Manage Perspectives | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/22/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -17,22 +20,12 @@ ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Create and Manage Perspectives (SSAS Tabular)
+# Create and manage perspectives 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Perspectives define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model. The tasks in this topic describe how to create and manage perspectives by using the **Perspectives** dialog box in the model designer.  
-  
- This topic includes the following tasks:  
-  
--   [To add a perspective](#bkmk_add)  
-  
--   [To edit a perspective](#bkmk_edit)  
-  
--   [To rename a perspective](#bkmk_rename)  
-  
--   [To delete a perspective](#bkmk_delete)  
-  
--   [To copy a perspective](#bkmk_copy)  
   
 ## Tasks  
  To create perspectives, you will use the **Perspectives** dialog box, where you can add, edit, delete, copy, and view perspectives. To view the **Perspectives** dialog box, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click on the **Model** menu, and then click **Perspectives**.  
@@ -59,8 +52,8 @@ manager: "erikre"
   
 -   When you hover over a perspective’s column header, the **Copy** button appears. To create a copy of that perspective, click the **Copy** button. A copy of the selected perspective is added as a new perspective to the right of existing perspectives. The new perspective inherits the name of the copied perspective and a *- Copy* annotation is appended to the end of the name. For example, if a copy of the *Sales* perspective is created, the new perspective is called *Sales – Copy*.  
   
-## See Also  
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Hierarchies &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+## See also  
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

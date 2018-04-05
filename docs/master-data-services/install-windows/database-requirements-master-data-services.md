@@ -2,18 +2,22 @@
 title: "Database Requirements (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Database Requirements (Master Data Services)
   All master data is stored in a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database. The computer that hosts this database must run an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

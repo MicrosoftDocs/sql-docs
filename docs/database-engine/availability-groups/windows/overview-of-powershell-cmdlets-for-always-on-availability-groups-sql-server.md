@@ -1,10 +1,13 @@
 ---
 title: "Overview of PowerShell Cmdlets for Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/30/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -17,10 +20,11 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Overview of PowerShell Cmdlets for Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
   
@@ -50,8 +54,8 @@ manager: "jhubbard"
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|**Disable-SqlAlways On**|Disables the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the **Path**, **InputObject**, or **Name** parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|**Enable-SqlAlways On**|Enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|**Disable-SqlAlwaysOn**|Disables the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the **Path**, **InputObject**, or **Name** parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
+|**Enable-SqlAlwaysOn**|Enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |**New-SqlHadrEndPoint**|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**Set-SqlHadrEndpoint**|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
   

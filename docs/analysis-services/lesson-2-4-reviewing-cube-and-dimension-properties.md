@@ -2,11 +2,14 @@
 title: "Reviewing Cube and Dimension Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 2-4 - Reviewing Cube and Dimension Properties
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 After you have defined a cube, you can review the results by using Cube Designer. In the following task, you review the structure of the cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project.  
   
 ### To review cube and dimension properties in Cube Designer  

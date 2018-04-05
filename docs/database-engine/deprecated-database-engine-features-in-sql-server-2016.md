@@ -1,11 +1,13 @@
 ---
 title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "06/12/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,15 +18,18 @@ helpviewer_keywords:
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Deprecated Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
-  
+  This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
+
+For [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], see [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
+
  You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
  The value of these counters are also available by executing the following statement:  
@@ -44,11 +49,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Remote servers|@@remserver|Replace remote servers by using linked servers.|None|None|  
+|Remote servers|\@\@remserver|Replace remote servers by using linked servers.|None|None|  
 |Remote servers|SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Set options|**SET ROWCOUNT** for **INSERT**, **UPDATE**, and **DELETE** statements|TOP keyword|SET ROWCOUNT|109|  
 |Table hints|HOLDLOCK table hint without parenthesis.|Use HOLDLOCK with parenthesis.|HOLDLOCK table hint without parenthesis|167|  
-|Tools|sqlmaint Utility|Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintenance plan feature|None|None|  
   
 ## Features Not Supported in a Future Version of SQL Server  
  The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features are supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but will be removed in a later version. The specific version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has not been determined.  
@@ -148,7 +152,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL as a column name in DML statements.|Use $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL as a column name in DML statements.|Use $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of #, ## as temporary table and temporary stored procedure names.|Use at least one additional character.|'#' and '##' as the name of temporary tables and stored procedures|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of @, @@, or @@ as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers.|Do not use @ or @@ or names that begin with @@ as identifiers.|'@' and names that start with '@@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of \@, \@\@, or \@\@ as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers.|Do not use \@ or \@\@ or names that begin with \@\@ as identifiers.|'\@' and names that start with '\@\@' as [!INCLUDE[tsql](../includes/tsql-md.md)] identifiers|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of DEFAULT keyword as default value.|Do not use the word DEFAULT as a default value.|DEFAULT keyword as a default value|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Use of a space as a separator between table hints.|Use a comma to separate table hints.|Multiple table hints without comma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|The select list of an aggregate indexed view must contain COUNT_BIG (*) in 90 compatibility mode|Use COUNT_BIG (*).|Index view select list without COUNT_BIG(*)|2|  

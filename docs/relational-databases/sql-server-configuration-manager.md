@@ -1,11 +1,13 @@
 ---
 title: "SQL Server Configuration Manager | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/25/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "07/13/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,19 +25,23 @@ helpviewer_keywords:
   - "configuration manager [SQL Server]"
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # SQL Server Configuration Manager
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > For content related to previous versions of SQL Server, see [SQL Server Configuration Manager](https://msdn.microsoft.com/en-US/library/ms174212(SQL.120).aspx).
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a tool to manage the services associated with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], to configure the network protocols used by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and to manage the network connectivity configuration from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client computers. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console snap-in that is available from the Start menu, or can be added to any other [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console display. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) uses the **SQLServerManager\<version>.msc** file (such as **SQLServerManager13.msc** for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) to open Configuration Manager. Here are the paths to the last four versions when Windows in installed on the C drive.  
   
 |||  
-|-|-|  
+|-|-|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
 > [!NOTE]  
 >  Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager does not appear as an application in newer versions of Windows.  

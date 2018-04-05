@@ -2,20 +2,25 @@
 title: "An error occurred during an attempt to establish a connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # An error occurred during an attempt to establish a connection
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This error occurs if you query [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data on a server that does not have [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installed. It also occurs if the SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) service is stopped, or if you are attempting to view [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data from an earlier version.  
   
 ## Details  

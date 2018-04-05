@@ -2,13 +2,18 @@
 title: "Using Connection String Keywords with SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client|applications"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
+f1_keywords: 
+  - "sql13.swb.connecttoserver.options.registeredservers.f1"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], connection string keywords"
   - "SQLNCLI, connection string keywords"
@@ -16,11 +21,13 @@ helpviewer_keywords:
   - "SQL Server Native Client, connection string keywords"
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 caps.latest.revision: 81
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Using Connection String Keywords with SQL Server Native Client
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  

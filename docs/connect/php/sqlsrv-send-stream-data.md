@@ -3,8 +3,11 @@ title: "sqlsrv_send_stream_data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +48,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Boolean : **true** if there is more data to be sent. Otherwise, **false**.  
   
 ## Example  
-The following example opens a product review as a stream and sends it to the server. The default behavior of sending the all stream data at the time of execution is disabled. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example opens a product review as a stream and sends it to the server. The default behavior of sending the all stream data at the time of execution is disabled. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -94,6 +98,8 @@ sqlsrv_close( $conn);
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

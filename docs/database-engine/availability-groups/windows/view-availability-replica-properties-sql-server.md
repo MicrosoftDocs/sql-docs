@@ -2,9 +2,12 @@
 title: "View Availability Replica Properties (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # View Availability Replica Properties (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to view the properties of an availability replica for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **To view availability replica properties, using:**  
@@ -38,6 +43,9 @@ manager: "jhubbard"
 4.  Right-click the availability replica whose properties you want to view, and select the **Properties** command.  
   
 5.  In the **Availability Replica Properties** dialog box, use the **General** page to view the properties of this replica. If you are connected to the primary replica, you can change the following properties: availability mode, failover mode, connection access for the primary role, read-access for the secondary role (readable-secondary), and the session-timeout value. For more information, see [Availability Replica Properties &#40;General Page&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md).  
+
+   [!NOTE]
+   >If the cluster type is none, you cannot change the failover mode.
   
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

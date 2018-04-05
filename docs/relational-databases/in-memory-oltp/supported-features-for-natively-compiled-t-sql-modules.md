@@ -1,10 +1,13 @@
 ---
 title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/23/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 44
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   This topic contains a list of T-SQL surface area and supported features in the body of natively compiled T-SQL modules, such as stored procedures ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), scalar user-defined functions, inline table-valued functions, and triggers.  
@@ -45,19 +49,29 @@ manager: "jhubbard"
 
 The following query constructs are supported:  
 
+CASE expression: CASE can be used in any statement or clause that allows a valid expression.
+   - **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+
 SELECT clause:  
 
 -   Columns and  name aliases (using either AS or = syntax).  
 
--   Scalar subqueries  
+-   Scalar subqueries
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], scalar subqueries are now supported in natively compiled modules.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
 
 -   Variable assignments  
 
@@ -67,15 +81,22 @@ FROM clause:
 
 -   FROM \<natively compiled inline TVF>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS are now supported in natively compiled modules.
 
--   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+-   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Subqueries are now supported in natively compiled modules.
 
 WHERE clause:  
 
 -   Filter predicate IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:
@@ -112,7 +133,7 @@ HAVING clause:
   - This limit may be lowered in case the query contains joins or aggregate functions. (For example, with one join (two tables), the limit is 4,096 rows. With two joins (three tables), the limit is 2,730 rows.)  
   - You can obtain results greater than 8,192 by storing the number of rows in a variable:  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -171,8 +192,8 @@ The following DML statements are supported.
 -   Bitwise operators ~, &, |, and ^  
 
 -   APPLY operator
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the APPLY operator is supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the APPLY operator is supported in natively compiled modules.
 
 ##  <a name="bfncsp"></a> Built-in Functions in Natively Compiled Modules  
  The following functions are supported in constraints on memory-optimized tables and in natively compiled T-SQL modules.  
@@ -182,8 +203,8 @@ The following DML statements are supported.
 -   Date functions: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME, and YEAR.  
 
 -   String functions: LEN, LTRIM, RTRIM, and SUBSTRING.  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the following built-in functions are also supported: TRIM, TRANSLATE, and CONCAT_WS.  
 
 -   Identity functions: SCOPE_IDENTITY  
 
@@ -192,8 +213,8 @@ The following DML statements are supported.
 -   Uniqueidentifier functions: NEWID and NEWSEQUENTIALID  
 
 -   JSON functions  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, the JSON functions are supported in natively compiled modules.
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], the JSON functions are supported in natively compiled modules.
 
 -   Error functions: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE  
 
@@ -232,7 +253,7 @@ The following DML statements are supported.
 
  Example with TOP N = 8192: Compiles  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -245,7 +266,7 @@ GO
 
  Example with TOP N > 8192: Fails to compile.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -260,7 +281,7 @@ GO
 
  Example using a variable: Compiles  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

@@ -3,8 +3,11 @@ title: "sys.soap_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.soap_endpoints catalog view"
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.soap_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -34,7 +38,7 @@ manager: "jhubbard"
  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\< inherited columns>**||For a list of columns that this view inherits, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< inherited columns>**||For a list of columns that this view inherits, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_sql_language_enabled**|**bit**|1 = BATCHES = ENABLED option was specified, meaning that ad-hoc SQL batches are allowed on the endpoint.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|The three-part name of the stored procedure that implements this method.<br /><br /> Names of methods require strict three-part syntax. one, two, or four-part names are not allowed.|  
 |**default_database**|**sysname**|The name of the default database given in the DATABASE = option.<br /><br /> NULL = DEFAULT was specified.|  

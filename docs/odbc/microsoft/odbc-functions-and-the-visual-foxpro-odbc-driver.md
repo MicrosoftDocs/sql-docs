@@ -3,8 +3,11 @@ title: "ODBC Functions and the Visual FoxPro ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -24,6 +27,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC Functions and the Visual FoxPro ODBC Driver
 The topics in this section provide a brief summary of ODBC API functions and any Visual FoxPro–specific details.  

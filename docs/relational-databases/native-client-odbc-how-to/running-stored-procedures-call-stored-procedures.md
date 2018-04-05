@@ -2,22 +2,27 @@
 title: "Call Stored Procedures (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "stored procedures [ODBC], calling"
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Running Stored Procedures - Call Stored Procedures
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver supports executing stored procedures as remote stored procedures. Executing a stored procedure as a remote stored procedure allows the driver and the server to optimize the performance of executing the procedure.  

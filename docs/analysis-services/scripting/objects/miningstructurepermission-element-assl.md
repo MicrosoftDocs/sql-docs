@@ -2,12 +2,15 @@
 title: "MiningStructurePermission Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,9 +28,11 @@ ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MiningStructurePermission Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Defines the permissions that members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have on an individual [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  
   
 ## Syntax  

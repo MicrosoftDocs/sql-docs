@@ -2,12 +2,15 @@
 title: "Formatting a Chart (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -55,7 +58,8 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Formatting a Chart (Report Builder and SSRS)
   After you have defined the data for your chart and it is appearing the way you want, you can add formatting to improve the overall appearance and highlight key data points. The most common formatting options can be modified from the Properties dialog box that are found when you right-click a chart element to display its shortcut menu. Each chart element has its own dialog box. For more information about chart elements, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

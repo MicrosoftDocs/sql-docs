@@ -2,9 +2,12 @@
 title: "Specify an Interval of Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Specify an Interval of Change Data
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are **datetime** values and will be stored in package variables for use later in the package.  
@@ -40,7 +44,7 @@ manager: "jhubbard"
   
          This example uses the variable name, ExtractEndTime.  
   
- If you calculate the endpoints in a master package that executes multiple child packages, you can use Parent Package Variable configurations to pass the values of these variables to each child package. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ If you calculate the endpoints in a master package that executes multiple child packages, you can use Parent Package Variable configurations to pass the values of these variables to each child package. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ## Calculate a Starting Point and an Ending Point for Change Data  
  After you set up the package variables for the interval endpoints, you can calculate the actual values for those endpoints and map those values to the corresponding package variables. Because those endpoints are **datetime** values, you will have to use functions that can calculate or work with **datetime** values. Both the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression language and Transact-SQL have functions that work with **datetime** values:  
@@ -89,7 +93,7 @@ manager: "jhubbard"
   
     4.  For **SQLStatement**, enter the following SQL statement:  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   

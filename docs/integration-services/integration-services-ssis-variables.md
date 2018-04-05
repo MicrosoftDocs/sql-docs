@@ -2,9 +2,12 @@
 title: "Integration Services (SSIS) Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,8 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 60
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Integration Services (SSIS) Variables
   Variables store values that a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and its containers, tasks, and event handlers can use at run time. The scripts in the Script task and the Script component can also use variables. The precedence constraints that sequence tasks and containers into a workflow can use variables when their constraint definitions include expressions.  
@@ -125,7 +129,17 @@ manager: "jhubbard"
  When the system resets the **IncludeInDebugDump** option to **false**, this might override the value selected by the user.  
   
 **Value**    
- The value of a user-defined variable can be a literal or an expression. A variable includes options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
+The value of a user-defined variable can be a literal or an expression. The value of a variable can't be null. Variables have the following default values:
+
+| Data type | Default value |
+|---|---|
+| Boolean | False |
+| Numeric and binary data types | 0 (zero) |
+| Char and string data types | (empty string) |
+| Object | System.Object |
+| | |
+
+A variable has options for setting the variable value and the data type of the value. The two properties must be compatible: for example, the use of a string value together with an integer data type is not valid.  
   
  If the variable is configured to evaluate as an expression, you must provide an expression. At run time, the expression is evaluated, and the variable is set to the evaluation result. For example, if a variable uses the expression `DATEPART("month", GETDATE())` the value of the variable is the number equivalent of the month for the current date. The expression must be a valid expression that uses the [!INCLUDE[ssIS](../includes/ssis-md.md)] expression grammar syntax. When an expression is used with variables, the expression can use literals and the operators and functions that the expression grammar provides, but the expression cannot reference the columns from a data flow in the package. The maximum length of an expression is 4000 characters. For more information, see [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -306,6 +320,6 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
  To dynamically update variables, you can create configurations for the variables, deploy the configurations with the package, and then update the variable values in the configuration file when you deploy the packages. At run time, the package uses the updated variable values. For more information, see [Create Package Configurations](../integration-services/packages/create-package-configurations.md).  
 
 ## Related Tasks  
- [Use the Values of Variables and Parameters in a Child Package](../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Use the Values of Variables and Parameters in a Child Package](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Map Query Parameters to Variables in a Data Flow Component](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

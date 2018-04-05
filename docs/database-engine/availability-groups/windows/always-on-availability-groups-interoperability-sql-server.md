@@ -1,10 +1,13 @@
 ---
 title: "Always On Availability Groups: Interoperability (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "04/20/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -16,22 +19,13 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Always On Availability Groups: Interoperability (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic documents interoperability of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
- **In This Topic:**  
-  
--   [Features That Interoperate with Always On Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#Interop)  
-  
--   [Features that Interoperate with Always On Availability Groups with Restrictions](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#restrictions)  
-  
--   [Features that Do Not Interoperate with Always On Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#NoInterop)  
-  
--   [Related Content](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#RelatedContent)  
   
 ##  <a name="Interop"></a> Features That Interoperate with Always On Availability Groups  
  The following table lists [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features that interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A link in the **More Information** column indicates that interoperability considerations exist for a given feature.  
@@ -56,7 +50,7 @@ manager: "jhubbard"
 ##  <a name="restrictions"></a> Features that Interoperate with Always On Availability Groups with Restrictions  
  The following features interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with specific restrictions. See the linked topics for details.  
   
--   Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016 Technical Preview 2). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)  
+-   Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)  
   
 ##  <a name="NoInterop"></a> Features that Do Not Interoperate with Always On Availability Groups  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] does not interoperate with the following features:  

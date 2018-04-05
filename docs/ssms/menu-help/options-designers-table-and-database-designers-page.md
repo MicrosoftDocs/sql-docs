@@ -3,8 +3,11 @@ title: "Options (Designers - Table and Database Designers Page) | Microsoft Docs
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Options (Designers - Table and Database Designers Page)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
   
 ## UIElement List  

@@ -2,12 +2,15 @@
 title: "MSReportServer_Instance Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apiname: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "MSReportServer_Instance class"
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Members
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

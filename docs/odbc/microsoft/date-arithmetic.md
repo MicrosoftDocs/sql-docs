@@ -3,8 +3,11 @@ title: "Date Arithmetic | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Date Arithmetic
 The driver supports adding and subtracting an integer from a DATE, TIME, or TIMESTAMP column. For a DATE column, the integer specifies the number of days to add or subtract. For a TIME or TIMESTAMP column, the integer specifies the number of seconds to add or subtract.

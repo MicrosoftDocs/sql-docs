@@ -2,13 +2,16 @@
 title: "Set Data Source Properties (SSAS Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Set Data Source Properties (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a data source object specifies a connection to an external data warehouse or relational database that provides data to a multidimensional model. Properties on the data source determine the connection string, a timeout interval, maximum number of connections, and the transaction isolation level.  
   
 ## Set data source properties in SQL Server Data Tools  

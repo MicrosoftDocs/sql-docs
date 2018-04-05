@@ -3,8 +3,11 @@ title: "Walkthrough: Adding and Changing a Database Diagram | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Walkthrough: Adding and Changing a Database Diagram
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 This walkthrough illustrates how to create and modify a database diagram and make changes to the database through the database diagrams component. You will see how to add tables to diagrams, create relationships between tables, create constraints and indexes on columns, and change the level of information you see for each table.  
   
 ## Prerequisites  

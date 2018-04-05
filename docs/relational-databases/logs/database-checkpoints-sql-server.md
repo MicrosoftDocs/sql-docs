@@ -1,9 +1,13 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
 ms.date: "09/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "logs"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,11 +30,13 @@ helpviewer_keywords:
   - "active logs"
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Database Checkpoints (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.  
  
   

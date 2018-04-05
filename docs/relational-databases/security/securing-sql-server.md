@@ -2,9 +2,12 @@
 title: "Securing SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,11 +22,13 @@ helpviewer_keywords:
   - "applications [SQL Server], security"
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Securing SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
   
  You can find more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security at the [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) Web site. This includes a best practice guide and a security checklist. This site also contains the latest service pack information and downloads.  
@@ -48,7 +53,7 @@ manager: "jhubbard"
 |For information about|See|  
 |---------------------------|---------|  
 |Configuring a firewall to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configure a Windows Firewall for Access to the SSIS Service](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
@@ -142,7 +147,6 @@ GO
 [SQL Server 2012 Security Best Practices - Operational and Administrative Tasks](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server Security Blog](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Security Best Practice and Label Security Whitepapers](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
-[Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
 [Row-Level Security](../../relational-databases/security/row-level-security.md)   
 [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   

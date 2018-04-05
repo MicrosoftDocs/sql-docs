@@ -2,9 +2,12 @@
 title: "Uninstall Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
   - "setup-install"
@@ -15,13 +18,16 @@ caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Uninstall Power Pivot for SharePoint
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Uninstalling a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
- **In this topic:**  
+ **In this article:**  
   
 -   [Prerequisites](#prereq)  
   

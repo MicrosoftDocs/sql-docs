@@ -2,12 +2,15 @@
 title: "Using the RSClientPrint Control in Custom Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "client-side printing"
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 31
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Using the RSClientPrint Control in Custom Applications
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX control, **RSPrintClient**, provides client-side printing for reports viewed in HTML Viewer. It provides a **Print** dialog box so that a user can initiate a print job, preview a report, specify pages to print, and change the margins. During a client-side print operation, the report server renders the report in the Image (EMF) rendering extension and uses the print capabilities of the operating system to create the print job and send it to a printer.  
@@ -105,7 +109,7 @@ manager: "erikre"
   
 |Argument|I/O|Type|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|Specifies the report server virtual directory (for example, https://adventure-works/reportserver).|  
+|ServerPath|In|String|Specifies the report server virtual directory (for example, `https://adventure-works/reportserver`).|  
 |ReportPathParameters|In|String|Specifies the full name to the report in the report server folder namespace, including parameters. Reports are retrieved through URL access. For example: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|In|String|The short name of the report (in the example above, the short name is Employee Sales Summary). It appears in the Print dialog box and in the print queue.|  
   

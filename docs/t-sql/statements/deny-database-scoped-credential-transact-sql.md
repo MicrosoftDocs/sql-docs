@@ -3,8 +3,11 @@ title: "DENY Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], database scoped credential"
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DENY Database Scoped Credential (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Denies permissions on a database scoped credential.  
 

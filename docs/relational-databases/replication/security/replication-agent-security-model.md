@@ -2,9 +2,12 @@
 title: "Replication Agent Security Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,13 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 caps.latest.revision: 72
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Replication Agent Security Model
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
 > [!IMPORTANT]  

@@ -2,41 +2,45 @@
 title: "Report Viewer Web Part Programmability in SharePoint Integration | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
   - "SQL Server 2016 Preview"
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Report Viewer Web Part Programmability in SharePoint Integration
   The Report Viewer Web Part is a  server control, which contains a set of public application programming interfaces (API) that enables developers to create custom SharePoint applications. You can create custom Web Parts that supply report path and parameters to Report Viewer Web Part using Web Part connections. You can also embed the Web Part in a custom SharePoint Web Part page and customize it using the public API.  
   
 ## Connecting to Report Viewer Web Part with Custom Web Parts  
- The Report Viewer Web Part is a connection consumer to SharePoint Web Parts that implement <xref:System.Web.UI.WebControls.IWebPartRow> or T:Microsoft.SharePoint.WebPartPages.IFilterValues. An <xref:System.Web.UI.WebControls.IWebPartRow> Web Part, such as the **Documents** Web Part can supply a report path to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part. Likewise, an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part, such as the **Text Filter** or the **Choice Filter**, can supply a report parameter to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part.  
+ The Report Viewer Web Part is a connection consumer to SharePoint Web Parts that implement <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> or T:Microsoft.SharePoint.WebPartPages.IFilterValues. An <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part, such as the **Documents** Web Part can supply a report path to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part. Likewise, an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part, such as the **Text Filter** or the **Choice Filter**, can supply a report parameter to a Report Viewer Web Part when placed on the same Web Part page as the Report Viewer Web Part.  
   
 ### Implementing a Report Path Provider with IWebPartRow  
  To supply a report path to the Report Viewer Web Part through Web Part connections, do the following:  
   
-1.  Create a Web Part that implements the <xref:System.Web.UI.WebControls.IWebPartRow> interface.  
+1.  Create a Web Part that implements the <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> interface.  
   
 2.  Add the Web Part to the same Web Part page as the Report Viewer Web Part.  
   
 3.  Connect your Web Part to the Report Viewer Web Part in the Web-based Web Part design user interface.  
   
     > [!NOTE]  
-    >  You can only connect one <xref:System.Web.UI.WebControls.IWebPartRow> Web Part to the Report Viewer Web Part at a time, and you cannot connect both an <xref:System.Web.UI.WebControls.IWebPartRow> Web Part and an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part at the same time.  
+    >  You can only connect one <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part to the Report Viewer Web Part at a time, and you cannot connect both an <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part and an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part at the same time.  
   
- For your <xref:System.Web.UI.WebControls.IWebPartRow> Web Part to work properly with the T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, you must do the following in the <xref:System.Web.UI.WebControls.IWebPartRow.GetRowData%2A> method:  
+ For your <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part to work properly with the T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, you must do the following in the <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> method:  
   
 -   Invoke the callback method with a <xref:System.Data.DataRowView> object as the input parameter.  
   
@@ -57,6 +61,6 @@ manager: "erikre"
 3.  Connect your T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part in the Web-based Web Part design user interface.  
   
     > [!NOTE]  
-    >  You can connect multiple T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Parts to the Report Viewer Web Part at a time. However, you cannot connect both an <xref:System.Web.UI.WebControls.IWebPartRow> Web Part and an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part at the same time.  
+    >  You can connect multiple T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Parts to the Report Viewer Web Part at a time. However, you cannot connect both an <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web Part and an T:Microsoft.SharePoint.WebPartPages.IFilterValues Web Part to the Report Viewer Web Part at the same time.  
   
   

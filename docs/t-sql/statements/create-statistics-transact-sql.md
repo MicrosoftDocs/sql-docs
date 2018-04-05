@@ -1,10 +1,13 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2016"
+ms.date: "01/04/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -26,12 +29,13 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates query optimization statistics on one or more columns of a table, an indexed view, or an external table. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics with CREATE STATISTICS or modify the query design to improve query performance.  
   
@@ -55,10 +59,13 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ WHERE <filter_predicate> ]  
     [ WITH   
         [ [ FULLSCAN   
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-          | STATS_STREAM = stats_stream ] ]   
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -75,6 +82,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -125,16 +137,16 @@ CREATE STATISTICS statistics_name
   
 -   CLR user-defined type columns can be specified if the type supports binary ordering. Computed columns defined as method invocations of a user-defined type column can be specified if the methods are marked deterministic.  
   
- WHERE <filter_predicate>  
+ WHERE \<filter_predicate> 
  Specifies an expression for selecting a subset of rows to include when creating the statistics object. Statistics that are created with a filter predicate are called filtered statistics. The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a **hierarchyID** data type column. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
   
  Here are some examples of filter predicates for the Production.BillOfMaterials table:  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  For more information about filter predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
@@ -151,6 +163,11 @@ CREATE STATISTICS statistics_name
  SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
  We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is created but does not contain statistics data.  
+ 
+ PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+ When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
+ 
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM **=***stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -171,30 +188,39 @@ CREATE STATISTICS statistics_name
  If per partition statistics are not supported an error is generated. Incremental stats are not supported for following statistics types:  
   
 -   Statistics created with indexes that are not partition-aligned with the base table.  
-  
 -   Statistics created on Always On readable secondary databases.  
-  
 -   Statistics created on read-only databases.  
-  
 -   Statistics created on filtered indexes.  
-  
 -   Statistics created on views.  
-  
 -   Statistics created on internal tables.  
-  
 -   Statistics created with spatial indexes or XML indexes.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
+MAXDOP = *max_degree_of_parallelism*  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Overrides the **max degree of parallelism** configuration option for the duration of the statistic operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+  
+ *max_degree_of_parallelism* can be:  
+  
+ 1  
+ Suppresses parallel plan generation.  
+  
+ \>1  
+ Restricts the maximum number of processors used in a parallel statistic operation to the specified number or fewer based on the current system workload.  
+  
+ 0 (default)  
+ Uses the actual number of processors or fewer based on the current system workload.  
+  
+ \<update_stats_stream_option> 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## Permissions  
  Requires one of these permissions:  
   
 -   ALTER TABLE  
-  
 -   User is the table owner  
-  
 -   Membership in the **db_ddladmin** fixed database role  
   
 ## General Remarks  
@@ -213,42 +239,36 @@ CREATE STATISTICS statistics_name
  The [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) catalog view tracks each column in the filtered statistics predicate as a referencing dependency. Consider the operations that you perform on table columns before creating filtered statistics because you cannot drop, rename, or alter the definition of a table column that is defined in a filtered statistics predicate.  
   
 ## Limitations and Restrictions  
-*  Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
-*  You can list up to 64 columns per statistics object.
+* Updating statistics is not supported on external tables. To update statistics on an external table, drop and re-create the statistics.  
+* You can list up to 64 columns per statistics object.
+* The MAXDOP option is not compatible with STATS_STREAM, ROWCOUNT and PAGECOUNT options.
   
 ## Examples  
-  
+
+### Examples use the AdventureWorks database.  
+
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT  
  The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database.  
   
-```  
+```sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
-  
 ```  
   
 ### B. Using CREATE STATISTICS with FULLSCAN and NORECOMPUTE  
  The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and disables automatic recomputing of statistics.  
   
-```  
+```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
-  
 ```  
   
 ### C. Using CREATE STATISTICS to create filtered statistics  
  The following example creates the filtered statistics `ContactPromotion1`. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
   
-```  
-USE AdventureWorks2012;  
-GO  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
+```sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -261,54 +281,46 @@ GO
   
  Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
   
-```  
+```sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
 --Create statistics on an external table and scan all the rows  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
-  
 ```  
+
+### E. Using CREATE STATISTICS with FULLSCAN and PERSIST_SAMPLE_PERCENT  
+ The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitely specify a sampling percentage.  
+  
+```sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### Examples using AdventureWorksDW database. 
   
-### E. Create statistics on two columns  
+### F. Create statistics on two columns  
  The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
   
-```  
+```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
-### F. Create statistics by using a full scan  
+### G. Create statistics by using a full scan  
  The following example creates the `CustomerStatsFullScan` statistics, based on scanning all of the rows in the `DimCustomer` table.  
   
-```  
-CREATE STATISTICS CustomerStatsFullScan ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
+```sql  
+CREATE STATISTICS CustomerStatsFullScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
-### G. Create statistics by specifying the sample percentage  
+### H. Create statistics by specifying the sample percentage  
  The following example creates the `CustomerStatsSampleScan` statistics, based on scanning 50 percent of the rows in the `DimCustomer` table.  
   
-```  
-CREATE STATISTICS CustomerStatsSampleScan ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
-```  
-  
-### H. Create filtered statistics  
- The following example creates the filtered statistics `ContactPromotion1`. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
-  
-```  
--- Uses AdventureWorks  
-  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
-CREATE STATISTICS ContactPromotion1  
-    ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
-WHERE EmailPromotion = 2  
-WITH SAMPLE 50 PERCENT;  
-GO  
+```sql  
+CREATE STATISTICS CustomerStatsSampleScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
 ## See Also  
@@ -321,3 +333,4 @@ GO
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
+

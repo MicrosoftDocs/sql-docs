@@ -2,13 +2,16 @@
 title: "Create or Customize a Data Feed Library (Power Pivot for SharePoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create or Customize a Data Feed Library (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A *data feed library* is a special-purpose SharePoint library that enables you to register and share Atom data service documents (.atomsvc). These documents provide XML data feeds to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks or other client applications that support the Atom data feed format. A data feed library is different from other SharePoint libraries because it gives you the ability to:  
   
 -   Create or edit a *data service document*, used to specify an HTTP connection to a specific feed.  

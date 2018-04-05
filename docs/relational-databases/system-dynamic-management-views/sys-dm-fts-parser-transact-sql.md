@@ -3,8 +3,11 @@ title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,10 +26,11 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_fts_parser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the final tokenization result after applying a given [word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), and [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combination to a query string input. The tokenization result is equivalent to the output of the Full-Text Engine for the specified query string.  
   

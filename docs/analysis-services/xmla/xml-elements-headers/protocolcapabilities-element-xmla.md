@@ -2,12 +2,15 @@
 title: "ProtocolCapabilities Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
@@ -25,14 +28,16 @@ helpviewer_keywords:
   - "ProtocolCapabilities element"
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProtocolCapabilities Element (XMLA)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a client application.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
 ## Syntax  
   

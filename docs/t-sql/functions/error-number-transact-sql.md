@@ -3,8 +3,11 @@ title: "ERROR_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "CATCH block"
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # ERROR_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the error number of the error that caused the CATCH block of a TRY…CATCH construct to be run.  
   
@@ -36,8 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ERROR_NUMBER ( )  
 ```  
   
@@ -95,21 +97,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C. Using ERROR_NUMBER in a CATCH block  
- The following code example shows a `SELECT` statement that generates a divide-by-zero error. The number of the error is returned.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_NUMBER() AS ErrorNumber;  
-END CATCH;  
-GO  
-```  
-  
-### D. Using ERROR_NUMBER in a CATCH block with other error-handling tools  
+### C. Using ERROR_NUMBER in a CATCH block with other error-handling tools  
  The following code example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error number, information that relates to the error is returned.  
   
 ```  

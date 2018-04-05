@@ -2,9 +2,12 @@
 title: "Replication Agents | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "replication [SQL Server], agents and profiles"
 ms.assetid: e257186c-4af4-4d02-bd4d-712264a9dace
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Replication Agents
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replication uses many stand-alone programs, which are named "agents," to perform the tasks associated with tracking changes and distributing data. This section of the documentation contains parameter references for the following replication agents.  
   
 ## In This Section  

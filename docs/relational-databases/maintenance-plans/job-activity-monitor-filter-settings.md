@@ -2,9 +2,12 @@
 title: "Job Activity Monitor (Filter Settings) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ f1_keywords:
   - "sql13.swb.jobactivitymon.filter.f1"
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Job Activity Monitor (Filter Settings)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this page to reduce the number of rows visible in the Job Activity Monitor. Enter criteria in one or several of the available boxes, to show only the rows that meet the specified values. Some of the boxes, such as **Status** or **Blocking Type** offer a finite number of possible values, provided by a drop-down list. Others, such as **Application,** allow you to enter whatever value and as many values as you wish, as a comma separated list. Toolbar icons allow you to sort the available boxes by category or alphabetically. Click the criteria to show a short description of the each one.  
   
  To filter the Job Activity Monitor, provide as many filter criteria as you want, click **Apply filter**, and then click **OK**.  

@@ -2,19 +2,23 @@
 title: "Power Pivot Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is published in a SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery.  
@@ -30,7 +34,7 @@ manager: "erikre"
  Use report data source type **Microsoft SQL Server Analysis Services**.  
   
 ## Connection String  
- The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+ The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## Credentials  
  Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  

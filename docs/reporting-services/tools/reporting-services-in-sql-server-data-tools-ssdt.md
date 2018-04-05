@@ -1,13 +1,16 @@
 ---
 title: "Reporting Services in SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "tools"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,10 +19,13 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
+
 # Reporting Services in SQL Server Data Tools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
  This topic describes [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] solutions, projects, project templates, and configurations used for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and the views, menus, toolbars, and shortcuts that you can use in Report Designer.  
   
@@ -305,11 +311,12 @@ manager: "erikre"
     |In a text box, select text from the current cursor position to the end of the expression|CTRL+SHIFT+END|  
     |Open the shortcut menu for the selected report item|SHIFT+F10+Property Key on newer keyboards|
   
-## See Also  
+## Next steps
+
 [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
- [Solution Explorer](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
- [Reporting Services Reports &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[Solution Explorer](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Reporting Services Reports](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

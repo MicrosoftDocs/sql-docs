@@ -1,10 +1,13 @@
 ---
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/30/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,14 +25,18 @@ helpviewer_keywords:
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,6 +85,9 @@ WHERE database_id = DB_ID();
  Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the lifetime of the route is unchanged.  
   
  ADDRESS **='***next_hop_address'*  
+
+ For SQL Database Managed Instance, `ADDRESS` must be local.
+
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  

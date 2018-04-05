@@ -1,10 +1,13 @@
 ---
 title: "@@PROCID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,12 +28,13 @@ helpviewer_keywords:
   - "module object identifiers [SQL Server]"
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
-# @@PROCID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# &#x40;&#x40;PROCID (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the object identifier (ID) of the current [!INCLUDE[tsql](../../includes/tsql-md.md)] module. A [!INCLUDE[tsql](../../includes/tsql-md.md)] module can be a stored procedure, user-defined function, or trigger. @@PROCID cannot be specified in CLR modules or the in-process data access provider.  
   
@@ -39,7 +43,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@PROCID  
 ```  
   

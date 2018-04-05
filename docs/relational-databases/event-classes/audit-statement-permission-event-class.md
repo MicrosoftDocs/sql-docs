@@ -2,9 +2,12 @@
 title: "Audit Statement Permission Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ helpviewer_keywords:
   - "Audit Statement Permission event class"
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Audit Statement Permission Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Audit Statement Permission** event class occurs whenever a statement permission (such as CREATE TABLE) is used.  
   
  The **Audit Statement Permission** event class may be removed from a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is recommended that you use the **Audit Schema Object Management** event class instead.  

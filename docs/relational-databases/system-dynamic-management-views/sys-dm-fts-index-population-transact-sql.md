@@ -3,8 +3,11 @@ title: "sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "dmv's"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,10 +25,11 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about the full-text index and semantic key phrase populations currently in progress in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -55,9 +59,10 @@ manager: "jhubbard"
  When statistical semantic indexing is enabled in addition to full-text indexing, the semantic extraction and population of key phrases, and the extraction of document similarity data, occur simultaneously with full-text indexing. The population of the document similarity index occurs later in a second phase. For more information, see [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
- 
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+  
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Significant joins of this dynamic management view")  
   

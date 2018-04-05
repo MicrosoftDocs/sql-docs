@@ -3,8 +3,11 @@ title: "Setting ODBC Connection Pooling Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Setting ODBC Connection Pooling Options
 Connection pooling enables an application to use a connection from a pool of connections that do not need to be reestablished for each use. You can use the **Connection Pooling** tab of the **ODBC Data Source Administrator** dialog box to enable and disable performance monitoring. Double-click a driver name to set the connection time-out period.  

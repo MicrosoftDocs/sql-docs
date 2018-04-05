@@ -2,9 +2,12 @@
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "configure-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "Extended Protection"
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Connect to the Database Engine Using Extended Protection
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
   
 > [!IMPORTANT]  

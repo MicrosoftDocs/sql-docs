@@ -1,10 +1,13 @@
 ---
 title: "CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,21 +32,24 @@ helpviewer_keywords:
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a scheme in the current database that maps the partitions of a partitioned table or index to filegroups. The number and domain of the partitions of a partitioned table or index are determined in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
-  
+
+>[!NOTE]
+>In Azure SQL Database only primary filegroups are supported.  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
@@ -148,9 +154,8 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  Executing the statement returns the following message.  
   
-```  
 Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked as the next used filegroup in partition scheme 'myRangePS4'.  
-```  
+  
   
  If partition function `myRangePF4` is changed to add a partition, filegroup `test5fg` receives the newly created partition.  
 

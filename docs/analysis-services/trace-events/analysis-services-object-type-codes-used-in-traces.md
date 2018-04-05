@@ -2,20 +2,25 @@
 title: "Analysis Services object type codes used in traces | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services object type codes used in traces
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This page lists the object type (a six digit number) of each object in an Analysis Services data model. These codes appear in trace logs and are used to identify the type of object associated with a particular lock. For example, a lock timeout on a database will indicate the object type 100002, which is the Database object type.  
   
 > [!NOTE]  

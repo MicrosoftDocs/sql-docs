@@ -2,12 +2,15 @@
 title: "How to: Deploy a Data Processing Extension to Report Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 41
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Deploying a Data Processing Extension to Report Designer
   Report Designer uses data processing extensions for retrieving and processing data while you are designing reports. You should deploy your data processing extension assembly to Report Designer as a private assembly. You also need to make an entry in the Report Designer configuration file, RSReportDesigner.config.  

@@ -3,8 +3,11 @@ title: "sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,18 +21,15 @@ helpviewer_keywords:
   - "sp_create_plan_guide_from_handle"
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates one or more plan guides from a query plan in the plan cache. You can use this stored procedure to ensure the query optimizer always uses a specific query plan for a specified query. For more information about plan guides, see [Plan Guides](../../relational-databases/performance/plan-guides.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -82,7 +82,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### A. Creating a plan guide from a query plan in the plan cache  
  The following example creates a plan guide for a single SELECT statement by specifying a query plan from the plan cache. The example begins by executing a simple `SELECT` statement for which the plan guide will be created. The plan for this query is examined by using the `sys.dm_exec_sql_text` and `sys.dm_exec_text_query_plan` dynamic management views. The plan guide is then created for the query by specifying the query plan in the plan cache that is associated with the query. The final statement in the example verifies that the plan guide exists.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

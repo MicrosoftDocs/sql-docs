@@ -2,12 +2,15 @@
 title: "Formatting Report Items (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -16,7 +19,8 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Formatting Report Items (Report Builder and SSRS)
   Formatting the items in your report makes the report look more attractive and enhances its readability. You can format the text boxes and individual items within text boxes, the images, the expressions, and the data while in report design mode.  

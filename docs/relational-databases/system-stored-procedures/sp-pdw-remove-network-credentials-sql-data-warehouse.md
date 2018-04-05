@@ -2,10 +2,12 @@
 title: "sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
-ms.suite: ""
+ms.component: "system-stored-procedures"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,10 +18,11 @@ ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_pdw_remove_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   This removes network credentials stored in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to perform backup and restore operations on a server that resides within your own network.  
   

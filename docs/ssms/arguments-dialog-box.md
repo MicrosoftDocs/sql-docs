@@ -3,8 +3,11 @@ title: "Arguments Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Arguments Dialog Box
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The **Arguments** dialog box specifies new or existing arguments for a tool. This dialog box appears when you launch an external tool that has the **Prompt for arguments** option selected in the **External Tools** dialog box.  
   
 ## Options  

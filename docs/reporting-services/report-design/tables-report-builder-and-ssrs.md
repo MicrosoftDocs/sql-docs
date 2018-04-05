@@ -2,19 +2,23 @@
 title: "Tables (Report Builder  and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tables (Report Builder  and SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], you can use a table to display detail data or grouped data, or a combination of both in a paginated report.   

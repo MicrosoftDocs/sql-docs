@@ -2,11 +2,14 @@
 title: "Adding Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "building-packages-programmatically"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -22,7 +25,8 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Adding Data Flow Components Programmatically
   When you build a data flow, you start by adding components. Then you configure those components and connect them together to establish the flow of data at run time. This section describes adding a component to the data flow task, creating the design-time instance of the component, and then configuring the component. For information about how to connect components, see [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -281,11 +285,7 @@ End Module
   
 ## External Resources  
  Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /><br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
-  
+
 ## See Also  
  [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   

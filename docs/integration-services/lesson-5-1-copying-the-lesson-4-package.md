@@ -2,9 +2,12 @@
 title: "Step 1: Copying the Lesson 4 Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Lesson 5-1 - Copying the Lesson 4 Package
 In this task, you will create a copy of the Lesson 4.dtsx package that you created in Lesson 4. Alternatively, you can add the completed lesson 4 package that is included with the tutorial to the project, and then copy it instead. You will use this new copy throughout the rest of Lesson 5.  

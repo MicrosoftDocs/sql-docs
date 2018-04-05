@@ -3,8 +3,11 @@ title: "semanticsimilaritytable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,10 +23,11 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # semanticsimilaritytable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a table of zero, one, or more rows for documents whose content in the specified columns is semantically similar to a specified document.  
   
@@ -33,7 +37,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 SEMANTICSIMILARITYTABLE  
     (  
     table,  

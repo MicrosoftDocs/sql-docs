@@ -2,11 +2,14 @@
 title: "Defining Named Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 6-2 - Defining Named Sets
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 A named set is a Multidimensional Expressions (MDX) expression that returns a set of dimension members. You can define named sets and save them as part of the cube definition; you can also create named sets in client applications. You create named sets by combining cube data, arithmetic operators, numbers, and functions. Named sets can be used by users in MDX queries in client applications and can also be used to define sets in subcubes. A subcube is a collection of crossjoined sets that restricts the cube space to the defined subspace for subsequent statements. Defining a restricted cube space is a fundamental concept to MDX scripting.  
   
 Named sets simplify MDX queries and provide useful aliases for complex, typically used, set expressions. For example, you can define a named set called Large Resellers that contains the set of members in the Reseller dimension that have the most employees. End users could then use the Large Resellers named set in queries, or you could use the named set to define a set in a subcube. Named set definitions are stored in cubes, but their values exist only in memory. To create a named set, use the **New Named Set** command on the **Calculations** tab of Cube Designer. For more information, see [Calculations](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Create Named Sets](../analysis-services/multidimensional-models/create-named-sets.md).  

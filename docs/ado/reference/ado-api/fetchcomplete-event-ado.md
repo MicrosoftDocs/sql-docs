@@ -1,12 +1,15 @@
 ---
 title: "FetchComplete Event (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # FetchComplete Event (ADO)
 The **FetchComplete** event is called after all the records in a lengthy asynchronous operation have been retrieved into the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

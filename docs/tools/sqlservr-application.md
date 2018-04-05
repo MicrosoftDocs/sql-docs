@@ -2,9 +2,12 @@
 title: "sqlservr Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "sqlservr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,11 +26,13 @@ helpviewer_keywords:
   - "continuing instance of SQL Server"
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sqlservr Application
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from a command prompt.  
   
 ## Syntax  
@@ -93,7 +98,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
- These messages may indicate that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g**``switch.  
+ These messages may indicate that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is trying to free parts of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool in order to find space for items such as extended stored procedure .dll files or automation objects. In this case, consider increasing the amount of memory reserved by the **-g** switch.  
   
  Using a value lower than the default increases the amount of memory available to the buffer pool and thread stacks; this may, in turn, provide some performance benefit to memory-intensive workloads in systems that do not use many extended stored procedures, distributed queries, or automation objects.  
   

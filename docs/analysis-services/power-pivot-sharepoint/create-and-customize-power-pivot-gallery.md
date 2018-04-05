@@ -2,22 +2,27 @@
 title: "Create and Customize Power Pivot Gallery | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create and Customize Power Pivot Gallery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special type of SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  
   
 ##  <a name="bkmk_top"></a> In this topic  

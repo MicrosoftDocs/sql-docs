@@ -1,32 +1,34 @@
 ---
-title: "Bi-directional cross filters - tabular models - Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+title: "Bi-directional cross filters in tabular models| Microsoft Docs"
+ms.custom: ""
+ms.date: "02/21/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
+  
+ms.component: multidimensional-tabular
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
-# Bi-directional cross filters - tabular models - Analysis Services
+# Bi-directional cross filters in tabular models
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   New in SQL Server 2016 is a built-in approach for enabling *bi-directional cross filters* in tabular models, eliminating the need for hand-crafted DAX workarounds for propagating filter context across table relationships.  
   
  Breaking the concept down into its component parts: *cross filtering* is the ability to set a filter context on a table based on values in a related table, and *bi-directional* is the transference of a filter context to second related table on the other side of a table relationship. As the name implies, you can slice in both directions of the relationship rather than just one way.  Internally, two-way filtering expands filter context to query a superset of your data.  
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- In SSDT, the mechanics of setting up a cross filter is through the Filter Direction option in the  table relationships dialog box. This feature is available only for tabular models created at the 1200 compatibility level in [SQL Server Data Tools for Visual Studio 2015 (SSDT)](http://go.microsoft.com/fwlink/p/?LinkID=627574).  
-  
- There are two types of cross filters: one- and two-way filtering. One-way is the traditional many-to-one filter direction between fact and dimensional tables in that relationship. Two-way is a cross-filter that enables the filter context of one relationship to be used as the filter context for another table relationship, with  one table common to both relationships.  
+ There are two types of cross filters: One-way and two-way filtering. One-way is the traditional many-to-one filter direction between fact and dimensional tables in that relationship. Two-way is a cross-filter that enables the filter context of one relationship to be used as the filter context for another table relationship, with  one table common to both relationships.  
   
  Given **DimDate** and **DimProduct** with foreign key relationships to **FactOnlineSales**, a two-way cross filter is equivalent of **FactOnlineSales-to-DimDate** plus **FactOnlineSales-to-DimProduct** used simultaneously.  
   
@@ -84,7 +86,7 @@ manager: "erikre"
   
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## Learn step by step  
+## Learn step-by-step  
  You can try out bi-directional cross filters by stepping through this walkthrough. To follow along, you’ll need:  
   
 -   SQL Server 2016 Analysis Services instance, tabular mode, latest CTP release  
@@ -105,7 +107,7 @@ manager: "erikre"
   
 3.  In Tabular Model Designer, set the workspace database to a SQL Server 2016 Preview Analysis Services instance in tabular server mode.  
   
-4.  Verify model compatibility level is set to **SQL Server 2016 RTM (1200)**.  
+4.  Verify model compatibility level is set to **SQL Server 2016 RTM (1200)** or higher.  
   
      Click **OK** to create the project.  
   
@@ -193,14 +195,14 @@ manager: "erikre"
   
  You should now see that both product counts and sales are filtered by the same filter context, one that includes not only manufacturers from **DimProducts** but also calendar year from **DimDate**.  
   
-## Conclusion and next steps  
+## Next steps  
  Understanding when and how a bi-directional cross filter can be a matter of trial and error to see how it works in your scenario. At times, you’ll find that the built-in behaviors are not sufficient and will need to fall back on DAX computations to get the job done. In the **See Also** section, you’ll find several links to additional resources on this subject.  
   
  In practical terms, cross-filtering can enable forms of data exploration typically delivered only through a many-to-many construction. Having said that, it’s important to recognize that bi-directional cross-filtering is not a many-to-many construct.  An actual many-to-many table configuration remains unsupported in the designer for tabular models in this release.  
   
-## See Also  
+## See also  
  [Create and manage relationships in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [A practical example of how to handle simple many-to-manay relationships in Power Pivot and SSAS tabular models](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [A practical example of how to handle simple many-to-manay relationships in Power Pivot and tabular models](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [Resolving many-to-many relationships leveraging DAX cross-table filtering](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Many to many revolution (SQLBI blog)](http://www.sqlbi.com/articles/many2many/)  
   

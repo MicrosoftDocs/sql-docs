@@ -2,9 +2,12 @@
 title: "Expression Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "control-flow"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Expression Task
   The Expression Task creates and evaluates expressions that set variable values at runtime, using the Expression Builder. When you edit the task, the [Expression Builder](../../integration-services/expressions/expression-builder.md) is launched.  

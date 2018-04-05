@@ -3,8 +3,11 @@ title: "sqlsrv_get_config | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "php"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,6 +48,8 @@ If **false** is returned by **sqlsrv_get_config**, you must call [sqlsrv_errors]
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
+
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   

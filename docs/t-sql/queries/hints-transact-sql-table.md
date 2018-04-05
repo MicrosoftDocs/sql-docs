@@ -1,10 +1,13 @@
 ---
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/20/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -37,12 +40,13 @@ helpviewer_keywords:
   - "PAGLOCK table hint"
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: 174
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Hints (Transact-SQL) - Table
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Table hints override the default behavior of the query optimizer for the duration of the data manipulation language (DML) statement by specifying a locking method, one or more indexes, a query-processing operation such as a table scan or index seek, or other options. Table hints are specified in the FROM clause of the DML statement and affect only the table or view referenced in that clause.  
   
@@ -120,7 +124,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## Arguments  
- WITH **(** <table_hint> **)** [ [**,** ]...*n* ]  
+ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
  With some exceptions, table hints are supported in the FROM clause only when the hints are specified with the WITH keyword. Table hints also must be specified with parentheses.  
   
 > [!IMPORTANT]  
@@ -128,13 +132,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  The following table hints are allowed with and without the WITH keyword: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT, and NOEXPAND. When these table hints are specified without the WITH keyword, the hints should be specified alone. For example:  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  When the hint is specified with another option, the hint must be specified with the WITH keyword:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -194,7 +198,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |Combined with an INDEX hint|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|The query optimizer considers only index seek operations to access the table or view through the specified index.|  
 |Parameterized by specifying an index and index columns|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|The query optimizer considers only index seek operations to access the table or view through the specified index using at least the specified index columns.|  
   
- When using the FORCESEEK hint (with or without index parameters), consider the following guidelines.  
+When using the FORCESEEK hint (with or without index parameters), consider the following guidelines.  
   
 -   The hint can be specified as a table hint or as a query hint. For more information about query hints, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -206,7 +210,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   If FORCESEEK causes no plan to be found, error 8622 is returned.  
   
- When FORCESEEK is specified with index parameters, the following guidelines and restrictions apply.  
+When FORCESEEK is specified with index parameters, the following guidelines and restrictions apply.  
   
 -   The hint cannot be specified for a table that is the target of an INSERT, UPDATE, or DELETE statement.  
   
@@ -293,9 +297,9 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Specifies that read operations comply with the rules for the READ COMMITTED isolation level by using locking. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] acquires shared locks as data is read and releases those locks when the read operation is completed, regardless of the setting of the READ_COMMITTED_SNAPSHOT database option. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). This hint cannot be specified on the target table of an INSERT statement; error 4140 is returned.  
   
  READPAST  
- Specifies that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] not read rows that are locked by other transactions. When READPAST is specified, row-level locks are skipped. That is, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] skips past the rows instead of blocking the current transaction until the locks are released. For example, assume table `T1` contains a single integer column with the values of 1, 2, 3, 4, 5. If transaction A changes the value of 3 to 8 but has not yet committed, a SELECT * FROM T1 (READPAST) yields values 1, 2, 4, 5. READPAST is primarily used to reduce locking contention when implementing a work queue that uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. A queue reader that uses READPAST skips past queue entries locked by other transactions to the next available queue entry, without having to wait until the other transactions release their locks.  
+ Specifies that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] not read rows that are locked by other transactions. When READPAST is specified, row-level locks are skipped but page-level locks are not skipped. That is, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] skips past the rows instead of blocking the current transaction until the locks are released. For example, assume table `T1` contains a single integer column with the values of 1, 2, 3, 4, 5. If transaction A changes the value of 3 to 8 but has not yet committed, a SELECT * FROM T1 (READPAST) yields values 1, 2, 4, 5. READPAST is primarily used to reduce locking contention when implementing a work queue that uses a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. A queue reader that uses READPAST skips past queue entries locked by other transactions to the next available queue entry, without having to wait until the other transactions release their locks.  
   
- READPAST can be specified for any table referenced in an UPDATE or DELETE statement, and any table referenced in a FROM clause. When specified in an UPDATE statement, READPAST is applied only when reading data to identify which records to update, regardless of where in the statement it is specified. READPAST cannot be specified for tables in the INTO clause of an INSERT statement. Read operations that use READPAST do not block. Update or delete operations that use READPAST may block when reading foreign keys or indexed views, or when modifying secondary indexes.  
+ READPAST can be specified for any table referenced in an UPDATE or DELETE statement, and any table referenced in a FROM clause. When specified in an UPDATE statement, READPAST is applied only when reading data to identify which records to update, regardless of where in the statement it is specified. READPAST cannot be specified for tables in the INTO clause of an INSERT statement. Update or delete operations that use READPAST may block when reading foreign keys or indexed views, or when modifying secondary indexes.  
   
  READPAST can only be specified in transactions operating at the READ COMMITTED or REPEATABLE READ isolation levels. When specified in transactions operating at the SNAPSHOT isolation level, READPAST must be combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  
   
@@ -338,13 +342,11 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Is equivalent to HOLDLOCK. Makes shared locks more restrictive by holding them until a transaction is completed, instead of releasing the shared lock as soon as the required table or data page is no longer needed, whether the transaction has been completed or not. The scan is performed with the same semantics as a transaction running at the SERIALIZABLE isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables). For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -352,9 +354,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the maximum number of cells to use for tessellating a geometry or geography object. *number* is a value between 1 and 8192.  
   
@@ -365,7 +365,7 @@ LEFT JOIN dbo.[Order History] AS oh
  TABLOCK  
  Specifies that the acquired lock is applied at the table level. The type of lock that is acquired depends on the statement being executed. For example, a SELECT statement may acquire a shared lock. By specifying TABLOCK, the shared lock is applied to the entire table instead of at the row or page level. If HOLDLOCK is also specified, the table lock is held until the end of the transaction.  
   
- When importing data into a heap by using the INSERT INTO <target_table> SELECT \<columns> FROM <source_table> statement, you can enable optimized logging and locking for the statement by specifying the TABLOCK hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+ When importing data into a heap by using the INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> statement, you can enable optimized logging and locking for the statement by specifying the TABLOCK hint for the target table. In addition, the recovery model of the database must be set to simple or bulk-logged. For more information, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
  When used with the [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) bulk rowset provider to import data into a table, TABLOCK enables multiple clients to concurrently load data into the target table with optimized logging and locking. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
@@ -398,7 +398,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## Filtered Index Hints  
  A filtered index can be used as a table hint, but will cause the query optimizer to generate error 8622 if it does not cover all of the rows that the query selects. The following is an example of an invalid filtered index hint. The example creates the filtered index `FIBillOfMaterialsWithComponentID` and then uses it as an index hint for a SELECT statement. The filtered index predicate includes data rows for ComponentIDs 533, 324, and 753. The query predicate also includes data rows for ComponentIDs 533, 324, and 753 but extends the result set to include ComponentIDs 855 and 924, which are not in the filtered index. Therefore, the query optimizer cannot use the filtered index hint and generates error 8622. For more information, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -421,6 +421,9 @@ GO
  NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  However, for the optimizer to consider indexed views for matching, or use an indexed view that is referenced with the NOEXPAND hint, the following SET options must be set to ON.  
+ 
+> [!NOTE]  
+>  Azure SQL Database supports automatic use of indexed views without specifying the NOEXPAND hint.
   
 ||||  
 |-|-|-|  
@@ -444,7 +447,7 @@ GO
 ### A. Using the TABLOCK hint to specify a locking method  
  The following example specifies that a shared lock is taken on the `Production.Product` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and is held until the end of the UPDATE statement.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -455,7 +458,7 @@ GO
 ### B. Using the FORCESEEK hint to specify an index seek operation  
  The following example uses the FORCESEEK hint without specifying an index to force the query optimizer to perform an index seek operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  
@@ -468,7 +471,7 @@ GO
   
  The following example uses the FORCESEEK hint with an index to force the query optimizer to perform an index seek operation on the specified index and index column.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -483,7 +486,7 @@ GO
 ### C. Using the FORCESCAN hint to specify an index scan operation  
  The following example uses the FORCESCAN hint to force the query optimizer to perform a scan operation on the `Sales.SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

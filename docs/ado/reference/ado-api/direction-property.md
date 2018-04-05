@@ -1,12 +1,15 @@
 ---
 title: "Direction Property | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Direction Property
 Indicates whether the [parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, an input and an output parameter, or if the parameter is the return value from a stored procedure.  

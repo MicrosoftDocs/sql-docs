@@ -2,13 +2,16 @@
 title: "Designing Aggregations (Analysis Services - Multidimensional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -18,9 +21,11 @@ ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Designing Aggregations (Analysis Services - Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Aggregations are precalculated summaries of cube data that help enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to provide rapid query responses.  
   
  To set storage options and design aggregations for a partition, use the Aggregation Design Wizard. The wizard operates on a single partition of a measure group at a time so that you can select different options and designs for each partition. The wizard takes you through steps to configure storage and design aggregation for a partition. For more information about configuring storage, see.  

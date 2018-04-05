@@ -1,12 +1,13 @@
 ---
 title: "Get started by running the Enable Database for Stretch Wizard | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "stretch-database"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-stretch"
 ms.tgt_pltfrm: ""
@@ -28,12 +29,14 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Get started by running the Enable Database for Stretch Wizard
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
- To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This topic describes the info that you have to enter and the choices that you have to make in the wizard.  
+
+ To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This article describes the info that you have to enter and the choices that you have to make in the wizard.  
   
  To learn more about Stretch Database, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md). 
  

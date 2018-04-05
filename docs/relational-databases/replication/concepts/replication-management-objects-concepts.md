@@ -1,12 +1,15 @@
 ---
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/08/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "programming [SQL Server replication], RMO"
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Replication Management Objects (RMO) is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO is implemented by the <xref:Microsoft.SqlServer.Replication> namespace.  
   
@@ -181,7 +185,10 @@ manager: "jhubbard"
   
 > [!IMPORTANT]  
 >  Although the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class supports declaring explicit transactions when setting properties, such transactions may interfere with internal replication transactions, can produce unanticipated results, and should not be used with RMO.  
-  
+
+### Enabling TLS 1.2 Support for RMO Components 
+ TLS1.2 support for RMO Components on Windows 2012 and lower can be enabled by installing the update [KB 3140245](http://support.microsoft.com/help/3140245), and creating the registry keys as mentioned in the article. On Windows 2012 R2 and later versions, only the registry keys as mentioned in above article, need to be created.
+ 
 ## Example  
  This example demonstrates the caching of property changes. Changes made to the attributes of a transactional publication are cached until they are explicitly sent to the server.  
   

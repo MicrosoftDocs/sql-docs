@@ -2,9 +2,12 @@
 title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,16 +16,17 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
-You may have to download the ODBC driver you need from Microsoft or from a third party. For info about the data sources that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
+You may have to download the ODBC driver you need from Microsoft or from a third party.
 
 You may also have to look up the required connection info that you have to provide. This third-party site - [The Connection Strings Reference](https://www.connectionstrings.com/) - contains sample connection strings and more info about data providers and the connection info they require.
 
-## Check the list of installed ODBC drivers
+## Make sure the driver you want is installed
 1.  Search for or browse to the **ODBC Data Sources (64-bit)** applet in the Control Panel. If you only have a 32-bit driver, or you know that you have to use a 32-bit driver, search for or browse to **ODBC Data Sources (32-bit)** instead.
 2.  Launch the applet. The **ODBC Data Source Administrator** window opens.
 3.  On the **Drivers** tab, you can find a list of all the ODBC drivers installed on your computer. (The names of some of the drivers may be listed in multiple languages.)
@@ -31,8 +35,10 @@ You may also have to look up the required connection info that you have to provi
 
     ![Installed 64-bit ODBC drivers](../../integration-services/import-export-data/media/installed-64-bit-odbc-drivers.png)
 
-    > [!TIP]
-    > If you know that your driver's installed and you don't see it in the 64-bit applet, look in the 32-bit applet instead. This also tells you whether you have to run the 64-bit or 32-bit SQL Server Import and Export Wizard.
+> [!TIP]
+> If you know that your driver's installed and you don't see it in the 64-bit applet, look in the 32-bit applet instead. This also tells you whether you have to run the 64-bit or 32-bit SQL Server Import and Export Wizard.
+>
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
     
 ## Step 1 - Select the data source
 The ODBC drivers installed on your computer aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source on the **Choose a Data Source** or **Choose a Destination** page of the wizard. This provider acts as a wrapper around the ODBC driver.
@@ -46,15 +52,19 @@ The next step is to provide the connection info for your ODBC driver and your da
 1.  Provide a **DSN** (data source name) that already exists or that you create with the **ODBC Data Source Administrator** applet in the Control Panel. A DSN is the saved collection of settings required to connect to an ODBC data source.
 
     If you already know the DSN name, or know how to create a new DSN now, you can skip the rest of this page. Enter the DSN name in the **Dsn** field on the **Choose a Data Source** or **Choose a Destination** page, then continue to the next step of the wizard.
+
+    [Provide a DSN](#odbc_dsn)
     
 2.  Provide a **connection string**, which you can look up online, or create and test on your computer with the **ODBC Data Source Administrator** applet.
 
     If you already have the connection string or know how to create it, you can skip the rest of this page. Enter the connection string in the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page, then continue to the next step of the wizard.
 
-If you provide a connection string, the **Choose a Data Source** or **Choose a Destination** page displays all the connection info that the wizard is going to use to connect to your data source, such as server and database name and authentication method; if you provide a DSN, this information isn't visible in the wizard.
+    [Provide a connection string](#odbc_connstring)
 
-## Option 1 - Provide a DSN
-If you want to provide your connection information with a DSN (data source name), use the **ODBC Data Source Administrator** applet to find the name of the existing DSN, or to create a new DSN.
+If you provide a connection string, the **Choose a Data Source** or **Choose a Destination** page displays all the connection info that the wizard is going to use to connect to your data source, such as server and database name and authentication method. If you provide a DSN, this information isn't visible.
+
+## <a name="odbc_dsn"></a> Option 1 - Provide a DSN
+If you want to provide the connection information with a DSN (data source name), use the **ODBC Data Source Administrator** applet to find the name of the existing DSN, or to create a new DSN.
 1.  Search for or browse to the **ODBC Data Sources (64-bit)** applet in the Control Panel. If you only have a 32-bit driver, or have to use a 32-bit driver, search for or browse to **ODBC Data Sources (32-bit)** instead.
 2.  Launch the applet. The **ODBC Data Source Administrator** window opens. Here's what the applet looks like.
 
@@ -76,12 +86,14 @@ If you want to provide your connection information with a DSN (data source name)
     
 8.  Go back to the wizard and enter the DSN name in the **Dsn** field on the **Choose a Data Source** or **Choose a Destination** page. Continue to the next step of the wizard.
 
-## Option 2 - Provide a connection string
-If you want to provide your connection information with a connection string, the rest of the sections in this topic help you get the connection string you need.
+## <a name="odbc_connstring"></a> Option 2 - Provide a connection string
+If you want to provide your connection information with a connection string, the rest of this topic helps you get the connection string you need.
 
 This example is going to use the following connection string, which connects to Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Enter the connection string in the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
@@ -96,7 +108,7 @@ Here's the screen that you see after entering the connection string.
 To find connection strings for your ODBC driver online, see [The Connection Strings Reference](https://www.connectionstrings.com/). This third-party site contains sample connection strings and more info about data providers and the connection info they require.
 
 ## Get the connection string with an app
-To build and test the connection string for your ODBC driver on your own computer, you can use the **ODBC Data Source Administrator** applet in the Control Panel. Create a File DSN for your connection, then copy settings out of the File DSN to assemble a reliable connection string.
+To build and test the connection string for your ODBC driver on your own computer, you can use the **ODBC Data Source Administrator** applet in the Control Panel. Create a File DSN for your connection, then copy settings out of the File DSN to assemble the connection string. This requires several steps, but helps to make sure you have a valid connection string.
 
 1.  Search for or browse to the **ODBC Data Sources (64-bit)** applet in the Control Panel. If you only have a 32-bit driver, or have to use a 32-bit driver, search for or browse to **ODBC Data Sources (32-bit)** instead.
 2.  Launch the applet. The **ODBC Data Source Administrator** window opens.
@@ -126,27 +138,31 @@ To build and test the connection string for your ODBC driver on your own compute
 
 10. Open the saved file with Notepad or another text editor. Here are the contents of our SQL Server example.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Copy and paste the necessary values into a connection string in which the name-value pairs are separated by semi-colons.
 
     After you assemble the necessary values from the sample file DSN, you have the following connection string.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     You don't typically need all the settings in a DSN created by the ODBC Data Source Administrator to create a connection string that works.  
     -   You always have to specify the ODBC driver.
     -   For a server-based data source like SQL Server, you typically need Server, Database, and login information. So in the sample DSN, you don't need TrustServerCertificate, WSID, or APP.
     -   For a file-based data source, you need at least file name and location.
     
-12. Paste this connection string into the **ConnectionString** field on the the **Choose a Data Source** or **Choose a Destination** page of the wizard. The wizard parses the string and you're ready to continue!
+12. Paste this connection string into the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page of the wizard. The wizard parses the string and you're ready to continue!
 
     ![Connect to SQL with ODBC after](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 

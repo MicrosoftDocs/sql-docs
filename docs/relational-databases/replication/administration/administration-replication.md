@@ -2,9 +2,12 @@
 title: "Administration (Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -17,11 +20,13 @@ helpviewer_keywords:
   - "merge replication [SQL Server replication], administering"
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Administration (Replication)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section contains information on administering replication topologies. We recommend that you read the best practices topic first, and then follow the links from that topic to more detailed information in this section and other sections.  
   
 ## In This Section  

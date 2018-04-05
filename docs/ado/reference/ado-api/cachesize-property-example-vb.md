@@ -1,12 +1,15 @@
 ---
 title: "CacheSize Property Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CacheSize Property Example (VB)
 This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  

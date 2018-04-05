@@ -2,9 +2,12 @@
 title: "Data Collector Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "data-collection"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "data collector [SQL Server], security"
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Data Collector Security
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The data collector uses the role-based security model implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This model lets the database administrator run the various data collector tasks in a security context that has only the permissions required to perform that task. This approach is also used for operations involving internal tables, which can only be accessed by using a stored procedure or view. No permissions are granted to internal tables. Instead, permissions are checked on the user of the stored procedure or view that is used to access a table.  
   
 > [!IMPORTANT]  
@@ -90,7 +95,7 @@ manager: "jhubbard"
   
 -   **db_ssisoperator**  
   
- For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### dc_proxy Role  
  Members of the **dc_proxy** role have Read access to data collector collection sets and collector-level properties. Members of this role can also execute jobs that they own and create job steps that run as an existing proxy account.  
@@ -109,7 +114,7 @@ manager: "jhubbard"
   
 -   **db_ssisoperator**  
   
- For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## Permissions for Configuring and Using the Management Data Warehouse  
  Depending on the task, users must be members of one or more of the fixed database roles provided for accessing the management data warehouse. In order of most-privileged to least-privileged access, the roles are as follows:  

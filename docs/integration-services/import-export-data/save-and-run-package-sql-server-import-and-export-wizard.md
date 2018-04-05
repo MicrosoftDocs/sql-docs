@@ -2,9 +2,12 @@
 title: "Save and Run Package (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 caps.latest.revision: 69
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Save and Run Package (SQL Server Import and Export Wizard)
   After you specify and configure your data source and destination, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) package to customize it and to reuse it later.
@@ -64,7 +68,7 @@ If you started the wizard from an Integration Services project in Visual Studio 
  **Package protection level**  
  Select a protection level from the list to help protect the data in the package.  
   
- The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only. For more info about the available options, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only. For more info about the available options, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  **Password**  
  Type a password.  

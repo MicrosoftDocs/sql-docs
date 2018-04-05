@@ -3,8 +3,11 @@ title: "Discard Changes Made to Diagrams (Visual Database Tools) | Microsoft Doc
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,11 @@ ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can discard changes in your database diagram that you do not want to save in the database.  
   
 ### To discard pending modifications  

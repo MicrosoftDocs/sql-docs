@@ -3,9 +3,12 @@ title: "Data generation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/30/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-non-specified"
+ms.service: ""
+ms.component: "samples"
 ms.technology: 
   - " database-engine "
 ms.topic: "article"
@@ -13,10 +16,12 @@ ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
 caps.latest.revision: 4
 author: "BarbKess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # WideWorldImporters data generation
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The released versions of the WideWorldImporters and WideWorldImportersDW databases contains data starting January 1st 2013, up to the day these databases were generated.
 
 If the sample databases are used at a later date, for demonstration or illustration purposes, it may be beneficial to include more recent sample data in the database.

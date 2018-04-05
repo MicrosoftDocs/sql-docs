@@ -3,8 +3,11 @@ title: "sys.tcp_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,19 +23,20 @@ helpviewer_keywords:
   - "sys.tcp_endpoints catalog view"
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.tcp_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contains one row for each TCP endpoint that is in the system. The endpoints that are described by **sys.tcp_endpoints** provide an object to grant and revoke the connection privilege. The information that is displayed regarding ports and IP addresses is not used to configure the protocols and may not match the actual protocol configuration. To view and configure protocols, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\< inherited columns>**||Inherits columns from [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< inherited columns>**||Inherits columns from [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**port**|int|The port number that the endpoint is listening on. Is not nullable.|  
 |**is_dynamic_port**|bit|1 = Port number was dynamically assigned.<br /><br /> Is not nullable.|  
 |**ip_address**|**nvarchar(45)**|Listener IP address as specified by the LISTENER_IP clause. Is nullable.|  

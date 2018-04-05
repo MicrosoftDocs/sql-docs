@@ -2,12 +2,15 @@
 title: "Subscription and Delivery Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "report-server-web-service"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 caps.latest.revision: 42
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Subscription and Delivery Methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  

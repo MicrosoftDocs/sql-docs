@@ -2,22 +2,27 @@
 title: "Configure Power Pivot Health Rules | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Power Pivot Health Rules
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint includes SharePoint health rules that help you monitor and remedy server availability and configuration problems. Health rules that apply to [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint appear in the Review rule definitions page.  
   
  Health rules provide early detection of server problems that could eventually result in service disruptions. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint provides a number of rules to help you identify and fix problems before they impact your users. You can customize many of these rules to fit the unique characteristics of your deployment. For example, if you want more time to address warnings about disk space, you could raise the available disk space percentage from 5% to 10% so that you get the warning earlier.  

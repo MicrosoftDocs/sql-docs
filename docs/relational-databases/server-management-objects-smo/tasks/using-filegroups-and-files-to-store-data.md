@@ -1,12 +1,15 @@
 ---
 title: "Using Filegroups and Files to Store Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/06/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "smo"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,17 +20,20 @@ helpviewer_keywords:
   - "storage [SMO]"
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Using Filegroups and Files to Store Data
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   Data files are used to store database files. The data files are subdivided into file groups. The <xref:Microsoft.SqlServer.Management.Smo.Database> object has a <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> property that references a <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> object. Each <xref:Microsoft.SqlServer.Management.Smo.FileGroup> object in that collection has a <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> property. This property refers to a <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> collection that contains all the data files that belong to the database. A file group is principally used to group files together that are used to store a database object. One reason for spreading a database object over several files is that it can improve performance, especially if the files are stored on different disk drives.  
   
  Every database that is created automatically has a file group named "Primary" and a data file with the same name as the database. Additional files and groups can be added to the collections.  
   
 ## Examples  
- For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Adding FileGroups and DataFiles to a Database in Visual Basic  
  The primary file group and data file are created automatically with default property values. The code example specifies some property values that you can use. Otherwise, the default property values are used.  

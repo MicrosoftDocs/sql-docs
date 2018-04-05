@@ -1,10 +1,13 @@
 ---
 title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2016"
+ms.date: "1/19/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,15 +17,18 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Always Encrypted API Reference for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+  Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!NOTE]  
 >  Always Encrypted is supported only by Microsoft JDBC Driver 6.0 or higher for SQL Server with SQL Server 2016.  
   
+ ## Always Encrypted API References
+ 
  There are several new additions and modifications to the JDBC driver API for use in client applications that use Always Encrypted.  
   
  **SQLServerConnection Class**  
@@ -82,7 +88,7 @@ manager: "jhubbard"
   
 |Name|Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionAzureKeyVaultProvider (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Key store provider for Azure Key Vault.  You need to provide an implementation for the SQLServerKeyVaultAuthenticationCallback interface to retrieve an access token for the key in Azure Key Vault.|  
+|public SQLServerColumnEncryptionAzureKeyVaultProvider (String clientId, String clientKey)|Key store provider for Azure Key Vault.  You need to provide the identifier and the key of the client requesting the token to authenticate to Azure Key Vault.|  
   
  Methods  
   
@@ -187,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.  
   
-## See Also  
+ ## See Also  
  [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
-  
+

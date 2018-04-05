@@ -2,12 +2,15 @@
 title: "XML Query Syntax for XML Report Data (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -17,9 +20,10 @@ helpviewer_keywords:
   - "XML [Reporting Services], data retrieval"
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # XML Query Syntax for XML Report Data (SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can create datasets for XML data sources. After you define a data source, you create a query for the dataset. Depending on the type of XML data pointed to by the data source, you create the dataset query by including an XML **Query** or an element path. An XML **Query** starts with a **\<Query>** tag and includes namespaces and XML elements that vary depending on the data source. An element path is namespace-independent and specifies which nodes and node attributes to use from the underlying XML data with an XPath-like syntax. For more information about element paths, see [Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -62,7 +66,7 @@ manager: "erikre"
 |XML document that uses default.|*No query*.<br /><br /> The element path is derived from the XML document itself and is namespace-independent.|  
   
 > [!NOTE]  
->  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to http://localhost/reportserver/reportservice2006.asmx. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
+>  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to `http://localhost/reportserver/reportservice2006.asmx`. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
   
 ## Specifying Namespaces  
  Use the XML **Query** element to specify the namespaces that are used in the XML data from the data source. The following XML query uses the namespace **sales**. The XML **ElementPath** nodes for `sales:LineItems` and `sales:LineItem` use the namespace **sales**.  
@@ -86,7 +90,7 @@ manager: "erikre"
   
 |XML Query Element|Resulting fields in the dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Value A: http://schemas.microsoft.com/...<br /><br /> Value B: http://schemas.microsoft.com/...<br /><br /> Value C: http://schemas.microsoft.com/...|  
+|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### XML document: DPNamespace.xml  

@@ -2,9 +2,12 @@
 title: "Subscription Properties - Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "Subscription Properties dialog box"
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Subscription Properties - Publisher
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Subscription Properties** dialog box at the Publisher allows you to view and set properties for push subscriptions. You can also view some properties for pull subscriptions, but the **Subscriptions Properties** dialog box at the Subscriber displays additional properties and allows properties to be modified.  
   
  Each property in the **Subscription Properties** dialog box includes a description. Click a property to see its description displayed at the bottom of the dialog box. This topic provides additional information on a number of properties, most of which are displayed at the Publisher only for push subscriptions. The properties are grouped into the following categories:  

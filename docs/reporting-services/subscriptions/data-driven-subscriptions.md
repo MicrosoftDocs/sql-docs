@@ -2,12 +2,15 @@
 title: "Data-Driven Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "subscriptions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,9 +18,10 @@ helpviewer_keywords:
   - "data-driven subscriptions"
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Data-Driven Subscriptions
   A data-driven subscription provides a way to use dynamic subscription data that is retrieved from an external data source at run time. A data-driven subscription can also use static text and default values that you specify when the subscription is defined. You can use data-driven subscriptions to do the following:  

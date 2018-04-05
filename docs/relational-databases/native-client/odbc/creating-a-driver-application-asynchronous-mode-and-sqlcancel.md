@@ -2,11 +2,14 @@
 title: "Asynchronous Mode and SQLCancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client|ODBC"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,11 +22,13 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, asynchronous mode"
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Some ODBC functions can operate either synchronously or asynchronously. The application can enable asynchronous operations for either a statement handle or a connection handle. If the option is set for a connection handle, it affects all statement handles on the connection handle. The application uses the following statements to enable or disable asynchronous operations:  

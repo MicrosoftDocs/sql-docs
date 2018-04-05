@@ -1,3 +1,5 @@
+# [XML Elements - Properties](xml-elements-properties.md)
+
 # [AllowOverwrite Element (XMLA)](allowoverwrite-element-xmla.md)
 # [ApplyCompression Element (XMLA)](applycompression-element-xmla.md)
 # [Attribute Element (XMLA)](attribute-element-xmla.md)
@@ -137,4 +139,3 @@
 # [Warning Element (XMLA)](warning-element-xmla.md)
 # [Where Element (XMLA)](where-element-xmla.md)
 # [WritebackTableCreation Element (XMLA)](writebacktablecreation-element-xmla.md)
-# [XML Elements - Properties](xml-elements-properties.md)

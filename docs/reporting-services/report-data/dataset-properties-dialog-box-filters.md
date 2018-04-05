@@ -2,12 +2,15 @@
 title: "Dataset Properties Dialog Box, Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
@@ -16,9 +19,10 @@ f1_keywords:
   - "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Dataset Properties Dialog Box, Filters
   Select **Filters** on the **Dataset Properties** dialog box to create filters for the dataset.  

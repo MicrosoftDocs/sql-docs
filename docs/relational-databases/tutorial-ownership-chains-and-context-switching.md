@@ -2,9 +2,12 @@
 title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "ownership chains [SQL Server]"
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Tutorial: Ownership Chains and Context Switching
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
@@ -95,7 +100,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+For more information about the GRANT statement, see [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md). For more information about stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md). For a poster of all [!INCLUDE[ssDE](../includes/ssde-md.md)] permissions, see [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## 2. Create a Stored Procedure to Access Data  
 To switch context within a database, use the EXECUTE AS statement. EXECUTE AS requires IMPERSONATE permissions.  

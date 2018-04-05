@@ -1,10 +1,13 @@
 ---
 title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,10 +18,11 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Use [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** and **DENY** statements to grant or deny a permission (such as **UPDATE**) on a securable (such as a database, table, view, etc.) to a security principal (a login, a database user, or a database role). Use **REVOKE** to remove the grant or deny of a permission.  
   
@@ -77,10 +81,10 @@ REVOKE
  \<permission>[ **,**...*n* ]  
  One or more permissions to grant, deny, or revoke.  
   
- ON [ <class_type> :: ] *securable*  
+ ON [ \<class_type> :: ] *securable* 
  The **ON** clause describes the securable parameter on which to grant, deny, or revoke permissions.  
   
- <class_type>  
+ \<class_type> 
  The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER***class_type*, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
  *securable*  
@@ -319,3 +323,4 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
   
+

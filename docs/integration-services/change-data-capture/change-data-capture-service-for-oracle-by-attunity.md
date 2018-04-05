@@ -1,11 +1,13 @@
 ---
 title: "Change Data Capture Service for Oracle by Attunity | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "change-data-capture"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,7 +16,8 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Change Data Capture Service for Oracle by Attunity
   The CDC Service for Oracle is a Windows service that scans Oracle transaction logs and captures changes to Oracle tables of interest into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tables. The SQL change tables where the changes captured from Oracle are stored are the same type of change tables used in the native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture feature. This makes consuming these changes as easy as consuming changes made to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -31,19 +34,10 @@ manager: "jhubbard"
 ## Supported Windows Environments  
  The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:  
   
--   Windows Vista with Service Pack 2  
-  
--   Windows 7  
-  
 -   Windows 8 and 8.1  
-  
 -   Windows 10  
-  
--   Windows Server 2008 R2  
-  
--   Windows Server 2008 with Service Pack 2  
-  
--   Windows Server 2012  
+-   Windows Server 2012 and 2012 R2
+-   Windows Server 2016
   
 ## Database Prerequisites  
  To work with the CDC Service for Oracle you must install the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client Oracle software. This is a prerequisite that should be obtained from Oracle and installed before installing the Oracle CDC Service. Additionally, you need to install the SQL Server ODBC Client using SQL Server Setup.  
@@ -52,16 +46,8 @@ manager: "jhubbard"
   
 ### Source Oracle Database  
   
--   Oracle Database 11x, any version  
-  
--   Oracle Database 10x, any version  
-  
--   Oracle Database 10g Release 2: 10.2.0.1-10.2.0.5 (patchset as of April 2010)  
-  
--   Oracle Database 11g Release 1: 11.1.0.6-11.1.0.7 (patchset as of September 2008)  
-  
--   Oracle Database 11g Release 2: 11.2.0.1-11.2.0.3 (patchset as of September 2011)  
-
+-   Oracle Database 10g Release 2
+-   Oracle Database 11g Release 1 and Release 2
 -   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
   
 ### Target SQL Server Database  

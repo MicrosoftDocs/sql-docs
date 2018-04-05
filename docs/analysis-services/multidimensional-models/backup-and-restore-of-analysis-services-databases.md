@@ -2,13 +2,16 @@
 title: "Backup and Restore of Analysis Services Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -26,9 +29,11 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Backup and Restore of Analysis Services Databases
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes backup and restore so that you can recover a database and its objects from a particular point in time. Backup and restore is also a valid technique for migrating databases to upgraded servers, moving databases between servers, or deploying a database to a production server. For the purposes of data recovery, if you do not already have a backup plan and your data is valuable, you should design and implement a plan as soon as possible.  
   
  The backup and restore commands are performed on a deployed Analysis Services database. For your projects and solutions in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you should use source control to ensure you can recover specific versions of your source files, and then create a data recovery plan for the repository of the source control system you are using.  
@@ -125,6 +130,6 @@ manager: "erikre"
   
 ## See Also  
  [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

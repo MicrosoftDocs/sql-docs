@@ -1,7 +1,7 @@
+# [Installing SSMA](installing-ssma-for-db2-db2tosql.md)
 # [Getting Started with SSMA  for DB2 Console](getting-started-with-ssma-for-db2-console-db2tosql.md)
 # [What's New in SSMA  for DB2](what-s-new-in-ssma-for-db2-db2tosql.md)
 # [New GUI features in SSMA](new-gui-features-in-ssma-for-db2-db2tosql.md)
-# [Installing SSMA](installing-ssma-for-db2-db2tosql.md)
 # [Installing SSMA for DB2 Client](installing-ssma-for-db2-client-db2tosql.md)
 # [User Interface Reference](user-interface-reference-db2tosql.md)
 # [Edit Type Mapping](edit-type-mapping-db2tosql.md)

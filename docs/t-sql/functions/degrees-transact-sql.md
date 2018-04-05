@@ -3,8 +3,11 @@ title: "DEGREES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,12 +22,13 @@ helpviewer_keywords:
   - "number of degrees"
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DEGREES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the corresponding angle in degrees for an angle specified in radians.  
   
@@ -33,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DEGREES ( numeric_expression )  
 ```  
   
@@ -46,23 +48,6 @@ DEGREES ( numeric_expression )
  Returns the same type as *numeric_expression*.  
   
 ## Examples  
- The following example returns the number of degrees in an angle of PI/2 radians.  
-  
-```  
-SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-The number of degrees in PI/2 radians is 90         
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the number of degrees in an angle of PI/2 radians.  
   
 ```  

@@ -1,12 +1,15 @@
 ---
 title: "ADO for Visual C++ Syntax Index for COM | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -19,7 +22,8 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ADO for Visual C++ Syntax Index for COM
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++.  

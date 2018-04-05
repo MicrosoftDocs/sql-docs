@@ -2,13 +2,16 @@
 title: "Configure Analysis Services Project Properties (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Configure Analysis Services Project Properties (SSDT)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project is defined with certain default properties that affect building and deploying the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  
   
  To change project properties, right-click the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project object and then click **Properties**. Alternatively, you can click **Properties** on the Project menu.  

@@ -2,11 +2,14 @@
 title: "Detecting an Empty Flat File with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -20,7 +23,8 @@ ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Detecting an Empty Flat File with the Script Task
   The Flat File source does not determine whether a flat file contains rows of data before attempting to process it. You may want to improve the efficiency of a package, especially of a package that iterates over numerous flat files, by skipping files that do not contain any rows of data. The Script task can look for an empty flat file before the package begins to process the data flow.  

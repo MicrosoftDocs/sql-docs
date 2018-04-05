@@ -2,12 +2,15 @@
 title: "Publish a Shared Data Source to a SharePoint Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reports"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Publish a Shared Data Source to a SharePoint Library
   To publish a shared data source to a report server that is running in SharePoint integrated mode, you must set the report project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs.  
@@ -35,13 +39,13 @@ manager: "erikre"
   
 4.  If you want to publish the shared data sources in your project and overwrite previously published shared data sources, set **OverwriteDataSources** to **True**.  
   
-5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder. For example, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Optional) For **TargetDataSourceFolder**, type a URL to a SharePoint library or library folder. For example, `http://TestServer/TestSite/Documents/DataSources`.  
   
      If you do not specify a value, the **TargetReportFolder** value is used.  
   
-6.  For **TargetReportFolder**, type a URL to a library or library folder. For example, http:*//TestServer/TestSite/Documents/Reports*.  
+6.  For **TargetReportFolder**, type a URL to a library or library folder. For example, `http://TestServer/TestSite/Documents/Reports`.  
   
-7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used. For example, http://*servername*, http://*servername*/*site*, or http://*servername*/*site*/*subsite*.  
+7.  For **TargetServerURL**, type a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used. For example, `http://servername`, `http://servername/site`, or `http://servername/site/subsite`.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

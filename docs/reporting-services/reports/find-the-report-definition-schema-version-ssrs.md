@@ -1,13 +1,16 @@
 ---
 title: "Find the Report Definition Schema Version (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reports"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,12 +19,15 @@ helpviewer_keywords:
   - "schemas [Reporting Services]"
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
+
 # Find the Report Definition Schema Version (SSRS)
-  A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+
+A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
 ### How to: Identify the RDL Schema Version of a Report  
   
@@ -38,7 +44,7 @@ manager: "erikre"
   
 ### How to: Identify the RDL Schema Version of Report Designer  
   
-1.  Open a new project. The version of the project that you choose determines the version of the RDL schema. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], more than one schema version is supported. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Open a new project. The version of the project that you choose determines the version of the RDL schema. In SQL Server, more than one schema version is supported. For more information, see [Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  On the **Project** menu, click **Add New Item**. The **Add New Item** dialog box opens.  
   
@@ -78,9 +84,10 @@ manager: "erikre"
     ```  
   
      The report definition namespace is specified by the following URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
-  
-## See Also  
- [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
- [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

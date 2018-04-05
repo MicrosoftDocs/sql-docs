@@ -1,23 +1,27 @@
 ---
 title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/10/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure E-mail for a Reporting Services Service Application
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerting sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. The e-mail settings are also required if you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription feature.  
 
@@ -86,4 +90,4 @@ manager: "erikre"
     ```  
   
   
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,20 +2,25 @@
 title: "Subscription Properties - &lt;Subscription&gt; | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Subscription Properties - &lt;Subscription&gt;
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section provides information on the **Subscription Properties** dialog box:  
   
 -   [Subscription Properties - Subscriber](../../relational-databases/replication/subscription-properties-subscriber.md) covers subscription properties available at the Subscriber (pull subscriptions only).  

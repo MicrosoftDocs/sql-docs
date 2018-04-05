@@ -2,9 +2,12 @@
 title: "Step 3: Testing the Deployed Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -15,7 +18,8 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Lesson 3-3 - Testing the Deployed Packages
 In this task, you will test the packages that you deployed to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -29,7 +33,7 @@ You will use the Execute Package Utility to run the deployed packages. The packa
 > [!NOTE]  
 > To ensure that the packages run successfully in the context of this tutorial, you should not modify any options.  
   
-Before you run packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the Execute Package Utility, ensure that the Integration Services service is running. The Integration Services service provides support for package storage and execution. If the service is stopped, you cannot connect to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] does not list the packages to run. You also must have permissions to run the package on the instance where the package has been deployed. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../integration-services/service/integration-services-roles-ssis-service.md).  
+Before you run packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the Execute Package Utility, ensure that the Integration Services service is running. The Integration Services service provides support for package storage and execution. If the service is stopped, you cannot connect to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] does not list the packages to run. You also must have permissions to run the package on the instance where the package has been deployed. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../integration-services/security/integration-services-roles-ssis-service.md).  
   
 The top-level folders within the Stored Packages folder are the user-defined folders that Integration Services service monitors. You can specify as many or few folders in the MsDtsSrvr.ini.xml file as you want. This tutorial assumes that you are using the default MsDtsSrvr.ini.xml file, and that the names of the top-level folders within Stored Packages are File System and MSDB.  
   

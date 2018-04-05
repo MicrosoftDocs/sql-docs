@@ -2,9 +2,12 @@
 title: "Run the Data Quality Client Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ f1_keywords:
   - "sql13.dqs.connecttoserver.f1"
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Run the Data Quality Client Application
   Run [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], and log on to a [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  

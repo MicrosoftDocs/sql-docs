@@ -3,8 +3,11 @@ title: "Standard Database Access Architectures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Standard Database Access Architectures
 In looking at the database access components described in the preceding section, it turns out that two of them — programming interfaces and data stream protocols — are good candidates for standardization. The other two components — IPC mechanism and network protocols — not only reside at too low a level but they are both highly dependent on the network and operating system. There is also a third approach — gateways — that provides possibilities for standardization.  

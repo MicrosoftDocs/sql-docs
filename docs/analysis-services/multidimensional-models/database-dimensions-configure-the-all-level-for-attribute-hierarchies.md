@@ -2,13 +2,16 @@
 title: "Configure the (All) Level for Attribute Hierarchies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -24,9 +27,11 @@ ms.assetid: 0cb35e6f-b10f-483d-b893-78f6ca3979fd
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Dimensions - Configure the (All) Level for Attribute Hierarchies
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the (All) level is an optional, system-generated level. It contains only one member whose value is the aggregation of the values of all members in the immediately subordinate level. This member is called the All member. It is a system-generated member that is not contained in the dimension table. Because the member in the (All) level is at the top of the hierarchy, the member's value is the consolidated aggregation of the values of all members in the hierarchy. The All member often serves as the default member of a hierarchy.  
   
  The presence of an (All) level in an attribute hierarchy depends on the **IsAggregatable** property setting for the attribute and the presence of an (All) level in a user-defined hierarchy depends on the **IsAggregatable** property of the attribute at the top-most level of user-defined hierarchy. If the **IsAggregatable** property is set to **True**, an (All) level will exist. A hierarchy has no (All) level if the **IsAggregatable** property is set to **False**.  

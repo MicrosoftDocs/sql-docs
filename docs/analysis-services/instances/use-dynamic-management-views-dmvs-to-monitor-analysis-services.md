@@ -1,23 +1,28 @@
 ---
 title: "Use Dynamic Management Views (DMVs) to Monitor Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: "12/15/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Use Dynamic Management Views (DMVs) to Monitor Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Analysis Services Dynamic Management Views (DMV) are query structures that expose information about local server operations and server health. The query structure is an interface to schema rowsets that return metadata and monitoring information about an Analysis Services instance.  
   
  For most DMV queries, you use a **SELECT** statement and the **$System** schema with an XML/A schema rowset.  
@@ -28,24 +33,12 @@ SELECT * FROM $System.<schemaRowset>
   
  DMV queries return information about server state that is current at the time the query was run. To monitor operations in real time, use tracing instead. For more information, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- This topic includes the following sections:  
-  
- [Benefits of Using DMV Queries](#bkmk_ben)  
-  
- [Examples and Scenarios](#bkmk_ex)  
-  
- [Query Syntax](#bkmk_syn)  
-  
- [Tools and Permissions](#bkmk_tools)  
-  
- [DMV Reference](#bkmk_ref)  
-  
-##  <a name="bkmk_ben"></a> Benefits of Using DMV Queries  
+##  <a name="bkmk_ben"></a> Benefits of Using DMV queries  
  DMV queries return information about operations and resource consumption that are not available through other means.  
   
  DMV queries are an alternative to running XML/A Discover commands. For most administrators, writing a DMV query is simpler because the query syntax is based on SQL. In addition, the result set is returned in a tabular format that is easier to read and copy from.  
   
-##  <a name="bkmk_ex"></a> Examples and Scenarios  
+##  <a name="bkmk_ex"></a> Examples and scenarios  
  A DMV query can help you answer questions about active sessions and connections, and which objects are consuming the most CPU or memory at a specific point in time. This section provides examples for scenarios where DMV queries are most commonly used. You can also review the [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) for additional insights into using DMV queries to monitor a server instance.  
   
  `Select * from $System.discover_object_activity` /** This query reports on object activity since the service last started. For example queries based on this DMV, see [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -56,7 +49,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** This query returns a snapshot of the locks used at a specific point in time.  
   
-##  <a name="bkmk_syn"></a> Query Syntax  
+##  <a name="bkmk_syn"></a> Query syntax  
  The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md) statement.  
   
  Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.  
@@ -81,14 +74,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Tools and Permissions  
+##  <a name="bkmk_tools"></a> Tools and permissions  
  You must have system administrator permissions on the Analysis Services instance to query a DMV.  
   
  You can use any client application that supports MDX or DMX queries, including SQL Server Management Studio, a Reporting Services report, or a PerformancePoint Dashboard.  
   
  To run a DMV query from Management Studio, connect to the instance you want to query, click **New Query**. You can run a query from an MDX or a DMX query window.  
   
-##  <a name="bkmk_ref"></a> DMV Reference  
+##  <a name="bkmk_ref"></a> DMV reference  
  Not all schema rowsets have a DMV interface. To return a list of all the schema rowsets that can be queried using DMV, run the following query.  
   
 ```  
@@ -162,8 +155,7 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Returns a fully qualified name of each property, along with property type, data type, and other metadata.|  
 |[MDSCHEMA_SETS Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Returns a list of set that are defined in the current connection.|  
   
-## See Also  
- [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## See also   
  [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [New SYSTEMRESTRICTEDSCHEMA Function for Restricted Rowsets and DMVs](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

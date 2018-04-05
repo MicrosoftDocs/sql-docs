@@ -1,10 +1,13 @@
 ---
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/01/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,11 +21,13 @@ helpviewer_keywords:
   - "hierarchical queries [SQL Server], using hierarchyid data type"
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Hierarchical Data (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The built-in **hierarchyid** data type makes it easier to store and query hierarchical data. **hierarchyid** is optimized for representing trees, which are the most common type of hierarchical data.  
   
  Hierarchical data is defined as a set of data items that are related to each other by hierarchical relationships. Hierarchical relationships exist where one item of data is the parent of another item. Examples of the hierarchical data that is commonly stored in databases include the following:  
@@ -241,7 +246,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notice that the hierarchy is has a valid structure, even though it is not internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
+ Notice that the hierarchy has a valid structure, even though it is not internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
   
  Add another row and select the results.  
   

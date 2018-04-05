@@ -2,9 +2,12 @@
 title: "Troubleshooting Reports for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Troubleshooting Reports for Package Execution
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor and troubleshoot [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Two of these package reports in particular help you to view package execution status and identify the cause of execution failures.  
@@ -32,11 +36,8 @@ manager: "jhubbard"
   
 -   **Activity - All Executions Report** – This report displays a summary of all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] executions that have been performed on the server. The summary displays information for each execution such as status, start time, and end time. Each summary entry includes links to more information about the execution including messages generated during execution and performance data. As with the Integration Services Dashboard, you can apply a filter to the table to narrow down the information displayed.  
   
-## Related Tasks  
- [View Reports for the Integration Services Server](../../integration-services/performance/view-reports-for-the-integration-services-server.md)  
-  
 ## Related Content  
- [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md)  
+ [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  
   
  [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

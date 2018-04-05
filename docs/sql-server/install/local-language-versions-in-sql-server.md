@@ -1,10 +1,13 @@
 ---
 title: "Local Language Versions in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/23/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Local Language Versions in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports all languages that are supported by Windows operating systems.  
   
 ## Cross-Language Support  
@@ -81,7 +86,7 @@ manager: "jhubbard"
 4.  Click **Apply** to confirm the change, and **OK** to close the window.  
   
 ## See Also  
- [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

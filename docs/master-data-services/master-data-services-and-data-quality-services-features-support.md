@@ -3,17 +3,21 @@ title: "Master Data Services and Data Quality Services Features Support | Micros
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "mds"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "master-data-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "leolimsft"
+ms.author: "lle"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Master Data Services and Data Quality Services Features Support
 

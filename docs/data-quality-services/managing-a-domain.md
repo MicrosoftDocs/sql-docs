@@ -2,18 +2,22 @@
 title: "Managing a Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Managing a Domain
   This topic describes the use of domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A domain contains a semantic representation of the data in a specific field in the data source that is to be analyzed. A domain is part of the knowledge base that you create for a data source, and the knowledge that you build up by analyzing a sample data source, or importing data, is added to the domains defined in the knowledge base. The knowledge in those domains is later used to perform cleansing and matching in a data quality project. Domains are at the core of all activities in Data Quality Services.  

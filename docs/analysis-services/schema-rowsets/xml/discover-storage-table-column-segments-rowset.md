@@ -2,12 +2,15 @@
 title: "DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -16,9 +19,11 @@ ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Provides information at the column and segment level about storage tables used by an Analysis Services database running in tabular or [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. This rowset is primarily used for troubleshooting and analysis.  
   
  **Applies to:** tabular models  

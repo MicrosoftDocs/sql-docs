@@ -2,9 +2,12 @@
 title: "Microsoft Connector for SAP BW Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Microsoft Connector for SAP BW Components
   This section contains topics that describe the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  

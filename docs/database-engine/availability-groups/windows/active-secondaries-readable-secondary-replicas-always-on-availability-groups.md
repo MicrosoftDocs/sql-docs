@@ -2,9 +2,12 @@
 title: "Active Secondaries-Readable Secondary Replicas-Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -20,10 +23,11 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  
   
@@ -144,7 +148,7 @@ manager: "jhubbard"
  This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Always On Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) dynamic management view.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Data Latency on databases with memory-optimized tables  
- In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] there were special considerations around data latency on active secondaries (see the [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] version of this article). Starting [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] there are no special considerations around data latency for memory-optimized tables. The expected data latency for memory-optimized tables is comparable to the latency for disk-based tables.  
+ In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] there were special considerations around data latency on active secondaries - see [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Active Secondaries: Readable Secondary Replicas](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). Starting [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] there are no special considerations around data latency for memory-optimized tables. The expected data latency for memory-optimized tables is comparable to the latency for disk-based tables.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Read-Only Workload Impact  
  When you configure a secondary replica for read-only access, your read-only workloads on the secondary databases consume system resources, such as CPU and I/O (for disk-based tables) from redo threads, especially if the read-only workloads on disk-based tables are highly I/O-intensive. There is no IO impact when accessing memory-optimized tables because all the rows reside in memory.  
@@ -202,7 +206,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_AccessInMemTables"></a> Accessing memory-optimized tables on a Secondary Replica  
  The transaction isolation levels that can be used with memory-optimized tables on a secondary replica are the same as on the primary replica. The recommendation is to set the session-level isolation level to READ COMMITTED and set the database-level option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT to ON. For example:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  

@@ -1,10 +1,13 @@
 ---
 title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/20/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -34,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -54,22 +57,20 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  If the provider changes the .dll file that is used to implement Extensible Key Management in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must use the ALTER CRYPTOGRAPHIC PROVIDER statement.  
   
  When the .dll file path is updated by using the ALTER CRYPTOGRAPHIC PROVIDER statement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs the following actions:  
-  
 -   Disables the provider.  
-  
 -   Verifies the DLL signature and ensures that the .dll file has the same GUID as the one recorded in the catalog.  
-  
 -   Updates the DLL version in the catalog.  
   
- When an EKM provider is set to DISABLE, any attempts on new connections to use the provider with encryption statements will fail.  
+
+When an EKM provider is set to DISABLE, any attempts on new connections to use the provider with encryption statements will fail.  
   
- To disable a provider, all sessions that use the provider must be terminated.  
+To disable a provider, all sessions that use the provider must be terminated.  
   
- When an EKM provider dll does not implement all of the necessary methods, ALTER CRYPTOGRAPHIC PROVIDER can return error 33085:  
+When an EKM provider dll does not implement all of the necessary methods, ALTER CRYPTOGRAPHIC PROVIDER can return error 33085:  
   
  `One or more methods cannot be found in cryptographic provider library '%.*ls'.`  
   
- When the header file used to create the EKM provider dll is out of date, ALTER CRYPTOGRAPHIC PROVIDER can return error 33032:  
+When the header file used to create the EKM provider dll is out of date, ALTER CRYPTOGRAPHIC PROVIDER can return error 33032:  
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
@@ -79,20 +80,22 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example alters a cryptographic provider, called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], to a newer version of a .dll file. This new version is named `c:\SecurityProvider\SecurityProvider_v2.dll` and is installed on the server. The provider's certificate must be installed on the server.  
   
+1. Disable the provider to perform the upgrade. This will terminate all open cryptographic sessions.  
 ```  
-/* First, disable the provider to perform the upgrade.  
-This will terminate all open cryptographic sessions */  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
-  
-/* Upgrade the provider .dll file. The GUID must the same  
-as the previous version, but the version can be different. */  
+```  
+
+2. Upgrade the provider .dll file. The GUID must the same as the previous version, but the version can be different.  
+```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
-  
-/* Enable the upgraded provider. */  
+```  
+
+3. Enable the upgraded provider.   
+```  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

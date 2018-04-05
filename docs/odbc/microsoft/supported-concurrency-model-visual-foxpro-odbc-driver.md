@@ -3,8 +3,11 @@ title: "Supported Concurrency Model (Visual FoxPro ODBC Driver) | Microsoft Docs
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "odbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Supported Concurrency Model (Visual FoxPro ODBC Driver)
 The Visual FoxPro ODBC Driver supports *read-only concurrency*. Your application can call [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) with a SQL_CONCURRENCY option of SQL_CONCUR_READ_ONLY.  

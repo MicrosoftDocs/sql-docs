@@ -1,10 +1,13 @@
 ---
 title: "@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "09/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,12 +24,13 @@ helpviewer_keywords:
   - "locking [SQL Server], time-outs"
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
-# @@LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the current lock time-out setting in milliseconds for the current session.  
   
@@ -35,7 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@LOCK_TIMEOUT  
 ```  
   

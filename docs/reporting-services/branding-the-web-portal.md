@@ -1,37 +1,32 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
+ms.date: "11/17/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
+
 # Branding the web portal
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don’t need deep cascading style sheet (CSS) knowledge to create it.  
   
-In this topic:  
-  
--   [Creating the brand package](#create)  
-  
--   [Applying the brand package to the web portal](#apply)  
-  
--   [metadata.xml example](#metadata)  
-  
--   [colors.json example](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
-## Creating the brand package  
+   
+## Creating the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   
   
@@ -41,7 +36,7 @@ A brand package for Reporting Services consists of three items and is packaged a
   
 The files must have the names listed above. The zip file can be named however you like.  
   
-### metadata.xml  
+### metadata.xml
   
 The metadata.xml file allows you to set the name of the brand package, and has a reference entry for both your colors.json and logo.png files.  
   
@@ -64,7 +59,7 @@ Example with a logo file.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json  
+### Colors.json
   
 When the brand package is uploaded, the server extracts the appropriate name/value pairs from the colors.json file and merges them with the master LESS stylesheet, brand.less. This LESS file is then processed and the resulting CSS file is served to the client. All colors in the stylesheet follow the six-character hexadecimal representation of a color.  
   
@@ -115,14 +110,13 @@ The first time you connect to a server with the Mobile Report Publisher, that ha
   
 You can then use that theme for any mobile reports that you create, even if they aren’t for the same server that you have the theme deployed on.   
   
-### Using a logo  
+### Using a logo
   
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
-  
-<a name="apply">  
-## Applying the brand package to the web portal  
+   
+## Applying the brand package to the web portal
   
 To add, download, or remove a brand package, you can do the following.  
   
@@ -142,10 +136,9 @@ To add, download, or remove a brand package, you can do the following.
   
 You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
   
-<a name="metadata">  
-## metadata.xml example  
+## metadata.xml example
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -156,9 +149,8 @@ You can also **Download** or **Remove** the package. Removing the package will r
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
-## Colors.json example  
+   
+## Colors.json example
   
     {  
         "name":"Multicolored example brand",  
@@ -251,13 +243,5 @@ You can also **Download** or **Remove** the package. Removing the package will r
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

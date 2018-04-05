@@ -2,9 +2,12 @@
 title: "Use a Format File to Bulk Import Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-bulk-import-export"
 ms.tgt_pltfrm: ""
@@ -14,12 +17,13 @@ helpviewer_keywords:
   - "format files [SQL Server], importing data using"
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Use a Format File to Bulk Import Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 This topic illustrates the use of a format file in bulk-import operations.  A format file maps the fields of the data file to the columns of the table.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -43,7 +47,7 @@ The examples of format files in this topic are based on the table and data file 
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database and a table named `myFirstImport`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -70,7 +74,7 @@ cls
 # revise directory as desired
 $dir = 'D:\BCP\';
 
-$bcpFile = $dir + 'MyFirstImport.bcp';
+$bcpFile = Join-Path -Path $dir -ChildPath 'MyFirstImport.bcp';
 
 # Confirm directory exists
 IF ((Test-Path -Path $dir) -eq 0)
@@ -98,7 +102,7 @@ SQL Server support two types of format file: non-XML format and XML format.  The
 ### **Creating a Non-XML Format File**<a name="nonxml_format_file"></a>
 Please review [Non-XML Format Files (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to generate a non-xml format file, `myFirstImport.fmt`, based on the schema of `myFirstImport`.  To use a bcp command to create a format file, specify the **format** argument and use **nul** instead of a data-file path.  The format option also requires the **-f** option.  In addition, for this example, the qualifier **c** is used to specify character data, **t,** is used to specify a comma as a [field terminator](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), and **T** is used to specify a trusted connection using integrated security.  At a command prompt, enter the following command:
 
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -f D:\BCP\myFirstImport.fmt -t, -T
 
 REM Review file
@@ -123,7 +127,7 @@ Your non-XML format file, `D:\BCP\myFirstImport.fmt` should look as follows:
 
 ### **Creating an XML Format File**<a name="xml_format_file"></a>  
 Please review [XML Format Files (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to create an xml format file, `myFirstImport.xml`, based on the schema of `myFirstImport`. To use a bcp command to create a format file, specify the **format** argument and use **nul** instead of a data-file path.  The format option always requires the **-f** option, and to create an XML format file, you must also specify the **-x** option.  In addition, for this example, the qualifier **c** is used to specify character data, **t,** is used to specify a comma as a [field terminator](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), and **T** is used to specify a trusted connection using integrated security.  At a command prompt, enter the following command:
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
 
 REM Review file
@@ -131,7 +135,7 @@ Notepad D:\BCP\myFirstImport.xml
 ```
 
 Your XML format file, `D:\BCP\myFirstImport.xml` should look as follows:
-```
+```xml
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
@@ -154,7 +158,7 @@ The examples below use the database, datafile, and format files created above.
 
 ### **Using [bcp](../../tools/bcp-utility.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_nonxml"></a>
 At a command prompt, enter the following command:
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -168,7 +172,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 
 ### **Using [bcp](../../tools/bcp-utility.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bcp_xml"></a>
 At a command prompt, enter the following command:
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -182,7 +186,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_nonxml"></a>
 Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -198,7 +202,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bulk_xml"></a>
 Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -214,7 +218,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a>	
 Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -233,7 +237,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="openrowset_xml"></a>
 Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

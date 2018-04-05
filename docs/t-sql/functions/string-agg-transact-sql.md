@@ -1,10 +1,13 @@
 ---
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/24/2017"
+ms.date: "04/19/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -16,12 +19,13 @@ helpviewer_keywords:
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string.
  
@@ -30,7 +34,7 @@ Concatenates the values of string expressions and places separator values betwee
 ## Syntax  
   
 ```  
-STRING_AGG ( expression, separator [ <order_clause> ] )
+STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
@@ -51,7 +55,7 @@ Optionally specify order of concatenated results using `WITHIN GROUP` clause:
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+ 
   A list of non-constant [expressions](../../t-sql/language-elements/expressions-transact-sql.md) that can be used for sorting results. Only one `order_by_expression` is allowed per query. The default sort order is ascending.   
   
 
@@ -70,7 +74,7 @@ Return type is depends on first argument (expression). If input argument is stri
 
 ## Remarks  
  
-`STRING_AGG` aggregate takes all expressions from rows and concatenates them into a single string. Expression values are implicitly converted to string types and then concatenated. The implicit conversion to strings follows the existing rules for data type conversions. For more information about data type conversions, see [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG` is an aggregate function that takes all expressions from rows and concatenates them into a single string. Expression values are implicitly converted to string types and then concatenated. The implicit conversion to strings follows the existing rules for data type conversions. For more information about data type conversions, see [CAST and CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 If the input expression is type `VARCHAR`, the separator cannot be type `NVARCHAR`. 
 
@@ -83,7 +87,7 @@ Null values are ignored and the corresponding separator is not added. To return 
 
 ### A. Generate list of names separated in new lines 
 The following example produces a list of names in a single result cell, separated with carriage returns.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -100,7 +104,7 @@ FROM Person.Person;
 
 ### B. Generate list of names separated with comma without NULL values   
 The following example replaces null values with 'N/A' and returns the names separated by commas in a single result cell.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -115,7 +119,7 @@ FROM Person.Person;
 
 ### C. Generate comma-separated values 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -134,7 +138,7 @@ FROM Person.Person;
 ### D. Return news articles with related tags 
 
 Article and their tags are separated into different tables. Developer wants to return one row per each article with all associated tags. Using following query: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -153,7 +157,7 @@ GROUP BY a.articleId, title;
 ### E. Generate list of emails per towns
 
 The following query finds the email addresses of employees and groups them by towns: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -169,9 +173,9 @@ GROUP BY town;
 Emails returned in the emails column can be directly used to send emails to group of people working in some particular towns. 
 
 ### F. Generate a sorted list of emails per towns   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+   
 Similar to previous example, the following query finds the email addresses of employees, groups them by town, and sorts the emails alphabetically:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 
@@ -187,6 +191,15 @@ GROUP BY town;
 
 
 ## See Also  
-
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

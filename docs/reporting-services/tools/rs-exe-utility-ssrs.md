@@ -2,12 +2,15 @@
 title: "RS.exe Utility (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "tools"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,25 +23,16 @@ helpviewer_keywords:
   - "deploying reports [Reporting Services]"
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
   
 > [!NOTE]  
 >  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
-  
- **In this topic:**  
-  
--   [File Location](#bkmk_filelocation)  
-  
--   [Arguments](#bkmk_arguments)  
-  
--   [Permissions](#bkmk_permissions)  
-  
--   [Examples](#bkmk_examples)  
   
 ## Syntax  
   
@@ -131,9 +125,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  For a detailed example, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## See Also  
- [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Script with the rs.exe Utility and the Web Service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Script with the rs.exe Utility and the Web Service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

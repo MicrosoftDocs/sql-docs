@@ -2,21 +2,26 @@
 title: "Create Tables, Partitions, and Columns in a Tabular model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create Tables, Partitions, and Columns in a Tabular model
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 In a Tabular model, a table consists of rows and columns. Rows are organized into partitions to support incremental data refresh. A Tabular solution can support several types of tables, depending on where the data is coming from:  
 
 * Regular tables, where data originates from a relational data source, via the data provider. 

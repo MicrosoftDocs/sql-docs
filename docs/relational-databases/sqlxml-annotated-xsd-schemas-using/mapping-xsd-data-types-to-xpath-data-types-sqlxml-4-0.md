@@ -2,9 +2,12 @@
 title: "Mapping XSD Data Types to XPath Data Types (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -22,9 +25,11 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When an XPath query is executed against an XSD schema and the XSD type is specified in the **xsd:type** attribute, XPath uses the data type specified when it processes the query.  
   
  The XPath data type of a node is derived from the XSD data type in the schema, as shown in the following table. (The EmployeeID node is used for the purpose of illustration.)  

@@ -1,10 +1,13 @@
 ---
 title: "CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -36,22 +39,23 @@ helpviewer_keywords:
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 caps.latest.revision: 212
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # CREATE DATABASE (SQL Server Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new database and the files used to store the database, a database snapshot, or attaches a database from the detached files of a previously created database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
+
+Create a database    
+
 ```  
-  
-      Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -106,10 +110,10 @@ FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY
 }  
   
 ```  
-  
+ 
+Attach a database    
+
 ```  
-  
-      Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -121,13 +125,12 @@ CREATE DATABASE database_name
       <service_broker_option>  
     | RESTRICTED_USER  
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )  
-}  
-  
+}   
 ```  
   
+Create a database snapshot    
+
 ```  
-  
-      Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  
@@ -147,9 +150,8 @@ CREATE DATABASE database_snapshot_name
  If data file name is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses *database_name* as both the *logical_file_name* and as the *os_file_name*. The default path is obtained from the registry. The default path can be changed by using the **Server Properties (Database Settings Page)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Changing the default path requires restarting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  CONTAINMENT = { NONE | PARTIAL }  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies the containment status of the database. NONE = non-contained database. PARTIAL = partially contained database.  
   
@@ -177,12 +179,10 @@ CREATE DATABASE database_snapshot_name
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  
   
  WITH \<option>  
- -   **<filestream_options>**  
+ -   **\<filestream_options>** 
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
-     ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
      Specifies the level of non-transactional FILESTREAM access to the database.  
   
@@ -192,10 +192,8 @@ CREATE DATABASE database_snapshot_name
     |READONLY|FILESTREAM data in this database can be read by non-transactional processes.|  
     |FULL|Full non-transactional access to FILESTREAM FileTables is enabled.|  
   
-     DIRECTORY_NAME = <directory_name>  
-     ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+     DIRECTORY_NAME = \<directory_name> 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
   
@@ -203,33 +201,25 @@ CREATE DATABASE database_snapshot_name
   
 -   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-    ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.  
   
 -   **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
   
-    ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
 -   **NESTED_TRIGGERS = { OFF | ON}**  
   
-    ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
 -   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
   
-    ||  
-    |-|  
-    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.  
   
@@ -260,7 +250,7 @@ CREATE DATABASE database_snapshot_name
   
      To set this option, requires membership in the sysadmin fixed server role.  
   
- FOR ATTACH [ WITH \< attach_database_option > ]  
+ FOR ATTACH [ WITH \< attach_database_option > ] 
  Specifies that the database is created by [attaching](../../relational-databases/databases/database-detach-and-attach-sql-server.md) an existing set of operating system files. There must be a \<filespec> entry that specifies the primary file. The only other \<filespec> entries required are those for any files that have a different path from when the database was first created or last attached. A \<filespec> entry must be specified for these files.  
   
  FOR ATTACH requires the following:  
@@ -282,9 +272,9 @@ CREATE DATABASE database_snapshot_name
   
  FOR ATTACH can specify the RESTRICTED_USER option. RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. Attempts by unqualified users are refused.  
   
- If the database uses [!INCLUDE[ssSB](../../includes/sssb-md.md)], use the WITH <service_broker_option> in your FOR ATTACH clause:  
+ If the database uses [!INCLUDE[ssSB](../../includes/sssb-md.md)], use the WITH \<service_broker_option> in your FOR ATTACH clause: 
   
- <service_broker_option>  
+ \<service_broker_option> 
  Controls [!INCLUDE[ssSB](../../includes/sssb-md.md)] message delivery and the [!INCLUDE[ssSB](../../includes/sssb-md.md)] identifier for the database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] options can only be specified when the FOR ATTACH clause is used.  
   
  ENABLE_BROKER  
@@ -305,14 +295,15 @@ CREATE DATABASE database_snapshot_name
 -   If you attach the database to a different server instance, regardless of version, you must execute [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) to remove replication after the attach operation is complete.  
   
 > [!NOTE]  
->  Attach works with the **vardecimal** storage format, but the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] must be upgraded to at least [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2. You cannot attach a database using vardecimal storage format to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about the **vardecimal** storage format, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+> Attach works with the **vardecimal** storage format, but the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] must be upgraded to at least [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2. You cannot attach a database using vardecimal storage format to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about the **vardecimal** storage format, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
  When a database is first attached or restored to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key (encrypted by the service master key) is not yet stored in the server. You must use the **OPEN MASTER KEY** statement to decrypt the database master key (DMK). Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the **ALTER MASTER KEY REGENERATE** statement to provision the server with a copy of the DMK, encrypted with the service master key (SMK). When a database has been upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no impact on future regenerations as part of a key rotation strategy. For information about how to upgrade a database by using attach, see [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md).  
   
- **Security Note** We recommend that you do not attach databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server, and also examine the code, such as stored procedures or other user-defined code, in the database.  
+> [!IMPORTANT]  
+> We recommend that you do not attach databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server, and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 > [!NOTE]  
->  The **TRUSTWORTHY** and **DB_CHAINING** options have no affect when attaching a database.  
+> The **TRUSTWORTHY** and **DB_CHAINING** options have no affect when attaching a database.  
   
  FOR ATTACH_REBUILD_LOG  
  Specifies that the database is created by attaching an existing set of operating system files. This option is limited to read/write databases. There must be a *\<filespec>* entry specifying the primary file. If one or more transaction log files are missing, the log file is rebuilt. The ATTACH_REBUILD_LOG automatically creates a new, 1 MB log file. This file is placed in the default log-file location. For information about this location, see [View or Change the Default Locations for Data and Log Files &#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).  
@@ -327,7 +318,7 @@ CREATE DATABASE database_snapshot_name
 -   All data files (MDF and NDF) must be available.  
   
 > [!IMPORTANT]  
->  This operation breaks the log backup chain. We recommend that a full database backup be performed after the operation is completed. For more information, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
+> This operation breaks the log backup chain. We recommend that a full database backup be performed after the operation is completed. For more information, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
  Typically, FOR ATTACH_REBUILD_LOG is used when you copy a read/write database with a large log to another server where the copy will be used mostly, or only, for read operations, and therefore requires less log space than the original database.  
   
@@ -385,7 +376,7 @@ CREATE DATABASE database_snapshot_name
  Specifies that the file grows until the disk is full. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a log file specified with unlimited growth has a maximum size of 2 TB, and a data file has a maximum size of 16 TB.  
   
 > [!NOTE]  
->  There is no maximum size when this option is specified for a FILESTREAM container. It continues to grow until the disk is full.  
+> There is no maximum size when this option is specified for a FILESTREAM container. It continues to grow until the disk is full.  
   
  FILEGROWTH *growth_increment*  
  Specifies the automatic growth increment of the file. The FILEGROWTH setting for a file cannot exceed the MAXSIZE setting. FILEGROWTH cannot be specified when the *os_file_name* is specified as a UNC path. FILEGROWTH does not apply to a FILESTREAM filegroup.  
@@ -418,9 +409,8 @@ CREATE DATABASE database_snapshot_name
  Specifies that the filegroup stores FILESTREAM binary large objects (BLOBs) in the file system.  
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifies that the filegroup stores memory_optimized data in the file system. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For code samples that create a filegroup to store memory-optimized data, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -436,7 +426,7 @@ CREATE DATABASE database_snapshot_name
  For descriptions of NAME and FILENAME and their values see the descriptions of the equivalent \<filespec> values.  
   
 > [!NOTE]  
->  When you create a database snapshot, the other \<filespec> options and the keyword PRIMARY are disallowed.  
+> When you create a database snapshot, the other \<filespec> options and the keyword PRIMARY are disallowed.  
   
  AS SNAPSHOT OF *source_database_name*  
  Specifies that the database being created is a database snapshot of the source database specified by *source_database_name*. The snapshot and source database must be on the same instance.  
@@ -478,7 +468,7 @@ Some database features depend on features or capabilities present in the file sy
  You can use the CREATE DATABASE statement to create a read-only, static view, a *database snapshot* of the *source database*. A database snapshot is transactionally consistent with the source database as it existed at the time when the snapshot was created. A source database can have multiple snapshots.  
   
 > [!NOTE]  
->  When you create a database snapshot, the CREATE DATABASE statement cannot reference log files, offline files, restoring files, and defunct files.  
+> When you create a database snapshot, the CREATE DATABASE statement cannot reference log files, offline files, restoring files, and defunct files.  
   
  If creating a database snapshot fails, the snapshot becomes suspect and must be deleted. For more information, see [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md).  
   
@@ -506,7 +496,7 @@ Some database features depend on features or capabilities present in the file sy
   
  The following example provides the permission to create a database to the database user Fay.  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT CREATE DATABASE TO [Fay];  
@@ -525,16 +515,19 @@ GO
  The permissions prevent the files from being accidentally tampered with if they reside in a directory that has open permissions.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] does not set data and log file permissions.  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] does not set data and log file permissions.  
   
 ## Examples  
   
 ### A. Creating a database without specifying files  
  The following example creates the database `mytest` and creates a corresponding primary and transaction log file. Because the statement has no \<filespec> items, the primary database file is the size of the model database primary file. The transaction log is set to the larger of these values: 512KB or 25% the size of the primary data file. Because MAXSIZE is not specified, the files can grow to fill all available disk space. This example also demonstrates how to drop the database named `mytest` if it exists, before creating the `mytest` database.  
   
-```  
+```sql  
 USE master;  
 GO  
+IF DB_ID (N'mytest') IS NOT NULL
+DROP DATABASE mytest;
+GO
 CREATE DATABASE mytest;  
 GO  
 -- Verify the database files and sizes  
@@ -542,13 +535,12 @@ SELECT name, size, size*1.0/128 AS [Size in MBs]
 FROM sys.master_files  
 WHERE name = N'mytest';  
 GO  
-  
 ```  
   
 ### B. Creating a database that specifies the data and transaction log files  
- The following example creates the database `Sales`. Because the keyword PRIMARY is not used, the first file (`Sales`_`dat`) becomes the primary file. Because neither MB nor KB is specified in the SIZE parameter for the `Sales`\_`dat` file, it uses MB and is allocated in megabytes. The `Sales`\_`log` file is allocated in megabytes because the `MB` suffix is explicitly stated in the `SIZE` parameter.  
+ The following example creates the database `Sales`. Because the keyword PRIMARY is not used, the first file (`Sales_dat`) becomes the primary file. Because neither MB nor KB is specified in the SIZE parameter for the `Sales_dat` file, it uses MB and is allocated in megabytes. The `Sales_log` file is allocated in megabytes because the `MB` suffix is explicitly stated in the `SIZE` parameter.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -570,7 +562,7 @@ GO
 ### C. Creating a database by specifying multiple data and transaction log files  
  The following example creates the database `Archive` that has three `100-MB` data files and two `100-MB` transaction log files. The primary file is the first file in the list and is explicitly specified with the `PRIMARY` keyword. The transaction log files are specified following the `LOG ON` keywords. Note the extensions used for the files in the `FILENAME` option: `.mdf` is used for primary data files, `.ndf` is used for the secondary data files, and `.ldf` is used for transaction log files. This example places the database on the `D:` drive instead of with the `master` database.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -608,7 +600,7 @@ GO
 ### D. Creating a database that has filegroups  
  The following example creates the database `Sales` that has the following filegroups:  
   
--   The primary filegroup with the files `Spri1`_`dat` and `Spri2`\_`dat`. The FILEGROWTH increments for these files are specified as `15%`.  
+-   The primary filegroup with the files `Spri1_dat` and `Spri2_dat`. The FILEGROWTH increments for these files are specified as `15%`.  
   
 -   A filegroup named `SalesGroup1` with the files `SGrp1Fi1` and `SGrp1Fi2`.  
   
@@ -616,7 +608,7 @@ GO
   
  This example places the data and log files on different disks to improve performance.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -665,7 +657,7 @@ GO
 ### E. Attaching a database  
  The following example detaches the database `Archive` created in example D, and then attaches it by using the `FOR ATTACH` clause. `Archive` was defined to have multiple data and log files. However, because the location of the files has not changed since they were created, only the primary file has to be specified in the `FOR ATTACH` clause. Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], any full-text files that are part of the database that is being attached will be attached with the database.  
   
-```  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -677,11 +669,11 @@ GO
 ```  
   
 ### F. Creating a database snapshot  
- The following example creates the database snapshot `sales`_`snapshot0600`. Because a database snapshot is read-only, a log file cannot be specified. In conformance with the syntax, every file in the source database is specified, and filegroups are not specified.  
+ The following example creates the database snapshot `sales_snapshot0600`. Because a database snapshot is read-only, a log file cannot be specified. In conformance with the syntax, every file in the source database is specified, and filegroups are not specified.  
   
  The source database for this example is the `Sales` database created in example D.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -698,7 +690,7 @@ GO
 ### G. Creating a database and specifying a collation name and options  
  The following example creates the database `MyOptionsTest`. A collation name is specified and the `TRUSTYWORTHY` and `DB_CHAINING` options are set to `ON`.  
   
-```  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -713,13 +705,12 @@ SELECT name, collation_name, is_trustworthy_on, is_db_chaining_on
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ### H. Attaching a full-text catalog that has been moved  
  The following example attaches the full-text catalog `AdvWksFtCat` along with the `AdventureWorks2012` data and log files. In this example, the full-text catalog is moved from its default location to a new location `c:\myFTCatalogs`. The data and log files remain in their default locations.  
   
-```  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -744,7 +735,7 @@ GO
   
 -   `FileStreamResumes` contains FILESTREAM data. It contains one FILESTREAM data container, `FSResumes`, located at `C:\MyFSfolder\Resumes`.  
   
-```  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -796,7 +787,7 @@ GO
 ### J. Creating a database that has a FILESTREAM filegroup with multiple files  
  The following example creates the `BlobStore1` database. The database is created with one row filegroup and one FILESTREAM filegroup, `FS`. The FILESTREAM filegroup contains two files, `FS1` and `FS2`. Then the database is altered by adding a third file, `FS3`, to the FILESTREAM filegroup.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
@@ -854,6 +845,4 @@ GO
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
-  
 

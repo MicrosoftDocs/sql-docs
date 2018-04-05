@@ -1,12 +1,15 @@
 ---
 title: "Overview of CLR Integration | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/19/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "clr"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -19,11 +22,13 @@ helpviewer_keywords:
   - "execution at client vs. execution at server [CLR integration]"
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CLR Integration - Overview
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The common language runtime (CLR) is the heart of the Microsoft .NET Framework and provides the execution environment for all .NET Framework code. Code that runs within the CLR is referred to as managed code. The CLR provides various functions and services required for program execution, including just-in-time (JIT) compilation, allocating and managing memory, enforcing type safety, exception handling, thread management, and security.  See the .NET Framework SDK for more information.  
   
  With the CLR hosted in Microsoft SQL Server (called CLR integration), you can author stored procedures, triggers, user-defined functions, user-defined types, and user-defined aggregates in managed code. Because managed code compiles to native code prior to execution, you can achieve significant performance increases in some scenarios.  
@@ -43,6 +48,9 @@ manager: "jhubbard"
  One of the benefits of managed code is type safety, or the assurance that code accesses types only in well-defined, permissible ways. Before managed code is executed, the CLR verifies that the code is safe. For example, the code is checked to ensure that no memory is read that has not previously been written. The CLR can also help ensure that code does not manipulate unmanaged memory.  
   
  CLR integration offers the potential for improved performance. For information, see [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
+ 
+>  [!WARNING]
+>  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
   
 ## Choosing Between Transact-SQL and Managed Code  
  When writing stored procedures, triggers, and user-defined functions, one decision you must make is whether to use traditional [!INCLUDE[tsql](../../includes/tsql-md.md)], or a .NET Framework language such as Visual Basic .NET or Visual C#. Use [!INCLUDE[tsql](../../includes/tsql-md.md)] when the code will mostly perform data access with little or no procedural logic. Use managed code for CPU-intensive functions and procedures that feature complex logic, or when you want to make use of the BCL of the .NET Framework.  

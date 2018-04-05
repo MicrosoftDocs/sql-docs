@@ -10,7 +10,7 @@
 ## [Modify an Index](modify-an-index.md)  
 ## [Move an Existing Index to a Different Filegroup](move-an-existing-index-to-a-different-filegroup.md)  
 ## [Indexes on Computed Columns](indexes-on-computed-columns.md)  
-## [SORT_IN_TEMPDB Option For Indexes](sort-in-tempdb-option-for-indexes.md)  
+## [SORT_IN_TEMPDB Option for Indexes](sort-in-tempdb-option-for-indexes.md)  
 ## [Disable Indexes and Constraints](disable-indexes-and-constraints.md)  
 ## [Enable Indexes and Constraints](enable-indexes-and-constraints.md)  
 ## [Rename Indexes](rename-indexes.md)  
@@ -26,16 +26,14 @@
 ## [Configure Parallel Index Operations](configure-parallel-index-operations.md)  
 ## [Index Properties F1 Help](index-properties-f1-help.md)  
 
-
-
 # Columnstore indexes
 ## [Overview](columnstore-indexes-overview.md)  
-## [Architecture](columnstore-indexes-architecture.md)  
-## [Design guidance](columnstore-indexes-design-guidance.md)  
-## [Data loading guidance](columnstore-indexes-data-loading-guidance.md)  
+## [Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
+## [Design Guidance](columnstore-indexes-design-guidance.md)  
+## [Data loading Guidance](columnstore-indexes-data-loading-guidance.md)  
 ## [What's new](columnstore-indexes-what-s-new.md)  
 ## [Query performance](columnstore-indexes-query-performance.md)  
 ## [Real-time operational analytics](get-started-with-columnstore-for-real-time-operational-analytics.md)  
-## [Data warehouse data warehouse](columnstore-indexes-data-warehouse.md)  
+## [Data Warehouse](columnstore-indexes-data-warehouse.md)  
 ## [Defragment](columnstore-indexes-defragmentation.md)  
 

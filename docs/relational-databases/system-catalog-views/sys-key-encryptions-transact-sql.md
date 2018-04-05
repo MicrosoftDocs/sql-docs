@@ -1,10 +1,13 @@
 ---
 title: "sys.key_encryptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "07/18/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "sys.key_encryptions catalog view"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.key_encryptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns a row for each symmetric key encryption specified by using the ENCRYPTION BY clause of the CREATE SYMMETRIC KEY statement.  
 
@@ -34,8 +38,8 @@ manager: "jhubbard"
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|ID of the encrypted key.|  
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate with which the key is encrypted, or the GUID of the symmetric key with which the key is encrypted.|  
-|**crypt_type**|**char(4)**|Type of encryption:<br /><br /> ESKS = Encrypted by symmetric key<br /><br /> ESKP = Encrypted by password<br /><br /> EPUC = Encrypted by certificate<br /><br /> EPUA = Encrypted by asymmetric key<br /><br /> ESKM = Encrypted by master key|  
-|**crypt_type_desc**|**nvarchar(60)**|Description of encryption type:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Note: Windows DPAPI is used to protect the service master key.|  
+|**crypt_type**|**char(4)**|Type of encryption:<br /><br /> ESKS = Encrypted by symmetric key<br /><br /> ESKP, ESP2, or ESP3 = Encrypted by password<br /><br /> EPUC = Encrypted by certificate<br /><br /> EPUA = Encrypted by asymmetric key<br /><br /> ESKM = Encrypted by master key|  
+|**crypt_type_desc**|**nvarchar(60)**|Description of encryption type:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Beginning with [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], includes a version number for use by CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Note: Windows DPAPI is used to protect the service master key.|  
 |**crypt_property**|**varbinary(max)**|Signed or encrypted bits.|  
   
 ## Permissions  

@@ -2,11 +2,14 @@
 title: "Lesson 14: Deploy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,9 +18,12 @@ ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Lesson 13: Deploy
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will configure deployment properties; specifying an on-premises or Azure server instance, and a name for the model. You'll then deploy the model to that instance. After your model is deployed, users can connect to it by using a reporting client application. To learn more about deploying, see [Tabular model solution deployment](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) and [Deploy to Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
   
 Estimated time to complete this lesson: **5 minutes**  
@@ -65,9 +71,9 @@ Congratulations! You're finished authoring and deploying your first Analysis Ser
   
   
 ## See also  
-[DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Tabular Model Databases &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Configure default data modeling and deployment properties](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Tabular Model Databases](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## What's next?

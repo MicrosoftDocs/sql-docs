@@ -1,11 +1,13 @@
 ---
 title: "Troubleshooting Tools for Package Execution | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -20,7 +22,8 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Troubleshooting Tools for Package Execution
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
@@ -66,9 +69,9 @@ manager: "jhubbard"
 ## Troubleshoot Package Execution by Using Logging  
  You can track much of what occurs in your running packages by enabling logging. Log providers capture information about the specified events for later analysis, and save that information in a database table, a flat file, an XML file, or another supported output format.  
   
--   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](https://msdn.microsoft.com/library/ms140246.aspx).  
+-   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](../performance/integration-services-ssis-logging.md).  
   
--   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx).  
+-   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Enhance the default logging output**. Logging typically appends rows to the logging destination each time that a package is run. Although each row of logging output identifies the package by its name and unique identifier, and also identifies the execution of the package by a unique ExecutionID, the large quantity of logging output in a single list can become difficult to analyze.  
   
@@ -105,13 +108,7 @@ manager: "jhubbard"
  If you encounter an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error that does not have an accompanying description, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md) by looking up the error by its number. The list does not include troubleshooting information at this time.  
   
 ## Related Tasks  
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)  
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## Related Content  
  Blog entry, [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
-  
-  

@@ -2,9 +2,12 @@
 title: "osql Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "osql"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,11 +27,13 @@ helpviewer_keywords:
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # osql Utility
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The **osql** utility allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
   
 > [!IMPORTANT]  
@@ -110,7 +115,7 @@ C:\>osql
  Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If –1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
   
  **-s** *col_separator*  
- Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & \< >), enclose the character in double quotation marks (").  
+ Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & < >), enclose the character in double quotation marks (").  
   
  **-w** *column_width*  
  Allows the user to set the screen width for output. The default is 80 characters. When an output line has reached its maximum screen width, it is broken into multiple lines.  

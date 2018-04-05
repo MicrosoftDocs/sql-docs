@@ -2,9 +2,12 @@
 title: "Lesson 1: Create and Apply an Off By Default Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-query-tuning"
 ms.tgt_pltfrm: ""
@@ -13,11 +16,13 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MikeRayMSFT"
+ms.author: "mikeray"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Using Policy-Based Management policies, you can administer one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one or more instance objects, server instances, one or more databases, or one or more database objects. As the database administrator, you want to ensure that certain servers do not have Database Mail enabled. In this lesson, you will create a condition and a policy that sets that server option. You will test the server to see whether it complies with the policy. Then, you will use the policy to reconfigure the server to bring the server into compliance.  
   
 This lesson contains the following topics:  

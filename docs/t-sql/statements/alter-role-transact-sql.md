@@ -1,10 +1,13 @@
 ---
 title: "ALTER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2016"
+ms.date: "03/13/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,17 +25,18 @@ helpviewer_keywords:
   - "names [SQL Server], database roles"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Adds or removes members to or from a database role, or changes the name of a user-defined database role.  
   
 > [!NOTE]  
->  To alter roles in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
+>  To alter roles adding or dropping members in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +56,7 @@ ALTER ROLE  role_name
   
  
 ```  
--- Syntax for SQL Server 2008 only  
+-- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
 ALTER ROLE role_name   
@@ -75,7 +79,7 @@ ALTER ROLE role_name
   
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
- DROP MEMBER *database_principal*  
+DROP MEMBER *database_principal*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to remove a database principal from the membership of a database role.  
@@ -84,7 +88,7 @@ ALTER ROLE role_name
   
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
- WITH NAME = *new_name*  
+WITH NAME = *new_name*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to change the name of a user-defined database role. The new name must not already exist in the database.  
@@ -95,12 +99,10 @@ ALTER ROLE role_name
  To run this command you need one or more of these permissions or memberships:  
   
 -   **ALTER** permission on the role  
-  
 -   **ALTER ANY ROLE** permission on the database  
-  
 -   Membership in the **db_securityadmin** fixed database role  
   
- Additionally, to change the membership in a fixed database role you need:  
+Additionally, to change the membership in a fixed database role you need:  
   
 -   Membership in the **db_owner** fixed database role  
   
@@ -121,7 +123,7 @@ ALTER ROLE role_name
   
  The following example changes the name of role `buyers` to `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -130,7 +132,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  This example creates a database role named `Sales`. It adds a database user named Barry to the membership, and then shows how to remove the member Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  

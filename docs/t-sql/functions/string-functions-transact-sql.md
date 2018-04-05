@@ -1,10 +1,13 @@
 ---
 title: "String Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "08/15/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "strings [SQL Server]"
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # String Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   The following scalar functions perform an operation on a string input value and return a string or numeric value:  
   
@@ -43,7 +47,7 @@ manager: "jhubbard"
 
 
   
- All built-in string functions are deterministic. This means they return the same value any time they are called with a specific set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ All built-in string functions except `FORMAT` are deterministic. This means they return the same value any time they are called with a specific set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
  When string functions are passed arguments that are not string values, the input type is implicitly converted to a text data type. For more information, see [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   

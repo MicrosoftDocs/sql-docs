@@ -2,9 +2,12 @@
 title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Statistics for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   

@@ -1,36 +1,41 @@
 ---
-title: "Install Reporting Services at the Command Prompt | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/15/2016"
-ms.prod: "sql-server-2016"
+title: "Install Reporting Services 2016 at the Command Prompt - SSRS | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/09/2018"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "command line"
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
-# Install Reporting Services at the Command Prompt
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a command-line installation from the SQL Server setup program. This topic contains several examples of command-line installations that are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For a complete description of the command-line options available for all SQL Server components, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). This topic does not describe command-line options for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products. For information on command installation of the add-in, see [Install the add-in using the installation file rsSharePoint.msi](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode  
-  
-##  <a name="bkmk_native_mode"></a> Native mode Reporting Services  
-  
-### RSINSTALLMODE (Native Mode)  
+# Install Reporting Services 2016 at the Command Prompt
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a command-line installation from the SQL Server setup program. This topic contains several examples of command-line installations that are specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For a complete description of the command-line options available for all SQL Server components, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). This topic does not describe command-line options for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products. For information on command installation of the add-in, see [Install the add-in using the installation file rsSharePoint.msi](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
+
+##  <a name="bkmk_native_mode"></a> Native mode Reporting Services
+
+### RSINSTALLMODE (Native Mode)
  The primary input setting for installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is the **/RSINSTALLMODE** input setting. The setting has two options: **DefaultNativeMode** and **FilesOnlyMode**  
   
- If the installation includes the SQL Server Database engine, the default RSINSTALLMODE is DefaultNativeMode.If the installation does not include the SQL Server Database engine, the default RSINSTALLMODE is FilesOnlyMode.If you choose DefaultNativeMode but the installation does not include the SQL Server Database engine, the installation automatically changes the RSINSTALLMODE to FilesOnlyMode. For more information on the input settings, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
-### Examples of Native Mode Installation  
+ If the installation includes the SQL Server Database engine, the default RSINSTALLMODE is DefaultNativeMode.If the installation does not include the SQL Server Database engine, the default RSINSTALLMODE is FilesOnlyMode.If you choose DefaultNativeMode but the installation does not include the SQL Server Database engine, the installation automatically changes the RSINSTALLMODE to FilesOnlyMode. For more information on the input settings, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+
+### Examples of Native Mode Installation
+
  The following example installs the following and configures the accounts for :  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode.  
@@ -79,11 +84,12 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[PID value]" /F
   
 ```  
 Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value]" /FTSVCACCOUNT="[ACCOUNT Name]" /FTSVCPASSWORD="[PASSWORD]" /UPDATEENABLED="False" /IACCEPTSQLSERVERLICENSETERMS /ALLOWUPGRADEFORSSRSSHAREPOINTMODE="True"  
-```  
-  
-## See Also  
- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [SysPrep Parameters](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#SysPrep)   
- [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
-  
-  
+```
+
+## Next steps
+
+[Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+[SysPrep Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
+[Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

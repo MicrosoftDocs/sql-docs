@@ -1,22 +1,28 @@
 ---
 title: "Commands in Tabular Model Scripting Language (TMSL) | Microsoft Docs"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
+ms.custom: ""
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TMSL Reference - Commands
-  You can execute commands on an XMLA endpoint, formulating object definitions in JSON using the Tabular Model Scripting Language (TMSL), against Tabular databases at compatibility level 1200 on a SQL Server 2016 instance.   See [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) for a list of objects used with the following commands.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  You can execute commands on an XMLA endpoint, formulating object definitions in JSON using the Tabular Model Scripting Language (TMSL), against Tabular model databases.   See [Object Definitions in Tabular Model Scripting Language &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) for a list of objects used with the following commands.  
   
 ## Object operations  
   

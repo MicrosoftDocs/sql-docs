@@ -2,9 +2,12 @@
 title: "Database Mirroring Operating Modes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "database-mirroring"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -15,9 +18,11 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Database Mirroring Operating Modes
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  
   
 > [!NOTE]  

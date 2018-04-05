@@ -2,9 +2,12 @@
 title: "Restart Packages by Using Checkpoints | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "packages"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,8 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 caps.latest.revision: 54
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Restart Packages by Using Checkpoints
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can restart failed packages from the point of failure, instead of rerunning the whole package. If a package is configured to use checkpoints, information about package execution is written to a checkpoint file. When the failed package is rerun, the checkpoint file is used to restart the package from the point of failure. If the package runs successfully, the checkpoint file is deleted, and then re-created the next time the package is run.  
@@ -74,19 +78,42 @@ manager: "jhubbard"
 >  The **/CheckPointing on** option of dtexec is equivalent to setting the **SaveCheckpoints** property of the package to **True**, and the **CheckpointUsage** property to Always. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 ## Securing Checkpoint Files  
- Package level protection does not include protection of checkpoint files and you must secure these files separately. Checkpoint data can be stored only in the file system and you should use an operating system access control list (ACL) to secure the location or folder where you store the file. It is important to secure checkpoint files because they contain information about the package state, including the current values of variables. For example, a variable may contain a recordset with many rows of private data such as telephone numbers. For more information, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+ Package level protection does not include protection of checkpoint files and you must secure these files separately. Checkpoint data can be stored only in the file system and you should use an operating system access control list (ACL) to secure the location or folder where you store the file. It is important to secure checkpoint files because they contain information about the package state, including the current values of variables. For example, a variable may contain a recordset with many rows of private data such as telephone numbers. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
+
+## Configure Checkpoints for Restarting a Failed Package
+  You configure [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to restart from a point of failure, instead of rerunning the entire package, by setting the properties that apply to checkpoints.  
   
-### To configure the checkpoint properties  
+### To configure a package to restart  
   
--   [Configure Checkpoints for Restarting a Failed Package](../../integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md)  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want to configure.  
   
+2.  In **Solution Explorer**, double-click the package to open it.  
+  
+3.  Click the **Control Flow** tab.  
+  
+4.  Right-click anywhere in the background of the control flow design surface, and then click **Properties**.  
+  
+5.  Set the SaveCheckpoints property to **True**.  
+  
+6.  Type the name of the checkpoint file in the CheckpointFileName property.  
+  
+7.  Set the CheckpointUsage property to one of two values:  
+  
+    -   Select **Always** to always restart the package from the checkpoint.  
+  
+        > [!IMPORTANT]  
+        >  An error occurs if the checkpoint file is not available.  
+  
+    -   Select **IfExists** to restart the package only if the checkpoint file is available.  
+  
+8.  Configure the tasks and containers from which the package can restart.  
+  
+    -   Right-click a task or container and click **Properties**.  
+  
+    -   Set the FailPackageOnFailure property to **True** for each selected task and container.  
+    
 ## External Resources  
   
 -   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](http://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
   
 -   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](http://go.microsoft.com/fwlink/?LinkId=241633), on support.microsoft.com.  
-  
-## See Also  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  

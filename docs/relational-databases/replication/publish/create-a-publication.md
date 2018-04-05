@@ -2,9 +2,12 @@
 title: "Create a Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -16,11 +19,13 @@ helpviewer_keywords:
   - "articles [SQL Server replication], adding"
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Create a Publication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a publication in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  
@@ -43,7 +48,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Publication and article names cannot include any of the following characters: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name in the **Article Properties - \<Article>** dialog box, which is available from the **Articles** page in the wizard.  
+-   Publication and article names cannot include any of the following characters: % , \* , [ , ] , | , : , " , ? , ' , \ , / , < , >. If objects in the database include any of these characters and you want to replicate them, you must specify an article name that is different from the object name in the **Article Properties - \<Article>** dialog box, which is available from the **Articles** page in the wizard.  
   
 ###  <a name="Security"></a> Security  
  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -113,7 +118,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Publication names cannot include the following characters:  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \ / < >  
   
 4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
@@ -133,7 +138,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  Publication names cannot include the following characters:  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \ / < >  
   
 3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   

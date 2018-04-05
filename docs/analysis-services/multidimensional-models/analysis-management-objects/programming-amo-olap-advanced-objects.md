@@ -1,13 +1,16 @@
 ---
 title: "Programming AMO OLAP Advanced Objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -21,7 +24,8 @@ ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Advanced Objects
   This topic explains the Analysis Management Objects (AMO) programming details of OLAP advanced objects. This topic contains the following sections:  

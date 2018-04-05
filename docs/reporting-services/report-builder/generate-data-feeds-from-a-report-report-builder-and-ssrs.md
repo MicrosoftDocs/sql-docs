@@ -1,23 +1,29 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-builder"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
+
 # Generate Data Feeds from a Report (Report Builder and SSRS)
-  You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, that can consume data feeds.  
+
+You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as Power Pivot, or Power BI, that can consume data feeds.  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
   
@@ -79,8 +85,9 @@ manager: "erikre"
 7.  Verify the document type is **ATOM File**, and then click **Save**.  
   
 8.  Optionally, open the .atom file in a browser or text editor or XML editor.  
-  
-## See Also  
- [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Export Reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

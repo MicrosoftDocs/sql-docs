@@ -1,12 +1,15 @@
 ---
 title: "Attributes Property Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Attributes Property Example (VB)
 This example demonstrates the [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  

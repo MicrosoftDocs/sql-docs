@@ -1,12 +1,15 @@
 ---
 title: "CacheSize Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # CacheSize Property (ADO)
 Indicates the number of records from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object that are cached locally in memory.  

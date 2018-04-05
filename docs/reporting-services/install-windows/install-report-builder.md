@@ -2,18 +2,22 @@
 title: "Install Report Builder | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 caps.latest.revision: 20
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a stand-alone app, installed on your computer by you or an administrator. You can install it from the Microsoft Download Center, from a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, or from a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

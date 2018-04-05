@@ -2,12 +2,15 @@
 title: "SELECT DISTINCT FROM &lt;model &gt; (DMX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -25,9 +28,10 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SELECT DISTINCT FROM &lt;model &gt; (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns all possible states for the selected column in the model. The values that are returned vary depending on whether the specified column contains discrete values, discretized numeric values, or continuous numeric values.  
   
@@ -139,7 +143,7 @@ FROM [TM Decision Tree]
   
  For example, if you browse the model by using the Decision Tree viewer and click a node that contains customers grouped by income, the following node properties are displayed in the Tooltip:  
   
- Age >=69 AND Yearly Income \< 39221.41  
+ Age >=69 AND Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  The minimum value of the minimum bucket and the maximum value of the maximum bucket are just the highest and lowest observed values. Any values that fall outside this observed range are assumed to belong to the minimum and maximum buckets.  

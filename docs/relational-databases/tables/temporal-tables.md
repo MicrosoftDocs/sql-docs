@@ -1,11 +1,13 @@
 ---
 title: "Temporal Tables | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/11/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
@@ -14,12 +16,13 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 caps.latest.revision: 47
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] introduces support for system-versioned temporal tables as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011 and is now supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 introduced support for system-versioned temporal tables as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011.  
   
  **Quick Start**  
   
@@ -56,7 +59,7 @@ manager: "jhubbard"
 -   **Video:** For a 20 minute discussion of temporal, see [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## What is a system-versioned temporal table?  
- A system-versioned temporal table is a new type of user table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], designed to keep a full history of data changes and allow easy point in time analysis. This type of temporal table is referred to as a system-versioned temporal table because the period of validity for each row is managed by the system (i.e. database engine).  
+ A system-versioned temporal table is a type of user table designed to keep a full history of data changes and allow easy point in time analysis. This type of temporal table is referred to as a system-versioned temporal table because the period of validity for each row is managed by the system (i.e. database engine).  
   
  Every temporal table has two explicitly defined columns, each with a **datetime2** data type. These columns are referred to as period columns. These period columns are used exclusively by the system to record period of validity for each row whenever a row is modified.  
   
@@ -140,16 +143,13 @@ SELECT * FROM Employee
 |Expression|Qualifying Rows|Description|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Returns a table with a rows containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *<date_time>* parameter value.|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime \< end_date_time AND SysEndTime > start_date_time|Returns a table with the values for all row versions that were active within the specified time range, regardless of whether they started being active before the *<start_date_time>* parameter value for the FROM argument or ceased being active after the *<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and records that became active exactly on the upper boundary defined by the TO endpoint are not included.|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Returns a table with the values for all row versions that were active within the specified time range, regardless of whether they started being active before the *<start_date_time>* parameter value for the FROM argument or ceased being active after the *<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that ceased being active exactly on the lower boundary defined by the FROM endpoint are not included and records that became active exactly on the upper boundary defined by the TO endpoint are not included also.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Same as above in the **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time> description, except the table of rows returned includes rows that became active on the upper boundary defined by the <end_date_time> endpoint.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Returns a table with the values for all row versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.|  
 |**ALL**|All rows|Returns the union of rows that belong to the current and the history table.|  
   
 > [!NOTE]  
 >  Optionally, you can choose to hide these period columns such that queries that do not explicitly reference these period columns do not return these columns (the **SELECT \* FROM***\<table>* scenario). To return a hidden column, simply explicitly refer to the hidden column in the query. Similarly **INSERT** and **BULK INSERT** statements will continue as if these new period columns were not present (and the column values will be auto-populated). For details on using the **HIDDEN** clause, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## See Also  
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

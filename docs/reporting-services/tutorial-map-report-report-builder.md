@@ -2,11 +2,14 @@
 title: "Tutorial: Map Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
 applies_to: 
@@ -15,7 +18,8 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tutorial: Map Report (Report Builder)
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] tutorial, you learn about map features you can use to display data on a geographic background in an [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. 

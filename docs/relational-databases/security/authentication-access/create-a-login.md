@@ -2,9 +2,12 @@
 title: "Create a Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,12 +26,13 @@ helpviewer_keywords:
   - "SQL Server logins"
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Create a Login
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   This topic describes how to create a login in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] or [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A login is the identity of the person or process that is connecting to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +43,7 @@ manager: "jhubbard"
   
  As a security principal, permissions can be granted to logins. The scope of a login is the whole [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. To connect to a specific database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a login must be mapped to a database user. Permissions inside the database are granted and denied to the database user, not the login. Permissions that have the scope of the whole instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for example, the **CREATE ENDPOINT** permission) can be granted to a login.  
   
-> **NOTE:** When a login connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] the identify is validated at the master database. Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] connections at the database level. When using contained database users a login is not necessary. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine contained database users with database level firewall rules. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTE:** When a login connects to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] the identify is validated at the master database. Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] connections at the database level. When using contained database users a login is not necessary. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combine contained database users with database level firewall rules. For more information, see [Contained Database Users - Making Your Database Portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Security  
 

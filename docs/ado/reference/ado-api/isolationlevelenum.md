@@ -1,12 +1,15 @@
 ---
 title: "IsolationLevelEnum | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # IsolationLevelEnum
 Specifies the level of transaction isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

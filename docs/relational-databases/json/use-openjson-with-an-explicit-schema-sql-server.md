@@ -1,11 +1,12 @@
 ---
 title: "Use OPENJSON with an Explicit Schema (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -16,10 +17,11 @@ ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Use **OPENJSON** with an explicit schema to return a table that's formatted as you specify in the WITH clause.  
   
@@ -28,7 +30,7 @@ manager: "jhubbard"
 ## Example - Use the WITH clause to format the output  
  The following query returns the results shown in the following table. Notice how the AS JSON clause causes values to be returned as JSON objects instead of scalar values in col5 and array_element.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -64,7 +66,7 @@ WITH ( k1 int,
 ## Example - Load JSON into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
  The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  
@@ -83,6 +85,22 @@ DECLARE @json NVARCHAR(MAX) = '{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

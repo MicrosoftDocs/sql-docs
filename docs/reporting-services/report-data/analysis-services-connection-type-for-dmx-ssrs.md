@@ -2,12 +2,15 @@
 title: "Analysis Services Connection Type for DMX (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -20,9 +23,10 @@ helpviewer_keywords:
   - "passing parameters [Reporting Services]"
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 caps.latest.revision: 64
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services Connection Type for DMX (SSRS)
   When you create a dataset using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source, Report Designer displays the Multidimensional Expression (MDX) query designer if it detects a valid cube. If no cube is detected, but a data mining model is available, Report Designer displays the Data Mining Extensions (DMX) query designer. To switch between the MDX and DMX designers, click the **Command Type DMX** (![Change to DMX query language view](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")) button on the toolbar. Use the DMX Query Designer to interactively build a DMX query using graphical elements. To use DMX Query Designer, the data source that you specify must already have a data mining model that provides the data. Query results are converted to a flattened rowset for use in the report.  

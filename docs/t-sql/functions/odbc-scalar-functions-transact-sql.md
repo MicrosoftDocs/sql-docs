@@ -3,8 +3,11 @@ title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -52,12 +55,13 @@ helpviewer_keywords:
   - "HOUR ODBC function"
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # ODBC Scalar Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   You can use [ODBC Scalar Functions](http://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   

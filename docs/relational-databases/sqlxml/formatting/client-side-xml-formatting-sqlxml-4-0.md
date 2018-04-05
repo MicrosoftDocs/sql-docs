@@ -2,9 +2,12 @@
 title: "Client-side XML Formatting (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -18,9 +21,11 @@ ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Client-side XML Formatting (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic provides information about client-side XML formatting. Client-side formatting refers to the formatting of XML on the middle tier.  
   
 > [!NOTE]  

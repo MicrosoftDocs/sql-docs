@@ -3,8 +3,11 @@ title: "sp_addserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -21,18 +24,15 @@ helpviewer_keywords:
   - "computer names"
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Defines the name of the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the computer hosting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is renamed, use **sp_addserver** to inform the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] of the new computer name. This procedure must be executed on all instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] hosted on the computer. The instance name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot be changed. To change the instance name of a named instance, install a new instance with the desired name, detach the database files from old instance, attach the databases to the new instance and drop the old instance. Alternatively, you can create a client alias name on the client computer, redirecting the connection to different server and instance name or **server:port** combination without changing the name of the instance on the server computer.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

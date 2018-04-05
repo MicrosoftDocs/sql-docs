@@ -1,10 +1,13 @@
 ---
 title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -27,12 +30,13 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -73,7 +77,7 @@ SELECT [ ALL | DISTINCT ]
   
  For backward compatibility, using the TOP *expression* without parentheses in SELECT statements is supported, but we do not recommend it. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
- \< select_list >  
+\< select_list >
  The columns to be selected for the result set. The select list is a series of expressions separated by commas. The maximum number of expressions that can be specified in the select list is 4096.  
   
  \*  
@@ -135,13 +139,12 @@ FROM Cities;
   
  Aliases are used also to specify names for the results of expressions, for example:  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *column_alias* can be used in an ORDER BY clause. However, it cannot be used in a WHERE, GROUP BY, or HAVING clause. If the query expression is part of a DECLARE CURSOR statement, *column_alias* cannot be used in the FOR UPDATE clause.  
   

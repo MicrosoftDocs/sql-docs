@@ -1,13 +1,14 @@
 ---
 title: "SortColumn Property (RDS) | Microsoft Docs"
-ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: "article"
 apitype: "COM"
 helpviewer_keywords: 
@@ -16,7 +17,8 @@ ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SortColumn Property (RDS)
 Indicates by which column to sort the records.  

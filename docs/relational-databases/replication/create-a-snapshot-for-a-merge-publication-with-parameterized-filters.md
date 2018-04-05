@@ -2,9 +2,12 @@
 title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -15,11 +18,13 @@ helpviewer_keywords:
   - "filters [SQL Server replication], parameterized"
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  **In This Topic**  

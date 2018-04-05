@@ -2,11 +2,14 @@
 title: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   When used with Microsoft® SQL Server™ 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  

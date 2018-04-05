@@ -3,8 +3,11 @@ title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-data-warehouse, pdw, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -28,12 +31,13 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Exports a certificate to a file.  
   
@@ -116,18 +120,6 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
     WITH PRIVATE KEY ( DECRYPTION BY PASSWORD = '9875t6#6rfid7vble7r' ,  
     FILE = 'c:\storedkeys\sales09key' ,   
     ENCRYPTION BY PASSWORD = '9n34khUbhk$w4ecJH5gh' );  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Exporting a certificate and a private key  
- In the following example, the private key of the certificate that is backed up will be encrypted with the password `997jkhUbhk$w4ez0876hKHJH5gh`.  
-  
-```  
-BACKUP CERTIFICATE sales05 TO FILE = '\\ServerA7\storedcerts\sales05cert'  
-    WITH PRIVATE KEY ( FILE = '\\ServerA7\storedkeys\sales05key' ,   
-    ENCRYPTION BY PASSWORD = '997jkhUbhk$w4ez0876hKHJH5gh' );  
 GO  
 ```  
   

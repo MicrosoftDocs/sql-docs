@@ -1,10 +1,13 @@
 ---
-title: "Use Add Replica to Availability Group Wizard (SSMS) | Microsoft Docs"
+title: "Use the Add Replica to Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -18,22 +21,16 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 24
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use the Add Replica to Availability Group Wizard (SQL Server Management Studio)
-  Use the Add Replica to Availability Group Wizard to help you a add new secondary replica to an existing Always On availability group.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Use the **Add Replica to Availability Group Wizard** to help you a add new secondary replica to an existing Always On availability group.  
   
 > [!NOTE]  
 >  For information about using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell to add a secondary replica to an availability group, see [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To add a replica, using:**  [Add Replica to Availability Group Wizard (SQL Server Management Studio)](#SSMSProcedure)  
-  
+    
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  If you have never added any availability replica to an availability group, see the "Server instances" and "Availability groups and replicas" sections in [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -41,7 +38,7 @@ manager: "jhubbard"
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   Before adding a secondary replica, verify that the host instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is in the same Windows Server Failover Clustering (WSFC) cluster as the existing replicas but resides on a different cluster node. Also, verify that this server instance meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before adding a secondary replica, verify that the host instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is in the same Windows Server Failover Cluster (WSFC) as the existing replicas but resides on a different cluster node. Also, verify that this server instance meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the Add Replica to Availability Group Wizard.  
   

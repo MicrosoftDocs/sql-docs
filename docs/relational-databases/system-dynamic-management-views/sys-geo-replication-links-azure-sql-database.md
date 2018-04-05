@@ -1,13 +1,13 @@
 ---
 title: "sys.geo_replication_links (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "10/18/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "dmv's"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,10 +24,11 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sys.geo_replication_links (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This view resides in the logical master database.  
   

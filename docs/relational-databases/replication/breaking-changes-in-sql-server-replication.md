@@ -2,9 +2,12 @@
 title: "Breaking Changes in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,13 @@ helpviewer_keywords:
   - "breaking changes [SQL Server replication]"
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Breaking Changes in SQL Server Replication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes breaking changes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
 ## Breaking Changes Made in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

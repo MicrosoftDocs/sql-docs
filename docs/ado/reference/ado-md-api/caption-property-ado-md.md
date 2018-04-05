@@ -1,12 +1,15 @@
 ---
 title: "Caption Property (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Caption Property (ADO MD)
 Indicates the text caption to use when displaying a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  

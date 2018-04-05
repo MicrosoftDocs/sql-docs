@@ -2,9 +2,12 @@
 title: "Enhance Merge Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -20,11 +23,13 @@ helpviewer_keywords:
   - "agents [SQL Server replication], performance"
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Enhance Merge Replication Performance
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to merge replication.  
   
 ## Database Design  

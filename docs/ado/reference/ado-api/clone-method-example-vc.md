@@ -1,12 +1,15 @@
 ---
 title: "Clone Method Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
@@ -17,7 +20,8 @@ ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Clone Method Example (VC++)
 This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create copies of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  

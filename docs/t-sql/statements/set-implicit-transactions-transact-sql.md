@@ -3,8 +3,11 @@ title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "IMPLICIT_TRANSACTIONS option"
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Sets the BEGIN TRANSACTION mode to *implicit*, for the connection.  
   
@@ -38,8 +42,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
@@ -81,7 +83,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## Examples  
  The following Transact-SQL script runs a few different test cases. The text output is also provided, which shows the detailed behavior and results from each test case.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -164,7 +166,7 @@ go
   
  Next is the text output from the preceding Transact-SQL script.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

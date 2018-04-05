@@ -1,10 +1,13 @@
 ---
 title: "DENY Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,12 +23,13 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Denies permissions on a symmetric key.  
   
@@ -34,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         TO <database_principal> [ ,...n ] [ CASCADE ]  
@@ -64,7 +67,7 @@ DENY permission [ ,...n ]
  CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- AS <database_principal>  
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to deny the permission.  
   
  *Database_user*  

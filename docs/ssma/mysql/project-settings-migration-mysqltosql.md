@@ -1,10 +1,13 @@
 ---
 title: "Project Settings (Migration) (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (MySQLToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from MySQL to SQL Server.  

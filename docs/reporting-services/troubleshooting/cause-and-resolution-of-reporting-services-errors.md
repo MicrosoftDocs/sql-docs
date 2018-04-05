@@ -2,12 +2,15 @@
 title: "Cause and Resolution of Reporting Services Errors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "troubleshooting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], errors"
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cause and Resolution of Reporting Services Errors
   This topic contains cause and resolution information for a number of errors related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  

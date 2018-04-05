@@ -2,12 +2,15 @@
 title: "Cross-Validation (Analysis Services - Data Mining) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
+  
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -19,9 +22,11 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cross-Validation (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Cross-validation* is a standard tool in analytics and is an important feature for helping you develop and fine-tune data mining models. You use cross-validation after you have created a mining structure and related mining models to ascertain the validity of the model.  Cross-validation has the following applications:  
   
 -   Validating the robustness of a particular mining model.  
@@ -100,7 +105,7 @@ manager: "jhubbard"
  To see an example of how to create a cross-validation report using the user interface, see [Create a Cross-Validation Report](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### Cross-Validation Stored Procedures  
- For advanced users, cross-validation is also available in the form of fully parameterized system stored procedures. You can run the stored procedures by connecting to an instance of [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or from any managed code application.  
+ For advanced users, cross-validation is also available in the form of fully parameterized system stored procedures. You can run the stored procedures by connecting to an instance from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or from any managed code application.  
   
  The stored procedures are grouped by mining model type. One set of stored procedures works with clustering models only. The other set of stored procedures works with other mining models.  
   

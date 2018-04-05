@@ -1,3 +1,5 @@
+# [Report Server Web Service Methods](report-server-web-service-methods.md)
+
 # [Authorization Methods](authorization-methods.md)
 # [Data Sources and Connection Methods](data-sources-and-connection-methods.md)
 # [Linked Reports Methods](linked-reports-methods.md)
@@ -7,6 +9,5 @@
 # [Report Parameters Methods](report-parameters-methods.md)
 # [Report Server Namespace Management Methods](report-server-namespace-management-methods.md)
 # [Report Server Web Service Endpoints](report-server-web-service-endpoints.md)
-# [Report Server Web Service Methods](report-server-web-service-methods.md)
 # [Scheduling Methods](scheduling-methods.md)
 # [Subscription and Delivery Methods](subscription-and-delivery-methods.md)

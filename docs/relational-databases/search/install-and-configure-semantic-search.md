@@ -2,9 +2,12 @@
 title: "Install and Configure Semantic Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,11 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Install and Configure Semantic Search
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes the prerequisites for statistical semantic search and how to install or check them.  
   
 ## Install Semantic Search  
@@ -28,7 +33,7 @@ manager: "jhubbard"
   
  A return value of 1 indicates that Full-Text Search and Semantic Search are installed; a return value of 0 indicates that they are not installed.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -46,7 +51,7 @@ GO
   
  If the semantic language statistics database is installed and registered for the instance, then the query results contain a single row of information about the database.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
@@ -79,7 +84,7 @@ GO
   
  By default, the name of the database is **semanticsdb**. You can optionally give the database a different name when you attach it. You have to provide this name when you register the database in the subsequent step.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -93,7 +98,7 @@ GO
   
  Call the stored procedure [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) and provide the name that you gave to the database when you attached it.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -118,7 +123,7 @@ GO
    
  Call the stored procedure [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). You do not have to provide the name of the database since an instance can have only one semantic language statistics database.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -127,7 +132,7 @@ GO
  
  Call the stored procedure [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) and provide the name of the database.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

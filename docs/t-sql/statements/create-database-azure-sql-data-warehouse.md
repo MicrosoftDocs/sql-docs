@@ -1,40 +1,46 @@
 ---
 title: "CREATE DATABASE (Azure SQL Data Warehouse) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.custom: ""
+ms.date: "02/14/20178"
+ms.prod: ""
+ms.prod_service: "sql-data-warehouse"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
+ms.service: "sql-data-warehouse"
+ms.component: "t-sql|statements"
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 42819b93-b757-4b2c-8179-d4be3c512c19
-caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # CREATE DATABASE (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Creates a new database.  
   
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
-    [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  
+    [ MAXSIZE = { 
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 
+        | 153600 | 204800 | 245760 
+      } GB ,
+    ]  
     EDITION = 'datawarehouse',  
-    SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' }  
+    SERVICE_OBJECTIVE = { 
+         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
+        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }  
 )  
 [;]  
 ```  
@@ -52,10 +58,18 @@ For more information about the Windows and SQL collation names, see [COLLATE (Tr
 Specifies the service tier of the database. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] use 'datawarehouse' .  
   
 *MAXSIZE*  
-The maximum size the database may grow to. Setting this value prevents the growth of the database size beyond the size set. The default *MAXSIZE* when not specified is 10240 GB (10 TB).  Other possible values range from 250 GB up to 240 TB.  
+The default is 245,760 GB (240 TB).  
+
+**Applies to:** Optimized for Elasticity performance tier
+
+The maximum allowable size for the database. The database cannot grow beyond MAXSIZE. 
+
+**Applies to:** Optimized for Compute performance tier
+
+The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE.  Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [Scale Performance on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/).  
+Specifies the performance level. For more information about service objectives for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [Performance Tiers](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## General Remarks  
 Use [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) to see the database properties.  

@@ -1,10 +1,13 @@
 ---
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Is the change table created when change data capture is enabled on a source table. The table returns one row for each insert and delete operation performed against the source table, and two rows for each update operation performed against the source table. When the name of the change table is not specified at the time the source table is enabled, the name is derived. The format of the name is cdc.*capture_instance*_CT where *capture_instance* is the schema name of the source table and the source table name in the format *schema_table*. For example, if the table **Person.Address** in the **AdventureWorks** sample database is enabled for change data capture, the derived change table name would be **cdc.Person_Address_CT**.  
   
@@ -39,9 +43,12 @@ manager: "jhubbard"
 |**__$operation**|**int**|Identifies the data manipulation language (DML) operation associated with the change. Can be one of the following:<br /><br /> 1 = delete<br /><br /> 2 = insert<br /><br /> 3 = update (old values)<br /><br /> Column data has row values before executing the update statement.<br /><br /> 4 = update (new values)<br /><br /> Column data has row values after executing the update statement.|  
 |**__$update_mask**|**varbinary(128)**|A bit mask based upon the column ordinals of the change table identifying those columns that changed.|  
 |*\<captured source table columns>*|varies|The remaining columns in the change table are the columns from the source table that were identified as captured columns when the capture instance was created. If no columns were specified in the captured column list, all columns in the source table are included in this table.|  
+|**__$command_id** |**int** |Tracks the order of operations within a transaction. |  
   
 ## Remarks  
-  
+
+The `__$command_id` column was column was introduced in a cumulative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+
 ## Captured Column Data Types  
  Captured columns included in this table have the same data type and value as their corresponding source columns with the following exceptions:  
   

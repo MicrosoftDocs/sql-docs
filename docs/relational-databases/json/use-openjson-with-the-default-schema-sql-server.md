@@ -1,11 +1,12 @@
 ---
 title: "Use OPENJSON with the Default Schema (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -16,10 +17,11 @@ ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Use OPENJSON with the Default Schema (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Use **OPENJSON** with the default schema to returns a table with one row for each property of the object or for each element in the array.  
   
@@ -28,7 +30,7 @@ manager: "jhubbard"
 ## Example - Return each property of an object  
  **Query**  
   
-```tsql  
+```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
@@ -44,7 +46,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 ## Example - Return each element of an array  
  **Query**  
   
-```tsql  
+```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
@@ -62,7 +64,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 ## Example - Convert JSON to a temporary table  
  The following query returns all properties of the **info** object.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json=N'{  
@@ -93,15 +95,29 @@ FROM OPENJSON(@json,N'lax $.info')
 ## Example - Combine relational data and JSON data  
  In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like "Manufacturer" and "Quality". The example creates a report that joins every sales order row to the related sales reasons by expanding the JSON array of sales reasons as if the reasons were stored in a separate child table.  
   
-```tsql  
+```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
 FROM Sales.SalesOrderHeader
 CROSS APPLY OPENJSON(SalesReasons)
 ```  
   
  In this example, OPENJSON returns a table of sales reasons in which the reasons appear as the value column. The CROSS APPLY operator joins each sales order row to the rows returned by the OPENJSON table-valued function.  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
-  

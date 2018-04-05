@@ -1,10 +1,13 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/17/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,8 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 44
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SQL Server Backup to URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -106,12 +110,12 @@ manager: "jhubbard"
   
 |Backup/Restore Statement|Supported|Exceptions|Comments|
 |-|-|-|-|
-|BACKUP|√|BLOCKSIZE and MAXTRANSFERSIZE are supported for block blobs. They are not supported for page blobs. | BACKUP to a block blob requires a Shared Access Signature saved in a SQL Server credential. BACKUP to page blob requires the storage account key saved in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, and requires the WITH CREDENTIAL argument to be specified.|  
-|RESTORE|√||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|RESTORE FILELISTONLY|√||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|RESTORE HEADERONLY|√||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|RESTORE LABELONLY|√||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|RESTORE VERIFYONLY|√||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|BACKUP|Y|BLOCKSIZE and MAXTRANSFERSIZE are supported for block blobs. They are not supported for page blobs. | BACKUP to a block blob requires a Shared Access Signature saved in a SQL Server credential. BACKUP to page blob requires the storage account key saved in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential, and requires the WITH CREDENTIAL argument to be specified.|  
+|RESTORE|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|RESTORE FILELISTONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|RESTORE HEADERONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|RESTORE LABELONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|RESTORE VERIFYONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |RESTORE REWINDONLY|−|||  
   
  For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -122,36 +126,36 @@ manager: "jhubbard"
 
 |Argument|Supported|Exception|Comments|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|Y|||  
+|LOG|Y|||  
 ||  
-|TO (URL)|√|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
-|MIRROR TO|√|||  
+|TO (URL)|Y|Unlike DISK and TAPE, URL does not support specifying or creating a logical name.|This argument is used to specify the URL path for the backup file.|  
+|MIRROR TO|Y|||  
 |**WITH OPTIONS:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Microsoft Azure Blob storage service and only if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||When the **WITH ENCRYPTION** argument is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-Snapshot Backup ensures that the entire database was TDE-encrypted before taking the backup and, if so, encrypts the file-snapshot backup file itself using the algorithm specified for TDE on the database. If all data in the database in the entire database is not encrypted, the backup will fail (e.g. the encryption process is not yet complete).|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|Not supported for file-snapshot backup||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
+|CREDENTIAL|Y||WITH CREDENTIAL is only supported when using BACKUP TO URL option to back up to the Microsoft Azure Blob storage service and only if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
+|FILE_SNAPSHOT|Y|||  
+|ENCRYPTION|Y||When the **WITH ENCRYPTION** argument is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] File-Snapshot Backup ensures that the entire database was TDE-encrypted before taking the backup and, if so, encrypts the file-snapshot backup file itself using the algorithm specified for TDE on the database. If all data in the database in the entire database is not encrypted, the backup will fail (e.g. the encryption process is not yet complete).|  
+|DIFFERENTIAL|Y|||  
+|COPY_ONLY|Y|||  
+|COMPRESSION&#124;NO_COMPRESSION|Y|Not supported for file-snapshot backup||  
+|DESCRIPTION|Y|||  
+|NAME|Y|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||Appending to blobs is not possible. To overwrite a backup use the **WITH FORMAT** argument. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||A backup taken to an existing blob fails unless **WITH FORMAT** is specified. The existing blob is overwritten when **WITH FORMAT** is specified. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the FORMAT argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|√|Not supported for page blob. Supported for block blob.| Recommend BLOCKSIZE=65536 to optimize use of the 50,000 blocks allowed in a block blob. |  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|√|Not supported for page blob. Supported for block blob.| Default is 1048576. The value can range up to 4 MB in increments of 65536 bytes.</br> Recommend MAXTRANSFERSIZE=4194304 to optimize use of the 50,000 blocks allowed in a block blob. |  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
+|NOFORMAT &#124; FORMAT|Y||A backup taken to an existing blob fails unless **WITH FORMAT** is specified. The existing blob is overwritten when **WITH FORMAT** is specified. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the FORMAT argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
+|MEDIADESCRIPTION|Y|||  
+|MEDIANAME|Y|||  
+|BLOCKSIZE|Y|Not supported for page blob. Supported for block blob.| Recommend BLOCKSIZE=65536 to optimize use of the 50,000 blocks allowed in a block blob. |  
+|BUFFERCOUNT|Y|||  
+|MAXTRANSFERSIZE|Y|Not supported for page blob. Supported for block blob.| Default is 1048576. The value can range up to 4 MB in increments of 65536 bytes.</br> Recommend MAXTRANSFERSIZE=4194304 to optimize use of the 50,000 blocks allowed in a block blob. |  
+|NO_CHECKSUM &#124; CHECKSUM|Y|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
+|STATS|Y|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|NORECOVERY &#124; STANDBY|Y|||  
+|NO_TRUNCATE|Y|||  
   
  For more information about backup arguments, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -159,35 +163,35 @@ manager: "jhubbard"
   
 |Argument|Supported|Exceptions|Comments|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||The FROM URL argument is used to specify the URL path for the backup file.|  
+|DATABASE|Y|||  
+|LOG|Y|||  
+|FROM (URL)|Y||The FROM URL argument is used to specify the URL path for the backup file.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Microsoft Azure Blob storage service.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
+|CREDENTIAL|Y||WITH CREDENTIAL is only supported when using RESTORE FROM URL option to restore from Microsoft Azure Blob storage service.|  
+|PARTIAL|Y|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|Y|||  
+|LOADHISTORY|Y|||  
+|MOVE|Y|||  
+|REPLACE|Y|||  
+|RESTART|Y|||  
+|RESTRICTED_USER|Y|||  
 |FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
+|PASSWORD|Y|||  
+|MEDIANAME|Y|||  
+|MEDIAPASSWORD|Y|||  
+|BLOCKSIZE|Y|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|Not supported for snapshot backup||  
-|STATS|√|||  
+|CHECKSUM &#124; NO_CHECKSUM|Y|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
+|FILESTREAM|Y|Not supported for snapshot backup||  
+|STATS|Y|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|KEEP_REPLICATION|Y|||  
+|KEEP_CDC|Y|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|Y|||  
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -267,13 +271,15 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
 -   [Restoring to a point-in-time using STOPAT](#PITR)  
   
 > [!NOTE]  
->  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Create a Shared Access Signature  
- The following example creates Shared Access Signatures that can be used to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential on a newly created container. The script  creates a Shared Access Signature that is associated with a Stored Access Policy. For more information, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). The example requires Microsoft Azure Powershell. For information about installing and using Azure Powershell, see [How to install and configure Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ The following example creates Shared Access Signatures that can be used to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential on a newly created container. The script  creates a Shared Access Signature that is associated with a Stored Access Policy. For more information, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). The script also writes the T-SQL command required to create the credential on SQL Server. 
 
 > [!NOTE] 
->  These scripts were written using Azure PowerShell 5.0.10586.
+> The example requires Microsoft Azure Powershell. For information about installing and using Azure Powershell, see [How to install and configure Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> These scripts were verified using Azure PowerShell 5.1.15063. 
+
 
 **Shared Access Signature that is associated with a Stored Access Policy**  
   
@@ -306,21 +312,16 @@ New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resource
 $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
 $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$permissions = $cbc.GetPermissions();  
-$policyName = $policyName  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-$policy.Permissions = "Read,Write,List,Delete"  
-$permissions.SharedAccessPolicies.Add($policyName, $policy)  
-$cbc.SetPermissions($permissions);  
+$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+
 
 # Gets the Shared Access Signature for the policy  
 $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
@@ -333,51 +334,59 @@ $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET
 $tSql | clip  
 Write-Host $tSql  
 ```  
-  
+
+After succesfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instancance of SQL Server and run the command to create the credential with the Shared Access Signature. 
+
 ###  <a name="credential"></a> Create a Credential  
- The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials for authentication to the Microsoft Azure Blob storage service.  
+ The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials for authentication to the Microsoft Azure Blob storage service. Do one of the following. 
   
-1.  **Using storage account identity and access key**  
+1.  **Using Shared Access Signature**  
+
+   If you ran the script to create the Shared Access Signature above, copy the `CREATE CREDENTIAL` to a query editor connected to your instance of SQL Server and run the command. 
+
+   The following T-SQL is an example that creates the credential to use a Shared Access Signature. 
+
+   ```sql  
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+   CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
+      SECRET = '<SAS_TOKEN>';  
+   ```  
   
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = '<mycredentialname>')  
-    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
-    ,SECRET = '<mystorageaccountaccesskey>';  
-    ```  
+2.  **Using storage account identity and access key**  
   
-2.  **Using Shared Access Signature**  
-  
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
-    ,SECRET = '<SAS_TOKEN>';  
-    ```  
+   ```sql 
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = '<mycredentialname>')  
+   CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+   ,SECRET = '<mystorageaccountaccesskey>';  
+   ```  
   
 ###  <a name="complete"></a> Perform a full database backup  
- The following examples perform a full database backup of the AdventureWorks2016 database to the Microsoft Azure Blob storage service.  
+ The following examples perform a full database backup of the AdventureWorks2016 database to the Microsoft Azure Blob storage service. Do one of the following:   
   
-1.  **To URL using storage account identity and access key**  
-  
-    ```Transact-SQL
-    BACKUP DATABASE AdventureWorks2016  
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
-          WITH CREDENTIAL = '<mycredentialname>'   
-         ,COMPRESSION  
-         ,STATS = 5;  
-    GO   
-    ```  
   
 2.  **To URL using Shared Access Signature**  
   
-    ```Transact-SQL  
-    BACKUP DATABASE AdventureWorks2016   
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
-    GO   
-    ```  
+   ```sql  
+   BACKUP DATABASE AdventureWorks2016   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   GO   
+   ```  
+
+1.  **To URL using storage account identity and access key**  
+  
+   ```sql
+   BACKUP DATABASE AdventureWorks2016  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+         WITH CREDENTIAL = '<mycredentialname>'   
+        ,COMPRESSION  
+        ,STATS = 5;  
+   GO   
+   ```  
   
 
   
@@ -387,25 +396,25 @@ Write-Host $tSql
   
 1.  **From URL using Shared Access Signature**  
   
-    ```Transact-SQL
-    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
-    ,NORECOVERY  
-    ,REPLACE  
-    ,STATS = 5;  
-    GO   
+   ```sql
+   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   ,NORECOVERY  
+   ,REPLACE  
+   ,STATS = 5;  
+   GO   
   
-    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
-    WITH   
-    RECOVERY   
-    ,STOPAT = 'May 18, 2015 5:35 PM'   
-    GO  
-    ```  
+   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   WITH   
+   RECOVERY   
+   ,STOPAT = 'May 18, 2015 5:35 PM'   
+   GO  
+   ```  
   
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

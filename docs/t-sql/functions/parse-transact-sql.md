@@ -1,10 +1,13 @@
 ---
 title: "PARSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/05/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +66,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Use PARSE only for converting from string to date/time and number types. For general type conversions, continue to use CAST or CONVERT. Keep in mind that there is a certain performance overhead in parsing the string value.  
   
- PARSE relies on the presence of .the .NET Framework Common Language Runtime (CLR).  
+ PARSE relies on the presence of the .NET Framework Common Language Runtime (CLR).  
   
  This function will not be remoted since it depends on the presence of the CLR. Remoting a function that requires the CLR would cause an error on the remote server.  
   

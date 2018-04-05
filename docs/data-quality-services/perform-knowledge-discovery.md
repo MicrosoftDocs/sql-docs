@@ -2,9 +2,12 @@
 title: "Perform Knowledge Discovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "data-quality-services"
+ms.service: ""
+ms.component: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "data-quality-services"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ f1_keywords:
   - "sql13.dqs.kb.kbmap.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Perform Knowledge Discovery
   This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  

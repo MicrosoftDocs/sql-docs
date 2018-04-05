@@ -3,8 +3,11 @@ title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/03/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,12 +28,13 @@ helpviewer_keywords:
   - "SET QUOTED_IDENTIFIER statement"
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax rules for identifiers.  
   
@@ -175,23 +179,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ID          String`  
-  
- `----------- ------------------------------`  
-  
- `1           'Text in single quotes'`  
-  
- `2           'Text in single quotes'`  
-  
- `3           Text with 2 '' single quotes`  
-  
- `4           "Text in double quotes"`  
-  
- `5           "Text in double quotes"`  
-  
- `6           Text with 2 "" double quotes`  
-  
- `7           Text with a single ' quote`  
+ ```
+ ID          String 
+ ----------- ------------------------------ 
+ 1           'Text in single quotes' 
+ 2           'Text in single quotes' 
+ 3           Text with 2 '' single quotes 
+ 4           "Text in double quotes" 
+ 5           "Text in double quotes" 
+ 6           Text with 2 "" double quotes 
+ 7           Text with a single ' quote
+ ```  
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

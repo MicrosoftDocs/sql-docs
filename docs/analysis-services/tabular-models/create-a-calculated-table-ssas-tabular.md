@@ -1,22 +1,26 @@
 ---
-title: "Create a Calculated Table (SSAS Tabular) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+title: "Create a Calculated Table | Microsoft Docs"
+ms.custom: ""
+ms.date: "02/22/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
+  
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
-# Create a Calculated Table (SSAS Tabular)
+# Create a calculated table 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   A *calculated table* is a computed object, based on either a DAX query or expression, derived from all or part of other tables in the same model.  
   
  A common design problem that calculated tables can solve is surfacing a role-playing dimension in a specific context so that you can expose it as a query structure in client applications.  You might recall that  a role-playing dimension  is simply a table surfaced in multiple  contexts -- a classic example is the Date table, manifested as OrderDate, ShipDate, or DueDate, depending on the foreign key relationship. By creating a calculated table for ShipDate explicitly, you get a standalone table that is available for queries, as fully operable as any other table.  
@@ -28,7 +32,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 ## How to create a calculated table  
   
-1.  First, verify the tabular model has a compatibility level of 1200. You can check the **Compatibility Level** property on the model in SSDT.  
+1.  First, verify the tabular model has a compatibility level of 1200 or higher. You can check the **Compatibility Level** property on the model in SSDT.  
   
 2.  Switch to the Data View. You can't create a calculated table in Diagram View.  
   
@@ -38,7 +42,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 5.  Name the table.  
   
-6.  Create relationships to other tables in the model. See [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) if you need help with this step.  
+6.  Create relationships to other tables in the model. See [Create a Relationship Between Two Tables](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md) if you need help with this step.  
   
 7.  Reference the table in calculations or expressions in your model or use **Analyze in Excel** for ad hoc data exploration.  
   
@@ -66,9 +70,9 @@ There is one CalculatedTableColumn for each column returned by the expression, w
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## See Also  
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+## See also  
+ [Compatibility level](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
- [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
+ [Understanding DAX in tabular models](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

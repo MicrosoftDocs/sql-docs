@@ -1,10 +1,13 @@
 ---
 title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/18/2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -13,10 +16,11 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Faster temp table and table variable by using memory optimization
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 If you use temporary tables, table variables, or table-valued parameters, consider conversions of them to leverage memory-optimized tables and table variables to improve performance. The code changes are usually minimal.  
@@ -59,6 +63,8 @@ In-Memory OLTP provides the following objects that can be used for memory-optimi
   
 ## B. Scenario: Replace global tempdb &#x23;&#x23;table  
   
+Replacing a global temporary table with a memory-optimized SCHEMA_ONLY table is fairly straightforward. The biggest change is to create the table at deployment time, not at runtime. Creation of memory-optimized tables takes longer than creation of traditional tables, due to the compile-time optimizations. Creating and dropping memory-optimized tables as part of the online workload would impact the performance of the workload, as well as the performance of redo on AlwaysOn secondaries and database recovery.
+
 Suppose you have the following global temporary table.  
   
   
@@ -96,13 +102,15 @@ The conversion from global temporary to SCHEMA_ONLY is the following steps:
   
   
 1. Create the **dbo.soGlobalB** table, one time, just as you would any traditional on-disk table.  
-2. From your Transact-SQL, remove the create of the **&#x23;&#x23;tempGlobalB** table.  
+2. From your Transact-SQL, remove the create of the **&#x23;&#x23;tempGlobalB** table.  It is important to create the memory-optimized table at deployment time, not at runtime, to avoid the compilation overhead that comes with table creation.
 3. In your T-SQL, replace all mentions of **&#x23;&#x23;tempGlobalB** with **dbo.soGlobalB**.  
   
   
 ## C. Scenario: Replace session tempdb &#x23;table  
   
 The preparations for replacing a session temporary table involve more T-SQL than for the earlier global temporary table scenario. Happily the extra T-SQL does not mean any more effort is needed to accomplish the conversion.  
+
+As with the global temp table scenario, the biggest change is to create the table at deployment time, not runtime, to avoid the compilation overhead.
   
 Suppose you have the following session temporary table.  
   
@@ -178,7 +186,7 @@ Third, in your general T-SQL code:
 1. Change all references to the temp table in your Transact-SQL statements to the new memory-optimized table:
     - _Old:_ &#x23;tempSessionC  
     - _New:_ dbo.soSessionC  
-2. Replace the `CREATE TABLE #tempSessionC` statements in your code with `DELETE FROM dbo.soSessionC`, to ensure a session is not exposed to table contents inserted by a previous session with the same session_id
+2. Replace the `CREATE TABLE #tempSessionC` statements in your code with `DELETE FROM dbo.soSessionC`, to ensure a session is not exposed to table contents inserted by a previous session with the same session_id. It is important to create the memory-optimized table at deployment time, not at runtime, to avoid the compilation overhead that comes with table creation.
 3. Remove the `DROP TABLE #tempSessionC` statements from your code – optionally you can insert a `DELETE FROM dbo.soSessionC` statement, in case memory size is a potential concern
   
   
@@ -424,39 +432,3 @@ If the memory-optimized table variable is accessed only with one exact key value
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Defining Durability for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi , 2016-05-02  Monday  18:40pm  
--->  
-  
-  
-  
-

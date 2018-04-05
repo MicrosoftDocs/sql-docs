@@ -1,22 +1,27 @@
 ---
 title: "Roles object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: "05/30/2017"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Roles object (TMSL)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Defines a role on the model that specifies a collection of permissions. Role membership consists of Windows security principles. You can set filters on a role to restrict access to specific objects.  
   
 ## Object definition  

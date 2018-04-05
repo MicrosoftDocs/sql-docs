@@ -1,12 +1,15 @@
 ---
 title: "Dialect Property | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -18,7 +21,8 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Dialect Property
 Indicates the dialect of the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) or [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) properties. The dialect defines the syntax and general rules that the provider uses to parse the string or stream.  

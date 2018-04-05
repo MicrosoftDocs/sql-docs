@@ -1,13 +1,16 @@
 ---
 title: "Data Alert Manager for Alerting Administrators | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
+ms.date: "07/02/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -15,15 +18,18 @@ helpviewer_keywords:
   - "managing, data alerts"
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Alert Manager for Alerting Administrators
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.
 
 ![Alert Manager for SharePoin tsite administrators](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoint site administrators")
 
@@ -76,4 +82,5 @@ manager: "erikre"
 ## See Also
 
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

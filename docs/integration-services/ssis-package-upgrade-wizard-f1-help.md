@@ -2,9 +2,12 @@
 title: "SSIS Package Upgrade Wizard F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "non-specific"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -21,7 +24,8 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # SSIS Package Upgrade Wizard F1 Help
   Use the SSIS Package Upgrade Wizard to upgrade packages created by earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to the package format for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

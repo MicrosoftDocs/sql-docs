@@ -1,10 +1,13 @@
 ---
 title: "Menu commands and other shortcut keys (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-db2"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Menu commands and other shortcut keys (DB2ToSQL)
 The following sections describe the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SSMA for DB2 application.  

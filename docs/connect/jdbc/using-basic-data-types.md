@@ -1,10 +1,13 @@
 ---
 title: "Using Basic Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/19/2018"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "jdbc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "drivers"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 73
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using Basic Data Types
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,12 +62,11 @@ manager: "jhubbard"
 |varchar|VARCHAR|String|  
 |varchar(max)|VARCHAR|String|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|Object|  
   
  (1) To use java.sql.Time with the time [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type, you must set the **sendTimeAsDatetime** connection property to false.  
   
  (2) You can programmatically access values of **datetimeoffset** with [DateTimeOffset Class](../../connect/jdbc/reference/datetimeoffset-class.md).  
-  
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sqlvariant data type is not currently supported by the JDBC driver. If a query is used to retrieve data from a table that contains a column of the sqlvariant data type, an exception will occur.  
   
  The following sections provide examples of how you can use the JDBC Driver and the basic data types. For a more detailed example of how to use the basic data types in a Java application, see [Basic Data Types Sample](../../connect/jdbc/basic-data-types-sample.md).  
   

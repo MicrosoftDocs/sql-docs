@@ -1,10 +1,13 @@
 ---
 title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -24,12 +27,13 @@ helpviewer_keywords:
   - "database master key [SQL Server], creating"
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # CREATE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a database master key.  
   
@@ -75,22 +79,13 @@ For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../
  Requires CONTROL permission on the database.  
   
 ## Examples  
- The following example creates a database master key for the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
+ The following example creates a database master key for the current database. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
   
 ```  
--- Uses AdventureWorks  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 GO  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example creates a master key. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
-  
-```  
-USE master;  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
-GO  
-```  
+
   
 ## See Also  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   

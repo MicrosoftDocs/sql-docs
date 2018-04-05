@@ -2,13 +2,16 @@
 title: "Multidimensional Model Data Access (Analysis Services - Multidimensional Data) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
+  
+ms.component: multidimensional-tabular
+ms.component: data-mining
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -25,9 +28,11 @@ ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Multidimensional Model Data Access (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Use the information in this topic to learn how to access [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] multidimensional data using programmatic methods, script, or client applications that include built-in support for connecting to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server on your network.  
   
  This topic contains the following sections:  

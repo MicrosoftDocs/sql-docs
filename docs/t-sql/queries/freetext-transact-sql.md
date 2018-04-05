@@ -1,10 +1,13 @@
 ---
 title: "FREETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "10/23/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,12 +25,13 @@ helpviewer_keywords:
   - "column searches [full-text search]"
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Is a predicate used in the [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types. This predicate searches for values that match the meaning and not just the exact wording of the words in the search condition. When FREETEXT is used, the full-text query engine internally performs the following actions on the *freetext_string*, assigns each term a weight, and then finds the matches:  
   
@@ -40,9 +44,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +73,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  Use of WEIGHT, FORMSOF, wildcards, NEAR and other syntax is not allowed. *freetext_string* is wordbroken, stemmed, and passed through the thesaurus.  
   
- *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
+ *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
 ```  
   
@@ -115,7 +117,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## General Remarks  
  Full-text predicates and functions work on a single table, which is implied in the FROM predicate. To search on multiple tables, use a joined table in your FROM clause to search on a result set that is the product of two or more tables.  
   
- Full-text queries using FREETEXT are less precise than those full-text queries using CONTAINS. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search engine identifies important words and phrases. No special meaning is given to any of the reserved keywords or wildcard characters that typically have meaning when specified in the <contains_search_condition> parameter of the CONTAINS predicate.  
+Full-text queries using FREETEXT are less precise than those full-text queries using CONTAINS. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search engine identifies important words and phrases. No special meaning is given to any of the reserved keywords or wildcard characters that typically have meaning when specified in the \<contains_search_condition> parameter of the CONTAINS predicate.
   
  Full-text predicates are not allowed in the [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) when the database compatibility level is set to 100.  
   

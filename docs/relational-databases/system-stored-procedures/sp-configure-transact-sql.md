@@ -3,8 +3,11 @@ title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, pdw"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,14 +21,17 @@ helpviewer_keywords:
   - "sp_configure"
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  Displays or changes global configuration settings for the current server.  
+  Displays or changes global configuration settings for the current server.
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
 >  For database-level configuration options, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To configure Soft-NUMA, see [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  

@@ -1,13 +1,16 @@
 ---
 title: "Designing Aggregations (XMLA) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "02/14/2018"
+ms.prod: analysis-services
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+  
+
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 applies_to: 
@@ -24,7 +27,8 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Designing Aggregations (XMLA)
   Aggregation designs are associated with the partitions of a particular measure group to make sure that the partitions use the same structure when storing aggregations. Using the same storage structure for partitions lets you to easily define partitions that can be later merged using the [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) command. For more information about aggregation designs, see [Aggregations and Aggregation Designs](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

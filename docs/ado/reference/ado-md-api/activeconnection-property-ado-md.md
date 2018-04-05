@@ -1,12 +1,15 @@
 ---
 title: "ActiveConnection Property (ADO MD) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 apitype: "COM"
@@ -20,7 +23,8 @@ ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # ActiveConnection Property (ADO MD)
 Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  

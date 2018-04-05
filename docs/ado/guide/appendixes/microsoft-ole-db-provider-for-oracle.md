@@ -1,12 +1,15 @@
 ---
 title: "Microsoft OLE DB Provider for Oracle | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
 ms.technology:
   - "drivers"
-ms.custom: "H1Hack27Feb2017"
+ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
@@ -17,7 +20,8 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]

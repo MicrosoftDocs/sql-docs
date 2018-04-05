@@ -3,8 +3,11 @@ title: "sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,12 +21,13 @@ helpviewer_keywords:
   - "sp_add_data_file_recover_suspect_db"
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a data file to a filegroup when recovery cannot complete on a database due to insufficient space on the file group (error 1105). After the file is added, this stored procedure turns off the suspect setting and completes the recovery of the database. The parameters are the same as those for ALTER DATABASE *database_name* ADD FILE.  
   

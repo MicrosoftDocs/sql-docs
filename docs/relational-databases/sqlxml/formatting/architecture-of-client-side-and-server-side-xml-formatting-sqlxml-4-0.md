@@ -2,9 +2,12 @@
 title: "Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-xml"
 ms.tgt_pltfrm: ""
@@ -22,9 +25,11 @@ ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The following illustration shows the architecture of XML formatting on the server side.  
   
  ![Architecture of XML formatting on the server side.](../../../relational-databases/sqlxml/formatting/media/serversidexml.gif "Architecture of XML formatting on the server side.")  

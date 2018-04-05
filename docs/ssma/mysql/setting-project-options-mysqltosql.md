@@ -1,10 +1,13 @@
 ---
 title: "Setting Project Options (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-mysql"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -16,9 +19,10 @@ helpviewer_keywords:
   - "Setting project options,configuration options"
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Setting Project Options (MySQLToSQL)
 For each SSMA project, you can set project-level options. These options specify how objects are converted, how data is migrated, and how source data types map to target data types.  Before you convert objects to SQL Server or SQL Azure or migrate data into SQL Server or SQL Azure, verify that the configuration options are appropriate for the project.  

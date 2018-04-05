@@ -2,19 +2,23 @@
 title: "Cache Shared Datasets (SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
+
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cache Shared Datasets (SSRS)
   Query results for a shared dataset can be copied to a cache to provide consistent data for multiple reports and to improve response time for the dataset query. Like reports, you can configure a shared dataset to be cached on first use or by specifying a schedule.  
@@ -31,7 +35,7 @@ manager: "erikre"
   
 -   The query runs as the result of a shared dataset reference in a report that is delivered via e-mail, where a large number of people are likely to click the link in a short span of time.  
   
--   The following list provides examples of when not to cache a shared dataset:  
+ The following list provides examples of when not to cache a shared dataset:  
   
 -   The query results must always include the most recent data.  
   

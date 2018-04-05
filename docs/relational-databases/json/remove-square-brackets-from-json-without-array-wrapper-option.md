@@ -1,11 +1,12 @@
 ---
 title: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.component: "json"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-json"
 ms.tgt_pltfrm: ""
@@ -16,21 +17,22 @@ ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option to generate a single JSON object as output instead of an array.  
+To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option with a single-row result to generate a single JSON object as output instead of an array with a single element.
+
+If you use this option with a multiple-row result, the resulting output is not valid JSON because of the multiple elements and the missing square brackets.  
   
- If you don't specify this option, the JSON output is enclosed within square brackets.  
-  
-## Examples  
- The following example shows the output of the **FOR JSON** clause with and without the **WITHOUT_ARRAY_WRAPPER** option.  
+## Example (single-row result)  
+The following example shows the output of the **FOR JSON** clause with and without the **WITHOUT_ARRAY_WRAPPER** option.  
   
  **Query**  
   
-```tsql  
+```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
@@ -45,7 +47,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **Result** without the **WITHOUT_ARRAY_WRAPPER** option  
+ **Result** (default) without the **WITHOUT_ARRAY_WRAPPER** option  
   
 ```json  
 [{
@@ -54,13 +56,14 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 	"day": 15
 }]
 ```  
-  
- Here's another example of a **FOR JSON** clause with and without the **WITHOUT_ARRAY_WRAPPER** option.  
+
+## Example (multiple-row result)
+Here's another example of a **FOR JSON** clause with and without the **WITHOUT_ARRAY_WRAPPER** option. This example produces a multiple-row result. The output is not valid JSON because of the multiple elements and the missing square brackets.
   
  **Query**  
   
-```tsql  
-SELECT TOP 1 SalesOrderNumber, OrderDate, Status  
+```sql  
+SELECT TOP 3 SalesOrderNumber, OrderDate, Status  
 FROM Sales.SalesOrderHeader  
 ORDER BY ModifiedDate  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
@@ -70,21 +73,53 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
+	"SalesOrderNumber": "SO43662",
+	"OrderDate": "2011-05-31T00:00:00",
+	"Status": 5
+}, {
+	"SalesOrderNumber": "SO43661",
+	"OrderDate": "2011-05-31T00:00:00",
+	"Status": 5
+}, {
 	"SalesOrderNumber": "SO43660",
 	"OrderDate": "2011-05-31T00:00:00",
 	"Status": 5
 } 
 ```  
   
- **Result** without the **WITHOUT_ARRAY_WRAPPER** option  
+ **Result** (default) without the **WITHOUT_ARRAY_WRAPPER** option  
   
 ```json  
 [{
+	"SalesOrderNumber": "SO43662",
+	"OrderDate": "2011-05-31T00:00:00",
+	"Status": 5
+}, {
+	"SalesOrderNumber": "SO43661",
+	"OrderDate": "2011-05-31T00:00:00",
+	"Status": 5
+}, {
 	"SalesOrderNumber": "SO43660",
 	"OrderDate": "2011-05-31T00:00:00",
 	"Status": 5
 }]
 ```  
+
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft blog posts  
+  
+For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
+
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

@@ -1,21 +1,29 @@
 ---
 title: "Working with paginated reports (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
+ms.date: "07/02/2017"
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "reporting-services"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
-  - "reporting-services-native"
+
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
+
 # Working with paginated reports (web portal)
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
 You can view and manage the properties of a paginated report within the web portal. The web portal can launch you into Report Builder to create or edit paginated reports.  
    
 ## Create a paginated report  
@@ -39,7 +47,7 @@ To manage an existing paginated report, you can do the following.
 > [!NOTE]
 > If you don’t see paginated reports in the folder, make sure you are viewing paginated reports. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Paginated Reports** is checked.  
   
-1.  Select the **ellipse (…)** for the dataset you want to manage.  
+1.  Select the **ellipsis (…)** for the dataset you want to manage.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -116,12 +124,12 @@ This allows you to not provide any credentials for the data source. If a data so
 To use this option, you must have previously configured the unattended execution account for your report server. The unattended execution account is used to connect to external data sources when other courses of credentials are not available. If you specify this option and the account is not configured, the connection to the report data source will fail and report processing will not occur. For more information about this account, see [Configure the Unattended Execution Account (SSRS Configuration Manager)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## Subscriptions  
-A Reporting Services subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values. [Learn more]  
+A Reporting Services subscription is a configuration that delivers a report at a specific time or in response to an event, and in a file format that you specify. For example, every Wednesday, save the MonthlySales.rdl report as a Microsoft Word document to a file share. Subscriptions can be used to schedule and automate the delivery of a report and with a specific set of report parameter values. For more information, see [Working with subscriptions](working-with-subscriptions-web-portal.md).
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)  
+![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## Dependent Items  
-Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipse (…)** on each item to manage those items further.  
+Use the Dependent Items page to view a list of items that are referencing this report. The icon for each item type indicates what it is. You can then select the **ellipsis (…)** on each item to manage those items further.  
   
 ## Caching  
 You have options when it comes to caching data for a paginated report. You will start off with a simple selection.  
@@ -137,6 +145,8 @@ You have options when it comes to caching data for a paginated report. You will 
 Selecting **Cache Copies of this report and use them when available** will present you with some more options.  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+
+For more information, see [Working with snapshots](working-with-snapshots-web-portal.md).
   
 ### Cache Expiration  
   
@@ -181,6 +191,11 @@ Access to items is defined through role assignments that specify the tasks that 
   
 **Edit Item Security**  
   
-Select to change how security is defined for the current item.  
-  
-  
+Select to change how security is defined for the current item.
+
+## Next steps
+
+[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

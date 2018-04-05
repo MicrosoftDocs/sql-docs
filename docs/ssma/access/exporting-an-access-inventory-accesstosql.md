@@ -28,7 +28,7 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Exporting an Access Inventory (AccessToSQL)

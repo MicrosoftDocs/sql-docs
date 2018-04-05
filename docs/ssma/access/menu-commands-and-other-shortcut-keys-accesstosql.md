@@ -19,7 +19,7 @@ ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Menu commands and other shortcut keys (AccessToSQL)

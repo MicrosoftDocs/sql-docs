@@ -19,7 +19,7 @@ ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping DB2 and SQL Server Data Types (DB2ToSQL)

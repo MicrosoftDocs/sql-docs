@@ -19,7 +19,7 @@ ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (GUI) (SybaseToSQL)

@@ -19,7 +19,7 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Installing SSMA for SAP ASE (SybaseToSQL)

@@ -19,7 +19,7 @@ ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (AccessToSQL)

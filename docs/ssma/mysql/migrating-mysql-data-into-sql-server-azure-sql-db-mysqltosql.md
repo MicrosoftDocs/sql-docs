@@ -22,7 +22,7 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migrating MySQL Data into SQL Server - Azure SQL DB (MySQLToSQL)

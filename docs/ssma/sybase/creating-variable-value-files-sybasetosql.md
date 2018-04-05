@@ -22,7 +22,7 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Variable Value Files (SybaseToSQL)

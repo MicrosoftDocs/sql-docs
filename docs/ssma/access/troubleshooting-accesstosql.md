@@ -19,7 +19,7 @@ ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Troubleshooting (AccessToSQL)

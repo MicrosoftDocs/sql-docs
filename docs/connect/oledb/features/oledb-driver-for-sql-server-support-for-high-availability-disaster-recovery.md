@@ -110,16 +110,13 @@ The equivalent connection properties are:
   
 An OLE DB Driver for SQL Server application can use one of the methods to specify application intent:  
   
- **IDBInitialize::Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** uses the previously configured set of properties to initialize the data source and create the data source object. Specify application intent as a provider property or as part of the extended properties string.  
   
- **IDataInitialize::GetDataSource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** takes an input connection string that can contain the **Application Intent** keyword.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** retrieves the value of the property that is currently set on the data source.  You can retrieve the **Application Intent** value through the DBPROP_INIT_PROVIDERSTRING property and SSPROP_INIT_APPLICATIONINTENT property.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  To set the **ApplicationIntent** property value, call **IDBProperties::SetProperties** passing in the **SSPROP_INIT_APPLICATIONINTENT** property with value "**ReadWrite**" or "**ReadOnly**" or **DBPROP_INIT_PROVIDERSTRING** property with value containing "**ApplicationIntent=ReadOnly**" or "**ApplicationIntent=ReadWrite**".  
   
 You can specify application intent in the Application Intent Properties field of the All tab in the **Data Link Properties** dialog box.  
@@ -136,13 +133,13 @@ The equivalent connection properties are:
 
 An OLE DB Driver for SQL Server application can use one of the following methods to set the MultiSubnetFailover option:  
 
- **IDBInitialize::Initialize**  
+ -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** uses the previously configured set of properties to initialize the data source and create the data source object. Specify application intent as a provider property or as part of the extended properties string.  
   
- **IDataInitialize::GetDataSource**  
+ -   **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** takes an input connection string that can contain the **MultiSubnetFailover** keyword.  
 
-**IDBProperties::SetProperties**  
+-   **IDBProperties::SetProperties**  
 To set the **MultiSubnetFailover** property value, call **IDBProperties::SetProperties** passing in the **SSPROP_INIT_MULTISUBNETFAILOVER** property with value **VARIANT_TRUE** or **VARIANT_FALSE** or **DBPROP_INIT_PROVIDERSTRING** property with value containing "**MultiSubnetFailover=Yes**" or "**MultiSubnetFailover=No**".
 
 #### Example

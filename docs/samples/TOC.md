@@ -10,3 +10,5 @@
 ## [DW- SQL Server features](wide-world-importers-dw-use-of-sql-server-features.md)
 ## [Generate data](wide-world-importers-generate-data.md)
 ## [ETL workflow](wide-world-importers-perform-etl.md)
+
+## [New and updated articles](new-updated-samples.md) 

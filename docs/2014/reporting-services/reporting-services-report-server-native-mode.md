@@ -106,6 +106,6 @@ manager: "mblythe"
   
 ## See Also  
  [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../2014/reporting-services/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Troubleshoot a Reporting Services Installation](../../2014/sql-server/install/troubleshoot-a-reporting-services-installation.md)  
+ [Troubleshoot a Reporting Services Installation](install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

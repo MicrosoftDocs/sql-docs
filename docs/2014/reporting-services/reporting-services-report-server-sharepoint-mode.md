@@ -24,7 +24,7 @@ manager: "mblythe"
   
 -   [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
--   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../2014/sql-server/install/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+-   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
  For information on what’s new in this release, see the ‘SharePoint’ section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
@@ -74,7 +74,7 @@ manager: "mblythe"
 ##  <a name="bkmk_connectedandlocal"></a> Connected Mode and Local Mode  
  The SQL Server 2008 R2 release introduced a new *local mode* for viewing reports from a SharePoint 2010 server that has the Microsoft SQL Server 2008 R2 or later Reporting Services Add-In for SharePoint 2010 products installed.  
   
--   *Local Mode*: Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products is required but a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server is not. The add-in can be installed several different ways, including the SharePoint 2010 products preparation tool. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) and [Where to find the Reporting Services add-in for SharePoint Products](../../2014/sql-server/install/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Local Mode*: Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products is required but a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server is not. The add-in can be installed several different ways, including the SharePoint 2010 products preparation tool. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) and [Where to find the Reporting Services add-in for SharePoint Products](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Connected Mode*: Connected mode is supported by integrating a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server into the SharePoint farm using SharePoint Central Administration. The integration with a report server enables full end-to-end reporting, providing the collaboration features of SharePoint 2010 and the server based features of a report server including: Subscriptions, Snapshots, and server based processing.  
   
@@ -96,7 +96,7 @@ manager: "mblythe"
      Document library version history is configured on the ”Versioning Settings” page of “Library Settings”.  
   
 ##  <a name="bkmk_supportedcombinations"></a> Supported combinations of the SharePoint add-in and Report Server  
- Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../2014/sql-server/install/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  The correct version of the Reporting Services add-in must be used with the corresponding version of SharePoint Products.  
@@ -107,7 +107,7 @@ manager: "mblythe"
  Integration is provided through [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in is a freely distributable component that you can download and then install on a server that is running the appropriate version of SharePoint.  
   
 > [!TIP]  
->  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information see, [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](../../2014/sql-server/install/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information see, [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
 -   On SharePoint, the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in provides the ReportServer proxy endpoint, a Report Viewer Web part, and application pages so that you can view, store, and manage report server content on a SharePoint site or farm.  
   
@@ -133,14 +133,14 @@ manager: "mblythe"
   
 |**Task**|**Link**|  
 |--------------|--------------|  
-|Detailed steps for installing and configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) and [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../2014/sql-server/install/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Scale-out your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint deployment by adding additional report servers.|[Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../2014/sql-server/install/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment Topologies for SQL Server BI Features in SharePoint](../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).|  
-|Add additional SharePoint web front-ends that have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](../../2014/sql-server/install/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Configure e-mail for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerting and subscription features.|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|Detailed steps for installing and configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) and [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Scale-out your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint deployment by adding additional report servers.|[Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment Topologies for SQL Server BI Features in SharePoint](../../2014/sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).|  
+|Add additional SharePoint web front-ends that have the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
+|Configure e-mail for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerting and subscription features.|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  

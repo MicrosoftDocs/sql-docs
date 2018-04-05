@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   [Report Manager URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [E-mail Settings](../../../2014/sql-server/install/e-mail-settings-configuration-manager-ssrs-native-mode.md)  
+-   [E-mail Settings](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Execution Account](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   

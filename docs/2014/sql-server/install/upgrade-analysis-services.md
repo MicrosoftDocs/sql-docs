@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Check Parameters for the System Configuration Checker](../../../2014/sql-server/install/check-parameters-for-the-system-configuration-checker.md)  
   

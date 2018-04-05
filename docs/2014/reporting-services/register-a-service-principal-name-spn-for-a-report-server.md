@@ -68,7 +68,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
 ## See Also  
  [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)  
   
   

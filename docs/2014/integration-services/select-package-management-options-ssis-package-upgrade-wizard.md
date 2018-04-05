@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  **To run the SSIS Package Upgrade Wizard**  
   
--   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## Options  
  **Update connection strings to use new provider names**  
@@ -70,9 +70,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  This option is available only when you specify that the original packages and the upgraded packages are stored in the file system and in the same folder.  
   
- For more information, see [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
+ For more information, see [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
 ## See Also  
- [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md)  
+ [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md)  
   
   

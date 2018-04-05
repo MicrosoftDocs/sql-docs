@@ -35,14 +35,14 @@ manager: "mblythe"
  [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../2014/reporting-services/register-a-service-principal-name-spn-for-a-report-server.md)  
  Explains how to manually register an SPN for a report server that runs under a domain user account on a network that uses Kerberos authentication.  
   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)  
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)  
  Explains how to establish one or more URLs used to access the Report Server Web service and Report Manager.  
   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)  
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Provides steps for creating a report server database. This step is required for deploying a Reporting Services installation.  
   
 ### Advanced or Optional Configuration  
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Provides steps for configuring multiple report servers to share a report server database.  
   
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

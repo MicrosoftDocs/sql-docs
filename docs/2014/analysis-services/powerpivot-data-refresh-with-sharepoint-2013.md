@@ -57,13 +57,13 @@ manager: "mblythe"
 |2012 PowerPivot for Excel|Supported|Not supported. Upgrade the workbook **(\*)**|  
 |Excel 2013|Supported|Supported|  
   
- **(\*)** For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ **(\*)** For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Interactive, or manual data refresh in SharePoint Server 2013 Excel Services can refresh data models with data from the original data source. Interactive data refresh is available after you configure an Excel Services application by registering an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, running in SharePoint mode. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
->  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+>  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Interactive refresh key point of interest:**  
   
@@ -129,7 +129,7 @@ manager: "mblythe"
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Scheduled data refresh key points of interest:**  
   
--   Requires the deployment of the PowerPivot for SharePoint add-in. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Requires the deployment of the PowerPivot for SharePoint add-in. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   A user configures a refresh schedule for a workbook. At the scheduled time, the PowerPivot System Service sends a request to Excel Services to:  
   
@@ -141,7 +141,7 @@ manager: "mblythe"
   
 -   **Credentials:** Uses stored credentials. Does not use the identity of the current user.  
   
--   **Supported Workbooks:** Workbooks created using the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] PowerPivot add-in for Excel 2010 or using Excel 2013. Workbooks created in Excel 2010 with the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] PowerPivot add-in are not supported. Upgrade the workbook to at least the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] PowerPivot format. For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Supported Workbooks:** Workbooks created using the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] PowerPivot add-in for Excel 2010 or using Excel 2013. Workbooks created in Excel 2010 with the [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] PowerPivot add-in are not supported. Upgrade the workbook to at least the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] PowerPivot format. For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  To display the **Manage Data Refresh** page:  
   
@@ -233,7 +233,7 @@ manager: "mblythe"
  [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
 ## See Also  
- [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md)  
+ [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [PowerPivot for SharePoint 2013 Installation](instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Find the Report Definition Schema Version (SSRS)
-  A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+  A report definition file specifies the RDL namespace for the version of the report definition schema that is used to validate the rdl file. When you open an .rdl file in a report authoring environment such as Report Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or Report Builder, if the report was created for a previous namespace, a backup file is automatically created, and the report is upgraded to the current namespace. If you save the upgraded report definition, you have saved the converted .rdl file. This is the only way to upgrade a report definition. The report definition itself is not upgraded on a report server. The compiled report is upgraded on a report server. For more information, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### How to: Identify the RDL Schema Version of a Report  
   
@@ -79,7 +79,7 @@ manager: "mblythe"
      The report definition namespace is specified by the following URL: `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## See Also  
- [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md)   
+ [Upgrade Reports](install-windows/upgrade-reports.md)   
  [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md)  
   
   

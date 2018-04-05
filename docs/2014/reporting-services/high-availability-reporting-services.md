@@ -36,6 +36,6 @@ manager: "mblythe"
   
 ## See Also  
  [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md)   
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

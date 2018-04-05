@@ -68,7 +68,7 @@ manager: "mblythe"
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] RDLC Report Designer|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2008|2005 RDL schema|Not supported|Does not support 2008 RDL schema.|  
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Viewer controls|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2008|2008 RDL not supported in local mode|N/A|Can view 2008 RDL reports on [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server in server mode.|  
   
- For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## See Also  
  [Publishing Data Sources and Reports](../../2014/reporting-services/publishing-data-sources-and-reports.md)  

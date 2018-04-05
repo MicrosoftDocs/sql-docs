@@ -21,7 +21,7 @@ manager: "jhubbard"
  For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   
 ## See Also  
- [Drop a SQL Server 2014 Installation](../../../2014/sql-server/install/drop-a-sql-server-2014-installation.md)   
+ [Drop a SQL Server 2014 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

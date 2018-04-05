@@ -121,9 +121,9 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
   
 ## See Also  
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Files](../../2014/reporting-services/reporting-services-configuration-files.md)   
  [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../2014/reporting-services/report-server-command-prompt-utilities-ssrs.md)   
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)  

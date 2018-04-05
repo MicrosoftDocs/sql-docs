@@ -60,7 +60,7 @@ manager: "jhubbard"
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
 6.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-service-master-key-transact-sql.md).  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
      You might receive an error message from the Log Reader Agent that the publication database and the distribution database are not synchronized.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/configure-log-shipping-sql-server.md).  
   
-2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../2014/sql-server/install/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../../2014/sql-server/install/rename-a-sql-server-failover-cluster-instance.md).  
+2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
 3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   

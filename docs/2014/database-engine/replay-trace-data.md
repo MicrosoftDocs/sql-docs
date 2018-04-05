@@ -25,7 +25,7 @@ manager: "jhubbard"
  You can replay trace data in one of two sequencing modes: stress mode or synchronization mode. The default behavior is to replay trace data in stress mode. For more information about the event replay stage and sequencing modes, see [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)  
   
 > [!NOTE]  
->  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md).  
+>  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../tools/distributed-replay/distributed-replay-requirements.md).  
   
 ### To replay the trace  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 3.  When the distributed replay has finished, the administration tool returns summary information. If you specified the **-o** option, the replay activity has been saved in result trace files on each client. For more information about the result trace files, see [Review the Replay Results](../../2014/database-engine/review-the-replay-results.md).  
   
 ## See Also  
- [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../tools/distributed-replay/distributed-replay-requirements.md)   
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../2014/database-engine/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configure Distributed Replay](../../2014/database-engine/configure-distributed-replay.md)  
   

@@ -113,7 +113,7 @@ manager: "jhubbard"
 |Encrypted Backup|Yes|Yes|Yes|||||  
 |Smart Backup|Yes|Yes|Yes|No||||  
   
- <sup>1</sup>For more information on installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../../2014/sql-server/install/install-sql-server-2014-on-server-core.md).  
+ <sup>1</sup>For more information on installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server 2014 on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
  <sup>2</sup>This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -206,7 +206,7 @@ manager: "jhubbard"
 |Contained Databases|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Buffer Pool Extension<sup>2</sup>|Yes|Yes|Yes|||||  
   
- <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../../2014/sql-server/install/considerations-for-installing-sql-server-using-sysprep.md).  
+ <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
   
  <sup>2</sup> This feature is only available for 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -421,7 +421,7 @@ manager: "jhubbard"
   
  <sup>1</sup>For more information on the supported datasources in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   
- <sup>2</sup>Requires [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. For more information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md).  
+ <sup>2</sup>Requires [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode. For more information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ### Report Server Database Server Edition Requirements  
  When creating a report server database, not all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can be used to host the database. The following table shows you which editions of the [!INCLUDE[ssDE](../includes/ssde-md.md)] you can use for specific editions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -475,7 +475,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Product Specifications for SQL Server 2014](../../2014/getting-started/sql-server-2014-product-specifications.md)   
- [Installation for SQL Server 2014](../../2014/sql-server/install/installation-for-sql-server-2014.md)   
+ [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Quick-Start Installation of SQL Server 2014](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

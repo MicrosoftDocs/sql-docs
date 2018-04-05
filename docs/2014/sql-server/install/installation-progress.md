@@ -24,6 +24,6 @@ manager: "jhubbard"
   Use the **Installation Progress** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to monitor the status of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 ## See Also  
- [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)  
+ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

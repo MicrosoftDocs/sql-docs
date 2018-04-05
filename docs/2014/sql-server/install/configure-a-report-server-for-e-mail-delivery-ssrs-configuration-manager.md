@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  To configure a report server for e-mail delivery, do the following:  
   
--   Use the Reporting Services Configuration Manager if you are specifying just an SMTP server and a user account that has permission to send e-mail. These are the minimum settings that are required for configuring the Report Server e-mail delivery extension. For more information, see [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/e-mail-settings-configuration-manager-ssrs-native-mode.md) and [E-Mail Delivery in Reporting Services](../../../2014/reporting-services/e-mail-delivery-in-reporting-services.md).  
+-   Use the Reporting Services Configuration Manager if you are specifying just an SMTP server and a user account that has permission to send e-mail. These are the minimum settings that are required for configuring the Report Server e-mail delivery extension. For more information, see [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail Delivery in Reporting Services](../../../2014/reporting-services/e-mail-delivery-in-reporting-services.md).  
   
 -   (Optionally) Use a text editor to specify additional settings in the RSreportserver.config file. This file contains all of the configuration settings for Report Server e-mail delivery. Specifying additional settings in these files is required if you are using a local SMTP server or if you are restricting e-mail delivery to specific hosts. For more information about finding and modifying configuration files, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md) in SQL Server Books Online.  
   
@@ -140,7 +140,7 @@ manager: "jhubbard"
 
   
 ##  <a name="bkmk_options_local_SMTP"></a> Configuration Options for Local SMTP Service  
- Configuring a local SMTP service is useful if you are testing or troubleshooting report server e-mail delivery. The local SMTP service is not enabled by default. For instructions on how to enable it, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) and [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/e-mail-settings-configuration-manager-ssrs-native-mode.md).  
+ Configuring a local SMTP service is useful if you are testing or troubleshooting report server e-mail delivery. The local SMTP service is not enabled by default. For instructions on how to enable it, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) and [E-mail Settings - Configuration Manager &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  The connection between the report server and a local SMTP server or forwarder is determined by the following configuration settings:  
   

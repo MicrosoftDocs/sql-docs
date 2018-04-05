@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  Before you run the setup operation, review the following topics:  
   
-1.  [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+1.  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 2.  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
   
  Other references:  
   
-1.  [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md)  
+1.  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
-2.  [Before Installing Failover Clustering](../../../2014/sql-server/install/before-installing-failover-clustering.md)  
+2.  [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md)  
   
 ## See Also  
  [Install Rules](../../../2014/sql-server/install/install-rules.md)  

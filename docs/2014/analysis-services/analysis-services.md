@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Tutorials &#40;SSAS&#41;](../../2014/tutorials/analysis-services-tutorials-ssas.md)   
- [Installation for SQL Server 2014](../../2014/sql-server/install/installation-for-sql-server-2014.md)   
+ [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Developer's Guide &#40;Analysis Services&#41;](../../2014/analysis-services/dev-guide/developer-s-guide-analysis-services.md)   
  [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  

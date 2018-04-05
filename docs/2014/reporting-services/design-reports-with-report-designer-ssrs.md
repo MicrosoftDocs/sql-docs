@@ -65,7 +65,7 @@ manager: "mblythe"
   
 -   **Add a new item of type Report.** A blank report opens in Report Designer.  
   
--   **Add an existing item.** An existing report definition (.rdl) opens in Report Designer. Opening a report or project from an earlier version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] might automatically upgrade the project to the current version and the report to the current schema. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+-   **Add an existing item.** An existing report definition (.rdl) opens in Report Designer. Opening a report or project from an earlier version of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] might automatically upgrade the project to the current version and the report to the current schema. For more information, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 -   **Import a [!INCLUDE[msCoName](../includes/msconame-md.md)] Access report.** Import all reports from an Access database (.mdb, .accdb) or project (.adp) file. Report Designer converts each report in a database or project file to RDL and saves it in the report project. Not all of the functionality of an Access report transfers to a report definition (.rdl) file. For more information, see [Import Reports from Microsoft Access &#40;Reporting Services&#41;](../../2014/reporting-services/import-reports-from-microsoft-access-reporting-services.md) and [Supported Access Report Features &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
   

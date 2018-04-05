@@ -162,9 +162,9 @@ manager: "mblythe"
 ## Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports multiple versions of report definitions, report servers, and SharePoint sites. To upgrade a report:  
   
--   Upgrade a report server installation. Compiled reports stored on the report server are upgraded automatically on first use. The report definition (.rdl) is not changed. For more information, see [Upgrade and Migrate Reporting Services](../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md).  
+-   Upgrade a report server installation. Compiled reports stored on the report server are upgraded automatically on first use. The report definition (.rdl) is not changed. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Open a report in a report authoring environment. The report definition is upgraded in most circumstances. For more information, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md) and [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+-   Open a report in a report authoring environment. The report definition is upgraded in most circumstances. For more information, see [Upgrade Reports](install-windows/upgrade-reports.md) and [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../2014/reporting-services/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## Troubleshoot Reports  
  To troubleshoot a report:  

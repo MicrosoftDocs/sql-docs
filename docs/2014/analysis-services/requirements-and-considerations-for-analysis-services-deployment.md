@@ -44,7 +44,7 @@ manager: "mblythe"
   
  The amount of memory and processor resources that are available to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] varies depending on the edition of SQL Server, operating system, hardware capability, and whether you are using virtual or physical processors. For more information, follow these links:  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [Compute Capacity Limits by Edition of SQL Server](../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
   

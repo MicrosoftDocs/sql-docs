@@ -20,7 +20,7 @@ manager: "jhubbard"
   
 -   Run the appropriate version of the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] configuration tool for the version of SharePoint.  
   
--   For SharePoint 2013, install the [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   For SharePoint 2013, install the [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
 
   
 ##  <a name="bkmk_sqleditions"></a> SQL Server Edition Requirements  
@@ -42,7 +42,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_ssas__sharepoint_2013"></a> Analysis Services Installed on SharePoint 2013  
  If you install Analysis Services server in SharePoint mode on a server by itself, then minimum system requirements are based on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] rather than SharePoint Server requirements.  
   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint runs best on new generation business servers that offer higher RAM thresholds and more processing capability. Large amounts of RAM are used to store [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in memory. The RAM supports the ability to adapt to structural changes. Extra processors support long running scans of raw, un-aggregated data. The data assumes its structure in a dynamic environment, in response to user-driven data analysis initiated through an Excel client or front-end interface.  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
  If you install Analysis Services server in SharePoint mode on a SharePoint farm server, review the minimum system requirements for both [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SharePoint Server at the following links:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Hardware and software requirements for SharePoint 2013](http://technet.microsoft.com/library/cc262485\(office.15\).aspx).  
   

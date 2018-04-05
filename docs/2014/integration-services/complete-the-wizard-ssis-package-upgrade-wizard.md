@@ -22,13 +22,13 @@ manager: "jhubbard"
   
  **To run the SSIS Package Upgrade Wizard**  
   
--   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## Options  
  **Summary of options**  
  Review the upgrade options that you have selected in the wizard. To change any options, click **Back** to return to previous wizard pages.  
   
 ## See Also  
- [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md)  
+ [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md)  
   
   

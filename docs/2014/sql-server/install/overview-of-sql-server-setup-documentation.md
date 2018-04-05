@@ -28,15 +28,15 @@ manager: "jhubbard"
   
      Describes how to prepare for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
--   [Install SQL Server 2014](../../../2014/sql-server/install/install-sql-server-2014.md)  
+-   [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
      Describes the options to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [Install SQL Server 2014 BI Features](../../../2014/sql-server/install/install-sql-server-2014-bi-features.md)  
+-   [Install SQL Server 2014 BI Features](install-sql-server-business-intelligence-features.md)  
   
      Describes options to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data.  
   
--   [Upgrade to SQL Server 2014](../../../2014/sql-server/install/upgrade-to-sql-server-2014.md)  
+-   [Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
      Describes options to upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 -   [AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
--   [Before Installing Failover Clustering](../../../2014/sql-server/install/before-installing-failover-clustering.md).  
+-   [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md).  
   
   

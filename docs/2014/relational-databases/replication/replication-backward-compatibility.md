@@ -33,6 +33,6 @@ manager: "jhubbard"
  Replication feature changes that might require changes to applications.  
   
 ## See Also  
- [Upgrade Replicated Databases](../../../2014/sql-server/install/upgrade-replicated-databases.md)  
+ [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

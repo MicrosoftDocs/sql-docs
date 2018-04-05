@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
   
- For more information about supported upgrade scenarios and upgrade known issues, see [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md).  
+ For more information about supported upgrade scenarios and upgrade known issues, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 ## See Also  
  [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   

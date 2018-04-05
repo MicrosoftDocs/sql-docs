@@ -120,7 +120,7 @@ manager: "mblythe"
  When you click Run , the tool processes all actions in batch mode. Although each action appears as a separate item in the task list, all actions that are included in the task process together. Only actions that pass a validation check are processed. You might need to add or change some of the input values to pass the validation check.  
   
 ## Related Content  
- [Upgrade PowerPivot for SharePoint](../../2014/sql-server/install/upgrade-powerpivot-for-sharepoint.md) Describes the workflow that upgrades an existing installation that is already in a farm.  
+ [Upgrade PowerPivot for SharePoint](../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Describes the workflow that upgrades an existing installation that is already in a farm.  
   
  [Uninstall PowerPivot for SharePoint](../../2014/sql-server/install/uninstall-powerpivot-for-sharepoint.md) Describes the workflow that removes PowerPivot for SharePoint services, solutions, and application pages from a farm.  
   

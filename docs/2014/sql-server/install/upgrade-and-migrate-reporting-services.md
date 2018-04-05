@@ -96,7 +96,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_upgrade_checklist"></a> Pre-Upgrade Checklist  
  Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following:  
   
--   Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+-   Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Use System Configuration Checker (SCC) to scan the report server computer for any conditions that might prevent a successful installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Check Parameters for the System Configuration Checker](../../../2014/sql-server/install/check-parameters-for-the-system-configuration-checker.md).  
   

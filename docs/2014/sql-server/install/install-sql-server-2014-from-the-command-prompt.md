@@ -444,7 +444,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 ##  <a name="ClusterInstall"></a> Failover Cluster Parameters  
  Before you install a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, review the following topics:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   

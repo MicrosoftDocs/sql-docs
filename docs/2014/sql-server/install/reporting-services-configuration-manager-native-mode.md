@@ -26,14 +26,14 @@ manager: "jhubbard"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
 > [!NOTE]  
->  Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is not designed to manage SharePoint mode report servers. SharePoint mode is managed and configured by using SharePoint Central Administration and PowerShell scripts. For information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode.md).  
+>  Starting with the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is not designed to manage SharePoint mode report servers. SharePoint mode is managed and configured by using SharePoint Central Administration and PowerShell scripts. For information, see [Reporting Services SharePoint Mode Installation &#40;SharePoint 2010 and SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  **In this section:**  
   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Provides recommendations and steps on how to modify the service account and password.  
   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Describes how to configure URLs used to access the Report Server Web service and Report Manager.  
   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
@@ -42,16 +42,16 @@ manager: "jhubbard"
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Describes how to modify the connection string used by the report server to connect to the report server database.  
   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
+ [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Describes how to configure a user account to process reports in unattended mode.  
   
  [Configure a Report Server for E-Mail Delivery &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Describes how to configure a report server to support e-mail report distribution.  
   
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Provides information about configuring multiple report server instances to use a shared report server database.  
   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
  Explains how to use and manage encryption keys that are used when storing sensitive data.  
   
  [Manage a Reporting Services Native Mode Report Server](../../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)  

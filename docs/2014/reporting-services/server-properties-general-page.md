@@ -38,7 +38,7 @@ manager: "mblythe"
  This property is read-only. It identifies the types of authentication requests accepted by the report server instance. To change the authentication mode, you must edit the RSReportServer.config file. For more information, see [Authentication with the Report Server](../../2014/reporting-services/authentication-with-the-report-server.md).  
   
  **URL**  
- This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md).  
+ This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
  **Enable a My Reports folder for each user**  
  Make My Reports available to users. This option is only available for native mode report servers.  

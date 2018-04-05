@@ -29,7 +29,7 @@ manager: "mblythe"
   
  The databases can run on a local or remote [!INCLUDE[ssDE](../includes/ssde-md.md)] instance. Choosing a local instance is useful if you have sufficient system resources or want to conserve software licenses, but running the databases on a remote computer can improve performance.  
   
- You can port or reuse an existing report server database from previous installation or a different instance with another report server instance. The schema of the report server database must be compatible with the report server instance. If the database is in an older format, you will be prompted to upgrade it to the current format. Newer versions cannot be down graded to an older version. If you have a newer report server database, you cannot use it with an earlier version of a report server instances. For more information about how report server databases are upgraded to newer formats, see [Upgrade a Report Server Database](../../2014/sql-server/install/upgrade-a-report-server-database.md).  
+ You can port or reuse an existing report server database from previous installation or a different instance with another report server instance. The schema of the report server database must be compatible with the report server instance. If the database is in an older format, you will be prompted to upgrade it to the current format. Newer versions cannot be down graded to an older version. If you have a newer report server database, you cannot use it with an earlier version of a report server instances. For more information about how report server databases are upgraded to newer formats, see [Upgrade a Report Server Database](install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
 >  The table structure for the databases is optimized for server operations and should not be modified or tuned. [!INCLUDE[msCoName](../includes/msconame-md.md)] might change the table structure from one release to the next. If you modify or extend the database, you might limit or prevent the capability to perform future upgrades or apply service packs. You might also introduce changes that impair report server operations. For example if you turn on READ_COMMITTED_SNAPSHOT on the ReportServer database, you will break the interactive sorting feature.  
@@ -63,11 +63,11 @@ manager: "mblythe"
  If you back up the temporary database and subsequently restore it, you should delete the contents. Generally, it is safe to delete the contents of the temporary database at any time. However, you must restart the Report Server Windows service after you delete the contents.  
   
 ## See Also  
- [Host a Report Server Database in a SQL Server Failover Cluster](../../2014/sql-server/install/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
+ [Host a Report Server Database in a SQL Server Failover Cluster](install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/administer-a-report-server-database-ssrs-native-mode.md)   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Backup and Restore Operations for Reporting Services](../../2014/sql-server/install/backup-and-restore-operations-for-reporting-services.md)  
+ [Backup and Restore Operations for Reporting Services](install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   

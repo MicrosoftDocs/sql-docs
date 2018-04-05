@@ -46,7 +46,7 @@ manager: "jhubbard"
 |[Replication Backward Compatibility](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Contains topics that describe [!INCLUDE[ssDE](../includes/ssde-md.md)] changes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that might require you to make changes to existing Replication solutions.|  
   
 ## See Also  
- [Install SQL Server 2014](../../2014/sql-server/install/install-sql-server-2014.md)   
- [Upgrade to SQL Server 2014](../../2014/sql-server/install/upgrade-to-sql-server-2014.md)  
+ [Install SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
+ [Upgrade to SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   
   

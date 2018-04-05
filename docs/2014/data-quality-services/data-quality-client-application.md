@@ -21,7 +21,7 @@ manager: "jhubbard"
  Data stewards, data experts, or IT professionals who are responsible for managing data assets and maintaining high standards of data quality can use the client application in any of three roles: a DQS KB Operator who can edit and execute a data quality project; a DQS KB Editor who can perform project functions, and create and edit a knowledge base; and a DQS Administrator who can perform project and knowledge base functions and administer the system. For more information, see [DQS Security](../../2014/data-quality-services/dqs-security.md).  
   
 ## Installing the Data Quality Client Application  
- The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application is installed using the SQL Server setup. You can install the client application on the same computer as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], or on a remote computer. For more information about installing the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application, see [Install Data Quality Services](../../2014/sql-server/install/install-data-quality-services.md).  
+ The [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application is installed using the SQL Server setup. You can install the client application on the same computer as [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], or on a remote computer. For more information about installing the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application, see [Install Data Quality Services](install-windows/install-data-quality-services.md).  
   
 ## Related Tasks  
   

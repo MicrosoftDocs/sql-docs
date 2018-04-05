@@ -20,7 +20,7 @@ ms.author: "maghan"
 manager: "jhubbard"
 ---
 # Web Service URL (SSRS Native Mode)
-  Use the Web Service URL page to configure or modify the URL used to access the report server. A *URL reservation* will be created based on the URL you specify. The URL reservation defines the syntax and rules for all URLs that can be subsequently used to access the Report Server Web service. It specifies the prefix, host, port, and virtual directory for the Report Server Web service. Depending on how you specify the host, multiple URLs might be possible for a single reservation. The default value for the host specifies a strong wildcard. A strong wildcard allows you to specify in a URL any host name that can be resolved to the computer that hosts the report server. For more information about URL configuration and reservations, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md) and [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md).  
+  Use the Web Service URL page to configure or modify the URL used to access the report server. A *URL reservation* will be created based on the URL you specify. The URL reservation defines the syntax and rules for all URLs that can be subsequently used to access the Report Server Web service. It specifies the prefix, host, port, and virtual directory for the Report Server Web service. Depending on how you specify the host, multiple URLs might be possible for a single reservation. The default value for the host specifies a strong wildcard. A strong wildcard allows you to specify in a URL any host name that can be resolved to the computer that hosts the report server. For more information about URL configuration and reservations, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) and [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  This page provides values that are commonly used in report server URLs. If you want to create additional URLs, use host headers, or specify the IP address in a particular format, click **Advanced**.  
   
- A link to the Web service will appear on this page after you click **Apply**. If you click this link before the report server database is created, you can expect to see a "Page Not Found" error. This error will no longer appear once the database is configured. For more information, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md).  
+ A link to the Web service will appear on this page after you click **Apply**. If you click this link before the report server database is created, you can expect to see a "Page Not Found" error. This error will no longer appear once the database is configured. For more information, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  If you reinstalled [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and find that you get errors when attempting to use the default IP address value of All Assigned and port 80, you can usually resolve the error by re-creating the URL after restarting the service.  
   
@@ -81,6 +81,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

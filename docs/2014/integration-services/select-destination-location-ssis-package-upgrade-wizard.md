@@ -25,13 +25,13 @@ manager: "jhubbard"
   
  **To run the SSIS Package Upgrade Wizard**  
   
--   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## Static Options  
  **Save to source location**  
  Save the upgraded packages to the same location as specified on the **Select Source Location** page of the wizard.  
   
- If the original packages are stored in the file system and you want the wizard to back up those packages, select the **Save to source location** option. For more information, see [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
+ If the original packages are stored in the file system and you want the wizard to back up those packages, select the **Save to source location** option. For more information, see [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
  **Select new destination location**  
  Save the upgraded packages to the destination location that is specified on this page.  
@@ -74,6 +74,6 @@ manager: "jhubbard"
  Type the password to be used when using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to connect to the server.  
   
 ## See Also  
- [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md)  
+ [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md)  
   
   

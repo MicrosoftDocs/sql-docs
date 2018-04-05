@@ -99,10 +99,10 @@ manager: "mblythe"
  You can also verify that the port is opened correctly by starting Report Manager on a different computer. For more information, see [Report Manager  &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Manage a Reporting Services Native Mode Report Server](../../2014/reporting-services/manage-a-reporting-services-native-mode-report-server.md)  
   
   

@@ -67,7 +67,7 @@ manager: "mblythe"
  Reports open in full-page mode by default. Full-page mode shows the toolbar that provides page navigation, search, and other functionality. You can customize the Web Part to change appearance or default behavior.  
   
 ## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/add-report-viewer-web-part-to-web-page-reporting-services-sharepoint-integrated-mode.md)  
   
   

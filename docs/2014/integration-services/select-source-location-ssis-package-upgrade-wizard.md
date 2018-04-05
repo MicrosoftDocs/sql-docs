@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  **To run the SSIS Package Upgrade Wizard**  
   
--   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## Static Options  
  **Package source**  
@@ -66,6 +66,6 @@ manager: "jhubbard"
  Type the password that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication will use to connect to the server.  
   
 ## See Also  
- [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md)  
+ [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md)  
   
   

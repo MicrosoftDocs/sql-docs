@@ -49,7 +49,7 @@ manager: "mblythe"
   
  The following statement is an example of a complete installation command and parameter set: **setup /ACTION=install /FEATURES=SQL,RS /InstanceName=Denali_INST1 …. /RSSHPINSTALLMODE="DefaultSharePointMode"**  
   
- For more information on command-line installations, see [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](../../2014/sql-server/install/install-reporting-services-at-the-command-prompt.md).  
+ For more information on command-line installations, see [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](install-windows/install-reporting-services-at-the-command-prompt.md).  
   
 ### The Reporting Services WMI Provider no longer supports Configuration of SharePoint Mode  
  The Configuration of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint is now completed using PowerShell cmdlets and SharePoint Central Administration. The new [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode architecture utilizes the SharePoint services architecture. SharePoint does not support WMI interfaces.  

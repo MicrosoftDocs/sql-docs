@@ -74,8 +74,8 @@ manager: "jhubbard"
  If you no longer need the encrypted data or if you do not have a backup copy of the key, you must delete the encrypted data. For more information, see [Encryption Keys &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## See Also  
- [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/initialize-a-report-server-ssrs-configuration-manager.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

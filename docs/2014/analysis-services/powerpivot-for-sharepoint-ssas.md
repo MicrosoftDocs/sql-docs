@@ -77,9 +77,9 @@ manager: "mblythe"
  **In other sections**  
   
 ## Additional topics  
- [Upgrade PowerPivot for SharePoint](../../2014/sql-server/install/upgrade-powerpivot-for-sharepoint.md)  
+ [Upgrade PowerPivot for SharePoint](../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md)  
+ [PowerPivot for SharePoint 2013 Installation](instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   

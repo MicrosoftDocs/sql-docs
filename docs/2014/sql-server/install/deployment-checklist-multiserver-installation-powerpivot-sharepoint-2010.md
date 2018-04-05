@@ -66,7 +66,7 @@ manager: "jhubbard"
   
  If you are just getting started with your topology, begin by installing a SQL Server Database Engine. These instructions result in a database server that can be accessed by the SharePoint servers in your farm.  
   
-1.  On the computer that you are using for the database server, run SQL Server Setup to install SQL Server Database Engine (see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md)).  
+1.  On the computer that you are using for the database server, run SQL Server Setup to install SQL Server Database Engine (see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)).  
   
      When selecting features to install, choose the following:  
   

@@ -67,7 +67,7 @@ manager: "mblythe"
 #### Report Definition Language (RDL) 2005 and Earlier  
  Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md).  
   
- For more information on upgrading reports, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+ For more information on upgrading reports, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 #### SQL Server 2005 and earlier Custom Report Items  
  Custom Report Items (CRI) compiled for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 and earlier are deprecated.  
@@ -137,7 +137,7 @@ manager: "mblythe"
 ### Report Definition Language (RDL) 2005 and Earlier  
  Report Definition Language (RDL) 2005 and earlier is deprecated. For more information about RDL, see [Report Definition Language &#40;SSRS&#41;](../../2014/reporting-services/report-definition-language-ssrs.md).  
   
- For more information on upgrading reports, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+ For more information on upgrading reports, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ### SQL Server 2005 and earlier Custom Report Items  
  Custom Report Items (CRI) compiled for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 and earlier are deprecated.  

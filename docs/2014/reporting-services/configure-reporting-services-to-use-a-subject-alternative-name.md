@@ -125,6 +125,6 @@ manager: "mblythe"
  [RSReportServer Configuration File](../../2014/reporting-services/rsreportserver-configuration-file.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../2014/reporting-services/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

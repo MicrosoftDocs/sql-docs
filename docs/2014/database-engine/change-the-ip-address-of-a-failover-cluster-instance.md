@@ -26,7 +26,7 @@ manager: "jhubbard"
 -   **Before you begin:**  [Security](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- Before you begin, review the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online topic: [Before Installing Failover Clustering](../../2014/sql-server/install/before-installing-failover-clustering.md).  
+ Before you begin, review the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online topic: [Before Installing Failover Clustering](../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Security  
   

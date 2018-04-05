@@ -46,7 +46,7 @@ manager: "jhubbard"
   
              To upgrade package files when a project is converted, run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. To upgrade package files separately from a project conversion, run the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and then run the **SSIS Package Upgrade Wizard**. If you upgrade the package files separately, ensure that you save the changes. Otherwise, when you convert the project to the project deployment model, any unsaved changes to the package are not converted.  
   
-     For more information on package upgrade, see [Upgrade Integration Services Packages](../../2014/sql-server/install/upgrade-integration-services-packages.md) and [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](../../2014/sql-server/install/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
+     For more information on package upgrade, see [Upgrade Integration Services Packages](install-windows/upgrade-integration-services-packages.md) and [Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
 3.  Deploy the project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information, see the instructions below: [To deploy a project to the Integration Services Server](#deploy).  
   

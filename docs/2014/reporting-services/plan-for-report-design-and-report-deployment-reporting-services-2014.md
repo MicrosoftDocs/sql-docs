@@ -77,7 +77,7 @@ manager: "mblythe"
   
  To upgrade the report definition, you must open the report in a report authoring environment and then save it.  
   
- For more information about report upgrades and the schema versions that are supported, see [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md).  
+ For more information about report upgrades and the schema versions that are supported, see [Upgrade Reports](install-windows/upgrade-reports.md).  
   
 ##  <a name="bkmk_report_authoring_and_deployment"></a> Report Authoring and Deployment Support  
  Report authoring environments are Report Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] projects, and Report Builder. Report authoring environments provide a variety of support for report upgrade, report design, report preview in local mode, report preview on the report server, and report deployment.  

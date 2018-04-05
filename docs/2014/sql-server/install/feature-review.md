@@ -28,6 +28,6 @@ manager: "jhubbard"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes server and client components for creating, managing, and deploying tabular, matrix, graphical, and free-form reports. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is also an extensible platform that you can use to develop report applications.|  
   
 ## See Also  
- [Install SQL Server 2014 Using SysPrep](../../../2014/sql-server/install/install-sql-server-2014-using-sysprep.md)  
+ [Install SQL Server 2014 Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
   

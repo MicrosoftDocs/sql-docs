@@ -124,7 +124,7 @@ manager: "mblythe"
   
 ## See Also  
  [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md)   
- [View and Read SQL Server Setup Log Files](../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)   
+ [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
   
   

@@ -81,7 +81,7 @@ manager: "jhubbard"
 4.  Click **Apply** to confirm the change, and **OK** to close the window.  
   
 ## See Also  
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)   
- [Install SQL Server 2014](../../../2014/sql-server/install/install-sql-server-2014.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

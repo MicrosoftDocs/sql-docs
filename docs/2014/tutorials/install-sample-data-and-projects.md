@@ -19,7 +19,7 @@ manager: "jhubbard"
   Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  
   
 ## Step 1: Install SQL Server Software  
- The lessons in this tutorial assume that you have the following software installed. All of the following software is installed using SQL Server installation media. For simplicity of deployment, you can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page. For more information, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md).  
+ The lessons in this tutorial assume that you have the following software installed. All of the following software is installed using SQL Server installation media. For simplicity of deployment, you can install all of the features on a single computer. To install these features, run SQL Server Setup and select them from the Feature Selection page. For more information, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Database Engine  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
  You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../2014/tutorials/multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## See Also  
- [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md)   
+ [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

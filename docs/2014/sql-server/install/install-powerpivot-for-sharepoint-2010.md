@@ -111,7 +111,7 @@ manager: "jhubbard"
 21. Click **Install**.  
   
 > [!TIP]  
->  If you need to trouble shoot the SQL Server installation, see [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md).  
+>  If you need to trouble shoot the SQL Server installation, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ##  <a name="bkmk_config"></a> Step 2: Configure the Server  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
  For more information about installing the provider, including verification steps, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
 ##  <a name="bkmk_verify"></a> Step 4: Verify the Installation  
- In this last step, you will verify that both SharePoint 2010 and [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] are fully functional. For instructions, see [Verify a PowerPivot for SharePoint Installation](../../../2014/sql-server/install/verify-a-powerpivot-for-sharepoint-installation.md).  
+ In this last step, you will verify that both SharePoint 2010 and [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] are fully functional. For instructions, see [Verify a PowerPivot for SharePoint Installation](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ## See Also  
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

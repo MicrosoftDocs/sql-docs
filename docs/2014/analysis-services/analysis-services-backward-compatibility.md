@@ -37,6 +37,6 @@ manager: "mblythe"
   
 ## See Also  
  [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
- [Upgrade Analysis Services](../../2014/sql-server/install/upgrade-analysis-services.md)  
+ [Upgrade Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

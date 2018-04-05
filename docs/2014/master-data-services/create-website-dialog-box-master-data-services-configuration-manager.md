@@ -42,7 +42,7 @@ manager: "jhubbard"
 ## See Also  
  [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [Set up the Database and Website for Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web Application Requirements &#40;Master Data Services&#41;](../../2014/sql-server/install/web-application-requirements-master-data-services.md)   
- [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../2014/sql-server/install/create-a-master-data-manager-web-application-master-data-services.md)  
+ [Web Application Requirements &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

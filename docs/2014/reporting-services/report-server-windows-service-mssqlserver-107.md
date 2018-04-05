@@ -48,7 +48,7 @@ manager: "mblythe"
 ## Internal-Only  
   
 ## See Also  
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Start and Stop the Report Server Service](../../2014/reporting-services/start-and-stop-the-report-server-service.md)  
   

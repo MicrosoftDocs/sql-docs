@@ -21,6 +21,6 @@ manager: "jhubbard"
   Click **Close** to finish the installation.  
   
 ## See Also  
- [Validate a SQL Server Installation](../../../2014/sql-server/install/validate-a-sql-server-installation.md)  
+ [Validate a SQL Server Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
   
   

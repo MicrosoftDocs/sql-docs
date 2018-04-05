@@ -47,7 +47,7 @@ manager: "mblythe"
  Each mode is exclusive of the other. A server that is configured for tabular mode cannot run Analysis Services databases that contain cubes and dimensions. If the underlying computer hardware can support it, you can install multiple instances of Analysis Services on the same computer and configure each instance to use a different deployment mode. Remember that Analysis Services is a resource intensive application. Deploying multiple instances on the same system is recommended only for high-end servers.  
   
 ## See Also  
- [Install Analysis Services in Tabular Mode](../../2014/sql-server/install/install-analysis-services-in-tabular-mode.md)   
+ [Install Analysis Services in Tabular Mode](instances/install-windows/install-analysis-services.md)   
  [Install Analysis Services in Multidimensional and Data Mining Mode](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Connect to Analysis Services](../../2014/analysis-services/connect-to-analysis-services.md)   

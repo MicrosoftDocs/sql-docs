@@ -27,6 +27,6 @@ manager: "jhubbard"
 |[Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md)|Provides descriptions and corrective actions for both detectable and undetectable issues concerning an upgrade.|  
   
 ## See Also  
- [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/upgrade-to-sql-server-2014-using-the-installation-wizard-setup.md)  
+ [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

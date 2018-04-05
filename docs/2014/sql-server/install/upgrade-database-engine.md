@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following:  
   
--   Review [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+-   Review [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Review [Check Parameters for the System Configuration Checker](../../../2014/sql-server/install/check-parameters-for-the-system-configuration-checker.md).  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   Run the appropriate Database Console Commands (DBCC) on databases to be upgraded to ensure that they are in a consistent state.  
   
--   Estimate the disk space that is required to upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, in addition to user databases. For disk space that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+-   Estimate the disk space that is required to upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, in addition to user databases. For disk space that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Ensure that existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system databases - master, model, msdb, and tempdb - are configured to autogrow, and ensure that they have sufficient hard disk space.  
   

@@ -96,7 +96,7 @@ manager: "mblythe"
     Cannot connect to the database server instance  
     ```  
   
-11. [Verify a PowerPivot for SharePoint Installation](../../2014/sql-server/install/verify-a-powerpivot-for-sharepoint-installation.md).  
+11. [Verify a PowerPivot for SharePoint Installation](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ##  <a name="bkmk_input"></a> Input values used to configure the server  
  The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool uses a combination of input values that you type in and default values that it detects or uses automatically.  
@@ -151,7 +151,7 @@ manager: "mblythe"
  If the tool creates a site collection, it creates a content database on the database server, using the same file naming conventions as SharePoint. You cannot change the content database name.  
   
 ## Verify the Configuration  
- See the “Verify [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration“ section of [Configure PowerPivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../2014/sql-server/install/configure-powerpivot-and-deploy-solutions-sharepoint-2013.md).  
+ See the “Verify [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration“ section of [Configure PowerPivot and Deploy Solutions &#40;SharePoint 2013&#41;](instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
 ##  <a name="bkmk_nextsteps"></a> Next steps  
  After you complete server installation, there are several post-installation tasks you should perform:  
@@ -179,7 +179,7 @@ manager: "mblythe"
  Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server runnin Analysis Services in SharePoint mode must have the same data providers that were used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 > [!NOTE]  
->  For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, the data providers are installed when you run the **spPowerPivot.msi** installer and [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md).  
+>  For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, the data providers are installed when you run the **spPowerPivot.msi** installer and [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ### Change Application Pool and Service Identities in SharePoint  
  The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration tool provisions farm features, applications, and services to run under a single account. This simplifies installation, but it does not result in a deployment that meets the security requirements of a SharePoint farm. To create a more robust deployment, change the application pools and service identities to run under different accounts after setup is complete. For more information, see [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md).  
@@ -195,15 +195,15 @@ manager: "mblythe"
 -   [Start PowerPivot in Excel 2013 add-in](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   
 ### Add additional Analysis Services servers in SharePoint mode  
- Over time, if you determine that additional data storage and processing capability is needed, you can add additional servers running Analysis Services in SharePoint mode to the farm. For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, you install new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers in SharePoint mode and then configure Excel Services. For more information, see the “Beyond the single-server installation” section of [PowerPivot for SharePoint 2013 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
+ Over time, if you determine that additional data storage and processing capability is needed, you can add additional servers running Analysis Services in SharePoint mode to the farm. For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, you install new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers in SharePoint mode and then configure Excel Services. For more information, see the “Beyond the single-server installation” section of [PowerPivot for SharePoint 2013 Installation](instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## Additional Resources  
  ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## See Also  
- [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md)   
  [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)   
- [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../../2014/sql-server/install/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

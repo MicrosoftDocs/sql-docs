@@ -33,7 +33,7 @@ manager: "jhubbard"
 ## Preparing to Install Integration Services  
  Before you install [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], review the following requirements:  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [Check Parameters for the System Configuration Checker](../../../2014/sql-server/install/check-parameters-for-the-system-configuration-checker.md)  
   

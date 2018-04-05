@@ -58,6 +58,6 @@ manager: "mblythe"
 ## See Also  
  [Project Property Pages Dialog Box](../../2014/reporting-services/project-property-pages-dialog-box.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-content-management-ssrs-native-mode.md)   
- [Upgrade Reports](../../2014/sql-server/install/upgrade-reports.md)  
+ [Upgrade Reports](install-windows/upgrade-reports.md)  
   
   

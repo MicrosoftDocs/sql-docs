@@ -174,7 +174,7 @@ manager: "mblythe"
 |---------------------|-----------------|  
 |0 - Multidimensional and Data Mining|Runs multidimensional and data mining solutions that you deploy to a default instance of Analysis Services. Deployment mode 0 is the default for an Analysis Services installation. For more information, see [Install Analysis Services in Multidimensional and Data Mining Mode](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md).|  
 |1 - PowerPivot for SharePoint|For Excel Data Model access, Analysis Services is an internal component of SharePoint. Analysis Services is installed in deployment mode 1 and accepts requests only from Excel Services in a SharePoint environment. For more information, see [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md).|  
-|2 - Tabular|Runs tabular solutions on a standalone instance of Analysis Services configured for deployment mode 2. For more information, see [Install Analysis Services in Tabular Mode](../../2014/sql-server/install/install-analysis-services-in-tabular-mode.md).|  
+|2 - Tabular|Runs tabular solutions on a standalone instance of Analysis Services configured for deployment mode 2. For more information, see [Install Analysis Services in Tabular Mode](instances/install-windows/install-analysis-services.md).|  
   
  Note that server models are not interchangeable. At installation, you will choose a mode for server operation. You should install multiple instances, one for each server mode, to support all workloads.  
   

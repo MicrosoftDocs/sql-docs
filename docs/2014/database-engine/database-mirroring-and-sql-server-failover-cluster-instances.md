@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  **To set up a new SQL Server failover cluster**  
   
--   [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../2014/sql-server/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
  **To set up database mirroring**  
   

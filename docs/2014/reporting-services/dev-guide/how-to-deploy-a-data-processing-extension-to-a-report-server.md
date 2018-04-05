@@ -29,7 +29,7 @@ manager: "jhubbard"
 1.  Copy your assembly from your staging location to the bin directory of the report server on which you want to use the data processing extension. The default location of the report server bin directory is %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  This step will prevent an upgrade to a newer instance of SQL Server. For more information, see [Upgrade and Migrate Reporting Services](../../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md).  
+    >  This step will prevent an upgrade to a newer instance of SQL Server. For more information, see [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  After the assembly file is copied, open the RSReportServer.config file. The RSReportServer.config file is located in the ReportServer directory. You need to make an entry in the configuration file for your data processing extension assembly file. You can open the configuration file with Visual Studio or a simple text editor, such as Notepad.  
   

@@ -39,7 +39,7 @@ manager: "jhubbard"
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md)   
- [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/install-sql-server-2014-from-the-installation-wizard-setup.md)   
- [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../../2014/sql-server/install/upgrade-to-sql-server-2014-using-the-installation-wizard-setup.md)  
+ [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

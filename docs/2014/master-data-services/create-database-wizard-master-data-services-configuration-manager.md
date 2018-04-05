@@ -55,6 +55,6 @@ manager: "jhubbard"
 ## See Also  
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Set up the Database and Website for Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Database Requirements &#40;Master Data Services&#41;](../../2014/sql-server/install/database-requirements-master-data-services.md)  
+ [Database Requirements &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

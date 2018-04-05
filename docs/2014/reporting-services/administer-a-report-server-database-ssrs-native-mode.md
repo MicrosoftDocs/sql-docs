@@ -78,14 +78,14 @@ SET READ_COMMITTED_SNAPSHOT OFF
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Backup and Restore Operations for Reporting Services](../../2014/sql-server/install/backup-and-restore-operations-for-reporting-services.md)   
+ [Backup and Restore Operations for Reporting Services](install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Report Server Database &#40;SSRS Native Mode&#41;](../../2014/reporting-services/report-server-database-ssrs-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

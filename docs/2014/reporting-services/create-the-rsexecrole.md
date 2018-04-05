@@ -31,7 +31,7 @@ manager: "mblythe"
   
 ## Before you start  
   
--   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the `RSExecRole`, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md).  
+-   Back up the encryption keys so that you can restore them after the database is moved. This is step does not directly affect your ability to create and provision the `RSExecRole`, but you must have a backup of the keys in order to verify your work. For more information, see [Back Up and Restore Reporting Services Encryption Keys](install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   Verify you are logged on as a user account that has `sysadmin` permissions on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
   
@@ -228,7 +228,7 @@ manager: "mblythe"
 ## See Also  
  [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../2014/reporting-services/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

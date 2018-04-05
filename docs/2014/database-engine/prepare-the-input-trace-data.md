@@ -23,7 +23,7 @@ manager: "jhubbard"
  For more information about the preprocess stage, see [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md).  
   
 > [!NOTE]  
->  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md).  
+>  The input trace data must be captured in a version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that is compatible with Distributed Replay. The input trace data must also be compatible with the target server that you want to replay the trace data against. For more information about version requirements, see [Distributed Replay Requirements](../tools/distributed-replay/distributed-replay-requirements.md).  
   
 ### To prepare the input trace data  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../2014/sql-server/install/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../tools/distributed-replay/distributed-replay-requirements.md)   
  [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../2014/database-engine/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configure Distributed Replay](../../2014/database-engine/configure-distributed-replay.md)  
   

@@ -49,7 +49,7 @@ manager: "jhubbard"
  **Restore**  
  Applies a previously saved copy of the symmetric key to the report server database. You must provide the password to unlock the file.  
   
- The previous copy of the symmetric key for the report server instance you are currently connected to is overwritten by the restored version. After you restore the symmetric key, you must initialize all the report servers that use the report server database. For more information about initializing report servers, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/initialize-a-report-server-ssrs-configuration-manager.md).  
+ The previous copy of the symmetric key for the report server instance you are currently connected to is overwritten by the restored version. After you restore the symmetric key, you must initialize all the report servers that use the report server database. For more information about initializing report servers, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
  **Change**  
  Recreates the symmetric key and re-encrypts all encrypted values in the report server database. Be sure to stop the Report Server service before recreating the symmetric key.  
@@ -67,9 +67,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../../../2014/sql-server/install/back-up-and-restore-reporting-services-encryption-keys.md)   
- [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/delete-and-re-create-encryption-keys-ssrs-configuration-manager.md)   
- [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/initialize-a-report-server-ssrs-configuration-manager.md)   
- [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/store-encrypted-report-server-data-ssrs-configuration-manager.md)  
+ [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

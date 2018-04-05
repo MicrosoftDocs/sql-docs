@@ -31,7 +31,7 @@ Dimensions are loaded first, followed by Fact tables. The package can be re-run 
 
 The workflow is as follows:
 
- ![WideWorldImporters ETL workflow](media/wideworldimporters/etl-workflow.png)
+ ![WideWorldImporters ETL workflow](media/wide-world-importers/etl-workflow.png)
 
 It starts with an expression task that works out the appropriate cutoff time. This time is the current time less a few minutes. (This is more robust than requesting data right to the current time). It then truncates any milliseconds from the time.
 

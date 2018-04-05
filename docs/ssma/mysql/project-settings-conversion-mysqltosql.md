@@ -19,7 +19,7 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Conversion) (MySQLToSQL)

@@ -22,7 +22,7 @@ ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)

@@ -21,7 +21,7 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with the Sample Console Script Files (SybaseToSQL)

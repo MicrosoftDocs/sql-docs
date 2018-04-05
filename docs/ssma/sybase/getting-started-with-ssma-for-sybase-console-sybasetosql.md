@@ -23,7 +23,7 @@ ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)

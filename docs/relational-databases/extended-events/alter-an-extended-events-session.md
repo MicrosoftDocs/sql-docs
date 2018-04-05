@@ -8,9 +8,7 @@ ms.service: ""
 ms.component: "extended-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39

@@ -19,7 +19,7 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Variable Value Files (DB2ToSQL)

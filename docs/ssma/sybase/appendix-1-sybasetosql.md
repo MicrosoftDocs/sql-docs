@@ -21,7 +21,7 @@ ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix - 1 (SybaseToSQL)

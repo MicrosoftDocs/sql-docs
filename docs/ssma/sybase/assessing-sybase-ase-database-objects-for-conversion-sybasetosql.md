@@ -19,7 +19,7 @@ ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessing SAP ASE database objects for conversion (SybaseToSQL)

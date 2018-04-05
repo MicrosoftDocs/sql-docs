@@ -34,8 +34,6 @@ ms.workload: "Active"
   
 The total number of permissions for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] is 237. Most permissions apply to all platforms, but some do not. For example server level permissions cannot be granted on SQL Database, and a few permissions only make sense on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposed 230 permissions. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposed 219 permissions. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposed 214 permissions. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposed 195 permissions. The [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) topic specifies which topics are new in recent versions.
 
-[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
-
 Once you understand the permissions, apply server level permissions to logins and database level permissions users with the [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md), and [DENY](../../t-sql/statements/deny-transact-sql.md) statements. For Example:   
 ```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
@@ -97,7 +95,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
      The REFERENCES permission is needed on an object to create a FUNCTION or VIEW with the `WITH SCHEMABINDING` clause that references that object.  
   
 ## Chart of SQL Server Permissions  
- For a poster sized chart of all [!INCLUDE[ssDE](../../includes/ssde-md.md)] permissions in pdf format, see [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ##  <a name="_securables"></a> Permissions Applicable to Specific Securables  
  The following table lists major classes of permissions and the kinds of securables to which they may be applied.  

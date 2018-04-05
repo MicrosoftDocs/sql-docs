@@ -137,7 +137,7 @@ In this section, you will create a Merge publication using [!INCLUDE[ssManStudio
 
     ![Create Snapshot Immediately](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. On the Agent Security page, select **Security Settings**, type \<*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Next**:  
+22. On the Agent Security page, select **Security Settings**, type <*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Next**:  
 
     ![Snapshot Agent Security](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -165,7 +165,7 @@ In this section, you will create a Merge publication using [!INCLUDE[ssManStudio
   
     a. Select the **Publication Access List** page, and select **Add**. 
   
-    b. In the Add Publication Access dialog box, select \<*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**: 
+    b. In the Add Publication Access dialog box, select <*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**: 
 
     ![Merge PAL](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -203,7 +203,7 @@ In this section, you will add a subscription to the Merge Publication you create
 
     ![Add DB to Sub](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8.  On the Merge Agent Security page, select the ellipsis (**…**) button, enter \<*Subscriber_Machine_Name>***\repl_merge** in the **Process account** box, supply the password for this account, select **OK**, select **Next**, and then select **Next** again:  
+8.  On the Merge Agent Security page, select the ellipsis (**…**) button, enter <*Subscriber_Machine_Name>***\repl_merge** in the **Process account** box, supply the password for this account, select **OK**, select **Next**, and then select **Next** again:  
 
     ![Merge Agent Security](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -225,7 +225,7 @@ In this section, you will add a subscription to the Merge Publication you create
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.  
   
-    a. On the **General** page, select **Search** and then enter \<*Subscriber_ Machine_Name>***\repl_merge** in the **Enter the Object Name** field, select **Check Names**, select **OK**: 
+    a. On the **General** page, select **Search** and then enter <*Subscriber_ Machine_Name>***\repl_merge** in the **Enter the Object Name** field, select **Check Names**, select **OK**: 
     
     ![Login on Subscriber](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

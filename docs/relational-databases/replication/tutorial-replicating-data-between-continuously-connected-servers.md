@@ -106,7 +106,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
   
 10. On the Agent Security page, clear **Use the security settings from the Snapshot Agent** check box.   
   
-    a. Select **Security Settings** for the Snapshot Agent, enter \<*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**:  
+    a. Select **Security Settings** for the Snapshot Agent, enter <*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**:  
 
     ![Snapshot Agent Security](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
@@ -188,7 +188,7 @@ In this section, you will add a subscriber to the Publication that was previousl
   
     ![Product Replica DB](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8.  In the **Distribution Agent Security** dialog box, select the ellipsis (**…**) button. Enter \<*Publisher_Machine_Name>***\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**:
+8.  In the **Distribution Agent Security** dialog box, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name>***\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**:
 
     ![Add Distribution Account](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -198,7 +198,7 @@ In this section, you will add a subscriber to the Publication that was previousl
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.     
   
-    a. On the **General** page, under **Login Name** select **Search** and add the login for \<*Subscriber_Machine_Name>***\repl_distribution**.
+    a. On the **General** page, under **Login Name** select **Search** and add the login for <*Subscriber_Machine_Name>***\repl_distribution**.
     b. On the **User Mappings** page, grant the login **db_owner** for the **ProductReplica** database: 
 
     ![Login on Subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
@@ -258,7 +258,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
 1. In the **Snapshot Agent History**, select the relevant error message (usually the one before the red X) and review the error message beneath the summary: 
 
     ![Snapshot Agent Access Denied](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
-     If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions for the \<*Publisher_Machine_Name>***\repl_snapshot** account on your repldata folder. For more information, please see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
+     If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions for the <*Publisher_Machine_Name>***\repl_snapshot** account on your repldata folder. For more information, please see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
 
 ### Troubleshoot Errors with Log Reader Agent
 The **Log Reader Agent** connects to  your publisher database and scans the transaction log for any transactions that are marked 'for replication'. It then adds those transactions to the **Distribution** database. 

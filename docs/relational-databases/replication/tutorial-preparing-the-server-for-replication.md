@@ -69,10 +69,10 @@ In this section, you will create Windows accounts to run replication agents. You
   
 |Agent|Location|Account name|  
 |---------|------------|----------------|  
-|Snapshot Agent|Publisher|\<*machine_name*>\repl_snapshot|  
-|Log Reader Agent|Publisher|\<*machine_name*>\repl_logreader|  
-|Distribution Agent|Publisher and Subscriber|\<*machine_name*>\repl_distribution|  
-|Merge Agent|Publisher and Subscriber|\<*machine_name*>\repl_merge|  
+|Snapshot Agent|Publisher|<*machine_name*>\repl_snapshot|  
+|Log Reader Agent|Publisher|<*machine_name*>\repl_logreader|  
+|Distribution Agent|Publisher and Subscriber|<*machine_name*>\repl_distribution|  
+|Merge Agent|Publisher and Subscriber|<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
 > In the replication tutorials, the Publisher and Distributor share the same instance (NODE1\SQL2016) of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], while the Susbcriber instance (NODE2\SQL2016) is remote. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
@@ -129,11 +129,11 @@ In this section, you will learn to configure the snapshot folder that is used to
 
        ![Sharing Repl Data](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \\\\<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
+6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as <*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Sharing Permissions](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Repeat step 6 to add the other two accounts that were created previously: \<*Publisher_Machine_Name>***\repl_merge** and \<*Publisher_Machine_Name>***\repl_distribution**
+7. Repeat step 6 to add the other two accounts that were created previously: <*Publisher_Machine_Name>***\repl_merge** and <*Publisher_Machine_Name>***\repl_distribution**
 
 8. Once these three accounts have been added, assign the following permissions:      
     - repl_distribution - Read  
@@ -148,12 +148,12 @@ In this section, you will learn to configure the snapshot folder that is used to
 
        ![Edit Security](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. In the **Permissions for repldata** dialog box, select **Add..**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
+11. In the **Permissions for repldata** dialog box, select **Add..**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as <*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Security Permissions](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12.  Repeat the previous step to add permissions for the Distribution Agent, as \<*Publisher_Machine_Name>***\repl_distribution**, and for the Merge Agent as \<*Publisher_Machine_Name>***\repl_merge**.  
+12.  Repeat the previous step to add permissions for the Distribution Agent, as <*Publisher_Machine_Name>***\repl_distribution**, and for the Merge Agent as <*Publisher_Machine_Name>***\repl_merge**.  
     
   
 13. Verify the following permissions are allowed:  
@@ -199,9 +199,8 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Select **Next**.  
 
      
-5.  Enter the below path in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
+5.  Enter the path \\\\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
 
-            \\<Publisher_Machine_Name>\repldata
 
     ![Repl Data Snapshot Folder](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -227,7 +226,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 
     ![New Login](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2.  On the **General** page, select **Search**, enter \<*Publisher_Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, select **Check Names**, and then select **OK**:  
+2.  On the **General** page, select **Search**, enter <*Publisher_Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, select **Check Names**, and then select **OK**:  
 
     ![Add Repl Snapshot Login](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   

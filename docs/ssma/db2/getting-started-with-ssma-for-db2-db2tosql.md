@@ -19,7 +19,7 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Getting Started with SSMA for DB2 (DB2ToSQL)

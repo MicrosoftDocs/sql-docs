@@ -21,7 +21,7 @@ ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Customizing Calls Order (SybaseToSQL)

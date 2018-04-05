@@ -19,7 +19,7 @@ ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Installing SSMA for DB2 (DB2ToSQL)

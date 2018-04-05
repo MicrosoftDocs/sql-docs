@@ -19,7 +19,7 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with SSMA Projects (SybaseToSQL)

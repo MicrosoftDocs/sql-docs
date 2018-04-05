@@ -19,7 +19,7 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix - 1 (AccessToSQL)

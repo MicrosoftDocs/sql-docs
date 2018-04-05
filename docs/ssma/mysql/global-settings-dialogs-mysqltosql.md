@@ -19,7 +19,7 @@ ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Dialogs) (MySQLToSQL)

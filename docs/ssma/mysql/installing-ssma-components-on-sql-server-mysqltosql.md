@@ -21,7 +21,7 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Installing SSMA Components on SQL Server (MySQLToSql)

@@ -19,7 +19,7 @@ ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (DB2ToSQL)

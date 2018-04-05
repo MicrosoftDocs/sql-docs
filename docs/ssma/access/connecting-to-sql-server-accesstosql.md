@@ -31,7 +31,7 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connecting to SQL Server (AccessToSQL)

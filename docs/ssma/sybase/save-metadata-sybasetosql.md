@@ -19,7 +19,7 @@ ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Metadata  (SybaseToSQL)

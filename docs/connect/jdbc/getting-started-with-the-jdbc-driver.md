@@ -20,6 +20,9 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Getting Started with the JDBC Driver
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 ## Getting Started  
 * [Step 1: Configure development environment for Java development](../../connect/jdbc/step-1-configure-development-environment-for-java-development.md)  
 * [Step 2: Create a SQL database for Java development](../../connect/jdbc/step-2-create-a-sql-database-for-java-development.md)  

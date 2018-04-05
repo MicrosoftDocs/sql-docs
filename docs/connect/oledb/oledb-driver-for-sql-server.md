@@ -10,7 +10,7 @@ ms.suite: "sql"
 description: ""
 ms.custom: ""
 ms.technology:
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "pmasl"

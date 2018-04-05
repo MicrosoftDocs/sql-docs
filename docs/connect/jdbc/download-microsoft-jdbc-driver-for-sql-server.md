@@ -21,8 +21,8 @@ ms.workload: "Active"
 ---
 # Download Microsoft JDBC Driver for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download JDBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
- 
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 ## Using the JDBC Driver with Maven Central
 The JDBC Driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following code:
 
@@ -34,7 +34,7 @@ The JDBC Driver can be added to a Maven project by adding it as a dependency in 
 </dependency>
 ```  
 
-## Download previous versions of JDBC Drivers for SQL Server  
+## Available downloads of JDBC Driver for SQL Server
  * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460) 
  * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 

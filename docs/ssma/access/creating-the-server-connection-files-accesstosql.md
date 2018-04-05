@@ -19,7 +19,7 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating the server connection files (AccessToSQL)

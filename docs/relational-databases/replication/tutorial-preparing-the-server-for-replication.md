@@ -129,7 +129,7 @@ In this section, you will learn to configure the snapshot folder that is used to
 
        ![Sharing Repl Data](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
+6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \\\\<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Sharing Permissions](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
@@ -209,7 +209,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
   
 7.  Select **Finish** to enable distribution. 
 
-    You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to grant those permissions to the existing account, modify which account the SQL Server Agent is using, or just start the SQL Agent manually: 
+    You might see this error when configuring the Distributor. It's an indication that the account used to start the SQL Server Agent account is not an administrator on the system. You'll either need to start the SQL Server Agent manually, grant those permissions to the existing account, or modify which account the SQL Server Agent is using: 
 
      ![Starting Agent Error](media/tutorial-preparing-the-server-for-replication/startingagenterror.png)
 

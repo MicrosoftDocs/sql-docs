@@ -72,7 +72,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 ### Create a publication and define articles
 1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
-2. Right-click the **SQL Server Agent** and Start. The SQL Server Agent should be running before you create the publication. If this does not start your agent, you'll need to do so manually from the **SQL Server Configuration Manager**. 
+2. Right-click the **SQL Server Agent** and select **Start**. The SQL Server Agent should be running before you create the publication. If this does not start your agent, you'll need to do so manually from the **SQL Server Configuration Manager**. 
 3. Expand the **Replication** folder, right-click the **Local Publications** folder, and select **New Publication**.  This will launch the Publication Configuration Wizard: 
 
     ![New Publication](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
@@ -130,7 +130,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
   
 1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the server node, and then expand the **Replication** folder.  
   
-2.  In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then select **View Snapshot Agent Status**.  
+2.  In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then select **View Snapshot Agent Status**:  
 
     ![Snapshot Agent Status](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
   

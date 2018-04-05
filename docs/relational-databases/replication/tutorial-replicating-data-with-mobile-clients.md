@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configure Publisher and Subscriber for Merge Replication | Microsoft Docs"
+title: "Tutorial: Configure Replication between a Server and Mobile Clients (Merge) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
 ms.prod: "sql-non-specified"
@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# Tutorial: Configure Publisher and Subscriber for Merge Replication
+# Tutorial: Configure Replication between a Server and Mobile Clients (Merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Merge replication is a good solution to the problem of moving data between a central server and mobile clients that are only occasionally connected. Using replication's wizards, you can easily configure and administer a Merge Replication topology. This tutorial shows you how to configure a replication topology for mobile clients.  For more information about Merge Replication, please see [An Overview of Merge Replication](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
   

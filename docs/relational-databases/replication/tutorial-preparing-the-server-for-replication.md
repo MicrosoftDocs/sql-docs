@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Preparing the Server for Replication | Microsoft Docs"
+title: "Tutorial: Prepare SQL Server For Replication - Publisher, Distributor, Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
 ms.prod: "sql-non-specified"
@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Tutorial: Prepare SQL Server Publisher and Distributor for Replication
+# Tutorial: Prepare SQL Server For Replication - Publisher, Distributor, Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 It is important to plan for security before you configure your replication topology. This tutorial shows you how to better secure a replication topology as well as how to configure distribution, which is the first step in replicating data. You must complete this tutorial before any of the others.  
   

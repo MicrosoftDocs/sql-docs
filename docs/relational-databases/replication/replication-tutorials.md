@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 ---
 # Replication Tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Replication includes tutorials that you can use to learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Replication is a powerf solution for moving data, or subsets of data between servers. You can replicate data between servers that are fully connected using Transactional Replication. You can also replicate data between servers and clients that are intermittently connected using Merge Replication. Below, you will find tutorials that help prepare your server for replication, and then teach you to configure both Transactional and Merge replication. 
   
 In the replication tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
   
@@ -42,7 +42,7 @@ Learn how to prepare servers so that replication can be run with least privilege
 Learn how to configure Transactional Replication to replicate data between fully connected servers. This tutorial also covers some basic Transactional error troubleshooting methodology. 
 
   
-[Tutorial: Configure Replication between a Server with Mobile Clients (Merge)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
+[Tutorial: Configure Replication between a Server and Mobile Clients (Merge)](../../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md)  
 Learn how to use Merge Replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See Also  

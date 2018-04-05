@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configuring Transactional Replication | Microsoft Docs"
+title: "Tutorial: Configure Replication between Two Fully Connected Servers (Transactional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
@@ -25,7 +25,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# Tutorial: Configure Publisher and Subscriber for Transactional Replication
+# Tutorial: Tutorial: Configure Replication between Two Fully Connected Servers (Transactional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Transactional Replication is a good solution to the problem of moving data between continuously connected servers. Using  the Replication Wizard, you can easily configure and administer a replication topology. This tutorial shows you how to configure a Transactional Replication topology for continuously connected servers. For more information about how Transactional Replication works, please see [Transactional Replication Overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication). 
   

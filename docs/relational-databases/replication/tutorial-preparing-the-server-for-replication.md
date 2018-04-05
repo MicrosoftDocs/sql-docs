@@ -58,9 +58,10 @@ To complete this Tutorial, your system must have SQL Server Management Studio (S
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
 - Download an [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). 
     - Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
-    >[!NOTE]
-     > - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)
-      > - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role  
+    
+>[!NOTE]
+> - Replication is not supported on SQL Servers that are more than two versions apart. For more information, please see [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)
+ > - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the Publisher and Subscriber using a login that is a member of the **sysadmin** fixed server role  
 
 
 **Estimated time to complete this tutorial:  30 minutes**
@@ -76,7 +77,7 @@ In this section, you will create Windows accounts to run replication agents. You
 |Merge Agent|Publisher and Subscriber|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
-> In the replication tutorials, the Publisher and Distributor share the same instance (NODE1\SQL2016) of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The subscriber is on NODE2\SQL2016. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
+> In the replication tutorials, the Publisher and Distributor share the same instance (NODE1\SQL2016) of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The subscriber is NODE2\SQL2016. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
 
 ### Create local Windows accounts for replication agents at the Publisher
   
@@ -142,10 +143,11 @@ In this section, you will learn to configure the snapshot folder that is used to
     -   repl_distribution - Read  
     -   repl_merge - Read  
     
+
      ![Shared Permissions](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
 
 
-9. Once your share permissions are configured correctly, select **Ok** to close the **Permissions for repldata** dialog box. Select **Ok** to close the **Advanced Sharing** dialog box. 
+9. Once your share permissions are configured correctly, select **OK** to close the **Permissions for repldata** dialog box. Select **OK** to close the **Advanced Sharing** dialog box. 
 
 10.  On the **repldata Properties**, select the **Security** tab and select **Edit**.  
 
@@ -161,11 +163,12 @@ In this section, you will learn to configure the snapshot folder that is used to
   
 13. Verify the following permissions are allowed:  
   
-    -   repl_snapshot - Full Control   
-    -   repl_distribution - Read  
-    -   repl_merge - Read  
+    - repl_distribution - Read
+    - repl_merge - Read
+    - repl_snapshot - Full Control   
+ 
 
-      ![Repl Data User Permissions](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
+    ![Repl Data User Permissions](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
 
  
 14. Click **OK** to close the **repldata Properties** dialog box and create the repldata share. 
@@ -199,7 +202,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Click **Next**.  
 
      
-5.  Enter **\\\\**\<*Machine_Name>***\repldata** in the **Snapshot folder** text box, where \<*Machine_Name>* is the name of the Publisher, and then click **Next**. This path should match what you see under **Network Path** of your repldata properties folder. 
+5.  Enter **\\\\**\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then click **Next**. This path should match what you see under **Network Path** of your repldata properties folder. 
 
     ![Repl Data Snapshot Folder](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -215,7 +218,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 
     If your SQL Server Management Studio is running with administrative rights, you can start the SQL Agent manually from within SSMS:  
         ![Start Agent from SSMS](media/tutorial-preparing-the-server-for-replication/ssmsstartagent.png) 
-        - If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS, and **Refresh**.     
+        - If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS, and **Refresh**.  If it's still not started,  you'll need to start it manually from the **SQL Server Configuration Manager**.    
   
 ### Setting database permissions at the Publisher  
   
@@ -223,7 +226,7 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 
     ![New Login](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2.  On the **General** page, click **Search**, enter \<*Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, where \<*Machine_Name>* is the name of the local Publisher server, click **Check Names**, and then click **OK**.  
+2.  On the **General** page, click **Search**, enter \<*Publisher_Machine_Name>***\repl_snapshot** in the **Enter the object name to select** box, click **Check Names**, and then click **OK**.  
 
     ![Add Repl Snapshot Login](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   

@@ -286,7 +286,7 @@
 ### [MSSQL_REPL-2147201021](mssql-repl-2147201021.md)  
 # [Replication Language Reference](replication-language-reference.md)  
 # [Replication Tutorials](replication-tutorials.md)  
-## [Prepare Server for Replicationl](tutorial-preparing-the-server-for-replication.md)  
+## [Prepare Server for Replication](tutorial-preparing-the-server-for-replication.md)  
 ## [Configure Transactional Replication](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Configure Merge Replication](tutorial-replicating-data-with-mobile-clients.md)  
 

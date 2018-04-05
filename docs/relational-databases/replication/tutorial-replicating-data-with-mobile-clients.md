@@ -43,7 +43,7 @@ To use this tutorial, your system must have SQL Server Management Studio and the
   
 -   At the Publisher server (source):  
   
-    -   Any edition of SQL Server, except for Express ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) or [!INCLUDE[ssEW](../../includes/ssew-md.md)]. These editions cannot be a replication Publisher.  
+    -   Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication Publisher.  
   
     -   The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
@@ -60,7 +60,7 @@ To use this tutorial, your system must have SQL Server Management Studio and the
   
 ## Configure a Publisher for Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In this section, you will create a merge publication using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL).  
+In this section, you will create a Merge publication using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to publish a subset of the **Employee**, **SalesOrderHeader**, and **SalesOrderDetail** tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. These tables are filtered with parameterized row filters so that each subscription contains a unique partition of the data. You will also add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login used by the Merge Agent to the publication access list (PAL).  
   
 ### Create Merge Publication and define articles  
   
@@ -80,7 +80,7 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
     ![Merge Replication](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6.  On the Articles page, expand the **Tables** node, and select the following three tables: **Employee**, **SalesOrderHeader, and **SalesOrderDetail**. Select **Next**.  
+6.  On the Articles page, expand the **Tables** node, and select the following three tables: **Employee**, **SalesOrderHeader**, and **SalesOrderDetail**. Select **Next**.  
 
     ![Merge Articles](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -92,7 +92,7 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
   
 8.  In the **Add Filter** dialog box, select **Employee (HumanResources)** in **Select the table to filter**. Select the **LoginID** column, select the right arrow to add the column to the WHERE clause of the filter query, and modify the WHERE clause as follows:  
   
-    ``` 
+    ```sql 
     WHERE [LoginID] = HOST_NAME()  
     ```  
   
@@ -106,11 +106,11 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
   
     a. In the **Add Join** dialog box, select **Sales.SalesOrderHeader** under **Joined table**. Select **Write the join statement manually**, and complete the join statement as follows:  
   
-    ```  
+    ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    a. In **Specify join options**, select **Unique key**, and then select **OK**.
+    b. In **Specify join options**, select **Unique key**, and then select **OK**.
 
     ![Add Join to Filter](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
@@ -121,7 +121,7 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
     b. Select **Use the Builder to create the statement**.  
     c. In the **Preview** box, confirm that the join statement is as follows:  
   
-    ```  
+    ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
@@ -133,7 +133,7 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
 
     ![Create Snapshot Immediately](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. On the Agent Security page, select **Security Settings**, type \<*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Finish**.  
+22. On the Agent Security page, select **Security Settings**, type \<*Publisher_Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then select **OK**. Select **Next**.  
 
     ![Snapshot Agent Security](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -161,12 +161,12 @@ In this section, you will create a merge publication using [!INCLUDE[ssManStudio
   
     a. Select the **Publication Access List** page, and select **Add**.  
   
-    a. In the Add Publication Access dialog box, select <*Publication_Machine_Name>\***repl_merge** and select **OK**. Select **OK**. 
+    a. In the Add Publication Access dialog box, select \<*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**. 
 
     ![Merge PAL](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-## See Also  
+**See Also**:  
 [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)  
 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)  
@@ -221,11 +221,11 @@ In this section, you will add a subscription to the Merge Publication you create
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.  
   
-    a. On the **General** page, select **Search** and then enter \<*Subscriber_ Machine_Name>***\repl_merge** in the **Enter the Object Name** field, select **Check Names**, select **Ok**. 
+    a. On the **General** page, select **Search** and then enter \<*Subscriber_ Machine_Name>***\repl_merge** in the **Enter the Object Name** field, select **Check Names**, select **OK**. 
     
     ![Login on Subscriber](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
-1. On the **User Mapping** page, select the **SalesOrdersReplica** database and select the **db_owner** role.  On the **Securables** page, grant the 'Explicit' permission to **Alter Trace**. Select **Ok**.
+1. On the **User Mapping** page, select the **SalesOrdersReplica** database and select the **db_owner** role.  On the **Securables** page, grant the 'Explicit' permission to **Alter Trace**. Select **OK**.
 
     ![Set login as DBO on Sub](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
@@ -268,7 +268,7 @@ In this section, you will start the Merge Agent to initialize the subscription u
 ### Next Steps  
 You have successfully configured both your Publisher and your Subscriber for your Merge Replication.  You can also insert, update, or delete data in the **SalesOrderHeader** or **SalesOrderDetail** tables at the Publisher or Subscriber, repeat this procedure when network connectivity is available to synchronize data between the Publisher and the Subscriber, and then query the **SalesOrderHeader** or **SalesOrderDetail** tables at the other server to view the replicated changes.  
   
-## See Also  
+**See Also**:   
 [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 [Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

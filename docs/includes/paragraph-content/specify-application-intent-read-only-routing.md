@@ -1,4 +1,14 @@
-
+---
+ title: include file
+ description: include file
+ services: sql-database
+ author: MightyPen
+ ms.service: sql-database
+ ms.topic: include
+ ms.date: 04/05/2018
+ ms.author: genemi
+ ms.custom: include file
+---
 ## Specifying Application Intent
 
 The keyword **ApplicationIntent** can be specified in your connection string. The assignable values are **ReadWrite** or **ReadOnly**. The default is **ReadWrite**.
@@ -28,13 +38,13 @@ The **ApplicationIntent** keyword enables *read-only routing*.
 
 ## Read-Only Routing
 
-Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing:
+Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing, all of the following apply:
 
-1. You must connect to an Always On Availability Group availability group listener.
+- You must connect to an Always On Availability Group availability group listener.
 
-2. The **ApplicationIntent** connection string keyword must be set to **ReadOnly**.
+- The **ApplicationIntent** connection string keyword must be set to **ReadOnly**.
 
-3. The Availability Group must be configured by the database administrator to enable read-only routing.
+- The Availability Group must be configured by the database administrator to enable read-only routing.
 
 Multiple connections each using read-only routing might not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. You can ensure that all read-only requests connect to the same read-only replica. Ensure this sameness by *not* passing an availability group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.
 

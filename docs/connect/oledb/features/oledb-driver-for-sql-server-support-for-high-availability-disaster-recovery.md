@@ -21,9 +21,9 @@ ms.workload: "On Demand"
 # OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  This topic discusses OLE DB Driver for SQL Server support (added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  This article discusses OLE DB Driver for SQL Server support (added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- You can specify the availability group listener of a given availability group in the connection string. If a OLE DB Driver for SQL Server application is connected to a database in an availability group that fails over, the original connection is broken, and the application must open a new connection to continue work after the failover.  
+ You can specify the availability group listener of a given availability group in the connection string. If an OLE DB Driver for SQL Server application is connected to a database in an availability group that fails over, the original connection is broken, and the application must open a new connection to continue work after the failover.  
   
  If you are not connecting to an availability group listener, and if multiple IP addresses are associated with a hostname, OLE DB Driver for SQL Server will iterate sequentially through all IP addresses associated with DNS entry. This can be time consuming if the first IP address returned by DNS server is not bound to any network interface card (NIC). When connecting to an availability group listener, OLE DB Driver for SQL Server attempts to establish connections to all IP addresses in parallel and if a connection attempt succeeds, the driver will discard any pending connection attempts.  
   
@@ -78,7 +78,7 @@ A database can allow or disallow read workloads on the targeted Always On databa
 The **ApplicationIntent** keyword is used to enable read-only routing.  
   
 ## Read-Only Routing  
-Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
+Read-only routing is a feature that can ensure the availability of a read-only replica of a database. To enable read-only routing:  
   
 1.  You must connect to an Always On Availability Group availability group listener.  
   
@@ -88,7 +88,7 @@ Read-only routing is a feature that can ensure the availability of a read only r
   
 It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an Always On Availability Group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.  
   
-Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
+Read-only routing may take longer than connecting to the primary because read-only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
   
 ## OLE DB  
 The OLE DB Driver for SQL Server supports both the **ApplicationIntent** and the **MultiSubnetFailover** keywords.   
@@ -108,7 +108,7 @@ The equivalent connection properties are:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-An OLE DB Driver for SQL Server OLE DB application can use one of the methods to specify application intent:  
+An OLE DB Driver for SQL Server application can use one of the methods to specify application intent:  
   
  **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** uses the previously configured set of properties to initialize the data source and create the data source object. Specify application intent as a provider property or as part of the extended properties string.  
@@ -128,13 +128,22 @@ When implicit connections are established, the implicit connection will use the 
   
 ### MultiSubnetFailover
 
-The equivalent connection property is:  
+The equivalent connection properties are:  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-The SSPROP_INIT_MULTISUBNETFAILOVER property is of type Boolean. The property accepts values of VARIANT_TRUE or VARIANT_FALSE.
+An OLE DB Driver for SQL Server application can use one of the following methods to set the MultiSubnetFailover option:  
 
-To set the MultiSubnetFailover property value, call **IDBProperties::SetProperties** passing in the SSPROP_INIT_MULTISUBNETFAILOVER property with value **VARIANT_TRUE** or **VARIANT_FALSE**. 
+ **IDBInitialize::Initialize**  
+ **IDBInitialize::Initialize** uses the previously configured set of properties to initialize the data source and create the data source object. Specify application intent as a provider property or as part of the extended properties string.  
+  
+ **IDataInitialize::GetDataSource**  
+ **IDataInitialize::GetDataSource** takes an input connection string that can contain the **MultiSubnetFailover** keyword.  
+
+**IDBProperties::SetProperties**  
+To set the **MultiSubnetFailover** property value, call **IDBProperties::SetProperties** passing in the **SSPROP_INIT_MULTISUBNETFAILOVER** property with value **VARIANT_TRUE** or **VARIANT_FALSE** or **DBPROP_INIT_PROVIDERSTRING** property with value containing "**MultiSubnetFailover=Yes**" or "**MultiSubnetFailover=No**".
 
 #### Example
 

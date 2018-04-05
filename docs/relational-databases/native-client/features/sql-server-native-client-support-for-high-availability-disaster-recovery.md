@@ -71,46 +71,9 @@ ms.workload: "On Demand"
  The driver will return an error if database mirroring is used on the primary database in the availability group, and if **MultiSubnetFailover=Yes** is used in the connection string that connects to a primary database instead of to an availability group listener.  
 
 
-## Specifying Application Intent
-
-The keyword **ApplicationIntent** can be specified in your connection string. The assignable values are **ReadWrite** or **ReadOnly**. The default is **ReadWrite**.
-
-When **ApplicationIntent=ReadOnly**, the client requests a read workload when connecting. The server enforces the intent at connection time, and during a **USE** database statement.
-
-The **ApplicationIntent** keyword does not work with legacy read-only databases.  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-#### Targets of ReadOnly
-
-When a connection chooses **ReadOnly**, the connection is assigned to any of the following special configurations that might exist for the database:
-
-- [Always On](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-    - A database can allow or disallow read workloads on the targeted Always On database. This is done with the **ALLOW_CONNECTIONS** clause of the **PRIMARY_ROLE** and **SECONDARY_ROLE**[!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.
-
-- [Geo-Replication](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
-
-- [Read Scale-Out](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
-
-If none of those special targets are available, the regular database is read from.
-
-&nbsp;
-
-The **ApplicationIntent** keyword enables *read-only routing*.  
-
-
-## Read-Only Routing  
- Read-only routing is a feature that can ensure the availability of a read only replica of a database. To enable read-only routing:  
-  
-1.  You must connect to an Always On Availability Group availability group listener.  
-  
-2.  The **ApplicationIntent** connection string keyword must be set to **ReadOnly**.  
-  
-3.  The Availability Group must be configured by the database administrator to enable read-only routing.  
-  
- It is possible that multiple connections using read-only routing will not all connect to the same read-only replica. Changes in database synchronization or changes in the server's routing configuration can result in client connections to different read-only replicas. To ensure that all read-only requests connect to the same read-only replica, do not pass an availability group listener to the **Server** connection string keyword. Instead, specify the name of the read-only instance.  
-  
- Read-only routing may take longer than connecting to the primary because read only routing first connects to the primary and then looks for the best available readable secondary. Because of this, you should increase your login timeout.  
-  
 ## ODBC  
  Two ODBC connection string keywords were added to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   

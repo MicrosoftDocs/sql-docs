@@ -199,7 +199,9 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
 4.  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running, on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent Start** page, select **Yes**, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically. Select **Next**.  
 
      
-5.  Enter **\\**\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
+5.  Enter the below path in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
+
+            \\<Publisher_Machine_Name>\repldata
 
     ![Repl Data Snapshot Folder](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   

@@ -19,7 +19,7 @@ ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Dialogs) (DB2ToSQL)

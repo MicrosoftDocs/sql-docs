@@ -19,7 +19,7 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # User Interface Reference (MySQLToSQL)

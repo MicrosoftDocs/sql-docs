@@ -21,7 +21,7 @@ ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Loading Converted Database Objects into SQL Server (SybaseToSQL)

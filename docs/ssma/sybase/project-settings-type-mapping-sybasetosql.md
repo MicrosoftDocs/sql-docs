@@ -19,7 +19,7 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Type Mapping) (SybaseToSQL)

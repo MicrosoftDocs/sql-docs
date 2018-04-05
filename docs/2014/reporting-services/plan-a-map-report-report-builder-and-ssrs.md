@@ -160,7 +160,7 @@ manager: "mblythe"
   
 ## See Also  
  [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Map Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-map-report-report-builder.md)   
+ [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md)   
  [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md)   
  [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

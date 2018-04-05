@@ -25,7 +25,7 @@ manager: "mblythe"
   
  You can add a hyperlink to a URL to any item that has an **Action** property, for example, a text box, an image, or a calculated series in a chart. When the user clicks that report item, the action that you define takes place. For more information, see the [Action Properties Dialog Box &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/action-properties-dialog-box-report-builder-and-ssrs.md) and [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md).  
+ To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Links that are bound to dataset fields can be vulnerable to tampering for malicious purposes. For more information, see [Secure Reports and Resources](../../2014/reporting-services/secure-reports-and-resources.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][Books Online](http://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  

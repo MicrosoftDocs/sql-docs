@@ -76,6 +76,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md)   
- [Tutorial: Writing Transact-SQL Statements](../../2014/tutorials/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../2014/tutorials/tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## Managing Backups  
  The following list includes general recommendations to manage backups:  

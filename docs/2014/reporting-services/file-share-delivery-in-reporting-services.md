@@ -21,7 +21,7 @@ manager: "mblythe"
 # File Share Delivery in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes a file share delivery extension so that you can deliver a report to a folder. The file share delivery extension is available by default and requires no additional configuration. In order for file delivery to succeed, you must set write access permissions on the shared folder. In addition, users who require access to the reports must have read permissions on the shared folder.  
   
- To distribute a report to a file share, you define either a standard subscription or a data-driven subscription. You can subscribe to and request delivery for only one report at a time. To learn how to use file share delivery in a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md). Additionally, the account that runs remote file share subscriptions requires rights to log on locally on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] computer.  
+ To distribute a report to a file share, you define either a standard subscription or a data-driven subscription. You can subscribe to and request delivery for only one report at a time. To learn how to use file share delivery in a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md). Additionally, the account that runs remote file share subscriptions requires rights to log on locally on the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] computer.  
   
 ||  
 |-|  

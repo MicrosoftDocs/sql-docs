@@ -191,9 +191,9 @@ manager: "mblythe"
 ##  <a name="bkmk_Next"></a> Next Step: Build a Solution  
  Now that you have a basic understanding of how the solutions compare, try out the following tutorials to learn the steps for creating each one. The following links take you to tutorials that explain the steps.  
   
--   Build a tabular model using the [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../../2014/tutorials/tabular-modeling-adventure-works-tutorial.md).  
+-   Build a tabular model using the [Tabular Modeling &#40;Adventure Works Tutorial&#41;](tabular-modeling-adventure-works-tutorial.md).  
   
--   Build a multidimensional model using the [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../2014/tutorials/multidimensional-modeling-adventure-works-tutorial.md).  
+-   Build a multidimensional model using the [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
 -   Build a data mining model using the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   

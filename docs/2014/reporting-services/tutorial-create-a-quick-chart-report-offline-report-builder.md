@@ -43,7 +43,7 @@ manager: "mblythe"
   
  The advantage of using the [!INCLUDE[tsql](../includes/tsql-md.md)] query is that all the other Report Builder tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
   
- The [!INCLUDE[tsql](../includes/tsql-md.md)] query does require a few other prerequisites. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ The [!INCLUDE[tsql](../includes/tsql-md.md)] query does require a few other prerequisites. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md).  
   
  [Create the pie chart with a Transact-SQL query that contains data](#CreatePieQueryData)  
   
@@ -145,7 +145,7 @@ manager: "mblythe"
 5.  In the **Choose a connection to a data source** page, select an existing data source or browse to the report server and select a data source, and then click **Next**. You may need to enter a user name and password.  
   
     > [!NOTE]  
-    >  The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+    >  The data source you choose is unimportant, as long as you have adequate permissions. You will not be getting data from the data source. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md).  
   
 6.  On the **Design a Query** page, click **Edit as Text**.  
   

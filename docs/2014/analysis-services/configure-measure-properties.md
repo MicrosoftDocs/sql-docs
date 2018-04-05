@@ -69,6 +69,6 @@ manager: "mblythe"
   
 ## See Also  
  [Configure Measure Group Properties](../../2014/analysis-services/configure-measure-group-properties.md)   
- [Modifying Measures](../../2014/tutorials/modifying-measures.md)  
+ [Modifying Measures](lesson-3-1-modifying-measures.md)  
   
   

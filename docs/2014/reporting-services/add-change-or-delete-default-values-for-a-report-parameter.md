@@ -63,7 +63,7 @@ manager: "mblythe"
 ## See Also  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md)   
  [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/parameters-collection-references-report-builder-and-ssrs.md)   
  [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   

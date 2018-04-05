@@ -59,7 +59,7 @@ manager: "mblythe"
   
 -   [Translations &#40;Analysis Services&#41;](../../2014/analysis-services/translations-analysis-services.md) are used to embed multiple captions for a single object, where each translated string can exist alongside other translations. You can use the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to define the translations for the caption, description, and account types for cubes and measures, dimension and attributes. You can retrieve data and metadata from [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects on which translations have been defined automatically by providing a locale identifier when connecting to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
-     A lesson on how to use this feature can be found in [Lesson 9: Defining Perspectives and Translations](../../2014/tutorials/lesson-9-defining-perspectives-and-translations.md) of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.  
+     A lesson on how to use this feature can be found in [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.  
   
 -   [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md) is through specialized MDX scripts that convert measures containing currency data. You can use the Business Intelligence Wizard in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] to generate an MDX script that uses a combination of data and metadata from dimensions, attributes, and measure groups to convert measures containing currency data.  
   

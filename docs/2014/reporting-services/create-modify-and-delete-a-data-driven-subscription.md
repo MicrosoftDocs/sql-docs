@@ -38,7 +38,7 @@ manager: "mblythe"
 -   [Manage and delete a data-driven subscription](#bkmk_manage_and_delete)  
   
 ##  <a name="bkmk_create_and_modify"></a> Create and Modify a Data-Driven Subscription  
- To create a new data-driven subscription or modify an existing subscription, use the Create Data-Driven Subscription pages in Report Manager. These pages walk you through each step of creating or modifying a subscription. To access a subscription after it is created, use the My Subscriptions page and the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ To create a new data-driven subscription or modify an existing subscription, use the Create Data-Driven Subscription pages in Report Manager. These pages walk you through each step of creating or modifying a subscription. To access a subscription after it is created, use the My Subscriptions page and the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  To create a data-driven subscription, select a report that uses stored credentials or no credentials. When you create the data-driven subscription, consider using a naming convention for the description field so you can easily differentiate standard subscriptions from data-driven subscriptions.  
   

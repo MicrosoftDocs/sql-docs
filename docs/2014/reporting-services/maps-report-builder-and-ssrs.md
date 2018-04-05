@@ -29,7 +29,7 @@ manager: "mblythe"
   
  ![rs_MapElements](../../2014/reporting-services/media/rs-mapelements.gif "rs_MapElements")  
   
- To start to use a map immediately, see [Tutorial: Map Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-map-report-report-builder.md) or [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ To start to use a map immediately, see [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md) or [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  You can save maps separately from a report as report parts.  [!INCLUDE[ssRBrptparts](../includes/ssrbrptparts-md.md)]  

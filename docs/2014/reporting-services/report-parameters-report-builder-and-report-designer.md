@@ -228,7 +228,7 @@ manager: "mblythe"
 ##  <a name="bkmk_Related_Topics"></a> Related Content  
  [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [Bursting the mysteries of InvalidReportParameterException in Reporting service](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

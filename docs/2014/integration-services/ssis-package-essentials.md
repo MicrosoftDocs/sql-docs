@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  For more information, see [Data Flow](../../2014/integration-services/data-flow.md).  
   
- For an example of how to create a basic package, see [Lesson 1: Creating the Project and Basic Package](../../2014/tutorials/lesson-1-creating-the-project-and-basic-package.md).  
+ For an example of how to create a basic package, see [Lesson 1: Creating the Project and Basic Package](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## Related Tasks  
   

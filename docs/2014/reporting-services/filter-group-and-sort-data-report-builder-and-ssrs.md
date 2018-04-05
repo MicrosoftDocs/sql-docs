@@ -43,9 +43,9 @@ manager: "mblythe"
   
 -   [Filter Equation Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)  
+-   [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
   
--   [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)  
+-   [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
 -   [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   

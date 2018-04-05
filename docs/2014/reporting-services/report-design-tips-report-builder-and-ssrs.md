@@ -157,7 +157,7 @@ manager: "mblythe"
   
 ## See Also  
  [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)   
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)  
+ [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
   
   

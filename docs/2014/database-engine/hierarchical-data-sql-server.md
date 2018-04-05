@@ -157,7 +157,7 @@ GO
   
      In a breadth-first index all direct children of a node are co-located. Breadth-first indexes are therefore efficient for answering queries about immediate children, such as "Find all employees who report directly to this manager".  
   
- Whether to have depth-first, breadth-first, or both, and which to make the clustering key (if any), depends on the relative importance of the above types of queries, and the relative importance of SELECT vs. DML operations. For a detailed example of indexing strategies, see [Tutorial: Using the hierarchyid Data Type](../../2014/tutorials/tutorial-using-the-hierarchyid-data-type.md).  
+ Whether to have depth-first, breadth-first, or both, and which to make the clustering key (if any), depends on the relative importance of the above types of queries, and the relative importance of SELECT vs. DML operations. For a detailed example of indexing strategies, see [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### Creating Indexes  
@@ -263,7 +263,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> Related Tasks  
   
 ###  <a name="migrating"></a> Migrating from Parent/Child to hierarchyid  
- Most trees are represented using Parent/Child. The easiest way to migrate from a Parent/Child structure to a table using `hierarchyid` is to use a temporary column or a temporary table to keep track of the number of nodes at each level of the hierarchy. For an example of migrating a Parent/Child table, see lesson 1 of [Tutorial: Using the hierarchyid Data Type](../../2014/tutorials/tutorial-using-the-hierarchyid-data-type.md).  
+ Most trees are represented using Parent/Child. The easiest way to migrate from a Parent/Child structure to a table using `hierarchyid` is to use a temporary column or a temporary table to keep track of the number of nodes at each level of the hierarchy. For an example of migrating a Parent/Child table, see lesson 1 of [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Managing a Tree Using hierarchyid  
@@ -523,7 +523,7 @@ GO
   
 ## See Also  
  [hierarchyid Data Type Method Reference](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)   
- [Tutorial: Using the hierarchyid Data Type](../../2014/tutorials/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](~/t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

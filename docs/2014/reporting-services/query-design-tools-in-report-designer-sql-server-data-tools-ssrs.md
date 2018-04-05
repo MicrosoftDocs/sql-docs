@@ -95,7 +95,7 @@ manager: "mblythe"
  [Reporting Services Tools](../../2014/reporting-services/reporting-services-tools.md)   
  [Add Data to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-data-to-a-report-report-builder-and-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md)   
  [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)  
   

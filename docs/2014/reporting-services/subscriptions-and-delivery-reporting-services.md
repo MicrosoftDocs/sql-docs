@@ -93,7 +93,7 @@ manager: "mblythe"
   
 -   [Data-Driven Subscriptions](../../2014/reporting-services/data-driven-subscriptions.md)  
   
--   [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)  
+-   [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
   
 ##  <a name="bkmk_subscription_requirements"></a> Subscription Requirements  
  Before you can create a subscription to a report, the following prerequisites must be met:  
@@ -169,7 +169,7 @@ manager: "mblythe"
  A snapshot update event uses the scheduled update of a report snapshot to trigger a subscription. You can define a subscription that is triggered whenever the report is updated with new data, based on report execution properties that are set on the report.  
   
 ## See Also  
- [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Schedules](../../2014/reporting-services/schedules.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../2014/reporting-services/reporting-services-report-server-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)   

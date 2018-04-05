@@ -79,7 +79,7 @@ manager: "mblythe"
  [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Add, Change, or Delete Default Values for a Report Parameter &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/parameters-collection-references-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)  
   
   

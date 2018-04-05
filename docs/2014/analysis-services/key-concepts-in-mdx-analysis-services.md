@@ -140,7 +140,7 @@ manager: "mblythe"
   
 -   [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)  
   
--   [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../2014/tutorials/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## See Also  
  [Cube Space](../../2014/analysis-services/cube-space.md)   

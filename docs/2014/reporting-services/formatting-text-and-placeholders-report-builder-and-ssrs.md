@@ -31,7 +31,7 @@ manager: "mblythe"
   
  In this illustration, the text box itself has a border, and all the text is in the same text box, but the text has a variety of formatting.  
   
- To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md).  
+ To quickly get started, see [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

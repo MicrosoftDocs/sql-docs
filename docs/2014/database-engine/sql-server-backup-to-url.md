@@ -875,6 +875,6 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](../../2014/database-engine/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../2014/tutorials/tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service.md)  
+ [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

@@ -25,7 +25,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  When you are working in Report Builder, you must be connected to a report server to view the drillthrough report that opens when you click the drillthrough link in the main report.  
   
- To get started quickly with drillthrough reports, see [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](../../2014/tutorials/tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthrough report is also featured in two business intelligence solutions, [BI Reporting: Reports and Subscriptions Scenario](http://technet.microsoft.com/bi/ff769487.aspx) and [Corporate Dashboards: Sales Solution](http://technet.microsoft.com/bi/ff643005.aspx)  
+ To get started quickly with drillthrough reports, see [Tutorial: Creating Drillthrough and Main Reports &#40;Report Builder&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md). Drillthrough report is also featured in two business intelligence solutions, [BI Reporting: Reports and Subscriptions Scenario](http://technet.microsoft.com/bi/ff769487.aspx) and [Corporate Dashboards: Sales Solution](http://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

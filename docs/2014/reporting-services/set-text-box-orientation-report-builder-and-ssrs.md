@@ -40,6 +40,6 @@ manager: "mblythe"
   
 ## See Also  
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Format Text &#40;Report Builder&#41;](../../2014/tutorials/tutorial-format-text-report-builder.md)  
+ [Tutorial: Format Text &#40;Report Builder&#41;](tutorial-format-text-report-builder.md)  
   
   

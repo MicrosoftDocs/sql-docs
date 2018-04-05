@@ -48,7 +48,7 @@ manager: "jhubbard"
 -   Configure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] network protocol  
   
 > [!NOTE]  
->  For a short tutorial about how to configure protocols and connect to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see [Tutorial: Getting Started with the Database Engine](../../../2014/tutorials/tutorial-getting-started-with-the-database-engine.md).  
+>  For a short tutorial about how to configure protocols and connect to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## SQL Server Native Client Configuration  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client network library. Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager for the following tasks related to client applications on this computer:  

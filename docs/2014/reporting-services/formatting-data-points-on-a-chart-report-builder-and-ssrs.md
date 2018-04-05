@@ -98,7 +98,7 @@ manager: "mblythe"
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/charts-report-builder-and-ssrs.md)   
  [Format Axis Labels as Dates or Currencies &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-examples-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)  
   

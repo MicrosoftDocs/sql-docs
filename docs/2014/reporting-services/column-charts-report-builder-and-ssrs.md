@@ -52,7 +52,7 @@ manager: "mblythe"
  [Chart Types &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/chart-types-report-builder-and-ssrs.md)   
  [Bar Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/bar-charts-report-builder-and-ssrs.md)   
  [Range Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/range-charts-report-builder-and-ssrs.md)   
- [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

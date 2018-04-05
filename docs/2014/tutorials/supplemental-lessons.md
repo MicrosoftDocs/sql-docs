@@ -26,6 +26,6 @@ manager: "jhubbard"
 |Lesson|Time to complete|  
 |------------|----------------------|  
 |[Implement Dynamic Security by Using Row Filters](../../2014/tutorials/implement-dynamic-security-by-using-row-filters.md)|30|  
-|[Configure Reporting Properties for Power View Reports](../../2014/tutorials/configure-reporting-properties-for-power-view-reports.md)|30|  
+|[Configure Reporting Properties for Power View Reports](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30|  
   
   

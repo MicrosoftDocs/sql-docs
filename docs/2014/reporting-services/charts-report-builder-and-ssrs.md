@@ -26,7 +26,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Charts (Report Builder and SSRS)
-  When you want to summarize data in a visual format, use the chart data region. Charts enable you to present large volumes of aggregated information at a glance. It is important to carefully prepare and understand your data before you create a chart, as this will help you design your charts quickly and efficiently. For more information, see [Add a Chart to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-chart-to-a-report-report-builder-and-ssrs.md). To start to use a chart immediately, see the bar, column, sparkline, and pie chart tutorials in [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md) or the bar and pie chart tutorials in [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md).  
+  When you want to summarize data in a visual format, use the chart data region. Charts enable you to present large volumes of aggregated information at a glance. It is important to carefully prepare and understand your data before you create a chart, as this will help you design your charts quickly and efficiently. For more information, see [Add a Chart to a Report &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-a-chart-to-a-report-report-builder-and-ssrs.md). To start to use a chart immediately, see the bar, column, sparkline, and pie chart tutorials in [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md) or the bar and pie chart tutorials in [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md).  
   
  The following illustration shows many of the different elements used in the chart.  
   
@@ -149,8 +149,8 @@ manager: "mblythe"
  [Images, Text Boxes, Rectangles, and Lines &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Interactive Sort, Document Maps, and Links &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Nested Data Regions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Add a Column Chart to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Add a Column Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Add a Pie Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Add a Bar Chart to Your Report &#40;Report Builder&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

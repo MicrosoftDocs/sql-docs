@@ -19,7 +19,7 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL)

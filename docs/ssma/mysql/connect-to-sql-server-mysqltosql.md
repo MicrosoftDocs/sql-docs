@@ -19,7 +19,7 @@ ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to SQL Server (MySQLToSQL)

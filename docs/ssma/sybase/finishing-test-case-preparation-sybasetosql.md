@@ -21,7 +21,7 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Finishing Test Case Preparation (SybaseToSQL)

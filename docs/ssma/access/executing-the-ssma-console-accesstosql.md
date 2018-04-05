@@ -19,7 +19,7 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (AccessToSQL)

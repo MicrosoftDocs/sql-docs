@@ -19,7 +19,7 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Menu commands and other shortcut keys (DB2ToSQL)

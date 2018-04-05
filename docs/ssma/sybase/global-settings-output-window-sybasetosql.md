@@ -19,7 +19,7 @@ ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Output Window)  (SybaseToSQL)

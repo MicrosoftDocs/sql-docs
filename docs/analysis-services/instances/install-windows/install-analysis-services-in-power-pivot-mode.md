@@ -8,9 +8,7 @@ ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "pro-bi"
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
+ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238

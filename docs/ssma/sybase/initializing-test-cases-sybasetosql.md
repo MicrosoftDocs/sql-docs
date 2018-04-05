@@ -21,7 +21,7 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Initializing Test Cases (SybaseToSQL)

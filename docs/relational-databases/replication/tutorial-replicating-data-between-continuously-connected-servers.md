@@ -47,8 +47,7 @@ To use this Tutorial, your system must have SQL Server Management Studio (SSMS) 
   
 -   At the Publisher server (source):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Compact. These editions cannot be replication Publishers.  
-  
+    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Compact. These editions cannot be replication Publishers.   
     -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 -   Subscriber server (destination):  
@@ -151,8 +150,8 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 2.  In the **Local Publications** folder, right-click **AdvWorksProductTrans**, and then select **Properties**.  The **Publication Properties** dialog box is displayed.    
   
     a. Select the **Publication Access List** page, and select **Add**.  
-  
-    a. In the **Add Publication Access** dialog box, select <*Publisher_Machine_Name>***\repl_distribution** and select **OK**. Select **OK**: 
+    b. In the **Add Publication Access** dialog box, select <*Publisher_Machine_Name>***\repl_distribution** and select **OK**. Select **OK**:
+
    
    ![Add Login to PAL List](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -199,8 +198,8 @@ In this section, you will add a subscriber to the Publication that was previousl
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**.     
   
-    - On the **General** page, under **Login Name** select **Search** and add the login for \<*Subscriber_Machine_Name>***\repl_distribution**.
-    - On the **User Mappings** page, grant the login **db_owner** for the **ProductReplica** database: 
+    a. On the **General** page, under **Login Name** select **Search** and add the login for \<*Subscriber_Machine_Name>***\repl_distribution**.
+    b. On the **User Mappings** page, grant the login **db_owner** for the **ProductReplica** database: 
 
     ![Login on Subscriber](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -295,12 +294,12 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
 
     ![DB Properties](media/tutorial-replicating-data-between-continuously-connected-servers/dbproperties.png)
 
-7. If the owner is not set to 'sa', open a **New Query Window** within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
+7. If the owner is blank, open a **New Query Window** within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
 
-```sql
--- set the owner of the database to 'sa' or a specific user account, without the brackets. 
+    ```sql
+    -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
     EXEC sp_changedbowner '<useraccount>'
-```
+    ```
 
 8. You'll need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**: 
 

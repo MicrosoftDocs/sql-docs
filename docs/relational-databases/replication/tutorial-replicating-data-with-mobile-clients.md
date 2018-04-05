@@ -43,8 +43,7 @@ To use this tutorial, your system must have SQL Server Management Studio and the
   
 -   At the Publisher server (source):  
   
-    -   Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication Publisher.  
-  
+    -   Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication Publisher.   
     -   The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 -   Subscriber server (destination):  
@@ -166,7 +165,7 @@ In this section, you will create a Merge publication using [!INCLUDE[ssManStudio
   
     a. Select the **Publication Access List** page, and select **Add**.  
   
-    a. In the Add Publication Access dialog box, select \<*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**: 
+    b. In the Add Publication Access dialog box, select \<*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**: 
 
     ![Merge PAL](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 

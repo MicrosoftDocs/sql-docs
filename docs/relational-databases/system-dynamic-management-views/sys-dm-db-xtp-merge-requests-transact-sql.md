@@ -8,9 +8,7 @@ ms.service: ""
 ms.component: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "database-engine-imoltp"
+ms.technology: "relational-databases"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5

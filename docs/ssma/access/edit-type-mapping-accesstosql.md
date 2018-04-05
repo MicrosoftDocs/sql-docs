@@ -19,7 +19,7 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit Type Mapping (AccessToSQL)

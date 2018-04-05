@@ -172,7 +172,7 @@
 ### [Upgrade How-to Topics](upgrade-how-to-topics.md)
 #### [Upgrade to SQL Server 2014 Using the Installation Wizard (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 #### [Upgrade to a Different Edition of SQL Server 2014 (Setup)](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)
-## [Uninstall SQL Server 2014](un../../database-engine/install-windows/install-sql-server.md)
+## [Uninstall SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)
 ### [Uninstall an Existing Instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md)
 ### [Remove Data Quality Server Objects](remove-data-quality-server-objects.md)
 ### [Uninstall and Remove Master Data Services](uninstall-and-remove-master-data-services.md)

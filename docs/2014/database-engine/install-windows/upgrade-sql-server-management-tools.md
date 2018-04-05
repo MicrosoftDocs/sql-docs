@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)   
- [Backward Compatibility](../../analysis-services/backward-compatibility.md)   
+ [Backward Compatibility](../../getting-started/backward-compatibility.md)   
  [Upgrade to SQL Server 2014 Using the Installation Wizard &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

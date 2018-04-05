@@ -35,7 +35,7 @@ manager: "jhubbard"
 -   Post-upgrade tasks and considerations.  
   
 ## Known Upgrade issues  
- Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md). For information about supported upgrade scenarios and upgrade known issues, see [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md). For backward compatibility content for other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, see [Backward Compatibility](../../analysis-services/backward-compatibility.md).  
+ Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md). For information about supported upgrade scenarios and upgrade known issues, see [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md). For backward compatibility content for other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, see [Backward Compatibility](../../getting-started/backward-compatibility.md).  
   
 > [!IMPORTANT]  
 >  Before you upgrade from one edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another, verify that the functionality that you are currently using is supported in the edition to which you are upgrading.  
@@ -163,7 +163,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ## See Also  
  [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)   
  [Work with Multiple Versions and Instances of SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [Backward Compatibility](../../analysis-services/backward-compatibility.md)   
+ [Backward Compatibility](../../getting-started/backward-compatibility.md)   
  [Upgrade Replicated Databases](upgrade-replicated-databases.md)  
   
   

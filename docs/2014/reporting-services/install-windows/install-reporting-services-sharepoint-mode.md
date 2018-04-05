@@ -57,7 +57,7 @@ manager: "jhubbard"
  [Claims to Windows Token Service &#40;C2WTS&#41; and Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
 ## See Also  
- [Data Alerts Architecture and Workflow](../reporting-services-data-alerts.md#alertingwf)   
+ [Data Alerts Architecture and Workflow](../reporting-services-data-alerts.md#AlertingWF)   
  [Data Alert Manager for Alerting Administrators](../data-alert-manager-for-alerting-administrators.md)  
   
   

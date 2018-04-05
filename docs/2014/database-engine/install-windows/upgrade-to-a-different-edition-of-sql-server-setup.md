@@ -79,6 +79,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Upgrade to SQL Server 2014](upgrade-sql-server.md)   
- [Backward Compatibility](../../analysis-services/backward-compatibility.md)  
+ [Backward Compatibility](../../getting-started/backward-compatibility.md)  
   
   

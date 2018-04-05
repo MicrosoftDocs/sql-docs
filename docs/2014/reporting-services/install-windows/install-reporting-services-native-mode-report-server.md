@@ -75,7 +75,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_requirements"></a> Requirements  
  The default configuration option uses default values to configure the core settings required to make a report server operational. It has the following requirements:  
   
--   You hardware should meet minimum hardware and software requirements for running Microsoft SQL Server. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+-   You hardware should meet minimum hardware and software requirements for running Microsoft SQL Server. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be installed together in the same instance. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosts the report server database that Setup creates and configures.  
   

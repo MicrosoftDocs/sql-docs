@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 -   SAN configurations are also supported on [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server and Datacenter Server editions. The Windows Catalog and Hardware Compatibility List category "Cluster/Multi-cluster Device" lists the set of SAN-capable storage devices that have been tested and are supported as SAN storage units with multiple WSFC clusters attached. Run cluster validation after finding the certified components.  
   
--   SMB File Share is also supported for installing data files. For more information, see [Storage Types for Data Files](../../install/hardware-and-software-requirements-for-installing-sql-server.md#storagetypes).  
+-   SMB File Share is also supported for installing data files. For more information, see [Storage Types for Data Files](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).  
   
     > [!WARNING]  
     >  If you are using Windows File Server as a SMB File Share storage, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup account must have SeSecurityPrivilege on the file server. To do this, using the Local Security Policy console on the file server, add the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup account to **Manage auditing and security log** rights.  

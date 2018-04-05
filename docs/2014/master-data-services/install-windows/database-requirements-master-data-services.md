@@ -63,7 +63,7 @@ manager: "jhubbard"
 ## See Also  
  [Install Master Data Services](install-master-data-services.md)   
  [Create a Master Data Services Database](create-a-master-data-services-database.md)   
- [Master Data Services Database](master-data-services-database.md)   
+ [Master Data Services Database](../master-data-services-database.md)   
  [Connect to a Master Data Services Database Dialog Box](../connect-to-a-master-data-services-database-dialog-box.md)   
  [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../create-database-wizard-master-data-services-configuration-manager.md)  
   

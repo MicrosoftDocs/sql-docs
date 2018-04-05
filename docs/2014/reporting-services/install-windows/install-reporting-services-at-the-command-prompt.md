@@ -73,7 +73,7 @@ Setup.exe /q /ACTION="Install" /INSTANCENAME="MSSQLSERVER" /FEATURES="SQLEngine,
   
 ## See Also  
  [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [SysPrep Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#sysprep)   
+ [SysPrep Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
  [Install PowerPivot from the Command Prompt](../../sql-server/install/install-powerpivot-from-the-command-prompt.md)  
   
   

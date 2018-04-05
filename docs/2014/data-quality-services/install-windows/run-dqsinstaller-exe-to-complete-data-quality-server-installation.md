@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   **With Command-Line Parameter**: Type the required command as mentioned in the table above, and then press ENTER.  
   
-4.  The required actions are performed based on the specified command. If you just chose to install [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] without any command-line parameters, rest of the steps are same as described in steps 2-6 in the previous section, [Run DQSInstaller.exe from Start Screen, Start Menu or Windows Explorer](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#windowsexplorer).  
+4.  The required actions are performed based on the specified command. If you just chose to install [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] without any command-line parameters, rest of the steps are same as described in steps 2-6 in the previous section, [Run DQSInstaller.exe from Start Screen, Start Menu or Windows Explorer](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
 ## Next Steps  
   

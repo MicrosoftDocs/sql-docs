@@ -163,7 +163,7 @@ In this section, you will create a Merge publication using [!INCLUDE[ssManStudio
   
 2.  In the Local Publications folder, right-click **AdvWorksSalesOrdersMerge**, and then select **Properties**.  
   
-    a. Select the **Publication Access List** page, and select **Add**.  
+    a. Select the **Publication Access List** page, and select **Add**. 
   
     b. In the Add Publication Access dialog box, select \<*Publisher_Machine_Name>***\repl_merge** and select **OK**. Select **OK**: 
 

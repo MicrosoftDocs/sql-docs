@@ -27,7 +27,7 @@ manager: "jhubbard"
 ## Prerequisites  
  Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review the topics in [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md).  
   
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions and the hardware and software requirements, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions and the hardware and software requirements, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 > [!IMPORTANT]  
 >  The following is not supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep:  

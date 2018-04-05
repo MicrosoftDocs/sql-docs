@@ -443,12 +443,12 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
   
  [Manage Excel Services with Windows PowerShell (SharePoint Server 2010)](http://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)  
   
- [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
  [Use the Get-EvenLog cmdlet](http://technet.microsoft.com/library/ee176846.aspx)  
   
 ##  <a name="bkmk_full_script"></a> Full PowerShell Script  
- The Following script contains all of the commands from the previous sections. The script runs the commands in the same order as they are presented in this topic. The script contains some optional variations of the commands noted in this topic in case you need additional filtering. The variations are disabled with a comment character (#). The script also includes some statements for verifying [!INCLUDE[ssRSnoversion](../../../../includes/ssrsnoversion-md.md)] SharePoint mode. The [!INCLUDE[ssRSnoversion](../../../../includes/ssrsnoversion-md.md)] statements are disabled with a comment character (#).  
+ The Following script contains all of the commands from the previous sections. The script runs the commands in the same order as they are presented in this topic. The script contains some optional variations of the commands noted in this topic in case you need additional filtering. The variations are disabled with a comment character (#). The script also includes some statements for verifying [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode. The [!INCLUDE[ssRSnoversion](../../../../includes/ssrsnoversion-md.md)] statements are disabled with a comment character (#).  
   
 ```  
 # This script audits services related to PowerPivot for SharePoint  

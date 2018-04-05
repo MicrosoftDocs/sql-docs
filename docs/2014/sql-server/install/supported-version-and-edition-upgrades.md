@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Before upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin group.  
   
--   To upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md).  
+-   To upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], you must be running a supported operating system. For more information, see [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Upgrade will be blocked if there is a pending restart.  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)   
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Upgrade to SQL Server 2014](../../../2014/sql-server/install/upgrade-to-sql-server-2014.md)   
  [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   

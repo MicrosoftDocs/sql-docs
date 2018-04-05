@@ -61,12 +61,12 @@ manager: "jhubbard"
   
 4.  The PowerPivot instance name must be available. You cannot have an existing PowerPivot-named instance on the computer on which you are installing Analysis Services in SharePoint mode.  
   
-5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode &#40;SQL Server 2014&#41;](../../../2014/sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
+5.  Review [Hardware and Software Requirements for Analysis Services Server in SharePoint Mode &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
 6.  Review the release notes at [SQL Server 2012 Service Pack 1 Release Notes](http://go.microsoft.com/fwlink/?LinkID=248389) (http://go.microsoft.com/fwlink/?LinkID=248389).  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server Edition Requirements  
- Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For details, see [Features Supported by the Editions of SQL Server 2012 (http://go.microsoft.com/fwlink/?linkid=232473)](http://go.microsoft.com/fwlink/?linkid=232473) and [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+ Business intelligence features are not all available in all editions of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For details, see [Features Supported by the Editions of SQL Server 2012 (http://go.microsoft.com/fwlink/?linkid=232473)](http://go.microsoft.com/fwlink/?linkid=232473) and [Editions and Components of SQL Server 2014](../../../getting-started/editions-and-components-of-sql-server-2014.md).  
   
  The current release notes can be found at [SQL Server 2012 SP1 Release Notes](ttp://go.microsoft.com/fwlink/?LinkID=248389) (http://go.microsoft.com/fwlink/?LinkID=248389).  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 3.  Click **New SQL Server stand-alone installation or add features to an existing installation**.  
   
-4.  If you see the **Product Key** page, specify the evaluation edition or enter a product key for a licensed copy of the enterprise edition. Click **Next**. For more information on editions, see [Editions and Components of SQL Server 2014](../../../2014/getting-started/editions-and-components-of-sql-server-2014.md).  
+4.  If you see the **Product Key** page, specify the evaluation edition or enter a product key for a licensed copy of the enterprise edition. Click **Next**. For more information on editions, see [Editions and Components of SQL Server 2014](../../../getting-started/editions-and-components-of-sql-server-2014.md).  
   
 5.  Review and accept the Microsoft Software License Terms of agreement, and then click **Next**.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
   
      Click **Next**.  
   
-     ![Setup Role](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Setup Role")  
+     ![Setup Role](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Setup Role")  
   
 11. In Feature Selection, a read-only list of the features is displayed for informational purposes. You cannot add or remove items the preselected items for this role. Click **Next**.  
   

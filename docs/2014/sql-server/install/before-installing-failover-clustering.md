@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 -   SAN configurations are also supported on [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Advanced Server and Datacenter Server editions. The Windows Catalog and Hardware Compatibility List category "Cluster/Multi-cluster Device" lists the set of SAN-capable storage devices that have been tested and are supported as SAN storage units with multiple WSFC clusters attached. Run cluster validation after finding the certified components.  
   
--   SMB File Share is also supported for installing data files. For more information, see [Storage Types for Data Files](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md#StorageTypes).  
+-   SMB File Share is also supported for installing data files. For more information, see [Storage Types for Data Files](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).  
   
     > [!WARNING]  
     >  If you are using Windows File Server as a SMB File Share storage, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup account must have SeSecurityPrivilege on the file server. To do this, using the Local Security Policy console on the file server, add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to **Manage auditing and security log** rights.  
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
     -   Formatting a drive after mounting additional drives is not supported.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md#StorageTypes) and [Database Engine Configuration - Data Directories](../../../2014/sql-server/install/database-engine-configuration-data-directories.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) and [Database Engine Configuration - Data Directories](../../../2014/sql-server/install/database-engine-configuration-data-directories.md).  
   
 -   If you deploy a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster on iSCSI technology components, we recommend that you use appropriate caution. For more information, see [Support for SQL Server on iSCSI technology components](http://go.microsoft.com/fwlink/?LinkId=116960).  
   
@@ -263,7 +263,7 @@ manager: "jhubbard"
   
   
 ## See Also  
- [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)   
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Check Parameters for the System Configuration Checker](../../../2014/sql-server/install/check-parameters-for-the-system-configuration-checker.md)   
  [Failover Cluster Instance Administration and Maintenance](../../../2014/database-engine/failover-cluster-instance-administration-and-maintenance.md)  
   

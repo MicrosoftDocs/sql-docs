@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   [Compute Capacity Limits by Edition of SQL Server](../../../2014/getting-started/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2014.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a clustered environment:** Running edition upgrade on one of the nodes of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster is sufficient. This node can be either active or passive, and the engine does not bring the resources offline during the Edition Upgrade. After the edition upgrade it is required to either restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or failover to a different node.  

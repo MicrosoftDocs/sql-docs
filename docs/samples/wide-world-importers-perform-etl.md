@@ -20,7 +20,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # WideWorldImportersDW ETL workflow
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The ETL package WWI_Integration is used to migrate data from the WideWorldImporters database to the WideWorldImportersDW database as the data changes. The package is run periodically (most commonly daily).
 
 ## Overview
@@ -31,7 +31,7 @@ Dimensions are loaded first, followed by Fact tables. The package can be re-run 
 
 The workflow is as follows:
 
- ![WideWorldImporters ETL workflow](../../sample/world-wide-importers/media/wideworldimporters-etl-workflow.png)
+ ![WideWorldImporters ETL workflow](media/wideworldimporters-etl-workflow.png)
 
 It starts with an expression task that works out the appropriate cutoff time. This time is the current time less a few minutes. (This is more robust than requesting data right to the current time). It then truncates any milliseconds from the time.
 

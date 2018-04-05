@@ -19,7 +19,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # WideWorldImportersDW database catalog
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Explanations for the schemas, tables, and stored procedures in the WideWorldImportersDW database. 
 
 The WideWorldImportersDW database is used for data warehousing and analytical processing. The transactional data about sales and purchases is generated in the WideWorldImporters database, and loaded into the WideWorldImportersDW database using a **daily ETL process**.

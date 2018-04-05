@@ -19,7 +19,7 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # WideWorldImporters database catalog
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.
 
 ## Schemas
@@ -178,7 +178,7 @@ These are the procedures used by a client application, such as a Web front-end.
 
 ### Integration Schema
 
-The stored procedures in this schema are used by the ETL process. They obtain the data needed from various tables for the timeframe required by the [ETL package](etl-workflow.md).
+The stored procedures in this schema are used by the ETL process. They obtain the data needed from various tables for the timeframe required by the [ETL package](wide-world-importers-perform-etl.md).
 
 ### DataLoadSimulation Schema
 

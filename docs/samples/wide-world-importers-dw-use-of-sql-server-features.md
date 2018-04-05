@@ -20,7 +20,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 WideWorldImportersDW is designed to showcase many of the key features of SQL Server that are suitable for data warehousing and analytics. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImportersDW.
 
 ## PolyBase

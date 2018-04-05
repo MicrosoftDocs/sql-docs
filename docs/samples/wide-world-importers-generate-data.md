@@ -19,7 +19,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # WideWorldImporters data generation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The released versions of the WideWorldImporters and WideWorldImportersDW databases contains data starting January 1st 2013, up to the day these databases were generated.
 
 If the sample databases are used at a later date, for demonstration or illustration purposes, it may be beneficial to include more recent sample data in the database.

@@ -50,7 +50,7 @@ manager: "jhubbard"
     FROM HumanResources.EmployeeOrg ;  
     ```  
   
-     [!INCLUDE[ssResult](../../../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     ```  
     Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title  
@@ -95,7 +95,7 @@ manager: "jhubbard"
     FROM HumanResources.EmployeeOrg ;  
     ```  
   
-     [!INCLUDE[ssResult](../../../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     ```  
     Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title  
@@ -147,7 +147,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-     [!INCLUDE[ssResult](../../../../includes/ssresult-md.md)]  
+     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
     ```  
     Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title  

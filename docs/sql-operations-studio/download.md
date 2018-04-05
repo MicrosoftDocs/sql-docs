@@ -74,6 +74,15 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
    sqlops
    ```
 
+   **tar.gz Installation:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   sqlops 
+   ``` 
+
    > [!NOTE]
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
    

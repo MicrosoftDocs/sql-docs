@@ -170,7 +170,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
 ## See Also  
  [Migrate PowerPivot to SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [Upgrade PowerPivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [What's New in Analysis Services and Business Intelligence](../../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](../../../analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
  [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../view-data-refresh-history-powerpivot-for-sharepoint.md)  
   
   

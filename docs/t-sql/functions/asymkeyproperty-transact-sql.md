@@ -29,7 +29,7 @@ ms.workload: "Inactive"
 # ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns the properties of an asymmetric key.
+This function returns the properties of an asymmetric key.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -41,13 +41,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## Arguments  
 *Key_ID*  
-Is the Key_ID of an asymmetric key in the database. To find the Key_ID when you only know the key name, use ASYMKEY_ID. *Key_ID* is data type **int**.
+The Key_ID of an asymmetric key in the database. If you only know the key name, use ASYMKEY_ID to find the Key_ID. *Key_ID* has data type **int**.
   
 **'**algorithm_desc**'**  
 Specifies that the output returns the algorithm description of the asymmetric key. Only available for asymmetric keys created from an EKM module.
   
 **'**string_sid**'**  
-Specifies that the output returns the SID of the asymmetric key in **nvarchar()** format.
+Specifies that the output returns the SID of the asymmetric key, in **nvarchar()** format.
   
 **'**sid**'**  
 Specifies that the output returns the SID of the asymmetric key in binary format.
@@ -56,10 +56,10 @@ Specifies that the output returns the SID of the asymmetric key in binary format
 **sql_variant**
   
 ## Permissions  
-Requires some permission on the asymmetric key and that the caller has not been denied VIEW permission on the asymmetric key.
+Requires appropriate permission(s) on the asymmetric key, and requires that the caller has not been denied VIEW permission on the asymmetric key. See [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md) for more information about asymmetric key permissions.
   
 ## Examples  
-The following example returns the properties of the asymmetric key with Key_ID 256.
+The following example returns the properties of the asymmetric key of Key_ID 256.
   
 ```sql
 SELECT   

@@ -46,8 +46,7 @@ To complete this Tutorial, your system must have SQL Server Management Studio (S
   
 -   At the Publisher server (source):  
   
-    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Compact. These editions cannot be replication Publishers.  
-  
+    -   Any edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except SQL Server Express or SQL Compact. These editions cannot be replication Publishers.   
     -   [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
 -   Subscriber server (destination):  
@@ -76,7 +75,7 @@ In this section, you will create Windows accounts to run replication agents. You
 |Merge Agent|Publisher and Subscriber|\<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
-> In the replication tutorials, the Publisher and Distributor share the same instance (NODE1\SQL2016) of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The subscriber is NODE2\SQL2016. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
+> In the replication tutorials, the Publisher and Distributor share the same instance (NODE1\SQL2016) of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], while the Susbcriber instance (NODE2\SQL2016) is remote. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. If the Publisher and Subscriber share the same instance, the steps that are used to create accounts at the Subscriber are not required.  
 
 ### Create local Windows accounts for replication agents at the Publisher
   
@@ -126,24 +125,22 @@ In this section, you will learn to configure the snapshot folder that is used to
   
     a. On the **Sharing** tab in the **repldata Properties** dialog box, select **Advanced Sharing**.  
   
-    a. In the **Advanced Sharing** dialog box, select **Share this Folder**, and then select **Permissions**:  
+    b. In the **Advanced Sharing** dialog box, select **Share this Folder**, and then select **Permissions**:  
 
        ![Sharing Repl Data](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created in previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
+6.  In the **Permissions for repldata** dialog box, select **Add**. In the **Select User, Computers, Service Account, or Groups** text box, type the name of the Snapshot Agent account created previously, as \<*Publisher_Machine_Name>***\repl_snapshot**. Select **Check Names**, and then select **OK**:  
 
     ![Add Sharing Permissions](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
 7. Repeat step 6 to add the other two accounts that were created previously: \<*Publisher_Machine_Name>***\repl_merge** and \<*Publisher_Machine_Name>***\repl_distribution**
 
-8. Once these three accounts have been added, assign the following permissions: 
-     
+8. Once these three accounts have been added, assign the following permissions:      
     - repl_distribution - Read  
     - repl_merge - Read  
-    - repl_snapshot - Full Control
-    
+    - repl_snapshot - Full Control    
 
-   ![Shared Permissions](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
+  ![Shared Permissions](media/tutorial-preparing-the-server-for-replication/sharedpermissions.png)
 
 9. Once your share permissions are configured correctly, select **OK** to close the **Permissions for repldata** dialog box. Select **OK** to close the **Advanced Sharing** dialog box. 
 
@@ -165,13 +162,13 @@ In this section, you will learn to configure the snapshot folder that is used to
     - repl_merge - Read
     - repl_snapshot - Full Control   
  
-
     ![Repl Data User Permissions](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
-1. Select the **Sharing** tab again and note down the **Network Path** for the share. You will need this path later when you're configuring your **Snapshot Folder**:  
+
+14. Select the **Sharing** tab again and note down the **Network Path** for the share. You will need this path later when you're configuring your **Snapshot Folder**:  
 
     ![Network Path](media/tutorial-replicating-data-between-continuously-connected-servers/networkpath.png)
 
-1. Select **OK** to close the **repldata Properties** dialog box. 
+15. Select **OK** to close the **repldata Properties** dialog box. 
  
 **See Also**:  
 [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  

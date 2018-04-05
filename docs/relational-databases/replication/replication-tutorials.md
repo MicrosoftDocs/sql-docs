@@ -27,7 +27,7 @@ ms.workload: "On Demand"
 ---
 # Replication Tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Replication is a powerf solution for moving data, or subsets of data between servers. You can replicate data between servers that are fully connected using Transactional Replication. You can also replicate data between servers and clients that are intermittently connected using Merge Replication. Below, you will find tutorials that help prepare your server for replication, and then teach you to configure both Transactional and Merge replication. 
+Replication is a powerf solution for moving data, or subsets of data, between servers. You can replicate data between servers that are fully connected using Transactional Replication. You can also replicate data between servers and clients that are intermittently connected using Merge Replication. Below, you will find tutorials that help prepare your server for replication, and then teach you to configure both Transactional and Merge replication. 
   
 In the Replication Tutorials, "Publisher" refers to the server that contains that source data being replicated and "Subscriber" refers to the destination server. The Publisher and Subscriber may share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see [Replication Publishing Model Overview](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
 
@@ -48,8 +48,10 @@ Learn how to configure Transactional Replication to replicate data between fully
 Learn how to use Merge Replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See Also  
-[Security and Protection &#40;Replication&#41;](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[Security and Protection for Replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+
 [Transactional Replication Overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+
 [Merge Replication Overview](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
 
   

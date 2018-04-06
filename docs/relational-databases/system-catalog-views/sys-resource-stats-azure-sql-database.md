@@ -61,7 +61,7 @@ ms.workload: "Inactive"
 ## Remarks  
  The data returned by **sys.resource_stats** is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.  
   
- When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max DTU limit for the databases as set in the elastic pool configuration.  
+ When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max limit for the databases as set in the elastic pool configuration.  
   
  For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15-seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 

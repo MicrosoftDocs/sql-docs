@@ -3604,7 +3604,7 @@
       },
 	  {
 	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-olap-database.md",
-	  "redirect_url": "/sql/samples/wide-world-importers-what-is"
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
 	  "redirect_document_id": false
       },
 	  {

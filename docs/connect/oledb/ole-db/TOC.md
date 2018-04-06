@@ -15,7 +15,6 @@
 ## [Interfaces +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [How to +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [FILESTREAM Support](../features/filestream-support.md)
 # [Large CLR User-Defined Types](large-clr-user-defined-types-ole-db.md)
 # [Schema Rowset Support](schema-rowset-support-ole-db.md)
 # [Schema Rowsets - Distributed Query Support](schema-rowsets-distributed-query-support.md)

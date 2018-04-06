@@ -31,7 +31,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed an error 22003 crash in SQLGetData when the size of the buffer passed in is smaller then the data being retrieved (Windows)
 - Fixed truncated ADAL error messages
 - Fixed a rare bug on 32-bit Windows when converting a floating point number to an integer
-- Fixed an issue where inserting double into decimal field with Always Encrypted on would no return data truncation error
+- Fixed an issue where inserting double into decimal field with Always Encrypted on would return data truncation error
 - Fixed a warning on MacOS installer
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]

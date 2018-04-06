@@ -32,7 +32,7 @@ ms.workload: "Inactive"
 # sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is change in resource consumption. This includes CPU usage, storage size change or database SKU modification. Idle databases with no changes may not have rows for every five minute interval. Historical data is retained for approximately 14 days.  
+  Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is change in resource consumption. The data returned includes CPU usage, storage size change or database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
   
  The **sys.resource_stats** view has different definitions depending on the version of the Azure SQL Database Server that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.  
   
@@ -40,16 +40,16 @@ ms.workload: "Inactive"
   
 |Columns|Data Type|Description|  
 |----------------------------|---------------|-----------------|  
-|start_time|**datetime**|UTC time indicating the start of the 5 minute reporting interval.|  
-|end_time|**datetime**|UTC time indicating the end of the 5 minute reporting interval.|  
+|start_time|**datetime**|UTC time indicating the start of the five-minute reporting interval.|  
+|end_time|**datetime**|UTC time indicating the end of the five-minute reporting interval.|  
 |database_name|**varchar**|Name of the user database.|  
 |sku|**varchar**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
-|storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures and metadata.|  
+|storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures, and metadata.|  
 |avg_cpu_percent|**numeric**|Average compute utilization in percentage of the limit of the service tier.|  
 |avg_data_io_percent|**numeric**|Average I/O utilization in percentage based on the limit of the service tier.|  
 |avg_log_write_percent|**numeric**|Average write resource utilization in percentage of the limit of the service tier.|  
-|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the 5 minute interval based on the 15 second samples of concurrent worker counts.|  
-|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the 5 minute interval based on the 15 second samples of concurrent session counts.|  
+|max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
+|max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. This value will be null if the database is using the vCore-based purchasing model.|  
   
 > [!TIP]  
@@ -63,7 +63,7 @@ ms.workload: "Inactive"
   
  When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max DTU limit for the databases as set in the elastic pool configuration.  
   
- For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15 seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ For a more granular view of this data, use **sys.dm_db_resource_stats** dynamic management view in a user database. This view captures data every 15-seconds and maintains historical data for 1 hour.  For more information, see [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## Examples  
  The following example returns all databases that are averaging at least 80% of compute utilization over the last one week.  

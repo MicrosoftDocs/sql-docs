@@ -1,5 +1,5 @@
 ---
-title: "ETL workflow | Microsoft Docs"
+title: "WideWorldImportersDW - ETL workflow | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -7,13 +7,12 @@ ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
-ms.date: "06/15/2017"
+ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
@@ -21,7 +20,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # WideWorldImportersDW ETL workflow
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 The ETL package WWI_Integration is used to migrate data from the WideWorldImporters database to the WideWorldImportersDW database as the data changes. The package is run periodically (most commonly daily).
 
 ## Overview
@@ -32,7 +31,7 @@ Dimensions are loaded first, followed by Fact tables. The package can be re-run 
 
 The workflow is as follows:
 
- ![WideWorldImporters ETL workflow](../../sample/world-wide-importers/media/wideworldimporters-etl-workflow.png)
+ ![WideWorldImporters ETL workflow](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
 It starts with an expression task that works out the appropriate cutoff time. This time is the current time less a few minutes. (This is more robust than requesting data right to the current time). It then truncates any milliseconds from the time.
 

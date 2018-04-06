@@ -11,11 +11,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # DMVs for SQL Server Machine Learning Services

@@ -19,7 +19,7 @@ ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Logging) (SybaseToSQL)

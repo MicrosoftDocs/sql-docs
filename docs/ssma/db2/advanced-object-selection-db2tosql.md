@@ -19,7 +19,7 @@ ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Advanced Object Selection (DB2ToSQL)

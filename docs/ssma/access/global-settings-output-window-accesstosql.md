@@ -19,7 +19,7 @@ ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Output Window) (AccessToSQL)

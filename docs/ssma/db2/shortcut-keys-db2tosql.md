@@ -19,7 +19,7 @@ ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shortcut Keys (DB2ToSQL)

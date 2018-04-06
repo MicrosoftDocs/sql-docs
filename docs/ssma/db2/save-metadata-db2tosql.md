@@ -19,7 +19,7 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Metadata (DB2ToSQL)

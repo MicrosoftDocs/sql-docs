@@ -39,9 +39,6 @@ ms.workload: "Inactive"
   
     -   **SWITCH IN** is not allowed while **SYSTEM_VERSIONING** is **ON** since it can invalidate temporal data consistency.  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Partitioning%20with%20Temporal%20Tables%20page)  
-  
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

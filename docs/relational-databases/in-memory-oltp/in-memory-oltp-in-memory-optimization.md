@@ -47,7 +47,7 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
 > [!NOTE]  
 >  **Try it out**  
 >   
->  In-Memory OLTP is available in Premium Azure SQL databases. To get started with In-Memory OLTP, as well as Columnstore in Azure SQL Database, see [Optimize Performance using In-Memory Technologies in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
+>  In-Memory OLTP is available in Premium and Business Critical tier Azure SQL databases and elastic pools. To get started with In-Memory OLTP, as well as Columnstore in Azure SQL Database, see [Optimize Performance using In-Memory Technologies in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
 
 ## In this section  

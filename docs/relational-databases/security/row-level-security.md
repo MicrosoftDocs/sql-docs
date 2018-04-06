@@ -5,11 +5,9 @@ ms.date: "03/29/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: "security"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

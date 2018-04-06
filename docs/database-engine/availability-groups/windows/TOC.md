@@ -102,7 +102,6 @@
 ### [Upgrading replica instances](upgrading-always-on-availability-group-replica-instances.md)  
 ### [View health with policies](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
 
-
 # References
 ## [PowerShell Cmdlets](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
 ## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
@@ -143,3 +142,17 @@
 ### [Some availability replicas do not have a healthy role](some-availability-replicas-do-not-have-a-healthy-role.md)  
 ### [Some synchronous replicas are not synchronized](some-synchronous-replicas-are-not-synchronized.md)  
 ### [WSFC cluster service is offline](wsfc-cluster-service-is-offline.md)  
+## [Troubleshooting and monitoring guide](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+### [Monitor performance for availability groups](monitor-performance-for-always-on-availability-groups.md)
+### [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md)
+### [Troubleshoot: Availability group exceeded RTO](troubleshoot-availability-group-exceeded-rto.md)
+### [Troubleshoot: Changes on primary not reflected on secondary replica](troubleshoot-primary-changes-not-reflected-on-secondary.md)
+### [Useful tools for troubleshooting](useful-tools-for-troubleshooting.md)
+#### [Extended events](always-on-extended-events.md)
+#### [Health diagnostics log](always-on-health-diagnostics-log.md)
+#### [Policies](always-on-policies.md)
+#### [Ring buffers](always-on-ring-buffers.md)
+#### [Wait types](always-on-wait-types.md)
+#### [CLUSTER.LOG](cluster-log-always-on-availability-groups.md)
+#### [Dynamic management and system catalog views](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+#### [SQL Server error log](sql-server-error-log-always-on-availability-groups.md)

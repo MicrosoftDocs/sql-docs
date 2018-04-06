@@ -16,11 +16,9 @@ applies_to:
 dev_langs: 
   - "R"
   - "TSQL"
-ms.assetid: 52b05828-11f5-4ce3-9010-59c213a674d1
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Lesson 6: Operationalize the R model

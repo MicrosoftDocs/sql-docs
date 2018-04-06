@@ -72,11 +72,11 @@ sys.dm_tran_active_snapshot_database_transactions
 |**elapsed_time_seconds**|**bigint**|Elapsed time since the transaction obtained its transaction sequence number.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
-## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+## Permissions
+
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Remarks  
  **sys.dm_tran_active_snapshot_database_transactions** reports transactions that are assigned a transaction sequence number (XSN). The XSN is assigned when the transaction first accesses the version store. In a database that is enabled for snapshot isolation or read committed isolation using row versioning, the examples show when an XSN is assigned to a transaction:  
   

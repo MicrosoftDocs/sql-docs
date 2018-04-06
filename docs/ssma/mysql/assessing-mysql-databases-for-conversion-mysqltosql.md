@@ -21,7 +21,7 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessing MySQL Databases for Conversion (MySQLToSQL)

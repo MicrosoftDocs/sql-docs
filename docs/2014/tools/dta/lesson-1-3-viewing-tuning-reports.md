@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### View tuning reports  
   
-1.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in previous practices of this lesson.  
+1.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in previous practices of this lesson.  
   
      Double-click **MySession** in the **Session Monitor** pane. Database Engine Tuning Advisor loads the session information from this session.  
   
@@ -44,6 +44,6 @@ manager: "jhubbard"
  You have now explored the **Reports** tab of the Database Engine Tuning Advisor GUI for the MySession tuning session. You can use these same steps to explore the reports that were generated for the EvaluateMySession tuning session. Double-click **EvaluateMySession** in the **Session Monitor** pane to begin.  
   
 ## Next Lesson  
- [Lesson 3: Using the dta Command Prompt Utility](../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lesson 3: Using the dta Command Prompt Utility](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

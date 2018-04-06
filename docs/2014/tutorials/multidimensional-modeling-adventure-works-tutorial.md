@@ -35,7 +35,7 @@ manager: "jhubbard"
  A scenario description accompanies this tutorial so that you can better understand the context for these lessons. For more information, see [Analysis Services Tutorial Scenario](../../2014/tutorials/analysis-services-tutorial-scenario.md).  
   
 ## Prerequisites  
- You will need sample data, sample project files, and software to complete all of the lessons in this tutorial. For instructions on how to find and install the prerequisites for this tutorial, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../2014/tutorials/install-sample-data-and-projects.md).  
+ You will need sample data, sample project files, and software to complete all of the lessons in this tutorial. For instructions on how to find and install the prerequisites for this tutorial, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md).  
   
  Additionally, the following permissions must be in place to successfully complete this tutorial:  
   

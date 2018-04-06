@@ -161,6 +161,6 @@ manager: "jhubbard"
  The next task will create indexes to support the hierarchical structure.  
   
 ## Next Task in Lesson  
- [Optimizing the NewOrg Table](../relational-databases/tables/lesson-1-3-optimizing-the-neworg-table.md)  
+ [Optimizing the NewOrg Table](lesson-1-3-optimizing-the-neworg-table.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 1.  Copy a sample SELECT statement or statements from "A. Using SELECT to retrieve rows and columns" in [SELECT Examples &#40;Transact-SQL&#41;](~/t-sql/queries/select-examples-transact-sql.md) and paste the statements into the Query Editor of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Save the file as **MyScript.sql** in a directory where you can easily find it.  
   
-2.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md).  
+2.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md).  
   
 3.  In the right pane of the Database Engine Tuning Advisor GUI, type **MySession** in **Session name**.  
   

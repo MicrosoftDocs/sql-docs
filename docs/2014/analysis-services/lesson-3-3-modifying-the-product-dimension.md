@@ -148,7 +148,7 @@ manager: "jhubbard"
 9. On the **File** menu, click **Save All**.  
   
 ## Defining Attribute Relationships  
- If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](define-attribute-relationships.md) and [Attribute Relationships](attribute-relationships.md).  
+ If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](define-attribute-relationships.md) and [Attribute Relationships](dev-guide/attribute-relationships.md).  
   
 #### To define attribute relationships  
   

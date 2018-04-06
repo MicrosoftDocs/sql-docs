@@ -120,7 +120,7 @@ manager: "jhubbard"
  If you integrated a report server scale-out deployment to run within a larger deployment of a SharePoint product or technology, load balance the report server nodes and define a single virtual server URL to the scale-out deployment. Report Server integration settings only allow you to specify a single report server URL. In the case of a scale-out deployment, the URL must be the access point for the server nodes in the scale-out deployment.  
   
 ## See Also  
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-url-ssrs-configuration-manager.md)   
- [URL Reservation Syntax  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL Reservation Syntax  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

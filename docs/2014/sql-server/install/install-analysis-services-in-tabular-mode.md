@@ -47,7 +47,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  All placeholder account values must be replaced with valid accounts and password.  
   
- Tools such as SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] are not installed using the example command line syntax that is provided. For more information about adding features, see [Install SQL Server 2014 from the Command Prompt](../../../2014/sql-server/install/install-sql-server-2014-from-the-command-prompt.md).  
+ Tools such as SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] are not installed using the example command line syntax that is provided. For more information about adding features, see [Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  `ASSERVERMODE` is case-sensitive.  All values must be expressed in upper case. The following table describes the valid values for `ASSERVERMODE`.  
   

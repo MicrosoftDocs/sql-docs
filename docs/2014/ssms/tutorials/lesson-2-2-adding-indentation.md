@@ -48,11 +48,11 @@ manager: "jhubbard"
   
 2.  Expand **Text Editor**, expand **All Languages**, and click **Tabs** , and set indentation values as appropriate. Note that you can change the size of the indent as well as the size of tabs, and whether tabs are converted to spaces.  
   
-     ![Appearance of the Tabs dialog box](../../2014/tutorials/media/tabsdialog.gif "Appearance of the Tabs dialog box")  
+     ![Appearance of the Tabs dialog box](media/tabsdialog.gif "Appearance of the Tabs dialog box")  
   
 3.  Click **OK**.  
   
 ## Next Task in Lesson  
- [Maximizing Query Editor](../ssms/tutorials/lesson-2-3-maximizing-query-editor.md)  
+ [Maximizing Query Editor](lesson-2-3-maximizing-query-editor.md)  
   
   

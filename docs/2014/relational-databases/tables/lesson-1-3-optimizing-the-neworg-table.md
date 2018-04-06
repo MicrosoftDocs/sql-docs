@@ -118,7 +118,7 @@ manager: "jhubbard"
      `/1/1/2/     0x5ADA       3        10      malexander`  
   
 > [!NOTE]  
->  For diagrams that show the difference between a depth-first index and a breadth-first index, see [Hierarchical Data &#40;SQL Server&#41;](../../2014/database-engine/hierarchical-data-sql-server.md).  
+>  For diagrams that show the difference between a depth-first index and a breadth-first index, see [Hierarchical Data &#40;SQL Server&#41;](../../database-engine/hierarchical-data-sql-server.md).  
   
 #### To drop the unnecessary columns  
   

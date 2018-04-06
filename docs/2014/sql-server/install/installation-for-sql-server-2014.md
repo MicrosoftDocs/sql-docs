@@ -61,19 +61,19 @@ manager: "jhubbard"
   
 -   Security considerations.  
   
- [Install SQL Server 2014](../../../2014/sql-server/install/install-sql-server-2014.md)  
+ [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  Describes installation options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Upgrade to SQL Server 2014](../../../2014/sql-server/install/upgrade-to-sql-server-2014.md)  
  Describes options for upgrading to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Uninstall SQL Server 2014](../../../2014/sql-server/install/uninstall-sql-server-2014.md)  
+ [Uninstall SQL Server 2014](../../../2014/sql-server/install/uninstall-sql-server.md)  
  Describes procedures to uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
- [SQL Server Failover Cluster Installation](../../../2014/sql-server/install/sql-server-failover-cluster-installation.md)  
+ [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install, and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
- [Install SQL Server 2014 BI Features](../../../2014/sql-server/install/install-sql-server-2014-bi-features.md)  
+ [Install SQL Server 2014 BI Features](../../../2014/sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## Related Sections  

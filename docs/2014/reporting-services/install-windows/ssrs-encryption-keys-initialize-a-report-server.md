@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   To initialize a report server, use the Reporting Services Configuration tool. Initialization occurs automatically when you create and configure the report server database. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   To initialize a report server for scale-out deployment, you can use the Initialization page in the Reporting Services Configuration tool or the **RSKeymgmt** utility. To follow step-by-step instructions, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   To initialize a report server for scale-out deployment, you can use the Initialization page in the Reporting Services Configuration tool or the **RSKeymgmt** utility. To follow step-by-step instructions, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** is a console application that you run from a command line on a computer that hosts a report server instance that is already part of a scale-out deployment. When you run the utility, you specify arguments to select a remote report server instance that you want to initialize.  

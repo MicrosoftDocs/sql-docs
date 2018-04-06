@@ -79,7 +79,7 @@ manager: "jhubbard"
  [Lesson 2: Creating the Deployment Bundle](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  In this lesson, you will build a deployment utility and verify that the deployment bundle includes the necessary files.  
   
- [Lesson 3: Installing Packages](../integration-services/lesson-3-install-ssis-packages.md)  
+ [Lesson 3: Installing Packages](../integration-services/lesson-3-install-ssis-package.md)  
  In this lesson, you will copy the deployment bundle to the target computer, install the packages, and then run the packages.  
   
 ||  

@@ -185,7 +185,7 @@ manager: "mblythe"
   
 ## See Also  
  [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../2014/tutorials/install-sample-data-and-projects.md)   
+ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)   
  [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)   
  [Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)  
   

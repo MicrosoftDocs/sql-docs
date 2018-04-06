@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   Repair must be run on individual cluster nodes.  
   
--   To repair a failover cluster node after a failed Prepare operation, use **Remove node** and then perform the Prepare step again. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../2014/sql-server/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+-   To repair a failover cluster node after a failed Prepare operation, use **Remove node** and then perform the Prepare step again. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-cluster/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### To repair a failed installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the Installation Center  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [View and Read SQL Server Setup Log Files](../../../2014/sql-server/install/view-and-read-sql-server-setup-log-files.md)   
+ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Installation How-to Topics](../../../2014/sql-server/install/installation-how-to-topics.md)  
   
   

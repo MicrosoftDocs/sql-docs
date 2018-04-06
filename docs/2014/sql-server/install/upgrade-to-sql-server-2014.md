@@ -23,39 +23,39 @@ manager: "jhubbard"
 ## In This Section  
  This section contains the following topics:  
   
--   [Supported Version and Edition Upgrades](../../../2014/sql-server/install/supported-version-and-edition-upgrades.md)  
+-   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
 -   [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
 -   [Use the Distributed Replay Utility to Prepare for Upgrades](../../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)  
   
--   [Upgrade Analysis Services](../../../2014/sql-server/install/upgrade-analysis-services.md)  
+-   [Upgrade Analysis Services](../../analysis-services/instances/install-windows/upgrade-analysis-services.md)  
   
--   [Upgrade Database Engine](../../../2014/sql-server/install/upgrade-database-engine.md)  
+-   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
   
--   [Upgrade Data Quality Services](../../../2014/sql-server/install/upgrade-data-quality-services.md)  
+-   [Upgrade Data Quality Services](../../data-quality-services/install-windows/upgrade-data-quality-services.md)  
   
--   [Upgrade Integration Services](../../../2014/sql-server/install/upgrade-integration-services.md)  
+-   [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)  
   
--   [Upgrade Master Data Services](../../../2014/sql-server/install/upgrade-master-data-services.md)  
+-   [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)  
   
--   [Upgrade PowerPivot for SharePoint](../../../2014/sql-server/install/upgrade-powerpivot-for-sharepoint.md)  
+-   [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
--   [Upgrade Replicated Databases](../../../2014/sql-server/install/upgrade-replicated-databases.md)  
+-   [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Upgrade and Migrate Reporting Services](../../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md)  
+-   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
--   [Upgrade SQL Server Management Tools](../../../2014/sql-server/install/upgrade-sql-server-management-tools.md)  
+-   [Upgrade SQL Server Management Tools](../../database-engine/install-windows/upgrade-sql-server-management-tools.md)  
   
 -   [Upgrade How-to Topics](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
 ## See Also  
- [Upgrade Database Engine](../../../2014/sql-server/install/upgrade-database-engine.md)   
- [Upgrade Analysis Services](../../../2014/sql-server/install/upgrade-analysis-services.md)   
- [Upgrade and Migrate Reporting Services](../../../2014/sql-server/install/upgrade-and-migrate-reporting-services.md)   
- [Upgrade Integration Services](../../../2014/sql-server/install/upgrade-integration-services.md)   
- [Upgrade Replicated Databases](../../../2014/sql-server/install/upgrade-replicated-databases.md)   
- [Upgrade Master Data Services](../../../2014/sql-server/install/upgrade-master-data-services.md)   
+ [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)   
+ [Upgrade Analysis Services](../../analysis-services/instances/install-windows/upgrade-analysis-services.md)   
+ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
+ [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
+ [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2005 Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=197134)   
  [SQL Server 2008 R2 Best Practices Analyzer](http://go.microsoft.com/fwlink/?LinkId=197135)   
  [Backward Compatibility](../../../2014/getting-started/backward-compatibility.md)  

@@ -53,7 +53,7 @@ manager: "jhubbard"
 5.  Exit Internet Explorer or the text editor.  
   
 ## Next Lesson  
- [Lesson 3: Installing Packages](../integration-services/lesson-3-install-ssis-packages.md)  
+ [Lesson 3: Installing Packages](../integration-services/lesson-3-install-ssis-package.md)  
   
 ||  
 |-|  

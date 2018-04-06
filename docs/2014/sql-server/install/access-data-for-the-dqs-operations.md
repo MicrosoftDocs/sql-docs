@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Prerequisites  
   
--   You must have completed the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation by running the DQSInstaller.exe file. For more information, see [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../../2014/sql-server/install/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
+-   You must have completed the [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] installation by running the DQSInstaller.exe file. For more information, see [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 -   Your Windows user account must be a member of the appropriate fixed server role (such as securityadmin, serveradmin, or sysadmin) in the database engine instance to grant/modify access to SQL login on databases.  
   
@@ -52,6 +52,6 @@ manager: "jhubbard"
  Try performing DQS operations that accesses the database as data source for DQS operation, and then exports the processed data to the database.  
   
 ## See Also  
- [Install Data Quality Services](../../../2014/sql-server/install/install-data-quality-services.md)  
+ [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

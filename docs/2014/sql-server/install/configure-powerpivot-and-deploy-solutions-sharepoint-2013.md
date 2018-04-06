@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   Configure an Excel Services Application to use an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode. For information on backend services and installing a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in SharePoint mode, see [PowerPivot for SharePoint 2013 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2013-installation.md).  
   
- For information on installing the PowerPivot for SharePoint 2013 Configuration tool, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../../2014/sql-server/install/install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013.md)  
+ For information on installing the PowerPivot for SharePoint 2013 Configuration tool, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
  This topic contains the following sections:  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
      Click the name of the services application to open the PowerPivot Management Dashboard for the service application opens. On first use, the dashboard takes several minutes to load.  
   
- For more information, see [Verify a PowerPivot for SharePoint Installation](../../../2014/sql-server/install/verify-a-powerpivot-for-sharepoint-installation.md).  
+ For more information, see [Verify a PowerPivot for SharePoint Installation](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
   
 ##  <a name="bkmk_troubleshoot_issues"></a> Troubleshoot Issues  
  To assist in troubleshooting issues, it is a good idea to verify the diagnostic logging is enabled.  

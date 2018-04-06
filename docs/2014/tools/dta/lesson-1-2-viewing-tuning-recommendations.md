@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### View tuning recommendations  
   
-1.  Start [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. See [Launching Database Engine Tuning Advisor](../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in the practice [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
+1.  Start [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. See [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in the practice [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
   
 2.  Double-click **MySession** in the **Session Monitor** pane. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor loads the session information from your previous tuning session and displays the **Recommendations** tab. Note that [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor made no **Partition Recommendations** because you accepted all the tuning option defaults and **No partitioning** was selected on the **Tuning Options** tab.  
   
@@ -52,6 +52,6 @@ manager: "jhubbard"
  More tuning result information can be viewed in the **Reports** tab, which is described in the next task of this lesson.  
   
 ## Next Task in Lesson  
- [Viewing Tuning Reports](../tools/dta/lesson-1-3-viewing-tuning-reports.md)  
+ [Viewing Tuning Reports](lesson-1-3-viewing-tuning-reports.md)  
   
   

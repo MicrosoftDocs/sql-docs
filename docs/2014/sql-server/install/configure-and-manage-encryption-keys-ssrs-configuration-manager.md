@@ -55,7 +55,7 @@ manager: "jhubbard"
  [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/delete-and-re-create-encryption-keys-ssrs-configuration-manager.md)  
  Explains how you can replace a symmetric key with a new version, and how to start over if symmetric keys cannot be validated.  
   
- [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explains how to add and remove encryption keys to control which report servers are part of a scale-out deployment.  
   
 ## See Also  

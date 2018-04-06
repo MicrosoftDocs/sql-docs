@@ -27,6 +27,6 @@ manager: "jhubbard"
 -   Setting Tool Options and Layout  
   
 ## Next Task in This Lesson  
- [Launching Database Engine Tuning Advisor](../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)  
+ [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md)  
   
   

@@ -118,7 +118,7 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
   
  The entire organizational tree that had reported to Jill (both Wanida and Kevin) now reports to Sariya.  
   
- For a stored procedure to reorganize a section of a hierarchy, see the "Moving Subtrees" section of [Moving Subtrees](../../2014/database-engine/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
+ For a stored procedure to reorganize a section of a hierarchy, see the "Moving Subtrees" section of [Moving Subtrees](../../database-engine/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## Next Task in Lesson  
  [Summary: Managing Data in a Hierarchical Table](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  

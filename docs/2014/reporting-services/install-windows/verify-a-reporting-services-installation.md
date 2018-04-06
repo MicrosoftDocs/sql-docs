@@ -110,7 +110,7 @@ manager: "jhubbard"
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   
 ## See Also  
- [Troubleshoot a Reporting Services Installation](../../sql-server/install/troubleshoot-a-reporting-services-installation.md)   
+ [Troubleshoot a Reporting Services Installation](troubleshoot-a-reporting-services-installation.md)   
  [Cause and Resolution of Reporting Services Errors](../cause-and-resolution-of-reporting-services-errors.md)  
   
   

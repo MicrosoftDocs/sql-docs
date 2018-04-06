@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2016"
+ms.date: "04/06/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -44,7 +44,9 @@ ms.workload: "On Demand"
 |xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|  
 |max_worker_percent|**decimal (5,2)**|Maximum concurrent workers (requests) in percentage of the limit of the database’s service tier.|  
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database’s service tier.|  
-|dtu_limit|**int**|Current max database DTU setting for this database during this interval.|  
+|dtu_limit|**int**|Current max database DTU setting for this database during this interval. This value will be null if the database is using the vCore-based purchasing model.|  
+|cpu_limit|**int**|Current max number of vCores settings for this database during this interval. This value will be null if the database is using the DTU-based purchasing model.|
+|||
   
 > [!TIP]  
 >  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) and [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -53,13 +55,13 @@ ms.workload: "On Demand"
  This view requires VIEW DATABASE STATE permission.  
   
 ## Remarks  
- The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed DTU limits for the service tier/performance level that you are running for Basic, Standard, and Premium databases.
+ The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.
  
  If the database was failed over to another server within the last 60 minutes, the view will only return data for the time it has been the primary database since that failover.  
   
  For a less granular view of this data, use **sys.resource_stats** catalog view in the **master** database. This view captures data every 5 minutes and maintains historical data for 14 days.  For more information, see [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max DTU limit for the databases as set in the elastic pool configuration.  
+ When a database is a member of an elastic pool, resource statistics presented as percent values, are expressed as the percent of the max limit for the databases as set in the elastic pool configuration.  
   
 ## Example  
   

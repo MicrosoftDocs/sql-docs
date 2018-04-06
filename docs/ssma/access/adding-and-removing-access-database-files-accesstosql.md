@@ -38,7 +38,7 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Adding and Removing Access Database Files (AccessToSQL)

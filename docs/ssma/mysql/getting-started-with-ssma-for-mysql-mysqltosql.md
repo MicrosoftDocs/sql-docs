@@ -23,7 +23,7 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Getting Started with SSMA for MySQL (MySQLToSQL)

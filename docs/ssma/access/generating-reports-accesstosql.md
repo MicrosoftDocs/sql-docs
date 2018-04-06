@@ -19,7 +19,7 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generating Reports (AccessToSQL)

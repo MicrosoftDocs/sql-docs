@@ -101,6 +101,9 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
   
 ## Tempdb database in SQL Database
 
+
+### tempdb sizes for DTU-based service tiers
+
 |SLO|Max Tempdb Data File Size (MBs)|# of tempdb data files|Max tempdb data size (MB)|
 |---|---:|---:|---:|
 |Basic|14,225|1|14,225|
@@ -124,6 +127,9 @@ Operations within **tempdb** are minimally logged so that transactions can be ro
 |Basic Elastic Pools (all DTU configurations)|14,225|12|170,700| 
 ||||
 
+### tempdb sizes for vCore-based service tiers
+
+See vCore-based resource limits](https://review.docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
 ## Restrictions  
  The following operations cannot be performed on the **tempdb** database:  

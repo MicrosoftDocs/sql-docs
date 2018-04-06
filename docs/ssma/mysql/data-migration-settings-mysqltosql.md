@@ -19,7 +19,7 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Migration Settings (MySQLToSQL)

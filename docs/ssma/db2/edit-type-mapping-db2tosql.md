@@ -19,7 +19,7 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit Type Mapping (DB2ToSQL)

@@ -19,7 +19,7 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Passwords (AccessToSQL)

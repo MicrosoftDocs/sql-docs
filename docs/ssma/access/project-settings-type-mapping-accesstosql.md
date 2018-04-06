@@ -26,7 +26,7 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Type Mapping) (AccessToSQL)

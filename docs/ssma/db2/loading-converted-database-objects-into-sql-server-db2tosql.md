@@ -19,7 +19,7 @@ ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Loading Converted Database Objects into SQL Server (DB2ToSQL)

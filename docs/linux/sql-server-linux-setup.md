@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This article co
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
@@ -174,7 +174,7 @@ If your Linux machine does not have access to the online repositories used in th
 
 1. **Install the database engine package**. Use one of the following commands based on your platform. Replace the package file name in this example with the exact name you downloaded.
 
-   | Platform | Package removal command |
+   | Platform | Package install command |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |

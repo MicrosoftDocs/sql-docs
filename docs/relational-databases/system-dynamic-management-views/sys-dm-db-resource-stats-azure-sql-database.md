@@ -55,7 +55,7 @@ ms.workload: "On Demand"
  This view requires VIEW DATABASE STATE permission.  
   
 ## Remarks  
- The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed DTU limits for the service tier/performance level that you are running for Basic, Standard, and Premium databases.
+ The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.
  
  If the database was failed over to another server within the last 60 minutes, the view will only return data for the time it has been the primary database since that failover.  
   

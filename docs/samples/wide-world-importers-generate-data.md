@@ -52,9 +52,9 @@ To import sample data up to the current date in the OLAP database WideWorldImpor
 2. If you have not yet done so, install a clean version of the WideWorldImportersDW database. For installation instructions, **WideWorldImporters Installation and Configuration**.
 3. Reseed the OLAP database by executing the following statement in the database:
 
-```
+    ```sql
     EXECUTE [Application].Configuration_ReseedETL
-```
+    ```
 
 4. Run the SSIS package **Daily ETL.ispac** to import the data into the OLAP database. For instructions on how to run the ETL job, see **WideWorldImporters ETL Workflow**.
 

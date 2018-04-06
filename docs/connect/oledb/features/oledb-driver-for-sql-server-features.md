@@ -95,7 +95,7 @@ ms.workload: "On Demand"
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)      
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

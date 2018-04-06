@@ -1,6 +1,6 @@
 ---
-title: "OLE DB Driver for SQL Server (OLE DB) | Microsoft Docs"
-description: "OLE DB Driver for SQL Server (OLE DB)"
+title: "OLE DB Driver for SQL Server Programming | Microsoft Docs"
+description: "OLE DB Driver for SQL Server Programming"
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: "sql-non-specified"
@@ -75,6 +75,6 @@ ms.workload: "On Demand"
 -   [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

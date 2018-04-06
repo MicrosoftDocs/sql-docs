@@ -108,7 +108,7 @@
             homepage: /sql/odbc/reference/syntax/odbc-reference
       - name: OLE DB
         href: /sql/connect/oledb/
-        homepage: /sql/connect/oledb/oledb-driver-for-sql-server-programming
+        homepage: /sql/connect/oledb/oledb-driver-for-sql-server
         items:
         - name: Features
           href: /sql/connect/oledb/features/
@@ -118,7 +118,7 @@
           homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
         - name: OLE DB
           href: /sql/connect/oledb/ole-db/
-          homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db
+          homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
           items:
           - name: Driver
             href: /sql/connect/oledb/ole-db-driver/

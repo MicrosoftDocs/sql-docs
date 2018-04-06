@@ -48,7 +48,7 @@ ms.workload: "Inactive"
 |**avg_storage_percent**|**decimal(5,2)**|Average storage utilization in percentage of the storage limit of the pool.|  
 |**max_worker_percent**|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|  
 |**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
-|**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval. This value will be null if the database is using the vCore-based purchasing model.|  
+|**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|  
   
 ## Remarks  

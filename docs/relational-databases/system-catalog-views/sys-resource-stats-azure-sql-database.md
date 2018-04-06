@@ -50,7 +50,7 @@ ms.workload: "Inactive"
 |avg_log_write_percent|**numeric**|Average write resource utilization in percentage of the limit of the service tier.|  
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database’s service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
-|dtu_limit|**int**|Current max database DTU setting for this database during this interval. This value will be null if the database is using the vCore-based purchasing model.|  
+|dtu_limit|**int**|Current max database DTU setting for this database during this interval. |  
   
 > [!TIP]  
 >  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

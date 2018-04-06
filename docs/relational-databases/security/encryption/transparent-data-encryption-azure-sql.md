@@ -14,7 +14,7 @@ ms.component: "security"
 ms.custom: 
 ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: "na"
+
 ms.topic: "article"
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"

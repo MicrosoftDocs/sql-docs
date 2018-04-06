@@ -7,7 +7,7 @@ ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "database-engine"
+ms.technology: "xevents"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b

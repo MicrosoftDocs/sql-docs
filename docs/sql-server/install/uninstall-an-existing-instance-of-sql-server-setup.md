@@ -8,9 +8,7 @@ ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
+ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -23,7 +21,7 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 caps.latest.revision: 74
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Active"
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)

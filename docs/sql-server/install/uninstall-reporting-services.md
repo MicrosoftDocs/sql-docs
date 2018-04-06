@@ -8,7 +8,7 @@ ms.service: ""
 ms.component: "install"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: - "setup-install"
+ms.technology: "setup-install"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4

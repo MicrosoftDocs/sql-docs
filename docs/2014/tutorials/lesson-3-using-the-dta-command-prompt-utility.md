@@ -37,6 +37,6 @@ manager: "jhubbard"
 -   Starting the **dta** Command Prompt Utility and Tuning a Workload  
   
 ## Next Task in Lesson  
- [Starting the dta Command Prompt Utility and Tuning a Workload](../../2014/tutorials/starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
+ [Starting the dta Command Prompt Utility and Tuning a Workload](../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
   

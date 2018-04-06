@@ -65,7 +65,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
- For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="Map"></a> 1. Create a Map with a Polygon Layer from the Map Wizard  
  Add a map to your report from the map gallery. The map has one layer that displays the counties in New York state. The shape of each county is a polygon based on spatial data that is embedded in the map from the map gallery.  

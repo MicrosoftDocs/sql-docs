@@ -54,7 +54,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
- For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="Setup"></a> 1. Create a Table Report and Dataset from the Table or Matrix Wizard  
  Create a table report, a data source, and a dataset. When you lay out the table, you will include only a few fields. After you complete the wizard you will manually add columns. The wizard makes it easy for you to lay out the table and apply a style.  

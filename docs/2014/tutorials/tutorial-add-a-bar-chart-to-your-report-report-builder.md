@@ -57,7 +57,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 15 minutes.  
   
 ## Requirements  
- For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="Chart"></a> 1. Create a Chart Report from the Chart Wizard  
  From the **Getting Started** dialog box, create an embedded dataset, choose a shared data source, and create a bar chart by using the Chart Wizard.  

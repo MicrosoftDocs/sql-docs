@@ -47,7 +47,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 15 minutes.  
   
 ## Requirements  
- For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="Table"></a> 1. Create a Table Report and Dataset from the Table or Matrix Wizard  
  From the **Getting Started** dialog box, choose a shared data source, create an embedded dataset, and display the data in a table.  

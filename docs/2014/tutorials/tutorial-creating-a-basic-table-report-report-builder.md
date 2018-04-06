@@ -50,7 +50,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 20 minutes.  
   
 ## Requirements  
- For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="CreateTable"></a> 1. Create a New Report from Getting Started  
  Create a table report from the **Getting Started** dialog box. There are two modes: report design and shared dataset design. In report design mode, you specify data in the Report Data pane and the report layout on the design surface. In shared dataset design mode, you create dataset queries to share with others. In this tutorial, you will be using report design mode.  
@@ -89,7 +89,7 @@ manager: "mblythe"
     Data Source=<servername>  
     ```  
   
-     Because you will use a query that contains the data instead of retrieving the data from a database, the connection string does not include the database name. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+     Because you will use a query that contains the data instead of retrieving the data from a database, the connection string does not include the database name. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 6.  Click **Credentials**. Enter the credentials that you need to access the external data source.  
   

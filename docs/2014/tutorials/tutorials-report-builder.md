@@ -18,7 +18,7 @@ manager: "mblythe"
 # Tutorials (Report Builder)
   Use the following Report Builder tutorials to learn how to create basic reports.  
   
- [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md)  
+ [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)  
  To use these tutorials, you must have read-only access to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database and permissions to access a [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] report server.  
   
  For help with these prerequisites, contact your report server administrator.  

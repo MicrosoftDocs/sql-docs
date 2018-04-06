@@ -80,7 +80,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
- This tutorial requires access to the Contoso Sales cube. This requirement applies to both the drillthrough and the main reports. For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ This tutorial requires access to the Contoso Sales cube. This requirement applies to both the drillthrough and the main reports. For more information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="DMatrixAndDataset"></a> 1. Create a Drillthrough Report from the Table or Matrix Wizard  
  From the Getting Started dialog box, create a matrix report by using the **Table or Matrix Wizard**. There are two modes available in the wizard: report design and shared dataset design. In this tutorial, you will use the report design mode.  

@@ -57,7 +57,7 @@ manager: "mblythe"
  Estimated time to complete this tutorial: 25 minutes.  
   
 ## Requirements  
- For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/tutorials/prerequisites-for-tutorials-report-builder.md).  
+ For information about requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ##  <a name="Setup"></a> 1. Create a Matrix Report and Dataset from the Table or Matrix Wizard  
  Create a matrix report, a data source, and a dataset.  

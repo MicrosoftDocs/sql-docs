@@ -1,5 +1,5 @@
 ---
-title: "Installation and configuration | Microsoft Docs"
+title: "Install and configure WideWorldImporters sample database - SQL | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -7,13 +7,11 @@ ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: 4
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
@@ -21,13 +19,13 @@ robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
 # Installation and configuration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
 
 ## Download
 

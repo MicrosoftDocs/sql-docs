@@ -46,16 +46,16 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
   
 ## Arguments  
 *Asym_Key_Name*  
-Is the name of an asymmetric key in the database.
+The name of an asymmetric key in the database.
   
 ## Return types
  **int**  
   
 ## Permissions  
-Requires some permission on the asymmetric key and that the caller has not been denied VIEW permission on the asymmetric key.
+Requires appropriate permission(s) on the asymmetric key, and requires that the caller has not been denied VIEW permission on the asymmetric key. See [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md) for more information about asymmetric key permissions.
   
 ## Examples  
-The following example returns the ID of asymmetric key `ABerglundKey11`.
+This example returns the ID of asymmetric key `ABerglundKey11`.
   
 ```sql
 SELECT ASYMKEY_ID('ABerglundKey11');  

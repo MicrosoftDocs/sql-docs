@@ -11,7 +11,7 @@ ms.service: sql-server
 ms.custom: security
 ms.workload: data-management
 ms.tgt_pltfrm: na
-ms.devlang: na
+
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm

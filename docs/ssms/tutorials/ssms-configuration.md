@@ -15,13 +15,14 @@ manager: craigg
 
 # Tutorial: SQL Server Management Studio Components and Configuration
 This Tutorial describes the  different window components within SQL Server Management Studio (SSMS) and some basic configuration options for your workspace. In this article, you will learn how about: 
-- The different components that make up the SSMS environment
-- Changing the environmental layout and resetting it to default
-- Maximizing the query editor
-- Changing some basic settings such as
-    - Changing the font
-    - Configuring startup options
-    - Resetting the configuration back to default
+
+> [!div class="checklist"]
+> * The different components that make up the SSMS environment
+> * Changing the environmental layout and resetting it to default
+> * Maximizing the query editor
+> * Changing the font 
+> * Configuring startup options 
+> * Resetting the configuration back to default 
 
 ## Prerequisites
 To complete this Tutorial, you need SQL Server Management Studio.  
@@ -57,7 +58,7 @@ This section covers the different window components available in the workspace, 
 
     
 
-## Changing the Environmental Layout 
+## Change the Environmental Layout 
 This section discusses manipulating the environmental layout, such as moving the various windows around. 
 
 -  Each window component can be moved around by holding down the title and dragging the window around. 
@@ -88,7 +89,7 @@ This section discusses manipulating the environmental layout, such as moving the
  
     ![Restore Window Layout](media/ssms-configuration/resetwindowlayout.png)
     
-## Maximizing Query Editor
+## Maximize Query Editor
 The query editor can be maximized to full screen mode.
 
 1. Click anywhere within the Query Editor Window.
@@ -98,7 +99,7 @@ This keyboard shortcut works with any document window.
 
 
 
-## Changing Basic Settings
+## Change Basic Settings
 This section discusses how to modify some basic settings within SSMS. These options are found within the **Tools** menu option:
 
   ![Tools Menu](media/ssms-configuration/tools.png)
@@ -108,18 +109,32 @@ This section discusses how to modify some basic settings within SSMS. These opti
 
     ![Customize Toolbar](media/ssms-configuration/toolbar.png)
 
+### Change the font
 - The font can be changed from the menu: **Tools** > **Options** > **Fonts and Colors**:
 
      ![Fonts and Colors](media/ssms-configuration/fontsandcolors.png)
 
+### Change the Startup Options
 - The startup options determine what your workspace looks like when you first launch SSMS. These can be configured from the menu: **Tools** > **Options** > **Startup**:
  
     ![Startup Options](media/ssms-configuration/startup.png)
 
+### Reset Settings to Default
 - All of these settings can be exported and imported from the menu: **Tools** > **Import and Export Settings** 
 
     ![Import + Export Settings](media/ssms-configuration/settings.png)
     - This is also where you can reset all of your settings to default. 
+
+
+## Next steps
+The next article will teach you some additional tips and tricks for using SSMS, such as finding your SQL Server error log and your SQL instance name. 
+
+Advance to the next article to learn more
+> [!div class="nextstepaction"]
+> [Next steps button](ssms-tricks.md)
+ 
+ 
+
 
 
 

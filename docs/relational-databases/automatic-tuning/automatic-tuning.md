@@ -81,7 +81,7 @@ that the forced plan is better than regressed one, the forced plan will be retai
 You can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using
 the following command:
 
-```   
+```sql   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
@@ -118,7 +118,7 @@ Some columns from this view are described in the following list:
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
-```   
+```sql   
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,

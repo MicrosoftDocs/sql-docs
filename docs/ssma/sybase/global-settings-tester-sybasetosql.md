@@ -19,7 +19,7 @@ ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Tester) (SybaseToSQL)

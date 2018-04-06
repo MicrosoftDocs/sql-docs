@@ -33,10 +33,10 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 - Fixed a rare bug on 32-bit Windows when converting a floating point number to an integer
 - Fixed an issue where inserting double into decimal field with Always Encrypted on would return data truncation error
 - Fixed a warning on MacOS installer
+- Fixed sending incorrect state to SQL Server during Session Recovery attempt when Connection Resiliency and Connection Pooling both are enabled, causing session to be dropped by the Server
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fixed sending incorrect state to SQL Server during Session Recovery attempt when Connection Resiliency and Connection Pooling both are enabled, causing session to be dropped by the Server
 - Fixed a bug where when using Kerberos authentication, bulk insert could fail with "access denied" error
 - Removed workaround for a unixODBC bug present in version below 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
 - Fixed Connection Resiliency (reconnect) hanging when using ColumnEncryption=enabled

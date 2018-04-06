@@ -16,11 +16,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: b13058d0-9c6a-44e1-849b-72189d9050ba
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Define and use compute contexts (SQL and R deep dive)

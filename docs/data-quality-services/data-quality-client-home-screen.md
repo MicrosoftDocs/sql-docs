@@ -18,7 +18,7 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Quality Client Home Screen

@@ -92,7 +92,7 @@ The following table gives more information on the keys for each sub-array (see t
 The Nullable key can either be yes or no.  
   
 ## Example  
-The following example creates a statement resource, then retrieves and displays the field metadata. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example creates a statement resource, then retrieves and displays the field metadata. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -132,6 +132,8 @@ sqlsrv_close( $conn);
   
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   

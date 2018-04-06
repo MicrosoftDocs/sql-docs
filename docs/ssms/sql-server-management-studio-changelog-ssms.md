@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2018"
+ms.date: "04/06/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -104,7 +104,7 @@ Database Mail:
 
 ### Known issues
 
-There are currently no known issues this release.
+- There is currently a known issue where SSMS 17.6 crashes when configuring the schedule in a maintenance plan.
 
 ## Previous SSMS releases
 

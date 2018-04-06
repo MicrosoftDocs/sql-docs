@@ -19,7 +19,7 @@ ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings(Loading System objects) (DB2ToSQL)

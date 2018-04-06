@@ -16,11 +16,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Load data into memory using rxImport (SQL and R deep dive)

@@ -16,7 +16,7 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Quality Services Concepts

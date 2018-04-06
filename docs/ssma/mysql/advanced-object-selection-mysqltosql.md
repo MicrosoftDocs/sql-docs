@@ -19,7 +19,7 @@ ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Advanced Object Selection  (MySQLToSQL)

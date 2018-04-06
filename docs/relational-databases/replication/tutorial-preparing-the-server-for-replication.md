@@ -201,7 +201,6 @@ Configuring a Publisher with a remote Distributor is outside the scope of this t
      
 5.  Enter the path \\\\<*Publisher_Machine_Name>***\repldata** in the **Snapshot folder** text box, and then select **Next**. This path should match what you saw previously under **Network Path** of your repldata properties folder after configuring your share properties: 
 
-
     ![Repl Data Snapshot Folder](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
 6.  Accept the default values on the remaining pages of the wizard:  

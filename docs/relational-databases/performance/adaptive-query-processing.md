@@ -22,7 +22,7 @@ ms.workload: "On Demand"
 # Adaptive query processing in SQL databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
+This article introduces these adaptive query processing features that you can use to improve query performance in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:
 - Batch mode memory grant feedback.
 - Batch mode adaptive join.
 - Interleaved execution. 
@@ -31,7 +31,7 @@ At a general level, SQL Server executes a query as follows:
 1. The query optimization process generates a set of feasible execution plans for a specific query. During this time, the cost of plan options is estimated and the plan with the lowest estimated cost is used.
 1. The query execution process takes the plan chosen by the query optimizer and uses it for execution.
     
-Sometimes the plan chosen by the query optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
+Sometimes the plan chosen by the Query Optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
 
 ![Adaptive Query Processing Features](./media/1_AQPFeatures.png)
 
@@ -43,8 +43,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 
 ## Batch mode memory grant feedback
-A query’s post-execution plan in SQL Server includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
-The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was *88 seconds* due to high spills:   
+A query’s post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -58,7 +58,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![High spills](./media/2_AQPGraphHighSpills.png)
 
-With memory grant feedback enabled, for the second execution, duration is *1 second* (down from 88 seconds), spills are removed entirely, and the grant is higher: 
+With memory grant feedback enabled, for the second execution, duration is **1 second** (down from 88 seconds), spills are removed entirely, and the grant is higher: 
 
 ![No spills](./media/3_AQPGraphNoSpills.png)
 
@@ -67,7 +67,7 @@ For an excessive memory grant condition, if the granted memory is more than two 
 For an insufficiently sized memory grant condition, that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* xEvent. This event returns the node id from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
-Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### Memory grant feedback caching
 Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
@@ -201,12 +201,12 @@ Once an interleaved execution plan is cached, the plan with the revised estimate
 ### Tracking interleaved execution activity
 You can see usage attributes in the actual query execution plan:
 
-| Plan attribute | Description |
+| Execution Plan attribute | Description |
 | --- | --- |
-| ContainsInterleavedExecutionCandidates | Applying to the *QueryPlan* node, when “true”, it means the plan contains interleaved execution candidates. |
-| IsInterleavedExecuted | The attribute is inside the RuntimeInformation element under the RelOp for the TVF node. When “true”, it means the operation was materialized as part of an interleaved execution operation. |
+| ContainsInterleavedExecutionCandidates | Applies to the *QueryPlan* node. When *true*, means the plan contains interleaved execution candidates. |
+| IsInterleavedExecuted | Attribute of the *RuntimeInformation* element under the RelOp for the TVF node. When *true*, means the operation was materialized as part of an interleaved execution operation. |
 
-You can also track interleaved execution occurrences via the following XEvents:
+You can also track interleaved execution occurrences via the following xEvents:
 
 | xEvent | Description |
 | ---- | --- |
@@ -214,17 +214,16 @@ You can also track interleaved execution occurrences via the following XEvents:
 | interleaved_exec_stats_update | This event describes the cardinality estimates updated by interleaved execution. |
 | Interleaved_exec_disabled_reason | This event fires when a query with a possible candidate for interleaved execution does not actually get interleaved execution. |
 
-A query must be executed in order to allow interleaved execution to revise MSTVF cardinality estimates. However, the estimated execution plan still shows when there are interleaved execution candidates via the ContainsInterleavedExecutionCandidates attribute.
+A query must be executed in order to allow interleaved execution to revise MSTVF cardinality estimates. However, the estimated execution plan still shows when there are interleaved execution candidates via the `ContainsInterleavedExecutionCandidates` showplan attribute.    
 
 ### Interleaved execution caching
 If a plan is cleared or evicted from cache, upon query execution there is a fresh compilation that uses interleaved execution.
-A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved execution and not cache it.
+A statement using `OPTION (RECOMPILE)` will create a new plan using interleaved execution and not cache it.     
 
 ### Interleaved execution and query store interoperability
-Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.
+Plans using interleaved execution can be forced. The plan is the version that has corrected cardinality estimates based on initial execution.    
 
 ## See Also
-
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

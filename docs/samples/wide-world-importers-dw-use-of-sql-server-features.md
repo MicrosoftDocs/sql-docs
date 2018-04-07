@@ -1,5 +1,5 @@
 ---
-title: "Use of SQL Server features and capabilities | Microsoft Docs"
+title: "WideWorldImporters OLAP database - use of SQL Server | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -7,13 +7,12 @@ ms.component: "samples"
 ms.technology:
   - "samples"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+
 author: "BarbKess"
 ms.author: "barbkess"
 manager: "craigg"
@@ -21,7 +20,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 WideWorldImportersDW is designed to showcase many of the key features of SQL Server that are suitable for data warehousing and analytics. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImportersDW.
 
 ## PolyBase

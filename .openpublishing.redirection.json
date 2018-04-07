@@ -3536,6 +3536,81 @@
 	  "source_path": "docs/relational-databases/server-management-objects-smo/link-to-programming-samples.md",
 	  "redirect_url": "/sql/relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net",
 	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/microsoft-sql-server-samples.md",
+	  "redirect_url": "/sql/samples/sql-samples-where-are",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/database-catalog-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-database-catalog",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/database-catalog-wwi-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-database-catalog",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/data-generation.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-generate-data",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/etl-workflow.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-perform-etl",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/installation-and-configuration-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-install-configure",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/installation-and-configuration-wwi-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-install-configure",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/overview.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/sample-queries-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/sample-queries-wwi-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/use-of-sql-server-features-and-capabilities-olap.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-dw-use-of-sql-server-features",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/use-of-sql-server-features-and-capabilities-wwi-oltp.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-oltp-use-of-sql-server-features",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-documentation.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-olap-database.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
+      },
+	  {
+	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-oltp-database.md",
+	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
+	  "redirect_document_id": false
       }
     ]
 }

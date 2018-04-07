@@ -15,7 +15,7 @@ ms.custom:
 ms.component: "security"
 ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
-ms.devlang: "na"
+
 ms.topic: "article"
 ms.date: "04/03/2018"
 ms.author: "aliceku"

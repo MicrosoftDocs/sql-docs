@@ -16,16 +16,16 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
+ms.reviewer: "mathoma" 
 manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Generate Scripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard.**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.  
-  
-1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
-  
-2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
+
+For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), please see [Tutorial: Scripting in SSMS](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms).
+
   
 ## Before You Begin  
  Choose the mechanism that best meets your requirements.  
@@ -50,26 +50,9 @@ ms.workload: "On Demand"
 5.  Point to the script type, such as **Create to** or **Alter to**.  
   
 6.  Select the location to save the script, such as **New Query Editor Window** or **Clipboard**.  
+
+    ![Scripting table](media/generate-scripts-sql-server-management-studio/scripttable.png)
   
-##  <a name="ScriptTwoObjectsOE"></a> To generate a script of two objects using Object Explorer  
- **To script two objects using Object Explorer**  
-  
- Sometimes you may want a script with multiple options, such as drop a procedure and then create a procedure, or create a table and then alter a table. The processes below for generating scripts of multiple objects also work if you need to create a script that references different types of objects, such as tables, views, and stored procedures.  
-  
-1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and then expand that instance.  
-  
-2.  Expand **Databases**, and then expand the database containing the objects to be scripted.  
-  
-3.  Right-click the first object to be scripted, point to **Script \<object type> as**, and in the **Save as** selections chooses **New Query Editor Window** as the output destination.  
-  
-4.  Navigate to the second object you want to script.  
-  
-5.  Right-click the object, point to **Script \<object type> as**, and in the **Save as** selections chooses **Clipboard** as the output destination.  
-  
-6.  In the Query Editor window opened for the first object, paste the script for the second object from the clipboard.  
-  
-##  <a name="ScriptTwoObjectsOED"></a> To generate a script of two objects using Object Explorer Details  
- **To script two objects using Object Explorer Details**  
   
  You can use the **Object Explorer Details** pane to generate a script for mutliple objects of the same category.  
   
@@ -86,5 +69,7 @@ ms.workload: "On Demand"
 6.  Crtl + left-click the second object you want to script.  
   
 7.  Right-click one of the selected objects, and select **Script \<object type> as**.  
+
+    ![Object Explorer](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   
   

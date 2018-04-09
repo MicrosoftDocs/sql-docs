@@ -554,7 +554,7 @@ manager: "mblythe"
  For more information about query designers, see [Query Designers &#40;Report Builder&#41;](../../2014/reporting-services/query-designers-report-builder.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../../2014/reporting-services/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
   
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
  **[Lesson 1: Create Windows Azure Storage Account and Container](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  In this lesson, you create a Windows Azure Storage account and a container.  
   
- **[Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](../tutorials/lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
+ **[Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  In this lesson, you create a policy on the Blob container and also generate a shared access signature.  
   
  **[Lesson 3: Create a SQL Server Credential](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
@@ -40,7 +40,7 @@ manager: "jhubbard"
  **[Lesson 5. &#40;Optional&#41; Encrypt your database using TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  In this lesson, you encrypt your database by using a transparent data encryption (TDE) and a server certificate.  
   
- **[Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](../../2014/tutorials/lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ **[Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
  In this lesson, you migrate a database from on-premises to a virtual machine in Windows Azure using CREATE DATABASE FOR ATTACH option.  
   
  **[Lesson 7: Move your data files to Windows Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  

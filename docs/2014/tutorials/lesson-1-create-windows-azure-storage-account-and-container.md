@@ -59,6 +59,6 @@ manager: "jhubbard"
   
  **Next Lesson:**  
   
- [Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](../../2014/tutorials/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

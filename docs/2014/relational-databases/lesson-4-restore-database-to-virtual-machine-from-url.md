@@ -89,6 +89,6 @@ GO
   
  **Next Lesson:**  
   
- [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](../../2014/tutorials/lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

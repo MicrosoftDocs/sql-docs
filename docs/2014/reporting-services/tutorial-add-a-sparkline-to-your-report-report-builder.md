@@ -348,7 +348,7 @@ manager: "mblythe"
  This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## See Also  
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)  
   
   

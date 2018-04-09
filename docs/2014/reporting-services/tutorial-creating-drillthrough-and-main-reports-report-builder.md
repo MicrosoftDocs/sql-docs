@@ -736,6 +736,6 @@ manager: "mblythe"
 5.  Optionally, explore other product categories by clicking their names.  
   
 ## See Also  
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)  
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)  
   
   

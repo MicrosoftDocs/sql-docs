@@ -66,7 +66,7 @@ manager: "mblythe"
      Your **AdventureWorksDataset** dataset and fields appear in the Report Data pane.  
   
 ## Next Task  
- You have successfully specified a query that retrieves data for your report. Next, you will create the report layout. See [Lesson 4: Adding a Table to the Report &#40;Reporting Services&#41;](../tutorials/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ You have successfully specified a query that retrieves data for your report. Next, you will create the report layout. See [Lesson 4: Adding a Table to the Report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## See Also  
  [Query Design Tools in Report Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-in-report-designer-sql-server-data-tools-ssrs.md)   

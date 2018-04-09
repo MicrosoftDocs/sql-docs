@@ -580,10 +580,10 @@ manager: "mblythe"
   
  For more information, see [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md) and the blog entry [Cartographic Adjustment of Spatial Data for SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) on blogs.msdn.com.  
   
- For more tutorials, see [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md).  
+ For more tutorials, see [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md).  
   
 ## See Also  
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Report Builder in SQL Server 2014](../../2014/reporting-services/report-builder-in-sql-server-2014.md)   
  [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  

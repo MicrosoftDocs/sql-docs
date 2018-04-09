@@ -173,9 +173,17 @@ This section covers how to script out [extended events](https://docs.microsoft.c
 2. Expand your **Management** node.
 3. Expand your **Extended Events** node.
 4. Expand your **Sessions** node.
-5. Right-click the extended session you're interested in > **Script Session As**:
+5. Right-click the extended session you're interested in > **Script Session As** > **New Query Editor Window**:
 
     ![Script xEvents](media/scripting-ssms/scriptxevents.png) 
+6. In the **New Query Window**, modify the new name of the session from *system_health* to *system_health2* and select **Execute** to execute the query. 
+
+    a. Right-click **Sessions** in **Object Explorer** and select **Refresh** to see your new Extended Event Session. The green icon next to the session indicates the session is running whereas the red icon indicates the session is stopped. 
+
+    ![New xEvent](media/scripting-ssms/newxevent.png)
+
+    >[!NOTE]
+    > You can start the session by right-clicking it and selecting **Start**. However, since this is a copy of the already-running *system_health* session, this step can be skipped. You can delete the copy of the extended event session by right-clicking it and selecting **Delete**. 
 
 ## Next steps
 The next article introduces you to the pre-built T-SQL templates found within SSMS. 

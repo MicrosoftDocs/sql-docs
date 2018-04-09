@@ -31,9 +31,8 @@ ms.workload: "Inactive"
   
 ### Code  
   
-```
+```cpp
 // blob_out_param.cpp  
-// compile with: /EHsc ole32.lib oleaut32.lib  
 #ifndef UNICODE
     #define UNICODE
 #endif

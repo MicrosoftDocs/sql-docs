@@ -19,7 +19,7 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Getting Started with SSMA for Access Console (AccessToSQL)

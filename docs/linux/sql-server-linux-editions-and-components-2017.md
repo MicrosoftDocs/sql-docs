@@ -8,9 +8,7 @@ ms.service: ""
 ms.component: ""
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "sql-linux"
-  - "server-general"
+ms.technology: "sql-linux"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

@@ -19,7 +19,7 @@ ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Assessment Report (DB2ToSQL)

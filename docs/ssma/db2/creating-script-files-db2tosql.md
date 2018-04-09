@@ -19,7 +19,7 @@ ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Script Files (DB2ToSQL)

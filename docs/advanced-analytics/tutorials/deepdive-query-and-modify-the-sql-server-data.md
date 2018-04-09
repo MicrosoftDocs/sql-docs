@@ -16,11 +16,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Query and modify the SQL Server data (SQL and R deep dive)

@@ -19,7 +19,7 @@ ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (GUI)  (MySQLToSQL)

@@ -21,7 +21,7 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Setting Project Options (MySQLToSQL)

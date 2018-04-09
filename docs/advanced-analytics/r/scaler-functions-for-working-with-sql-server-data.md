@@ -13,11 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "R"
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # RevoScaleR functions for working with SQL Server data

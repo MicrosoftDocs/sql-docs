@@ -1,7 +1,7 @@
 ---
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/30/2016"
+ms.date: "04/06/2018"
 ms.prod: ""
 ms.prod_service: "sql-database"
 ms.reviewer: ""

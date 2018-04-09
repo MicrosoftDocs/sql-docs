@@ -14,11 +14,9 @@ ms.topic: "tutorial"
 dev_langs: 
   - "R"
   - "SQL"
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Predict and plot from model (R in SQL quickstart)

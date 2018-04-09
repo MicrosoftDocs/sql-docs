@@ -22,7 +22,7 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL)

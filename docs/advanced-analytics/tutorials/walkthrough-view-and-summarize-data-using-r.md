@@ -14,11 +14,9 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "R"
-ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: 22
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # View and summarize data using R

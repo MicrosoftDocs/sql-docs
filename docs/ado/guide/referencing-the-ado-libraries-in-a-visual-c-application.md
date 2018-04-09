@@ -8,7 +8,7 @@ ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
-ms.technology: “drivers”
+ms.technology: "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 

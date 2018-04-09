@@ -11,11 +11,9 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Monitor Machine Learning Services using custom reports in Management Studio

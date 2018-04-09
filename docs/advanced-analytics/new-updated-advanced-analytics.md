@@ -2,9 +2,9 @@
 title: Updated - Advanced Analytics for SQL Server docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Advanced Analytics for Microsoft SQL Server.
 
-manager: craigg
-author: MightyPen
-ms.author: genemi
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
@@ -263,7 +263,7 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../samples/new-updated-samples.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)

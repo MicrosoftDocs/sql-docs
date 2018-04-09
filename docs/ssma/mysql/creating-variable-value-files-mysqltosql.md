@@ -22,7 +22,7 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Variable Value Files (MySQLToSQL)

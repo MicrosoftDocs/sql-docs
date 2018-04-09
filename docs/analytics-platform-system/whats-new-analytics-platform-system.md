@@ -2,7 +2,7 @@
 title: "What's new in Analytics Platform System – a scale-out data warehouse"
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "jhubbard"	  
+manager: "craigg"	  
 ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""

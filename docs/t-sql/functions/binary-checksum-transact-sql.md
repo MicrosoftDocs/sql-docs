@@ -46,6 +46,9 @@ Specifies that the computation is over all the columns of the table. BINARY_CHEC
   
 *expression*  
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type. BINARY_CHECKSUM ignores expressions of noncomparable data types in its computation.
+
+## Return Types  
+ **int**
   
 ## Remarks  
 BINARY_CHECKSUM(*), computed on any row of a table, returns the same value as long the row is not subsequently modified. BINARY_CHECKSUM satisfies the properties of a hash function: BINARY_CHECKSUM applied over any two lists of expressions returns the same value if the corresponding elements of the two lists have the same type and are equal when compared using the equals (=) operator. For this definition, null values of a specified type are considered to compare as equal. If one of the values in the expression list changes, the checksum of the list also generally changes. However, there is a small chance that the checksum will not change. For this reason, we do not recommend using BINARY_CHECKSUM to detect whether values have changed, unless your application can tolerate occasionally missing a change. Consider using HashBytes instead. When an MD5 hash algorithm is specified, the probability of HashBytes returning the same result for two different inputs is much lower than that of BINARY_CHECKSUM.

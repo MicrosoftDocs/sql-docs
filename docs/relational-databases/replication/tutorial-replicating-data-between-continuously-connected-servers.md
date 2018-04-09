@@ -96,8 +96,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
     WHERE [SafetyStockLevel] < 500  
     ```
   
-
-   ![Filter Statement](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
+    ![Filter Statement](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
 8. Select **OK**, and then select **Next**.  
   

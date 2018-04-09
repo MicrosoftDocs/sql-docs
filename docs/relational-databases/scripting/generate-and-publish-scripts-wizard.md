@@ -122,7 +122,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
  **Options** - If you want the wizard to save scripts to a location of your choice, select **Save scripts to a specific location**. You can later run the scripts against either an instance of the Database Engine, or against [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. If you want the wizard to publish your database objects to a remote Web hosting provider, select **Publish to Web service**.  
   
- **Save Scripts to a Specific Location** – save one or more .Transact-SQL script files to a location you specify.  
+ **Save Scripts to a Specific Location** – save one or more Transact-SQL script files to a location you specify.  
 
      ![Save](media/generate-and-publish-scripts-wizard/save.png)   
   
@@ -165,7 +165,7 @@ For a more detailed Tutorial on using the Generate and Publish Scripts wizard, p
   
 -   **Include if NOT EXISTS** - When **True**, the script includes a statement to check whether the object already exists in the database, and does not try to create a new object if the object already exists. The default is **False**.  
   
--   **Include system constraint names** - When **False**, the default value of constraints that were automatically named on the origin database are automatically re-named on the target database. When **True**, constraints have the same name on the origin and target databases.  
+-   **Include system constraint names** - When **False**, the default value of constraints that were automatically named on the origin database are automatically renamed on the target database. When **True**, constraints have the same name on the origin and target databases.  
   
 -   **Include unsupported statements** - When **False**, the script does not contain statements for objects that are not supported on the selected server version or engine type. When **True**, the script contains the unsupported objects. Each statement for an unsupported object will have a comment that the statement must be edited before the script can be run against the selected SQL Server version or engine type. The default is **False**.  
   

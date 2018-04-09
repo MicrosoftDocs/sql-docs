@@ -78,7 +78,7 @@ Any time you perform a task using the GUI in SSMS, you can also generate the T-S
 4. Open a **New Query** window and paste (Right-click in the window > **Paste**):
 
     ![Paste Script](media/scripting-ssms/paste.png)
-5. Select **Execute** to execute the query and shrinkg the transaction log. 
+5. Select **Execute** to execute the query and shrink the transaction log. 
 
 
 ## Script Databases
@@ -162,7 +162,7 @@ In this section, you will learn how to drop and create a stored procedure.
 2. Expand your **Databases** node.
 3. Expand your **Programmability** node. 
 4. Expand your **Stored Procedure** node.
-5. Right-click the the stored procedure **dbo.uspGetBillOfMaterials**> **Script Stored Procedure As** > **Drop and Create to** > **New Query Window**:
+5. Right-click the stored procedure **dbo.uspGetBillOfMaterials**> **Script Stored Procedure As** > **Drop and Create to** > **New Query Window**:
     
     ![Script Stored Procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
 

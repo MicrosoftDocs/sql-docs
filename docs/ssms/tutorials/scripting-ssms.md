@@ -127,7 +127,7 @@ The following section teaches you how to script out the database, both using the
     c. Select **OK**, and then select **Next**. 
 
 
-    ![Advanced Script Options](media/scripting-ssms/advancedscripts.png)
+   ![Advanced Script Options](media/scripting-ssms/advancedscripts.png)
 
     >[!NOTE]
     > You have the ability to script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this is not ideal with large databases as it can take more memory than SSMS is able to allocate. This is okay for small databases, but if you want to move data for a larger database, you should use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
@@ -178,10 +178,10 @@ This section covers how to script out [extended events](https://docs.microsoft.c
     ![Script xEvents](media/scripting-ssms/scriptxevents.png) 
 
 ## Next steps
-The next article will introduce you to the pre-built templates found within SSMS. 
+The next article introduces you to the pre-built T-SQL templates found within SSMS. 
 
-Advance to the next article to learn more
+Advance to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps button](templates-ssms.md)
+> [Next steps](templates-ssms.md)
 
 

@@ -123,7 +123,6 @@ The following section teaches you how to script out the database, both using the
       - **Script Statistics** set to *Script Statistics*
       - **Types of data to script** set to *Schema only*
       - **Script Indexes** set to *true*
-
  
     ![Advanced Script Options](media/scripting-ssms/advancedscripts.png)
 

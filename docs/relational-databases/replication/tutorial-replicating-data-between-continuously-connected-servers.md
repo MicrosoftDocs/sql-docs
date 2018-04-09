@@ -306,7 +306,7 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
     EXEC sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
-    -- example for user account: exec sp_changedbowner 'sqlrepro\administrator'
+    -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
 
 8. You'll need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**: 

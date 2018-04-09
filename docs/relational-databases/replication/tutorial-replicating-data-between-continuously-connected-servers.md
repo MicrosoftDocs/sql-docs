@@ -37,7 +37,7 @@ In this tutorial, you will learn how to:
 > * Create a publisher via Transactional Replication
 > * Create a subscriber for the Transactional publisher
 > * Validate the Subscription and measure latency
-> * Troubleshooting Replication Error Methodology
+> * Error Troubleshooting Methodology
   
   
 ## Prerequisites  
@@ -94,9 +94,10 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
   
     ```sql  
     WHERE [SafetyStockLevel] < 500  
-    ```  
+    ```
+  
 
-    ![Filter Statement](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
+   ![Filter Statement](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
 8. Select **OK**, and then select **Next**.  
   
@@ -239,7 +240,7 @@ In this section, you will use tracer tokens to verify that changes are being rep
 **See Also**   
 [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-## Troubleshooting Replication Error Methodology
+## Error Troubleshooting Methodology
 This section teaches you how to troubleshoot basic replication synchronization failures. Please note that this section is meant to introduce you to navigating the replication components with the aim of troubleshooting. However, the actual errors that you encounter may be different than what is discussed here, and as such may need a different resolution. If that is the case, further troubleshooting is necessary and is outside the scope of this tutorial. 
 
 
@@ -263,7 +264,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
         Exception Message: Access to path '\\node1\repldata.....' is denied.
 
 
-     If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions for the <*Publisher_Machine_Name>***\repl_snapshot** account on your repldata folder. For more information, please see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
+  If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions for the <*Publisher_Machine_Name>***\repl_snapshot** account on your repldata folder. For more information, please see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
 
 ### Troubleshoot Errors with Log Reader Agent
 The **Log Reader Agent** connects to  your publisher database and scans the transaction log for any transactions that are marked 'for replication'. It then adds those transactions to the **Distribution** database. 
@@ -372,6 +373,6 @@ You have successfully configured both your Publisher and your Subscriber for you
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]
-> [Next steps button](tutorial-replicating-data-with-mobile-clients.md)
+> [Next steps](tutorial-replicating-data-with-mobile-clients.md)
 
   

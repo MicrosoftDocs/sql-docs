@@ -91,11 +91,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/connect/oledb/ole-db/filestream-support-ole-db.md",
-            "redirect_url": "/sql/connect/oledb/features/filestream-support",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
             "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
             "redirect_document_id": false
@@ -1128,6 +1123,11 @@
         {
             "source_path": "docs/connect/odbc/mac/system-requirements.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/oledb/ole-db/filestream-support-ole-db.md",
+            "redirect_url": "/sql/connect/oledb/features/filestream-support",
             "redirect_document_id": false
         },
         {

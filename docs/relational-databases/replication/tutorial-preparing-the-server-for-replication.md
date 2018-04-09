@@ -251,7 +251,7 @@ You have now successfully prepared your server for replication. The next article
 
 Advance to the next article to learn more
 > [!div class="nextstepaction"]
-> [Next steps button](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Next steps](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

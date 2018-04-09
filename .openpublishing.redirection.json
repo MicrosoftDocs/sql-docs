@@ -3611,6 +3611,11 @@
 	  "source_path": "docs/sample/world-wide-importers/wide-world-importers-oltp-database.md",
 	  "redirect_url": "/sql/samples/wide-world-importers-what-is",
 	  "redirect_document_id": false
+      },
+      {
+      "source_path": "docs/connect/oledb/ole-db/filestream-support-ole-db.md",
+      "redirect_url": "/sql/connect/oledb/features/filestream-support",
+      "redirect_document_id": false
       }
     ]
 }

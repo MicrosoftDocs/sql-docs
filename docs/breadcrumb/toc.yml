@@ -116,7 +116,7 @@
         - name: Applications
           href: /sql/connect/oledb/applications/
           homepage: /sql/connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server
-        - name: OLE DB
+        - name: OLE DB Programming
           href: /sql/connect/oledb/ole-db/
           homepage: /sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming
           items:

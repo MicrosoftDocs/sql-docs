@@ -73,7 +73,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 1.  Connect to the Publisher in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2. Right-click the **SQL Server Agent** and select **Start**. The SQL Server Agent should be running before you create the publication. If this does not start your agent, you'll need to do so manually from the **SQL Server Configuration Manager**. 
-3. Expand the **Replication** folder, right-click the **Local Publications** folder, and select **New Publication**.  This will launch the Publication Configuration Wizard: 
+3. Expand the **Replication** folder, right-click the **Local Publications** folder, and select **New Publication**.  This will launch the Publication Configuration Wizard:  
 
     ![New Publication](media/tutorial-replicating-data-between-continuously-connected-servers/newpublication.png)
   
@@ -88,7 +88,7 @@ In this section, you will create a transactional publication using [!INCLUDE[ssM
 
     ![Articles to publish](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
-6. On the Filter Table Rows page, select **Add**.  
+6. On the Filter Table Rows page, select **Add**.   
   
 7. In the **Add Filter** dialog box, select the **SafetyStockLevel** column, select the right arrow to add the column to the Filter statement WHERE clause of the filter query. Then manually type in the WHERE clause modifier as follows:  
   

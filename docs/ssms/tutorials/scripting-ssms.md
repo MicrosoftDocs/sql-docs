@@ -124,15 +124,16 @@ The following section teaches you how to script out the database, both using the
       - **Types of data to script** set to *Schema only*
       - **Script Indexes** set to *true*
 
- 
-    ![Advanced Script Options](media/scripting-ssms/advancedscripts.png)
+    ![Script Objects](media/scripting-ssms/advancedscripts.png)
 
     >[!NOTE]
-    > You have the ability to script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this is not ideal with large databases as it can take more memory than SSMS is able to allocate. This is okay for small databases, but if you want to move data for a larger database, you should use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+    >You have the ability to script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this is not ideal with large databases as it can take more memory than SSMS is able to allocate. This is okay for small databases, but if you want to move data for a larger database, you should use the [Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-6. Select **OK** and then select **Next**. 
-7. Select **Next** on the **Summary** and then select **Next** again to generate the script to a **New Query** Window.  
-8. On your keyboard, select **Ctrl + F** to open the **Find** dialog box and select the down arrow to open the **Replace** option. On the top **Find** line, type in *AdventureWorks2016* and on the bottom **Replace** line, type in *AdventureWorks2016b*. 
+
+
+1. Select **OK** and then select **Next**. 
+2. Select **Next** on the **Summary** and then select **Next** again to generate the script to a **New Query** Window.  
+3. On your keyboard, select **Ctrl + F** to open the **Find** dialog box and select the down arrow to open the **Replace** option. On the top **Find** line, type in *AdventureWorks2016* and on the bottom **Replace** line, type in *AdventureWorks2016b*. 
     a. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*. 
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)

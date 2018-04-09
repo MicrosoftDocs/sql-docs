@@ -1,7 +1,7 @@
 ---
 title: "BULK INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2017"
+ms.date: "04/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -122,7 +122,10 @@ Is a named external data source pointing to the Azure Blob storage location of t
   
  CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
  Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE is not a supported option on Linux.
+
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you specify a collation name for each column in a [format file](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   

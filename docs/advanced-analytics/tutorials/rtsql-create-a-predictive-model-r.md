@@ -135,7 +135,7 @@ EXEC sp_execute_external_script
 
 -- Save the generated model
 INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES (' latest model', @model)
+VALUES ('latest model', @model)
 ```
 
 **Results**

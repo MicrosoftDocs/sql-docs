@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  [Install PowerPivot from the Command Prompt](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)  
   
- [Uninstall PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-powerpivot-for-sharepoint.md)  
+ [Uninstall PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
  [Repair PowerPivot for SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   

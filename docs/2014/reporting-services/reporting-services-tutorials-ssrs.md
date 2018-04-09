@@ -32,7 +32,7 @@ manager: "mblythe"
  [Updating Reports Using Classes Generated from the RDL Schema &#40;SSRS Tutorial&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
  Follow the steps in this tutorial to learn how to use the XML Schema Definition Tool (Xsd.exe) to generate classes that allow you to serialize and deserialize report definition files (.rdl and .rdlc) with the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
- [Create a Drillthrough &#40;RDLC&#41; Report with Parameters using ReportViewer &#40;SSRS Tutorial&#41;](../tutorials/create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
+ [Create a Drillthrough &#40;RDLC&#41; Report with Parameters using ReportViewer &#40;SSRS Tutorial&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  Follow the steps in this tutorial to learn how to create a drillthrough report with parameters and a filter using the ReportViewer control.  
   
 ## See Also  

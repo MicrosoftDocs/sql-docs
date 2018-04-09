@@ -22,7 +22,7 @@ manager: "jhubbard"
  [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](uninstall-an-existing-instance-of-sql-server-setup.md)  
  This topic describes how to manually uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Uninstall PowerPivot for SharePoint](uninstall-powerpivot-for-sharepoint.md)  
+ [Uninstall PowerPivot for SharePoint](uninstall-power-pivot-for-sharepoint.md)  
  This topic describes how to manually uninstall PowerPivot for SharePoint.  
   
  [Uninstall Reporting Services](uninstall-reporting-services.md)  

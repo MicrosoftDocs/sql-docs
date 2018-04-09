@@ -122,7 +122,7 @@ manager: "mblythe"
 ## Related Content  
  [Upgrade PowerPivot for SharePoint](../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) Describes the workflow that upgrades an existing installation that is already in a farm.  
   
- [Uninstall PowerPivot for SharePoint](../../2014/sql-server/install/uninstall-powerpivot-for-sharepoint.md) Describes the workflow that removes PowerPivot for SharePoint services, solutions, and application pages from a farm.  
+ [Uninstall PowerPivot for SharePoint](../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md) Describes the workflow that removes PowerPivot for SharePoint services, solutions, and application pages from a farm.  
   
  [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
   

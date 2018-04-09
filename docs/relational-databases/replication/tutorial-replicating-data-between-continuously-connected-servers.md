@@ -255,9 +255,14 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
 
    ![Snapshot Agent History](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
     
-1. In the **Snapshot Agent History**, select the relevant error message (usually the one before the red X) and review the error message beneath the summary: 
+1. In the **Snapshot Agent History**, select the relevant log entry. This will usually be the one that is *before* the error message (errors are indicated by the red X).  Review the message text in the text box below the logs: 
 
     ![Snapshot Agent Access Denied](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
+
+        The replication agent had encountered an exception.
+        Exception Message: Access to path '\\node1\repldata.....' is denied.
+
+
      If your windows permissions are not configured correctly for your snapshot folder, you'll see an 'access is denied' error for the **Snapshot Agent**. You'll need to verify permissions for the <*Publisher_Machine_Name>***\repl_snapshot** account on your repldata folder. For more information, please see [Create a share for the snapshot folder and assign permissions](tutorial-preparing-the-server-for-replication.md#create-a-share-for-the-snapshot-folder-and-assign-permissions).
 
 ### Troubleshoot Errors with Log Reader Agent
@@ -290,15 +295,17 @@ The **Log Reader Agent** connects to  your publisher database and scans the tran
        Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
        Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
 
-6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly. This typically happens when a database has been restored. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** tab. If this field is blank, then this is the likely cause of your issue: 
+6. The aforementioned error is typically caused because the owner of the publisher database is not set correctly. This typically happens when a database has been restored. To verify this, expand **Databases** in **Object Explorer** > right-click **AdventureWorks2012** > **Properties**. Verify that an owner exists under the **Files** page. If this field is blank, then this is the likely cause of your issue: 
 
     ![DB Properties](media/tutorial-replicating-data-between-continuously-connected-servers/dbproperties.png)
 
-7. If the owner is blank, open a **New Query Window** within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
+7. If the owner is blank on the **Files** page, open a **New Query Window** within the context of the **AdventureWorks2012** database. Run the following T-SQL code snippet:
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
     EXEC sp_changedbowner '<useraccount>'
+    -- example for sa: exec sp_changedbowner 'sa'
+    -- example for user account: exec sp_changedbowner 'sqlrepro\administrator'
     ```
 
 8. You'll need to restart the **Log Reader Agent**. To do this, expand the **SQL Server Agent** node in **Object Explorer** and open the **Job Activity Monitor**. Sort by **Category** and identify the **Log Reader Agent** by the **'REPL-LogReader'** category. Right-click the **Log Reader Agent** job and **Start Job at Step**: 

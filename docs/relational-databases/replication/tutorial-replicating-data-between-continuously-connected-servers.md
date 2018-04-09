@@ -255,7 +255,7 @@ The **Snapshot Agent** is the agent that generates the snapshot, and writes it t
 
    ![Snapshot Agent History](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenthistory.png)
     
-1. In the **Snapshot Agent History**, select the relevant log entry. This will usually be the one that is *before* the error message (errors are indicated by the red X).  Review the message text in the text box below the logs: 
+1. In the **Snapshot Agent History**, select the relevant log entry. This will usually be a line or two *before* the entry reporting the error (errors are indicated by the red X).  Review the message text in the text box below the logs: 
 
     ![Snapshot Agent Access Denied](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotaccessdenied.png)
 

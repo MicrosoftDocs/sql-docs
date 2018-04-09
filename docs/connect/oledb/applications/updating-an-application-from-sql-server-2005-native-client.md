@@ -41,6 +41,7 @@ ms.workload: "Inactive"
 |IBCPSession::BCColFmt conversion changes.|In OLE DB Driver for SQL Server, when you use IBCPSession::BCOColFmt to convert SQLDATETIME or SQLDATETIME to a string type, a fractional value is exported. For example, when converting type SQLDATETIME to type SQLNVARCHARMAX, versions prior to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 returned<br /> 1989-02-01 00:00:00.<br />OLE DB Driver for SQL Server returns <br />1989-02-01 00:00:00.0000000.|  
 |Custom applications that use the BCP API can now see a warning.|The BCP API will generate a warning message if data length is greater than the specified length for a field for all types. Previously, this warning was only given for character types, but will not be issued for all types.|  
 |Inserting an empty string into a **sql_variant** bound as a date/time type generates an error.|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0, inserting an empty string into a **sql_variant** bound as a date/time type did not generate an error. OLE DB Driver for SQL Server correctly generates an error in this situation.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|To resolve this error, set **NOCOUNT ON** in the trigger or call SQLMoreResults to advance to the next result.|  
 
 ## See Also   
  [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)

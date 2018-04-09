@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/15/2017"
+ms.date: "04/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
@@ -132,7 +132,7 @@ The following table lists the default service accounts used by setup when instal
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[Virtual Account](#VA_Desc)*|  
@@ -144,7 +144,8 @@ The following table lists the default service accounts used by setup when instal
 |PolyBase Engine  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
 |PolyBase Data Movement Service |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
   
- *When resources external to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer are needed, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends using a Managed Service Account (MSA), configured with the minimum privileges necessary.  
+ *When resources external to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer are needed, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends using a Managed Service Account (MSA), configured with the minimum privileges necessary.   
+ ** When installed on a Domain Controller, a virtual account as the service account is not supported.
   
  **SQL Server Failover Cluster Instance**
   

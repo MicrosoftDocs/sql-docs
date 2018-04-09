@@ -19,7 +19,7 @@ ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Save Metadata  (MySQLToSQL)

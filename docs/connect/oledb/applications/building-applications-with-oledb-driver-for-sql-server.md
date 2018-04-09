@@ -10,7 +10,7 @@ ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology:
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords:
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, building applications"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Building Applications with OLE DB Driver for SQL Server

@@ -19,7 +19,7 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Legal Notice (SSMA for Sybase)

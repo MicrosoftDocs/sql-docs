@@ -19,7 +19,7 @@ ms.assetid: 580d72a3-9be3-4f19-a9b3-5b41cc84b589
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Shortcut Keys (MySQLToSQL)

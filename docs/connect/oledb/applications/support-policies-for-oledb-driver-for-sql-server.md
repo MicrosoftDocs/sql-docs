@@ -10,7 +10,7 @@ ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
 ms.technology: 
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"

@@ -22,7 +22,7 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Passwords (MySQLToSQL)

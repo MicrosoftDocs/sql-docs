@@ -32,7 +32,7 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 caps.latest.revision: 31
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)

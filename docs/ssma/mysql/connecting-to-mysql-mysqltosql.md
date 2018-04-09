@@ -22,7 +22,7 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connecting to MySQL (MySQLToSQL)

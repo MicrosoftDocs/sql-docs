@@ -19,7 +19,7 @@ ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New Project (DB2ToSQL)

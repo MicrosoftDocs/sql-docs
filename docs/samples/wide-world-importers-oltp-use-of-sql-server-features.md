@@ -21,7 +21,7 @@ robots: noindex,nofollow
 ms.workload: "Inactive"
 ---
 # Use of SQL Server features and capabilities
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 WideWorldImporters use of SQL Server features and capabilities in the OLTP database.
 
 WideWorldImporters is designed to showcase many of the key features of SQL Server, including the latest features introduced in SQL Server 2016. The following is a list of SQL Server features and capabilities, and a description of how they are used in WideWorldImporters.

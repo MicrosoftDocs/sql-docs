@@ -23,7 +23,7 @@ ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Legal Notice (SSMA for Access)

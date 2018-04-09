@@ -22,7 +22,7 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating the Server Connection Files (SybaseToSQL)

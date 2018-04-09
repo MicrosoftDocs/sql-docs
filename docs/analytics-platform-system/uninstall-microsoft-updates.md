@@ -2,7 +2,7 @@
 title: "Uninstall Microsoft Updates (Analytics Platform System)"
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "jhubbard"	  
+manager: "craigg"	  
 ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""

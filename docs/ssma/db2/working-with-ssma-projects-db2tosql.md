@@ -19,7 +19,7 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Working with SSMA Projects (DB2ToSQL)

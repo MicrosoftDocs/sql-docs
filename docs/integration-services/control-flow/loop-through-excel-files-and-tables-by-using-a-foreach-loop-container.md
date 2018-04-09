@@ -1,7 +1,7 @@
 ---
 title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "04/02/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
 ms.service: ""
@@ -25,8 +25,11 @@ ms.workload: "On Demand"
 ---
 # Loop through Excel Files and Tables by Using a Foreach Loop Container
   The procedures in this topic describe how to loop through the Excel workbooks in a folder, or through the tables in an Excel workbook, by using the Foreach Loop container with the appropriate enumerator.  
-  
-### To loop through Excel files by using the Foreach File enumerator  
+
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+ 
+## To loop through Excel files by using the Foreach File enumerator  
   
 1.  Create a string variable that will receive the current Excel path and file name on each iteration of the loop. To avoid validation issues, assign a valid Excel path and file name as the initial value of the variable. (The sample expression shown later in this procedure uses the variable name, `ExcelFile`.)  
   
@@ -69,7 +72,7 @@ ms.workload: "On Demand"
   
 11. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel workbook that matches the specified file location and pattern.  
   
-### To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
+## To loop through Excel tables by using the Foreach ADO.NET Schema Rowset enumerator  
   
 1.  Create an ADO.NET connection manager that uses the Microsoft Jet OLE DB Provider to connect to an Excel workbook. On the All page of the **Connection Manager** dialog box, make sure that you enter Excel 8.0 as the value of the Extended Properties property. For more information, see [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
@@ -93,6 +96,7 @@ ms.workload: "On Demand"
 9. Create tasks in the Foreach Loop container that use the Excel connection manager to perform the same operations on each Excel table in the specified workbook. If you use a Script Task to examine the enumerated table name or to work with each table, remember to add the string variable to the ReadOnlyVariables property of the Script task.  
   
 ## See Also  
+ [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)   

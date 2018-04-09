@@ -19,7 +19,7 @@ ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Global Settings (Logging) (DB2ToSQL)

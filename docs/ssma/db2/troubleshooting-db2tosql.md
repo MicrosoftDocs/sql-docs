@@ -19,7 +19,7 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Troubleshooting (DB2ToSQL)

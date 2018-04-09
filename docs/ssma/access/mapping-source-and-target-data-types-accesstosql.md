@@ -25,7 +25,7 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping Source and Target Data Types (AccessToSQL)

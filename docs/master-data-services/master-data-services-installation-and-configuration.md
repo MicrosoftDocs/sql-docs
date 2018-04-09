@@ -279,10 +279,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
  Create a new model and entities for your data. See [Create a Model &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) and [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
  For an overview of how you use a model and entities to build a structure for your data in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], see [Master Data Services Overview &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
-  
+    
 ## See Also  
  [Master Data Services Database](../master-data-services/master-data-services-database.md)   
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   

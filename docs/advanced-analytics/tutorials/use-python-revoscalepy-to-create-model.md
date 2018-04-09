@@ -10,10 +10,9 @@ ms.component:
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
-caps.latest.revision: 4
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ---
 # Use Python with revoscalepy to create a model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +22,6 @@ In this lesson, you learn how to run Python code from a remote development clien
 ## Prerequisites
 
 + This lesson uses different data than the previous lessons. You do not need to complete the previous lessons first. However, if you have completed the previous lessons and have a server already configured to run Python, use that server and database as a compute context.
-
 + To run Python code using SQL Server as a compute context requires SQL Server 2017 or later. Moreover, you must explicitly install and then enable the feature, **Machine Learning Services**, choosing the Python language option.
 
     If you installed a pre-release version of SQL Server 2017, you should update to at least the RTM version. Later service releases have continued to expand and improve Python functionality. Some features of this tutorial might not work in early pre-release versions.
@@ -48,9 +46,9 @@ This lesson also demonstrates the basics of how to set up and then use a **SQL S
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]

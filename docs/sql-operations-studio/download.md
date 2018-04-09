@@ -55,15 +55,37 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=870840).
+1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
+   **Debian Installation:**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
 
    sqlops
    ```
+
+   **rpm Installation:**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
+
+   sqlops
+   ```
+
+   **tar.gz Installation:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:

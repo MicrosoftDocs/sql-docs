@@ -160,7 +160,7 @@ ms.workload: "Inactive"
   
  This example backs up the currently active transaction log when a database is damaged and inaccessible, if the transaction log is undamaged and accessible.  
   
-```scr  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1  
    WITH NO_TRUNCATE;  

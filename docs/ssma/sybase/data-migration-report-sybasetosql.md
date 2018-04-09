@@ -19,7 +19,7 @@ ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Migration Report (SybaseToSQL)

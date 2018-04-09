@@ -10,8 +10,6 @@ ms.technology:
   
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 
-caps.latest.revision: 38
 author: "HeidiSteen"
 ms.author: "heidist"
 manager: "cgronlun"

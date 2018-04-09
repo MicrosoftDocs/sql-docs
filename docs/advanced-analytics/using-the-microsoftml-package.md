@@ -14,11 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "R"
-ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+author: "HeidiSteen"
+ms.author: "heidist"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Using the MicrosoftML package with SQL Server

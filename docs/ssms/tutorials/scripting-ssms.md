@@ -123,9 +123,9 @@ The following section teaches you how to script out the database, both using the
       - **Script Statistics** set to *Script Statistics*
       - **Types of data to script** set to *Schema only*
       - **Script Indexes** set to *true*
-      
 
-    c. Select **OK**, and then select **Next**. 
+
+   c. Select **OK**, and then select **Next**. 
 
 
    ![Advanced Script Options](media/scripting-ssms/advancedscripts.png)

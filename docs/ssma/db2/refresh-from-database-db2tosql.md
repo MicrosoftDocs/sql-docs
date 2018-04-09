@@ -19,7 +19,7 @@ ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh from Database (DB2ToSQL)

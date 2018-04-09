@@ -19,7 +19,7 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Removing SSMA for Sybase Components (SybaseToSQL)

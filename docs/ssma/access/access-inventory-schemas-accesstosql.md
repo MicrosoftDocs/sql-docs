@@ -46,7 +46,7 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 caps.latest.revision: 17
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Access Inventory Schemas (AccessToSQL)

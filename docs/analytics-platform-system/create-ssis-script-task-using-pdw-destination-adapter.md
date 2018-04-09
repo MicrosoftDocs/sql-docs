@@ -2,7 +2,7 @@
 title: "How to create a script task that uses the SSIS PDW destination adapter"
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "jhubbard"	  
+manager: "craigg"	  
 ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""

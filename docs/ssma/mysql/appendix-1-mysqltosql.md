@@ -19,7 +19,7 @@ ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Appendix - 1 (MySQLToSQL)

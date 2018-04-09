@@ -1,7 +1,7 @@
 ---
-title: "Multidimensional Models (SSAS) | Microsoft Docs"
+title: "Multidimensional models | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/03/2017"
 ms.prod: analysis-services
 ms.prod_service: "analysis-services"
 ms.service: ""

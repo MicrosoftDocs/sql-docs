@@ -19,7 +19,7 @@ ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)

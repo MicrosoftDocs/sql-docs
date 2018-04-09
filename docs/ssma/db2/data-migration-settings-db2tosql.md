@@ -19,7 +19,7 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Migration Settings (DB2ToSQL)

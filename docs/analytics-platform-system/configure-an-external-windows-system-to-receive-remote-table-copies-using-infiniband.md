@@ -2,7 +2,7 @@
 title: "Configure external Windows system to get remote table copies InfiniBand-PDW"
 author: "barbkess" 
 ms.author: "barbkess"
-manager: "jhubbard"	  
+manager: "craigg"	  
 ms.prod: "analytics-platform-system"
 ms.prod_service: "mpp-data-warehouse"
 ms.service: ""

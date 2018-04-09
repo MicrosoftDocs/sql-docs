@@ -19,7 +19,7 @@ ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Mapping MySQL and SQL Server Character Set (MySQLToSQL)

@@ -22,7 +22,7 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL DB  (SybaseToSQL)

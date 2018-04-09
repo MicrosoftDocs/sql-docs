@@ -21,7 +21,7 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Running Test Cases (SybaseToSQL)

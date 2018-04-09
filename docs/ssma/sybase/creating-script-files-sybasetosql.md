@@ -24,7 +24,7 @@ ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating Script Files (SybaseToSQL)

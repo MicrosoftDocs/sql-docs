@@ -19,7 +19,7 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Generating Reports (DB2ToSQL)

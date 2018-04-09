@@ -55,7 +55,7 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md) for Linux by using one of the installers or the tar.gz archive:
+1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)

@@ -39,6 +39,10 @@ Use the following instructions to manually deploy the solution package that add 
 * SQL Server 2008 Reporting Services (Native mode) and later.
 * Power BI Report Server
 
+> [!IMPORTANT]
+> You currently cannot install this web part if you already have Reporting Services SharePoint integrated mode configured.
+>
+
 ## Download the Report Viewer web part solution package
 
 The Report Viewer web part is available on the Microsoft Download Center.

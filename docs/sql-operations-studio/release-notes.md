@@ -17,7 +17,7 @@ ms.workload: "Inactive"
 ---
 # SQL Operations Studio (preview) release notes
 
-**[Download the March Public Preview](download.md)**
+**[Download the April Public Preview](download.md)**
 
 
 ## April 2018 (April Public Preview)

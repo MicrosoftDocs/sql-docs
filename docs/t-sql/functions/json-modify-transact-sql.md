@@ -14,8 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

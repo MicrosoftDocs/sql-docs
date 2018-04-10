@@ -21,8 +21,9 @@ helpviewer_keywords:
   - "JSON, converting from"
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Active"
 ---

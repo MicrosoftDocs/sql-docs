@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 
   This sample uses an ISequentialStream interface bound to an ICommandText parameter to send between 4MB and 4GB of data to a filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support](../../../oledb/features/filestream-support.md).  
   
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

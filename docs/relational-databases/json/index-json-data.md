@@ -16,8 +16,9 @@ helpviewer_keywords:
   - "indexing JSON data"
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

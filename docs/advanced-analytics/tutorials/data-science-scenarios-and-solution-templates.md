@@ -35,7 +35,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 
 ## Fraud detection
 
-[Online fraud detection template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Online fraud detection template (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **What:** The ability to detect fraudulent transactions is important for online businesses. To reduce charge-back losses, businesses need to quickly identify transactions that were made using stolen payment instruments or credentials. When fraudulent transactions are discovered, businesses typically take measures to block certain accounts as soon as possible, to prevent further losses. In this scenario, you learn how to use data from online purchase transactions to identify likely fraud.
 

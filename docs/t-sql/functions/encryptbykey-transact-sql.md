@@ -71,6 +71,8 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  **varbinary** with a maximum size of 8,000 bytes.  
   
  Returns NULL if the key is not open, if the key does not exist, or if the key is a deprecated RC4 key and the database is not in compatibility level 110 or higher.  
+ 
+ Returns NULL if the *cleartext* value is NULL.
   
 ## Remarks  
  EncryptByKey uses a symmetric key. This key must be open. If the symmetric key is already open in the current session, you do not have to open it again in the context of the query.  

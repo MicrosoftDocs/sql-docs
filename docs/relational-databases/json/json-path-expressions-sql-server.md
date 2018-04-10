@@ -16,8 +16,9 @@ helpviewer_keywords:
   - "path expressions (JSON)"
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

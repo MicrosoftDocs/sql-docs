@@ -25,6 +25,8 @@ ms.workload: "On Demand"
 # When to Use OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+
   OLE DB Driver for SQL Server is one technology that you can use to access data in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  For a discussion of the different data-access technologies, see [Data Access Technologies Road Map](http://go.microsoft.com/fwlink/?LinkID=179186)  
   
  When deciding whether to use OLE DB Driver for SQL Server as the data access technology of your application, you should consider several factors.  
@@ -40,7 +42,7 @@ ms.workload: "On Demand"
  For information about the differences between OLE DB Driver for SQL Server and MDAC, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB How-to Topics](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

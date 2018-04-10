@@ -66,7 +66,7 @@ manager: "jhubbard"
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Change Database Wizard &#40;SSRS Native Mode&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Upgrade and Migrate Reporting Services](../../sql-server/install/upgrade-and-migrate-reporting-services.md)   
+ [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Migrate a Reporting Services Installation &#40;Native Mode&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

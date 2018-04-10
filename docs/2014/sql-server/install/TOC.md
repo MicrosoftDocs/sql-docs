@@ -176,7 +176,7 @@
 ### [Uninstall an Existing Instance of SQL Server (Setup)](uninstall-an-existing-instance-of-sql-server-setup.md)
 ### [Remove Data Quality Server Objects](remove-data-quality-server-objects.md)
 ### [Uninstall and Remove Master Data Services](uninstall-and-remove-master-data-services.md)
-### [Uninstall PowerPivot for SharePoint](uninstall-powerpivot-for-sharepoint.md)
+### [Uninstall PowerPivot for SharePoint](uninstall-power-pivot-for-sharepoint.md)
 ### [Uninstall Reporting Services](uninstall-reporting-services.md)
 ## [SQL Server Failover Cluster Installation](../failover-clusters/install/sql-server-failover-cluster-installation.md)
 ### [Before Installing Failover Clustering](../failover-clusters/install/before-installing-failover-clustering.md)

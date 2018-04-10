@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 #### Reporting Services samples  
   
-1.  Complete one of the Reporting Services tutorials. For more information, see [Reporting Services Tutorials &#40;SSRS&#41;](../../tutorials/reporting-services-tutorials-ssrs.md).  
+1.  Complete one of the Reporting Services tutorials. For more information, see [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
 2.  Download the Adventure works sample database and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sample reports from CodePlex. For more information, see [AdventureWorks Report Samples](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 3.  Open a browser and type the report server URL in the address bar. The address consists of the server name and the virtual directory name that you specified for the report server during setup. By default, the report server virtual directory is named **ReportServer**. You can use the following URL to verify report server installation: http://*\<computer name>*/ReportServer*\<_instance name>*. The URL will be different if you installed the report server as a named instance. For more information about the URL format, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md). If you are a local administrator on Windows Vista or Windows Server 2008, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Run reports to test report server operations. For this step, you can create a sample report from a tutorial. For more information, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../tutorials/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Run reports to test report server operations. For this step, you can create a sample report from a tutorial. For more information, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 #### To verify that Report Manager is installed and running  
   
@@ -110,7 +110,7 @@ manager: "jhubbard"
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   
 ## See Also  
- [Troubleshoot a Reporting Services Installation](../../sql-server/install/troubleshoot-a-reporting-services-installation.md)   
+ [Troubleshoot a Reporting Services Installation](troubleshoot-a-reporting-services-installation.md)   
  [Cause and Resolution of Reporting Services Errors](../cause-and-resolution-of-reporting-services-errors.md)  
   
   

@@ -108,6 +108,6 @@ manager: "mblythe"
   
 ## See Also  
  [XML Connection Type &#40;SSRS&#41;](../../2014/reporting-services/xml-connection-type-ssrs.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

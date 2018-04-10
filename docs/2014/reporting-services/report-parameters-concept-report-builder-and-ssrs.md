@@ -44,6 +44,6 @@ manager: "mblythe"
 ## See Also  
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

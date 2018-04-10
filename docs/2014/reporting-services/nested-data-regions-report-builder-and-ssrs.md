@@ -87,7 +87,7 @@ manager: "mblythe"
  [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

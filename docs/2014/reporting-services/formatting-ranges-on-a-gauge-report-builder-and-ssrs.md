@@ -29,7 +29,7 @@ manager: "mblythe"
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Adding a KPI to Your Report &#40;Report Builder&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Gauges &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/gauges-report-builder-and-ssrs.md)  
   
   

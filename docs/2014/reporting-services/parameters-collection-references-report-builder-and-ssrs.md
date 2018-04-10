@@ -57,8 +57,8 @@ manager: "mblythe"
  [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md)   
  [Commonly Used Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/commonly-used-filters-report-builder-and-ssrs.md)   
  [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/built-in-collections-in-expressions-report-builder-and-ssrs.md)  
   
   

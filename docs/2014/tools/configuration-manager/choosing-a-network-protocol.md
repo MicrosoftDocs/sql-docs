@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## Enabling the Protocol  
  The protocol must be enabled on both the client and server to work. The server can listen for requests on all enabled protocols at the same time. Client computers can pick one, or try the protocols in the order listed in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
- For a short tutorial about how to configure protocols and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], see [Tutorial: Getting Started with the Database Engine](../../../2014/tutorials/tutorial-getting-started-with-the-database-engine.md).  
+ For a short tutorial about how to configure protocols and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], see [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
   

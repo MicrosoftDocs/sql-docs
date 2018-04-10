@@ -45,7 +45,7 @@ manager: "mblythe"
   
 ## See Also  
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Tables &#40;Report Builder  and SSRS&#41;](../../2014/reporting-services/tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/matrices-report-builder-and-ssrs.md)   
  [Lists &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/lists-report-builder-and-ssrs.md)   

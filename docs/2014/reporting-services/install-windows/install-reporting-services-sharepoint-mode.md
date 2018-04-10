@@ -42,13 +42,13 @@ manager: "jhubbard"
   
  [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](../../sql-server/install/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
  [Where to find the Reporting Services add-in for SharePoint Products](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../sql-server/install/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
- [Add an Additional Reporting Services Web Front-end to a Farm](../../sql-server/install/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
+ [Add an Additional Reporting Services Web Front-end to a Farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
  [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   

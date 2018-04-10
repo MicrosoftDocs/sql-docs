@@ -51,7 +51,7 @@ manager: "mblythe"
   
  Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and `FormatString` property. See [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/formatstring-element-assl.md) for details.  
   
- [Lesson 9: Defining Perspectives and Translations](../../2014/tutorials/lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   
 ## Defining Translations  
  Defining a translation creates a `Translation` object as a child of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, dimension, or cube object. Use [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] to open the solution and define translations.  

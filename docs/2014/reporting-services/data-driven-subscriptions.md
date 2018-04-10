@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------|-----------------|  
 |[Create, Modify, and Delete a Data-Driven Subscription](../../2014/reporting-services/create-modify-and-delete-a-data-driven-subscription.md)|Explains how to create, modify, or delete a data-driven subscription.|  
 |[Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../2014/reporting-services/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Provides information about the data sources that you can use for a data-driven subscription.|  
-|[Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md)|Provides step-by-step instruction for learning how to create a data-driven subscription.|  
+|[Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)|Provides step-by-step instruction for learning how to create a data-driven subscription.|  
 |[Caching Reports &#40;SSRS&#41;](../../2014/reporting-services/caching-reports-ssrs.md)|Describes how to use the Null Delivery Provider with a data-driven subscription to preload the cache.|  
   
 ## See Also  

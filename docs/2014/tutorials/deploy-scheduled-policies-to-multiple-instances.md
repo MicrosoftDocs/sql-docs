@@ -93,7 +93,7 @@ manager: "jhubbard"
 ## Next  
  This tutorial is finished. To return to the start, see [Tutorial: Evaluating Best Practices by Using Policy-Based Management](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- To see a list of [!INCLUDE[ssDE](../includes/ssde-md.md)] tutorials, click [Database Engine Tutorials](../../2014/tutorials/database-engine-tutorials.md).  
+ To see a list of [!INCLUDE[ssDE](../includes/ssde-md.md)] tutorials, click [Database Engine Tutorials](../relational-databases/database-engine-tutorials.md).  
   
 ## See Also  
  [Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)  

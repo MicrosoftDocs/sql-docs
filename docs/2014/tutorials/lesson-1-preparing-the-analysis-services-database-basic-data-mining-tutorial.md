@@ -38,6 +38,6 @@ manager: "jhubbard"
  [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
  [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)   
  [Build Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/build-analysis-services-projects-ssdt.md)   
- [Creating an Analysis Services Project](../../2014/tutorials/creating-an-analysis-services-project.md)  
+ [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

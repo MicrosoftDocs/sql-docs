@@ -63,7 +63,7 @@ manager: "mblythe"
 ## Passing Parameter Values from the Subscriber Database to the Report  
  If you are creating a data-driven subscription for a parameterized report, you can use variable parameter values to customize the output of each report. For example, the subscriber database might contain employee identification numbers, hire dates, job titles, and office location information that can be used to filter report data. If the report accepts parameters that are based on these or other available column data, you can map the parameter to the appropriate column.  
   
- When mapping subscriber fields to report parameters, make sure that the data types and column lengths are compatible. If there is a data type mismatch, an error will occur during subscription processing. To learn more about using subscriber data in a parameterized report, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../2014/tutorials/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ When mapping subscriber fields to report parameters, make sure that the data types and column lengths are compatible. If there is a data type mismatch, an error will occur during subscription processing. To learn more about using subscriber data in a parameterized report, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## Modifying the Subscriber Data Source  
  The following modifications to the subscriber data source can prevent the subscription from running:  

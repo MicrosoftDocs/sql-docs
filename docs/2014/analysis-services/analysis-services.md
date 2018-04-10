@@ -61,7 +61,7 @@ manager: "mblythe"
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] features vary by edition. Multidimensional and data mining models are available in standard edition, but with fewer features than higher editions. Tabular models and PowerPivot for SharePoint are premium features and are not available in a standard edition license. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## See Also  
- [Analysis Services Tutorials &#40;SSAS&#41;](../../2014/tutorials/analysis-services-tutorials-ssas.md)   
+ [Analysis Services Tutorials &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Developer's Guide &#40;Analysis Services&#41;](../../2014/analysis-services/dev-guide/developer-s-guide-analysis-services.md)   
  [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)   

@@ -62,7 +62,7 @@ manager: "mblythe"
   
  For more information about simple and complex expressions, where you can use expressions, and the types of references that you can include in an expression, see topics under [Expressions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expressions-report-builder-and-ssrs.md). For more information about the context in which expressions are evaluated for calculating aggregates, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- To learn how to write expressions that use many of the functions and operators also used by expression examples in this topic, but in the context of writing a report, see [Tutorial: Introducing Expressions](../../2014/tutorials/tutorial-introducing-expressions.md).  
+ To learn how to write expressions that use many of the functions and operators also used by expression examples in this topic, but in the context of writing a report, see [Tutorial: Introducing Expressions](tutorial-introducing-expressions.md).  
   
  The expression editor includes a hierarchical view of built-in functions. When you select the function, a code example appears in the Values pane. For more information, see the [Expression Dialog Box](../../2014/reporting-services/expression-dialog-box.md) or [Expression Dialog Box &#40;Report Builder&#41;](../../2014/reporting-services/expression-dialog-box-report-builder.md).  
   

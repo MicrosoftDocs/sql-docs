@@ -154,8 +154,8 @@ manager: "mblythe"
 ## See Also  
  [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../2014/reporting-services/report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
  [Add Dataset Filters, Data Region Filters, and Group Filters &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

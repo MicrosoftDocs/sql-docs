@@ -83,6 +83,6 @@ manager: "mblythe"
 |Update and manage data mining solutions.|Link TBD|  
   
 ## See Also  
- [Data Mining Tutorials &#40;Analysis Services&#41;](../../2014/tutorials/data-mining-tutorials-analysis-services.md)  
+ [Data Mining Tutorials &#40;Analysis Services&#41;](data-mining-tutorials-analysis-services.md)  
   
   

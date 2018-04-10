@@ -34,7 +34,7 @@ manager: "jhubbard"
 |Describes how to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## See Also  
- [Tutorial: SQL Server Management Studio](../../2014/tutorials/tutorial-sql-server-management-studio.md)   
- [Tutorial: Writing Transact-SQL Statements](../../2014/tutorials/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
+ [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

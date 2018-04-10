@@ -23,7 +23,7 @@ manager: "jhubbard"
  For information, on other examples where credentials are used, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx).  
   
 > [!IMPORTANT]  
->  The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](../../2014/database-engine/sql-server-backup-to-url.md), and [SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure.md)). SQL Server, when accessing Azure storage to write or read backups uses the storage account name and access key information.  For more information on creating credentials for storing database files in Azure storage, see [Lesson 3: Create a SQL Server Credential](../../2014/tutorials/lesson-3-create-a-sql-server-credential.md)  
+>  The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](../../2014/database-engine/sql-server-backup-to-url.md), and [SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure.md)). SQL Server, when accessing Azure storage to write or read backups uses the storage account name and access key information.  For more information on creating credentials for storing database files in Azure storage, see [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## Create a SQL Server Credential  
  To create a SQL Server Credential, use the following steps:  

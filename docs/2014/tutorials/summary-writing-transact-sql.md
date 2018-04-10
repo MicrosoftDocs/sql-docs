@@ -19,6 +19,6 @@ manager: "jhubbard"
   Query Editor is a significant step towards a more sophisticated authoring environment in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] development. You can easily switch the Query Editor to full-screen mode to view your code or quickly switch your connection to another server. A good place to look for additional features is in the **Options** dialog box, available from the **Tools** menu.  
   
 ## Next Lesson  
- [Lesson 3: Working with Templates, Solutions, and Script Projects](../../2014/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lesson 3: Working with Templates, Solutions, and Script Projects](../ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)  
   
   

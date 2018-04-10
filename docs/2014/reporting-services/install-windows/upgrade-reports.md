@@ -202,7 +202,7 @@ manager: "jhubbard"
  For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## See Also  
- [Upgrade and Migrate Reporting Services](../../sql-server/install/upgrade-and-migrate-reporting-services.md)   
+ [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Breaking Changes in SQL Server Reporting Services in SQL Server 2014](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2014.md)   
  [Behavior Changes to SQL Server Reporting Services  in SQL Server 2014](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2014.md)   
  [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014](../discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2014.md)   

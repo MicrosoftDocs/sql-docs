@@ -89,6 +89,6 @@ WHERE session_id = @@SPID;
   
  [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md)  
   
- [Creating a Login](../../2014/tutorials/creating-a-login.md)  
+ [Creating a Login](../t-sql/lesson-2-1-creating-a-login.md)  
   
   

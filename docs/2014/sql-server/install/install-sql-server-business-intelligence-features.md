@@ -37,12 +37,12 @@ manager: "jhubbard"
 |Link|Task|  
 |----------|----------|  
 |[Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|Use the instructions in this section to upgrade servers and content from a previous release to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Uninstall SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)<br /><br /> [Uninstall PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-powerpivot-for-sharepoint.md)<br /><br /> [Uninstall Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|Use the instructions in this section to uninstall BI features.|  
+|[Uninstall SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)<br /><br /> [Uninstall PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [Uninstall Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|Use the instructions in this section to uninstall BI features.|  
   
 ## See Also  
  [What's New &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
  [What's New in Analysis Services and Business Intelligence](../../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
- [Install SQL Server 2014](../../../2014/sql-server/install/install-sql-server-2014.md)   
+ [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

@@ -47,11 +47,11 @@ manager: "jhubbard"
   
 |Technology|Description|  
 |----------------|-----------------|  
-|[Analysis Services Tutorials &#40;SSAS&#41;](../../2014/tutorials/analysis-services-tutorials-ssas.md)|Learn how to develop and deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tabular or multidimensional models. Also learn how to use tools such as PowerPivot to analyze the data in the models.|  
-|[Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
-|[Integration Services Tutorials](../../2014/tutorials/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
-|[Database Engine Tutorials](../../2014/tutorials/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
-|[Replication Tutorials](../../2014/tutorials/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Analysis Services Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Learn how to develop and deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tabular or multidimensional models. Also learn how to use tools such as PowerPivot to analyze the data in the models.|  
+|[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
+|[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
+|[Database Engine Tutorials](../relational-databases/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
+|[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Enterprise Information Management Tutorials](../../2014/tutorials/enterprise-information-management-tutorials.md)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
   
   

@@ -154,7 +154,7 @@ manager: "jhubbard"
   
 -   [Restore a Backup from a Device &#40;SQL Server&#41;](../../2014/database-engine/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../2014/tutorials/tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **To create a backup**  
   
@@ -177,7 +177,7 @@ manager: "jhubbard"
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../2014/tutorials/tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   

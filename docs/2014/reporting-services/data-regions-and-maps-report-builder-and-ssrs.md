@@ -65,7 +65,7 @@ manager: "mblythe"
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reports, Report Parts, and Report Definitions &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Page Layout and Rendering &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Tutorials &#40;Report Builder&#41;](../../2014/tutorials/tutorials-report-builder.md)   
- [Reporting Services Tutorials &#40;SSRS&#41;](../../2014/tutorials/reporting-services-tutorials-ssrs.md)  
+ [Tutorials &#40;Report Builder&#41;](report-builder-tutorials.md)   
+ [Reporting Services Tutorials &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  
   
   

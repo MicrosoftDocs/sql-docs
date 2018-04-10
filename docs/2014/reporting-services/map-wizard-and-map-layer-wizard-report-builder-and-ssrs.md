@@ -104,7 +104,7 @@ manager: "mblythe"
   
  After you add a map or map layer and preview the report, you can change map and map layer options that you set in the wizards. For more information, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](../../2014/tutorials/tutorial-map-report-report-builder.md).  
+ For more information about maps, see [Maps &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/maps-report-builder-and-ssrs.md). For step-by-step instructions to add a map to a report, see [Tutorial: Map Report &#40;Report Builder&#41;](tutorial-map-report-report-builder.md).  
   
  ![Arrow icon used with Back to Top link](../../2014/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   

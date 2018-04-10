@@ -18,7 +18,7 @@ manager: "mblythe"
 # Troubleshoot Report Builder
   Report Builder is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report authoring tool that you can use to build reports from many different kinds of data sources and to publish your reports to a report server or SharePoint site. The reports that you create can be viewed in Report Builder, in a Web browser, or as part of a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application or SharePoint site.  
   
- To learn how to use Report Builder and perform many basic tasks, see the [Tutorials](../../2014/tutorials/tutorials-report-builder.md).  
+ To learn how to use Report Builder and perform many basic tasks, see the [Tutorials](report-builder-tutorials.md).  
   
  The following topics can help you troubleshoot reports, depending on whether you are a report author or report server administrator.  
   

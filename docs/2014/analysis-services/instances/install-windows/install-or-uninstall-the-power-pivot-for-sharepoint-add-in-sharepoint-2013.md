@@ -60,7 +60,7 @@ manager: "jhubbard"
   
     -   [PowerPivot for SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
-    -   [Uninstall PowerPivot for SharePoint](../../../sql-server/install/uninstall-powerpivot-for-sharepoint.md)  
+    -   [Uninstall PowerPivot for SharePoint](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
 ##  <a name="bkmk_where_to_install"></a> Where to Install spPowerPivot.msi?  
  A recommended best practice is to install **spPowerPivot.msi** on all servers in the SharePoint farm for configuration consistency, including application servers and web-front end servers. The installer package includes the Analysis Services data providers as well as the [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] configuration tool. When you install **spPowerPivot.msi** you can customize the installation by excluding individual components.  

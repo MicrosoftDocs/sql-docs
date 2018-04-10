@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "FOR JSON, data type conversion"
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Inactive"
 ---

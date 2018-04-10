@@ -17,8 +17,9 @@ helpviewer_keywords:
   - "exporting JSON"
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Active"
 ---

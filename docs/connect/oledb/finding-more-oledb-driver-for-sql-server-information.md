@@ -24,6 +24,8 @@ ms.workload: "Inactive"
 # Finding More OLE DB Driver for SQL Server Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+
   For more information about OLE DB Driver for SQL Server and other types of data access programming, see the following online resources:  
   
  [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  

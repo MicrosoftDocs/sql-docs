@@ -28,6 +28,9 @@ ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server Programming
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   The OLE DB Driver for SQL Server is a low-level COM API that is used for accessing data. The OLE DB Driver for SQL Server is recommended for developing tools, utilities, or low-level components that need high performance. The OLE DB Driver for SQL Server is a native, high performance provider that accesses the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabular Data Stream (TDS) protocol directly.  
   
  OLE DB Driver for SQL Server provides OLE DB support to applications connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -60,7 +63,7 @@ ms.workload: "On Demand"
   
 -   [Large CLR User-Defined Types &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM Support &#40;OLE DB&#41;](../../oledb/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM Support](../../oledb/features/filestream-support.md)  
   
 -   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   

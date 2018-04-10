@@ -21,8 +21,9 @@ helpviewer_keywords:
   - "JSON, querying"
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Active"
 ---

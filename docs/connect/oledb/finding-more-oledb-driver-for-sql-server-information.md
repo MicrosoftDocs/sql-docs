@@ -39,6 +39,6 @@ ms.workload: "Inactive"
   
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
   
   

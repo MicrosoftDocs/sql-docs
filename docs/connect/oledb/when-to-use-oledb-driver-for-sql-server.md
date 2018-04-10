@@ -40,7 +40,7 @@ ms.workload: "On Demand"
  For information about the differences between OLE DB Driver for SQL Server and MDAC, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB How-to Topics](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

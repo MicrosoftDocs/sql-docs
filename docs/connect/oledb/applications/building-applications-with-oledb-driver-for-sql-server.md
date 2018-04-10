@@ -54,5 +54,5 @@ ms.workload: "On Demand"
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "INCLUDE_NULL_VALUES (FOR JSON)"
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Inactive"
 ---

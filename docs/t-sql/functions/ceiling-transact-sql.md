@@ -31,7 +31,7 @@ ms.workload: "Active"
 # CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the smallest integer greater than, or equal to, the specified numeric expression.
+This function returns the smallest integer greater than, or equal to, the specified numeric expression.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,13 +43,13 @@ CEILING ( numeric_expression )
   
 ## Arguments  
 *numeric_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category. For this function, the **bit** data type is invalid.
   
 ## Return types
-Returns the same type as *numeric_expression*.
+Return values have the same type as *numeric_expression*.
   
 ## Examples  
-The following example shows positive numeric, negative, and zero values with the CEILING function.
+This example shows positive numeric, negative numeric, and zero value inputs for the CEILING function.
   
 ```sql
 SELECT CEILING($123.45), CEILING($-123.45), CEILING($0.0);  

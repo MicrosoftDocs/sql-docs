@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "ROOT (FOR JSON)"
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Inactive"
 ---

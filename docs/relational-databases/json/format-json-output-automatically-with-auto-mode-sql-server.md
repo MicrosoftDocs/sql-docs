@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "FOR JSON AUTO"
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

@@ -330,13 +330,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
  `sys.fn_builtin_permissions` will return an empty set when it is called with a class name that is not valid.  
  
-The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times.   
- 
-![Database Engine Permissions](../../relational-databases/security/media/database-engine-permissions.PNG) 
-
->[!NOTE]
-> As part of this topic the poster is far to small to read. Download the Database Engine Permissions Poster from [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
-   
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ## Permissions  
  Requires membership in the public role.  

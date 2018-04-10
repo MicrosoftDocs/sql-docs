@@ -15,8 +15,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 
 caps.latest.revision: 
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

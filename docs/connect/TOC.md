@@ -6,7 +6,7 @@
 # [JDBC +](jdbc/microsoft-jdbc-driver-for-sql-server.md)
 # [Node.js +](node-js/node-js-driver-for-sql-server.md)
 # [ODBC +](odbc/microsoft-odbc-driver-for-sql-server.md)
-# [OLE DB +](oledb/oledb-driver-for-sql-server-programming.md)
+# [OLE DB +](oledb/oledb-driver-for-sql-server.md)
 # [PHP +](php/microsoft-php-driver-for-sql-server.md)
 # [Python +](python/python-driver-for-sql-server.md)
 # [Ruby +](ruby/ruby-driver-for-sql-server.md)

@@ -25,6 +25,8 @@ ms.workload: "On Demand"
 # OLE DB Driver for SQL Server Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+
   In addition to exposing features of the Windows (formerly Microsoft) Data Access Components (WDAC), OLE DB Driver for SQL Server also implements many other features to expose [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
   
 ## In This Section    

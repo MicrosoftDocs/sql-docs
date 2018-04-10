@@ -25,7 +25,7 @@ ms.workload: "Active"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. 
 
-SSDT 15.5.2 is a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.5 or later.
+SSDT 15.x is a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.5 or later.
 
 | SSDT for Visual Studio 2017 | SSDT for Visual Studio 2015 | 
 |:--|:--|
@@ -45,8 +45,9 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.4
 ## SSDT for Visual Studio 2017
 **Version Information**  
   
-The release number: 15.6.0  
-The build number for this release: 14.0.16162.0
+Release number: 15.6.0  
+Build number: 14.0.16162.0  
+Release date: April 10, 2018  
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

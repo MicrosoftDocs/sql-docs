@@ -28,7 +28,8 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 
 
 ## SSDT for Visual Studio 2017 (15.6.0)
-Build number: 14.0.16162.0
+Build number: 14.0.16162.0  
+Release date: April 10, 2018
   
 ### What's New?
 

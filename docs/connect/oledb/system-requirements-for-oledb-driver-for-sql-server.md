@@ -78,5 +78,5 @@ ms.workload: "Inactive"
 |time|time|varchar|varchar|Varchar|  
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Installing OLE DB Driver for SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

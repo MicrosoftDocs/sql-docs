@@ -44,4 +44,4 @@ ms.workload: "Inactive"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger.|  
 
 ## See Also   
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)

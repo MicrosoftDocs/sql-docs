@@ -1,7 +1,7 @@
-# [OLE DB Driver for SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [OLE DB Driver for SQL Server Programming](oledb-driver-for-sql-server-programming.md)
 
 # Specific Areas
-## [OLE DB Driver for SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Creating OLE DB Driver for SQL Server applications +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [OLE DB data source objects +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Commands +](../../oledb/ole-db-commands/commands.md)
 ## [Rowsets +](../../oledb/ole-db-rowsets/rowsets.md)

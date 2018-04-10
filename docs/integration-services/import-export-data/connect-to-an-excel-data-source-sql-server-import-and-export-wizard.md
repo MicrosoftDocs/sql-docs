@@ -20,7 +20,7 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Connect to an Excel Data Source (SQL Server Import and Export Wizard)
-This topic shows you how to connect to a **Microsoft Excel** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
+This article shows you how to connect to a **Microsoft Excel** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
 The following screen shot shows a sample connection to a Microsoft Excel workbook.
 

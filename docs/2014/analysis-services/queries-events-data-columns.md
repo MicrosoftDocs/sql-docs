@@ -76,6 +76,6 @@ manager: "mblythe"
 |ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the query event occurred.|  
   
 ## See Also  
- [Queries Events Category](../../2014/analysis-services/queries-events-category.md)  
+ [Queries Events Category](queries-events-category.md)  
   
   

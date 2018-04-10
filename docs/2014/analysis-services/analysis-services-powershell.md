@@ -181,7 +181,7 @@ Enable-psremoting
   
  **Native Connections to Analysis Services**  
   
- ![Native connection to Analysis Services](../../2014/analysis-services/media/ssas-powershell-nativeconnection.gif "Native connection to Analysis Services")  
+ ![Native connection to Analysis Services](media/ssas-powershell-nativeconnection.gif "Native connection to Analysis Services")  
   
  The following example is a demonstration of how to use a native connection to navigate object hierarchy. From the provider, you can issue a `dir` to view instance information. You can use `cd` to view objects of that instance.  
   
@@ -196,7 +196,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  **HTTP Connections to Analysis Services**  
   
- ![HTTP Connection to Analysis Services](../../2014/analysis-services/media/ssas-powershell-httpconnection.gif "HTTP Connection to Analysis Services")  
+ ![HTTP Connection to Analysis Services](media/ssas-powershell-httpconnection.gif "HTTP Connection to Analysis Services")  
   
  HTTP connections are useful if you configured your server for HTTP access using the instructions in this topic: [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   

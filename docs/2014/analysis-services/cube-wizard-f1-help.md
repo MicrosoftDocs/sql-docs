@@ -26,27 +26,27 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Select Creation Method &#40;Cube Wizard&#41;](../../2014/analysis-services/select-creation-method-cube-wizard.md)  
+-   [Select Creation Method &#40;Cube Wizard&#41;](select-creation-method-cube-wizard.md)  
   
--   [Select a Data Source View &#40;Cube Wizard&#41;](../../2014/analysis-services/select-a-data-source-view-cube-wizard.md)  
+-   [Select a Data Source View &#40;Cube Wizard&#41;](select-a-data-source-view-cube-wizard.md)  
   
--   [Select Measure Group Tables &#40;Cube Wizard&#41;](../../2014/analysis-services/select-measure-group-tables-cube-wizard.md)  
+-   [Select Measure Group Tables &#40;Cube Wizard&#41;](select-measure-group-tables-cube-wizard.md)  
   
--   [Select Measures &#40;Cube Wizard&#41;](../../2014/analysis-services/select-measures-cube-wizard.md)  
+-   [Select Measures &#40;Cube Wizard&#41;](select-measures-cube-wizard.md)  
   
--   [Define New Measures &#40;Cube Wizard&#41;](../../2014/analysis-services/define-new-measures-cube-wizard.md)  
+-   [Define New Measures &#40;Cube Wizard&#41;](define-new-measures-cube-wizard.md)  
   
--   [Select Existing Dimensions &#40;Cube Wizard&#41;](../../2014/analysis-services/select-existing-dimensions-cube-wizard.md)  
+-   [Select Existing Dimensions &#40;Cube Wizard&#41;](select-existing-dimensions-cube-wizard.md)  
   
--   [Select New Dimensions &#40;Cube Wizard&#41;](../../2014/analysis-services/select-new-dimensions-cube-wizard.md)  
+-   [Select New Dimensions &#40;Cube Wizard&#41;](select-new-dimensions-cube-wizard.md)  
   
--   [Select Missing Dimension Keys &#40;Cube Wizard&#41;](../../2014/analysis-services/select-missing-dimension-keys-cube-wizard.md)  
+-   [Select Missing Dimension Keys &#40;Cube Wizard&#41;](select-missing-dimension-keys-cube-wizard.md)  
   
--   [Completing the Wizard &#40;Cube Wizard&#41;](../../2014/analysis-services/completing-the-wizard-cube-wizard.md)  
+-   [Completing the Wizard &#40;Cube Wizard&#41;](completing-the-wizard-cube-wizard.md)  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

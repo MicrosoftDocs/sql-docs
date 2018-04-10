@@ -56,7 +56,7 @@ manager: "mblythe"
  Referenced assemblies (excluding standard system and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] assemblies) are also copied to the output directory. When references are to other projects in a solution, those projects are built first, using the appropriate project configuration and build dependencies established by the project references, and then are copied to the project output folder.  
   
 ## See Also  
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -25,11 +25,11 @@ manager: "mblythe"
 # Grant permissions on a dimension (Analysis Services)
   Dimension security is used to set permissions on a dimension object, not its data. Typically, allowing or denying access to processing operations is the main objective when setting permissions on a dimension.  
   
- But perhaps your objective is not to control processing operations, but rather data access to a dimension, or the attributes and hierarchies it contains. For example, a company with regional sales divisions might want to make sales performance information off limits to those outside the division. To allow or deny access to portions of dimension data for different constituents, you can set permissions on dimension attributes and dimension members. Notice that you cannot deny access to an individual dimension object itself, only to its data. If your immediate goal is to allow or deny access to members in a dimension, including access rights to individual attribute hierarchies, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md) for more information.  
+ But perhaps your objective is not to control processing operations, but rather data access to a dimension, or the attributes and hierarchies it contains. For example, a company with regional sales divisions might want to make sales performance information off limits to those outside the division. To allow or deny access to portions of dimension data for different constituents, you can set permissions on dimension attributes and dimension members. Notice that you cannot deny access to an individual dimension object itself, only to its data. If your immediate goal is to allow or deny access to members in a dimension, including access rights to individual attribute hierarchies, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) for more information.  
   
  The remainder of this topic covers permissions that you can set on the dimension object itself, including:  
   
--   Read or Read/Write permissions (you can only choose from Read or Read/Write; specifying "none" is not an option). As noted, if your goal is to restrict access to dimension data, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md) for details.  
+-   Read or Read/Write permissions (you can only choose from Read or Read/Write; specifying "none" is not an option). As noted, if your goal is to restrict access to dimension data, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) for details.  
   
 -   Processing permissions (do this when scenarios require a processing strategy that calls for custom permissions on individual objects)  
   
@@ -49,9 +49,9 @@ manager: "mblythe"
   
      By default, permissions are set to **Read**.  
   
-     Although **Read/Write** is available, we recommend that you do not use this permission. **Read/Write** is used for dimension writeback scenarios, which have been deprecated. See [Deprecated Analysis Services Features in SQL Server 2014](../../2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Although **Read/Write** is available, we recommend that you do not use this permission. **Read/Write** is used for dimension writeback scenarios, which have been deprecated. See [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md).  
   
-     Optionally, you can set **Read Definition** and **Process** permissions on individual dimension objects, as long as those permissions are not already set at the database level. See [Grant process permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-process-permissions-analysis-services.md) and [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](../../2014/analysis-services/grant-read-definition-permissions-on-object-metadata-analysis-services.md) for details.  
+     Optionally, you can set **Read Definition** and **Process** permissions on individual dimension objects, as long as those permissions are not already set at the database level. See [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) and [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) for details.  
   
 ## Set permissions on a cube dimension  
  Cube dimensions are database dimensions that have been added to a cube. As such, they are structurally dependent on associated measure groups. Although you can process these objects atomically, in terms of authorization, it makes sense to treat the cube and cube dimensions as a single entity.  
@@ -63,13 +63,13 @@ manager: "mblythe"
      By default, permissions are inherited from a corresponding database dimension. Clear the **Inherit** check box to alter permissions from **Read** to **Read/Write**. Before using **Read/Write**, be sure to read the note in the previous section.  
   
 > [!IMPORTANT]  
->  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](../../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md).  
+>  If you configure database role permissions by using Analysis Management Objects (AMO), any reference to a cube dimension in a cube's DimensionPermission attribute severs the permission inheritance from the database's DimensionPermission attribute. For more information about AMO, see [Developing with Analysis Management Objects &#40;AMO&#41;](dev-guide/developing-with-analysis-management-objects-amo.md).  
   
 ## See Also  
- [Roles and Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/roles-and-permissions-analysis-services.md)   
- [Grant cube or model permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-cube-or-model-permissions-analysis-services.md)   
- [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

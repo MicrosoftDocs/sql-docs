@@ -28,7 +28,7 @@ manager: "mblythe"
  Select the tables that will be used for measure groups in the cube.  
   
 ## See Also  
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

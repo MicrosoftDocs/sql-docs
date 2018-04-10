@@ -20,14 +20,14 @@ manager: "mblythe"
   
  Topics in this section:  
   
- [Dialog Boxes Reference &#40;SSAS&#41;](../../2014/analysis-services/dialog-boxes-reference-ssas.md)  
+ [Dialog Boxes Reference &#40;SSAS&#41;](dialog-boxes-reference-ssas.md)  
   
- [Table Import Wizard Reference &#40;SSAS&#41;](../../2014/analysis-services/table-import-wizard-reference-ssas.md)  
+ [Table Import Wizard Reference &#40;SSAS&#41;](table-import-wizard-reference-ssas.md)  
   
- [Connection Properties Dialog Box &#40;SSAS - Tabular&#41;](../../2014/analysis-services/connection-properties-dialog-box-ssas-tabular.md)  
+ [Connection Properties Dialog Box &#40;SSAS - Tabular&#41;](connection-properties-dialog-box-ssas-tabular.md)  
   
- [Database Properties Dialog Box &#40;SSAS - Tabular&#41;](../../2014/analysis-services/database-properties-dialog-box-ssas-tabular.md)  
+ [Database Properties Dialog Box &#40;SSAS - Tabular&#41;](database-properties-dialog-box-ssas-tabular.md)  
   
- [Table Properties Dialog Box &#40;SSAS - Tabular&#41;](../../2014/analysis-services/table-properties-dialog-box-ssas-tabular.md)  
+ [Table Properties Dialog Box &#40;SSAS - Tabular&#41;](table-properties-dialog-box-ssas-tabular.md)  
   
   

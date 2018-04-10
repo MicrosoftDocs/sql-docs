@@ -32,7 +32,7 @@ manager: "mblythe"
 ## Selecting the Data Source View  
  If you use an existing data source to create a cube, the first step is to specify the data source view on which to base the cube. On the **Select Data Source View** page of the wizard, select an existing data source view. In the preview pane, you can view the tables in a selected data source view. To display the schema for any selected data source view, click **Browse**.  
   
- If the data source view you want to use is not listed, in the Cube Wizard, click **Cancel**, and open the Data Source View Wizard. You can also click **Add New Item** on the **File** menu to add an existing data source view from another database (or other location). For more information about creating data source views, see [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md).  
+ If the data source view you want to use is not listed, in the Cube Wizard, click **Cancel**, and open the Data Source View Wizard. You can also click **Add New Item** on the **File** menu to add an existing data source view from another database (or other location). For more information about creating data source views, see [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  A data source view must contain at least one table to be listed on this page. You cannot create a cube based on a data source view that does not have any tables.  

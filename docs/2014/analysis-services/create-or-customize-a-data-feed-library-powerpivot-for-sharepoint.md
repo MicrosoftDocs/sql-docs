@@ -25,7 +25,7 @@ manager: "mblythe"
   
 -   Share and manage data service documents in a central location.  
   
--   Visually identify data service documents by an icon, so that you can easily distinguish service documents from other documents stored in the same library: ![GMNI_IconDataFeed](../../2014/analysis-services/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Visually identify data service documents by an icon, so that you can easily distinguish service documents from other documents stored in the same library: ![GMNI_IconDataFeed](media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  A data feed library always contains data service document (.atomsvc) files, and never the data feed itself. Unlike a data feed, which consists of static XML data, the data service document specifies a URL to a service or application that generates a feed upon request, providing reusable connection information for repeatable import operations.  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
  [Add the Data Feed Content Type to Any Library](#addtolib)  
   
 ##  <a name="prereq"></a> Prerequisites  
- [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] feature integration must be activated for the sites for which you are creating the data feed library. If the data feed library template type is not available, the most likely cause is that this prerequisite has not been met. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](../../2014/analysis-services/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] feature integration must be activated for the sites for which you are creating the data feed library. If the data feed library template type is not available, the most likely cause is that this prerequisite has not been met. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  You must be a site owner to create the library.  
   
@@ -59,7 +59,7 @@ manager: "mblythe"
   
  A link to the data feed library will appear in the navigation Quick Launch pane for the current site.  
   
- After you create a library, you can use it to create data service documents. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/use-data-feeds-powerpivot-for-sharepoint.md).  
+ After you create a library, you can use it to create data service documents. For more information, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-powerpivot-for-sharepoint.md).  
   
 ##  <a name="addtolib"></a> Add the Data Feed Content Type to Any Library  
  If you do not want to create a dedicated data feed library, but you still want to create and manage data service documents from a SharePoint site, you can manually add and configure the data service document content type for any library that you will use to share data service document (.atomsvc) files.  
@@ -107,9 +107,9 @@ manager: "mblythe"
 4.  Click the down arrow on New Document, and select **Data Service Document**. The New Data Service Document page should appear.  
   
 ## See Also  
- [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/use-data-feeds-powerpivot-for-sharepoint.md)   
- [Delete a PowerPivot Data Feed Library](../../2014/analysis-services/delete-a-powerpivot-data-feed-library.md)   
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)   
- [PowerPivot Data Feeds](../../2014/analysis-services/powerpivot-data-feeds.md)  
+ [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-powerpivot-for-sharepoint.md)   
+ [Delete a PowerPivot Data Feed Library](delete-a-powerpivot-data-feed-library.md)   
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Data Feeds](powerpivot-data-feeds.md)  
   
   

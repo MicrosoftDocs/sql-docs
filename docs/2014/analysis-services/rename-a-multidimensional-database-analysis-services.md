@@ -49,9 +49,9 @@ manager: "mblythe"
 -   Right-click the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and edit the Name property.  
   
 ## See Also  
- [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Set Multidimensional Database Properties &#40;Analysis Services&#41;](../../2014/analysis-services/set-multidimensional-database-properties-analysis-services.md)   
- [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../2014/analysis-services/configure-analysis-services-project-properties-ssdt.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)  
+ [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
+ [Set Multidimensional Database Properties &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [Configure Analysis Services Project Properties &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

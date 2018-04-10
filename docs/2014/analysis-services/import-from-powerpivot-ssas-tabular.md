@@ -45,7 +45,7 @@ manager: "mblythe"
 4.  In the **Open** dialog box, select the [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] file that contains the model metadata and data you want to import, and then click **Open**.  
   
 ## See Also  
- [Workspace Database &#40;SSAS Tabular&#41;](../../2014/analysis-services/workspace-database-ssas-tabular.md)   
- [Copy and Paste Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/copy-and-paste-data-ssas-tabular.md)  
+ [Workspace Database &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)   
+ [Copy and Paste Data &#40;SSAS Tabular&#41;](copy-and-paste-data-ssas-tabular.md)  
   
   

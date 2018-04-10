@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  In-order for users to connect to a deployed model by using a reporting or data analysis client application, you must create at least one role with at least Read permission to which those users are members.  
   
- Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
+ Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](tabular-modeling-adventure-works-tutorial.md) includes additional information and lessons on how to use this feature.  
   
@@ -127,17 +127,17 @@ manager: "mblythe"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing Roles  
- When authoring a model project, you can use the Analyze in Excel feature to test the efficacy of the roles you have defined. From the **Model** menu in the model designer, when you click **Analyze in Excel**, before Excel opens, the **Choose Credentials and Perspective** dialog box appears. In this dialog, you can specify the current username, a different username, a role, and a perspective with which you will use to connect to the workspace model as a data source. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md).  
+ When authoring a model project, you can use the Analyze in Excel feature to test the efficacy of the roles you have defined. From the **Model** menu in the model designer, when you click **Analyze in Excel**, before Excel opens, the **Choose Credentials and Perspective** dialog box appears. In this dialog, you can specify the current username, a different username, a role, and a perspective with which you will use to connect to the workspace model as a data source. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related Tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md)|Tasks in this topic describe how to create and manage roles by using the **Role Manager** dialog box.|  
+|[Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md)|Tasks in this topic describe how to create and manage roles by using the **Role Manager** dialog box.|  
   
 ## See Also  
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)   
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
+ [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

@@ -33,28 +33,28 @@ manager: "mblythe"
   
 ## Panes  
  **Toolbar**  
- Use the toolbar in both form view and script view to perform common operations on this tab. For more information about this pane, see [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the toolbar in both form view and script view to perform common operations on this tab. For more information about this pane, see [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Script Organizer**  
- Use the **Script Organizer** pane in form view to display the contents of the cube script in an ordered format. For more information about this pane, see [Script Organizer &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Script Organizer** pane in form view to display the contents of the cube script in an ordered format. For more information about this pane, see [Script Organizer &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Calculation Tools**  
- Use the **Calculation Tools** pane in both form view and script view to display metadata, functions, and tools available to the cube. For more information about this pane, see [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Calculation Tools** pane in both form view and script view to display metadata, functions, and tools available to the cube. For more information about this pane, see [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Script Editor**  
- Use the **Script Editor** pane in script view to edit the entire cube script and in form view to edit script commands contained in the cube script. For more information about this pane, see [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Script Editor** pane in script view to edit the entire cube script and in form view to edit script commands contained in the cube script. For more information about this pane, see [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Calculated Member Form Editor**  
- Use the **Calculated Member Form Editor** pane in form view to edit calculated members in the cube script. For more information about this pane, see [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Calculated Member Form Editor** pane in form view to edit calculated members in the cube script. For more information about this pane, see [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Named Set Form Editor**  
- Use the **Named Set Form Editor** pane in form view to edit named sets in the cube script. For more information about this pane, see [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Named Set Form Editor** pane in form view to edit named sets in the cube script. For more information about this pane, see [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Calculations](../../2014/analysis-services/dev-guide/calculations.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Create Named Sets](../../2014/analysis-services/create-named-sets.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
+ [Calculations](dev-guide/calculations.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Create Named Sets](create-named-sets.md)  
   
   

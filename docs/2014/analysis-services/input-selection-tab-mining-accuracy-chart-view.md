@@ -57,7 +57,7 @@ manager: "mblythe"
  **Specify Column Mapping**  
  Opens the **Specify Column Mapping** dialog box, where you select the data source, specify case and nested tables, and map external data columns to the mining structure columns.  
   
- For more information, see [Specify Column Mapping Dialog Box &#40;Mining Accuracy Chart&#41;](../../2014/analysis-services/specify-column-mapping-dialog-box-mining-accuracy-chart.md).  
+ For more information, see [Specify Column Mapping Dialog Box &#40;Mining Accuracy Chart&#41;](specify-column-mapping-dialog-box-mining-accuracy-chart.md).  
   
  **Filter Expression**  
  Displays the filter condition that you built by using the filter editors.  
@@ -67,7 +67,7 @@ manager: "mblythe"
   
 ## See Also  
  [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md)   
  [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   

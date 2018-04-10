@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Analyze Key Influencers (Table Analysis Tools for Excel)
-  ![Analyze Key Influencers button in ribbon](../../2014/analysis-services/media/tat-aki.gif "Analyze Key Influencers button in ribbon")  
+  ![Analyze Key Influencers button in ribbon](media/tat-aki.gif "Analyze Key Influencers button in ribbon")  
   
  With the **Analyze Key Influencers** tool, you choose a column that contains a target outcome, and the algorithm determines which factors had the strongest influence on the outcome.  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
 -   Note that a new worksheet is added for each report that you create. You can move the tables after they are created; we placed them side by side for comparison.  
   
- ![DM13](../../2014/analysis-services/media/dm13-tat-aki-report.gif "DM13")  
+ ![DM13](media/dm13-tat-aki-report.gif "DM13")  
   
  **Relative Impact**  
  The shaded bar in the first report indicates the strength of the association of this attribute with the outcome.  
@@ -101,12 +101,12 @@ manager: "mblythe"
 ### Requirements  
  If the target column contains continuous numeric values, the tool automatically segments the numeric values into groups. These groupings represent clusters of cases that have similar characteristics. However, numeric values might not be divided into user-friendly groups. For example, the report might contain a grouping such as "\<12.85701", whereas report users typically like to see groupings that use whole numbers, such as 10-19, 20-29, and so on.  
   
- If you want to group numeric data in a different way, you must segment the data the way you want before creating the analysis. For example, you can use the [Relabel](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool in the Data Mining Client for Excel to create a new grouping label in a separate column, and then use only that new column in analysis.  
+ If you want to group numeric data in a different way, you must segment the data the way you want before creating the analysis. For example, you can use the [Relabel](relabel-sql-server-data-mining-add-ins.md) tool in the Data Mining Client for Excel to create a new grouping label in a separate column, and then use only that new column in analysis.  
   
 ### Related Tools  
  The **Data Mining** ribbon provides more advanced tools, including the ability to customize data mining models  
   
- If you save your model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client to browse the model and explore relationships in more detail. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md). You can also use Microsoft Office Visio to create charts and diagrams that display the relationships as cluster or as dependency networks. For more information, see [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
+ If you save your model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client to browse the model and explore relationships in more detail. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md). You can also use Microsoft Office Visio to create charts and diagrams that display the relationships as cluster or as dependency networks. For more information, see [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  The models that are created when you use the Table Analysis Tools are deleted when you close your worksheet or terminate the connection with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. Therefore, you can only browse the models as long as the connection remains open. You cannot render the models in Visio if you close the connection or close the worksheet.  
@@ -114,7 +114,7 @@ manager: "mblythe"
  For more information about the algorithm used by the **Analyze Key Influencers** tool, see "Microsoft Naïve Bayes Algorithm" in SQL Server Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)   
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)   
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)  
   
   

@@ -33,8 +33,8 @@ manager: "mblythe"
  Select to designate if a measure or attribute will be used as a predictable column in the mining model. A column can be marked as both input and predictable.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Nested Table Key &#40;Add New Nested Table Wizard&#41;](../../2014/analysis-services/select-nested-table-key-add-new-nested-table-wizard.md)   
- [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Nested Table Key &#40;Add New Nested Table Wizard&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

@@ -44,10 +44,10 @@ manager: "mblythe"
  Specifies the friendly name of the source table. By default, the column displays the name of the source table that appears in the **Source Table** column. Change the name if you want to use a different name than the name used in the source database.  
   
  **Filter Details**  
- When a filter has been applied to the data that is being imported, displays the data import filter in the **Filter Details** dialog box. For more information, see [Filter Details &#40;SSAS&#41;](../../2014/analysis-services/filter-details-ssas.md).  
+ When a filter has been applied to the data that is being imported, displays the data import filter in the **Filter Details** dialog box. For more information, see [Filter Details &#40;SSAS&#41;](filter-details-ssas.md).  
   
  **Preview and Filter**  
- Displays the **Preview Selected Table** dialog box that is used to apply a filter to the data that is being imported. For more information, see [Preview Selected Table &#40;SSAS&#41;](../../2014/analysis-services/preview-selected-table-ssas.md).  
+ Displays the **Preview Selected Table** dialog box that is used to apply a filter to the data that is being imported. For more information, see [Preview Selected Table &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Select Related Tables**  
  Selects for import those tables and views that are related to the tables and views that you have already selected.  

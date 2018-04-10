@@ -189,7 +189,7 @@ manager: "mblythe"
  For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](https://msdn.microsoft.com/library/ee634396.aspx).  
   
 ## See Also  
- [Data Sources &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)  
+ [Data Sources &#40;SSAS Tabular&#41;](data-sources-ssas-tabular.md)   
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
   
   

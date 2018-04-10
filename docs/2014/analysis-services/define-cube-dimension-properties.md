@@ -33,6 +33,6 @@ manager: "mblythe"
 |`Visible`|Determines whether the cube dimension is visible. The default value is `True`.|  
   
 ## See Also  
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)  
   
   

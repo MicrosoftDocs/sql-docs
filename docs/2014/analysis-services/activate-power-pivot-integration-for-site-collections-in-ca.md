@@ -42,7 +42,7 @@ manager: "mblythe"
 6.  Repeat for additional site collections by opening each site and clicking **Site Actions**.  
   
 ## See Also  
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)   
  [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
  [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

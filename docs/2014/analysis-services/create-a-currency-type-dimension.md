@@ -29,7 +29,7 @@ manager: "mblythe"
   
 -   A measure group that represents the exchange rates that will be used.  
   
- From this information, the Business Intelligence Wizard will design a currency conversion process that identifies the appropriate destination currency dimension (the currency dimension that represents destination currencies). Depending on the number of currency conversions that your business intelligence solution requires, the Business Intelligence Wizard can define multiple destination currency dimensions. For more information about defining currency conversions, see [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md).  
+ From this information, the Business Intelligence Wizard will design a currency conversion process that identifies the appropriate destination currency dimension (the currency dimension that represents destination currencies). Depending on the number of currency conversions that your business intelligence solution requires, the Business Intelligence Wizard can define multiple destination currency dimensions. For more information about defining currency conversions, see [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md).  
   
  To identify a dimension as a currency dimension, set the `Type` property of the dimension to `Currency`.  
   
@@ -54,14 +54,14 @@ manager: "mblythe"
   
      To identify an attribute as a currency ISO code attribute, set the `Type` property of the attribute to `CurrencyIsoCode`.  
   
- For more information about attribute types, see [Configure Attribute Types](../../2014/analysis-services/configure-attribute-types.md).  
+ For more information about attribute types, see [Configure Attribute Types](configure-attribute-types.md).  
   
 ## Defining Account Intelligence with the Business Intelligence Wizard  
- After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../../2014/analysis-services/add-account-intelligence-to-a-dimension.md).  
+ After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](add-account-intelligence-to-a-dimension.md).  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Dimension Types](../../2014/analysis-services/dev-guide/dimension-types.md)  
+ [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md)   
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Dimension Types](dev-guide/dimension-types.md)  
   
   

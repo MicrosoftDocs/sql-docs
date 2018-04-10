@@ -43,8 +43,8 @@ manager: "mblythe"
 |**Statistical**|Calculated ratio of something, or count of something that does not aggregate.|  
   
 ## See Also  
- [Dimension Wizard F1 Help](../../2014/analysis-services/dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

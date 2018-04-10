@@ -22,7 +22,7 @@ manager: "mblythe"
   
  The actual content displayed in the table varies depending on the algorithm that was used and might include columns, rules, properties, attributes, nodes, and formulas. For more information about model content, and how to interpret the information for each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
- The information that is displayed in the viewer uses a common structure that is based on the content schema rowset for mining models. The content schema rowset is a generic framework for storing patterns, statistics, and other contents of a data mining model. For a list of the columns in the data mining schema rowset for mining models, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../2014/analysis-services/dev-guide/dmschema-mining-model-content-rowset.md).  
+ The information that is displayed in the viewer uses a common structure that is based on the content schema rowset for mining models. The content schema rowset is a generic framework for storing patterns, statistics, and other contents of a data mining model. For a list of the columns in the data mining schema rowset for mining models, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](dev-guide/dmschema-mining-model-content-rowset.md).  
   
 ## Options  
  **Node caption (Unique ID)**  
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining Queries](data-mining/data-mining-queries.md)  
   
   

@@ -46,9 +46,9 @@ manager: "mblythe"
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Attach and Detach Analysis Services Databases](../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)   
- [Move an Analysis Services Database](../../2014/analysis-services/move-an-analysis-services-database.md)   
- [Detach Element](../../2014/analysis-services/dev-guide/detach-element.md)   
- [Attach Element](../../2014/analysis-services/dev-guide/attach-element.md)  
+ [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
+ [Move an Analysis Services Database](move-an-analysis-services-database.md)   
+ [Detach Element](dev-guide/detach-element.md)   
+ [Attach Element](dev-guide/attach-element.md)  
   
   

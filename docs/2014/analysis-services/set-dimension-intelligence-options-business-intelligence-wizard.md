@@ -18,15 +18,15 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Set Dimension Intelligence Options (Business Intelligence Wizard)
-  Use the **Set Dimension Intelligence Options** page to select the dimension to which the Business Intelligence Wizard will apply dimension intelligence. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports several standard business types for dimensions and attributes, such as product dimensions or account dimensions. Client applications can use these business types to provide additional analysis support for business intelligence solutions. For more information about available dimension types and attribute types, see [Dimension Types](../../2014/analysis-services/dev-guide/dimension-types.md) and [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md).  
+  Use the **Set Dimension Intelligence Options** page to select the dimension to which the Business Intelligence Wizard will apply dimension intelligence. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports several standard business types for dimensions and attributes, such as product dimensions or account dimensions. Client applications can use these business types to provide additional analysis support for business intelligence solutions. For more information about available dimension types and attribute types, see [Dimension Types](dev-guide/dimension-types.md) and [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md).  
   
 ## Options  
  **Dimension**  
  Select the dimension to which the wizard will apply dimension intelligence.  
   
 ## See Also  
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)  
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

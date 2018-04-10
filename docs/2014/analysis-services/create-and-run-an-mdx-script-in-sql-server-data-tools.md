@@ -33,8 +33,8 @@ manager: "mblythe"
 4.  To run the MDX script, deploy and process the cube with the new MDX script changes.  
   
 ## See Also  
- [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
+ [The Basic MDX Script &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
  [MDX Scripting Statements &#40;MDX&#41;](~/mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -52,6 +52,6 @@ manager: "mblythe"
 |Populate only if empty|The subject area time tables are populated only if they are empty.|  
   
 ## See Also  
- [Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+ [Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

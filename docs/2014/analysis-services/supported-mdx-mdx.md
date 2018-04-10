@@ -42,7 +42,7 @@ manager: "mblythe"
   
  [CREATE SET Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-set.md)  
   
- [EXISTING Keyword &#40;MDX&#41;](../../2014/analysis-services/existing-keyword-mdx.md)  
+ [EXISTING Keyword &#40;MDX&#41;](existing-keyword-mdx.md)  
   
  [FREEZE Statement &#40;MDX&#41;](~/mdx/mdx-scripting-freeze.md)  
   
@@ -51,11 +51,11 @@ manager: "mblythe"
  [This &#40;MDX&#41;](~/mdx/this-mdx.md)  
   
 > [!NOTE]  
->  MDX supports assignment to the following cell properties: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, and `FONT_SIZE`. For more information, see [Using Cell Properties &#40;MDX&#41;](../../2014/analysis-services/using-cell-properties-mdx.md). MDX also supports assignment to the `NON_EMPTY_BEHAVIOR` property of the [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md) statement.  
+>  MDX supports assignment to the following cell properties: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME`, and `FONT_SIZE`. For more information, see [Using Cell Properties &#40;MDX&#41;](using-cell-properties-mdx.md). MDX also supports assignment to the `NON_EMPTY_BEHAVIOR` property of the [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md) statement.  
   
  [SCOPE Statement &#40;MDX&#41;](~/mdx/mdx-scripting-scope.md)  
   
 ## See Also  
- [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)  
+ [The Basic MDX Script &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
   
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  In order to support a many-to-many dimension relationship, a primary key–foreign key relationship must be defined in the data source view between all the tables that are involved. Otherwise, you will not be able to select the correct intermediate measure group when you establish the relationship in the **Dimension Usage** tab of Cube Designer.  
   
- For more information, see [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md), and [Define a Many-to-Many Relationship and Many-to-Many Relationship Properties](../../2014/analysis-services/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
+ For more information, see [Dimension Relationships](dev-guide/dimension-relationships.md), and [Define a Many-to-Many Relationship and Many-to-Many Relationship Properties](define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
  In the tasks in this topic, you define the Sales Reasons dimension and the Sales Reasons measure group, and you define a many-to-many relationship between the Sales Reasons dimension and the Internet Sales measure group through the Sales Reasons measure group.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 1.  Switch to Cube Designer for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube, and then click the **Cube Structure** tab.  
   
-2.  Right-click anywhere in the **Measures** pane, and then click **New Measure Group**. For more information, see [Create Measures and Measure Groups in Multidimensional Models](../../2014/analysis-services/create-measures-and-measure-groups-in-multidimensional-models.md).  
+2.  Right-click anywhere in the **Measures** pane, and then click **New Measure Group**. For more information, see [Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 3.  In the **New Measure Group** dialog box, select `InternetSalesReason` in the **Select a table from the data source view** list, and then click **OK**.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 5.  Select **Internet Sales Reason Count** and review the properties of this measure in the Properties window.  
   
-     Notice that the **AggregateFunction** property for this measure is defined as **Count** instead of **Sum**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] chose **Count** because the underlying data type is a string data type. The other two columns in the underlying fact table were not selected as measures because [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detected them as numeric keys instead of as actual measures. For more information, see [Define Semiadditive Behavior](../../2014/analysis-services/define-semiadditive-behavior.md).  
+     Notice that the **AggregateFunction** property for this measure is defined as **Count** instead of **Sum**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] chose **Count** because the underlying data type is a string data type. The other two columns in the underlying fact table were not selected as measures because [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detected them as numeric keys instead of as actual measures. For more information, see [Define Semiadditive Behavior](define-semiadditive-behavior.md).  
   
 6.  In the Properties window, change the **Visible** property of the **Internet Sales Reason Count** measure to **False**.  
   
@@ -171,8 +171,8 @@ manager: "jhubbard"
  [Defining Dimension Granularity within a Measure Group](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## See Also  
- [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](../../2014/analysis-services/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Define a Many-to-Many Relationship and Many-to-Many Relationship Properties](../../2014/analysis-services/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
+ [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Define a Many-to-Many Relationship and Many-to-Many Relationship Properties](define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   

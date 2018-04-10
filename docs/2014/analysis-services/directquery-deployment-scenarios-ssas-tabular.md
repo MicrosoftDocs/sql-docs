@@ -25,7 +25,7 @@ manager: "mblythe"
 ##  <a name="bkmk_DQProcedure"></a> Design and Deployment Steps  
  **Step 1. Create the solution**  
   
- Regardless of which mode you will use, you must review the information that describes limitations on the data that can be used in DirectQuery models. For example, all the data used in your model and reports must come from a single SQL Server database. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md).  
+ Regardless of which mode you will use, you must review the information that describes limitations on the data that can be used in DirectQuery models. For example, all the data used in your model and reports must come from a single SQL Server database. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).  
   
  Also, review the limitations on measures and calculated columns, and determine whether the formulas you intend to use are compatible with DirectQuery mode. You might need to remove or modify the following elements:  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 -   Change any required property settings for DirectQuery mode, as described in the error messages.  
   
--   Remove calculated columns. If you require a calculated column for a particular measure, you can always create the column by using the [Relational Query Designer &#40;SSAS&#41;](../../2014/analysis-services/relational-query-designer-ssas.md) provided in the Table Import wizard.  
+-   Remove calculated columns. If you require a calculated column for a particular measure, you can always create the column by using the [Relational Query Designer &#40;SSAS&#41;](relational-query-designer-ssas.md) provided in the Table Import wizard.  
   
 -   Modify or remove formulas that are incompatible with DirectQuery mode. If you require a particular function for a calculation, consider ways that you could provide an equivalent by using Transact-SQL.  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |**DirectQuery only**|Optional. A DirectQuery only model has no need for a partition.<br /><br /> However, if you created partitions in the model during the design phase, remember that only one partition can be used as the data source. By default the first partition you created will be used as the DirectQuery partition.<br /><br /> To ensure that all the data required by the model is available from the DirectQuery partition, choose a DirectQuery partition and edit the SQL statement to get the entire data set.|  
-|**Hybrid mode**|If any table in your model has multiple partitions, you must choose a single partition as the *DirectQuery partition*. If you do not assign a partition, by default, the first partition that was created will be used as the DirectQuery partition.<br /><br /> Set processing options on all partitions except the DirectQuery. Typically the DirectQuery partition is never processed, because the data is passed through from the relational source.<br /><br /> For more information, see [Partitions and DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-and-directquery-mode-ssas-tabular.md).|  
+|**Hybrid mode**|If any table in your model has multiple partitions, you must choose a single partition as the *DirectQuery partition*. If you do not assign a partition, by default, the first partition that was created will be used as the DirectQuery partition.<br /><br /> Set processing options on all partitions except the DirectQuery. Typically the DirectQuery partition is never processed, because the data is passed through from the relational source.<br /><br /> For more information, see [Partitions and DirectQuery Mode &#40;SSAS Tabular&#41;](partitions-and-directquery-mode-ssas-tabular.md).|  
   
  **Step 6. Configure impersonation**  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
  When you are ready to deploy the model, open the **Project** menu of Visual Studio, and select **Properties**. Set the **QueryMode** property to one of the values described in the following table:  
   
- For more information, see [Deploy From SQL Server Data Tools &#40;SSAS Tabular&#41;](../../2014/analysis-services/deploy-from-sql-server-data-tools-ssas-tabular.md).  
+ For more information, see [Deploy From SQL Server Data Tools &#40;SSAS Tabular&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md).  
   
 |||  
 |-|-|  
@@ -95,7 +95,7 @@ manager: "mblythe"
   
 -   The property, **DirectQueryMode**, was set when you defined the deployment properties.  
   
--   The property, **Data Source Impersonation Info**, was set when you defined the user impersonation options. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md).  
+-   The property, **Data Source Impersonation Info**, was set when you defined the user impersonation options. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 -   You can change these properties any time after the model has been deployed.  
   
@@ -125,7 +125,7 @@ manager: "mblythe"
 |**Hybrid mode with DirectQuery preferred**|The model is processed and data can be loaded into the cache. However, queries use DirectQuery by default. If a client wants to use the cached data, a parameter must be inserted in the connection string. If the tables in the model are partitioned, the principal partition of the cache is also set to **In-Memory with DirectQuery**.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery with In-Memory**|  
   
 ## See Also  
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md)   
- [Tabular Model Data Access](../../2014/analysis-services/tabular-model-data-access.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)   
+ [Tabular Model Data Access](tabular-model-data-access.md)  
   
   

@@ -30,7 +30,7 @@ manager: "mblythe"
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates the new attribute that has the same name as the column to which it is bound. If there are multiple attributes that use the same column, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] appends a number to the attribute name.  
   
 ## See Also  
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

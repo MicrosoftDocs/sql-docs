@@ -39,6 +39,6 @@ manager: "mblythe"
 4.  If there are errors, in Visual Studio, open the **Error List** and resolve any problems that would prevent the model from being switched to DirectQuery mode.  
   
 ## See Also  
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)  
   
   

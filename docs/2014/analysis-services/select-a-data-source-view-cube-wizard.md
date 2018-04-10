@@ -31,8 +31,8 @@ manager: "mblythe"
  Select this option if you do not want to use a data source view. This option is appropriate if you will generate the data source view later, or if you plan to use the cube with linked measure groups only.  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

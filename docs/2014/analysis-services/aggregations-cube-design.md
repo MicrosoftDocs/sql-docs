@@ -31,6 +31,6 @@ manager: "mblythe"
  Use the **Advanced View** pane to create and modify aggregations. This view should be used by advanced users only.  
   
 ## See Also  
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

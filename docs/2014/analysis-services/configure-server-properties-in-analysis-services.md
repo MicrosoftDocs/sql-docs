@@ -38,7 +38,7 @@ manager: "mblythe"
  The property pages in SQL Server Management Studio contain a subset of the available properties, showing only those properties that are more likely to be modified. The full set of properties can be found in the msmdsrv.ini file.  
   
 > [!NOTE]  
->  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md).  
+>  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md).  
   
 #### View or set configuration properties in Management Studio  
   
@@ -77,21 +77,21 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[General Properties](../../2014/analysis-services/general-properties.md)|The general properties are both basic and advanced properties, and include properties that define the data directory, backup directory, and other server behaviors.|  
-|[Data Mining Properties](../../2014/analysis-services/data-mining-properties.md)|The data mining properties control which data mining algorithms are enabled and which are disabled. By default, all of the algorithms are enabled.|  
+|[General Properties](general-properties.md)|The general properties are both basic and advanced properties, and include properties that define the data directory, backup directory, and other server behaviors.|  
+|[Data Mining Properties](data-mining-properties.md)|The data mining properties control which data mining algorithms are enabled and which are disabled. By default, all of the algorithms are enabled.|  
 |DSO|DSO is no longer supported. DSO properties are ignored.|  
-|[Feature Properties](../../2014/analysis-services/feature-properties.md)|The feature properties pertain to product features, most of them advanced, including properties that control links between server instances.|  
-|[Filestore Properties](../../2014/analysis-services/filestore-properties.md)|The file store properties are for advanced use only. They include advanced memory management settings.|  
-|[Lock Manager Properties](../../2014/analysis-services/lock-manager-properties.md)|The lock manager properties define server behaviors pertaining to locking and timeouts. Most of these properties are for advanced use only.|  
-|[Log Properties](../../2014/analysis-services/log-properties.md)|The log properties controls if, where, and how events are logged on the server. This includes error logging, exception logging, flight recorder, query logging, and traces.|  
-|[Memory Properties](../../2014/analysis-services/memory-properties.md)|The memory properties control how the server uses memory. They are primarily for advanced use.|  
-|[Network Properties](../../2014/analysis-services/network-properties.md)|The network properties control server behavior pertaining to networking, including properties that control compression and binary XML. Most of these properties are for advanced use only.|  
-|[OLAP Properties](../../2014/analysis-services/olap-properties.md)|The OLAP properties control cube and dimension processing, lazy processing, data caching, and query behavior. These include both basic and advanced properties.|  
-|[Security Properties](../../2014/analysis-services/security-properties.md)|The security section contains both basic and advanced properties that define access permissions. This includes settings pertaining to administrators and users.|  
-|[Thread Pool Properties](../../2014/analysis-services/thread-pool-properties.md)|The thread pool properties control how many threads the server creates. These are primarily advanced properties.|  
+|[Feature Properties](feature-properties.md)|The feature properties pertain to product features, most of them advanced, including properties that control links between server instances.|  
+|[Filestore Properties](filestore-properties.md)|The file store properties are for advanced use only. They include advanced memory management settings.|  
+|[Lock Manager Properties](lock-manager-properties.md)|The lock manager properties define server behaviors pertaining to locking and timeouts. Most of these properties are for advanced use only.|  
+|[Log Properties](log-properties.md)|The log properties controls if, where, and how events are logged on the server. This includes error logging, exception logging, flight recorder, query logging, and traces.|  
+|[Memory Properties](memory-properties.md)|The memory properties control how the server uses memory. They are primarily for advanced use.|  
+|[Network Properties](network-properties.md)|The network properties control server behavior pertaining to networking, including properties that control compression and binary XML. Most of these properties are for advanced use only.|  
+|[OLAP Properties](olap-properties.md)|The OLAP properties control cube and dimension processing, lazy processing, data caching, and query behavior. These include both basic and advanced properties.|  
+|[Security Properties](security-properties.md)|The security section contains both basic and advanced properties that define access permissions. This includes settings pertaining to administrators and users.|  
+|[Thread Pool Properties](thread-pool-properties.md)|The thread pool properties control how many threads the server creates. These are primarily advanced properties.|  
   
 ## See Also  
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
- [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md)  
+ [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md)  
   
   

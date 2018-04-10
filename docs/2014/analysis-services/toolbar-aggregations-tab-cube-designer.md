@@ -31,6 +31,6 @@ manager: "mblythe"
 |**Delete**|Click to delete a selected aggregation design.  In the advanced view of the aggregation designer, it can also be used to delete an aggregation from an aggregation design.|  
   
 ## See Also  
- [Aggregations &#40;Cube Design&#41;](../../2014/analysis-services/aggregations-cube-design.md)  
+ [Aggregations &#40;Cube Design&#41;](aggregations-cube-design.md)  
   
   

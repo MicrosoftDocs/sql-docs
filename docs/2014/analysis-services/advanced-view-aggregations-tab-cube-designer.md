@@ -30,6 +30,6 @@ manager: "mblythe"
 |**Delete**|Click to delete a selected aggregation or a selected aggregation design.|  
   
 ## See Also  
- [Aggregations &#40;Cube Design&#41;](../../2014/analysis-services/aggregations-cube-design.md)  
+ [Aggregations &#40;Cube Design&#41;](aggregations-cube-design.md)  
   
   

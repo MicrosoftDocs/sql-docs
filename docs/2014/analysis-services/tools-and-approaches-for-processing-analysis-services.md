@@ -39,12 +39,12 @@ manager: "mblythe"
   
 -   Monitor processing with SQL Server Profiler  
   
--   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](../../2014/analysis-services/dev-guide/programming-amo-olap-basic-objects.md).  
+-   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](dev-guide/programming-amo-olap-basic-objects.md).  
   
- Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../2014/analysis-services/processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md).  
+ Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition](../../2014/analysis-services/process-database-table-or-partition.md) and [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md).  
+>  This topic describes the tools and approaches for processing multidimensional models. For more information about processing tabular models, see [Process Database, Table, or Partition](process-database-table-or-partition.md) and [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md).  
   
 ### Processing objects in SQL Server Management Studio  
   
@@ -64,9 +64,9 @@ manager: "mblythe"
   
     -   Mining Structures  
   
-     Analysis Services objects are hierarchical. If you choose database, processing can occur for all of the objects contained in the database. Whether processing actually occurs will vary depending on the process option you select and the state of the object. Specifically, if an object is unprocessed, processing its parent will result in that object getting processed. For more information about object dependencies, see [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md).  
+     Analysis Services objects are hierarchical. If you choose database, processing can occur for all of the objects contained in the database. Whether processing actually occurs will vary depending on the process option you select and the state of the object. Specifically, if an object is unprocessed, processing its parent will result in that object getting processed. For more information about object dependencies, see [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
   
-3.  In the **Process** dialog box, in **Process Options**, use the default value provided or select a different option from the list. For more information about each option, see [Processing Options and Settings &#40;Analysis Services&#41;](../../2014/analysis-services/processing-options-and-settings-analysis-services.md).  
+3.  In the **Process** dialog box, in **Process Options**, use the default value provided or select a different option from the list. For more information about each option, see [Processing Options and Settings &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
 4.  Click **Impact Analysis** to identify and optionally process dependent objects that are affected if the objects listed in the Process dialog box are processed.  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
 2.  In Solution Explorer, under the deployed project, expand the **Dimensions** folder.  
   
-3.  Right-click a dimension, and then click **Process**. You can right-click multiple dimensions to process multiple objects at once. For more information, see [Batch Processing &#40;Analysis Services&#41;](../../2014/analysis-services/batch-processing-analysis-services.md).  
+3.  Right-click a dimension, and then click **Process**. You can right-click multiple dimensions to process multiple objects at once. For more information, see [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 4.  In the **Process Dimension** dialog box, in the **Process Options** column under **Object list**, verify that the option for this column is **Process Full**. If it is not, under **Process Options**, click the option, and select **Process Full** from the drop-down list.  
   
@@ -155,6 +155,6 @@ manager: "mblythe"
 3.  Edit the task to specify a connection to the database, which objects to process, and the process option. For more information about how to implement this task, see [Analysis Services Processing Task](../../2014/integration-services/analysis-services-processing-task.md).  
   
 ## See Also  
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
   
   

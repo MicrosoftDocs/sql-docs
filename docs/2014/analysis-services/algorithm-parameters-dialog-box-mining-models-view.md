@@ -48,7 +48,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Models View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-models-view-data-mining-model-designer.md)   
+ [Mining Models View &#40;Data Mining Model Designer&#41;](mining-models-view-data-mining-model-designer.md)   
  [Moving Data Mining Objects](data-mining/moving-data-mining-objects.md)  
   
   

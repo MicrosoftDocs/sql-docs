@@ -61,7 +61,7 @@ manager: "mblythe"
   
 -   Create multiple versions of your data and build multiple models.  
   
- For additional tips on how to select, modify, and review data, see [Checklist of Preparation for Data Mining](../../2014/analysis-services/checklist-of-preparation-for-data-mining.md).  
+ For additional tips on how to select, modify, and review data, see [Checklist of Preparation for Data Mining](checklist-of-preparation-for-data-mining.md).  
   
 ### How Much Data Do I Need?  
  A rule of thumb is to never have less than 50-100 rows of data for the simplest models types and scenarios. For example, if you are predicting a single attribute using a Naïve Bayes model and the data set is well-formed, you might be able to generate fairly accurate predictions using 50-100 rows of data.  
@@ -114,7 +114,7 @@ manager: "mblythe"
   
  By default, when you import numeric data into [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, the numbers are stored in a decimal format with two decimal places. If this is not an appropriate number format, you should change to another numeric format, or change the number of decimal places.  
   
- One option is to use the [Relabel](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool to change the way that numbers are displayed or grouped.  
+ One option is to use the [Relabel](relabel-sql-server-data-mining-add-ins.md) tool to change the way that numbers are displayed or grouped.  
   
  However, if your data is too complex to process with the **Relabel** tool, you can use the numeric functions in Excel to convert your data to discrete ranges, save that result into a separate column, and then use the discretized column for classification instead.  
   
@@ -154,13 +154,13 @@ manager: "mblythe"
   
 -   This type of model also cannot predict continuous values. Therefore, if you want to predict a continuous number such as income (for example) you should first bin the values into meaningful ranges. If you are not sure what the appropriate ranges are, you can use the clustering algorithm to identify clumps of numbers in your data.  
   
--   When you use a wizard based on this algorithm (such as [Analyze Key Influencers &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/analyze-key-influencers-table-analysis-tools-for-excel.md)), columns that are continuous will be binned by the wizard you.  
+-   When you use a wizard based on this algorithm (such as [Analyze Key Influencers &#40;Table Analysis Tools for Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), columns that are continuous will be binned by the wizard you.  
   
--   If you build a Naive Bayes model using the [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md) option, number columns will be removed from the model. If you want to avoid this, use the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool to create a new column with binned values.  
+-   If you build a Naive Bayes model using the [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) option, number columns will be removed from the model. If you want to avoid this, use the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) tool to create a new column with binned values.  
   
  **Clustering Models**  
   
--   The clustering tools ([Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/cluster-wizard-data-mining-add-ins-for-excel.md) and [Detect Categories &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md)) also cannot use continuous numbers, but both of these tools will automatically bin number columns for you.  
+-   The clustering tools ([Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) and [Detect Categories &#40;Table Analysis Tools for Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) also cannot use continuous numbers, but both of these tools will automatically bin number columns for you.  
   
 -   Both tools give you the option to choose the number of output categories in the results, but if you want to control the way that values in individual columns are grouped, you should create a new column with the grouping you want.  
   
@@ -177,7 +177,7 @@ manager: "mblythe"
   
  For example, if a column contains numbers that repeat in a specific interval to indicate the days of the week, you might specify the content type of that column as `Cyclical`.  
   
- You don’t have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
+ You don’t have to worry about content types if you use the wizards and tools provided in this add-ins. However, if you use the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option to add a new model to existing data, you might get an error relating to content types.  
   
  The reason is that some types of model require a certain kind of data (such as a time stamp). The tools process these columns according to specific requirements and also add a content type property. Therefore, if you re-use the data with a completely different algorithm, you might need to change the data type or content type.  
   
@@ -222,7 +222,7 @@ manager: "mblythe"
   
  What it means is that each row of data actually contains a nested data table, with one or more columns and one or more rows.  
   
- Nested tables are very handy, but you can use them only with the [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md) modeling options. For example, the sample data for the [Associate Wizard &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/associate-wizard-data-mining-client-for-excel.md) wizard and [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](../../2014/analysis-services/shopping-basket-analysis-table-analysistools-for-excel.md) tool contains data that has been flattened from a nested table.  
+ Nested tables are very handy, but you can use them only with the [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) modeling options. For example, the sample data for the [Associate Wizard &#40;Data Mining Client for Excel&#41;](associate-wizard-data-mining-client-for-excel.md) wizard and [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) tool contains data that has been flattened from a nested table.  
 
   
   

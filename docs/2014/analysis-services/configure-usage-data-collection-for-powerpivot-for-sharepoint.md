@@ -18,7 +18,7 @@ manager: "mblythe"
 # Configure Usage Data Collection for (PowerPivot for SharePoint
   Usage data collection is a farm-level SharePoint feature. PowerPivot for SharePoint uses and extends this system to provide reports in the PowerPivot Management Dashboard that show how PowerPivot data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the PowerPivot Management Dashboard.  
   
- For information on usage data in the PowerPivot Management Dashboard, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+ For information on usage data in the PowerPivot Management Dashboard, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
  **In this topic:**  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
   
 6.  Click **OK** to save your changes.  
   
-7.  Optionally, you can specify whether all messages or just errors are logged. For more information on how to throttle event messages, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+7.  Optionally, you can specify whether all messages or just errors are logged. For more information on how to throttle event messages, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Set log file location  
  PowerPivot usage data is initially stored in usage log files on the local server, and then moved at regular intervals to the PowerPivot service application databases. The log file location is set in Central Administration. The default location is:  
@@ -102,7 +102,7 @@ manager: "mblythe"
   
 6.  Click **Run Now**.  
   
-7.  Check the reports to view the refresh data. For more information, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+7.  Check the reports to view the refresh data. For more information, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="confighist"></a> Limit how long usage data history is stored  
  Usage data history is stored for events (connections, load, unload, and on-demand query processing) and data refresh (scheduled data processing). Although usage data is collected through the SharePoint usage data collection system, the reporting data is moved to a PowerPivot application database and a reporting database for longer term storage. The usage data history setting controls how long usage data is retained in the PowerPivot application databases. The same limit is applied equally to all types of stored usage data in the same PowerPivot service application database.  
@@ -123,7 +123,7 @@ manager: "mblythe"
   
 3.  Click **OK**.  
   
- For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md).  
+ For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Define fast, medium and slow query response categories for reporting purposes  
  Query processing performance is measured against predefined categories that define a request-response cycle by how long it takes to complete. Predefined categories include: Trivial, Quick, Expected, Long-running, and Exceeded. Every request to a PowerPivot server will fall into one of the categories based on time to completion.  
@@ -188,7 +188,7 @@ manager: "mblythe"
 |Long Running Response Upper Limit|10000 (in milliseconds)|Integer|Sets an upper boundary that defines a long running request-response exchange. Any requests that exceed this upper limit fall into the Exceeded category, which has no upper threshold.|  
   
 ## See Also  
- [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configuration-setting-reference-powerpivot-for-sharepoint.md)   
- [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md)  
+ [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-powerpivot-for-sharepoint.md)   
+ [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md)  
   
   

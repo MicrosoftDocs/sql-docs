@@ -60,14 +60,14 @@ manager: "mblythe"
  When you create a server time dimension, and specify the time periods and the calendars to use in that dimension, the Dimension Wizard adds the attributes for the time periods that are appropriate for each specified calendar. For example, if you create a server time dimension that uses years as the time period and includes both fiscal and reporting calendars, the wizard will then add FiscalYear and ReportingYears attributes, together with the standard Years attribute, to the dimension. A server time dimension will also have attributes for combinations of selected time periods, such as a DayOfWeek attribute for a dimension that contains Days and Weeks. The Dimension Wizard creates a calendar hierarchy by combining attributes that belong to a single calendar type. For example, a fiscal calendar hierarchy may contain the following levels: Fiscal Year, Fiscal Half Year, Fiscal Quarter, Fiscal Month, and Fiscal Day.  
   
 ## Adding Time Intelligence with the Business Intelligence Wizard  
- After you have defined a time dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add time intelligence functionality, such as period-to-date, period-to-period, and rolling average measures. For more information, see [Define Time Intelligence Calculations using the Business Intelligence Wizard](../../2014/analysis-services/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
+ After you have defined a time dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to add time intelligence functionality, such as period-to-date, period-to-period, and rolling average measures. For more information, see [Define Time Intelligence Calculations using the Business Intelligence Wizard](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
   
 > [!NOTE]  
 >  You cannot use the Business Intelligence Wizard to add time intelligence to server time dimensions. The Business Intelligence Wizard adds a hierarchy to support time intelligence, and this hierarchy must be bound to a column of the time dimension table. Server time dimensions do not have a corresponding time dimension table and therefore cannot support this additional hierarchy.  
   
 ## See Also  
- [Create a Time Dimension by Generating a Time Table](../../2014/analysis-services/create-a-time-dimension-by-generating-a-time-table.md)   
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Dimension Types](../../2014/analysis-services/dev-guide/dimension-types.md)  
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Dimension Types](dev-guide/dimension-types.md)  
   
   

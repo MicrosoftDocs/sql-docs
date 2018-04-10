@@ -21,7 +21,7 @@ manager: "mblythe"
 # Create and Manage Roles (SSAS Tabular)
   Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. When a model is deployed, database administrators can manage roles by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- The tasks in this topic describe how to create and manage roles during model authoring by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For information about managing roles in a deployed model database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
+ The tasks in this topic describe how to create and manage roles during model authoring by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For information about managing roles in a deployed model database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
 ## Tasks  
  To create, edit, copy, and delete roles, you will use the **Role Manager** dialog box. To view the **Role Manager** dialog box, in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], click the **Model** menu, and then click **Role Manager**.  
@@ -55,16 +55,16 @@ manager: "mblythe"
 7.  To add members to the role, click the **Members** tab, and then click **Add**.  
   
     > [!NOTE]  
-    >  Role members can also be added to a deployed model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Manage Roles by using SSMS &#40;SSAS Tabular&#41;](../../2014/analysis-services/manage-roles-by-using-ssms-ssas-tabular.md).  
+    >  Role members can also be added to a deployed model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [Manage Roles by using SSMS &#40;SSAS Tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md).  
   
 8.  In the **Select Users or Groups** dialog box, enter Windows user or Windows group objects as members.  
   
 9. Click **Ok**.  
   
 ## See Also  
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)   
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md)   
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
+ [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   

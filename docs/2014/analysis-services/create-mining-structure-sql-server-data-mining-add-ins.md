@@ -18,11 +18,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Mining Structure (SQL Server Data Mining Add-ins)
-  ![Create Mining Structure button, Data Mining ribbon](../../2014/analysis-services/media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  
+  ![Create Mining Structure button, Data Mining ribbon](media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  
   
  Use the **Advanced** option in the **Data Modeling** group when you want to create a data set used for analysis without necessarily creating a model. This is useful when you want to experiment with different algorithms.  
   
- After you have created the mining structure, use the [Add Model to Structure](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md) wizard to create a model based on that structure. You can also create new models by using the **Data Mining Advanced Query Editor**.  
+ After you have created the mining structure, use the [Add Model to Structure](add-model-to-structure-data-mining-add-ins-for-excel.md) wizard to create a model based on that structure. You can also create new models by using the **Data Mining Advanced Query Editor**.  
   
  You can also use this option when you intend to build models using one of the advanced algorithms, which are supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but not available through a wizard, such as linear regression or sequence clustering, or if you are using a custom algorithm.  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
     >   
     >  For example, a postal code column might be listed by default as a continuous long data type, but to get better results, you can specify that it be handled as a discrete text value.  
     >   
-    >  For more information, see the section on content types in [Choosing Data for Data Mining](../../2014/analysis-services/choosing-data-for-data-mining.md).  
+    >  For more information, see the section on content types in [Choosing Data for Data Mining](choosing-data-for-data-mining.md).  
   
      Click **OK** to close the dialog box.  
   
@@ -110,9 +110,9 @@ manager: "mblythe"
 -   All algorithms require a **Key** column. The values in the Key column must be unique. A **Key Time** column is required only for forecasting or time series models. .  
   
 ### Requirements  
- To create a data mining structure, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A connection is required even if you are working with temporary structures. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To create a data mining structure, you must have a connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A connection is required even if you are working with temporary structures. For more information about how to create or change a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)  
   
   

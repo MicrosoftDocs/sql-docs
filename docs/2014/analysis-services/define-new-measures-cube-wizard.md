@@ -92,9 +92,9 @@ manager: "mblythe"
  To remove a new measure from the cube, click the **X** button for that measure.  
   
 ## See Also  
- [Cube Wizard F1 Help](../../2014/analysis-services/cube-wizard-f1-help.md)   
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Cube Wizard F1 Help](cube-wizard-f1-help.md)   
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

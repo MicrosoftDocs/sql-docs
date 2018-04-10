@@ -32,6 +32,6 @@ manager: "mblythe"
 >  When writing an expression that contains multiple statements using the Calculation Expressions pane, ensure that all lines except the last line of the MDX script end with a semi-colon (;). Calculations are concatenated into a single MDX script, and each script has a semi-colon appended to it to ensure that the MDX script compiles correctly. If you add a semi-colon to the last line of the script in the Calculation Expressions pane, the cube will build and deploy correctly but you will be unable to run queries against it.  
   
 ## See Also  
- [Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
   
   

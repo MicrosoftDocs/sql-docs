@@ -33,15 +33,15 @@ manager: "mblythe"
   
 -   The name of the cube that sets the context of the MDX query.  
   
--   The set of members or tuples to include on the slicer axis. For more information about slicer and query axes, see[Restricting the Query with Query and Slicer Axes &#40;MDX&#41;](../../2014/analysis-services/restricting-the-query-with-query-and-slicer-axes-mdx.md).  
+-   The set of members or tuples to include on the slicer axis. For more information about slicer and query axes, see[Restricting the Query with Query and Slicer Axes &#40;MDX&#41;](restricting-the-query-with-query-and-slicer-axes-mdx.md).  
   
  To identify the query axes, the cube that will be queried, and the slicer axis, the MDX SELECT statement uses the following clauses:  
   
--   A SELECT clause that determines the query axes of an MDX SELECT statement. For more information about the construction of query axes in a SELECT clause, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-query-axis-mdx.md).  
+-   A SELECT clause that determines the query axes of an MDX SELECT statement. For more information about the construction of query axes in a SELECT clause, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](specifying-the-contents-of-a-query-axis-mdx.md).  
   
 -   A FROM clause that determines which cube will be queried. For more information about the FROM clause, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
--   An optional WHERE clause that determines which members or tuples to use on the slicer axis to restrict the data returned. For more information about the construction of a slicer axis in a WHERE clause, see [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-slicer-axis-mdx.md).  
+-   An optional WHERE clause that determines which members or tuples to use on the slicer axis to restrict the data returned. For more information about the construction of a slicer axis in a WHERE clause, see [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](specifying-the-contents-of-a-slicer-axis-mdx.md).  
   
 > [!NOTE]  
 >  For more detailed information about the various clauses of the SELECT statement, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
@@ -63,7 +63,7 @@ FROM <SELECT subcube clause>
 ### Comparing the Syntax of the MDX SELECT Statement to SQL  
  The syntax format for the MDX SELECT statement is similar to that of SQL syntax. However, there are several fundamental differences:  
   
--   MDX syntax distinguishes sets by surrounding tuples or members with braces (the { and } characters.) For more information about member, tuple, and set syntax, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md).  
+-   MDX syntax distinguishes sets by surrounding tuples or members with braces (the { and } characters.) For more information about member, tuple, and set syntax, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md).  
   
 -   MDX queries can have 0, 1, 2 or up to 128 query axes in the SELECT statement. Each axis behaves in exactly the same way, unlike SQL where there are significant differences between how the rows and the columns of a query behave.  
   
@@ -104,10 +104,10 @@ FROM [Adventure Works]
 WHERE ( [Sales Territory].[Southwest] )  
 ```  
   
- For more detailed examples, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-query-axis-mdx.md)and [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-slicer-axis-mdx.md).  
+ For more detailed examples, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](specifying-the-contents-of-a-query-axis-mdx.md)and [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](specifying-the-contents-of-a-slicer-axis-mdx.md).  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
  [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)  
   
   

@@ -68,7 +68,7 @@ manager: "mblythe"
 |**Specific Windows user name and password** <sup>2</sup>|ImpersonateWindowsUserAccount|This option specifies the model use a Windows user account to import or process data from the data source. The domain and name of the user account uses the following format:**\<Domain name>\\<User account name\>**. When creating a new model using the Table Import Wizard, this is the default option.|  
 |**Service Account**|ImpersonateServiceAccount|This option specifies the model use the security credentials associated with the Analysis Services service instance that manages the model.|  
   
- <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/datasourceimpersonationinfo-element-assl.md) property on the data source.  
+ <sup>1</sup>ImpersonationMode specifies the value for the [DataSourceImpersonationInfo Element &#40;ASSL&#41;](dev-guide/datasourceimpersonationinfo-element-assl.md) property on the data source.  
   
  <sup>2</sup>When using this option, if the workspace database is removed from memory, either due to a reboot or the **Workspace Retention** property is set to **Unload from Memory** or **Delete from Workspace**, and the model project is closed, in the subsequent session, if you attempt to process table data, you will be prompted to enter the credentials for each data source. Similarly, if a deployed model database is removed from memory, you will be prompted for credentials for each data source.  
   
@@ -91,8 +91,8 @@ manager: "mblythe"
  For models that are deployed to an Analysis Services server, impersonation information can be configured by clicking the ellipsis (...) of the **Data Source Impersonation Info** property in the **Database Properties** dialog box of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## See Also  
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md)   
- [Data Sources &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-ssas-tabular.md)   
- [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-solution-deployment-ssas-tabular.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)   
+ [Data Sources &#40;SSAS Tabular&#41;](data-sources-ssas-tabular.md)   
+ [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

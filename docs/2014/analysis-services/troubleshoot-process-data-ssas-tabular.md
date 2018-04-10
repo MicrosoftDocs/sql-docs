@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Troubleshoot Process Data (SSAS Tabular)
-  This topic provides information about processing (refresh) model data when authoring a model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. This topic does not provide information about processing data in models that has been deployed to an Analysis Services server instance. For more information about processing data in a deployed model, see [Script Administrative Tasks in Analysis Services](../../2014/analysis-services/script-administrative-tasks-in-analysis-services.md).  
+  This topic provides information about processing (refresh) model data when authoring a model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. This topic does not provide information about processing data in models that has been deployed to an Analysis Services server instance. For more information about processing data in a deployed model, see [Script Administrative Tasks in Analysis Services](script-administrative-tasks-in-analysis-services.md).  
   
  Sections in this topic:  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
   
  Therefore you should always be mindful of the potential impact before you change data sources or process the data that is obtained from the data source, and consider these potential consequences:  
   
--   Some parts of the model data may be broken as a result of changes in the data source. If not all of the columns can be retrieved from the data source (for example, if they have been deleted or changed), process will fail, and you must update the mappings between the source data and the model data. For more information, see [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](../../2014/analysis-services/edit-an-existing-data-source-connection-ssas-tabular.md).  
+-   Some parts of the model data may be broken as a result of changes in the data source. If not all of the columns can be retrieved from the data source (for example, if they have been deleted or changed), process will fail, and you must update the mappings between the source data and the model data. For more information, see [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
   
 -   After processing, some columns might be flagged as containing an error. This can happen because the DAX formula in the column uses data that became unavailable when you processed, the data type of a column changed, or an invalid value was added to the external data. To resolve the issue, you can edit the formula, or you can delete the column if it is based on data that is no longer available.  
   
@@ -98,12 +98,12 @@ manager: "mblythe"
 ##  <a name="bkmk_rest_changes"></a> Restrictions on Changes to a Data Source  
  There are some restrictions on the changes that you can make to a data source:  
   
--   The data types of a column can only be changed to a compatible data type. For example, if the data in the column includes decimal numbers, you cannot change the data type to an integer. However, you can change numeric data to text. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md).  
+-   The data types of a column can only be changed to a compatible data type. For example, if the data in the column includes decimal numbers, you cannot change the data type to an integer. However, you can change numeric data to text. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 -   You cannot multi-select columns in different tables and change properties of the columns. You can work with only one table or view at a time.  
   
 ## See Also  
- [Manually Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/manually-process-data-ssas-tabular.md)   
- [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](../../2014/analysis-services/edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Manually Process Data &#40;SSAS Tabular&#41;](manually-process-data-ssas-tabular.md)   
+ [Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

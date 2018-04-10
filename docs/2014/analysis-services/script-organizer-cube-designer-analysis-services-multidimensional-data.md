@@ -42,20 +42,20 @@ manager: "mblythe"
   
 |Option|Definition|  
 |------------|----------------|  
-|**New Calculated Member**|Select to display the **Calculated Member Form Editor** and create a new calculated member. For more information about the **Calculated Member Form Editor**, see [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**New Named Set**|Select to display the **Named Set Form Editor** and create a new named set. For more information about the **Named Set Form Editor**, see [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
-|**New Script Command**|Select to display the **Script Editor** and create a new script command. For more information about the **Script Editor**, see [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
+|**New Calculated Member**|Select to display the **Calculated Member Form Editor** and create a new calculated member. For more information about the **Calculated Member Form Editor**, see [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**New Named Set**|Select to display the **Named Set Form Editor** and create a new named set. For more information about the **Named Set Form Editor**, see [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
+|**New Script Command**|Select to display the **Script Editor** and create a new script command. For more information about the **Script Editor**, see [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Move Up**|Select to move the selected calculation up one place.<br /><br /> Note: This option is disabled if the selected calculation cannot be moved further.|  
 |**Move Down**|Select to move the selected calculation down one place.<br /><br /> Note: This option is disabled if the selected calculation cannot be moved further.|  
 |**Delete**|Select to delete the selected calculation.|  
   
 ## See Also  
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

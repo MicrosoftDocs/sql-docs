@@ -53,7 +53,7 @@ manager: "mblythe"
  The history page appears, showing a complete record for all refresh activity for PowerPivot data in the current Excel workbook.  
   
 ##  <a name="viewITOps"></a> View Data Refresh History for All Workbooks  
- Using the PowerPivot Management Dashboard in Central administration, farm administrators and service application administrators can get a comprehensive view of data refresh history and status for all PowerPivot workbooks. For more information, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+ Using the PowerPivot Management Dashboard in Central administration, farm administrators and service application administrators can get a comprehensive view of data refresh history and status for all PowerPivot workbooks. For more information, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
 ##  <a name="pageelements"></a> Use History Information  
  The data refresh history page provides detailed information about each refresh operation. You can use the information on this page to confirm whether refresh occurred or determine why it failed.  
@@ -70,8 +70,8 @@ manager: "mblythe"
 |Status|Provides a historical record of whether a refresh operation succeeded or failed.|  
   
 ## See Also  
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)   
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [PowerPivot Data Refresh](../../2014/analysis-services/powerpivot-data-refresh.md)  
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)   
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
+ [PowerPivot Data Refresh](powerpivot-data-refresh.md)  
   
   

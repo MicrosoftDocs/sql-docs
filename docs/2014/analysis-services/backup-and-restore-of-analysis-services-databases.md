@@ -95,7 +95,7 @@ manager: "mblythe"
     > [!IMPORTANT]  
     >  For each backup file, the user who runs the backup command must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: a member of a server role for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  
   
- For more information about backing up an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, see [Backup Options](../../2014/analysis-services/backup-options.md).  
+ For more information about backing up an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, see [Backup Options](backup-options.md).  
   
 ##  <a name="bkmk_restore"></a> Restoring an Analysis Services Database  
  Administrators can restore an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database from one or more backup files.  
@@ -119,10 +119,10 @@ manager: "mblythe"
     > [!NOTE]  
     >  After restoring an existing database, the user who restored the database might lose access to the restored database. This loss of access can occur if, at the time that the backup was performed, the user was not a member of the server role or was not a member of the database role with Full Control (Administrator) permissions.  
   
- For more information about restoring an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, see [Restore Options](../../2014/analysis-services/restore-options.md).  
+ For more information about restoring an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, see [Restore Options](restore-options.md).  
   
 ## See Also  
- [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [Analysis Services PowerShell](../../2014/analysis-services/analysis-services-powershell.md)  
+ [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [Analysis Services PowerShell](analysis-services-powershell.md)  
   
   

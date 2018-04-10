@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Classification Matrix (SQL Server Data Mining Add-ins)
-  ![Classification Matrix button, Data Mining ribbon](../../2014/analysis-services/media/dmc-cmatrix.gif "Classification Matrix button, Data Mining ribbon")  
+  ![Classification Matrix button, Data Mining ribbon](media/dmc-cmatrix.gif "Classification Matrix button, Data Mining ribbon")  
   
  You can use the classification matrix to assess the accuracy of a model for prediction. To generate a classification matrix, you run a set of testing data through the model, and the classification matrix tool compares the actual values from the testing set against the predictions made by the model. By looking at the matrix, you can tell at a glance how often the model is correct, and how often it predicts wrongly.  
   
@@ -86,8 +86,8 @@ manager: "mblythe"
  In SQL Server 2012 and SQL Server 2014, the ability to map the internal test data set to the model is not working in the **Classification Matrix** tool. However, you can specify an external data set, and then select the training set as the input to determine error on the original data set.  
   
 ## See Also  
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md)   
- [Detect Categories &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md)  
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)   
+ [Detect Categories &#40;Table Analysis Tools for Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
   

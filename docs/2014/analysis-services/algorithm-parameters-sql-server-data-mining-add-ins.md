@@ -115,6 +115,6 @@ manager: "mblythe"
  For additional detail about the algorithms, see SQL Server Books Online.  
   
 ## See Also  
- [Data Mining Algorithms &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/data-mining-algorithms-sql-server-data-mining-add-ins.md)  
+ [Data Mining Algorithms &#40;SQL Server Data Mining Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
   

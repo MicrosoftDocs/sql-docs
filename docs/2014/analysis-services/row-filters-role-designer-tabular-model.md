@@ -34,7 +34,7 @@ manager: "mblythe"
  Type a DAX formula that evaluates to a Boolean condition.  
   
 ## See Also  
- [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md)   
- [Manage Roles by using SSMS &#40;SSAS Tabular&#41;](../../2014/analysis-services/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md)   
+ [Manage Roles by using SSMS &#40;SSAS Tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

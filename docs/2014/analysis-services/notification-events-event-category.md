@@ -27,9 +27,9 @@ manager: "mblythe"
 |Notification|39|Collects all notification events since the trace started.|  
 |User Defined|40|Collects all user defined events since the trace started.|  
   
- For information about the columns associated with each of the Notification Events event classes, see [Notification Events Data Columns](../../2014/analysis-services/notification-events-data-columns.md).  
+ For information about the columns associated with each of the Notification Events event classes, see [Notification Events Data Columns](notification-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

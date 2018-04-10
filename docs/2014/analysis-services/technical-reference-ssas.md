@@ -26,10 +26,10 @@ manager: "mblythe"
  [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Error and Event Reference**  
- [Errors and Events Reference &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/errors-and-events-reference-powerpivot-for-sharepoint.md)  
+ [Errors and Events Reference &#40;PowerPivot for SharePoint&#41;](errors-and-events-reference-powerpivot-for-sharepoint.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **PowerShell Reference**  
- [Analysis Services PowerShell](../../2014/analysis-services/analysis-services-powershell.md)  
+ [Analysis Services PowerShell](analysis-services-powershell.md)  
   
  [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
@@ -41,12 +41,12 @@ manager: "mblythe"
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **User Interface Reference**  
- [User Interface Reference &#40;Analysis Services&#41;](../../2014/analysis-services/user-interface-reference-analysis-services.md)  
+ [User Interface Reference &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   
 ## See Also  
- [Developer's Guide &#40;Analysis Services&#41;](../../2014/analysis-services/dev-guide/developer-s-guide-analysis-services.md)   
- [Analysis Services Schema Rowsets](../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
- [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md)  
+ [Developer's Guide &#40;Analysis Services&#41;](dev-guide/developer-s-guide-analysis-services.md)   
+ [Analysis Services Schema Rowsets](dev-guide/analysis-services-schema-rowsets.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [XML for Analysis  &#40;XMLA&#41; Reference](dev-guide/xml-for-analysis-xmla-reference.md)  
   
   

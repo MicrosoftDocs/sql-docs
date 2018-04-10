@@ -36,7 +36,7 @@ manager: "mblythe"
 |**Storage Location**|Specifies the location of the database. If the database is located in the default Data directory, this value will be empty.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
   

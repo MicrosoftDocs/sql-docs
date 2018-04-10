@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Partitions and DirectQuery Mode (SSAS Tabular)
-  This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md).  
+  This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
- For instructions on how to change the partition that is used, or view information about the partition, see [Change the DirectQuery Partition &#40;SSAS Tabular&#41;](../../2014/analysis-services/change-the-directquery-partition-ssas-tabular.md).  
+ For instructions on how to change the partition that is used, or view information about the partition, see [Change the DirectQuery Partition &#40;SSAS Tabular&#41;](change-the-directquery-partition-ssas-tabular.md).  
   
 ## Using Partitions in DirectQuery Mode  
  For each table, you must specify a single partition to use as the DirectQuery data source.  If there are multiple partitions, when you switch the model to enable DirectQuery mode, by default the first partition that was created in the table is flagged as the DirectQuery partition. You can change this later by using the Partition Manager in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -46,6 +46,6 @@ manager: "mblythe"
 |InMemory With DirectQuery|Allow partition to be processed|If the model is using hybrid mode, you should use the same partition for queries against the in-memory and queries against the DirectQuery data source.|  
   
 ## See Also  
- [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md)  
+ [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
   
   

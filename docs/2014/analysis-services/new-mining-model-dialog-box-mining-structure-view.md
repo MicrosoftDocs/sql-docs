@@ -28,7 +28,7 @@ manager: "mblythe"
  Select the algorithm that you want the new mining model to be based on.  
   
 ## See Also  
- [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
+ [Mining Structure View &#40;Data Mining Model Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Add a Mining Model to an Existing Mining Structure](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
   

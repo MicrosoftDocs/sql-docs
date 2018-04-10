@@ -75,6 +75,6 @@ manager: "mblythe"
 |ServerName|43|8|Contains the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the notification event occurred.|  
   
 ## See Also  
- [Notification Events Event Category](../../2014/analysis-services/notification-events-event-category.md)  
+ [Notification Events Event Category](notification-events-event-category.md)  
   
   

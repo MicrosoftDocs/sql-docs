@@ -50,7 +50,7 @@ manager: "mblythe"
  Zoom out from the diagram until the whole diagram fits within the screen.  
   
  **Find Node**  
- Use the **Find Node** dialog box to filter the clusters in the graph and make it easier to find a specific cluster. For more information, see [Find Node Dialog Box &#40;Mining Model Viewer&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
+ Use the **Find Node** dialog box to filter the clusters in the graph and make it easier to find a specific cluster. For more information, see [Find Node Dialog Box &#40;Mining Model Viewer&#41;](find-node-dialog-box-mining-model-viewer.md).  
   
  Note that in this context, you are searching only the name of the cluster, not the attributes within the cluster; therefore, this option is most useful if you have assigned descriptive names to your cluster. You can assign names to clusters in the viewer by right-clicking each cluster and selecting **Rename**.  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

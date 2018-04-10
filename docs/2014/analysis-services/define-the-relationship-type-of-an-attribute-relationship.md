@@ -36,6 +36,6 @@ manager: "mblythe"
      In a flexible relationship, relationships between members change over time. In a rigid relationship, relationships between members do not change over time.  
   
 ## See Also  
- [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md)  
+ [Define Attribute Relationships](define-attribute-relationships.md)  
   
   

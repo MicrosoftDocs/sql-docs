@@ -34,13 +34,13 @@ manager: "mblythe"
   
 ## Pages  
  **General**  
- Use this page to select the database to restore, the backup file from which to restore the database, as well as the general options and password to use while restoring the database. For more information about this page, see [General &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
+ Use this page to select the database to restore, the backup file from which to restore the database, as well as the general options and password to use while restoring the database. For more information about this page, see [General &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Partitions**  
- Use this page to restore local partitions to specified locations, and to restore remote partitions from remote backup files. For more information about this page, see [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
+ Use this page to restore local partitions to specified locations, and to restore remote partitions from remote backup files. For more information about this page, see [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
   
   

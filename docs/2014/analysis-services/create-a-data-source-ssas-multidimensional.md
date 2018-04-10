@@ -24,7 +24,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Data Source (SSAS Multidimensional)
-  In an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional model, a data source object represents a connection to the data source from which you are processing (or importing) data. A multidimensional model must contain at least one data source object, but you can add more to combine data from several data warehouses. Use the instructions in this topic to create a data source object for your model. For more information about setting properties on this object, see [Set Data Source Properties &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/set-data-source-properties-ssas-multidimensional.md).  
+  In an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional model, a data source object represents a connection to the data source from which you are processing (or importing) data. A multidimensional model must contain at least one data source object, but you can add more to combine data from several data warehouses. Use the instructions in this topic to create a data source object for your model. For more information about setting properties on this object, see [Set Data Source Properties &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
   
  This topic includes the following sections:  
   
@@ -49,14 +49,14 @@ manager: "mblythe"
  A data source connection can sometimes use Windows authentication or an authentication service provided by the database management system, such as SQL Server authentication when connecting to SQL Azure databases. The account you specify must have a login on the remote database server and read permissions on the external database.  
   
 ### Windows Authentication  
- Connections that use Windows authentication are specified on the **Impersonation Information** tab of the Data Source Designer. Use this tab to choose the impersonation option that specifies the account under which [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] runs when connecting to the external data source. Not all options can be used in all scenarios. For more information about these options and when to use them, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md).  
+ Connections that use Windows authentication are specified on the **Impersonation Information** tab of the Data Source Designer. Use this tab to choose the impersonation option that specifies the account under which [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] runs when connecting to the external data source. Not all options can be used in all scenarios. For more information about these options and when to use them, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### Database Authentication  
  As an alternative to Windows authentication, you can specify a connection that uses an authentication service provided by the database management system. In some cases, using database authentication is required. Scenarios that call for using database authentication include using SQL Server authentication to connect to a Windows Azure SQL Database, or accessing a relational data source that runs on a different operating system or in a non-trusted domain.  
   
  For a data source that uses database authentication, the username and password of a database login is specified on the connection string. Credentials are added to the connection string when you enter a user name and password in Connection Manager when setting up the data source connection in your [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] model. Remember to specify a user identity that has read permissions to the data.  
   
- When retrieving data, the client library making the connection formulates a connection request that includes the credentials in the connection string. Windows authentication credential options in the Impersonation Information tab are not used in the connection, but can be used for other operations, such as accessing resources on the local computer. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md).  
+ When retrieving data, the client library making the connection formulates a connection request that includes the credentials in the connection string. Windows authentication credential options in the Impersonation Information tab are not used in the connection, but can be used for other operations, such as accessing resources on the local computer. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
  After you save the data source object in your model, the connection string and password are encrypted.  For security purposes, all visible traces of the password are removed from the connection string when you subsequently view it in tools, script, or code.  
   
@@ -80,7 +80,7 @@ manager: "mblythe"
   
      The default provider for a new connection is the Native OLE DB\\[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client provider. This provider is used to connect to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine instance using OLE DB. For connections to a SQL Server relational database, using Native OLE DB\SQL Server Native Client 11.0 is often faster than using alternative providers.  
   
-     You can choose a different provider to access other data sources. For a list of the providers and relational databases supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md).  
+     You can choose a different provider to access other data sources. For a list of the providers and relational databases supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md).  
   
 5.  Enter the information requested by the selected provider to connect to the underlying data source. If the **Native OLE DB\SQL Server Native Client** provider is selected, enter the following information:  
   
@@ -170,7 +170,7 @@ manager: "mblythe"
 5.  Find and select the table you added. Right-click the table and select **New Relationship**. Choose the source and destination columns that contain matching data.  
   
 ## See Also  
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

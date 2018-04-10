@@ -34,20 +34,20 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Select Partitions to Modify &#40;Aggregation Design Wizard&#41;](../../2014/analysis-services/select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [Select Partitions to Modify &#40;Aggregation Design Wizard&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [Review Aggregation Usage &#40;Aggregation Design Wizard&#41;](../../2014/analysis-services/review-aggregation-usage-aggregation-design-wizard.md)  
+-   [Review Aggregation Usage &#40;Aggregation Design Wizard&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
--   [Specify Object Counts &#40;Aggregation Design Wizard&#41;](../../2014/analysis-services/specify-object-counts-aggregation-design-wizard.md)  
+-   [Specify Object Counts &#40;Aggregation Design Wizard&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [Set Aggregation Options &#40;Aggregation Design Wizard&#41;](../../2014/analysis-services/set-aggregation-options-aggregation-design-wizard.md)  
+-   [Set Aggregation Options &#40;Aggregation Design Wizard&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
--   [Completing the Wizard &#40;Aggregation Design Wizard&#41;](../../2014/analysis-services/completing-the-wizard-aggregation-design-wizard.md)  
+-   [Completing the Wizard &#40;Aggregation Design Wizard&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## See Also  
- [Aggregations and Aggregation Designs](../../2014/analysis-services/dev-guide/aggregations-and-aggregation-designs.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Usage-Based Optimization Wizard F1 Help](../../2014/analysis-services/usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Usage-Based Optimization Wizard F1 Help](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

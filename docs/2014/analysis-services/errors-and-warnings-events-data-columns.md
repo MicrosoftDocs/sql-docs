@@ -47,6 +47,6 @@ manager: "mblythe"
 |ServerName|43|8|Contains the name of the server running [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on which the error event occurred.|  
   
 ## See Also  
- [Security Audit Event Category](../../2014/analysis-services/security-audit-event-category.md)  
+ [Security Audit Event Category](security-audit-event-category.md)  
   
   

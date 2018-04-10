@@ -20,7 +20,7 @@ manager: "mblythe"
 # Connect to a Flat File (SSAS)
   This page of the **Table Import Wizard** enables you to connect to a flat file (.txt), tab-separated file (.tab), or a comma-separated file (.csv). To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
- To connect to a flat file, you must have the ACE provider installed on your computer. For more information, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md).  
+ To connect to a flat file, you must have the ACE provider installed on your computer. For more information, see [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md).  
   
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a file in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected file.  

@@ -179,7 +179,7 @@ manager: "mblythe"
  Decide whether to change default null processing behaviors. By default, nulls in a string column are processed as empty values, while nulls in a numeric column are processed as zero. See [Defining the Unknown Member and Null Processing Properties](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) for instructions on setting null processing on an attribute.  
   
 ## See Also  
- [Log Properties](../../2014/analysis-services/log-properties.md)   
+ [Log Properties](log-properties.md)   
  [Defining the Unknown Member and Null Processing Properties](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

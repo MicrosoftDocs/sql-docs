@@ -80,6 +80,6 @@ manager: "mblythe"
 -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expand the tabular model database that contains the role you want to delete, then expand **Roles**, then right click on the role, and then click **Delete**.  
   
 ## See Also  
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)  
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
   
   

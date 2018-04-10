@@ -29,11 +29,11 @@ manager: "mblythe"
   
 -   **Query-scoped** To create a calculated member that is defined as part of an MDX query, and therefore whose scope is limited to the query, you use the WITH keyword. You can then use the calculated member within an MDX SELECT statement. Using this approach, the calculated member created by using the WITH keyword can be changed without disturbing the SELECT statement.  
   
-     For more information about how to use the WITH keyword to create calculated members, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](../../2014/analysis-services/creating-query-scoped-calculated-members-mdx.md).  
+     For more information about how to use the WITH keyword to create calculated members, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](creating-query-scoped-calculated-members-mdx.md).  
   
 -   **Session-scoped** To create a calculated member whose scope is wider than the context of the query, that is, whose scope is the lifetime of the MDX session, you use the CREATE MEMBER statement. A calculated member defined by using the CREATE MEMBER statement is available to all MDX queries in that session. The CREATE MEMBER statement makes sense, for example, in a client application that consistently reuses the same set in a variety of queries.  
   
-     For more information about how to use the CREATE MEMBER statement to create calculated members in a session, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](../../2014/analysis-services/creating-session-scoped-calculated-members-mdx.md).  
+     For more information about how to use the CREATE MEMBER statement to create calculated members in a session, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](creating-session-scoped-calculated-members-mdx.md).  
   
 ## See Also  
  [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)   

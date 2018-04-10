@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Classify Wizard (Data Mining Add-ins for Excel)
-  ![Classify wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-classify.gif "Classify wizard in Data Mining ribbon")  
+  ![Classify wizard in Data Mining ribbon](media/dmc-classify.gif "Classify wizard in Data Mining ribbon")  
   
  The **Classify** wizard helps you build a classification model based on existing data in an Excel table, an Excel range, or an external data source.  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
   
 6.  On the **Finish** page, provide a descriptive name for your data set and model, and set the following options that control how you work with the finished model:  
   
-    -   **Browse model**. When this option is selected, as soon as the wizard finishes processing the model, it opens a **Browse** window to help you explore the results. The contents of the viewer depend on the type of model you built. For more information, see [Browsing a Decision Trees Model](../../2014/analysis-services/browsing-a-decision-trees-model.md) and [Browsing a Neural Network Model](../../2014/analysis-services/browsing-a-neural-network-model.md).  
+    -   **Browse model**. When this option is selected, as soon as the wizard finishes processing the model, it opens a **Browse** window to help you explore the results. The contents of the viewer depend on the type of model you built. For more information, see [Browsing a Decision Trees Model](browsing-a-decision-trees-model.md) and [Browsing a Neural Network Model](browsing-a-neural-network-model.md).  
   
     -   **Enable drillthrough**. Select this option to view the underlying data from the finished model. This option is only available if you build a Decision Tree model.  
   
@@ -77,9 +77,9 @@ manager: "mblythe"
  [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
- To use the **Classify** wizard, you must be connected to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ To use the **Classify** wizard, you must be connected to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)  
   
   

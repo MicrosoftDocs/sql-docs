@@ -22,8 +22,8 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a NewTabular Model Project &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-newtabular-model-project-ssas-tabular.md)|This topic describes how to create a new, blank tabular model project.|  
-|[Import from Analysis Services &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-analysis-services-ssas-tabular.md)|This topic describes how to create a new tabular model project based on an existing model already in Analysis Services. Metadata from the existing model is extracted and used to create the new model.|  
-|[Import from PowerPivot &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-powerpivot-ssas-tabular.md)|This topic describes how to create a new tabular model project by extracting the metadata and data from a PowerPivot for Excel file (.xlsx).|  
+|[Create a NewTabular Model Project &#40;SSAS Tabular&#41;](create-a-newtabular-model-project-ssas-tabular.md)|This topic describes how to create a new, blank tabular model project.|  
+|[Import from Analysis Services &#40;SSAS Tabular&#41;](import-from-analysis-services-ssas-tabular.md)|This topic describes how to create a new tabular model project based on an existing model already in Analysis Services. Metadata from the existing model is extracted and used to create the new model.|  
+|[Import from PowerPivot &#40;SSAS Tabular&#41;](import-from-powerpivot-ssas-tabular.md)|This topic describes how to create a new tabular model project by extracting the metadata and data from a PowerPivot for Excel file (.xlsx).|  
   
   

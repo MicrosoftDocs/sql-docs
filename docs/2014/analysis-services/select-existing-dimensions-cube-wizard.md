@@ -29,6 +29,6 @@ manager: "mblythe"
  By default, all dimensions are selected.  
   
 ## See Also  
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)  
   
   

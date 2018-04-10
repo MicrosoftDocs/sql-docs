@@ -122,23 +122,23 @@ manager: "mblythe"
   
  The following tools in these add-ins support use of external data for data mining:  
   
--   [Sample Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/sample-data-sql-server-data-mining-add-ins.md)  
+-   [Sample Data &#40;SQL Server Data Mining Add-ins&#41;](sample-data-sql-server-data-mining-add-ins.md)  
   
--   [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/classify-wizard-data-mining-add-ins-for-excel.md)  
+-   [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Estimate Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/estimate-wizard-data-mining-add-ins-for-excel.md)  
+-   [Estimate Wizard &#40;Data Mining Add-ins for Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/cluster-wizard-data-mining-add-ins-for-excel.md)  
+-   [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/forecast-wizard-data-mining-add-ins-for-excel.md)  
+-   [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/create-mining-structure-sql-server-data-mining-add-ins.md)  
+-   [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  
   
--   [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/accuracy-chart-sql-server-data-mining-add-ins.md)  
+-   [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)  
   
--   [Profit Chart &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/profit-chart-sql-server-data-mining-add-ins.md)  
+-   [Profit Chart &#40;SQL Server Data Mining Add-ins&#41;](profit-chart-sql-server-data-mining-add-ins.md)  
   
--   [Classification Matrix &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/classification-matrix-sql-server-data-mining-add-ins.md)  
+-   [Classification Matrix &#40;SQL Server Data Mining Add-ins&#41;](classification-matrix-sql-server-data-mining-add-ins.md)  
   
 ### Using Analysis Services as a Data Source  
  You cannot directly access data stored in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube or tabular model. Instead, create a connection in Excel to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, and use the data to create a model.  
@@ -152,7 +152,7 @@ manager: "mblythe"
   
 -   SQL Server 2012  
   
- You can also get data from any other relational data source that is supported as a data source by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For information about supported data sources, see [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)  
+ You can also get data from any other relational data source that is supported as a data source by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For information about supported data sources, see [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)  
   
  Note that the following data types cannot be used for data mining and will result in an error if included when you build a model:  
   
@@ -161,6 +161,6 @@ manager: "mblythe"
 -   binary  
   
 ## See Also  
- [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md)  
+ [Trace &#40;Data Mining Client for Excel&#41;](trace-data-mining-client-for-excel.md)  
   
   

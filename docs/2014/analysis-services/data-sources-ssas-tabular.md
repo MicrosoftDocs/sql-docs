@@ -22,11 +22,11 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)|This topic provides information about the different data sources that you can import data from.|  
-|[Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md)|This topic provides information about the various data types that are supported in a Tabular Model.|  
-|[Impersonation &#40;SSAS Tabular&#41;](../../2014/analysis-services/impersonation-ssas-tabular.md)|This topic provides information about impersonation, which provides logon credentials that are used by Analysis Services when connecting to a data source to import and refresh data.|  
-|[Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)|Tasks in this section describe how to import data from different data sources.|  
-|[Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md)|Tasks in this section describe how to process (refresh) or change data that has already been imported into a model.|  
-|[Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](../../2014/analysis-services/edit-an-existing-data-source-connection-ssas-tabular.md)|Describes how to edit a data source connection that has already been created and used to import data from a source.|  
+|[Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)|This topic provides information about the different data sources that you can import data from.|  
+|[Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md)|This topic provides information about the various data types that are supported in a Tabular Model.|  
+|[Impersonation &#40;SSAS Tabular&#41;](impersonation-ssas-tabular.md)|This topic provides information about impersonation, which provides logon credentials that are used by Analysis Services when connecting to a data source to import and refresh data.|  
+|[Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)|Tasks in this section describe how to import data from different data sources.|  
+|[Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)|Tasks in this section describe how to process (refresh) or change data that has already been imported into a model.|  
+|[Edit an Existing Data Source Connection &#40;SSAS Tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|Describes how to edit a data source connection that has already been created and used to import data from a source.|  
   
   

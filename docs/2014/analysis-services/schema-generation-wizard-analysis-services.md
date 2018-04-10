@@ -37,13 +37,13 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Use the Schema Generation Wizard &#40;Analysis Services&#41;](../../2014/analysis-services/use-the-schema-generation-wizard-analysis-services.md)|Describes how to generate the schema for the subject area and staging area databases.|  
-|[Understanding the Database Schemas](../../2014/analysis-services/understanding-the-database-schemas.md)|Describes the schema that is generated for the subject area and staging area databases.|  
-|[Understanding Incremental Generation](../../2014/analysis-services/understanding-incremental-generation.md)|Describes the incremental generation capabilities of the Schema Generation Wizard.|  
+|[Use the Schema Generation Wizard &#40;Analysis Services&#41;](use-the-schema-generation-wizard-analysis-services.md)|Describes how to generate the schema for the subject area and staging area databases.|  
+|[Understanding the Database Schemas](understanding-the-database-schemas.md)|Describes the schema that is generated for the subject area and staging area databases.|  
+|[Understanding Incremental Generation](understanding-incremental-generation.md)|Describes the incremental generation capabilities of the Schema Generation Wizard.|  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
   
   

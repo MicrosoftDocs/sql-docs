@@ -32,14 +32,14 @@ manager: "mblythe"
 > [!NOTE]  
 >  There are several download sites for the Visual Studio 2012 and Visual Studio 2013 versions of SSDT. Most do not include the BI project templates. Using the links above will get you the correct version. You’ll know that you have the correct version of SSDT-BI if you see the Business Intelligence project templates folder. This folder contains the project templates for Analysis Services, Reporting Services and Integration Services. Depending on how you installed SSDT-BI, you might also see an additional project template for SQL Server databases.  
   
- ![New Project templates in SSDT](../../2014/analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![New Project templates in SSDT](media/ssdt-biprojects.png "New Project templates in SSDT")  
   
 ## Features recently added: Power View for Multidimensional Models  
  The ability to create Power View reports against multidimensional models was first introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 Cumulative Update 4. Power View for Multidimensional Models functionality is now included as part of [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  **Power View Report for a Multidimensional Model**  
   
- ![Power View Report](../../2014/analysis-services/media/powerviewreport-wn.gif "Power View Report")  
+ ![Power View Report](media/powerviewreport-wn.gif "Power View Report")  
   
  This functionality helps organizations maximize existing BI investments by enabling multidimensional models (also known as OLAP cubes) to be used with the latest client reporting tools. Depending on the types of data in the multidimensional model, users can easily create a variety of dynamic visualizations from tables and matrices, to bubble charts and geographical maps. Multidimensional models now also support queries using Data Analysis Expressions (DAX).  
   

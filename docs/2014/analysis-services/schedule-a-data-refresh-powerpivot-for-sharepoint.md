@@ -104,7 +104,7 @@ manager: "mblythe"
   
     3.  Choose **Connect using the credentials saved in Secure Store Service** if you know the ID of a target application that contains previously stored credentials you want to use.  
   
-     For more information about these options, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) and [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     For more information about these options, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) and [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 9. In Data Sources, select the **All data sources** checkbox if you want data refresh to re-query all of the original data sources.  
   
@@ -118,7 +118,7 @@ manager: "mblythe"
   
     -   The data source must be available at the time that data refresh occurs and at the stated location. If the original data source is on a local disk drive of the person who authored the workbook, you must either exclude that data source from the data refresh operation, or find a way to publish that data source to a location that is accessible through a network connection. If you move a data source to a network location, be sure to open the workbook in [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] and update the data source connection information. This is necessary to re-establish the connection information that is stored in the PowerPivot workbook.  
   
-    -   The data source must be accessed using the credential information that is embedded in the PowerPivot workbook or that is specified in the schedule. Embedded credential information is stored in the PowerPivot workbook when you import data using PowerPivot for Excel. Embedded credential information is often SSPI=IntegratedSecurity or SSPI=TrustedConnection, which means use the credentials of the current user to connect to the data source. If you want to override the credential information in your data refresh schedule, you can specify predefined, stored credentials. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+    -   The data source must be accessed using the credential information that is embedded in the PowerPivot workbook or that is specified in the schedule. Embedded credential information is stored in the PowerPivot workbook when you import data using PowerPivot for Excel. Embedded credential information is often SSPI=IntegratedSecurity or SSPI=TrustedConnection, which means use the credentials of the current user to connect to the data source. If you want to override the credential information in your data refresh schedule, you can specify predefined, stored credentials. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
     -   Data refresh must succeed for all of the data sources that you specify. Otherwise, the refreshed data is discarded, leaving you with the last saved version of the workbook. Exclude any data sources that you are not sure about.  
   
@@ -154,11 +154,11 @@ manager: "mblythe"
  Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
->  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+>  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
 ## See Also  
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)   
- [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/view-data-refresh-history-powerpivot-for-sharepoint.md)   
- [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md)   
+ [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

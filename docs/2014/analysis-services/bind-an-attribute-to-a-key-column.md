@@ -26,7 +26,7 @@ manager: "mblythe"
   
 1.  In Dimension Designer, open the dimension that contains the attribute you want to rename.  
   
-2.  In the **Attributes** pane of the Dimension Builder view, change the display format to either **Tree** or **List**. For more information about how to change the format of the Attributes pane, see [View Attributes in a Tree, List or Grid in Dimension Designer](../../2014/analysis-services/view-attributes-in-a-tree-list-or-grid-in-dimension-designer.md).  
+2.  In the **Attributes** pane of the Dimension Builder view, change the display format to either **Tree** or **List**. For more information about how to change the format of the Attributes pane, see [View Attributes in a Tree, List or Grid in Dimension Designer](view-attributes-in-a-tree-list-or-grid-in-dimension-designer.md).  
   
 3.  Right-click the attribute you want to configure, and then click **Rename**.  
   

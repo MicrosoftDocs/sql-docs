@@ -41,6 +41,6 @@ manager: "mblythe"
 6.  Repeat these steps for other tables in your workbook.  
   
 ## Next Step  
- After you create a default field set, you can further influence the report design experience by specifying default labels, default images, default group behavior, or whether rows that contain the same value are grouped together in one row or listed individually. For more information, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md).  
+ After you create a default field set, you can further influence the report design experience by specifying default labels, default images, default group behavior, or whether rows that contain the same value are grouped together in one row or listed individually. For more information, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md).  
   
   

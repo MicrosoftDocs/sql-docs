@@ -31,7 +31,7 @@ manager: "mblythe"
  Select to create a cube based on the mining model dimension to be created. After you select this option, you can enter a new name for the cube.  
   
 ## See Also  
- [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
+ [Mining Structure View &#40;Data Mining Model Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Create a Data Mining Dimension](data-mining/create-a-data-mining-dimension.md)  
   
   

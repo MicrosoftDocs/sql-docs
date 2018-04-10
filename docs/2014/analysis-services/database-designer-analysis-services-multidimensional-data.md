@@ -21,14 +21,14 @@ manager: "mblythe"
 ## Tabs  
  The Database Designer contains the following tabs:  
   
- [General](../../2014/analysis-services/general-database-designer-analysis-services-multidimensional-data.md)  
+ [General](general-database-designer-analysis-services-multidimensional-data.md)  
  Use the **General** tab to change the properties of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
- [Warnings](../../2014/analysis-services/warnings-database-designer-analysis-services-multidimensional-data.md)  
+ [Warnings](warnings-database-designer-analysis-services-multidimensional-data.md)  
  Use the **Warnings** tab to view and dismiss rules globally, and to view and re-enable specific instances of dismissed warnings.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
   

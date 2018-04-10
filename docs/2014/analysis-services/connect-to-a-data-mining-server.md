@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Connect to a Data Mining Server
-  ![Connections button](../../2014/analysis-services/media/misc-connection.gif "Connections button")  
+  ![Connections button](media/misc-connection.gif "Connections button")  
   
  Click the **Connection** button to select an existing connection, or to create a new connection to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
   
  **How can I monitor usage of the connection?**  
   
- The [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md) tool creates a log of all activity between the add-ins and the specified server.  
+ The [Trace &#40;Data Mining Client for Excel&#41;](trace-data-mining-client-for-excel.md) tool creates a log of all activity between the add-ins and the specified server.  
   
  To enable monitoring of session models, select the **Use session models** option in the **Tracer** dialog box.  
   
@@ -95,9 +95,9 @@ manager: "mblythe"
  You can also explicitly create a temporary structure or model by using the **Data Mining Advanced Query Editor** and selecting one of the DMX templates. Add the `USE SESSION MODELS` clause to specify that objects be temporary.   
   
 ### Creating Backups of Mining Models and Structures  
- To create a backup of a model or structure, you can export it by using [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/manage-models-sql-server-data-mining-add-ins.md), in the Data Mining Client for Excel.  
+ To create a backup of a model or structure, you can export it by using [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md), in the Data Mining Client for Excel.  
   
- If you created a temporary mining model, it typically has a name that is difficult to understand, such as Table5_593679_TS_62446. However, you can use the [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md) tool to discover the names of temporary structures and models that were created by the Table Analysis Tools and then back them up using **Manage Models**.  
+ If you created a temporary mining model, it typically has a name that is difficult to understand, such as Table5_593679_TS_62446. However, you can use the [Trace &#40;Data Mining Client for Excel&#41;](trace-data-mining-client-for-excel.md) tool to discover the names of temporary structures and models that were created by the Table Analysis Tools and then back them up using **Manage Models**.  
   
 ##### Identify and export a temporary model  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
 4.  Click Export this mining model to generate a script file in a location you specify.  
   
 ## See Also  
- [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md)   
- [Server Configuration Utility &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
+ [Server Configuration Utility &#40;Data Mining Add-ins for Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
   

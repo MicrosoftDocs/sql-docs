@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Sample Data (SQL Server Data Mining Add-ins)
-  ![Partition Data wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-partition.gif "Partition Data wizard in Data Mining ribbon")  
+  ![Partition Data wizard in Data Mining ribbon](media/dmc-partition.gif "Partition Data wizard in Data Mining ribbon")  
   
  The **Sample Data** wizard makes it easy to divide your source data into two sets, one for building (training) the model and one for testing the model. This wizard also provides an option for resampling the data to build a new data set that better represents your target.  
   
@@ -81,6 +81,6 @@ manager: "mblythe"
  For more information, see [Row Sampling Transformation](../../2014/integration-services/row-sampling-transformation.md) and [Percentage Sampling Transformation](../../2014/integration-services/percentage-sampling-transformation.md).  
   
 ## See Also  
- [Checklist of Preparation for Data Mining](../../2014/analysis-services/checklist-of-preparation-for-data-mining.md)  
+ [Checklist of Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)  
   
   

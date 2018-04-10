@@ -51,6 +51,6 @@ manager: "mblythe"
 >  For more information see [Using Multiple Active Result Sets &#40;MARS&#41;](../../2014/database-engine/dev-guide/using-multiple-active-result-sets-mars.md).  
   
 ## See Also  
- [Write-Enabled Dimensions](../../2014/analysis-services/dev-guide/write-enabled-dimensions.md)  
+ [Write-Enabled Dimensions](dev-guide/write-enabled-dimensions.md)  
   
   

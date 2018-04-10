@@ -36,7 +36,7 @@ manager: "mblythe"
  Displays a string that describes the aggregation design used by the partition.  
   
 ## See Also  
- [Usage-Based Optimization Wizard F1 Help](../../2014/analysis-services/usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Usage-Based Optimization Wizard F1 Help](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

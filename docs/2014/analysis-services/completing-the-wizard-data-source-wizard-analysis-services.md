@@ -28,8 +28,8 @@ manager: "mblythe"
  Displays the connection string for the data source. Click **Back** to make changes to these settings.  
   
 ## See Also  
- [Data Source Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-wizard-f1-help-analysis-services.md)   
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)  
+ [Data Source Wizard F1 Help &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
   
   

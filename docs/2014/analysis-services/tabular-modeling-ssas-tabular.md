@@ -23,10 +23,10 @@ manager: "mblythe"
  Tabular models are authored in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] using new tabular model project templates. You can import data from multiple sources, and then enrich the model by adding relationships, calculated columns, measures, KPIs, and hierarchies. Models can then be deployed to an instance of Analysis Services where client reporting applications can connect to them. Deployed models can be managed in SQL Server Management Studio just like multidimensional models. They can also be partitioned for optimized processing and secured to the row-level by using role based security.  
   
 ## In This Section  
- [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-solutions-ssas-tabular.md)  
+ [Tabular Model Solutions &#40;SSAS Tabular&#41;](tabular-model-solutions-ssas-tabular.md)  
   
- [Tabular Model Databases &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-databases-ssas-tabular.md)  
+ [Tabular Model Databases &#40;SSAS Tabular&#41;](tabular-model-databases-ssas-tabular.md)  
   
- [Tabular Model Data Access](../../2014/analysis-services/tabular-model-data-access.md)  
+ [Tabular Model Data Access](tabular-model-data-access.md)  
   
   

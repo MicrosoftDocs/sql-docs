@@ -37,7 +37,7 @@ manager: "mblythe"
      You can now directly edit any objects within the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
 ## See Also  
- [Working with Analysis Services Projects and Databases During the Development Phase](../../2014/analysis-services/work-with-analysis-services-projects-and-databases-in-development.md)   
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../2014/analysis-services/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Working with Analysis Services Projects and Databases During the Development Phase](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

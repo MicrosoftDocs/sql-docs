@@ -74,8 +74,8 @@ manager: "mblythe"
  Select the aggregation function that will be used for the selected account type.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md)   
- [Warnings &#40;Database Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/warnings-database-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)   
+ [Warnings &#40;Database Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

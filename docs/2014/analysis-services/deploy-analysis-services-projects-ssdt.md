@@ -30,6 +30,6 @@ manager: "mblythe"
  The project configuration and its associated settings determine the deployment properties that will be used to deploy the project. For a shared project, each developer can use their own configuration with their own project configuration options. For example, each developer can specify a different test server to work in isolation from other developers.  
   
 ## See Also  
- [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md)  
+ [Create an Analysis Services Project &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
   
   

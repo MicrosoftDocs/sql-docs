@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Key Columns Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Key Columns** dialog box to change the **KeyColumns** property of an attribute. For more information, see [Modify the KeyColumn Property of an Attribute](../../2014/analysis-services/modify-the-keycolumn-property-of-an-attribute.md).  
+  Use the **Key Columns** dialog box to change the **KeyColumns** property of an attribute. For more information, see [Modify the KeyColumn Property of an Attribute](modify-the-keycolumn-property-of-an-attribute.md).  
   
  **To display the Key Columns dialog box**  
   
@@ -59,6 +59,6 @@ manager: "mblythe"
  Click to remove the selected column from the columns listed in **Key Columns**.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

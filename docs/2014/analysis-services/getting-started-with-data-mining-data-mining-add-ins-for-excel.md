@@ -86,10 +86,10 @@ manager: "mblythe"
   
  As you try binning your data different ways, or adding new columns, remember to use the **Document Model** wizard to capture a snapshot of each model’s metadata and results. Having a record will make it easier to track progress in your exploration.  
   
- [Exploring and Cleaning Data](../../2014/analysis-services/exploring-and-cleaning-data.md)  
+ [Exploring and Cleaning Data](exploring-and-cleaning-data.md)  
   
 ## Validate Your Model  
- As you run each wizard or tool, the algorithm analyzes the contents of the data and determines whether a statistically valid pattern exists. If the algorithm cannot find valid patterns, you’ll get an error message. However, even if a model was successfully created, you’ll want to test the model to see if it validates your assumptions. You can use tools such as the [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/accuracy-chart-sql-server-data-mining-add-ins.md) or [Cross-Validation &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/cross-validation-sql-server-data-mining-add-ins.md) to produce statistical measures of model quality.  
+ As you run each wizard or tool, the algorithm analyzes the contents of the data and determines whether a statistically valid pattern exists. If the algorithm cannot find valid patterns, you’ll get an error message. However, even if a model was successfully created, you’ll want to test the model to see if it validates your assumptions. You can use tools such as the [Accuracy Chart &#40;SQL Server Data Mining Add-ins&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) or [Cross-Validation &#40;SQL Server Data Mining Add-ins&#41;](cross-validation-sql-server-data-mining-add-ins.md) to produce statistical measures of model quality.  
   
  As you assess the results of your first model, ask yourself questions such as these:  
   
@@ -101,11 +101,11 @@ manager: "mblythe"
   
 -   Is the data set balanced? Cross-validation can test the representativeness of your data.  
   
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
- [Data Mining Client for Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Data Mining Client for Excel &#40;SQL Server Data Mining Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
- [Choosing a Model](../../2014/analysis-services/choosing-a-model.md)  
+ [Choosing a Model](choosing-a-model.md)  
   
 ## Explore and Refine  
  If the model appears to be valid, you can use the model for prediction, recommendation, deriving insights, or planning business strategies..  
@@ -120,12 +120,12 @@ manager: "mblythe"
   
  An important use of data mining models is to create predictions and recommendations. The Data Mining Add-ins for Excel includes tools that make it easy to generate even complex prediction queries, for converting insights into actionable results. All of these tools are fully integrated with Excel.  
   
- [Viewing Models &#40;Data Mining Add-ins for Office&#41;](../../2014/analysis-services/viewing-models-data-mining-add-ins-for-office.md)  
+ [Viewing Models &#40;Data Mining Add-ins for Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## See Also  
- [What's Included in the Data Mining Add-Ins for Office](../../2014/analysis-services/what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Technical Reference &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/technical-reference-data-mining-add-ins-for-excel.md)  
+ [What's Included in the Data Mining Add-Ins for Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Technical Reference &#40;Data Mining Add-ins for Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

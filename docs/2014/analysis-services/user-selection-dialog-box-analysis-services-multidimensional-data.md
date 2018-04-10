@@ -27,7 +27,7 @@ manager: "mblythe"
  Select the users on which to filter queries from the query log.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Specify Query Criteria &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/specify-query-criteria-usage-based-optimization-wizard.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Specify Query Criteria &#40;Usage-Based Optimization Wizard&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

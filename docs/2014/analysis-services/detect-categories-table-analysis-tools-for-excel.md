@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Detect Categories (Table Analysis Tools for Excel)
-  ![Detect Categories button in ribbon](../../2014/analysis-services/media/tat-detectcat.gif "Detect Categories button in ribbon")  
+  ![Detect Categories button in ribbon](media/tat-detectcat.gif "Detect Categories button in ribbon")  
   
  The **Detect Categories** tool automatically finds rows in a table that have similar characteristics.  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
   
 6.  The tool creates a new worksheet, named Categories Report, which contains the list of categories and their characteristics.  
   
- For more information about how to specify options for the tool, see [Detect Categories Dialog Box (Table Analysis Tools for Excel)](../../2014/analysis-services/detect-categories-table-analysis-tools-for-excel.md).  
+ For more information about how to specify options for the tool, see [Detect Categories Dialog Box (Table Analysis Tools for Excel)](detect-categories-table-analysis-tools-for-excel.md).  
   
 ## Understanding the Categories Report  
  The **Categories Report** contains two tables, **Category List** and **Category Characteristics**, and a **Category Profiles** chart.  
@@ -51,14 +51,14 @@ manager: "mblythe"
   
  The model creates temporary names for each category, but you can rename the categories as you like. For example, in the following example, the first category has been renamed **Low Income**, because that was the top attribute of the cluster.  
   
- ![report created by Detect Categories tool](../../2014/analysis-services/media/dm13-tat-detectcat-report1.gif "report created by Detect Categories tool")  
+ ![report created by Detect Categories tool](media/dm13-tat-detectcat-report1.gif "report created by Detect Categories tool")  
   
  As soon as you type the new label, the change is propagated to all the other charts as well as to the category list added in the source data worksheet.  
   
 ### Category Characteristics  
  The second table, **Category Characteristics**, shows details about the makeup of each category. Click the **Filter** button at the top of the **Category** column to see focus on one or just a few categories.  
   
- ![report created by Detect Categories tool](../../2014/analysis-services/media/dm13-tat-detectcat-report2.gif "report created by Detect Categories tool")  
+ ![report created by Detect Categories tool](media/dm13-tat-detectcat-report2.gif "report created by Detect Categories tool")  
   
  The shading in the column, **Relative Importance**, indicates how important that combination of attribute and value is as a distinguishing factor. The longer the bar, the more likely it is that this attribute is strongly representative of this category.  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
   
  Excel 2013 now provides **Chart Styles** and **Chart Elements** controls right in the design surface that make it easy to improve the chart design.  
   
- ![report created by Detect Categories tool](../../2014/analysis-services/media/dm13-tat-detectcat-report3.gif "report created by Detect Categories tool")  
+ ![report created by Detect Categories tool](media/dm13-tat-detectcat-report3.gif "report created by Detect Categories tool")  
   
 ## Requirements  
  The **Detect Categories** tool has no requirements for the amount or type of data.  
@@ -78,13 +78,13 @@ manager: "mblythe"
 ## Related Tools  
  When the **Detect Categories** tool analyzes your data, it creates a data mining structure and data mining model by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm.  
   
- After you have created a data mining model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client for Excel to browse the model and explore relationships in more detail. The Data Mining Client for Excel is a separate add-in that provides more advanced data mining functionality. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ After you have created a data mining model by using the **Analyze Key Influencers** tool, you can use the Data Mining Client for Excel to browse the model and explore relationships in more detail. The Data Mining Client for Excel is a separate add-in that provides more advanced data mining functionality. For information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
- For more information about using the data modeling capabilities in the Data Mining Client for Excel, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
+ For more information about using the data modeling capabilities in the Data Mining Client for Excel, see [Creating a Data Mining Model](creating-a-data-mining-model.md).  
   
  For more information about the algorithm used by the **Detect Categories** tool, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

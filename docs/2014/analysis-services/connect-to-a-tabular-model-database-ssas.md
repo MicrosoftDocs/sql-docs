@@ -34,7 +34,7 @@ manager: "mblythe"
 ##  <a name="bkmk_userpermissions"></a> User permissions on the database  
  Users who connect to tabular databases must have membership in a database role that specifies Read access.  
   
- Roles, and sometimes role membership, are defined when a model is authored in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or for deployed models, by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information about creating roles by using Role Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md). For more information about creating and managing roles for a deployed model, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
+ Roles, and sometimes role membership, are defined when a model is authored in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or for deployed models, by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information about creating roles by using Role Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md). For more information about creating and managing roles for a deployed model, see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
 > [!CAUTION]  
 >  Re-deploying a tabular model project with roles defined by using Role Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] will overwrite roles defined in a deployed tabular model.  
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 -   Create a data connection from within Excel, using the instructions provided in the next section.  
   
--   Create a BI semantic model connection (.bism) file in SharePoint that provides redirection to a database running on an Analysis Services tabular mode server. A BI semantic model connection file provides a right-click command that launches Excel using the model database that you specified in the connection. It will also launch [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] if Reporting Services is installed. For more information about creating and using BI semantic model connection files, see [Create a BI Semantic Model Connection to a Tabular Model Database](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Create a BI semantic model connection (.bism) file in SharePoint that provides redirection to a database running on an Analysis Services tabular mode server. A BI semantic model connection file provides a right-click command that launches Excel using the model database that you specified in the connection. It will also launch [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] if Reporting Services is installed. For more information about creating and using BI semantic model connection files, see [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   Create a Reporting Services shared data source that references a tabular database as the data source. You can create the shared data source in SharePoint and use it to launch [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
   
@@ -87,10 +87,10 @@ manager: "mblythe"
   
 5.  Select the database. A valid selection will show a single **Model** cube for the database. Click **Next** and then click **Finish**.  
   
- After the connection is established, you can use the data to create a PivotTable or PivotChart. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md).  
+ After the connection is established, you can use the data to create a PivotTable or PivotChart. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_sharepoint"></a> Connect from SharePoint  
- If you are using PowerPivot for SharePoint, you can create a BI semantic model connection file in SharePoint that provides redirection to a database running on an Analysis Services tabular mode server. A BI semantic model connection provides an HTTP endpoint to a database. It also simplifies tabular model access for knowledge workers who routinely use documents on a SharePoint site. Knowledge workers only need to know the location of the BI semantic model connection file or its URL to access tabular model databases. Details about server location or database name are encapsulated in the BI semantic model connection. For more information about creating and using BI semantic model connection files, see [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](../../2014/analysis-services/powerpivot-bi-semantic-model-connection-bism.md) and   [Create a BI Semantic Model Connection to a Tabular Model Database](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+ If you are using PowerPivot for SharePoint, you can create a BI semantic model connection file in SharePoint that provides redirection to a database running on an Analysis Services tabular mode server. A BI semantic model connection provides an HTTP endpoint to a database. It also simplifies tabular model access for knowledge workers who routinely use documents on a SharePoint site. Knowledge workers only need to know the location of the BI semantic model connection file or its URL to access tabular model databases. Details about server location or database name are encapsulated in the BI semantic model connection. For more information about creating and using BI semantic model connection files, see [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md) and   [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_Tshoot"></a> Troubleshooting Connection Problems  
  This section provides cause and resolution steps for problems that occur while connecting to a tabular model database.  
@@ -112,6 +112,6 @@ manager: "mblythe"
  On SharePoint, this Microsoft Excel error occurs when you attempt data interaction, such as filtering data, in a PivotTable that uses model data. The error occurs because the user does not have sufficient SharePoint permissions on the workbook. The user must have **Read** permissions or above. **View-Only** permissions are not sufficient for data access.  
   
 ## See Also  
- [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-solution-deployment-ssas-tabular.md)  
+ [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

@@ -44,7 +44,7 @@ manager: "mblythe"
  This option is only used for OLAP mining models.  
   
 ## See Also  
- [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
+ [Mining Structure View &#40;Data Mining Model Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Add Columns to a Mining Structure](data-mining/add-columns-to-a-mining-structure.md)  
   
   

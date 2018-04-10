@@ -27,9 +27,9 @@ manager: "mblythe"
   
  When you use different fact tables, ensure that no data is duplicated among the partitions. For example, if one fact table contains transactions for 2012 only, and another fact table contains transactions for 2013 only, these tables contain independent data. Similarly, fact tables for distinct product lines or distinct geographical areas are independent.  
   
- It is possible, but not recommended, to use different fact tables that contain duplicated data. In this case, you must use filters in the partitions to ensure that data used by one partition is not used by any other partition. For more information, see [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-local-partition-analysis-services.md).  
+ It is possible, but not recommended, to use different fact tables that contain duplicated data. In this case, you must use filters in the partitions to ensure that data used by one partition is not used by any other partition. For more information, see [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
 ## See Also  
- [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-local-partition-analysis-services.md)  
+ [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

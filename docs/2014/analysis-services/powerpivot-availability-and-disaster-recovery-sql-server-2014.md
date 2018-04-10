@@ -37,7 +37,7 @@ manager: "mblythe"
   
  The following diagram illustrates an example [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2013 deployment. This example supports good availability of the [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] services and assumes the databases are backed up on a regular basis.  
   
- ![powerpivot availability in 2013](../../2014/analysis-services/media/ssas-powerpivot-services-2013.png "powerpivot availability in 2013")  
+ ![powerpivot availability in 2013](media/ssas-powerpivot-services-2013.png "powerpivot availability in 2013")  
   
 -   **(1)** The Web front-end servers. Use the [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2013 Add-in to install the data providers on each server. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
  The following diagram illustrates an example [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 2010 deployment. This example supports good availability of the [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] services and assumes the databases are backed up on a regular basis.  
   
- ![powerpivot availability in sharepoint 2010](../../2014/analysis-services/media/ssas-powerpivot-services-2010.png "powerpivot availability in sharepoint 2010")  
+ ![powerpivot availability in sharepoint 2010](media/ssas-powerpivot-services-2010.png "powerpivot availability in sharepoint 2010")  
   
 -   **(1)** The Web front-end servers. Install the data providers on each server. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

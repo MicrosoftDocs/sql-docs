@@ -347,6 +347,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   The HAVING clause is not allowed in an axis clause; use a [Filter &#40;MDX&#41;](~/mdx/filter-mdx.md) function expression instead.  
   
--   By default calculated members are not allowed in subselects; however, this restriction can be changed, in a per session basis, by assigning a value to the `SubQueries` connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or `DBPROP_MSMD_SUBQUERIES` property in [Supported XMLA Properties &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md). See [Calculated Members in Subselects and Subcubes](../../2014/analysis-services/calculated-members-in-subselects-and-subcubes.md) for a detailed explanation of the behavior of calculated members depending on the values of `SubQueries` or `DBPROP_MSMD_SUBQUERIES`.  
+-   By default calculated members are not allowed in subselects; however, this restriction can be changed, in a per session basis, by assigning a value to the `SubQueries` connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or `DBPROP_MSMD_SUBQUERIES` property in [Supported XMLA Properties &#40;XMLA&#41;](dev-guide/supported-xmla-properties-xmla.md). See [Calculated Members in Subselects and Subcubes](calculated-members-in-subselects-and-subcubes.md) for a detailed explanation of the behavior of calculated members depending on the values of `SubQueries` or `DBPROP_MSMD_SUBQUERIES`.  
   
   

@@ -36,8 +36,8 @@ manager: "mblythe"
  Click to automatically detect the continuous and discrete content types for numeric column. This does not apply to mining structures that are based on OLAP data sources. For OLAP mining structures, the wizard automatically detects content types and chooses a type that is compatible with the selected algorithm.  
   
 ## See Also  
- [Completing the Wizard &#40;Data Mining Wizard&#41;](../../2014/analysis-services/completing-the-wizard-data-mining-wizard.md)   
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Specify the Training Data &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
+ [Completing the Wizard &#40;Data Mining Wizard&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Specify the Training Data &#40;Data Mining Wizard&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

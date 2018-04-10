@@ -27,23 +27,23 @@ manager: "mblythe"
      By default, the **Dimension Structure** page appears when you first open a dimension in Dimension Designer.  
   
 ## Toolbar  
- Use the toolbar to perform common actions in the **Dimension Structure** page of Dimension Designer. For more information about this pane, see [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md).  
+ Use the toolbar to perform common actions in the **Dimension Structure** page of Dimension Designer. For more information about this pane, see [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md).  
   
 ## Panes  
  The **Dimension Structure** page contains the following panes:  
   
- [Data Source View](../../2014/analysis-services/datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Data Source View](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the **Data Source View** pane to explore and manage the data source view associated with a dimension.  
   
- [Hierarchies](../../2014/analysis-services/hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Hierarchies](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the **Hierarchies** pane to manage the hierarchies and levels for a dimension.  
   
- [Attributes](../../2014/analysis-services/attributes-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attributes](attributes-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the **Attributes** pane to explore and manage attributes for a dimension.  
   
 ## See Also  
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

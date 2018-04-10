@@ -29,7 +29,7 @@ manager: "mblythe"
 |`AttributeID`|Contains the unique identifier (ID) of the attribute.|  
   
 ## See Also  
- [Define Cube Dimension Properties](../../2014/analysis-services/define-cube-dimension-properties.md)   
- [Define Cube Hierarchy Properties](../../2014/analysis-services/define-cube-hierarchy-properties.md)  
+ [Define Cube Dimension Properties](define-cube-dimension-properties.md)   
+ [Define Cube Hierarchy Properties](define-cube-hierarchy-properties.md)  
   
   

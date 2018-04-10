@@ -26,7 +26,7 @@ manager: "mblythe"
   
  The best place to start is with a data summarization example you already know, and then see how MDX relates to it. Here’s a PivotTable created in Excel, populated with data from an Analysis Services sample cube.  
   
- ![PivotTable with measures and dimensions called out](../../2014/analysis-services/media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
+ ![PivotTable with measures and dimensions called out](media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
   
 ## Measures and Dimensions  
  An Analysis Services cube consists of measures, dimensions, and dimension attributes, all of which are evident in the PivotTable example.  
@@ -40,11 +40,11 @@ manager: "mblythe"
  Each attribute has a collection of data values, or members, associated with it. In our example, members of the Country Group attribute are Europe, North America, and Pacific. **Members** refers to the actual data values that belong to an attribute.  
   
 > [!NOTE]  
->  One aspect of data modeling is to formalize the patterns and relationships that already exist within the data itself. When working with data that falls into a natural hierarchy, as is the case with countries-regions-cities, you can formalize that relationship by creating an **attribute relationship**. An attribute relationship is a one-to-many relationship between attributes, for example a relationship between a state and a city – a state has many cities, but a city belongs to just one state. Creating attribute relationships in the model speeds up query performance, so it’s a best practice to create them if the data supports it. You can create an attribute relationship in Dimension Designer in SQL Server Data Tools. See [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+>  One aspect of data modeling is to formalize the patterns and relationships that already exist within the data itself. When working with data that falls into a natural hierarchy, as is the case with countries-regions-cities, you can formalize that relationship by creating an **attribute relationship**. An attribute relationship is a one-to-many relationship between attributes, for example a relationship between a state and a city – a state has many cities, but a city belongs to just one state. Creating attribute relationships in the model speeds up query performance, so it’s a best practice to create them if the data supports it. You can create an attribute relationship in Dimension Designer in SQL Server Data Tools. See [Define Attribute Relationships](define-attribute-relationships.md).  
   
  Inside Excel, model metadata shows up in the PivotTable field list.  Compare the PivotTable above to the field list below. Notice that the field list contains Sales Territory, Group, Country, Region (metadata), whereas the PivotTable contains just the members (data values). Knowing what the icons look like can help you easily relate the parts of a multidimensional model to a PivotTable in Excel.  
   
- ![PivotTable field list](../../2014/analysis-services/media/ssas-keyconcepts-ptfieldlist.png "PivotTable field list")  
+ ![PivotTable field list](media/ssas-keyconcepts-ptfieldlist.png "PivotTable field list")  
   
 ## Attribute Hierarchies  
  Almost without having to think about it, you know that values in a PivotTable go up or down as you expand and collapse the levels along each axis, but what makes this so? The answer lies in attribute hierarchies.  
@@ -59,11 +59,11 @@ manager: "mblythe"
   
  Aggregations like this are pre-computed and stored in advance, which is part of the secret to fast query performance of Analysis Services.  
   
- ![PivotTable with all member called out](../../2014/analysis-services/media/ssas-keyconcepts-pivot2-allmember.png "PivotTable with all member called out")  
+ ![PivotTable with all member called out](media/ssas-keyconcepts-pivot2-allmember.png "PivotTable with all member called out")  
   
  Expand the hierarchy, and eventually you get to the lowest level. This is called the **leaf member**. A leaf member is a member of a hierarchy that has no children. In this example, Australia is the leaf member.  
   
- ![PivotTable with leaf member calle dout](../../2014/analysis-services/media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable with leaf member calle dout")  
+ ![PivotTable with leaf member calle dout](media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable with leaf member calle dout")  
   
  Anything above it is called a **parent member**. Pacific is the parent of Australia.  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
 -   An (All) member that contains the aggregated value of all the child attributes. Optionally, you can hide or turn off the (All) level when it doesn’t make sense for the data. For example, although Product Code is numeric, it wouldn’t make sense to sum or average or otherwise aggregate all of the Product Codes.  
   
 > [!NOTE]  
->  BI developers often set properties on the attribute hierarchy to achieve certain behaviors in client applications, or gain certain performance benefits. For example, you would set AttributeHierarchyEnabled=False on attributes for which the (All) member doesn’t make sense. Alternatively, perhaps you simply want to hide the (All) member, in which case you would set AttributeHierarchyVisible=False. See [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md) for more details about properties.  
+>  BI developers often set properties on the attribute hierarchy to achieve certain behaviors in client applications, or gain certain performance benefits. For example, you would set AttributeHierarchyEnabled=False on attributes for which the (All) member doesn’t make sense. Alternatively, perhaps you simply want to hide the (All) member, in which case you would set AttributeHierarchyVisible=False. See [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md) for more details about properties.  
   
 ## Navigation Hierarchies  
  Within the PivotTable (at least in this example), row and column axes expand to show lower levels of attributes. An expandable tree is achieved through navigation hierarchies that you create in a model.  In the AdventureWorks sample model, the Sales Territory dimension has a multi-level hierarchy that begins with a Country Group, followed by Country, followed by Region.  
@@ -89,13 +89,13 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|![PivotTable with balanced hierarchy called out](../../2014/analysis-services/media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable with balanced hierarchy called out")|A **balanced hierarchy** is a hierarchy in which the same number of levels exists between the top level and any leaf member.<br /><br /> A **natural hierarchy** is one that emerges naturally from the underlying data. A common example is Country-Region-State or Year-Month-Date or Category-Subcategory-Model, where each subordinate level flows predictably from the parent.<br /><br /> In a multidimensional model, most hierarchies are balanced hierarchies, and many of them are also natural hierarchies.<br /><br /> Another related modeling term is a `user-defined hierarchy`, often used as a contrast with attribute hierarchies. It simply means a hierarchy created by the BI developer, as opposed to attribute hierarchies that are automatically generated by Analysis Services when you define an attribute.|  
+|![PivotTable with balanced hierarchy called out](media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "PivotTable with balanced hierarchy called out")|A **balanced hierarchy** is a hierarchy in which the same number of levels exists between the top level and any leaf member.<br /><br /> A **natural hierarchy** is one that emerges naturally from the underlying data. A common example is Country-Region-State or Year-Month-Date or Category-Subcategory-Model, where each subordinate level flows predictably from the parent.<br /><br /> In a multidimensional model, most hierarchies are balanced hierarchies, and many of them are also natural hierarchies.<br /><br /> Another related modeling term is a `user-defined hierarchy`, often used as a contrast with attribute hierarchies. It simply means a hierarchy created by the BI developer, as opposed to attribute hierarchies that are automatically generated by Analysis Services when you define an attribute.|  
   
  **Unbalanced Hierarchies**  
   
 |||  
 |-|-|  
-|![PivotTable with ragged hierarchy called out](../../2014/analysis-services/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable with ragged hierarchy called out")|A **ragged hierarchy** or **unbalanced hierarchy** is a hierarchy in which different numbers of levels exist between the top level and the leaf members. Again, it’s a hierarchy created by the BI developer, but in this case there are gaps in the data.<br /><br /> In the AdventureWorks sample model, Sales Territory illustrates a ragged hierarchy because the United States has an additional level (Regions) that does not exist for other countries in this example.<br /><br /> Ragged hierarchies are a challenge to BI developers if the client application does not handle ragged hierarchies in an elegant manner. In Analysis Services model, you can build a **parent-child hierarchy** that explicitly defines a relationship among multi-level data, eliminating any ambiguity as to how one level relates to the next. See [Parent-Child Hierarchy](../../2014/analysis-services/parent-child-hierarchy.md) for details.|  
+|![PivotTable with ragged hierarchy called out](media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "PivotTable with ragged hierarchy called out")|A **ragged hierarchy** or **unbalanced hierarchy** is a hierarchy in which different numbers of levels exist between the top level and the leaf members. Again, it’s a hierarchy created by the BI developer, but in this case there are gaps in the data.<br /><br /> In the AdventureWorks sample model, Sales Territory illustrates a ragged hierarchy because the United States has an additional level (Regions) that does not exist for other countries in this example.<br /><br /> Ragged hierarchies are a challenge to BI developers if the client application does not handle ragged hierarchies in an elegant manner. In Analysis Services model, you can build a **parent-child hierarchy** that explicitly defines a relationship among multi-level data, eliminating any ambiguity as to how one level relates to the next. See [Parent-Child Hierarchy](parent-child-hierarchy.md) for details.|  
   
 ## Key Attributes  
  Models are a collection of related objects that rely on keys and indexes to make the associations. Analysis Services models are no different. For each dimension (recall it is equivalent to a table in a relational model), there is a key attribute. The **key attribute** is used in foreign key relationships to the fact table (measure group). All non-key attributes in the dimension are linked (directly or indirectly) to the key attribute.  
@@ -106,7 +106,7 @@ manager: "mblythe"
   
  To set the granularity attribute, use the Dimension Usage tab in Cube Designer in SQL Server Data Tools. In the AdventureWorks sample model, the key attribute of the Date dimension is the Date key. For Sales Orders, the granularity attribute is equivalent to the key attribute. For Sales Targets, the level of granularity is quarterly, and so the granularity attribute is set to Calendar Quarter, accordingly.  
   
- ![Model showing the granularity attribute](../../2014/analysis-services/media/ssas-keyconcepts-granularityattrib.png "Model showing the granularity attribute")  
+ ![Model showing the granularity attribute](media/ssas-keyconcepts-granularityattrib.png "Model showing the granularity attribute")  
   
 > [!NOTE]  
 >  If the granularity attribute and the key attribute are different, all non-key attributes must be linked, directly or indirectly, to the granularity attribute. Within a cube, the granularity attribute defines a dimension's granularity.  
@@ -136,20 +136,20 @@ manager: "mblythe"
 ## Next Steps  
  Now that you have a grasp of important concepts and terminology, you can continue on to these additional topics that further explain fundamental concepts in Analysis Services:  
   
--   [The Basic MDX Query &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-query-mdx.md)  
+-   [The Basic MDX Query &#40;MDX&#41;](the-basic-mdx-query-mdx.md)  
   
--   [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)  
+-   [The Basic MDX Script &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
   
 -   [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## See Also  
- [Cube Space](../../2014/analysis-services/cube-space.md)   
- [Tuples](../../2014/analysis-services/tuples.md)   
- [Autoexists](../../2014/analysis-services/autoexists.md)   
- [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md)   
- [Visual Totals and Non Visual Totals](../../2014/analysis-services/visual-totals-and-non-visual-totals.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
+ [Cube Space](cube-space.md)   
+ [Tuples](tuples.md)   
+ [Autoexists](autoexists.md)   
+ [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
  [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   

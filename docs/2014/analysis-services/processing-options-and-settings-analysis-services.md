@@ -29,10 +29,10 @@ manager: "mblythe"
 # Processing Options and Settings (Analysis Services)
   When you process objects in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can select a processing option to control the type of processing that occurs for each object. Processing types differ from one object to another, and by changes that have occurred to the object since it was last processed. If you enable [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to automatically select a processing method, it will use the method that returns the object to a fully processed state in the least time.  
   
- Processing settings let you control the objects that are processed, and the methods that are used to process those objects. Some processing settings are primarily used for batch processing jobs. For more information about batch processing, see [Batch Processing &#40;Analysis Services&#41;](../../2014/analysis-services/batch-processing-analysis-services.md).  
+ Processing settings let you control the objects that are processed, and the methods that are used to process those objects. Some processing settings are primarily used for batch processing jobs. For more information about batch processing, see [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 > [!NOTE]  
->  This topic applies to multidimensional and data mining solutions. For information about tabular solutions, see [Process Database, Table, or Partition](../../2014/analysis-services/process-database-table-or-partition.md).  
+>  This topic applies to multidimensional and data mining solutions. For information about tabular solutions, see [Process Database, Table, or Partition](process-database-table-or-partition.md).  
   
 ## Processing Options  
  The following table describes the processing methods that are available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], and identifies the objects for which each method is supported.  
@@ -63,6 +63,6 @@ manager: "mblythe"
 ||Specific error conditions. You can set the following options to control specific error-handling behavior:<br /><br /> **Key not found**. Occurs when a key value exists in a partition but does not exist in the corresponding dimension. The default setting is **Report and continue**. Other settings are **Ignore error** and **Report and stop**.<br /><br /> **Duplicate key**. Occurs when more than one key value exists in a dimension. The default setting is **Ignore error**. Other settings are **Report and continue** and **Report and stop**.<br /><br /> **Null key converted to unknown**. Occurs when a key value is null and the **Key error action** is set to **Convert to unknown**. The default setting is **Ignore error**. Other settings are **Report and continue** and **Report and stop**.<br /><br /> **Null key not allowed**. Occurs when **Key error action** is set to **Discard record**. The default setting is **Report and continue**. Other settings are **Ignore error** and **Report and stop**.|  
   
 ## See Also  
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
   
   

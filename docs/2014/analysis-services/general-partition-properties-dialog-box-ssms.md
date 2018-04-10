@@ -27,7 +27,7 @@ manager: "mblythe"
 |**Aggregation Design ID**|Displays the identifier of the aggregation design used by the partition.|  
 |**Aggregation Prefix**|Displays the default prefix of aggregation instances that are contained by the partition.|  
 |**Create Timestamp**|Displays the date and time the partition was created.|  
-|**Current Storage Mode**|Displays the current storage mode of the partition.<br /><br /> Note: This mode may vary depending on the proactive caching settings for the partition. For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](../../2014/analysis-services/dev-guide/proactive-caching-partitions.md).|  
+|**Current Storage Mode**|Displays the current storage mode of the partition.<br /><br /> Note: This mode may vary depending on the proactive caching settings for the partition. For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md).|  
 |**Description**|Type to change the description of the partition.|  
 |**Estimated Rows**|Type the estimated number of rows in the underlying data source represented by the partition. This value is used during processing to estimate the time and storage required to process the partition.|  
 |**Estimated Size**|Displays the estimated size of the partition.|  
@@ -35,7 +35,7 @@ manager: "mblythe"
 |**Last Processed**|Displays the date and time the partition was last processed.|  
 |**Last Schema Update**|Displays the date and time the metadata for the partition was last updated.|  
 |**Name**|Displays the name of the partition.|  
-|**Processing Mode**|Select the processing mode for the partition. For more information about processing modes for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).|  
+|**Processing Mode**|Select the processing mode for the partition. For more information about processing modes for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).|  
 |**Remote Data Source ID**|Displays the identifier of the remote data source from which the source data for the partition is retrieved.<br /><br /> Note: This property contains a value only for remote partitions.|  
 |**Slice**|Displays the expression that identifies the data slice represented by the partition.|  
 |**Source**|Displays the table or query that provides the source data for the partition.|  
@@ -44,11 +44,11 @@ manager: "mblythe"
 |**Type**|Displays the type of the partition.|  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)   
- [Remote Partitions](../../2014/analysis-services/dev-guide/remote-partitions.md)   
- [Partition Properties Dialog Box &#40;SSMS&#41;](../../2014/analysis-services/partition-properties-dialog-box-ssms.md)   
- [Selection &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](../../2014/analysis-services/selection-partition-properties-dialog-box-ssms.md)   
- [Proactive Caching &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](../../2014/analysis-services/proactive-caching-partition-properties-dialog-box-ssms.md)   
- [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/error-configuration-for-cube-partition-and-dimension-processing.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitions](dev-guide/remote-partitions.md)   
+ [Partition Properties Dialog Box &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [Selection &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
+ [Proactive Caching &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
+ [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

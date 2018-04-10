@@ -22,7 +22,7 @@ manager: "mblythe"
   
 ## Options  
  **Status tree view**  
- Displays status messages from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance regarding the objects being processed, including start time, stop time, and progress information. Right-click an item and select **Copy** to copy the details of a status message to the clipboard, or double-click an item to display the **View Details** dialog box. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/view-details-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays status messages from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance regarding the objects being processed, including start time, stop time, and progress information. Right-click an item and select **Copy** to copy the details of a status message to the clipboard, or double-click an item to display the **View Details** dialog box. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Status description**  
  Displays the current status of the processing operation.  
@@ -34,10 +34,10 @@ manager: "mblythe"
  Click to repeat the processing operation that displayed the **Process Progress** dialog box.  
   
  **View Details**  
- Click to open the **View Details** dialog box and display details regarding the item selected in **Status tree view**. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/view-details-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to open the **View Details** dialog box and display details regarding the item selected in **Status tree view**. For more information about the **View Details** dialog box, see [View Details Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
   
   

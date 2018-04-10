@@ -34,27 +34,27 @@ manager: "mblythe"
   
 ## In this section  
   
--   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Authorizing access to objects and operations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md)  
+-   [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
--   [Grant cube or model permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-cube-or-model-permissions-analysis-services.md)  
+-   [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Grant process permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-process-permissions-analysis-services.md)  
+-   [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
--   [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](../../2014/analysis-services/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [Grant permissions on a data source object &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [Grant permissions on a dimension &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-dimension-analysis-services.md)  
+-   [Grant permissions on a dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
- [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md)  
+ [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md)  
   
   

@@ -27,7 +27,7 @@ manager: "mblythe"
 |**New Role Name**|Type the name of the new role to be created with the same members and permissions as the role selected in Object Explorer.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/security-roles-analysis-services-multidimensional-data.md)  
   
   

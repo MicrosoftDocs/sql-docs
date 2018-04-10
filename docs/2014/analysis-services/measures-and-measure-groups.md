@@ -32,12 +32,12 @@ manager: "mblythe"
   
 |**Link**|**Description**|  
 |--------------|---------------------|  
-|[Create Measures and Measure Groups in Multidimensional Models](../../2014/analysis-services/create-measures-and-measure-groups-in-multidimensional-models.md)|Choose from one of several approaches for creating measures and measure groups.|  
-|[Configure Measure Properties](../../2014/analysis-services/configure-measure-properties.md)|If you used the Cube Wizard to start your cube, you might need to change the aggregation method, apply a data format, set the visibility of the measure in client applications, or possibly add a measure expression to manipulate the data before values are aggregated.|  
-|[Configure Measure Group Properties](../../2014/analysis-services/configure-measure-group-properties.md)|In a multidimensional model, a measure group equates to a fact table in the source data warehouse. Properties on a measure group allow you to specify caching behaviors, storage, and processing directives that operate collectively at the measure group level. Partition configuration is partly determined by the properties you set on measure group objects.|  
-|[Use Aggregate Functions](../../2014/analysis-services/use-aggregate-functions.md)|Understand the aggregation methods that can be assigned to a measure.|  
-|[Define Semiadditive Behavior](../../2014/analysis-services/define-semiadditive-behavior.md)|Semiadditive behavior refers to aggregations that are valid for some dimensions but not others. A common example is a bank account balance. You might want to aggregate balances by customer and region, but not time. For example, you would not want to add balances from the same account over consecutive days. To define semiadditive behavior,   use the Add Business Intelligence Wizard.|  
-|[Linked Measure Groups](../../2014/analysis-services/linked-measure-groups.md)|Repurpose an existing measure group in other cubes in the same database or in different Analysis Services databases.|  
+|[Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md)|Choose from one of several approaches for creating measures and measure groups.|  
+|[Configure Measure Properties](configure-measure-properties.md)|If you used the Cube Wizard to start your cube, you might need to change the aggregation method, apply a data format, set the visibility of the measure in client applications, or possibly add a measure expression to manipulate the data before values are aggregated.|  
+|[Configure Measure Group Properties](configure-measure-group-properties.md)|In a multidimensional model, a measure group equates to a fact table in the source data warehouse. Properties on a measure group allow you to specify caching behaviors, storage, and processing directives that operate collectively at the measure group level. Partition configuration is partly determined by the properties you set on measure group objects.|  
+|[Use Aggregate Functions](use-aggregate-functions.md)|Understand the aggregation methods that can be assigned to a measure.|  
+|[Define Semiadditive Behavior](define-semiadditive-behavior.md)|Semiadditive behavior refers to aggregations that are valid for some dimensions but not others. A common example is a bank account balance. You might want to aggregate balances by customer and region, but not time. For example, you would not want to add balances from the same account over consecutive days. To define semiadditive behavior,   use the Add Business Intelligence Wizard.|  
+|[Linked Measure Groups](linked-measure-groups.md)|Repurpose an existing measure group in other cubes in the same database or in different Analysis Services databases.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
  A measure represents a column that contains quantifiable data, usually numeric, that can be aggregated. Measures represent some aspect of organizational activity, expressed in monetary terms (such as revenue, margins, or costs) or as counts (inventory levels, number of employees, customers, or orders), or as a more complex calculation that incorporates business logic.  
@@ -48,13 +48,13 @@ manager: "mblythe"
   
  In this example **Reseller Sales** aggregates to various levels along the **Sales Territory** hierarchy.  
   
- ![PivotTable with measures and dimensions called out](../../2014/analysis-services/media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
+ ![PivotTable with measures and dimensions called out](media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
   
  Measures produce valid results when the fact table that contains the numeric source data also contains pointers to dimension tables that are used in the query. Using the Reseller Sales example, if each row storing a sales amount also stores a pointer to a product table, a date table, or a sales territory table, then queries that include members from those dimension will resolve correctly.  
   
  What happens if the measure is unrelated to the dimensions used in query? Typically, Analysis Services will show the default measure, and the value will be the same for all members. In this example, **Internet Sales**, which measure direct sales placed by customers using the online catalog, has no relationship to the sales organization.  
   
- ![Pivottable showing repeated measure values](../../2014/analysis-services/media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![Pivottable showing repeated measure values](media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
   
  To minimize the chances of encountering these behaviors in a client application, you could build multiple cubes or perspectives within the same database, and ensure that each cube or perspective contains only related objects. The relationships you need to check are between the measure group (mapped to the fact table) and the dimensions.  
   
@@ -64,7 +64,7 @@ manager: "mblythe"
  A simple <xref:Microsoft.AnalysisServices.MeasureGroup> object is composed of basic information like the group name, storage mode, and processing mode. It also contains its constituent parts; the measures, dimensions, and partitions that form the composition of the measure group.  
   
 ## See Also  
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Create Measures and Measure Groups in Multidimensional Models](../../2014/analysis-services/create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

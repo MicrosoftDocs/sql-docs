@@ -25,17 +25,17 @@ manager: "mblythe"
 ## Panes  
  The **Browser** tab contains the following panes:  
   
- [Toolbar](../../2014/analysis-services/toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the toolbar to perform common actions in the **Browser** tab of Dimension Designer.  
   
- [Level and Members](../../2014/analysis-services/level-members-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Level and Members](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the **Level and Members** pane to browse and modify the members of the selected hierarchy, in the selected language.  
   
 ## See Also  
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)   
- [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
+ [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

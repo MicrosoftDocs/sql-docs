@@ -33,7 +33,7 @@ manager: "mblythe"
   
  Deploying the PowerPivot for SharePoint 2013 add-in enables additional functionality and features in your SharePoint farm. The additional features include PowerPivot Gallery, Schedule Data Refresh, and the PowerPivot Management Dashboard.  
   
- ![SSAS PowerPivot Mode 2 Server Deployment](../../2014/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
+ ![SSAS PowerPivot Mode 2 Server Deployment](media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
 ## PowerPivot for SharePoint 2010  
  PowerPivot for SharePoint 2010 provides server hosting of PowerPivot data in a SharePoint 2010 farm. PowerPivot data is an analytical data model that you build in Excel using the PowerPivot for Excel add-in. Server hosting of that data requires SharePoint 2010, Excel Services, and an installation of PowerPivot for SharePoint. Data is loaded on PowerPivot for SharePoint instances in the farm, where it can be refreshed at scheduled intervals using the PowerPivot data refresh capability that the server provides.  
@@ -43,7 +43,7 @@ manager: "mblythe"
   
  A complete deployment of PowerPivot for SharePoint includes client and server components that integrate with Excel and Excel Services in a SharePoint farm. The PowerPivot data inside an Excel workbook is an Analysis Services database that requires an Analysis Services xVelocity in-memory analytics engine (VertiPaq) to load and query the data. On a client workstation, the xVelocity engine runs in-process within Excel. On a SharePoint farm, Analysis Services runs on an application server where it is paired with related services that handle requests for PowerPivot data. The following diagram illustrates PowerPivot client and server components:  
   
- ![GMNI_GeminiArch2](../../2014/analysis-services/media/gmni-geminiarch2.gif "GMNI_GeminiArch2")  
+ ![GMNI_GeminiArch2](media/gmni-geminiarch2.gif "GMNI_GeminiArch2")  
   
  PowerPivot Web service runs on a web application server. It redirects requests from the web application to a PowerPivot System Service instance in the farm.  
   
@@ -52,27 +52,27 @@ manager: "mblythe"
  An Analysis Service server instance in SharePoint integrated mode completes the deployment. It loads, queries, and unloads data. It also processes data if the workbook is configured for PowerPivot data refresh.  Each instance is tightly coupled with the local PowerPivot System Service that is part of the same installation.  
   
 ##  <a name="bkmk_RelatedContent"></a> In This Section  
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
+ [PowerPivot Configuration using Windows PowerShell](powerpivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](powerpivot-configuration-tools.md)  
   
- [PowerPivot Authentication and Authorization](../../2014/analysis-services/powerpivot-authentication-and-authorization.md)  
+ [PowerPivot Authentication and Authorization](powerpivot-authentication-and-authorization.md)  
   
- [PowerPivot Health Rules - Configure](../../2014/analysis-services/powerpivot-health-rules-configure.md)  
+ [PowerPivot Health Rules - Configure](powerpivot-health-rules-configure.md)  
   
- [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md)  
   
  [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)  
   
- [PowerPivot Data Access](../../2014/analysis-services/powerpivot-data-access.md)  
+ [PowerPivot Data Access](powerpivot-data-access.md)  
   
- [PowerPivot Data Refresh](../../2014/analysis-services/powerpivot-data-refresh.md)  
+ [PowerPivot Data Refresh](powerpivot-data-refresh.md)  
   
- [PowerPivot Data Feeds](../../2014/analysis-services/powerpivot-data-feeds.md)  
+ [PowerPivot Data Feeds](powerpivot-data-feeds.md)  
   
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](../../2014/analysis-services/powerpivot-bi-semantic-model-connection-bism.md)  
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md)  
   
  **In other sections**  
   

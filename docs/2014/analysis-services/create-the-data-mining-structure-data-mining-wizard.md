@@ -41,8 +41,8 @@ manager: "mblythe"
  Displays a description of the selected algorithm.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)   
- [Select the Definition Method &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-definition-method-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Data Source View &#40;Data Mining Wizard&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Select the Definition Method &#40;Data Mining Wizard&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

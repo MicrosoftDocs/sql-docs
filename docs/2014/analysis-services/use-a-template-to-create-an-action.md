@@ -19,7 +19,7 @@ manager: "mblythe"
   The **Actions** view in Cube Designer contains a number of templates that you can use to create common actions. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  After you create the action, it will become available to users after you update or reprocess the cube. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+>  After you create the action, it will become available to users after you update or reprocess the cube. For more information, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To use a template to create an action  
   

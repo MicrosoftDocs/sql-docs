@@ -41,8 +41,8 @@ manager: "mblythe"
  Select the column from the table specified in **Main table** that provides the member names for the dimension. A name column must be specified when a composite key is used. To create a name column for a composite key, we recommend that you create a named calculation in the data source view that concatenates the specified key columns. When a single key is used, the name column is optional.  
   
 ## See Also  
- [Dimension Wizard F1 Help](../../2014/analysis-services/dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

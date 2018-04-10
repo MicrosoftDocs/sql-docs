@@ -33,21 +33,21 @@ manager: "mblythe"
 ## Pages  
  Dimension Designer contains the following pages:  
   
- [Dimension Structure](../../2014/analysis-services/dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Dimension Structure](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  Use this page to view and modify the attributes, hierarchies, and levels in the dimension.  
   
- [Attribute Relationships](../../2014/analysis-services/attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attribute Relationships](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
  Use thispage to create, modify or delete the attribute relationships of the selected dimension.  
   
- [Translations](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Translations](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Use this page to view and modify translations associated with the dimension and its attributes, hierarchies, and levels.  
   
- [Browser](../../2014/analysis-services/browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Browser](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  Use this page to browse the members of a hierarchy that the dimension contains.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

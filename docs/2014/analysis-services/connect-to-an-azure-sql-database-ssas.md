@@ -21,7 +21,7 @@ manager: "mblythe"
   This page of the **Table Import Wizard** enables you to connect to a [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
 > [!NOTE]  
->  If you are connecting to an Azure DataMarket dataset, see [Connect to a Report or Data Feed &#40;SSAS&#41;](../../2014/analysis-services/connect-to-a-report-or-data-feed-ssas.md).  
+>  If you are connecting to an Azure DataMarket dataset, see [Connect to a Report or Data Feed &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
  The [!INCLUDE[ssSDS](../includes/sssds-md.md)] is a hosted, relational database that you connect to by using SQL Server Authentication. For more information about [!INCLUDE[ssSDS](../includes/sssds-md.md)], see the web site [SQL Database](http://go.microsoft.com/fwlink/?LinkID=157856). To connect to a data source, you must have the appropriate provider installed on your computer.  
   
@@ -50,7 +50,7 @@ manager: "mblythe"
  Select a database from the list of databases.  
   
  **Advanced**  
- Set additional connection properties by using the **Set Advanced Properties** dialog box. For more information, see [Set Advanced Properties &#40;SSAS&#41;](../../2014/analysis-services/set-advanced-properties-ssas.md).  
+ Set additional connection properties by using the **Set Advanced Properties** dialog box. For more information, see [Set Advanced Properties &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test Connection**  
  Attempt to establish a connection to the data source using the current settings. A message is displayed indicating whether the connection is successful.  

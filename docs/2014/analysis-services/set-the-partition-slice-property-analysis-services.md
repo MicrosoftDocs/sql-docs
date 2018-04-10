@@ -46,6 +46,6 @@ manager: "mblythe"
 >  If you need to define a complex slice, we recommend that you define the tuples in the slice by using an XMLA Alter script. Then, you can use either the ascmd command-line tool or the SSIS [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md) task to run the script and create the specified set of members immediately before you process the partition.  
   
 ## See Also  
- [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-local-partition-analysis-services.md)  
+ [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

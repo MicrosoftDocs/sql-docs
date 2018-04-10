@@ -37,15 +37,15 @@ manager: "mblythe"
  The `DbStorageLocation` database property is used as part of a `Create` database command in a `Detach`/`Attach` database commands sequence, in a `Backup`/`Restore` database commands sequence, or in a `Synchronize` database command. Changing the `DbStorageLocation` database property is considered a structural change in the database object. This means that all metadata must be recreated and the data reprocessed.  
   
 > [!IMPORTANT]  
->  You should not change the database storage location by using an `Alter` command. Instead, we recommend that you use a sequence of `Detach`/`Attach` database commands (see [Move an Analysis Services Database](../../2014/analysis-services/move-an-analysis-services-database.md), [Attach and Detach Analysis Services Databases](../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)).  
+>  You should not change the database storage location by using an `Alter` command. Instead, we recommend that you use a sequence of `Detach`/`Attach` database commands (see [Move an Analysis Services Database](move-an-analysis-services-database.md), [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)).  
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
- [Attach and Detach Analysis Services Databases](../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)   
- [Move an Analysis Services Database](../../2014/analysis-services/move-an-analysis-services-database.md)   
- [DbStorageLocation Element](../../2014/analysis-services/dev-guide/dbstoragelocation-element.md)   
- [Create Element &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/create-element-xmla.md)   
- [Attach Element](../../2014/analysis-services/dev-guide/attach-element.md)   
- [Synchronize Element &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/synchronize-element-xmla.md)  
+ [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
+ [Move an Analysis Services Database](move-an-analysis-services-database.md)   
+ [DbStorageLocation Element](dev-guide/dbstoragelocation-element.md)   
+ [Create Element &#40;XMLA&#41;](dev-guide/create-element-xmla.md)   
+ [Attach Element](dev-guide/attach-element.md)   
+ [Synchronize Element &#40;XMLA&#41;](dev-guide/synchronize-element-xmla.md)  
   
   

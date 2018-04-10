@@ -26,10 +26,10 @@ manager: "mblythe"
   
 3.  In **Name**, type a name for the project, then specify a location and solution name, and then click **OK**.  
   
- After your new project is created, it is important to set project and model properties. For more information, see [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md) and [Model Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/model-properties-ssas-tabular.md).  
+ After your new project is created, it is important to set project and model properties. For more information, see [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md) and [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md)   
- [Model Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/model-properties-ssas-tabular.md)  
+ [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md)   
+ [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)  
   
   

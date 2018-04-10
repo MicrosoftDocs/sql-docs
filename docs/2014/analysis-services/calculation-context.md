@@ -36,7 +36,7 @@ manager: "mblythe"
   
 5.  The cube or subcube cells on each axis, eliminating empty tuples on the axis and applying the HAVING clause.  
   
-6.  For more information, see [Establishing Cube Context in a Query &#40;MDX&#41;](../../2014/analysis-services/establishing-cube-context-in-a-query-mdx.md).  
+6.  For more information, see [Establishing Cube Context in a Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md).  
   
  In the following query, the calculation context for the row axis is restricted by the Country attribute member and the Calendar Year attribute member that are specified in the WHERE clause.  
   
@@ -68,8 +68,8 @@ WHERE (Customer.Country.France,
 >  To increase query performance, you should eliminate members and tuples as early in the resolution process as possible. In this manner, complex query time calculations on the final set of members operate on the fewest cells possible.  
   
 ## See Also  
- [Establishing Cube Context in a Query &#40;MDX&#41;](../../2014/analysis-services/establishing-cube-context-in-a-query-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)   
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)  
+ [Establishing Cube Context in a Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)  
   
   

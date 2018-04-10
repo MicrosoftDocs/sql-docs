@@ -57,7 +57,7 @@ manager: "mblythe"
 >  Any calculated member that is to be used in the value expression of another calculated member must be created before the calculated member that uses it.  
   
  Format String  
- Specifies the format of cell values that are based on the calculated member. This property accepts the same values as the `Display Format` property for measures. For more information about display formats, see [Configure Measure Properties](../../2014/analysis-services/configure-measure-properties.md).  
+ Specifies the format of cell values that are based on the calculated member. This property accepts the same values as the `Display Format` property for measures. For more information about display formats, see [Configure Measure Properties](configure-measure-properties.md).  
   
  Visible  
  Determines whether the calculated member is visible or hidden when cube metadata is retrieved. If the calculated member is hidden, it can still be used in MDX expressions, statements, and scripts, but it is not displayed as a selectable object in client user interfaces.  
@@ -79,6 +79,6 @@ manager: "mblythe"
 -   If a calculated member is created in the measures dimension, the calculated member is addressable in that dimension.  
   
 ## See Also  
- [Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
   
   

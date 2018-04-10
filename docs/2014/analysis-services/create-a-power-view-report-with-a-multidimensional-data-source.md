@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Power View Report with a Multidimensional Data Source
-  Creating a Power View report based on a multidimensional model is no different than creating a report based on a PowerPivot workbook or an Analysis Services Tabular model. Power View reports are created from a Report Data Source connection file (.rsds) in a SharePoint library. For more information about how to create an .rsds, see [Create a Report Data Source](../../2014/analysis-services/create-a-report-data-source.md).  
+  Creating a Power View report based on a multidimensional model is no different than creating a report based on a PowerPivot workbook or an Analysis Services Tabular model. Power View reports are created from a Report Data Source connection file (.rsds) in a SharePoint library. For more information about how to create an .rsds, see [Create a Report Data Source](create-a-report-data-source.md).  
   
  Before you begin, you need to know:  
   

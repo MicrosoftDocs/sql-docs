@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  [Logical Architecture &#40;Analysis Services - Data Mining&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/logical-architecture-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/logical-architecture-analysis-services-multidimensional-data.md)  
   
  [Data Mining Projects](data-mining/data-mining-projects.md)  
   

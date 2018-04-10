@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Forecast (Table Analysis Tools for Excel)
-  ![Forecast button in Table Analysis tools ribbon](../../2014/analysis-services/media/tat-forecast.gif "Forecast button in Table Analysis tools ribbon")  
+  ![Forecast button in Table Analysis tools ribbon](media/tat-forecast.gif "Forecast button in Table Analysis tools ribbon")  
   
  The **Forecast** tool helps you make predictions based on data in an Excel data table or other data source, and optionally view the probabilities associated with each predicted value. For example, if your data contains a date column and a column that shows total sales for each day of the month, you could predict the sales for future days. You can also specify the number of predictions to make. For example, you can predict five days, or thirty.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 2.  Click **Forecast** on the **Analyze** tab.  
   
-3.  Specify the columns to forecast. The tool automatically selects columns in the data that have a predictable data type—that is, continuous numeric data. The tool might not select some columns that have continuous numeric data if the columns contain many null or zero values, because the missing data might affect the results. If this happens, you can fix the data by using the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool.  
+3.  Specify the columns to forecast. The tool automatically selects columns in the data that have a predictable data type—that is, continuous numeric data. The tool might not select some columns that have continuous numeric data if the columns contain many null or zero values, because the missing data might affect the results. If this happens, you can fix the data by using the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) tool.  
   
 4.  Specify the column that contains the date, time, or other series identifier. If you select the option **\<no time stamp>** the tool will create a series based on the sequence of rows in the source data.  
   
@@ -87,9 +87,9 @@ manager: "mblythe"
   
 -   The **Forecast** wizard in the Data Mining Client for Excel provides you with the ability to customize the parameters.  
   
- For more information about the **Forecast** wizard, see [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/forecast-wizard-data-mining-add-ins-for-excel.md). For more information about the algorithm used for forecasting, see the topic "Microsoft Time Series Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
+ For more information about the **Forecast** wizard, see [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md). For more information about the algorithm used for forecasting, see the topic "Microsoft Time Series Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

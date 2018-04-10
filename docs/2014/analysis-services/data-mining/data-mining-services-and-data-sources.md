@@ -50,7 +50,7 @@ manager: "mblythe"
 |2382|Redirector for other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |Dynamically assigned at server startup|Named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
- For more information about controlling the ports used by this service, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ For more information about controlling the ports used by this service, see [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ## Connecting to Data Sources  
  Whenever you create or update a data mining structure or model, you use data that is defined by a data source. The data source does not contain the data, which might include Excel workbooks, text files, and SQL Server databases; it only defines the connection information.  A data source view (DSV) serves as an abstraction layer on top of that source, modifying or mapping the data that is obtained from the source.  

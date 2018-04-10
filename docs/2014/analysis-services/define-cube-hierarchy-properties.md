@@ -29,6 +29,6 @@ manager: "mblythe"
 |`Visible`|Determines the visibility of the cube hierarchy. The default value is `True`.|  
   
 ## See Also  
- [User Hierarchies](../../2014/analysis-services/dev-guide/user-hierarchies.md)  
+ [User Hierarchies](dev-guide/user-hierarchies.md)  
   
   

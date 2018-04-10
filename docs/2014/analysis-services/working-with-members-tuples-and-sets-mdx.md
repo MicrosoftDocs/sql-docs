@@ -77,7 +77,7 @@ FROM [Adventure Works]
  For more information about tuple functions, see [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md).  
   
 ## Set Functions  
- MDX provides several functions that return sets. Explicitly typing tuples and enclosing them in braces is not the only way to retrieve a set. For more information about the members function to return a set, see [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md). There are many additional set functions.  
+ MDX provides several functions that return sets. Explicitly typing tuples and enclosing them in braces is not the only way to retrieve a set. For more information about the members function to return a set, see [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md). There are many additional set functions.  
   
  The colon operator lets you use the natural order of members to create a set. For example, the set shown in the following example contains tuples for the 1st through the 4th quarter of calendar year 2002.  
   
@@ -124,8 +124,8 @@ FROM [Adventure Works]
  A string function acts upon a MDX expression to return a string. For example, the [UniqueName &#40;MDX&#41;](~/mdx/uniquename-mdx.md) function returns a string value containing the unique name of a dimension, hierarchy, level, or member. For more information about string functions, see [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md).  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
   
   

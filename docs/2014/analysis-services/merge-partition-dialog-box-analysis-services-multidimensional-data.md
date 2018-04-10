@@ -45,7 +45,7 @@ manager: "mblythe"
 |**Last Processed**|Displays the date and time at which the source partition was last processed.|  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)   
- [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)   
+ [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

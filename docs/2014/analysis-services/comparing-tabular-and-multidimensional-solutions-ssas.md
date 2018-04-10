@@ -49,7 +49,7 @@ manager: "mblythe"
 ##  <a name="bkmk_overview"></a> Overview of modeling in Analysis Services  
  Analysis Services provides a model development experience, as well as model deployment via database hosting on an Analysis Services instance. Model types include tabular and multidimensional. As you might expect, database hosting supports the tabular and multidimensional solutions that you create, but database hosting also includes PowerPivot for SharePoint.  
   
- PowerPivot for SharePoint is *Analysis Services in SharePoint mode*, where Analysis Services operates as an adjunct service to SharePoint, helping to host and manage Excel Data Models that were previously created in Excel and then saved to SharePoint. The role of Analysis Services in this context is to load the data model into memory, refresh data from external data sources, and execute queries against the model. In this configuration, Analysis Services operates behind the scenes. All connections and requests to Analysis Services are made by SharePoint, and only when an Excel workbook contains a data model (data models are optional in Excel workbooks). If building a data model in Excel, and hosting it in SharePoint, aligns with your project requirements, see [Power Pivot: Powerful data analysis and data modeling in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) and [PowerPivot for SharePoint &#40;SSAS&#41;](../../2014/analysis-services/powerpivot-for-sharepoint-ssas.md) for more information.  
+ PowerPivot for SharePoint is *Analysis Services in SharePoint mode*, where Analysis Services operates as an adjunct service to SharePoint, helping to host and manage Excel Data Models that were previously created in Excel and then saved to SharePoint. The role of Analysis Services in this context is to load the data model into memory, refresh data from external data sources, and execute queries against the model. In this configuration, Analysis Services operates behind the scenes. All connections and requests to Analysis Services are made by SharePoint, and only when an Excel workbook contains a data model (data models are optional in Excel workbooks). If building a data model in Excel, and hosting it in SharePoint, aligns with your project requirements, see [Power Pivot: Powerful data analysis and data modeling in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) and [PowerPivot for SharePoint &#40;SSAS&#41;](powerpivot-for-sharepoint-ssas.md) for more information.  
   
 > [!NOTE]  
 >  Excel Data Models and tabular models are architecturally similar. You can import an Excel Data Model into a tabular model if you need to support larger amounts of data or use other model features not available in Excel.  
@@ -69,8 +69,8 @@ manager: "mblythe"
   
 |**Link**|**Summary of supported options**|  
 |--------------|--------------------------------------|  
-|[Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)|Multidimensional models use data from relational data sources.|  
-|[Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)|Tabular models support a broader range of data sources, including flat files, data feeds, and data sources that are accessed via ODBC data providers.|  
+|[Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)|Multidimensional models use data from relational data sources.|  
+|[Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)|Tabular models support a broader range of data sources, including flat files, data feeds, and data sources that are accessed via ODBC data providers.|  
   
  Both modeling approaches can use data from multiple data sources in the same model.  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
  Tabular databases can sometimes get greater amounts of compression, about one tenth the size, especially if most of the data is imported from fact tables. For tabular, memory requirements will be larger than the size of data on disk due to additional data structures that are created when the tabular database is loaded into memory. Under load, both disk and memory requirements for either solution type can be expected to increase as Analysis Services caches, stores, scans, and queries data.  
   
- For some projects, data requirements might be so large as to become a factor in choosing between the model types. If the data you need to load is many terabytes in size, a tabular solution might not meet your requirements if available memory cannot accommodate the data. There is a paging option that swaps in-memory data to disk, but very large amounts of data are better accommodated in multidimensional solutions. The largest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases in production today are multidimensional. For more information about memory paging options for tabular solutions, see [Memory Properties](../../2014/analysis-services/memory-properties.md). For more information about scaling a multidimensional solution, see [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=251711).  
+ For some projects, data requirements might be so large as to become a factor in choosing between the model types. If the data you need to load is many terabytes in size, a tabular solution might not meet your requirements if available memory cannot accommodate the data. There is a paging option that swaps in-memory data to disk, but very large amounts of data are better accommodated in multidimensional solutions. The largest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases in production today are multidimensional. For more information about memory paging options for tabular solutions, see [Memory Properties](memory-properties.md). For more information about scaling a multidimensional solution, see [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=251711).  
   
 ##  <a name="bkmk_models"></a> Model Features  
  The following table summarizes feature availability at the model level. If you already installed Analysis Services, you can use this information to understand the capabilities of the server mode you installed. If you are already familiar with model features in Analysis Services and your business requirements include one or more of these features, you can review this list to ensure that the feature you want to use is available in the type of model you plan to build.  
@@ -96,30 +96,30 @@ manager: "mblythe"
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
 |Actions|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|No|  
-|Aggregation objects|[Yes](../../2014/analysis-services/designing-aggregations-analysis-services-multidimensional.md)|No|  
-|Calculated Measures|[Yes](../../2014/analysis-services/create-calculated-members.md)|Yes|  
-|Custom Assemblies|[Yes](../../2014/analysis-services/multidimensional-model-assemblies-management.md)|No|  
+|Aggregation objects|[Yes](designing-aggregations-analysis-services-multidimensional.md)|No|  
+|Calculated Measures|[Yes](create-calculated-members.md)|Yes|  
+|Custom Assemblies|[Yes](multidimensional-model-assemblies-management.md)|No|  
 |Custom Rollups|Yes|No|  
-|Distinct Count|[Yes](../../2014/analysis-services/use-aggregate-functions.md)|Yes (via DAX)*|  
+|Distinct Count|[Yes](use-aggregate-functions.md)|Yes (via DAX)*|  
 |Drillthrough|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
-|Hierarchies|[Yes](../../2014/analysis-services/create-user-defined-hierarchies.md)|Yes|  
-|KPIs|[Yes](../../2014/analysis-services/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
-|Linked measure groups|[Yes](../../2014/analysis-services/linked-measure-groups.md)|No|  
-|Many-to-many relationships|[Yes](../../2014/analysis-services/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
-|Parent-child Hierarchies|[Yes](../../2014/analysis-services/parent-child-hierarchy.md)|Yes (via DAX)|  
-|Partitions|[Yes](../../2014/analysis-services/partitions-in-multidimensional-models.md)|[Yes](../../2014/analysis-services/partitions-ssas-tabular.md)|  
-|Perspectives|[Yes](../../2014/analysis-services/perspectives-in-multidimensional-models.md)|[Yes](../../2014/analysis-services/partitions-ssas-tabular.md)|  
-|Semi-additive Measures|[Yes](../../2014/analysis-services/define-semiadditive-behavior.md)|Yes (via DAX)|  
-|Translations|[Yes](../../2014/analysis-services/translations-in-multidimensional-models.md)|No|  
-|User-defined Hierarchies|[Yes](../../2014/analysis-services/create-user-defined-hierarchies.md)|Yes|  
-|Writeback|[Yes](../../2014/analysis-services/set-partition-writeback.md)|No|  
+|Hierarchies|[Yes](create-user-defined-hierarchies.md)|Yes|  
+|KPIs|[Yes](key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
+|Linked measure groups|[Yes](linked-measure-groups.md)|No|  
+|Many-to-many relationships|[Yes](define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
+|Parent-child Hierarchies|[Yes](parent-child-hierarchy.md)|Yes (via DAX)|  
+|Partitions|[Yes](partitions-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Perspectives|[Yes](perspectives-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Semi-additive Measures|[Yes](define-semiadditive-behavior.md)|Yes (via DAX)|  
+|Translations|[Yes](translations-in-multidimensional-models.md)|No|  
+|User-defined Hierarchies|[Yes](create-user-defined-hierarchies.md)|Yes|  
+|Writeback|[Yes](set-partition-writeback.md)|No|  
   
  *If your solution must support a very large number of distinct counts (such as many millions of customer IDs), consider Tabular first. It tends to be more performant in this scenario. See the section about distinct counts in the whitepaper, [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](http://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Model Size  
  The size of the model, in terms of total number of objects, does not vary by solution type. However, the design tools used to build each solution vary in how well they accommodate working with a large number of objects. A larger model is somewhat easier to build in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] because it provides more facilities for diagramming and listing objects by type in Object Explorer and Solution Explorer.  
   
- Very large models that consist of many hundreds of tables or dimensions are often built programmatically in Visual Studio, and not in the design tools. For more information about the maximum number of objects in a model, see [Maximum Capacity Specifications &#40;Analysis Services&#41;](../../2014/analysis-services/dev-guide/maximum-capacity-specifications-analysis-services.md).  
+ Very large models that consist of many hundreds of tables or dimensions are often built programmatically in Visual Studio, and not in the design tools. For more information about the maximum number of objects in a model, see [Maximum Capacity Specifications &#40;Analysis Services&#41;](dev-guide/maximum-capacity-specifications-analysis-services.md).  
   
 ##  <a name="bkmk_ext"></a> Programmability and Developer Experience  
  For tabular and multidimensional models, there is one object model shared for both modalities. AMO and ADOMD.NET support both modes. Neither client library was revised for tabular constructs so you will need to understand how multidimensional and tabular constructs and naming conventions relate to each other. As a first step, review the AMO-to-tabular programming sample to learn AMO programming against a tabular model. For more information, download the sample from the [codeplex web site](http://go.microsoft.com/fwlink/?LinkID=221036).  
@@ -153,7 +153,7 @@ manager: "mblythe"
   
 |**Modeling Tool**|**How Used**|  
 |-----------------------|------------------|  
-|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Use to create Tabular, Multidimensional, and Data Mining solutions. This authoring environment uses the Visual Studio shell to provide workspaces, property panes, and object navigation. Technical users who already use Visual Studio will most likely prefer this tool for building business intelligence applications. See [Tools and applications used in Analysis Services](../../2014/analysis-services/tools-and-applications-used-in-analysis-services.md) for details.|  
+|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Use to create Tabular, Multidimensional, and Data Mining solutions. This authoring environment uses the Visual Studio shell to provide workspaces, property panes, and object navigation. Technical users who already use Visual Studio will most likely prefer this tool for building business intelligence applications. See [Tools and applications used in Analysis Services](tools-and-applications-used-in-analysis-services.md) for details.|  
 |Excel 2013 and later, with the Power Pivot for Excel add-in|Power Pivot for Excel is a tool used to edit and enhance an Excel Data Model. It has a separate application workspace that opens over Excel, but uses the same visual metaphors (tabbed pages, grid layout, and formula bar) as Excel. Users who are proficient in Excel typically prefer this tool over [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. See [Power Pivot: Powerful data analysis and data modeling in Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
   
 ##  <a name="bkmk_client"></a> Client and Reporting Applications  
@@ -201,11 +201,11 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
- [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services-and-business-intelligence.md)   
  [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
  [What’s New in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [PowerPivot Help for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](../../2014/analysis-services/powerpivot-bi-semantic-model-connection-bism.md)   
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md)   
  [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
   

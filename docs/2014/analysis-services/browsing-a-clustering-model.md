@@ -34,7 +34,7 @@ manager: "mblythe"
   
 -   [Cluster Discrimination](#BKMK_ClusterDiscrimination)  
   
- To experiment with a clustering model, you can use the sample data on the Training tab of the sample data workbook, and build a clustering model using [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/cluster-wizard-data-mining-add-ins-for-excel.md) and all the defaults.  
+ To experiment with a clustering model, you can use the sample data on the Training tab of the sample data workbook, and build a clustering model using [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) and all the defaults.  
   
 ###  <a name="BKMK_ClusterDiagram"></a> Cluster Diagram  
  The **Cluster Diagram** tab displays all the clusters that are in a mining model. Here you can see how many different groupings were found in your data set, and how near or far they are from each other.  
@@ -45,7 +45,7 @@ manager: "mblythe"
   
      Note how the gray lines connecting all clusters change so that lines leading to the selected cluster are highlighted in bright blue.  
   
-     ![cluster diagram intro](../../2014/analysis-services/media/dm13-cluster-diagram-intro.gif "cluster diagram intro")  
+     ![cluster diagram intro](media/dm13-cluster-diagram-intro.gif "cluster diagram intro")  
   
      The intensity of the line that connects one cluster to another represents the strength of the similarity of the clusters. If the shading is light or nonexistent, the clusters are not very similar. As the line becomes darker, it indicates that the similarity between the two clusters is stronger.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
      By changing the shading variable, you can see at a glance which clusters contain more of this targeted age group, and which clusters contain very few customers in this age group.  
   
-     ![Modify the cluster diagram to show age](../../2014/analysis-services/media/dm13-cluster-diagramshadebyage.gif "Modify the cluster diagram to show age")  
+     ![Modify the cluster diagram to show age](media/dm13-cluster-diagramshadebyage.gif "Modify the cluster diagram to show age")  
   
      The darker the shading, the larger the proportion of the target attribute and value distribution that cluster.  
   
@@ -96,7 +96,7 @@ manager: "mblythe"
   
      The ToolTip shows the distribution of occupations in that cluster.  
   
-     ![View detailed values in Tooltips or in Legend](../../2014/analysis-services/media/dm13-cluster-profile-age-tooltip.gif "View detailed values in Tooltips or in Legend")  
+     ![View detailed values in Tooltips or in Legend](media/dm13-cluster-profile-age-tooltip.gif "View detailed values in Tooltips or in Legend")  
   
      Notice that, in some clusters (such as the one in the graphic), the list of occupations is not complete, and some occupations are replaced with the label, **Other**.  
   
@@ -128,7 +128,7 @@ manager: "mblythe"
   
      The new cluster name is persisted in all views, and on the server, until you reprocess the model.  
   
-     ![Rename clusters to make chart easier to use](../../2014/analysis-services/media/dm13-cluster-rename.gif "Rename clusters to make chart easier to use")  
+     ![Rename clusters to make chart easier to use](media/dm13-cluster-rename.gif "Rename clusters to make chart easier to use")  
   
  **Tips**  
   
@@ -159,7 +159,7 @@ manager: "mblythe"
   
      Attribute states are listed in order of importance, accompanied by their probability in this cluster, represented as a colored bar in the **Probability** column.  
   
-     ![Characteristics of a clustering model](../../2014/analysis-services/media/dm13-cluster-characteristics.gif "Characteristics of a clustering model")  
+     ![Characteristics of a clustering model](media/dm13-cluster-characteristics.gif "Characteristics of a clustering model")  
   
 2.  Click the **Variables** column to sort by attribute.  
   
@@ -198,7 +198,7 @@ manager: "mblythe"
   
      The comparison should look similar to the following graphic.  
   
-     ![comparing clusters in a model](../../2014/analysis-services/media/dm13-cluster-compareclusters.gif "comparing clusters in a model")  
+     ![comparing clusters in a model](media/dm13-cluster-compareclusters.gif "comparing clusters in a model")  
   
      Note that, under the covers, the **Cluster Discrimination** viewer sends complex queries to the data mining server, to extract the attributes that are most important in distinguishing between the two groups, making it easier to compare two sets of customers.  
   
@@ -208,18 +208,18 @@ manager: "mblythe"
   
 3.  Now compare the lists in Excel.  
   
-     ![Dependency network graph for an association model](../../2014/analysis-services/media/dm13-comparing-profiles-in-excel.gif "Dependency network graph for an association model")  
+     ![Dependency network graph for an association model](media/dm13-comparing-profiles-in-excel.gif "Dependency network graph for an association model")  
   
      Because the underlying statistics that were used to build the image in the viewer are saved to Excel as tables, you can filter and sort, and view the actual probability values.  
   
-     In addition to using Excel, we recommend that you try the cluster viewer for Visio, which also allows you to not just view data points but also extensively modify and enhance the graph. For more information, see [Cluster Diagram Walkthrough &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/cluster-diagram-walkthrough-data-mining-add-ins.md).  
+     In addition to using Excel, we recommend that you try the cluster viewer for Visio, which also allows you to not just view data points but also extensively modify and enhance the graph. For more information, see [Cluster Diagram Walkthrough &#40;Data Mining Add-ins&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
  **Tips**  
   
- After getting some insights into groups of customers, try using the [What-If Scenario &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/what-if-scenario-table-analysis-tools-for-excel.md) or [Goal Seek Scenario &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/goal-seek-scenario-table-analysis-tools-for-excel.md) tools, to explore factors in the model that might be changed to affect the outcome.  
+ After getting some insights into groups of customers, try using the [What-If Scenario &#40;Table Analysis Tools for Excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) or [Goal Seek Scenario &#40;Table Analysis Tools for Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) tools, to explore factors in the model that might be changed to affect the outcome.  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
- [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/cluster-wizard-data-mining-add-ins-for-excel.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)   
+ [Cluster Wizard &#40;Data Mining Add-ins for Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
   

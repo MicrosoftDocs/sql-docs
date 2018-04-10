@@ -92,8 +92,8 @@ manager: "mblythe"
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-designer-ssas-tabular.md)   
- [Hierarchies &#40;SSAS Tabular&#41;](../../2014/analysis-services/hierarchies-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)  
+ [Tabular Model Designer &#40;SSAS Tabular&#41;](tabular-model-designer-ssas-tabular.md)   
+ [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md)   
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)  
   
   

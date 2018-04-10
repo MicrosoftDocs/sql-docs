@@ -35,7 +35,7 @@ manager: "mblythe"
 ##  <a name="bkmk_prereq"></a> Review Prerequisites  
  You must have Contribute permissions or above to create a BI semantic model connection file.  
   
- You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/add-bi-semantic-model-connection-content-type-to-library.md).  
+ You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  You must know the URL of the PowerPivot workbook for which you are setting up a BI semantic model connection (for example, http://adventure-works/shared documents/myworkbook.xlsx). The workbook must be in the same farm.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 1.  In the library that will contain the BI semantic model connection, click **Documents** on the SharePoint ribbon. Click the down arrow on New Document, and select **BISM Connection File** to open the New BI Semantic Model Connection page.  
   
-     ![New Document submenu in a SharePoint library](../../2014/analysis-services/media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
+     ![New Document submenu in a SharePoint library](media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
 2.  Set the **Server** property to the SharePoint URL of the PowerPivot workbook (for example, **http://mysharepoint/shared documents/myWorkbook.xlsx**. In a PowerPivot for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to PowerPivot data specify just the path to the workbook. The PowerPivot System Service determines which server loads the data.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
      Your page should look similar to the following illustration.  
   
-     ![BISM connection page showing URL to workbook](../../2014/analysis-services/media/ssas-bismconnection-ppvtds.gif "BISM connection page showing URL to workbook")  
+     ![BISM connection page showing URL to workbook](media/ssas-bismconnection-ppvtds.gif "BISM connection page showing URL to workbook")  
   
      Optionally, if you have SharePoint permissions to the workbook, an extra validation step is performed, ensuring that the location is valid. If you do not have permission to access the data, you are given the option of saving the BI semantic model connection without the validation response.  
   
@@ -92,11 +92,11 @@ manager: "mblythe"
  If you created a **BISM Users** group using the instructions in the previous section, user and group accounts that are members of **BISM Users** will have sufficient permission on the workbook as well as the BI semantic model connection file, assuming the workbook uses inherited permissions.  
   
 ##  <a name="bkmk_next"></a> Next Steps  
- After you create and secure a BI semantic model connection, you can specify it as a data source. For more information, see [Use a BI Semantic Model Connection in Excel or Reporting Services](../../2014/analysis-services/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
+ After you create and secure a BI semantic model connection, you can specify it as a data source. For more information, see [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## See Also  
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](../../2014/analysis-services/powerpivot-bi-semantic-model-connection-bism.md)   
- [Use a BI Semantic Model Connection in Excel or Reporting Services](../../2014/analysis-services/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md)   
+ [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

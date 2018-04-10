@@ -214,6 +214,6 @@ FROM [Adventure Works]
  [CalculationCurrentPass &#40;MDX&#41;](~/mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40;MDX&#41;](~/mdx/calculationpassvalue-mdx.md)   
  [CREATE MEMBER Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-member.md)   
- [Manipulating Data &#40;MDX&#41;](../../2014/analysis-services/manipulating-data-mdx.md)  
+ [Manipulating Data &#40;MDX&#41;](manipulating-data-mdx.md)  
   
   

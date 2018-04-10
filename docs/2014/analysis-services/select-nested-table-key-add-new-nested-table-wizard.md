@@ -27,8 +27,8 @@ manager: "mblythe"
  Select the attribute that will be the key column for the nested table. All selected attributes must be in hierarchies or have their attribute hierarchies enabled.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select a Measure Group Dimension &#40;Add New Nested Table Wizard&#41;](../../2014/analysis-services/select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
- [Select Nested Table Columns &#40;Add New Nested Table Wizard&#41;](../../2014/analysis-services/select-nested-table-columns-add-new-nested-table-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select a Measure Group Dimension &#40;Add New Nested Table Wizard&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
+ [Select Nested Table Columns &#40;Add New Nested Table Wizard&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)  
   
   

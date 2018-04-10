@@ -34,15 +34,15 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Specify Target &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Specify Target &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [Subject Area Database Schema Options &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [Subject Area Database Schema Options &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [Specify Naming Conventions &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [Specify Naming Conventions &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [Completing the Wizard &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Completing the Wizard &#40;Schema Generation Wizard&#41; &#40;Analysis Services - Multidimensional Data&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## See Also  
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

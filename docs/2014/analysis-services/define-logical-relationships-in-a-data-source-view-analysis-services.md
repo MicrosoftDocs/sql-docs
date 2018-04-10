@@ -83,6 +83,6 @@ manager: "mblythe"
 3.  Right-click the relationship you want to modify, and then click **Edit Relationship**.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

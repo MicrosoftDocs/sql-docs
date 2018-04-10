@@ -42,8 +42,8 @@ manager: "mblythe"
  Click to remove the selected nested table. This button is enabled only if a nested table is selected.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Case Level Columns &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-case-level-columns-data-mining-wizard.md)   
- [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Case Level Columns &#40;Data Mining Wizard&#41;](select-case-level-columns-data-mining-wizard.md)   
+ [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

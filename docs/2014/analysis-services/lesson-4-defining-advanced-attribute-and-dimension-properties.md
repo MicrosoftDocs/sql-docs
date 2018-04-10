@@ -39,7 +39,7 @@ manager: "jhubbard"
  In this task, you learn how to sort dimension members based on a secondary attribute, to achieve the sort order that you want.  
   
  [Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- In this task, you learn how to define member properties for attributes and to specify aggregation relationships between them. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md) and [User Hierarchy Properties](../../2014/analysis-services/dev-guide/user-hierarchy-properties.md).  
+ In this task, you learn how to define member properties for attributes and to specify aggregation relationships between them. For more information, see [Define Attribute Relationships](define-attribute-relationships.md) and [User Hierarchy Properties](dev-guide/user-hierarchy-properties.md).  
   
  [Defining the Unknown Member and Null Processing Properties](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  In this task, you configure the UnknownMember and UnknownMemberName properties to handle error conditions caused by null dimension members.  
@@ -50,6 +50,6 @@ manager: "jhubbard"
 ## See Also  
  [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

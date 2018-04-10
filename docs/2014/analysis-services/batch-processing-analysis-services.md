@@ -31,7 +31,7 @@ manager: "mblythe"
  [Batch Processing using XMLA in Management Studio](#bkmk_xmla)  
   
 ##  <a name="bkmk_ssdt"></a> Batch Processing in SQL Server Data Tools  
- Before objects can be processed in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], the project that contains the objects must be deployed. For more information, see [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md).  
+ Before objects can be processed in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], the project that contains the objects must be deployed. For more information, see [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Open [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
@@ -73,6 +73,6 @@ manager: "mblythe"
  For step by step instructions, see **Example 2** in [Schedule SSAS Administrative Tasks with SQL Server Agent](instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
 ## See Also  
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
   
   

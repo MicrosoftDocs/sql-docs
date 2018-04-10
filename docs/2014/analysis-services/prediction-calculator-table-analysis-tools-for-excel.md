@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Prediction Calculator (Table Analysis Tools for Excel)
-  ![Prediction Calculator tool](../../2014/analysis-services/media/tat-predcal.gif "Prediction Calculator tool")  
+  ![Prediction Calculator tool](media/tat-predcal.gif "Prediction Calculator tool")  
   
  The **Prediction Calculator** tool helps you create a scorecard that can be used to analyze new data and evaluate options or risk. For example, if you have historical and demographic data about customers, the **Prediction Calculator** tool can help you with two key tasks:  
   
@@ -144,7 +144,7 @@ manager: "mblythe"
  When you type in the new value, the score displayed in the cell, Prediction for Yes, changes to TRUE, and the **Relative Impact** scores for the various attributes are updated as well.  
   
 > [!NOTE]  
->  Even if you alter only one value, such as the number of cars, the values and impacts of other attributes may change when you do so. This is because data mining models often find complex relationships among data, and changing any one variable may have unforeseen effects. For this reason, we recommend that you use the interactive prediction calculator to experiment with different values, or browse the mining model to better understand the interactions. For more information, see [Browse Models](../../2014/analysis-services/prediction-calculator-table-analysis-tools-for-excel.md).  
+>  Even if you alter only one value, such as the number of cars, the values and impacts of other attributes may change when you do so. This is because data mining models often find complex relationships among data, and changing any one variable may have unforeseen effects. For this reason, we recommend that you use the interactive prediction calculator to experiment with different values, or browse the mining model to better understand the interactions. For more information, see [Browse Models](prediction-calculator-table-analysis-tools-for-excel.md).  
   
 #### Score Breakdown  
  This table shows the individual scores for each possible state of the input columns, and the relative impact that the score has on the outcomes. This table is static and for reference only.  
@@ -173,9 +173,9 @@ manager: "mblythe"
 8.  Convert the score to a predicted result by using the criteria printed on the sheet immediately after the **Total** row.  
   
 ## Related Tools  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the Microsoft Logistic Regression algorithm for use in this type of analysis. If you are already familiar with logistic regression, you can easily create logistic regression models by using the **Advanced** option of the Data Mining Client for Excel. For more information, see [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md). For more information about the options and parameters for logistic regression models, see the topic "Microsoft Logistic Regression Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the Microsoft Logistic Regression algorithm for use in this type of analysis. If you are already familiar with logistic regression, you can easily create logistic regression models by using the **Advanced** option of the Data Mining Client for Excel. For more information, see [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). For more information about the options and parameters for logistic regression models, see the topic "Microsoft Logistic Regression Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

@@ -96,7 +96,7 @@ manager: "mblythe"
   
 3.  Right-click each data source and view its properties to ensure that each one is using the **Inherit** option.  
   
- For more information about default settings at the database level, see [Set Multidimensional Database Properties &#40;Analysis Services&#41;](../../2014/analysis-services/set-multidimensional-database-properties-analysis-services.md).  
+ For more information about default settings at the database level, see [Set Multidimensional Database Properties &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
  **Databases – Default option**  
   
@@ -105,8 +105,8 @@ manager: "mblythe"
  For multidimensional databases, **Default** means use the service account, and current user for data mining operations.  
   
 ## See Also  
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/create-a-data-source-ssas-multidimensional.md)   
- [Set Data Source Properties &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/set-data-source-properties-ssas-multidimensional.md)   
- [DirectQuery Deployment Scenarios &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-deployment-scenarios-ssas-tabular.md)  
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)   
+ [Set Data Source Properties &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
+ [DirectQuery Deployment Scenarios &#40;SSAS Tabular&#41;](directquery-deployment-scenarios-ssas-tabular.md)  
   
   

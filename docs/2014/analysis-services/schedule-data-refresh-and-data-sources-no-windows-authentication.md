@@ -24,7 +24,7 @@ manager: "mblythe"
   
  **Overview:** Create two Secure Store Target Applications. Configure the first target application (PowerPivotDataRefresh) to use Windows credentials. Configure the second target application with the credentials for a data source that does not support windows authentication, for example, an Oracle database. The second target application also uses the first target application for the unattended data refresh account.  
   
- ![as_powerpivot_refresh_no_windows_auth](../../2014/analysis-services/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
+ ![as_powerpivot_refresh_no_windows_auth](media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
 -   **(1) PowerPivotDatarefresh:** A Secure Store Target Application ID that is set with windows authentication.  
   
@@ -48,7 +48,7 @@ manager: "mblythe"
   
 2.  Click the name of your secure store service application.  
   
-3.  On the **Manage** page, click **New**. ![as_powerpivot_refresh_sss_new_target_application](../../2014/analysis-services/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
+3.  On the **Manage** page, click **New**. ![as_powerpivot_refresh_sss_new_target_application](media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application")  
   
 4.  On the **Create New Secure Store Target Application** page, configure the following values:  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
   
 9. Click **OK**.  
   
-10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](../../2014/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Type the Windows User Name and Windows Password and then click **OK**.  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
 2.  Click the name of your Secure Store Service application.  
   
-3.  On the **Manage** page, click **New**![as_powerpivot_refresh_sss_new_target_application](../../2014/analysis-services/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application").  
+3.  On the **Manage** page, click **New**![as_powerpivot_refresh_sss_new_target_application](media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application").  
   
 4.  On the **Create New Secure Store Target Application** page, configure the following values:  
   
@@ -108,7 +108,7 @@ manager: "mblythe"
   
 9. Click **OK**.  
   
-10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](../../2014/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   
@@ -124,11 +124,11 @@ manager: "mblythe"
   
 4.  In the **Data Refresh** section, set the **PowerPivot Unattended Data Refresh Account**to`PowerPivotDataRefresh` and then click **OK**.  
   
-     ![as_powerpivot_refresh_new_refresh_acount](../../2014/analysis-services/media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
+     ![as_powerpivot_refresh_new_refresh_acount](media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## To configure the workbook  
   
-1.  Browse to your workbook in the PowerPivot Gallery and click **Manage Data Refresh**![as_powerpivot_refresh_manage_reresh](../../2014/analysis-services/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Browse to your workbook in the PowerPivot Gallery and click **Manage Data Refresh**![as_powerpivot_refresh_manage_reresh](media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  If you see the **Data Refresh History** page, click **Configure Schedule**.  
   

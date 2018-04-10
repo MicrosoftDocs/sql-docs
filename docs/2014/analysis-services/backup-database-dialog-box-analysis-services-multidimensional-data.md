@@ -50,7 +50,7 @@ manager: "mblythe"
  Type the full path and file name of the backup file to use.  
   
  **Browse**  
- Click to display the **Save File As** dialog box and select the path and file name of the backup file to use. For more information about the **Save File As** dialog box, see [Save File As Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to display the **Save File As** dialog box and select the path and file name of the backup file to use. For more information about the **Save File As** dialog box, see [Save File As Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Allow file overwrite**  
  Select to overwrite an existing backup file or remote backup file, if one exists.  
@@ -90,10 +90,10 @@ manager: "mblythe"
 |**Server**|Displays the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that manages the remote partitions.|  
 |**Database**|Displays the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database that contains the remote partitions.|  
 |**Partition List**|Displays the list of remote partitions contained by the database displayed in **Database**.|  
-|**Remote backup file**|Type the full path and file name of the remote backup file to use, or click the ellipsis button (**...**) to display the **Save File As** dialog box and select the path and file name of the remote backup file to use. For more information about the **Save File As** dialog box, see [Save File As Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Remote backup file**|Type the full path and file name of the remote backup file to use, or click the ellipsis button (**...**) to display the **Save File As** dialog box and select the path and file name of the remote backup file to use. For more information about the **Save File As** dialog box, see [Save File As Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
   
   

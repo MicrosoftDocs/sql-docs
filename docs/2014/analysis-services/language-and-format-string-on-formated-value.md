@@ -140,9 +140,9 @@ manager: "mblythe"
 |L|06:30|FORMAT_STRING is set explicitly to `Short Time` and LANGUAGE is set explicitly to `1041` (Japanese).|  
   
 ## See Also  
- [FORMAT_STRING Contents &#40;MDX&#41;](../../2014/analysis-services/format-string-contents-mdx.md)   
- [Using Cell Properties &#40;MDX&#41;](../../2014/analysis-services/using-cell-properties-mdx.md)   
- [Creating and Using Property Values &#40;MDX&#41;](../../2014/analysis-services/creating-and-using-property-values-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING Contents &#40;MDX&#41;](format-string-contents-mdx.md)   
+ [Using Cell Properties &#40;MDX&#41;](using-cell-properties-mdx.md)   
+ [Creating and Using Property Values &#40;MDX&#41;](creating-and-using-property-values-mdx.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

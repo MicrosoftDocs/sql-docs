@@ -81,6 +81,6 @@ manager: "mblythe"
  Each data refresh job will have different load characteristics depending on the number and size of the data sources that are being refreshed. Workbooks that have a single data source with a smaller number of rows have a far lighter processing load than a workbook that has numerous data sources and very large row sets.  
   
 ## See Also  
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

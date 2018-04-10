@@ -58,8 +58,8 @@ manager: "mblythe"
 >  This option is available if you selected **From existing cube** on the **Select the Definition Method** page and if you have selected **Create Mining Model Dimension** on the current page of the wizard.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)   
- [Specify the Training Data &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Data Source View &#40;Data Mining Wizard&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Specify the Training Data &#40;Data Mining Wizard&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

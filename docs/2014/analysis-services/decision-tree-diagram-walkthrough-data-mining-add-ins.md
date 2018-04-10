@@ -136,6 +136,6 @@ manager: "mblythe"
      Displays the children of the currently selected node.  
   
 ## See Also  
- [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+ [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

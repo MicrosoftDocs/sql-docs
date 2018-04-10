@@ -24,7 +24,7 @@ manager: "mblythe"
   
  Measures that are created via the Cube Wizard are assigned an aggregation type as part of the measure definition. The aggregation type is always `Sum`, assuming the source column contains numeric data. `Sum` is assigned regardless of the source column's data type. For example, if you used the Cube Wizard to create measures, and you pulled in all columns from a fact table, you will notice that all of the resulting measures have an aggregation of `Sum`, even if the source is a date time column. Always review the pre-assigned aggregation methods for measures created via the wizard to make sure the aggregation function is suitable.  
   
- You can assign or change the aggregation method in the either the cube definition, via [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], or via MDX. See [Create Measures and Measure Groups in Multidimensional Models](../../2014/analysis-services/create-measures-and-measure-groups-in-multidimensional-models.md) or [Aggregate &#40;MDX&#41;](~/mdx/aggregate-mdx.md) for further instructions.  
+ You can assign or change the aggregation method in the either the cube definition, via [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], or via MDX. See [Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md) or [Aggregate &#40;MDX&#41;](~/mdx/aggregate-mdx.md) for further instructions.  
   
 ##  <a name="AggFunction"></a> Aggregate Functions  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides functions to aggregate measures along the dimensions that are contained in measure groups. The *additivity* of an aggregation function determines how the measure is aggregated across all the dimensions in the cube. Aggregation functions fall into three levels of additivity:  
@@ -33,7 +33,7 @@ manager: "mblythe"
  An additive measure, also called a fully additive measure, can be aggregated along all the dimensions that are included in the measure group that contains the measure, without restriction.  
   
  Semiadditive  
- A semiadditive measure can be aggregated along some, but not all, dimensions that are included in the measure group that contains the measure. For example, a measure that represents the quantity available for inventory can be aggregated along a geography dimension to produce a total quantity available for all warehouses, but the measure cannot be aggregated along a time dimension because the measure represents a periodic snapshot of quantities available. Aggregating such a measure along a time dimension would produce incorrect results. See [Define Semiadditive Behavior](../../2014/analysis-services/define-semiadditive-behavior.md) for details.  
+ A semiadditive measure can be aggregated along some, but not all, dimensions that are included in the measure group that contains the measure. For example, a measure that represents the quantity available for inventory can be aggregated along a geography dimension to produce a total quantity available for all warehouses, but the measure cannot be aggregated along a time dimension because the measure represents a periodic snapshot of quantities available. Aggregating such a measure along a time dimension would produce incorrect results. See [Define Semiadditive Behavior](define-semiadditive-behavior.md) for details.  
   
  Nonadditive  
  A nonadditive measure cannot be aggregated along any dimension in the measure group that contains the measure. Instead, the measure must be individually calculated for each cell in the cube that represents the measure. For example, a calculated measure that returns a percentage, such as profit margin, cannot be aggregated from the percentage values of child members in any dimension.  
@@ -46,9 +46,9 @@ manager: "mblythe"
 |`Count`|Additive|Retrieves the count of all child members.|  
 |`Min`|Semiadditive|Retrieves the lowest value for all child members.|  
 |`Max`|Semiadditive|Retrieves the highest value for all child members.|  
-|`DistinctCount`|Nonadditive|Retrieves the count of all unique child members. For more details, see [About Distinct Count Measures](../../2014/analysis-services/use-aggregate-functions.md#bkmk_distinct) in the next section.|  
+|`DistinctCount`|Nonadditive|Retrieves the count of all unique child members. For more details, see [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) in the next section.|  
 |`None`|Nonadditive|No aggregation is performed, and all values for leaf and nonleaf members in a dimension are supplied directly from the fact table for the measure group that contains the measure. If no value can be read from the fact table for a member, the value for that member is set to null.|  
-|`ByAccount`|Semiadditive|Calculates the aggregation according to the aggregation function assigned to the account type for a member in an account dimension. If no account type dimension exists in the measure group, treated as the `None` aggregation function.<br /><br /> For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](../../2014/analysis-services/create-a-finance-account-of-parent-child-type-dimension.md).|  
+|`ByAccount`|Semiadditive|Calculates the aggregation according to the aggregation function assigned to the account type for a member in an account dimension. If no account type dimension exists in the measure group, treated as the `None` aggregation function.<br /><br /> For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](create-a-finance-account-of-parent-child-type-dimension.md).|  
 |`AverageOfChildren`|Semiadditive|Calculates the average of values for all non-empty child members.|  
 |`FirstChild`|Semiadditive|Retrieves the value of the first child member.|  
 |`LastChild`|Semiadditive|Retrieves the value of the last child member.|  
@@ -65,8 +65,8 @@ manager: "mblythe"
  A distinct count measure that counts members is based on a foreign key column in the fact table. (That is, the measure's **Source Column** property identifies this column.) This column joins the dimension table column that identifies the members counted by the distinct count measure.  
   
 ## See Also  
- [Measures and Measure Groups](../../2014/analysis-services/measures-and-measure-groups.md)   
+ [Measures and Measure Groups](measures-and-measure-groups.md)   
  [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)   
- [Define Semiadditive Behavior](../../2014/analysis-services/define-semiadditive-behavior.md)  
+ [Define Semiadditive Behavior](define-semiadditive-behavior.md)  
   
   

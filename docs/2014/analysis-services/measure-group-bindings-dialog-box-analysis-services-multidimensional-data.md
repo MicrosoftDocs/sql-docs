@@ -41,10 +41,10 @@ manager: "mblythe"
 |------------|----------------|  
 |**Dimension Columns**|Displays the columns from the dimension table on which the attribute selected in **Attributes** is based.|  
 |**Measure Group Columns**|Select either **Inherited from dimension** to use the measure group relationship inherited from the dimension, or select a column from the fact table on which the measure group is based to explicitly define a relationship.|  
-|**Null Processing**|Select a null processing option for the attribute. For more information about null processing options, see [NullProcessing Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/nullprocessing-element-assl.md).|  
+|**Null Processing**|Select a null processing option for the attribute. For more information about null processing options, see [NullProcessing Element &#40;ASSL&#41;](dev-guide/nullprocessing-element-assl.md).|  
   
 ## See Also  
- [Define Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Define Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

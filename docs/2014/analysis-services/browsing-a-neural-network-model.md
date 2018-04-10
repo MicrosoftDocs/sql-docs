@@ -33,14 +33,14 @@ manager: "mblythe"
   
 -   [Outputs](#BKMK_Outputs)  
   
- If you want to experiment with this viewer, you can create a model using the [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/classify-wizard-data-mining-add-ins-for-excel.md) wizard, and use the **Advanced** option to change the algorithm to Microsoft Logistic Regression in the **Algorithm Parameters** dialog box.  
+ If you want to experiment with this viewer, you can create a model using the [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) wizard, and use the **Advanced** option to change the algorithm to Microsoft Logistic Regression in the **Algorithm Parameters** dialog box.  
   
 ###  <a name="BKMK_Variables"></a> Variables  
  The **Variables** pane displays a list of input variables in order of their effect on the model. You use the **Input** and **Output** controls to filter the model, affecting the variables that are displayed, as well as their order.  
   
  Using this viewer, you can explore the factors that are most important in determining whether a customer more likely belongs to the bike buyer category or the non-buyer category.  
   
- ![Testing effect on outcome of selected attributes](../../2014/analysis-services/media/dm13-neuralnet-agebuyer1.gif "Testing effect on outcome of selected attributes")  
+ ![Testing effect on outcome of selected attributes](media/dm13-neuralnet-agebuyer1.gif "Testing effect on outcome of selected attributes")  
   
 ##### Explore variables  
   
@@ -58,9 +58,9 @@ manager: "mblythe"
   
      For Income, the column has been subdivided into groupings such as 78.4-154.06 (for the uppermost income range).  
   
-     ![sort to view how variables were binned](../../2014/analysis-services/media/dm13-nn-bucketing-variables.gif "sort to view how variables were binned")  
+     ![sort to view how variables were binned](media/dm13-nn-bucketing-variables.gif "sort to view how variables were binned")  
   
-     If you want different groupings, you should use the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) tool, or Excel functions, to create new income categories before building the model.  
+     If you want different groupings, you should use the [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md) tool, or Excel functions, to create new income categories before building the model.  
   
 4.  Click **Favors Yes** to restore the graph to the default view.  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
   
      For example, for the input attribute, add **Gender**, and select **Female** as the value.  
   
-     ![Testing effect on outcome of selected attributes](../../2014/analysis-services/media/dm13-neuralnet-agebuyer2.gif "Testing effect on outcome of selected attributes")  
+     ![Testing effect on outcome of selected attributes](media/dm13-neuralnet-agebuyer2.gif "Testing effect on outcome of selected attributes")  
   
      Notice how the list of variables changes. Now **Income** is the variable that is most important in predicting the target outcome.  
   
@@ -129,9 +129,9 @@ manager: "mblythe"
   
  If you want to create a model with multiple predictable attributes using the add-ins, use the **Advanced** modeling options.  
   
- For more information, see [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/create-mining-structure-sql-server-data-mining-add-ins.md) and [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md).  
+ For more information, see [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](create-mining-structure-sql-server-data-mining-add-ins.md) and [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

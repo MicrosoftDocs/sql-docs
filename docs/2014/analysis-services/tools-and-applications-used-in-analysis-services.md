@@ -33,7 +33,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  There are several download sites for the Visual Studio 2012 and Visual Studio 2013 versions of SSDT. Most do not include the BI project templates. Using the links above will get you the correct version. You’ll know that you have the correct version of SSDT-BI if you see the Business Intelligence project templates folder. This folder contains the project templates for Analysis Services, Reporting Services and Integration Services. Depending on how you installed SSDT-BI, you might also see an additional project template for SQL Server databases.  
   
- ![New Project templates in SSDT](../../2014/analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![New Project templates in SSDT](media/ssdt-biprojects.png "New Project templates in SSDT")  
   
 ## Administrative tools  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
  Although it's officially deprecated, SQL Server Profiler provides an easy way to monitor connections, MDX query execution, and other server operations. SQL Server Profiler is installed by default. You can find it with SQL Server applications on Apps in Windows Server 2012.  
   
 ### PowerShell  
- You can use PowerShell commands to perform many administrative tasks. See [Analysis Services PowerShell](../../2014/analysis-services/analysis-services-powershell.md) for more information.  
+ You can use PowerShell commands to perform many administrative tasks. See [Analysis Services PowerShell](analysis-services-powershell.md) for more information.  
   
 ### Community and Third-party tools  
  Check the [Analysis Services codeplex page](http://sqlsrvanalysissrvcs.codeplex.com/) for community code samples. [Forums](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) can be helpful when seeking recommendations for third-party tools that support Analysis Services.  

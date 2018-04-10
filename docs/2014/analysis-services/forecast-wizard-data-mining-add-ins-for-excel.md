@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Forecast Wizard (Data Mining Add-ins for Excel)
-  ![Associate wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-forecast.gif "Associate wizard in Data Mining ribbon")  
+  ![Associate wizard in Data Mining ribbon](media/dmc-forecast.gif "Associate wizard in Data Mining ribbon")  
   
  The Forecast wizard helps you predict values in a time series. The Forecast wizard uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm, which is a regression algorithm for use in predicting continuous columns, such as product sales.  
   
@@ -27,7 +27,7 @@ manager: "mblythe"
   
  You can create predictions from a forecasting model without providing new input data.  
   
- The [Forecast &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/forecast-table-analysis-tools-for-excel.md) tool, in the **Analyze** ribbon, also lets you create forecasting models, but it is less customizable and can only use data in Excel tables.  
+ The [Forecast &#40;Table Analysis Tools for Excel&#41;](forecast-table-analysis-tools-for-excel.md) tool, in the **Analyze** ribbon, also lets you create forecasting models, but it is less customizable and can only use data in Excel tables.  
   
 ## Using the Forecast Wizard  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
 5.  On the **Finish** page, provide a descriptive name for your data set and model, and set the following options that control how you work with the finished model:  
   
-    -   **Browse model**. When this option is selected, as soon as the wizard finishes processing the model, it opens a **Browse** window to help you explore the results. The contents of the viewer depend on the type of model you built. For more information, see [Browsing a Forecasting Model](../../2014/analysis-services/browsing-a-forecasting-model.md).  
+    -   **Browse model**. When this option is selected, as soon as the wizard finishes processing the model, it opens a **Browse** window to help you explore the results. The contents of the viewer depend on the type of model you built. For more information, see [Browsing a Forecasting Model](browsing-a-forecasting-model.md).  
   
     -   **Enable drillthrough**. Select this option to view the underlying data from the finished model. This option is only available if you build a Decision Tree model.  
   
@@ -69,8 +69,8 @@ manager: "mblythe"
  If your data does not include a time or date column, you can assign an arbitrary numeric series, or let the wizard create one. F you let the wizard create the series order column, make sure the other columns are sorted in the worder you want them before starting the wizard.  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   
- [Forecast &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/forecast-table-analysis-tools-for-excel.md)   
- [Browsing a Forecasting Model](../../2014/analysis-services/browsing-a-forecasting-model.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)   
+ [Forecast &#40;Table Analysis Tools for Excel&#41;](forecast-table-analysis-tools-for-excel.md)   
+ [Browsing a Forecasting Model](browsing-a-forecasting-model.md)  
   
   

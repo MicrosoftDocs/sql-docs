@@ -31,9 +31,9 @@ manager: "mblythe"
  **Cube writebacks**  
  You use the [UPDATE CUBE](~/mdx/mdx-data-manipulation-update-cube.md) statement to make updates to a write-enabled cube. The UPDATE CUBE statement lets you update a tuple with a specific value. You use the [REFRESH CUBE Statement (MDX)](~/mdx/mdx-data-definition-refresh-cube.md) to refresh data in a client session with updated data from the server.  
   
- For more information, see [Using Cube Writebacks &#40;MDX&#41;](../../2014/analysis-services/using-cube-writebacks-mdx.md).  
+ For more information, see [Using Cube Writebacks &#40;MDX&#41;](using-cube-writebacks-mdx.md).  
   
 ## See Also  
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

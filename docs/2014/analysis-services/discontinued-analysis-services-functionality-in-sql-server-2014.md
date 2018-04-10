@@ -39,6 +39,6 @@ manager: "mblythe"
  Decision Support Objects (DSO) library that provided compatibility with SQL Server 2000 Analysis Services databases is also discontinued and no longer part of SQL Server.  
   
 ## See Also  
- [Analysis Services Backward Compatibility](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

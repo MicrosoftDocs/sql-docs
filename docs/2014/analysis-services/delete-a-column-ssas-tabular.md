@@ -21,7 +21,7 @@ manager: "mblythe"
 ## Delete a Model Table Column  
   
 > [!NOTE]  
->  Deleting a column from a model table does not delete the column from a partition query definition. If the column you are deleting is part of a partition, you must manually delete the column from the partition query definition. Failure to delete the column from the partition query definition will cause the column to be queried and data returned, but not populated to the model table, during processing operations. For more information, see [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md).  
+>  Deleting a column from a model table does not delete the column from a partition query definition. If the column you are deleting is part of a partition, you must manually delete the column from the partition query definition. Failure to delete the column from the partition query definition will cause the column to be queried and data returned, but not populated to the model table, during processing operations. For more information, see [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
 #### To delete a model table column  
   
@@ -36,7 +36,7 @@ manager: "mblythe"
 3.  In the **Edit Table Properties** dialog box, in the table preview window, uncheck the column you want to delete, and then click **OK**.  
   
 ## See Also  
- [Add Columns to a Table &#40;SSAS Tabular&#41;](../../2014/analysis-services/add-columns-to-a-table-ssas-tabular.md)   
- [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md)  
+ [Add Columns to a Table &#40;SSAS Tabular&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
   
   

@@ -44,7 +44,7 @@ manager: "mblythe"
   
 ## See Also  
  [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

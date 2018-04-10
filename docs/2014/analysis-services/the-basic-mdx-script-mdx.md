@@ -40,7 +40,7 @@ manager: "mblythe"
   
 -   For each calculated member defined in the cube, a corresponding CREATE MEMBER statement exists in the default MDX script.  
   
- You can control the order of script commands, named sets, and calculated members in the default MDX script by using the **Calculations** tab of Cube Designer. For more information on defining calculations stored in the default MDX script, see [Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md).  
+ You can control the order of script commands, named sets, and calculated members in the default MDX script by using the **Calculations** tab of Cube Designer. For more information on defining calculations stored in the default MDX script, see [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md).  
   
  If there is no MDX script associated with a cube, the cube assumes the default MDX script. A cube needs to be associated with at least one MDX script because a cube relies on the MDX script to determine calculation behavior. In other words, a cube that was not associated with an MDX script or was associated with an empty MDX script could not and would not be able to calculate any cells. If you programmatically create cubes, either by using Analysis Services Scripting Language (ASSL) commands or by using Analysis Management Objects (AMO), it is recommended that you create a default MDX script containing a single CALCULATE statement for the cube.  
   
@@ -59,10 +59,10 @@ manager: "mblythe"
  For more information on MDX scripting statements, see [MDX Scripting Statements &#40;MDX&#41;](~/mdx/mdx-scripting-statements-mdx.md).  
   
  [CREATE MEMBER](~/mdx/mdx-data-definition-create-member.md)  
- The CREATE MEMBER statement creates calculated members. For more information about how to create calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../2014/analysis-services/building-calculated-members-in-mdx-mdx.md).  
+ The CREATE MEMBER statement creates calculated members. For more information about how to create calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](building-calculated-members-in-mdx-mdx.md).  
   
  [CREATE SET](~/mdx/mdx-data-definition-create-set.md)  
- The CREATE SET statement creates named sets. For more information about how to create names sets, see [Building Named Sets in MDX &#40;MDX&#41;](../../2014/analysis-services/building-named-sets-in-mdx-mdx.md).  
+ The CREATE SET statement creates named sets. For more information about how to create names sets, see [Building Named Sets in MDX &#40;MDX&#41;](building-named-sets-in-mdx-mdx.md).  
   
  Conditional statements  
  Conditional statements add conditional logic to MDX scripts. This category includes the [CASE](~/mdx/case-statement-mdx.md) and [IF](~/mdx/mdx-scripting-if.md) statements.  
@@ -89,6 +89,6 @@ manager: "mblythe"
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

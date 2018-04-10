@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Relationship Between Two Tables (SSAS Tabular)
-  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](../../2014/analysis-services/relationships-ssas-tabular.md).  
+  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
   
 ## Create a relationship between two tables  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
 6.  Click **Create**.  
   
 ## See Also  
- [Delete Relationships &#40;SSAS Tabular&#41;](../../2014/analysis-services/delete-relationships-ssas-tabular.md)   
- [Relationships &#40;SSAS Tabular&#41;](../../2014/analysis-services/relationships-ssas-tabular.md)  
+ [Delete Relationships &#40;SSAS Tabular&#41;](delete-relationships-ssas-tabular.md)   
+ [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md)  
   
   

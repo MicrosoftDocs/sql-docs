@@ -43,19 +43,19 @@ manager: "mblythe"
  Uses a specified Windows username rather than the user currently logged on. Using a different Windows user does not require a password. Objects and data can only be viewed in Excel within the context of the effective username. No changes to model objects or data can be made in Excel.  
   
  **Role**  
- A role is used to define user permissions on the object metadata and data. Roles are usually defined for a particular Windows user or Windows user group. Certain roles can include additional row-level filters defined in a DAX formula. When using the Analyze in Excel feature, you can optionally select a role to be used. Object metadata and data views will be restricted by the permission and filters defined for the role. For more information, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
+ A role is used to define user permissions on the object metadata and data. Roles are usually defined for a particular Windows user or Windows user group. Certain roles can include additional row-level filters defined in a DAX formula. When using the Analyze in Excel feature, you can optionally select a role to be used. Object metadata and data views will be restricted by the permission and filters defined for the role. For more information, see [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md).  
   
- In addition to the effective user or role, you can specify a perspective. Perspectives enable model authors to define particular business scenario views of model objects and data. By default, no perspective is used. In order to use a perspective with Analyze in Excel, perspectives must already be defined by using the Perspectives dialog box in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. If a perspective is specified, the PivotTable Field List will contain only those objects selected in the perspective. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-perspectives-ssas-tabular.md).  
+ In addition to the effective user or role, you can specify a perspective. Perspectives enable model authors to define particular business scenario views of model objects and data. By default, no perspective is used. In order to use a perspective with Analyze in Excel, perspectives must already be defined by using the Perspectives dialog box in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. If a perspective is specified, the PivotTable Field List will contain only those objects selected in the perspective. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](create-and-manage-perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_rt"></a> Related Tasks  
   
 |**Topic**|**Description**|  
 |---------------|---------------------|  
-|[Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-a-tabular-model-in-excel-ssas-tabular.md)|This topic describes how to use the Analyze in Excel feature in the model designer to open Excel, create a data source connection to the model workspace database, and add a PivotTable to the worksheet.|  
+|[Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|This topic describes how to use the Analyze in Excel feature in the model designer to open Excel, create a data source connection to the model workspace database, and add a PivotTable to the worksheet.|  
   
 ## See Also  
- [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)  
+ [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)  
   
   

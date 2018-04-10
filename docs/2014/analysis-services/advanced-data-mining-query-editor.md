@@ -70,6 +70,6 @@ manager: "mblythe"
  Lists the columns from the external data source that have been added as inputs.  
   
 ## See Also  
- [Query &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/query-sql-server-data-mining-add-ins.md)  
+ [Query &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

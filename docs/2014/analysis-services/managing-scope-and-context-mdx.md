@@ -26,7 +26,7 @@ manager: "mblythe"
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a Multidimensional Expressions (MDX) script can apply to the entire cube, or to specific portions of the cube, at specific points within the execution of the script. The MDX script can take a layered approach to calculations within a cube through the use of calculation passes.  
   
 > [!NOTE]  
->  For more information on how calculation passes can affect calculations, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](../../2014/analysis-services/understanding-pass-order-and-solve-order-mdx.md).  
+>  For more information on how calculation passes can affect calculations, see [Understanding Pass Order and Solve Order &#40;MDX&#41;](understanding-pass-order-and-solve-order-mdx.md).  
   
  To control the calculation pass, scope, and context within an MDX script, you specifically use the CACULATE statement, the `This` function, and the SCOPE statement.  
   
@@ -113,7 +113,7 @@ END SCOPE;
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
- [The Basic MDX Script &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-script-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [The Basic MDX Script &#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -32,7 +32,7 @@ manager: "mblythe"
   
  **Scenario 1: Service is not started**  
   
- The SQL Server Analysis Services (PowerPivot) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md) and [Start or Stop a PowerPivot for SharePoint Server](../../2014/analysis-services/start-or-stop-a-powerpivot-for-sharepoint-server.md).  
+ The SQL Server Analysis Services (PowerPivot) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md) and [Start or Stop a PowerPivot for SharePoint Server](start-or-stop-a-powerpivot-for-sharepoint-server.md).  
   
  **Scenario 2a: Opening an earlier version workbook n the server**  
   

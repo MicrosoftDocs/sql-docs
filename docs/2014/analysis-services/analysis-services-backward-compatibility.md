@@ -30,13 +30,13 @@ manager: "mblythe"
   
 |Topics|Description|  
 |------------|-----------------|  
-|[Deprecated Analysis Services Features in SQL Server 2014](../../2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014.md)|Describes features that have been retained in the current version to maintain backward compatibility,  but which will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|[Discontinued Analysis Services Functionality in SQL Server 2014](../../2014/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2014.md)|Describes features that existed in earlier versions of  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that have since been removed in later versions.|  
-|[Breaking Changes to Analysis Services Features in SQL Server 2014](../../2014/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2014.md)|Describes code changes introduced in this release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that could potentially break a model or custom applications or script created in previous versions of the software .|  
-|[Behavior Changes to Analysis Services Features in SQL Server 2014](../../2014/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Describes existing features that have different behaviors in this release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Common examples include changing a default to a new or different value, disallowing a previously allowable operation or configuration, or a introducing a requirement to manually revise or replace a setting or configuration that is lost during upgrade.<br /> .|  
+|[Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)|Describes features that have been retained in the current version to maintain backward compatibility,  but which will be removed in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[Discontinued Analysis Services Functionality in SQL Server 2014](discontinued-analysis-services-functionality-in-sql-server-2014.md)|Describes features that existed in earlier versions of  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] but that have since been removed in later versions.|  
+|[Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)|Describes code changes introduced in this release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that could potentially break a model or custom applications or script created in previous versions of the software .|  
+|[Behavior Changes to Analysis Services Features in SQL Server 2014](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Describes existing features that have different behaviors in this release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Common examples include changing a default to a new or different value, disallowing a previously allowable operation or configuration, or a introducing a requirement to manually revise or replace a setting or configuration that is lost during upgrade.<br /> .|  
   
 ## See Also  
- [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services-and-business-intelligence.md)   
  [Upgrade Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

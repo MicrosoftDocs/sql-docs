@@ -28,6 +28,6 @@ manager: "mblythe"
  On the other hand, if you change the data source connection string to a different database from the previous generation, no error is generated. The new database is used, and no change is made to the previous database.  
   
 ## See Also  
- [Understanding Incremental Generation](../../2014/analysis-services/understanding-incremental-generation.md)  
+ [Understanding Incremental Generation](understanding-incremental-generation.md)  
   
   

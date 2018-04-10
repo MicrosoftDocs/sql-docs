@@ -61,7 +61,7 @@ manager: "mblythe"
   
 -   Remove unwanted subtotals from a matrix report. Default grouping at the field level creates a subtotal for each field. If you only want a single subtotal that is calculated at the row level, setting the Row Identifier produces this result.  
   
- You cannot set a Row Identifier for tables marked as date tables. For date tables, the row identifier is specified when you mark the table. For more information, see [Mark as Date Table Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/mark-as-date-table-dialog-box-ssas.md).  
+ You cannot set a Row Identifier for tables marked as date tables. For date tables, the row identifier is specified when you mark the table. For more information, see [Mark as Date Table Dialog Box &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md).  
   
 ## Setting the Keep Unique Rows property  
  This property allows you to specify which columns convey identity information (such as an employee name or a product code) in way that distinguishes one row from another. In cases where rows appear to be identical (such as two customers with the same name), the columns you specify for this property repeat in the report table.  
@@ -90,7 +90,7 @@ manager: "mblythe"
 ### Images are missing  
  Properties you set in the model determine whether images are visualized in a report, or represented as text values in the report.  
   
- ![Image URLs appear as text in a report](../../2014/analysis-services/media/ssas-rptprop-noimageurl.gif "Image URLs appear as text in a report")  
+ ![Image URLs appear as text in a report](media/ssas-rptprop-noimageurl.gif "Image URLs appear as text in a report")  
   
  By default, text in the model is interpreted as text in the report. If a text column is a URL address to a report image, remember to set the **Image URL** property so that [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] retrieves the image file. For binary images, remember to set the **Row Identifier** property.  
   
@@ -99,11 +99,11 @@ manager: "mblythe"
   
  However, consider a different example where you might want multiple instances of a row to appear, because in fact the underlying rows contain data about different entities. In this example, assume you have two customers both named **Jon Yang**. Using the default grouping behavior, only one instance of **Jon Yang** will appear in the report. Moreover, because only one instance appears in the list, the measure **Annual Income** is the sum of that value for both customers.  
   
- ![Default group consolidates 2 into 1](../../2014/analysis-services/media/ssas-jonyang-norowid.gif "Default group consolidates 2 into 1")  
+ ![Default group consolidates 2 into 1](media/ssas-jonyang-norowid.gif "Default group consolidates 2 into 1")  
   
  To change the default grouping behavior, set the **Row Identifier** and **Keep Unique Rows** properties. In **Keep Unique Rows**, choose the Last Name column so this value is repeated for a row, even if it already appears in a different row. After you change the properties and republish the workbook, you can create the same report, only this time you will see both customers named **Jon Yang**, with the **Annual Income** correctly allocated to each one.  
   
- ![Row data containing duplicates based on row ID](../../2014/analysis-services/media/ssas-jonyang.gif "Row data containing duplicates based on row ID")  
+ ![Row data containing duplicates based on row ID](media/ssas-jonyang.gif "Row data containing duplicates based on row ID")  
   
 ### Matrix layout is too crowded  
  When you present a detail table in a matrix, the default grouping provides a summarized value for each column. Depending on your objectives, this might be more summarizations than you want. To change this behavior, you can set **Row Identifier**. No additional properties need to be set; just setting row identifier is sufficient to change the grouping so that summarizations are calculated for each row based on its unique row identifier.  
@@ -112,11 +112,11 @@ manager: "mblythe"
   
  **Before: Default grouping based on fields in matrix**  
   
- ![Matrix layout grouped on Row Identifier](../../2014/analysis-services/media/ssas-rptprop-matrixrowid.gif "Matrix layout grouped on Row Identifier")  
+ ![Matrix layout grouped on Row Identifier](media/ssas-rptprop-matrixrowid.gif "Matrix layout grouped on Row Identifier")  
   
  **After: Grouping on row identifier**  
   
- ![Matrix layout grouped on Row Identifier](../../2014/analysis-services/media/ssas-rptprop-matrixrowid.gif "Matrix layout grouped on Row Identifier")  
+ ![Matrix layout grouped on Row Identifier](media/ssas-rptprop-matrixrowid.gif "Matrix layout grouped on Row Identifier")  
   
 ### Chart showing too many items and levels on the axis  
  Chart reports that show detail data should use the row identifier as an axis. Without a row identifier, the axis is indeterminate, resulting in a best-guess layout that might not make sense. To change this behavior, you can set **Row Identifier**. No additional properties need to be set; just setting row identifier is sufficient to change the grouping so that summarizations are calculated for each row based on its unique row identifier.  
@@ -125,11 +125,11 @@ manager: "mblythe"
   
  **Before: Default grouping based on fields in a chart**  
   
- ![Chart based on default grouping at field level](../../2014/analysis-services/media/ssas-rptprop-chartfieldgroup.gif "Chart based on default grouping at field level")  
+ ![Chart based on default grouping at field level](media/ssas-rptprop-chartfieldgroup.gif "Chart based on default grouping at field level")  
   
  **After: Grouping on row identifier (row identifier becomes the axis)**  
   
- ![Chart based on row ID grouping](../../2014/analysis-services/media/ssas-rptprop-chartrowid.gif "Chart based on row ID grouping")  
+ ![Chart based on row ID grouping](media/ssas-rptprop-chartrowid.gif "Chart based on row ID grouping")  
   
 ## Next Steps  
  After you have evaluated the tables in your model and set table behavior properties on those containing detail rows that should always appear as individual items, you can further optimize the model through additional properties or settings.  

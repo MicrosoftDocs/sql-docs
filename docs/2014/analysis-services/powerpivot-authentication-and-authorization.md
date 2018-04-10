@@ -22,7 +22,7 @@ manager: "mblythe"
   
  Click the following links to read specific sections in this topic:  
   
- [Windows Authentication Using Classic Mode Sign-in Requirement](../../2014/analysis-services/powerpivot-authentication-and-authorization.md#bkmk_auth)  
+ [Windows Authentication Using Classic Mode Sign-in Requirement](powerpivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot Operations Requiring User Authorization](#UserConnections)  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 -   Loading PowerPivot data from cache or a library if the data is not otherwise available. If a data connection request is made for PowerPivot data that is not already loaded in the system, the [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] instance will use the identity of the SharePoint user to retrieve the data source from a content library and load it into memory.  
   
--   Data refresh operations that save an updated copy of the data source to the workbook in a content library. In this case, an actual log on operation is performed using the user name and password that is retrieved from a target application in Secure Store Service. Credentials can be the PowerPivot unattended data refresh account, or credentials that were stored with the data refresh schedule when it was created. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) and [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+-   Data refresh operations that save an updated copy of the data source to the workbook in a content library. In this case, an actual log on operation is performed using the user name and password that is retrieved from a target application in Secure Store Service. Credentials can be the PowerPivot unattended data refresh account, or credentials that were stored with the data refresh schedule when it was created. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) and [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
 ##  <a name="Permissions"></a> SharePoint Permissions for PowerPivot Data Access  
  Publishing, managing, and securing a PowerPivot workbook is supported solely through SharePoint integration. SharePoint servers provide authentication and authorization subsystems that ensure legitimate access to data. There are no supported scenarios for securely deploying a PowerPivot workbook outside of a SharePoint farm.  
@@ -96,7 +96,7 @@ manager: "mblythe"
  In Excel Services, security-related configuration settings are specified on trusted locations, trusted data providers, and trusted data connection libraries. The following table describes the settings that enable or enhance PowerPivot data access. If a setting is not listed here, it has no effect on PowerPivot server connections. For instructions on how to specify these settings step by step, see the section "Enable Excel Services" in [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
   
 > [!NOTE]  
->  Most security-related settings apply to trusted locations. If you want to preserve default values or use different values for different sites, you can create an additional trusted location for sites that contain PowerPivot data, and then configure the following settings for just that site. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+>  Most security-related settings apply to trusted locations. If you want to preserve default values or use different values for different sites, you can create an additional trusted location for sites that contain PowerPivot data, and then configure the following settings for just that site. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
 |Area|Setting|Description|  
 |----------|-------------|-----------------|  
@@ -109,9 +109,9 @@ manager: "mblythe"
 |User defined function assembly|Not applicable.|PowerPivot for SharePoint ignores user-defined function assemblies that you build deploy for Excel Services. If you rely on user-defined assemblies for a specific behavior, be aware that PowerPivot query processing will not use the user-defined functions you created.|  
   
 ## See Also  
- [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md)   
- [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
- [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md)   
+ [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md)   
+ [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
+ [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md)   
  [PowerPivot Securtiy Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

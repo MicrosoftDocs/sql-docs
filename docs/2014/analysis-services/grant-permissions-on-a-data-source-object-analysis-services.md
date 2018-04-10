@@ -52,11 +52,11 @@ manager: "mblythe"
      If the client does not allow for impersonation (through the Impersonation Level property in OLE DB and other client components), [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will try to make an anonymous connection to the underlying data source. Anonymous connections to remote data sources rarely succeed, as most data sources do not accept anonymous connections).  
   
 ## See Also  
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
  [Connection String Properties &#40;Analysis Services&#41;](instances/connection-string-properties-analysis-services.md)   
  [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Grant cube or model permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-cube-or-model-permissions-analysis-services.md)   
- [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -89,7 +89,7 @@ manager: "mblythe"
  Only object identifiers, and not object names, are subject to the casing behaviors described in the table. If you see a change in how your solution works (a before and after comparison -- after installing SQL Server 2012 SP2 or later), it will most likely be a processing issue. Queries are not impacted by object identifiers. For both query languages (DAX and MDX), the formula engine uses the object name (not the identifier).  
   
 > [!NOTE]  
->  Code changes related to case-sensitivity have been a breaking change for some applications. See [Breaking Changes to Analysis Services Features in SQL Server 2014](../../2014/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2014.md) for more information.  
+>  Code changes related to case-sensitivity have been a breaking change for some applications. See [Breaking Changes to Analysis Services Features in SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) for more information.  
   
 ##  <a name="bkmk_test"></a> Locale testing using Excel, SQL Server Profiler and SQL Server Management Studio  
  When testing translations, the connection must specify the LCID of the translation. As documented in [Get Different Language from SSAS into Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), you can use Excel to test your translations.  
@@ -104,7 +104,7 @@ manager: "mblythe"
   
      You should see the French translations from the Adventure Works sample database.  
   
-     ![Excel PivotTable with French translations](../../2014/analysis-services/media/ssas-localetest-excel.png "Excel PivotTable with French translations")  
+     ![Excel PivotTable with French translations](media/ssas-localetest-excel.png "Excel PivotTable with French translations")  
   
  As a follow up, you can use SQL Server Profiler to confirm the locale. Click a `Session Initialize` event and then look at the property list in the text area below to find `<localeidentifier>1036</localeidentifier>`.  
   
@@ -116,7 +116,7 @@ manager: "mblythe"
   
 -   Execute an MDX query against the Adventure Works database. The query results should be the French translations.  
   
-     ![MDX query with French translations in SSMS](../../2014/analysis-services/media/ssas-localetest-ssms.png "MDX query with French translations in SSMS")  
+     ![MDX query with French translations in SSMS](media/ssas-localetest-ssms.png "MDX query with French translations in SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Writing MDX queries in a solution containing Translations  
  Translations provide display information for the names of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects, but the identifiers for the same objects are not translated. Whenever possible, use the identifiers and keys for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects instead of the translated captions and names. For example, use member keys instead of member names for Multidimensional Expressions (MDX) statements and scripts to ensure portability across multiple languages.  
@@ -158,7 +158,7 @@ manager: "mblythe"
     ```  
   
 ## See Also  
- [Globalization scenarios for Analysis Services Multiidimensional](../../2014/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Write International Transact-SQL Statements](../../2014/database-engine/write-international-transact-sql-statements.md)  
   
   

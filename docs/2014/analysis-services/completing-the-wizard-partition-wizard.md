@@ -31,7 +31,7 @@ manager: "mblythe"
   
 |Option|Description|  
 |------------|-----------------|  
-|**Design aggregations for the partition now**|Designs aggregations for the new partition after the Partition Wizard creates the new partition. Selecting this option starts the Aggregation Design Wizard after you click **Finish** in the Partition Wizard. For more information about the Aggregation Design Wizard, see [Aggregation Design Wizard F1 Help](../../2014/analysis-services/aggregation-design-wizard-f1-help.md).|  
+|**Design aggregations for the partition now**|Designs aggregations for the new partition after the Partition Wizard creates the new partition. Selecting this option starts the Aggregation Design Wizard after you click **Finish** in the Partition Wizard. For more information about the Aggregation Design Wizard, see [Aggregation Design Wizard F1 Help](aggregation-design-wizard-f1-help.md).|  
 |**Design the aggregations later**|Creates the partition without designing aggregations at this time.|  
 |**Copy the aggregation design from an existing partition**|Copies the aggregation design from an existing partition in the measure group to the new partition. Clicking this option makes the **Copy from** option available. Use the **Copy from** option to select the partition from which to copy the aggregation design.<br /><br /> Note that partitions that may be merged in the future must have the same table structure and aggregation design. If you might merge the new partition with an existing partition in the measure group, you should copy the aggregation design of the existing partition into the new partition.|  
   
@@ -39,6 +39,6 @@ manager: "mblythe"
  Deploys and processes the partition to the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance specified on the **Processing and Storage Locations** page. The wizard deploys and processes the partition after you click **Finish** on this page.  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)  
   
   

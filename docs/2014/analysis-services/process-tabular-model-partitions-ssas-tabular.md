@@ -37,7 +37,7 @@ manager: "mblythe"
 4.  In the **Process** checkbox column, select the partitions you want to process with the selected mode, and then click **Ok**.  
   
 ## See Also  
- [Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-partitions-ssas-tabular.md)   
- [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Tabular Model Partitions &#40;SSAS Tabular&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

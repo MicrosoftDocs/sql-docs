@@ -60,10 +60,10 @@ manager: "mblythe"
 |**Messages window**|Displays information about how a DMX statement executed. For example, this window displays any errors encountered during execution or the number of cells retrieved after execution.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
- [MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)   
- [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/xmla-query-editor-analysis-services-multidimensional-data.md)   
+ [MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
+ [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)   
  [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)   
  [Customize Menus and Shortcut Keys](../../2014/database-engine/customize-menus-and-shortcut-keys.md)   

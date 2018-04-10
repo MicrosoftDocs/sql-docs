@@ -67,9 +67,9 @@ manager: "mblythe"
  Analyze a sample of data in all numeric columns. Replaces specified **Content Type** values with a recommended content type.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggest Related Columns &#40;Data Mining Wizard&#41;](../../2014/analysis-services/suggest-related-columns-data-mining-wizard.md)   
- [Specify Table Types &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggest Related Columns &#40;Data Mining Wizard&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Specify Table Types &#40;Data Mining Wizard&#41;](specify-table-types-data-mining-wizard.md)   
+ [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

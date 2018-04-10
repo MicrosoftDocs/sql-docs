@@ -32,6 +32,6 @@ manager: "mblythe"
      The XML code for the object appears in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
- [Build Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/build-analysis-services-projects-ssdt.md)  
+ [Build Analysis Services Projects &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
   
   

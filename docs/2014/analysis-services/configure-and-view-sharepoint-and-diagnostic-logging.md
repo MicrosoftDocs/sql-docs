@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
+  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
   
  In this topic:  
   
@@ -123,8 +123,8 @@ manager: "mblythe"
 |w3wp.exe|PowerPivot Service|Request Processing|Verbose|Redirecting request for UserName\<*SharePoint user*> to the database|An impersonated connection to the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data source was created on behalf of the SharePoint user.|  
   
 ## See Also  
- [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md)   
+ [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md)   
  [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
   
   

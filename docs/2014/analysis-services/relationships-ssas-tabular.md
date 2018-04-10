@@ -74,7 +74,7 @@ manager: "mblythe"
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- If you import these tables from the same database, the Table Import Wizard can detect the relationships between the tables based on the columns that are in [brackets], and can reproduce these relationships in the model designer. For more information, see [Automatic Detection and Inference of Relationships](#detection) in this topic. If you import tables from multiple sources, you can manually create relationships as described in [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ If you import these tables from the same database, the Table Import Wizard can detect the relationships between the tables based on the columns that are in [brackets], and can reproduce these relationships in the model designer. For more information, see [Automatic Detection and Inference of Relationships](#detection) in this topic. If you import tables from multiple sources, you can manually create relationships as described in [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ### Columns and Keys  
  Relationships are based on columns in each table that contain the same data. For example, the Customers and Orders tables can be related to each other because they both contain a column that stores a customer ID. In the example, the column names are the same, but this is not a requirement. One could be CustomerID and another CustomerNumber, as long as all of the rows in the Orders table contain an ID that is also stored in the Customers table.  
@@ -119,7 +119,7 @@ manager: "mblythe"
 ### One Relationship for Each Source Column  
  A source column cannot participate in multiple relationships. If you have used a column as a source column in one relationship already, but want to use that column to connect to another related lookup column in a different table, you can create a copy of the column, and use that column for the new relationship.  
   
- It is easy to create a copy of a column that has the exact same values, by using a DAX formula in a calculated column. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-calculated-column-ssas-tabular.md).  
+ It is easy to create a copy of a column that has the exact same values, by using a DAX formula in a calculated column. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](create-a-calculated-column-ssas-tabular.md).  
   
 ### Unique Identifier for Each Table  
  Each table must have a single column that uniquely identifies each row in that table. This column is often referred to as the primary key.  
@@ -128,7 +128,7 @@ manager: "mblythe"
  The data values in the lookup column must be unique. In other words, the column cannot contain duplicates. In Tabular models, nulls and empty strings are equivalent to a blank, which is a distinct data value. This means that you cannot have multiple nulls in the lookup column.  
   
 ### Compatible Data Types  
- The data types in the source column and lookup column must be compatible. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md).  
+ The data types in the source column and lookup column must be compatible. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ### Composite Keys and Lookup Columns  
  You cannot use composite keys in a tabular model; you must always have one column that uniquely identifies each row in the table. If you try to import tables that have an existing relationship based on a composite key, the Table Import Wizard will ignore that relationship because it cannot be created in the tabular model.  
@@ -170,7 +170,7 @@ manager: "mblythe"
   
  If your model contains data from multiple sources, you will likely have to manually create relationships. For example, you may import Customers, CustomerDiscounts, and Orders tables from a relational data source. Relationships existing between those tables at the source are automatically created in the model. You may then add another table from a different source, for example, you import region data from a Geography table in a Microsoft Excel workbook. You can then manually create a relationship between a column in the Customers table and a column in the Geography table.  
   
- To manually create relationships in a tabular model, you can use the model designer in Diagram View or by using the Manage Relationships dialog box. The diagram view displays tables, with relationships between them, in a graphical format. You can click a column in one table and drag the cursor to another table to easily create a relationship, in the correct order, between the tables. The Manage Relationships dialog box displays relationships between tables in a simple table format. To learn how to manually create relationships, see [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-relationship-between-two-tables-ssas-tabular.md).  
+ To manually create relationships in a tabular model, you can use the model designer in Diagram View or by using the Manage Relationships dialog box. The diagram view displays tables, with relationships between them, in a graphical format. You can click a column in one table and drag the cursor to another table to easily create a relationship, in the correct order, between the tables. The Manage Relationships dialog box displays relationships between tables in a simple table format. To learn how to manually create relationships, see [Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
 ##  <a name="bkmk_dupl_errors"></a> Duplicate Values and Other Errors  
  If you choose a column that cannot be used in the relationship, a red X appears next to the column. You can pause the cursor over the error icon to view a message that provides more information about the problem. Problems that can make it impossible to create a relationship between the selected columns include the following:  
@@ -184,11 +184,11 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-relationship-between-two-tables-ssas-tabular.md)|Describes how to manually create a relationship between two tables.|  
-|[Delete Relationships &#40;SSAS Tabular&#41;](../../2014/analysis-services/delete-relationships-ssas-tabular.md)|Describes how to delete a relationship and the ramifications of deleting relationships.|  
+|[Create a Relationship Between Two Tables &#40;SSAS Tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Describes how to manually create a relationship between two tables.|  
+|[Delete Relationships &#40;SSAS Tabular&#41;](delete-relationships-ssas-tabular.md)|Describes how to delete a relationship and the ramifications of deleting relationships.|  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/tables-and-columns-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)   
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
   
   

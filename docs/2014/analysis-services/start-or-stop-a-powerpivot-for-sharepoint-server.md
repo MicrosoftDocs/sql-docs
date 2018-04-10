@@ -38,7 +38,7 @@ manager: "mblythe"
   
  You cannot start or stop all physical services simultaneously across the farm. You must select each server and then start or stop a particular service.  
   
- You cannot start, pause, or stop a PowerPivot System Service for a specific Web application, but you can remove a service from the default connection list to make it unavailable. For more information, see [Connect a PowerPivot Service Application to a SharePoint Web Application in Central Administration](../../2014/analysis-services/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
+ You cannot start, pause, or stop a PowerPivot System Service for a specific Web application, but you can remove a service from the default connection list to make it unavailable. For more information, see [Connect a PowerPivot Service Application to a SharePoint Web Application in Central Administration](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 1.  In Central Administration, in **System Settings**, click **Manage services on server**.  
   
@@ -60,6 +60,6 @@ manager: "mblythe"
 |Usage data|Usage data will not be collected while the services are stopped.|  
   
 ## See Also  
- [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md)  
+ [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md)  
   
   

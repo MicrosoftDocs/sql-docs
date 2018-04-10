@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure or Repair PowerPivot for SharePoint 2010 (PowerPivot Configuration Tool)
-  To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010, use the PowerPivot Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013. This topic describes the PowerPivot Configuration Tool for SharePoint 2010. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
+  To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010, use the PowerPivot Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013. This topic describes the PowerPivot Configuration Tool for SharePoint 2010. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md).  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -25,7 +25,7 @@ manager: "mblythe"
 ##  <a name="bkmk_before"></a> Before you start  
  The PowerPivot for SharePoint 2010 Configuration Tool scans for program files, registry settings, and available ports. To get the most use out of the tools, review the following.  
   
--   General requirements to run the configuration tool, [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md).  
+-   General requirements to run the configuration tool, [PowerPivot Configuration Tools](powerpivot-configuration-tools.md).  
   
 -   PowerPivot for SharePoint 2010 requires web applications configured for classic mode authentication. If the PowerPivot for SharePoint 2010 Configuration Tool creates the application for you, the application is configured for classic mode.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
  The first page of the tool provides a summary of the input values used to configure the SharePoint farm. In addition to the input values that you provide, default values are used to configure the system. Default names are used for service applications, service application databases, and service application properties.  
   
 > [!TIP]  
->  If the PowerPivot Configuration tool scans the computer and returns a blank task list in the left pane, then no features or settings need configuration. To modify the SharePoint or PowerPivot configuration, use Windows PowerShell or the management pages in SharePoint Central Administration. For more information, see [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md).  
+>  If the PowerPivot Configuration tool scans the computer and returns a blank task list in the left pane, then no features or settings need configuration. To modify the SharePoint or PowerPivot configuration, use Windows PowerShell or the management pages in SharePoint Central Administration. For more information, see [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md).  
   
  Values for service accounts are used for multiple services. For example, the PowerPivot Configuration tool uses the default account on the first page to set all application pool identities. You can change these accounts later by modifying the service application properties in Central Administration.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
  The PowerPivot Configuration tool uses Windows PowerShell to configure the server. You can click the **Script** tab to review the Windows PowerShell script the.  
   
- ![Configuration Tool user interface](../../2014/analysis-services/media/ssas-pctui.gif "Configuration Tool user interface")  
+ ![Configuration Tool user interface](media/ssas-pctui.gif "Configuration Tool user interface")  
   
 ##  <a name="bkmk_steps"></a> Configuration steps  
  The link to the configuration tool is only visible when PowerPivot for SharePoint 2010 is installed on the local server.  
@@ -105,7 +105,7 @@ manager: "mblythe"
 ||Web Application Database Server|Default, if needed|The default database instance is pre-selected to store the application database, but you can specify a different SQL Server instance in the tool.|  
 ||Web Application Database Name|Default, if needed|The database name is based on the file naming conventions of SharePoint, but you can choose a different name.|  
 |**Deploy Web Application Solution**|URL|Default, if needed|The Default URL is from the default web application.|  
-||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the PowerPivot setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-maximum-file-upload-size-powerpivot-for-sharepoint.md).|  
+||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the PowerPivot setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-powerpivot-for-sharepoint.md).|  
 |**Create Site Collection**|Site Administrator|Default, if needed|The tool uses the default account. You can override it in the **Create Site Collection** page.|  
 ||Contact E-mail|Default, if needed|If Microsoft Outlook is configured on the server, the tool will use the email address of the current user. Otherwise, a placeholder value is used.|  
 ||Site URL|Default, if needed|The tool creates the site URL, using the same URL naming conventions as SharePoint.|  
@@ -167,22 +167,22 @@ manager: "mblythe"
 3.  Click the link and run the setup program that installs the service.  
   
 ### Install Data Providers Used in Data Refresh and Check User Permissions  
- Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server must have the same data provider that was used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
+ Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server must have the same data provider that was used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 ### Change Application Pool and Service Identities in SharePoint  
- The PowerPivot Configuration tool provisions farm features, applications, and services to run under a single account. This simplifies installation, but it does not result in a deployment that meets the security requirements of a SharePoint farm. To create a more robust deployment, change the application pools and service identities to run under different accounts after setup is complete. For more information, see [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md).  
+ The PowerPivot Configuration tool provisions farm features, applications, and services to run under a single account. This simplifies installation, but it does not result in a deployment that meets the security requirements of a SharePoint farm. To create a more robust deployment, change the application pools and service identities to run under different accounts after setup is complete. For more information, see [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md).  
   
 ### Create Additional Trusted Sites in Excel Services  
- You can add trusted sites in Excel Services to vary permissions and configuration settings on sites that provide Excel workbooks and PowerPivot data. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+ You can add trusted sites in Excel Services to vary permissions and configuration settings on sites that provide Excel workbooks and PowerPivot data. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
 ### Add Servers or Applications  
  Over time, if you determine that additional data storage and processing capability is needed, you can add a second PowerPivot for SharePoint server instance to the farm. For instructions, see [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## Additional Resources  
- ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## See Also  
- [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md)   
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Configuration Tools](powerpivot-configuration-tools.md)   
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)  
   
   

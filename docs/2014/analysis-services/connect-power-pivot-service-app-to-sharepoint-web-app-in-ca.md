@@ -56,7 +56,7 @@ manager: "mblythe"
 6.  Click **OK**.  
   
 ## See Also  
- [Create and Configure a PowerPivot Service Application in Central Administration](../../2014/analysis-services/create-and-configure-a-powerpivot-service-application-in-central-administration.md)   
+ [Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-a-powerpivot-service-application-in-central-administration.md)   
  [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
   

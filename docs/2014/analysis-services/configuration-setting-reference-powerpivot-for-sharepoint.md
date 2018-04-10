@@ -34,7 +34,7 @@ manager: "mblythe"
   
  [Usage Data Collection](#UsageData)  
   
- For instructions on how to create a PowerPivot service application, see [Create and Configure a PowerPivot Service Application in Central Administration](../../2014/analysis-services/create-and-configure-a-powerpivot-service-application-in-central-administration.md).  
+ For instructions on how to create a PowerPivot service application, see [Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-a-powerpivot-service-application-in-central-administration.md).  
   
 ##  <a name="LoadingData"></a> Data Load Timeout  
  PowerPivot data is retrieved and loaded by Analysis Services server instances in the farm. Depending on how and when the data was last accessed, it will either be loaded from a content library or from a local file cache. Data is loaded into memory whenever a query or processing request is received. To maximize overall server availability, you can set a timeout value that instructs the server to stop a load data request if it cannot be completed within the allotted time.  
@@ -74,9 +74,9 @@ manager: "mblythe"
 |----------|-------------|------------------|-----------------|  
 |Start time|04:00 a.m.|1 to 12 hours, where the value is a valid integer within that range.<br /><br /> Type is Time.|Sets the lower limit of a business hour range.|  
 |End time|08:00 p.m.|1 to 12 hours, where the value is a valid integer within that range.<br /><br /> Type is Time.|Sets the upper limit of a business hour range.|  
-|PowerPivot Unattended Data Refresh Account|None|A target application ID|This account is used to run data refresh jobs on behalf of a schedule owner.<br /><br /> The unattended data refresh account must be defined in advance before it can be referenced in the service application configuration page. For more information, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
-|Allow users to enter custom Windows credentials|Enabled|Boolean|Determines whether the scheduled data refresh configuration page shows an option that allows a schedule owner to specify Windows user account and password to run a data refresh job.<br /><br /> Secure Store Service must be enabled in order for this option to work. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
-|Maximum Processing History Length|365|1 to 5000 days|Determines how long data refresh history is retained in the PowerPivot service application database. For more information, see [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md).|  
+|PowerPivot Unattended Data Refresh Account|None|A target application ID|This account is used to run data refresh jobs on behalf of a schedule owner.<br /><br /> The unattended data refresh account must be defined in advance before it can be referenced in the service application configuration page. For more information, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).|  
+|Allow users to enter custom Windows credentials|Enabled|Boolean|Determines whether the scheduled data refresh configuration page shows an option that allows a schedule owner to specify Windows user account and password to run a data refresh job.<br /><br /> Secure Store Service must be enabled in order for this option to work. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).|  
+|Maximum Processing History Length|365|1 to 5000 days|Determines how long data refresh history is retained in the PowerPivot service application database. For more information, see [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Usage Data Collection  
  Usage reports that appear in the PowerPivot Management Dashboard can provide important information about how PowerPivot-enabled workbooks are used. The following configuration settings control aspects of usage data collection for PowerPivot server events that are subsequently presented in usage or activity reports.  
@@ -91,10 +91,10 @@ manager: "mblythe"
 |Long Response Upper Limit|10000 (in milliseconds)|1 to n milliseconds, where n is any valid integer.|By default, the threshold for long requests is ten seconds.<br /><br /> These are requests that run longer than expected, but still fall within an acceptable range.|  
   
 ## See Also  
- [Create and Configure a PowerPivot Service Application in Central Administration](../../2014/analysis-services/create-and-configure-a-powerpivot-service-application-in-central-administration.md)   
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)   
- [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md)   
- [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md)  
+ [Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-a-powerpivot-service-application-in-central-administration.md)   
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)   
+ [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md)   
+ [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md)  
   
   

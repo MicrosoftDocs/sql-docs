@@ -29,6 +29,6 @@ manager: "mblythe"
 |**Hide partitions with aggregation designs**|Select to show only the partitions that do not have aggregation designs assigned to them.|  
   
 ## See Also  
- [Aggregations and Aggregation Designs](../../2014/analysis-services/dev-guide/aggregations-and-aggregation-designs.md)  
+ [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md)  
   
   

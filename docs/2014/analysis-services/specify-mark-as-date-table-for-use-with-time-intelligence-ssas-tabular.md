@@ -49,7 +49,7 @@ manager: "mblythe"
 4.  If necessary, create any relationships between fact tables and the date table.  
   
 ## See Also  
- [Calculations &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculations-ssas-tabular.md)   
+ [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)   
  [Time Intelligence Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

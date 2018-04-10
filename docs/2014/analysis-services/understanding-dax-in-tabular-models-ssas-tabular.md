@@ -66,7 +66,7 @@ manager: "mblythe"
   
  When a calculated column contains a valid DAX formula, values are calculated for each row as soon as the formula is entered. Values are then stored in the database. For example, in a Date table, when the formula `=[Calendar Year] & " Q" & [Calendar Quarter]` is entered into the formula bar, a value for each row in the table is calculated by taking values from the Calendar Year column (in the same Date table), adding a space and the capital letter Q, and then adding the values from the Calendar Quarter column (in the same Date table). The result for each row in the calculated column is calculated immediately and appears, for example, as **2010 Q1**. Column values are only recalculated if the data is re-processed.  
   
- For more information, see [Calculated Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculated-columns-ssas-tabular.md).  
+ For more information, see [Calculated Columns &#40;SSAS Tabular&#41;](calculated-columns-ssas-tabular.md).  
   
 ### Measures  
  Measures are dynamic formulas where the results change depending on context. Measures are used in reporting formats that support combining and filtering model data by using multiple attributes such as a [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] report or Excel PivotTable or PivotChart. In tabular model projects, measures are defined by the model author by using the measure grid (and formula bar) in the model designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -77,7 +77,7 @@ manager: "mblythe"
   
  Unlike calculated columns and row filters, the syntax for a measure includes the measure’s name preceding the formula. In the example just provided, the name **Total Sales:** appears preceding the formula. After you have created a measure, the name and its definition appear in the reporting client application Field List and depending on perspectives and roles is available to all users of the model.  
   
- For more information, see [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md).  
+ For more information, see [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md).  
   
 ### Row Filters  
  Row filters define which rows in a table are visible to members of a particular role. Row filters can be created for each table in a model by using DAX formulas. Row filters are created for a particular role by using Role Manager in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Row filters can also be defined for a deployed model by using Role Properties in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -88,7 +88,7 @@ manager: "mblythe"
   
  Row filters apply to the specified rows as well as related rows. When a table has multiple relationships, filters apply security for the relationship that is active. Row filters will be intersected with other row filters defined for related tables.  
   
- For more information, see [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md).  
+ For more information, see [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX Data Types  
  You can import data into a model from many different data sources that might support different data types. When you import data into a model, the data is converted to one of the tabular model data types. When the model data is used in a calculation, the data is then converted to a DAX data type for the duration and output of the calculation. When you create a DAX formula, the terms used in the formula will automatically determine the value data type returned.  
@@ -109,7 +109,7 @@ manager: "mblythe"
   
  While data types are typically automatically set, it is important to understand data types and how they apply, in-particular, to DAX formulas. Errors in formulas or unexpected results, for example, are often caused by using a particular operator that cannot be used with a data type specified in an argument. For example, the formula, `= 1 & 2`, returns a string result of 12. The formula, `= “1” + “2”`, however, returns an integer result of 3.  
   
- For detailed information about data types in tabular models and explicit and implicit conversions of data types in DAX, see [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md).  
+ For detailed information about data types in tabular models and explicit and implicit conversions of data types in DAX, see [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_opertors"></a> DAX Operators  
  The DAX language uses four different types of calculation operators in formulas:  
@@ -342,7 +342,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_RelModel"></a> Formulas and the Tabular Model  
  The model designer, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], is an area where you can work with multiple tables of data and connect the tables in a tabular model. Within this model, tables are joined by relationships on columns with common values (keys). The tabular model lets you link values to columns in other tables and create more interesting calculations. Just as in a relational database, you can connect many levels of related tables and use columns from any of the tables in the results.  
   
- For example, you can link a sales table, a products table, and a product categories table, and users can use various combinations of the columns in PivotTables and reports. Related fields can be used to filter connected tables, or to create calculations over subsets. (If you are not familiar with relational database and working with tables and joins, see [Relationships &#40;SSAS Tabular&#41;](../../2014/analysis-services/relationships-ssas-tabular.md).)  
+ For example, you can link a sales table, a products table, and a product categories table, and users can use various combinations of the columns in PivotTables and reports. Related fields can be used to filter connected tables, or to create calculations over subsets. (If you are not familiar with relational database and working with tables and joins, see [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).)  
   
  Tabular models support multiple relationships among tables. To avoid confusion or wrong results, only one relationship at a time is designated as the active relationship, but you can change the active relationship as necessary to traverse different connections in the data in calculations. The [USERELATIONSHIP Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230952(v=sql.120).aspx) can be used to specify one or more relationships to be used in a specific calculation.  
   
@@ -390,7 +390,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Processing and recalculation have no effect on row filter formulas unless the result of a recalculation returns a different value, thus making the row queryable or not queryable by role members.  
   
- For more information, see [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md).  
+ For more information, see [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Troubleshooting Errors in Formulas  
  If you get an error when defining a formula, the formula might contain either a *syntactic error*, *semantic error*, or *calculation error*.  
@@ -420,10 +420,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## See Also  
  [Data Analysis Expressions &#40;DAX&#41; Reference](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculated-columns-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)   
- [KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/kpis-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)  
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [Calculated Columns &#40;SSAS Tabular&#41;](calculated-columns-ssas-tabular.md)   
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
+ [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
   
   

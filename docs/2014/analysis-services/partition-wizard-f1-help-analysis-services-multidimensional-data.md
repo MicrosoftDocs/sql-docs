@@ -35,17 +35,17 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Specify Source Information &#40;Partition Wizard&#41;](../../2014/analysis-services/specify-source-information-partition-wizard.md)  
+-   [Specify Source Information &#40;Partition Wizard&#41;](specify-source-information-partition-wizard.md)  
   
--   [Restrict Rows &#40;Partition Wizard&#41;](../../2014/analysis-services/restrict-rows-partition-wizard.md)  
+-   [Restrict Rows &#40;Partition Wizard&#41;](restrict-rows-partition-wizard.md)  
   
--   [Processing and Storage Locations &#40;Partition Wizard&#41;](../../2014/analysis-services/processing-and-storage-locations-partition-wizard.md)  
+-   [Processing and Storage Locations &#40;Partition Wizard&#41;](processing-and-storage-locations-partition-wizard.md)  
   
--   [Completing the Wizard &#40;Partition Wizard&#41;](../../2014/analysis-services/completing-the-wizard-partition-wizard.md)  
+-   [Completing the Wizard &#40;Partition Wizard&#41;](completing-the-wizard-partition-wizard.md)  
   
--   [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+-   [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)  
   
   

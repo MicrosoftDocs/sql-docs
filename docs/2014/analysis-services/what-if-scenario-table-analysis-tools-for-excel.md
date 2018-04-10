@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # What-If Scenario (Table Analysis Tools for Excel)
-  ![What If Scenario button in Table Analysis tools](../../2014/analysis-services/media/tat-whatif.gif "What If Scenario button in Table Analysis tools")  
+  ![What If Scenario button in Table Analysis tools](media/tat-whatif.gif "What If Scenario button in Table Analysis tools")  
   
  The **What-If** scenario tool analyzes patterns in existing data, and then enables you to evaluate the effect that changes in one column would have on the value of a different column.  
   
@@ -88,11 +88,11 @@ manager: "mblythe"
  Outputting the predictions to the original data table might make it easier to determine whether the predictions are useful.  
   
 ## Related Tools  
- The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, includes wizards for creating data mining models that predict behavior. For more information, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
+ The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, includes wizards for creating data mining models that predict behavior. For more information, see [Creating a Data Mining Model](creating-a-data-mining-model.md).  
   
  For more information about the algorithm used by the **What-If** scenario tool, see the topic "Microsoft Logistic Regression Algorithm" in SQL Server Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

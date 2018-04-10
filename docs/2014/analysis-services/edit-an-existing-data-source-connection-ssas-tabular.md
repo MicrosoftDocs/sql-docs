@@ -76,7 +76,7 @@ manager: "mblythe"
      When you save the current set of table properties, a message may appear indicating that you need to process the tables. Click **Process** to load updated data into your model.  
   
 ## See Also  
- [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)  
+ [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
   
   

@@ -20,23 +20,23 @@ manager: "mblythe"
 # Use the Business Intelligence Wizard to Enhance Dimensions
   In addition to modifying dimension and dimension object properties directly, you can also use the Business Intelligence Wizard to configure and enhance dimensions.  
   
--   [Add Account Intelligence to a Dimension](../../2014/analysis-services/add-account-intelligence-to-a-dimension.md)  
+-   [Add Account Intelligence to a Dimension](add-account-intelligence-to-a-dimension.md)  
   
--   [Add Dimension Intelligence to a Dimension](../../2014/analysis-services/add-dimension-intelligence-to-a-dimension.md)  
+-   [Add Dimension Intelligence to a Dimension](add-dimension-intelligence-to-a-dimension.md)  
   
--   [Add a Custom Aggregation to a Dimension](../../2014/analysis-services/add-a-custom-aggregation-to-a-dimension.md)  
+-   [Add a Custom Aggregation to a Dimension](add-a-custom-aggregation-to-a-dimension.md)  
   
--   [Set Custom Member Formulas for Attributes in a Dimension](../../2014/analysis-services/set-custom-member-formulas-for-attributes-in-a-dimension.md)  
+-   [Set Custom Member Formulas for Attributes in a Dimension](set-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
--   [Define the Ordering for a Dimension](../../2014/analysis-services/define-the-ordering-for-a-dimension.md)  
+-   [Define the Ordering for a Dimension](define-the-ordering-for-a-dimension.md)  
   
--   [Enable Dimension Writeback](../../2014/analysis-services/enable-dimension-writeback.md)  
+-   [Enable Dimension Writeback](enable-dimension-writeback.md)  
   
 ## See Also  
- [Define Database Dimensions](../../2014/analysis-services/define-database-dimensions.md)   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)   
- [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)   
- [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Define Database Dimensions](define-database-dimensions.md)   
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
+ [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)   
+ [Define Attribute Relationships](define-attribute-relationships.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

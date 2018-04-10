@@ -32,7 +32,7 @@ manager: "mblythe"
  In terms of precedence, the custom rollup operators of the source attribute for a level in a hierarchy override the custom member formulas of the previous level. However, the custom member formulas of the preceding level override the custom rollup operators of a level.  
   
 ## See Also  
- [Define Custom Member Formulas](../../2014/analysis-services/define-custom-member-formulas.md)   
- [Unary Operators in Parent-Child Dimensions](../../2014/analysis-services/unary-operators-in-parent-child-dimensions.md)  
+ [Define Custom Member Formulas](define-custom-member-formulas.md)   
+ [Unary Operators in Parent-Child Dimensions](unary-operators-in-parent-child-dimensions.md)  
   
   

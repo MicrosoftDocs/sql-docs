@@ -33,7 +33,7 @@ manager: "mblythe"
 ## Tasks  
   
 > [!IMPORTANT]  
->  Before creating a KPI, you must first create a Base measure that evaluates to value. You then extend the Base measure to a KPI. How to create measures are described in another topic, [Create and Manage Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-measures-ssas-tabular.md). A KPI also requires a target value. This value can be from another pre-defined measure or an absolute value. Once you have extended a Base measure to a KPI, you can then select the target value and define status thresholds in the Key Performance Indicator dialog box.  
+>  Before creating a KPI, you must first create a Base measure that evaluates to value. You then extend the Base measure to a KPI. How to create measures are described in another topic, [Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md). A KPI also requires a target value. This value can be from another pre-defined measure or an absolute value. Once you have extended a Base measure to a KPI, you can then select the target value and define status thresholds in the Key Performance Indicator dialog box.  
   
 ###  <a name="bkmk_create_KPI"></a> To create a KPI  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
 5.  Click on **Descriptions**, and then type descriptions for KPI, Value, Status, and Target.  
   
 > [!TIP]  
->  You can use the Analyze in Excel feature to test your KPI. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md).  
+>  You can use the Analyze in Excel feature to test your KPI. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ###  <a name="bkmk_edit_KPI"></a> To edit a KPI  
   
@@ -81,8 +81,8 @@ manager: "mblythe"
 |Trend|ALT+T|  
   
 ## See Also  
- [KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/kpis-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)   
- [Create and Manage Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-measures-ssas-tabular.md)  
+ [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

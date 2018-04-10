@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Storage Options Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to specify custom storage mode, proactive caching, and notification options for dimensions, cubes, measure groups, and partitions. You can display the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking **Options** on the **Storage Settings** dialog box. For more information about the **Storage Settings** dialog box, see [Storage Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
+  Use the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to specify custom storage mode, proactive caching, and notification options for dimensions, cubes, measure groups, and partitions. You can display the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by clicking **Options** on the **Storage Settings** dialog box. For more information about the **Storage Settings** dialog box, see [Storage Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  The **Storage Options** dialog box contains the tabs listed in the following table.  
   
@@ -26,11 +26,11 @@ manager: "mblythe"
   
 |Page|Definition|  
 |----------|----------------|  
-|**General**|Use the **General** tab to specify storage and proactive caching settings. For more information about this tab, see [General &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Notifications**|Use the **Notifications** tab to specify the notification method and related settings. For more information about this tab, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  
+|**General**|Use the **General** tab to specify storage and proactive caching settings. For more information about this tab, see [General &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](general-storage-options-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Notifications**|Use the **Notifications** tab to specify the notification method and related settings. For more information about this tab, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Proactive Caching &#40;Partitions&#41;](../../2014/analysis-services/dev-guide/proactive-caching-partitions.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md)  
   
   

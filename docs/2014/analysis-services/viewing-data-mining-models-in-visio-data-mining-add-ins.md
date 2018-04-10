@@ -28,7 +28,7 @@ manager: "mblythe"
   
  If you do not see the data mining shapes when you open Visio, open the template file from the installation folder.  
   
- ![DM](../../2014/analysis-services/media/dm-stencil.gif "DM")  
+ ![DM](media/dm-stencil.gif "DM")  
   
  To use a shape, drag it to the page. Each of the shapes opens a different wizard, which helps you select source data, set options for the specific diagram type, and specify shading and other display options.  
   
@@ -68,13 +68,13 @@ manager: "mblythe"
 ## Walkthroughs  
  For examples of how to work with and interpret a completed diagram, see these topics:  
   
- [Cluster Diagram Walkthrough](../../2014/analysis-services/cluster-diagram-walkthrough-data-mining-add-ins.md)  
+ [Cluster Diagram Walkthrough](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Dependency Net Diagram Walkthrough](../../2014/analysis-services/dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Dependency Net Diagram Walkthrough](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Decision Tree Diagram Walkthrough](../../2014/analysis-services/decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+ [Decision Tree Diagram Walkthrough](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

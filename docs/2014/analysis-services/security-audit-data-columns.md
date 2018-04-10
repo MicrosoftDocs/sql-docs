@@ -130,6 +130,6 @@ manager: "mblythe"
 |ServerName|43|8|Name of the server producing the event.|  
   
 ## See Also  
- [Security Audit Event Category](../../2014/analysis-services/security-audit-event-category.md)  
+ [Security Audit Event Category](security-audit-event-category.md)  
   
   

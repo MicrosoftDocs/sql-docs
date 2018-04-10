@@ -42,7 +42,7 @@ manager: "mblythe"
 ###  <a name="bkmk_ssdt"></a> Data Definition Queries in SQL Server Data Tools  
  The Data Mining Wizard is the preferred tool in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for creating and modifying mining models and mining structures, and for defining the data sources that are used in prediction queries and for training.  
   
- However, if you want to know what statements are being sent to the server by the wizard to create data structures or mining models, you can use SQL Server Profiler to capture the data definition statements. For more information, see [Use SQL Server Profiler to Monitor Analysis Services](instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ However, if you want to know what statements are being sent to the server by the wizard to create data structures or mining models, you can use SQL Server Profiler to capture the data definition statements. For more information, see [Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  To view the statements used for defining data sources used for training or prediction, you can use the **SQL View** in the Prediction Query Builder. Sometimes it can be helpful to build basic queries for training and testing models by using Prediction Query Builder, to establish the correct syntax. You can then switch to **SQL View** and manually edit the query. For more information, see [Manually Edit a Prediction Query](manually-edit-a-prediction-query.md).  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
 -   Define the data set used for training a model, by using [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) together with a data source query such as OPENROWSET.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides query templates that can help you create data definition queries. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
  In general, the templates that are provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contain only the general syntax definition, which you must customize, either by typing in the **Query** window, or by using the dialog box provided for entering parameters.  
   
@@ -79,9 +79,9 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Design queries of all kinds, using Prediction Query Builder.|[Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)|  
 |Learn how to manage models in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)|  
 |Learn more about OPENROWSET and other ways to query external data.|[&#60;source data query&#62;](~/dmx/source-data-query.md).|  

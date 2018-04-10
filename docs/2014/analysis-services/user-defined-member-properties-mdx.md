@@ -23,9 +23,9 @@ manager: "mblythe"
 ## Creating User-Defined Member Properties  
  User-defined member properties can be added to server-based dimensions or cubes either through the user interface or programmatically:  
   
--   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+-   To add user-defined member properties through the user interface, you use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Define Attribute Relationships](define-attribute-relationships.md).  
   
--   To add user-defined member properties programmatically, your application can use either Analysis Manager Objects (AMO) or a combination of XML for Analysis (XMLA) and Analysis Services Scripting Language (ASSL). For more information, see [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md).  
+-   To add user-defined member properties programmatically, your application can use either Analysis Manager Objects (AMO) or a combination of XML for Analysis (XMLA) and Analysis Services Scripting Language (ASSL). For more information, see [Attribute Relationships](dev-guide/attribute-relationships.md).  
   
 ## Retrieving User-Defined Member Properties  
  You can retrieve user-defined member properties using either the `PROPERTIES` keyword or the [Properties](~/mdx/properties-mdx.md) function.  
@@ -62,10 +62,10 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](../../2014/analysis-services/building-calculated-members-in-mdx-mdx.md).  
+ For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](building-calculated-members-in-mdx-mdx.md).  
   
 ## See Also  
- [Using Member Properties &#40;MDX&#41;](../../2014/analysis-services/using-member-properties-mdx.md)   
+ [Using Member Properties &#40;MDX&#41;](using-member-properties-mdx.md)   
  [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)  
   
   

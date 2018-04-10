@@ -26,7 +26,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  A user whose role only has Process permissions will be unable to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to connect to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and process objects. These tools require the `Read Definition` permission to access object metadata. Without the ability to use either tool, XMLA script must be used to execute a processing operation.  
 >   
->  We suggest you also grant `Read Definition` permissions for testing purposes. A user having both `Read Definition` and `Process Database` permissions can process objects in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], interactively. See [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](../../2014/analysis-services/grant-read-definition-permissions-on-object-metadata-analysis-services.md) for details.  
+>  We suggest you also grant `Read Definition` permissions for testing purposes. A user having both `Read Definition` and `Process Database` permissions can process objects in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], interactively. See [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) for details.  
   
 ## Set processing permissions at the database level  
  This section explains how to enable processing by non-administrators, for all cubes, dimensions, mining structures, and mining models in the database.  
@@ -88,9 +88,9 @@ manager: "mblythe"
 5.  Click **OK** to complete the role definition.  
   
 ## See Also  
- [Process Database, Table, or Partition](../../2014/analysis-services/process-database-table-or-partition.md)   
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)   
- [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md)   
- [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](../../2014/analysis-services/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Process Database, Table, or Partition](process-database-table-or-partition.md)   
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)   
+ [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

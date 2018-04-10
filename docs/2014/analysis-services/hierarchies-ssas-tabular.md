@@ -33,9 +33,9 @@ manager: "mblythe"
   
  Because each level in a hierarchy is a representation of a column in a table, the level can be renamed. While not exclusive to hierarchies (any column can be renamed in a tabular model), renaming hierarchy levels can make it easier for users to find and include levels in a report. Renaming a level does not rename the column it references; it simply makes the level more identifiable. In our Calendar Year hierarchy example, in the Date table in Data View, the columns: CalendarYear, CalendarMonth, CalendarWeek, and CalendarDay were renamed to Calendar Year, Month, Week, and Day to make them more easily identifiable. Renaming levels has the additional benefit of providing consistency in reports, since users will less likely need to change column names to make them more readable in PivotTables, charts, etc.  
   
- Hierarchies can be included in perspectives. Perspectives define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model. A perspective, for example, could provide users a viewable list (hierarchy) of only those data items necessary for their specific reporting requirements. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md).  
+ Hierarchies can be included in perspectives. Perspectives define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model. A perspective, for example, could provide users a viewable list (hierarchy) of only those data items necessary for their specific reporting requirements. For more information, see [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
   
- Hierarchies are not meant to be used as a security mechanism, but as a tool for providing a better user experience. All security for a particular hierarchy is inherited from the underlying model. Hierarchies cannot provide access to model objects to which a user does not already have access. Security for the model database must be resolved before access to objects in the model can be provided through a hierarchy. Security roles can be used to secure model metadata and data. For more information, see [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md).  
+ Hierarchies are not meant to be used as a security mechanism, but as a tool for providing a better user experience. All security for a particular hierarchy is inherited from the underlying model. Hierarchies cannot provide access to model objects to which a user does not already have access. Security for the model database must be resolved before access to objects in the model can be provided through a hierarchy. Security roles can be used to secure model metadata and data. For more information, see [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_define"></a> Defining Hierarchies  
  You create and manage hierarchies by using the model designer in Diagram View. Creating and managing hierarchies is not supported in the model designer in Data View. To view the model designer in Diagram View, click the **Model** menu, then point to **Model View**, and then click **Diagram View**.  
@@ -46,17 +46,17 @@ manager: "mblythe"
   
  By default, new hierarchies are named hierarchy1, hierarchy 2, etc. You should change hierarchy names to reflect the nature of the parent-child relationship, making them more identifiable to users.  
   
- After you have created hierarchies, you can test their efficacy by using the Analyze in Excel feature. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md).  
+ After you have created hierarchies, you can test their efficacy by using the Analyze in Excel feature. For more information, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ##  <a name="bkmk_related_tasks"></a> Related Tasks  
   
 |Task|Description|  
 |----------|-----------------|  
-|[Create and Manage Hierarchies &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-hierarchies-ssas-tabular.md)|Describes how to create and manage hierarchies by using the model designer in Diagram View.|  
+|[Create and Manage Hierarchies &#40;SSAS Tabular&#41;](create-and-manage-hierarchies-ssas-tabular.md)|Describes how to create and manage hierarchies by using the model designer in Diagram View.|  
   
 ## See Also  
- [Tabular Model Designer &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-designer-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)  
+ [Tabular Model Designer &#40;SSAS Tabular&#41;](tabular-model-designer-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
   
   

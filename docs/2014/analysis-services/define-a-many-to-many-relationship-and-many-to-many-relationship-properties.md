@@ -41,11 +41,11 @@ manager: "mblythe"
   
  Visually, a many-to-many dimensional relationship is not indicated in a cube diagram. Instead, use the Dimension Usage tab to quickly identify any many-to-many relationships in a model. A many-to-many relationship is indicated by the following icon.  
   
- ![Many-to-many icon in dimension usage](../../2014/analysis-services/media/ssas-m2m-icondimusage.png "Many-to-many icon in dimension usage")  
+ ![Many-to-many icon in dimension usage](media/ssas-m2m-icondimusage.png "Many-to-many icon in dimension usage")  
   
  Click the button to open the Define Relationship dialog box to verify the relationship type is many-to-many, and to view which intermediate measure group is used in the relationship.  
   
- ![Define Relationship button  in dimension usage](../../2014/analysis-services/media/ssas-m2m-btndimusage.png "Define Relationship button  in dimension usage")  
+ ![Define Relationship button  in dimension usage](media/ssas-m2m-btndimusage.png "Define Relationship button  in dimension usage")  
   
  In subsequent sections, you will learn how to set up a many-to-many dimension and test model behaviors. If you would rather review additional information or try tutorials first, see **Learn More** at the end of this article.  
   
@@ -73,11 +73,11 @@ manager: "mblythe"
 3.  Verify that all of the tables you plan to use in the many-to-many relationships are related in the DSV through primary key relationships. This is a requirement for establishing a link to the intermediate measure group in a subsequent step.  
   
     > [!NOTE]  
-    >  If the underlying data source does not provide primary and foreign key relationships, you can create the relationships manually in the DSV. For more information, see [Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
+    >  If the underlying data source does not provide primary and foreign key relationships, you can create the relationships manually in the DSV. For more information, see [Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
      The following example confirms that the tables used in this procedure are linked using primary keys.  
   
-     ![DSV showing related tables](../../2014/analysis-services/media/ssas-m2m-dsvpkeys.PNG "DSV showing related tables")  
+     ![DSV showing related tables](media/ssas-m2m-dsvpkeys.PNG "DSV showing related tables")  
   
 #### Step 2: Create dimensions and measure groups  
   
@@ -87,21 +87,21 @@ manager: "mblythe"
   
      For attributes, select all.  
   
-     ![Attributes list in new dimension](../../2014/analysis-services/media/ssas-m2m-dimsalesreason.PNG "Attributes list in new dimension")  
+     ![Attributes list in new dimension](media/ssas-m2m-dimsalesreason.PNG "Attributes list in new dimension")  
   
 3.  Create a second dimension based on existing table, Fact Internet Sales. Although this is a fact table, it contains Sales Order information. We'll use it to build a Sales Order dimension.  
   
 4.  In Specify Source Information, you will see a warning that indicates a Name column must be specified. Choose **SalesOrderNumber** as the Name.  
   
-     ![Sales Order dimension showing the name column](../../2014/analysis-services/media/ssas-m2m-dimsalesordersource.PNG "Sales Order dimension showing the name column")  
+     ![Sales Order dimension showing the name column](media/ssas-m2m-dimsalesordersource.PNG "Sales Order dimension showing the name column")  
   
 5.  On the next page of the wizard, choose the attributes. In this example, you can select just **SalesOrderNumber**.  
   
-     ![Sales order dimension showing attribute list](../../2014/analysis-services/media/ssas-m2m-dimsalesorderattrib.PNG "Sales order dimension showing attribute list")  
+     ![Sales order dimension showing attribute list](media/ssas-m2m-dimsalesorderattrib.PNG "Sales order dimension showing attribute list")  
   
 6.  Rename the dimension to **Dim Sales Orders**, so that you have a consistent naming convention for the dimensions.  
   
-     ![Wizard page showing dimension rename](../../2014/analysis-services/media/ssas-m2m-dimsalesorders.PNG "Wizard page showing dimension rename")  
+     ![Wizard page showing dimension rename](media/ssas-m2m-dimsalesorders.PNG "Wizard page showing dimension rename")  
   
 7.  Right-click **Cubes** and select **New Cube**.  
   
@@ -123,13 +123,13 @@ manager: "mblythe"
   
 1.  In cube designer, click Dimension Usage tab. Notice that there is already a many-to-many relationship between **Dim Sales Reason** and **Fact Internet Sales**. Recall that the following icon indicates a many-to-many relationship.  
   
-     ![Many-to-many icon in dimension usage](../../2014/analysis-services/media/ssas-m2m-icondimusage.png "Many-to-many icon in dimension usage")  
+     ![Many-to-many icon in dimension usage](media/ssas-m2m-icondimusage.png "Many-to-many icon in dimension usage")  
   
 2.  Click on the intersection cell between **Dim Sales Reason** and **Fact Internet Sales**, and then click the button to open the Define Relationship dialog box.  
   
      You can see that this dialog box is used to specify a many-to-many relationship. If you were adding dimensions that had a regular relationship instead, you would use this dialog box to change it to many-to-many.  
   
-     ![Define Relationship button  in dimension usage](../../2014/analysis-services/media/ssas-m2m-btndimusage.png "Define Relationship button  in dimension usage")  
+     ![Define Relationship button  in dimension usage](media/ssas-m2m-btndimusage.png "Define Relationship button  in dimension usage")  
   
 3.  Deploy the project to an Analysis Services multidimensional instance. In the next step, you will browse the cube in Excel to verify its behaviors.  
   
@@ -154,7 +154,7 @@ manager: "mblythe"
   
      Part way down, you can find the sales amount and sales reasons for order number **SO5382**. Grand total of this particular order is **539.99**, and the purchase reasons attributed to this order include Promotion, Other and Price.  
   
-     ![Excel worksheet showing many-to-many aggregations](../../2014/analysis-services/media/ssas-m2m-excel.png "Excel worksheet showing many-to-many aggregations")  
+     ![Excel worksheet showing many-to-many aggregations](media/ssas-m2m-excel.png "Excel worksheet showing many-to-many aggregations")  
   
      Notice that the Sales Amount is correctly calculated for the order; it is **539.99** for the entire order. Although **539.99** is indicated for each reason, that value is not summed for all three reasons, erroneously inflating our grand total.  
   
@@ -162,7 +162,7 @@ manager: "mblythe"
   
 5.  Scroll to the bottom of the worksheet. It is now easy to see that Price is the most important reason for customer purchases, relative to other reasons as well as the grand total.  
   
-     ![Excel workbook showing totals in many-to-many](../../2014/analysis-services/media/ssas-m2m-excelgrandtotal.png "Excel workbook showing totals in many-to-many")  
+     ![Excel workbook showing totals in many-to-many](media/ssas-m2m-excelgrandtotal.png "Excel workbook showing totals in many-to-many")  
   
 #### Tips for handling unexpected query results  
   
@@ -184,9 +184,9 @@ manager: "mblythe"
  [Tutorial: Many-to-many dimension example for SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## See Also  
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
  [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)   
- [Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)  
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)  
   
   

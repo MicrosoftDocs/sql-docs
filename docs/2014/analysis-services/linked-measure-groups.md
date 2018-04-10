@@ -24,7 +24,7 @@ manager: "mblythe"
 # Linked Measure Groups
   A linked measure group is based on another measure group in a different cube within the same database or a different Analysis Services database. You might use a linked measure group if you want to reuse a set of measures, and the corresponding data values, in multiple cubes.  
   
- Microsoft recommends that the original and linked measure groups reside in solutions that run on the same server. Linking to a measure group on a remote server is scheduled for deprecation in a future release (see [Deprecated Analysis Services Features in SQL Server 2014](../../2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft recommends that the original and linked measure groups reside in solutions that run on the same server. Linking to a measure group on a remote server is scheduled for deprecation in a future release (see [Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Linked measure groups are read-only. To pick up the latest changes, you must delete and recreate all linked measure groups based on the modified source object. For this reason, copy and pasting measure groups between projects is an alternative approach that you should consider in case future modifications to the measure group are required.  
@@ -64,11 +64,11 @@ manager: "mblythe"
 6.  Click **Finish** to create the linked object. Linked objects appear in the Measures and Dimensions pane, indicated by the link icon.  
   
 ## Secure a linked measure  
- After the link has been defined, access to the measures in a linked measure group, is managed in the same manner as access to other measure groups. A linked object appears alongside its non-linked counterparts in Role Designer. For more information on managing security for a measure group, see [Grant cube or model permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-cube-or-model-permissions-analysis-services.md).  
+ After the link has been defined, access to the measures in a linked measure group, is managed in the same manner as access to other measure groups. A linked object appears alongside its non-linked counterparts in Role Designer. For more information on managing security for a measure group, see [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  In order to define or use a linked measure group, the Windows service account for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance must belong to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database role that has `ReadDefinition` and `Read` access rights on the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance to the source cube and measure group, or must belong to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Administrators role for the source [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
 ## See Also  
- [Define Linked Dimensions](../../2014/analysis-services/define-linked-dimensions.md)  
+ [Define Linked Dimensions](define-linked-dimensions.md)  
   
   

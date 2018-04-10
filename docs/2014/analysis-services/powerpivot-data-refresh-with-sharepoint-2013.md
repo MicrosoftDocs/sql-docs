@@ -85,7 +85,7 @@ manager: "mblythe"
   
 4.  **Note:** The updated workbook is not automatically saved back to the document library.  
   
- ![interactive data refresh](../../2014/analysis-services/media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
+ ![interactive data refresh](media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows Authentication with Workbook Data Connections and Interactive Data Refresh  
  Excel Services sends the Analysis Services server a process command that instructs the server to impersonate a user account. To obtain system rights sufficient to perform the user impersonation-delegation process, the Analysis Services service account, requires **Act as part of the operating system** privilege on the local server. The Analysis Services server also needs to be able to delegate the user's credentials to data sources. The query result is sent to Excel Services.  
@@ -122,7 +122,7 @@ manager: "mblythe"
   
 3.  Delegation from the Excel Services service account or from Claims to Windows token service (C2WTS) to the Analysis services instance is not required. Therefore no configuration for KCD from Excel Services or C2WTS to PowerPivot AS service is necessary. If the backend data source is on the same server as the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, Kerberos Constrained Delegation is not required. However, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] service account requires the right to Act As Part Of The Operating System.  
   
- ![as_interactive_data_refresh2012SP1_windowsauth](../../2014/analysis-services/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
+ ![as_interactive_data_refresh2012SP1_windowsauth](media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
  For more information, see [Act as part of the operating system](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
   
@@ -161,7 +161,7 @@ manager: "mblythe"
   
     -   Save the workbook back to the content database.  
   
- ![manage data refresh context menu](../../2014/analysis-services/media/as-manage-datarefresh-sharepoint2013.gif "manage data refresh context menu")  
+ ![manage data refresh context menu](media/as-manage-datarefresh-sharepoint2013.gif "manage data refresh context menu")  
   
 > [!TIP]  
 >  For information on refreshing workbooks from SharePoint online, see [Refreshing Excel workbooks with embedded PowerPivot models from SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -169,7 +169,7 @@ manager: "mblythe"
 ##  <a name="bkmk_refresh_architecture"></a> Scheduled Data Refresh Architecture in SharePoint 2013  
  The following illustration summarizes the data refresh architecture in SharePoint 2013 and SQL Server 2012 SP1.  
   
- ![architecture of SQL Server 2012 SP1 data refresh](../../2014/analysis-services/media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture of SQL Server 2012 SP1 data refresh")  
+ ![architecture of SQL Server 2012 SP1 data refresh](media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture of SQL Server 2012 SP1 data refresh")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -192,7 +192,7 @@ manager: "mblythe"
   
 2.  At the bottom of the dashboard, see the **Data Refresh – Recent Activity** and **Data Refresh – Recent Failures**.  
   
-3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
  **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **PowerPivot Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the “least critical event” to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
   
@@ -202,7 +202,7 @@ manager: "mblythe"
   
 -   The category of **Data Refresh**.  
   
- Review the **configure diagnostic logging**. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ Review the **configure diagnostic logging**. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="datarefresh_additional_authentication"></a> Additional Authentication Considerations  
  The settings in the **Excel Services Authentication Settings** dialog in Excel 2013, determine the Windows identity that Excel Services and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] use for data refresh.  
@@ -223,7 +223,7 @@ manager: "mblythe"
   
 4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings…** button.  
   
- ![excel services authentication settings](../../2014/analysis-services/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
+ ![excel services authentication settings](media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  For more information on data refresh authentication and usage of credentials, see the blog post [Refreshing PowerPivot Data in SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   

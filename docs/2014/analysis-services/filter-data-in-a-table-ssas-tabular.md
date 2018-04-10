@@ -50,8 +50,8 @@ manager: "mblythe"
 2.  Click on the **Column** menu, and then click **Clear All Filters**.  
   
 ## See Also  
- [Filter and Sort Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/filter-and-sort-data-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md)  
+ [Filter and Sort Data &#40;SSAS Tabular&#41;](filter-and-sort-data-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
   
   

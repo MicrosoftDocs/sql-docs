@@ -36,19 +36,19 @@ manager: "mblythe"
   
 -   Naming and saving the data source view.  
   
- After you create a data source view, you can use Data Source View Designer to change the view's properties in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
+ After you create a data source view, you can use Data Source View Designer to change the view's properties in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
 ## In This Section  
   
--   [Select a Data Source &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/select-a-data-source-data-source-view-wizard-analysis-services.md)  
+-   [Select a Data Source &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
   
--   [Name Matching &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/name-matching-data-source-view-wizard-analysis-services.md)  
+-   [Name Matching &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
   
--   [Select Tables and Views &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/select-tables-and-views-data-source-view-wizard-analysis-services.md)  
+-   [Select Tables and Views &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [Completing the Wizard &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [Completing the Wizard &#40;Data Source View Wizard&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## See Also  
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

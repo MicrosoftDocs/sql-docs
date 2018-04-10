@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Documenting Mining Models (Data Mining Add-ins for Excel)
-  ![Document Model button, Data Mining ribbon](../../2014/analysis-services/media/dmc-docmodel.gif "Document Model button, Data Mining ribbon")  
+  ![Document Model button, Data Mining ribbon](media/dmc-docmodel.gif "Document Model button, Data Mining ribbon")  
   
  The **Document Model** wizard creates a report that provides useful information about the mining models that you have created. By documenting the models that you create, you can track the source of the data used to generate a model, get additional information about when the model was processed, and track parameter changes that affect the results of the model.  
   
@@ -73,9 +73,9 @@ manager: "mblythe"
 ||Discrete columns|Count of passing<br /><br /> Count of failing<br /><br /> Log score<br /><br /> Lift|  
   
 > [!NOTE]  
->  You can document any model type that is supported by SQL Server Analysis Services. Therefore, the table lists some model types that cannot be created by using the Table Analysis Tools or by using the wizards in the Data Mining Client. However, you can create all model types by using the **Advanced Data Mining Query Editor**. For more information, see [Query &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/query-sql-server-data-mining-add-ins.md).  
+>  You can document any model type that is supported by SQL Server Analysis Services. Therefore, the table lists some model types that cannot be created by using the Table Analysis Tools or by using the wizards in the Data Mining Client. However, you can create all model types by using the **Advanced Data Mining Query Editor**. For more information, see [Query &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md).  
   
 ## See Also  
- [Deploying and Scaling Mining Models &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [Deploying and Scaling Mining Models &#40;Data Mining Add-ins for Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

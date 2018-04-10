@@ -27,9 +27,9 @@ manager: "mblythe"
 |Query Begin|9|Collects all query begin events since the trace started.|  
 |Query End|10|Collects all query end events since the trace started.|  
   
- For information about the columns associated with each of the Query Events event classes, see [Queries Events Data Columns](../../2014/analysis-services/queries-events-data-columns.md).  
+ For information about the columns associated with each of the Query Events event classes, see [Queries Events Data Columns](queries-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

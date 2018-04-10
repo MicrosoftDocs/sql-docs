@@ -19,7 +19,7 @@ manager: "mblythe"
   In previous releases, calculated members were not allowed in subselects or subcubes. However, starting with SQL Server 2008 they are allowed and enabled by a connection property. In addition, a new behavior for calculated members, in subselects and subcubes, was introduced in SQL Server 2008 R2.  
   
 ## Calculated Members in Subselects and Subcubes  
- The `SubQueries` connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or the `DBPROPMSMDSUBQUERIES` property in [Supported XMLA Properties &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md) defines the behavior or allowance of calculated members or calculated sets on subselects or subcubes. In the context of this document, subselect refers to subselects and subcubes unless otherwise stated.  
+ The `SubQueries` connection string property in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> or the `DBPROPMSMDSUBQUERIES` property in [Supported XMLA Properties &#40;XMLA&#41;](dev-guide/supported-xmla-properties-xmla.md) defines the behavior or allowance of calculated members or calculated sets on subselects or subcubes. In the context of this document, subselect refers to subselects and subcubes unless otherwise stated.  
   
  The SubQueries property allows the following values.  
   
@@ -121,7 +121,7 @@ Where [Measures].[Reseller Sales Amount]
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Subselects in Queries](../../2014/analysis-services/subselects-in-queries.md)   
- [Supported XMLA Properties &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md)  
+ [Subselects in Queries](subselects-in-queries.md)   
+ [Supported XMLA Properties &#40;XMLA&#41;](dev-guide/supported-xmla-properties-xmla.md)  
   
   

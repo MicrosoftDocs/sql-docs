@@ -85,6 +85,6 @@ manager: "mblythe"
 |RequestProperties|45|9|XMLA request properties.|  
   
 ## See Also  
- [Security Audit Event Category](../../2014/analysis-services/security-audit-event-category.md)  
+ [Security Audit Event Category](security-audit-event-category.md)  
   
   

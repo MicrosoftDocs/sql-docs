@@ -24,37 +24,37 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Edit As Text**|Not enabled for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system.|  
-|![Change to MDX query view](../../2014/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to Command Type MDX.|  
-|![Refresh result data](../../2014/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
-|![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
-|![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Toggle between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
-|![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made. Results are shown in the Data pane.|  
-|![Show Aggregations button](../../2014/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|Show aggregations in the Data pane.|  
-|![Delete](../../2014/analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
-|![Icon for the Query Parameters dialog box](../../2014/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Query Parameters** dialog box. When you specify values for a query parameter, a parameter with the same name is automatically created.|  
-|![Prepare Query button](../../2014/analysis-services/media/rsqdicon-preparequery.gif "Prepare Query button")|Prepare the query.|  
-|![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
-|![Cancel the query](../../2014/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
-|![Switch to Design mode](../../2014/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Toggle between Design mode and Query mode.|  
+|![Change to MDX query view](media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to Command Type MDX.|  
+|![Refresh result data](media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
+|![Toggle for show empty cells](media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Toggle between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
+|![AutoExecute the query](media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made. Results are shown in the Data pane.|  
+|![Show Aggregations button](media/rsqdicon-showaggregations.gif "Show Aggregations button")|Show aggregations in the Data pane.|  
+|![Delete](media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
+|![Icon for the Query Parameters dialog box](media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Query Parameters** dialog box. When you specify values for a query parameter, a parameter with the same name is automatically created.|  
+|![Prepare Query button](media/rsqdicon-preparequery.gif "Prepare Query button")|Prepare the query.|  
+|![Run the query](media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
+|![Cancel the query](media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
+|![Switch to Design mode](media/rsqdicon-designmode.gif "Switch to Design mode")|Toggle between Design mode and Query mode.|  
   
  In general, the toolbar buttons are the same for **Design Mode** and **Query Mode**. However, the following buttons are not enabled for Query mode:  
   
 -   **Edit As Text**  
   
--   **Add Calculated Member** (![Add calculated member](../../2014/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Add Calculated Member** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Show Empty Cells** (![Toggle for show empty cells](../../2014/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Show Empty Cells** (![Toggle for show empty cells](media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![AutoExecute the query](../../2014/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![AutoExecute the query](media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
--   **Show Aggregations** (![Show Aggregations button](../../2014/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button"))  
+-   **Show Aggregations** (![Show Aggregations button](media/rsqdicon-showaggregations.gif "Show Aggregations button"))  
   
 ## Options  
   
 |Option|Description|  
 |------------|-----------------|  
-|**Process**|Click to display the **Process** dialog box and process the cube. For more information about the **Process** dialog box, see [Process Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/process-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Change User**|Click to display the **Security Context** dialog box and change the user and role used on the **Browser** tab. For more information about the **Security Context** dialog box, see [Security Context Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/security-context-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Process**|Click to display the **Process** dialog box and process the cube. For more information about the **Process** dialog box, see [Process Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Change User**|Click to display the **Security Context** dialog box and change the user and role used on the **Browser** tab. For more information about the **Security Context** dialog box, see [Security Context Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Reconnect**|Click to reconnect the **Calculations** tab to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and database that contains the cube, if the session for the **Browser** tab is disconnected due to connection loss or timeout.|  
 |**Refresh**|Click to refresh the **Metadata** and **Reports** panes.|  
 |**Sort Ascending**|Click to sort the siblings of the selected row in the **Report** pane in ascending order for the language specified in **Language**.<br /><br /> **Note** This option is enabled only if a cell in the **Reports** pane is selected.|  

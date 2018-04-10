@@ -36,8 +36,8 @@ manager: "mblythe"
  Opens the Data Source Wizard in which you can create a new data source that will be added to the project.  
   
 ## See Also  
- [Data Source View Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-view-wizard-f1-help-analysis-services.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Data Source Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-wizard-f1-help-analysis-services.md)  
+ [Data Source View Wizard F1 Help &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Data Source Wizard F1 Help &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

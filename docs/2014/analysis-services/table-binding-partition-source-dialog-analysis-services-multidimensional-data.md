@@ -41,6 +41,6 @@ manager: "mblythe"
  If a filter is specified in **Filter tables**, the list is further restricted by comparing the filter against the table names that meet the above criteria. Only those tables that contain the string specified in **Filter tables** are displayed.  
   
 ## See Also  
- [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

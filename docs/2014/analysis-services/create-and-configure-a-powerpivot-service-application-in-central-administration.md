@@ -71,7 +71,7 @@ manager: "mblythe"
   
      Do not add the PowerPivot service application to the default connection group if one already exists. Adding multiple entries of the same service application type is not a supported configuration and might cause errors. If you are creating additional service applications, leave them out of the default connection group and add them to custom lists instead.  
   
-     For more information about service associations, see [Connect a PowerPivot Service Application to a SharePoint Web Application in Central Administration](../../2014/analysis-services/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
+     For more information about service associations, see [Connect a PowerPivot Service Application to a SharePoint Web Application in Central Administration](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
 10. Click **OK.** The service will appear alongside other managed services in the farm's service application list.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
   
 4.  In **Database Load Timeout**, increase or decrease the value to change how long the PowerPivot service waits for a response from the SQL Server Analysis Services (PowerPivot) instance to which it forwarded a load data request. Because very large datasets take time to move over the wire, you must allow sufficient time for the PowerPivot service instance to retrieve the Excel workbook and move the PowerPivot data to an Analysis Services instance for query processing. Because PowerPivot data can be unusually large, the default value is 30 minutes.  
   
-5.  In **Connection Pool Timeout**, increase or decrease the value to change how many minutes an idle data connection will remain open. The default value is 30 minutes. During this period, the PowerPivot service will reuse an idle data connection for read-only requests from the same SharePoint user for the same PowerPivot data. If no further requests are received for that data during the period specified, the connection is removed from the pool. Valid values are 1 to 3600 seconds. For more information about connection pools, see [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configuration-setting-reference-powerpivot-for-sharepoint.md).  
+5.  In **Connection Pool Timeout**, increase or decrease the value to change how many minutes an idle data connection will remain open. The default value is 30 minutes. During this period, the PowerPivot service will reuse an idle data connection for read-only requests from the same SharePoint user for the same PowerPivot data. If no further requests are received for that data during the period specified, the connection is removed from the pool. Valid values are 1 to 3600 seconds. For more information about connection pools, see [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-powerpivot-for-sharepoint.md).  
   
 6.  In **Maximum User Connection Pool Size**, increase or decrease the value to change the maximum number of idle connections the PowerPivot service will create in individual connection pools for each SharePoint user, PowerPivot dataset, and version combinations.  
   
@@ -104,9 +104,9 @@ manager: "mblythe"
   
 9. In Data Refresh, in **Business Hours**, you can specify a range of hours that defines a business day. Data refresh schedules can run after the close of a business day to pick up transactional data that was generated during normal business hours.  
   
-10. In **PowerPivot Unattended Data Refresh Account**, you can specify a predefined Secure Store Service target application that stores a predefined account for running PowerPivot data refresh jobs. Be sure to specify the target application name, and not the ID. The target application for unattended data refresh is created automatically if you used the New Server option in SQL Server Setup to install PowerPivot for SharePoint. Otherwise, you must create the target application manually. For instructions on how to configure the account, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+10. In **PowerPivot Unattended Data Refresh Account**, you can specify a predefined Secure Store Service target application that stores a predefined account for running PowerPivot data refresh jobs. Be sure to specify the target application name, and not the ID. The target application for unattended data refresh is created automatically if you used the New Server option in SQL Server Setup to install PowerPivot for SharePoint. Otherwise, you must create the target application manually. For instructions on how to configure the account, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
-11. In **Allow users to enter custom Windows credentials**, you can select or clear the checkbox to specify whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, PowerPivot service application will create and manage a target application each set of stored credentials. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+11. In **Allow users to enter custom Windows credentials**, you can select or clear the checkbox to specify whether schedule owners can enter arbitrary Windows credentials to run a data refresh schedule. If you select this checkbox, PowerPivot service application will create and manage a target application each set of stored credentials. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 12. In **Maximum Processing History Length**, you can specify how long to retain a historical record of data refresh processing. This information appears in data refresh history pages that are kept for each workbook that uses data refresh. It also appears in the PowerPivot Management Dashboard.  
   
@@ -151,6 +151,6 @@ manager: "mblythe"
 3.  Click **Properties** on the ribbon.  
   
 ## See Also  
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)  
   
   

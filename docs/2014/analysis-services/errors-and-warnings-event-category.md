@@ -28,9 +28,9 @@ manager: "mblythe"
 |-----------------|--------------|-----------------|  
 |Error|17|Records all new error events since the trace started.|  
   
- For information about the columns associated with each of the Errors and Warnings event classes, see [Errors and Warnings Events Data Columns](../../2014/analysis-services/errors-and-warnings-events-data-columns.md).  
+ For information about the columns associated with each of the Errors and Warnings event classes, see [Errors and Warnings Events Data Columns](errors-and-warnings-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

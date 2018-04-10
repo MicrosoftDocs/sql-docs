@@ -48,7 +48,7 @@ manager: "mblythe"
   
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery cannot be in a restricted site. The parent site that contains [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery must be added to either the trusted site or Local intranet zone.  
   
--   The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] web application solution must have been deployed for your application, and the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] feature must have been activated for the site collection. For more information, see [Deploy PowerPivot Solutions to SharePoint](../../2014/analysis-services/deploy-powerpivot-solutions-to-sharepoint.md) and[Activate PowerPivot Feature Integration for Site Collections in Central Administration](../../2014/analysis-services/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] web application solution must have been deployed for your application, and the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] feature must have been activated for the site collection. For more information, see [Deploy PowerPivot Solutions to SharePoint](deploy-powerpivot-solutions-to-sharepoint.md) and[Activate PowerPivot Feature Integration for Site Collections in Central Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   To view or create a Reporting Services report that is based on a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook, both the workbook and the report must be in the same [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery. The report must either use a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook that contains embedded data, or the workbook must contain at most one external data source that is a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook.  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
  Preview images are based on how the workbook is rendered by Excel Services. The representation in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery should be identical to what you see when you view a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook in a browser. However, preview has a limited surface area. Portions of a workbook or report might be trimmed to fit the available space. You might need to open a workbook or report to view the document in its entirety.  
   
- Refreshing [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook data from external data sources is fully supported in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery, but it requires additional configuration. A farm or service administrator must add the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery as an Excel Services trusted location. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+ Refreshing [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook data from external data sources is fully supported in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery, but it requires additional configuration. A farm or service administrator must add the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery as an Excel Services trusted location. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Create the PowerPivot Gallery  
  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery is created for you when you install [!INCLUDE[ssGeminiLong](../includes/ssgeminilong-md.md)] using the New Server installation option. If you added [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] to an existing farm or if you want an additional library, you can create a new one for your application or site.  
@@ -68,7 +68,7 @@ manager: "mblythe"
   
     3.  Under Libraries, click **PowerPivot Gallery**.  
   
-    1.  **SharePoint 2013**: Click the settings icon ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Click **Site Contents**  
+    1.  **SharePoint 2013**: Click the settings icon ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Click **Site Contents**  
   
     2.  Click **add an app**.  
   
@@ -78,7 +78,7 @@ manager: "mblythe"
   
 3.  Click **Create**.  
   
-4.  Ask a farm or service administrator to add the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery as a trusted location for Excel Services. This step is necessary to avoid errors if a user configures a workbook for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data refresh. For more information about this task, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+4.  Ask a farm or service administrator to add the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery as a trusted location for Excel Services. This step is necessary to avoid errors if a user configures a workbook for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data refresh. For more information about this task, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
  A link to the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery library will appear in the navigation Quick Launch pane for the current site.  
   
@@ -117,7 +117,7 @@ manager: "mblythe"
 ####  <a name="bkmk_hide_refresh_button"></a> Disable or Hide the Refresh Button  
  You cannot hide the **Manage Data Refresh** button. However the button is disabled if the user does not sufficient permissions.  
   
- ![as_powerpivot_refresh_manage_reresh](../../2014/analysis-services/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook’s data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
 ##  <a name="switch"></a> Switch to Theater View or Gallery View  
  Preview varies depending on how you configure the view for the library. In Gallery view, you can hover the mouse pointer over individual worksheets in the workbook to bring a sheet into focus in the preview area.  
   
- ![GMNI_ReportGallery](../../2014/analysis-services/media/gmni-reportgallery.gif "GMNI_ReportGallery")  
+ ![GMNI_ReportGallery](media/gmni-reportgallery.gif "GMNI_ReportGallery")  
   
  The following table describes the different layouts for presenting thumbnail sketches of each previewed page:  
   
@@ -146,8 +146,8 @@ manager: "mblythe"
   
 ## See Also  
  [Troubleshoot a PowerPivot for SharePoint Installation](../../2014/sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [Use PowerPivot Gallery](../../2014/analysis-services/use-powerpivot-gallery.md)   
- [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md)   
- [Delete PowerPivot Gallery](../../2014/analysis-services/delete-powerpivot-gallery.md)  
+ [Use PowerPivot Gallery](use-powerpivot-gallery.md)   
+ [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md)   
+ [Delete PowerPivot Gallery](delete-powerpivot-gallery.md)  
   
   

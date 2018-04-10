@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Level and Members (Browser Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
-  Use this pane to browse the members of the currently selected hierarchy and language. To select a hierarchy or language to browse, use the **Hierarchy** and **Language** options on the **Toolbar** pane. For more information about the Toolbar pane, see [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
+  Use this pane to browse the members of the currently selected hierarchy and language. To select a hierarchy or language to browse, use the **Hierarchy** and **Language** options on the **Toolbar** pane. For more information about the Toolbar pane, see [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## Writeback Mode  
  The functionality of this pane changes if writeback mode is enabled. The selected dimension must be write-enabled (in other words, the `WriteEnabled` property of the dimension must be set to true) and the dimension must be deployed to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in order to enable writeback mode.  
@@ -100,7 +100,7 @@ manager: "mblythe"
 >  This option is displayed only if writeback mode is enabled.  
   
  **Filter Members**  
- Displays the **Filter Members** dialog box to filter members displayed in **Level and Members** for the selected hierarchy. For more information about the **Filter Members** dialog box, see [Filter Members Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/filter-members-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays the **Filter Members** dialog box to filter members displayed in **Level and Members** for the selected hierarchy. For more information about the **Filter Members** dialog box, see [Filter Members Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expand All**  
  Expands all members in **Tree**.  
@@ -121,7 +121,7 @@ manager: "mblythe"
  Select to enable writeback mode.  
   
 ## See Also  
- [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

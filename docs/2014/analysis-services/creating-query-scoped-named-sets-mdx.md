@@ -24,7 +24,7 @@ manager: "mblythe"
  As discussed in this topic, the syntax of the WITH keyword is quite flexible, even accommodating the use of functions to define the named set.  
   
 > [!NOTE]  
->  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../../2014/analysis-services/building-named-sets-in-mdx-mdx.md).  
+>  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](building-named-sets-in-mdx-mdx.md).  
   
 ## WITH Keyword Syntax  
  Use the following syntax to add the WITH keyword to a MDX SELECT statement:  
@@ -92,6 +92,6 @@ FROM Sales
   
 ## See Also  
  [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)   
- [Creating Session-Scoped Named Sets &#40;MDX&#41;](../../2014/analysis-services/creating-session-scoped-named-sets-mdx.md)  
+ [Creating Session-Scoped Named Sets &#40;MDX&#41;](creating-session-scoped-named-sets-mdx.md)  
   
   

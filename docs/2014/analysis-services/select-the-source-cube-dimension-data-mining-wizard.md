@@ -28,17 +28,17 @@ manager: "mblythe"
  Select the dimension of the cube that will provide the source data for your mining structure.  
   
 ## Choosing a Dimension  
- Because you can select only one dimension for use in your model, it is important that you understand the cube structure and select the dimension that provides the best information for your model. If you are not sure which dimension to use, it might be helpful to browse the cube and review the fields and the data in them by using Dimension Designer. For more information, see [Browse Dimension Data in Dimension Designer](../../2014/analysis-services/browse-dimension-data-in-dimension-designer.md).  
+ Because you can select only one dimension for use in your model, it is important that you understand the cube structure and select the dimension that provides the best information for your model. If you are not sure which dimension to use, it might be helpful to browse the cube and review the fields and the data in them by using Dimension Designer. For more information, see [Browse Dimension Data in Dimension Designer](browse-dimension-data-in-dimension-designer.md).  
   
- If you are unfamiliar with dimensions in general, see [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/introduction-to-dimensions-analysis-services-multidimensional-data.md).  
+ If you are unfamiliar with dimensions in general, see [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/introduction-to-dimensions-analysis-services-multidimensional-data.md).  
   
- For more information about the type of information that is typically contained in a single dimension, including attributes and measures that might be useful for data mining, see [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md).  
+ For more information about the type of information that is typically contained in a single dimension, including attributes and measures that might be useful for data mining, see [Dimension Relationships](dev-guide/dimension-relationships.md).  
   
- If the dimension that you choose does not contain all of the related attributes that you need to build the data mining model, you might need to modify the dimension. For more information, see [Define Database Dimensions](../../2014/analysis-services/define-database-dimensions.md).  
+ If the dimension that you choose does not contain all of the related attributes that you need to build the data mining model, you might need to modify the dimension. For more information, see [Define Database Dimensions](define-database-dimensions.md).  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Create the Data Mining Structure &#40;Data Mining Wizard&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   
- [Select the Case Key &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-case-key-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Create the Data Mining Structure &#40;Data Mining Wizard&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Select the Case Key &#40;Data Mining Wizard&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

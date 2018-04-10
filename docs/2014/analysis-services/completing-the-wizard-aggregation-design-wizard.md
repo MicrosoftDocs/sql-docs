@@ -31,7 +31,7 @@ manager: "mblythe"
  Complete the wizard and assign the aggregation design to the selected partitions but not deploy or process the selected partitions.  
   
 ## See Also  
- [Aggregation Design Wizard F1 Help](../../2014/analysis-services/aggregation-design-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Aggregation Design Wizard F1 Help](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

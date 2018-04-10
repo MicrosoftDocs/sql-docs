@@ -44,6 +44,6 @@ manager: "mblythe"
 5.  Click **OK**.  
   
 ## See Also  
- [Deploy PowerPivot Solutions to SharePoint](../../2014/analysis-services/deploy-powerpivot-solutions-to-sharepoint.md)  
+ [Deploy PowerPivot Solutions to SharePoint](deploy-powerpivot-solutions-to-sharepoint.md)  
   
   

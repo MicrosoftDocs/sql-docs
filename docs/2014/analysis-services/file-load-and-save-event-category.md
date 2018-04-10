@@ -29,9 +29,9 @@ manager: "mblythe"
 |PageIn Begin|96|PageIn Begin|  
 |PageIn End|97|PageIn End|  
   
- For information about the columns associated with each of the File Load and Save event classes, see [File Load and Save Data Columns](../../2014/analysis-services/file-load-and-save-data-columns.md).  
+ For information about the columns associated with each of the File Load and Save event classes, see [File Load and Save Data Columns](file-load-and-save-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

@@ -44,59 +44,59 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Choose Enhancement &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/choose-enhancement-business-intelligence-wizard.md)  
+-   [Choose Enhancement &#40;Business Intelligence Wizard&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
--   [Choose Time Calculations &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/choose-time-calculations-business-intelligence-wizard.md)  
+-   [Choose Time Calculations &#40;Business Intelligence Wizard&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
--   [Define Scope of Calculations &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-scope-of-calculations-business-intelligence-wizard.md)  
+-   [Define Scope of Calculations &#40;Business Intelligence Wizard&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [Define Account Intelligence &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [Define Account Intelligence &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Configure Dimension Attributes &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Configure Dimension Attributes &#40;Business Intelligence Wizard&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
--   [Define Account Intelligence &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-account-intelligence-business-intelligence-wizard.md)  
+-   [Define Account Intelligence &#40;Business Intelligence Wizard&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [Set Dimension Intelligence Options &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [Set Dimension Intelligence Options &#40;Business Intelligence Wizard&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
--   [Define Dimension Intelligence &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-dimension-intelligence-business-intelligence-wizard.md)  
+-   [Define Dimension Intelligence &#40;Business Intelligence Wizard&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Specify a Unary Operator &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Specify a Unary Operator &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Specify a Unary Operator &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Specify a Unary Operator &#40;Business Intelligence Wizard&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
--   [Create a Custom Member Formula &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
+-   [Create a Custom Member Formula &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
--   [Create a Custom Member Formula &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/create-a-custom-member-formula-business-intelligence-wizard.md)  
+-   [Create a Custom Member Formula &#40;Business Intelligence Wizard&#41;](create-a-custom-member-formula-business-intelligence-wizard.md)  
   
--   [Specify Attribute Ordering &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
+-   [Specify Attribute Ordering &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](specify-attribute-ordering-dimension-business-intelligence-wizard.md)  
   
--   [Specify Attribute Ordering &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/specify-attribute-ordering-business-intelligence-wizard.md)  
+-   [Specify Attribute Ordering &#40;Business Intelligence Wizard&#41;](specify-attribute-ordering-business-intelligence-wizard.md)  
   
--   [Enable Dimension Writeback &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
+-   [Enable Dimension Writeback &#40;Dimension&#41; &#40;Business Intelligence Wizard&#41;](enable-dimension-writeback-dimension-business-intelligence-wizard.md)  
   
--   [Enable Dimension Writeback &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/enable-dimension-writeback-business-intelligence-wizard.md)  
+-   [Enable Dimension Writeback &#40;Business Intelligence Wizard&#41;](enable-dimension-writeback-business-intelligence-wizard.md)  
   
--   [Define Semiadditive Behavior &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-semiadditive-behavior-business-intelligence-wizard.md)  
+-   [Define Semiadditive Behavior &#40;Business Intelligence Wizard&#41;](define-semiadditive-behavior-business-intelligence-wizard.md)  
   
--   [Set Currency Conversion Options &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/set-currency-conversion-options-business-intelligence-wizard.md)  
+-   [Set Currency Conversion Options &#40;Business Intelligence Wizard&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [Select Members &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/select-members-business-intelligence-wizard.md)  
+-   [Select Members &#40;Business Intelligence Wizard&#41;](select-members-business-intelligence-wizard.md)  
   
--   [Select Conversion Type &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/select-conversion-type-business-intelligence-wizard.md)  
+-   [Select Conversion Type &#40;Business Intelligence Wizard&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
--   [Define Local Currency Reference &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-local-currency-reference-business-intelligence-wizard.md)  
+-   [Define Local Currency Reference &#40;Business Intelligence Wizard&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
--   [Specify Reporting Currencies &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/specify-reporting-currencies-business-intelligence-wizard.md)  
+-   [Specify Reporting Currencies &#40;Business Intelligence Wizard&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
--   [Define Currency Conversion &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/define-currency-conversion-business-intelligence-wizard.md)  
+-   [Define Currency Conversion &#40;Business Intelligence Wizard&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [Select a Column Dialog Box &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [Select a Column Dialog Box &#40;Business Intelligence Wizard&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [Completing the Wizard &#40;Business Intelligence Wizard&#41;](../../2014/analysis-services/completing-the-wizard-business-intelligence-wizard.md)  
+-   [Completing the Wizard &#40;Business Intelligence Wizard&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## See Also  
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

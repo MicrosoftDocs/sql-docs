@@ -111,7 +111,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  You should not rely on finding assemblies in the same application domain, because the application domain boundary and the assemblies that go into each domain are defined by the implementation.  
   
 ## See Also  
- [Setting Security for Stored Procedures](../../2014/analysis-services/dev-guide/setting-security-for-stored-procedures.md)   
- [Defining Stored Procedures](../../2014/analysis-services/dev-guide/defining-stored-procedures.md)  
+ [Setting Security for Stored Procedures](dev-guide/setting-security-for-stored-procedures.md)   
+ [Defining Stored Procedures](dev-guide/defining-stored-procedures.md)  
   
   

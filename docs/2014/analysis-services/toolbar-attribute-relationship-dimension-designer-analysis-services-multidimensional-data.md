@@ -34,7 +34,7 @@ manager: "mblythe"
   
 ## Options  
  **Add Business Intelligence**  
- Opens the **Business Intelligence Wizard** and add business intelligence features. For more information, see [Use the Business Intelligence Wizard to Enhance Dimensions](../../2014/analysis-services/use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
+ Opens the **Business Intelligence Wizard** and add business intelligence features. For more information, see [Use the Business Intelligence Wizard to Enhance Dimensions](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
  **Process**  
  Processes the object.  

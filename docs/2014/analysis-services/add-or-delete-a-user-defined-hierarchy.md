@@ -24,7 +24,7 @@ manager: "mblythe"
 # Add or Delete a User-Defined Hierarchy
   You add a user-defined hierarchy to or remove a user-defined hierarchy from a dimension on the **Dimension Structure** tab in Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md) and [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ When you add a user-defined hierarchy, it is not available to users until it is instantiated in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and the dimension is processed. For more information, see [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md) and [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To add a user-defined hierarchy to a dimension  
   
@@ -42,10 +42,10 @@ manager: "mblythe"
   
 5.  Optionally, modify properties of the user-defined hierarchy or its levels.  
   
-     For example, you might want to specify a name for the user-defined hierarchy, rename one or more of its levels, and define a custom name for the All level. For more information, see [User Hierarchy Properties](../../2014/analysis-services/dev-guide/user-hierarchy-properties.md), and [Level Properties &#91;Paved Over&#93;](../../2014/analysis-services/dev-guide/level-properties-[paved-over].md).  
+     For example, you might want to specify a name for the user-defined hierarchy, rename one or more of its levels, and define a custom name for the All level. For more information, see [User Hierarchy Properties](dev-guide/user-hierarchy-properties.md), and [Level Properties &#91;Paved Over&#93;](dev-guide/level-properties-[paved-over].md).  
   
     > [!NOTE]  
-    >  By default, a user-defined hierarchy is just a path that enables users to drill down for information. However, if relationships exist between levels, you can increase query performance by configuring attribute relationships between levels. For more information, see [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md) and [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+    >  By default, a user-defined hierarchy is just a path that enables users to drill down for information. However, if relationships exist between levels, you can increase query performance by configuring attribute relationships between levels. For more information, see [Attribute Relationships](dev-guide/attribute-relationships.md) and [Define Attribute Relationships](define-attribute-relationships.md).  
   
 ### To remove a user-defined hierarchy from a dimension  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
 -   Drag the user-defined hierarchy off of the design surface.  
   
 ## See Also  
- [User Hierarchies](../../2014/analysis-services/dev-guide/user-hierarchies.md)   
- [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)  
+ [User Hierarchies](dev-guide/user-hierarchies.md)   
+ [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)  
   
   

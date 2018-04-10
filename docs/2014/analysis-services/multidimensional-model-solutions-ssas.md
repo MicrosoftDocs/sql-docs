@@ -23,25 +23,25 @@ manager: "mblythe"
 ## In This Section  
  The following topics provide guidance on designing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensional database objects.  
   
- [Multidimensional Model Databases &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Describes how to define an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)  
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
  Describes how to define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source objects.  
   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
  Describes how to design [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source views.  
   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
  Describes how to design [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dimension objects.  
   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)  
  Describes how to design [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube objects.  
   
- [Schema Generation Wizard &#40;Analysis Services&#41;](../../2014/analysis-services/schema-generation-wizard-analysis-services.md)  
+ [Schema Generation Wizard &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  Describes how to design multidimensional database objects without an existing relational schema.  
   
- [Analysis Services Personalization Extensions](../../2014/analysis-services/dev-guide/analysis-services-personalization-extensions.md)  
+ [Analysis Services Personalization Extensions](dev-guide/analysis-services-personalization-extensions.md)  
  Describes how to design Personalization Extensions for [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
   

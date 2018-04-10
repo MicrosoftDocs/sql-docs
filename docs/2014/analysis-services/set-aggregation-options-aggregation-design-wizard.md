@@ -43,7 +43,7 @@ manager: "mblythe"
  Resets all the aggregation options on this page to their default values.  
   
 ## See Also  
- [Aggregation Design Wizard F1 Help](../../2014/analysis-services/aggregation-design-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Aggregation Design Wizard F1 Help](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

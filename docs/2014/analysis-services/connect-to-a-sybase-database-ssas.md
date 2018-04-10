@@ -47,7 +47,7 @@ manager: "mblythe"
  Select a database from the list of databases.  
   
  **Advanced**  
- Set additional connection properties by using the **Set Advanced Properties** dialog box. For more information, see [Set Advanced Properties &#40;SSAS&#41;](../../2014/analysis-services/set-advanced-properties-ssas.md).  
+ Set additional connection properties by using the **Set Advanced Properties** dialog box. For more information, see [Set Advanced Properties &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test Connection**  
  Attempt to establish a connection to the data source using the current settings. A message is displayed indicating whether the connection is successful.  

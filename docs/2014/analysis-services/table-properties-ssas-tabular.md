@@ -40,7 +40,7 @@ manager: "mblythe"
   
  **Reporting Properties**  
   
- For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/power-view-reporting-properties-ssas-tabular.md).  
+ For detailed descriptions and configuration information for reporting properties, see [Power View Reporting Properties &#40;SSAS Tabular&#41;](power-view-reporting-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  

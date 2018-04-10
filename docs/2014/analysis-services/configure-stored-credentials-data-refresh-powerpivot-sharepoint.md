@@ -22,9 +22,9 @@ manager: "mblythe"
   
  After you follow the instructions in this topic, you will be able to use the following credentials option in the PowerPivot data refresh schedule page:  
   
- ![SSAS_PowerPivotDataRefreshCreds_Stored](../../2014/analysis-services/media/ssas-powerpivotdatarefreshcreds-stored.gif "SSAS_PowerPivotDataRefreshCreds_Stored")  
+ ![SSAS_PowerPivotDataRefreshCreds_Stored](media/ssas-powerpivotdatarefreshcreds-stored.gif "SSAS_PowerPivotDataRefreshCreds_Stored")  
   
- This topic explains how to set up the user names and passwords that are used for PowerPivot data refresh in a SharePoint 2010 farm. Before you can use these steps, you must have enabled Secure Store Service and generated a master key. For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)  
+ This topic explains how to set up the user names and passwords that are used for PowerPivot data refresh in a SharePoint 2010 farm. Before you can use these steps, you must have enabled Secure Store Service and generated a master key. For more information, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
  This topic contains the following sections:  
   
@@ -125,7 +125,7 @@ manager: "mblythe"
   
 ###  <a name="bkmk_verify"></a> Step 4: Verify account availability in data refresh configuration pages  
   
-1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
 2.  Verify that the **Connect using the credentials saved in Secure Store Service (SSS) to log on to the data source** option is enabled in the data refresh configuration page, and then enter the name of the target application.  
   
@@ -142,7 +142,7 @@ manager: "mblythe"
   
  This step is only necessary if you want to provide users with an option of overriding the database credentials that are already embedded in the PowerPivot workbook.  
   
- This step only works if the connection string already includes a user name and password. Note that having credentials in the connection string is relatively uncommon, so your ability to make use of this option is somewhat limited. In most cases, you will only have a user ID and password in the connection string if you are using database authentication to connect to the data source. For more information about how to check the connection string to see if it includes a User ID and password, see the “Grant permissions to create schedules and access external data” section in [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
+ This step only works if the connection string already includes a user name and password. Note that having credentials in the connection string is relatively uncommon, so your ability to make use of this option is somewhat limited. In most cases, you will only have a user ID and password in the connection string if you are using database authentication to connect to the data source. For more information about how to check the connection string to see if it includes a User ID and password, see the “Grant permissions to create schedules and access external data” section in [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 1.  In Central Administration, in Application Management, click **Manage service applications**.  
   
@@ -187,7 +187,7 @@ manager: "mblythe"
 17. Click **OK**.  
   
 ## See Also  
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

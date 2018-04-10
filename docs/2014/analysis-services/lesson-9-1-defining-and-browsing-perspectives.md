@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Defining and Browsing Perspectives
   A perspective can simplify the view of a cube for specific purposes. By default, users can see all of the elements in a cube to which they have permissions. What users are viewing when they view an entire [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube is the default perspective for the cube. A view of the whole cube can be very complex for users to navigate, especially for users who only need to interact with a small part of the cube to satisfy their business intelligence and reporting requirements.  
   
- To reduce the apparent complexity of a cube, you can create viewable subsets of the cube, called *perspectives*, which show users only a part of the measure groups, measures, dimensions, attributes, hierarchies, Key Performance Indicators (KPIs), actions, and calculated members in the cube. This can be particularly useful for working with client applications that were written for a previous release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. These clients have no concept of display folders or perspectives, for example, but a perspective appears to older clients as if it were a cube. For more information, see [Perspectives](../../2014/analysis-services/dev-guide/perspectives.md), and [Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md).  
+ To reduce the apparent complexity of a cube, you can create viewable subsets of the cube, called *perspectives*, which show users only a part of the measure groups, measures, dimensions, attributes, hierarchies, Key Performance Indicators (KPIs), actions, and calculated members in the cube. This can be particularly useful for working with client applications that were written for a previous release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. These clients have no concept of display folders or perspectives, for example, but a perspective appears to older clients as if it were a cube. For more information, see [Perspectives](dev-guide/perspectives.md), and [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  A perspective is not a security mechanism, but instead is a tool for providing a better user experience. All security for a perspective is inherited from the underlying cube.  
@@ -192,7 +192,7 @@ manager: "jhubbard"
  [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
 ## See Also  
- [Perspectives](../../2014/analysis-services/dev-guide/perspectives.md)   
- [Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)  
+ [Perspectives](dev-guide/perspectives.md)   
+ [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)  
   
   

@@ -24,7 +24,7 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-default-field-set-for-power-view-reports-ssas-tabular.md)|Describes how to configure a Default Field Set; a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list.|  
-|[Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md)|Describes how to configure table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information in tile, card, and chart layouts.|  
+|[Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](configure-default-field-set-for-power-view-reports-ssas-tabular.md)|Describes how to configure a Default Field Set; a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list.|  
+|[Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md)|Describes how to configure table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information in tile, card, and chart layouts.|  
   
   

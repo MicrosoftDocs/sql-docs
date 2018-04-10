@@ -110,7 +110,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Notice that the `WITH` keyword is used with the [CurrentMember (MDX)](~/mdx/current-mdx.md) and [Name (MDX)](~/mdx/members-string-mdx.md) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-query-mdx.md).  
+>  Notice that the `WITH` keyword is used with the [CurrentMember (MDX)](~/mdx/current-mdx.md) and [Name (MDX)](~/mdx/members-string-mdx.md) functions to create a calculated member for use in the query. For more information, see [The Basic MDX Query &#40;MDX&#41;](the-basic-mdx-query-mdx.md).  
   
  In the previous query, the name of the member of the Country attribute hierarchy that is associated with each member of the State attribute hierarchy is returned. The expected Country member appears (because an attribute relationship is defined between the City and Country attributes). However, if no attribute relationship were defined between attribute hierarchies in the same dimension, the (All) member would be returned, as illustrated in the following query.  
   
@@ -127,11 +127,11 @@ FROM [Adventure Works]
 ## Calculation Context  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
- [Tuples](../../2014/analysis-services/tuples.md)   
- [Autoexists](../../2014/analysis-services/autoexists.md)   
- [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md)   
- [Visual Totals and Non Visual Totals](../../2014/analysis-services/visual-totals-and-non-visual-totals.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Tuples](tuples.md)   
+ [Autoexists](autoexists.md)   
+ [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
  [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   

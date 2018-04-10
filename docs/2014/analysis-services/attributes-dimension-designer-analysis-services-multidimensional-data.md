@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Attributes (Dimension Structure Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
-  Use this pane to manage the attributes associated with the selected dimension. Attributes can be dragged from this pane to the **Hierarchies** pane to create hierarchies and levels. For more information, see [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
+  Use this pane to manage the attributes associated with the selected dimension. Attributes can be dragged from this pane to the **Hierarchies** pane to create hierarchies and levels. For more information, see [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
   
  To create an attribute, drag a column from the **Data Source View** pane to the **Attributes** pane while in list, tree, or view mode. To remove an attribute, select **Delete** on the shortcut menu.  
   
@@ -70,8 +70,8 @@ manager: "mblythe"
  Displays the location of the underlying column. When creating a new attribute, click the down arrow to select between **Same as key** and **Separate column**. If **Separate column** is chosen, the **NameColumn** property in the **Properties** pane sets the column that stores the name to use for the attribute.  
   
 ## See Also  
- [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

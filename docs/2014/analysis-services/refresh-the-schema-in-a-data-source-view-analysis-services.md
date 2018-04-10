@@ -46,18 +46,18 @@ manager: "mblythe"
   
  During refresh, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] queries all underlying relational data sources to determine whether there have been changes in tables/views which are included in the DSV. If connections can be established to all underlying data sources and there have been any changes, you will see them in the **Refresh Data Source View** dialog box.  
   
- ![Refresh Data Source View dialog box](../../2014/analysis-services/media/ssas-olapdsv-refresh.gif "Refresh Data Source View dialog box")  
+ ![Refresh Data Source View dialog box](media/ssas-olapdsv-refresh.gif "Refresh Data Source View dialog box")  
   
  The dialog box lists tables, columns, constraints, and relationships that will be deleted or added in the DSV. The report also lists any named query or calculation that cannot be successfully prepared. The affected objects are listed in a tree view with columns and relationships nested under tables and the type of change (deletion or addition) indicated for each object. The standard data source view object icons indicate the type of object affected.  
   
  Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations—a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
   
 > [!IMPORTANT]  
->  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  
+>  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  
   
  After you examine the report, you can either accept the changes or cancel the update to reject any changes. All changes must be accepted or rejected together. You cannot choose individual items in the list. You can also save a report of the changes.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

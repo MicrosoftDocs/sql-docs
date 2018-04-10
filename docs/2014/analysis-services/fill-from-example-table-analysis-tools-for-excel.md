@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Fill From Example (Table Analysis Tools for Excel)
-  ![Fill From Example button in Table Analysis Tools](../../2014/analysis-services/media/tat-fillex.gif "Fill From Example button in Table Analysis Tools")  
+  ![Fill From Example button in Table Analysis Tools](media/tat-fillex.gif "Fill From Example button in Table Analysis Tools")  
   
  The **Fill From Example** tool helps you build new columns of data based on existing values.  
   
@@ -73,9 +73,9 @@ manager: "mblythe"
  If the original data column contained a value, that value is copied into the new column. However, if the original column contained a blank cell, the new column contains the value that was predicted by the wizard.  
   
 ## Related Tools and Information  
- You can also use the [Explore Data](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md) wizard, available in the Data Mining Client for Excel, to examine the distribution of values in an Excel column. For more information, see [Exploring and Cleaning Data](../../2014/analysis-services/exploring-and-cleaning-data.md).  
+ You can also use the [Explore Data](explore-data-sql-server-data-mining-add-ins.md) wizard, available in the Data Mining Client for Excel, to examine the distribution of values in an Excel column. For more information, see [Exploring and Cleaning Data](exploring-and-cleaning-data.md).  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

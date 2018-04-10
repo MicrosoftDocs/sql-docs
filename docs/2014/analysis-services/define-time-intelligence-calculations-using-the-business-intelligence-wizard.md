@@ -57,7 +57,7 @@ manager: "mblythe"
 ## Apply Time Views to Members  
  On the **Define Scope of Calculations** page, you specify the members to which the new time views apply. You can apply the new time views to one of the following objects:  
   
--   **Members of an account dimension** On the **Define Scope of Calculations** page, the **Available measures** list includes account dimensions. Account dimensions have their `Type` properties set to `Accounts`. If you have an accounts dimension but that dimension does not appear in the **Available measures** list, you can use the Business Intelligence Wizard to apply the account intelligence to that dimension. For more information, see [Add Account Intelligence to a Dimension](../../2014/analysis-services/add-account-intelligence-to-a-dimension.md).  
+-   **Members of an account dimension** On the **Define Scope of Calculations** page, the **Available measures** list includes account dimensions. Account dimensions have their `Type` properties set to `Accounts`. If you have an accounts dimension but that dimension does not appear in the **Available measures** list, you can use the Business Intelligence Wizard to apply the account intelligence to that dimension. For more information, see [Add Account Intelligence to a Dimension](add-account-intelligence-to-a-dimension.md).  
   
 -   **Measures** Instead of specifying an account dimension, you can specify the measures to which the time views apply. In this case, select the views to which selected time calculations apply. For example, assets and liabilities are year-to-date data; therefore, you do not apply a Year-to-Date calculation to assets or liabilities measures.  
   
@@ -71,6 +71,6 @@ manager: "mblythe"
 |Cube|Adds a calculated member that defines the Multidimensional Expressions (MDX) code to perform the calculation.|  
   
 ## See Also  
- [Create Calculated Members](../../2014/analysis-services/create-calculated-members.md)  
+ [Create Calculated Members](create-calculated-members.md)  
   
   

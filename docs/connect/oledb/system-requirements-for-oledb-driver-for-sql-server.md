@@ -26,6 +26,8 @@ ms.workload: "Inactive"
 # System Requirements for OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+
   To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] such as MARS, you must have the following software installed:  
 
 -   OLE DB Driver for SQL Server on your client.  

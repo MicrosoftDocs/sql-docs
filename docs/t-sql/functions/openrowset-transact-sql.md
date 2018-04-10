@@ -1,7 +1,7 @@
 ---
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "04/09/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-database"
 ms.service: ""
@@ -127,7 +127,10 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.  
-  
+
+> [!IMPORTANT]
+> CODEPAGE is not a supported option on Linux.
+
 > [!NOTE]  
 >  We recommend that you specify a collation name for each column in a format file, except when you want the 65001 option to have priority over the collation/code page specification.  
   

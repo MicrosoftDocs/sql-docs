@@ -26,7 +26,7 @@ The following screen shot shows a sample connection to a Microsoft Excel workboo
 
 ![Excel connection](../../integration-services/import-export-data/media/excel-connection.png) 
 
-You may have to download and install additional files to connect to Excel files. For more info, see [Get the files you need to connect to Excel](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel).
+You may have to download and install additional files to connect to Excel files. For more info, see [Get the files you need to connect to Excel](../load-data-to-from-excel-with-ssis.md#files-you-need).
 
 > [!IMPORTANT]
 > For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

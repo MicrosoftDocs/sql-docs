@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 # Use OPENJSON with the Default Schema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Use **OPENJSON** with the default schema to returns a table with one row for each property of the object or for each element in the array.  
+  Use **OPENJSON** with the default schema to return a table with one row for each property of the object or for each element in the array.  
   
  Here are some examples that use **OPENJSON** with the default schema. For more info and more examples, see [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
@@ -94,7 +94,7 @@ FROM OPENJSON(@json,N'lax $.info')
 |tags|[ "Sport", "Water polo" ]|4|  
   
 ## Example - Combine relational data and JSON data  
- In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like "Manufacturer" and "Quality". The example creates a report that joins every sales order row to the related sales reasons by expanding the JSON array of sales reasons as if the reasons were stored in a separate child table.  
+ In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like "Manufacturer" and "Quality." The example creates a report that joins every sales order row to the related sales reasons by expanding the JSON array of sales reasons as if the reasons were stored in a separate child table.  
   
 ```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason

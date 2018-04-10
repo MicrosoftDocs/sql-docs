@@ -72,7 +72,7 @@ manager: "mblythe"
   
  The –Credential parameter takes a PSCredential object that specifies a user name and password. In Analysis Services PowerShell, the –Credential parameter is available for cmdlets that make a connection request to Analysis Services, as opposed to cmdlets that run within the context of an existing connection. Cmdlets that make a connection request include Invoke-ASCmd, Backup-ASDatabase, and Restore-ASDatabase. For these cmdlets, the –Credential parameter can be used, assuming the following criteria are met:  
   
-1.  The server is configured for HTTP access, which means that IIS handles the connection, reads the user name and password, and impersonates that user identity when connecting to Analysis Services. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../2014/analysis-services/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+1.  The server is configured for HTTP access, which means that IIS handles the connection, reads the user name and password, and impersonates that user identity when connecting to Analysis Services. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  The IIS virtual directory that was created for Analysis Services HTTP access is configured for Basic authentication.  
   
@@ -146,7 +146,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
   
 1.  Verify that both local and remote computers have the [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] versions of the client and server tools.  
   
-2.  On the remote server that is hosting an Analysis Services instance, open TCP port 2383 in Windows Firewall. If you installed Analysis Services as a named instance or are using a custom port, the port number will be different. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+2.  On the remote server that is hosting an Analysis Services instance, open TCP port 2383 in Windows Firewall. If you installed Analysis Services as a named instance or are using a custom port, the port number will be different. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 3.  On the remote server, verify that the followings services are started:  Remote Procedure Call (RPC) service, TCP/IP NetBIOS Helper service, Windows Management Instrumentation (WMI) service, Windows Remote Management (WS-Management) service.  
   
@@ -198,7 +198,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  ![HTTP Connection to Analysis Services](../../2014/analysis-services/media/ssas-powershell-httpconnection.gif "HTTP Connection to Analysis Services")  
   
- HTTP connections are useful if you configured your server for HTTP access using the instructions in this topic: [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../2014/analysis-services/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ HTTP connections are useful if you configured your server for HTTP access using the instructions in this topic: [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
  Assuming a server URL of http://localhost/olap/msmdpump.dll, a connection might look like the following:  
   
@@ -275,6 +275,6 @@ Restart-service mssqlserverolapservice
 ## See Also  
  [Install SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)   
- [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../2014/analysis-services/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

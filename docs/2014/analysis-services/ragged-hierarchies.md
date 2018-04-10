@@ -72,6 +72,6 @@ manager: "mblythe"
  [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)   
  [User Hierarchies](../../2014/analysis-services/dev-guide/user-hierarchies.md)   
  [Parent-Child Hierarchy](../../2014/analysis-services/parent-child-hierarchy.md)   
- [Connection String Properties &#40;Analysis Services&#41;](../../2014/analysis-services/connection-string-properties-analysis-services.md)  
+ [Connection String Properties &#40;Analysis Services&#41;](instances/connection-string-properties-analysis-services.md)  
   
   

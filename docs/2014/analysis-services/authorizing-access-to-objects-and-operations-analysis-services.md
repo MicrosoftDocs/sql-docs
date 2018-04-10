@@ -50,7 +50,7 @@ manager: "mblythe"
   
  **Step 1: Server Administration**  
   
- As a first step, decide who will have administrator rights at the server level. During installation, the local administrator who installs SQL Server is required to specify one or more Windows accounts as the Analysis Services server administrator. Server administrators have all possible permissions on a server, including the permission to view, modify, and delete any object on the server, or view associated data. After installation is complete, a server administrator can add or remove accounts to change membership of this role. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md) for details about this permission level.  
+ As a first step, decide who will have administrator rights at the server level. During installation, the local administrator who installs SQL Server is required to specify one or more Windows accounts as the Analysis Services server administrator. Server administrators have all possible permissions on a server, including the permission to view, modify, and delete any object on the server, or view associated data. After installation is complete, a server administrator can add or remove accounts to change membership of this role. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for details about this permission level.  
   
  **Step 2: Database Administration**  
   
@@ -89,8 +89,8 @@ manager: "mblythe"
  Using an approach like this one minimizes churn to role definitions and role membership in the model, and provides visibility into role assignments that makes cube permissions easier to implement and maintain.  
   
 ## See Also  
- [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md)   
+ [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Roles and Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/roles-and-permissions-analysis-services.md)   
- [Authentication methodologies supported by Analysis Services](../../2014/analysis-services/authentication-methodologies-supported-by-analysis-services.md)  
+ [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

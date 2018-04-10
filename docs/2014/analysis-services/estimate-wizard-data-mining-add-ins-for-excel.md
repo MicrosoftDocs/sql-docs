@@ -79,13 +79,13 @@ manager: "mblythe"
   
  In the **Algorithm Parameters** dialog box, you can set additional advanced options, depending on which algorithm you chose. For information on the options for each algorithm see these topics in SQL Server Books Online:  
   
- [Microsoft Decision Trees Algorithm Technical Reference](../../2014/analysis-services/microsoft-decision-trees-algorithm-technical-reference.md)  
+ [Microsoft Decision Trees Algorithm Technical Reference](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
- [Microsoft Linear Regression Algorithm Technical Reference](../../2014/analysis-services/microsoft-linear-regression-algorithm-technical-reference.md)  
+ [Microsoft Linear Regression Algorithm Technical Reference](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)  
   
- [Microsoft Logistic Regression Algorithm Technical Reference](../../2014/analysis-services/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Microsoft Logistic Regression Algorithm Technical Reference](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
- [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)  
+ [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
  To use the Estimate Data Wizard, you must be connected to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  

@@ -22,7 +22,7 @@ manager: "mblythe"
   
  Use this view of a sequence clustering model to view patterns. In the diagram, a link represents the probability of a transition, and a node represents a sequence state.  
   
- **For More Information:** [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **For More Information:** [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -58,8 +58,8 @@ manager: "mblythe"
  Use the slider to control the number of states and transitions that are displayed in the chart. Lowering the slider shows only the states and transitions with the highest probability.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

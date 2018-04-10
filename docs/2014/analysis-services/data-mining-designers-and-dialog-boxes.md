@@ -33,7 +33,7 @@ manager: "mblythe"
 |[DMX Query Editor &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/dmx-query-editor-analysis-services-data-mining.md)|Use the DMX Query Editor to design and execute statements written in the Data Mining Extensions (DMX) language.|  
   
 ## See Also  
- [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md)   
+ [Data Mining Tools](data-mining/data-mining-tools.md)   
  [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)  
   

@@ -23,13 +23,13 @@ manager: "mblythe"
   
  [Tools and applications used in Analysis Services](../../2014/analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
- [Analysis Services Instance Management](../../2014/analysis-services/analysis-services-instance-management.md)  
+ [Analysis Services Instance Management](instances/analysis-services-instance-management.md)  
   
  [Tabular Modeling &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-modeling-ssas-tabular.md)  
   
  [Multidimensional Modeling &#40;SSAS&#41;](../../2014/analysis-services/multidimensional-modeling-ssas.md)  
   
- [Data Mining &#40;SSAS&#41;](../../2014/analysis-services/data-mining-ssas.md)  
+ [Data Mining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
  [PowerPivot for SharePoint &#40;SSAS&#41;](../../2014/analysis-services/powerpivot-for-sharepoint-ssas.md)  
   

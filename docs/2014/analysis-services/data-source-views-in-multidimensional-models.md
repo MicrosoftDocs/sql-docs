@@ -31,7 +31,7 @@ manager: "mblythe"
 ## Related Tasks  
  [Defining a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/defining-a-data-source-view-analysis-services.md)  
   
- [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
  [Change Properties in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/change-properties-in-a-data-source-view-analysis-services.md)  
   

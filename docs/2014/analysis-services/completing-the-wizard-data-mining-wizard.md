@@ -25,7 +25,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  This page changes depending on whether you selected **From existing relational database or data warehouse** or **From existing cube** on the **Select the Definition Method** page of the wizard.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Data Mining Designer](data-mining/data-mining-designer.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Mining structure name**  
@@ -40,7 +40,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  Drillthrough on the mining structure is enabled by default.  
   
- For more information about drillthrough options, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md).  
+ For more information about drillthrough options, see [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md).  
   
  **Preview**  
  Displays the mining structure to be created.  

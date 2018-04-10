@@ -73,7 +73,7 @@ manager: "mblythe"
   
 ## See Also  
  [Developing with XMLA in Analysis Services](../../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md)   
- [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Retrieving Metadata from an Analytical Data Source](../../../2014/analysis-services/dev-guide/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

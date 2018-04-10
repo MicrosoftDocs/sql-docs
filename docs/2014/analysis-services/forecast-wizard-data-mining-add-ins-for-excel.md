@@ -51,7 +51,7 @@ manager: "mblythe"
   
     -   ARTXP and ARIMA combined  
   
-     For information about the differences, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md).  
+     For information about the differences, see [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
      You can also add periodicity hints, specify smoothing options, and customize regression options for the model.  
   

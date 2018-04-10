@@ -29,7 +29,7 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

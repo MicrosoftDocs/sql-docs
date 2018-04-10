@@ -91,7 +91,7 @@ manager: "mblythe"
 |[Thread Pool Properties](../../2014/analysis-services/thread-pool-properties.md)|The thread pool properties control how many threads the server creates. These are primarily advanced properties.|  
   
 ## See Also  
- [Analysis Services Instance Management](../../2014/analysis-services/analysis-services-instance-management.md)   
+ [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
  [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md)  
   
   

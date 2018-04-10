@@ -20,7 +20,7 @@ manager: "mblythe"
 # Microsoft Generic Content Tree Viewer (Data Mining)
   The **Microsoft Generic Content Tree Viewer** displays detailed information about the contents of a data mining mode in a standardized HTML table format. This view is useful because it exposes the underlying structure of the model, as well details about coefficients, the distribution of values, and much more.  
   
- The actual content displayed in the table varies depending on the algorithm that was used and might include columns, rules, properties, attributes, nodes, and formulas. For more information about model content, and how to interpret the information for each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
+ The actual content displayed in the table varies depending on the algorithm that was used and might include columns, rules, properties, attributes, nodes, and formulas. For more information about model content, and how to interpret the information for each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  The information that is displayed in the viewer uses a common structure that is based on the content schema rowset for mining models. The content schema rowset is a generic framework for storing patterns, statistics, and other contents of a data mining model. For a list of the columns in the data mining schema rowset for mining models, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../2014/analysis-services/dev-guide/dmschema-mining-model-content-rowset.md).  
   
@@ -33,11 +33,11 @@ manager: "mblythe"
  **Node details**  
  Displays detailed information about the content of the selected node. Each node stores its information in a standardized format, but the contents and significance of each line of the table depends on the type of model or type of node that you are viewing. For example, the information stored for a node that represents a rule in an association model contains different information than a node that represents a tree in a decision trees model.  
   
- For information about how to interpret the node information for a specific model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-analysis-services-data-mining.md).  
+ For information about how to interpret the node information for a specific model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md)  
+ [Data Mining Queries](data-mining/data-mining-queries.md)  
   
   

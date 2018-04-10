@@ -63,7 +63,7 @@ manager: "mblythe"
 |Statement|Returns a command string to be run by the client application.|  
 |URL|Returns a Uniform Resource Location (URL) string to be opened by the client application, typically with an Internet browser.|  
   
- For more information about action types, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md).  
+ For more information about action types, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  **Action expression**  
  Type the Multidimensional Expressions (MDX) expression that returns the string returned by the action to the client application for execution.  

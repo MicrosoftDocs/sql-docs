@@ -30,6 +30,6 @@ manager: "mblythe"
 -   Fill in the required information to complete building the action based on the template.  
   
 ## See Also  
- [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md)  
+ [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   

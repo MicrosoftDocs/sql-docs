@@ -97,7 +97,7 @@ manager: "mblythe"
 |Length of object names|100 characters|  
   
 ## See Also  
- [Determine the Server Mode of an Analysis Services Instance](../../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [General Properties](../../../2014/analysis-services/general-properties.md)  
   
   

@@ -51,6 +51,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

@@ -32,6 +32,6 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
- [Create a Data Mining Dimension](../../2014/analysis-services/create-a-data-mining-dimension.md)  
+ [Create a Data Mining Dimension](data-mining/create-a-data-mining-dimension.md)  
   
   

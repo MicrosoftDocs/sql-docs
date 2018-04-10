@@ -28,9 +28,9 @@ manager: "mblythe"
   
 -   [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
--   [Data Mining Concepts](../../2014/analysis-services/data-mining-concepts.md)  
+-   [Data Mining Concepts](data-mining/data-mining-concepts.md)  
   
 ## See Also  
  [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   

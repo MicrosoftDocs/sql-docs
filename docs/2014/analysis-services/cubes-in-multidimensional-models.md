@@ -36,7 +36,7 @@ manager: "mblythe"
 |Partitions|[Partitions in Multidimensional Models](../../2014/analysis-services/partitions-in-multidimensional-models.md)|  
 |Perspectives|[Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)|  
 |Hierarchies|[Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)|  
-|Actions|[Actions in Multidimensional Models](../../2014/analysis-services/actions-in-multidimensional-models.md)|  
+|Actions|[Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)|  
 |Key Performance Indicators (KPI)|[Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](../../2014/analysis-services/key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calculations|[Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md)|  
 |Translations|[Translations in Multidimensional Models](../../2014/analysis-services/translations-in-multidimensional-models.md)|  
@@ -48,7 +48,7 @@ manager: "mblythe"
 |[Create a Cube Using the Cube Wizard](../../2014/analysis-services/create-a-cube-using-the-cube-wizard.md)|Describes how to use the Cube Wizard to define a cube, dimensions, dimension attributes, and user-defined hierarchies.|  
 |[Create Measures and Measure Groups in Multidimensional Models](../../2014/analysis-services/create-measures-and-measure-groups-in-multidimensional-models.md)|Describes how to define measure groups.|  
 |[Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md)|Describes how to define and configure a calculation in an MDX script.|  
-|[Actions in Multidimensional Models](../../2014/analysis-services/actions-in-multidimensional-models.md)|Describes how to define and configure an action.|  
+|[Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)|Describes how to define and configure an action.|  
 |[Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)|Describes how to define and configure a perspective.|  
 |[Defining Stored Procedures](../../2014/analysis-services/dev-guide/defining-stored-procedures.md)|Describes how to work with stored procedures.|  
   

@@ -20,9 +20,9 @@ manager: "mblythe"
   
  The usage of a column indicates how the data will be used in the model. A column can be used as a key to identify a series, as an input value to use in analysis, or as the value that you want to predict. Columns can be used for both prediction and input.  
   
- The data type specifies additional detail about the type of data that is contained in the column, and how the data will be used during training. Some content types require a specific data type, and vice versa. You might also need to specify a particular data type depending on the algorithm that you use when you create a mining model. For information about content types and data types in mining models and structures, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
+ The data type specifies additional detail about the type of data that is contained in the column, and how the data will be used during training. Some content types require a specific data type, and vice versa. You might also need to specify a particular data type depending on the algorithm that you use when you create a mining model. For information about content types and data types in mining models and structures, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **For More Information:** [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md), [Mining Model Columns](../../2014/analysis-services/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Mining Model Columns](data-mining/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Mining model structure**  

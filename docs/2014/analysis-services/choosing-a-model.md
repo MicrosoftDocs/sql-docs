@@ -97,7 +97,7 @@ manager: "mblythe"
   
  In the Data Mining Add-ins for Excel, feature selection is automatically applied, using the scoring method appropriate for each algorithm. If you want to affect the results of feature selection, use the wizards in the **Data Mining** ribbon, and click **Advanced** to set parameters using the **Algorithm Parameters** dialog box.  
   
- For a list of the feature selection methods used by each algorithm see the topic on [Feature Selection &#40;Data Mining&#41;](../../2014/analysis-services/feature-selection-data-mining.md) in SQL Server Books Online.  
+ For a list of the feature selection methods used by each algorithm see the topic on [Feature Selection &#40;Data Mining&#41;](data-mining/feature-selection-data-mining.md) in SQL Server Books Online.  
   
 ## List of Supported Algorithms  
  The following algorithms are provided by default.  

@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- This enumeration describes the type of content represented by a mining structure column, and can be extended as needed by mining algorithm providers. For more information about content types, see [Content Types &#40;Data Mining&#41;](../../../2014/analysis-services/content-types-data-mining.md).  
+ This enumeration describes the type of content represented by a mining structure column, and can be extended as needed by mining algorithm providers. For more information about content types, see [Content Types &#40;Data Mining&#41;](../data-mining/content-types-data-mining.md).  
   
  The values listed in the following table are typically supported by all mining algorithm providers.  
   

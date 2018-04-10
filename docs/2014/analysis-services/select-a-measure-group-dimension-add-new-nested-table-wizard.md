@@ -20,7 +20,7 @@ manager: "mblythe"
 # Select a Measure Group Dimension (Add New Nested Table Wizard)
   Use the **Select a Measure Group Dimension** page to select a dimension in the measure group to use as a nested table.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Measure Groups**  

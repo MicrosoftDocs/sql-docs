@@ -68,13 +68,13 @@ manager: "mblythe"
   
  In the **Parameters** list, you can change advanced options, which depend on the type of algorithm you choose. The parameters for each algorithm are described in more detail in SQL Server Books Online.  
   
- [Microsoft Decision Trees Algorithm Technical Reference](../../2014/analysis-services/microsoft-decision-trees-algorithm-technical-reference.md)  
+ [Microsoft Decision Trees Algorithm Technical Reference](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
- [Microsoft Logistic Regression Algorithm Technical Reference](../../2014/analysis-services/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Microsoft Logistic Regression Algorithm Technical Reference](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
- [Microsoft Naive Bayes Algorithm Technical Reference](../../2014/analysis-services/microsoft-naive-bayes-algorithm-technical-reference.md)  
+ [Microsoft Naive Bayes Algorithm Technical Reference](data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
- [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)  
+ [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
  To use the **Classify** wizard, you must be connected to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  

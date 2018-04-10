@@ -35,7 +35,7 @@ manager: "mblythe"
   
      The sample data workbook contains an example, in the Associate tab, of how transaction data is typically arranged if, for example, you have multiple products in each transaction or multiple purchasing records per customer that you want to analyze.  
   
-     If you want to use external data to build an association model using the Associate wizard, you must add the data to Excel first, and *flatten* the data. For more information about preparing data for association modeling, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md), in SQL Server Books Online.  
+     If you want to use external data to build an association model using the Associate wizard, you must add the data to Excel first, and *flatten* the data. For more information about preparing data for association modeling, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), in SQL Server Books Online.  
   
 3.  On the **Association** page, choose the column that identifies the transaction.  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
   
 6.  Optionally, click **Parameters** to change the algorithm parameters and customize the behavior of the mining model.  
   
-     The Algorithm Parameters dialog box includes all of the parameters you set in the wizard, plus a few that are less commonly used, such as MAXIMUM_SUPPORT. For information about how to use these parameters, see [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/microsoft-association-algorithm-technical-reference.md).  
+     The Algorithm Parameters dialog box includes all of the parameters you set in the wizard, plus a few that are less commonly used, such as MAXIMUM_SUPPORT. For information about how to use these parameters, see [Microsoft Association Algorithm Technical Reference](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
 7.  On the **Finish** page, type a unique name for the data set and the model.  
   

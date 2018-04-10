@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Profit Chart Settings Dialog Box (Mining Accuracy Chart View)
-  Use the **Profit Chart Settings** dialog box to configure settings for generating a profit chart. For more information about profit charts, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md).  
+  Use the **Profit Chart Settings** dialog box to configure settings for generating a profit chart. For more information about profit charts, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## Options  
  **Population**  
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

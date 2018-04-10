@@ -20,7 +20,7 @@ manager: "mblythe"
 # Select Nested Table Columns (Add New Nested Table Wizard)
   Use the **Select Nested Table Columns** page to select the attributes and measures to include in the nested table and to define how the mining model will use the attributes and measures.  
   
- **For More Information:** [Mining Model Columns](../../2014/analysis-services/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Mining Model Columns](data-mining/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Columns**  

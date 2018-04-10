@@ -76,7 +76,7 @@ manager: "mblythe"
  [Use a BI Semantic Model Connection in Excel or Reporting Services](../../2014/analysis-services/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
 ## See Also  
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Connect to Analysis Services](../../2014/analysis-services/connect-to-analysis-services.md)  
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
   
   

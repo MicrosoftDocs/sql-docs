@@ -20,13 +20,13 @@ manager: "mblythe"
 # Lift Chart Tab (Mining Accuracy Chart View)
   Use the **Lift Chart** pane to view a chart that compares all the selected mining models in the selected mining structure.  
   
- If the model predicts a discrete attribute, the pane can display either a lift chart or a profit chart. For information about lift charts, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md).  
+ If the model predicts a discrete attribute, the pane can display either a lift chart or a profit chart. For information about lift charts, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
- To create a profit chart, you must provide additional information about the cost of implementing the recommendations of the mining model, as well as the expected return. For more information, see [Profit Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/profit-chart-analysis-services-data-mining.md).  
+ To create a profit chart, you must provide additional information about the cost of implementing the recommendations of the mining model, as well as the expected return. For more information, see [Profit Chart &#40;Analysis Services - Data Mining&#41;](data-mining/profit-chart-analysis-services-data-mining.md).  
   
  If the model predicts a continuous attribute, the pane will display a scatter plot graph.  
   
- For general information about methods of measuring the accuracy of a mining model, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md).  
+ For general information about methods of measuring the accuracy of a mining model, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## Options  
  **Chart Type**  
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

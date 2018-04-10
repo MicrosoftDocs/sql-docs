@@ -22,7 +22,7 @@ manager: "mblythe"
   
  First you select the mining model and then you select a viewer. Each model always has two viewers available: a custom viewer, which can include multiple tabs, and the generic viewer.  
   
- For a walkthrough of how to use each viewer, see [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md).  
+ For a walkthrough of how to use each viewer, see [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md).  
   
 ## Common Options  
  **Refresh viewer content**  
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 ### Microsoft Association Rules Algorithm  
   
--   [Browse a Model Using the Microsoft Association Rules Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+-   [Browse a Model Using the Microsoft Association Rules Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
     -   [Itemsets Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/itemsets-tab-mining-model-viewer.md)  
   
@@ -59,7 +59,7 @@ manager: "mblythe"
   
 ### Microsoft Clustering Algorithm  
   
--   [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+-   [Browse a Model Using the Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
     -   [Cluster Diagram Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/cluster-diagram-tab-mining-model-viewer.md)  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
   
 ### Microsoft Decision Tree Algorithm  
   
--   [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+-   [Browse a Model Using the Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
     -   [Decision Tree Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)  
   
@@ -83,7 +83,7 @@ manager: "mblythe"
   
 ### Microsoft Linear Regression Algorithm  
   
--   [Browse a Model Using the Microsoft Neural Network Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+-   [Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
     -   [Decision Tree Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)  
   
@@ -93,11 +93,11 @@ manager: "mblythe"
   
 ### Microsoft Logistic Regression Algorithm  
   
--   [Browse a Model Using the Microsoft Neural Network Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+-   [Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ### Microsoft Naïve Bayes Algorithm  
   
--   [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+-   [Browse a Model Using the Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
     -   [Dependency Network Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
   
 ### Microsoft Neural Network Algorithm  
   
--   [Browse a Model Using the Microsoft Neural Network Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+-   [Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
     -   [Dependency Network Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)  
   
@@ -119,7 +119,7 @@ manager: "mblythe"
   
 ### Microsoft Sequence Clustering Algorithm  
   
--   [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+-   [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
     -   [Sequence Clustering Cluster Diagram Tab &#40;Mining Model Viewer](../../2014/analysis-services/sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
@@ -133,7 +133,7 @@ manager: "mblythe"
   
 ### Microsoft Time Series Algorithm  
   
--   [Browse a Model Using the Microsoft Time Series Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+-   [Browse a Model Using the Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
     -   [Model Tab &#40;Mining Model Viewers&#41;](../../2014/analysis-services/model-tab-mining-model-viewers.md)  
   

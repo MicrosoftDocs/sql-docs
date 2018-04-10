@@ -159,7 +159,7 @@ manager: "mblythe"
  `Port`  
  An integer property that defines the port number on which server will listen for client connections. If not set, server dynamically finds first unused port.  
   
- The default value for this property is zero (0), which in turn defaults to port 2383. For more information about port configuration, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ The default value for this property is zero (0), which in turn defaults to port 2383. For more information about port configuration, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  `ServerTimeout`  
  An integer that defines the timeout, in seconds, for queries. The default is 3600 seconds (or 60 minutes). Zero (0) specifies that no queries will timeout.  
@@ -176,6 +176,6 @@ manager: "mblythe"
   
 ## See Also  
  [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

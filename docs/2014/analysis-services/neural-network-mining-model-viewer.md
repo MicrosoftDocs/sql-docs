@@ -20,7 +20,7 @@ manager: "mblythe"
 # Neural Network (Mining Model Viewer)
   Use the **Neural Net** viewer to explore mining models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm.  
   
- **For More Information:** [Microsoft Neural Network Algorithm](../../2014/analysis-services/microsoft-neural-network-algorithm.md), [Microsoft Logistic Regression Algorithm](../../2014/analysis-services/microsoft-logistic-regression-algorithm.md),[Browse a Model Using the Microsoft Neural Network Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **For More Information:** [Microsoft Neural Network Algorithm](data-mining/microsoft-neural-network-algorithm.md), [Microsoft Logistic Regression Algorithm](data-mining/microsoft-logistic-regression-algorithm.md),[Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -60,8 +60,8 @@ manager: "mblythe"
 |**Favors \<Value 2>**|Displays a bar that indicates how much this particular attribute-value combination affects the target outcome chosen in **Value 2**.|  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

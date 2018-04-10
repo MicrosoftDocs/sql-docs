@@ -76,7 +76,7 @@ SELECT StructureColumn('<structure column name>' FROM <model>.CASES
   
  Therefore, to protect sensitive data or personal information, you should construct your data source view to mask personal information and grant `AllowDrillthrough` permission on a structure only when necessary.  
   
- For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../../2014/analysis-services/drillthrough-queries-data-mining.md).  
+ For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../data-mining/drillthrough-queries-data-mining.md).  
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.MiningModel.AllowDrillThrough%2A>   

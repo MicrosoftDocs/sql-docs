@@ -36,11 +36,11 @@ manager: "mblythe"
  For information about wizards that help you design and work with multidimensional data, see [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md).  
   
 ## See Also  
- [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md)   
+ [Data Mining Tools](data-mining/data-mining-tools.md)   
  [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Create an OLAP Mining Structure](../../2014/analysis-services/create-an-olap-mining-structure.md)   
- [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)   
- [Create a New Relational Mining Structure](../../2014/analysis-services/create-a-new-relational-mining-structure.md)   
- [Create a New OLAP Mining Structure](../../2014/analysis-services/create-a-new-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](data-mining/create-an-olap-mining-structure.md)   
+ [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)   
+ [Create a New Relational Mining Structure](data-mining/create-a-new-relational-mining-structure.md)   
+ [Create a New OLAP Mining Structure](data-mining/create-a-new-olap-mining-structure.md)  
   
   

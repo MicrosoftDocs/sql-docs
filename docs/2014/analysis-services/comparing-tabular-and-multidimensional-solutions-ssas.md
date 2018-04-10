@@ -95,13 +95,13 @@ manager: "mblythe"
 ||||  
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
-|Actions|[Yes](../../2014/analysis-services/actions-in-multidimensional-models.md)|No|  
+|Actions|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|No|  
 |Aggregation objects|[Yes](../../2014/analysis-services/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Calculated Measures|[Yes](../../2014/analysis-services/create-calculated-members.md)|Yes|  
 |Custom Assemblies|[Yes](../../2014/analysis-services/multidimensional-model-assemblies-management.md)|No|  
 |Custom Rollups|Yes|No|  
 |Distinct Count|[Yes](../../2014/analysis-services/use-aggregate-functions.md)|Yes (via DAX)*|  
-|Drillthrough|[Yes](../../2014/analysis-services/actions-in-multidimensional-models.md)|Yes|  
+|Drillthrough|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
 |Hierarchies|[Yes](../../2014/analysis-services/create-user-defined-hierarchies.md)|Yes|  
 |KPIs|[Yes](../../2014/analysis-services/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
 |Linked measure groups|[Yes](../../2014/analysis-services/linked-measure-groups.md)|No|  
@@ -168,7 +168,7 @@ manager: "mblythe"
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in SharePoint on-premises|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)],as a ClickOnce application from SharePoint, can use either an Analysis Services cube or tabular model.|  
   
 ##  <a name="bkmk_deploymentmode"></a> Server Deployment Modes for Multidimensional and Tabular Solutions  
- An Analysis Services instance is installed in one of three modes that set the operational context of the server. The server mode you install will determine the type of solutions that can be deployed to that server. Storage and memory architecture are the primary differences among the modes, but additional differences apply. The three server modes are briefly described in the following table. For more information, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ An Analysis Services instance is installed in one of three modes that set the operational context of the server. The server mode you install will determine the type of solutions that can be deployed to that server. Storage and memory architecture are the primary differences among the modes, but additional differences apply. The three server modes are briefly described in the following table. For more information, see [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
 |Deployment mode|Description|  
 |---------------------|-----------------|  
@@ -200,7 +200,7 @@ manager: "mblythe"
 -   Build a PowerPivot model using the [PowerPivot for Excel Tutorial](http://go.microsoft.com/fwlink/?LinkId=251135).  
   
 ## See Also  
- [Analysis Services Instance Management](../../2014/analysis-services/analysis-services-instance-management.md)   
+ [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
  [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
  [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
  [What’s New in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   

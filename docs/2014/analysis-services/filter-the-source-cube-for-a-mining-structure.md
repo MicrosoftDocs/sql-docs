@@ -50,7 +50,7 @@ manager: "mblythe"
      The source cube is now filtered as defined by the cube slice.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](../../2014/analysis-services/mining-structure-tasks-and-how-tos.md)   
- [Create a New OLAP Mining Structure](../../2014/analysis-services/create-a-new-olap-mining-structure.md)  
+ [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Create a New OLAP Mining Structure](data-mining/create-a-new-olap-mining-structure.md)  
   
   

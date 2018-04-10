@@ -20,7 +20,7 @@ manager: "mblythe"
 # Select the Definition Method (Data Mining Wizard)
   Use the **Select the Definition Method** page to select the source for creating the new mining model. Your path through the wizard will be different depending on your selection, because a mining structure that is based on a cube requires different steps to construct than a mining structure that is based on a relational data source.  
   
- **For More information:** [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md)  
+ **For More information:** [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## Options  
  **From existing relational database or data warehouse**  

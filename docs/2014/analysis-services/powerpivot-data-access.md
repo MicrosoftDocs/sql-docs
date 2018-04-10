@@ -38,7 +38,7 @@ manager: "mblythe"
  Not all data in a PowerPivot workbook is handled by PowerPivot for SharePoint. Excel Services processes tables and cell data in a worksheet. Only PivotTables, PivotCharts, and Slicers that go against PowerPivot data are handled by the PowerPivot for SharePoint.  
   
 ## See Also  
- [Connect to Analysis Services](../../2014/analysis-services/connect-to-analysis-services.md)   
+ [Connect to Analysis Services](instances/connect-to-analysis-services.md)   
  [Tabular Model Data Access](../../2014/analysis-services/tabular-model-data-access.md)  
   
   

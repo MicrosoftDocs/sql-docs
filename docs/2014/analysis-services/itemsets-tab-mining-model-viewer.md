@@ -20,7 +20,7 @@ manager: "mblythe"
 # Itemsets Tab (Mining Model Viewer)
   You can use the **Itemsets** pane to view the frequent itemsets that an association rules mining model contains. Because an association model can contain many itemsets, controls are provided in the viewer to help you filter the itemsets that are displayed in the viewer.  
   
- **For More Information:** [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md), [Browse a Model Using the Microsoft Association Rules Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **For More Information:** [Microsoft Association Algorithm](data-mining/microsoft-association-algorithm.md), [Browse a Model Using the Microsoft Association Rules Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -76,8 +76,8 @@ manager: "mblythe"
  Displays the description of each itemset. By default, itemsets are presented as a comma-delimited list of attributes and their values. You can change the way they are displayed by using the **Show** option.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

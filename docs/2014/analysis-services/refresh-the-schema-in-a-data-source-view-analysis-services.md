@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   Addition of new unique constraints. If a logical primary key exists for a table in the DSV and a physical key is added to the table in the data source, the logical key is removed and replaced by the physical key.  
   
- Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Refresh a DSV in SQL Server Data Tools  
  To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then click the Refresh Data Source View button or choose **Refresh** from the Data Source View menu.  

@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ## See Also  
  [XML for Analysis Schema Rowsets](../../../2014/analysis-services/dev-guide/xml-for-analysis-schema-rowsets.md)   
- [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../../../2014/analysis-services/use-sql-server-extended-events-xevents-to-monitor-analysis-services.md)   
- [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   A mining model lets you analyze the data in the mining structure for patterns, and then make predictions based on those patterns. You can create different types of mining models, based on different algorithms, on a single mining structure.  
   
- For more information, see [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md).  
+ For more information, see [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
  The **Data Mining Wizard** guides you through the following steps:  
   
@@ -55,9 +55,9 @@ manager: "mblythe"
  After you create the mining structure and an optional mining model, you can use **Data Mining Designer** to modify their properties.  
   
 ## See Also  
- [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md)   
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
- [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)   
+ [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Data Mining Designer](data-mining/data-mining-designer.md)   
+ [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)   
  [Select the Definition Method &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-definition-method-data-mining-wizard.md)   
  [Create the Data Mining Structure &#40;Data Mining Wizard&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   
  [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)   

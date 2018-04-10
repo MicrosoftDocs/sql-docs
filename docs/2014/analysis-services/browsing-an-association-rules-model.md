@@ -75,7 +75,7 @@ manager: "mblythe"
   
      Notice how the name changes. In the case of a market basket model, which is built on nested tables of products that were purchased by multiple customers, the attribute name is typically the product name, and the presence of the product in the list is marked as `Existing`, meaning that the customer did buy the item.  
   
-     The opposite of `Existing` is `Missing`, which can be a very useful attribute to investigate in data mining. For example, suppose the itemset A +B is so very popular that you wanted to find customers who purchased Item A but not item B. You could do this by using a prediction query and retrieving the transactions with one but not the other, and do some further analysis on those. For information about how to create prediction queries on association models, see [Association Model Query Examples](../../2014/analysis-services/association-model-query-examples.md) in SQL Server Books Online  
+     The opposite of `Existing` is `Missing`, which can be a very useful attribute to investigate in data mining. For example, suppose the itemset A +B is so very popular that you wanted to find customers who purchased Item A but not item B. You could do this by using a prediction query and retrieving the transactions with one but not the other, and do some further analysis on those. For information about how to create prediction queries on association models, see [Association Model Query Examples](data-mining/association-model-query-examples.md) in SQL Server Books Online  
   
 5.  To force the list of itemsets to redisplay using your new filter criteria, you can select or clear the **Show long name** check box.  
   

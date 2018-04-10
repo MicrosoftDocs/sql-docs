@@ -33,6 +33,6 @@ manager: "mblythe"
 |**Last Processed**|Displays the date and time the mining structure was last processed.|  
   
 ## See Also  
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)  
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

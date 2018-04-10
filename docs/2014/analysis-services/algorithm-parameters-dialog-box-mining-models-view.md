@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Algorithm Parameters Dialog Box (Mining Models View)
-  Use the **Algorithm Parameters** dialog box to adjust algorithm parameters that are specific to the selected model. When you change an algorithm parameter, you will usually change the results of the mining model. The way that each parameter affects the results depends on the algorithm you are using, and on your data. For more information, see [Customize Mining Models and Structure](../../2014/analysis-services/customize-mining-models-and-structure.md).  
+  Use the **Algorithm Parameters** dialog box to adjust algorithm parameters that are specific to the selected model. When you change an algorithm parameter, you will usually change the results of the mining model. The way that each parameter affects the results depends on the algorithm you are using, and on your data. For more information, see [Customize Mining Models and Structure](data-mining/customize-mining-models-and-structure.md).  
   
 ## Options  
  **Parameters**  
@@ -47,8 +47,8 @@ manager: "mblythe"
  If you delete one of the standard Analysis Services algorithm parameters from the list, the parameter will still be used in the model, but with the default values for that parameter. The parameter is not permanently deleted and will appear the next time that you open the dialog box.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Models View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-models-view-data-mining-model-designer.md)   
- [Moving Data Mining Objects](../../2014/analysis-services/moving-data-mining-objects.md)  
+ [Moving Data Mining Objects](data-mining/moving-data-mining-objects.md)  
   
   

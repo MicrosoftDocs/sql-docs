@@ -86,9 +86,9 @@ manager: "mblythe"
 ##  <a name="bkmk_procdm"></a> Processing Data Mining Structures and Models  
  A mining structure defines the data domain from which data-mining models will be built. One mining structure can contain more than one mining model. You can process a mining structure separately from its associated mining models. When you process a mining structure separately, it is populated with the training data from your data source.  
   
- When a data mining model is processed, the training data passes through the mining model algorithms, trains the model using the data mining algorithm, and builds the content. For more information about the data mining model object, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md).  
+ When a data mining model is processed, the training data passes through the mining model algorithms, trains the model using the data mining algorithm, and builds the content. For more information about the data mining model object, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md).  
   
- For more information about processing mining structures and models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md).  
+ For more information about processing mining structures and models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## See Also  
  [Tools and Approaches for Processing &#40;Analysis Services&#41;](../../2014/analysis-services/tools-and-approaches-for-processing-analysis-services.md)   

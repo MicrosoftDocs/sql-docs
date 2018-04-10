@@ -173,7 +173,7 @@ manager: "mblythe"
 |[Set or Change the Preferred Connection Method for DirectQuery](../../2014/analysis-services/set-or-change-the-preferred-connection-method-for-directquery.md)|Describes how to set or change the connection method for models configured for DirectQuery.|  
 |[DirectQuery Deployment Scenarios &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-deployment-scenarios-ssas-tabular.md)|Describes DirectQuery deployment scenarios.|  
 |[Configure In-Memory or DirectQuery Access for a Tabular Model Database](../../2014/analysis-services/configure-in-memory-or-directquery-access-for-a-tabular-model-database.md)|Understand DirectQuery configurations|  
-|[Clear the Analysis Services Caches](../../2014/analysis-services/clear-the-analysis-services-caches.md)|Clear the cache of the tabular model|  
+|[Clear the Analysis Services Caches](instances/clear-the-analysis-services-caches.md)|Clear the cache of the tabular model|  
   
 ## See Also  
  [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md)   

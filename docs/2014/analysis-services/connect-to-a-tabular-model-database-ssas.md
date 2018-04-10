@@ -19,7 +19,7 @@ manager: "mblythe"
   After you build a tabular model and deploy it to an Analysis Services tabular mode server, you need to set permissions that make it available to client applications. This topic explains how to permissions and how to connect to a database from client applications.  
   
 > [!NOTE]  
->  By default, remote connections to Analysis Services are not available until you configure the firewall. Be sure that you have opened the appropriate port if you are configuring a named or default instance for client connections. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+>  By default, remote connections to Analysis Services are not available until you configure the firewall. Be sure that you have opened the appropriate port if you are configuring a named or default instance for client connections. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  This topic contains the following sections:  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
 3.  In **Server Name**, specify the Analysis Services instance that hosts the database. The server name is often the name of the computer that runs the server software. If the server was installed as a named instance, you must specify the name in this format: \<servername>\\<instancename\>.  
   
-     The server instance must be configured for standalone tabular deployment and the server instance must have an inbound rule that allows access to it. For more information, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md) and [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+     The server instance must be configured for standalone tabular deployment and the server instance must have an inbound rule that allows access to it. For more information, see [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md) and [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 4.  For log on credentials, choose **Use Windows Authentication** if you have read permissions to the database. Otherwise, choose **Use the Following User Name and Password**, and enter the username and password of a Windows account that has database permissions. Click **Next**.  
   

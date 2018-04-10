@@ -113,11 +113,11 @@ manager: "mblythe"
  A Boolean property that indicates whether the Microsoft_Logistic_Regression algorithm is enabled.  
   
 > [!NOTE]  
->  In addition to properties that define the data mining services available on the server, there are data mining properties that define the behavior of specific algorithms. You configure these properties when you create an individual data mining model, not at the server level. For more information, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md).  
+>  In addition to properties that define the data mining services available on the server, there are data mining properties that define the behavior of specific algorithms. You configure these properties when you create an individual data mining model, not at the server level. For more information, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ## See Also  
- [Physical Architecture &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/physical-architecture-analysis-services-data-mining.md)   
+ [Physical Architecture &#40;Analysis Services - Data Mining&#41;](data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

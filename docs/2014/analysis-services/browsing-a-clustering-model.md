@@ -179,7 +179,7 @@ manager: "mblythe"
   
 -   Note that the primary characteristic of the customer in the Over 65 cluster is that they don’t buy your product! If you want to know why this is so, you can browse clusters and compare groups, or you might create a related model using an algorithm that is good at exploring causes and outcomes, such as a decision tree model or a Naïve Bayes model.  
   
--   If you want to get a complete list of attributes and probabilities for this cluster (or all clusters) you can create a query. For examples of queries on clustering models, see [Clustering Model Query Examples](../../2014/analysis-services/clustering-model-query-examples.md).  
+-   If you want to get a complete list of attributes and probabilities for this cluster (or all clusters) you can create a query. For examples of queries on clustering models, see [Clustering Model Query Examples](data-mining/clustering-model-query-examples.md).  
   
  [Back To Top](#BKMK_Tabs)  
   

@@ -20,7 +20,7 @@ manager: "mblythe"
 # Attribute Discrimination Tab (Mining Model Viewer)
   Use the **Attribute Discrimination** tab to compare the states of the input attributes and see how they are related to the outcome attribute. The attribute values that make the most difference between the two selected predictable attribute states are listed first.  
   
- **For More Information:** [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/microsoft-naive-bayes-algorithm.md), [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **For More Information:** [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md), [Browse a Model Using the Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -52,8 +52,8 @@ manager: "mblythe"
 |**Favors \<Value 2>**|The bar indicates whether the current attribute and value favor the target outcome selected in **Value 2**.|  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

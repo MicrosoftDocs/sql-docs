@@ -86,7 +86,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|**DirectQuery only**|**DirectQueryOnly**<br /><br /> Because you have specified Direct Query only, the metadata of the model is deployed to the server, but the model is not processed.<br /><br /> Note that the cache that was used by the workspace database is not automatically deleted. If you want to ensure that users are not able to see the cached data, you might wish to clear the design-time cache. For more information, see [Clear the Analysis Services Caches](../../2014/analysis-services/clear-the-analysis-services-caches.md).|  
+|**DirectQuery only**|**DirectQueryOnly**<br /><br /> Because you have specified Direct Query only, the metadata of the model is deployed to the server, but the model is not processed.<br /><br /> Note that the cache that was used by the workspace database is not automatically deleted. If you want to ensure that users are not able to see the cached data, you might wish to clear the design-time cache. For more information, see [Clear the Analysis Services Caches](instances/clear-the-analysis-services-caches.md).|  
 |**Hybrid mode**|**DirectQuery with In-Memory**<br /><br /> **In-Memory with DirectQuery**<br /><br /> Both of these values allow you to use either the cache or the relational data source as necessary. The order defines which data source is used by default when answering queries against the model.<br /><br /> In a hybrid mode, the cache must be processed at the same time that the model metadata is deployed to the server.<br /><br /> You can change this setting after deployment.|  
   
  **Step 8. Verify deployed model**  

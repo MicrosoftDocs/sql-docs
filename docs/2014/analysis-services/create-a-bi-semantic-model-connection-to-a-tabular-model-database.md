@@ -39,7 +39,7 @@ manager: "mblythe"
   
  You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  In certain scenarios, the shared services in a SharePoint environment must have administrative permissions on the Analysis Services instance. These services include PowerPivot service applications, Reporting Services service applications, and PerformancePoint service applications. Before you can grant administrative permissions, you must know the identity of these service applications. You can use Central Administration to determine the identity.  
   

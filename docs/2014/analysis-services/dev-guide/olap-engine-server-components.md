@@ -58,7 +58,7 @@ manager: "mblythe"
 |2382|Redirector for other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |Dynamically assigned at server startup|Named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
- See [Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md) for more details.  
+ See [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) for more details.  
   
 ## See Also  
  [Object Naming Rules &#40;Analysis Services&#41;](../../../2014/analysis-services/dev-guide/object-naming-rules-analysis-services.md)   

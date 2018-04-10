@@ -38,11 +38,11 @@ manager: "mblythe"
 ### SQL Server Management Studio  
  You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage instances that host tabular models, and to query the metadata and data in them. You can process models or the objects in a model, create and manage partitions, and set security that can be used for managing data access. For more information, see the following topics:  
   
--   [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+-   [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
--   [Connect to Analysis Services](../../2014/analysis-services/connect-to-analysis-services.md)  
+-   [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
   
--   [Monitor an Analysis Services Instance](../../2014/analysis-services/monitor-an-analysis-services-instance.md)  
+-   [Monitor an Analysis Services Instance](instances/monitor-an-analysis-services-instance.md)  
   
  You can use both the MDX and XMLA query windows in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to retrieve data and metadata from a tabular model database. However, note the following restrictions:  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
   
 -   Tabular Model AMO Sample on Codeplex  
   
--   [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  You can use the Analysis Services 9.0 OLE DB provider in unmanaged client applications to support OLE DB access to tabular models. An updated version of the Analysis Services OLE DB provider is required to enable tabular model access. For more information about providers used with tabular models, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
@@ -113,11 +113,11 @@ manager: "mblythe"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](../../2014/analysis-services/dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../../2014/analysis-services/use-sql-server-extended-events-xevents-to-monitor-analysis-services.md).  
+     New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
 -   [DISCOVER_TRACES Rowset](../../2014/analysis-services/dev-guide/discover-traces-rowset.md)  
   
-     New `Type` column lets you filter traces by category. For more information, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](../../2014/analysis-services/create-profiler-traces-for-replay-analysis-services.md).  
+     New `Type` column lets you filter traces by category. For more information, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](instances/create-profiler-traces-for-replay-analysis-services.md).  
   
 -   [MDSCHEMA_HIERARCHIES Rowset](../../2014/analysis-services/dev-guide/mdschema-hierarchies-rowset.md)  
   
@@ -131,6 +131,6 @@ manager: "mblythe"
 ## See Also  
  [Connect to a Tabular Model Database &#40;SSAS&#41;](../../2014/analysis-services/connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot Data Access](../../2014/analysis-services/powerpivot-data-access.md)   
- [Connect to Analysis Services](../../2014/analysis-services/connect-to-analysis-services.md)  
+ [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
   
   

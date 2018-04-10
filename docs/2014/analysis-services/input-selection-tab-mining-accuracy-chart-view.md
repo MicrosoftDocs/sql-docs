@@ -20,7 +20,7 @@ manager: "mblythe"
 # Input Selection Tab (Mining Accuracy Chart View)
   Use the **Input Selection** tab of the **Mining Accuracy Chart** designer to specify the source of the data that is used to test the model and build the accuracy chart.  
   
- **For more information:** [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ **For more information:** [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## Options  
  **Synchronize Prediction**  **Columns and Values**  
@@ -43,7 +43,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Use mining model test cases**|Use the testing set that was created when you partitioned the mining structure, and apply the filter that is defined on the model. For information about model filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md)|  
+|**Use mining model test cases**|Use the testing set that was created when you partitioned the mining structure, and apply the filter that is defined on the model. For information about model filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Use mining structure test cases**|Use the testing set that was created when you partitioned the mining structure.|  
 |**Specify a different data set**|Specify a table from an existing data source view to use as a test data set.|  
   
@@ -66,9 +66,9 @@ manager: "mblythe"
  Opens the **Data Set Filter** dialog box, which lets you select external tables, and set conditions on case table columns, and the **Filter** dialog box, which helps you build conditions that apply to individual columns in the selected table, or to columns in nested tables.  
   
 ## See Also  
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Apply a Filter to a Mining Model](../../2014/analysis-services/apply-a-filter-to-a-mining-model.md)   
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md)   
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

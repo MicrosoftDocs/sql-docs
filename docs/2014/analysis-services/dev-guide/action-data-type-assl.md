@@ -64,7 +64,7 @@ manager: "mblythe"
 |Derived elements|[DrillThroughAction](../../../2014/analysis-services/dev-guide/drillthroughaction-data-type-assl.md), [ReportAction](../../../2014/analysis-services/dev-guide/reportaction-data-type-assl.md), [StandardAction](../../../2014/analysis-services/dev-guide/standardaction-data-type-assl.md)|  
   
 ## Remarks  
- For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/actions-analysis-services-multidimensional-data.md).  
+ For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Action>.  
   

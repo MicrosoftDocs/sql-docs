@@ -22,7 +22,7 @@ manager: "mblythe"
   
  Use this view of a sequence clustering model to drill through from each cluster to the supporting cases, if drillthrough has been enabled. You can also assign descriptive names to the clusters, and change the shading variable to assess the distribution of values at a glance  
   
- **For More Information:** [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **For More Information:** [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -74,8 +74,8 @@ manager: "mblythe"
  The lines in the diagram indicate associations between sequence clusters. You can adjust how many links the viewer shows by adjusting the slider to the right of the clusters. Lowering the slider shows only the strongest links.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

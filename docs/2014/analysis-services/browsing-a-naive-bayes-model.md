@@ -105,7 +105,7 @@ manager: "mblythe"
   
 2.  Note that lower incomes are also correlated with the Europe region.  
   
-     The Naïve Bayes model does not support drilldown; however, if you wanted to investigate the cases associated with this outcome group, you could use a query. For information about queries on this type of model, see [Naive Bayes Model Query Examples](../../2014/analysis-services/naive-bayes-model-query-examples.md).  
+     The Naïve Bayes model does not support drilldown; however, if you wanted to investigate the cases associated with this outcome group, you could use a query. For information about queries on this type of model, see [Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md).  
   
  [Back To Top](#BKMK_Tabs)  
   

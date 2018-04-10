@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Actions in Multidimensional Models
-  An action is an end user-initiated operation upon a selected cube or portion of a cube. The operation can start an application with the selected item as a parameter, or it can retrieve information about the selected item. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
+  An action is an end user-initiated operation upon a selected cube or portion of a cube. The operation can start an application with the selected item as a parameter, or it can retrieve information about the selected item. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](actions-analysis-services-multidimensional-data.md).  
   
  Use the **Actions** tab of Cube Designer to build actions for a cube. Specify the following:  
   
@@ -77,7 +77,7 @@ manager: "mblythe"
 |**Caption is MDX**|Specify `True` if the caption is MDX or `False` if it is not.|  
   
 > [!NOTE]  
->  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/action-element-assl.md), [Type Element &#40;Action&#41; &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/type-element-action-assl.md), and [Programming AMO OLAP Advanced Objects](../../2014/analysis-services/dev-guide/programming-amo-olap-advanced-objects.md).  
+>  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/action-element-assl.md), [Type Element &#40;Action&#41; &#40;ASSL&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/type-element-action-assl.md), and [Programming AMO OLAP Advanced Objects](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/programming-amo-olap-advanced-objects.md).  
   
 ## Creating a Reporting Action  
  The report server responds to URL-based requests for reports. To create a reporting action, on the **Cube** menu, click **New Reporting Action**. The following options are specific to a reporting action.  
@@ -122,6 +122,6 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  Select one or more dimensions and, for each dimension, the drillthrough columns returned to the client application by the action.  
   
 ## See Also  
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/cubes-in-multidimensional-models.md)  
   
   

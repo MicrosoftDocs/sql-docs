@@ -22,23 +22,23 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Association Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm. For an explanation of general and statistical terminology related to mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules algorithm. For an explanation of general and statistical terminology related to mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of an Association Model  
  An association model has a simple structure. Each model has a single parent node that represents the model and its metadata, and each parent node has a flat list of itemsets and rules. The itemsets and rules are not organized in trees, they are ordered with itemsets first and rules next as shown in the following diagram.  
   
- ![structure of model content for association models](../../2014/analysis-services/media/modelcontentstructure-assoc.gif "structure of model content for association models")  
+ ![structure of model content for association models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-assoc.gif "structure of model content for association models")  
   
  Each itemset is contained in its own node (NODE_TYPE = 7). The *node* includes the definition of the itemset, the number of cases that contain this itemset, and other information.  
   
  Each rule is also contained in its own node (NODE_TYPE = 8). A *rule* describes a general pattern for how items are associated. A rule is like an IF-THEN statement. The left-hand side of the rule shows an existing condition or set of conditions. The right-hand side of the rule shows the item in your data set that is usually associated with the conditions on the left side.  
   
- **Note** If you want to extract either the rules or the itemsets, you can use a query to return only the node types that you want. For more information, see [Association Model Query Examples](data-mining/association-model-query-examples.md).  
+ **Note** If you want to extract either the rules or the itemsets, you can use a query to return only the node types that you want. For more information, see [Association Model Query Examples](association-model-query-examples.md).  
   
 ## Model Content for an Association Model  
  This section provides detail and examples only for those columns in the mining model content that are relevant for association models.  
   
- For information about the general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For information about the general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -185,14 +185,14 @@ manager: "mblythe"
  **Rule node** Importance score for the rule.  
   
 > [!NOTE]  
->  Importance is calculated differently for itemsets and rules. For more information, see [Microsoft Association Algorithm Technical Reference](data-mining/microsoft-association-algorithm-technical-reference.md).  
+>  Importance is calculated differently for itemsets and rules. For more information, see [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md).  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Blank.  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Association Algorithm](data-mining/microsoft-association-algorithm.md)   
- [Association Model Query Examples](data-mining/association-model-query-examples.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Association Algorithm](microsoft-association-algorithm.md)   
+ [Association Model Query Examples](association-model-query-examples.md)  
   
   

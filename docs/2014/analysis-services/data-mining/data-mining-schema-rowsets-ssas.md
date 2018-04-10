@@ -23,10 +23,10 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Querying the Data Mining Schema Rowsets (Analysis Services - Data Mining)
-  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], many of the existing OLE DB data mining schema rowsets are exposed as a set of system tables that you can query by using Data Mining Extensions (DMX) statements. By creating queries against the data mining schema rowset, you can identify the services that are available, get updates on the status of your models and structures, and find out details about the model content or parameters. For a description of the data mining schema rowsets, see [Data Mining Schema Rowsets](../../2014/analysis-services/dev-guide/data-mining-schema-rowsets.md).  
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], many of the existing OLE DB data mining schema rowsets are exposed as a set of system tables that you can query by using Data Mining Extensions (DMX) statements. By creating queries against the data mining schema rowset, you can identify the services that are available, get updates on the status of your models and structures, and find out details about the model content or parameters. For a description of the data mining schema rowsets, see [Data Mining Schema Rowsets](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
->  You can also query the data mining schema rowsets by using XMLA. For more information about how to do this in SQL Server Management Studio, see [Create a Data Mining Query by Using XMLA](data-mining/create-a-data-mining-query-by-using-xmla.md).  
+>  You can also query the data mining schema rowsets by using XMLA. For more information about how to do this in SQL Server Management Studio, see [Create a Data Mining Query by Using XMLA](create-a-data-mining-query-by-using-xmla.md).  
   
 ## List of Data Mining Schema Rowsets  
  The following table lists the data mining schema rowsets that may be useful for querying and monitoring.  
@@ -39,7 +39,7 @@ manager: "mblythe"
 |DMSCHEMA_MINING_STRUCTURE_COLUMNS|Lists all columns used in mining structures in the current context.<br /><br /> Information includes content type and data type, nullability, and whether the column contains nested table data.|  
 |DMSCHEMA_MINING_SERVICES|Lists all mining services, or algorithms, that are available on the specified server.<br /><br /> Information includes supported modeling flags, input types, and supported data source types.|  
 |DMSCHEMA_MINING_SERVICE_PARAMETERS|Lists all parameters for the mining services that are available on the current instance.<br /><br /> Information includes the data type for each parameter, the default values, and the upper and lower limits.|  
-|DMSCHEMA_MODEL_CONTENT|Returns the content of the model if the model has been processed.<br /><br /> For more information, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).|  
+|DMSCHEMA_MODEL_CONTENT|Returns the content of the model if the model has been processed.<br /><br /> For more information, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).|  
 |DBSCHEMA_CATALOGS|Lists all databases (catalogs) in the current instance of Analysis Services.|  
 |MDSCHEMA_INPUT_DATASOURCES|Lists all data sources in the current instance of Analysis Services.|  
   

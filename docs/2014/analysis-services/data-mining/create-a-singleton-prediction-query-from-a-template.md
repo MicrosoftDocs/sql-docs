@@ -29,11 +29,11 @@ NATURAL PREDICTION JOIN
 AS [t]  
 ```  
   
- The procedure that follows describes how to use the Template Explorer in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to quickly create this query.  
+ The procedure that follows describes how to use the Template Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to quickly create this query.  
   
 ### To open the Analysis Services templates in SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], on the **View** menu, click **Template Explorer**.  
   
 2.  Click the cube icon to open the **Analysis Server**templates.  
   
@@ -43,7 +43,7 @@ AS [t]
   
 2.  Double-click **Singleton Prediction**.  
   
-3.  In the **Connect to Analysis Services** dialog box, type the name of the server that has the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that contains the mining model to be queried.  
+3.  In the **Connect to Analysis Services** dialog box, type the name of the server that has the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that contains the mining model to be queried.  
   
 4.  Click **Connect**.  
   
@@ -82,7 +82,7 @@ AS [t]
   
 8.  Leave the **input alias** as `t`.  
   
-9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. In the query text pane, find the red squiggle under the comma and ellipsis that indicates a syntax error. Delete the ellipsis, and add any additional query condition that you want. If you do not add any other conditions, delete the comma.  
   
@@ -91,6 +91,6 @@ AS [t]
 11. Click **Execute**.  
   
 ## See Also  
- [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

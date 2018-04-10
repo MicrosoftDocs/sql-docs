@@ -51,7 +51,7 @@ manager: "mblythe"
   
 -   In a singleton prediction query, the data is supplied inline as part of the query.  
   
- For time series models, input data is not always required; it is possible to make predictions using just the data already in the model. However, if you do specify new input data, you must decide whether you will use the new data to update and extend the model, or to replace the original series of data that was used in the model.  For more information about these options, see [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md).  
+ For time series models, input data is not always required; it is possible to make predictions using just the data already in the model. However, if you do specify new input data, you must decide whether you will use the new data to update and extend the model, or to replace the original series of data that was used in the model.  For more information about these options, see [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
 ###  <a name="bkmk_PredFunc"></a> Adding Prediction Functions  
  In addition to predicting a value, you can customize a prediction query to return various kinds of information that are related to the prediction. For example, if the prediction creates a list of products to recommend to a customer, you might also want to return the probability for each prediction, so that you can rank them and present only the top recommendations to the user.  
@@ -66,7 +66,7 @@ manager: "mblythe"
 > [!WARNING]  
 >  Despite the name, singleton prediction queries do not just make single predictions—you can generate multiple predictions for each set of inputs. You provide multiple input cases by creating a SELECT statement for each input case and combining them with the UNION operator.  
   
- When you create a singleton prediction query, you must provide the new data to the model in the form of a PREDICTION JOIN. This means that even though you are not mapping to an actual table, you must make sure that the new data matches the existing columns in the mining model. If the new data columns and the new data match exactly, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will map the columns for you. This is called a *NATURAL PREDICTION JOIN*. However, if the columns do not match, or if the new data does not contain the same kind and amount of data that is in the model, you must specify which columns in the model map to the new data, or specify the missing values.  
+ When you create a singleton prediction query, you must provide the new data to the model in the form of a PREDICTION JOIN. This means that even though you are not mapping to an actual table, you must make sure that the new data matches the existing columns in the mining model. If the new data columns and the new data match exactly, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will map the columns for you. This is called a *NATURAL PREDICTION JOIN*. However, if the columns do not match, or if the new data does not contain the same kind and amount of data that is in the model, you must specify which columns in the model map to the new data, or specify the missing values.  
   
 ###  <a name="bkmk_BatchQuery"></a> Batch Prediction Queries  
  A batch prediction query is useful when you have external data that you want to use in making predictions. For example, you might have built a model that categorizes customers by their online activity and purchasing history. You could apply that model to a list of newly acquired leads, to create projections for sales, or to identify targets for proposed campaigns.  
@@ -75,10 +75,10 @@ manager: "mblythe"
   
  To get the best results, you should join as many of the matching columns as possible between the new data and the model. However, the query will succeed even if there are no matches. If no columns are joined, the query will return the marginal prediction, which is equivalent to the statement `SELECT <predictable-column> FROM <model>` without a PREDICTION JOIN clause.  
   
- After you have successfully mapped all relevant columns, you run the query, and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] makes predictions for each row in the new data based on patterns in the model. You can save the results back to a new table in the data source view that contains the external data, or you can copy and paste the data is you are using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ After you have successfully mapped all relevant columns, you run the query, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] makes predictions for each row in the new data based on patterns in the model. You can save the results back to a new table in the data source view that contains the external data, or you can copy and paste the data is you are using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!WARNING]  
->  If you use the designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the external data source must first be defined as a data source view.  
+>  If you use the designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the external data source must first be defined as a data source view.  
   
  If you use DMX to create a prediction join, you can specify the external data source by using the OPENQUERY, OPENROWSET, or SHAPE commands. The default data access method in the DMX templates is OPENQUERY. For information about these methods, see [&#60;source data query&#62;](~/dmx/source-data-query.md).  
   
@@ -95,16 +95,16 @@ manager: "mblythe"
   
  Regardless of which approach you use, the starting point for predictions is always the end of the original series.  
   
- For more information about how to create prediction joins on time series models, see [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md) or [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ For more information about how to create prediction joins on time series models, see [Time Series Model Query Examples](time-series-model-query-examples.md) or [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
   
 ##  <a name="bkmk_WorkResults"></a> Working with the Results of a Prediction Query  
  Your options for saving the results of a data mining prediction query are different depending on how you create the query.  
   
--   When you build a query using Prediction Query Builder in either [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can save the results of a prediction query to an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data source. For more information, see [View and Save the Results of a Prediction Query](data-mining/view-and-save-the-results-of-a-prediction-query.md).  
+-   When you build a query using Prediction Query Builder in either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can save the results of a prediction query to an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. For more information, see [View and Save the Results of a Prediction Query](view-and-save-the-results-of-a-prediction-query.md).  
   
--   When you create prediction queries using DMX in the Query pane of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], you can use the query output options to save the results to a file, or to the Query Results pane as text or in a grid. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
+-   When you create prediction queries using DMX in the Query pane of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can use the query output options to save the results to a file, or to the Query Results pane as text or in a grid. For more information, see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/query-and-text-editors-sql-server-management-studio.md).  
   
--   When you run a prediction query using the Integration Services components, the tasks provides the ability to write the results to a database by using an available ADO.NET connection manager or OLEDB connection manager. For more information, see [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md).  
+-   When you run a prediction query using the Integration Services components, the tasks provides the ability to write the results to a database by using an available ADO.NET connection manager or OLEDB connection manager. For more information, see [Data Mining Query Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-mining-query-task.md).  
   
  It is important to understand that the results of a prediction query are not like the results of a query on a relational database, which always returns a single row of related values. Each DMX prediction function that you add to a query returns its own rowset. Therefore, when you make a prediction on a single case, the result might be a predicted value together with several columns of nested tables containing additional detail.  
   
@@ -144,7 +144,7 @@ FROM
  If your provider cannot handle hierarchical rowsets, you can flatten the results by using the FLATTEN keyword in the prediction query. For more information, including examples of flattened rowsets, see [SELECT &#40;DMX&#41;](~/dmx/select-dmx.md).  
   
 ## See Also  
- [Content Queries &#40;Data Mining&#41;](data-mining/content-queries-data-mining.md)   
- [Data Definition Queries &#40;Data Mining&#41;](data-mining/data-definition-queries-data-mining.md)  
+ [Content Queries &#40;Data Mining&#41;](content-queries-data-mining.md)   
+ [Data Definition Queries &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
   
   

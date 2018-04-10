@@ -65,7 +65,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- The model used for this example is based on the Naive Bayes model you create in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md), but was modified by adding a second predictable attribute and applying a filter to the training data.  
+ The model used for this example is based on the Naive Bayes model you create in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md), but was modified by adding a second predictable attribute and applying a filter to the training data.  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Retrieving a Summary of Training Data  
  In a Naive Bayes model, the marginal statistics node stores aggregated information about the distribution of values in the training data. This summary is convenient and saves you from having to create SQL queries against the training data to find the same information.  
@@ -95,10 +95,10 @@ WHERE NODE_TYPE = 26
   
  For example, these results tell you the number of training cases for each discrete value (VALUETYPE = 4), together with the computed probability, adjusted for missing values (VALUETYPE = 1).  
   
- For a definition of the values provided in the NODE_DISTRIBUTION table in a Naive Bayes model, see [Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). For more information about how support and probability calculations are affected by missing values, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).  
+ For a definition of the values provided in the NODE_DISTRIBUTION table in a Naive Bayes model, see [Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). For more information about how support and probability calculations are affected by missing values, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Query3"></a> Sample Query 3: Finding More Information about Attributes  
- Because a Naive Bayes model often contains complex information about the relationships among different attributes, the easiest way to view these relationships is to use the [Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md). However, you can create DMX queries to return the data.  
+ Because a Naive Bayes model often contains complex information about the relationships among different attributes, the easiest way to view these relationships is to use the [Microsoft Naive Bayes Viewer](browse-a-model-using-the-microsoft-naive-bayes-viewer.md). However, you can create DMX queries to return the data.  
   
  The following example shows how to return information from the model about a particular attribute, `Region`.  
   
@@ -142,7 +142,7 @@ ORDER BY MSOLAP_NODE_SCORE DESC
 |Bike Buyer -> Marital Status|23.13297354|  
 |Bike Buyer -> English Occupation|2.832069191|  
   
- By browsing the model content in the [Microsoft Generic Content Tree Viewer](data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md), you will get a better idea of what statistics might be interesting. Some simple examples were demonstrated here; more often you may need to execute multiple queries or store the results and process them on the client.  
+ By browsing the model content in the [Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md), you will get a better idea of what statistics might be interesting. Some simple examples were demonstrated here; more often you may need to execute multiple queries or store the results and process them on the client.  
   
 ###  <a name="bkmk_Query4"></a> Sample Query 4: Using System Stored Procedures  
  In addition to writing your own content queries, you can use some Analysis Services system stored procedures to explore the results. To use a system stored procedure, prefix the stored procedure name with the CALL keyword:  
@@ -211,7 +211,7 @@ NATURAL PREDICTION JOIN
  The final row in the table shows the adjustments to support and probability for the missing value. Variance and standard deviation values are always 0, because Naive Bayes models cannot model continuous values.  
   
 ###  <a name="bkmk_Query7"></a> Sample Query 7: Predicting Associations  
- The Microsoft Naive Bayes algorithm can be used for association analysis, if the mining structure contains a nested table with the predictable attribute as the key. For example, you could build a Naive Bayes model by using the mining structure created in [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) of the data mining tutorial. The model used in this example was modified to add information about income and customer region in the case table.  
+ The Microsoft Naive Bayes algorithm can be used for association analysis, if the mining structure contains a nested table with the predictable attribute as the key. For example, you could build a Naive Bayes model by using the mining structure created in [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) of the data mining tutorial. The model used in this example was modified to add information about income and customer region in the case table.  
   
  The following query example shows a singleton query that predicts products that are related to purchases of the product, `'Road Tire Tube'`. You might use this information to recommend products to a specific type of customer.  
   
@@ -237,7 +237,7 @@ AS t
 |Touring-1000|  
   
 ## Function List  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm supports the additional functions that are listed in the following table.  
   
 |||  
 |-|-|  
@@ -253,8 +253,8 @@ AS t
  To see  the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
- [Microsoft Naive Bayes Algorithm Technical Reference](data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md)   
- [Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)   
+ [Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -49,7 +49,7 @@ manager: "mblythe"
 > [!WARNING]  
 >  If you want to remove the filter from an existing mining model, or change the filter conditions, you must reprocess the mining model.  
   
- For more information about the kinds of filters you can apply, and how filter expressions are evaluated, see [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+ For more information about the kinds of filters you can apply, and how filter expressions are evaluated, see [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
 ### Create a filter on external testing data  
   
@@ -83,13 +83,13 @@ manager: "mblythe"
   
 11. Verify that the completed filter conditions are correct by viewing the text in the **Expression** pane.  
   
-12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      The filter condition is applied to the data source when you create the accuracy chart.  
   
 ## See Also  
- [Choose and Map Model Testing Data](data-mining/choose-and-map-model-testing-data.md)   
- [Using Nested Table Data as an Input for an Accuracy Chart](data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [Choose an Accuracy Chart Type and Set Chart Options](data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)   
+ [Using Nested Table Data as an Input for an Accuracy Chart](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [Choose an Accuracy Chart Type and Set Chart Options](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

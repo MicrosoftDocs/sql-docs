@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Lift Chart, Profit Chart, or Classification Matrix
-  You can create an accuracy chart for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data mining model in five basic steps:  
+  You can create an accuracy chart for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining model in five basic steps:  
   
 -   Select the mining structure that contains the mining models that you want to compare.  
   
@@ -30,11 +30,11 @@ manager: "mblythe"
   
 -   Configure the chart options.  
   
- These basic steps are the same for the lift chart, profit chart, and classification matrix. The following procedures outline the steps to configure the basic chart options for these chart types. For information about how to create a cross-validation report, see [Measures in the Cross-Validation Report](data-mining/measures-in-the-cross-validation-report.md).  
+ These basic steps are the same for the lift chart, profit chart, and classification matrix. The following procedures outline the steps to configure the basic chart options for these chart types. For information about how to create a cross-validation report, see [Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md).  
   
 ### Open the mining structure in the Accuracy Chart Designer  
   
-1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  In Solution Explorer, double-click the structure that contains the mining model or models.  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ### Select mining models for inclusion in the chart  
   
-1.  On the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Input Selection** tab.  
+1.  On the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Input Selection** tab.  
   
      The list displays all models in the current structure that have the same predictable attribute.  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
 5.  Click the **Predict Value** text box, and select a value from the list. If the predictable column is a continuous data type, you must type a value in the text box.  
   
-     For more information, see [Choose the Column to Use for Testing a Mining Model](data-mining/choose-the-column-to-use-for-testing-a-mining-model.md).  
+     For more information, see [Choose the Column to Use for Testing a Mining Model](choose-the-column-to-use-for-testing-a-mining-model.md).  
   
 ### Select testing data  
   
@@ -67,12 +67,12 @@ manager: "mblythe"
   
     -   Select the option, **Use mining structure test cases**, to use the full set of testing cases that were defined as part of the mining structures holdout data set.  
   
-    -   Select the option, **Specify a different data set**, if you want to use external data.  The data set must be available as a data source view.   Click the browse (**…**) button to choose the data tables to use for the accuracy chart. For more information, see [Choose and Map Model Testing Data](data-mining/choose-and-map-model-testing-data.md).  
+    -   Select the option, **Specify a different data set**, if you want to use external data.  The data set must be available as a data source view.   Click the browse (**…**) button to choose the data tables to use for the accuracy chart. For more information, see [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
-         If you are using an external data set, you can optionally filter the input data set. For more information, see [Apply Filters to Model Testing Data](data-mining/apply-filters-to-model-testing-data.md).  
+         If you are using an external data set, you can optionally filter the input data set. For more information, see [Apply Filters to Model Testing Data](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  You cannot create a filter on the model test cases or the mining structure test cases on the **Input Selection** tab. To create a filter on the mining model, modify the Filter property of the model. For more information, see [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md).  
+>  You cannot create a filter on the model test cases or the mining structure test cases on the **Input Selection** tab. To create a filter on the mining model, modify the Filter property of the model. For more information, see [Apply a Filter to a Mining Model](apply-a-filter-to-a-mining-model.md).  
   
 ### Configure chart settings and generate the chart  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
      The amount of revenue that is associated with each successful sale.  
   
 ## See Also  
- [Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md)   
- [Classification Matrix &#40;Analysis Services - Data Mining&#41;](data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)   
+ [Classification Matrix &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

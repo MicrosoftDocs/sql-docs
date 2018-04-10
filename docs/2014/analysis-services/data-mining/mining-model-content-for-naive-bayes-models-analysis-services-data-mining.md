@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Naive Bayes Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Naive Bayes Model  
  A Naive Bayes model has a single parent node that represents the model and its metadata, and underneath that parent node, any number of independent trees that represent the predictable attributes that you selected. In addition to trees for the attributes, each model contains one marginal statistics node (NODE_TYPE = 26) that provides descriptive statistics about the set of training cases. For more information, see [Information in the Marginal Statistics Node](#bkmk_margstats).  
@@ -29,14 +29,14 @@ manager: "mblythe"
  For each predictable attribute and value, the model outputs a tree that contains information describing how the various input columns affected the outcome of that particular predictable. Each tree contains the predictable attribute and its value (NODE_TYPE = 9), and then a series of nodes that represent the input attributes (NODE_TYPE = 10). Because the input attributes typically have multiple values, each input attribute (NODE_TYPE = 10) may have multiple child nodes (NODE_TYPE = 11), each for a specific state of the attribute.  
   
 > [!NOTE]  
->  Because a Naive Bayes model does not permit continuous data types, all the values of the input columns are treated as discrete or discretized. You can specify how a value is discretized. For more information, [Change the Discretization of a Column in a Mining Model](data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
+>  Because a Naive Bayes model does not permit continuous data types, all the values of the input columns are treated as discrete or discretized. You can specify how a value is discretized. For more information, [Change the Discretization of a Column in a Mining Model](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![structure of model content for naive bayes](../../2014/analysis-services/media/modelcontentstructure-nb.gif "structure of model content for naive bayes")  
+ ![structure of model content for naive bayes](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-nb.gif "structure of model content for naive bayes")  
   
 ## Model Content for a Naive Bayes Model  
  This section provides detail and examples only for those columns in the mining model content that have particular relevance for Naive Bayes models.  
   
- For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -261,7 +261,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- In these results, the value of the SUPPORT column tells you the count of customers with the specified marital status who purchased a bike. The PROBABILITY column contains the probability of each attribute value, as calculated for this node only. For general definitions of terms used in the NODE_DISTRIBUTION table, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ In these results, the value of the SUPPORT column tells you the count of customers with the specified marital status who purchased a bike. The PROBABILITY column contains the probability of each attribute value, as calculated for this node only. For general definitions of terms used in the NODE_DISTRIBUTION table, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Information in the Marginal Statistics Node  
  In a Naive Bayes model, the nested table for the marginal statistics node contains the distribution of values for the entire set of training data. For example, the following table contains a partial list of the statistics in the nested NODE_DISTRIBUTION table for the model, `TM_NaiveBayes`:  
@@ -283,12 +283,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  In a Naive Bayes model, there can be no continuous attributes; therefore, all numeric data is represented as either discrete (VALUE_TYPE = 4) or discretized (VALUE_TYPE = 5).  
   
- A `Missing` value (VALUE_TYPE = 1) is added to every input and output attribute to represent potential values that were not present in the training data. You must be careful to distinguish between "missing" as a string and the default `Missing` value. For more information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).  
+ A `Missing` value (VALUE_TYPE = 1) is added to every input and output attribute to represent potential values that were not present in the training data. You must be careful to distinguish between "missing" as a string and the default `Missing` value. For more information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Model Viewers](data-mining-model-viewers.md)   
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)  
   
   

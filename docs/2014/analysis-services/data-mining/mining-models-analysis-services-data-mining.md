@@ -44,7 +44,7 @@ manager: "mblythe"
   
  A mining model is empty until the data provided by the mining structure has been processed and analyzed. After a mining model has been processed, it contains metadata, results, and bindings back to the mining structure.  
   
- ![model contains metadata, patterns, and bindings](../../2014/analysis-services/media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
+ ![model contains metadata, patterns, and bindings](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
   
  The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices—the data columns and their data types, filters, and algorithm—have a powerful influence on the results of analysis.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 -   Populate the model with data by *processing* the structure and model.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides the following tools to help you manage your mining models:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the following tools to help you manage your mining models:  
   
 -   The Data Mining Wizard helps you create a structure and related mining model. This is the easiest method to use. The wizard automatically creates the required mining structure and helps you with the configuration of the important settings.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
   
  In addition, each mining model contains two special properties: <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> and <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>.  
   
--   **Algorithm property** Specifies the algorithm that is used to create the model. The algorithms that are available depend on the provider that you are using. For a list of the algorithms that are included with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md). The `Algorithm` property applies to the mining model and can be set only one time for each model. You can change the algorithm later but some columns in the mining model might become invalid if they are not supported by the algorithm that you choose. You must always reprocess the model following a change to this property.  
+-   **Algorithm property** Specifies the algorithm that is used to create the model. The algorithms that are available depend on the provider that you are using. For a list of the algorithms that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). The `Algorithm` property applies to the mining model and can be set only one time for each model. You can change the algorithm later but some columns in the mining model might become invalid if they are not supported by the algorithm that you choose. You must always reprocess the model following a change to this property.  
   
 -   **Usage property** Defines how each column is used by the model. You can define the column usage as `Input`, `Predict`, `Predict Only`, or `Key`. The `Usage` property applies to individual mining model columns and must be set individually for every column that is included in a model. If the structure contains a column that you do not use in the model, the usage is set to `Ignore`. Examples of data that you might include in the mining structure but not use in analysis might be customer names or e-mail addresses. This way you can query them later without having to include them during the analysis phase.  
   
@@ -115,7 +115,7 @@ manager: "mblythe"
  [Mining Model Architecture](#bkmk_mdlArch)  
   
 ##  <a name="bkmk_mdlView"></a> Viewing and Querying Mining Models  
- After you have processed a model, you can explore it by using the custom viewers that are provided in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For  
+ After you have processed a model, you can explore it by using the custom viewers that are provided in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For  
   
  You can also create queries against the mining model either to make predictions, or to retrieve model metadata or the patterns created by the model. You create queries by using Data Mining Extensions (DMX).  
   
@@ -123,26 +123,26 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](data-mining/mining-structure-columns.md)<br /><br /> [Mining Model Columns](data-mining/mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md)|  
-|Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
-|Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](data-mining/mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md)|  
-|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
-|Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)|  
-|View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](data-mining/data-mining-queries.md)|  
+|Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](mining-structure-columns.md)<br /><br /> [Mining Model Columns](mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)|  
+|Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
+|Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](data-mining-model-viewers.md)|  
+|View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](data-mining-queries.md)|  
   
 ## Related Tasks  
  Use the following links to get more specific information about working with data mining models  
   
 |Task|Link|  
 |----------|----------|  
-|Add and delete mining models|[Add a Mining Model to an Existing Mining Structure](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Delete a Mining Model from a Mining Structure](data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|Work with mining model columns|[Exclude a Column from a Mining Model](data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Create an Alias for a Model Column](data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Change the Discretization of a Column in a Mining Model](data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Specify a Column to Use as Regressor in a Model](data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Alter model properties|[Change the Properties of a Mining Model](data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Delete a Filter from a Mining Model](data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Enable Drillthrough for a Mining Model](data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [View or Change Algorithm Parameters](data-mining/view-or-change-algorithm-parameters.md)|  
-|Copy. move, or manage models|[Make a Copy of a Mining Model](data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Copy a View of a Mining Model](data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)|  
-|Populate models with data, or update data in a model|[Process a Mining Model](data-mining/process-a-mining-model.md)|  
-|Work with OLAP models|[Create a Data Mining Dimension](data-mining/create-a-data-mining-dimension.md)|  
+|Add and delete mining models|[Add a Mining Model to an Existing Mining Structure](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Delete a Mining Model from a Mining Structure](delete-a-mining-model-from-a-mining-structure.md)|  
+|Work with mining model columns|[Exclude a Column from a Mining Model](exclude-a-column-from-a-mining-model.md)<br /><br /> [Create an Alias for a Model Column](create-an-alias-for-a-model-column.md)<br /><br /> [Change the Discretization of a Column in a Mining Model](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Specify a Column to Use as Regressor in a Model](specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Alter model properties|[Change the Properties of a Mining Model](change-the-properties-of-a-mining-model.md)<br /><br /> [Apply a Filter to a Mining Model](apply-a-filter-to-a-mining-model.md)<br /><br /> [Delete a Filter from a Mining Model](delete-a-filter-from-a-mining-model.md)<br /><br /> [Enable Drillthrough for a Mining Model](enable-drillthrough-for-a-mining-model.md)<br /><br /> [View or Change Algorithm Parameters](view-or-change-algorithm-parameters.md)|  
+|Copy. move, or manage models|[Make a Copy of a Mining Model](make-a-copy-of-a-mining-model.md)<br /><br /> [Copy a View of a Mining Model](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)|  
+|Populate models with data, or update data in a model|[Process a Mining Model](process-a-mining-model.md)|  
+|Work with OLAP models|[Create a Data Mining Dimension](create-a-data-mining-dimension.md)|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)  
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)  
   
   

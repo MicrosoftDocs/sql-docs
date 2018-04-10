@@ -68,9 +68,9 @@ manager: "mblythe"
 (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
 ```  
   
- When you have finished building the filter, the filter text is evaluated by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], translated to a DMX expression, and then saved with the model.  
+ When you have finished building the filter, the filter text is evaluated by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], translated to a DMX expression, and then saved with the model.  
   
- For instructions on how to use the filter dialog boxes in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md).  
+ For instructions on how to use the filter dialog boxes in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Apply a Filter to a Mining Model](apply-a-filter-to-a-mining-model.md).  
   
 ## Managing Mining Model Filters  
  Data-based model filtering greatly simplifies the task of managing mining structures and mining models, because you can easily create multiple models that are based on the same structure. You can also quickly make copies of existing mining models and then change only the filter condition. However, filters can lead to some confusion.  
@@ -114,12 +114,12 @@ manager: "mblythe"
 -   Collapse excluded values into a category as part of the mining structure definition.  
   
 ## Related Resources  
- For more information about filter syntax, and examples of filter expressions, see [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+ For more information about filter syntax, and examples of filter expressions, see [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
- For information about how to use model filters when you are testing a mining model, see [Choose an Accuracy Chart Type and Set Chart Options](data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
+ For information about how to use model filters when you are testing a mining model, see [Choose an Accuracy Chart Type and Set Chart Options](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ## See Also  
- [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

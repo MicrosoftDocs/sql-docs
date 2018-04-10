@@ -26,7 +26,7 @@ manager: "mblythe"
   
  Note that some properties are dependent on other property settings. For example, you cannot set properties that control binning behavior (such as <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> or <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>) until you have set the data type of the column to `Discretized`.  
   
- For more information about mining structure properties, see [Mining Structure Columns](data-mining/mining-structure-columns.md).  
+ For more information about mining structure properties, see [Mining Structure Columns](mining-structure-columns.md).  
   
 ### To change the properties of a mining structure  
   
@@ -39,6 +39,6 @@ manager: "mblythe"
      The new value will take effect when you select a different element in the designer.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -19,16 +19,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Sequence Clustering Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the Microsoft Sequence Clustering algorithm. For an explanation of general and statistical terminology related to mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the Microsoft Sequence Clustering algorithm. For an explanation of general and statistical terminology related to mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Sequence Clustering Model  
  A sequence clustering model has a single parent node (NODE_TYPE = 1) that represents the model and its metadata. The parent node, which is labeled **(All)**, has a related sequence node (NODE_TYPE = 13) that lists all the transitions that were detected in the training data.  
   
- ![Structure of sequence clustering model](../../2014/analysis-services/media/modelcontent-seqclust.gif "Structure of sequence clustering model")  
+ ![Structure of sequence clustering model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontent-seqclust.gif "Structure of sequence clustering model")  
   
  The algorithm also creates a number of clusters, based on the transitions that were found in the data and any other input attributes included when creating the model, such as customer demographics and so forth. Each cluster (NODE_TYPE = 5) contains its own sequence node (NODE_TYPE = 13) that lists only the transitions that were used in generating that specific cluster. From the sequence node, you can drill down to view the details of individual state transitions (NODE_TYPE = 14).  
   
- For an explanation of sequence and state transitions, with examples, see [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md).  
+ For an explanation of sequence and state transitions, with examples, see [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md).  
   
 ## Model Content for a Sequence Clustering Model  
  This section provides additional information about columns in the mining model content that have particular relevance for sequence clustering.  
@@ -152,7 +152,7 @@ manager: "mblythe"
 ###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION Table  
  The NODE_DISTRIBUTION table provides detailed probability and support information for the transitions and sequences for a specific cluster.  
   
- A row is always added to the transition table to represent possible `Missing` values. For information about what the `Missing` value means, and how it affects calculations, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).  
+ A row is always added to the transition table to represent possible `Missing` values. For information about what the `Missing` value means, and how it affects calculations, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  The calculations for support and probability differ depending on whether the calculation applies to the training cases or to the finished model. This is because the default clustering method, Expectation Maximization (EM), assumes that any case can belong to more than one cluster. When calculating support for the cases in the model, it is possible to use raw counts and raw probabilities. However, the probabilities for any particular sequence in a cluster must be weighted by the sum of all possible sequence and cluster combinations.  
   
@@ -162,7 +162,7 @@ manager: "mblythe"
  Therefore, to learn the number of clusters in the model, you can take the value of NODE_CARDINALITY for the (All) node and subtract one. For example, if the model created 9 clusters, the cardinality of the model root is 10. This is because the model contains 9 cluster nodes, each with its own sequence node, plus one additional sequence node labeled cluster 10, which represents the sequences for the model.  
   
 ## Walkthrough of Structure  
- An example might help clarify how the information is stored, and how you can interpret it. For example, you can find the largest order, meaning the longest observed chain in the underlying [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] data, by using the following query:  
+ An example might help clarify how the information is stored, and how you can interpret it. For example, you can find the largest order, meaning the longest observed chain in the underlying [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] data, by using the following query:  
   
 ```  
 USE AdventureWorksDW2012  
@@ -185,7 +185,7 @@ ORDER BY Count(*) DESC
 |SO58845|7|Sport-100|  
 |SO58845|8|Long-Sleeve Logo Jersey|  
   
- However, some customers who purchase the Mountain-500 might purchase different products. You can view all the products that follow the Mountain-500 by viewing the list of sequences in the model. The following procedures walk you through viewing these sequences by using the two viewers provided in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
+ However, some customers who purchase the Mountain-500 might purchase different products. You can view all the products that follow the Mountain-500 by viewing the list of sequences in the model. The following procedures walk you through viewing these sequences by using the two viewers provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 #### To view related sequences by using the Sequence Clustering viewer  
   
@@ -256,11 +256,11 @@ ORDER BY Count(*) DESC
   
  Another use of the extensive state and transition information compiled by a sequence clustering model is to determine which possible paths are never used. For example, if you have many visitors going to pages 1-4, but visitors never continue on to page 5, you might investigate whether there are problems that prevent navigation to page 5. You can do this by querying the model content, and comparing it against a list of possible paths.  Graphs that tell you all the navigation paths in a Web site can be created programmatically, or by using a variety of site analysis tools.  
   
- To find out how to obtain the list of observed paths by querying the model content, and to see other examples of queries on a sequence clustering model, see [Sequence Clustering Model Query Examples](data-mining/clustering-model-query-examples.md).  
+ To find out how to obtain the list of observed paths by querying the model content, and to see other examples of queries on a sequence clustering model, see [Sequence Clustering Model Query Examples](clustering-model-query-examples.md).  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](data-mining/clustering-model-query-examples.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)  
   
   

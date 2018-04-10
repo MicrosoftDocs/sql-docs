@@ -20,7 +20,7 @@ manager: "mblythe"
   
 -   NTLM  
   
--   Kerberos (see [Configure Analysis Services for Kerberos constrained delegation](instances/configure-analysis-services-for-kerberos-constrained-delegation.md))  
+-   Kerberos (see [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md))  
   
 -   EffectiveUserName on the connection string  
   
@@ -51,7 +51,7 @@ manager: "mblythe"
   
  Constrained delegation requires additional configuration in Active Directory, where services on both the sending and receiving end of the request are explicitly authorized for delegation. Although there are configuration costs up front, once the service is configured, password updates are managed independently in Active Directory. You do not need to update stored account information in applications, as you would if using the stored credentials option described further on.  
   
- For more information about configuring Analysis Services for constrained delegation, see [Configure Analysis Services for Kerberos constrained delegation](instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
+ For more information about configuring Analysis Services for constrained delegation, see [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
 > [!NOTE]  
 >  Windows Server 2012 supports constrained delegation across domains. In contrast, configuring Kerberos constrained delegation in domains at lower functional levels, such as Windows Server 2008 or 2008 R2, require both client and server computers to be members of the same domain.  
@@ -68,19 +68,19 @@ manager: "mblythe"
   
  For Anonymous authentication, you can set the anonymous user identity to a specific Windows user account (IUSR_GUEST by default) or an application pool identity. The anonymous user account will be used on the Analysis Services connection, and must have data access permissions on the Analysis Services instance. When you use this approach, only the user identity associated with the Anonymous account is used on the connection. If your application requires additional identity management, you will need to choose one of the other approaches, or supplement with an identity management solution that you provide.  
   
- Basic and Anonymous are available only when you configure Analysis Services for HTTP access, using IIS and the msmdpump.dll to establish the connection. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ Basic and Anonymous are available only when you configure Analysis Services for HTTP access, using IIS and the msmdpump.dll to establish the connection. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
  **Stored Credentials**  
   
  Most middle tier application services include functionality for storing a user name and password subsequently used to retrieve data from a down-level data store, such as Analysis Services or the SQL Server relational engine. As such, stored credentials provide a fifth alternative for retrieving data. Limitations with this approach include maintenance overhead associated with keeping user names and passwords up to date, and the use of a single identity on the connection. If your solution requires the identity of the original caller, then stored credentials would not be a viable alternative.  
   
- For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../2014/reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## See Also  
  [Using Impersonation with Transport Security](http://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Configure Analysis Services for Kerberos constrained delegation](instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [SPN registration for an Analysis Services instance](instances/spn-registration-for-an-analysis-services-instance.md)   
- [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
+ [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md)   
+ [Connect to Analysis Services](connect-to-analysis-services.md)  
   
   

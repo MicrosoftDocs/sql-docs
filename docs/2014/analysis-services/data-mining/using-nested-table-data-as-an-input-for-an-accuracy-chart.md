@@ -47,12 +47,12 @@ manager: "mblythe"
   
 6.  Click **Select Nested Table**. In the **Select Table** dialog box, select the table that contains the nested data, and then click **OK**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      If you need to modify the relationship between the nested table and the case table, click **Modify Join** to open the **Create Relationship** dialog box.  
   
 ## See Also  
- [Choose and Map Model Testing Data](data-mining/choose-and-map-model-testing-data.md)   
- [Apply Filters to Model Testing Data](data-mining/apply-filters-to-model-testing-data.md)  
+ [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)   
+ [Apply Filters to Model Testing Data](apply-filters-to-model-testing-data.md)  
   
   

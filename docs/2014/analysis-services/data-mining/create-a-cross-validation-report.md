@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Cross-Validation Report
-  This topic walks you through creation of a cross-validation report using the Accuracy Chart tab in Data Mining Designer. For general information about what a cross-validation report looks like, and the statistical measures it includes, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
+  This topic walks you through creation of a cross-validation report using the Accuracy Chart tab in Data Mining Designer. For general information about what a cross-validation report looks like, and the statistical measures it includes, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
   
  A cross-validation report is fundamentally different from an accuracy chart, such as a lift chart or classification matrix.  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 ### Select a mining structure  
   
-1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Open the Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  In Solution Explorer, open the database that contains the structure or model for which you want to create a report.  
   
@@ -68,7 +68,7 @@ manager: "mblythe"
   
 5.  Optionally, for **Target Threshold**, type a decimal number between 0 and 1 to specify the minimum probability that a prediction must have to be counted as accurate.  
   
-     For additional tips about how to set probability thresholds, see [Measures in the Cross-Validation Report](data-mining/measures-in-the-cross-validation-report.md).  
+     For additional tips about how to set probability thresholds, see [Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md).  
   
 6.  Click **Get Results**.  
   
@@ -89,6 +89,6 @@ manager: "mblythe"
 4.  Paste the selection into an open Excel workbook. If you use the **Paste** option, the report is pasted into Excel as HTML, which preserves row and column formatting. If you paste the report by using the **Paste Special** options for text or Unicode text, the report is pasted in row-delimited format.  
   
 ## See Also  
- [Measures in the Cross-Validation Report](data-mining/measures-in-the-cross-validation-report.md)  
+ [Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md)  
   
   

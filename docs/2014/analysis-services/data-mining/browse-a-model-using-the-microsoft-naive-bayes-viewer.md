@@ -28,15 +28,15 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browse a Model Using the Microsoft Naive Bayes Viewer
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes Viewer in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] displays mining models that are built with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm that is highly adaptable to predictive modeling tasks. For more information about this algorithm, see [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md).  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] displays mining models that are built with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm that is highly adaptable to predictive modeling tasks. For more information about this algorithm, see [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
   
- Because one of the main purposes of a naive Bayes model is to provide a way to quickly explore the data in a dataset, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes Viewer provides several methods for displaying the interaction between predictable attributes and input attributes.  
+ Because one of the main purposes of a naive Bayes model is to provide a way to quickly explore the data in a dataset, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes Viewer provides several methods for displaying the interaction between predictable attributes and input attributes.  
   
 > [!NOTE]  
->  If you want to view detailed information about the equations used in the model and the patterns that were discovered, you can switch to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+>  If you want to view detailed information about the equations used in the model and the patterns that were discovered, you can switch to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Viewer Tabs  
- When you browse a mining model in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes Viewer provides the following tabs for exploring data:  
+ When you browse a mining model in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes Viewer provides the following tabs for exploring data:  
   
 -   [Dependency Network](#BKMK_Dependency)  
   
@@ -87,9 +87,9 @@ manager: "mblythe"
  [Back to Top](#BKMK_ViewerTabs)  
   
 ## See Also  
- [Microsoft Naive Bayes Algorithm](data-mining/microsoft-naive-bayes-algorithm.md)   
- [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Data Mining Tools](data-mining/data-mining-tools.md)   
- [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
+ [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)   
+ [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining Tools](data-mining-tools.md)   
+ [Data Mining Model Viewers](data-mining-model-viewers.md)  
   
   

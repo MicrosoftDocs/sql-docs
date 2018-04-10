@@ -23,11 +23,11 @@ manager: "mblythe"
   
  The following model properties have advanced editors that you can use to create expressions or configure complex model properties. The following properties provide:  
   
--   `Filter` property: Opens the [Data Set Filter or Model Filter Dialog Box](../../2014/analysis-services/data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` property: Opens the [Data Set Filter or Model Filter Dialog Box](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../../2014/analysis-services/algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/algorithm-parameters-dialog-box-mining-models-view.md).  
   
- For information about how to set the properties in a mining model, see [Mining Model Columns](data-mining/mining-model-columns.md).  
+ For information about how to set the properties in a mining model, see [Mining Model Columns](mining-model-columns.md).  
   
 ### To change the properties of a mining model  
   
@@ -49,6 +49,6 @@ manager: "mblythe"
      The new value will take effect when you select a different element in the designer.  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)  
   
   

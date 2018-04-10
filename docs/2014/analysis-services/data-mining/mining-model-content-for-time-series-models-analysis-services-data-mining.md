@@ -20,20 +20,20 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
-  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm.  
+  All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
   
- For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- When reviewing this topic, you might find it useful follow along by browsing the contents of a time series model. You can create a time series model by completing the Basic Data Mining tutorial. The model you create in the tutorial is a mixed model that trains data by using both the ARIMA and ARTXP algorithms. For more information, see [Creating a Forecasting Structure and Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). For information about how to view the contents of a mining model, see [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md).  
+ When reviewing this topic, you might find it useful follow along by browsing the contents of a time series model. You can create a time series model by completing the Basic Data Mining tutorial. The model you create in the tutorial is a mixed model that trains data by using both the ARIMA and ARTXP algorithms. For more information, see [Creating a Forecasting Structure and Model &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). For information about how to view the contents of a mining model, see [Data Mining Model Viewers](data-mining-model-viewers.md).  
   
 ## Understanding the Structure of a Time Series Model  
  A time series model has a single parent node that represents the model and its metadata. Underneath that parent node, there are one or two time series trees, depending on the algorithm that you used to create the model.  
   
- If you create a mixed model, two separate trees are added to the model, one for ARIMA and one for ARTXP. If you choose to use only the ARTXP algorithm or only the ARIMA algorithm, you will have a single tree that corresponds to that algorithm. You specify which algorithm to use by setting the FORECAST_METHOD parameter. For more information about whether to use ARTXP, ARIMA, or a mixed model, see [Microsoft Time Series Algorithm](data-mining/microsoft-time-series-algorithm.md).  
+ If you create a mixed model, two separate trees are added to the model, one for ARIMA and one for ARTXP. If you choose to use only the ARTXP algorithm or only the ARIMA algorithm, you will have a single tree that corresponds to that algorithm. You specify which algorithm to use by setting the FORECAST_METHOD parameter. For more information about whether to use ARTXP, ARIMA, or a mixed model, see [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md).  
   
  The following diagram shows an example of a time series data mining model that was created with the default settings, to create a mixed model. So that you can more easily compare the differences between the two models, here the ARTXP model is shown on the left side of the diagram and the ARIMA model is shown in the right side of the diagram.  Whereas ARTXP is a tree-like structure that splits into smaller and smaller branches, the structure created by the ARIMA algorithm is more like a pyramid built upwards from smaller components.  
   
- ![Structure of model content for time series models](../../2014/analysis-services/media/modelcontentstructure-ts.gif "Structure of model content for time series models")  
+ ![Structure of model content for time series models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-ts.gif "Structure of model content for time series models")  
   
  The important point to remember is that information is arranged within the ARIMA and ARTXP trees in completely different ways, and you should consider the two trees as related only at the root node. Although the two representations are presented in one model for convenience, they should be treated as two independent models. ARTXP represents an actual tree structure, but ARIMA does not.  
   
@@ -73,14 +73,14 @@ manager: "mblythe"
   
 -   A node for the *moving average* (MA)  
   
- For information about the meaning of these terms, see [Microsoft Time Series Algorithm](data-mining/microsoft-time-series-algorithm.md).  
+ For information about the meaning of these terms, see [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md).  
   
- The *difference order* is an important part of the formula, and is represented in the equation. For more information about how the difference order is used, see [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ The *difference order* is an important part of the formula, and is represented in the equation. For more information about how the difference order is used, see [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
 ## Model Content for Time Series  
  This section provides detail and examples only for those columns in the mining model content that have particular relevance for time series models.  
   
- For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -190,7 +190,7 @@ manager: "mblythe"
   
  For more information about the node distribution table in an ARIMA tree, see [Understanding the ARIMA Tree](#bkmk_ARIMA_1).  
   
- If you wish to see all the constants and other components composed into a readable format, use the [Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), click the node, and open the **Mining Legend**.  
+ If you wish to see all the constants and other components composed into a readable format, use the [Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), click the node, and open the **Mining Legend**.  
   
  NODE_SUPPORT  
  The number of cases that support this node.  
@@ -209,7 +209,7 @@ manager: "mblythe"
   
  **ARTXP:** Value is always 0.0 for nodes without a split. For nodes with a split, the value represents the interestingness score of the split.  
   
- For more information about scoring methods, see [Feature Selection &#40;Data Mining&#41;](data-mining/feature-selection-data-mining.md).  
+ For more information about scoring methods, see [Feature Selection &#40;Data Mining&#41;](feature-selection-data-mining.md).  
   
  **ARIMA:**  The Bayesian Information Criterion (BIC) score of the ARIMA model. The same score is set on all the ARIMA nodes related to the equation.  
   
@@ -223,7 +223,7 @@ manager: "mblythe"
   
  For example, if there is a direct correlation between time and sales for most of the data series, each series would be contained within a time series tree (NODE_TYPE =16) that has no child nodes for each data series, only a regression equation. However, if the relationship is not linear, an ARTXP time series tree can split on conditions into child nodes, just like a decision tree model. By viewing the model content in the **Microsoft Generic Content Tree Viewer** you can see where the splits occur, and how it affects the trend line.  
   
- To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
+ To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
   
 -   The [Amount] trend line for the Pacific region splits on the time key. A split on the time key means that there is a change in the trend at a certain point in time. The trend line was linear only up to a certain point, and then the curve assumed a different shape. For example, one time series might continue until August 6, 2002, and another time series start after that date.  
   
@@ -242,9 +242,9 @@ manager: "mblythe"
  In short, data mining is useful for providing hints about where potentially interesting phenomena occur, but further investigation and the expertise of the business users is necessary to accurately interpret the worth of the information in context.  
   
 ### Elements of the ARTXP Time Series Formula  
- To view the complete formula for an ARTXP tree or branch, we recommend that you use the **Mining Legend** of the [Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), which presents all of the constants in a readable format.  
+ To view the complete formula for an ARTXP tree or branch, we recommend that you use the **Mining Legend** of the [Microsoft Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), which presents all of the constants in a readable format.  
   
--   [View the Formula for a Time Series Model &#40;Data Mining&#41;](data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [View the Formula for a Time Series Model &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  The following section presents a sample equation and explains the basic terms.  
   
@@ -268,7 +268,7 @@ manager: "mblythe"
  There are multiple elements in this equation because the model has calculated that the quantity of the R250 model in the Europe region is dependent on the values of several other data series.  
   
 #### Model Content for an ARTXP Formula  
- The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+ The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -291,7 +291,7 @@ manager: "mblythe"
   
 -   Whenever the relationship cannot be expressed as a linear correlation, the time series branches like a decision tree.  
   
- By browsing the model content in the [Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md) you can see where the split occurs, and how it affects the trend line.  
+ By browsing the model content in the [Microsoft Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md) you can see where the split occurs, and how it affects the trend line.  
   
  If a direct correlation exists between time and sales for any part of the data series, the easiest way to get the formula is to copy the formula from the **Mining Legend**, and then paste it into a document or presentation to help explain the model. Alternatively, you could extract the mean, coefficient, and other information from the NODE_DISTRIBUTION table for that tree and use it to compute extensions of the trend. If the entire series exhibits a consistent linear relationship, the equation is contained in the (All) node. If there is any branching in the tree, the equation is contained in the leaf node.  
   
@@ -335,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
 |Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
- From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
+ From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
   
  For example, the short form of the ARIMA Equation for the M200 Europe series tells you that only the default, or daily, cycle was detected. The short form of the equation is provided in the NODE_CAPTION column.  
   
@@ -371,9 +371,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  These examples illustrate that the further you drill down into the ARIMA tree, the more detail is revealed, but the important information is combined and presented in the parent node as well.  
   
 ### Time Series Formula for ARIMA  
- To view the complete formula for any ARIMA node, we recommend that you use the **Mining Legend** of the [Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), which presents the autoregressive order, moving averages, and other elements of the equation already composed in a consistent format.  
+ To view the complete formula for any ARIMA node, we recommend that you use the **Mining Legend** of the [Microsoft Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), which presents the autoregressive order, moving averages, and other elements of the equation already composed in a consistent format.  
   
--   [View the Formula for a Time Series Model &#40;Data Mining&#41;](data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [View the Formula for a Time Series Model &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  This section presents a sample equation and explains the basic terms.  
   
@@ -436,12 +436,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 -   XML representation: Use an XML query.  
   
 ## Remarks  
- It can be difficult to retrieve information from an ARTXP tree, because information for each split is in a different place within the tree. Therefore, with an ARTXP model, you must get all the pieces and then do some processing to reconstitute the complete formula. Retrieving an equation from an ARIMA model is easier because the formula has been made available throughout the tree. For information about how to create a query to retrieve this information, see [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md).  
+ It can be difficult to retrieve information from an ARTXP tree, because information for each split is in a different place within the tree. Therefore, with an ARTXP model, you must get all the pieces and then do some processing to reconstitute the complete formula. Retrieving an equation from an ARIMA model is easier because the formula has been made available throughout the tree. For information about how to create a query to retrieve this information, see [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Time Series Algorithm](data-mining/microsoft-time-series-algorithm.md)   
- [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md)   
- [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
+ [Time Series Model Query Examples](time-series-model-query-examples.md)   
+ [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)  
   
   

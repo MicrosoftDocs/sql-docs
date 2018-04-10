@@ -46,24 +46,24 @@ manager: "mblythe"
   
  Third-party algorithms may also include custom properties that can be defined on the mining structure column.  
   
- For more information about the data mining structure and the data mining model, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md).  
+ For more information about the data mining structure and the data mining model, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
 ## Related Content  
  See the following topics for more information about how to define and use mining structure columns.  
   
 |Topic|Links|  
 |-----------|-----------|  
-|Describes the data types that you can use to define a mining structure column.|[Data Types &#40;Data Mining&#41;](data-mining/data-types-data-mining.md)|  
-|Describes the content types that are available for each type of data that is contained in a mining structure column. Content types are dependent on data type. The content type is assigned at the model level, and determines how the column data is used by the model.|[Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md)|  
-|Introduces the concept of nested tables, and explains how nested tables can be added to the data source as mining structure columns.|[Classified Columns &#40;Data Mining&#41;](data-mining/classified-columns-data-mining.md)|  
-|Lists and explains the distribution properties that you can set on a mining structure column to specify the expected distribution of values in the column.|[Column Distributions &#40;Data Mining&#41;](data-mining/column-distributions-data-mining.md)|  
-|Explains the concept of discretization (sometimes referred to as *binning*) and describes the methods that Analysis Services provides for discretizing continuous numeric data.|[Discretization Methods &#40;Data Mining&#41;](data-mining/discretization-methods-data-mining.md)|  
-|Describes the modeling flags that you can set on a mining structure column.|[Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md)|  
-|Describes classified columns, which are a special type of column that you can use to relate one mining structure column to another.|[Classified Columns &#40;Data Mining&#41;](data-mining/classified-columns-data-mining.md)|  
-|Learn to add and modify mining structure columns.|[Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)|  
+|Describes the data types that you can use to define a mining structure column.|[Data Types &#40;Data Mining&#41;](data-types-data-mining.md)|  
+|Describes the content types that are available for each type of data that is contained in a mining structure column. Content types are dependent on data type. The content type is assigned at the model level, and determines how the column data is used by the model.|[Content Types &#40;Data Mining&#41;](content-types-data-mining.md)|  
+|Introduces the concept of nested tables, and explains how nested tables can be added to the data source as mining structure columns.|[Classified Columns &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
+|Lists and explains the distribution properties that you can set on a mining structure column to specify the expected distribution of values in the column.|[Column Distributions &#40;Data Mining&#41;](column-distributions-data-mining.md)|  
+|Explains the concept of discretization (sometimes referred to as *binning*) and describes the methods that Analysis Services provides for discretizing continuous numeric data.|[Discretization Methods &#40;Data Mining&#41;](discretization-methods-data-mining.md)|  
+|Describes the modeling flags that you can set on a mining structure column.|[Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Describes classified columns, which are a special type of column that you can use to relate one mining structure column to another.|[Classified Columns &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
+|Learn to add and modify mining structure columns.|[Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)|  
   
 ## See Also  
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)   
- [Mining Model Columns](data-mining/mining-model-columns.md)  
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Mining Model Columns](mining-model-columns.md)  
   
   

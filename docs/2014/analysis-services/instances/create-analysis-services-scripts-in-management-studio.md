@@ -20,16 +20,16 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Analysis Services Scripts in Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] includes script generation features, templates, and editors that you can use to script Analysis Services objects and tasks.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes script generation features, templates, and editors that you can use to script Analysis Services objects and tasks.  
   
 ## Script Analysis Services Tasks in Management Studio  
- Scripting tasks in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is accomplished by clicking one of the Script options in a task-oriented dialog box. All of the dialog boxes that you use to perform tasks such as backup or restore database, process an object, or design an aggregation, include a Script option at the top of the dialog box. Selecting one of these options generates an XMLA script based on the information and settings in the dialog box.  
+ Scripting tasks in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is accomplished by clicking one of the Script options in a task-oriented dialog box. All of the dialog boxes that you use to perform tasks such as backup or restore database, process an object, or design an aggregation, include a Script option at the top of the dialog box. Selecting one of these options generates an XMLA script based on the information and settings in the dialog box.  
   
  By default, the script is generated and placed in an XMLA query editor, but you can also expand the Script option list to direct the script to the Windows Clipboard or a file.  
   
 #### To script an Analysis Services task  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 2.  Right-click a database and click **Backup**. This opens the Backup Database dialog box. Specify a backup file name and choose the options you want for this backup.  
   
@@ -42,18 +42,18 @@ manager: "mblythe"
      You can now close the Backup Database dialog box and edit or run the XMLA script directly.  
   
 ## Script Analysis Services Objects in Management Studio  
- Scripting objects in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is accomplished by right-clicking an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and selecting either **Create to**, **Alter to**, or **Delete to**. Each of these options can be directed to a window or a file, but regardless of where the script is directed to, it will come in the form of a DDL script in an XMLA wrapper. One great advantage to such scripts is that they can be run against any server you point them at. Also, names in the scripts can be changed and run on an iterative basis for mass construction, alteration, or deletion of objects.  
+ Scripting objects in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is accomplished by right-clicking an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and selecting either **Create to**, **Alter to**, or **Delete to**. Each of these options can be directed to a window or a file, but regardless of where the script is directed to, it will come in the form of a DDL script in an XMLA wrapper. One great advantage to such scripts is that they can be run against any server you point them at. Also, names in the scripts can be changed and run on an iterative basis for mass construction, alteration, or deletion of objects.  
   
- Objects that you can script include the elements of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, including data sources, data source views, cubes, dimensions, mining structures, and roles.  
+ Objects that you can script include the elements of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, including data sources, data source views, cubes, dimensions, mining structures, and roles.  
   
- Prerequisites include an understanding of XML for Analysis (XMLA). Fortunately, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] has a feature that automatically creates the XMLA script required to create objects, such as cubes. This automation feature helps reduce the learning curve for XMLA. For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md). For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md).  
+ Prerequisites include an understanding of XML for Analysis (XMLA). Fortunately, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a feature that automatically creates the XMLA script required to create objects, such as cubes. This automation feature helps reduce the learning curve for XMLA. For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md). For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  When scripting the Role Object, be aware that security permissions are contained by the objects they secure rather than with the security role with which they are associated.  
   
 #### To script Analysis Services objects  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 2.  Locate the object for which you want to create a script that either creates, alters, or deletes objects.  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
     >  Typically, you would select **File** if you want to create multiple different versions of the file.  
   
 ## See Also  
- [Script Administrative Tasks in Analysis Services](../../2014/analysis-services/script-administrative-tasks-in-analysis-services.md)   
- [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Script Administrative Tasks in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/script-administrative-tasks-in-analysis-services.md)   
+ [XMLA Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

@@ -36,7 +36,7 @@ manager: "mblythe"
 # Testing and Validation (Data Mining)
   Validation is the process of assessing how well your mining models perform against real data. It is important that you validate your mining models by understanding their quality and characteristics before you deploy them into a production environment.  
   
- This section introduces some basic concepts related to model quality, and describes the strategies for model validation that are provided in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For an overview of how model validation fits into the larger data mining process, see [Data Mining Solutions](data-mining/data-mining-solutions.md).  
+ This section introduces some basic concepts related to model quality, and describes the strategies for model validation that are provided in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For an overview of how model validation fits into the larger data mining process, see [Data Mining Solutions](data-mining-solutions.md).  
   
 ## Methods for Testing and Validation of Data Mining Models  
  There are many approaches for assessing the quality and characteristics of a data mining model.  
@@ -59,7 +59,7 @@ manager: "mblythe"
  *Usefulness* includes various metrics that tell you whether the model provides useful information. For example, a data mining model that correlates store location with sales might be both accurate and reliable, but might not be useful, because you cannot generalize that result by adding more stores at the same location. Moreover, it does not answer the fundamental business question of why certain locations have more sales. You might also find that a model that appears successful in fact is meaningless, because it is based on cross-correlations in the data.  
   
 ## Tools for Testing and Validation of Mining Models  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports multiple approaches to validation of data mining solutions, supporting all phases of the data mining test methodology.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports multiple approaches to validation of data mining solutions, supporting all phases of the data mining test methodology.  
   
 -   Partitioning data into testing and training sets.  
   
@@ -83,14 +83,14 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Learn how to set up a testing data set using a wizard or DMX commands|[Training and Testing Data Sets](data-mining/training-and-testing-data-sets.md)|  
-|Learn how to test the distribution and representativeness of the data in a mining structure|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Learn about the accuracy chart types provided in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)].|[Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Learn how to create a classification matrix, sometimes called a confusion matrix, for assessing the number of true and false positives and negatives.|[Classification Matrix &#40;Analysis Services - Data Mining&#41;](data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Learn how to set up a testing data set using a wizard or DMX commands|[Training and Testing Data Sets](training-and-testing-data-sets.md)|  
+|Learn how to test the distribution and representativeness of the data in a mining structure|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Learn about the accuracy chart types provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Learn how to create a classification matrix, sometimes called a confusion matrix, for assessing the number of true and false positives and negatives.|[Classification Matrix &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## See Also  
- [Data Mining Tools](data-mining/data-mining-tools.md)   
- [Data Mining Solutions](data-mining/data-mining-solutions.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Data Mining Tools](data-mining-tools.md)   
+ [Data Mining Solutions](data-mining-solutions.md)   
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

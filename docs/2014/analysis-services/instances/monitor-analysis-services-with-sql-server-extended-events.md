@@ -16,11 +16,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Use SQL Server Extended Events (XEvents) to Monitor Analysis Services
-  Analysis Services provides tracing capabilities through the usage of [Extended Events](../../2014/database-engine/extended-events.md).  
+  Analysis Services provides tracing capabilities through the usage of [Extended Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/extended-events.md).  
   
  Extended Events is an event infrastructure that is highly scalable and configurable for server systems. Extended Events is a light weight performance monitoring system that uses very few performance resources.  
   
- All Analysis Services events can be captured and target to specific consumers, as defined in [Extended Events](../../2014/database-engine/extended-events.md), through XEvents.  
+ All Analysis Services events can be captured and target to specific consumers, as defined in [Extended Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/extended-events.md), through XEvents.  
   
 ## Initiating Extended Events in Analysis Services  
  Extended Event tracing is enabled using a similar XMLA create object script command as shown below:  
@@ -64,7 +64,7 @@ manager: "mblythe"
  The name given to this trace; usually a human readable definition of the trace. It is a common practice to use the *trace_id* value as the name.  
   
  *AS_event*  
- The Analysis Services event to be exposed. See [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md) for names of the events.  
+ The Analysis Services event to be exposed. See [Analysis Services Trace Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-services-trace-events.md) for names of the events.  
   
  *data_filename*  
  The name of the file that contains the events data. This name is suffixed with a time stamp to avoid data overwriting if the trace is sent over and over.  
@@ -97,6 +97,6 @@ manager: "mblythe"
  Defines the unique identifier for the trace to be deleted.  
   
 ## See Also  
- [Extended Events](../../2014/database-engine/extended-events.md)  
+ [Extended Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/extended-events.md)  
   
   

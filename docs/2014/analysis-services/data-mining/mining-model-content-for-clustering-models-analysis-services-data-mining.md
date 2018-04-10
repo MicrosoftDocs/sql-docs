@@ -21,19 +21,19 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Clustering Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the Microsoft Clustering algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the Microsoft Clustering algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Clustering Model  
  A clustering model has a simple structure. Each model has a single parent node that represents the model and its metadata, and each parent node has a flat list of clusters (NODE_TYPE = 5). This organization is shown in the following image.  
   
- ![structure of model content for clustering](../../2014/analysis-services/media/modelcontentstructure-clust.gif "structure of model content for clustering")  
+ ![structure of model content for clustering](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-clust.gif "structure of model content for clustering")  
   
  Each child node represents a single cluster and contains detailed statistics about the attributes of the cases in that cluster. This includes a count of the number of cases in the cluster, and the distribution of values that distinguish the cluster from other clusters.  
   
 > [!NOTE]  
 >  You do not need to iterate through the nodes to get a count or description of the clusters; the model parent node also counts and lists the clusters.  
   
- The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md):  
+ The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md):  
   
 |ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
@@ -48,12 +48,12 @@ manager: "mblythe"
 > [!NOTE]  
 >  The variance represents the total variance for the cluster. When the value for variance is small, it indicates that most values in the column were fairly close to the mean. To obtain the standard deviation, calculate the square root of the variance.  
   
- Note that for each of the attributes there is a `Missing` value type that tells you how many cases had no data for that attribute. Missing data can be significant and affects calculations in different ways, depending on the data type. For more information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).  
+ Note that for each of the attributes there is a `Missing` value type that tells you how many cases had no data for that attribute. Missing data can be significant and affects calculations in different ways, depending on the data type. For more information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## Model Content for a Clustering Model  
  This section provides detail and examples only for those columns in the mining model content that are relevant for clustering models.  
   
- For information about the general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For information about the general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -151,15 +151,15 @@ manager: "mblythe"
  **Cluster nodes** The name of the cluster. Example: Cluster 1.  
   
 ## Remarks  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides multiple methods for creating a clustering model. If you do not know which method was used to create the model that you are working with, you can retrieve the model metadata programmatically, by using an ADOMD client or AMO, or by querying the data mining schema rowset. For more information, see [Query the Parameters Used to Create a Mining Model](data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides multiple methods for creating a clustering model. If you do not know which method was used to create the model that you are working with, you can retrieve the model metadata programmatically, by using an ADOMD client or AMO, or by querying the data mining schema rowset. For more information, see [Query the Parameters Used to Create a Mining Model](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  The structure and content of the model stay the same, regardless of which clustering method or parameters you use.  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)   
- [Microsoft Clustering Algorithm](data-mining/microsoft-clustering-algorithm.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Model Viewers](data-mining-model-viewers.md)   
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)   
+ [Data Mining Queries](data-mining-queries.md)  
   
   

@@ -22,13 +22,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Measures in the Cross-Validation Report
-  During cross-validation, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  
+  During cross-validation, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  
   
  The report contains some basic information about the number of folds in the data and the amount of data in each fold, and a set of general metrics that describe data distribution. By comparing the general metrics for each cross-section, you can assess the reliability of the structure or model.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also displays a set of detailed measures for mining models. These measures depend on the model type and on the type of attribute that is being analyzed: for example, whether it is discrete or continuous.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] also displays a set of detailed measures for mining models. These measures depend on the model type and on the type of attribute that is being analyzed: for example, whether it is discrete or continuous.  
   
- This section provides a list of the measures that are contained in the **Cross-Validation** report, and what they mean. For details on how each measure is calculated, see [Cross-Validation Formulas](data-mining/cross-validation-formulas.md).  
+ This section provides a list of the measures that are contained in the **Cross-Validation** report, and what they mean. For details on how each measure is calculated, see [Cross-Validation Formulas](cross-validation-formulas.md).  
   
 ## List of Measures in the Cross-Validation Report  
  The following table lists the measures that appear in the cross-validation report. The measures are grouped by *test type*, which is provided in the left-hand column of the following table. The right-hand column lists the name of the measure as it appears in the report, and provides a brief explanation of what it means.  
@@ -43,6 +43,6 @@ manager: "mblythe"
 |Aggregates|Aggregate measures provide an indication of the variance in the results for each partition:<br /><br /> **Mean**: Average of the partition values for a particular measure.<br /><br /> **Standard Deviation**: Average of the deviation from the mean for a specific measure, across all the partitions in a model. For cross-validation, a higher value for this score implies substantial variation between the folds.|  
   
 ## See Also  
- [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

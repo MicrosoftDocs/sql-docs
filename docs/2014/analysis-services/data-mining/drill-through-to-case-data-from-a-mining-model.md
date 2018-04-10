@@ -23,7 +23,7 @@ manager: "mblythe"
  If the mining structure does not allow you to drill through to the underlying data, but the mining model does, you can view information from the model cases, but not from the mining structure.  
   
 > [!NOTE]  
->  You can add the ability to drillthrough on an existing mining model by setting the property `AllowDrillthrough` to `True`. However, after you enable drillthrough, the model must be reprocessed before you can see the case data. For more information, see [Enable Drillthrough for a Mining Model](data-mining/enable-drillthrough-for-a-mining-model.md).  
+>  You can add the ability to drillthrough on an existing mining model by setting the property `AllowDrillthrough` to `True`. However, after you enable drillthrough, the model must be reprocessed before you can see the case data. For more information, see [Enable Drillthrough for a Mining Model](enable-drillthrough-for-a-mining-model.md).  
   
  Depending on the type of viewer you are using, you can select the node for drillthrough in the following ways:  
   
@@ -38,11 +38,11 @@ manager: "mblythe"
 |**Microsoft Sequence Clustering Viewer**|**Itemsets** tab|Click a row that contains an itemset.|  
   
 > [!NOTE]  
->  Some models cannot use drillthrough. The ability to use drillthrough depends on the algorithm that was used to create the model. For a list of the mining model types that support drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md).  
+>  Some models cannot use drillthrough. The ability to use drillthrough depends on the algorithm that was used to create the model. For a list of the mining model types that support drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
   
 ### To view drillthrough data from a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], open the mining structure that contains the mining model you want.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the mining structure that contains the mining model you want.  
   
 2.  In Data Mining Designer, click the **Mining Model Viewer** tab.  
   
@@ -55,6 +55,6 @@ manager: "mblythe"
 6.  To copy the data to the Clipboard, right-click any row in the table, and select **Copy All**.  
   
 ## See Also  
- [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)  
+ [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)  
   
   

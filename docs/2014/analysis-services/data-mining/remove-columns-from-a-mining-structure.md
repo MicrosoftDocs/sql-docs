@@ -42,6 +42,6 @@ manager: "mblythe"
 4.  In the **Delete Objects** dialog box, click **OK**.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

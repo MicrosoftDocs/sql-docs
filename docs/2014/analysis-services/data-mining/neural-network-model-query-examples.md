@@ -22,7 +22,7 @@ manager: "mblythe"
 # Neural Network Model Query Examples
   When you create a query against a data mining model, you can create a content query, which provides details about the patterns discovered in analysis, or a prediction query, which uses the patterns in the model to make predictions for new data. For example, a content query for a neural network model might retrieve model metadata such as the number of hidden layers. Alternatively, a prediction query might suggest classifications based on an input and optionally provide probabilities for each classification.  
   
- This section explains how to create queries for models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm.  
+ This section explains how to create queries for models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm.  
   
  **Content queries**  
   
@@ -42,9 +42,9 @@ manager: "mblythe"
  All mining models expose the content learned by the algorithm according to a standardized schema, the mining model schema rowset. This information provides details about the model and includes the basic metadata, structures discovered in analysis, and parameters that are used when processing. You can create queries against the model content by using Data Mining Extension (DMX) statements.  
   
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Getting Model Metadata by Using DMX  
- The following query returns some basic metadata about a model that was built by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm. In a neural network model, the parent node of the model contains only the name of the model, the name of the database where the model is stored, and the number of child nodes. However, the marginal statistics node (NODE_TYPE = 24) provides both this basic metadata and some derived statistics about the input columns used in the model.  
+ The following query returns some basic metadata about a model that was built by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm. In a neural network model, the parent node of the model contains only the name of the model, the name of the database where the model is stored, and the number of child nodes. However, the marginal statistics node (NODE_TYPE = 24) provides both this basic metadata and some derived statistics about the input columns used in the model.  
   
- The following sample query is based on the mining model that you create in the [Intermediate Data Mining Tutorial](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), named `Call Center Default NN`. The model uses data from a call center to explore possible correlations between staffing and the number of calls, orders, and issues. The DMX statement retrieves data from the marginal statistics node of the neural network model. The query includes the FLATTENED keyword, because the input attribute statistics of interest are stored in a nested table, NODE_DISTRIBUTION. However, if your query provider supports hierarchical rowsets you do not need to use the FLATTENED keyword.  
+ The following sample query is based on the mining model that you create in the [Intermediate Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), named `Call Center Default NN`. The model uses data from a call center to explore possible correlations between staffing and the number of calls, orders, and issues. The DMX statement retrieves data from the marginal statistics node of the neural network model. The query includes the FLATTENED keyword, because the input attribute statistics of interest are stored in a nested table, NODE_DISTRIBUTION. However, if your query provider supports hierarchical rowsets you do not need to use the FLATTENED keyword.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -66,7 +66,7 @@ WHERE NODE_TYPE = 24
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
- For a definition of what the columns in the schema rowset mean in the context of a neural network model, see [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ For a definition of what the columns in the schema rowset mean in the context of a neural network model, see [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Retrieving Model Metadata from the Schema Rowset  
  You can find the same information that is returned in a DMX content query by querying the data mining schema rowset. However, the schema rowset provides some additional columns. The following sample query returns the date that the model was created, the date it was modified, and the date that the model was last processed. The query also returns the predictable columns, which are not easily available from the model content, and the parameters that were used to build the model. This information can be useful for documenting the model.  
@@ -169,15 +169,15 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
 -   The unique names of nodes in the input layer always begin with 60000000.  
   
- Thus, these results tell you that the node denoted by the ID 70000000200000000 had six different coefficients (VALUETYPE = 7) passed to it. The values of the coefficients are in the ATTRIBUTE_VALUE column. You can determine exactly which input attribute the coefficient is for by using the node ID in the ATTRIBUTE_NAME column. For example, the node ID 6000000000000000a refers to input attribute and value, `Day of Week = 'Tue.'` You can use the node ID to create a query, or you can browse to the node by using the [Microsoft Generic Content Tree Viewer](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+ Thus, these results tell you that the node denoted by the ID 70000000200000000 had six different coefficients (VALUETYPE = 7) passed to it. The values of the coefficients are in the ATTRIBUTE_VALUE column. You can determine exactly which input attribute the coefficient is for by using the node ID in the ATTRIBUTE_NAME column. For example, the node ID 6000000000000000a refers to input attribute and value, `Day of Week = 'Tue.'` You can use the node ID to create a query, or you can browse to the node by using the [Microsoft Generic Content Tree Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
   
- Similarly, if you query the NODE_DISTRIBUTION table of the nodes in the output layer (NODE_TYPE = 23), you can see the coefficients for each output value. However, in the output layer, the pointers refer back to the nodes of the hidden layer. For more information, see [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Similarly, if you query the NODE_DISTRIBUTION table of the nodes in the output layer (NODE_TYPE = 23), you can see the coefficients for each output value. However, in the output layer, the pointers refer back to the nodes of the hidden layer. For more information, see [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
 ## Using a Neural Network Model to Make Predictions  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm supports both classification and regression. You can use prediction functions with these models to provide new data and create either singleton or batch predictions.  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm supports both classification and regression. You can use prediction functions with these models to provide new data and create either singleton or batch predictions.  
   
 ###  <a name="bkmk_Query5"></a> Sample Query 5: Creating a Singleton Prediction  
- The easiest way to build a prediction query on a neural network model is to use the Prediction Query Builder, available on the **Mining Prediction** tab of Data Mining Designer in both [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You can browse the model in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network Viewer to filter attributes of interest and view trends, and then switch to the **Mining Prediction** tab to create a query and predict new values for those trends.  
+ The easiest way to build a prediction query on a neural network model is to use the Prediction Query Builder, available on the **Mining Prediction** tab of Data Mining Designer in both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. You can browse the model in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network Viewer to filter attributes of interest and view trends, and then switch to the **Mining Prediction** tab to create a query and predict new values for those trends.  
   
  For example, you can browse the call center model to view correlations between the order volumes and other attributes. To do this, open the model in the viewer, and for **Input**, select **\<All>**.  Next, for **Output**, select **Number of Orders**. For **Value 1**, select the range that represents the most orders, and for **Value 2**, select the range that represents the fewest orders. You can then see at a glance all the attributes that the model correlates with order volume.  
   
@@ -204,7 +204,7 @@ NATURAL PREDICTION JOIN
 >  The Data Mining Add-Ins for Excel 2007 provide logistic regression wizards that make it easy to answer complex questions, such as how many Level Two Operators would be needed to improve service grade to a target level for a specific shift. The data mining add-ins are a free download, and include wizards that are based on the neural network and/or logistic regression algorithms. For more information, see the [Data Mining Add-ins for Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790) Web site.  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. There are no prediction functions that are specific to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm; however, the algorithm supports the functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. There are no prediction functions that are specific to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm; however, the algorithm supports the functions that are listed in the following table.  
   
 |||  
 |-|-|  
@@ -220,9 +220,9 @@ NATURAL PREDICTION JOIN
  For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
- [Microsoft Neural Network Algorithm](data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

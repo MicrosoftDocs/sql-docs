@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Logistic Regression Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the Microsoft Logistic Regression algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the Microsoft Logistic Regression algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Logistic Regression Model  
  A logistic regression model is created by using the Microsoft Neural Network algorithm with parameters that constrain the model to eliminate the hidden node. Therefore, the overall structure of a logistic regression model is almost identical to that of a neural network: each model has a single parent node that represents the model and its metadata, and a special marginal statistics node (NODE_TYPE = 24) that provides descriptive statistics about the inputs used in the model.  
@@ -29,16 +29,16 @@ manager: "mblythe"
   
  However, in a logistic regression model, the node that represents the hidden layer is empty, and has no children. Therefore the model contains nodes that represent individual outputs (NODE_TYPE = 23) and individual inputs (NODE_TYPE = 21) but no individual hidden nodes.  
   
- ![structure of content for logisitc regression model](../../2014/analysis-services/media/skt-modelcontentstructure-logregc.gif "structure of content for logisitc regression model")  
+ ![structure of content for logisitc regression model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/skt-modelcontentstructure-logregc.gif "structure of content for logisitc regression model")  
   
- By default, a logistic regression model is displayed in the **Microsoft Neural Network Viewer**. With this custom viewer, you can filter on input attributes and their values, and graphically see how they affect the outputs. The tooltips in the viewer show you the probability and lift associated with each pair of inputs and output values. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ By default, a logistic regression model is displayed in the **Microsoft Neural Network Viewer**. With this custom viewer, you can filter on input attributes and their values, and graphically see how they affect the outputs. The tooltips in the viewer show you the probability and lift associated with each pair of inputs and output values. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  To explore the structure of the inputs and subnetworks, and to see detailed statistics, you can use the Microsoft Generic Content Tree viewer. You can click on any node to expand it and see the child nodes, or view the weights and other statistics contained in the node.  
   
 ## Model Content for a Logistic Regression Model  
  This section provides detail and examples only for those columns in the mining model content that have particular relevance for logistic regression. The model content is almost identical to that of a neural network model, but descriptions that apply to neural network models may be repeated in this table for convenience.  
   
- For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -138,7 +138,7 @@ manager: "mblythe"
  The probability of reaching the node from the parent node. For logistic regression models, always 0.  
   
  NODE_DISTRIBUTION  
- A nested table that contains statistical information for the node. For detailed information about the contents of this table for each node type, see the section, Understanding the NODE_DISTRIBUTION Table, in [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ A nested table that contains statistical information for the node. For detailed information about the contents of this table for each node type, see the section, Understanding the NODE_DISTRIBUTION Table, in [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  For logistic regression models, always 0.  
@@ -182,9 +182,9 @@ manager: "mblythe"
  You can use these IDs to determine how output attributes are related to specific input layer attributes, by viewing the NODE_DISTRIBUTION table of the output node. Each row in that table contains an ID that points back to a specific input attribute node. The NODE_DISTRIBUTION table also contains the coefficient for that input-output pair.  
   
 ## See Also  
- [Microsoft Logistic Regression Algorithm](data-mining/microsoft-logistic-regression-algorithm.md)   
- [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Logistic Regression Model Query Examples](data-mining/logistic-regression-model-query-examples.md)   
- [Microsoft Logistic Regression Algorithm Technical Reference](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Microsoft Logistic Regression Algorithm](microsoft-logistic-regression-algorithm.md)   
+ [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Logistic Regression Model Query Examples](logistic-regression-model-query-examples.md)   
+ [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

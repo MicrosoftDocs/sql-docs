@@ -29,13 +29,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browse a Model Using the Microsoft Tree Viewer
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] displays decision trees that are built with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm is a hybrid decision tree algorithm that supports both classification and regression. Therefore, you can also use this viewer to view models based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm is used for predictive modeling of both discrete and continuous attributes. For more information about this algorithm, see [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md).  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tree Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] displays decision trees that are built with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a hybrid decision tree algorithm that supports both classification and regression. Therefore, you can also use this viewer to view models based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is used for predictive modeling of both discrete and continuous attributes. For more information about this algorithm, see [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
->  To view detailed information about the equations used in the model and the patterns that were discovered, use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+>  To view detailed information about the equations used in the model and the patterns that were discovered, use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree viewer. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) or [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
   
 ##  <a name="BKMK_TabsPanes"></a> Viewer Tabs  
- When you browse a mining model in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer includes the following tabs and panes:  
+ When you browse a mining model in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the model is displayed on the **Mining Model Viewer** tab of Data Mining Designer in the appropriate viewer for the model. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tree Viewer includes the following tabs and panes:  
   
 -   [Decision Tree](#BKMK_DecisionTree)  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
 -   [Mining Legend](#BKMK_MiningLegend)  
   
 ###  <a name="BKMK_DecisionTree"></a> Decision Tree  
- When you build a decision tree model, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] builds a separate tree for each predictable attribute. You can view an individual tree by selecting it from the **Tree** list on the **Decision Tree** tab of the viewer.  
+ When you build a decision tree model, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] builds a separate tree for each predictable attribute. You can view an individual tree by selecting it from the **Tree** list on the **Decision Tree** tab of the viewer.  
   
  A decision tree is composed of a series of splits, with the most important split, as determined by the algorithm, at the left of the viewer in the **All** node. Additional splits occur to the right. The split in the **All** node is most important because it contains the strongest split-causing conditional in the dataset, and therefore it caused the first split.  
   
@@ -102,10 +102,10 @@ manager: "mblythe"
  [Back to Top](#BKMK_TabsPanes)  
   
 ## See Also  
- [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Data Mining Tools](data-mining/data-mining-tools.md)   
- [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining Tools](data-mining-tools.md)   
+ [Data Mining Model Viewers](data-mining-model-viewers.md)  
   
   

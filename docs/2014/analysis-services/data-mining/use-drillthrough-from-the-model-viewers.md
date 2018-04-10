@@ -69,8 +69,8 @@ manager: "mblythe"
 5.  Right-click anywhere in the results and select **Copy All** to save the results to the Clipboard. If the model contains a nested table column, only the name of the nested table column is pasted; to retrieve the data values inside the nested table column for each case you must create a query on the model content.  
   
 ## See Also  
- [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Drillthrough on Mining Models](data-mining/drillthrough-on-mining-models.md)   
- [Drillthrough on Mining Structures](data-mining/drillthrough-on-mining-structures.md)  
+ [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Drillthrough on Mining Models](drillthrough-on-mining-models.md)   
+ [Drillthrough on Mining Structures](drillthrough-on-mining-structures.md)  
   
   

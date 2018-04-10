@@ -64,7 +64,7 @@ manager: "mblythe"
 |1|2|123|17|  
 |2|19|0|20|  
   
- Although the addition of more columns makes the report look more complex, the additional detail can be very useful when you want to assess the cumulative cost of making the wrong prediction. To create sums on the diagonals or to compare the results for different combinations of rows, you can click the **Copy** button provided in the **Classification Matrix** tab and paste the report into Excel. Alternatively, you can use a client such as the Data Mining Client for Excel, which supports [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later versions, to create a classification report directly in Excel that includes both counts and percentages. For more information, see [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
+ Although the addition of more columns makes the report look more complex, the additional detail can be very useful when you want to assess the cumulative cost of making the wrong prediction. To create sums on the diagonals or to compare the results for different combinations of rows, you can click the **Copy** button provided in the **Classification Matrix** tab and paste the report into Excel. Alternatively, you can use a client such as the Data Mining Client for Excel, which supports [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, to create a classification report directly in Excel that includes both counts and percentages. For more information, see [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733).  
   
 ## Restrictions on the Classification Matrix  
  A classification matrix can be used only with discrete predictable attributes.  
@@ -76,12 +76,12 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|Explains related chart types.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Describes uses of cross-validation for mining models and mining structures.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Describes steps for creating lift charts and other accuracy charts.|[Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Explains related chart types.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Describes uses of cross-validation for mining models and mining structures.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Describes steps for creating lift charts and other accuracy charts.|[Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## See Also  
- [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

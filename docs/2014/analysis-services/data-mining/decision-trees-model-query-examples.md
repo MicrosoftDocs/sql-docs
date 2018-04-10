@@ -22,7 +22,7 @@ manager: "mblythe"
 # Decision Trees Model Query Examples
   When you create a query against a data mining model, you can create a content query, which provides details about the patterns discovered in analysis, or you can create a prediction query, which uses the patterns in the model to make predictions for new data. For example, a content query for a decision trees model might provide statistics about the number of cases at each level of the tree, or the rules that differentiate between cases. Alternatively, a prediction query maps the model to new data in order to generate recommendations, classifications, and so forth. You can also retrieve metadata about the model by using a query.  
   
- This section explains how to create queries for models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm.  
+ This section explains how to create queries for models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm.  
   
  **Content Queries**  
   
@@ -41,7 +41,7 @@ manager: "mblythe"
  [Retrieving a Regression Formula from a Decision Trees Model](#bkmk_Query6)  
   
 ##  <a name="bkmk_top2"></a> Finding Information about a Decision Trees Model  
- To create meaningful queries on the content of a decision trees model, you should understand the structure of the model content, and which node types store what kind of information. For more information, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ To create meaningful queries on the content of a decision trees model, you should understand the structure of the model content, and which node types store what kind of information. For more information, see [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Retrieving Model Parameters from the Data Mining Schema Rowset  
  By querying the data mining schema rowset, you can find metadata about the model, such as when it was created, when the model was last processed, the name of the mining structure that the model is based on, and the name of the column used as the predictable attribute. You can also return the parameters that were used when the model was first created.  
@@ -59,7 +59,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Returning Details about the Model Content by Using DMX  
- The following query returns some basic information about the decision trees that were created when you built the model in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Each tree structure is stored in its own node. Because this model contains a single predictable attribute, there is only one tree node. However, if you create an association model by using the Decision Trees algorithm, there might be hundreds of trees, one for each product.  
+ The following query returns some basic information about the decision trees that were created when you built the model in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). Each tree structure is stored in its own node. Because this model contains a single predictable attribute, there is only one tree node. However, if you create an association model by using the Decision Trees algorithm, there might be hundreds of trees, one for each product.  
   
  This query returns all the nodes of type 2, which are the top level nodes of a tree that represents a particular predictable attribute.  
   
@@ -138,7 +138,7 @@ AND NODE_TYPE = 4
 -   Retrieving the regression formula for a part of a decision tree where the relationship between the input and output is linear.  
   
 ###  <a name="bkmk_Query4"></a> Sample Query 4: Returning Predictions with Probabilities  
- The following sample query uses the decision tree model that was created in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). The query passes in a new set of sample data, from the table dbo.ProspectiveBuyers in [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] DW, to predict which of the customers in the new data set will purchase a bike.  
+ The following sample query uses the decision tree model that was created in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). The query passes in a new set of sample data, from the table dbo.ProspectiveBuyers in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW, to predict which of the customers in the new data set will purchase a bike.  
   
  The query uses the prediction function [PredictHistogram &#40;DMX&#41;](~/dmx/predicthistogram-dmx.md), which returns a nested table that contains useful information about the probabilities discovered by the model. The final WHERE clause of the query filters the results to return only those customers who are predicted as likely to buy a bike, with a probability greater than 0%.  
   
@@ -177,7 +177,7 @@ WHERE [Bike Buyer] = 1
 AND PredictProbability([Bike Buyer]) >'.05'  
 ```  
   
- By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns nested tables with the column label, **Expression**. You can change this label by aliasing the column that is returned. If you do this, the alias (in this case, **Results**) is used as both the column heading and as the value in the nested table. You must expand the nested table to see the results.  
+ By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] returns nested tables with the column label, **Expression**. You can change this label by aliasing the column that is returned. If you do this, the alias (in this case, **Results**) is used as both the column heading and as the value in the nested table. You must expand the nested table to see the results.  
   
  Example results where Bike Buyer = 1:  
   
@@ -187,12 +187,12 @@ AND PredictProbability([Bike Buyer]) >'.05'
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
- If your provider does not support hierarchical rowsets, such as those shown here, you can use the FLATTENED keyword in the query to return the results as a table that contains nulls in place of the repeated column values. For more information, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md) or [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md).  
+ If your provider does not support hierarchical rowsets, such as those shown here, you can use the FLATTENED keyword in the query to return the results as a table that contains nulls in place of the repeated column values. For more information, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](nested-tables-analysis-services-data-mining.md) or [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md).  
   
 ###  <a name="bkmk_Query5"></a> Sample Query 5: Predicting Associations from a Decision Trees Model  
- The following sample query is based on the Association mining structure. To follow along with this example, you can add a new model to this mining structure, and select Microsoft Decision Trees as the algorithm. For more information on how to create the Association mining structure, see [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
+ The following sample query is based on the Association mining structure. To follow along with this example, you can add a new model to this mining structure, and select Microsoft Decision Trees as the algorithm. For more information on how to create the Association mining structure, see [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
- The following sample query is a singleton query, which you can create easily in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by choosing fields and then selecting values for those fields from a drop-down list.  
+ The following sample query is a singleton query, which you can create easily in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by choosing fields and then selecting values for those fields from a drop-down list.  
   
 ```  
 SELECT PredictAssociation([DT_Association].[v Assoc Seq Line Items],3)  
@@ -230,9 +230,9 @@ NATURAL PREDICTION JOIN
 |Classic Vest|  
   
 ###  <a name="bkmk_Query6"></a> Sample Query 6: Retrieving a Regression Formula from a Decision Trees Model  
- When you create a decision tree model that contains a regression on a continuous attribute, you can use the regression formula to make predictions, or you can extract information about the regression formula. For more information about queries on regression models, see [Linear Regression Model Query Examples](data-mining/linear-regression-model-query-examples.md).  
+ When you create a decision tree model that contains a regression on a continuous attribute, you can use the regression formula to make predictions, or you can extract information about the regression formula. For more information about queries on regression models, see [Linear Regression Model Query Examples](linear-regression-model-query-examples.md).  
   
- If a decision trees model contains a mixture of regression nodes and nodes that split on discrete attributes or ranges, you can create a query that returns only the regression node. The NODE_DISTRIBUTION table contains the details of the regression formula. In this example, the columns are flattened and the NODE_DISTRIBUTION table is aliased for easier viewing. However, in this model, no regressors were found to relate Income with other continuous attributes. In such cases, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns the mean value of the attribute and the total variance in the model for that attribute.  
+ If a decision trees model contains a mixture of regression nodes and nodes that split on discrete attributes or ranges, you can create a query that returns only the regression node. The NODE_DISTRIBUTION table contains the details of the regression formula. In this example, the columns are flattened and the NODE_DISTRIBUTION table is aliased for easier viewing. However, in this model, no regressors were found to relate Income with other continuous attributes. In such cases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] returns the mean value of the attribute and the total variance in the model for that attribute.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION AS t  
@@ -248,10 +248,10 @@ WHERE NODE_TYPE = 25
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
- For more information about the value types and the statistics used in regression models, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ For more information about the value types and the statistics used in regression models, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  
@@ -267,12 +267,12 @@ WHERE NODE_TYPE = 25
 |[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
 |[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md)   
- [Microsoft Decision Trees Algorithm Technical Reference](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

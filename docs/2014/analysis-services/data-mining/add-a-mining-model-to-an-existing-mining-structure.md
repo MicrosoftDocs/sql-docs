@@ -20,11 +20,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add a Mining Model to an Existing Mining Structure
-  You can add more mining models to a mining structure, after you add the initial model. Each model must contain columns that exist in the structure, but you can define the usage of the columns differently for each mining model. For more information about how to define mining models columns, see [Mining Model Columns](data-mining/mining-model-columns.md).  
+  You can add more mining models to a mining structure, after you add the initial model. Each model must contain columns that exist in the structure, but you can define the usage of the columns differently for each mining model. For more information about how to define mining models columns, see [Mining Model Columns](mining-model-columns.md).  
   
 ### To add a mining model to the structure  
   
-1.  From the **Mining Model** menu item in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select **New Mining Model**.  
+1.  From the **Mining Model** menu item in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select **New Mining Model**.  
   
      The **New Mining Model** dialog box opens.  
   
@@ -34,9 +34,9 @@ manager: "mblythe"
   
 4.  Click **OK**.  
   
- A new mining model appears in the **Mining Models** tab. The model uses the default columns that exist in the structure. For information about how to modify the columns, see [Change the Properties of a Mining Model](data-mining/change-the-properties-of-a-mining-model.md).  
+ A new mining model appears in the **Mining Models** tab. The model uses the default columns that exist in the structure. For information about how to modify the columns, see [Change the Properties of a Mining Model](change-the-properties-of-a-mining-model.md).  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)  
   
   

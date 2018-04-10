@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Drillthrough Queries using DMX
-  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
+  For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  
   
 > [!WARNING]  
 >  To view the data, drillthrough must have been enabled, and you must have the necessary permissions.  
@@ -42,7 +42,7 @@ WHERE [Model Region] = 'M200 Pacific'
  Note that in this example, an alias has been used to rename the structure column. If you do not assign an alias to the structure column, the column is returned with the name 'Expression'. This is the default behavior for all unnamed columns.  
   
 ## See Also  
- [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Drillthrough on Mining Structures](data-mining/drillthrough-on-mining-structures.md)  
+ [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)   
+ [Drillthrough on Mining Structures](drillthrough-on-mining-structures.md)  
   
   

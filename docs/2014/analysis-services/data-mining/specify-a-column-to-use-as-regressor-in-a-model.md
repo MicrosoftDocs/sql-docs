@@ -20,11 +20,11 @@ manager: "mblythe"
   
  However, you can specify that a column be included as a regressor by adding the FORCE_REGRESSOR parameter to the model and specifying the regressors to use. You might want to do this in cases where the attribute has meaning even if the effect is too small to be detected by the model, or when you want to ensure that the attribute is included in the formula.  
   
- The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
+ The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
   
 ### How to create a simple linear regression model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in **Solution Explorer**, expand **Mining Structures**.  
   
 2.  Double-click Call Center.dmm to open it in the designer.  
   
@@ -58,9 +58,9 @@ manager: "mblythe"
      In the viewer, the model is represented a single node containing the regression formula. You can view the formula in the **Mining Legend**, or you can extract the coefficients for the formula by using queries.  
   
 ## See Also  
- [Microsoft Linear Regression Algorithm](data-mining/microsoft-linear-regression-algorithm.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Linear Regression Algorithm Technical Reference](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Microsoft Linear Regression Algorithm](microsoft-linear-regression-algorithm.md)   
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

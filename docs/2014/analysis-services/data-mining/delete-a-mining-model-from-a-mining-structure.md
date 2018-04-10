@@ -21,11 +21,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Delete a Mining Model from a Mining Structure
-  You can delete mining models by using Data Mining Designer, by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or by using DMX statements.  
+  You can delete mining models by using Data Mining Designer, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or by using DMX statements.  
   
 ### Delete a mining model using SQL Server Data Tools  
   
-1.  Select the **Mining Models** tab in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Select the **Mining Models** tab in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Right-click the model that you want to delete, and select **Delete**.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
 ### Delete a mining model using SQL Server Management Studio  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database that contains the model.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database that contains the model.  
   
 2.  Expand **Mining Structures**, and then expand **Mining Models**.  
   
@@ -48,6 +48,6 @@ manager: "mblythe"
 -   [DROP MINING MODEL &#40;DMX&#41;](~/dmx/drop-mining-model-dmx.md)  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)  
   
   

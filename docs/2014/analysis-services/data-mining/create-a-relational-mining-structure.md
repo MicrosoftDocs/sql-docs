@@ -41,9 +41,9 @@ manager: "mblythe"
  [Why and How to Enable Drillthrough](#BKMK_DrillThru)  
   
 ## Requirements  
- First, you must have an existing data source. You can use the Data Source designer to set up a data source, if one does not already exist. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/create-a-data-source-ssas-multidimensional.md).  
+ First, you must have an existing data source. You can use the Data Source designer to set up a data source, if one does not already exist. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/create-a-data-source-ssas-multidimensional.md).  
   
- Next, use the Data Source View Wizard to assemble required data into a single data source view. For more information about how you can select, transform, filter, or manage data with data source views, see [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md).  
+ Next, use the Data Source View Wizard to assemble required data into a single data source view. For more information about how you can select, transform, filter, or manage data with data source views, see [Data Source Views in Multidimensional Models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-source-views-in-multidimensional-models.md).  
   
 ##  <a name="BKMK_Relational_Structure"></a> Overview of Process  
  Start the Data Mining Wizard, by right-clicking the **Mining Structures** node in Solution Explorer, and selecting **Add New Mining Structure**. The wizard guides you through the following steps to create the structure for a new relational mining model:  
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 2.  **Create the Data Mining Structure**: Determine whether you will build just a structure, or a structure with a mining model.  
   
-     You also choose an appropriate algorithm for your initial model. For guidance on which algorithm is best for certain tasks, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+     You also choose an appropriate algorithm for your initial model. For guidance on which algorithm is best for certain tasks, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 3.  **Select Data Source View**: Choose a data sources view to use in training your model. The data source view can also contain data used for testing, or unrelated data. You get to pick and choose which data is actually used in the structure and in the model. You can also apply filters to the data later on.  
   
@@ -60,7 +60,7 @@ manager: "mblythe"
   
      For each table, you must specify the key, so that the algorithm knows how to identify a unique record, and related records if you have added a nested table.  
   
-     For more information, see [Mining Structure Columns](data-mining/mining-structure-columns.md).  
+     For more information, see [Mining Structure Columns](mining-structure-columns.md).  
   
 5.  **Specify the Training Data**: On this page, you choose as the *case table*, which is the table that contains the most important data for analysis.  
   
@@ -68,15 +68,15 @@ manager: "mblythe"
   
 6.  **Specify Columns Content and Data Types**: For each column that you use in the structure, you must choose both a *data type* and a *content type*.  
   
-     The wizard will automatically detect possible data types, but you don’t need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](data-mining/mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](data-mining/data-types-data-mining.md).  
+     The wizard will automatically detect possible data types, but you don’t need to use the data type recommended by the wizard. For example, even if your data contains numbers, they might be representative of categorical data. Columns that you specify as keys are automatically assigned the correct data type for that particular model type. For more information, see [Mining Model Columns](mining-model-columns.md) and [Data Types &#40;Data Mining&#41;](data-types-data-mining.md).  
   
      The *content type* that you choose for each column that you use in the model tells the algorithm how the data should be processed.  
   
-     For example, you might decide to discretize numbers, rather than use continuous values. You can also ask the algorithm to automatically detect the best content type for the column. For more information, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
+     For example, you might decide to discretize numbers, rather than use continuous values. You can also ask the algorithm to automatically detect the best content type for the column. For more information, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
   
 7.  **Create Testing Set**: On this page, you can tell the wizard how much data should be set aside for use in testing the model. If your data will support multiple models, it is a good idea to create a holdout data set, so that all models can be tested on the same data.  
   
-     For more information, see [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
+     For more information, see [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 8.  **Completing the Wizard**: On this page, you give a name to the new mining structure and the associated mining model, and save the structure and model.  
   
@@ -108,7 +108,7 @@ manager: "mblythe"
  Near the end of the wizard, you must decide whether to partition your data into training and testing sets. The ability to provision a randomly sampled portion of the data for testing is very convenient, as it ensures that a consistent set of test data is available for use with all mining models associated with the new mining structure.  
   
 > [!WARNING]  
->  Note that this option is not available for all model types. For example, if you create a forecasting model, you won’t be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](data-mining/training-and-testing-data-sets.md).  
+>  Note that this option is not available for all model types. For example, if you create a forecasting model, you won’t be able to use holdout, because the time series algorithm requires that there be no gaps in data. For a list of the model types that support holdout data sets, see [Training and Testing Data Sets](training-and-testing-data-sets.md).  
   
  To create this holdout data set, you specify the percentage of the data you want to use for testing. All remaining data will be used for training. Optionally, you can set a maximum number of cases to use for testing, or set a seed value to use in starting the random selection process.  
   
@@ -120,13 +120,13 @@ manager: "mblythe"
  Why is this useful? Suppose you are viewing the results of a clustering model, and want to see the customers who were put into a specific cluster. By using drillthrough, you can view details such as contact information.  
   
 > [!WARNING]  
->  To use drillthrough, you must enable it when you create the mining structure. You can enable drillthrough on models later, by setting a property on the model, but mining structures require that this option be set at the beginning. For more information, see [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md).  
+>  To use drillthrough, you must enable it when you create the mining structure. You can enable drillthrough on models later, by setting a property on the model, but mining structures require that this option be set at the beginning. For more information, see [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
   
 ## See Also  
- [Data Mining Designer](data-mining/data-mining-designer.md)   
- [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Mining Model Properties](data-mining/mining-model-properties.md)   
- [Properties for Mining Structure and Structure Columns](data-mining/properties-for-mining-structure-and-structure-columns.md)   
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Data Mining Designer](data-mining-designer.md)   
+ [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [Mining Model Properties](mining-model-properties.md)   
+ [Properties for Mining Structure and Structure Columns](properties-for-mining-structure-and-structure-columns.md)   
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

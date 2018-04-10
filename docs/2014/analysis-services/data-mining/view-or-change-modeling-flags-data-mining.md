@@ -39,7 +39,7 @@ manager: "mblythe"
   
 ### Get the modeling flags used in the model  
   
--   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], open a DMX Query window, and type a query like the following:  
+-   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a DMX Query window, and type a query like the following:  
   
     ```  
     SELECT COLUMN_NAME, CONTENT_TYPE, MODELING_FLAG  
@@ -49,7 +49,7 @@ manager: "mblythe"
     ```  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)   
- [Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
+ [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
   

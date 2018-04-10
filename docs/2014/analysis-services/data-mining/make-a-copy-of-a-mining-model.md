@@ -25,11 +25,11 @@ manager: "mblythe"
   
  For example, if you have a Customers table that is linked to a table of purchases, you could create copies to generate separate mining models for each customer demographic, filtering on attributes such as age or region.  
   
- For information about how to copy the content of the model (such as the graphical representation or the model patterns) to the Clipboard for use in other programs, see [Copy a View of a Mining Model](data-mining/copy-a-view-of-a-mining-model.md).  
+ For information about how to copy the content of the model (such as the graphical representation or the model patterns) to the Clipboard for use in other programs, see [Copy a View of a Mining Model](copy-a-view-of-a-mining-model.md).  
   
 ### To create a related mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
      Select the model. On the **Mining Model** menu, select **New Mining Model**.  
   
-4.  Type a name for the new mining model, and select an algorithm. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  Type a name for the new mining model, and select an algorithm. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ### To edit the filter on the copied mining model  
   
@@ -49,15 +49,15 @@ manager: "mblythe"
   
 3.  Change the filter conditions.  
   
-     For more information about how to use the filter editor dialog boxes, see [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md).  
+     For more information about how to use the filter editor dialog boxes, see [Apply a Filter to a Mining Model](apply-a-filter-to-a-mining-model.md).  
   
 4.  In the **Properties** window, in the `AlgorithmParameters` text box, click **Setalgorithm parameters**, and change algorithm parameters, if desired.  
   
-5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)   
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)   
- [Delete a Filter from a Mining Model](data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
+ [Delete a Filter from a Mining Model](delete-a-filter-from-a-mining-model.md)  
   
   

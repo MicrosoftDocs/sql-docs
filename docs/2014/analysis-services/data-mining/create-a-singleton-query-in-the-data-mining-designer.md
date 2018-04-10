@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a Singleton Query in the Data Mining Designer
-  A singleton query is useful if you want to create a prediction for a single case. For more information about singleton queries, see [Data Mining Queries](data-mining/data-mining-queries.md).  
+  A singleton query is useful if you want to create a prediction for a single case. For more information about singleton queries, see [Data Mining Queries](data-mining-queries.md).  
   
  In the **Mining Model Prediction** tab of Data Mining Designer, you can create many different types of queries. You can create a query by using the designer, or by typing Data Mining Extensions (DMX) statements. You can also start with the designer and modify the query that it creates by changing the DMX statements, or by adding a WHERE or ORDER BY clause.  
   
@@ -78,6 +78,6 @@ AS [t]
      A new screen opens to show the result of the query. To view the DMX statement that you just created, click **SQL**.  
   
 ## See Also  
- [Prediction Queries &#40;Data Mining&#41;](data-mining/prediction-queries-data-mining.md)  
+ [Prediction Queries &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

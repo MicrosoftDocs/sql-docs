@@ -18,7 +18,7 @@ manager: "mblythe"
 # Data providers used for Analysis Services connections
   Analysis Services provides three data providers for server and data access. All applications connecting to Analysis Services do so using one of these providers. Two of the providers, ADOMD.NET and Analysis Services Management Objects (AMO), are managed data providers. The Analysis Services OLE DB provider (MSOLAP DLL) is a native data provider.  
   
- In organizations that run multiple versions of Analysis Services, you might need to install more recent versions of the data providers on user workstations connecting to Analysis Services data. Connections to newer versions of Analysis Services require data providers from the same major release. For example, to connect to [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], each workstation must have a data provider from the 2014 release. Although Excel installs the data providers it needs to connect, that provider can be out of date relative to the Analysis Services instances you are using.  
+ In organizations that run multiple versions of Analysis Services, you might need to install more recent versions of the data providers on user workstations connecting to Analysis Services data. Connections to newer versions of Analysis Services require data providers from the same major release. For example, to connect to [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], each workstation must have a data provider from the 2014 release. Although Excel installs the data providers it needs to connect, that provider can be out of date relative to the Analysis Services instances you are using.  
   
  This topic contains the following section:  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   In SQL Server Management Studio, connect to the Analysis Services instance. Right-click the instance you want to check, point to **Reports**, and click **General**. Edition and version build information appears in the report.  
   
- The major build number of the initial release of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] is 12.0.2000.9.  
+ The major build number of the initial release of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is 12.0.2000.9.  
   
  For more information about getting version and build information, see [How to determine the version and edition of SQL Server and its components](http://support.microsoft.com/kb/321185).  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 2.  Right-click msolap120.dll and click **Properties**.  
   
- If you cannot find the file at this location, or if the folder path includes AS OLEDB\110 or AS OLEDB\90, you are using an older library and must now install a newer version (AS OLEDB\11) to connect to [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ If you cannot find the file at this location, or if the folder path includes AS OLEDB\110 or AS OLEDB\90, you are using an older library and must now install a newer version (AS OLEDB\11) to connect to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 #### Find the file version of ADOMD.NET and AMO  
   
@@ -82,11 +82,11 @@ manager: "mblythe"
   
  The Analysis Services OLE DB provider is installed automatically by SQL Server Setup, Excel, and other applications that are frequently used to access Analysis Services databases. You can also install it manually by downloading it from the download center. By default, the provider can be found in the \Program Files\Microsoft Analysis Services folder. The provider must be installed on any workstation used to access Analysis Services data.  
   
- MSOLAP130.dll is the version of the Analysis Services OLE DB provider that ships in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Other recent previous versions include MSOLAP10.dll (for SQL Server 2008 and 2008 R2) and MSOLAP90.dll (for SQL Server 2005).  
+ MSOLAP130.dll is the version of the Analysis Services OLE DB provider that ships in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Other recent previous versions include MSOLAP10.dll (for SQL Server 2008 and 2008 R2) and MSOLAP90.dll (for SQL Server 2005).  
   
  OLE DB providers are often specified on connection strings. An Analysis Services connection string uses a different nomenclature to refer to the OLE DB provider: MSOLAP.\<version>.dll  
   
- MSOLAP.5.dll is the current Analysis Services OLE DB provider installed with Excel 2013. Previous versions, such as MSOLAP.4.dll or MSOLAP.3.dll, are often found on workstations running older versions of Excel. Some Analysis Services features, such as the PowerPivot add-in, require specific versions of the OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](instances/connection-string-properties-analysis-services.md) for more information.  
+ MSOLAP.5.dll is the current Analysis Services OLE DB provider installed with Excel 2013. Previous versions, such as MSOLAP.4.dll or MSOLAP.3.dll, are often found on workstations running older versions of Excel. Some Analysis Services features, such as the PowerPivot add-in, require specific versions of the OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) for more information.  
   
 ##  <a name="bkmk_ADOMD"></a> ADOMD.NET  
  ADOMD.NET is a managed data provider used for querying Analysis Services data. Excel uses ADOMD.NET when connecting to a specific Analysis Services cube. The connection string you see in Excel is for an ADOMD.NET connection.  
@@ -95,9 +95,9 @@ manager: "mblythe"
   
  To check file version information, look for ADOMD.NET in the global assembly cache, where it is listed as `Microsoft.AnalysisServices.AdomdClient`.  
   
- When connecting to a database, the connection string properties for all three libraries are largely the same. Almost any connection string you define for ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) will also work for AMO and the Analysis Services OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](instances/connection-string-properties-analysis-services.md) for more information.  
+ When connecting to a database, the connection string properties for all three libraries are largely the same. Almost any connection string you define for ADOMD.NET (<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>) will also work for AMO and the Analysis Services OLE DB provider. See [Connection String Properties &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md) for more information.  
   
- For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](../../2014/analysis-services/dev-guide/establishing-connections-in-adomd-net.md).  
+ For more information about connecting programmatically, see [Establishing Connections in ADOMD.NET](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/establishing-connections-in-adomd-net.md).  
   
 ##  <a name="blkmk_AMO"></a> AMO  
  AMO is a managed data provider used for server administration and data definition. For example, SQL Server Management Studio uses AMO to connect to Analysis Services.  
@@ -106,9 +106,9 @@ manager: "mblythe"
   
  A connection using AMO is typically minimal, consisting of “data source=\<servername>”. After a connection is established, you use the API to work with database collections and major objects. Both SSDT and SSMS use AMO to connect to an Analysis Services instance.  
   
- For more information about connecting programmatically, see [Programming AMO Fundamental Objects](../../2014/analysis-services/dev-guide/programming-amo-fundamental-objects.md).  
+ For more information about connecting programmatically, see [Programming AMO Fundamental Objects](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/programming-amo-fundamental-objects.md).  
   
 ## See Also  
- [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
+ [Connect to Analysis Services](connect-to-analysis-services.md)  
   
   

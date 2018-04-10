@@ -69,10 +69,10 @@ manager: "mblythe"
 |**SourceMeasureGroup**|Displays the source of the measure group.<br /><br /> For relational data sources, the value is always **(none)**.<br /><br /> For structures based on an OLAP cube, the value is the MDX statement that defines the slice used as the source for the nested table.|  
 |**Type**|The data type for the content in the column.|  
   
- For more information about setting or changing properties, see [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md).  
+ For more information about setting or changing properties, see [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md).  
   
 ## See Also  
- [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)   
- [Mining Structure Columns](data-mining/mining-structure-columns.md)  
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)   
+ [Mining Structure Columns](mining-structure-columns.md)  
   
   

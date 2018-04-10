@@ -25,21 +25,21 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Logistic Regression Algorithm Technical Reference
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm is a variation of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm, where the *HIDDEN_NODE_RATIO* parameter is set to 0. This setting will create a neural network model that does not contain a hidden layer, and that therefore is equivalent to logistic regression.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm is a variation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm, where the *HIDDEN_NODE_RATIO* parameter is set to 0. This setting will create a neural network model that does not contain a hidden layer, and that therefore is equivalent to logistic regression.  
   
 ## Implementation of the Microsoft Logistic Regression Algorithm  
  Suppose the predictable column contains only two states, yet you still want to perform a regression analysis, relating input columns to the probability that the predictable column will contain a specific state. The following diagram illustrates the results you will obtain if you assign 1 and 0 to the states of the predictable column, calculate the probability that the column will contain a specific state, and perform a linear regression against an input variable.  
   
- ![Poorly modeled data using linear regression](../../2014/analysis-services/media/logistic-linear-regression.gif "Poorly modeled data using linear regression")  
+ ![Poorly modeled data using linear regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/logistic-linear-regression.gif "Poorly modeled data using linear regression")  
   
  The x-axis contains values of an input column. The y-axis contains the probabilities that the predictable column will be one state or the other. The problem with this is that the linear regression does not constrain the column to be between 0 and 1, even though those are the maximum and minimum values of the column. A way to solve this problem is to perform logistic regression. Instead of creating a straight line, logistic regression analysis creates an "S" shaped curve that contains maximum and minimum constraints. For example, the following diagram illustrates the results you will achieve if you perform a logistic regression against the same data as used for the previous example.  
   
- ![Data modeled by using logistic regression](../../2014/analysis-services/media/logistic-regression.gif "Data modeled by using logistic regression")  
+ ![Data modeled by using logistic regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/logistic-regression.gif "Data modeled by using logistic regression")  
   
  Notice how the curve never goes above 1 or below 0. You can use logistic regression to describe which input columns are important in determining the state of the predictable column.  
   
 ### Feature Selection  
- Feature selection is used automatically by all Analysis Services data mining algorithms to improve analysis and reduce processing load. The method used for feature selection in a logistic regression model depends on the data type of the attribute. Because logistic regression is based on the Microsoft Neural Network algorithm, it uses a subset of the feature selection methods that apply to neural networks. For more information, see [Feature Selection &#40;Data Mining&#41;](data-mining/feature-selection-data-mining.md).  
+ Feature selection is used automatically by all Analysis Services data mining algorithms to improve analysis and reduce processing load. The method used for feature selection in a logistic regression model depends on the data type of the attribute. Because logistic regression is based on the Microsoft Neural Network algorithm, it uses a subset of the feature selection methods that apply to neural networks. For more information, see [Feature Selection &#40;Data Mining&#41;](feature-selection-data-mining.md).  
   
 ### Scoring Inputs  
  *Scoring* in the context of a neural network model or logistic regression model means the process of converting the values that are present in the data into a set of values that use the same scale and therefore can be compared to each other. For example, suppose the inputs for Income range from 0 to 100,000 whereas the inputs for [Number of Children] range from 0 to 5. This conversion process allows you to *score*, or compare, the importance of each input regardless of the difference in values.  
@@ -86,10 +86,10 @@ WHERE NODE_TYPE = 23
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   
- For more information, see [Logistic Regression Model Query Examples](data-mining/logistic-regression-model-query-examples.md).  
+ For more information, see [Logistic Regression Model Query Examples](logistic-regression-model-query-examples.md).  
   
 ## Customizing the Logistic Regression Algorithm  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] logistic regression algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the model by setting modeling flags on the columns used as input.  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] logistic regression algorithm supports several parameters that affect the behavior, performance, and accuracy of the resulting mining model. You can also modify the behavior of the model by setting modeling flags on the columns used as input.  
   
 ### Setting Algorithm Parameters  
  The following table describes the parameters that can be used with the Microsoft Logistic Regression algorithm.  
@@ -127,7 +127,7 @@ WHERE NODE_TYPE = 23
  The default is 10000.  
   
 ### Modeling Flags  
- The following modeling flags are supported for use with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm.  
+ The following modeling flags are supported for use with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm.  
   
  NOT NULL  
  Indicates that the column cannot contain a null. An error will result if Analysis Services encounters a null during model training.  
@@ -143,7 +143,7 @@ WHERE NODE_TYPE = 23
  A logistic regression model must contain a key column, input columns, and at least one predictable column.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm supports the specific input column content types, predictable column content types, and modeling flags that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm supports the specific input column content types, predictable column content types, and modeling flags that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  
@@ -151,9 +151,9 @@ WHERE NODE_TYPE = 23
 |Predictable attribute|Continuous, Discrete, Discretized|  
   
 ## See Also  
- [Microsoft Logistic Regression Algorithm](data-mining/microsoft-logistic-regression-algorithm.md)   
- [Linear Regression Model Query Examples](data-mining/linear-regression-model-query-examples.md)   
- [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Microsoft Neural Network Algorithm](data-mining/microsoft-neural-network-algorithm.md)  
+ [Microsoft Logistic Regression Algorithm](microsoft-logistic-regression-algorithm.md)   
+ [Linear Regression Model Query Examples](linear-regression-model-query-examples.md)   
+ [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)  
   
   

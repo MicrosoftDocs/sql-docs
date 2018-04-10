@@ -37,7 +37,7 @@ manager: "mblythe"
   
  If you do not have the original project files, or do not wish to alter them, you can use the option in Visual Studio, **Import from Server (Multidimensional or Data Mining)**, to get a copy of the metadata and solution objects. You can then modify the deployment target, edit data sources, and work with the cube objects without affecting the existing objects.  
   
- For more information, see [Import a Data Mining Project using the Analysis Services Import Wizard](data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
+ For more information, see [Import a Data Mining Project using the Analysis Services Import Wizard](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
 ##  <a name="bkmk_Overview"></a> Overview of OLAP Data Mining Process  
  Start the Data Mining Wizard by right-clicking the **Mining Structures** node in Solution Explorer, and selecting  **New Mining Structure**. The wizard guides you through the following steps to create the structure for a new structure and model:  
@@ -75,9 +75,9 @@ manager: "mblythe"
   
 8.  **Specify Columns Content and Data Type**: By this point, you have added all the data that will be used for analysis, and must specify the *data type* and *content type* for each attribute.  
   
-     In an OLAP model, you do not have the option to automatically detect data types, because the data type is already defined by the multidimensional solution and cannot be changed. Keys are also automatically identified. For more information, see  [Data Types &#40;Data Mining&#41;](data-mining/data-types-data-mining.md).  
+     In an OLAP model, you do not have the option to automatically detect data types, because the data type is already defined by the multidimensional solution and cannot be changed. Keys are also automatically identified. For more information, see  [Data Types &#40;Data Mining&#41;](data-types-data-mining.md).  
   
-     The *content type* that you choose for each column that you use in the model tells the algorithm how the data should be processed. For more information, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
+     The *content type* that you choose for each column that you use in the model tells the algorithm how the data should be processed. For more information, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
   
 9. **Slicing the source cube**: Here you can define filters in a cube to select just a subset of data and train models that are more targeted.  
   
@@ -85,7 +85,7 @@ manager: "mblythe"
   
 10. **Create Testing Set**: On this page, you can tell the wizard how much data should be set aside for use in testing the model. If your data will support multiple models, it is a good idea to create a holdout data set, so that all models can be tested on the same data.  
   
-     For more information, see [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
+     For more information, see [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 11. **Completing the Wizard**: On this page, you give a name to the new mining structure and the associated mining model, and save the structure and model.  
   
@@ -106,10 +106,10 @@ manager: "mblythe"
   
 |Task|Sample scenario|Algorithm|  
 |----------|---------------------|---------------|  
-|Group members into clusters|Segment a customer dimension based on customer member properties, the products that the customers buy, and the amount of money that the customers spend.|[!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering Algorithm|  
-|Find interesting or abnormal members|Identify interesting or abnormal stores in a store dimension based on sales, profit, store location, and store size.|[!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees Algorithm|  
-|Find interesting or abnormal cells|Identify store sales that go against typical trends over time.|[!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Algorithm|  
-|Find correlations|Identify factors that are related to server downtime, including region, machine type, OS, or purchase date.|[!INCLUDE[msCoName](../includes/msconame-md.md)] Naïve Bayes algorithm|  
+|Group members into clusters|Segment a customer dimension based on customer member properties, the products that the customers buy, and the amount of money that the customers spend.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering Algorithm|  
+|Find interesting or abnormal members|Identify interesting or abnormal stores in a store dimension based on sales, profit, store location, and store size.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees Algorithm|  
+|Find interesting or abnormal cells|Identify store sales that go against typical trends over time.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series Algorithm|  
+|Find correlations|Identify factors that are related to server downtime, including region, machine type, OS, or purchase date.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes algorithm|  
   
 ##  <a name="bkmk_Filters"></a> Slicing a Cube vs. Filtering Models  
  Slicing the cube while you are building a model is like creating a filter on a relational mining model. In a relational model, the filter on the data source is defined as a WHERE clause on a SQL statement; in a cube, you use the editor to create filter statements using MDX.  
@@ -122,12 +122,12 @@ manager: "mblythe"
   
 -   For the second filter, you would choose the Customer dimension, select the Gender attribute, and select “Female” from the list of attribute values.  
   
- After the mining structure has been created, you can modify both the definition of the cube data and the filter criteria. For more information, see [Filter the Source Cube for a Mining Structure](../../2014/analysis-services/filter-the-source-cube-for-a-mining-structure.md).  
+ After the mining structure has been created, you can modify both the definition of the cube data and the filter criteria. For more information, see [Filter the Source Cube for a Mining Structure](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/filter-the-source-cube-for-a-mining-structure.md).  
   
  Both the **Mining Structure** tab and the **Mining Model** tab provide an option to add a filter to an existing mining structure, by clicking **Define a Cube Slice**. The **Slice Cube** dialog box helps you build a valid MDX filter expression by choosing value from dropdown lists.  
   
 > [!WARNING]  
->  Note that the interface for designing and browsing cubes has been changed in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For more information, see [Browse data and metadata in Cube](../../2014/analysis-services/browse-data-and-metadata-in-cube.md).  
+>  Note that the interface for designing and browsing cubes has been changed in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Browse data and metadata in Cube](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/browse-data-and-metadata-in-cube.md).  
   
  You can add as many filters on the cube as are required to return the data that you need for the mining model. You can also define slices on individual cube slices. For example, if your structure contains two nested tables that are based on products, you could slice one table on March 2004 and the other table on April 2004. The resulting model could then be used to predict purchases made in April based on the purchases that were made in March.  
   
@@ -147,7 +147,7 @@ manager: "mblythe"
  The ability to use nested table data like this is a feature of SQL Server data mining that is particularly powerful, and in a cube, there are almost limitless possibilities for using related subsets of data.  
   
 ##  <a name="bkmk_DMDimension"></a> Understanding Data Mining Dimensions and Drillthrough  
- The option, **Allow drillthrough**, lets you run queries against the underlying cube data while you are browsing the model. The data is not contained in the new data mining dimension, but the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database can use the data bindings to retrieve the information from the source cube.  
+ The option, **Allow drillthrough**, lets you run queries against the underlying cube data while you are browsing the model. The data is not contained in the new data mining dimension, but the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database can use the data bindings to retrieve the information from the source cube.  
   
  The option, **Create mining model dimension**, lets you generate a new dimension within the existing cube that contains the patterns discovered by the algorithm. The hierarchy within the new dimension is determined largely by the model type. For example, the representation of a clustering model is fairly flat, with the (All) node at the top of the hierarchy and each cluster in the next level. In contrast, the dimension that is created for a decision tree model might have a very deep hierarchy, representing the branching of the tree.  
   
@@ -157,10 +157,10 @@ manager: "mblythe"
 >  Only these model types support the creation of data mining dimensions: models based on the Microsoft Clustering algorithm, the Microsoft Decision Trees algorithm, or the Microsoft Association algorithm.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Structure Columns](data-mining/mining-structure-columns.md)   
- [Mining Model Columns](data-mining/mining-model-columns.md)   
- [Mining Model Properties](data-mining/mining-model-properties.md)   
- [Properties for Mining Structure and Structure Columns](data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Structure Columns](mining-structure-columns.md)   
+ [Mining Model Columns](mining-model-columns.md)   
+ [Mining Model Properties](mining-model-properties.md)   
+ [Properties for Mining Structure and Structure Columns](properties-for-mining-structure-and-structure-columns.md)  
   
   

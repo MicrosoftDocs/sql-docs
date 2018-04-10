@@ -36,11 +36,11 @@ manager: "mblythe"
  [Making Predictions for a Discrete Value](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> Getting Information about the Logistic Regression Model  
- Logistic regression models are created by using the Microsoft Neural Network algorithm with a special set of parameters; therefore, a logistic regression model has some of the same information as a neural networks model, but is less complex. To understand the structure of the model content, and which node types store what kind of information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md).  
+ Logistic regression models are created by using the Microsoft Neural Network algorithm with a special set of parameters; therefore, a logistic regression model has some of the same information as a neural networks model, but is less complex. To understand the structure of the model content, and which node types store what kind of information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- To follow along in the query scenarios, you can create a logistic regression model as described in the following section of the Intermediate Data Mining Tutorial: [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+ To follow along in the query scenarios, you can create a logistic regression model as described in the following section of the Intermediate Data Mining Tutorial: [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
- You can also use the mining structure, Targeted Mailing, from the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+ You can also use the mining structure, Targeted Mailing, from the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md).  
   
 ```  
 ALTER MINING STRUCTURE [Targeted Mailing]  
@@ -97,7 +97,7 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
- The actual query returns many more rows; however, this sample illustrates the type of information that is provided about the inputs. For discrete inputs, each possible value is listed in the table. For continuous-value inputs such as Age, a complete listing is impossible, so the input is discretized as a mean. For more information about how to use the information in the marginal statistics node, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md).  
+ The actual query returns many more rows; however, this sample illustrates the type of information that is provided about the inputs. For discrete inputs, each possible value is listed in the table. For continuous-value inputs such as Age, a complete listing is impossible, so the input is discretized as a mean. For more information about how to use the information in the marginal statistics node, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 > [!NOTE]  
 >  The results have been flattened for easier viewing, but you can return the nested table in a single column if your provider supports hierarchical rowsets.  
@@ -132,7 +132,7 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 ||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- For more information about the probability, support, and standard deviation values in the nested NODE_DISTRIBUTION table, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md).  
+ For more information about the probability, support, and standard deviation values in the nested NODE_DISTRIBUTION table, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
 ###  <a name="bkmk_Query4"></a> Sample Query 4: Making Predictions for a Discrete Value  
  Logistic regression is typically used in scenarios where you want to analyze the factors that contribute to a binary outcome. Although the model used in the tutorial predicts a continuous value, **ServiceGrade**, in a real-life scenario you might want to set up the model to predict whether service grade met some discretized target value. Alternatively, you could output the predictions using a continuous value but later group the predicted outcomes into **Good**, **Fair**, or **Poor**.  
@@ -143,7 +143,7 @@ NATURAL PREDICTION JOIN
   
 ##### To create a discretized version of the Call Center mining structure and models  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, expand **Mining Structures**.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, expand **Mining Structures**.  
   
 2.  Right-click Call Center.dmm and select **Copy**.  
   
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  Note that the predicted outcomes have been grouped into three categories as specified; however, these groupings are based on the clustering of actual values in the data, not arbitrary values that you might set as business goals.  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  
@@ -200,16 +200,16 @@ NATURAL PREDICTION JOIN
 |[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
 |[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 > [!NOTE]  
 >  For neural network and logistic regression models, the [PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md) function returns a single value that represents the size of the training set for the entire model.  
   
 ## See Also  
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Logistic Regression Algorithm](data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft Logistic Regression Algorithm Technical Reference](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Logistic Regression Algorithm](microsoft-logistic-regression-algorithm.md)   
+ [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

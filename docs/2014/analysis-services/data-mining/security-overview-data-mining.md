@@ -18,29 +18,29 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Security Overview (Data Mining)
-  The process of securing [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] occurs at multiple levels. You must secure each instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and its data sources to make sure that only authorized users have read or read/write permissions to selected dimensions, mining models, and data sources. You must also secure underlying data sources to prevent unauthorized users from maliciously compromising sensitive business information. The process of securing an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is described in the following topics.  
+  The process of securing [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] occurs at multiple levels. You must secure each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and its data sources to make sure that only authorized users have read or read/write permissions to selected dimensions, mining models, and data sources. You must also secure underlying data sources to prevent unauthorized users from maliciously compromising sensitive business information. The process of securing an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] is described in the following topics.  
   
 ##  <a name="bkmk_Architecture"></a> Security Architecture  
- See the following resources to learn about the basic security architecture of an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], including how [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication to authenticate user access.  
+ See the following resources to learn about the basic security architecture of an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including how [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication to authenticate user access.  
   
--   [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)  
+-   [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)  
   
--   [Security Properties](../../2014/analysis-services/security-properties.md)  
+-   [Security Properties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/security-properties.md)  
   
 -   [Configure Service Accounts &#40;Analysis Services&#41;](instances/configure-service-accounts-analysis-services.md)  
   
--   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configuring the Logon Account for Analysis Services  
- You must select an appropriate logon account for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and specify the permissions for this account. You must make sure that the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] logon account has only those permissions that are necessary to perform necessary tasks, including appropriate permissions to the underlying data sources.  
+ You must select an appropriate logon account for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and specify the permissions for this account. You must make sure that the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] logon account has only those permissions that are necessary to perform necessary tasks, including appropriate permissions to the underlying data sources.  
   
  For data mining, you need a different set of permissions to build and process models than you need to view or query the models. Making predictions against a model is a kind of query and does not require administrative permissions.  
   
 ##  <a name="bkmk_Instance"></a> Securing an Analysis Services Instance  
- Next you must secure the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] computer, the Windows operating system on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] computer, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] itself, and the data sources that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses.  
+ Next you must secure the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] computer, the Windows operating system on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] computer, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] itself, and the data sources that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses.  
   
 ##  <a name="bkmk_Access"></a> Configuring Access to Analysis Services  
- When you set up and define authorized users for an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you need to determine which users should also have permission to administer specific database objects, which users can view the definition of objects or browse the models, and which users are able to access data sources directly.  
+ When you set up and define authorized users for an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you need to determine which users should also have permission to administer specific database objects, which users can view the definition of objects or browse the models, and which users are able to access data sources directly.  
   
 ##  <a name="bkmk_DMspecial"></a> Special Considerations for Data Mining  
  To enable an analyst or developer to create and test data mining models, you must give that analyst or developer administrative permissions on the database where the mining models are stored. As a consequence, the data mining analyst or developer can potentially create or delete other objects that are not related to data mining, including data mining objects that were created and are being used by other analysts or developers, or OLAP objects that are not included in the data mining solution.  
@@ -54,6 +54,6 @@ manager: "mblythe"
  If you use Integration Services packages to clean data, to update mining models, or to make predictions, you must ensure that the Integration Services service has the appropriate permissions on the database where the model is stored, and appropriate permissions on the source data.  
   
 ## See Also  
- [Roles and Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/roles-and-permissions-analysis-services.md)  
+ [Roles and Permissions &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/roles-and-permissions-analysis-services.md)  
   
   

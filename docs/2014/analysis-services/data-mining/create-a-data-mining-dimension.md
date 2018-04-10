@@ -24,7 +24,7 @@ manager: "mblythe"
   
 ### To create a data mining dimension  
   
-1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], select either the **Mining Structure** tab or the **Mining Models** tab.  
+1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], select either the **Mining Structure** tab or the **Mining Models** tab.  
   
 2.  From the **Mining Model** menu, select **Create a Data Mining Dimension**.  
   
@@ -41,6 +41,6 @@ manager: "mblythe"
      The data mining dimension is created and is added to the **Dimensions** folder in Solution Explorer. If you selected **Create cube**, a new cube is also created and is added to the **Cubes** folder.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

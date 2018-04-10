@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
+  This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  
   
 ##  <a name="bkmk_Top"></a> Understanding the Structure of a Decision Trees Model  
  A decision trees model has a single parent node that represents the model and its metadata. Underneath the parent node are independent trees that represent the predictable attributes that you select. For example, if you set up your decision tree model to predict whether customers will purchase something, and provide inputs for gender and income, the model would create a single tree for the purchasing attribute, with many branches that divide on conditions related to gender and income.  
@@ -30,7 +30,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  If your model includes multiple trees, you can view only one tree at a time in the **Microsoft Tree Viewer**. However, in the **Generic Content Tree Viewer** , all trees in the same model are displayed at the same time.  
   
- ![structure of model content for decision tree](../../2014/analysis-services/media/modelcontentstructure-dt.gif "structure of model content for decision tree")  
+ ![structure of model content for decision tree](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-dt.gif "structure of model content for decision tree")  
   
  The tree for each predictable attribute contains information that describes how the input columns that you choose affect the outcome of that particular predictable attribute. Each tree is headed by a node (NODE_TYPE = 9) that contains the predictable attribute, followed by a series of nodes (NODE_TYPE = 10) that represent the input attributes. An attribute corresponds to either a case-level column or values of nested table columns, which are generally the values in the `Key` column of the nested table.  
   
@@ -43,10 +43,10 @@ manager: "mblythe"
  The Microsoft Decision Trees algorithm does not allow continuous data types as inputs; therefore, if any columns have a continuous numeric data type, the values are discretized. The algorithm performs its own discretization at the point of a split for all continuous attributes.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically chooses a method for bucketing continuous attributes; however, you can control how continuous values in the inputs are discretized by setting the content type of the mining structure column to `Discretized` and then setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> or <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> property.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically chooses a method for bucketing continuous attributes; however, you can control how continuous values in the inputs are discretized by setting the content type of the mining structure column to `Discretized` and then setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> or <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> property.  
   
 ##  <a name="bkmk_ModelContent"></a> Model Content for a Decision Trees Model  
- This section provides details and examples only for those columns in the mining model content that have particular relevance for decision trees models. For information about general-purpose columns in the schema rowset, and explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ This section provides details and examples only for those columns in the mining model content that have particular relevance for decision trees models. For information about general-purpose columns in the schema rowset, and explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -160,7 +160,7 @@ manager: "mblythe"
   
  Each tree that represents an output attribute is additionally subdivided into interior branches (NODE_TYPE = 3) that represent splits. Each of these trees contains statistics about the distribution of the target attribute. In addition, each leaf node (NODE_TYPE = 4) contains statistics that describe input attributes and their values, together with the number of cases in support of each attribute-value pair. Therefore, in any branch of a decision tree, you can view the probabilities or the distribution of data easily without having to query the source data. Each level of the tree necessarily represents the sum of its immediate child nodes.  
   
- For examples of how to retrieve these statistics, see [Decision Trees Model Query Examples](data-mining/decision-trees-model-query-examples.md).  
+ For examples of how to retrieve these statistics, see [Decision Trees Model Query Examples](decision-trees-model-query-examples.md).  
   
 ## Example of Decision Tree Structure  
  To understand how a decision tree works, consider an example, such as the AdventureWorks bike buyer scenario. Assuming that the predictable attribute is customer purchases, the decision trees algorithm tries to find one column of data, among all the inputs that you provided, that most effectively detects the customers that are likely to purchase a bike and those who are unlikely to buy a bike. For example, the model might find that Age is the best indicator of purchasing behavior. Specifically, that the customers over the age of 30 are very likely to purchase a bike, and all other customers are unlikely to make a purchase. In this scenario, the model creates a *split* on the Age attribute. That means that the tree divides into two branches, one containing customers over the age of 30, and the other containing customers under 30. The new branches are represented in the model structure as two new interior trees (NODE_TYPE = 3).  
@@ -196,7 +196,7 @@ manager: "mblythe"
  The attribute represented by the XML fragment can be either simple or complex. A simple attribute contains the name of the model column, and the value of the attribute. If the model column contains a nested table, the nested table attribute is represented as a concatenation of the table name, the key value, and the attribute.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports version 2.0 of the PMML standard, with extensions to support the use of nested table. If your data contains nested tables and you generate a PMML version of the model, all elements in the model that include the predicates are marked as an extension.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports version 2.0 of the PMML standard, with extensions to support the use of nested table. If your data contains nested tables and you generate a PMML version of the model, all elements in the model that include the predicates are marked as an extension.  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Node Distribution for Discrete Attributes  
  In a decision trees model, the NODE_DISTRIBUTION table contains useful statistics. However, the type of statistics depends on whether the tree predicts a discrete or continuous attribute. This section describes the meaning of the node distribution statistics for discrete attributes.  
@@ -223,23 +223,23 @@ manager: "mblythe"
 |Age < 30|40|Age < 30 and Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 and Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- A small adjustment is made in all models to account for possible missing values. For continuous attributes, each value or range of values is represented as a state (for example, Age \<30, Age = 30, and Age >30) and the probabilities are calculated as follows: state exists (value = 1), some other state exists (value = 0), state is `Missing`. For more information about how probabilities are adjusted to represent missing values, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).  
+ A small adjustment is made in all models to account for possible missing values. For continuous attributes, each value or range of values is represented as a state (for example, Age \<30, Age = 30, and Age >30) and the probabilities are calculated as follows: state exists (value = 1), some other state exists (value = 0), state is `Missing`. For more information about how probabilities are adjusted to represent missing values, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
  The probabilities for each node are calculated almost directly from the distribution, as follows:  
   
  Probability = (support for state + support for prior state) / (node support plus the prior node support)  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses probabilities for each node to compare the stored probability with the prior probability to determine whether the path from the parent to the child node indicates a strong inference.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses probabilities for each node to compare the stored probability with the prior probability to determine whether the path from the parent to the child node indicates a strong inference.  
   
  When making predictions, the probability of the distribution must be balanced with the probability of the node, to smoothen the probabilities. For example, if a split in the tree separates cases by a ratio of 9000/1000, the tree is very unbalanced. As a result, a prediction coming from the small branch should not carry the same weight as a prediction coming from a branch with many cases.  
   
 #### Variance  
  Variance is a measure of how scattered values in a sample are, given an expected distribution. For discrete values, the variance is 0 by definition.  
   
- For information about how variance is calculated for continuous values, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ For information about how variance is calculated for continuous values, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 #### Value Type  
- The value type column provides information about the meaning of the numeric value provided in the other columns in the NODE_DISTRIBUTION table. You can use the value type in queries to retrieve specific rows from the nested tables. For examples, see [Decision Trees Model Query Examples](data-mining/decision-trees-model-query-examples.md).  
+ The value type column provides information about the meaning of the numeric value provided in the other columns in the NODE_DISTRIBUTION table. You can use the value type in queries to retrieve specific rows from the nested tables. For examples, see [Decision Trees Model Query Examples](decision-trees-model-query-examples.md).  
   
  Of the types in the <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> enumeration, the following are used in classification trees.  
   
@@ -248,7 +248,7 @@ manager: "mblythe"
 |1 (Missing)|Indicates a count, probability, or other statistic related to missing values.|  
 |4 (Discrete)|Indicates a count, probability, or other statistic related to a discrete or discretized value.|  
   
- If the model includes a continuous predictable attribute, the tree might also contain value types that are unique to regression formulas. For a list of the value types that are used in regression trees, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ If the model includes a continuous predictable attribute, the tree might also contain value types that are unique to regression formulas. For a list of the value types that are used in regression trees, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ###  <a name="NodeScore"></a> Node Score  
  The node score represents slightly different information at each level of the tree. In general, the score is a numeric value that tells you how good a split was achieved by splitting on the condition. The value is represented as a double, where a higher value is better.  
@@ -259,7 +259,7 @@ manager: "mblythe"
   
  For all other nodes in the tree (except leaf nodes), the score for each node represents the best split score for the current node, minus the split score for the parent node. Typically, the split score for a parent node should always be better than the split score on any one of its child nodes. That is because a decision trees model ideally splits on the most important attributes first.  
   
- There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Research Web site.  
+ There are many ways of calculating a score for a split, depending on the algorithm parameter you choose. A discussion of how the scores are calculated for each of the scoring methods is beyond the scope of this topic. For more information, see "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963)", on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research Web site.  
   
 > [!NOTE]  
 >  If you create a decision trees model that has both continuous and discrete predictable attributes, you will see completely different scores in the (All) nodes that represent each tree type. Each model should be considered independently, and the methods used for scoring regression are completely different from those used for scoring classification. The node score values cannot be compared.  
@@ -277,12 +277,12 @@ manager: "mblythe"
 |if n between 5 and 10|No equation|  
 |if n > 10|Relationship can be expressed as equation 2|  
   
- For more information about regression nodes, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ For more information about regression nodes, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Model Viewers](data-mining-model-viewers.md)   
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)  
   
   

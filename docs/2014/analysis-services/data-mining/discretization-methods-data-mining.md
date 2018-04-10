@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Discretization Methods (Data Mining)
-  Some algorithms that are used to create data mining models in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] require specific content types in order to function correctly. For example, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns as input and cannot predict continuous values. Additionally, some columns may contain so many values that the algorithm cannot easily identify interesting patterns in the data from which to create a model.  
+  Some algorithms that are used to create data mining models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] require specific content types in order to function correctly. For example, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns as input and cannot predict continuous values. Additionally, some columns may contain so many values that the algorithm cannot easily identify interesting patterns in the data from which to create a model.  
   
  In these cases, you can discretize the data in the columns to enable the use of the algorithms to produce a mining model. *Discretization* is the process of putting values into buckets so that there are a limited number of possible states. The buckets themselves are treated as ordered and discrete values. You can discretize both numeric and string columns.  
   
@@ -36,13 +36,13 @@ manager: "mblythe"
   
  `Number of Buckets = sqrt(n)`  
   
- If you do not want [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to calculate the number of buckets, you can use the <xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A> property to manually specify the number of buckets.  
+ If you do not want [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to calculate the number of buckets, you can use the <xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A> property to manually specify the number of buckets.  
   
- The following table describes the methods that you can use to discretize data in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ The following table describes the methods that you can use to discretize data in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Discretization method|Description|  
 |---------------------------|-----------------|  
-|`AUTOMATIC`|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determines which discretization method to use.|  
+|`AUTOMATIC`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determines which discretization method to use.|  
 |`CLUSTERS`|The algorithm divides the data into groups by sampling the training data, initializing to a number of random points, and then running several iterations of the Microsoft Clustering algorithm using the Expectation Maximization (EM) clustering method. The `CLUSTERS` method is useful because it works on any distribution curve. However, it requires more processing time than the other discretization methods.<br /><br /> This method can only be used with numeric columns.|  
 |`EQUAL_AREAS`|The algorithm divides the data into groups that contain an equal number of values. This method is best used for normal distribution curves, but does not work well if the distribution includes a large number of values that occur in a narrow group in the continuous data. For example, if one-half of the items have a cost of 0, one-half the data will occur under a single point in the curve. In such a distribution, this method breaks the data up in an effort to establish equal discretization into multiple areas. This produces an inaccurate representation of the data.|  
   
@@ -52,15 +52,15 @@ manager: "mblythe"
   
 -   The `CLUSTERS` method uses a random sample of 1000 records to discretize data. Use the `EQUAL_AREAS` method if you do not want the algorithm to sample data.  
   
--   The neural network mining model tutorial provides an example of how discretization can be customized. For more information, see [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   The neural network mining model tutorial provides an example of how discretization can be customized. For more information, see [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## See Also  
- [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md)   
+ [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Content Types &#40;DMX&#41;](~/dmx/content-types-dmx.md)   
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)   
- [Data Types &#40;Data Mining&#41;](data-mining/data-types-data-mining.md)   
- [Mining Structure Columns](data-mining/mining-structure-columns.md)   
- [Column Distributions &#40;Data Mining&#41;](data-mining/column-distributions-data-mining.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Data Types &#40;Data Mining&#41;](data-types-data-mining.md)   
+ [Mining Structure Columns](mining-structure-columns.md)   
+ [Column Distributions &#40;Data Mining&#41;](column-distributions-data-mining.md)  
   
   

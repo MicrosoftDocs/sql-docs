@@ -31,7 +31,7 @@ manager: "mblythe"
   
 ### Modify a query  
   
-1.  On the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **SQL**.  
+1.  On the **Mining Model Prediction** tab in Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click **SQL**.  
   
      The grid at the bottom of the screen is replaced by a text editor that contains the query. You can type changes to the query in this editor.  
   
@@ -41,8 +41,8 @@ manager: "mblythe"
     >  If the query that you have created is invalid, the Results window does not display an error and does not display any results. Click the **Design** button, or select **Design** or **Query** from the **Mining Model** menu to correct the problem and run the query again.  
   
 ## See Also  
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)   
- [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Data Mining Queries](data-mining-queries.md)   
+ [Prediction Query Builder &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/prediction-query-builder-data-mining.md)   
+ [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -21,13 +21,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Choose and Map Model Testing Data
-  To create an accuracy chart in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must choose the data that will be used to test the model, and map the data to the model.  
+  To create an accuracy chart in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must choose the data that will be used to test the model, and map the data to the model.  
   
- By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will use the mining model testing data, provided that you created a holdout data set when you built the mining structure. Creating a holdout test set is the easiest way to test models that are based on the same mining structure, because the column names and data types will always match the model, and you can be reasonably assured that the distribution of the data is similar. Also, the designer will automatically create the relationships between the input and model columns.  
+ By default, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will use the mining model testing data, provided that you created a holdout data set when you built the mining structure. Creating a holdout test set is the easiest way to test models that are based on the same mining structure, because the column names and data types will always match the model, and you can be reasonably assured that the distribution of the data is similar. Also, the designer will automatically create the relationships between the input and model columns.  
   
  Alternatively, you can specify an external source of data. For external data, there are some additional requirements:  
   
--   The external data set must be defined as a data source view in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+-   The external data set must be defined as a data source view in an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 -   The external data set must at least contain one column that can be mapped to the predictable column in the mining model. You can choose to ignore some columns.  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 ##  <a name="bkmk_SelectInputs"></a> To select input tables to test the accuracy of a mining model  
   
-1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], double-click the mining structure that contains the models you want to chart.  
+1.  In Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-click the mining structure that contains the models you want to chart.  
   
 2.  Select the **Mining Accuracy Chart** tab.  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
      **Specify a different data set**  
   
-4.  If you selected **Specify a different data set**, optionally click **Open Filter Editor** to create filter conditions on the input data set. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+4.  If you selected **Specify a different data set**, optionally click **Open Filter Editor** to create filter conditions on the input data set. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  Click the **Lift Chart** tab or the **Classification Matrix** tab to automatically build the chart by using the testing data you specified.  
   
@@ -85,7 +85,7 @@ manager: "mblythe"
   
 9. Edit the mappings, if necessary. Columns in the mining structure are automatically mapped to the columns with the same name in the input table. To manually create mappings, click a column in the **Select Input Table(s)** table and drag it onto the corresponding column in the **Mining Structure** table. To delete a mapping, click the line that links the column in the **Mining Structure** table to the mapped column in the **Select Input Table(s)** table, and then press DELETE.  
   
-10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="bkmk_ChangeMappings"></a> To modify the way input data is mapped to the model  
   
@@ -101,11 +101,11 @@ manager: "mblythe"
   
 6.  In the **Specify Column Mapping** dialog box, click **Select Case Table**.  
   
-7.  In the Select Table dialog box, Select a data source view from the list, and select the table that contains the case data. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  In the Select Table dialog box, Select a data source view from the list, and select the table that contains the case data. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-8.  If the tables you need are not available, close the dialog box and create a new data source view that contains the table. For information about how to create a data source view, see [Defining a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/defining-a-data-source-view-analysis-services.md).  
+8.  If the tables you need are not available, close the dialog box and create a new data source view that contains the table. For information about how to create a data source view, see [Defining a Data Source View &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/defining-a-data-source-view-analysis-services.md).  
   
-9. If the mining model contains a nested table, click **Select Nested Table**, and select the nested table from the list of tables in the data source view. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+9. If the mining model contains a nested table, click **Select Nested Table**, and select the nested table from the list of tables in the data source view. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. Select the join line of the mapping you want to modify, and select **Modify Connections**.  
   
@@ -113,11 +113,11 @@ manager: "mblythe"
   
 11. Under **Table Column**, select the row that corresponds to the row under **Mining Structure Column** for which you want to modify a relationship. Select a new column from the list, or select the blank entry from the list to delete the column.  
   
-12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      The new column mappings are displayed in the **Specify Column Mapping** dialog box. You can remove a mapping by selecting the line between the columns and pressing the DELETE key. You can create a new connection by selecting a column in the **Mining Structure** table and dragging it to the corresponding column in the **SelectInput Table(s)** table.  
   
 ## See Also  
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

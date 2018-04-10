@@ -20,22 +20,22 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Copy a View of a Mining Model
-  The **Mining Model Viewer** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] uses a separate viewer for each type of mining model. Several of the viewers have components from which you can copy the contents to the Clipboard, and from there paste the contents into a document or into image manipulation software. The following components make this functionality available:  
+  The **Mining Model Viewer** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses a separate viewer for each type of mining model. Several of the viewers have components from which you can copy the contents to the Clipboard, and from there paste the contents into a document or into image manipulation software. The following components make this functionality available:  
   
--   Cluster Diagram in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Cluster Viewer and the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer  
+-   Cluster Diagram in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster Viewer  
   
--   Decision Tree in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer and the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Viewer  
+-   Decision Tree in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tree Viewer and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series Viewer  
   
--   State Transitions in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer  
+-   State Transitions in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Cluster Viewer  
   
--   Dependency Network in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules Viewer, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes Viewer, and the [!INCLUDE[msCoName](../includes/msconame-md.md)] Tree Viewer  
+-   Dependency Network in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules Viewer, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes Viewer, and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tree Viewer  
   
--   Mining model content, from the Node Details pane of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree Viewer  
+-   Mining model content, from the Node Details pane of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer  
   
  You can copy the complete representation of the mining model, or just the part that is visible in the viewer.  
   
 > [!WARNING]  
->  When you copy a model using the viewer, it does not create a new model object. To create a new model, you must use either the wizard, or the Data Mining Designer,. For more information, see [Make a Copy of a Mining Model](data-mining/make-a-copy-of-a-mining-model.md).  
+>  When you copy a model using the viewer, it does not create a new model object. To create a new model, you must use either the wizard, or the Data Mining Designer,. For more information, see [Make a Copy of a Mining Model](make-a-copy-of-a-mining-model.md).  
   
 ### To copy the complete model to the Clipboard  
   
@@ -64,6 +64,6 @@ manager: "mblythe"
 5.  Right-click the **Node Details** pane again and select **Copy**.  
   
 ## See Also  
- [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)  
   
   

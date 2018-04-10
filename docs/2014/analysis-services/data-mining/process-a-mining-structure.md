@@ -18,21 +18,21 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Process a Mining Structure
-  Before you can browse or work with the mining models that are associated with a mining structure, you have to deploy the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project and process the mining structure and mining models. Also, if you make a change to the mining structure or mining models, you will be prompted to redeploy and process them. Processing the structure in the **Mining Structure** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] processes all the associated models.  
+  Before you can browse or work with the mining models that are associated with a mining structure, you have to deploy the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project and process the mining structure and mining models. Also, if you make a change to the mining structure or mining models, you will be prompted to redeploy and process them. Processing the structure in the **Mining Structure** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] processes all the associated models.  
   
  You can process a mining structure by using these tools:  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 -   XMLA: Process command  
   
- For information about how to process individual models, see [Process a Mining Model](data-mining/process-a-mining-model.md).  
+ For information about how to process individual models, see [Process a Mining Model](process-a-mining-model.md).  
   
 ### To process a mining structure and all associated mining models using SQL Server Data Tools  
   
-1.  Select **Process Mining Structure and All Models** from the **Mining Model** menu item in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+1.  Select **Process Mining Structure and All Models** from the **Mining Model** menu item in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
      If you made changes to the structure, you will be prompted to redeploy the structure before processing the models. Click **Yes**.  
   
@@ -45,6 +45,6 @@ manager: "mblythe"
 4.  Click **Close** in the **Processing Mining Structure - \<structure>** dialog box.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

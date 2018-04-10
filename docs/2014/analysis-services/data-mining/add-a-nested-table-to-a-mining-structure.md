@@ -39,9 +39,9 @@ manager: "mblythe"
   
 6.  Click **OK**.  
   
-     A new table column that contains the key column is added to the mining structure. For information about how to add additional columns, see [Add Columns to a Mining Structure](data-mining/add-columns-to-a-mining-structure.md).  
+     A new table column that contains the key column is added to the mining structure. For information about how to add additional columns, see [Add Columns to a Mining Structure](add-columns-to-a-mining-structure.md).  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

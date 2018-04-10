@@ -20,11 +20,11 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create a New Relational Mining Structure
-  Use the Data Mining Wizard to create a new mining structure, using data from a relational database or other source, and then save the structure and any related models to a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
+  Use the Data Mining Wizard to create a new mining structure, using data from a relational database or other source, and then save the structure and any related models to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
   
 ### To create a relational mining structure  
   
-1.  In Solution Explorer, right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure**.  
+1.  In Solution Explorer, right-click the **Mining Structures** folder in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, and then click **New Mining Structure**.  
   
      The Data Mining Wizard opens.  
   
@@ -34,11 +34,11 @@ manager: "mblythe"
   
 4.  On the **Select the Data Mining Technique** page, select the data mining algorithm that you want to use, and then click **Next**.  
   
-     For more information about data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+     For more information about data mining algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 5.  On the **Select Data Source View** page, under **Available data source views**, click the data source view that you want to use, and then click **Next**.  
   
-     For more information about creating a data source view, see [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md).  
+     For more information about creating a data source view, see [Data Source Views in Multidimensional Models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-source-views-in-multidimensional-models.md).  
   
 6.  On the **Specify Table Types** page, under **Input tables**, select a case table and a nested table.  
   
@@ -51,13 +51,13 @@ manager: "mblythe"
 9. On the **Specify Columns' Content and Data Type** page, under **Mining model structure**, you can adjust the content type and data type for each column.  
   
     > [!NOTE]  
-    >  You can click **Detect** to automatically detect whether a column contains continuous or discrete data. After you click this button, the column content and data types will be updated in the **Content Type** and **Data Type** columns. For more information about content types and data types, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md) and [Data Types &#40;Data Mining&#41;](data-mining/data-types-data-mining.md).  
+    >  You can click **Detect** to automatically detect whether a column contains continuous or discrete data. After you click this button, the column content and data types will be updated in the **Content Type** and **Data Type** columns. For more information about content types and data types, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md) and [Data Types &#40;Data Mining&#41;](data-types-data-mining.md).  
   
 10. Click **Next**.  
   
 11. On the **Completing the Wizard** page, provide a name for the mining structure and the related initial mining model that will be created, and then click **Finish**.  
   
 ## See Also  
- [Mining Structure Tasks and How-tos](data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
   
   

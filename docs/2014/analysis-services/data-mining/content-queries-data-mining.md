@@ -130,7 +130,7 @@ manager: "mblythe"
 ##  <a name="bkmk_Examples"></a> Examples  
  Although some model content is standard across algorithms, some parts of the content vary greatly depending on the algorithm that you used to build the model. Therefore, when you create a content query, you must understand what information in the model is most useful to your specific model.  
   
- A few examples are provided in this section to illustrate how the choice of algorithm affects the kind of information that is stored in the model. For more information about mining model content, and the content that is specific to each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ A few examples are provided in this section to illustrate how the choice of algorithm affects the kind of information that is stored in the model. For more information about mining model content, and the content that is specific to each model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_Assoc"></a> Example 1: Content Query on an Association Model  
  The statement, `SELECT FROM <model>.CONTENT`, returns different kinds of information, depending on the type of model you are querying. For an association model, a key piece of information is the *node type*. Nodes are like containers for information in the model content. In an association model, nodes that represent rules have a NODE_TYPE value of 8, whereas nodes that represent itemsets have a NODE_TYPE value of 7.  
@@ -162,7 +162,7 @@ ORDER BY NODE_SUPPORT DESC
   
  The WHERE clause specifies that the value of NODE_TYPE should be 8, to retrieve only rules.  
   
- For more examples, see [Association Model Query Examples](data-mining/association-model-query-examples.md).  
+ For more examples, see [Association Model Query Examples](association-model-query-examples.md).  
   
 ###  <a name="bkmk_DecTree"></a> Example 2: Content Query on a Decision Trees Model  
  A decision tree model can be used for prediction as well as for classification.  This example assumes that you are using the model to predict an outcome, but you also want to find out which factors or rules can be used to classify the outcome.  
@@ -186,7 +186,7 @@ FROM [<decision tree model name>]
 WHERE NODE_UNIQUE_NAME= '<node id>'  
 ```  
   
- For more examples, see [Decision Trees Model Query Examples](data-mining/decision-trees-model-query-examples.md).  
+ For more examples, see [Decision Trees Model Query Examples](decision-trees-model-query-examples.md).  
   
 ##  <a name="bkmk_Results"></a> Working with the Query Results  
  As the examples demonstrate, content queries mostly return tabular rowsets, but can also include information from nested columns. You can flatten the rowset that is returned, but this can make working with results more complex. The content of the NODE_DISTRIBUTION node in particular is nested, but contains much interesting information about the model.  
@@ -195,6 +195,6 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
 ## See Also  
  [Understanding the DMX Select Statement](~/dmx/understanding-the-dmx-select-statement.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)  
+ [Data Mining Queries](data-mining-queries.md)  
   
   

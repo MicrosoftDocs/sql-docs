@@ -23,14 +23,14 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Missing Values (Analysis Services - Data Mining)
-  Handling  *missing values* correctly is an important part of effective modeling. This section explains what missing values are, and describes the features provided in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to work with missing values when building data mining structures and mining models.  
+  Handling  *missing values* correctly is an important part of effective modeling. This section explains what missing values are, and describes the features provided in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to work with missing values when building data mining structures and mining models.  
   
 ## Definition of Missing Values in Data Mining  
  A missing value can signify a number of different things. Perhaps the field was not applicable, the event did not happen, or the data was not available. It could be that the person who entered the data did not know the right value, or did not care if a field was not filled in.  
   
- However, there are many data mining scenarios in which missing values provide important information. The meaning of the missing values depends largely on context. For example, a missing value for the date in a list of invoices has a meaning substantially different from the lack of a date in column that indicates an employee hire date. Generally, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] treats missing values as informative and adjusts the probabilities to incorporate the missing values into its calculations. By doing so, you can ensure that models are balanced and do not weight existing cases too heavily.  
+ However, there are many data mining scenarios in which missing values provide important information. The meaning of the missing values depends largely on context. For example, a missing value for the date in a list of invoices has a meaning substantially different from the lack of a date in column that indicates an employee hire date. Generally, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] treats missing values as informative and adjusts the probabilities to incorporate the missing values into its calculations. By doing so, you can ensure that models are balanced and do not weight existing cases too heavily.  
   
- Therefore, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides two distinctly different mechanisms for managing and calculating missing values. The first method controls the handling of nulls at the level of the mining structure. The second method differs in implementation for each algorithm, but generally defines how missing values are processed and counted in models that permit null values.  
+ Therefore, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides two distinctly different mechanisms for managing and calculating missing values. The first method controls the handling of nulls at the level of the mining structure. The second method differs in implementation for each algorithm, but generally defines how missing values are processed and counted in models that permit null values.  
   
 ## Specifying Handling of Nulls  
  In your data source, missing values might be represented in many ways: as nulls, as empty cells in a spreadsheet, as the value N/A or some other code, or as an artificial value such as 9999. However, for purposes of data mining, only nulls are considered missing values. If your data contains placeholder values instead of nulls, they can affect the results of the model, so you should replace them with nulls or infer correct values if possible. There are a variety of tools that you can use to infer and fill in appropriate values, such as the Lookup transformation or the Data Profiler task in SQL Server Integration Services, or the Fill By Example tool provided in the Data Mining Add-Ins for Excel.  
@@ -42,7 +42,7 @@ manager: "mblythe"
   
  When you create a mining model, a `Missing` state is automatically added to the model for all discrete columns. For example, if the input column [Gender] contains two possible values, Male and Female, a third value is automatically added to represent the `Missing` value, and the histogram that shows the distribution of all values for the column always includes a count of the cases with `Missing` values. If the Gender column is not missing any values, the histogram shows that the Missing state is found in 0 cases.  
   
- The rationale for including the `Missing` state by default becomes clear when you consider that your data might not have examples of all possible values, and you would not want the model to exclude the possibility just because there was no example in the data. For example, if sales data for a store showed that all customers who purchased a certain product happened to be women, you would not want to create a model that predicts that only women could purchase the product. Instead, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] adds a placeholder for the extra unknown value, called `Missing`, as a way of accommodating possible other states.  
+ The rationale for including the `Missing` state by default becomes clear when you consider that your data might not have examples of all possible values, and you would not want the model to exclude the possibility just because there was no example in the data. For example, if sales data for a store showed that all customers who purchased a certain product happened to be women, you would not want to create a model that predicts that only women could purchase the product. Instead, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adds a placeholder for the extra unknown value, called `Missing`, as a way of accommodating possible other states.  
   
  For example, the following table shows the distribution of values for the (All) node in the decision tree model created for the Bike Buyer tutorial. In the example scenario, the [Bike Buyer] column is the predictable attribute, where 1 indicates "Yes" and 0 indicates "No".  
   
@@ -52,15 +52,15 @@ manager: "mblythe"
 |1|9098|  
 |Missing|0|  
   
- This distribution shows that about half of the customers have purchased a bike, and half have not. This particular data set is very clean; therefore, every case has a value in the [Bike Buyer] column, and the count of `Missing` values is 0. However, if any case had a null in the [Bike Buyer] field, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] would count that row as a case with a `Missing` value.  
+ This distribution shows that about half of the customers have purchased a bike, and half have not. This particular data set is very clean; therefore, every case has a value in the [Bike Buyer] column, and the count of `Missing` values is 0. However, if any case had a null in the [Bike Buyer] field, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] would count that row as a case with a `Missing` value.  
   
  If the input is a continuous column, the model tabulates two possible states for the attribute: `Existing` and `Missing`. In other words, either the column contains a value of some numeric data type, or it contains no value. For cases that have a value, the model calculates mean, standard deviation, and other meaningful statistics. For cases that have no value, the model provides a count of the `Missing` vales and adjusts predictions accordingly. The method for adjusting the prediction differs depending on the algorithm and is described in the following section.  
   
 > [!NOTE]  
->  For attributes in a nested table, missing values are not informative. For example, if a customer has not purchased a product, the nested **Products** table would not have a row corresponding to that product, and the mining model would not create an attribute for the missing product. However, if you are interested in customers who have not purchased certain products, you can create a model that is filtered on the non-existence of the products in the nested table, by using a NOT EXISTS statement in the model filter. For more information, see [Apply a Filter to a Mining Model](data-mining/apply-a-filter-to-a-mining-model.md).  
+>  For attributes in a nested table, missing values are not informative. For example, if a customer has not purchased a product, the nested **Products** table would not have a row corresponding to that product, and the mining model would not create an attribute for the missing product. However, if you are interested in customers who have not purchased certain products, you can create a model that is filtered on the non-existence of the products in the nested table, by using a NOT EXISTS statement in the model filter. For more information, see [Apply a Filter to a Mining Model](apply-a-filter-to-a-mining-model.md).  
   
 ## Adjusting Probability for Missing States  
- In addition to counting values, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] calculates the probability of any value across the data set. The same is true for the `Missing` value. For example, the following table shows the probabilities for the cases in the previous example:  
+ In addition to counting values, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculates the probability of any value across the data set. The same is true for the `Missing` value. For example, the following table shows the probabilities for the cases in the previous example:  
   
 |Value|Cases|Probability|  
 |-----------|-----------|-----------------|  
@@ -89,9 +89,9 @@ manager: "mblythe"
   
  StateProbability = (NodePriorProbability)* (StateSupport + 1) / (NodeSupport + TotalStates)  
   
- Moreover, in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], the Decision Trees algorithm provides an additional adjustment that helps the algorithm compensate for the presence of filters on the model, which may result in many states to be excluded during training.  
+ Moreover, in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], the Decision Trees algorithm provides an additional adjustment that helps the algorithm compensate for the presence of filters on the model, which may result in many states to be excluded during training.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], if a state is present during training but just happens to have zero support in a certain node, the standard adjustment is made. However, if a state is never encountered during training, the algorithm sets the probability to exactly zero. This adjustment applies not only to the `Missing` state, but also to other states that exist in the training data but have zero support as result of model filtering.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], if a state is present during training but just happens to have zero support in a certain node, the standard adjustment is made. However, if a state is never encountered during training, the algorithm sets the probability to exactly zero. This adjustment applies not only to the `Missing` state, but also to other states that exist in the training data but have zero support as result of model filtering.  
   
  This additional adjustment results in the following formula:  
   
@@ -106,13 +106,13 @@ manager: "mblythe"
   
 |Tasks|Links|  
 |-----------|-----------|  
-|Add flags to individual model columns to control handling of missing values|[View or Change Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md)|  
-|Set properties on a mining model to control handling of missing values|[Change the Properties of a Mining Model](data-mining/change-the-properties-of-a-mining-model.md)|  
+|Add flags to individual model columns to control handling of missing values|[View or Change Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Set properties on a mining model to control handling of missing values|[Change the Properties of a Mining Model](change-the-properties-of-a-mining-model.md)|  
 |Learn how to specify modeling flags in DMX|[Modeling Flags &#40;DMX&#41;](~/dmx/modeling-flags-dmx.md)|  
-|Alter the way that the mining structure handles missing values|[Change the Properties of a Mining Structure](data-mining/change-the-properties-of-a-mining-structure.md)|  
+|Alter the way that the mining structure handles missing values|[Change the Properties of a Mining Structure](change-the-properties-of-a-mining-structure.md)|  
   
 ## See Also  
- [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modeling Flags &#40;Data Mining&#41;](../../2014/analysis-services/modeling-flags-data-mining.md)  
+ [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Modeling Flags &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/modeling-flags-data-mining.md)  
   
   

@@ -57,12 +57,12 @@ manager: "mblythe"
 |**Usage**|Sets how the column will be used by the mining model.|  
   
 ## See Also  
- [Mining Model Columns](data-mining/mining-model-columns.md)   
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)   
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)   
- [Change the Properties of a Mining Model](data-mining/change-the-properties-of-a-mining-model.md)   
- [Data Mining Tools](data-mining/data-mining-tools.md)   
- [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)   
- [Create an Alias for a Model Column](data-mining/create-an-alias-for-a-model-column.md)  
+ [Mining Model Columns](mining-model-columns.md)   
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
+ [Change the Properties of a Mining Model](change-the-properties-of-a-mining-model.md)   
+ [Data Mining Tools](data-mining-tools.md)   
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)   
+ [Create an Alias for a Model Column](create-an-alias-for-a-model-column.md)  
   
   

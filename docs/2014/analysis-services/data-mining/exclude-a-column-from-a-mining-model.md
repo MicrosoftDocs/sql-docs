@@ -26,11 +26,11 @@ manager: "mblythe"
   
 ### To exclude a column from a mining model  
   
-1.  In the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], select the cell that corresponds to the column you want to exclude, under the appropriate mining model.  
+1.  In the **Mining Models** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], select the cell that corresponds to the column you want to exclude, under the appropriate mining model.  
   
 2.  Select **Ignore** from the drop-down list box.  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)  
   
   

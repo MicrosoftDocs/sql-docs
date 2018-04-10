@@ -27,10 +27,10 @@ manager: "mblythe"
  SPN registration is not required if the service runs under a predefined managed service account created by a domain administrator. Note that depending on the functional level of your domain, registering an SPN can require domain administrator permissions.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
  This topic contains the following sections:  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
 ##  <a name="bkmk_scnearios"></a> When SPN registration is required  
  Any client connection that specifies “SSPI=Kerberos” on the connection string will introduce SPN registration requirements for an Analysis Services instance.  
   
- SPN registration is required under the following circumstances. For more detailed information, see [Configure Analysis Services for Kerberos constrained delegation](instances/configure-analysis-services-for-kerberos-constrained-delegation.md).  
+ SPN registration is required under the following circumstances. For more detailed information, see [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
 -   Identity delegation is necessary to flow the user identity from the client application or middle-tier service to Analysis Services. Identity delegation is typically used when per-user permissions or filters are defined on specific objects.  
   
@@ -156,12 +156,12 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  This means that you can use the instructions from previous sections for default or named instance to register the SPN. When specifying the host name, be sure to use the host name you specified in the msmdpump.ini file when you configured the service for HTTP access.  
   
- For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 ##  <a name="bkmk_spnFixedPorts"></a> SPN registration for SSAS instances listening on fixed ports  
  You cannot specify a port number on an Analysis Services SPN registration. If you installed Analysis Services as the default instance and configured it to listen on a fixed port, you must now configure it to listen on the default port (TCP 2383). For named instances, you need to use SQL Server Browser service and dynamic port assignments.  
   
- An Analysis Services instance can only listen on a single port. Using multiple ports is not supported. For more information about port configuration, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ An Analysis Services instance can only listen on a single port. Using multiple ports is not supported. For more information about port configuration, see [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ## See Also  
  [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576)   
@@ -171,7 +171,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [What SPN do I use and how does it get there?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)   
+ [Configure Windows Service Accounts and Permissions](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/configure-windows-service-accounts-and-permissions.md)   
  [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](http://support.microsoft.com/kb/929650)   
  [what’s new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  

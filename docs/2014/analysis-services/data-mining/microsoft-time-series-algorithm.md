@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Time Series Algorithm
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm provides regression algorithms that are optimized for the forecasting of continuous values, such as product sales, over time. Whereas other [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, such as decision trees, require additional columns of new information as input to predict a trend, a time series model does not. A time series model can predict trends based only on the original dataset that is used to create the model. You can also add new data to the model when you make a prediction and automatically incorporate the new data in the trend analysis.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm provides regression algorithms that are optimized for the forecasting of continuous values, such as product sales, over time. Whereas other [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, such as decision trees, require additional columns of new information as input to predict a trend, a time series model does not. A time series model can predict trends based only on the original dataset that is used to create the model. You can also add new data to the model when you make a prediction and automatically incorporate the new data in the trend analysis.  
   
  The following diagram shows a typical model for forecasting sales of a product in four different sales regions over time. The model that is shown in the diagram shows sales for each region plotted as red, yellow, purple, and blue lines. The line for each region has two parts:  
   
@@ -35,21 +35,21 @@ manager: "mblythe"
   
  The combination of the source data and the prediction data is called a *series*.  
   
- ![An example of a time series](../../2014/analysis-services/media/time-series.gif "An example of a time series")  
+ ![An example of a time series](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/time-series.gif "An example of a time series")  
   
- An important feature of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm is that it can perform cross prediction. If you train the algorithm with two separate, but related, series, you can use the resulting model to predict the outcome of one series based on the behavior of the other series. For example, the observed sales of one product can influence the forecasted sales of another product. Cross prediction is also useful for creating a general model that can be applied to multiple series. For example, the predictions for a particular region are unstable because the series lacks good quality data. You could train a general model on an average of all four regions, and then apply the model to the individual series to create more stable predictions for each region.  
+ An important feature of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm is that it can perform cross prediction. If you train the algorithm with two separate, but related, series, you can use the resulting model to predict the outcome of one series based on the behavior of the other series. For example, the observed sales of one product can influence the forecasted sales of another product. Cross prediction is also useful for creating a general model that can be applied to multiple series. For example, the predictions for a particular region are unstable because the series lacks good quality data. You could train a general model on an average of all four regions, and then apply the model to the individual series to create more stable predictions for each region.  
   
 ## Example  
- The management team at [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] wants to predict monthly bicycle sales for the coming year. The company is especially interested in whether the sale of one bike model can be used to predict the sale of another model. By using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm on historical data from the past three years, the company can produce a data mining model that forecasts future bike sales. Additionally, the company can perform cross predictions to see whether the sales trends of individual bike models are related.  
+ The management team at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] wants to predict monthly bicycle sales for the coming year. The company is especially interested in whether the sale of one bike model can be used to predict the sale of another model. By using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm on historical data from the past three years, the company can produce a data mining model that forecasts future bike sales. Additionally, the company can perform cross predictions to see whether the sales trends of individual bike models are related.  
   
  Each quarter, the company plans to update the model with recent sales data and update their predictions to model recent trends. To correct for stores that do not accurately or consistently update sales data, they will create a general prediction model, and use that to create predictions for all regions.  
   
 ## How the Algorithm Works  
- In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm used a single algorithm, ARTXP. The ARTXP algorithm was optimized for short-term predictions, and therefore, predicted the next likely value in a series. Beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm uses both the ARTXP algorithm and a second algorithm, ARIMA. The ARIMA algorithm is optimized for long-term prediction. For a detailed explanation about the implementation of the ARTXP and ARIMA algorithms, see [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm used a single algorithm, ARTXP. The ARTXP algorithm was optimized for short-term predictions, and therefore, predicted the next likely value in a series. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm uses both the ARTXP algorithm and a second algorithm, ARIMA. The ARIMA algorithm is optimized for long-term prediction. For a detailed explanation about the implementation of the ARTXP and ARIMA algorithms, see [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
- By default, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm uses a mix of the algorithms when it analyzes patterns and making predictions. The algorithm trains two separate models on the same data: one model uses the ARTXP algorithm and one model uses the ARIMA algorithm. The algorithm then blends the results of the two models to yield the best prediction over a variable number of time slices. Because ARTXP is best for short-term predictions, it is weighted more heavily at the beginning of a series of predictions. However, as the time slices that you are predicting move further into the future, ARIMA is weighted more heavily.  
+ By default, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm uses a mix of the algorithms when it analyzes patterns and making predictions. The algorithm trains two separate models on the same data: one model uses the ARTXP algorithm and one model uses the ARIMA algorithm. The algorithm then blends the results of the two models to yield the best prediction over a variable number of time slices. Because ARTXP is best for short-term predictions, it is weighted more heavily at the beginning of a series of predictions. However, as the time slices that you are predicting move further into the future, ARIMA is weighted more heavily.  
   
- You can also control the mix of algorithms to favor either short- or long-term prediction in the times series. Beginning in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Standard, you can specify that the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm use one of the following settings:  
+ You can also control the mix of algorithms to favor either short- or long-term prediction in the times series. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, you can specify that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm use one of the following settings:  
   
 -   Use only ARTXP for short-term prediction.  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
   
 -   Use the default blending of the two algorithms.  
   
- Beginning in [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)], you can customize how the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm blends the models for prediction. When you use a mixed model, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm blends the two algorithms in the following way:  
+ Beginning in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], you can customize how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm blends the models for prediction. When you use a mixed model, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm blends the two algorithms in the following way:  
   
 -   Only ARTXP is always used for making the first couple of predictions.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
  Both algorithms can detect seasonality in data at multiple levels. For example, your data might contain monthly cycles nested within yearly cycles. To detect these seasonal cycles, you can either provide a periodicity hint or specify that the algorithm should automatically detect periodicity.  
   
- In addition to periodicity, there are several other parameters that control the behavior of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm when it detects periodicity, makes predictions, or analyzes cases. For information about how to set algorithm parameters, see [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ In addition to periodicity, there are several other parameters that control the behavior of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm when it detects periodicity, makes predictions, or analyzes cases. For information about how to set algorithm parameters, see [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
 ## Data Required for Time Series Models  
  When you prepare data for use in training any data mining model, make sure that you understand the requirements for the particular model and how the data is used.  
@@ -84,7 +84,7 @@ manager: "mblythe"
   
 -   **An optional series key column** Each model can have an additional key column that contains unique values that identify a series. The optional series key column must contain unique values. For example, a single model can contain sales for many product models, as long as there is only one record for each product name for every time slice.  
   
- You can define input data for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series model in several different ways. However, because the format of the input cases affects the definition of the mining model, you must consider your business needs and prepare your data accordingly. The following two examples illustrate how the input data affects the model. In both examples, the completed mining model contains patterns for four distinct series:  
+ You can define input data for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series model in several different ways. However, because the format of the input cases affects the definition of the mining model, you must consider your business needs and prepare your data accordingly. The following two examples illustrate how the input data affects the model. In both examples, the completed mining model contains patterns for four distinct series:  
   
 -   Sales for Product A  
   
@@ -127,18 +127,18 @@ manager: "mblythe"
 ## Viewing a Time Series Model  
  After the model has been trained, the results are stored as a set of patterns, which you can explore or use to make predictions.  
   
- To explore the model, you can use the [Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md). The viewer includes a chart that displays future predictions, and a tree view of the periodic structures in the data.  
+ To explore the model, you can use the [Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md). The viewer includes a chart that displays future predictions, and a tree view of the periodic structures in the data.  
   
- If you want to know more about how the predictions are calculated, you can browse the model in the [Microsoft Generic Content Tree Viewer](data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). The content stored for the model includes details such as the periodic structures detected by the ARIMA and ARTXP algorithms, the equation used to blend the algorithms, and other statistics.  
+ If you want to know more about how the predictions are calculated, you can browse the model in the [Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). The content stored for the model includes details such as the periodic structures detected by the ARIMA and ARTXP algorithms, the equation used to blend the algorithms, and other statistics.  
   
 ## Creating Time Series Predictions  
- By default, when you view a time series model, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] shows you five predictions for the series. However, you can create queries to return a variable number of predictions, and you can extra columns to the predictions to return descriptive statistics. For information about how to create queries against a time series model, see [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md). For examples of how to use Data Mining Extensions (DMX) to make time series predictions, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
+ By default, when you view a time series model, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] shows you five predictions for the series. However, you can create queries to return a variable number of predictions, and you can extra columns to the predictions to return descriptive statistics. For information about how to create queries against a time series model, see [Time Series Model Query Examples](time-series-model-query-examples.md). For examples of how to use Data Mining Extensions (DMX) to make time series predictions, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md).  
   
- When using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm to make predictions, you should consider the following additional restrictions and requirements:  
+ When using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm to make predictions, you should consider the following additional restrictions and requirements:  
   
 -   Cross-prediction is only available when you use a mixed model, or a model based on the ARTXP algorithm. If you use a model based only on the ARIMA algorithm, cross-prediction is not possible.  
   
--   A time series model can make predictions that differ, sometimes significantly, depending on the 64-bit operating system that the server uses. These differences occur due to the way that an [!INCLUDE[vcpritanium](../includes/vcpritanium-md.md)]-based system represents and handles numbers for floating-point arithmetic, which differs from the way that an [!INCLUDE[vcprx64](../includes/vcprx64-md.md)]-based system does these calculations. Because prediction results can be specific to the operating system, we recommend that you evaluate models on the same operating system that you will use in production.  
+-   A time series model can make predictions that differ, sometimes significantly, depending on the 64-bit operating system that the server uses. These differences occur due to the way that an [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-based system represents and handles numbers for floating-point arithmetic, which differs from the way that an [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based system does these calculations. Because prediction results can be specific to the operating system, we recommend that you evaluate models on the same operating system that you will use in production.  
   
 ## Remarks  
   
@@ -151,10 +151,10 @@ manager: "mblythe"
 -   Supports drillthrough.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Browse a Model Using the Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Microsoft Time Series Algorithm Technical Reference](data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Time Series Model Query Examples](data-mining/time-series-model-query-examples.md)   
- [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Browse a Model Using the Microsoft Time Series Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
+ [Time Series Model Query Examples](time-series-model-query-examples.md)   
+ [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

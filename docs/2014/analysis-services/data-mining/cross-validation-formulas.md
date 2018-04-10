@@ -20,7 +20,7 @@ manager: "mblythe"
   
  This section lists the measures used in the cross-validation report and describes the method of calculation.  
   
- For a breakdown of the accuracy measures by model type, see [Measures in the Cross-Validation Report](data-mining/measures-in-the-cross-validation-report.md).  
+ For a breakdown of the accuracy measures by model type, see [Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md).  
   
 ## Formulas used for Cross-Validation Measures  
   
@@ -43,7 +43,7 @@ manager: "mblythe"
 |**Root mean squared error**|Discrete attribute, no specified target.|Square root of the mean of the squares of complement of the probability score, divided by the number of cases in the partition, excluding cases with missing values for the target attribute.|  
   
 ## See Also  
- [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)   
+ [Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

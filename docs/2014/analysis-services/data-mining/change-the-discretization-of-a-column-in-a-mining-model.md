@@ -21,9 +21,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Change the Discretization of a Column in a Mining Model
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatically discretizes values—that is to say, it bins data in numeric column—in certain scenarios. For example, if your data contains continuous numeric data and you create a decision tree model, each column of continuous data will be automatically binned, depending on the distribution of the data. If you want to control how the data is discretized, you must change the properties on the mining structure column that control how the data is used in the model.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically discretizes values—that is to say, it bins data in numeric column—in certain scenarios. For example, if your data contains continuous numeric data and you create a decision tree model, each column of continuous data will be automatically binned, depending on the distribution of the data. If you want to control how the data is discretized, you must change the properties on the mining structure column that control how the data is used in the model.  
   
- For general information about how to set the properties in a mining model, see [Mining Model Columns](data-mining/mining-model-columns.md).  
+ For general information about how to set the properties in a mining model, see [Mining Model Columns](mining-model-columns.md).  
   
 ### To display the properties for a mining model column  
   
@@ -54,6 +54,6 @@ manager: "mblythe"
     >  If you change these properties, the structure must be reprocessed, along with any models that you want to use the new setting.  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)  
   
   

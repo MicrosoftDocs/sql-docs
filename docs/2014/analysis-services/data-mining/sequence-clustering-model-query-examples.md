@@ -24,7 +24,7 @@ manager: "mblythe"
   
  Prediction queries on a sequence clustering model typically make recommendations based either on the sequences and transitions, on non-sequence attributes that were included in the model, or on a combination of sequence and non-sequence attributes.  
   
- This section explains how to create queries for models that are based on the Microsoft Sequence Clustering algorithm. For general information about creating queries, see [Data Mining Queries](data-mining/data-mining-queries.md).  
+ This section explains how to create queries for models that are based on the Microsoft Sequence Clustering algorithm. For general information about creating queries, see [Data Mining Queries](data-mining-queries.md).  
   
  **Content Queries**  
   
@@ -39,12 +39,12 @@ manager: "mblythe"
  [Predict next state or states](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> Finding Information about the Sequence Clustering Model  
- To create meaningful queries on the content of a mining model, you must understand the structure of the model content, and which node types store what kind of information. For more information, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-sequence-clustering-models.md).  
+ To create meaningful queries on the content of a mining model, you must understand the structure of the model content, and which node types store what kind of information. For more information, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md).  
   
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Using the Data Mining Schema Rowset to Return Model Parameters  
  By querying the data mining schema rowset, you can find various kinds of information about the model, including basic metadata, the date and time that the model was created and last processed, the name of the mining structure that the model is based on, and the column used as the predictable attribute.  
   
- The following query returns the parameters that were used to build and train the model, `[Sequence Clustering]`. You can create this model in Lesson 5 of the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+ The following query returns the parameters that were used to build and train the model, `[Sequence Clustering]`. You can create this model in Lesson 5 of the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md).  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -247,7 +247,7 @@ AS t
  The values in rows 6 and 7 are placeholders. When you reach the end of the chain of possible transitions, rather than terminating the prediction results, the value that was passed as an input is added to the results. For example, if you increased the number of predictions to 20, the values for rows 6-20 would all be the same, All-Purpose Bike Stand.  
   
 ## Function List  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm supports the additional functions that are listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm supports the additional functions that are listed in the following table.  
   
 |||  
 |-|-|  
@@ -267,12 +267,12 @@ AS t
 |[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
 |[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [General Prediction Functions &#40;DMX&#41;](~/dmx/general-prediction-functions-dmx.md). For the syntax of specific functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Sequence Clustering Algorithm Technical Reference](data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

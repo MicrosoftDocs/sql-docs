@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Microsoft Decision Trees Algorithm Technical Reference
-  The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm is a hybrid algorithm that incorporates different methods for creating a tree, and supports multiple analytic tasks, including regression, classification, and association. The Microsoft Decision Trees algorithm supports modeling of both discrete and continuous attributes.  
+  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a hybrid algorithm that incorporates different methods for creating a tree, and supports multiple analytic tasks, including regression, classification, and association. The Microsoft Decision Trees algorithm supports modeling of both discrete and continuous attributes.  
   
  This topic explains the implementation of the algorithm, describes how to customize the behavior of the algorithm for different tasks, and provides links to additional information about querying decision tree models.  
   
@@ -49,18 +49,18 @@ manager: "mblythe"
 ### Discrete and Continuous Inputs  
  When the predictable attribute is discrete and the inputs are discrete, counting the outcomes per input is a matter of creating a matrix and generating scores for each cell in the matrix.  
   
- However, when the predictable attribute is discrete and the inputs are continuous, the input of the continuous columns are automatically discretized. You can accept the default and have [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] find the optimum number of bins, or you can control the manner in which continuous inputs are discretized by setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> and <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> properties. For more information, see [Change the Discretization of a Column in a Mining Model](data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
+ However, when the predictable attribute is discrete and the inputs are continuous, the input of the continuous columns are automatically discretized. You can accept the default and have [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] find the optimum number of bins, or you can control the manner in which continuous inputs are discretized by setting the <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> and <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> properties. For more information, see [Change the Discretization of a Column in a Mining Model](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
  For continuous attributes, the algorithm uses linear regression to determine where a decision tree splits.  
   
  When the predictable attribute is a continuous numeric data type, feature selection is applied to the outputs as well, to reduce the possible number of outcomes and build the model faster. You can change the threshold for feature selection and thereby increase or decrease the number of possible values by setting the MAXIMUM_OUTPUT_ATTRIBUTES parameter.  
   
- For a more detained explanation about how the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm works with discrete predictable columns, see [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963). For more information about how the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm works with a continuous predictable column, see the appendix of [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
+ For a more detained explanation about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with discrete predictable columns, see [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963). For more information about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with a continuous predictable column, see the appendix of [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### Scoring Methods and Feature Selection  
- The Microsoft Decision Trees algorithm offers three formulas for scoring information gain: Shannon's entropy, Bayesian network with K2 prior, and Bayesian network with a uniform Dirichlet distribution of priors. All three methods are well established in the data mining field. We recommend that you experiment with different parameters and scoring methods to determine which provides the best results. For more information about these scoring methods, see [Feature Selection](../../2014/sql-server/install/feature-selection.md).  
+ The Microsoft Decision Trees algorithm offers three formulas for scoring information gain: Shannon's entropy, Bayesian network with K2 prior, and Bayesian network with a uniform Dirichlet distribution of priors. All three methods are well established in the data mining field. We recommend that you experiment with different parameters and scoring methods to determine which provides the best results. For more information about these scoring methods, see [Feature Selection](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)sql-server/install/feature-selection.md).  
   
- All [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data mining algorithms automatically use feature selection to improve analysis and reduce processing load. The method used for feature selection depends on the algorithm that is used to build the model. The algorithm parameters that control feature selection for a decision trees model are MAXIMUM_INPUT_ATTRIBUTES and MAXIMUM_OUTPUT.  
+ All [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining algorithms automatically use feature selection to improve analysis and reduce processing load. The method used for feature selection depends on the algorithm that is used to build the model. The algorithm parameters that control feature selection for a decision trees model are MAXIMUM_INPUT_ATTRIBUTES and MAXIMUM_OUTPUT.  
   
 |Algorithm|Method of analysis|Comments|  
 |---------------|------------------------|--------------|  
@@ -91,16 +91,16 @@ manager: "mblythe"
 -   Restrict the number of discrete values for any attribute to 10 or less. You might try grouping values in different ways in different models.  
   
     > [!NOTE]  
-    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../2014/integration-services/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
+    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
   
 ## Customizing the Decision Trees Algorithm  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm supports parameters that affect the performance and accuracy of the resulting mining model. You can also set modeling flags on the mining model columns or mining structure columns to control the way that data is processed.  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports parameters that affect the performance and accuracy of the resulting mining model. You can also set modeling flags on the mining model columns or mining structure columns to control the way that data is processed.  
   
 > [!NOTE]  
->  The Microsoft Decision Trees algorithm is available in all editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]; however, some advanced parameters for customizing the behavior of the Microsoft Decision Trees algorithm are available for use only in specific editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  The Microsoft Decision Trees algorithm is available in all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; however, some advanced parameters for customizing the behavior of the Microsoft Decision Trees algorithm are available for use only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### Setting Algorithm Parameters  
- The following table describes the parameters that you can use with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm.  
+ The following table describes the parameters that you can use with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm.  
   
  *COMPLEXITY_PENALTY*  
  Controls the growth of the decision tree. A low value increases the number of splits, and a high value decreases the number of splits. The default value is based on the number of attributes for a particular model, as described in the following list:  
@@ -117,7 +117,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  By setting this parameter, you force the algorithm to try to use the attribute as a regressor. However, whether the attribute is actually used as a regressor in the final model depends on the results of analysis. You can find out which columns were used as regressors by querying the model content.  
   
- [Available only in some editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ]  
+ [Available only in some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ]  
   
  *MAXIMUM_INPUT_ATTRIBUTES*  
  Defines the number of input attributes that the algorithm can handle before it invokes feature selection.  
@@ -126,7 +126,7 @@ manager: "mblythe"
   
  Set this value to 0 to turn off feature selection.  
   
- [Available only in some editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]  
+ [Available only in some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
   
  *MAXIMUM_OUTPUT_ATTRIBUTES*  
  Defines the number of output attributes that the algorithm can handle before it invokes feature selection.  
@@ -135,7 +135,7 @@ manager: "mblythe"
   
  Set this value to 0 to turn off feature selection.  
   
- [Available only in some editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]]  
+ [Available only in some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
   
  *MINIMUM_SUPPORT*  
  Determines the minimum number of leaf cases that is required to generate a split in the decision tree.  
@@ -155,7 +155,7 @@ manager: "mblythe"
   
  The default is 4, or BDE.  
   
- For an explanation of these scoring methods, see [Feature Selection](../../2014/sql-server/install/feature-selection.md).  
+ For an explanation of these scoring methods, see [Feature Selection](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)sql-server/install/feature-selection.md).  
   
  *SPLIT_METHOD*  
  Determines the method that is used to split the node. The following options are available:  
@@ -169,7 +169,7 @@ manager: "mblythe"
  The default is 3.  
   
 ### Modeling Flags  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm supports the following modeling flags. When you create the mining structure or mining model, you define modeling flags to specify how values in each column are handled during analysis. For more information, see [Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports the following modeling flags. When you create the mining structure or mining model, you define modeling flags to specify how values in each column are handled during analysis. For more information, see [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
 |Modeling Flag|Description|  
 |-------------------|-----------------|  
@@ -177,11 +177,11 @@ manager: "mblythe"
 |NOT NULL|Indicates that the column cannot contain a null. An error will result if Analysis Services encounters a null during model training.<br /><br /> Applies to mining structure columns.|  
   
 ### Regressors in Decision Tree Models  
- Even if you do not use the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm, any decision tree model that has continuous numeric inputs and outputs can potentially include nodes that represent a regression on a continuous attribute.  
+ Even if you do not use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm, any decision tree model that has continuous numeric inputs and outputs can potentially include nodes that represent a regression on a continuous attribute.  
   
- You do not need to specify that a column of continuous numeric data represents a regressor. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm will automatically use the column as a potential regressor and partition the dataset into regions with meaningful patterns even if you do not set the REGRESSOR flag on the column.  
+ You do not need to specify that a column of continuous numeric data represents a regressor. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm will automatically use the column as a potential regressor and partition the dataset into regions with meaningful patterns even if you do not set the REGRESSOR flag on the column.  
   
- However, you can use the FORCE_REGRESSOR parameter to guarantee that the algorithm will use a particular regressor. This parameter can be used only with the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees and [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithms. When you set the modeling flag, the algorithm will try to find regression equations of the form a*C1 + b\*C2 + ... to fit the patterns in the nodes of the tree. The sum of the residuals is calculated, and if the deviation is too great, a split is forced in the tree.  
+ However, you can use the FORCE_REGRESSOR parameter to guarantee that the algorithm will use a particular regressor. This parameter can be used only with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithms. When you set the modeling flag, the algorithm will try to find regression equations of the form a*C1 + b\*C2 + ... to fit the patterns in the nodes of the tree. The sum of the residuals is calculated, and if the deviation is too great, a split is forced in the tree.  
   
  For example, if you are predicting customer purchasing behavior using **Income** as an attribute, and set the REGRESSOR modeling flag on the column, the algorithm will first try to fit the **Income** values by using a standard regression formula. If the deviation is too great, the regression formula is abandoned and the tree will be split on another attribute. The decision tree algorithm will then try to fit a regressor for income in each of the branches after the split.  
   
@@ -189,7 +189,7 @@ manager: "mblythe"
  A decision tree model must contain a key column, input columns, and at least one predictable column.  
   
 ### Input and Predictable Columns  
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports the specific input columns and predictable columns that are listed in the following table. For more information about what the content types mean when used in a mining model, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
   
 |Column|Content types|  
 |------------|-------------------|  
@@ -200,8 +200,8 @@ manager: "mblythe"
 >  Cyclical and Ordered content types are supported, but the algorithm treats them as discrete values and does not perform special processing.  
   
 ## See Also  
- [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md)   
- [Decision Trees Model Query Examples](data-mining/decision-trees-model-query-examples.md)   
- [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
+ [Decision Trees Model Query Examples](decision-trees-model-query-examples.md)   
+ [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

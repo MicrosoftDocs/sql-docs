@@ -25,7 +25,7 @@ manager: "mblythe"
  This section explains how to create queries for models that are based on the Microsoft Linear Regression algorithm.  
   
 > [!NOTE]  
->  Because linear regression is based on a special case of the Microsoft Decision Trees algorithm, there are many similarities, and some decision tree models that use continuous predictable attributes can contain regression formulas. For more information, see [Microsoft Decision Trees Algorithm Technical Reference](data-mining/microsoft-decision-trees-algorithm-technical-reference.md).  
+>  Because linear regression is based on a special case of the Microsoft Decision Trees algorithm, there are many similarities, and some decision tree models that use continuous predictable attributes can contain regression formulas. For more information, see [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).  
   
  **Content queries**  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
  [Using prediction functions with a regression model](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> Finding Information about the Linear Regression Model  
- The structure of a linear regression model is extremely simple: the mining model represents the data as a single node, which defines the regression formula. For more information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md).  
+ The structure of a linear regression model is extremely simple: the mining model represents the data as a single node, which defines the regression formula. For more information, see [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  [Return to Top](#bkmk_top)  
   
@@ -67,9 +67,9 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
  [Return to Top](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Retrieving the Regression Formula for the Model  
- The following query returns the mining model content for a linear regression model that was built by using the same Targeted Mailing data source that was used in the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). This model predicts customer income based on age.  
+ The following query returns the mining model content for a linear regression model that was built by using the same Targeted Mailing data source that was used in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). This model predicts customer income based on age.  
   
- The query returns the contents of the node that contains the regression formula. Each variable and coefficient is stored in a separate row of the nested NODE_DISTRIBUTION table. If you want to view the complete regression formula, use the [Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md), click the **(All)** node, and open the **Mining Legend**.  
+ The query returns the contents of the node that contains the regression formula. Each variable and coefficient is stored in a separate row of the nested NODE_DISTRIBUTION table. If you want to view the complete regression formula, use the [Microsoft Tree Viewer](browse-a-model-using-the-microsoft-tree-viewer.md), click the **(All)** node, and open the **Mining Legend**.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -110,7 +110,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (Statistics)|  
 |11 (Intercept)|  
   
- For more information about the meaning of each value type for regression models, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ For more information about the meaning of each value type for regression models, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
  [Return to Top](#bkmk_top)  
   
@@ -136,10 +136,10 @@ FROM LR_PredictIncome.CONTENT
  [Return to Top](#bkmk_top)  
   
 ## Making Predictions from a Linear Regression Model  
- You can build prediction queries on linear regression models by using the Mining Model Prediction tab in Data Mining Designer. The prediction query builder is available in both [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ You can build prediction queries on linear regression models by using the Mining Model Prediction tab in Data Mining Designer. The prediction query builder is available in both [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
->  You can also create queries on regression models by using the [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] Data Mining Add-ins for Excel or the [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Data Mining Add-ins for Excel. Even though the Data Mining Add-ins for Excel do not create regression models, you can browse and query any mining model that is stored on an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  You can also create queries on regression models by using the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Data Mining Add-ins for Excel or the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Data Mining Add-ins for Excel. Even though the Data Mining Add-ins for Excel do not create regression models, you can browse and query any mining model that is stored on an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  [Return to Top](#bkmk_top)  
   
@@ -183,7 +183,7 @@ NATURAL PREDICTION JOIN
  [Return to Top](#bkmk_top)  
   
 ## List of Prediction Functions  
- All [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm supports the additional functions listed in the following table.  
+ All [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms support a common set of functions. However, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm supports the additional functions listed in the following table.  
   
 |||  
 |-|-|  
@@ -196,12 +196,12 @@ NATURAL PREDICTION JOIN
 |[PredictSupport &#40;DMX&#41;](~/dmx/predictsupport-dmx.md)|Returns the support value for a specified state.|  
 |[PredictVariance &#40;DMX&#41;](~/dmx/predictvariance-dmx.md)|Returns the variance of a specified column.|  
   
- For a list of the functions that are common to all [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md). For more information about how to use these functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
+ For a list of the functions that are common to all [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). For more information about how to use these functions, see [Data Mining Extensions &#40;DMX&#41; Function Reference](~/dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## See Also  
- [Microsoft Linear Regression Algorithm](data-mining/microsoft-linear-regression-algorithm.md)   
- [Data Mining Queries](data-mining/data-mining-queries.md)   
- [Microsoft Linear Regression Algorithm Technical Reference](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Microsoft Linear Regression Algorithm](microsoft-linear-regression-algorithm.md)   
+ [Data Mining Queries](data-mining-queries.md)   
+ [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

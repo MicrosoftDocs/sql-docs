@@ -20,13 +20,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create an Alias for a Model Column
-  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can create an alias for a model column. This might be useful when the mining structure name is too long to easily work with, or when you want to rename the column to be more descriptive of its contents or usage in the model. For example, if you make a copy of a structure column and then discretize the column differently for a particular model, you can rename the column to reflect the content more accurately.  
+  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can create an alias for a model column. This might be useful when the mining structure name is too long to easily work with, or when you want to rename the column to be more descriptive of its contents or usage in the model. For example, if you make a copy of a structure column and then discretize the column differently for a particular model, you can rename the column to reflect the content more accurately.  
   
- To create an alias for a model column, you use the **Properties** pane and set the [Name](../../2014/analysis-services/dev-guide/name-element-assl.md) property of the column.  
+ To create an alias for a model column, you use the **Properties** pane and set the [Name](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/name-element-assl.md) property of the column.  
   
  On the **Mining Models** tab of Data Mining Designer, the alias appears enclosed in parentheses next to the column usage label.  
   
- For information about how to set the properties of a mining model, see [Mining Model Columns](data-mining/mining-model-columns.md).  
+ For information about how to set the properties of a mining model, see [Mining Model Columns](mining-model-columns.md).  
   
 ### To add an alias to a mining model column  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
 2.  In the **Properties** window on the right side of the screen, click the cell next to the Name property and delete the current value. Type a new name for the column.  
   
 ## See Also  
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)   
- [Mining Model Properties](data-mining/mining-model-properties.md)  
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
+ [Mining Model Properties](mining-model-properties.md)  
   
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
  Mining model content includes metadata about the model, statistics about the data, and patterns discovered by the mining algorithm. Depending on the algorithm that was used, the model content may include regression formulas, the definitions of rules and itemsets, or weights and other statistics.  
   
- Regardless of the algorithm that was used, mining model content is presented in a standard structure. You can browse the structure in the Microsoft Generic Content Tree Viewer, provided in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then switch to one of the custom viewers to see how the information is interpreted and displayed graphically for each model type. You can also create queries against the mining model content by using any client that supports the MINING_MODEL_CONTENT schema rowset. For more information, see [Data Mining Query Tasks and How-tos](data-mining/data-mining-query-tasks-and-how-tos.md).  
+ Regardless of the algorithm that was used, mining model content is presented in a standard structure. You can browse the structure in the Microsoft Generic Content Tree Viewer, provided in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then switch to one of the custom viewers to see how the information is interpreted and displayed graphically for each model type. You can also create queries against the mining model content by using any client that supports the MINING_MODEL_CONTENT schema rowset. For more information, see [Data Mining Query Tasks and How-tos](data-mining-query-tasks-and-how-tos.md).  
   
  This section describes the basic structure of the content provided for all kinds of mining models. It describes the node types that are common to all mining model content, and provides guidance on how to interpret the information.  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
  Depending on which algorithm you used to create the model, the root node has a varying number of child nodes. Child nodes have different meanings and contain different content, depending on the algorithm and the depth and complexity of the data.  
   
 ##  <a name="bkmk_Nodes"></a> Nodes in Mining Model Content  
- In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../2014/analysis-services/dev-guide/dmschema-mining-model-content-rowset.md).  
+ In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/dmschema-mining-model-content-rowset.md).  
   
  Each node includes metadata about the node, including an identifier that is unique within each model, the ID of the parent node, and the number of child nodes that the node has. The metadata identifies the model to which the node belongs, and the database catalog where that particular model is stored. Additional content provided in the node differs depending on the type of algorithm you used to create the model, and might include the following:  
   
@@ -70,7 +70,7 @@ manager: "mblythe"
  The following table lists the different types of nodes that are output in data mining models. Because each algorithm processes information differently, each model generates only a few specific kinds of nodes. If you change the algorithm, the type of nodes may change. Also, if you reprocess the model, the content of each node may change.  
   
 > [!NOTE]  
->  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
+>  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
   
 |NODE_TYPE ID|Node Label|Node Contents|  
 |-------------------|----------------|-------------------|  
@@ -127,12 +127,12 @@ manager: "mblythe"
   
 -   If the value of PARENT_UNIQUE_NAME is 0, the node must be a direct descendant of the top node in the model. This is because the ID of the root node is always 0.  
   
--   You can use functions within a Data Mining Extensions (DMX) query to find descendants or parents of a particular node. For more information about using functions in queries, see [Data Mining Queries](data-mining/data-mining-queries.md).  
+-   You can use functions within a Data Mining Extensions (DMX) query to find descendants or parents of a particular node. For more information about using functions in queries, see [Data Mining Queries](data-mining-queries.md).  
   
  *Cardinality* refers to the number of items in a set. In the context of a processed mining model, cardinality tells you the number of children in a particular node. For example, if a decision tree model has a node for [Yearly Income], and that node has two child nodes, one for the condition [Yearly Income] = High and one for the condition, [Yearly Income] = Low, the value of CHILDREN_CARDINALITY for the [Yearly Income] node would be 2.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], only the immediate child nodes are counted when calculating the cardinality of a node. However, if you create a custom plug-in algorithm, you can overload CHILDREN_CARDINALITY to count cardinality differently. This may be useful, for example, if you wanted to count the total number of descendants, not just the immediate children.  
+>  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], only the immediate child nodes are counted when calculating the cardinality of a node. However, if you create a custom plug-in algorithm, you can overload CHILDREN_CARDINALITY to count cardinality differently. This may be useful, for example, if you wanted to count the total number of descendants, not just the immediate children.  
   
  Although cardinality is counted in the same way for all models, how you interpret or use the cardinality value differs depending on the model type. For example, in a clustering model, the cardinality of the top node tells you the total number of clusters that were found. In other types of models, cardinality may always have a set value depending on the node type. For more information about how to interpret cardinality, see the topic about the individual model type.  
   
@@ -214,7 +214,7 @@ manager: "mblythe"
 |1|Missing|Indicates that the case data did not contain a value for this attribute. The `Missing` state is calculated separately from attributes that have values.|  
 |2|Existing|Indicates that the case data contains a value for this attribute.|  
 |3|Continuous|Indicates that the value of the attribute is a continuous numeric value and therefore can be represented by a mean, together with variance and standard deviation.|  
-|4|Discrete|Indicates a value, either numeric or text, that is treated as discrete.<br /><br /> **Note** Discrete values can also be missing; however, they are handled differently when making calculations. For information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](data-mining/missing-values-analysis-services-data-mining.md).|  
+|4|Discrete|Indicates a value, either numeric or text, that is treated as discrete.<br /><br /> **Note** Discrete values can also be missing; however, they are handled differently when making calculations. For information, see [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretized|Indicates that the attribute contains numeric values that have been discretized. The value will be a formatted string that describes the discretization buckets.|  
 |6|Existing|Indicates that the attribute has continuous numeric values and that values have been supplied in the data, vs. values that are missing or inferred.|  
 |7|Coefficient|Indicates a numeric value that represents a coefficient.<br /><br /> A coefficient is a value that is applied when calculating the value of the dependent variable. For example, if your model creates a regression formula that predicts income based on age, the coefficient is used in the formula that relates age to income.|  
@@ -260,7 +260,7 @@ manager: "mblythe"
  Two kinds of XML rules are provided, similar to the two kinds of probability values. The XML fragment in MARGINAL_RULE defines the attribute and value for the current node, whereas the XML fragment in NODE_RULE describes the path to the current node from the model root.  
   
 ##  <a name="bkmk_AlgoType"></a> Mining Model Content by Algorithm Type  
- Each algorithm stores different types of information as part of its content schema. For example, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering Algorithm generates many child nodes, each of which represents a possible cluster. Each cluster node contains rules that describe characteristics shared by items in the cluster. In contrast, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression algorithm does not contain any child nodes; instead, the parent node for the model contains the equation that describes the linear relationship discovered by analysis.  
+ Each algorithm stores different types of information as part of its content schema. For example, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering Algorithm generates many child nodes, each of which represents a possible cluster. Each cluster node contains rules that describe characteristics shared by items in the cluster. In contrast, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm does not contain any child nodes; instead, the parent node for the model contains the equation that describes the linear relationship discovered by analysis.  
   
  The following table provides links to topics for each type of algorithm.  
   
@@ -270,38 +270,38 @@ manager: "mblythe"
   
 |Algorithm or Model Type|Model Content|Querying Mining Models|  
 |-----------------------------|-------------------|----------------------------|  
-|Association rules models|[Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[Association Model Query Examples](data-mining/association-model-query-examples.md)|  
-|Clustering models|[Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Clustering Model Query Examples](data-mining/clustering-model-query-examples.md)|  
-|Decision trees model|[Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Decision Trees Model Query Examples](data-mining/decision-trees-model-query-examples.md)|  
-|Linear regression models|[Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Linear Regression Model Query Examples](data-mining/linear-regression-model-query-examples.md)|  
-|Logistic regression models|[Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-logistic-regression-models.md)|[Linear Regression Model Query Examples](data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes models|[Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md)|  
-|Neural network models|[Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](data-mining/neural-network-model-query-examples.md)|  
-|Sequence clustering|[Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](data-mining/sequence-clustering-model-query-examples.md)|  
-|Time series models|[Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](data-mining/time-series-model-query-examples.md)|  
+|Association rules models|[Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Association Model Query Examples](association-model-query-examples.md)|  
+|Clustering models|[Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Clustering Model Query Examples](clustering-model-query-examples.md)|  
+|Decision trees model|[Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Decision Trees Model Query Examples](decision-trees-model-query-examples.md)|  
+|Linear regression models|[Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Linear Regression Model Query Examples](linear-regression-model-query-examples.md)|  
+|Logistic regression models|[Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Linear Regression Model Query Examples](linear-regression-model-query-examples.md)|  
+|Naïve Bayes models|[Mining Model Content for Naive Bayes Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes Model Query Examples](naive-bayes-model-query-examples.md)|  
+|Neural network models|[Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neural Network Model Query Examples](neural-network-model-query-examples.md)|  
+|Sequence clustering|[Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequence Clustering Model Query Examples](sequence-clustering-model-query-examples.md)|  
+|Time series models|[Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Time Series Model Query Examples](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Tools for Viewing Mining Model Content  
- When you browse or explore a model in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can view the information in the **Microsoft Generic Content Tree Viewer**, which is available in both [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ When you browse or explore a model in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can view the information in the **Microsoft Generic Content Tree Viewer**, which is available in both [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- The [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Viewer displays the columns, rules, properties, attributes, nodes, and other content from the model by using the same information that is available in the content schema rowset of the mining model. The content schema rowset is a generic framework for presenting detailed information about the content of a data mining model. You can view model content in any client that supports hierarchical rowsets. The viewer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] presents this information in an HTML table viewer that represents all models in a consistent format, making it easier to understand the structure of the models that you create. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Viewer displays the columns, rules, properties, attributes, nodes, and other content from the model by using the same information that is available in the content schema rowset of the mining model. The content schema rowset is a generic framework for presenting detailed information about the content of a data mining model. You can view model content in any client that supports hierarchical rowsets. The viewer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] presents this information in an HTML table viewer that represents all models in a consistent format, making it easier to understand the structure of the models that you create. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 ##  <a name="bkmk_Querying"></a> Tools for Querying Mining Model Content  
  To retrieve mining model content, you must create a query against the data mining model.  
   
- The easiest way to create a content query is to execute the following DMX statement in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:  
+ The easiest way to create a content query is to execute the following DMX statement in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```  
 SELECT * FROM [<mining model name>].CONTENT  
 ```  
   
- For more information, see [Data Mining Queries](data-mining/data-mining-queries.md).  
+ For more information, see [Data Mining Queries](data-mining-queries.md).  
   
  You can also query the mining model content by using the data mining schema rowsets. A schema rowset is a standard structure that clients use to discover, browse, and query information about mining structures and models. You can query the schema rowsets by using XMLA, Transact-SQL, or DMX statements.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], you can also access the information in the data mining schema rowsets by opening a connection to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance and querying the system tables. For more information, see [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-schema-rowsets-ssas.md).  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can also access the information in the data mining schema rowsets by opening a connection to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and querying the system tables. For more information, see [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md).  
   
 ## See Also  
- [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../2014/analysis-services/microsoft-generic-content-tree-viewer-data-mining.md)   
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

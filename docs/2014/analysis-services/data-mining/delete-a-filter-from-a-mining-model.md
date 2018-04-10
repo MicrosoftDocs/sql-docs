@@ -24,7 +24,7 @@ manager: "mblythe"
   
 ### To delete a condition from a filter on a mining model  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in Solution Explorer, click the mining structure that contains the mining model you want to filter.  
   
 2.  Click the **Mining Models** tab.  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
  If you want to delete the whole filter, you do not need to open the filter editor dialog boxes. The filter conditions that you created are available in the `Filter` property of the mining model.  
   
 > [!NOTE]  
->  You can view the properties of a mining model in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], but not in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+>  You can view the properties of a mining model in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], but not in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### To clear the filter on a mining model in Solution Explorer  
   
@@ -57,8 +57,8 @@ manager: "mblythe"
 3.  Press the Backspace or Delete key.  
   
 ## See Also  
- [Drill Through to Case Data from a Mining Model](data-mining/drill-through-to-case-data-from-a-mining-model.md)   
- [Mining Model Tasks and How-tos](data-mining/mining-model-tasks-and-how-tos.md)   
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Drill Through to Case Data from a Mining Model](drill-through-to-case-data-from-a-mining-model.md)   
+ [Mining Model Tasks and How-tos](mining-model-tasks-and-how-tos.md)   
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

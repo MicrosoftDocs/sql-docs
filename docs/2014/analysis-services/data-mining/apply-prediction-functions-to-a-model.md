@@ -38,25 +38,25 @@ manager: "mblythe"
   
 -   Additionally, individual algorithms support a variety of specialized functions. For example, if you create a mining model based on the Microsoft Clustering algorithm, you can use specialized prediction functions to find information about the clusters, such as the distance from a data value to the cluster centroid.  
   
-     For examples of how to query a specific type of mining model, see the algorithm reference topic, in [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+     For examples of how to query a specific type of mining model, see the algorithm reference topic, in [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### Choose a mining model to use for prediction  
   
-1.  From [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the model, and select **Build Prediction Query**.  
+1.  From [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the model, and select **Build Prediction Query**.  
   
      --OR --  
   
-     In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the tab, **Mining Model Prediction**, and then click **Select Model** in the  **Mining Model** table.  
+     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the tab, **Mining Model Prediction**, and then click **Select Model** in the  **Mining Model** table.  
   
 2.  In the **Select Mining Model** dialog box, select a mining model, and then click **OK**.  
   
-     You can choose any model within the current [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. To create a query using a model in a different database, you must either open a new query window in the context of that database, or open the solution file that contains that model.  
+     You can choose any model within the current [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. To create a query using a model in a different database, you must either open a new query window in the context of that database, or open the solution file that contains that model.  
   
 ### Add prediction functions to a query  
   
 1.  In the **Prediction Query Builder**, configure the input data used for prediction, either by providing values in the **Singleton Query Input** dialog box, or by mapping the model to an external data source.  
   
-     For more information, see [Choose and Map Input Data for a Prediction Query](data-mining/choose-and-map-input-data-for-a-prediction-query.md).  
+     For more information, see [Choose and Map Input Data for a Prediction Query](choose-and-map-input-data-for-a-prediction-query.md).  
   
     > [!WARNING]  
     >  It is not required that you provide inputs to generate predictions. When there is no input, the algorithm will typically return the mostly likely predicted value across all possible inputs.  
@@ -76,9 +76,9 @@ manager: "mblythe"
   
 ### Example: Create a query on a clustering model  
   
-1.  If you do not have a clustering model available for building this sample query, create the model, [TM_Clustering], using the [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+1.  If you do not have a clustering model available for building this sample query, create the model, [TM_Clustering], using the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md).  
   
-2.  From [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right-click the model, [TM_Clustering], and select **Build Prediction Query**.  
+2.  From [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], right-click the model, [TM_Clustering], and select **Build Prediction Query**.  
   
 3.  From the **Mining Model** menu, select **Singleton Query**.  
   
@@ -123,6 +123,6 @@ manager: "mblythe"
  If you want to add other clauses elsewhere in the statement—for example, if you want to add a WHERE clause—you cannot add it by using the grid; you must switch to DMX view first.  
   
 ## See Also  
- [Data Mining Queries](data-mining/data-mining-queries.md)  
+ [Data Mining Queries](data-mining-queries.md)  
   
   

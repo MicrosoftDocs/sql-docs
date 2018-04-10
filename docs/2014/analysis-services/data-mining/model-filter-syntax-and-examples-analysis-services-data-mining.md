@@ -107,7 +107,7 @@ manager: "mblythe"
 -   Non-Boolean operators, such as the plus or minus signs, are not supported in the filter syntax.  
   
 ## Examples of Filters  
- The following examples demonstrate the use of filters applied to a mining model. If you create the filter expression by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in the **Property** window and the **Expression** pane of the filter dialog box, you would see only the string that appears after the WITH FILTER keywords. Here, the definition of the mining structure is included to make it easier to understand the column type and usage.  
+ The following examples demonstrate the use of filters applied to a mining model. If you create the filter expression by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], in the **Property** window and the **Expression** pane of the filter dialog box, you would see only the string that appears after the WITH FILTER keywords. Here, the definition of the mining structure is included to make it easier to understand the column type and usage.  
   
 ###  <a name="bkmk_Ex1"></a> Example 1: Typical Case-Level Filtering  
  This example shows a simple filter that restricts the cases used in the model to customers whose occupation is architect and whose age is over 30.  
@@ -290,7 +290,7 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  Note that any extra columns that you add to the model might affect the results. Therefore, if you do not want the column to be used in computation of the series, you should add the column only to the mining structure, and not to the model. You can also set the model flag on the column to `PredictOnly` or to `Ignore`. For more information, see [Modeling Flags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).  
+>  Note that any extra columns that you add to the model might affect the results. Therefore, if you do not want the column to be used in computation of the series, you should add the column only to the mining structure, and not to the model. You can also set the model flag on the column to `PredictOnly` or to `Ignore`. For more information, see [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
  For other model types, you can use dates as input criteria or filter criteria just like you would in any other column. However, if you need to use a specific level of granularity that is not supported by a `Continuous` data type, you can create a derived value in the data source by using expressions to extract the unit to use in filtering and analysis.  
   
@@ -302,7 +302,7 @@ FILTER (EXISTS (Products))
  
   
 ## See Also  
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

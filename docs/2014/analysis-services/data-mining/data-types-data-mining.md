@@ -20,13 +20,13 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Types (Data Mining)
-  When you create a mining model or a mining structure in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must define the data types for each of the columns in the mining structure. The data type tells the data mining engine whether the data in the data source is numerical or text, and how the data should be processed. For example, if your source data contains numerical data, you can specify whether the numbers be treated as integers or by using decimal places.  
+  When you create a mining model or a mining structure in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must define the data types for each of the columns in the mining structure. The data type tells the data mining engine whether the data in the data source is numerical or text, and how the data should be processed. For example, if your source data contains numerical data, you can specify whether the numbers be treated as integers or by using decimal places.  
   
  Each data type supports one or more content types. By setting the content type, you can customize the way that data in the column is processed or calculated in the mining model.  
   
- For example, if you have numeric data in a column, you can choose to handle it either as a numeric or text data type. If you choose the numeric data type, you can set several different content types: you can discretize the numbers, or handle them as continuous values. For a list of all the content types, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
+ For example, if you have numeric data in a column, you can choose to handle it either as a numeric or text data type. If you choose the numeric data type, you can set several different content types: you can discretize the numbers, or handle them as continuous values. For a list of all the content types, see [Content Types &#40;Data Mining&#41;](content-types-data-mining.md).  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the following data types for mining structure columns:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the following data types for mining structure columns:  
   
 |Data Type|Supported Content Types|  
 |---------------|-----------------------------|  
@@ -46,12 +46,12 @@ manager: "mblythe"
  If you change the data type of a column, you must always reprocess the mining structure and any mining models that are based on that structure. Sometimes if you change the data type, that column can no longer be used in a particular model. In that case, Analysis Services will either raise an error when you reprocess the model, or will process the model but leave out that particular column.  
   
 ## See Also  
- [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md)   
+ [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)   
  [Content Types &#40;DMX&#41;](~/dmx/content-types-dmx.md)   
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Data Types &#40;DMX&#41;](~/dmx/data-types-dmx.md)   
- [Mining Model Columns](data-mining/mining-model-columns.md)   
- [Mining Structure Columns](data-mining/mining-structure-columns.md)  
+ [Mining Model Columns](mining-model-columns.md)   
+ [Mining Structure Columns](mining-structure-columns.md)  
   
   

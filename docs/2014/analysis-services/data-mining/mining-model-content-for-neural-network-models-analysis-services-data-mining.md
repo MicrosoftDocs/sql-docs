@@ -26,7 +26,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-  This topic describes mining model content that is specific to models that use the Microsoft Neural Network algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+  This topic describes mining model content that is specific to models that use the Microsoft Neural Network algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## Understanding the Structure of a Neural Network Model  
  Each neural network model has a single parent node that represents the model and its metadata, and a marginal statistics node (NODE_TYPE = 24) that provides descriptive statistics about the input attributes. The marginal statistics node is useful because it summarizes information about inputs, so that you do not need to query data from the individual nodes.  
@@ -37,7 +37,7 @@ manager: "mblythe"
   
 -   Successive nodes each contain a different *subnetwork* (NODE_TYPE = 17). Each subnetwork always contains a hidden layer (NODE_TYPE = 19), and an output layer (NODE_TYPE = 20) for that subnetwork.  
   
- ![structure of model content for neural networks](../../2014/analysis-services/media/modelcontentstructure-nn.gif "structure of model content for neural networks")  
+ ![structure of model content for neural networks](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-nn.gif "structure of model content for neural networks")  
   
  The information in the input layer is straightforward: the top node for each input layer (NODE_TYPE = 18) serves as an organizer for a collection of input nodes (NODE_TYPE = 21). The content of the input nodes is described in the following table.  
   
@@ -50,10 +50,10 @@ manager: "mblythe"
   
  The easiest way to explore the structure of the inputs and subnetworks is to use the **Microsoft Generic Content Tree viewer**. You can click any node to expand it and see the child nodes, or view the weights and other statistics that is contained in the node.  
   
- To work with the data and see how the model correlates inputs with outputs, use the **Microsoft Neural Network Viewer**. By using this custom viewer, you can filter on input attributes and their values, and graphically see how they affect the outputs. The tooltips in the viewer show you the probability and lift associated with each pair of inputs and output values. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ To work with the data and see how the model correlates inputs with outputs, use the **Microsoft Neural Network Viewer**. By using this custom viewer, you can filter on input attributes and their values, and graphically see how they affect the outputs. The tooltips in the viewer show you the probability and lift associated with each pair of inputs and output values. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
 ## Model Content for a Neural Network Model  
- This section provides detail and examples only for those columns in the mining model content that have particular relevance for neural networks. For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](data-mining/mining-model-content-analysis-services-data-mining.md).  
+ This section provides detail and examples only for those columns in the mining model content that have particular relevance for neural networks. For information about general-purpose columns in the schema rowset, such as MODEL_CATALOG and MODEL_NAME, that are not described here, or for explanations of mining model terminology, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Name of the database where the model is stored.  
@@ -235,8 +235,8 @@ manager: "mblythe"
  **Continuous attribute:** The final two rows of the NODE_DISTRIBUTION table contain the mean of the attribute, the coefficient for the node as a whole, and the variance of the coefficient.  
   
 ## See Also  
- [Microsoft Neural Network Algorithm](data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Neural Network Model Query Examples](data-mining/neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

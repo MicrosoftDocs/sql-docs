@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Monitor an Analysis Services Instance
-  You can monitor the performance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
+  You can monitor the performance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or Performance Monitor, an application sometimes referred to as **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you create and manage traces and analyze and replay trace results. Performance Monitor reports on server status, as indexed through certain counters, which are discussed in the next section.  
   
 > [!NOTE]  
 >  For more information about monitoring, see the [SQL Server 2008 R2 Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -29,14 +29,14 @@ manager: "mblythe"
 ## In This Section  
  Follow these links to learn more about monitoring.  
   
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-services-trace-events.md)  
   
- [Use SQL Server Profiler to Monitor Analysis Services](instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
+ [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Performance Counters &#40;SSAS&#41;](instances/performance-counters-ssas.md)  
+ [Performance Counters &#40;SSAS&#41;](performance-counters-ssas.md)  
   
   

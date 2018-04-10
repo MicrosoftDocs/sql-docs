@@ -26,7 +26,7 @@ ms.workload: "On Demand"
 # Building Applications with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   When developing an application that uses the OLE DB Driver for SQL Server library, there are a number of issues that come into play. The topics in this section discuss many of these issues including upgrading from MDAC to OLE DB Driver for SQL Server, using the OLE DB Driver for SQL Server header and library files, and an overview of the various connection strings that can be used with OLE DB Driver for SQL Server.  
 

@@ -17,8 +17,9 @@ helpviewer_keywords:
   - "importing JSON"
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Active"
 ---

@@ -225,7 +225,7 @@ SELECT <select list> FROM [<mining model>]
  To learn how to use DMX in another predictive scenario, see [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## See Also  
- [Association Model Query Examples](../../2014/analysis-services/association-model-query-examples.md)   
- [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md)  
+ [Association Model Query Examples](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-tools.md)  
   
   

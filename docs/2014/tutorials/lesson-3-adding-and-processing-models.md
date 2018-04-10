@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  In this lesson, you will create a set of mining models that will suggest the most likely customers from a list of potential customers.  
   
- To complete the tasks in this lesson, you will use the [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md) and the [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/microsoft-naive-bayes-algorithm.md).  
+ To complete the tasks in this lesson, you will use the [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) and the [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  This lesson contains the following tasks:  
   
@@ -38,6 +38,6 @@ manager: "jhubbard"
  [Lesson 4: Exploring the Targeted Mailing Models &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Add Mining Models to a Structure &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Add Mining Models to a Structure &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

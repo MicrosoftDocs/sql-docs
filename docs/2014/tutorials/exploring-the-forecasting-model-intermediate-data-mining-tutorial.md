@@ -171,7 +171,7 @@ manager: "jhubbard"
  [Creating Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md)  
   
   

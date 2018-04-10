@@ -180,7 +180,7 @@ manager: "jhubbard"
   
 2.  In the Node Caption pane, scroll to the bottom of the list, and click the last node.  
   
-     The viewer shows itemsets first and rules next, but does not group them. The easiest way to find a specific node is to create a content query. For more information, see [Association Model Query Examples](../../2014/analysis-services/association-model-query-examples.md).  
+     The viewer shows itemsets first and rules next, but does not group them. The easiest way to find a specific node is to create a content query. For more information, see [Association Model Query Examples](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
 3.  In the Node Details pane, review the value for NODE_TYPE and NODE_DESCRIPTION.  
   
@@ -196,7 +196,7 @@ manager: "jhubbard"
 ## See Also  
  [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
  [Lesson 4: Building a Sequence Clustering Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
- [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md)   
- [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/microsoft-association-algorithm-technical-reference.md)  
+ [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   
   

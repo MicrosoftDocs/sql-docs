@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  Each algorithm that you used to build a model in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns a different type of result. Therefore, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides custom viewers for each type of machine learning model.  
   
- If you want to get into details, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also provides an HTML viewer, called the **Generic Content Tree Viewer**, that displays detailed information about the model data and any patterns that were found, in a semi-tabular format. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ If you want to get into details, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also provides an HTML viewer, called the **Generic Content Tree Viewer**, that displays detailed information about the model data and any patterns that were found, in a semi-tabular format. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
  In this lesson you will look at the results from your three models. Each model type is based on a different algorithm and provides different insights into the data.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
  [Lesson 5: Testing Models &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/mining-model-viewer-tasks-and-how-tos.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining Model Viewers](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

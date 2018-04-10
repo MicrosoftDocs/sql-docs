@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The DMX query language  
   
--   The [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md)  
+-   The [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)  
   
 -   Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   

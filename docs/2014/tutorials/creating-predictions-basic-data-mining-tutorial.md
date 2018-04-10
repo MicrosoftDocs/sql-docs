@@ -168,6 +168,6 @@ manager: "jhubbard"
  [Using Drillthrough on Structure Data &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

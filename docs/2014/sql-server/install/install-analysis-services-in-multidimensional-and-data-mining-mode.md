@@ -52,7 +52,7 @@ manager: "jhubbard"
 |-----------|-----------|  
 |[Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) and [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).|Before you run Setup, check prerequisites for installing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and determine which account you will use to provision the server.|  
 |[Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Run SQL Server Setup to install the software.|  
-|[Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md)|After Setup is finished, you must configure firewall settings to allow remote connections to the server.|  
+|[Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)|After Setup is finished, you must configure firewall settings to allow remote connections to the server.|  
 |[Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)|Users who access Analysis Services databases must have Read permission on at least one database on the server.|  
   
 ## Related Content  
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
- [Determine the Server Mode of an Analysis Services Instance](../../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
  [SQL Server Data Mining Add-ins](http://go.microsoft.com/fwlink/?LinkId=197091)  
   

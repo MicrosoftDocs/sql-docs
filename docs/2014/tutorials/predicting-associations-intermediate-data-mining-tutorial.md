@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Predicting Associations (Intermediate Data Mining Tutorial)
-  After the models have been processed, you can use the information about associations stored in the model to create predictions. In the final task of this lesson, you learn how to build prediction queries against the association models that you created. This lesson assumes that you are familiar with how to use the Prediction Query Builder and want to learn how to build prediction queries against association models. For more information how to use Prediction Query Builder, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md).  
+  After the models have been processed, you can use the information about associations stored in the model to create predictions. In the final task of this lesson, you learn how to build prediction queries against the association models that you created. This lesson assumes that you are familiar with how to use the Prediction Query Builder and want to learn how to build prediction queries against association models. For more information how to use Prediction Query Builder, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-tools.md).  
   
 ## Creating a Singleton Prediction Query  
  Prediction queries on an association model can be very useful:  
@@ -203,11 +203,11 @@ manager: "jhubbard"
   
 13. Click the **Result** button to view the predictions for each customer.  
   
- You might try creating a similar prediction query on the multiple models, to see whether filtering changes the prediction results. For more information about creating predictions and other types of queries, see [Association Model Query Examples](../../2014/analysis-services/association-model-query-examples.md).  
+ You might try creating a similar prediction query on the multiple models, to see whether filtering changes the prediction results. For more information about creating predictions and other types of queries, see [Association Model Query Examples](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
 ## See Also  
  [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](~/dmx/predictassociation-dmx.md)   
- [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

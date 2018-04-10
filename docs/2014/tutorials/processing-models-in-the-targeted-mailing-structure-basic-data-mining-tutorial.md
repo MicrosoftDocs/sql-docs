@@ -69,6 +69,6 @@ manager: "jhubbard"
  [Lesson 4: Exploring the Targeted Mailing Models &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

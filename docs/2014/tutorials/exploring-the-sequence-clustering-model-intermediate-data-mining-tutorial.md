@@ -230,7 +230,7 @@ manager: "jhubbard"
   
  A content tree is a representation of any mining model as a series of nodes, wherein each node represents learned knowledge about the training data. The node can contain a pattern, a set of rules, a cluster, or the definition of a range of dates that share some attributes. The exact content of the node differs depending on the algorithm and the predictable attribute, but the general representation of the content is the same.  
   
- You can expand each node to see increasing levels of detail, and copy the content of any node to the Clipboard. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ You can expand each node to see increasing levels of detail, and copy the content of any node to the Clipboard. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 #### To view details for a sequence clustering model by using the Generic Content Tree Viewer  
   

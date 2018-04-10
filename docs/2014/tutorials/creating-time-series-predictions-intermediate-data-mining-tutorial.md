@@ -184,6 +184,6 @@ manager: "jhubbard"
  [Advanced Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)  
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

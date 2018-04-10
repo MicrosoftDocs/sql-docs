@@ -98,7 +98,7 @@ manager: "jhubbard"
  [Exploring the Clustering Model &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/mining-model-viewer-tasks-and-how-tos.md)   
+ [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Decision Tree Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Dependency Network Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
  [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  

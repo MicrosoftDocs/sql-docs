@@ -40,6 +40,6 @@ manager: "jhubbard"
 ## See Also  
  [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
  [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md)   
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

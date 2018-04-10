@@ -67,6 +67,6 @@ manager: "jhubbard"
  [Creating Predictions for the Call Center Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

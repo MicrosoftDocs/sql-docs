@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   [Configure a Windows Firewall for Database Engine Access](../../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
   
--   [Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Configure a Firewall for Report Server Access](../../../2014/reporting-services/configure-a-firewall-for-report-server-access.md)  
   
@@ -175,7 +175,7 @@ manager: "jhubbard"
   
  If users access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening and specify that port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that are not required.  
   
- For step by step instructions to configure the Windows Firewall for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ For step by step instructions to configure the Windows Firewall for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Ports Used By Reporting Services  
  The following table lists the ports that are frequently used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

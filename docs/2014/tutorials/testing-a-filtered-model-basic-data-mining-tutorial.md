@@ -122,7 +122,7 @@ manager: "jhubbard"
      You will now notice that all three Decision Tree models provide significant lift compared to the random guess model, and also outperform the Clustering and Naive-Bayes models.  
   
 ## Related Tasks  
- For more information on filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md).  
+ For more information on filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  For an example of how to apply filters to nested tables, see [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
@@ -134,8 +134,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Mining Model Tasks and How-tos](../../2014/analysis-services/mining-model-tasks-and-how-tos.md)   
- [Delete a Filter from a Mining Model](../../2014/analysis-services/delete-a-filter-from-a-mining-model.md)   
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Mining Model Tasks and How-tos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Delete a Filter from a Mining Model](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

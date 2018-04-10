@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      [Testing a Filtered Model &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
- For more information about how model validation in general, see [Data Mining Concepts](../../2014/analysis-services/data-mining-concepts.md).  
+ For more information about how model validation in general, see [Data Mining Concepts](../../2014/analysis-services/data-mining/data-mining-concepts.md).  
   
 ## First Task in Lesson  
  [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
@@ -43,9 +43,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Lift Chart Tab &#40;Mining Accuracy Chart View&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
- [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)   
+ [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Classification Matrix Tab &#40;Mining Accuracy Chart View&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
- [Classification Matrix &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/classification-matrix-analysis-services-data-mining.md)  
+ [Classification Matrix &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

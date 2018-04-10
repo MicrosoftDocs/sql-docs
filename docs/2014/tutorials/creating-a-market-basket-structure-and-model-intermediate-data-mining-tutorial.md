@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md)  
+ [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

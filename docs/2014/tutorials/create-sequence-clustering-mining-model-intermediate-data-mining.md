@@ -88,7 +88,7 @@ manager: "jhubbard"
  [Processing the Sequence Clustering Model](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## See Also  
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md)  
+ [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

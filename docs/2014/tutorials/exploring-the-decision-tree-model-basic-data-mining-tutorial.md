@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  Because you enabled drillthrough when you created the structure and model, you can retrieve detailed information from the model cases and mining structure, including those columns that were not included in the mining model (e.g., emailAddress, FirstName).  
   
- For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md).  
+ For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### To drill through to case data  
   
@@ -101,6 +101,6 @@ manager: "jhubbard"
  [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Decision Tree Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [Dependency Network Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   
- [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
   

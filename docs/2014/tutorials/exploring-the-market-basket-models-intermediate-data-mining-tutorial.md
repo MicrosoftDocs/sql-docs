@@ -186,7 +186,7 @@ manager: "jhubbard"
   
      A node type of 8 is a rule, and a node type of 7 is an itemset. For a rule, the value of NODE_DESCRIPTION tells you the conditions that make up the rule. For an itemset, the value of NODE_DESCRIPTION tells you the items included in the itemset.  
   
- You can also create a content query to obtain detailed statistics about the rules. For more information about mining model content and how to interpret it, see [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ You can also create a content query to obtain detailed statistics about the rules. For more information about mining model content and how to interpret it, see [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
  [Back to Top](#bkmk_DepNet)  
   

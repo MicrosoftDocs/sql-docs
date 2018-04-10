@@ -59,7 +59,7 @@ manager: "jhubbard"
  [Creating a Targeted Mailing Mining Model Structure &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md)   
- [Data Types &#40;Data Mining&#41;](../../2014/analysis-services/data-types-data-mining.md)  
+ [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [Data Types &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

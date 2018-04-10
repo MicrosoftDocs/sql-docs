@@ -93,7 +93,7 @@ manager: "jhubbard"
  [Exploring the Clustering Model &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
+ [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)   
  [Attribute Discrimination Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/attribute-discrimination-tab-mining-model-viewer.md)   
  [Attribute Profiles Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/attribute-profiles-tab-mining-model-viewer.md)   
  [Attribute Characteristics Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/attribute-characteristics-tab-mining-model-viewer.md)   

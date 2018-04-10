@@ -191,9 +191,9 @@ manager: "jhubbard"
  However, these algorithms can iterate through many combinations of factors and automatically identify the strongest correlations, providing statistical support for insights that would be very difficult to discover through manual exploration of data using Transact-SQL or even PowerPivot.  
   
 ## See Also  
- [Logistic Regression Model Query Examples](../../2014/analysis-services/logistic-regression-model-query-examples.md)   
- [Microsoft Logistic Regression Algorithm](../../2014/analysis-services/microsoft-logistic-regression-algorithm.md)   
- [Microsoft Neural Network Algorithm](../../2014/analysis-services/microsoft-neural-network-algorithm.md)   
- [Neural Network Model Query Examples](../../2014/analysis-services/neural-network-model-query-examples.md)  
+ [Logistic Regression Model Query Examples](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
+ [Microsoft Logistic Regression Algorithm](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Neural Network Model Query Examples](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

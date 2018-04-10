@@ -18,9 +18,9 @@ manager: "jhubbard"
 # Lesson 2: Adding Mining Models to the Bike Buyer Mining Structure
   In this lesson, you will add two mining models to the Bike Buyer mining structure that you created [Lesson 1: Creating the Bike Buyer Mining Structure](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). These mining models will allow you to explore the data using one model, and to create predictions using another.  
   
- To explore how potential customers can be categorized by their characteristics, you will create a mining model based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md). In a later lesson, you will explore how this algorithm finds clusters of customers who share similar characteristics. For example, you might find that certain customers tend to live close to each other, commute by bicycle, and have similar education backgrounds. You can use these clusters to better understand how different customers are related, and to use the information to create a marketing strategy that targets specific customers.  
+ To explore how potential customers can be categorized by their characteristics, you will create a mining model based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). In a later lesson, you will explore how this algorithm finds clusters of customers who share similar characteristics. For example, you might find that certain customers tend to live close to each other, commute by bicycle, and have similar education backgrounds. You can use these clusters to better understand how different customers are related, and to use the information to create a marketing strategy that targets specific customers.  
   
- To predict whether a potential customer is likely to buy a bicycle, you will create a mining model based on the [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md). This algorithm looks through the information that is associated with each potential customer, and finds characteristics that are useful in predicting if they will buy a bicycle. It then compares the values of the characteristics of previous bike buyers against new potential customers to determine whether the new potential customers are likely to buy a bicycle.  
+ To predict whether a potential customer is likely to buy a bicycle, you will create a mining model based on the [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). This algorithm looks through the information that is associated with each potential customer, and finds characteristics that are useful in predicting if they will buy a bicycle. It then compares the values of the characteristics of previous bike buyers against new potential customers to determine whether the new potential customers are likely to buy a bicycle.  
   
 ## ALTER MINING STRUCTURE Statement  
  In order to add a mining model to the mining structure, you use the [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
@@ -76,7 +76,7 @@ ADD MINING MODEL [<mining model name>]
 ) USING <algorithm name>( <algorithm parameters> )  
 ```  
   
- For more information about the algorithm parameters that you can adjust, see [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md) and [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md).  
+ For more information about the algorithm parameters that you can adjust, see [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) and [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md).  
   
  You can specify that a column in the mining model be used for prediction by using the following syntax:  
   
@@ -84,7 +84,7 @@ ADD MINING MODEL [<mining model name>]
 <mining model column> PREDICT  
 ```  
   
- The final line of the code, which is optional, defines a filter that is applied when training and testing the model. For more information about how to apply filters to mining models, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md).  
+ The final line of the code, which is optional, defines a filter that is applied when training and testing the model. For more information about how to apply filters to mining models, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## Lesson Tasks  
  You will perform the following tasks in this lesson:  

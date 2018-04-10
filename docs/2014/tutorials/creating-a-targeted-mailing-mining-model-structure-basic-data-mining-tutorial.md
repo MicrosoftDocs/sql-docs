@@ -102,7 +102,7 @@ manager: "jhubbard"
   
     -   **LastName**  
   
-     Ensure that these rows have checks only in the left column. These columns will be added to your structure but will not be included in the model. However, after the model is built, they will be available for drillthrough and testing. For more information about drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md)  
+     Ensure that these rows have checks only in the left column. These columns will be added to your structure but will not be included in the model. However, after the model is built, they will be available for drillthrough and testing. For more information about drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
 14. Click **Next**.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Specify Table Types &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
- [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md)  
+ [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

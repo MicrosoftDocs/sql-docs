@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 3.  In the Mining Models tab, right-click the model, and select **Process Model**.  
   
- For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md)  
+ For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
 ### To view drillthrough data from a mining model  
   

@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Creating Predictions on a Sequence Clustering Model (Intermediate Data Mining Tutorial)
   After you understand the sequence clustering model better by browsing it in the viewer, you can create prediction queries by using Prediction Query Builder on the **Mining Model Prediction** tab in Data Mining Designer. To create a prediction, you first select the sequence clustering model, and then select the input data. For inputs, you can use either an external data source, or you can build a singleton query and provide values in a dialog box.  
   
- This lesson assumes that you are already familiar with how to use the prediction query builder and want to learn how to build queries that are specific to a sequence clustering model. For general information about how to use Prediction Query Builder, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-tools.md) or the section of the Basic Data Mining tutorial, [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
+ This lesson assumes that you are already familiar with how to use the prediction query builder and want to learn how to build queries that are specific to a sequence clustering model. For general information about how to use Prediction Query Builder, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining/data-mining-query-tools.md) or the section of the Basic Data Mining tutorial, [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md).  
   
 ## Creating Predictions on the Regional Model  
  For this scenario, you will first create some singleton prediction queries, to get an idea of how predictions might be different by region.  
@@ -198,7 +198,7 @@ NATURAL PREDICTION JOIN
  If you are familiar with programming concepts, you can also use Analysis Management Objects (AMO) to programmatically work with data mining objects. For more information, see [AMO Data Mining Classes](../../2014/analysis-services/dev-guide/amo-data-mining-classes.md).  
   
 ## See Also  
- [Sequence Clustering Model Query Examples](../../2014/analysis-services/sequence-clustering-model-query-examples.md)   
- [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-sequence-clustering-models.md)  
+ [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-sequence-clustering-model-query-examples.md)   
+ [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

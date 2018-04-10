@@ -226,6 +226,6 @@ SELECT <select list> FROM [<mining model>]
   
 ## See Also  
  [Association Model Query Examples](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
- [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-tools.md)  
+ [Data Mining Query Interfaces](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

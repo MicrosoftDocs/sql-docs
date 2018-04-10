@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  This value does not affect the number of cases in the training set; it simply ensures that the same partitioning method will be used each time you build the model.  
   
- For more information on holdout seed, see [Training and Testing Data Sets](../../2014/analysis-services/training-and-testing-data-sets.md).  
+ For more information on holdout seed, see [Training and Testing Data Sets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### To set the Holdout Seed  
   

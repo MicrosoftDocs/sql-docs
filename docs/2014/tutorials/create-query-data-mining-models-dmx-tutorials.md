@@ -37,7 +37,7 @@ manager: "jhubbard"
      This tutorial creates a forecasting model to illustrate the use of the CREATE MODEL (DMX) statement. You then add related models and customize the behavior of each by changing the parameters of the Microsoft Time Series algorithm. Finally you create predictions and update the predictions with new data. The ability to update a time series while making predictions was added in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## Reference  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
@@ -52,8 +52,8 @@ manager: "jhubbard"
      This tutorial contains a number of independent lessons, each introducing you to a different model type. Each lesson walks you through the process of creating a model, exploring the model, and then customizing the model and creating prediction queries.  
   
 ## See Also  
- [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)   
- [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md)   
- [Data Mining Projects](../../2014/analysis-services/data-mining-projects.md)  
+ [Data Mining Solutions](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Data Mining Tools](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [Data Mining Projects](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

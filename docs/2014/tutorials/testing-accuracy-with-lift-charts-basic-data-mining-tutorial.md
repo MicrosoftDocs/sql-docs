@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 2.  In the **Select data set to be used for Accuracy Chart** group box, select **Use mining structure test cases**. This is the testing data that you set aside when you created the mining structure.  
   
-     For more information on the other options, see [Choose an Accuracy Chart Type and Set Chart Options](../../2014/analysis-services/choose-an-accuracy-chart-type-and-set-chart-options.md).  
+     For more information on the other options, see [Choose an Accuracy Chart Type and Set Chart Options](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
 ##  <a name="BKMK_Selecting"></a> Setting Accuracy Chart Parameters  
  To create an accuracy chart, you must define three things:  
@@ -74,13 +74,13 @@ manager: "jhubbard"
   
      You'll notice that the `TM_Decision_Tree` model provides the greatest lift,  outperforming both the Clustering and Naive Bayes models.  
   
- For an in-depth explanation of a lift chart similar to the one created in this lesson, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md).  
+ For an in-depth explanation of a lift chart similar to the one created in this lesson, see [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md).  
   
 ## Next Task in Lesson  
  [Testing a Filtered Model &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/lift-chart-analysis-services-data-mining.md)   
+ [Lift Chart &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Lift Chart Tab &#40;Mining Accuracy Chart View&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

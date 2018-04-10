@@ -37,6 +37,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Create the Data Mining Structure &#40;Data Mining Wizard&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   
- [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](../../2014/analysis-services/data-mining/create-a-relational-mining-structure.md)  
   
   

@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "WITHOUT_ARRAY_WRAPPER"
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

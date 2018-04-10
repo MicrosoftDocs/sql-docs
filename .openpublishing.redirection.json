@@ -1126,6 +1126,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/oledb/oledb-driver-for-sql-server-programming.md",
+            "redirect_url": "/sql/connect/oledb/oledb-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db.md",
+            "redirect_url": "/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false
@@ -3472,7 +3482,8 @@
       },
 
 	  {
-	  "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",	  "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+      "source_path": "docs/ssms/tutorials/lesson-2-writing-transact-sql.md",	  
+      "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
 	  "redirect_document_id": false
       },
 
@@ -3537,6 +3548,56 @@
 	  "redirect_url": "/sql/relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net",
 	  "redirect_document_id": false
       },
+      {
+        "source_path": "docs/relational-databases/replication/lesson-1-creating-windows-accounts-for-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+  
+  
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-preparing-the-snapshot-folder.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+  
+  
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-configuring-distribution.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-preparing-the-server-for-replication",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-1-publishing-data-using-transactional-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-validating-the-subscription-and-measuring-latency.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+        {
+        "source_path": "docs/relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md",
+        "redirect_url": "/sql/relational-databases/replication/tutorial-replicating-data-with-mobile-clients",
+        "redirect_document_id": false
+        },
+
 	  {
 	  "source_path": "docs/sample/microsoft-sql-server-samples.md",
 	  "redirect_url": "/sql/samples/sql-samples-where-are",

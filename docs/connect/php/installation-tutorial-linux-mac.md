@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "03/26/2018"
+ms.date: "04/10/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -229,20 +229,20 @@ If you do not already have it, install brew as follows:
 ```
 
     > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php72 with php70 or php71 respectively in the following commands.
+    > To install PHP 7.0 or 7.1, replace php@7.2 with php@7.0 or php@7.1 respectively in the following commands.
 
 ### Step 1. Install PHP
 
 ```
 brew tap
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew install php72 --with-pear --with-httpd24 --with-cgi
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
-echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+brew tap homebrew/core
+brew install php@7.2
 ```
+PHP should now be in your path -- run `php -v` to verify that you are running the correct version of PHP. If PHP is not in your path or it is not the correct version, run the following:
+```
+brew link --force --overwrite php@7.2
+```
+
 ### Step 2. Install prerequisites
 Install the ODBC driver for macOS by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
@@ -253,13 +253,20 @@ brew install autoconf automake libtool
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
-chmod -R ug+w /usr/local/opt/php72/lib/php
-pear config-set php_ini /usr/local/etc/php/7.2/php.ini system
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 ```
 ### Step 4. Install Apache and configure driver loading
 ```
+brew install apache2
+```
+To find the Apache configuration file for your Apache installation, run 
+```
+apachectl -V | grep SERVER_CONFIG_FILE
+``` 
+and substitute the path for `httpd.conf` in the following commands:
+```
+echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### Step 5. Restart Apache and test the sample script

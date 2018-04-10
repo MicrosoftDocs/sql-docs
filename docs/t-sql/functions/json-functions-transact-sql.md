@@ -16,8 +16,9 @@ helpviewer_keywords:
   - "JSON functions"
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

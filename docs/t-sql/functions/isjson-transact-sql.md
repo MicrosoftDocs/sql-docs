@@ -20,8 +20,9 @@ helpviewer_keywords:
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

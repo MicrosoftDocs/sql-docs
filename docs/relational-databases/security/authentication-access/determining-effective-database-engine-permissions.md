@@ -86,9 +86,8 @@ To understand the permissions that are granted to each role, see the role descri
 
 This system is flexible, which means it can be complicated if the people setting it up want to be precise. To simplify matters it helps to create roles, assign permissions to roles, and then add groups of people to the roles. And it's easier if the database development team separates activity by schema and then grants role permissions to a whole schema instead of to individual tables or procedures. Real world scenarios are complex and business needs can create unexpected security requirements.   
 
-The following graphic shows the permissions and their relationships to each other. Some of the higher level permissions (such as `CONTROL SERVER`) are listed many times. In this article, the poster is far too small to read. Click the image to download the **Database Engine Permissions Poster** in pdf format.  
-  
- [![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### Security Classes
 

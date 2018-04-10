@@ -21,8 +21,9 @@ helpviewer_keywords:
   - "JSON_QUERY function"
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

@@ -63,7 +63,7 @@ ms.workload: "On Demand"
   
 -   [Large CLR User-Defined Types &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM Support &#40;OLE DB&#41;](../../oledb/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM Support](../../oledb/features/filestream-support.md)  
   
 -   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   

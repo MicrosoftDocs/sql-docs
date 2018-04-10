@@ -1131,6 +1131,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/oledb/ole-db/filestream-support-ole-db.md",
+            "redirect_url": "/sql/connect/oledb/features/filestream-support",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/oledb/ole-db/oledb-driver-for-sql-server-ole-db.md",
             "redirect_url": "/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming",
             "redirect_document_id": false

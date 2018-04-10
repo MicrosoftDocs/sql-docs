@@ -137,7 +137,7 @@ For a date or time data type *expression*,  *style* can have one of the values s
   
 <sup>5</sup> Hijri is a calendar system with several variations. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Kuwaiti algorithm.
   
-> **IMPORTANT**<br />  
+> [!IMPORTANT]<br />  
 >  By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That means that SQL Server interprets the two-digit year 49 as 2049 and the two-digit year 50 as 1950. Many client applications, including those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option to change the cutoff year used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This allows for the consistent treatment of dates. We recommend specifying four-digit years.  
   
 <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When casting character data representing only date or only time components to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.

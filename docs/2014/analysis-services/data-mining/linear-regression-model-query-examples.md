@@ -67,7 +67,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
  [Return to Top](#bkmk_top)  
   
 ###  <a name="bkmk_Query2"></a> Sample Query 2: Retrieving the Regression Formula for the Model  
- The following query returns the mining model content for a linear regression model that was built by using the same Targeted Mailing data source that was used in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). This model predicts customer income based on age.  
+ The following query returns the mining model content for a linear regression model that was built by using the same Targeted Mailing data source that was used in the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). This model predicts customer income based on age.  
   
  The query returns the contents of the node that contains the regression formula. Each variable and coefficient is stored in a separate row of the nested NODE_DISTRIBUTION table. If you want to view the complete regression formula, use the [Microsoft Tree Viewer](browse-a-model-using-the-microsoft-tree-viewer.md), click the **(All)** node, and open the **Mining Legend**.  
   

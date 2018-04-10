@@ -76,7 +76,7 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explains related chart types.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Scatter Plot &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Describes uses of cross-validation for mining models and mining structures.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Describes steps for creating lift charts and other accuracy charts.|[Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  

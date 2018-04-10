@@ -20,9 +20,9 @@ manager: "mblythe"
 # Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining)
   If you have the necessary permissions, you can use SQL Server Profiler to monitor data mining activities that are issued as requests sent to an instance of SQL Server Analysis Services. Data mining activity can include the processing of models or structures, prediction queries or content queries, or the creation of new models or structures.  
   
- SQL Server Profiler uses a `trace` to monitor requests sent from multiple clients, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, Web services, or the Data Mining Add-ins for Excel, so long as the activities all use the same instance of SQL Server Analysis Services. You must create a separate trace for each instance of SQL Server Analysis Services that you want to monitor. For general information about traces, and how to use SQL Server Profiler, see [Use SQL Server Profiler to Monitor Analysis Services](instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ SQL Server Profiler uses a `trace` to monitor requests sent from multiple clients, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, Web services, or the Data Mining Add-ins for Excel, so long as the activities all use the same instance of SQL Server Analysis Services. You must create a separate trace for each instance of SQL Server Analysis Services that you want to monitor. For general information about traces, and how to use SQL Server Profiler, see [Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- For specific guidance about the types of events to capture, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](instances/create-profiler-traces-for-replay-analysis-services.md).  
+ For specific guidance about the types of events to capture, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
 ## Using Traces to Monitor Data Mining  
  When you capture information in a trace, you can specify whether the information is saved in a file or in a table on an instance of SQL Server. Regardless of the method you use to store the data, you can use SQL Server Profiler to view the trace and filter by events. The following table lists some of the events and subclasses in the default [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] trace that are of interest for data mining.  
@@ -40,7 +40,7 @@ manager: "mblythe"
  By viewing the command statements in the trace log, you can also see the syntax of complex statements sent by the client to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, including calls to system stored procedures. This information can be useful for debugging, or you can use valid statements as a template for creating new prediction queries or models. For some examples of stored procedure calls that you can capture via a trace, see [Clustering Model Query Examples](clustering-model-query-examples.md).  
   
 ## See Also  
- [Monitor an Analysis Services Instance](instances/monitor-an-analysis-services-instance.md)   
- [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
+ [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

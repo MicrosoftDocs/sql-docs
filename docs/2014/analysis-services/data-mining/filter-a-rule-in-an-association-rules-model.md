@@ -59,6 +59,6 @@ manager: "mblythe"
 ## See Also  
  [Mining Model Viewer Tasks and How-tos](mining-model-viewer-tasks-and-how-tos.md)   
  [Browse a Model Using the Microsoft Association Rules Viewer](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lesson 3: Building a Market Basket Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

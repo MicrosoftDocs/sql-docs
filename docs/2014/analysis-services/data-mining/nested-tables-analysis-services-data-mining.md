@@ -22,7 +22,7 @@ manager: "mblythe"
 # Nested Tables (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], data must be fed to a data mining algorithm as a series of cases that are contained within a case table. However, not all cases can be described by a single row of data. For example, a case might be derived from two tables: one table that contains customer information, and another table that contains customer purchases. A single customer in the customer information table might have multiple items in the customer purchases table, which makes it difficult to describe the data by using a single row. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides a unique method for handling these cases, by using *nested tables*. The concept of a nested table is demonstrated in the following illustration.  
   
- ![Two tables combined by using a nested table](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/nested-tables.gif "Two tables combined by using a nested table")  
+ ![Two tables combined by using a nested table](../media/nested-tables.gif "Two tables combined by using a nested table")  
   
  In this diagram, the first table, which is the parent table, contains information about customers, and associates a unique identifier for each customer. The second table, the child table, contains the purchases for each customer. The purchases in the child table are related to the parent table by the unique identifier, the **CustomerKey** column. The third table in the diagram shows the two tables combined.  
   

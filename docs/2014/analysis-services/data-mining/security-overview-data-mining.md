@@ -23,13 +23,13 @@ manager: "mblythe"
 ##  <a name="bkmk_Architecture"></a> Security Architecture  
  See the following resources to learn about the basic security architecture of an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including how [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Authentication to authenticate user access.  
   
--   [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)  
+-   [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/security-roles-analysis-services-multidimensional-data.md)  
   
--   [Security Properties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/security-properties.md)  
+-   [Security Properties](../security-properties.md)  
   
--   [Configure Service Accounts &#40;Analysis Services&#41;](instances/configure-service-accounts-analysis-services.md)  
+-   [Configure Service Accounts &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configuring the Logon Account for Analysis Services  
  You must select an appropriate logon account for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and specify the permissions for this account. You must make sure that the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] logon account has only those permissions that are necessary to perform necessary tasks, including appropriate permissions to the underlying data sources.  
@@ -54,6 +54,6 @@ manager: "mblythe"
  If you use Integration Services packages to clean data, to update mining models, or to make predictions, you must ensure that the Integration Services service has the appropriate permissions on the database where the model is stored, and appropriate permissions on the source data.  
   
 ## See Also  
- [Roles and Permissions &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/roles-and-permissions-analysis-services.md)  
+ [Roles and Permissions &#40;Analysis Services&#41;](../roles-and-permissions-analysis-services.md)  
   
   

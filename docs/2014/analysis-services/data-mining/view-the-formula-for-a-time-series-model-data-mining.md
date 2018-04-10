@@ -29,7 +29,7 @@ manager: "mblythe"
   
  If you create a mixed model, the ARIMA and ARTXP analyses are created in separate trees, joined at the root node representing the model. The structures of the ARIMA and ARTXP trees are very different. For example, the ARTXP tree is in fact a tree structure, like a decision tree, whereas the ARIMA tree represents a series of moving averages. Therefore, although the two representations are presented in one model for convenience, they should be treated as two independent models. The equations are also completely different and cannot be combined or compared.  
   
- You can also view time series models by using the [Microsoft Generic Content Tree Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md). For more information about the content of a time series model, see [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ You can also view time series models by using the [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). For more information about the content of a time series model, see [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
 ### To view the ARTXP regression formula for a time series model  
   
@@ -44,7 +44,7 @@ manager: "mblythe"
 3.  If the model contains multiple trees, select a single tree from the **Tree** drop-down list.  
   
     > [!NOTE]  
-    >  A model will always have multiple trees if you have more than one data series. However, you will not see as many trees in the **Time Series viewer** as you will see in the [Microsoft Generic Content Tree Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md). That is because the Time Series viewer combines the ARIMA and ARTXP information for each data series into a single representation.  
+    >  A model will always have multiple trees if you have more than one data series. However, you will not see as many trees in the **Time Series viewer** as you will see in the [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md). That is because the Time Series viewer combines the ARIMA and ARTXP information for each data series into a single representation.  
   
 4.  Click any leaf node in the tree.  
   

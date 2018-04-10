@@ -61,7 +61,7 @@ manager: "mblythe"
   
  You create an alias by editing the `Name` property of the mining model column. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] continues to use the original name as the ID of the column, and the new value that you type for `Name` becomes the column alias, and appears in the grid in parentheses next to the column usage.  
   
- ![aliases on mining model columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcolumnalias-income.gif "aliases on mining model columns")  
+ ![aliases on mining model columns](../media/modelcolumnalias-income.gif "aliases on mining model columns")  
   
  The graphic shows related models that have multiple copies of a mining structure column, all related to Income. Each copy of the structure column has been discretized in a different way. The models in the diagram each use a different column from the mining structure; however, for convenience in comparing the columns across the models, the column in each model has been renamed to [**Income**].  
   

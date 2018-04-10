@@ -60,18 +60,18 @@ manager: "mblythe"
   
  The following diagram describes the relationships between each step in the process, and the technologies in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you can use to complete each step.  
   
- ![Key steps in data mining process](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/data-mining-process.gif "Key steps in data mining process")  
+ ![Key steps in data mining process](../media/data-mining-process.gif "Key steps in data mining process")  
   
  The process illustrated in the diagram is cyclical, meaning that creating a data mining model is a dynamic and iterative process. After you explore the data, you may find that the data is insufficient to create the appropriate mining models, and that you therefore have to look for more data. Alternatively, you may build several models and then realize that the models do not adequately answer the problem you defined, and that you therefore must redefine the problem. You may have to update the models after they have been deployed because more data has become available. Each step in the process might need to be repeated many times in order to create a good model.  
   
- Microsoft SQL Server Data Mining provides an integrated environment for creating and working with data mining models. This environment includes SQL Server Development Studio, which contains data mining algorithms and query tools that make it easy to build a comprehensive solution for a variety of projects, and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], which contains tools for browsing models and managing data mining objects. For more information, see [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
+ Microsoft SQL Server Data Mining provides an integrated environment for creating and working with data mining models. This environment includes SQL Server Development Studio, which contains data mining algorithms and query tools that make it easy to build a comprehensive solution for a variety of projects, and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], which contains tools for browsing models and managing data mining objects. For more information, see [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
- For an example of how the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools can be applied to a business scenario, see the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md).  
+ For an example of how the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools can be applied to a business scenario, see the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
   
 ##  <a name="DefiningTheProblem"></a> Defining the Problem  
  The first step in the data mining process, as highlighted in the following diagram, is to clearly define the problem, and consider ways that data can be utilized to provide an answer to the problem.  
   
- ![Data mining first step: defining the problem](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-defining.gif "Data mining first step: defining the problem")  
+ ![Data mining first step: defining the problem](../media/dmprocess-defining.gif "Data mining first step: defining the problem")  
   
  This step includes analyzing business requirements, defining the scope of the problem, defining the metrics by which the model will be evaluated, and defining specific objectives for the data mining project. These tasks translate into questions such as the following:  
   
@@ -94,7 +94,7 @@ manager: "mblythe"
 ##  <a name="PreparingData"></a> Preparing Data  
  The second step in the data mining process, as highlighted in the following diagram, is to consolidate and clean the data that was identified in the [Defining the Problem](#DefiningTheProblem) step.  
   
- ![Data mining second step: preparing data](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-preparing.gif "Data mining second step: preparing data")  
+ ![Data mining second step: preparing data](../media/dmprocess-preparing.gif "Data mining second step: preparing data")  
   
  Data can be scattered across a company and stored in different formats, or may contain inconsistencies such as incorrect or missing entries. For example, the data might show that a customer bought a product before the product was offered on the market, or that the customer shops regularly at a store located 2,000 miles from her home.  
   
@@ -102,16 +102,16 @@ manager: "mblythe"
   
  Therefore, before you start to build mining models, you should identify these problems and determine how you will fix them. For data mining typically you are working with a very large dataset and cannot examine every transaction for data quality; therefore, you might need to use some form of data profiling and automated data cleansing and filtering tools, such as those supplied in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSlong](../../includes/ssmdslong-md.md)], or [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] to explore the data and find the inconsistencies. For more information, see these resources:  
   
--   [Master Data Services Overview](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)master-data-services/master-data-services-overview.md)  
+-   [Master Data Services Overview](../../master-data-services/master-data-services-overview.md)  
   
--   [Data Quality Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/data-quality-services.md)  
+-   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- It is important to note that the data you use for data mining does not need to be stored in an Online Analytical Processing (OLAP) cube, or even in a relational database, although you can use both of these as data sources. You can conduct data mining using any source of data that has been defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. These can include text files, Excel workbooks, or data from other external providers. For more information, see [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-sources-supported-ssas-multidimensional.md).  
+ It is important to note that the data you use for data mining does not need to be stored in an Online Analytical Processing (OLAP) cube, or even in a relational database, although you can use both of these as data sources. You can conduct data mining using any source of data that has been defined as an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. These can include text files, Excel workbooks, or data from other external providers. For more information, see [Data Sources Supported &#40;SSAS Multidimensional&#41;](../data-sources-supported-ssas-multidimensional.md).  
   
 ##  <a name="ExploringData"></a> Exploring Data  
  The third step in the data mining process, as highlighted in the following diagram, is to explore the prepared data.  
   
- ![Data mining third step: exploring data](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-exploring.gif "Data mining third step: exploring data")  
+ ![Data mining third step: exploring data](../media/dmprocess-exploring.gif "Data mining third step: exploring data")  
   
  You must understand the data in order to make appropriate decisions when you create the mining models. Exploration techniques include calculating the minimum and maximum values, calculating mean and standard deviations, and looking at the distribution of the data. For example, you might determine by reviewing the maximum, minimum, and mean values that the data is not representative of your customers or business processes, and that you therefore must obtain more balanced data or review the assumptions that are the basis for your expectations. Standard deviations and other distribution values can provide useful information about the stability and accuracy of the results. A large standard deviation can indicate that adding more data might help you improve the model. Data that strongly deviates from a standard distribution might be skewed, or might represent an accurate picture of a real-life problem, but make it difficult to fit a model to the data.  
   
@@ -119,14 +119,14 @@ manager: "mblythe"
   
  You can use tools such as [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to canvass available sources of data and determine their availability for data mining. You can use tools such as [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)], or the Data Profiler in Integration Services, to analyze the distribution of your data and repair issues such as wrong or missing data.  
   
- After you have defined your sources, you combine them in a Data Source view by using the Data Source View Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. For more information, see [Data Source Views in Multidimensional Models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-source-views-in-multidimensional-models.md). This designer also contains some several tools that you can use to explore the data and verify that it will work for creating a model. For more information, see [Explore Data in a Data Source View &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/explore-data-in-a-data-source-view-analysis-services.md).  
+ After you have defined your sources, you combine them in a Data Source view by using the Data Source View Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. For more information, see [Data Source Views in Multidimensional Models](../data-source-views-in-multidimensional-models.md). This designer also contains some several tools that you can use to explore the data and verify that it will work for creating a model. For more information, see [Explore Data in a Data Source View &#40;Analysis Services&#41;](../explore-data-in-a-data-source-view-analysis-services.md).  
   
  Note that when you create a model, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically creates statistical summaries of the data contained in the model, which you can query to use in reports or further analysis. For more information, see [Data Mining Queries](data-mining-queries.md).  
   
 ##  <a name="BuildingModels"></a> Building Models  
  The fourth step in the data mining process, as highlighted in the following diagram, is to build the mining model or models. You will use the knowledge that you gained in the [Exploring Data](#ExploringData) step to help define and create the models.  
   
- ![Data mining fourth step: building mining models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-building.gif "Data mining fourth step: building mining models")  
+ ![Data mining fourth step: building mining models](../media/dmprocess-building.gif "Data mining fourth step: building mining models")  
   
  You define the columns of data that you want to use by creating a mining structure. The mining structure is linked to the source of data, but does not actually contain any data until you process it. When you process the mining structure, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generates aggregates and other statistical information that can be used for analysis. This information can be used by any mining model that is based on the structure. For more information about how mining structures are related to mining models, see [Logical Architecture &#40;Analysis Services - Data Mining&#41;](logical-architecture-analysis-services-data-mining.md).  
   
@@ -141,7 +141,7 @@ manager: "mblythe"
 ##  <a name="ValidatingModels"></a> Exploring and Validating Models  
  The fifth step in the data mining process, as highlighted in the following diagram, is to explore the mining models that you have built and test their effectiveness.  
   
- ![Data mining fifth step: validating mining models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-validating.gif "Data mining fifth step: validating mining models")  
+ ![Data mining fifth step: validating mining models](../media/dmprocess-validating.gif "Data mining fifth step: validating mining models")  
   
  Before you deploy a model into a production environment, you will want to test how well the model performs. Also, when you build a model, you typically create multiple models with different configurations and test all models to see which yields the best results for your problem and your data.  
   
@@ -154,7 +154,7 @@ manager: "mblythe"
 ##  <a name="DeployingandUpdatingModels"></a> Deploying and Updating Models  
  The last step in the data mining process, as highlighted in the following diagram, is to deploy the models that performed the best to a production environment.  
   
- ![Data mining sixth step: deploying mining models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmprocess-deploying.gif "Data mining sixth step: deploying mining models")  
+ ![Data mining sixth step: deploying mining models](../media/dmprocess-deploying.gif "Data mining sixth step: deploying mining models")  
   
  After the mining models exist in a production environment, you can perform many tasks, depending on your needs. The following are some of the tasks you can perform:  
   
@@ -166,7 +166,7 @@ manager: "mblythe"
   
 -   Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to create a package in which a mining model is used to intelligently separate incoming data into multiple tables. For example, if a database is continually updated with potential customers, you could use a mining model together with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to split the incoming data into customers who are likely to purchase a product and customers who are likely to not purchase a product.  
   
--   Create a report that lets users directly query against an existing mining model. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md).  
+-   Create a report that lets users directly query against an existing mining model. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 -   Update the models after review and analysis. Any update requires that you reprocess the models. For more information, see [Processing Data Mining Objects](processing-data-mining-objects.md).  
   

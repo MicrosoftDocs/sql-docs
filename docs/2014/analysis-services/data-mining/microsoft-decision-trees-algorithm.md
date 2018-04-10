@@ -48,22 +48,22 @@ manager: "mblythe"
 ### Predicting Discrete Columns  
  The way that the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm builds a tree for a discrete predictable column can be demonstrated by using a histogram. The following diagram shows a histogram that plots a predictable column, Bike Buyers, against an input column, Age. The histogram shows that the age of a person helps distinguish whether that person will purchase a bicycle.  
   
- ![Histogram from Microsoft Decision Trees algorithm](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dt-histogram.gif "Histogram from Microsoft Decision Trees algorithm")  
+ ![Histogram from Microsoft Decision Trees algorithm](../media/dt-histogram.gif "Histogram from Microsoft Decision Trees algorithm")  
   
  The correlation that is shown in the diagram would cause the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm to create a new node in the model.  
   
- ![Decision tree node](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dt-tree.gif "Decision tree node")  
+ ![Decision tree node](../media/dt-tree.gif "Decision tree node")  
   
  As the algorithm adds new nodes to a model, a tree structure is formed. The top node of the tree describes the breakdown of the predictable column for the overall population of customers. As the model continues to grow, the algorithm considers all columns.  
   
 ### Predicting Continuous Columns  
  When the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm builds a tree based on a continuous predictable column, each node contains a regression formula. A split occurs at a point of non-linearity in the regression formula. For example, consider the following diagram.  
   
- ![Multiple regression lines showing non-linearity](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/regression-tree1.gif "Multiple regression lines showing non-linearity")  
+ ![Multiple regression lines showing non-linearity](../media/regression-tree1.gif "Multiple regression lines showing non-linearity")  
   
  The diagram contains data that can be modeled either by using a single line or by using two connected lines. However, a single line would do a poor job of representing the data. Instead, if you use two lines, the model will do a much better job of approximating the data. The point where the two lines come together is the point of non-linearity, and is the point where a node in a decision tree model would split. For example, the node that corresponds to the point of non-linearity in the previous graph could be represented by the following diagram. The two equations represent the regression equations for the two lines.  
   
- ![Equation that represents a point of non-linearity](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/regression-tree2.gif "Equation that represents a point of non-linearity")  
+ ![Equation that represents a point of non-linearity](../media/regression-tree2.gif "Equation that represents a point of non-linearity")  
   
 ## Data Required for Decision Tree Models  
  When you prepare data for use in a decision trees model, you should understand the requirements for the particular algorithm, including how much data is needed, and how the data is used.  

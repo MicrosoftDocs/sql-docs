@@ -30,11 +30,11 @@ manager: "mblythe"
 ## Implementation of the Microsoft Logistic Regression Algorithm  
  Suppose the predictable column contains only two states, yet you still want to perform a regression analysis, relating input columns to the probability that the predictable column will contain a specific state. The following diagram illustrates the results you will obtain if you assign 1 and 0 to the states of the predictable column, calculate the probability that the column will contain a specific state, and perform a linear regression against an input variable.  
   
- ![Poorly modeled data using linear regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/logistic-linear-regression.gif "Poorly modeled data using linear regression")  
+ ![Poorly modeled data using linear regression](../media/logistic-linear-regression.gif "Poorly modeled data using linear regression")  
   
  The x-axis contains values of an input column. The y-axis contains the probabilities that the predictable column will be one state or the other. The problem with this is that the linear regression does not constrain the column to be between 0 and 1, even though those are the maximum and minimum values of the column. A way to solve this problem is to perform logistic regression. Instead of creating a straight line, logistic regression analysis creates an "S" shaped curve that contains maximum and minimum constraints. For example, the following diagram illustrates the results you will achieve if you perform a logistic regression against the same data as used for the previous example.  
   
- ![Data modeled by using logistic regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/logistic-regression.gif "Data modeled by using logistic regression")  
+ ![Data modeled by using logistic regression](../media/logistic-regression.gif "Data modeled by using logistic regression")  
   
  Notice how the curve never goes above 1 or below 0. You can use logistic regression to describe which input columns are important in determining the state of the predictable column.  
   

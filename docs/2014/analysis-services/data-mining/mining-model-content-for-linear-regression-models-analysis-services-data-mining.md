@@ -25,7 +25,7 @@ manager: "mblythe"
 ## Understanding the Structure of a Linear Regression Model  
  A linear regression model has an extremely simple structure. Each model has a single parent node that represents the model and its metadata, and a regression tree node (NODE_TYPE = 25) that that contains the regression formula for each predictable attribute.  
   
- ![Structure of model for linear regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-linreg.gif "Structure of model for linear regression")  
+ ![Structure of model for linear regression](../media/modelcontentstructure-linreg.gif "Structure of model for linear regression")  
   
  Linear regression models use the same algorithm as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees, but different parameters are used to constrain the tree, and only continuous attributes are accepted as inputs. However, because linear regression models are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm, linear regression models are displayed by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree Viewer. For information, see [Browse a Model Using the Microsoft Tree Viewer](browse-a-model-using-the-microsoft-tree-viewer.md).  
   

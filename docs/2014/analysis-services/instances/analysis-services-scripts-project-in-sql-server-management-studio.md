@@ -35,12 +35,12 @@ manager: "mblythe"
   
      This folder contains connection strings to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances, against which the scripts contained by the Analysis Server Scripts project can be executed. You can have multiple connections in an Analysis Server Scripts project, and you can choose a connection against which to run a script contained by the project at the time of execution.  
   
-3.  Right-click **Queries** to create Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA) scripts in the Scripts folder of the Analysis Server Scripts project in Solution Explorer. For more information, see [Script Administrative Tasks in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/script-administrative-tasks-in-analysis-services.md).  
+3.  Right-click **Queries** to create Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA) scripts in the Scripts folder of the Analysis Server Scripts project in Solution Explorer. For more information, see [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md).  
   
 4.  Right-click on the project, point to **Add**, and then select **Existing Item** to add miscellaneous files, such as text files that contain notes on the project, in the **Miscellaneous** folder of the Analysis Server Scripts project in Solution Explorer. These files are ignored by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## File Types  
- A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution can contain several file types, depending on what projects you included in the solution and what items you included in each project for that solution. For more information about file types for solutions in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Files That Manage Solutions and Projects](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/files-that-manage-solutions-and-projects.md). Typically, the files for each project in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution are stored in the solution folder, in a separate folder for each project.  
+ A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution can contain several file types, depending on what projects you included in the solution and what items you included in each project for that solution. For more information about file types for solutions in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Files That Manage Solutions and Projects](../../database-engine/files-that-manage-solutions-and-projects.md). Typically, the files for each project in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution are stored in the solution folder, in a separate folder for each project.  
   
  The project folder for an Analysis Server Scripts project can contain the file types listed in the following table.  
   
@@ -55,10 +55,10 @@ manager: "mblythe"
  When adding new MDX, DMX, or XMLA scripts to an Analysis Server Scripts project, you have the option of using Template Explorer to locate [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] templates, which are a collection of predefined scripts or statements that demonstrate how to perform a specified action. Template Explorer is available on the **View** menu and includes templates for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssEW](../../includes/ssew-md.md)]. For more information, see [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
   
 ## See Also  
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../dev-guide/analysis-services-scripting-language-assl-reference.md)  
   
   

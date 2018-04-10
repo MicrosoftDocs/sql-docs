@@ -31,7 +31,7 @@ manager: "mblythe"
   
  The following diagram illustrates the flow of data when a mining structure is processed, and when a mining model is processed.  
   
- ![Processing of data: source to structure to model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmcon-modelarch.gif "Processing of data: source to structure to model")  
+ ![Processing of data: source to structure to model](../media/dmcon-modelarch.gif "Processing of data: source to structure to model")  
   
 ## Viewing the Results of Processing  
  After a mining structure has been processed, it contains a compact representation of the data for use in statistical analysis. If the cache has not been cleared, you can access the data in this cache in the following ways:  

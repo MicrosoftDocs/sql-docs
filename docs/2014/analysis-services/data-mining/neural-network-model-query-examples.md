@@ -44,7 +44,7 @@ manager: "mblythe"
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Getting Model Metadata by Using DMX  
  The following query returns some basic metadata about a model that was built by using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm. In a neural network model, the parent node of the model contains only the name of the model, the name of the database where the model is stored, and the number of child nodes. However, the marginal statistics node (NODE_TYPE = 24) provides both this basic metadata and some derived statistics about the input columns used in the model.  
   
- The following sample query is based on the mining model that you create in the [Intermediate Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), named `Call Center Default NN`. The model uses data from a call center to explore possible correlations between staffing and the number of calls, orders, and issues. The DMX statement retrieves data from the marginal statistics node of the neural network model. The query includes the FLATTENED keyword, because the input attribute statistics of interest are stored in a nested table, NODE_DISTRIBUTION. However, if your query provider supports hierarchical rowsets you do not need to use the FLATTENED keyword.  
+ The following sample query is based on the mining model that you create in the [Intermediate Data Mining Tutorial](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md), named `Call Center Default NN`. The model uses data from a call center to explore possible correlations between staffing and the number of calls, orders, and issues. The DMX statement retrieves data from the marginal statistics node of the neural network model. The query includes the FLATTENED keyword, because the input attribute statistics of interest are stored in a nested table, NODE_DISTRIBUTION. However, if your query provider supports hierarchical rowsets you do not need to use the FLATTENED keyword.  
   
 ```  
 SELECT FLATTENED MODEL_CATALOG, MODEL_NAME,   
@@ -169,7 +169,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
 -   The unique names of nodes in the input layer always begin with 60000000.  
   
- Thus, these results tell you that the node denoted by the ID 70000000200000000 had six different coefficients (VALUETYPE = 7) passed to it. The values of the coefficients are in the ATTRIBUTE_VALUE column. You can determine exactly which input attribute the coefficient is for by using the node ID in the ATTRIBUTE_NAME column. For example, the node ID 6000000000000000a refers to input attribute and value, `Day of Week = 'Tue.'` You can use the node ID to create a query, or you can browse to the node by using the [Microsoft Generic Content Tree Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+ Thus, these results tell you that the node denoted by the ID 70000000200000000 had six different coefficients (VALUETYPE = 7) passed to it. The values of the coefficients are in the ATTRIBUTE_VALUE column. You can determine exactly which input attribute the coefficient is for by using the node ID in the ATTRIBUTE_NAME column. For example, the node ID 6000000000000000a refers to input attribute and value, `Day of Week = 'Tue.'` You can use the node ID to create a query, or you can browse to the node by using the [Microsoft Generic Content Tree Viewer](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
  Similarly, if you query the NODE_DISTRIBUTION table of the nodes in the output layer (NODE_TYPE = 23), you can see the coefficients for each output value. However, in the output layer, the pointers refer back to the nodes of the hidden layer. For more information, see [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
@@ -223,6 +223,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
  [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

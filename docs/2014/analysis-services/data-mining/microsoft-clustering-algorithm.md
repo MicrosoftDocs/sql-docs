@@ -30,7 +30,7 @@ manager: "mblythe"
   
  Clustering models identify relationships in a dataset that you might not logically derive through casual observation. For example, you can logically discern that people who commute to their jobs by bicycle do not typically live a long distance from where they work. The algorithm, however, can find other characteristics about bicycle commuters that are not as obvious. In the following diagram, cluster A represents data about people who tend to drive to work, while cluster B represents data about people who tend to ride bicycles to work.  
   
- ![Cluster pattern of commuter tendencies](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/clustering-example.gif "Cluster pattern of commuter tendencies")  
+ ![Cluster pattern of commuter tendencies](../media/clustering-example.gif "Cluster pattern of commuter tendencies")  
   
  The clustering algorithm differs from other data mining algorithms, such as the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm, in that you do not have to designate a predictable column to be able to build a clustering model. The clustering algorithm trains the model strictly from the relationships that exist in the data and from the clusters that the algorithm identifies.  
   
@@ -40,7 +40,7 @@ manager: "mblythe"
 ## How the Algorithm Works  
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm first identifies relationships in a dataset and generates a series of clusters based on those relationships. A scatter plot is a useful way to visually represent how the algorithm groups data, as shown in the following diagram. The scatter plot represents all the cases in the dataset, and each case is a point on the graph. The clusters group points on the graph and illustrate the relationships that the algorithm identifies.  
   
- ![Scatter plot of cases in a dataset](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/clustering-plot.gif "Scatter plot of cases in a dataset")  
+ ![Scatter plot of cases in a dataset](../media/clustering-plot.gif "Scatter plot of cases in a dataset")  
   
  After first defining the clusters, the algorithm calculates how well the clusters represent groupings of the points, and then tries to redefine the groupings to create clusters that better represent the data. The algorithm iterates through this process until it cannot improve the results more by redefining the clusters.  
   

@@ -86,7 +86,7 @@ manager: "mblythe"
     ```  
   
 ## See Also  
- [Script Administrative Tasks in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/script-administrative-tasks-in-analysis-services.md)   
+ [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)  
   
   

@@ -58,7 +58,7 @@ manager: "mblythe"
  For a more detained explanation about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with discrete predictable columns, see [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=45963). For more information about how the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm works with a continuous predictable column, see the appendix of [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### Scoring Methods and Feature Selection  
- The Microsoft Decision Trees algorithm offers three formulas for scoring information gain: Shannon's entropy, Bayesian network with K2 prior, and Bayesian network with a uniform Dirichlet distribution of priors. All three methods are well established in the data mining field. We recommend that you experiment with different parameters and scoring methods to determine which provides the best results. For more information about these scoring methods, see [Feature Selection](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)sql-server/install/feature-selection.md).  
+ The Microsoft Decision Trees algorithm offers three formulas for scoring information gain: Shannon's entropy, Bayesian network with K2 prior, and Bayesian network with a uniform Dirichlet distribution of priors. All three methods are well established in the data mining field. We recommend that you experiment with different parameters and scoring methods to determine which provides the best results. For more information about these scoring methods, see [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  All [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining algorithms automatically use feature selection to improve analysis and reduce processing load. The method used for feature selection depends on the algorithm that is used to build the model. The algorithm parameters that control feature selection for a decision trees model are MAXIMUM_INPUT_ATTRIBUTES and MAXIMUM_OUTPUT.  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
 -   Restrict the number of discrete values for any attribute to 10 or less. You might try grouping values in different ways in different models.  
   
     > [!NOTE]  
-    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
+    >  You can use the data exploration tools available in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] to visualize the distribution of values in your data and group your values appropriately before beginning data mining. For more information, see [Data Profiling Task and Viewer](../../integration-services/data-profiling-task-and-viewer.md). You can also use the [Data Mining Add-ins for Excel 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=7C76E8DF-8674-4C3B-A99B-55B17F3C4C51), to explore, group and relabel data in Microsoft Excel.  
   
 ## Customizing the Decision Trees Algorithm  
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm supports parameters that affect the performance and accuracy of the resulting mining model. You can also set modeling flags on the mining model columns or mining structure columns to control the way that data is processed.  
@@ -155,7 +155,7 @@ manager: "mblythe"
   
  The default is 4, or BDE.  
   
- For an explanation of these scoring methods, see [Feature Selection](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)sql-server/install/feature-selection.md).  
+ For an explanation of these scoring methods, see [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  *SPLIT_METHOD*  
  Determines the method that is used to split the node. The following options are available:  

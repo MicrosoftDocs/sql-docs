@@ -58,7 +58,7 @@ manager: "mblythe"
   
  The example in the diagram illustrates the usage of data if three folds are specified.  
   
- ![How cross-validation segments data](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/xvoverviewmain.gif "How cross-validation segments data")  
+ ![How cross-validation segments data](../media/xvoverviewmain.gif "How cross-validation segments data")  
   
  In the scenario in the diagram, the mining structure contains a holdout data set that is used for testing, but the test data set has not been included for cross-validation. As a result, all the data in the training data set, 70 percent of the data in the mining structure, is used for cross-validation. The cross-validation report shows the total number of cases used in each partition.  
   
@@ -179,7 +179,7 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Describes how to set cross-validation parameters in SQL Server Development Studio.|[Cross-Validation Tab &#40;Mining Accuracy Chart View&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/cross-validation-tab-mining-accuracy-chart-view.md)|  
+|Describes how to set cross-validation parameters in SQL Server Development Studio.|[Cross-Validation Tab &#40;Mining Accuracy Chart View&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Describes the metrics that are provided by cross-validation|[Cross-Validation Formulas](cross-validation-formulas.md)|  
 |Explains the cross-validation report format and defines the statistical measures provided for each model type.|[Measures in the Cross-Validation Report](measures-in-the-cross-validation-report.md)|  
 |Lists the stored procedures for computing cross-validation statistics.|[Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](~/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  

@@ -98,6 +98,6 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Data Mining Schema Rowsets](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../dev-guide/data-mining-schema-rowsets.md)  
   
   

@@ -52,7 +52,7 @@ manager: "mblythe"
  Depending on which algorithm you used to create the model, the root node has a varying number of child nodes. Child nodes have different meanings and contain different content, depending on the algorithm and the depth and complexity of the data.  
   
 ##  <a name="bkmk_Nodes"></a> Nodes in Mining Model Content  
- In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/dmschema-mining-model-content-rowset.md).  
+ In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../dev-guide/dmschema-mining-model-content-rowset.md).  
   
  Each node includes metadata about the node, including an identifier that is unique within each model, the ID of the parent node, and the number of child nodes that the node has. The metadata identifies the model to which the node belongs, and the database catalog where that particular model is stored. Additional content provided in the node differs depending on the type of algorithm you used to create the model, and might include the following:  
   
@@ -301,7 +301,7 @@ SELECT * FROM [<mining model name>].CONTENT
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can also access the information in the data mining schema rowsets by opening a connection to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and querying the system tables. For more information, see [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md).  
   
 ## See Also  
- [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

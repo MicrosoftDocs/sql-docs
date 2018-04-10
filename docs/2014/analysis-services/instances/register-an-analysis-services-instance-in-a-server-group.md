@@ -18,7 +18,7 @@ manager: "mblythe"
 # Register an Analysis Services Instance in a Server Group
   If you have a large number of Analysis Services server instances, you can create server groups in Management Studio to make server administration easier. The purpose of a server group is to provide proximity among a group of related servers within the administrative workspace. For example, suppose you are tasked with managing ten separate instances of Analysis Services. Grouping them by server mode, up-time criteria, or by department or region would allow you to view and connect to instances that share the same characteristics more easily. You can also add descriptive information that helps you remember how the server is used.  
   
- ![Registered Server pane with member servers](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-ssms-registerserver.gif "Registered Server pane with member servers")  
+ ![Registered Server pane with member servers](../media/ssas-ssms-registerserver.gif "Registered Server pane with member servers")  
   
  Server groups can be created in a hierarchical structure. Local Server Group is the root node. It always contains instances of Analysis Services that run on the local computer. You can add remote servers to any group, including the local group.  
   

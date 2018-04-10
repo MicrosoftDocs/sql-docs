@@ -24,7 +24,7 @@ manager: "mblythe"
   
  For an explanation of general mining model content that applies to all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- When reviewing this topic, you might find it useful follow along by browsing the contents of a time series model. You can create a time series model by completing the Basic Data Mining tutorial. The model you create in the tutorial is a mixed model that trains data by using both the ARIMA and ARTXP algorithms. For more information, see [Creating a Forecasting Structure and Model &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). For information about how to view the contents of a mining model, see [Data Mining Model Viewers](data-mining-model-viewers.md).  
+ When reviewing this topic, you might find it useful follow along by browsing the contents of a time series model. You can create a time series model by completing the Basic Data Mining tutorial. The model you create in the tutorial is a mixed model that trains data by using both the ARIMA and ARTXP algorithms. For more information, see [Creating a Forecasting Structure and Model &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). For information about how to view the contents of a mining model, see [Data Mining Model Viewers](data-mining-model-viewers.md).  
   
 ## Understanding the Structure of a Time Series Model  
  A time series model has a single parent node that represents the model and its metadata. Underneath that parent node, there are one or two time series trees, depending on the algorithm that you used to create the model.  
@@ -33,7 +33,7 @@ manager: "mblythe"
   
  The following diagram shows an example of a time series data mining model that was created with the default settings, to create a mixed model. So that you can more easily compare the differences between the two models, here the ARTXP model is shown on the left side of the diagram and the ARIMA model is shown in the right side of the diagram.  Whereas ARTXP is a tree-like structure that splits into smaller and smaller branches, the structure created by the ARIMA algorithm is more like a pyramid built upwards from smaller components.  
   
- ![Structure of model content for time series models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-ts.gif "Structure of model content for time series models")  
+ ![Structure of model content for time series models](../media/modelcontentstructure-ts.gif "Structure of model content for time series models")  
   
  The important point to remember is that information is arranged within the ARIMA and ARTXP trees in completely different ways, and you should consider the two trees as related only at the root node. Although the two representations are presented in one model for convenience, they should be treated as two independent models. ARTXP represents an actual tree structure, but ARIMA does not.  
   
@@ -223,7 +223,7 @@ manager: "mblythe"
   
  For example, if there is a direct correlation between time and sales for most of the data series, each series would be contained within a time series tree (NODE_TYPE =16) that has no child nodes for each data series, only a regression equation. However, if the relationship is not linear, an ARTXP time series tree can split on conditions into child nodes, just like a decision tree model. By viewing the model content in the **Microsoft Generic Content Tree Viewer** you can see where the splits occur, and how it affects the trend line.  
   
- To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
+ To better understand this behavior, you can review the time series model created in the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). This model, based on the AdventureWorks data warehouse, does not use particularly complex data. Therefore, there are not many splits in the ARTXP tree. However, even this relatively simple model illustrates three different kinds of splits:  
   
 -   The [Amount] trend line for the Pacific region splits on the time key. A split on the time key means that there is a change in the trend at a certain point in time. The trend line was linear only up to a certain point, and then the curve assumed a different shape. For example, one time series might continue until August 6, 2002, and another time series start after that date.  
   
@@ -268,7 +268,7 @@ manager: "mblythe"
  There are multiple elements in this equation because the model has calculated that the quantity of the R250 model in the Europe region is dependent on the values of several other data series.  
   
 #### Model Content for an ARTXP Formula  
- The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md).  
+ The following table shows the same information for the formula, using the contents of the relevant node as displayed in the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -335,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
 |Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
- From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/microsoft-generic-content-tree-viewer-data-mining.md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
+ From these results, which you can also browse by using the [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md), you can tell at a glance which series are completely linear, which have multiple periodic structures, and what the discovered periodicities are.  
   
  For example, the short form of the ARIMA Equation for the M200 Europe series tells you that only the default, or daily, cycle was detected. The short form of the equation is provided in the NODE_CAPTION column.  
   

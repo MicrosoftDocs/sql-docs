@@ -52,7 +52,7 @@ manager: "mblythe"
   
 -   [Use a fixed port for a default or named instance of Analysis Services](#bkmk_fixed)  
   
- For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ##  <a name="bkmk_checkport"></a> Check port and firewall settings for Analysis Services  
  On the Microsoft Windows operating systems that are supported by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Windows Firewall is on by default and is blocking remote connections. You must manually open a port in the firewall to allow inbound requests to Analysis Services. SQL Server Setup does not perform this step for you.  
@@ -102,7 +102,7 @@ manager: "mblythe"
 8.  To verify that remote connections are enabled, open SQL Server Management Studio or Excel on a different computer and connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by specifying the network name of the server in **Server name**.  
   
     > [!NOTE]  
-    >  Other users will not have access to this server until you grant permissions. For more information, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md).  
+    >  Other users will not have access to this server until you grant permissions. For more information, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md).  
   
 #### Netsh AdvFirewall Syntax  
   
@@ -230,8 +230,8 @@ manager: "mblythe"
  If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint – 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
   
 ## See Also  
- [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/sql-server-browser-service-database-engine-and-ssas.md)   
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/start-stop-pause-resume-restart-sql-server-services.md)   
- [Configure a Windows Firewall for Database Engine Access](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
+ [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

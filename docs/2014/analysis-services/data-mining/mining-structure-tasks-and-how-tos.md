@@ -38,6 +38,6 @@ manager: "mblythe"
   
 -   [Process a Mining Structure](process-a-mining-structure.md)  
   
--   [Filter the Source Cube for a Mining Structure](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/filter-the-source-cube-for-a-mining-structure.md)  
+-   [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md)  
   
   

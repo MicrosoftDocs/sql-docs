@@ -53,13 +53,13 @@ manager: "mblythe"
 ## Getting Started  
  See these topics to learn about the tools and to get set up:  
   
--   [Data Mining Client for Excel &#40;SQL Server Data Mining Add-ins&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+-   [Data Mining Client for Excel &#40;SQL Server Data Mining Add-ins&#41;](../data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
--   [Table Analysis Tools for Excel](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/table-analysis-tools-for-excel.md)  
+-   [Table Analysis Tools for Excel](../table-analysis-tools-for-excel.md)  
   
--   [Data Mining Shapes for Visio](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-mining-shapes-for-visio.md)  
+-   [Data Mining Shapes for Visio](../data-mining-shapes-for-visio.md)  
   
--   [Connect to a Data Mining Server](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/connect-to-a-data-mining-server.md)  
+-   [Connect to a Data Mining Server](../connect-to-a-data-mining-server.md)  
   
 ## Support and Requirements  
  The SQL Server Data Mining Add-Ins for Office is a free download. You must have one of the following versions of Office already installed to use these tools:  

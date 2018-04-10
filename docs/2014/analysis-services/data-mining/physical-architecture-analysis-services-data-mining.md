@@ -39,14 +39,14 @@ manager: "mblythe"
 > [!WARNING]  
 >  DSO has been deprecated. You should not use DSO to develop solutions.  
   
- ![Analysis Services System Architecture Diagram](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services System Architecture Diagram")  
+ ![Analysis Services System Architecture Diagram](../dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services System Architecture Diagram")  
   
 ## Server Configuration  
  One server instance can support multiple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, each with its own instance of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service that responds to client requests and processes objects.  
   
- Separate instances must be installed if you want to work with both tabular models and data mining and/or multidimensional models. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports side-by-side installation of instances running in tabular mode (which uses the xVelocity in-memory analytics engine (VertiPaq) storage engine) and instances running in one of the conventional OLAP, MOLAP, or ROLAP configurations. For more information, see [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ Separate instances must be installed if you want to work with both tabular models and data mining and/or multidimensional models. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports side-by-side installation of instances running in tabular mode (which uses the xVelocity in-memory analytics engine (VertiPaq) storage engine) and instances running in one of the conventional OLAP, MOLAP, or ROLAP configurations. For more information, see [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
- All communications between a client and the Analysis Services server use XMLA, which is a platform-independent and language-independent protocol. When a request is received from a client, Analysis Services determines whether the request relates to OLAP or data mining, and routes the request appropriately. For more information, see [OLAP Engine Server Components](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/olap-engine-server-components.md).  
+ All communications between a client and the Analysis Services server use XMLA, which is a platform-independent and language-independent protocol. When a request is received from a client, Analysis Services determines whether the request relates to OLAP or data mining, and routes the request appropriately. For more information, see [OLAP Engine Server Components](../dev-guide/olap-engine-server-components.md).  
   
 ## See Also  
  [Logical Architecture &#40;Analysis Services - Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  

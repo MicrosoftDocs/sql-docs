@@ -37,7 +37,7 @@ manager: "mblythe"
   
 -   Successive nodes each contain a different *subnetwork* (NODE_TYPE = 17). Each subnetwork always contains a hidden layer (NODE_TYPE = 19), and an output layer (NODE_TYPE = 20) for that subnetwork.  
   
- ![structure of model content for neural networks](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-nn.gif "structure of model content for neural networks")  
+ ![structure of model content for neural networks](../media/modelcontentstructure-nn.gif "structure of model content for neural networks")  
   
  The information in the input layer is straightforward: the top node for each input layer (NODE_TYPE = 18) serves as an organizer for a collection of input nodes (NODE_TYPE = 21). The content of the input nodes is described in the following table.  
   

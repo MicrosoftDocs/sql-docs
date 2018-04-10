@@ -32,14 +32,14 @@ manager: "mblythe"
   
  [Analysis Services Template Reference](#bkmk_Ref)  
   
- This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md) or [Create a Singleton Prediction Query from a Template](data-mining/create-a-singleton-prediction-query-from-a-template.md).  
+ This topic does not cover DMX templates. For examples of how to create data mining queries using the templates, see [Create a DMX Query in SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) or [Create a Singleton Prediction Query from a Template](../data-mining/create-a-singleton-prediction-query-from-a-template.md).  
   
 ##  <a name="bkmk_usingTE"></a> Open an Analysis Services Template  
  All templates for database engine queries and Analysis Services queries and commands are available in Template Explorer.  
   
  To open **Template Explorer**, select it from the **View** menu. Next, click the cube icon to see a list of the templates that are available for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- ![Template Explorer, filtered for Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-templateexplorer.gif "Template Explorer, filtered for Analysis Services")  
+ ![Template Explorer, filtered for Analysis Services](../media/ssas-templateexplorer.gif "Template Explorer, filtered for Analysis Services")  
   
  To open a template, right-click the template name and select **Open**, or drag the template into a query window that you already opened. After the query window is open, you can use commands on the toolbar or Query menu to help you build statements:  
   
@@ -103,10 +103,10 @@ manager: "mblythe"
   
 4.  In Object Explorer, select the database you want to backup, and drag and drop the database between the brackets of the DatabaseID element.  
   
-5.  Double-click the text within the \<File> element. Type the name of the backup file, including the .abf file extension. Specify the full file path if you are not using the default backup location. For more information, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+5.  Double-click the text within the \<File> element. Type the name of the backup file, including the .abf file extension. Specify the full file path if you are not using the default backup location. For more information, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Generate a Schema Rowset Query using an XMLA Template  
- The **Template Explorer** contains only one template for schema rowset queries. To use this template, you must be familiar with the requirements of the individual schema rowset that you want to use, including any required elements, and the columns that can be used as restrictions. For more information, see [Analysis Services Schema Rowsets](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/analysis-services-schema-rowsets.md).  
+ The **Template Explorer** contains only one template for schema rowset queries. To use this template, you must be familiar with the requirements of the individual schema rowset that you want to use, including any required elements, and the columns that can be used as restrictions. For more information, see [Analysis Services Schema Rowsets](../dev-guide/analysis-services-schema-rowsets.md).  
   
  Note that many of the schema rowsets have also been exposed as Dynamic Management Views (DMV) for simplicity. By using the corresponding DMV, you can query the schema rowset using syntax like that of Transact-SQL. For example, the following queries return the same results, but one is in XML format, and one is in a tabular format. For more information about DMVs, see [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).  
   
@@ -141,7 +141,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Open **Template Explorer**, and drag the template, **Discover Schema Rowsets**, into the blank query window.  
   
-3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/requesttype-element-xmla.md) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](../dev-guide/requesttype-element-xmla.md) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Click **Execute**.  
   
@@ -225,7 +225,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ## See Also  
  [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../dev-guide/analysis-services-scripting-language-assl-reference.md)  
   
   

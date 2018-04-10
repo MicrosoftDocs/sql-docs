@@ -48,7 +48,7 @@ manager: "mblythe"
 3.  Press F5, or click **Execute**.  
   
 ## Example  
- The following code returns a list of the parameters that were used to create the mining model that you build in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md). These parameters include the explicit values for any defaults used by the mining services available from providers on the server.  
+ The following code returns a list of the parameters that were used to create the mining model that you build in the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). These parameters include the explicit values for any defaults used by the mining services available from providers on the server.  
   
 ```  
 SELECT MINING_PARAMETERS   

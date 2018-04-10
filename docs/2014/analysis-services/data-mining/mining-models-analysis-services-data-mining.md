@@ -44,7 +44,7 @@ manager: "mblythe"
   
  A mining model is empty until the data provided by the mining structure has been processed and analyzed. After a mining model has been processed, it contains metadata, results, and bindings back to the mining structure.  
   
- ![model contains metadata, patterns, and bindings](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
+ ![model contains metadata, patterns, and bindings](../media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
   
  The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices—the data columns and their data types, filters, and algorithm—have a powerful influence on the results of analysis.  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
 |Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](mining-structure-columns.md)<br /><br /> [Mining Model Columns](mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)|  
 |Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
-|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
+|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../dev-guide/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
 |Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](data-mining-model-viewers.md)|  
 |View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](data-mining-queries.md)|  
   
@@ -143,6 +143,6 @@ manager: "mblythe"
 |Work with OLAP models|[Create a Data Mining Dimension](create-a-data-mining-dimension.md)|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)  
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/database-objects-analysis-services-multidimensional-data.md)  
   
   

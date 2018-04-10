@@ -40,7 +40,7 @@ manager: "mblythe"
   
 ## See Also  
  [Post-install Configuration &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
- [Configure Server Properties in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/configure-server-properties-in-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/script-administrative-tasks-in-analysis-services.md)  
+ [Configure Server Properties in Analysis Services](../configure-server-properties-in-analysis-services.md)   
+ [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

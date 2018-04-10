@@ -26,7 +26,7 @@ manager: "mblythe"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- You can also use an XMLA Process command. For more information, see  [Tools and Approaches for Processing &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/tools-and-approaches-for-processing-analysis-services.md).  
+ You can also use an XMLA Process command. For more information, see  [Tools and Approaches for Processing &#40;Analysis Services&#41;](../tools-and-approaches-for-processing-analysis-services.md).  
   
 ### Process a single mining model using SQL Server Data Tools  
   

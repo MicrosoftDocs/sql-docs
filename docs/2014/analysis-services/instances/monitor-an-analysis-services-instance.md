@@ -29,7 +29,7 @@ manager: "mblythe"
 ## In This Section  
  Follow these links to learn more about monitoring.  
   
- [Analysis Services Trace Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](../analysis-services-trace-events.md)  
   
  [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   

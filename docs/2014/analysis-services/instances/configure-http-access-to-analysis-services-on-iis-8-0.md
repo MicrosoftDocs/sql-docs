@@ -59,7 +59,7 @@ manager: "mblythe"
   
  When MSMDPUMP connects to Analysis Services, it does so under a Windows user identity. This account will either be the Anonymous account if you configured the virtual directory for anonymous connections, or a Windows user account. The account must have the appropriate data access rights on the Analysis Services server and database.  
   
- ![Diagram showing connections between components](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas.gif "Diagram showing connections between components")  
+ ![Diagram showing connections between components](../media/ssas.gif "Diagram showing connections between components")  
   
  The following table lists additional considerations when you enable HTTP access for different scenarios.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
   
 2.  Open **Web Server** | **Application Development** and choose **CGI** and **ISAPI Extensions**.  
   
-     ![Add features page for Web server role](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-isapicgi.png "Add features page for Web server role")  
+     ![Add features page for Web server role](../media/ssas-httpaccess-isapicgi.png "Add features page for Web server role")  
   
  **When IIS is on a remote server**  
   
@@ -112,7 +112,7 @@ manager: "mblythe"
   
 1.  Copy the following files, found at \<drive>:\Program Files\Microsoft SQL Server\\<instance\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI, and a Resources folder.  
   
-     ![File Explorer showing files to copy](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-msmdpumpfilecopy.PNG "File Explorer showing files to copy")  
+     ![File Explorer showing files to copy](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "File Explorer showing files to copy")  
   
 2.  On the web server, create a new folder: \<drive>:\inetpub\wwwroot\\**OLAP**  
   
@@ -135,11 +135,11 @@ manager: "mblythe"
   
 2.  Open the server folder, right-click **Application Pools** and then click **Add Application Pool**. Create an application pool named **OLAP**, using the .NET Framework, with Managed pipeline mode set to **Classic**.  
   
-     ![Screenshot of Add Application Pool dialog](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess.PNG "Screenshot of Add Application Pool dialog")  
+     ![Screenshot of Add Application Pool dialog](../media/ssas-httpaccess.PNG "Screenshot of Add Application Pool dialog")  
   
 3.  By default, IIS creates application pools using **ApplicationPoolIdentity** as the security identity, which is a valid choice for HTTP access to Analysis Services. If you have specific reasons for changing the identity, right-click **OLAP**, and then select **Advanced Settings**. Select **ApplicationPoolIdentity**. Click the **Change** button for this property to replace the built-in account with the custom account you want to use.  
   
-     ![Screenshot of Advanced Settings property page](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-advsettings.PNG "Screenshot of Advanced Settings property page")  
+     ![Screenshot of Advanced Settings property page](../media/ssas-httpaccess-advsettings.PNG "Screenshot of Advanced Settings property page")  
   
 4.  By default, on a 64-bit operating system, IIS sets the **Enable 32-bit Applications** property to **false**. If you copied msmdpump.dll from a 64-bit installation of Analysis Services, this is the correct setting for the MSMDPUMP extension on a 64-bit IIS server. If you copied the MSMDPUMP binaries from a 32-bit installation, set it to **true**. Check this property now in **Advanced Settings** to ensure it is set correctly.  
   
@@ -147,17 +147,17 @@ manager: "mblythe"
   
 1.  In IIS Manager, open **Sites**, open **Default Web Site**. You should see a folder named **Olap**. This is a reference to the OLAP folder you created under \inetpub\wwwroot.  
   
-     ![OLAP folder under default web site](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-convertfolderbefore.png "OLAP folder under default web site")  
+     ![OLAP folder under default web site](../media/ssas-httpaccess-convertfolderbefore.png "OLAP folder under default web site")  
   
 2.  Right-click the folder and choose **Convert to Application**.  
   
 3.  In Add Application, enter **OLAP** for the alias. Click **Select** to choose the OLAP application pool. Physical Path should be set to C:\inetpub\wwwroot\OLAP  
   
-     ![Add Application dialog box](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-convertedapp.png "Add Application dialog box")  
+     ![Add Application dialog box](../media/ssas-httpaccess-convertedapp.png "Add Application dialog box")  
   
 4.  Click **OK**. Refresh the web site and notice that the OLAP folder is now an application under the default web site. The virtual path to the MSMDPUMP file is now established.  
   
-     ![OLAP folder after app conversion](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-convertfolderafter.png "OLAP folder after app conversion")  
+     ![OLAP folder after app conversion](../media/ssas-httpaccess-convertfolderafter.png "OLAP folder after app conversion")  
   
 > [!NOTE]  
 >  Previous versions of these instructions included steps for creating a virtual directory. That step is no longer necessary.  
@@ -189,11 +189,11 @@ manager: "mblythe"
   
 2.  Double-click **Authentication** in the IIS section of the main page.  
   
-     ![Screenshot of IIS Manager main page](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-iis.png "Screenshot of IIS Manager main page")  
+     ![Screenshot of IIS Manager main page](../media/ssas-httpaccess-iis.png "Screenshot of IIS Manager main page")  
   
 3.  Enable **Windows Authentication** if you are using Windows integrated security.  
   
-     ![Screenshot of Vdir Authentication settings](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-iisauth.png "Screenshot of Vdir Authentication settings")  
+     ![Screenshot of Vdir Authentication settings](../media/ssas-httpaccess-iisauth.png "Screenshot of Vdir Authentication settings")  
   
 4.  Alternatively, enable **Basic Authentication** if your client and server applications are in different domains. This mode requires the user to enter a user name and password. The user name and password are transmitted over the HTTP connection to IIS. IIS will try to impersonate the user using the provided credentials when connecting to MSMDPUMP, but the credentials will not be delegated to Analysis Services. Instead, you will need to pass a valid user name and password on a connection, as described in Step 6 in this document.  
   
@@ -211,15 +211,15 @@ manager: "mblythe"
   
 6.  Click the **OLAP** virtual directory to open the main page. Double-click **Handler Mappings**.  
   
-     ![Handler mapping icon in feature page](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-handlermapping.png "Handler mapping icon in feature page")  
+     ![Handler mapping icon in feature page](../media/ssas-httpaccess-handlermapping.png "Handler mapping icon in feature page")  
   
 7.  Right-click anywhere on the page and then select **Add Script Map**. In the Add Script Map dialog box, specify **\*.dll** as the request path, specify c:\inetpub\wwwroot\OLAP\msmdpump.dll as the executable, and type **OLAP** as the name. Keep all of the default restrictions associated with this script map.  
   
-     ![Screenshot of Add Script Map dialog box](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-addscript.png "Screenshot of Add Script Map dialog box")  
+     ![Screenshot of Add Script Map dialog box](../media/ssas-httpaccess-addscript.png "Screenshot of Add Script Map dialog box")  
   
 8.  When prompted to allow the ISAPI extension, click **Yes**.  
   
-     ![Screenshot of confirmation to add ISAPI extension](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-isapiprompt.png "Screenshot of confirmation to add ISAPI extension")  
+     ![Screenshot of confirmation to add ISAPI extension](../media/ssas-httpaccess-isapiprompt.png "Screenshot of confirmation to add ISAPI extension")  
   
 ##  <a name="bkmk_edit"></a> Step 4: Edit the MSMDPUMP.INI file to set the target server  
  The MSMDPUMP.INI file specifies the Analysis Services instance that MSMDPUMP.DLL connects to. This instance can be local or remote, installed as the default or as a named instance.  
@@ -252,9 +252,9 @@ manager: "mblythe"
 |-|-|  
 |Anonymous|Add to the Membership list the account specified in **Edit Anonymous Authentication Credentials** in IIS. For more information, see [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication),|  
 |Windows authentication|Add to the Membership list the Windows user or group accounts requesting Analysis Services data via impersonation or delegation.<br /><br /> Assuming Kerberos constrained delegation is used, the only accounts that need permissions are the Windows user and group accounts requesting access. No permissions are necessary for the application pool identity.|  
-|Basic authentication|Add to the Membership list the Windows user or group accounts that will be passed on the connection string.<br /><br /> In addition, if you are passing credentials via `EffectiveUserName` on the connection string, then the application pool identity must have administrator rights on the Analysis Services instance. In SSMS, right-click the instance &#124; **Properties** &#124; **Security** &#124; **Add**. Enter the application pool identity. If you used the built-in default identity, the account is specified as **IIS AppPool\DefaultAppPool**.<br /><br /> ![](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-iisapppoolidentity.png)|  
+|Basic authentication|Add to the Membership list the Windows user or group accounts that will be passed on the connection string.<br /><br /> In addition, if you are passing credentials via `EffectiveUserName` on the connection string, then the application pool identity must have administrator rights on the Analysis Services instance. In SSMS, right-click the instance &#124; **Properties** &#124; **Security** &#124; **Add**. Enter the application pool identity. If you used the built-in default identity, the account is specified as **IIS AppPool\DefaultAppPool**.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
- For more information about setting permissions, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md).  
+ For more information about setting permissions, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md).  
   
 ##  <a name="bkmk_test"></a> Step 6: Test your configuration  
  The connection string syntax for MSMDPUMP is the URL to the MSMDPUMP.dll file.  
@@ -269,7 +269,7 @@ manager: "mblythe"
   
      Object Explorer displays the HTTP connection:  
   
-     ![Object Explorer showing http connection to SSAS](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-httpaccess-ssms.PNG "Object Explorer showing http connection to SSAS")  
+     ![Object Explorer showing http connection to SSAS](../media/ssas-httpaccess-ssms.PNG "Object Explorer showing http connection to SSAS")  
   
 2.  Authentication must be Windows authentication, and the person using Management Studio must be an Analysis Services administrator. An administrator can grant further permissions to enable access by other users.  
   
@@ -291,14 +291,14 @@ manager: "mblythe"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/establishing-secure-connections-in-adomd-net.md).  
+ For more information about setting up the connection programmatically, see [Establishing Secure Connections in ADOMD.NET](../dev-guide/establishing-secure-connections-in-adomd-net.md).  
   
  As a final step, be sure to follow-up with more rigorous testing by using a client computer that runs in the network environment from which the connections will originate.  
   
 ## See Also  
  [Forum post (http access using msmdpump and basic authentication)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)   
+ [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS Authentication Methods](http://go.microsoft.com/fwlink/?LinkdID=208461)   
  [How to Set Up SSL on IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   

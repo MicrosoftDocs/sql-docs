@@ -29,7 +29,7 @@ manager: "mblythe"
   
  However, in a logistic regression model, the node that represents the hidden layer is empty, and has no children. Therefore the model contains nodes that represent individual outputs (NODE_TYPE = 23) and individual inputs (NODE_TYPE = 21) but no individual hidden nodes.  
   
- ![structure of content for logisitc regression model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/skt-modelcontentstructure-logregc.gif "structure of content for logisitc regression model")  
+ ![structure of content for logisitc regression model](../media/skt-modelcontentstructure-logregc.gif "structure of content for logisitc regression model")  
   
  By default, a logistic regression model is displayed in the **Microsoft Neural Network Viewer**. With this custom viewer, you can filter on input attributes and their values, and graphically see how they affect the outputs. The tooltips in the viewer show you the probability and lift associated with each pair of inputs and output values. For more information, see [Browse a Model Using the Microsoft Neural Network Viewer](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   

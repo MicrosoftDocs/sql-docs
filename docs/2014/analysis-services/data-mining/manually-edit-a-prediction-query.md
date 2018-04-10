@@ -42,7 +42,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Queries](data-mining-queries.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/prediction-query-builder-data-mining.md)   
- [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Prediction Query Builder &#40;Data Mining&#41;](../prediction-query-builder-data-mining.md)   
+ [Lesson 6: Creating and Working with Predictions &#40;Basic Data Mining Tutorial&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

@@ -113,6 +113,6 @@ manager: "mblythe"
   
 ## See Also  
  [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Modeling Flags &#40;Data Mining&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/modeling-flags-data-mining.md)  
+ [Modeling Flags &#40;Data Mining&#41;](../modeling-flags-data-mining.md)  
   
   

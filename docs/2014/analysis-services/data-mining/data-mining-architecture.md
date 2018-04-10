@@ -20,13 +20,13 @@ manager: "mblythe"
   
  In general, SQL Server Data Mining operates as a service that is provided as part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance running in multidimensional mode; therefore, we recommend that you also review the following sections of Books Online that describe the operation, maintenance, and configuration of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional solutions.  
   
- [Multidimensional Model Object Processing](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)  
   
- [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
+ [Connect to Analysis Services](../instances/connect-to-analysis-services.md)  
   
- [Database Storage Location](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/database-storage-location.md)  
+ [Database Storage Location](../database-storage-location.md)  
   
- [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  For more information about how you can implement data mining in your business intelligence solution, see the Solution Guides section of the MSDN Library.  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
  [Security Overview &#40;Data Mining&#41;](security-overview-data-mining.md)  
   
 ## See Also  
- [Multidimensional Model Programming](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/multidimensional-model-programming.md)   
- [Data Mining Programming](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/data-mining-programming.md)  
+ [Multidimensional Model Programming](../dev-guide/multidimensional-model-programming.md)   
+ [Data Mining Programming](../dev-guide/data-mining-programming.md)  
   
   

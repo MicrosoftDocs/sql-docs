@@ -25,7 +25,7 @@ manager: "mblythe"
   
  The relationship takes the form of an equation for a line that best represents a series of data. For example, the line in the following diagram is the best possible linear representation of the data.  
   
- ![A line that models a set of data](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/linear-regression.gif "A line that models a set of data")  
+ ![A line that models a set of data](../media/linear-regression.gif "A line that models a set of data")  
   
  Each data point in the diagram has an error associated with its distance from the regression line. The coefficients a and b in the regression equation adjust the angle and location of the regression line. You can obtain the regression equation by adjusting a and b until the sum of the errors that are associated with all the points reaches its minimum.  
   

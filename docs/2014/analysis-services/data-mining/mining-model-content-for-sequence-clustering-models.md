@@ -24,7 +24,7 @@ manager: "mblythe"
 ## Understanding the Structure of a Sequence Clustering Model  
  A sequence clustering model has a single parent node (NODE_TYPE = 1) that represents the model and its metadata. The parent node, which is labeled **(All)**, has a related sequence node (NODE_TYPE = 13) that lists all the transitions that were detected in the training data.  
   
- ![Structure of sequence clustering model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontent-seqclust.gif "Structure of sequence clustering model")  
+ ![Structure of sequence clustering model](../media/modelcontent-seqclust.gif "Structure of sequence clustering model")  
   
  The algorithm also creates a number of clusters, based on the transitions that were found in the data and any other input attributes included when creating the model, such as customer demographics and so forth. Each cluster (NODE_TYPE = 5) contains its own sequence node (NODE_TYPE = 13) that lists only the transitions that were used in generating that specific cluster. From the sequence node, you can drill down to view the details of individual state transitions (NODE_TYPE = 14).  
   

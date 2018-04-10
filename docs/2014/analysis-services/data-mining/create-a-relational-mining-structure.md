@@ -41,9 +41,9 @@ manager: "mblythe"
  [Why and How to Enable Drillthrough](#BKMK_DrillThru)  
   
 ## Requirements  
- First, you must have an existing data source. You can use the Data Source designer to set up a data source, if one does not already exist. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/create-a-data-source-ssas-multidimensional.md).  
+ First, you must have an existing data source. You can use the Data Source designer to set up a data source, if one does not already exist. For more information, see [Create a Data Source &#40;SSAS Multidimensional&#41;](../create-a-data-source-ssas-multidimensional.md).  
   
- Next, use the Data Source View Wizard to assemble required data into a single data source view. For more information about how you can select, transform, filter, or manage data with data source views, see [Data Source Views in Multidimensional Models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-source-views-in-multidimensional-models.md).  
+ Next, use the Data Source View Wizard to assemble required data into a single data source view. For more information about how you can select, transform, filter, or manage data with data source views, see [Data Source Views in Multidimensional Models](../data-source-views-in-multidimensional-models.md).  
   
 ##  <a name="BKMK_Relational_Structure"></a> Overview of Process  
  Start the Data Mining Wizard, by right-clicking the **Mining Structures** node in Solution Explorer, and selecting **Add New Mining Structure**. The wizard guides you through the following steps to create the structure for a new relational mining model:  

@@ -42,7 +42,7 @@ manager: "mblythe"
  `IDMAlgorithmFactory`  
  Creates instances of the objects that implement the algorithm interface, and provides [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] with access to the algorithm-metadata interface.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses these COM interfaces to communicate with plugin algorithms. Although plugin algorithms that you use must support the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining specification, they do not have to support all the data mining options in the specification. You can use the [MINING_SERVICES](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/dmschema-mining-services-rowset.md) schema rowset to determine the capabilities of an algorithm. This schema rowset lists the data mining support options for each plugin algorithm provider.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses these COM interfaces to communicate with plugin algorithms. Although plugin algorithms that you use must support the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining specification, they do not have to support all the data mining options in the specification. You can use the [MINING_SERVICES](../dev-guide/dmschema-mining-services-rowset.md) schema rowset to determine the capabilities of an algorithm. This schema rowset lists the data mining support options for each plugin algorithm provider.  
   
  You must register new algorithms before you use them with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To register an algorithm, include the following information in the .ini file of the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on which you want to include the algorithms:  
   
@@ -88,6 +88,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [DMSCHEMA_MINING_SERVICES Rowset](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/dmschema-mining-services-rowset.md)  
+ [DMSCHEMA_MINING_SERVICES Rowset](../dev-guide/dmschema-mining-services-rowset.md)  
   
   

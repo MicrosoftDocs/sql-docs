@@ -30,7 +30,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  If your model includes multiple trees, you can view only one tree at a time in the **Microsoft Tree Viewer**. However, in the **Generic Content Tree Viewer** , all trees in the same model are displayed at the same time.  
   
- ![structure of model content for decision tree](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-dt.gif "structure of model content for decision tree")  
+ ![structure of model content for decision tree](../media/modelcontentstructure-dt.gif "structure of model content for decision tree")  
   
  The tree for each predictable attribute contains information that describes how the input columns that you choose affect the outcome of that particular predictable attribute. Each tree is headed by a node (NODE_TYPE = 9) that contains the predictable attribute, followed by a series of nodes (NODE_TYPE = 10) that represent the input attributes. An attribute corresponds to either a case-level column or values of nested table columns, which are generally the values in the `Key` column of the nested table.  
   

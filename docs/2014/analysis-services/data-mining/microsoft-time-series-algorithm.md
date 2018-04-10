@@ -35,7 +35,7 @@ manager: "mblythe"
   
  The combination of the source data and the prediction data is called a *series*.  
   
- ![An example of a time series](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/time-series.gif "An example of a time series")  
+ ![An example of a time series](../media/time-series.gif "An example of a time series")  
   
  An important feature of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm is that it can perform cross prediction. If you train the algorithm with two separate, but related, series, you can use the resulting model to predict the outcome of one series based on the behavior of the other series. For example, the observed sales of one product can influence the forecasted sales of another product. Cross prediction is also useful for creating a general model that can be applied to multiple series. For example, the predictions for a particular region are unstable because the series lacks good quality data. You could train a general model on an average of all four regions, and then apply the model to the individual series to create more stable predictions for each region.  
   

@@ -27,7 +27,7 @@ manager: "mblythe"
 ## Understanding the Structure of an Association Model  
  An association model has a simple structure. Each model has a single parent node that represents the model and its metadata, and each parent node has a flat list of itemsets and rules. The itemsets and rules are not organized in trees, they are ordered with itemsets first and rules next as shown in the following diagram.  
   
- ![structure of model content for association models](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-assoc.gif "structure of model content for association models")  
+ ![structure of model content for association models](../media/modelcontentstructure-assoc.gif "structure of model content for association models")  
   
  Each itemset is contained in its own node (NODE_TYPE = 7). The *node* includes the definition of the itemset, the number of cases that contain this itemset, and other information.  
   

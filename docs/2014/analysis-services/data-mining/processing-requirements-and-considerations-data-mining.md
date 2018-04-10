@@ -33,7 +33,7 @@ manager: "mblythe"
   
  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server issues queries to the database that provides the raw data. This database might be an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or an earlier version of the SQL Server database engine. When you process a data mining structure, the data in the source is transferred to the mining structure and persisted on disk in a new, compressed format. Not every column in the data source is processed: only the columns that are included in the mining structure, as defined by the bindings.  
   
- Using this data, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] builds an index of all data and discretized columns, and creates a separate index for continuous columns. One query is issued for each nested table to create the index, and an additional query per nested table is generated to process relationships between each pair of a nested table and case table. The reason for creating multiple queries is to process a special internal multidimensional data store. You can limit the number of queries that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sends to the relational store by setting the server property, `DatabaseConnectionPoolMax`. For more information, see [OLAP Properties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/olap-properties.md).  
+ Using this data, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] builds an index of all data and discretized columns, and creates a separate index for continuous columns. One query is issued for each nested table to create the index, and an additional query per nested table is generated to process relationships between each pair of a nested table and case table. The reason for creating multiple queries is to process a special internal multidimensional data store. You can limit the number of queries that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sends to the relational store by setting the server property, `DatabaseConnectionPoolMax`. For more information, see [OLAP Properties](../olap-properties.md).  
   
  When you process the model, the model does not reread the data from the data source, but instead gets the summary of the data from the mining structure. Using the cube that was created, together with the cached index and case data has been cached, the server creates independent threads to train the models.  
   
@@ -87,6 +87,6 @@ manager: "mblythe"
 ## See Also  
  [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Multidimensional Model Object Processing](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)  
   
   

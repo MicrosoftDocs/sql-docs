@@ -76,6 +76,6 @@ manager: "mblythe"
  If you attempt to synchronize a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, the server returns an error and database synchronization fails.  
   
 ## See Also  
- [Analysis Services Backward Compatibility](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](../analysis-services-backward-compatibility.md)  
   
   

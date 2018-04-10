@@ -42,7 +42,7 @@ manager: "mblythe"
 ### Deploying  
  Deploying the solution to a different server or database requires that you have the solution file that was created by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- For more information about deploying Analysis Services solutions, see [Deploy Analysis Services Projects &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/deploy-analysis-services-projects-ssdt.md).  
+ For more information about deploying Analysis Services solutions, see [Deploy Analysis Services Projects &#40;SSDT&#41;](../deploy-analysis-services-projects-ssdt.md).  
   
 ### Scripting  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several languages that you can use to script objects.  
@@ -61,12 +61,12 @@ manager: "mblythe"
   
 -   Only DMX supports training a model with application data. Moreover, the DMX INSERT INTO statement supports training a model without providing values for a key column.  
   
- For more information, see [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md).  
+ For more information, see [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../dev-guide/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### Backup and Restore  
  Backup and restore of an entire Analysis Services database is the method of choice if your data mining solution relies on OLAP objects. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides backup and restore functionality that makes database backups faster and easier.  
   
- For more information about backup, see [Backup and Restore of Analysis Services Databases](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/backup-and-restore-of-analysis-services-databases.md).  
+ For more information about backup, see [Backup and Restore of Analysis Services Databases](../backup-and-restore-of-analysis-services-databases.md).  
   
 ### Exporting and Importing  
  Exporting and then re-importing mining models and structures by using DMX statements is the easiest way to move or back up individual relational data mining objects. For more information about the DMX syntax for these operations, see the following topics:  

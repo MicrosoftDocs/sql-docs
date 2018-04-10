@@ -31,30 +31,30 @@ manager: "mblythe"
 ## Replay for Queries  
  To replay queries, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must capture the following events:  
   
--   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The server process ID (SPID) provides the reference to the user session. For more information, see [Security Audit Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/security-audit-data-columns.md).  
+-   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The server process ID (SPID) provides the reference to the user session. For more information, see [Security Audit Data Columns](../security-audit-data-columns.md).  
   
--   Query Begin event class with all its data columns. This event class provides information about the query that was submitted to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The Event Subclass column provides information about the type of query. The TextData column provides the actual text of the query. The RequestParameters column provides the parameters for parameterized queries, and the RequestProperties column provides the properties of an XML for Analysis (XMLA) request. For more information, see [Queries Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/queries-events-data-columns.md).  
+-   Query Begin event class with all its data columns. This event class provides information about the query that was submitted to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The Event Subclass column provides information about the type of query. The TextData column provides the actual text of the query. The RequestParameters column provides the parameters for parameterized queries, and the RequestProperties column provides the properties of an XML for Analysis (XMLA) request. For more information, see [Queries Events Data Columns](../queries-events-data-columns.md).  
   
--   Query End event class with all its data columns. This event class verifies the status of the query execution. For more information, see [Queries Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/queries-events-data-columns.md).  
+-   Query End event class with all its data columns. This event class verifies the status of the query execution. For more information, see [Queries Events Data Columns](../queries-events-data-columns.md).  
   
 ## Replay for Discovers  
  To replay discovers, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must capture the following events:  
   
--   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The SPID provides the reference to the user session. For more information, see [Security Audit Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/security-audit-data-columns.md).  
+-   Audit Login event class with all its data columns. This event class provides information about which user logged in and about the session settings. The SPID provides the reference to the user session. For more information, see [Security Audit Data Columns](../security-audit-data-columns.md).  
   
--   Discover Begin event class with all its data columns. The TextData column provides the \<RequestType> portion of the discover request, and the RequestProperties column provides the \<Properties> portion of the discover request. The EventSubclass column provides the discover type. For more information, see [Discover Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/discover-events-data-columns.md).  
+-   Discover Begin event class with all its data columns. The TextData column provides the \<RequestType> portion of the discover request, and the RequestProperties column provides the \<Properties> portion of the discover request. The EventSubclass column provides the discover type. For more information, see [Discover Events Data Columns](../discover-events-data-columns.md).  
   
--   Discover End event class with all its data columns. This event class verifies the status of the discover request. For more information, see [Discover Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/discover-events-data-columns.md).  
+-   Discover End event class with all its data columns. This event class verifies the status of the discover request. For more information, see [Discover Events Data Columns](../discover-events-data-columns.md).  
   
 ## Replay for Commands  
  To replay commands, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must capture the following events:  
   
--   Command Begin event class with all its data columns. The TextData column provides the command details, such as the process type, database ID, and cube ID. The RequestParameters column provides the parameters for parameterized command, and the RequestProperties column provides the properties of an XMLA request. For more information, see [Command Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/command-events-data-columns.md).  
+-   Command Begin event class with all its data columns. The TextData column provides the command details, such as the process type, database ID, and cube ID. The RequestParameters column provides the parameters for parameterized command, and the RequestProperties column provides the properties of an XMLA request. For more information, see [Command Events Data Columns](../command-events-data-columns.md).  
   
--   Command End event class with all its data columns. This event class verifies the status of the command. For more information, see [Command Events Data Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/command-events-data-columns.md).  
+-   Command End event class with all its data columns. This event class verifies the status of the command. For more information, see [Command Events Data Columns](../command-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-services-trace-events.md)   
+ [Analysis Services Trace Events](../analysis-services-trace-events.md)   
  [Introduction to Monitoring Analysis Services with SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

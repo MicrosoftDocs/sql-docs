@@ -52,7 +52,7 @@ manager: "mblythe"
   
 -   The `CLUSTERS` method uses a random sample of 1000 records to discretize data. Use the `EQUAL_AREAS` method if you do not want the algorithm to sample data.  
   
--   The neural network mining model tutorial provides an example of how discretization can be customized. For more information, see [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   The neural network mining model tutorial provides an example of how discretization can be customized. For more information, see [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## See Also  
  [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)   

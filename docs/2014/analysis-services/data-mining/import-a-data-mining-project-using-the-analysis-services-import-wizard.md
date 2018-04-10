@@ -57,6 +57,6 @@ manager: "mblythe"
      The new project is automatically opened using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/project-properties-ssas-tabular.md)  
+ [Project Properties &#40;SSAS Tabular&#41;](../project-properties-ssas-tabular.md)  
   
   

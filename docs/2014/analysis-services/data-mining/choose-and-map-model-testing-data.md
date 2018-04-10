@@ -103,7 +103,7 @@ manager: "mblythe"
   
 7.  In the Select Table dialog box, Select a data source view from the list, and select the table that contains the case data. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-8.  If the tables you need are not available, close the dialog box and create a new data source view that contains the table. For information about how to create a data source view, see [Defining a Data Source View &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/defining-a-data-source-view-analysis-services.md).  
+8.  If the tables you need are not available, close the dialog box and create a new data source view that contains the table. For information about how to create a data source view, see [Defining a Data Source View &#40;Analysis Services&#41;](../defining-a-data-source-view-analysis-services.md).  
   
 9. If the mining model contains a nested table, click **Select Nested Table**, and select the nested table from the list of tables in the data source view. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

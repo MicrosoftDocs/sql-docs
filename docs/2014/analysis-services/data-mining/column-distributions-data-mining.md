@@ -30,17 +30,17 @@ manager: "mblythe"
  `Normal`  
  The values for the continuous column form a histogram with a normal distribution.  
   
- ![Histogram with normal distribution](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/normal-distribution.gif "Histogram with normal distribution")  
+ ![Histogram with normal distribution](../media/normal-distribution.gif "Histogram with normal distribution")  
   
  `Log Normal`  
  The values for the continuous column form a histogram, where the curve is elongated at the upper end and is skewed toward the lower end.  
   
- ![Histogram with log normal distribution](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/log-normal-distribution.gif "Histogram with log normal distribution")  
+ ![Histogram with log normal distribution](../media/log-normal-distribution.gif "Histogram with log normal distribution")  
   
  `Uniform`  
  The values for the continuous column form a flat curve, in which all values are equally likely.  
   
- ![Histogram with uniform distribution](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/uniform-distribution.gif "Histogram with uniform distribution")  
+ ![Histogram with uniform distribution](../media/uniform-distribution.gif "Histogram with uniform distribution")  
   
  For more information about the algorithms that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides, see [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   

@@ -53,7 +53,7 @@ manager: "mblythe"
  When you deploy the solution, the objects used for data mining are created in the specified [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, in a database with the same name as the solution file.  
   
 ###  <a name="bkmk_RelationalSltn"></a> Deploying a Relational Solution  
- When you deploy a relational data mining solution, the required data mining objects are created within a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, and the objects are processed by default. You can change processing options by using the configuration property, **Processing Option**. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/configure-analysis-services-project-properties-ssdt.md).  
+ When you deploy a relational data mining solution, the required data mining objects are created within a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, and the objects are processed by default. You can change processing options by using the configuration property, **Processing Option**. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../configure-analysis-services-project-properties-ssdt.md).  
   
  By default, only incremental changes are deployed each time. In other words, you can modify a mining model, and when you re-deploy the project, only that mining model would be updated. However, if you have multiple clients editing the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, this can lead to errors. To change the default deployment mode so that the entire database is refreshed when you deploy the solution, change the **Deployment Mode** property  
   
@@ -71,16 +71,16 @@ manager: "mblythe"
   
  If your model is based on relational data only, exporting and importing objects using DMX is the easiest way to move models.  
   
- [Move an Analysis Services Database](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/move-an-analysis-services-database.md)  
+ [Move an Analysis Services Database](../move-an-analysis-services-database.md)  
   
  When models use a cube as a data source, refer to this topic for more information about how to move models and their supporting cube data.  
   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/deploy-analysis-services-projects-ssdt.md)  
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](../deploy-analysis-services-projects-ssdt.md)  
   
  Provides general information about deployment of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projects, and describes the properties that you can set as part of the project configuration.  
   
 ## See Also  
- [Multidimensional Model Object Processing](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/multidimensional-model-object-processing.md)   
+ [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)   
  [Data Mining Query Interfaces](data-mining-query-tools.md)   
  [Processing Requirements and Considerations &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md)  
   

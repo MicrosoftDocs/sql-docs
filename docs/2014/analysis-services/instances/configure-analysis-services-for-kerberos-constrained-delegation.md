@@ -49,7 +49,7 @@ manager: "mblythe"
 ##  <a name="bkmk_delegate"></a> Configure Analysis Services for trusted delegation  
  Configuring Analysis Services for Kerberos constrained delegation allows the service to impersonate a client identity on a down-level service, such as the relational database engine, so that data can be queried as if the client was connected directly.  
   
- Delegation scenarios for Analysis Services are limited to tabular models configured for `DirectQuery` mode. This is the only scenario in which Analysis Services can pass delegated credentials to another service. In all other scenarios, such as SharePoint scenarios mentioned in the previous section, Analysis Services is on the receiving end of the delegation chain. For more information about DirectQuery, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/directquery-mode-ssas-tabular.md).  
+ Delegation scenarios for Analysis Services are limited to tabular models configured for `DirectQuery` mode. This is the only scenario in which Analysis Services can pass delegated credentials to another service. In all other scenarios, such as SharePoint scenarios mentioned in the previous section, Analysis Services is on the receiving end of the delegation chain. For more information about DirectQuery, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../directquery-mode-ssas-tabular.md).  
   
 > [!NOTE]  
 >  A common misconception is that ROLAP storage, processing operations, or access to remote partitions somehow introduce requirements for constrained delegation. This is not the case. All of these operations are executed directly by the service account (also referred to as the processing account), on its own behalf. Delegation is not required for these operations in Analysis Services, given that permissions for such operations are granted directly to the service account (for example, granting db_datareader permissions on the relational database so that the service can process data). For more information about server operations and permissions, see [Configure Service Accounts &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md).  
@@ -74,25 +74,25 @@ manager: "mblythe"
   
      Delegation tab appears only when the user account (OlapSvc) is assigned to a service (Analysis Services), and the service has an SPN registered for it. SPN registration requires that the service is running.  
   
-     ![SSAS_Kerberos_1_AccountProperties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
+     ![SSAS_Kerberos_1_AccountProperties](../media/ssas-kerberos-1-accountproperties.gif "SSAS_Kerberos_1_AccountProperties")  
   
 3.  On the Add Services page, click **Users or Computers**.  
   
-     ![SSAS_Kerberos_2_](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
+     ![SSAS_Kerberos_2_](../media/ssas-kerberos-2.gif "SSAS_Kerberos_2_")  
   
 4.  On the Select Users or Computer page, enter the account used to run the SQL Server instance providing data to Analysis Services tabular model databases. Click **OK** to accept the service account.  
   
-     If you cannot select the account you want, verify that SQL Server is running and has an SPN registered for that account. For more information about SPNs for the database engine, see [Register a Service Principal Name for Kerberos Connections](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/register-a-service-principal-name-for-kerberos-connections.md).  
+     If you cannot select the account you want, verify that SQL Server is running and has an SPN registered for that account. For more information about SPNs for the database engine, see [Register a Service Principal Name for Kerberos Connections](../../database-engine/register-a-service-principal-name-for-kerberos-connections.md).  
   
-     ![SSAS_Kerberos_3_SelectUsers](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
+     ![SSAS_Kerberos_3_SelectUsers](../media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   
 5.  The SQL Server instance should now appear in Add Services. Any service also using that account will also appear in the list. Choose the SQL Server instance you want to use. Click **OK** to accept the instance.  
   
-     ![SSAS_Kerberos_4_](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-kerberos-4.gif "SSAS_Kerberos_4_")  
+     ![SSAS_Kerberos_4_](../media/ssas-kerberos-4.gif "SSAS_Kerberos_4_")  
   
 6.  The properties page of the Analysis Services service account should now look similar to the following screenshot. Click **OK** to save your changes.  
   
-     ![SSAS_Kerberos_5_Finished](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-kerberos-5-finished.gif "SSAS_Kerberos_5_Finished")  
+     ![SSAS_Kerberos_5_Finished](../media/ssas-kerberos-5-finished.gif "SSAS_Kerberos_5_Finished")  
   
 7.  Test for successful delegation by connecting from a remote client computer, under a different identity, and query the tabular model. You should see the user identity on the request in SQL Server Profiler.  
   

@@ -23,9 +23,9 @@ manager: "mblythe"
   
  The following model properties have advanced editors that you can use to create expressions or configure complex model properties. The following properties provide:  
   
--   `Filter` property: Opens the [Data Set Filter or Model Filter Dialog Box](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` property: Opens the [Data Set Filter or Model Filter Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` property: Opens the [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  For information about how to set the properties in a mining model, see [Mining Model Columns](mining-model-columns.md).  
   

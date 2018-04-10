@@ -49,11 +49,11 @@ manager: "mblythe"
  We highly recommend the following link for additional information resources not covered in this topic: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> General information on log file configuration settings  
- You can find sections for each log in the msmdsrv.ini server configuration file, located in the \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config folder. See [Configure Server Properties in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/configure-server-properties-in-analysis-services.md) for instructions on editing the file.  
+ You can find sections for each log in the msmdsrv.ini server configuration file, located in the \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config folder. See [Configure Server Properties in Analysis Services](../configure-server-properties-in-analysis-services.md) for instructions on editing the file.  
   
  Where possible, we suggest that you set logging properties in the server properties page of Management Studio. Although in some cases, you must edit the msmdsrv.ini file directly to configure settings that are not visible in the administrative tools.  
   
- ![Section of the config file showing log settings](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-logfilesettings.png "Section of the config file showing log settings")  
+ ![Section of the config file showing log settings](../media/ssas-logfilesettings.png "Section of the config file showing log settings")  
   
 ##  <a name="bkmk_msmdsrv"></a> MSMDSRV service log file  
  Analysis Services logs server operations to the msmdsrv.log file, one per instance, located at \program files\Microsoft SQL Server\\<instance\>\Olap\Log.  
@@ -115,7 +115,7 @@ manager: "mblythe"
   
  Query log settings are server wide. The settings you specify will be used by all databases running on this server.  
   
- ![Query log settings in Management Studio](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/ssas-querylogsettings.png "Query log settings in Management Studio")  
+ ![Query log settings in Management Studio](../media/ssas-querylogsettings.png "Query log settings in Management Studio")  
   
  After the configuration settings are specified, run an MDX query multiple times. If sampling is set to 10, run the query 11 times.Verify the table is created. In Management Studio, connect to the relational database engine, open the database folder, open the **Tables** folder, and verify that **OlapQueryLog** exists. If you do not immediately see the table, refresh the folder to pick up any changes to its contents.  
   
@@ -180,6 +180,6 @@ manager: "mblythe"
 ## See Also  
  [Analysis Services Instance Management](analysis-services-instance-management.md)   
  [Introduction to Monitoring Analysis Services with SQL Server Profiler](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
- [Configure Server Properties in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/configure-server-properties-in-analysis-services.md)  
+ [Configure Server Properties in Analysis Services](../configure-server-properties-in-analysis-services.md)  
   
   

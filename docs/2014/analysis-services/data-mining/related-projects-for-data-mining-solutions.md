@@ -55,37 +55,37 @@ manager: "mblythe"
   
  **Control Flow Components**  
   
--   [Analysis Services Execute DDL Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/analysis-services-execute-ddl-task.md)  
+-   [Analysis Services Execute DDL Task](../../integration-services/analysis-services-execute-ddl-task.md)  
   
--   [Analysis Services Processing Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/analysis-services-processing-task.md)  
+-   [Analysis Services Processing Task](../../integration-services/analysis-services-processing-task.md)  
   
--   [CDC Control Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/cdc-control-task.md)  
+-   [CDC Control Task](../../integration-services/cdc-control-task.md)  
   
--   [Data Cleansing](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/data-cleansing.md)  
+-   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-mining-query-task.md)  
+-   [Data Mining Query Task](../../integration-services/data-mining-query-task.md)  
   
--   [Data Profiling Task](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-profiling-task.md)  
+-   [Data Profiling Task](../../integration-services/data-profiling-task.md)  
   
  **Data Flow Components**  
   
--   [CDC Flow Components](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/cdc-flow-components.md)  
+-   [CDC Flow Components](../../integration-services/cdc-flow-components.md)  
   
--   [Conditional Split Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/conditional-split-transformation.md)  
+-   [Conditional Split Transformation](../../integration-services/conditional-split-transformation.md)  
   
--   [Data Conversion Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-conversion-transformation.md)  
+-   [Data Conversion Transformation](../../integration-services/data-conversion-transformation.md)  
   
--   [Data Mining Model Training Destination](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-mining-model-training-destination.md)  
+-   [Data Mining Model Training Destination](../../integration-services/data-mining-model-training-destination.md)  
   
--   [Data Mining Query Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/data-mining-query-transformation.md)  
+-   [Data Mining Query Transformation](../../integration-services/data-mining-query-transformation.md)  
   
--   [Derived Column Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/derived-column-transformation.md)  
+-   [Derived Column Transformation](../../integration-services/derived-column-transformation.md)  
   
--   [Percentage Sampling Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/percentage-sampling-transformation.md)  
+-   [Percentage Sampling Transformation](../../integration-services/percentage-sampling-transformation.md)  
   
--   [Term Extraction Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/term-extraction-transformation.md)  
+-   [Term Extraction Transformation](../../integration-services/term-extraction-transformation.md)  
   
--   [Term Lookup Transformation](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)integration-services/term-lookup-transformation.md)  
+-   [Term Lookup Transformation](../../integration-services/term-lookup-transformation.md)  
   
 ##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Although [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is typically not seen as a critical component of data mining solutions, it provides the following features that are useful for presentation of data mining solutions.  
@@ -100,15 +100,15 @@ manager: "mblythe"
   
  For more information about how to use Reporting Services with DMX queries as a data source, see these links:  
   
- [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Retrieve Data from a Data Mining Model &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
- [Analysis Services DMX Query Designer User Interface](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/analysis-services-dmx-query-designer-user-interface.md)  
+ [Analysis Services DMX Query Designer User Interface](../../reporting-services/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  However, it is not necessary to use DMX as the data source. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components for data mining also support saving the results of a prediction query to a relational database. If you have an established workflow for updating models using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], persisting predictions and other data mining query results to SQL Server enable you to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] for reporting, as well as other tools that do not interface with DMX.  
   
- For more information about using Reporting Services as the presentation layer for data sources, see [Integrating Reporting Services into Applications](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)reporting-services/dev-guide/integrating-reporting-services-into-applications.md).  
+ For more information about using Reporting Services as the presentation layer for data sources, see [Integrating Reporting Services into Applications](../../reporting-services/dev-guide/integrating-reporting-services-into-applications.md).  
   
 ##  <a name="bkmk_DQSetc"></a> Data Quality Services  
  Data Quality Services (DQS) is new in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Because data problems can make data mining impossible, data miners who perform repeated analysis or who work in large organizations with complex data sources are expected to find that a well-planned data project using DQS is a more reliable solution for support of data mining than ad hoc cleansing of data using [!INCLUDE[tsql](../../includes/tsql-md.md)] or other scripts.  
@@ -122,7 +122,7 @@ manager: "mblythe"
   
  The outcome of the process is a knowledge base that you can continuously improve, or reuse in multiple data-enhancement phases.  
   
- For more information, see [Data Cleansing](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/data-cleansing.md).  
+ For more information, see [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
  **A computer-assisted matching process that analyzes source data and proposes changes.**  
  To prevent data duplication, you can perform addition cleansing of the data source, to identify exact and approximate matches. These components let you specify the matching rules, and the thresholds at which to apply them.  
@@ -131,9 +131,9 @@ manager: "mblythe"
   
  After you have created the initial DQS project, you can automate many of the tasks by using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components.  
   
- For more information, see [Data Matching](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/data-matching.md).  
+ For more information, see [Data Matching](../../data-quality-services/data-matching.md).  
   
- While performing cleansing and matching activities in a data quality project, you can get real-time statistics and information about the data that is being processed by DQS. Data profiling helps you assess the extent to which data cleansing or matching helped improve the data quality, and understand the changes that were made. For information about data profiling and notifications, see [Data Profiling and Notifications in DQS](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ While performing cleansing and matching activities in a data quality project, you can get real-time statistics and information about the data that is being processed by DQS. Data profiling helps you assess the extent to which data cleansing or matching helped improve the data quality, and understand the changes that were made. For information about data profiling and notifications, see [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
  **A knowledge base that represents three types of knowledge: out-of-the-box knowledge, knowledge generated by the DQS server, and knowledge generated by the user.**  
  Once you have created a knowledge base, you can use it iteratively to cleanse and verify other data.  
@@ -144,24 +144,24 @@ manager: "mblythe"
   
  You can also apply the knowledge in the knowledge base to other sources, to perform data cleansing within other processes. Such data cleansing can help identify user entry errors, corruption in transmission or storage, or mismatched data dictionary definitions.  
   
- For more information, see [DQS Knowledge Bases and Domains](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ For more information, see [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="bkmk_FTSetc"></a> Full-Text Search  
  Full-Text Search in SQL Server lets applications and users run full-text queries against character-based data in SQL Server tables. When full-text search is enabled, you can perform searches against text data that are enhanced by language-specific rules about the multiple forms of a word or phrase. You can also configure search conditions, such as the distance between multiple terms, and use functions to constrain the results that are returned in order of likelihood.  
   
  Because full-text queries are a feature provided by the SQL Server engine, you can create parameterized queries, generate custom data sets or term vectors by using full-text search features on a text data source, and use these sources in data mining.  
   
- For more information about how full-text queries interact with the full-text index, see [Query with Full-Text Search](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/query-with-full-text-search.md).  
+ For more information about how full-text queries interact with the full-text index, see [Query with Full-Text Search](../../database-engine/query-with-full-text-search.md).  
   
  An advantage of using the full-text search features of SQL Server is that you can leverage the linguistic intelligence that is contained in the word breakers and stemmers shipped for all SQL Server languages. By using the supplied word breakers and stemmers, you can ensure that words are separated using the characters appropriate for each language, and that synonyms based on diacritics or orthographic variations (such as the multiple number formats in Japanese) are not overlooked.  
   
  In addition to linguistic intelligence that governs word boundaries, the stemmers for each language can reduce variants of a word to a single term, based on knowledge of the rules for conjugation and orthographic variation in that language. The rules for linguistic analysis differ for each language and are developed based on extensive research on real-life corpora.  
   
- For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+ For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  The version of a word that is stored after full-text indexing is a token in compressed form. Subsequent queries to the full-text index generate multiple inflectional forms of a particular word based on the rules of that language, to ensure that all probable matches are made. For example, although the token that is stored might be “run”, the query engine also looks for the terms "running", "ran", and "runner," because these are regularly derived morphological variations of the root word "run".  
   
- You can also create and build a user thesaurus to store synonyms and enable better search results, or categorization of terms. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ You can also create and build a user thesaurus to store synonyms and enable better search results, or categorization of terms. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  Requirements for using full-text search include the following:  
   
@@ -184,9 +184,9 @@ manager: "mblythe"
   
 -   Return similarity scores, and the terms that contribute to the score.  
   
- For more information, see [Find Key Phrases in Documents with Semantic Search](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/find-similar-and-related-documents-with-semantic-search.md).  
+ For more information, see [Find Key Phrases in Documents with Semantic Search](../../database-engine/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../database-engine/find-similar-and-related-documents-with-semantic-search.md).  
   
- For more information about the database objects that support semantic indexing, see [Enable Semantic Search on Tables and Columns](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)database-engine/enable-semantic-search-on-tables-and-columns.md).  
+ For more information about the database objects that support semantic indexing, see [Enable Semantic Search on Tables and Columns](../../database-engine/enable-semantic-search-on-tables-and-columns.md).  
   
  Requirements for using semantic search include the following:  
   
@@ -199,7 +199,7 @@ manager: "mblythe"
 -   Not all of the full-text languages support semantic indexing. For a list of supported languages, see [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## See Also  
- [Multidimensional Model Solutions &#40;SSAS&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/multidimensional-model-solutions-ssas.md)   
- [Tabular Model Solutions &#40;SSAS Tabular&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/tabular-model-solutions-ssas-tabular.md)  
+ [Multidimensional Model Solutions &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
+ [Tabular Model Solutions &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

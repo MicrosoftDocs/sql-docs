@@ -29,7 +29,7 @@ manager: "mblythe"
 # Mining Structures (Analysis Services - Data Mining)
   The mining structure defines the data from which mining models are built: it specifies the source data view, the number and type of columns, and an optional partition into training and testing sets. A single mining structure can support multiple mining models that share the same domain. The following diagram illustrates the relationship of the data mining structure to the data source, and to its constituent data mining models.  
   
- ![Processing of data: source to structure to model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/dmcon-modelarch.gif "Processing of data: source to structure to model")  
+ ![Processing of data: source to structure to model](../media/dmcon-modelarch.gif "Processing of data: source to structure to model")  
   
  The mining structure in the diagram is based on a data source that contains multiple tables or views, joined on the CustomerID field. One table contains information about customers, such as the geographical region, age, income and gender, while the related nested table contains multiple rows of additional information about each customer, such as products the customer has purchased. The diagram shows that multiple models can be built on one mining structure, and that the models can use different columns from the structure.  
   
@@ -65,7 +65,7 @@ manager: "mblythe"
   
  Moreover, each model can use the columns from the structure in different ways. For example, your data source view might contain an Income column, which you can bin in different ways for different models.  
   
- The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement.  
+ The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement.  
   
 ### Mining Structure Columns  
  The building blocks of the mining structure are the mining structure columns, which describe the data that the data source contains. These columns contain information such as data type, content type, and how the data is distributed. The mining structure does not contain information about how columns are used for a specific mining model, or about the type of algorithm that is used to build a model; this information is defined in the mining model itself.  
@@ -113,13 +113,13 @@ manager: "mblythe"
 |Tasks|Links|  
 |-----------|-----------|  
 |Work with relational mining structures|[Create a New Relational Mining Structure](create-a-new-relational-mining-structure.md)<br /><br /> [Add a Nested Table to a Mining Structure](add-a-nested-table-to-a-mining-structure.md)|  
-|Work with mining structures based on OLAP cubes|[Create a New OLAP Mining Structure](create-a-new-olap-mining-structure.md)<br /><br /> [Filter the Source Cube for a Mining Structure](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/filter-the-source-cube-for-a-mining-structure.md)|  
+|Work with mining structures based on OLAP cubes|[Create a New OLAP Mining Structure](create-a-new-olap-mining-structure.md)<br /><br /> [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md)|  
 |Work with columns in a  mining structure|[Add Columns to a Mining Structure](add-columns-to-a-mining-structure.md)<br /><br /> [Remove Columns from a Mining Structure](remove-columns-from-a-mining-structure.md)|  
 |Change or query mining structure properties and data|[Change the Properties of a Mining Structure](change-the-properties-of-a-mining-structure.md)|  
 |Work with the underlying data sources and update source data|[Edit the Data Source View used for a Mining Structure](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Process a Mining Structure](process-a-mining-structure.md)|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/database-objects-analysis-services-multidimensional-data.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

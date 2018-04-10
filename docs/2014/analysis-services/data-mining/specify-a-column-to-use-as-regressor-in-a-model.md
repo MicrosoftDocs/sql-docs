@@ -20,7 +20,7 @@ manager: "mblythe"
   
  However, you can specify that a column be included as a regressor by adding the FORCE_REGRESSOR parameter to the model and specifying the regressors to use. You might want to do this in cases where the attribute has meaning even if the effect is too small to be detected by the model, or when you want to ensure that the attribute is included in the formula.  
   
- The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
+ The following procedure describes how to create a simple linear regression model, using the same sample data that is used for the [neural networks tutorial](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md). The model is not necessarily robust, but demonstrates how to use the Data Mining Designer to customize a linear regression model.  
   
 ### How to create a simple linear regression model  
   

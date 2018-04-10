@@ -55,7 +55,7 @@ manager: "mblythe"
   
  Typically you will use [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] as a tool for developing new projects and adding to existing projects, and then manage projects and objects that have been deployed by using tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- However, you can directly modify objects that are already deployed to an instance of ssASnoversion by using the `Immediate` option and connecting to the server in Online mode. For more information, see [Connect in Online Mode to an Analysis Services Database](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/connect-in-online-mode-to-an-analysis-services-database.md).  
+ However, you can directly modify objects that are already deployed to an instance of ssASnoversion by using the `Immediate` option and connecting to the server in Online mode. For more information, see [Connect in Online Mode to an Analysis Services Database](../connect-in-online-mode-to-an-analysis-services-database.md).  
   
 > [!WARNING]  
 >  All changes to a mining structure or mining model, including changes to metadata such as a name or description, require that the structure or model be reprocessed.  
@@ -73,7 +73,7 @@ manager: "mblythe"
 ### Analysis Management Objects (AMO)  
  Analysis Management Objects (AMO) is an object model built on top of XMLA that gives you full control over data mining objects. By using AMO, you can create, deploy, and monitor mining structures and mining models  
   
--   [AMO Concepts and Object Model](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/amo-concepts-and-object-model.md)  
+-   [AMO Concepts and Object Model](../dev-guide/amo-concepts-and-object-model.md)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -92,6 +92,6 @@ manager: "mblythe"
  **Restrictions:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generates some XMLA statements that are supported for internal use only, and cannot be used in XML DDL scripts.  
   
 ## See Also  
- [Developer's Guide &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/developer-s-guide-analysis-services.md)  
+ [Developer's Guide &#40;Analysis Services&#41;](../dev-guide/developer-s-guide-analysis-services.md)  
   
   

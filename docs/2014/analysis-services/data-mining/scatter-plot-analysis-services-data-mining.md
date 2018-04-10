@@ -29,7 +29,7 @@ manager: "mblythe"
 ## Interpreting the Results  
  The following diagram shows an example of a scatter plot, created for the scenario just described.  
   
- ![example of a scatter plot for linear regression](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/scatterplot-callctr.gif "example of a scatter plot for linear regression")  
+ ![example of a scatter plot for linear regression](../media/scatterplot-callctr.gif "example of a scatter plot for linear regression")  
   
  You can pause the mouse on any point scattered around the line to view the predicted and actual values in a tooltip. There is no **Mining Legend** for a scatter plot; however, the chart itself contains a legend that displays the score associated with the model. For more information about interpreting the score, see [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
   
 |Topics|Links|  
 |------------|-----------|  
-|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Provides a walkthrough of how to create a lift chart for the Targeted Mailing model.|[Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Testing Accuracy with Lift Charts &#40;Basic Data Mining Tutorial&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Explains related chart types.|[Lift Chart &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Profit Chart &#40;Analysis Services - Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Classification Matrix &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)|  
 |Describes uses of cross-validation for mining models and mining structures.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Describes steps for creating lift charts and other accuracy charts.|[Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  

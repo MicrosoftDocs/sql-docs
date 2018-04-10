@@ -44,7 +44,7 @@ manager: "mblythe"
 -   [Change the Colors Used in the Data Mining Viewer](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## See Also  
- [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/mining-model-viewers-data-mining-model-designer.md)  
+ [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

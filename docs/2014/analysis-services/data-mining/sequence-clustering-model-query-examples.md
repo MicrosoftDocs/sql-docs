@@ -44,7 +44,7 @@ manager: "mblythe"
 ###  <a name="bkmk_Query1"></a> Sample Query 1: Using the Data Mining Schema Rowset to Return Model Parameters  
  By querying the data mining schema rowset, you can find various kinds of information about the model, including basic metadata, the date and time that the model was created and last processed, the name of the mining structure that the model is based on, and the column used as the predictable attribute.  
   
- The following query returns the parameters that were used to build and train the model, `[Sequence Clustering]`. You can create this model in Lesson 5 of the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md).  
+ The following query returns the parameters that were used to build and train the model, `[Sequence Clustering]`. You can create this model in Lesson 5 of the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
   
 ```  
 SELECT MINING_PARAMETERS   

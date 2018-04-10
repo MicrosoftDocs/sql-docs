@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Testing and Validation Tasks and How-tos (Data Mining)
-  You can use the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to compare the predictive accuracy of the mining models in your mining structure.  
+  You can use the **Mining Accuracy Chart** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to compare the predictive accuracy of the mining models in your mining structure.  
   
  You can create four kinds of charts:  
   
@@ -37,22 +37,22 @@ manager: "mblythe"
   
  The first three charts use the **Input Selection** tab to define the data that is used for generating the chart.  
   
- The Cross-validation chart is created by using additional inputs, available on the **Cross-Validation** tab. For more information, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
+ The Cross-validation chart is created by using additional inputs, available on the **Cross-Validation** tab. For more information, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
   
- For more information about how to use the mining accuracy chart, see [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  
+ For more information about how to use the mining accuracy chart, see [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 ## In This Section  
   
--   [Create a Lift Chart, Profit Chart, or Classification Matrix](data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Create a Lift Chart, Profit Chart, or Classification Matrix](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Create a Cross-Validation Report](data-mining/create-a-cross-validation-report.md)  
+-   [Create a Cross-Validation Report](create-a-cross-validation-report.md)  
   
--   [Choose and Map Model Testing Data](data-mining/choose-and-map-model-testing-data.md)  
+-   [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)  
   
--   [Apply Filters to Model Testing Data](data-mining/apply-filters-to-model-testing-data.md)  
+-   [Apply Filters to Model Testing Data](apply-filters-to-model-testing-data.md)  
   
--   [Choose the Column to Use for Testing a Mining Model](data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Choose the Column to Use for Testing a Mining Model](choose-the-column-to-use-for-testing-a-mining-model.md)  
   
--   [Using Nested Table Data as an Input for an Accuracy Chart](data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
+-   [Using Nested Table Data as an Input for an Accuracy Chart](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   

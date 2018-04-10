@@ -26,14 +26,14 @@ manager: "mblythe"
 ## Understanding the Structure of a Clustering Model  
  A clustering model has a simple structure. Each model has a single parent node that represents the model and its metadata, and each parent node has a flat list of clusters (NODE_TYPE = 5). This organization is shown in the following image.  
   
- ![structure of model content for clustering](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-clust.gif "structure of model content for clustering")  
+ ![structure of model content for clustering](../media/modelcontentstructure-clust.gif "structure of model content for clustering")  
   
  Each child node represents a single cluster and contains detailed statistics about the attributes of the cases in that cluster. This includes a count of the number of cases in the cluster, and the distribution of values that distinguish the cluster from other clusters.  
   
 > [!NOTE]  
 >  You do not need to iterate through the nodes to get a count or description of the clusters; the model parent node also counts and lists the clusters.  
   
- The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/basic-data-mining-tutorial.md):  
+ The parent node contains useful statistics that describe the actual distribution of all the training cases. These statistics are found in the nested table column, NODE_DISTRIBUTION. For example, the following table shows several rows from the NODE_DISTRIBUTION table that describe the distribution of customer demographics for the clustering model, `TM_Clustering`, that you create in the [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md):  
   
 |ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  

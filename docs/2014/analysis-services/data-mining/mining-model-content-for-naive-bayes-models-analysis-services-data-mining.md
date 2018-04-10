@@ -31,7 +31,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  Because a Naive Bayes model does not permit continuous data types, all the values of the input columns are treated as discrete or discretized. You can specify how a value is discretized. For more information, [Change the Discretization of a Column in a Mining Model](change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- ![structure of model content for naive bayes](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/media/modelcontentstructure-nb.gif "structure of model content for naive bayes")  
+ ![structure of model content for naive bayes](../media/modelcontentstructure-nb.gif "structure of model content for naive bayes")  
   
 ## Model Content for a Naive Bayes Model  
  This section provides detail and examples only for those columns in the mining model content that have particular relevance for Naive Bayes models.  

@@ -66,9 +66,9 @@ manager: "mblythe"
 -   When you move a model, the same requirements apply: you must set up appropriate access to the location of the old data source, copy the data sources, or configure a new data source. Also, you must transfer logins and roles, or set up permissions to allow data mining objects to be processed and updated in the new location.  
   
 ## Configuring Permissions and Server Properties  
- Data mining requires additional permissions on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Most data mining properties can be set by using the [Analysis Server Properties Dialog Box &#40;Analysis Services&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/analysis-server-properties-dialog-box-analysis-services.md).  
+ Data mining requires additional permissions on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Most data mining properties can be set by using the [Analysis Server Properties Dialog Box &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- For more information about the properties that you can configure, see [Configure Server Properties in Analysis Services](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/configure-server-properties-in-analysis-services.md).  
+ For more information about the properties that you can configure, see [Configure Server Properties in Analysis Services](../configure-server-properties-in-analysis-services.md).  
   
  The following server properties are of particular relevance to data mining:  
   
@@ -81,9 +81,9 @@ manager: "mblythe"
   
 -   **MaxConcurrentPredictionQueries** Controls the load on the server caused by predictions. The default value of 0 allows unlimited queries for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, and a maximum of five concurrent queries for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Queries above the limit are serialized and may time out.  
   
- The server provides additional properties that control which data mining algorithms are available, including any restrictions on the algorithms, and the defaults for all data mining services. However, there are no settings that allow you to control access to data mining stored procedures specifically. For more information, see [Data Mining Properties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/data-mining-properties.md).  
+ The server provides additional properties that control which data mining algorithms are available, including any restrictions on the algorithms, and the defaults for all data mining services. However, there are no settings that allow you to control access to data mining stored procedures specifically. For more information, see [Data Mining Properties](../data-mining-properties.md).  
   
- You can also set properties that let you tune the server and control security for client usage. For more information, see [Feature Properties](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/feature-properties.md).  
+ You can also set properties that let you tune the server and control security for client usage. For more information, see [Feature Properties](../feature-properties.md).  
   
 > [!NOTE]  
 >  For more information about Support for plug-in algorithms by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
@@ -115,13 +115,13 @@ manager: "mblythe"
   
  If the procedure returns a dataset, the client will receive a dataset or datatable with a nested table containing the rows. For example, if you create a query against the model content, the query returns the entire model. To avoid bringing back too many rows, you can write stored procedures by using the ADOMD+ object model.  
   
- To write a server stored procedure, you must reference the Microsoft.AnalysisServices.AdomdServer namespace. For more information about how to create and use stored procedures, see [User Defined Functions and Stored Procedures](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/user-defined-functions-and-stored-procedures.md).  
+ To write a server stored procedure, you must reference the Microsoft.AnalysisServices.AdomdServer namespace. For more information about how to create and use stored procedures, see [User Defined Functions and Stored Procedures](../dev-guide/user-defined-functions-and-stored-procedures.md).  
   
 > [!NOTE]  
 >  Stored procedures cannot be used to change security on data server objects. When you execute a stored procedure, the user's current context is used to determine access to all server objects. Therefore, users must have appropriate permissions on any database objects that they access.  
   
 ## See Also  
- [Physical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)analysis-services/dev-guide/physical-architecture-analysis-services-multidimensional-data.md)   
+ [Physical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/physical-architecture-analysis-services-multidimensional-data.md)   
  [Physical Architecture &#40;Analysis Services - Data Mining&#41;](physical-architecture-analysis-services-data-mining.md)   
  [Management of Data Mining Solutions and Objects](management-of-data-mining-solutions-and-objects.md)  
   

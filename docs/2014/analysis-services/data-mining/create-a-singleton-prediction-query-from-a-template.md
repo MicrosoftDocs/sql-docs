@@ -91,6 +91,6 @@ AS [t]
 11. Click **Execute**.  
   
 ## See Also  
- [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../../2014/reporting-services/prerequisites-for-tutorials-report-builder.md)tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

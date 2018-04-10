@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "OPENJSON, with default schema"
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "Inactive"
 ---

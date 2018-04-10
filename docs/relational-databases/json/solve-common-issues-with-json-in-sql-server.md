@@ -15,8 +15,9 @@ helpviewer_keywords:
   - "JSON, FAQ"
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

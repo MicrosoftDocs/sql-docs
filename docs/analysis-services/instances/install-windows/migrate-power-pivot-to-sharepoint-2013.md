@@ -34,18 +34,6 @@ ms.workload: "Inactive"
 |Prepare the SharePoint 2013 farm|Backup, copy, restore databases.|Mount content databases|Migrate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Schedules|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|-SharePoint Central Administration<br /><br /> -Windows PowerShell|-SharePoint application Pages<br /><br /> -Windows PowerShell|  
   
- **In this topic:**  
-  
--   [1) Prepare the SharePoint 2013 Farm](#bkmk_prepare_sharepoint2013)  
-  
--   [2) Backup, Copy, Restore the Databases](#bkmk_backup_restore)  
-  
--   [3) Prepare Web Applications and Mount Content Databases](#bkmk_prepare_mount_databases)  
-  
--   [4) Upgrade Power Pivot Schedules](#bkmk_upgrade_powerpivot_schedules)  
-  
--   [Additional Resources](#bkmk_additional_resources)  
-  
 ##  <a name="bkmk_prepare_sharepoint2013"></a> 1) Prepare the SharePoint 2013 Farm  
   
 1.  > [!TIP]  

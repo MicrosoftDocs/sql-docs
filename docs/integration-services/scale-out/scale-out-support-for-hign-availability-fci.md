@@ -27,7 +27,7 @@ To set up high availability on the Scale Out Master side with SQL Server failove
 Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.
 
 ## 2. Install SQL Server failover cluster
-Install a SQL Server failover cluster. See [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md") for instructions. During the installation, select Database Engine Services on Feature Selection page. Log the SQL Server network name for future configuration.
+Install a SQL Server failover cluster. See [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) for instructions. During the installation, select Database Engine Services on Feature Selection page. Log the SQL Server network name for future configuration.
 
 ![SQL network name](media/sql-network-name.PNG)
 
@@ -49,7 +49,7 @@ Update the Scale Out Master service configuration file,
 \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config, on the primary and secondary nodes. Update **SqlServerName** to [SQL Server network name]//[Instance name] or [SQL Server network name] for default instance.
 
 ## 6. Add Scale Out Master service to SQL Server role in Windows failover cluster
-In Failover Cluster Manager, connect to the cluster for Scale Out. Select Roles in the explorer, right click the SQL Server role and select Add Resource, Generic Service. 
+In Failover Cluster Manager, connect to the cluster for Scale Out. Select Roles in the explorer, right-click the SQL Server role, and select Add Resource, Generic Service. 
 
 ![Generic service](media/generic-service.PNG)
 
@@ -69,7 +69,7 @@ Install Scale Out Worker on worker nodes. During the installation, specify https
 > If you want to failover SSISDB and Scale Out Master service separately, specify Scale Out Master service DNS host name instead of Sql Server network name.
 
 ## 8. Install Scale Out Worker client certificate
-The worker certificate needs to be installed on all nodes in the SQL Server failover cluster. See [Install Scale Out Worker client certificate](walkthrough-set-up-integration-services-scale-out.md#InstallCert).
+Install the worker certificate on all nodes in the SQL Server failover cluster. See [Install Scale Out Worker client certificate](walkthrough-set-up-integration-services-scale-out.md#InstallCert).
 
 > [!NOTE]
 > Scale Out Manager has not supported SQL Server failover cluster. If you use Scale Out Manager to add Scale Out Worker, you still need to install worker certificate to all master nodes manually.

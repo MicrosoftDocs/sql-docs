@@ -44,7 +44,7 @@ The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are ins
 > [!NOTE]  
 > All appropriate registry settings for the OLE DB Driver for SQL Server are made as part of the installation process.  
 
-The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in the follow location:  
+The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in the following location:  
 
 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`  
 

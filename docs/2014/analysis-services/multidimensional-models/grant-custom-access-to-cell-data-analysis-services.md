@@ -44,11 +44,11 @@ manager: "mblythe"
 ## Allow access to specific measures  
  You can use cell security to explicitly choose which measures are available. Once you specifically identify which members are allowed, all other measures become unavailable. This is perhaps the simplest scenario to implement via MDX script, as the following steps illustrate.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connect to the instance of [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)], select a database, open the **Roles** folder, and then click a database role (or create a new database role). Membership should already be specified, and the role should have `Read` access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], select a database, open the **Roles** folder, and then click a database role (or create a new database role). Membership should already be specified, and the role should have `Read` access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
   
 2.  In **Cell Data**, check the cube selection to be sure you have chosen the right one, and then select **Enable read permissions**.  
   
-     If you select just this check box, and do not provide an MDX expression, the effect is the same as denying access to all cells in the cube. This is because the default allowed set is an empty set whenever [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] resolves a subset of cube cells.  
+     If you select just this check box, and do not provide an MDX expression, the effect is the same as denying access to all cells in the cube. This is because the default allowed set is an empty set whenever [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] resolves a subset of cube cells.  
   
 3.  Enter the following MDX expression.  
   
@@ -89,7 +89,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 > [!NOTE]  
 >  What happens if you set both the Read and Read-Contingent permissions on a cell within the same role? The role will provide Read permissions on the cell, and not Read-Contingent.  
   
- Recall from previous sections that selecting just the **Enable read-contingent permissions** checkbox, without providing any MDX expression, denies access to all cells in the cube. This is because the default allowed set is an empty set whenever [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] resolves a subset of cube cells.  
+ Recall from previous sections that selecting just the **Enable read-contingent permissions** checkbox, without providing any MDX expression, denies access to all cells in the cube. This is because the default allowed set is an empty set whenever [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] resolves a subset of cube cells.  
   
 ## Set Read/Write permissions on a cell  
  Read/write permissions on a cell are used to enable writeback, provided that members have read/write permissions to the cube itself. Permissions that are granted at the cell level cannot be greater than the permissions that are granted at the cube level. See [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) for details.  

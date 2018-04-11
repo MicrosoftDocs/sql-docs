@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Introducing AMO Classes
-  Analysis Management Objects (AMO) is a library of classes designed to manage an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../../../../includes/ssasnoversion-md.md)] from a client application. AMO classes are classes that you will use to administer [!INCLUDE[ssASnoversion](../../../../../../includes/ssasnoversion-md.md)] objects such as databases, dimensions, cubes, mining structures and models, roles and permissions, exceptions, and others  
+  Analysis Management Objects (AMO) is a library of classes designed to manage an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] from a client application. AMO classes are classes that you will use to administer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects such as databases, dimensions, cubes, mining structures and models, roles and permissions, exceptions, and others  
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
@@ -31,8 +31,8 @@ manager: "mblythe"
 |Topic|Description|  
 |-----------|-----------------|  
 |[AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Describes classes that are required in order to work with any other set of classes.|  
-|[AMO OLAP Classes](../multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Describes classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../../../../includes/ssasnoversion-md.md)].|  
-|[AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Describes classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../../../../includes/ssasnoversion-md.md)].|  
+|[AMO OLAP Classes](../multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Describes classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Describes classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[AMO Security Classes](../multidimensional-models/analysis-management-objects/amo-security-classes.md)|Describes classes that let you control access to other objects and maintain security.|  
 |[AMO Other Classes and Methods](../multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Describes classes and methods that help OLAP or Data Mining administrators to complete their daily tasks.|  
   

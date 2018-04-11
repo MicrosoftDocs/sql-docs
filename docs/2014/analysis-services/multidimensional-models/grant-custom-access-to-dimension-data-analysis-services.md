@@ -33,7 +33,7 @@ manager: "mblythe"
   
  ![PivotTables with and without a dimension member](media/ssas-permsdimdenied.png "PivotTables with and without a dimension member")  
   
- By default, if you can read data from an [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] cube, you automatically have read permissions on all measures and dimension members associated with that cube. While this behavior might be sufficient for many scenarios, sometimes security requirements call for a more segmented authorization strategy, with varying levels of access for different users, on the same dimension.  
+ By default, if you can read data from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube, you automatically have read permissions on all measures and dimension members associated with that cube. While this behavior might be sufficient for many scenarios, sometimes security requirements call for a more segmented authorization strategy, with varying levels of access for different users, on the same dimension.  
   
  You can restrict access by choosing which members to allow (AllowedSet) or deny (DeniedSet) access. You do this by either selecting or deselecting dimension members to include or exclude from the role.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
 ## Basic dimension security  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
      The role should already have read access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
   
@@ -103,20 +103,20 @@ manager: "mblythe"
  Recall from the previous section that the denied set is a fixed collection. If processing subsequently introduces new members that should also be denied access, you will need to edit this role to add those members to the list.  
   
  **Default member**  
- The DefaultMember property determines the data set returned to a client when an attribute is not explicitly included in a query. When the attribute is not explicitly included, [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] uses one of the following default members for the attribute:  
+ The DefaultMember property determines the data set returned to a client when an attribute is not explicitly included in a query. When the attribute is not explicitly included, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses one of the following default members for the attribute:  
   
--   If the database role defines a default member for the attribute, [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] uses this default member.  
+-   If the database role defines a default member for the attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses this default member.  
   
--   If the database role does not define a default member for the attribute, [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] uses the default member that is defined for the attribute itself. The default member for an attribute, unless you specify otherwise, is the `All` member (unless the attribute is defined as non-aggregatable).  
+-   If the database role does not define a default member for the attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the default member that is defined for the attribute itself. The default member for an attribute, unless you specify otherwise, is the `All` member (unless the attribute is defined as non-aggregatable).  
   
- For example, suppose a database role specifies `Male` as the default member for the `Gender` attribute. Unless a query both explicitly includes the `Gender` attribute and specifies a different member for this attribute, [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] would return a data set that included only male customers. For more information about setting the default member, see [Define a Default Member](multidimensional-models/attribute-properties-define-a-default-member.md).  
+ For example, suppose a database role specifies `Male` as the default member for the `Gender` attribute. Unless a query both explicitly includes the `Gender` attribute and specifies a different member for this attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] would return a data set that included only male customers. For more information about setting the default member, see [Define a Default Member](multidimensional-models/attribute-properties-define-a-default-member.md).  
   
  **Enable Visual Total**  
  The VisualTotals property indicates whether the aggregated cell values that are displayed are calculated according to all cell values or only according to the cell values that are visible to the database role.  
   
- By default, the VisualTotals property is disabled (set to `False`). This default setting maximizes performance because [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] can quickly calculate the total of all cell values, instead of having to spend time selecting which cells values to calculate.  
+ By default, the VisualTotals property is disabled (set to `False`). This default setting maximizes performance because [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can quickly calculate the total of all cell values, instead of having to spend time selecting which cells values to calculate.  
   
- However, having the VisualTotals property disabled could create a security issue if a user can use the aggregated cell values to deduce values for attribute members to which the user's database role does not have access. For example, [!INCLUDE[ssASnoversion](../../../../../../../../../includes/ssasnoversion-md.md)] uses the values for three attribute members to calculate an aggregated cell value. The database role has access to view two of these three attribute members. Using the aggregated cell value, a member of this database role would be able to deduce the value for the third attribute member.  
+ However, having the VisualTotals property disabled could create a security issue if a user can use the aggregated cell values to deduce values for attribute members to which the user's database role does not have access. For example, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the values for three attribute members to calculate an aggregated cell value. The database role has access to view two of these three attribute members. Using the aggregated cell value, a member of this database role would be able to deduce the value for the third attribute member.  
   
  Setting VisualTotals property to `True` can eliminate this risk. When you enable the VisualTotals property, a database role can only view aggregated totals for dimension members to which the role has permission.  
   

@@ -64,7 +64,7 @@
 ##### [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)
 #### [Lesson 10: Defining Administrative Roles](../analysis-services/lesson-10-defining-administrative-roles.md)
 ##### [Granting Process Database Permissions](../analysis-services/lesson-10-granting-process-database-permissions.md)
-### [Data Mining Tutorials](../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)
+### [Data Mining Tutorials](../analysis-services/data-mining-tutorials-analysis-services.md)
 #### [Basic Data Mining Tutorial](basic-data-mining-tutorial.md)
 ##### [Lesson 1: Preparing the Analysis Services Database](lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)
 ###### [Creating an Analysis Services Project](creating-an-analysis-services-project-basic-data-mining-tutorial.md)

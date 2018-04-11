@@ -198,7 +198,7 @@ NATURAL PREDICTION JOIN
  If you are familiar with programming concepts, you can also use Analysis Management Objects (AMO) to programmatically work with data mining objects. For more information, see [AMO Data Mining Classes](../../2014/analysis-services/dev-guide/amo-data-mining-classes.md).  
   
 ## See Also  
- [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-sequence-clustering-model-query-examples.md)   
+ [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

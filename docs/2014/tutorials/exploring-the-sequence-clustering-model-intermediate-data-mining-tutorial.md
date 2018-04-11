@@ -255,6 +255,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-sequence-clustering-model-query-examples.md)  
+ [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

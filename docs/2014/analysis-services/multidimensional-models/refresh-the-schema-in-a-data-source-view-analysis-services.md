@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   Addition of new unique constraints. If a logical primary key exists for a table in the DSV and a physical key is added to the table in the data source, the logical key is removed and replaced by the physical key.  
   
- Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
+ Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Refresh a DSV in SQL Server Data Tools  
  To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then click the Refresh Data Source View button or choose **Refresh** from the Data Source View menu.  
@@ -53,11 +53,11 @@ manager: "mblythe"
  Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations—a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
   
 > [!IMPORTANT]  
->  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  
+>  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  
   
  After you examine the report, you can either accept the changes or cancel the update to reject any changes. All changes must be accepted or rejected together. You cannot choose individual items in the list. You can also save a report of the changes.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

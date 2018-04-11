@@ -41,7 +41,7 @@ manager: "mblythe"
   
 -   A FROM clause that determines which cube will be queried. For more information about the FROM clause, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
   
--   An optional WHERE clause that determines which members or tuples to use on the slicer axis to restrict the data returned. For more information about the construction of a slicer axis in a WHERE clause, see [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
+-   An optional WHERE clause that determines which members or tuples to use on the slicer axis to restrict the data returned. For more information about the construction of a slicer axis in a WHERE clause, see [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 > [!NOTE]  
 >  For more detailed information about the various clauses of the SELECT statement, see [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md).  
@@ -104,10 +104,10 @@ FROM [Adventure Works]
 WHERE ( [Sales Territory].[Southwest] )  
 ```  
   
- For more detailed examples, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)and [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
+ For more detailed examples, see [Specifying the Contents of a Query Axis &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)and [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](mdx/key-concepts-in-mdx-analysis-services.md)   
  [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)  
   
   

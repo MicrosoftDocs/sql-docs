@@ -129,7 +129,7 @@ FROM [Adventure Works]
 ## See Also  
  [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
  [Tuples](tuples.md)   
- [Autoexists](multidimensional-models/mdx/autoexists.md)   
+ [Autoexists](mdx/autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   

@@ -47,10 +47,10 @@ manager: "mblythe"
 ## Data Members  
  Typically, leaf members in a dimension contain data derived directly from underlying data sources, whereas nonleaf members contain data derived from aggregations performed on child members.  
   
- However, parent-child hierarchies might have some nonleaf members whose data is derived from underlying data sources, in addition to data aggregated from child members. For these nonleaf members in a parent-child hierarchy, special system-generated child members can be created that contain the underlying fact table data. Referred to as *data members*, these special child members contain a value that is directly associated with a nonleaf member and is independent of the summary value calculated from the descendants of the nonleaf member. For more information about data members, see [Attributes in Parent-Child Hierarchies](multidimensional-models/parent-child-dimension-attributes.md).  
+ However, parent-child hierarchies might have some nonleaf members whose data is derived from underlying data sources, in addition to data aggregated from child members. For these nonleaf members in a parent-child hierarchy, special system-generated child members can be created that contain the underlying fact table data. Referred to as *data members*, these special child members contain a value that is directly associated with a nonleaf member and is independent of the summary value calculated from the descendants of the nonleaf member. For more information about data members, see [Attributes in Parent-Child Hierarchies](parent-child-dimension-attributes.md).  
   
 ## See Also  
- [Attributes in Parent-Child Hierarchies](multidimensional-models/parent-child-dimension-attributes.md)   
+ [Attributes in Parent-Child Hierarchies](parent-child-dimension-attributes.md)   
  [Database Dimension Properties](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   

@@ -31,20 +31,20 @@ manager: "mblythe"
   
  Cell permissions apply to data inside the cell, and not to its metadata. Notice how the cell is still visible in the results of a query, displaying a value of `#N/A` instead of the actual cell value. The `#N/A` value appears in the cell unless the client application translates the value, or another value is specified by setting the Secured Cell Value property in the connection string.  
   
- To hide the cell entirely, you have to limit the members—dimensions, dimension attributes, and dimension attribute members—that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md).  
+ To hide the cell entirely, you have to limit the members—dimensions, dimension attributes, and dimension attribute members—that are viewable. For more information, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md).  
   
  As an administrator, you can specify whether role members have read, read contingent, or read/write permissions on cells within a cube. Putting permissions on a cell is the lowest level of security allowed, so before you start applying permissions at this level, it's important to keep a few facts in mind:  
   
 -   Cell-level security cannot expand rights that have been restricted at a higher level. An example: if a role denies access to dimension data, cell-level security cannot override the denied set. Another example: consider a role with `Read` permission on a cube and **Read/Write** permission on a cell ─ the cell data permission will not be **Read/Write**; it will be `Read`.  
   
--   Custom permissions often need to be coordinated between dimension members and cells within the same role. For example, suppose you want to deny access to several discount-related measures for different combinations of resellers. Given **Resellers** as dimension data and **Discount Amount** as a measure, you would need to combine within the same role permissions on both the measure (using the instructions in this topic), as well as on dimension members. See [Grant custom access to dimension data &#40;Analysis Services&#41;](multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) for details on setting dimension permissions.  
+-   Custom permissions often need to be coordinated between dimension members and cells within the same role. For example, suppose you want to deny access to several discount-related measures for different combinations of resellers. Given **Resellers** as dimension data and **Discount Amount** as a measure, you would need to combine within the same role permissions on both the measure (using the instructions in this topic), as well as on dimension members. See [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) for details on setting dimension permissions.  
   
  Cell-level security is specified through MDX expressions. Because a cell is a tuple (that is, an intersection point across potentially multiple dimensions and measures), it is necessary to use MDX to identify specific cells.  
   
 ## Allow access to specific measures  
  You can use cell security to explicitly choose which measures are available. Once you specifically identify which members are allowed, all other measures become unavailable. This is perhaps the simplest scenario to implement via MDX script, as the following steps illustrate.  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], select a database, open the **Roles** folder, and then click a database role (or create a new database role). Membership should already be specified, and the role should have `Read` access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], select a database, open the **Roles** folder, and then click a database role (or create a new database role). Membership should already be specified, and the role should have `Read` access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
   
 2.  In **Cell Data**, check the cube selection to be sure you have chosen the right one, and then select **Enable read permissions**.  
   
@@ -92,14 +92,14 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  Recall from previous sections that selecting just the **Enable read-contingent permissions** checkbox, without providing any MDX expression, denies access to all cells in the cube. This is because the default allowed set is an empty set whenever [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] resolves a subset of cube cells.  
   
 ## Set Read/Write permissions on a cell  
- Read/write permissions on a cell are used to enable writeback, provided that members have read/write permissions to the cube itself. Permissions that are granted at the cell level cannot be greater than the permissions that are granted at the cube level. See [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) for details.  
+ Read/write permissions on a cell are used to enable writeback, provided that members have read/write permissions to the cube itself. Permissions that are granted at the cell level cannot be greater than the permissions that are granted at the cube level. See [Set Partition Writeback](set-partition-writeback.md) for details.  
   
 ## See Also  
  [MDX Builder &#40;Analysis Services - Multidimensional Data&#41;](mdx-builder-analysis-services-multidimensional-data.md)   
- [The Basic MDX Script &#40;MDX&#41;](multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Grant process permissions &#40;Analysis Services&#41;](multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Grant permissions on a dimension &#40;Analysis Services&#41;](multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Grant custom access to dimension data &#40;Analysis Services&#41;](multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [The Basic MDX Script &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [Grant permissions on a dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

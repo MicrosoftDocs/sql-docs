@@ -73,7 +73,7 @@ manager: "mblythe"
 3.  Verify that all of the tables you plan to use in the many-to-many relationships are related in the DSV through primary key relationships. This is a requirement for establishing a link to the intermediate measure group in a subsequent step.  
   
     > [!NOTE]  
-    >  If the underlying data source does not provide primary and foreign key relationships, you can create the relationships manually in the DSV. For more information, see [Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
+    >  If the underlying data source does not provide primary and foreign key relationships, you can create the relationships manually in the DSV. For more information, see [Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
      The following example confirms that the tables used in this procedure are linked using primary keys.  
   
@@ -186,7 +186,7 @@ manager: "mblythe"
 ## See Also  
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Perspectives in Multidimensional Models](multidimensional-models/perspectives-in-multidimensional-models.md)  
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)  
   
   

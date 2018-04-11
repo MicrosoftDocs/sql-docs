@@ -155,6 +155,6 @@ manager: "mblythe"
 3.  Edit the task to specify a connection to the database, which objects to process, and the process option. For more information about how to implement this task, see [Analysis Services Processing Task](../../2014/integration-services/analysis-services-processing-task.md).  
   
 ## See Also  
- [Multidimensional Model Object Processing](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)  
   
   

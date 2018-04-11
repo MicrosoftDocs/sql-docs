@@ -31,7 +31,7 @@ manager: "mblythe"
  ![Delete Objects dialog box](../media/ssas-olapdsv-deleteobjects.gif "Delete Objects dialog box")  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Change Properties in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Change Properties in a Data Source View &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

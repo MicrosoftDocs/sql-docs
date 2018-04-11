@@ -35,18 +35,18 @@ manager: "mblythe"
   
  ![Source column in Partition pane](../media/ssas-partitionsource.png "Source column in Partition pane")  
   
- If the partition is based on a query, click the browse (**...**) button to edit the query. This edits the **Source** property for the partition. For more information, see [Change a partition source to use a different fact table](multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
+ If the partition is based on a query, click the browse (**...**) button to edit the query. This edits the **Source** property for the partition. For more information, see [Change a partition source to use a different fact table](change-a-partition-source-to-use-a-different-fact-table.md).  
   
  You can specify a table in the data source view that has the same structure as the original source table (in the external data source from which the data is retrieved). The source can be in any of the data sources or data source views of the cube database.  
   
 ## Storage settings  
- In Cube Designer, on the Partitions tab, you can click **Storage Settings** to pick one of the standard settings for MOLAP, ROLAP, or HOLAP storage, or to configure custom settings for the storage mode and proactive caching. The default is MOLAP because it delivers the fastest query performance. For more information about each setting, see [Set Partition Storage &#40;Analysis Services - Multidimensional&#41;](multidimensional-models/set-partition-storage-analysis-services-multidimensional.md).  
+ In Cube Designer, on the Partitions tab, you can click **Storage Settings** to pick one of the standard settings for MOLAP, ROLAP, or HOLAP storage, or to configure custom settings for the storage mode and proactive caching. The default is MOLAP because it delivers the fastest query performance. For more information about each setting, see [Set Partition Storage &#40;Analysis Services - Multidimensional&#41;](set-partition-storage-analysis-services-multidimensional.md).  
   
  Storage can be configured separately for each partition of each measure group in a cube. You can also configure the default storage settings for a cube or measure group. Storage is configured on the **Partitions** tab in the Cube Wizard.  
   
 ## See Also  
- [Create and Manage a Local Partition &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Designing Aggregations &#40;Analysis Services - Multidimensional&#41;](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
- [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Designing Aggregations &#40;Analysis Services - Multidimensional&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -213,7 +213,7 @@ FROM [Adventure Works]
  [DrilldownLevel &#40;MDX&#41;](~/mdx/drilldownlevel-mdx.md)   
  [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](~/mdx/prevmember-mdx.md)   
- [Using Member Properties &#40;MDX&#41;](multidimensional-models/mdx/mdx-member-properties.md)   
+ [Using Member Properties &#40;MDX&#41;](mdx/mdx-member-properties.md)   
  [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
   
   

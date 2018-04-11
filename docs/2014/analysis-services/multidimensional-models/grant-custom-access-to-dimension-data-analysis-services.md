@@ -56,7 +56,7 @@ manager: "mblythe"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expand **Roles** for the appropriate database in Object Explorer, and then click a database role (or create a new database role).  
   
-     The role should already have read access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
+     The role should already have read access to the cube. See [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) if you need help with this step.  
   
 2.  On **Dimension Data** | **Basic**, select the dimension for which you are setting permissions.  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
     >  When applying permissions that trim dimension members, aggregated totals are not recalculated automatically. Suppose the `All` member of an attribute hierarchy returns a count of 200 before permissions are applied. After applying permissions that deny access to some members, `All` still returns 200, even though the member values visible to the user are much less. To avoid confusing the consumers of your cube, you can configure the `All` member be the aggregate of just those members to which role members, rather than the aggregate of all of the members of the attribute hierarchy. To invoke this behavior, you can enable `Visual Totals` on the **Advanced** tab when configuring dimension security. Once enabled, the aggregate is calculated at query time rather than retrieved from pre-calculated aggregations. This can have a noticeable effect on query performance, so use it only when necessary.  
   
 ## Hiding measures  
- In [Grant custom access to cell data &#40;Analysis Services&#41;](multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md), it was explained that fully hiding all visual aspects of a measure, and not just its cell data, requires permissions on dimension members. This section explains how to deny access to the object metadata of a measure.  
+ In [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), it was explained that fully hiding all visual aspects of a measure, and not just its cell data, requires permissions on dimension members. This section explains how to deny access to the object metadata of a measure.  
   
 1.  On **Dimension Data** | **Basic**, scroll down the Dimension list until you reach cube dimensions, and then select **Measures Dimension**.  
   
@@ -109,7 +109,7 @@ manager: "mblythe"
   
 -   If the database role does not define a default member for the attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses the default member that is defined for the attribute itself. The default member for an attribute, unless you specify otherwise, is the `All` member (unless the attribute is defined as non-aggregatable).  
   
- For example, suppose a database role specifies `Male` as the default member for the `Gender` attribute. Unless a query both explicitly includes the `Gender` attribute and specifies a different member for this attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] would return a data set that included only male customers. For more information about setting the default member, see [Define a Default Member](multidimensional-models/attribute-properties-define-a-default-member.md).  
+ For example, suppose a database role specifies `Male` as the default member for the `Gender` attribute. Unless a query both explicitly includes the `Gender` attribute and specifies a different member for this attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] would return a data set that included only male customers. For more information about setting the default member, see [Define a Default Member](attribute-properties-define-a-default-member.md).  
   
  **Enable Visual Total**  
  The VisualTotals property indicates whether the aggregated cell values that are displayed are calculated according to all cell values or only according to the cell values that are visible to the database role.  
@@ -124,9 +124,9 @@ manager: "mblythe"
  Click to test the MDX syntax defined on this page.  
   
 ## See Also  
- [Grant cube or model permissions &#40;Analysis Services&#41;](multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Grant custom access to cell data &#40;Analysis Services&#41;](multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Grant permissions on a data source object &#40;Analysis Services&#41;](multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

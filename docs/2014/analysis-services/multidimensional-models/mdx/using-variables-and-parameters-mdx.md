@@ -57,6 +57,6 @@ from [Adventure Works]
  To use this functionality with OLE DB, you would use the `ICommandWithParameters` interface. To use this functionality with ADOMD.Net, you would use the **AdomdCommand.Parameters** collection.  
   
 ## See Also  
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

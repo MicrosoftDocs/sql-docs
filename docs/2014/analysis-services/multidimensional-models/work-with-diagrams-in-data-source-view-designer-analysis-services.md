@@ -87,7 +87,7 @@ manager: "mblythe"
  To avoid this problem, add all the tables first, before making any final adjustments. Objects should now retain their position in the diagram when you open it again later.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
  [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

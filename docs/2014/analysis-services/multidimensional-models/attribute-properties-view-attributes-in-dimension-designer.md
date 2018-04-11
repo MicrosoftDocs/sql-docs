@@ -39,6 +39,6 @@ manager: "mblythe"
 |![Parent attribute icon](../media/as-icon-parent-attribute.gif "Parent attribute icon")|Parent|  
   
 ## See Also  
- [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

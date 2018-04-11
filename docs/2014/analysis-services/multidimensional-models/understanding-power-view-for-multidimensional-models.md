@@ -165,7 +165,7 @@ manager: "mblythe"
   
  When Power View connects to a multidimensional model with an .rsds file that has a Locale Identifier, and if a corresponding translation is contained in the cube, users will see the translations in Power View.  
   
- For more information, see [Create a Report Data Source](multidimensional-models/create-a-report-data-source.md).  
+ For more information, see [Create a Report Data Source](create-a-report-data-source.md).  
   
 ## Power View pinned filters  
  Power View reports can contain multiple views. With this release, the *Pin Filter* feature for both tabular and multidimensional models provides the ability to create filters that apply across all views in a report. The image below shows the Pin filter toggle button for a view filter. By default, a view filter is unpinned and applies only to that view. Pinning a view filter applies it to all views; unpinning it removes it from other views.  

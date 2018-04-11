@@ -38,7 +38,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  When you specify an axis for a set (in this case composed of a single tuple) in a query, you must begin by specifying a set for the column axis before specifying a set for the row axis. The column axis can also be referred to as *axis(0)* or simply *0*. For more information about MDX queries, see [The Basic MDX Query &#40;MDX&#41;](multidimensional-models/mdx/mdx-query-the-basic-query.md).  
+>  When you specify an axis for a set (in this case composed of a single tuple) in a query, you must begin by specifying a set for the column axis before specifying a set for the row axis. The column axis can also be referred to as *axis(0)* or simply *0*. For more information about MDX queries, see [The Basic MDX Query &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md).  
   
 ### Tuples as values or member references  
  You can use a tuple in a query to return the value in the cell that is referenced by the tuple, as in the previous example. Or you can use a tuple in an expression to explicitly refer to the members specified in the tuple. The query or the expression can utilize functions that either return or consume tuples. A tuple can be used to either refer to the value of the cell that the tuple specifies, or to specify a combination of members when utilized in a function.  
@@ -61,9 +61,9 @@ FROM [Adventure Works]
 >  An attribute member can be referred by either its member name or its member key. In the previous example, you could replace the reference to [CY 2004] with &[2004].  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](multidimensional-models/mdx/cube-space.md)   
- [Autoexists](multidimensional-models/mdx/autoexists.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Cube Space](mdx/cube-space.md)   
+ [Autoexists](mdx/autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

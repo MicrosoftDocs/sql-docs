@@ -24,7 +24,7 @@ manager: "mblythe"
  As discussed in this topic, the syntax of the CREATE MEMBER statement is straightforward and easy to use.  
   
 > [!NOTE]  
->  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
+>  For more information about calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## CREATE MEMBER Syntax  
  Use the following syntax to add the CREATE MEMBER statement to the MDX statement:  
@@ -50,6 +50,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## See Also  
- [Creating Query-Scoped Calculated Members &#40;MDX&#41;](multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Creating Query-Scoped Calculated Members &#40;MDX&#41;](mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

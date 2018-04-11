@@ -62,10 +62,10 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
+ For more information about building calculated members, see [Building Calculated Members in MDX &#40;MDX&#41;](mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## See Also  
- [Using Member Properties &#40;MDX&#41;](multidimensional-models/mdx/mdx-member-properties.md)   
+ [Using Member Properties &#40;MDX&#41;](mdx/mdx-member-properties.md)   
  [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)  
   
   

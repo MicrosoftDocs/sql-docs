@@ -1,22 +1,15 @@
 ---
-title: "Set up Python client tools for use with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2018"
-ms.prod: "machine-learning-services"
-ms.prod_service: "machine-learning-services"
-ms.service: ""
-ms.component: python
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Set up Python client tools for use with SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Set up Python client tools for use with SQL Server 
+# Set up Python client tools for use with SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to configure a Python environment on a Windows computer to support running Python code in SQL Server. This includes the following scenarios:

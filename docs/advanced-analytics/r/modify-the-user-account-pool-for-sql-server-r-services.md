@@ -31,7 +31,7 @@ The Windows account group is created by [!INCLUDE[ssNoVersion](../../includes/ss
 -   In a default instance, the group name is **SQLRUserGroup**. The name is the same whether you use R or Python or both.
 -   In a named instance, the default group name is suffixed with the instance name: for example, **SQLRUserGroupMyInstanceName**.
 
-By default, the user account pool contains 20 user accounts. In most cases, 20 is more than adequate to support machine learning tasks, but you can change the number of accounts.
+By default, the user account pool contains 20 user accounts. In most cases, 20 is more than adequate to support machine learning tasks, but you can change the number of accounts. The maximum number of accounts is 100.
 -  In a default instance, the individual accounts are named **MSSQLSERVER01** through **MSSQLSERVER20**.
 -   For a named instance, the individual accounts are named after the instance name: for example, **MyInstanceName01** through **MyInstanceName20**.
 
@@ -46,7 +46,7 @@ Passwords associated with each user account are generated at random, but you can
 1. Open SQL Server Configuration Manager and select **SQL Server Services**.
 2. Double-click the SQL Server Launchpad service and stop the service if it is running.
 3.  On the **Service** tab, make sure that the Start Mode is set to Automatic. External scripts cannot start when the Launchpad is not running.
-4.  Click the **Advanced** tab and edit the value of **External Users Count** if necessary. This setting controls how many different SQL users can run external script sessions concurrently. The default is 20 accounts.
+4.  Click the **Advanced** tab and edit the value of **External Users Count** if necessary. This setting controls how many different SQL users can run external script sessions concurrently. The default is 20 accounts. The maximum number of users is 100.
 5. Optionally, you can set the option **Reset External Users Password** to _Yes_ if your organization has a policy that requires changing passwords on a regular basis. Doing this will regenerate the encrypted passwords that Launchpad maintains for the user accounts. For more information, see [Enforcing Password Policy](#bkmk_EnforcePolicy).
 6.  Restart the Launchpad service.
 

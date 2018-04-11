@@ -101,7 +101,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> When binding an output parameter to a bigint value, if the value may be outside the range of an [integer](https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql), using PDO::PARAM_INT with PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE may result in a "value out of range" exception. Therefore, use the default PDO::PARAM_STR instead and provide the size of resulted string, which is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. 
+> When binding an output parameter to a bigint value, if the value may be outside the range of an [integer](https://docs.microsoft.com/en-us/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql), using PDO::PARAM_INT with PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE may result in a "value out of range" exception. Therefore, use the default PDO::PARAM_STR instead and provide the size of the resulted string, which is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. 
 
 ## Example  
 This code sample shows how to use an input/output parameter.  

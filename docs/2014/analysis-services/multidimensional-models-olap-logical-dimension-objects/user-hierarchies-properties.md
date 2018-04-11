@@ -34,7 +34,7 @@ manager: "mblythe"
 |Name|Contains the name of the hierarchy.|  
   
 ## See Also  
- [User Hierarchies](../dev-guide/user-hierarchies.md)   
- [Level Properties &#91;Paved Over&#93;](../../../2014/analysis-services/dev-guide/level-properties-[paved-over].md)  
+ [User Hierarchies](user-hierarchies.md)   
+ [Level Properties](user-hierarchies-level-properties.md)  
   
   

@@ -53,7 +53,7 @@ manager: "mblythe"
 ## See Also  
  [Attributes and Attribute Hierarchies](attributes-and-attribute-hierarchies.md)   
  [User Hierarchies](user-hierarchies.md)   
- [Dimension Relationships](../dev-guide/dimension-relationships.md)   
+ [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

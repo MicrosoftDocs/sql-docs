@@ -34,14 +34,14 @@ manager: "mblythe"
 |Topic||  
 |[Actions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)||  
-|[Calculations](../calculations.md)||  
-|[Cube Cells &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/cube-cells-analysis-services-multidimensional-data.md)||  
+|[Calculations](calculations.md)||  
+|[Cube Cells &#40;Analysis Services - Multidimensional Data&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
 |[Cube Properties](cube-properties-multidimensional-model-programming.md)||  
 |[Cube Storage &#40;Analysis Services - Multidimensional Data&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[Cube Translations](cube-translations.md)||  
 |[Dimension Relationships](dimension-relationships.md)||  
 |[Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
-|[Measures and Measure Groups](../measures-and-measure-groups.md)||  
+|[Measures and Measure Groups](../multidimensional-models/measures-and-measure-groups.md)||  
 |[Partitions &#40;Analysis Services - Multidimensional Data&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[Perspectives](perspectives.md)||  
   

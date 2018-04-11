@@ -27,7 +27,7 @@ manager: "mblythe"
   
 ## See Also  
  [User Hierarchy Properties](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Level Properties &#91;Paved Over&#93;](../dev-guide/level-properties-[paved-over].md)   
- [Parent-Child Hierarchy](multidimensional-models/parent-child-dimension.md)  
+ [Level Properties &#91;Paved Over&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)   
+ [Parent-Child Hierarchy](parent-child-dimension.md)  
   
   

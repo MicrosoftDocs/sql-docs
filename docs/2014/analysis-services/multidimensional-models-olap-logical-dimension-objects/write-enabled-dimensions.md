@@ -61,6 +61,6 @@ manager: "mblythe"
 ## See Also  
  [Database Dimension Properties](database-dimension-properties.md)   
  [Write-Enabled Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -27,7 +27,7 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/dimensions-analysis-services-multidimensional-data.md)|Provides an overview of dimension concepts.|  
+|[Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dimensions-analysis-services-multidimensional-data.md)|Provides an overview of dimension concepts.|  
 |[Attributes and Attribute Hierarchies](attributes-and-attribute-hierarchies.md)|Describes attributes and attribute hierarchies.|  
 |[User Hierarchies](user-hierarchies.md)|Describes user-defined hierarchies of attributes.|  
 |[Write-Enabled Dimensions](write-enabled-dimensions.md)|Describes write-enabled dimensions.|  

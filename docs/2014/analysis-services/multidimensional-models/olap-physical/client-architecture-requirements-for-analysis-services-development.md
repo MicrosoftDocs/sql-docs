@@ -24,7 +24,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Client Architecture Requirements for Analysis Services Development
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../../../../../../../../../../../../../../../../includes/ssasnoversion-md.md)] supports a thin-client architecture. The [!INCLUDE[ssASnoversion](../../../../../../../../../../../../../../../../../../includes/ssasnoversion-md.md)] calculation engine is entirely server-based, so all queries are resolved on the server. As a result, only a single round trip between the client and the server is required for each query, resulting in scalable performance as queries increase in complexity.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports a thin-client architecture. The [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calculation engine is entirely server-based, so all queries are resolved on the server. As a result, only a single round trip between the client and the server is required for each query, resulting in scalable performance as queries increase in complexity.  
   
  The native protocol for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] is XML for Analysis (XML/A). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] provides several data access interfaces for client applications, but all of these components communicate with an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] using XML for Analysis.  
   
@@ -50,20 +50,20 @@ manager: "mblythe"
  Both client and middle tier applications can communicate directly with [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] without using a provider. Client and middle tier applications may send XML for Analysis in SOAP packets over TCP/IP, HTTP, or HTTPS. The client may be coded using any language that supports SOAP. Communication in this case is most easily managed by Internet Information Services (IIS) using HTTP, although a direct connection to the server using TCP/IP may also be coded. This is the thinnest possible client solution for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## Analysis Services in Tabular or SharePoint Mode  
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], the server can be started in xVelocity in-memory analytics engine (VertiPaq) mode for tabular databases and for [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] workbooks that have been published to a SharePoint site.  
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], the server can be started in xVelocity in-memory analytics engine (VertiPaq) mode for tabular databases and for [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks that have been published to a SharePoint site.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] are the only client environments that are supported for creating and querying in-memory databases that use SharePoint or Tabular mode, respectively. The embedded PowerPivot database that you create by using the Excel and [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] tools is contained within the Excel workbook, and is saved as part of the Excel .xlsx file.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] are the only client environments that are supported for creating and querying in-memory databases that use SharePoint or Tabular mode, respectively. The embedded PowerPivot database that you create by using the Excel and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] tools is contained within the Excel workbook, and is saved as part of the Excel .xlsx file.  
   
- However, a [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] workbook can use data that is stored in a traditional cube if you import the cube data into the workbook. You can also import data from another [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] workbook if it has been published to a SharePoint site.  
+ However, a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook can use data that is stored in a traditional cube if you import the cube data into the workbook. You can also import data from another [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook if it has been published to a SharePoint site.  
   
 > [!NOTE]  
->  When you use a cube as a data source for a [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] workbook, the data that you get from the cube is defined as an MDX query; however, the data is imported as a flattened snapshot. You cannot interactively work with the data or refresh the data from the cube.  
+>  When you use a cube as a data source for a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbook, the data that you get from the cube is defined as an MDX query; however, the data is imported as a flattened snapshot. You cannot interactively work with the data or refresh the data from the cube.  
   
 ### Interfaces for PowerPivot Client  
- [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] interacts with the xVelocity in-memory analytics engine (VertiPaq) storage engine within the workbook by using the established interfaces and languages for Analysis Services: AMO and ADOMD.NET, and MDX and XMLA. Within the add-in, measures are defined by using a formula language similar to Excel, Data Analysis Expressions (DAX). DAX expressions are embedded within the XMLA messages that are sent to the in-process server.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interacts with the xVelocity in-memory analytics engine (VertiPaq) storage engine within the workbook by using the established interfaces and languages for Analysis Services: AMO and ADOMD.NET, and MDX and XMLA. Within the add-in, measures are defined by using a formula language similar to Excel, Data Analysis Expressions (DAX). DAX expressions are embedded within the XMLA messages that are sent to the in-process server.  
   
 ### Providers  
- Communications between [!INCLUDE[ssGemini](../../../../../../../../../includes/ssgemini-md.md)] and Excel use the MSOLAP OLEDB provider (version 11.0). Within the MSOLAP provider, there are four different modules, or transports, that can be used for sending messages between the client and server.  
+ Communications between [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] and Excel use the MSOLAP OLEDB provider (version 11.0). Within the MSOLAP provider, there are four different modules, or transports, that can be used for sending messages between the client and server.  
   
  **TCP/IP** Used for normal client-server connections.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Level Properties [Paved Over] | Microsoft Docs"
+title: "Level Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -19,7 +19,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "mblythe"
 ---
-# Level Properties [Paved Over]
+# Level Properties 
   The following table lists and describes the properties of a level in a user-defined hierarchy.  
   
 |Property|Description|  

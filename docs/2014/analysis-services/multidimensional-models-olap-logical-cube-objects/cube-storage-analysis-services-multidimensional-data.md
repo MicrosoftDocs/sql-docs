@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   Storage is not allocated for empty cells.  
   
- Storage is defined on a partition-by-partition basis, and at least one partition exists for each measure group in a cube. For more information, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](partitions-analysis-services-multidimensional-data.md), [Partition Storage Modes and Processing](partitions-partition-storage-modes-and-processing.md), [Measures and Measure Groups](../measures-and-measure-groups.md), and [Create Measures and Measure Groups in Multidimensional Models](../create-measures-and-measure-groups-in-multidimensional-models.md).  
+ Storage is defined on a partition-by-partition basis, and at least one partition exists for each measure group in a cube. For more information, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](partitions-analysis-services-multidimensional-data.md), [Partition Storage Modes and Processing](partitions-partition-storage-modes-and-processing.md), [Measures and Measure Groups](../multidimensional-models/measures-and-measure-groups.md), and [Create Measures and Measure Groups in Multidimensional Models](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 ## Partition Storage  
  Storage for a measure group can be divided into multiple partitions. Partitions enable you to distribute a measure group into discrete segments on a single server or across multiple servers, and to optimize storage and query performance. Each partition in a measure group can be based on a different data source and stored using different storage settings.  

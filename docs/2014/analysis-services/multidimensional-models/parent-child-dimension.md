@@ -33,7 +33,7 @@ manager: "mblythe"
 ## Dimension Schema  
  The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] sample database.  
   
- ![Self-referencing join in DimOrganization table](dev-guide/../media/dimorganization.gif "Self-referencing join in DimOrganization table")  
+ ![Self-referencing join in DimOrganization table](dev-guide/media/dimorganization.gif "Self-referencing join in DimOrganization table")  
   
  In this dimension table, the **ParentOrganizationKey** column has a foreign key relationship with the **OrganizationKey** primary key column. In other words, each record in this table can be related through a parent-child relationship with another record in the table. This kind of self-join is generally used to represent organization entity data, such as the management structure of employees in a department.  
   

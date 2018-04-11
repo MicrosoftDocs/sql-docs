@@ -24,7 +24,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![Security classes in AMO covered in this topic](../../../2014/analysis-services/dev-guide/../media/amo-securityclasses.gif "Security classes in AMO covered in this topic")  
+ ![Security classes in AMO covered in this topic](../../../2014/analysis-services/dev-guide/media/amo-securityclasses.gif "Security classes in AMO covered in this topic")  
   
 ##  <a name="RolesMembers"></a> Role and RoleMember Objects  
  A <xref:Microsoft.AnalysisServices.Role> object is created by adding it to the roles collection of the database, and updating the <xref:Microsoft.AnalysisServices.Role> object to the server by using the Update method. A <xref:Microsoft.AnalysisServices.Role> object has to be updated before it can be used.  
@@ -49,7 +49,7 @@ manager: "mblythe"
  [Programming AMO Security Objects](programming-amo-security-objects.md)   
  [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Introducing AMO Classes](amo-classes-introduction.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

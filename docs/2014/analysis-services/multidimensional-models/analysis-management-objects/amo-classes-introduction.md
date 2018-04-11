@@ -24,7 +24,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![Classes reviewed in AMO conceptual topics](../../../2014/analysis-services/dev-guide/../media/amo-reviewedclasses.gif "Classes reviewed in AMO conceptual topics")  
+ ![Classes reviewed in AMO conceptual topics](../../../2014/analysis-services/dev-guide/media/amo-reviewedclasses.gif "Classes reviewed in AMO conceptual topics")  
   
  The AMO library can be thought of as logically-related groups of objects that are used to accomplish a specific task. AMO classes can be categorized in the following way. This section includes the following topics:  
   
@@ -38,8 +38,8 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Developing with Analysis Management Objects &#40;AMO&#41;](developing-with-analysis-management-objects-amo.md)  
   
   

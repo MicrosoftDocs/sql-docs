@@ -27,7 +27,7 @@ manager: "mblythe"
 ## Basic Architecture  
  An instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] can contain multiple databases, and a database can have OLAP objects and data mining objects at the same time. Applications connect to a specified instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a specified database. A server computer can host multiple instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] are named as "\<ServerName>\\<InstanceName\>". The following illustration shows all mentioned relationships between [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects.  
   
- ![AMO running objects relationships](../../../2014/analysis-services/dev-guide/../media/amo-runningobjects.gif "AMO running objects relationships")  
+ ![AMO running objects relationships](../../../2014/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO running objects relationships")  
   
  Basic classes are the minimum set of objects that are required to build a cube. This minimum set of objects is a dimension, a measure group, and a partition. An aggregation is optional.  
   

@@ -30,7 +30,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![AMO DataMining Classes](../../../2014/analysis-services/dev-guide/../media/amo-dataminingclasses.gif "AMO DataMining Classes")  
+ ![AMO DataMining Classes](../../../2014/analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO DataMining Classes")  
   
 ##  <a name="MiningStructure"></a> MiningStructure Objects  
  A mining structure is the container for mining models. The structure defines all possible columns that the mining models may use. Each mining model defines its own columns from the set of defined columns in the structure.  
@@ -106,7 +106,7 @@ manager: "mblythe"
  [AMO Fundamental Classes](amo-fundamental-classes.md)   
  [Programming AMO Data Mining Objects](programming-amo-data-mining-objects.md)   
  [Introducing AMO Classes](amo-classes-introduction.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

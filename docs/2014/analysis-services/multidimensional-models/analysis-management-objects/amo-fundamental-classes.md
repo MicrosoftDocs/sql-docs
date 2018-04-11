@@ -30,7 +30,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![AMO Fundamental Classes](../../../2014/analysis-services/dev-guide/../media/amo-fundamentalclasses.gif "AMO Fundamental Classes")  
+ ![AMO Fundamental Classes](../../../2014/analysis-services/dev-guide/media/amo-fundamentalclasses.gif "AMO Fundamental Classes")  
   
   
   

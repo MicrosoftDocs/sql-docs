@@ -51,7 +51,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![OLAP Classes  in AMO](../../../2014/analysis-services/dev-guide/../media/amo-olapclasses.gif "OLAP Classes  in AMO")  
+ ![OLAP Classes  in AMO](../../../2014/analysis-services/dev-guide/media/amo-olapclasses.gif "OLAP Classes  in AMO")  
   
 ## Basic Classes  
   
@@ -158,7 +158,7 @@ manager: "mblythe"
  [Introducing AMO Classes](amo-classes-introduction.md)   
  [Programming AMO OLAP Basic Objects](programming-amo-olap-basic-objects.md)   
  [Programming AMO OLAP Advanced Objects](programming-amo-olap-advanced-objects.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

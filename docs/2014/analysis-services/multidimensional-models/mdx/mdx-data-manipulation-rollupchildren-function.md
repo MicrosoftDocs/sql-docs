@@ -72,6 +72,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  The MDX statement examines the unary operator of the child member. If the unary operator is used for subtraction (as in the case with the domestic and foreign returns members), the `IIf` function substitutes the tilde (~) unary operator. Otherwise, the `IIf` function uses the unary operator of the child member. Finally, the returned rollup total is then multiplied by 1.1 to provide the domestic and foreign gross sales forecast value.  
   
 ## See Also  
- [Manipulating Data &#40;MDX&#41;](mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipulating Data &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

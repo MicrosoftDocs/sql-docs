@@ -32,7 +32,7 @@ manager: "mblythe"
   
  By using AMO you are able to create, modify, and delete objects such as cubes, dimensions, mining structures, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases; over all these objects, actions can be performed from your application in the .NET Framework. You can also process and update the information stored in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases.  
   
- With AMO you cannot query your data. To query your data, use [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ With AMO you cannot query your data. To query your data, use [Developing with ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
  This topic contains the following sections:  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
  [Automating Administrative Tasks with AMO](#AutomatingAdministrativeTaskswithAMO)  
   
 ##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO in the Analysis Services Architecture  
- By design, AMO is only intended for object management and not for querying data. If the user needs to query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data from a client application, the client application should use [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ By design, AMO is only intended for object management and not for querying data. If the user needs to query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data from a client application, the client application should use [Developing with ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
 ##  <a name="AMOArchitecture"></a> AMO Architecture  
  AMO is a complete library of classes designed to manage an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] from a client application in managed code under the .NET Framework version 2.0.  
@@ -54,15 +54,15 @@ manager: "mblythe"
   
  The following illustration is a high-level view of the AMO hierarchy that includes major classes. The illustration shows the placement of the classes among their containers and their peers. A <xref:Microsoft.AnalysisServices.Dimension> belongs to a <xref:Microsoft.AnalysisServices.Database> and a <xref:Microsoft.AnalysisServices.Server>, and can be created at the same time as a <xref:Microsoft.AnalysisServices.DataSource> and <xref:Microsoft.AnalysisServices.MiningStructure>. Certain peer classes must be instantiated before you can use others. For example, you have to create an instance of <xref:Microsoft.AnalysisServices.DataSource> before adding a new <xref:Microsoft.AnalysisServices.Dimension> or <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
- ![AMO Classes High Level View](../../../2014/analysis-services/dev-guide/../media/amo-highlevelview-majorobjectshighlighted.gif "AMO Classes High Level View")  
+ ![AMO Classes High Level View](../../../2014/analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO Classes High Level View")  
   
  A *major object* is a class that represents a complete object as a whole entity and not as a part of another object. Major objects include <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension>, and <xref:Microsoft.AnalysisServices.MiningStructure>, because these are entities on their own. However, a <xref:Microsoft.AnalysisServices.Level> is not a major object, because it is a constituent part of a <xref:Microsoft.AnalysisServices.Dimension>. Major objects can be created, deleted, modified, or processed independent of other objects. Minor objects are objects that can only be created as part of creating the parent major object. Minor objects are usually created upon a major object creation. Values for minor objects should be defined at creation time because there is no default creation for minor objects.  
   
  The following illustration shows the major objects that a <xref:Microsoft.AnalysisServices.Server> object contains.  
   
- ![AMO Major Objects highlighted](../../../2014/analysis-services/dev-guide/../media/amo-majorobjects.gif "AMO Major Objects highlighted")  
+ ![AMO Major Objects highlighted](../../../2014/analysis-services/dev-guide/media/amo-majorobjects.gif "AMO Major Objects highlighted")  
   
- ![AMO Major Objects highlighted (2)](../../../2014/analysis-services/dev-guide/../media/amo-majorobjects-02.gif "AMO Major Objects highlighted (2)")  
+ ![AMO Major Objects highlighted (2)](../../../2014/analysis-services/dev-guide/media/amo-majorobjects-02.gif "AMO Major Objects highlighted (2)")  
   
  When programming with AMO, the association between classes and contained classes uses collection type attributes, for example <xref:Microsoft.AnalysisServices.Server> and <xref:Microsoft.AnalysisServices.Dimension>. To work with one instance of a contained class, you first acquire a reference to a collection object that holds or can hold the contained class. Next, you find the specific object that you are looking for in the collection, and then you can obtain a reference to the object to start working with it.  
   
@@ -112,6 +112,6 @@ manager: "mblythe"
  Automatic backup management can be done by using [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tasks, or by creating specialized AMO applications that run automatically. By using AMO you can develop Backup interfaces for operators that help them in their daily jobs.  
   
 ##### Tasks AMO is not intended for  
- AMO cannot be used to query the data. To query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data, including cubes and mining models, use ADOMD.NET from a user application. For more information, see [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ AMO cannot be used to query the data. To query [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data, including cubes and mining models, use ADOMD.NET from a user application. For more information, see [Developing with ADOMD.NET](../adomd-net/developing-with-adomd-net.md).  
   
   

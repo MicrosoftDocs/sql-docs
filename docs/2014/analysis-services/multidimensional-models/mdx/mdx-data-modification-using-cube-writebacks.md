@@ -115,6 +115,6 @@ USE_EQUAL_ALLOCATION
 -   Changing the dimension granularity for a dimension included in the writeback.  
   
 ## See Also  
- [Modifying Data &#40;MDX&#41;](mdx/mdx-data-modification-modifying-data.md)  
+ [Modifying Data &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

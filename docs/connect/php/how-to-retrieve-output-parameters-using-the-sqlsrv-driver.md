@@ -123,7 +123,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql), you will need to specify its SQL field type, either as SQLSRV_SQLTYPE_BIGINT or SQLSRV_SQLTYPE_VARCHAR(n), where n is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. If SQL field type is not set, it may result in a "value out of range" exception.
+> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql), you will need to specify its SQL field type, either as SQLSRV_SQLTYPE_BIGINT or SQLSRV_SQLTYPE_VARCHAR(n), where n is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. If SQL field type is not set, it may result in a "value out of range" exception.
 
 ## Example  
 This code sample shows how to bind a large bigint value as an output parameter.  

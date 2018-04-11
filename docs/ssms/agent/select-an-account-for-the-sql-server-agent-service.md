@@ -1,4 +1,4 @@
----
+﻿---
 title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
@@ -29,6 +29,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Select an Account for the SQL Server Agent Service
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

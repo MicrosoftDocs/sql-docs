@@ -1,4 +1,4 @@
----
+﻿---
 title: "Creating a Table (Tutorial) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/18/2016"
@@ -20,6 +20,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Lesson 1-2 - Creating a Table
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

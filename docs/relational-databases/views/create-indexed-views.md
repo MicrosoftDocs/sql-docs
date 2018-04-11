@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
@@ -25,6 +25,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Indexed Views
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

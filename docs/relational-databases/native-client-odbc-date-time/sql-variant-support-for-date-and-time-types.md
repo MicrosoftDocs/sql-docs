@@ -1,4 +1,4 @@
----
+﻿---
 title: "sql_variant Support for Date and Time Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -20,6 +20,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sql_variant Support for Date and Time Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Databases and Files Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2016"
@@ -25,6 +25,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Databases and Files Catalog Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

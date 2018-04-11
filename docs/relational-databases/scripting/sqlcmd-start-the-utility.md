@@ -1,4 +1,4 @@
----
+﻿---
 title: "Start the sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,6 +18,7 @@ author: "mightypen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sqlcmd - Start the Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

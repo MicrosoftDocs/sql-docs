@@ -1,4 +1,4 @@
----
+﻿---
 title: "TDE - Bring Your Own Key (BYOK) - Azure SQL | Microsoft Docs"
 description: "Bring Your Own Key (BYOK) support for Transparent Data Encryption (TDE) with Azure Key Vault for SQL Database and Data Warehouse. TDE with BYOK overview, benefits, how it works, considerations, and recommendations."
 keywords: ""
@@ -19,6 +19,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.date: "04/03/2018"
 ms.author: "aliceku"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
 # Transparent Data Encryption with Bring Your Own Key (PREVIEW) support for Azure SQL Database and Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

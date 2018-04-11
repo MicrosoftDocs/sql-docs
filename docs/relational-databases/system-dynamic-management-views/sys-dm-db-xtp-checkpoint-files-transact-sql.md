@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

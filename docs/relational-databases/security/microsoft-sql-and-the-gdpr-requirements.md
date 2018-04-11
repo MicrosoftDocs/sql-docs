@@ -1,4 +1,4 @@
----
+﻿---
 title: "Microsoft SQL and the GDPR requirements | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

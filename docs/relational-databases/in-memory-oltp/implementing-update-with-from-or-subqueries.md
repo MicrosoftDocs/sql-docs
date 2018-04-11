@@ -1,4 +1,4 @@
----
+﻿---
 title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Implementing UPDATE with FROM or Subqueries
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

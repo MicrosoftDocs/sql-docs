@@ -1,4 +1,4 @@
----
+﻿---
 title: "Supported DDL for Natively Compiled T-SQL modules | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Supported DDL for Natively Compiled T-SQL modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

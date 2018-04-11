@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
@@ -24,6 +24,7 @@ helpviewer_keywords:
 author: "jeannt"
 ms.author: "jeannt"
 manager: "craigg"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Diagnostic Records and Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -28,6 +28,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Diagnostic Records and Fields
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

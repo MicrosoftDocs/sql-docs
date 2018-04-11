@@ -1,4 +1,4 @@
----
+﻿---
 title: "Determine Which Queries Are Holding Locks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,6 +22,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Determine Which Queries Are Holding Locks
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

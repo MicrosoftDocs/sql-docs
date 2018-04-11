@@ -1,4 +1,4 @@
----
+﻿---
 title: "SMO Object Model Diagram | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SMO Object Model Diagram
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

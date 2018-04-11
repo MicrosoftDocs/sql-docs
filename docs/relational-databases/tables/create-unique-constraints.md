@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"
@@ -24,6 +24,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Unique Constraints
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

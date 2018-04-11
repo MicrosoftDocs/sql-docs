@@ -1,4 +1,4 @@
----
+﻿---
 title: "Copy-Only Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2016"
@@ -22,6 +22,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Copy-Only Backups (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

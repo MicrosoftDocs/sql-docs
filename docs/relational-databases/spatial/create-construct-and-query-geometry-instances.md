@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,6 +21,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create, Construct, and Query geometry Instances
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

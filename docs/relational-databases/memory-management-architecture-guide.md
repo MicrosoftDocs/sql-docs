@@ -1,4 +1,4 @@
----
+﻿---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2017"
@@ -21,6 +21,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Memory Management Architecture Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

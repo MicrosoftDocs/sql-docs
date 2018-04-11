@@ -1,4 +1,4 @@
----
+﻿---
 title: "Validate Replicated Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -27,6 +27,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Validate Replicated Data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

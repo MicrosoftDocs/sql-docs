@@ -1,4 +1,4 @@
----
+﻿---
 title: "PowerShell and CLI: Enable SQL TDE using your own Azure Key Vault key | Microsoft Docs"
 description: "Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell or CLI."
 keywords:
@@ -18,6 +18,7 @@ ms.devlang: "azurecli, powershell"
 ms.topic: "article"
 ms.date: "03/15/2018"
 ms.author: "aliceku"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # PowerShell and CLI: Enable Transparent Data Encryption using your own key from Azure Key Vault (Preview)

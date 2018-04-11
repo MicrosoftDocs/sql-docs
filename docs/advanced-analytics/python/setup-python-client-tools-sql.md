@@ -1,6 +1,5 @@
 ---
 title: Set up Python client tools for use with SQL Server Machine Learning | Microsoft Docs
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 

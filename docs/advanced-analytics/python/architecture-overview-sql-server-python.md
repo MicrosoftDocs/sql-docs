@@ -1,6 +1,5 @@
 ---
 title: Architecture overview for SQL Server Machine Learning Services with Python | Microsoft Docs
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 

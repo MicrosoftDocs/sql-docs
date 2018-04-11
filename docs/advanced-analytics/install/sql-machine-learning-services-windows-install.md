@@ -1,10 +1,9 @@
 ---
 title: Install SQL Server 2017 Machine Learning Services (In-Database) on Windows | Microsoft Docs
-ms.date: 04/15/2018
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
-  
+
+ms.date: 04/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

@@ -1,7 +1,6 @@
 ---
 title: "DMVs for Python | Microsoft Docs"
 ms.custom: ""
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 

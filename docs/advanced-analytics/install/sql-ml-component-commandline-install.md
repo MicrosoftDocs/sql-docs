@@ -1,10 +1,9 @@
 ---
 title: Command-prompt installation of SQL Server machine learning components | Microsoft Docs
-ms.date: 04/15/2018
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
-  
+
+ms.date: 04/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist

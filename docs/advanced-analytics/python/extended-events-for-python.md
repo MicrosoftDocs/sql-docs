@@ -1,6 +1,5 @@
 ---
 title: Extended events for Python in SQL Server Machine Learning | Microsoft Docs
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 

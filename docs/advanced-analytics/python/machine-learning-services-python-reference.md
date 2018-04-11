@@ -1,6 +1,5 @@
 ---
 title: Python API reference for SQL Server Machine Learning Services | Microsoft Docs
-ms.suite: sql
 ms.prod: sql
 ms.technology: machine-learning
 

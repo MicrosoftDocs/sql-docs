@@ -123,7 +123,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type, either as SQLSRV_SQLTYPE_BIGINT or SQLSRV_SQLTYPE_VARCHAR(n), where n is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. If SQL field type is not set, it may result in a "value out of range" exception.
+> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
 
 ## Example  
 This code sample shows how to bind a large bigint value as an output parameter.  
@@ -142,7 +142,7 @@ if ($conn === false) {
 // e.g. 9223372036854
 $bigintOut = 0;
 $outSql = "{CALL spTestProcedure (?)}";
-$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_OUT, null, SQLSRV_SQLTYPE_VARCHAR(20))));
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_OUT, null, SQLSRV_SQLTYPE_BIGINT)));
 sqlsrv_execute($stmt);
 echo "$bigintOut\n";   // Expect 9223372036854
 

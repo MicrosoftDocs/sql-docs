@@ -1,28 +1,19 @@
 ---
-title: "Python Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: 
+title: Python libraries and data types in SQL Server Machine Learning | Microsoft Docs
 ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Python Libraries and Data Types
+# Python libraries and data types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes the Python libraries that are included with the following products:
-
-+ SQL Server Machine Learning Services (In-Database)
-+ Microsoft Machine Learning Server (Standalone)
+This article describes the Python libraries that are included with SQL Server Machine Learning Services (In-Database) and (Standalone) installations.
 
 This article also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 

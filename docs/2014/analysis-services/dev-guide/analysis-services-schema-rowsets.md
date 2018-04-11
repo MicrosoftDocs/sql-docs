@@ -45,7 +45,7 @@ manager: "mblythe"
 |[Data Mining Schema Rowsets](../../../2014/analysis-services/dev-guide/data-mining-schema-rowsets.md)|Describes the data mining schema rowsets supported by the XMLA provider.|  
   
 ## See Also  
- [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/multidimensional-model-data-access-analysis-services-multidimensional-data.md)   
+ [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

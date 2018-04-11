@@ -30,6 +30,6 @@ manager: "mblythe"
  Use the **Perspective Details** pane to create and modify perspectives for the selected cube.  
   
 ## See Also  
- [Perspectives](dev-guide/perspectives.md)  
+ [Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
   
   

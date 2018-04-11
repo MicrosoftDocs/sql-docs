@@ -199,7 +199,7 @@ manager: "mblythe"
 -   Not all of the full-text languages support semantic indexing. For a list of supported languages, see [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## See Also  
- [Multidimensional Model Solutions &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
+ [Multidimensional Model Solutions &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Tabular Model Solutions &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

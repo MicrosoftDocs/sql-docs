@@ -68,7 +68,7 @@ manager: "mblythe"
 |xpress|Compression support|  
   
 ## See Also  
- [Managing Connections and Sessions &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/managing-connections-and-sessions-xmla.md)   
+ [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  
   
   

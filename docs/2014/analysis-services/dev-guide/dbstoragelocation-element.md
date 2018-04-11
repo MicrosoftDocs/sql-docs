@@ -54,6 +54,6 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
- [Attach and Detach Analysis Services Databases](../../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)  
+ [Attach and Detach Analysis Services Databases](../multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   

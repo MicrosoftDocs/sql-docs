@@ -29,6 +29,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

@@ -80,7 +80,7 @@ manager: "mblythe"
  Each dimension in the measure group that contains the aggregation design is represented by a *Dataset* value in the `Query` element. The order of *Dataset* values must match the order of dimensions included in the measure group.  
   
 ## See Also  
- [Designing Aggregations &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/designing-aggregations-xmla.md)   
+ [Designing Aggregations &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  
   
   

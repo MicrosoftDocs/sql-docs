@@ -45,7 +45,7 @@ manager: "mblythe"
 |[Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/analysis-services-scripting-language-xml-data-types-assl.md)|Syntax reference for each data type in the ASSL schema.|  
   
 ## See Also  
- [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md)   
- [Developing with Analysis Management Objects &#40;AMO&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)  
+ [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   

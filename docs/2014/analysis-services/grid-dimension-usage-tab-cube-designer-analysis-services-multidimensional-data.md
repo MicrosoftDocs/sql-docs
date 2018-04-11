@@ -41,8 +41,8 @@ manager: "mblythe"
 |**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, measure group, or dimension relationship.|  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Toolbar &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  

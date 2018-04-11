@@ -74,7 +74,7 @@ manager: "mblythe"
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../includes/msconame-md.md)] support.  
   
 ## Error Log  
- You can set these properties at the server instance level to modify the default values for Error Configuration that appear in other tools and designers. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md) and <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> for more information.  
+ You can set these properties at the server instance level to modify the default values for Error Configuration that appear in other tools and designers. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) and <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> for more information.  
   
  **ErrorLog\ErrorLogFileName**  
  A property used as a default during processing operation performed by the server.  

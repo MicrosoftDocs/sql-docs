@@ -65,7 +65,7 @@ manager: "mblythe"
   
  The `Object` element must refer to a data source in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. If the `Object` element refers to an object other than a data source, an error occurs.  
   
- For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](../../../2014/analysis-services/dev-guide/proactive-caching-partitions.md).  
+ For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## See Also  
  [Commands &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/commands-xmla.md)  

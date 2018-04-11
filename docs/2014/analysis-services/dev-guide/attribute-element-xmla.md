@@ -79,6 +79,6 @@ manager: "mblythe"
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)   
- [Write-Enabled Dimensions](../../../2014/analysis-services/dev-guide/write-enabled-dimensions.md)  
+ [Write-Enabled Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

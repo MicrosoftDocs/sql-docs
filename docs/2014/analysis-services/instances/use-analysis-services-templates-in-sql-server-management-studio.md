@@ -103,7 +103,7 @@ manager: "mblythe"
   
 4.  In Object Explorer, select the database you want to backup, and drag and drop the database between the brackets of the DatabaseID element.  
   
-5.  Double-click the text within the \<File> element. Type the name of the backup file, including the .abf file extension. Specify the full file path if you are not using the default backup location. For more information, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+5.  Double-click the text within the \<File> element. Type the name of the backup file, including the .abf file extension. Specify the full file path if you are not using the default backup location. For more information, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ##  <a name="bkmk_schemarowset"></a> Generate a Schema Rowset Query using an XMLA Template  
  The **Template Explorer** contains only one template for schema rowset queries. To use this template, you must be familiar with the requirements of the individual schema rowset that you want to use, including any required elements, and the columns that can be used as restrictions. For more information, see [Analysis Services Schema Rowsets](../dev-guide/analysis-services-schema-rowsets.md).  

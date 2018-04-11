@@ -31,12 +31,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  If [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] detects a syntax error in any calculation, the Form view will not display until the error is corrected in the Script view.  
   
- You can also use the Business Intelligence Wizard to add certain calculations to a cube. For example, you can use this wizard to add time intelligence to a cube, which means defining calculated members for time-related calculations such as period-to-date, moving averages, or period over period growth. For more information, see [Define Time Intelligence Calculations using the Business Intelligence Wizard](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
+ You can also use the Business Intelligence Wizard to add certain calculations to a cube. For example, you can use this wizard to add time intelligence to a cube, which means defining calculated members for time-related calculations such as period-to-date, moving averages, or period over period growth. For more information, see [Define Time Intelligence Calculations using the Business Intelligence Wizard](multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md).  
   
 > [!IMPORTANT]  
 >  On the **Calculations** tab, the calculation script starts with the CALCULATE command. The CALCULATE command controls the aggregation of the cells in the cube and you should edit this command only if you intend to manually specify how the cube cells should be aggregated.  
   
- For more information, see [Calculations](dev-guide/calculations.md), and [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md).  
+ For more information, see [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md), and [Calculations in Multidimensional Models](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
@@ -55,7 +55,7 @@ manager: "jhubbard"
 ## See Also  
  [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Create Named Sets](create-named-sets.md)   
- [Create Calculated Members](create-calculated-members.md)  
+ [Create Named Sets](multidimensional-models/create-named-sets.md)   
+ [Create Calculated Members](multidimensional-models/create-calculated-members.md)  
   
   

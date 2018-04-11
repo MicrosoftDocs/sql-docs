@@ -63,7 +63,7 @@ manager: "mblythe"
 ## Remarks  
  The `Update` command moves attribute members within a write-enabled dimension.  
   
- For more information about updating members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For more information about updating members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## See Also  
  [Drop Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/drop-element-xmla.md)   

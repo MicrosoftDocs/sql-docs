@@ -65,7 +65,7 @@ manager: "mblythe"
   
  Moreover, each model can use the columns from the structure in different ways. For example, your data source view might contain an Income column, which you can bin in different ways for different models.  
   
- The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement.  
+ The data mining structure stores the definition of the data source and the columns in it in the form of *bindings* to the source data. For more information about data source bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md). However, note that you can also create a data mining structure without binding it to a specific data source by using the DMX [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement.  
   
 ### Mining Structure Columns  
  The building blocks of the mining structure are the mining structure columns, which describe the data that the data source contains. These columns contain information such as data type, content type, and how the data is distributed. The mining structure does not contain information about how columns are used for a specific mining model, or about the type of algorithm that is used to build a model; this information is defined in the mining model itself.  
@@ -119,7 +119,7 @@ manager: "mblythe"
 |Work with the underlying data sources and update source data|[Edit the Data Source View used for a Mining Structure](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Process a Mining Structure](process-a-mining-structure.md)|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/database-objects-analysis-services-multidimensional-data.md)   
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

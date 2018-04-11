@@ -127,7 +127,7 @@ manager: "mblythe"
  Both the **Mining Structure** tab and the **Mining Model** tab provide an option to add a filter to an existing mining structure, by clicking **Define a Cube Slice**. The **Slice Cube** dialog box helps you build a valid MDX filter expression by choosing value from dropdown lists.  
   
 > [!WARNING]  
->  Note that the interface for designing and browsing cubes has been changed in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Browse data and metadata in Cube](../browse-data-and-metadata-in-cube.md).  
+>  Note that the interface for designing and browsing cubes has been changed in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Browse data and metadata in Cube](../multidimensional-models/browse-data-and-metadata-in-cube.md).  
   
  You can add as many filters on the cube as are required to return the data that you need for the mining model. You can also define slices on individual cube slices. For example, if your structure contains two nested tables that are based on products, you could slice one table on March 2004 and the other table on April 2004. The resulting model could then be used to predict purchases made in April based on the purchases that were made in March.  
   

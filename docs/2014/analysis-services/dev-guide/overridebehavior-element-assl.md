@@ -66,7 +66,7 @@ manager: "mblythe"
  The enumeration that corresponds to the allowed values for `OverrideBehavior` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.OverrideBehavior>.  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)   
+ [Attributes and Attribute Hierarchies](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Properties &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/properties-assl.md)  
   
   

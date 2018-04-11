@@ -58,7 +58,7 @@ manager: "jhubbard"
  [Creating a Data Source &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Build Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/build-analysis-services-projects-ssdt.md)   
- [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md)  
+ [Build Analysis Services Projects &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Create an Analysis Services Project &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

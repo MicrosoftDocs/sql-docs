@@ -45,8 +45,8 @@ manager: "mblythe"
 -   [Completing the Wizard &#40;Aggregation Design Wizard&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## See Also  
- [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Usage-Based Optimization Wizard F1 Help](usage-based-optimization-wizard-f1-help.md)   
  [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   

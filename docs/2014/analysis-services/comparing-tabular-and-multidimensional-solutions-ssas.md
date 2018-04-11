@@ -69,7 +69,7 @@ manager: "mblythe"
   
 |**Link**|**Summary of supported options**|  
 |--------------|--------------------------------------|  
-|[Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)|Multidimensional models use data from relational data sources.|  
+|[Data Sources Supported &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Multidimensional models use data from relational data sources.|  
 |[Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)|Tabular models support a broader range of data sources, including flat files, data feeds, and data sources that are accessed via ODBC data providers.|  
   
  Both modeling approaches can use data from multiple data sources in the same model.  
@@ -96,30 +96,30 @@ manager: "mblythe"
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
 |Actions|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|No|  
-|Aggregation objects|[Yes](designing-aggregations-analysis-services-multidimensional.md)|No|  
-|Calculated Measures|[Yes](create-calculated-members.md)|Yes|  
-|Custom Assemblies|[Yes](multidimensional-model-assemblies-management.md)|No|  
+|Aggregation objects|[Yes](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
+|Calculated Measures|[Yes](multidimensional-models/create-calculated-members.md)|Yes|  
+|Custom Assemblies|[Yes](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
 |Custom Rollups|Yes|No|  
-|Distinct Count|[Yes](use-aggregate-functions.md)|Yes (via DAX)*|  
+|Distinct Count|[Yes](multidimensional-models/use-aggregate-functions.md)|Yes (via DAX)*|  
 |Drillthrough|[Yes](multidimensional-models/actions-in-multidimensional-models.md)|Yes|  
-|Hierarchies|[Yes](create-user-defined-hierarchies.md)|Yes|  
-|KPIs|[Yes](key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
-|Linked measure groups|[Yes](linked-measure-groups.md)|No|  
-|Many-to-many relationships|[Yes](define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
-|Parent-child Hierarchies|[Yes](parent-child-hierarchy.md)|Yes (via DAX)|  
-|Partitions|[Yes](partitions-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
-|Perspectives|[Yes](perspectives-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
-|Semi-additive Measures|[Yes](define-semiadditive-behavior.md)|Yes (via DAX)|  
-|Translations|[Yes](translations-in-multidimensional-models.md)|No|  
-|User-defined Hierarchies|[Yes](create-user-defined-hierarchies.md)|Yes|  
-|Writeback|[Yes](set-partition-writeback.md)|No|  
+|Hierarchies|[Yes](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
+|KPIs|[Yes](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Yes|  
+|Linked measure groups|[Yes](multidimensional-models/linked-measure-groups.md)|No|  
+|Many-to-many relationships|[Yes](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
+|Parent-child Hierarchies|[Yes](multidimensional-models/parent-child-dimension.md)|Yes (via DAX)|  
+|Partitions|[Yes](multidimensional-models/partitions-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Perspectives|[Yes](multidimensional-models/perspectives-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Semi-additive Measures|[Yes](multidimensional-models/define-semiadditive-behavior.md)|Yes (via DAX)|  
+|Translations|[Yes](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
+|User-defined Hierarchies|[Yes](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
+|Writeback|[Yes](multidimensional-models/set-partition-writeback.md)|No|  
   
  *If your solution must support a very large number of distinct counts (such as many millions of customer IDs), consider Tabular first. It tends to be more performant in this scenario. See the section about distinct counts in the whitepaper, [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](http://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Model Size  
  The size of the model, in terms of total number of objects, does not vary by solution type. However, the design tools used to build each solution vary in how well they accommodate working with a large number of objects. A larger model is somewhat easier to build in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] because it provides more facilities for diagramming and listing objects by type in Object Explorer and Solution Explorer.  
   
- Very large models that consist of many hundreds of tables or dimensions are often built programmatically in Visual Studio, and not in the design tools. For more information about the maximum number of objects in a model, see [Maximum Capacity Specifications &#40;Analysis Services&#41;](dev-guide/maximum-capacity-specifications-analysis-services.md).  
+ Very large models that consist of many hundreds of tables or dimensions are often built programmatically in Visual Studio, and not in the design tools. For more information about the maximum number of objects in a model, see [Maximum Capacity Specifications &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
   
 ##  <a name="bkmk_ext"></a> Programmability and Developer Experience  
  For tabular and multidimensional models, there is one object model shared for both modalities. AMO and ADOMD.NET support both modes. Neither client library was revised for tabular constructs so you will need to understand how multidimensional and tabular constructs and naming conventions relate to each other. As a first step, review the AMO-to-tabular programming sample to learn AMO programming against a tabular model. For more information, download the sample from the [codeplex web site](http://go.microsoft.com/fwlink/?LinkID=221036).  

@@ -26,6 +26,6 @@ manager: "mblythe"
  As a stand-alone provider, the Analysis Services OLE DB Provider provides client applications with the ability to create local cube files and mining models from relational and multidimensional sources. Client applications can connect to a local cube and execute queries using Multidimensional Expressions (MDX) without interacting with the full-scale server running the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## See Also  
- [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
   

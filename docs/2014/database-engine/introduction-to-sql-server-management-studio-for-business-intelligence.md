@@ -55,7 +55,7 @@ manager: "jhubbard"
 -   [Enable and Disable Client-Side Printing for Reporting Services](../../2014/reporting-services/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
 ## See Also  
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../2014/analysis-services/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../2014/reporting-services/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

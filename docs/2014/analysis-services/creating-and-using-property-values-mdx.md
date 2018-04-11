@@ -28,14 +28,14 @@ manager: "mblythe"
  **Member properties**  
  Member properties cover the basic information about each member in each tuple. This basic information includes the member name, parent level, the number of children, and so on.  
   
- For information about member properties and how to use them, see [Using Member Properties &#40;MDX&#41;](using-member-properties-mdx.md).  
+ For information about member properties and how to use them, see [Using Member Properties &#40;MDX&#41;](multidimensional-models/mdx/mdx-member-properties.md).  
   
  **Cell properties**  
  Cell properties contain information about the content and format of cells in a multidimensional data source, such as a cube.  
   
- For more information about cell properties and how to use them, see [Using Cell Properties &#40;MDX&#41;](using-cell-properties-mdx.md).  
+ For more information about cell properties and how to use them, see [Using Cell Properties &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
 ## See Also  
- [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

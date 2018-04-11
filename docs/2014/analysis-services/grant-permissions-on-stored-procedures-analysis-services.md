@@ -34,6 +34,6 @@ manager: "mblythe"
 -   **Unrestricted** With the Unrestricted permission set, a stored procedure can access external resources by using any code. With this permission set, there are no security or reliability guarantees for stored procedures.  
   
 ## See Also  
- [Multidimensional Model Assemblies Management](multidimensional-model-assemblies-management.md)  
+ [Multidimensional Model Assemblies Management](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

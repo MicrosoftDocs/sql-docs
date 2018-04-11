@@ -33,7 +33,7 @@ manager: "mblythe"
 |Full update|`SELECT`<br /><br /> `COUNT(*) AS TotalCount`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`|  
 |Incremental update|`SELECT`<br /><br /> `MAX([CustomerKey]) AS LastCustomerKey`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`|  
   
- For more information about full and incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md).  
+ For more information about full and incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
  The query entered must be a valid query command for the underlying provider. The query is prepared with the underlying provider for validation, and to identify the columns returned. The dialog box can present two views:  
   

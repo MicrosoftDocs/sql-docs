@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The `CellOrdinal` element identifies the cell to be updated by the `UpdateCells` command.  
   
- For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/updating-cells-xmla.md).  
+ For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## See Also  
  [Value Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/value-element-xmla.md)   

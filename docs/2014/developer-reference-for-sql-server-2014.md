@@ -43,11 +43,11 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Exception Message Box Programming](../2014/database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](../2014/analysis-services/dev-guide/developing-with-adomd-net.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../2014/analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
   

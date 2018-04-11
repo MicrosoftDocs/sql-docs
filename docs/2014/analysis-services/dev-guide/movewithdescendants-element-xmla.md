@@ -63,7 +63,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  This element applies only to attribute members in parent-child hierarchies.  
   
- For more information about updating members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For more information about updating members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

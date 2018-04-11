@@ -85,7 +85,7 @@ manager: "mblythe"
   
 ## See Also  
  [EndSession Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/endsession-element-xmla.md)   
- [Managing Connections and Sessions &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/managing-connections-and-sessions-xmla.md)   
+ [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Headers &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/headers-xmla.md)  
   
   

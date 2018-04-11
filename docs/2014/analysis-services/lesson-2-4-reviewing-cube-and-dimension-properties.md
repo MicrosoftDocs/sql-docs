@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  In the **Dimensions** pane of the **Cube Structure** tab, expand **Customer**, and then click **Edit Customer** to open the dimension in Dimension Designer.  
   
-     Dimension Designer contains these tabs: **Dimension Structure**, **Attribute Relationships**, **Translations**, and **Browser**. Notice that the **Dimension Structure** tab includes three panes: **Attributes**, **Hierarchies**, and **Data Source View**. The attributes that the dimension contains appear in the **Attributes** pane. For more information, see [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md), [Create User-Defined Hierarchies](create-user-defined-hierarchies.md).  
+     Dimension Designer contains these tabs: **Dimension Structure**, **Attribute Relationships**, **Translations**, and **Browser**. Notice that the **Dimension Structure** tab includes three panes: **Attributes**, **Hierarchies**, and **Data Source View**. The attributes that the dimension contains appear in the **Attributes** pane. For more information, see [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [Create User-Defined Hierarchies](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  To switch to Cube Designer, right-click the **Analysis Services Tutorial** cube in the **Cubes** node in Solution Explorer, and then click **View Designer**.  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 7.  Click the **Partitions** tab.  
   
-     The Cube Wizard defines a single partition for the cube, by using the multidimensional online analytical processing (MOLAP) storage mode without aggregations. With MOLAP, all leaf-level data and all aggregations are stored within the cube for maximum performance. Aggregations are precalculated summaries of data that improve query response time by having answers ready before questions are asked. You can define additional partitions, storage settings, and writeback settings on the **Partitions** tab. For more information, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md), [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md).  
+     The Cube Wizard defines a single partition for the cube, by using the multidimensional online analytical processing (MOLAP) storage mode without aggregations. With MOLAP, all leaf-level data and all aggregations are stored within the cube for maximum performance. Aggregations are precalculated summaries of data that improve query response time by having answers ready before questions are asked. You can define additional partitions, storage settings, and writeback settings on the **Partitions** tab. For more information, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 8.  Click the **Browser** tab.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 9. In Solution Explorer, right-click **Analysis Services Tutorial** in the **Cubes** node, and then click **View Code**. You might need to wait.  
   
-     The XML code for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube is displayed on the **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** tab. This is the actual code that is used to create the cube in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] during deployment. For more information, see [View the XML for an Analysis Services Project &#40;SSDT&#41;](view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     The XML code for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube is displayed on the **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** tab. This is the actual code that is used to create the cube in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] during deployment. For more information, see [View the XML for an Analysis Services Project &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Close the XML code tab.  
   
@@ -58,6 +58,6 @@ manager: "jhubbard"
  [Deploying an Analysis Services Project](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## See Also  
- [Browse Dimension Data in Dimension Designer](browse-dimension-data-in-dimension-designer.md)  
+ [Browse Dimension Data in Dimension Designer](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

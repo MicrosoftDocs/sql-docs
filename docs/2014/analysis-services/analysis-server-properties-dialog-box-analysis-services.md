@@ -96,7 +96,7 @@ manager: "mblythe"
  [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
  [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [Roles and Permissions &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

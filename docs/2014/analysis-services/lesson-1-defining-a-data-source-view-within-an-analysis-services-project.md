@@ -38,9 +38,9 @@ manager: "jhubbard"
  [Lesson 2: Defining and Deploying a Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## See Also  
- [Create an Analysis Services Project &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)   
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Create an Analysis Services Project &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   

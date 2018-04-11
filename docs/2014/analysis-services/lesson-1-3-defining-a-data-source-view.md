@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Defining a Data Source View
-  After you define the data sources that you will use in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, the next step is generally to define a data source view for the project. A data source view is a single, unified view of the metadata from the specified tables and views that the data source defines in the project. Storing the metadata in the data source view enables you to work with the metadata during development without an open connection to any underlying data source. For more information, see [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
+  After you define the data sources that you will use in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, the next step is generally to define a data source view for the project. A data source view is a single, unified view of the metadata from the specified tables and views that the data source defines in the project. Storing the metadata in the data source view enables you to work with the metadata during development without an open connection to any underlying data source. For more information, see [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  In the following task, you define a data source view that includes five tables from the **AdventureWorksDW2012** data source.  
   
@@ -78,6 +78,6 @@ manager: "jhubbard"
  [Modifying Default Table Names](lesson-1-4-modifying-default-table-names.md)  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

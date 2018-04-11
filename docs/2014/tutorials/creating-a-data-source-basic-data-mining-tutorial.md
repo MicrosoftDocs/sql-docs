@@ -59,8 +59,8 @@ manager: "jhubbard"
  [Creating an Analysis Services Project &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/create-a-data-source-ssas-multidimensional.md)   
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Defining a Data Source](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md)  
+ [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

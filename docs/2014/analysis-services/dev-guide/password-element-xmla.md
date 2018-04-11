@@ -62,7 +62,7 @@ manager: "mblythe"
   
  For `Restore` commands, if the `Password` element is not included or contains an empty string while attempting to restore an encrypted backup file, an error occurs.  
   
- If `Location` elements are included in either a `Backup` or a `Restore` command, the same `Password` element is used for both backup and remote backup files. For more information about remote backup files, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ If `Location` elements are included in either a `Backup` or a `Restore` command, the same `Password` element is used for both backup and remote backup files. For more information about remote backup files, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Location Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/location-element-xmla.md)   

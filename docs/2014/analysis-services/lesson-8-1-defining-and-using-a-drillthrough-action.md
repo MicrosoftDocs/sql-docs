@@ -146,8 +146,8 @@ manager: "jhubbard"
 ## See Also  
  [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)   
- [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
- [Define a Fact Relationship and Fact Relationship Properties](define-a-fact-relationship-and-fact-relationship-properties.md)  
+ [Define a Fact Relationship and Fact Relationship Properties](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

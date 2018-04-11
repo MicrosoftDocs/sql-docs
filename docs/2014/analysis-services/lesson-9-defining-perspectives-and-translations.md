@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  This lesson contains the following tasks:  
   
- [Defining and Browsing Perspectives](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
+ [Defining and Browsing Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  In this task, you define and browse perspectives to simplify the view of the cube for specific users or uses.  
   
  [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
@@ -36,9 +36,9 @@ manager: "jhubbard"
  [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Perspectives](dev-guide/perspectives.md)   
- [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)   
- [Dimension Translations](dev-guide/dimension-translations.md)   
- [Cube Translations](dev-guide/cube-translations.md)   
+ [Perspectives in Multidimensional Models](multidimensional-models/perspectives-in-multidimensional-models.md)   
+ [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+ [Cube Translations](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Translations &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

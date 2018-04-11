@@ -45,6 +45,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Assemblies Management](multidimensional-model-assemblies-management.md)  
+ [Multidimensional Model Assemblies Management](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

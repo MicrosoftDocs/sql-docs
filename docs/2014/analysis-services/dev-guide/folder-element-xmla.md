@@ -63,7 +63,7 @@ manager: "mblythe"
 ## Remarks  
  The `Folder` element, if specified, changes the storage locations of objects contained either by the backup file (for `Restore` commands) or the database on the source instance (for `Synchronize` commands) that match the value of the `Original` element to the value of the `New` element.  
   
- For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [StorageLocation Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/storagelocation-element-assl.md)   

@@ -39,16 +39,16 @@ manager: "mblythe"
 ##  <a name="bkmk_SourceData"></a> Data Mining Source Data  
  The data that you use in data mining is not stored in the data mining solution; only the bindings are stored. The data might reside in a database created in a previous version of SQL Server, a CRM system, or even a flat file. When you train the structure or model by processing, a statistical summary of the data is created and stored in a cache that can be persisted for use in later operations, or deleted after processing. For more information, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md).  
   
- You combine disparate data within the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source view (DSV) object, which provides an abstraction layer on top of your data source. You can specify joins between tables, or add tables that have a many-to-one relationship to create nested table columns. The definition of these objects, the data source and the data source view, are stored within the solution with the file name extensions, *.ds and \*.dsv. For more information about creating and using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data sources and data source views, see [Data Sources Supported &#40;SSAS Multidimensional&#41;](../data-sources-supported-ssas-multidimensional.md).  
+ You combine disparate data within the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source view (DSV) object, which provides an abstraction layer on top of your data source. You can specify joins between tables, or add tables that have a many-to-one relationship to create nested table columns. The definition of these objects, the data source and the data source view, are stored within the solution with the file name extensions, *.ds and \*.dsv. For more information about creating and using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data sources and data source views, see [Data Sources Supported &#40;SSAS Multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
- You can also define and alter data sources and data source views by using AMO or XMLA. For more information about working with these objects programmatically, see [Logical Architecture Overview &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/logical-architecture-overview-analysis-services-multidimensional-data.md).  
+ You can also define and alter data sources and data source views by using AMO or XMLA. For more information about working with these objects programmatically, see [Logical Architecture Overview &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
 
   
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  A data mining structure is a logical data container that defines the data domain from which mining models are built. A single mining structure can support multiple mining models.  
   
- When you need to use the data in the data mining solution, Analysis Services reads the data from the source and generates a cache of aggregates and other information. By default this cache is persisted so that training data can be reused to support additional models. If you need to delete the cache, change the `CacheMode` property on the mining structure object to the value, `ClearAfterProcessing`. For more information, see [AMO Data Mining Classes](../dev-guide/amo-data-mining-classes.md).  
+ When you need to use the data in the data mining solution, Analysis Services reads the data from the source and generates a cache of aggregates and other information. By default this cache is persisted so that training data can be reused to support additional models. If you need to delete the cache, change the `CacheMode` property on the mining structure object to the value, `ClearAfterProcessing`. For more information, see [AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md).  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] also provides the ability to separate your data into training and testing data sets, so that you can test your mining models on a representative, randomly selected set of data. The data is not actually stored separately; rather, case data in the structure cache is marked with a property that indicates whether that particular case is used for training or for testing. If the cache is deleted, that information cannot be retrieved.  
   
@@ -77,12 +77,12 @@ manager: "mblythe"
  **Custom assemblies**  
  .NET assemblies can be defined by using any CLR-or COM-complaint language, and then registered with an instance of SQL Server. Assembly files are loaded from the location defined by the application, and a copy is saved in the server along with the data. The copy of the assembly file is used to load the assembly every time the service is started.  
   
- For more information, see [Multidimensional Model Assemblies Management](../multidimensional-model-assemblies-management.md).  
+ For more information, see [Multidimensional Model Assemblies Management](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Custom stored procedures**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining supports the use of stored procedures to work with data mining objects. You can create your own stored procedures to extend functionality and more easily work with data returned by prediction queries and content queries.  
   
- [Defining Stored Procedures](../dev-guide/defining-stored-procedures.md)  
+ [Defining Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  The following stored procedures are supported for use in performing cross-validation.  
   
@@ -100,7 +100,7 @@ manager: "mblythe"
 
   
 ## See Also  
- [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)   
+ [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
   

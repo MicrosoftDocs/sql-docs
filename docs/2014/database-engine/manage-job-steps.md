@@ -164,7 +164,7 @@ Set oServer = nothing
   
 -   Type the statement to execute. The statement must be a multidimensional expressions (MDX) query.  
   
- For more information on MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md).  
+ For more information on MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
   
 ## Integration Services Packages  
  When you create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package job step, you must do the following:  

@@ -38,7 +38,7 @@ manager: "mblythe"
   
 5.  On the **Select Data Source View** page, under **Available data source views**, click the data source view that you want to use, and then click **Next**.  
   
-     For more information about creating a data source view, see [Data Source Views in Multidimensional Models](../data-source-views-in-multidimensional-models.md).  
+     For more information about creating a data source view, see [Data Source Views in Multidimensional Models](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 6.  On the **Specify Table Types** page, under **Input tables**, select a case table and a nested table.  
   

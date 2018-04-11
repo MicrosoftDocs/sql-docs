@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Hierarchies (Dimension Structure Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
-  Use the **Hierarchies** pane to manage the hierarchies and levels for the currently selected dimension. For more information, see [Create User-Defined Hierarchies](create-user-defined-hierarchies.md).  
+  Use the **Hierarchies** pane to manage the hierarchies and levels for the currently selected dimension. For more information, see [Create User-Defined Hierarchies](multidimensional-models/user-defined-hierarchies-create.md).  
   
  You can use the Hierarchies pane to do the following procedures:  
   

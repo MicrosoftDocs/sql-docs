@@ -126,7 +126,7 @@ manager: "mblythe"
 |Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](mining-structure-columns.md)<br /><br /> [Mining Model Columns](mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](content-types-data-mining.md)|  
 |Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
-|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../dev-guide/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
+|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)|  
 |Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](data-mining-model-viewers.md)|  
 |View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](data-mining-queries.md)|  
   
@@ -143,6 +143,6 @@ manager: "mblythe"
 |Work with OLAP models|[Create a Data Mining Dimension](create-a-data-mining-dimension.md)|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/database-objects-analysis-services-multidimensional-data.md)  
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

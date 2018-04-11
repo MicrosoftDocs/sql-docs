@@ -64,7 +64,7 @@ manager: "mblythe"
   
  For `Update` commands, the `Where` element identifies the scope of attribute members to be updated. Multiple attribute members can be updated by using a combination of attributes included in the `Attributes` collection of the parent `Update` command and the `Attributes` collection of the `Where` element.  
   
- For more information about deleting and updating attribute members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For more information about deleting and updating attribute members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

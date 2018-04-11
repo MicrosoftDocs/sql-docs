@@ -102,6 +102,6 @@ GO
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Backup and Restore of Analysis Services Databases](../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

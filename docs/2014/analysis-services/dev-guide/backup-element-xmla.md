@@ -79,7 +79,7 @@ manager: "mblythe"
   
  Multiple `Backup` commands can be run in parallel, if the commands are included in the [Parallel](../../../2014/analysis-services/dev-guide/parallel-element-xmla.md) collection of a [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) command. The `Parallel` collection enables a database to be backed up into multiple backup files at the same time.  
   
- For more information about backing up and restoring databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 > [!IMPORTANT]  
 >  For each backup file, the user who runs the backup command must have permission to write to the backup location specified for each file. Also, the user must have one of the following roles: a member of a server role for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, or a member of a database role with Full Control (Administrator) permissions on the database to be backed up.  

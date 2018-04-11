@@ -54,6 +54,6 @@ manager: "jhubbard"
 >  A completed project for Lesson 10 is available by downloading and installing the samples. For more information, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md).  
   
 ## See Also  
- [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [Roles and Permissions &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

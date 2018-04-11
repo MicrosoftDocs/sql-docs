@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The value of the `MembersWithData` element is used only by parent attributes (in other words, the value of the [Usage](../../../2014/analysis-services/dev-guide/usage-element-dimensionattribute-assl.md) element of the `DimensionAttribute` parent element is set to *Parent*) to determine whether to display data members for non-leaf members in the parent attribute. For more information about data members, see [Attributes in Parent-Child Hierarchies](../../../2014/analysis-services/attributes-in-parent-child-hierarchies.md).  
+ The value of the `MembersWithData` element is used only by parent attributes (in other words, the value of the [Usage](../../../2014/analysis-services/dev-guide/usage-element-dimensionattribute-assl.md) element of the `DimensionAttribute` parent element is set to *Parent*) to determine whether to display data members for non-leaf members in the parent attribute. For more information about data members, see [Attributes in Parent-Child Hierarchies](../multidimensional-models/parent-child-dimension-attributes.md).  
   
  The value of this element is limited to one of the strings listed in the following table.  
   

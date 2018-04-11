@@ -38,7 +38,7 @@ manager: "mblythe"
  The property pages in SQL Server Management Studio contain a subset of the available properties, showing only those properties that are more likely to be modified. The full set of properties can be found in the msmdsrv.ini file.  
   
 > [!NOTE]  
->  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md).  
+>  This topic does not document the deployment configuration properties in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information about deployment configuration, see [Specifying Configuration Settings for Solution Deployment](multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### View or set configuration properties in Management Studio  
   
@@ -92,6 +92,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
- [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md)  
+ [Specifying Configuration Settings for Solution Deployment](multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

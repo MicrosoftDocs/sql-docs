@@ -52,9 +52,9 @@ manager: "mblythe"
 ## See Also  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attach Element](../../../2014/analysis-services/dev-guide/attach-element.md)   
- [Attach and Detach Analysis Services Databases](../../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)   
- [Move an Analysis Services Database](../../../2014/analysis-services/move-an-analysis-services-database.md)   
- [Database ReadWriteModes](../../../2014/analysis-services/database-readwritemodes.md)   
- [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../../2014/analysis-services/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Attach and Detach Analysis Services Databases](../multidimensional-models/attach-and-detach-analysis-services-databases.md)   
+ [Move an Analysis Services Database](../multidimensional-models/move-an-analysis-services-database.md)   
+ [Database ReadWriteModes](../multidimensional-models/database-readwritemodes.md)   
+ [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   

@@ -51,6 +51,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Source View Wizard F1 Help &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Lesson 5: Defining Relationships Between Dimensions and Measure Groups
   In the previous lessons in this tutorial, you learned that database dimensions added to a cube can be used as the basis for one or more cube dimensions. In this lesson, you learn to define different types of relationships between cube dimensions and measure groups, and to specify the properties of these relationships.  
   
- For more information, see [Dimension Relationships](dev-guide/dimension-relationships.md).  
+ For more information, see [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
 >  Completed projects for all of the lessons in this tutorial are available online. You can jump ahead to any lesson by using the completed project from the previous lesson as a starting point. [Click here](http://go.microsoft.com/fwlink/?LinkID=221866) to download the sample projects that go with this tutorial.  
@@ -38,11 +38,11 @@ manager: "jhubbard"
  In this task, you learn to modify the granularity of a dimension for a specific measure group.  
   
 ## Next Lesson  
- [Lesson 6: Defining Calculations](lesson-6-defining-calculations.md)  
+ [Lesson 6: Defining Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
 ## See Also  
  [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Dimension Relationships](dev-guide/dimension-relationships.md)  
+ [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

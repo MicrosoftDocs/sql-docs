@@ -47,7 +47,7 @@ manager: "jhubbard"
  [Lesson 2: Defining and Deploying a Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
- [Change Properties in a Data Source View &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Change Properties in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
   In the tasks in this topic, you create a user-defined hierarchy and change the member names that are displayed for the Date, Month, Calendar Quarter, and Calendar Semester attributes. You also define composite keys for attributes, control the sort order of dimension members, and define attribute relationships.  
   
 ## Adding a Named Calculation  
- You can add a named calculation, which is a SQL expression that is represented as a calculated column, to a table in a data source view. The expression appears and behaves as a column in the table. Named calculations enable you to extend the relational schema of existing tables in a data source view without modifying the table in the underlying data source. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ You can add a named calculation, which is a SQL expression that is represented as a calculated column, to a table in a data source view. The expression appears and behaves as a column in the table. Named calculations enable you to extend the relational schema of existing tables in a data source view without modifying the table in the underlying data source. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### To add a named calculation  
   
@@ -298,6 +298,6 @@ manager: "jhubbard"
  [Browsing the Deployed Cube](lesson-3-5-browsing-the-deployed-cube.md)  
   
 ## See Also  
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -72,8 +72,8 @@ manager: "mblythe"
  <sup>1</sup> All the schema rowsets listed here are supported by the MSOLAP data source provider for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] XMLA Provider.  
   
 ## See Also  
- [Developing with XMLA in Analysis Services](../../../2014/analysis-services/dev-guide/developing-with-xmla-in-analysis-services.md)   
+ [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
- [Retrieving Metadata from an Analytical Data Source](../../../2014/analysis-services/dev-guide/retrieving-metadata-from-an-analytical-data-source.md)  
+ [Retrieving Metadata from an Analytical Data Source](../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

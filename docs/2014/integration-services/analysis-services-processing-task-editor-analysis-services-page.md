@@ -48,7 +48,7 @@ manager: "jhubbard"
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Multidimensional Model Object Processing](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  

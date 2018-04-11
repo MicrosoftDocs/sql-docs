@@ -55,7 +55,7 @@ manager: "jhubbard"
 5.  On the **File** menu, click **Save All**.  
   
 ## Adding a Named Calculation  
- You can add a named calculation, which is a SQL expression that is represented as a calculated column, to a table in a data source view. The expression appears and behaves as a column in the table. Named calculations let you extend the relational schema of existing tables in a data source view without modifying the table in the underlying data source. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ You can add a named calculation, which is a SQL expression that is represented as a calculated column, to a table in a data source view. The expression appears and behaves as a column in the table. Named calculations let you extend the relational schema of existing tables in a data source view without modifying the table in the underlying data source. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### To add a named calculation  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
 9. On the **File** menu, click **Save All**.  
   
 ## Defining Composite KeyColumns  
- The **KeyColumns** property contains the column or columns that represent the key for the attribute. In this lesson, you create a composite key for the **City** and `State-Province` attributes. Composite keys can be helpful when you need to uniquely identify an attribute. For example, when you define attribute relationships later in this tutorial, a **City** attribute must uniquely identify a `State-Province` attribute. However, there could be several cities with the same name in different states. For this reason, you will create a composite key that is composed of the **StateProvinceName** and **City** columns for the **City** attribute. For more information, see [Modify the KeyColumn Property of an Attribute](modify-the-keycolumn-property-of-an-attribute.md).  
+ The **KeyColumns** property contains the column or columns that represent the key for the attribute. In this lesson, you create a composite key for the **City** and `State-Province` attributes. Composite keys can be helpful when you need to uniquely identify an attribute. For example, when you define attribute relationships later in this tutorial, a **City** attribute must uniquely identify a `State-Province` attribute. However, there could be several cities with the same name in different states. For this reason, you will create a composite key that is composed of the **StateProvinceName** and **City** columns for the **City** attribute. For more information, see [Modify the KeyColumn Property of an Attribute](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### To define composite KeyColumns for the City attribute  
   
@@ -210,7 +210,7 @@ manager: "jhubbard"
 8.  On the **File** menu, click **Save All**.  
   
 ## Defining Attribute Relationships  
- If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](define-attribute-relationships.md) and [Attribute Relationships](dev-guide/attribute-relationships.md).  
+ If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md) and [Attribute Relationships](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 #### To define attribute relationships  
   
@@ -263,9 +263,9 @@ manager: "jhubbard"
  [Modifying the Product Dimension](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## See Also  
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
- [Remove an Attribute from a Dimension](remove-an-attribute-from-a-dimension.md)   
- [Rename an Attribute](rename-an-attribute.md)   
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Remove an Attribute from a Dimension](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
+ [Rename an Attribute](multidimensional-models/attribute-properties-rename-an-attribute.md)   
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

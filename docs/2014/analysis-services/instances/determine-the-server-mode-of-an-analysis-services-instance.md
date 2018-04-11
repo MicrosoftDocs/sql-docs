@@ -52,7 +52,7 @@ manager: "mblythe"
  [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Connect to Analysis Services](connect-to-analysis-services.md)   
  [Tabular Model Solutions &#40;SSAS Tabular&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [Multidimensional Model Solutions &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
+ [Multidimensional Model Solutions &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

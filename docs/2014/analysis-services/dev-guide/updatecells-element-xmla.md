@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The `UpdateCells` command updates cells in a cube that supports cell writeback.  
   
- For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/updating-cells-xmla.md).  
+ For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## See Also  
  [Drop Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/drop-element-xmla.md)   

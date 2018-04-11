@@ -42,8 +42,8 @@ manager: "mblythe"
 |**KPI Browser**|Use the KPI Browser pane in browser view to view the results of the KPIs contained by the cube. For more information about this pane, see [KPI Browser &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](key-performance-indicators-kpis-in-multidimensional-models.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
+ [Key Performance Indicators &#40;KPIs&#41; in Multidimensional Models](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

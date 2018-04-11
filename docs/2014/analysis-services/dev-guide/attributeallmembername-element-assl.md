@@ -59,7 +59,7 @@ manager: "mblythe"
  The element that corresponds to the parent of `AttributeAllMemberName` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## See Also  
- [Configure the &#40;All&#41; Level for Attribute Hierarchies](../../../2014/analysis-services/configure-the-all-level-for-attribute-hierarchies.md)   
+ [Configure the &#40;All&#41; Level for Attribute Hierarchies](../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)   
  [Properties &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/properties-assl.md)  
   
   

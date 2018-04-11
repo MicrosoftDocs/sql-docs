@@ -67,7 +67,7 @@ manager: "mblythe"
 ## Remarks  
  When defining out-of-line bindings, the `Name` element is optional. Not having to specify a `Name` element allows data sources to be defined within the binding for cubes, partitions, and so on. For data sources contained by a `Database` element, `Name` is a required element.  
   
- For more information about data sources, see [Data Sources in Multidimensional Models](../../../2014/analysis-services/data-sources-in-multidimensional-models.md).  
+ For more information about data sources, see [Data Sources in Multidimensional Models](../multidimensional-models/data-sources-in-multidimensional-models.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DataSource>.  
   

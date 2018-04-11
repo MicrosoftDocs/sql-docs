@@ -31,11 +31,11 @@ manager: "mblythe"
 |**Selection**|Use the **Selection** page to select the partition in the measure group for which you want to display or modify properties. For more information about this page, see [Selection &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**General**|Use the **General** page to display and modify the general properties of the partition selected in the **Selection** page. For more information about this page, see [General &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
 |**Proactive Caching**|Use the **Proactive Caching** page to display and modify the storage and proactive caching settings of the partition selected in the **Selection** page. For more information about this page, see [Proactive Caching &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
-|**Error Configuration**|Use the **Error Configuration** page to display and modify the error configuration settings for processing the partition selected in the **Selection** page. For more information about this page, see [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md).|  
+|**Error Configuration**|Use the **Error Configuration** page to display and modify the error configuration settings for processing the partition selected in the **Selection** page. For more information about this page, see [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)   
- [Remote Partitions](dev-guide/remote-partitions.md)   
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitions](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

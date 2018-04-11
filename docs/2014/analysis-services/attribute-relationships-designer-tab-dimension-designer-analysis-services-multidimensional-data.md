@@ -42,7 +42,7 @@ manager: "mblythe"
  **Edit Attribute Relationship**  
  Opens the **Edit Attribute Relationship** dialog box in which you can modify the attribute relationship.  
   
- For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](define-attribute-relationships.md).  
+ For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md).  
   
  **Relationship Type**  
  Sets the relationship type to either **Flexible** or **Rigid**. In a flexible relationship, relationships between members change over time. In a rigid relationship, relationships between members do not change over time.  

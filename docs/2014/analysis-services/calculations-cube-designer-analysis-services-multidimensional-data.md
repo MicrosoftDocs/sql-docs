@@ -51,10 +51,10 @@ manager: "mblythe"
  Use the **Named Set Form Editor** pane in form view to edit named sets in the cube script. For more information about this pane, see [Named Set Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Calculations](dev-guide/calculations.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Create Named Sets](create-named-sets.md)  
+ [Create Named Sets](multidimensional-models/create-named-sets.md)  
   
   

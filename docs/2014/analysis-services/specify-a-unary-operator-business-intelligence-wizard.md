@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Specify a Unary Operator (Business Intelligence Wizard)
-  Use the **Specify a Unary Operator** page to identify the parent-child relationship for the column that contains either a unary operator (for regular aggregations) or a value representing a weight factor (for weighted aggregations.) For more information about regular and weighted aggregations, see [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md).  
+  Use the **Specify a Unary Operator** page to identify the parent-child relationship for the column that contains either a unary operator (for regular aggregations) or a value representing a weight factor (for weighted aggregations.) For more information about regular and weighted aggregations, see [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 > [!NOTE]  
 >  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

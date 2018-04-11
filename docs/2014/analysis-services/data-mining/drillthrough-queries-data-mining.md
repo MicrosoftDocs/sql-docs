@@ -94,7 +94,7 @@ manager: "mblythe"
 |Procedure describing use of drillthrough in the Data Mining Designer|[Drill Through to Case Data from a Mining Model](drill-through-to-case-data-from-a-mining-model.md)|  
 |To alter an existing mining model to allow drillthrough|[Enable Drillthrough for a Mining Model](enable-drillthrough-for-a-mining-model.md)|  
 |Enabling drillthrough on a mining structure by using the DMX WITH DRILLTHROUGH clause|[CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md)|  
-|For information about assigning permissions that apply to drillthrough on mining structures and mining models|[Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|For information about assigning permissions that apply to drillthrough on mining structures and mining models|[Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## See Also  
  [Data Mining Model Viewers](data-mining-model-viewers.md)   

@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- For more information about processing options available to objects on an Analysis Services instance, see [Multidimensional Model Object Processing](../../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ For more information about processing options available to objects on an Analysis Services instance, see [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  The value of the `WritebackTableCreation` element is limited to one of the strings listed in the following table.  
   

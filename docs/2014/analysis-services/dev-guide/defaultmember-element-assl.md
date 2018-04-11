@@ -60,7 +60,7 @@ manager: "mblythe"
   
  For `ManyToManyMeasureGroupDimension` elements, the `DefaultMember` element contains an MDX expression that specifies a member in the dimension identified in the `CubeDimensionID` element of the `ManyToManyMeasureGroupDimension`. The MDX expression is similar to the [StrToMember](~/mdx/strtomember-mdx.md) MDX function with the CONSTRAINED keyword, in that it cannot include MDX or user-defined functions.  
   
- For more information about default members, see [Define a Default Member](../../../2014/analysis-services/define-a-default-member.md).  
+ For more information about default members, see [Define a Default Member](../multidimensional-models/attribute-properties-define-a-default-member.md).  
   
  The elements that correspond to the parents of `DefaultMember` in the Analysis Management Objects (AMO) object model are <xref:Microsoft.AnalysisServices.AttributePermission>, <xref:Microsoft.AnalysisServices.DimensionAttribute>, and <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  
   

@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> Connect using SQL Server Management Studio (SSMS)  
  Connect to Analysis Services in SSMS to manage server instances and databases interactively. You can also run XMLA or MDX queries to perform administrative tasks or retrieve data. In contrast with other tools and applications that only load databases when a query is sent, SSMS loads all databases when you connect to the server, assuming you have permission to view the database. This means that if you have numerous tabular databases on the server, all are loaded into system memory when you connect using SSMS.  
@@ -96,7 +96,7 @@ manager: "mblythe"
 -   [Analysis Services Connection Manager](../../integration-services/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
->  When using SQL Server Data Tools to work on an existing Analysis Services project, remember that you can connect offline using a local or version controlled project, or connect in online mode to update Analysis Services objects while the database is running. For more information, see [Connect in Online Mode to an Analysis Services Database](../connect-in-online-mode-to-an-analysis-services-database.md). More commonly, connections from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] are in project mode, where changes are deployed to the database only when you explicitly deploy the project.  
+>  When using SQL Server Data Tools to work on an existing Analysis Services project, remember that you can connect offline using a local or version controlled project, or connect in online mode to update Analysis Services objects while the database is running. For more information, see [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). More commonly, connections from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] are in project mode, where changes are deployed to the database only when you explicitly deploy the project.  
   
 ##  <a name="bkmk_tshoot"></a> Test connections  
  You can use SQL Server Profiler to monitor connections to Analysis Services. The Audit Login and Audit Logout events provide evidence of a connection. The identity column indicates the security context under which the connection is made.  
@@ -129,6 +129,6 @@ manager: "mblythe"
  [Connect to Analysis Services](connect-to-analysis-services.md)   
  [Authentication methodologies supported by Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
  [Impersonation &#40;SSAS Tabular&#41;](../impersonation-ssas-tabular.md)   
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../create-a-data-source-ssas-multidimensional.md)  
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

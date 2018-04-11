@@ -102,7 +102,7 @@ manager: "mblythe"
 8.  To verify that remote connections are enabled, open SQL Server Management Studio or Excel on a different computer and connect to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by specifying the network name of the server in **Server name**.  
   
     > [!NOTE]  
-    >  Other users will not have access to this server until you grant permissions. For more information, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md).  
+    >  Other users will not have access to this server until you grant permissions. For more information, see [Authorizing access to objects and operations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
 #### Netsh AdvFirewall Syntax  
   

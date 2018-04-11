@@ -64,7 +64,7 @@ manager: "mblythe"
   
  For `Restore` commands, the `File` element determines the name of the backup file to be restored by the `Restore` command.  
   
- For `Location` elements, the `File` element describes a remote backup file for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains remote partitions. For more information about backing up and restoring remote partitions, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For `Location` elements, the `File` element describes a remote backup file for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that contains remote partitions. For more information about backing up and restoring remote partitions, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [AllowOverwrite Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/allowoverwrite-element-xmla.md)   

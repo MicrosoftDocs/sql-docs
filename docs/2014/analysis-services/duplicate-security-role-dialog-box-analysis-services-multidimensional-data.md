@@ -28,6 +28,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/security-roles-analysis-services-multidimensional-data.md)  
+ [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

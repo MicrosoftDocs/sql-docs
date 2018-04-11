@@ -84,6 +84,6 @@ manager: "mblythe"
 ## See Also  
  [Restore Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [General &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
+ [Backup and Restore of Analysis Services Databases](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

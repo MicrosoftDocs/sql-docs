@@ -68,7 +68,7 @@ manager: "jhubbard"
  [Adding Attributes to Dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## See Also  
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -42,7 +42,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![AMO Other Classes](../../../2014/analysis-services/dev-guide/media/amo-otherclasses.gif "AMO Other Classes")  
+ ![AMO Other Classes](../../../2014/analysis-services/dev-guide/../media/amo-otherclasses.gif "AMO Other Classes")  
   
 ##  <a name="Assembly"></a> Assembly Objects  
  An <xref:Microsoft.AnalysisServices.Assembly> object is created by adding it to the assemblies collection of the server, and then updating the <xref:Microsoft.AnalysisServices.Assembly> object to the server, by using the Update method.  

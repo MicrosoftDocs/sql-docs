@@ -34,9 +34,9 @@ manager: "mblythe"
   
 |Icon|Attribute Usage|  
 |----------|---------------------|  
-|![Attribute icon](media/as-icon-attribute.gif "Attribute icon")|Regular or AccountType|  
-|![Key attribute icon](media/as-icon-key-attribute.gif "Key attribute icon")|Key|  
-|![Parent attribute icon](media/as-icon-parent-attribute.gif "Parent attribute icon")|Parent|  
+|![Attribute icon](../media/as-icon-attribute.gif "Attribute icon")|Regular or AccountType|  
+|![Key attribute icon](../media/as-icon-key-attribute.gif "Key attribute icon")|Key|  
+|![Parent attribute icon](../media/as-icon-parent-attribute.gif "Parent attribute icon")|Parent|  
   
 ## See Also  
  [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)  

@@ -46,7 +46,7 @@ manager: "mblythe"
   
  During refresh, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] queries all underlying relational data sources to determine whether there have been changes in tables/views which are included in the DSV. If connections can be established to all underlying data sources and there have been any changes, you will see them in the **Refresh Data Source View** dialog box.  
   
- ![Refresh Data Source View dialog box](media/ssas-olapdsv-refresh.gif "Refresh Data Source View dialog box")  
+ ![Refresh Data Source View dialog box](../media/ssas-olapdsv-refresh.gif "Refresh Data Source View dialog box")  
   
  The dialog box lists tables, columns, constraints, and relationships that will be deleted or added in the DSV. The report also lists any named query or calculation that cannot be successfully prepared. The affected objects are listed in a tree view with columns and relationships nested under tables and the type of change (deletion or addition) indicated for each object. The standard data source view object icons indicate the type of object affected.  
   

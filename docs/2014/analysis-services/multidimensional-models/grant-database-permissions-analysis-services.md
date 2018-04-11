@@ -27,7 +27,7 @@ manager: "mblythe"
   
  There are no logins in Analysis Services. You simply create roles and assign Windows accounts in the **Membership** pane. All users, including administrators, connect to Analysis Services using a Windows account.  
   
- ![Create role dialog showing database permissions](media/ssas-permsdbrole.png "Create role dialog showing database permissions")  
+ ![Create role dialog showing database permissions](../media/ssas-permsdbrole.png "Create role dialog showing database permissions")  
   
  There are three types of permissions specified at the database level.  
   

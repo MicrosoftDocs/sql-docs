@@ -38,7 +38,7 @@ manager: "mblythe"
 ## Using Data Members  
  Data members are useful when aggregating measures along organizational dimensions that have parent-child hierarchies. For example, the following diagram shows a dimension that has three levels, representing the gross sales volume of products. The first level shows the gross sales volume for all salespersons. The second level contains the gross sales volume for all sales staff grouped by sales manager, and the third level contains the gross sales volume for all sales staff grouped by salesperson.  
   
- ![Gross sales volume dimension with three levels](media/agdatamember1.gif "Gross sales volume dimension with three levels")  
+ ![Gross sales volume dimension with three levels](../media/agdatamember1.gif "Gross sales volume dimension with three levels")  
   
  Ordinarily, the value of the Sales Manager 1 member would be derived by aggregating the values of the Salesperson 1 and Salesperson 2 members. However, because Sales Manager 1 also can sell products, that member may also contain data derived from the fact table, because there may be gross sales associated with Sales Manager 1.  
   

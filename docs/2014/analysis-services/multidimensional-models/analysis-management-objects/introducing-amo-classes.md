@@ -24,7 +24,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![Classes reviewed in AMO conceptual topics](../../../2014/analysis-services/dev-guide/media/amo-reviewedclasses.gif "Classes reviewed in AMO conceptual topics")  
+ ![Classes reviewed in AMO conceptual topics](../../../2014/analysis-services/dev-guide/../media/amo-reviewedclasses.gif "Classes reviewed in AMO conceptual topics")  
   
  The AMO library can be thought of as logically-related groups of objects that are used to accomplish a specific task. AMO classes can be categorized in the following way. This section includes the following topics:  
   

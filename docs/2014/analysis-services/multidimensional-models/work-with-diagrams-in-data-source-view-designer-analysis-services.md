@@ -53,7 +53,7 @@ manager: "mblythe"
 ##  <a name="bkmk_edit"></a> Edit or Delete a Diagram  
  When working with a diagram, pay close attention to the commands used for adding and removing objects. For example, deleting an object from a diagram will delete it from the DSV. If you only want to delete it from the diagram, use **Hide Table** instead.  
   
- ![Screenshot of diagram workspace, right-click menu](media/ssas-olapdsv-diagram.gif "Screenshot of diagram workspace, right-click menu")  
+ ![Screenshot of diagram workspace, right-click menu](../media/ssas-olapdsv-diagram.gif "Screenshot of diagram workspace, right-click menu")  
   
  Although you can hide objects individually, bringing them back using the Show Related Tables command returns all related objects to the diagram. To control which objects are returned to the workspace, drag them from the Tables pane instead.  
   

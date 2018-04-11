@@ -24,7 +24,7 @@ manager: "mblythe"
   
  **Power View for Multidimensional Models architecture**  
   
- ![Power View for Multidimensional Models Architecure](media/daxmd-architecture.gif "Power View for Multidimensional Models Architecure")  
+ ![Power View for Multidimensional Models Architecure](../media/daxmd-architecture.gif "Power View for Multidimensional Models Architecure")  
   
 ## Prerequisites  
  **Server Requirements**  
@@ -74,7 +74,7 @@ manager: "mblythe"
   
  **Measure groups in the Power View Field List**  
   
- ![Field List in Power View](media/daxmd-powerviewfieldlist.gif "Field List in Power View")  
+ ![Field List in Power View](../media/daxmd-powerviewfieldlist.gif "Field List in Power View")  
   
  Measures within a measure group appear as measures. If there are calculated measures that do not have an associated measure group, they will be grouped under a special table called Measures.  
   
@@ -82,14 +82,14 @@ manager: "mblythe"
   
  **Measures and KPIs in a measure group**  
   
- ![Measure group in Power View Field List](media/daxmd-fieldlist-group.gif "Measure group in Power View Field List")  
+ ![Measure group in Power View Field List](../media/daxmd-fieldlist-group.gif "Measure group in Power View Field List")  
   
 ### Measures as variants  
  Measures in multidimensional models are variants. This means the measures are not strongly typed and can have different data types. For example, in the image below, the Amount measure in the Financial Reporting table by default is Currency data type, but also has a string value “NA” for the sub-total of “Statistical Accounts”, which is String data type. Power View recognizes certain measures as variants and shows the correct values and formatting in the different visualizations.  
   
  **Measure as variant**  
   
- ![Non-aggregatable hierarchy in Power View](media/daxmd-nonaggrattrib.gif "Non-aggregatable hierarchy in Power View")  
+ ![Non-aggregatable hierarchy in Power View](../media/daxmd-nonaggrattrib.gif "Non-aggregatable hierarchy in Power View")  
   
 ### Implicit measures  
  Tabular models provide users the ability to create *implicit* measures such as count, sum, or average on fields. For multidimensional models, because dimension attribute data is stored is stored differently, querying implicit measures can take a long time. Because of this, implicit measures are not available in Power View.  
@@ -99,14 +99,14 @@ manager: "mblythe"
   
  **Dimension, attributes and hierarchies in SQL Server Data Tools (SSDT) and Power View Field List**  
   
- ![Dimensions in SSDT and in Power View Field List](media/daxmd-ssdt-dimensions.gif "Dimensions in SSDT and in Power View Field List")  
+ ![Dimensions in SSDT and in Power View Field List](../media/daxmd-ssdt-dimensions.gif "Dimensions in SSDT and in Power View Field List")  
   
 ### Dimension attribute type  
  Multidimensional models support associating dimension attributes with specific dimension attribute types. The image below shows the Geography dimension where the City, State-Province, Country and Postal Code dimension attributes have geography types associated with them. These are exposed in the tabular metadata. Power View recognizes the metadata enabling users to create map visualizations. This is indicated by the map icon next to the City, Country, Postal Code and State-Province columns in the Geography table in the Power View Field List.  
   
  **Dimension attribute geography types in SSDT and Power View Field List**  
   
- ![Dimension attribute geography types](media/daxmd-ssdt-attribute-geog-types.gif "Dimension attribute geography types")  
+ ![Dimension attribute geography types](../media/daxmd-ssdt-attribute-geog-types.gif "Dimension attribute geography types")  
   
 ### Dimension calculated members  
  Multidimensional models support calculated members for child of All with a single real member. Additional constraints while exposing this type of calculated member are:  
@@ -123,7 +123,7 @@ manager: "mblythe"
   
  **Power View report with calculated members**  
   
- ![Calculated members in Power View](media/daxmd-calcmembersinpowerview.gif "Calculated members in Power View")  
+ ![Calculated members in Power View](../media/daxmd-calcmembersinpowerview.gif "Calculated members in Power View")  
   
 ### Default members  
  Multidimensional models support default members for dimension attributes. The default member is used by Analysis Services when aggregating data for a query. The default member of a dimension attribute is exposed as default value or filter for the corresponding column in the tabular metadata.  
@@ -138,21 +138,21 @@ manager: "mblythe"
   
  **Non-aggregatable hierarchy in Power View**  
   
- ![Non-aggregatable hierarchy in Power View](media/daxmd-nonaggrattrib.gif "Non-aggregatable hierarchy in Power View")  
+ ![Non-aggregatable hierarchy in Power View](../media/daxmd-nonaggrattrib.gif "Non-aggregatable hierarchy in Power View")  
   
 ## Images  
  Power View provides the ability to render images. In multidimensional models, one of the ways you can provide images to Power View is to expose columns containing URLs (Uniform Resource Locator) of the images. With this release, Analysis Services supports tagging dimension attributes as type ImageURL. This data type is then provided to Power View in the tabular metadata. Power View can then download and display the images specified in the URLs within visualizations.  
   
  **ImageURL dimension attribute type in SSDT**  
   
- ![Dimension attribute properties](media/daxmd-dimattribute-properties.gif "Dimension attribute properties")  
+ ![Dimension attribute properties](../media/daxmd-dimattribute-properties.gif "Dimension attribute properties")  
   
 ## Parent-child hierarchies  
  Multidimensional models support parent-child hierarchies, which are exposed as a hierarchy in the tabular metadata. Each level of the parent-child hierarchy is exposed as a hidden column. The key attribute of the parent-child dimension is not exposed in the tabular metadata.  
   
  **Parent-child hierarchies in Power View**  
   
- ![Parent-child hierarchies](media/daxmd-ssdt-hierarchies.gif "Parent-child hierarchies")  
+ ![Parent-child hierarchies](../media/daxmd-ssdt-hierarchies.gif "Parent-child hierarchies")  
   
 ## Perspectives and translations  
  Perspectives are views of cubes where only certain dimensions or measure groups are visible in client tools. You can specify a perspective name as a value to the Cube connection string property. For example, in the following connection string, ‘Direct Sales’ is a perspective in the multidimensional model:  
@@ -172,7 +172,7 @@ manager: "mblythe"
   
  **Pinned Filters**  
   
- ![Pinned Filter](media/daxmd-pinnedfilterinpowerview.gif "Pinned Filter")  
+ ![Pinned Filter](../media/daxmd-pinnedfilterinpowerview.gif "Pinned Filter")  
   
 ## Unsupported features  
  **Power View in Excel 2013** – does not support connecting to and creating reports for multidimensional models. Power View for multidimensional models supports browser based Power View clients only.  

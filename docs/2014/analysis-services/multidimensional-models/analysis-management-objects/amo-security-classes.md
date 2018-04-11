@@ -24,7 +24,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![Security classes in AMO covered in this topic](../../../2014/analysis-services/dev-guide/media/amo-securityclasses.gif "Security classes in AMO covered in this topic")  
+ ![Security classes in AMO covered in this topic](../../../2014/analysis-services/dev-guide/../media/amo-securityclasses.gif "Security classes in AMO covered in this topic")  
   
 ##  <a name="RolesMembers"></a> Role and RoleMember Objects  
  A <xref:Microsoft.AnalysisServices.Role> object is created by adding it to the roles collection of the database, and updating the <xref:Microsoft.AnalysisServices.Role> object to the server by using the Update method. A <xref:Microsoft.AnalysisServices.Role> object has to be updated before it can be used.  

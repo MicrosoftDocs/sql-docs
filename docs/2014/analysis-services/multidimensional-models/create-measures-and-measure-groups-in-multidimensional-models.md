@@ -58,7 +58,7 @@ manager: "mblythe"
   
  The following diagram represents the **FactSalesQuota** fact table and the two dimension tables associated with it, **DimTime** and **DimEmployee**. In the Adventure Works sample cube, these tables are used as the basis of the Sales Quotas measure group, and the Time and Employee dimensions.  
   
- ![FactSalesQuota table with two dimension tables](media/factsalesquota.gif "FactSalesQuota table with two dimension tables")  
+ ![FactSalesQuota table with two dimension tables](../media/factsalesquota.gif "FactSalesQuota table with two dimension tables")  
   
  The fact table contains two basic types of columns: attribute columns and measure columns.  
   

@@ -21,33 +21,33 @@ manager: "mblythe"
 # Understanding Microsoft OLAP Architecture
   Use these topics to better understand [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] multidimensional databases and plan how to implement multidimensional databases in your business intelligence solution.  
   
- ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Logical Architecture**  
- [Server Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md)  
+ ![Small File Folder Icon](../../../integration-services/../media/filefolder-small.gif "Small File Folder Icon") **Logical Architecture**  
+ [Server Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
- [Dimension Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
+ [Dimension Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
   
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
- [More…](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [More…](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
- ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Physical Architecture**  
- [OLAP Engine Server Components](../multidimensional-models/olap-physical/olap-engine-server-components.md)  
+ ![Small File Folder Icon](../../../integration-services/../media/filefolder-small.gif "Small File Folder Icon") **Physical Architecture**  
+ [OLAP Engine Server Components](olap-engine-server-components.md)  
   
- [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)  
+ [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
- [More…](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [More…](understanding-microsoft-olap-physical-architecture.md)  
   
- ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programming Architecture**  
- [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ ![Small File Folder Icon](../../../integration-services/../media/filefolder-small.gif "Small File Folder Icon") **Programming Architecture**  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [Developing with ADOMD.NET](../adomd-net/developing-with-adomd-net.md)  
   
- ![Small File Folder Icon](../../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
- [Globalization scenarios for Analysis Services Multiidimensional](../../../2014/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ ![Small File Folder Icon](../../../integration-services/../media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
+ [Globalization scenarios for Analysis Services Multiidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## See Also  
- [Technical Reference &#40;SSAS&#41;](../../../2014/analysis-services/technical-reference-ssas.md)  
+ [Technical Reference &#40;SSAS&#41;](../../../analysis-services/technical-reference-ssas.md)  
   
   

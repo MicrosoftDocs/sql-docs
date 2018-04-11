@@ -54,15 +54,15 @@ manager: "mblythe"
   
  The following illustration is a high-level view of the AMO hierarchy that includes major classes. The illustration shows the placement of the classes among their containers and their peers. A <xref:Microsoft.AnalysisServices.Dimension> belongs to a <xref:Microsoft.AnalysisServices.Database> and a <xref:Microsoft.AnalysisServices.Server>, and can be created at the same time as a <xref:Microsoft.AnalysisServices.DataSource> and <xref:Microsoft.AnalysisServices.MiningStructure>. Certain peer classes must be instantiated before you can use others. For example, you have to create an instance of <xref:Microsoft.AnalysisServices.DataSource> before adding a new <xref:Microsoft.AnalysisServices.Dimension> or <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
- ![AMO Classes High Level View](../../../2014/analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO Classes High Level View")  
+ ![AMO Classes High Level View](../../../2014/analysis-services/dev-guide/../media/amo-highlevelview-majorobjectshighlighted.gif "AMO Classes High Level View")  
   
  A *major object* is a class that represents a complete object as a whole entity and not as a part of another object. Major objects include <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Dimension>, and <xref:Microsoft.AnalysisServices.MiningStructure>, because these are entities on their own. However, a <xref:Microsoft.AnalysisServices.Level> is not a major object, because it is a constituent part of a <xref:Microsoft.AnalysisServices.Dimension>. Major objects can be created, deleted, modified, or processed independent of other objects. Minor objects are objects that can only be created as part of creating the parent major object. Minor objects are usually created upon a major object creation. Values for minor objects should be defined at creation time because there is no default creation for minor objects.  
   
  The following illustration shows the major objects that a <xref:Microsoft.AnalysisServices.Server> object contains.  
   
- ![AMO Major Objects highlighted](../../../2014/analysis-services/dev-guide/media/amo-majorobjects.gif "AMO Major Objects highlighted")  
+ ![AMO Major Objects highlighted](../../../2014/analysis-services/dev-guide/../media/amo-majorobjects.gif "AMO Major Objects highlighted")  
   
- ![AMO Major Objects highlighted (2)](../../../2014/analysis-services/dev-guide/media/amo-majorobjects-02.gif "AMO Major Objects highlighted (2)")  
+ ![AMO Major Objects highlighted (2)](../../../2014/analysis-services/dev-guide/../media/amo-majorobjects-02.gif "AMO Major Objects highlighted (2)")  
   
  When programming with AMO, the association between classes and contained classes uses collection type attributes, for example <xref:Microsoft.AnalysisServices.Server> and <xref:Microsoft.AnalysisServices.Dimension>. To work with one instance of a contained class, you first acquire a reference to a collection object that holds or can hold the contained class. Next, you find the specific object that you are looking for in the collection, and then you can obtain a reference to the object to start working with it.  
   

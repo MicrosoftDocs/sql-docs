@@ -48,13 +48,13 @@ manager: "mblythe"
   
  In this example **Reseller Sales** aggregates to various levels along the **Sales Territory** hierarchy.  
   
- ![PivotTable with measures and dimensions called out](media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
+ ![PivotTable with measures and dimensions called out](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "PivotTable with measures and dimensions called out")  
   
  Measures produce valid results when the fact table that contains the numeric source data also contains pointers to dimension tables that are used in the query. Using the Reseller Sales example, if each row storing a sales amount also stores a pointer to a product table, a date table, or a sales territory table, then queries that include members from those dimension will resolve correctly.  
   
  What happens if the measure is unrelated to the dimensions used in query? Typically, Analysis Services will show the default measure, and the value will be the same for all members. In this example, **Internet Sales**, which measure direct sales placed by customers using the online catalog, has no relationship to the sales organization.  
   
- ![Pivottable showing repeated measure values](media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
+ ![Pivottable showing repeated measure values](../media/ssas-unrelatedmeasure.PNG "Pivottable showing repeated measure values")  
   
  To minimize the chances of encountering these behaviors in a client application, you could build multiple cubes or perspectives within the same database, and ensure that each cube or perspective contains only related objects. The relationships you need to check are between the measure group (mapped to the fact table) and the dimensions.  
   

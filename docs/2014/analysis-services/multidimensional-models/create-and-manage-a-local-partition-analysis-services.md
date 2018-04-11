@@ -53,7 +53,7 @@ manager: "mblythe"
   
 3.  In the Source column, click the browse (. .) button to open the Partition Source dialog box.  
   
-     ![Source column in Partition pane](media/ssas-partitionsource.png "Source column in Partition pane")  
+     ![Source column in Partition pane](../media/ssas-partitionsource.png "Source column in Partition pane")  
   
 4.  In Binding Type, select **Query Binding**. The SQL query that selects the data appears automatically.  
   

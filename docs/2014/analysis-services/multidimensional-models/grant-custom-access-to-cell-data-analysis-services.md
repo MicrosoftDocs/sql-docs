@@ -27,7 +27,7 @@ manager: "mblythe"
 # Grant custom access to cell data (Analysis Services)
   Cell security is used to allow or deny access to measure data within a cube. The following illustration shows a combination of allowed and denied measures in a PivotTable, when connected as a user whose role only allows access to certain measures. In this example, **Reseller Sales Amount** and **Reseller Total Product Cost** are the only measures available through this role. All other measures are implicitly denied (the steps used to get this result are provided below in the next section, Allow access to specific measures).  
   
- ![Pivottable showing allowed and denied cells](media/ssas-permscellsallowed.png "Pivottable showing allowed and denied cells")  
+ ![Pivottable showing allowed and denied cells](../media/ssas-permscellsallowed.png "Pivottable showing allowed and denied cells")  
   
  Cell permissions apply to data inside the cell, and not to its metadata. Notice how the cell is still visible in the results of a query, displaying a value of `#N/A` instead of the actual cell value. The `#N/A` value appears in the cell unless the client application translates the value, or another value is specified by setting the Secured Cell Value property in the connection string.  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
   
  In Excel, cell-security is evident in the following illustration:  
   
- ![Excel columns showing cells as not-available](media/ssas-permscellshidemeasure.png "Excel columns showing cells as not-available")  
+ ![Excel columns showing cells as not-available](../media/ssas-permscellshidemeasure.png "Excel columns showing cells as not-available")  
   
 ## Set Read permissions on calculated measures  
  Permissions on a calculated measure can be set independently of its constituent parts. Skip ahead to the next section on Read-Contingent if you want to coordinate permissions between a calculated measure and its dependent measures.  
@@ -81,7 +81,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  In Excel, connect to the cube using the current role, and choose all three measures to see the effects of cell security. Notice that measures in the denied set are unavailable, but the calculated measure is visible to the user.  
   
- ![Excel table with available and unavailable cellls](media/ssas-permscalculatedcells.png "Excel table with available and unavailable cellls")  
+ ![Excel table with available and unavailable cellls](../media/ssas-permscalculatedcells.png "Excel table with available and unavailable cellls")  
   
 ## Set Read-Contingent permissions on calculated measures  
  Cell-security offers an alternative, Read-Contingent, for setting permissions on the related cells participating in a calculation. Consider again the **Reseller Gross Profit** example. When you enter the same MDX expression provided in the previous section, placed this time into the second text area of the **Create Role** | **Cell data** dialog box (in the text area below **Allow reading of cell content contingent on cell security**), the result is apparent when viewed in Excel. Because **Reseller Gross Profit** is contingent upon **Reseller Sales Amount** and **Reseller Total Product Cost**, gross profit is now inaccessible because its constituent parts are inaccessible.  

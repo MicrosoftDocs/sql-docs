@@ -51,7 +51,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![OLAP Classes  in AMO](../../../2014/analysis-services/dev-guide/media/amo-olapclasses.gif "OLAP Classes  in AMO")  
+ ![OLAP Classes  in AMO](../../../2014/analysis-services/dev-guide/../media/amo-olapclasses.gif "OLAP Classes  in AMO")  
   
 ## Basic Classes  
   

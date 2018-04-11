@@ -33,7 +33,7 @@ manager: "mblythe"
 ## Partition source  
  Specifies the source table or named query for the partition. To change the source table, click the cell and then click the browse (**...**) button.  
   
- ![Source column in Partition pane](media/ssas-partitionsource.png "Source column in Partition pane")  
+ ![Source column in Partition pane](../media/ssas-partitionsource.png "Source column in Partition pane")  
   
  If the partition is based on a query, click the browse (**...**) button to edit the query. This edits the **Source** property for the partition. For more information, see [Change a partition source to use a different fact table](multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
   

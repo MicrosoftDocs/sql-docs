@@ -13,8 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
 ---

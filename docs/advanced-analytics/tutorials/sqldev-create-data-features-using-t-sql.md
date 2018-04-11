@@ -1,25 +1,13 @@
 ---
-title: "Lesson 4: Create data features using T-SQL  | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Lesson 4 Ceate data features using T-SQL  | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Lesson 4: Create data features using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

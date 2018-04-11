@@ -23,23 +23,23 @@ manager: "mblythe"
 ## Panes  
  The **Attribute Relationships** page contains the following panes:  
   
- [Toolbar](../../2014/analysis-services/toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Use the toolbar to perform operations on the **Attribute Relationship** tab of Dimension Designer.  
   
- [Attribute Relationship diagram](../../2014/analysis-services/attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+ [Attribute Relationship diagram](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
  Use the attribute relationship diagram to view the attribute relationship diagram, and to create, modify, and delete attribute relationships.  
   
- [Attributes list](../../2014/analysis-services/attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attributes list](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use this list to locate a specific attribute in the attribute relationship diagram, or to define a new attribute relationship.  
   
- [Attribute Relationships list](../../2014/analysis-services/attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attribute Relationships list](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use this list to locate a specific attribute relationship in the attribute relationship diagram and to manage that relationship.  
   
 ## See Also  
- [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

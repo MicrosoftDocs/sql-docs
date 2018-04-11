@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   *Probability* defines how likely an association must be before it is considered valid. You will consider any association with a probability of at least 10 percent.  
   
- For more information about the effects of increasing or decreasing support and probability, see [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/microsoft-association-algorithm-technical-reference.md).  
+ For more information about the effects of increasing or decreasing support and probability, see [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
  After you have defined the structure and parameters for the **Association** mining model, you will process the model.  
   
@@ -60,6 +60,6 @@ manager: "jhubbard"
  [Exploring the Market Basket Models &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

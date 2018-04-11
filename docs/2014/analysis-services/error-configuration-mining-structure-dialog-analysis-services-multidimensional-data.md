@@ -87,7 +87,7 @@ manager: "mblythe"
  Type the full path and file name for the error log file.  
   
 ## See Also  
- [Mining Structure Properties Dialog &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [General &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+ [Mining Structure Properties Dialog &#40;Analysis Services - Data Mining&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [General &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Data Mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

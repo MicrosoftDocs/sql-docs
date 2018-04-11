@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   You cannot partition data if you are trying to predict a value that is stored in a nested table.  
   
- **For More Information:** [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md), [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **For More Information:** [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md), [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## Options  
  **Percentage of data for testing**  
@@ -46,9 +46,9 @@ manager: "mblythe"
  The default is NULL. This means there is no limit.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggest Related Columns &#40;Data Mining Wizard&#41;](../../2014/analysis-services/suggest-related-columns-data-mining-wizard.md)   
- [Specify Table Types &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggest Related Columns &#40;Data Mining Wizard&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Specify Table Types &#40;Data Mining Wizard&#41;](specify-table-types-data-mining-wizard.md)   
+ [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

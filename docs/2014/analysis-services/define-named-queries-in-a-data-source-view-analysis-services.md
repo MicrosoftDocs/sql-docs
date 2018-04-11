@@ -54,12 +54,12 @@ manager: "mblythe"
     4.  Type the query in the bottom pane, or use the graphical query building tools to create a query.  
   
     > [!NOTE]  
-    >  The query-building user interface (UI) depends on the data source. Instead of getting a graphical UI, you can get a generic UI, which is text-based. You can accomplish the same things with these different UIs, but you must do so in different ways. For more information, see [Create or Edit Named Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md).  
+    >  The query-building user interface (UI) depends on the data source. Instead of getting a graphical UI, you can get a generic UI, which is text-based. You can accomplish the same things with these different UIs, but you must do so in different ways. For more information, see [Create or Edit Named Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md).  
   
 5.  Click **OK**. An icon showing two overlapping tables appears in the table header to indicate that the table has been replaced by a named query.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

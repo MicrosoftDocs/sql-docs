@@ -47,7 +47,7 @@ manager: "mblythe"
 ## Advanced Options  
  When you use the Data Mining Client for Excel, you have the option to create your own data mining structures and models, or to fine-tune the parameters of the algorithms.  
   
- [Algorithm Parameters &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/algorithm-parameters-sql-server-data-mining-add-ins.md)  
+ [Algorithm Parameters &#40;SQL Server Data Mining Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  There are two ways to customize your models using these advanced options:  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
 -   In the **Data Mining Client**, after you start the wizard, click **Parameters**.  
   
 ## See Also  
- [Query &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/query-sql-server-data-mining-add-ins.md)   
- [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [Query &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md)   
+ [Advanced Modeling &#40;Data Mining Add-ins for Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

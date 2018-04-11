@@ -39,9 +39,9 @@ manager: "mblythe"
 |VertiPaq SE Query Begin|82|VertiPaq SE query|  
 |VertiPaq SE Query End|83|VertiPaq SE query|  
   
- For information about the columns associated with each of the Query Processing event classes, see [Query Processing Events Data Columns](../../2014/analysis-services/query-processing-events-data-columns.md).  
+ For information about the columns associated with each of the Query Processing event classes, see [Query Processing Events Data Columns](query-processing-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

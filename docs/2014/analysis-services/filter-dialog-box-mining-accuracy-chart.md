@@ -30,7 +30,7 @@ manager: "mblythe"
   
  If you apply the filter to the new data set, the existing data mining model is used to evaluate only those cases in the data set that meet the conditions. However, if you apply the filter to the mining model itself, the accuracy of the model is assessed for only those cases within the mining model that meet those criteria.  
   
- **For more information:** [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ **For more information:** [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## Options  
  **Conditions**  
@@ -44,7 +44,7 @@ manager: "mblythe"
 |**Value**|Type a value to use as a condition.|  
   
 ## See Also  
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

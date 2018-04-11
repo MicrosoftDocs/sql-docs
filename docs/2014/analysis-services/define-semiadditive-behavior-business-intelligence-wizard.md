@@ -30,7 +30,7 @@ manager: "mblythe"
  **The wizard has detected the \<dimension name> account dimension, which contains semiadditive members. The server will aggregate members of this dimension according to the semiadditive behavior specified for each account type.**  
  Enables semi-additive behavior for account dimensions that contain semi-additive members. Selecting this option sets the aggregation function of all measures in measure groups that reference the account dimension to `ByAccount`.  
   
- For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](../../2014/analysis-services/create-a-finance-account-of-parent-child-type-dimension.md).  
+ For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](create-a-finance-account-of-parent-child-type-dimension.md).  
   
  **Define semiadditive behavior for individual members**  
  Enables semi-additive behavior and specifies the semi-additive aggregation function for specific measures. The aggregation function applies to all dimensions that are referenced by the measure group that contains the measure.  
@@ -60,8 +60,8 @@ manager: "mblythe"
 >  Selections made for this option apply only if **Define semiadditive behavior for individual members** is selected.  
   
 ## See Also  
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)  
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

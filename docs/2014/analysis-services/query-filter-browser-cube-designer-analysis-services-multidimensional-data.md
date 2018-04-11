@@ -54,10 +54,10 @@ manager: "mblythe"
 >  This field is a dynamic data entry element, changing appearance to reflect the types of data necessary for the selected operator.  
   
 ## See Also  
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analyze in Excel &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadata &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analyze in Excel &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadata &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

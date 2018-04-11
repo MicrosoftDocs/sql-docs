@@ -76,6 +76,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)  
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

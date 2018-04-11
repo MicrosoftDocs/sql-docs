@@ -61,7 +61,7 @@ FROM
   
 3.  Right-click the table in which you wish to define the named calculation in either the **Tables** or the **Diagram** pane, and then click **New Named Calculation**. Be sure to right-click on the table name, and not on an attribute. The menu should look like the following:  
   
-     ![Screenshot of diagram workspace, right-click menu](../../2014/analysis-services/media/ssas-olapdsv-diagram.gif "Screenshot of diagram workspace, right-click menu")  
+     ![Screenshot of diagram workspace, right-click menu](media/ssas-olapdsv-diagram.gif "Screenshot of diagram workspace, right-click menu")  
   
     > [!NOTE]  
     >  To locate a table or view, you can use the **Find Table** option by either clicking the **Data Source View** menu or right-clicking in an open area of the **Tables** or **Diagram** panes.  
@@ -82,6 +82,6 @@ FROM
  When you attempt to delete a named calculation, you are prompted with a list of the objects defined in the project or database that will be invalidated by the deletion. Review the list carefully before deleting the calculation.  
   
 ## See Also  
- [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

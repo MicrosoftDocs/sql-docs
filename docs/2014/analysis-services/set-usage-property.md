@@ -21,7 +21,7 @@ manager: "mblythe"
 # Set Usage Property
   You can set the usage for an attribute by using the **Dimension Structure** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- When you set usage for an attribute, your changes do not take effect until you process the dimension. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ When you set usage for an attribute, your changes do not take effect until you process the dimension. For more information, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To set usage for an attribute  
   
@@ -38,7 +38,7 @@ manager: "mblythe"
     -   **Parent**  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)   
- [Add an  Attribute to a Dimension](../../2014/analysis-services/add-an-attribute-to-a-dimension.md)  
+ [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md)   
+ [Add an  Attribute to a Dimension](add-an-attribute-to-a-dimension.md)  
   
   

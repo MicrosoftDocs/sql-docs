@@ -95,7 +95,7 @@ manager: "mblythe"
  If a member is inserted between the last member of the previous member group and the first member of the next member group, the new member becomes the last member of the previous member group.  
   
 ## Updating a Dimension with Discretized Attributes  
- When you process a dimension, a discretized attribute is rediscretized only with a full update (ProcessFull). To rediscretize an attribute, you must perform a full update of the dimension. If the dimension table of a discretized attribute is updated and you process the dimension with an incremental update (ProcessAdd), the discretized attribute is not rediscretized. The names and children of the new buckets remain the same. For more information about processing dimensions, see [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md).  
+ When you process a dimension, a discretized attribute is rediscretized only with a full update (ProcessFull). To rediscretize an attribute, you must perform a full update of the dimension. If the dimension table of a discretized attribute is updated and you process the dimension with an incremental update (ProcessAdd), the discretized attribute is not rediscretized. The names and children of the new buckets remain the same. For more information about processing dimensions, see [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
   
 ## Usage Limitations  
   
@@ -108,6 +108,6 @@ manager: "mblythe"
 -   If the dimension table of a dimension that contains member groups is updated, and the dimension is subsequently fully processed, a new set of member groups is generated. The names and children of the new member groups may be different from the old member groups.  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)  
+ [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md)  
   
   

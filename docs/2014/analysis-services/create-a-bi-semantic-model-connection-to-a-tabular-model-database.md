@@ -37,9 +37,9 @@ manager: "mblythe"
 ##  <a name="bkmk_prereq"></a> Review Prerequisites  
  You must have Contribute permissions or above to create a BI semantic model connection file.  
   
- You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/add-bi-semantic-model-connection-content-type-to-library.md).  
+ You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  In certain scenarios, the shared services in a SharePoint environment must have administrative permissions on the Analysis Services instance. These services include PowerPivot service applications, Reporting Services service applications, and PerformancePoint service applications. Before you can grant administrative permissions, you must know the identity of these service applications. You can use Central Administration to determine the identity.  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
   
  You must be an Analysis Services system administrator to grant administrative rights in Management Studio.  
   
- PowerPivot for SharePoint must be accessed via web applications that use classic authentication mode. BI semantic model connections to external data sources have a dependency on classic mode sign-in. For more information, see [PowerPivot Authentication and Authorization](../../2014/analysis-services/powerpivot-authentication-and-authorization.md).  
+ PowerPivot for SharePoint must be accessed via web applications that use classic authentication mode. BI semantic model connections to external data sources have a dependency on classic mode sign-in. For more information, see [PowerPivot Authentication and Authorization](powerpivot-authentication-and-authorization.md).  
   
  All computers and users that participate in the connection sequence must be in the same domain or trusted domain (two-way trust).  
   
@@ -77,7 +77,7 @@ manager: "mblythe"
 ##  <a name="bkmk_BISM"></a> Grant Read Permissions on the Tabular Model Database  
  Because the database is running on a server that is external to the farm, part of setting up your connections will include granting database user permissions on the backend Analysis Services server. Analysis Services uses a role-based permission model. Users who connect to model databases must do so with Read permissions or higher, through a role that grants read access to its members.  
   
- Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
+ Roles, and sometimes role membership, are defined when the model is created in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. You cannot use SQL Server Management Studio to create roles, but you can use it to add members to a role that is already defined. For more information about creating roles, see [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md).  
   
 #### Assign role membership  
   
@@ -138,10 +138,10 @@ manager: "mblythe"
 4.  Click **Remove User Permissions**.  
   
 ##  <a name="bkmk_next"></a> Next Steps  
- After you create and secure a BI semantic model connection, you can specify it as a data source. For more information, see [Use a BI Semantic Model Connection in Excel or Reporting Services](../../2014/analysis-services/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
+ After you create and secure a BI semantic model connection, you can specify it as a data source. For more information, see [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## See Also  
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](../../2014/analysis-services/powerpivot-bi-semantic-model-connection-bism.md)   
- [Create a BI Semantic Model Connection to a PowerPivot Workbook](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-powerpivot-workbook.md)  
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md)   
+ [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-powerpivot-workbook.md)  
   
   

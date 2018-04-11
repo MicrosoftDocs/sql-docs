@@ -48,7 +48,7 @@ manager: "mblythe"
  Until additional configurations are created, all developers use this common configuration. However, during the various phases of project development — such as during the initial development and testing of a project — different developers will may use different data sources and deploy the project to different servers for different purposes. Configurations enable you to retain these different settings in different configuration files.  
   
 ## See Also  
- [Build Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/build-analysis-services-projects-ssdt.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)  
+ [Build Analysis Services Projects &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

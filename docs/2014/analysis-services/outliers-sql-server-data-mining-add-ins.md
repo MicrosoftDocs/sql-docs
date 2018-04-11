@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Outliers (SQL Server Data Mining Add-ins)
-  ![Outliers wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-outliers.gif "Outliers wizard in Data Mining ribbon")  
+  ![Outliers wizard in Data Mining ribbon](media/dmc-outliers.gif "Outliers wizard in Data Mining ribbon")  
   
  An *outlier* means a data value that is problematic for any one of the following reasons:  
   
@@ -93,6 +93,6 @@ manager: "mblythe"
 |**Outlier Handling**|If you decide to delete outliers, you can either change the data in the current worksheet, or create a copy of the data in a new worksheet.|  
   
 ## See Also  
- [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md)  
+ [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
   

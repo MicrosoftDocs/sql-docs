@@ -67,7 +67,7 @@ manager: "mblythe"
 >  If an object has a warning, but the object is in an invalid state or was manually removed from the project, an error icon appears next to the warning in the list. To dismiss the warning, select it and then click **Re-enable**.  
   
 ## See Also  
- [Dismiss Warning Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [General &#40;Database Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/general-database-designer-analysis-services-multidimensional-data.md)  
+ [Dismiss Warning Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [General &#40;Database Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

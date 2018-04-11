@@ -81,10 +81,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-kpis-ssas-tabular.md)|Describes how to create a KPI with a Base measure, a Target measure, and status thresholds.|  
+|[Create and Manage KPIs &#40;SSAS Tabular&#41;](create-and-manage-kpis-ssas-tabular.md)|Describes how to create a KPI with a Base measure, a Target measure, and status thresholds.|  
   
 ## See Also  
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md)  
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)  
   
   

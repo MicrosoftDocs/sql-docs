@@ -34,7 +34,7 @@ manager: "mblythe"
 |**Text of the query**|Type the text of the query used to retrieve data for incrementally updating the cube, measure group, or partition.<br /><br /> Note: This option is enabled only if **Query** is selected.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Process Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Process Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

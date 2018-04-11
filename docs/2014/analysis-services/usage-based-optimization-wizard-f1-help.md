@@ -45,24 +45,24 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Select Partitions to Modify &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Select Partitions to Modify &#40;Usage-Based Optimization Wizard&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Specify Query Criteria &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Specify Query Criteria &#40;Usage-Based Optimization Wizard&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Review the Queries that will be Optimized &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Review the Queries that will be Optimized &#40;Usage-Based Optimization Wizard&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Review Aggregation Usage &#40;Usage-Based Optimiation Wizard&#41;](../../2014/analysis-services/review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Review Aggregation Usage &#40;Usage-Based Optimiation Wizard&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Specify Object Counts &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Specify Object Counts &#40;Usage-Based Optimization Wizard&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Set Aggregation Options &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Set Aggregation Options &#40;Usage-Based Optimization Wizard&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Completing the Wizard &#40;Usage-Based Optimization Wizard&#41;](../../2014/analysis-services/completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Completing the Wizard &#40;Usage-Based Optimization Wizard&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## See Also  
- [Aggregations and Aggregation Designs](../../2014/analysis-services/dev-guide/aggregations-and-aggregation-designs.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Aggregation Design Wizard F1 Help](../../2014/analysis-services/aggregation-design-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Aggregation Design Wizard F1 Help](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

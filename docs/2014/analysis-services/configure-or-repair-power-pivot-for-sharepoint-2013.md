@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure or Repair PowerPivot for SharePoint 2013 (PowerPivot Configuration Tool)
-  To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, use the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2010 as well as a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. This topic describes the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
+  To configure or repair an installation of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, use the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] setup wizard installs the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2010 as well as a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. This topic describes the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. For more information on SharePoint 2010, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](configure-repair-powerpivot-sharepoint-2010.md).  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -35,9 +35,9 @@ manager: "mblythe"
 ##  <a name="bkmk_before"></a> Before you start  
  The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool scans for program files, registry settings, and available ports. To get the most use out of the tools, review the following.  
   
--   General requirements to run the configuration tool, [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md).  
+-   General requirements to run the configuration tool, [PowerPivot Configuration Tools](powerpivot-configuration-tools.md).  
   
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 prefers web application configured for claims based authentication. If the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool creates the application for you, it configures the application to use claims-based Windows authentication. For more information about authentication requirements, see [PowerPivot Authentication and Authorization](../../2014/analysis-services/powerpivot-authentication-and-authorization.md).  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 prefers web application configured for claims based authentication. If the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool creates the application for you, it configures the application to use claims-based Windows authentication. For more information about authentication requirements, see [PowerPivot Authentication and Authorization](powerpivot-authentication-and-authorization.md).  
   
 -   Port 80 must be available for the P[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool to create a web application.  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
  The first page of the tool provides a summary of the input values used to configure the SharePoint farm. In addition to the input values that you provide, default values are used to configure the system. Default names are used for service applications, service application databases, and service application properties.  
   
 > [!TIP]  
->  If the configuration tool scans the computer and returns a blank task list in the left pane, then no features or settings were detected that need configuration. To modify the SharePoint or [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] configuration, use Windows PowerShell or the management pages in SharePoint Central Administration. For more information, see [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md).  
+>  If the configuration tool scans the computer and returns a blank task list in the left pane, then no features or settings were detected that need configuration. To modify the SharePoint or [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] configuration, use Windows PowerShell or the management pages in SharePoint Central Administration. For more information, see [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md).  
   
  Values for service accounts are used for multiple services. For example, the configuration tool uses the default account on the first page to set all application pool identities. You can change these accounts later by modifying the service application properties in Central Administration.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
  The tool uses Windows PowerShell to configure the server. You can click the **Script** tab to review the Windows PowerShell script that the tool uses to configure the server.  
   
- ![PowerPivot for SharePoint 2013 Configuration tool](../../2014/analysis-services/media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot for SharePoint 2013 Configuration tool")  
+ ![PowerPivot for SharePoint 2013 Configuration tool](media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot for SharePoint 2013 Configuration tool")  
   
 ||Description|  
 |-|-----------------|  
@@ -123,7 +123,7 @@ manager: "mblythe"
 ||Database Server|Default, if needed|The default database instance is pre-selected to store the application content database, but you can specify a different SQL Server instance in the tool.|  
 ||Database Name|Default, if needed|The name of the application database. The database name is based on the file naming conventions of SharePoint, but you can choose a different name.|  
 |**Deploy Web Application Solution**|URL|Default, if needed|The Default URL is from the default web application.|  
-||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-maximum-file-upload-size-powerpivot-for-sharepoint.md).|  
+||Maximum File Size (in MB)|Default, if needed|Default setting is 2047. SharePoint document libraries also have a maximum size and the [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] setting should not exceed the document library setting. For more information, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](configure-maximum-file-upload-size-powerpivot-for-sharepoint.md).|  
 |**Create Site Collection**|Site Administrator|Default, if needed|The tool uses the default account. You can override it in the **Create Site Collection** page.|  
 ||Contact E-mail|Default, if needed|If Microsoft Outlook is configured on the server, the tool will use the email address of the current user. Otherwise, a placeholder value is used.|  
 ||Site URL|Default, if needed|The tool creates the site URL, using the same URL naming conventions as SharePoint.|  
@@ -167,7 +167,7 @@ manager: "mblythe"
 ### Grant SharePoint Permissions to Workbook Users  
  Users will need SharePoint permissions before they can publish or view workbooks. Grant **View** permissions to users who need to view published workbooks and **Contribute** permissions to users who publish or manage workbooks. You must be a site collection administrator to grant permissions.  
   
-1.  In a SharePoint 2013 site, click the settings icon ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") and then click **Site Settings**.  
+1.  In a SharePoint 2013 site, click the settings icon ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") and then click **Site Settings**.  
   
 2.  Click **Site Permissions** in the **Users and Permissions** group.  
   
@@ -176,16 +176,16 @@ manager: "mblythe"
 4.  Enter the Windows domain user or group accounts who should have membership in the groups. As before, do not use e-mail addresses or distribution group if the application is configured for classic authentication.  
   
 ### Install Data Providers Used in Data Refresh and Check User Permissions  
- Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server runnin Analysis Services in SharePoint mode must have the same data providers that were used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
+ Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server runnin Analysis Services in SharePoint mode must have the same data providers that were used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 > [!NOTE]  
 >  For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, the data providers are installed when you run the **spPowerPivot.msi** installer and [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 ### Change Application Pool and Service Identities in SharePoint  
- The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration tool provisions farm features, applications, and services to run under a single account. This simplifies installation, but it does not result in a deployment that meets the security requirements of a SharePoint farm. To create a more robust deployment, change the application pools and service identities to run under different accounts after setup is complete. For more information, see [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md).  
+ The [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Configuration tool provisions farm features, applications, and services to run under a single account. This simplifies installation, but it does not result in a deployment that meets the security requirements of a SharePoint farm. To create a more robust deployment, change the application pools and service identities to run under different accounts after setup is complete. For more information, see [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md).  
   
 ### Create Additional Trusted Sites in Excel Services  
- You can add trusted sites in Excel Services to vary permissions and configuration settings on sites that provide Excel workbooks and [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+ You can add trusted sites in Excel Services to vary permissions and configuration settings on sites that provide Excel workbooks and [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
 ### Build a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Workbook  
  After you have the server components installed in a farm, you can create your first Excel 2013 workbook that uses embedded [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data, and then publish it to a SharePoint library. Alternatively, you can upload or publish a sample [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbook to verify [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data access in SharePoint. For more information, see the following:  
@@ -198,12 +198,12 @@ manager: "mblythe"
  Over time, if you determine that additional data storage and processing capability is needed, you can add additional servers running Analysis Services in SharePoint mode to the farm. For [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 2013, you install new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers in SharePoint mode and then configure Excel Services. For more information, see the “Beyond the single-server installation” section of [PowerPivot for SharePoint 2013 Installation](instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## Additional Resources  
- ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## See Also  
  [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md)   
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Configuration Tools](powerpivot-configuration-tools.md)   
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)   
  [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

@@ -57,10 +57,10 @@ manager: "mblythe"
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Move an Analysis Services Database](../../2014/analysis-services/move-an-analysis-services-database.md)   
- [Database ReadWriteModes](../../2014/analysis-services/database-readwritemodes.md)   
- [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../2014/analysis-services/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach Element](../../2014/analysis-services/dev-guide/detach-element.md)   
- [Attach Element](../../2014/analysis-services/dev-guide/attach-element.md)  
+ [Move an Analysis Services Database](move-an-analysis-services-database.md)   
+ [Database ReadWriteModes](database-readwritemodes.md)   
+ [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Detach Element](dev-guide/detach-element.md)   
+ [Attach Element](dev-guide/attach-element.md)  
   
   

@@ -28,10 +28,10 @@ manager: "mblythe"
   
  Deleting a DSV will invalidate other [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects that depend on it, so before you delete the DSV, you will see the list of objects that will become invalid once the DSV is removed. Review this list carefully to be sure that it does not include objects you still expect to use.  
   
- ![Delete Objects dialog box](../../2014/analysis-services/media/ssas-olapdsv-deleteobjects.gif "Delete Objects dialog box")  
+ ![Delete Objects dialog box](media/ssas-olapdsv-deleteobjects.gif "Delete Objects dialog box")  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Change Properties in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/change-properties-in-a-data-source-view-analysis-services.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Change Properties in a Data Source View &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

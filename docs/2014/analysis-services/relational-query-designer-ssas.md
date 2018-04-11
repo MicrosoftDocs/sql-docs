@@ -40,11 +40,11 @@ manager: "mblythe"
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
- ![Graphical designer for queries](../../2014/analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![Graphical designer for queries](media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  The following figure shows the graphical query designer when it is used with stored procedures or table-valued functions.  
   
- ![Stored procedure in graphical query designer](../../2014/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![Stored procedure in graphical query designer](media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  The following table describes the function of each pane.  
   
@@ -200,13 +200,13 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not all data source types support graphical query designers.|  
 |**Import**|Import an existing query from a file or report. Only file types sql and rdl are supported.|  
-|![Run the query](../../2014/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the result set in the Result pane.|  
+|![Run the query](media/rsqdicon-run.gif "Run the query")|Run the query and display the result set in the Result pane.|  
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed.<br /><br /> Note that if a stored procedure returns more than one result set, only the first result set is used to populate the dataset. Note also that <br />                      **TableDirect** is available only for the data source type OLE DB.|  
   
 #### Command Type Text  
  When you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
   
- ![Generic query designer, for relational data query](../../2014/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
+ ![Generic query designer, for relational data query](media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
  The following table describes the function of each pane.  
   
@@ -229,7 +229,7 @@ SELECT Name FROM ContactType
   
  The following figure shows the Query and Results panes when you run a stored procedure. In this case, the input parameters are constants.  
   
- ![Stored procedure in text-based query designer](../../2014/analysis-services/media/rs-relational-text-sp.gif "Stored procedure in text-based query designer")  
+ ![Stored procedure in text-based query designer](media/rs-relational-text-sp.gif "Stored procedure in text-based query designer")  
   
  The following table describes the function of each pane.  
   

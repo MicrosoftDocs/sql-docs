@@ -33,27 +33,27 @@ manager: "mblythe"
  When you create a cube, you can also add to the new cube any dimensions that already exist in the database. These dimensions may have been previously defined for another cube or by the Dimension Wizard. After a database dimension has been defined, you can modify and configure the database dimension in Dimension Designer. You can also customize the cube dimension, to a limited extent, in Cube Designer.  
   
 > [!NOTE]  
->  You can also design and configure dimensions, attributes, and hierarchies programmatically by using either XMLA or Analysis Management Objects (AMO). For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md) and [Developing with Analysis Management Objects &#40;AMO&#41;](../../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md).  
+>  You can also design and configure dimensions, attributes, and hierarchies programmatically by using either XMLA or Analysis Management Objects (AMO). For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](dev-guide/analysis-services-scripting-language-assl-reference.md) and [Developing with Analysis Management Objects &#40;AMO&#41;](dev-guide/developing-with-analysis-management-objects-amo.md).  
   
 ## In This Section  
  The following table describes the topics in this section.  
   
- [Define Database Dimensions](../../2014/analysis-services/define-database-dimensions.md)  
+ [Define Database Dimensions](define-database-dimensions.md)  
  Describes how to modify and configure a database dimension by using Dimension Designer.  
   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
  Describes how to define, modify, and configure a database dimension attribute by using Dimension Designer.  
   
- [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md)  
+ [Define Attribute Relationships](define-attribute-relationships.md)  
  Describes how to define, modify, and configure an attribute relationship by using Dimension Designer.  
   
- [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)  
+ [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)  
  Describes how to define, modify, and configure a user-defined hierarchy of dimension attributes by using Dimension Designer.  
   
- [Use the Business Intelligence Wizard to Enhance Dimensions](../../2014/analysis-services/use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Use the Business Intelligence Wizard to Enhance Dimensions](use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Describes how to enhance a database dimension by using the Business Intelligence Wizard.  
   
 ## See Also  
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)  
   
   

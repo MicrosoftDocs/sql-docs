@@ -23,15 +23,15 @@ manager: "mblythe"
 > [!NOTE]  
 >  This page will appear only if you have selected **From existing cube** on the **Select the Definition Method** page of the wizard.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Attributes**  
  Click the attribute that will be the key of the mining structure.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select the Source Cube Dimension &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-source-cube-dimension-data-mining-wizard.md)   
- [Select Case Level Columns &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-case-level-columns-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select the Source Cube Dimension &#40;Data Mining Wizard&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [Select Case Level Columns &#40;Data Mining Wizard&#41;](select-case-level-columns-data-mining-wizard.md)  
   
   

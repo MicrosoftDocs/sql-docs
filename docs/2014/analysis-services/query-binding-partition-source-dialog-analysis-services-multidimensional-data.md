@@ -28,12 +28,12 @@ manager: "mblythe"
  Type or modify the SQL statement used when retrieving fact data when the partition is processed.  
   
 > [!IMPORTANT]  
->  By specifying a WHERE clause, a subset of records can be used for this partition. This is essential to prevent duplication of data when multiple partitions are based on a single fact table. For more information, see [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partition-source-dialog-box-analysis-services-multidimensional-data.md).  
+>  By specifying a WHERE clause, a subset of records can be used for this partition. This is essential to prevent duplication of data when multiple partitions are based on a single fact table. For more information, see [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Check**  
  Click to verify that the statement in **Query** is a valid SQL statement.  
   
 ## See Also  
- [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [Partition Source Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

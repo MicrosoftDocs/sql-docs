@@ -124,6 +124,6 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
 ## See Also  
  [Analysis Services Schema Rowsets](../../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md)   
- [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

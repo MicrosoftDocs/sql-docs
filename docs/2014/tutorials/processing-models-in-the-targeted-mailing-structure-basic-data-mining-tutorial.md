@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  This value does not affect the number of cases in the training set; it simply ensures that the same partitioning method will be used each time you build the model.  
   
- For more information on holdout seed, see [Training and Testing Data Sets](../../2014/analysis-services/training-and-testing-data-sets.md).  
+ For more information on holdout seed, see [Training and Testing Data Sets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### To set the Holdout Seed  
   
@@ -69,6 +69,6 @@ manager: "jhubbard"
  [Lesson 4: Exploring the Targeted Mailing Models &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

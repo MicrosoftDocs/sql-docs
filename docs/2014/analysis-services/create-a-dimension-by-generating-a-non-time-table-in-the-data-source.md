@@ -102,7 +102,7 @@ manager: "mblythe"
  On the **Completing the Wizard** page, type a name for the new dimension and view the dimension structure. Select the **Generate schema now** check box to start the Schema Generation Wizard after you click **Finish**. In most cases, you should not select this check box if you plan to create additional objects. If you do not select this check box, you can use Dimension Designer to generate the schema later.  
   
 ## See Also  
- [Create a Time Dimension by Generating a Time Table](../../2014/analysis-services/create-a-time-dimension-by-generating-a-time-table.md)   
- [Create a Time Dimension by Generating a Time Table](../../2014/analysis-services/create-a-time-dimension-by-generating-a-time-table.md)  
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

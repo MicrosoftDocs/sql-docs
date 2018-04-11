@@ -35,7 +35,7 @@ manager: "mblythe"
 |**Selected projects and components**|Displays a list of component references to be added to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Select one or more items from the grid, and then click **Remove** to remove the selected components from the grid. The grid contains the following columns:<br /><br /> **Component name**: The full, or "friendly," name of the component. Select the title to sort by the component name.<br /><br /> **Version**: The listed version number of the component. Select the title to sort by the version.<br /><br /> **Runtime**: The version of the .NET Framework on which the component is based. Select the title to sort by the runtime version.<br /><br /> **Path**: The file name of the component and the path where it is located. Select the title to sort by the path.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Assemblies Management](../../2014/analysis-services/multidimensional-model-assemblies-management.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Assemblies Management](multidimensional-model-assemblies-management.md)  
   
   

@@ -35,10 +35,10 @@ manager: "jhubbard"
 ## See Also  
  [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Perspectives](../../2014/analysis-services/dev-guide/perspectives.md)   
- [Perspectives in Multidimensional Models](../../2014/analysis-services/perspectives-in-multidimensional-models.md)   
- [Dimension Translations](../../2014/analysis-services/dev-guide/dimension-translations.md)   
- [Cube Translations](../../2014/analysis-services/dev-guide/cube-translations.md)   
- [Translations &#40;Analysis Services&#41;](../../2014/analysis-services/translations-analysis-services.md)  
+ [Perspectives](dev-guide/perspectives.md)   
+ [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)   
+ [Dimension Translations](dev-guide/dimension-translations.md)   
+ [Cube Translations](dev-guide/cube-translations.md)   
+ [Translations &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

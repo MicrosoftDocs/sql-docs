@@ -76,6 +76,6 @@ manager: "mblythe"
  If you select the **Apply settings to dimensions** check box, the same storage settings are applied to the dimensions related to the measure group. The dimension values are initially the same as the partition values.  
   
 ## See Also  
- [Partitions in Multidimensional Models](../../2014/analysis-services/partitions-in-multidimensional-models.md)  
+ [Partitions in Multidimensional Models](partitions-in-multidimensional-models.md)  
   
   

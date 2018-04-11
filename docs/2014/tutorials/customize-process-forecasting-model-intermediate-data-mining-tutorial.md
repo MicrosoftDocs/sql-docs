@@ -102,8 +102,8 @@ manager: "jhubbard"
  [Exploring the Forecasting Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md)   
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)   
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)  
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

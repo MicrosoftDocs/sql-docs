@@ -20,9 +20,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Goal Seek Scenario (Table Analysis Tools for Excel)
-  ![Goal Seek button in Table Analysis tools](../../2014/analysis-services/media/tat-goalseek.gif "Goal Seek button in Table Analysis tools")  
+  ![Goal Seek button in Table Analysis tools](media/tat-goalseek.gif "Goal Seek button in Table Analysis tools")  
   
- The **Goal Seek** scenario tool is complementary to the [What If](../../2014/analysis-services/what-if-scenario-table-analysis-tools-for-excel.md) scenario tool. The **What-If** tool tells you the impact of making a change, whereas the **Goal Seek** tool tells you the underlying factors that must change to achieve a desired result.  
+ The **Goal Seek** scenario tool is complementary to the [What If](what-if-scenario-table-analysis-tools-for-excel.md) scenario tool. The **What-If** tool tells you the impact of making a change, whereas the **Goal Seek** tool tells you the underlying factors that must change to achieve a desired result.  
   
  For example, let’s say your goal is to increase customer satisfaction. You can use **Goal Seek** analysis to determine which factors would be most likely to increase customer satisfaction, and decide whether those changes are cost-effective.  
   
@@ -95,11 +95,11 @@ manager: "mblythe"
 >  The confidence level for the recommendation and its success are predetermined by the algorithm and cannot be changed.  
   
 ## Related Tools  
- The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, includes wizards for creating data mining models that predict behavior. For more information, see [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md).  
+ The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, includes wizards for creating data mining models that predict behavior. For more information, see [Creating a Data Mining Model](creating-a-data-mining-model.md).  
   
  For more information about the algorithm used by the **Goal Seek** scenario tool, see the topic "Microsoft Logistic Regression Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

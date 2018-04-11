@@ -16,9 +16,9 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1: Creating the Bike Buyer Mining Structure
-  In this lesson, you will create a mining structure that allows you to predict whether a potential customer of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] will purchase a bicycle. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md).  
+  In this lesson, you will create a mining structure that allows you to predict whether a potential customer of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] will purchase a bicycle. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- The Bike Buyer mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md). In later lessons, you will use the clustering mining models to explore the different ways in which customers can be grouped, and will use decision tree mining models to predict whether or not a potential customer will purchase a bicycle.  
+ The Bike Buyer mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). In later lessons, you will use the clustering mining models to explore the different ways in which customers can be grouped, and will use decision tree mining models to predict whether or not a potential customer will purchase a bicycle.  
   
 ## CREATE MINING STRUCTURE Statement  
  To create a mining structure, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
@@ -68,7 +68,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- For more information about discretizing columns, see [Discretization Methods &#40;Data Mining&#41;](../../2014/analysis-services/discretization-methods-data-mining.md). For more information about the types of mining structure columns that you can define, see [Mining Structure Columns](../../2014/analysis-services/mining-structure-columns.md).  
+ For more information about discretizing columns, see [Discretization Methods &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md). For more information about the types of mining structure columns that you can define, see [Mining Structure Columns](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
  The final line of the code defines an optional partition in the mining structure:  
   

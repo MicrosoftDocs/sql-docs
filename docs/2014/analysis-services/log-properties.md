@@ -59,7 +59,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Log Properties
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the log server properties listed in the following tables. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the log server properties listed in the following tables. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md).  
   
 ## General  
  `File`  
@@ -74,7 +74,7 @@ manager: "mblythe"
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../includes/msconame-md.md)] support.  
   
 ## Error Log  
- You can set these properties at the server instance level to modify the default values for Error Configuration that appear in other tools and designers. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/error-configuration-for-cube-partition-and-dimension-processing.md) and <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> for more information.  
+ You can set these properties at the server instance level to modify the default values for Error Configuration that appear in other tools and designers. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md) and <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> for more information.  
   
  **ErrorLog\ErrorLogFileName**  
  A property used as a default during processing operation performed by the server.  
@@ -230,7 +230,7 @@ manager: "mblythe"
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../includes/msconame-md.md)] support.  
   
 ## See Also  
- [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

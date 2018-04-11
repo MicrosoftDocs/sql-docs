@@ -36,14 +36,14 @@ manager: "mblythe"
 >  This option must contain a valid set expression.  
   
 ## See Also  
- [Calculations](../../2014/analysis-services/dev-guide/calculations.md)   
- [Create Named Sets](../../2014/analysis-services/create-named-sets.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Script Organizer &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Calculations](dev-guide/calculations.md)   
+ [Create Named Sets](create-named-sets.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Script Organizer &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculation Tools &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculated Member Form Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Script Editor &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

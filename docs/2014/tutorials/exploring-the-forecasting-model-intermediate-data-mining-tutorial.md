@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  ![Series predicting M200 and T1000 quantity](../../2014/tutorials/media/6series-defaultforecasting.gif "Series predicting M200 and T1000 quantity")  
   
- The chart that is displayed in this viewer includes both historical and predicted data. Predicted data is shaded to differentiate it from historical data. To make it easier to compare different series, you can also change the colors associated with each line in the graph. For more information, see [Change the Colors Used in the Data Mining Viewer](../../2014/analysis-services/change-the-colors-used-in-the-data-mining-viewer.md).  
+ The chart that is displayed in this viewer includes both historical and predicted data. Predicted data is shaded to differentiate it from historical data. To make it easier to compare different series, you can also change the colors associated with each line in the graph. For more information, see [Change the Colors Used in the Data Mining Viewer](../../2014/analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md).  
   
  From the trend lines, you can see that total sales for all regions are generally increasing, with a peak every 12 months in December. From the chart, you can also see that the data for the T1000 bicycle starts much later than the data for the other product series. That is because it is a newer product, but because this series is based on much less data, the predictions might not be as accurate.  
   
@@ -163,7 +163,7 @@ manager: "jhubbard"
   
      This value tells you which time series is contained in this node. The topmost node in the ARIMA section should match the topmost node in the (All) section. In the AdventureWorks example, this node contains the ARIMA analysis for the series, M200 Europe.  
   
- For more information, see [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
+ For more information, see [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  [Back to Top](#bkmk_Charts)  
   
@@ -171,7 +171,7 @@ manager: "jhubbard"
  [Creating Time Series Predictions &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/creating-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md)  
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

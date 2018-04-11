@@ -61,7 +61,7 @@ manager: "jhubbard"
  [Modifying the Forecasting Structure &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)  
+ [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

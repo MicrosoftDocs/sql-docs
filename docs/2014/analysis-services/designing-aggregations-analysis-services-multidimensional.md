@@ -40,6 +40,6 @@ manager: "mblythe"
  The final step of the wizard allows you to process or defer processing. Processing creates the aggregations you design with the wizard, while deferring processing saves the designed aggregations for future processing, thus allowing design activities to continue without processing. Depending on the size of the partition, processing may take considerable time. If you choose, you can interrupt processing a partition.  
   
 ## See Also  
- [Aggregations and Aggregation Designs](../../2014/analysis-services/dev-guide/aggregations-and-aggregation-designs.md)  
+ [Aggregations and Aggregation Designs](dev-guide/aggregations-and-aggregation-designs.md)  
   
   

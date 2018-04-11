@@ -33,8 +33,8 @@ manager: "mblythe"
  Select a node in the node list, and then click **OK**. The dialog box closes and the selected node is highlighted in the viewer.  
   
 ## See Also  
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)   
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

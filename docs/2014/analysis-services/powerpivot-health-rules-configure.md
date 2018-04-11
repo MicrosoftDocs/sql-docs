@@ -26,7 +26,7 @@ manager: "mblythe"
 |-|  
 |**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the PowerPivot service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the topic [Health Rules Reference &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/health-rules-reference-powerpivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
+ **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the PowerPivot service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the topic [Health Rules Reference &#40;PowerPivot for SharePoint&#41;](health-rules-reference-powerpivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -62,7 +62,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  At the top of the page, select the server in your SharePoint farm that has an instance of Analysis Services (in the following illustration, the server name is AW-SRV033). **SQL Server Analysis Services** will appear in the list of services.  
   
-     ![Screenshot of Manage Services on Server page](../../2014/analysis-services/media/ssas-centraladmin-servicesonserver.gif "Screenshot of Manage Services on Server page")  
+     ![Screenshot of Manage Services on Server page](media/ssas-centraladmin-servicesonserver.gif "Screenshot of Manage Services on Server page")  
   
 3.  Click **SQL Server Analysis Services**.  
   
@@ -89,7 +89,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      This configuration setting corresponds to the following rule definition on the **Review problems and solutions** page: **PowerPivot: The high number of connections indicates that more servers should be deployed to handle the current load.**  
   
      Insufficient Disk Space (default is 5%)  
-     Disk space is used to cache PowerPivot data each time a database is requested. This rule lets you know when disk space is running low. By default, this health rule is triggered when disk space is less than 5% on the disk drive where the backup folder is located. For more information about disk usage, see [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-disk-space-usage-powerpivot-for-sharepoint.md).  
+     Disk space is used to cache PowerPivot data each time a database is requested. This rule lets you know when disk space is running low. By default, this health rule is triggered when disk space is less than 5% on the disk drive where the backup folder is located. For more information about disk usage, see [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-powerpivot-for-sharepoint.md).  
   
      This configuration setting corresponds to the following rule definition on the **Review problems and solutions** page: **PowerPivot: Disk space is running low on the drive where PowerPivot data is cached.**  
   
@@ -102,11 +102,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  In the Service Applications page, click **Default PowerPivot Service Application**.  
   
-     ![Screenshot of ManageService Application page](../../2014/analysis-services/media/ssas-centraladmin-app.gif "Screenshot of ManageService Application page")  
+     ![Screenshot of ManageService Application page](media/ssas-centraladmin-app.gif "Screenshot of ManageService Application page")  
   
 3.  The PowerPivot Management Dashboard appears. Click the **Configure service application settings** in the **Actions** list to open the service application settings page.  
   
-     ![Screenshot of dashboard, focus on Actions list](../../2014/analysis-services/media/ssas-centraladmin-actionslist.gif "Screenshot of dashboard, focus on Actions list")  
+     ![Screenshot of dashboard, focus on Actions list](media/ssas-centraladmin-actionslist.gif "Screenshot of dashboard, focus on Actions list")  
   
 4.  In Health Rule Settings, modify the following settings:  
   
@@ -121,12 +121,12 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Check for Updates to PowerPivot Management Dashboard.xlsx (default is 5 days)  
      The PowerPivot Management Dashboard.xlsx file is a data source used by reports in PowerPivot Management Dashboard. In a default server configuration, the .xlsx file is refreshed daily, using usage data collected by SharePoint and the PowerPivot System Service. In event the file is not updated, a health rule reports it as a problem. By default, the rule is triggered if the timestamp of the file has not changed for 5 days.  
   
-     For more information about usage data collection, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
+     For more information about usage data collection, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
   
      This configuration setting corresponds to the following rule definition on the **Review problems and solutions** page: **PowerPivot: Usage data is not getting updated at the expected frequency.**  
   
 ## See Also  
- [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-disk-space-usage-powerpivot-for-sharepoint.md)   
- [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md)  
+ [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-powerpivot-for-sharepoint.md)   
+ [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md)  
   
   

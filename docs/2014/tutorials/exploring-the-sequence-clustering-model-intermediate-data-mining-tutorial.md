@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Exploring the Sequence Clustering Model (Intermediate Data Mining Tutorial)
-  Now that you have built the **Sequence Clustering with Region** model, you can explore it by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering Viewer in the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contains five tabs: **Cluster Diagram**, **Cluster Profiles**, **Cluster Characteristics**, **ClusterDiscrimination**, and **State Transitions**. For more information about how to use this viewer, see [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Now that you have built the **Sequence Clustering with Region** model, you can explore it by using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering Viewer in the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contains five tabs: **Cluster Diagram**, **Cluster Profiles**, **Cluster Characteristics**, **ClusterDiscrimination**, and **State Transitions**. For more information about how to use this viewer, see [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Cluster Diagram tab](#bkmk_CDiagram)  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 7.  Right-click this cluster and select **Rename Cluster**. Type the new name, `Largest Cluster`.  
   
- You can drill through from the node that represents the cluster to view details of the cases that are in each cluster. This can be useful if you want to take action on the results of your analysis, such as sending e-mail to a customer. You can also browse the other attributes of the cases that you included in the structure but did not use in the model, such as Region and IncomeGroup. For more information about drilling through from mining models to the underlying cases, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md).  
+ You can drill through from the node that represents the cluster to view details of the cases that are in each cluster. This can be useful if you want to take action on the results of your analysis, such as sending e-mail to a customer. You can also browse the other attributes of the cases that you included in the structure but did not use in the model, such as Region and IncomeGroup. For more information about drilling through from mining models to the underlying cases, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### To drill through to details from the Cluster diagram  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
   
 2.  Pause the mouse over the shaded bar in the row for `Region`.  
   
-     The probability of the value being Pacific is very high. For more information about how to interpret these values, see [Microsoft Sequence Clustering Algorithm Technical Reference](../../2014/analysis-services/microsoft-sequence-clustering-algorithm-technical-reference.md).  
+     The probability of the value being Pacific is very high. For more information about how to interpret these values, see [Microsoft Sequence Clustering Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
 3.  Look through the list of characteristics for the cluster until you find the first transition row.  
   
@@ -182,7 +182,7 @@ manager: "jhubbard"
   
 2.  Locate a transition row, and pause the mouse over the shaded bar.  
   
-     The items in the **Values** column can include both states and transitions. The shading for each item indicates the discrimination score. To learn more about the meaning of different scores, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-sequence-clustering-models.md).  
+     The items in the **Values** column can include both states and transitions. The shading for each item indicates the discrimination score. To learn more about the meaning of different scores, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
  [Back to Top](#bkmk_CDiagram)  
   
@@ -230,7 +230,7 @@ manager: "jhubbard"
   
  A content tree is a representation of any mining model as a series of nodes, wherein each node represents learned knowledge about the training data. The node can contain a pattern, a set of rules, a cluster, or the definition of a range of dates that share some attributes. The exact content of the node differs depending on the algorithm and the predictable attribute, but the general representation of the content is the same.  
   
- You can expand each node to see increasing levels of detail, and copy the content of any node to the Clipboard. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
+ You can expand each node to see increasing levels of detail, and copy the content of any node to the Clipboard. For more information, see [Browse a Model Using the Microsoft Generic Content Tree Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
 #### To view details for a sequence clustering model by using the Generic Content Tree Viewer  
   
@@ -246,7 +246,7 @@ manager: "jhubbard"
   
 4.  Continue to expand nodes and view the details in the HTML viewer pane.  
   
- For more information about the mining model content, and how to use the details in the viewer, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-sequence-clustering-models.md).  
+ For more information about the mining model content, and how to use the details in the viewer, see [Mining Model Content for Sequence Clustering Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
  [Back to Top](#bkmk_CDiagram)  
   
@@ -254,7 +254,7 @@ manager: "jhubbard"
  [Creating a Related Sequence Clustering Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md)   
- [Sequence Clustering Model Query Examples](../../2014/analysis-services/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

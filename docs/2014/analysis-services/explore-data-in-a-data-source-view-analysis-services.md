@@ -47,6 +47,6 @@ manager: "mblythe"
 6.  To resample the data, click **Resample Data** on the **Explore \<object name> Table** toolbar.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

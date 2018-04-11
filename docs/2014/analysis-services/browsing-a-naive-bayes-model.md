@@ -29,14 +29,14 @@ manager: "mblythe"
 ##  <a name="BKMK_Tabs"></a> Explore the Model  
  The purpose of the viewer is to help you explore the interaction between input and output attributes (inputs and dependent variables) that were discovered by the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes model.  
   
- If you want to experiment with the Naïve Bayes viewer, use the [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/classify-wizard-data-mining-add-ins-for-excel.md) wizard in the Data Mining ribbon, click the **Advanced** option, and change the algorithm to use the Naïve Bayes algorithm  
+ If you want to experiment with the Naïve Bayes viewer, use the [Classify Wizard &#40;Data Mining Add-ins for Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) wizard in the Data Mining ribbon, click the **Advanced** option, and change the algorithm to use the Naïve Bayes algorithm  
   
  For these examples, we used the Source data in the sample workbook, and grouped the column, **Yearly Income**, into five income groups, from **Very Low** to **Very High**. The Naïve Bayes model then analyzed the factors correlated with each income category.  
   
 ###  <a name="bkmk_DepNet"></a> Dependency Network  
  The first window you’ll use is the **Dependency Network**. It shows you at a glance which inputs are closely correlated to the selected outcome.  
   
- ![dependency network in Naive Bayes viewer](../../2014/analysis-services/media/dm13-nb.gif "dependency network in Naive Bayes viewer")  
+ ![dependency network in Naive Bayes viewer](media/dm13-nb.gif "dependency network in Naive Bayes viewer")  
   
 ##### Explore the dependency network  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
 1.  To hide some values so that you can more easily compare outcomes, click the column heading and drag it under another column.  
   
-     ![attribute profiles in Naive Bayes viewer](../../2014/analysis-services/media/dm13-nb-attprof.gif "attribute profiles in Naive Bayes viewer")  
+     ![attribute profiles in Naive Bayes viewer](media/dm13-nb-attprof.gif "attribute profiles in Naive Bayes viewer")  
   
 2.  Click in any cell to view the distribution of values in the **Mining Legend**.  
   
@@ -74,7 +74,7 @@ manager: "mblythe"
 ###  <a name="bkmk_AttChar"></a> Attribute Characteristics  
  The **Attribute Characteristics** view is useful for in-depth examination of a particular outcome variable and the contributing factors.  
   
- ![attribute characteristics in Naive Bayes viewer](../../2014/analysis-services/media/dm13-nb-viewer.gif "attribute characteristics in Naive Bayes viewer")  
+ ![attribute characteristics in Naive Bayes viewer](media/dm13-nb-viewer.gif "attribute characteristics in Naive Bayes viewer")  
   
 ##### Explore the attribute characteristics  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
      As you select a target outcome, the graph updates to show the factors that are most strongly associated with the outcome, sorted by importance.  
   
-     Note that if you create a model using the [Analyze Key Influencers &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/analyze-key-influencers-table-analysis-tools-for-excel.md) option, you can create models that have more than one predictable attribute. However, all other wizards in the Data Mining add-ins limit you to one predictable attribute.  
+     Note that if you create a model using the [Analyze Key Influencers &#40;Table Analysis Tools for Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md) option, you can create models that have more than one predictable attribute. However, all other wizards in the Data Mining add-ins limit you to one predictable attribute.  
   
 2.  Click **Copy to Excel** to create a table, in a new worksheet, listing the scores for all attributes that are related to the selected target outcome.  
   
@@ -91,7 +91,7 @@ manager: "mblythe"
 ###  <a name="bkmk_AttDisc"></a> Attribute Discrimination  
  The **Attribute Discrimination** view helps compare two outcomes, or one outcome vs. all other outcomes.  
   
- ![attribute discrimination in Naive Bayes viewer](../../2014/analysis-services/media/dm13-nb-attdisc.gif "attribute discrimination in Naive Bayes viewer")  
+ ![attribute discrimination in Naive Bayes viewer](media/dm13-nb-attdisc.gif "attribute discrimination in Naive Bayes viewer")  
   
 ##### Explore attribute discrimination  
   
@@ -105,11 +105,11 @@ manager: "mblythe"
   
 2.  Note that lower incomes are also correlated with the Europe region.  
   
-     The Naïve Bayes model does not support drilldown; however, if you wanted to investigate the cases associated with this outcome group, you could use a query. For information about queries on this type of model, see [Naive Bayes Model Query Examples](../../2014/analysis-services/naive-bayes-model-query-examples.md).  
+     The Naïve Bayes model does not support drilldown; however, if you wanted to investigate the cases associated with this outcome group, you could use a query. For information about queries on this type of model, see [Naive Bayes Model Query Examples](data-mining/naive-bayes-model-query-examples.md).  
   
  [Back To Top](#BKMK_Tabs)  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

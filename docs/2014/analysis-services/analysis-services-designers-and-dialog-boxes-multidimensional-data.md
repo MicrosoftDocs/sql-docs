@@ -24,7 +24,7 @@ manager: "mblythe"
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides designers and dialog boxes for use in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)   
- [User Interface Reference &#40;Analysis Services&#41;](../../2014/analysis-services/user-interface-reference-analysis-services.md)  
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)   
+ [User Interface Reference &#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   
   

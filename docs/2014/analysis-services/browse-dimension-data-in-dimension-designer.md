@@ -21,7 +21,7 @@ manager: "mblythe"
 # Browse Dimension Data in Dimension Designer
   You can browse the data in a dimension by using the **Browser** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- In order for dimension data to be displayed in the **Browser** view, the dimension must be in a processed state. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ In order for dimension data to be displayed in the **Browser** view, the dimension must be in a processed state. For more information, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To browse a dimension in SQL Server Data Tools  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
     >  You must have a translation defined in the dimension for the selected language.  
   
 ## See Also  
- [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/introduction-to-dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Introduction to Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/introduction-to-dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

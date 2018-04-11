@@ -33,7 +33,7 @@ manager: "mblythe"
 >  The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard only deploys objects into a single [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. It does not deploy any server level objects or data.  
   
 ## See Also  
- [Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md)   
- [Understanding the Input Files Used to Create the Deployment Script](../../2014/analysis-services/understanding-the-input-files-used-to-create-the-deployment-script.md)  
+ [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)   
+ [Understanding the Input Files Used to Create the Deployment Script](understanding-the-input-files-used-to-create-the-deployment-script.md)  
   
   

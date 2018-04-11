@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  When you add a mining model to a mining structure that has already been processed, you can use the `INSERT INTO MINING MODEL` statement to process just the new mining model by using the existing data.  
   
- For more information about processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md).  
+ For more information about processing mining models, see [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## INSERT INTO Statement  
  In order to train the time series mining structure and all its associated mining models, use the [INSERT INTO &#40;DMX&#41;](~/dmx/insert-into-dmx.md) statement. The code in the statement can be broken into the following parts.  
@@ -147,7 +147,7 @@ OPENQUERY (<source data definition>)
  [Lesson 4: Creating Time Series Predictions Using DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## See Also  
- [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/processing-requirements-and-considerations-data-mining.md)   
+ [Processing Requirements and Considerations &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;source data query&#62;](~/dmx/source-data-query.md)   
  [OPENQUERY &#40;DMX&#41;](~/dmx/source-data-query-openquery.md)  
   

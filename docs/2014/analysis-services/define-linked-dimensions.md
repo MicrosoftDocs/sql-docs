@@ -29,7 +29,7 @@ manager: "mblythe"
 >  Because refresh is not available, most Analysis Services developers copy dimensions rather than link them. You can copy dimensions across projects within the same solution. For more information, see [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
 ## Prerequisites  
- The source database that provides the dimension and the current database that uses it must be at the same version and compatibility level. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ The source database that provides the dimension and the current database that uses it must be at the same version and compatibility level. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  The source database must be deployed and online. Servers that publish or consume linked objects must be configured to allow the operation (see below).  
   
@@ -74,8 +74,8 @@ manager: "mblythe"
  You cannot change the structure of a linked dimension, so you cannot view it with the **Dimension Structure** tab of Dimension Designer. After processing the linked dimension, you can view it with the **Browser** tab. You can also change its name and create a translation for the name.  
   
 ## See Also  
- [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [Linked Measure Groups](../../2014/analysis-services/linked-measure-groups.md)   
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)  
+ [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [Linked Measure Groups](linked-measure-groups.md)   
+ [Dimension Relationships](dev-guide/dimension-relationships.md)  
   
   

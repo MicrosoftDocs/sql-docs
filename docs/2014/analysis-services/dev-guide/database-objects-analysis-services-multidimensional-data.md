@@ -61,13 +61,13 @@ manager: "mblythe"
 |[Data Source Views in Multidimensional Models](../../../2014/analysis-services/data-source-views-in-multidimensional-models.md)|Describes a logical data model based on one or more data sources, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Cubes in Multidimensional Models](../../../2014/analysis-services/cubes-in-multidimensional-models.md)|Describes cubes and cube objects, including measures, measure groups, dimension usage relationships, calculations, key performance indicators, actions, translations, partitions, and perspectives.|  
 |[Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)|Describes dimensions and dimension objects, including attributes, attribute relationships, hierarchies, levels, and members.|  
-|[Mining Structures &#40;Analysis Services - Data Mining&#41;](../../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)|Describes mining structures and mining objects, including mining models.|  
+|[Mining Structures &#40;Analysis Services - Data Mining&#41;](../data-mining/mining-structures-analysis-services-data-mining.md)|Describes mining structures and mining objects, including mining models.|  
 |[Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/security-roles-analysis-services-multidimensional-data.md)|Describes a role, the security mechanism used to control access to objects in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Multidimensional Model Assemblies Management](../../../2014/analysis-services/multidimensional-model-assemblies-management.md)|Describes an assembly, a collection of user-defined functions used to extend the MDX and DMX languages, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
 ## See Also  
  [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)   
  [Multidimensional Model Solutions &#40;SSAS&#41;](../../../2014/analysis-services/multidimensional-model-solutions-ssas.md)   
- [Data Mining Solutions](../../../2014/analysis-services/data-mining-solutions.md)  
+ [Data Mining Solutions](../data-mining/data-mining-solutions.md)  
   
   

@@ -24,7 +24,7 @@ manager: "mblythe"
   
  You can create and specify a named calculation on a dimension table in the data source view as a unary operator column. The simplest expression, such as '+', returns the same operator for all members. But you can use any expression as long as it returns an operator for every member.  
   
- You can change the **UnaryOperatorColumn** property setting manually on a parent attribute or use the Define Custom Aggregation enhancement of the Business Intelligence Wizard to replace the default aggregation that is associated with members of a dimension. For more information about how to use the Business Intelligence Wizard to perform this configuration, see [Add a Custom Aggregation to a Dimension](../../2014/analysis-services/add-a-custom-aggregation-to-a-dimension.md).  
+ You can change the **UnaryOperatorColumn** property setting manually on a parent attribute or use the Define Custom Aggregation enhancement of the Business Intelligence Wizard to replace the default aggregation that is associated with members of a dimension. For more information about how to use the Business Intelligence Wizard to perform this configuration, see [Add a Custom Aggregation to a Dimension](add-a-custom-aggregation-to-a-dimension.md).  
   
  The default setting for the **UnaryOperatorColumn** property on a parent attribute is (none), which disables the custom rollup operators. The following table lists the unary operators and describes how they behave when they are applied to a level.  
   
@@ -36,15 +36,15 @@ manager: "mblythe"
 |/ (slash mark)|The value of the member is divided by the aggregate value of the sibling members that occur before the member.|  
 |~ (tilde)|The value of the member is ignored.|  
   
- Blank values and any other values not found in the table are treated the same as the plus sign (+) unary operator. There is no operator precedence, so the order of members as stored in the unary operator column determines the order of evaluation. To change the order of evaluation, create a new attribute, set its **Type** property to **Sequence**, and then assign sequence numbers that correspond to the order of evaluation in its **Source Column** property. You must also order members of the attribute by that attribute. For information about how to use the Business Intelligence Wizard to order members of an attribute, see [Define the Ordering for a Dimension](../../2014/analysis-services/define-the-ordering-for-a-dimension.md).  
+ Blank values and any other values not found in the table are treated the same as the plus sign (+) unary operator. There is no operator precedence, so the order of members as stored in the unary operator column determines the order of evaluation. To change the order of evaluation, create a new attribute, set its **Type** property to **Sequence**, and then assign sequence numbers that correspond to the order of evaluation in its **Source Column** property. You must also order members of the attribute by that attribute. For information about how to use the Business Intelligence Wizard to order members of an attribute, see [Define the Ordering for a Dimension](define-the-ordering-for-a-dimension.md).  
   
- You can use the **UnaryOperatorColumn** property to specify a named calculation that returns a unary operator as a literal character for all members of the attribute. This could be as simple as typing a literal character such as `'*'` in the named calculation. This would replace the default operator, the plus sign (+), with the multiplication operator, the asterisk (*), for all members of the attribute. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ You can use the **UnaryOperatorColumn** property to specify a named calculation that returns a unary operator as a literal character for all members of the attribute. This could be as simple as typing a literal character such as `'*'` in the named calculation. This would replace the default operator, the plus sign (+), with the multiplication operator, the asterisk (*), for all members of the attribute. For more information, see [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  In the **Browser** tab of Dimension Designer, you can view the unary operators next to each member in a hierarchy. You can also change the unary operators when you work with a write-enabled dimension. If the dimension is not write-enabled, you must use a tool to modify the data source directly.  
   
 ## See Also  
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)   
- [Custom Rollup Operators in Parent-Child Dimensions](../../2014/analysis-services/custom-rollup-operators-in-parent-child-dimensions.md)   
- [Start the Business Intelligence Wizard in Dimension Designer](../../2014/analysis-services/start-the-business-intelligence-wizard-in-dimension-designer.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)   
+ [Custom Rollup Operators in Parent-Child Dimensions](custom-rollup-operators-in-parent-child-dimensions.md)   
+ [Start the Business Intelligence Wizard in Dimension Designer](start-the-business-intelligence-wizard-in-dimension-designer.md)  
   
   

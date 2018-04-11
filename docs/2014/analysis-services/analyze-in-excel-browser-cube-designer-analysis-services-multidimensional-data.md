@@ -42,16 +42,16 @@ manager: "mblythe"
   
  For more information about the **Analyze in Excel** feature, see these resources:  
   
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md)  
+ [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
   
- [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
- [Browse data and metadata in Cube](../../2014/analysis-services/browse-data-and-metadata-in-cube.md)  
+ [Browse data and metadata in Cube](browse-data-and-metadata-in-cube.md)  
   
 ## See Also  
- [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadata &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Query and Filter &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadata &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Query and Filter &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

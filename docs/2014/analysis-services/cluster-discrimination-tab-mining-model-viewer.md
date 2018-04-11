@@ -20,7 +20,7 @@ manager: "mblythe"
 # Cluster Discrimination Tab (Mining Model Viewer)
   Use the **Cluster Discrimination** tab to compare two clusters that exist in a clustering model. You can see how different combinations of attributes and values are represented within the clusters.  
   
- **For More Information:** [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md), [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **For More Information:** [Microsoft Clustering Algorithm](data-mining/microsoft-clustering-algorithm.md), [Browse a Model Using the Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -49,8 +49,8 @@ manager: "mblythe"
 |**Favors \<cluster 2>**|The bar graph on the right represents the probability that the selected attribute-value pair is representative of the cluster selected in **Cluster 2**.|  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

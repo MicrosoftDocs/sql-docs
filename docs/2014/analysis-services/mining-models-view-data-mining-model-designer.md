@@ -22,12 +22,12 @@ manager: "mblythe"
   
  The **Mining Models** view has the following tools and dialog boxes:  
   
--   [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](../../2014/analysis-services/algorithm-parameters-dialog-box-mining-models-view.md)  
+-   [Algorithm Parameters Dialog Box &#40;Mining Models View&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
   
 ## See Also  
- [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)  
+ [Mining Structure View &#40;Data Mining Model Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -27,9 +27,9 @@ manager: "mblythe"
 |Discover Begin|36|Collects all discover begin events since the trace started.|  
 |Discover End|38|Collects all discover end events since the trace started.|  
   
- For information about the columns associated with each of the Discover Events event classes, see [Discover Events Data Columns](../../2014/analysis-services/discover-events-data-columns.md).  
+ For information about the columns associated with each of the Discover Events event classes, see [Discover Events Data Columns](discover-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

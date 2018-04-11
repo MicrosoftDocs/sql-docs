@@ -42,7 +42,7 @@ manager: "mblythe"
  **Atom feeds**  
  The feed must be an Atom feed. RSS feeds are not supported. The feed must either be publicly available or you must have permission to connect to it under the Windows account with which you are currently logged in.  
   
- Data from a data feed is added into a model once during import. To get updated data from the feed, you can either refresh the data from the model designer, or configure a data refresh schedule for the model after it is deployed to a production instance of Analysis Services. For more information, see [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md).  
+ Data from a data feed is added into a model once during import. To get updated data from the feed, you can either refresh the data from the model designer, or configure a data refresh schedule for the model after it is deployed to a production instance of Analysis Services. For more information, see [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md).  
   
 ##  <a name="azure"></a> Import data from an Azure DataMarket dataset  
  You can import data from an Azure DataMarket as a table in your model.  
@@ -188,10 +188,10 @@ manager: "mblythe"
 12. In the **Select Tables and Views** page, click **Finish**.  
   
 ## See Also  
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)   
- [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md)   
- [Impersonation &#40;SSAS Tabular&#41;](../../2014/analysis-services/impersonation-ssas-tabular.md)   
- [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)  
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)   
+ [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md)   
+ [Impersonation &#40;SSAS Tabular&#41;](impersonation-ssas-tabular.md)   
+ [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
   
   

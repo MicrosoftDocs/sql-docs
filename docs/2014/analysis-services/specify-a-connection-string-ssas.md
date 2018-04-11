@@ -20,7 +20,7 @@ manager: "mblythe"
 # Specify a connection string (SSAS)
   This page of the **Table Import Wizard** enables you to specify a connection string to connect to an OLE DB or ODBC data source. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
   
- To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md).  
+ To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md).  
   
 ## UIElement List  
  **Friendly name for this connection**  

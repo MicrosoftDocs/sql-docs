@@ -29,7 +29,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Fact dimensions must be incrementally updated after every update to the measure group that the fact relationship references.  
   
- For more information, see [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md), and [Define a Fact Relationship and Fact Relationship Properties](../../2014/analysis-services/define-a-fact-relationship-and-fact-relationship-properties.md).  
+ For more information, see [Dimension Relationships](dev-guide/dimension-relationships.md), and [Define a Fact Relationship and Fact Relationship Properties](define-a-fact-relationship-and-fact-relationship-properties.md).  
   
  In the tasks in this topic, you add a new cube dimension based on the **CustomerPONumber** column in the **FactInternetSales** fact table. You then define the relationship between this new cube dimension and the **Internet Sales** measure group as a fact relationship.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
  [Defining a Many-to-Many Relationship](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## See Also  
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Define a Fact Relationship and Fact Relationship Properties](../../2014/analysis-services/define-a-fact-relationship-and-fact-relationship-properties.md)  
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Define a Fact Relationship and Fact Relationship Properties](define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

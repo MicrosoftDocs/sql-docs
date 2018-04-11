@@ -28,9 +28,9 @@ manager: "mblythe"
   
  To create an attribute manually, set the **Attributes** pane to grid view. In the name column of the last row in the grid, click the **\<new attribute>** item. Type a name for the new attribute. This creates an attribute that is not mapped to a column and that has default settings for all its properties. You can set the mapping in the **Properties** window of [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] by configuring the **KeyColumns** property for the new attribute.  
   
- For more information, see [Define a New Attribute Automatically](../../2014/analysis-services/define-a-new-attribute-automatically.md), [Define a New Attribute Manually](../../2014/analysis-services/define-a-new-attribute-manually.md), [Bind an Attribute to a Name Column](../../2014/analysis-services/bind-an-attribute-to-a-name-column.md), and [Modify the KeyColumn Property of an Attribute](../../2014/analysis-services/modify-the-keycolumn-property-of-an-attribute.md).  
+ For more information, see [Define a New Attribute Automatically](define-a-new-attribute-automatically.md), [Define a New Attribute Manually](define-a-new-attribute-manually.md), [Bind an Attribute to a Name Column](bind-an-attribute-to-a-name-column.md), and [Modify the KeyColumn Property of an Attribute](modify-the-keycolumn-property-of-an-attribute.md).  
   
 ## See Also  
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

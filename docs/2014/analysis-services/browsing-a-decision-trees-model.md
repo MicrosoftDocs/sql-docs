@@ -51,7 +51,7 @@ manager: "mblythe"
   
      Additional splits occur to the right. Thus, by analyzing different segments of the tree, you can learn which attributes had the most influence on purchasing behavior.  
   
- ![Dependency network graph for an association model](../../2014/analysis-services/media/dm13-dec-tree-split-definition.gif "Dependency network graph for an association model")  
+ ![Dependency network graph for an association model](media/dm13-dec-tree-split-definition.gif "Dependency network graph for an association model")  
   
  Using this information, you might focus a marketing campaign on customers that might simply need encouragement to make a purchase.  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
 4.  Change the value for **Background** from **All Cases** to **Yes**.  
   
-     ![changing decision tree graph to highlight buyers](../../2014/analysis-services/media/dm13-dectreeshadedbuyer.gif "changing decision tree graph to highlight buyers")  
+     ![changing decision tree graph to highlight buyers](media/dm13-dectreeshadedbuyer.gif "changing decision tree graph to highlight buyers")  
   
 5.  Now the intensity of the color tells you how many customers in each node purchased a bike, which is the behavior you are interested in.  
   
@@ -99,7 +99,7 @@ manager: "mblythe"
   
 7.  Change the value for **Background** from **Yes** to **No** and see how the graph changes.  
   
-     ![Dependency network graph for an association model](../../2014/analysis-services/media/dm13-dec-tree-background-no.gif "Dependency network graph for an association model")  
+     ![Dependency network graph for an association model](media/dm13-dec-tree-background-no.gif "Dependency network graph for an association model")  
   
  **Tips**  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
   
 2.  Now click the Bike Buyer node.  
   
-     ![Dependency network view for decision trees](../../2014/analysis-services/media/dm13-dectree-depnet.gif "Dependency network view for decision trees")  
+     ![Dependency network view for decision trees](media/dm13-dectree-depnet.gif "Dependency network view for decision trees")  
   
      When you select a node, the viewer highlights the dependencies that are specific to the node. In this case, the viewer highlights each node that helps predict the outcome.  
   
@@ -149,9 +149,9 @@ manager: "mblythe"
   
      Return to Excel to view your data. The Browse viewer runs a query, saves the data to a table in a new worksheet, and labels the results.  
   
-     ![results of drillthrough are saved to Excel](../../2014/analysis-services/media/dm13-dectree-drillthroughresults.gif "results of drillthrough are saved to Excel")  
+     ![results of drillthrough are saved to Excel](media/dm13-dectree-drillthroughresults.gif "results of drillthrough are saved to Excel")  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

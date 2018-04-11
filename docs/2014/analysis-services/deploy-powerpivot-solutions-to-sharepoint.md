@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Deploy PowerPivot Solutions to SharePoint
-  Use the following instructions to manually deploy two solution packages that add PowerPivot features to a SharePoint Server 2010 environment. Deploying the solutions is a required step for configuring PowerPivot for SharePoint on a SharePoint 2010 server. To view the complete list of required steps, see [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md).  
+  Use the following instructions to manually deploy two solution packages that add PowerPivot features to a SharePoint Server 2010 environment. Deploying the solutions is a required step for configuring PowerPivot for SharePoint on a SharePoint 2010 server. To view the complete list of required steps, see [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md).  
   
- Alternatively, you can use the PowerPivot Configuration Tool to deploy the solutions. Using the configuration tool is easier and more efficient for a single server installation, but you might want to use Central Administration and PowerShell if you prefer using a familiar tool or if you are configuring multiple features at the same time. For more information about using the configuration tool, see [PowerPivot Configuration Tools](../../2014/analysis-services/powerpivot-configuration-tools.md).  
+ Alternatively, you can use the PowerPivot Configuration Tool to deploy the solutions. Using the configuration tool is easier and more efficient for a single server installation, but you might want to use Central Administration and PowerShell if you prefer using a familiar tool or if you are configuring multiple features at the same time. For more information about using the configuration tool, see [PowerPivot Configuration Tools](powerpivot-configuration-tools.md).  
   
  Before deploying the solutions, you must first install PowerPivot for SharePoint using the SQL Server 2012 installation media. SQL Server Setup installs the solution packages that you are about to deploy.  
   
@@ -46,7 +46,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  The return value should be **false**. If it is **true**, you cannot access PowerPivot data with this web application.  
   
 ##  <a name="bkmk_farm"></a> Step 1: Deploy the Farm Solution  
- This section shows you how to deploy solutions using PowerShell, but you can also use the PowerPivot Configuration Tool to complete this task. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
+ This section shows you how to deploy solutions using PowerShell, but you can also use the PowerPivot Configuration Tool to complete this task. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](configure-repair-powerpivot-sharepoint-2010.md).  
   
  This task only needs to be performed once, after you install PowerPivot for SharePoint.  
   
@@ -117,7 +117,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Click **Retract Solution**.  
   
- If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the PowerPivot Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
+ If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the PowerPivot Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](configure-repair-powerpivot-sharepoint-2010.md).  
   
  If you still want to re-deploy all solutions, be sure to do so in this order:  
   
@@ -147,7 +147,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 ## See Also  
  [Upgrade PowerPivot for SharePoint](../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)   
- [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Configuration using Windows PowerShell](powerpivot-configuration-using-windows-powershell.md)  
   
   

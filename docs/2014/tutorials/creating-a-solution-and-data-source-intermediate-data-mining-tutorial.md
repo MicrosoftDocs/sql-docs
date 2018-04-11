@@ -76,7 +76,7 @@ manager: "jhubbard"
  [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Data Mining Projects](../../2014/analysis-services/data-mining-projects.md)   
+ [Data Mining Projects](../../2014/analysis-services/data-mining/data-mining-projects.md)   
  [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
   
   

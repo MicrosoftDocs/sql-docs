@@ -41,11 +41,11 @@ manager: "mblythe"
  Select to generate the schema needed to support the dimension. Selecting this option opens the Schema Generation Wizard.  
   
 > [!NOTE]  
->  This option appears only if you selected **Generate a time table in the data source** or **Generate a non-time table in the data source** on the **Select Creation Method** page. For more information, see [Select Creation Method &#40;Dimension Wizard&#41;](../../2014/analysis-services/select-creation-method-dimension-wizard.md).  
+>  This option appears only if you selected **Generate a time table in the data source** or **Generate a non-time table in the data source** on the **Select Creation Method** page. For more information, see [Select Creation Method &#40;Dimension Wizard&#41;](select-creation-method-dimension-wizard.md).  
   
 ## See Also  
- [Dimension Wizard F1 Help](../../2014/analysis-services/dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

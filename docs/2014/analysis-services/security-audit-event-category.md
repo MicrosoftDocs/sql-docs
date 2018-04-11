@@ -30,9 +30,9 @@ manager: "mblythe"
 |Audit Object Permission Event|18|Records all object permission changes.|  
 |Audit Admin Operations Event|19|Records server operations for backup, restore, synchronize, attach, detach, image load, and image save.|  
   
- For information about the columns associated with each of the Security Audit event classes, see [Security Audit Data Columns](../../2014/analysis-services/security-audit-data-columns.md).  
+ For information about the columns associated with each of the Security Audit event classes, see [Security Audit Data Columns](security-audit-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

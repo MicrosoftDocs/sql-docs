@@ -20,7 +20,7 @@ manager: "mblythe"
 # Select Nested Table Columns (Add New Nested Table Wizard)
   Use the **Select Nested Table Columns** page to select the attributes and measures to include in the nested table and to define how the mining model will use the attributes and measures.  
   
- **For More Information:** [Mining Model Columns](../../2014/analysis-services/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Mining Model Columns](data-mining/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Columns**  
@@ -33,8 +33,8 @@ manager: "mblythe"
  Select to designate if a measure or attribute will be used as a predictable column in the mining model. A column can be marked as both input and predictable.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Nested Table Key &#40;Add New Nested Table Wizard&#41;](../../2014/analysis-services/select-nested-table-key-add-new-nested-table-wizard.md)   
- [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Nested Table Key &#40;Add New Nested Table Wizard&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
+ [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

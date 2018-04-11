@@ -29,7 +29,7 @@ manager: "mblythe"
 3.  Follow the steps in the Table Import Wizard. On subsequent pages, you will be able to select specific tables and apply filters by using the **Select Tables and Views** page.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)  
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
   
   

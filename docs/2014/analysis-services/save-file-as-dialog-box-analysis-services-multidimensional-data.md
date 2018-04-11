@@ -35,7 +35,7 @@ manager: "mblythe"
  Type to modify the file selected from **Select the folder**, or to select a file not listed in **Select the folder**.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Backup Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Backup Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

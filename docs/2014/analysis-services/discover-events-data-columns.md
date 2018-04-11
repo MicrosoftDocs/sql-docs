@@ -77,6 +77,6 @@ manager: "mblythe"
 |RequestProperties|45|9|Contains the properties in the XMLA request.|  
   
 ## See Also  
- [Discover Events Event Category](../../2014/analysis-services/discover-events-event-category.md)  
+ [Discover Events Event Category](discover-events-event-category.md)  
   
   

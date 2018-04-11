@@ -20,12 +20,12 @@ manager: "mblythe"
 # Specify the Training Data (Data Mining Wizard)
   Use the **Specify the Training Data** page to identify which columns to include in the mining structure. You can select columns to include in the structure even if you do not use them in all models. For example, if you want to drill through to the columns from the mining model, you can include them in the structure but not in the model.  
   
- At least one key column is required for each table that is included in the structure. The column that you pick as the key depends on whether the table is a case table or a nested table. If the table is a nested table, the key is often also the predictable column, not the relational foreign key. To learn about nested keys, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md).  
+ At least one key column is required for each table that is included in the structure. The column that you pick as the key depends on whether the table is a case table or a nested table. If the table is a nested table, the key is often also the predictable column, not the relational foreign key. To learn about nested keys, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md).  
   
 > [!NOTE]  
->  Different mining algorithms use keys differently. To learn about the different kinds of keys, see [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md).  
+>  Different mining algorithms use keys differently. To learn about the different kinds of keys, see [Content Types &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **For More Information:** [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md), [Mining Model Columns](../../2014/analysis-services/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Mining Model Columns](data-mining/mining-model-columns.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Tables/Columns**  
@@ -62,9 +62,9 @@ manager: "mblythe"
  **Note** This column only available when you are creating a mining model together with the mining structure.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Suggest Related Columns &#40;Data Mining Wizard&#41;](../../2014/analysis-services/suggest-related-columns-data-mining-wizard.md)   
- [Specify Table Types &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Suggest Related Columns &#40;Data Mining Wizard&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Specify Table Types &#40;Data Mining Wizard&#41;](specify-table-types-data-mining-wizard.md)   
+ [Specify the Column's Content and Data Type &#40;Data Mining Wizard&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

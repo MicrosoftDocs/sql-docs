@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Cross-Validation (SQL Server Data Mining Add-ins)
-  ![Cross-Validation button, Data Mining ribbon](../../2014/analysis-services/media/dmc-xvalid.gif "Cross-Validation button, Data Mining ribbon")  
+  ![Cross-Validation button, Data Mining ribbon](media/dmc-xvalid.gif "Cross-Validation button, Data Mining ribbon")  
   
  Cross-validation is a standard tool in analytics and is an important feature for helping you develop and fine-tune data mining models. You use cross-validation after you have created a mining model to ascertain the validity of the model and to compare its results with other, related mining models.  
   
@@ -134,6 +134,6 @@ manager: "mblythe"
  In clustering models, there are two kinds of cluster membership, depending on the method you used to create the model. In some models, based on the K-means algorithm, a new case is expected to belong to only one cluster. However, by default the Microsoft Clustering algorithm uses the Expectation Maximization method, which assumes that a new case potentially can belong to any cluster. Therefore, in these models a case can have multiple `CaseLikelihood` values, but the one reported by default is the likelihood of the case belonging to the cluster that is the best match for the new case.  
   
 ## See Also  
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

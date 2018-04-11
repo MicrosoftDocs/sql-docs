@@ -32,7 +32,7 @@ manager: "jhubbard"
 >  User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they are allowed to run. Because UAC is on by default, you will be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351).  
   
 ## See Also  
- [Configure Service Accounts &#40;Analysis Services&#41;](../../../2014/analysis-services/configure-service-accounts-analysis-services.md)   
+ [Configure Service Accounts &#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   
  [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)  
   
   

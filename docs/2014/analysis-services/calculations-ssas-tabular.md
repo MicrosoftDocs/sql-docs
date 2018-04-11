@@ -22,12 +22,12 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../2014/analysis-services/understanding-dax-in-tabular-models-ssas-tabular.md)|Describes the Data Analysis Expressions (DAX) formula language used to create calculations for calculated columns, measures, and row filters in tabular models.|  
+|[Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Describes the Data Analysis Expressions (DAX) formula language used to create calculations for calculated columns, measures, and row filters in tabular models.|  
 |[Formula Compatibility in DirectQuery Mode](dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Describes the differences, lists the functions that are not supported in DirectQuery mode, and lists the functions that are supported but could return different results.|  
 |[Data Analysis Expressions &#40;DAX&#41; Reference](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|This section provides detailed descriptions of DAX syntax, operators, and functions.|  
   
 > [!NOTE]  
->  Step-by-step tasks for creating calculations are not provided in this section. Because calculations are specified in calculated columns, measures, and row filters (in roles), instructions on where to create DAX formulas are provided in tasks related to those features. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-calculated-column-ssas-tabular.md), [Create and Manage Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-measures-ssas-tabular.md), and [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
+>  Step-by-step tasks for creating calculations are not provided in this section. Because calculations are specified in calculated columns, measures, and row filters (in roles), instructions on where to create DAX formulas are provided in tasks related to those features. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](create-a-calculated-column-ssas-tabular.md), [Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md), and [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md).  
   
 > [!NOTE]  
 >  While DAX can also be used to query a tabular model, topics in this section focus specifically on using DAX formulas to create calculations.  

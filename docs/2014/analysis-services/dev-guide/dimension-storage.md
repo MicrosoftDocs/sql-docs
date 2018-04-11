@@ -41,7 +41,7 @@ manager: "mblythe"
  Data for a dimension that uses ROLAP is actually stored in the tables used to define the dimension. The ROLAP storage mode can be used to support large dimensions without duplicating large amounts of data, but at the expense of query performance. Because the dimension relies directly on the tables in the data source view used to define the dimension, the ROLAP storage mode also supports real-time OLAP.  
   
 > [!IMPORTANT]  
->  If a dimension uses the ROLAP storage mode and the dimension is included in a cube that uses MOLAP storage, any schema changes to its source table must be followed by immediate processing of the cube. Failure to do this may result in inconsistent results when querying the cube. **Related topic:**[Automate Analysis Services Administrative Tasks with SSIS](../../../2014/analysis-services/automate-analysis-services-administrative-tasks-with-ssis.md).  
+>  If a dimension uses the ROLAP storage mode and the dimension is included in a cube that uses MOLAP storage, any schema changes to its source table must be followed by immediate processing of the cube. Failure to do this may result in inconsistent results when querying the cube. **Related topic:**[Automate Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## See Also  
  [Partition Storage Modes and Processing](../../../2014/analysis-services/dev-guide/partition-storage-modes-and-processing.md)  

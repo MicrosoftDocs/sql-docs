@@ -56,6 +56,6 @@ manager: "jhubbard"
  [Understanding the Requirements for a Time Series Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)  
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

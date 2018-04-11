@@ -52,16 +52,16 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)|Describes the types of data sources that can be used in a multidimensional model.|  
-|[Create a Data Source &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/create-a-data-source-ssas-multidimensional.md)|Explains how to add a data source object to a multidimensional model.|  
-|[Delete a Data Source in Solution Explorer &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use this procedure to delete a data source object from a multidimensional model.|  
-|[Set Data Source Properties &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/set-data-source-properties-ssas-multidimensional.md)|Describes each property and explains how to set each one.|  
-|[Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md)|Explains how to configure options in the Impersonation Information dialog box.|  
+|[Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)|Describes the types of data sources that can be used in a multidimensional model.|  
+|[Create a Data Source &#40;SSAS Multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)|Explains how to add a data source object to a multidimensional model.|  
+|[Delete a Data Source in Solution Explorer &#40;SSAS Multidimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use this procedure to delete a data source object from a multidimensional model.|  
+|[Set Data Source Properties &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Describes each property and explains how to set each one.|  
+|[Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md)|Explains how to configure options in the Impersonation Information dialog box.|  
   
 ## See Also  
- [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/database-objects-analysis-services-multidimensional-data.md)   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-and-bindings-ssas-multidimensional.md)  
+ [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/database-objects-analysis-services-multidimensional-data.md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

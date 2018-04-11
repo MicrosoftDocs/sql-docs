@@ -28,8 +28,8 @@ manager: "mblythe"
  Click the browse (**…**) button to open the **Select a Column** dialog box and select the custom member formula column to be associated with the attribute.  
   
 ## See Also  
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)  
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

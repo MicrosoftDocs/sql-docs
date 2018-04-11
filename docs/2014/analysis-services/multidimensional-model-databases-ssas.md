@@ -37,29 +37,29 @@ manager: "mblythe"
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] uses integration with source control software to support multiple developers working with different objects within an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project at the same time. A developer can also interact with an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database directly, rather than through an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, but the risk of this is that the objects in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database can become out of sync with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project that was used for its deployment. After deployment, you administer an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Certain changes can also be made to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], such as to partitions and roles, which can also cause the objects in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database to become out of sync with the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project that was used for its deployment.  
   
 ## Related Tasks  
- [Attach and Detach Analysis Services Databases](../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)  
+ [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)  
   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
   
- [Document and Script an Analysis Services Database](../../2014/analysis-services/document-and-script-an-analysis-services-database.md)  
+ [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)  
   
- [Modify or Delete an Analysis Services Database](../../2014/analysis-services/modify-or-delete-an-analysis-services-database.md)  
+ [Modify or Delete an Analysis Services Database](modify-or-delete-an-analysis-services-database.md)  
   
- [Move an Analysis Services Database](../../2014/analysis-services/move-an-analysis-services-database.md)  
+ [Move an Analysis Services Database](move-an-analysis-services-database.md)  
   
- [Rename a Multidimensional Database &#40;Analysis Services&#41;](../../2014/analysis-services/rename-a-multidimensional-database-analysis-services.md)  
+ [Rename a Multidimensional Database &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Set Multidimensional Database Properties &#40;Analysis Services&#41;](../../2014/analysis-services/set-multidimensional-database-properties-analysis-services.md)  
+ [Set Multidimensional Database Properties &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
- [Synchronize Analysis Services Databases](../../2014/analysis-services/synchronize-analysis-services-databases.md)  
+ [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)  
   
- [Switch an Analysis Services database between ReadOnly and ReadWrite modes](../../2014/analysis-services/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## See Also  
- [Connect in Online Mode to an Analysis Services Database](../../2014/analysis-services/connect-in-online-mode-to-an-analysis-services-database.md)   
- [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md)   
- [Querying Multidimensional Data with MDX](../../2014/analysis-services/querying-multidimensional-data-with-mdx.md)  
+ [Connect in Online Mode to an Analysis Services Database](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Create an Analysis Services Project &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Querying Multidimensional Data with MDX](querying-multidimensional-data-with-mdx.md)  
   
   

@@ -20,10 +20,10 @@ manager: "mblythe"
   
 ## In this section  
   
--   [Understanding Power View for Multidimensional Models](../../2014/analysis-services/understanding-power-view-for-multidimensional-models.md)  
+-   [Understanding Power View for Multidimensional Models](understanding-power-view-for-multidimensional-models.md)  
   
--   [Create a Report Data Source](../../2014/analysis-services/create-a-report-data-source.md)  
+-   [Create a Report Data Source](create-a-report-data-source.md)  
   
--   [Create a Power View Report with a Multidimensional Data Source](../../2014/analysis-services/create-a-power-view-report-with-a-multidimensional-data-source.md)  
+-   [Create a Power View Report with a Multidimensional Data Source](create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   

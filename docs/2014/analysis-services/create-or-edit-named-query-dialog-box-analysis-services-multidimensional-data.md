@@ -68,7 +68,7 @@ manager: "mblythe"
 |**Sort Descending**|Sorts output rows on the selected column in the **Grid pane**, in descending order.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
 |**Remove Filter**|Removes sort criteria, if applicable, for the selected row in the **Grid pane**.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
 |**Use Group By**|Adds grouping functionality to the query.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
-|**Add Table**|Displays the **Add Table** dialog box to add a new table or view to the query. For more information about the **Add Table** dialog box, see [Add Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
+|**Add Table**|Displays the **Add Table** dialog box to add a new table or view to the query. For more information about the **Add Table** dialog box, see [Add Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
   
  **Diagram pane**  
  Displays the objects referenced by the query as a diagram. The diagram shows the tables included in the query, and how they are joined. Select or clear the check box next to a column in a table to add or remove it from the query output.  
@@ -99,7 +99,7 @@ manager: "mblythe"
  Displays the results of the query when you click **Run** on the **Toolbar** pane.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

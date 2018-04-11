@@ -88,6 +88,6 @@ manager: "mblythe"
 |ServerName|43|8|Contains the name of the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the server state discover event occurred.|  
   
 ## See Also  
- [Discover Server State Event Category](../../2014/analysis-services/discover-server-state-event-category.md)  
+ [Discover Server State Event Category](discover-server-state-event-category.md)  
   
   

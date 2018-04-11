@@ -73,7 +73,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- For more information about the algorithm parameters that you can adjust, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md).  
+ For more information about the algorithm parameters that you can adjust, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
  You can specify that a column in the mining model be used for prediction by using the following syntax:  
   
@@ -219,7 +219,7 @@ WITH DRILLTHROUGH
  [Lesson 3: Processing the Time Series Structure and Models](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## See Also  
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)   
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md)  
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure the PowerPivot Unattended Data Refresh Account (PowerPivot for SharePoint)
-  The PowerPivot unattended data refresh account is a designated account for running PowerPivot data refresh jobs in a SharePoint farm. By configuring it, you enable the **Use the data refresh account configured by the administrator** option in a data refresh schedule page (see below). Workbook authors who schedule data refresh can choose this option if they want to use the PowerPivot unattended data refresh account to run a data refresh job. For more information about how to view the Credentials options in a data refresh schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+  The PowerPivot unattended data refresh account is a designated account for running PowerPivot data refresh jobs in a SharePoint farm. By configuring it, you enable the **Use the data refresh account configured by the administrator** option in a data refresh schedule page (see below). Workbook authors who schedule data refresh can choose this option if they want to use the PowerPivot unattended data refresh account to run a data refresh job. For more information about how to view the Credentials options in a data refresh schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
- ![SSAS_PowerpivotKJ_DataRefreshCreds](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
+ ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -45,7 +45,7 @@ manager: "mblythe"
  [Update the credentials used by an existing PowerPivot unattended data refresh account](#bkmk_editUA)  
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
- Secure Store Service must be enabled and configured, and a master key must be generated. For instructions on how to do this, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)  
+ Secure Store Service must be enabled and configured, and a master key must be generated. For instructions on how to do this, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
  You must decide in advance which Windows domain user account to use as the PowerPivot unattended data refresh account. This should be an account that is created specifically for this purpose so that you can monitor how it is used.  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
  You can configure only one PowerPivot unattended data refresh account for each PowerPivot service application. Account information is stored in Secure Store Service in a target application that is set to a predefined Windows domain user account. Once the target application is created, you can specify it as the PowerPivot data refresh account in the configuration pages of a PowerPivot service application.  
   
 > [!NOTE]  
->  When data refresh is performed under the unattended data refresh account, usage reporting and data refresh history is recorded against the Windows user account used for unattended data refresh. If you require a more accurate record of the individuals who are requesting data refresh or who own schedules, consider one of the other options for running data refresh. Namely, having users specify their own credentials (this is the default), or creating additional target applications for storing any Windows credentials that you want to use for data refresh purposes. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+>  When data refresh is performed under the unattended data refresh account, usage reporting and data refresh history is recorded against the Windows user account used for unattended data refresh. If you require a more accurate record of the individuals who are requesting data refresh or who own schedules, consider one of the other options for running data refresh. Namely, having users specify their own credentials (this is the default), or creating additional target applications for storing any Windows credentials that you want to use for data refresh purposes. For more information, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
  There are five parts to creating the unattended data refresh account.  
   
@@ -146,7 +146,7 @@ manager: "mblythe"
   
 ###  <a name="bkmk_verify"></a> Step 5: Verify account availability in data refresh configuration pages  
   
-1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+1.  Open a data refresh configuration page for a published workbook that contains PowerPivot data. For instructions on how to open the page, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
 2.  Verify that the **Use the data refresh account configured by the administrator** option is enabled in the data refresh configuration page.  
   
@@ -161,9 +161,9 @@ manager: "mblythe"
 ##  <a name="bkmk_use"></a> Using the PowerPivot Unattended Data Refresh Account  
  Of the three credential options in PowerPivot data refresh scheduling page, only the first one corresponds to the unattended data refresh account. Be sure to select this option when setting up the data refresh schedule.  
   
- ![SSAS_PowerpivotKJ_DataRefreshCreds](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
+ ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- Do not use the third credential option (the one that requires you to enter the target application ID) to access the PowerPivot unattended data refresh account. There is an additional impersonation check that is performed with that option that will result in a validation error if you try to use it with the PowerPivot unattended data refresh account (or any target application that is based on the Individual account type). For more information about how to use the third option, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Do not use the third credential option (the one that requires you to enter the target application ID) to access the PowerPivot unattended data refresh account. There is an additional impersonation check that is performed with that option that will result in a validation error if you try to use it with the PowerPivot unattended data refresh account (or any target application that is based on the Individual account type). For more information about how to use the third option, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="bkmk_editUA"></a> Update the credentials used by an existing PowerPivot unattended data refresh account  
  If the unattended data refresh account is already configured through setup or by an administrator, you can update the user name or password by editing the target application that stores the credentials. Note that the original Windows identity that was previously associated with PowerPivot unattended data refresh account will not be visible when you edit the credentials in Secure Store Service. Whether you are updating an expired password or specifying different account, you must always re-type both the user name and password for that target application in Secure Store Service.  
@@ -187,8 +187,8 @@ manager: "mblythe"
  If you are changing not just the password, but the account user name as well, you will most likely need to perform additional configuration steps, such as granting read permissions to external data sources and SharePoint permissions to update the PowerPivot workbook. For instructions, go to this step in PowerPivot unattended data refresh account configuration: [Step 3: Grant contribute permissions to the account](#bkmk_grant), and then continue with all remaining steps, concluding with verification that the account is configured correctly.  
   
 ## See Also  
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [PowerPivot Data Refresh](../../2014/analysis-services/powerpivot-data-refresh.md)  
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
+ [PowerPivot Data Refresh](powerpivot-data-refresh.md)  
   
   

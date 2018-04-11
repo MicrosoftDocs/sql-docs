@@ -26,9 +26,9 @@ manager: "mblythe"
 |Lock Released|53|Collects information about locks released, since the trace started.|  
 |Lock Waiting|54|Collects information about locks in waiting status, since trace started.|  
   
- For information about the columns associated with each of the Lock event classes, see [Lock Events Data Columns](../../2014/analysis-services/lock-events-data-columns.md).  
+ For information about the columns associated with each of the Lock event classes, see [Lock Events Data Columns](lock-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

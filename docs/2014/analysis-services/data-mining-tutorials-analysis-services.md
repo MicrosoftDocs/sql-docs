@@ -45,21 +45,21 @@ manager: "jhubbard"
      Advanced concepts covered in these lessons include the use of nested tables, cross-prediction, custom data source views and named queries, and filtering in data mining queries. You will also gain proficiency in using the prediction query tools that are included in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## Reference  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md)  
   
 ## Related Sections  
- [Data Mining Tools](../../2014/analysis-services/data-mining-tools.md)  
+ [Data Mining Tools](data-mining/data-mining-tools.md)  
   
- [Logical Architecture &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/logical-architecture-analysis-services-data-mining.md)  
+ [Logical Architecture &#40;Analysis Services - Data Mining&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/logical-architecture-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/logical-architecture-analysis-services-multidimensional-data.md)  
   
- [Data Mining Projects](../../2014/analysis-services/data-mining-projects.md)  
+ [Data Mining Projects](data-mining/data-mining-projects.md)  
   
 ## See Also  
- [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)   
+ [Data Mining Solutions](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server Data Mining resources](http://go.microsoft.com/fwlink/?LinkId=97965)   
  [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   

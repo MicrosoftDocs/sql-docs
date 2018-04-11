@@ -27,7 +27,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  If you make any manual changes to the query, your changes will be lost when you switch back to Design view. If you want to save the DMX query, you can copy the query to the Windows Clipboard and then paste it to a text file.  
   
- **For More Information:** [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md)  
+ **For More Information:** [Data Mining Queries](data-mining/data-mining-queries.md)  
   
 ## Options  
  **Switch to query result view**  
@@ -90,7 +90,7 @@ manager: "mblythe"
   
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](~/dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)  
+ [Data Mining Query Interfaces](data-mining/data-mining-query-tools.md)   
+ [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Specify a Unary Operator (Dimension) (Business Intelligence Wizard)
-  Use the **Specify a Unary Operator** page to select a dimension that has a parent attribute defined and to which the Business Intelligence Wizard will apply unary operators. For more information about parent attributes, see [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md).  
+  Use the **Specify a Unary Operator** page to select a dimension that has a parent attribute defined and to which the Business Intelligence Wizard will apply unary operators. For more information about parent attributes, see [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md).  
   
 > [!NOTE]  
 >  This page does not appear if the Business Intelligence Wizard was started from Dimension Designer or by right-clicking a dimension in Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -28,8 +28,8 @@ manager: "mblythe"
  Select the dimension that contains a parent attribute and to which the wizard will apply unary operators.  
   
 ## See Also  
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-designer-analysis-services-multidimensional-data.md)  
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Designer &#40;Analysis Services - Multidimensional Data&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

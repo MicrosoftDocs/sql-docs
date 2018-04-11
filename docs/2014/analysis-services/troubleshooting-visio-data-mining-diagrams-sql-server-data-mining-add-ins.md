@@ -33,7 +33,7 @@ manager: "mblythe"
   Can’t see the details  
   
 ## See Also  
- [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] creates groups by performing single-dimensional clustering on the input values by using the K-Means clustering method with Gaussian distributions. This option is valid only for numeric columns.  
   
- After you specify a grouping method, you must specify the number of groups, by using the **DiscretizationBucketCount** property. For more information, see [Group Attribute Members &#40;Discretization&#41;](../../2014/analysis-services/group-attribute-members-discretization.md)  
+ After you specify a grouping method, you must specify the number of groups, by using the **DiscretizationBucketCount** property. For more information, see [Group Attribute Members &#40;Discretization&#41;](group-attribute-members-discretization.md)  
   
  In the tasks in this topic, you will enable different types of groupings for the following: the yearly income values in the **Customer** dimension; the number of employee sick leave hours in the **Employees** dimension; and the number of employee vacation hours in the **Employees** dimension. You will then process and browse the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube to view the effect of the member groups. Finally, you will modify the member group properties to see the effect of the change in grouping type.  
   
@@ -124,6 +124,6 @@ manager: "jhubbard"
  [Hiding and Disabling Attribute Hierarchies](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## See Also  
- [Group Attribute Members &#40;Discretization&#41;](../../2014/analysis-services/group-attribute-members-discretization.md)  
+ [Group Attribute Members &#40;Discretization&#41;](group-attribute-members-discretization.md)  
   
   

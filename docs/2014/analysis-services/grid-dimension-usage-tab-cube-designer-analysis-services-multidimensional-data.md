@@ -24,15 +24,15 @@ manager: "mblythe"
 |------------|----------------|  
 |**Measure Groups**|Select the measure groups to display in the **Grid** pane as columns. Selecting **(Show All)** displays all of the available measure groups.<br /><br /> Click a selected column header for a measure group to rename the measure group.|  
 |**Dimensions**|Select the cube dimensions to display in the **Grid** pane as rows. Selecting **(Show All)** displays all of the available cube dimensions.<br /><br /> Click a selected row header for a dimension to rename the cube dimension.|  
-|**(Cell)**|Select a cell and click the ellipsis button (**...**) to display the **Define Relationship** dialog box and define a dimension relationship between a cube dimension and a measure group. For more information about the **Define Relationship** dialog box, see [Define Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Select a cell and click the ellipsis button (**...**) to display the **Define Relationship** dialog box and define a dimension relationship between a cube dimension and a measure group. For more information about the **Define Relationship** dialog box, see [Define Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## Context Menu  
  The following options are available in the context menu, which is displayed by right-clicking the **Grid** pane:  
   
 |Option|Definition|  
 |------------|----------------|  
-|**Add Cube Dimension**|Select to display the **Add Cube Dimension** dialog box and add references to existing or new database dimensions in the cube. For more information about the **Add Cube Dimension** dialog box, see [Add Cube Dimension Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
-|**New Linked Object**|Select to display the **Linked Object Wizard** and link measure groups and dimensions from other cubes, and to import actions, KPIs, and calculations, to the selected cube. For more information about the **Linked Object Wizard**, see [Linked Object Wizard F1 Help](../../2014/analysis-services/linked-object-wizard-f1-help.md).|  
+|**Add Cube Dimension**|Select to display the **Add Cube Dimension** dialog box and add references to existing or new database dimensions in the cube. For more information about the **Add Cube Dimension** dialog box, see [Add Cube Dimension Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
+|**New Linked Object**|Select to display the **Linked Object Wizard** and link measure groups and dimensions from other cubes, and to import actions, KPIs, and calculations, to the selected cube. For more information about the **Linked Object Wizard**, see [Linked Object Wizard F1 Help](linked-object-wizard-f1-help.md).|  
 |**Cut**|Note: This option is disabled.|  
 |**Copy**|Note: This option is disabled.|  
 |**Paste**|Note: This option is disabled.|  
@@ -41,10 +41,10 @@ manager: "mblythe"
 |**Properties**|Select to display the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected cube dimension, measure group, or dimension relationship.|  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
   
   

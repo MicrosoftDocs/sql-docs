@@ -33,8 +33,8 @@ manager: "mblythe"
  Select the language for the new translation from the list of available languages. Languages already selected do not appear in the list.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Translation Details &#40;Translations Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Translation Details &#40;Translations Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

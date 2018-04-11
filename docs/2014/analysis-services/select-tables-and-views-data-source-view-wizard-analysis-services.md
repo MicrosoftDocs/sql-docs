@@ -50,7 +50,7 @@ manager: "mblythe"
  Adds all the tables that are related to those listed under **Included objects**. This option does not add views. However, this option does add partitioned tables. If you select name-matching criteria on the **Name Matching** page of the wizard, this option also includes logically related tables according to the criteria you select. Tables are also included if they are related to the newly added related tables, and if they have an identical structure to the original table.  
   
 ## See Also  
- [Data Source View Wizard F1 Help &#40;Analysis Services&#41;](../../2014/analysis-services/data-source-view-wizard-f1-help-analysis-services.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source View Wizard F1 Help &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

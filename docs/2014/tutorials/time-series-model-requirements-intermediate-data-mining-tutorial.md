@@ -50,7 +50,7 @@ manager: "jhubbard"
 ## Handling Missing Data (Optional)  
  If any series has missing data, you might get an error when you try to process the model. You have several ways to work around missing data:  
   
--   You can have Analysis Services fill in missing values, either by calculating a mean, or by using a previous value. You do this by setting the MISSING_VALUE_SUBSTITUTION parameter on the mining model. For more information about this parameter, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md). For information about how to change parameters on an existing mining model, see [View or Change Algorithm Parameters](../../2014/analysis-services/view-or-change-algorithm-parameters.md).  
+-   You can have Analysis Services fill in missing values, either by calculating a mean, or by using a previous value. You do this by setting the MISSING_VALUE_SUBSTITUTION parameter on the mining model. For more information about this parameter, see [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md). For information about how to change parameters on an existing mining model, see [View or Change Algorithm Parameters](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md).  
   
 -   You can alter the data source or filter the underlying view to eliminate ragged series or to replace values. You can do this in the relational data source, or you can modify the data source view by creating custom named queries or named calculations. For more information, see [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md). A later task in this lesson provides an example of how to build both a named query and a custom calculation.  
   
@@ -66,6 +66,6 @@ manager: "jhubbard"
  [Creating a Forecasting Structure and Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)  
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  To specify a grain for a cube dimension other than the default grain, you modify the granularity attribute for a cube dimension as used within a particular measure group on the **Dimension Usage** tab of Cube Designer. When you change the grain of a dimension within a specific measure group to an attribute other than the key attribute for that dimension, you must guarantee that all other attributes in the measure group are directly or indirectly related to new granularity attribute. You do this by specifying attribute relationships between all other attributes and the attribute that is specified as the granularity attribute in the measure group. In this case, you define additional attribute relationships rather than move attribute relationships. The attribute that is specified as the granularity attribute effectively becomes the key attribute within the measure group for the remaining attributes in the dimension. If you do not specify attribute relationships appropriately, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] will not be able to aggregate values correctly, as you will see in the tasks in this topic.  
   
- For more information, see [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md), [Define a Regular Relationship and Regular Relationship Properties](../../2014/analysis-services/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ For more information, see [Dimension Relationships](dev-guide/dimension-relationships.md), [Define a Regular Relationship and Regular Relationship Properties](define-a-regular-relationship-and-regular-relationship-properties.md).  
   
  In the tasks in this topic, you add a Sales Quotas measure group and define the granularity of the Date dimension in this measure group to be monthly. You then define attribute relationships between the month attribute and other dimension attributes to ensure that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aggregates values correctly.  
   
@@ -221,8 +221,8 @@ manager: "jhubbard"
  [Lesson 6: Defining Calculations](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## See Also  
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Define a Regular Relationship and Regular Relationship Properties](../../2014/analysis-services/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](../../2014/analysis-services/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Define a Regular Relationship and Regular Relationship Properties](define-a-regular-relationship-and-regular-relationship-properties.md)   
+ [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

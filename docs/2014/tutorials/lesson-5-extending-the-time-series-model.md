@@ -231,7 +231,7 @@ WHERE [ModelRegion] = 'M200 Europe'
  Replacing the model cases is useful when you want to train a model on one set of cases and then apply that model to a different data series. A detailed walkthrough of this scenario is presented in [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## See Also  
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)  
   
   

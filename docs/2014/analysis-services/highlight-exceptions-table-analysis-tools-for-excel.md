@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Highlight Exceptions (Table Analysis Tools for Excel)
-  ![Highlight Exceptions button in ribbon](../../2014/analysis-services/media/tat-highlightex.gif "Highlight Exceptions button in ribbon")  
+  ![Highlight Exceptions button in ribbon](media/tat-highlightex.gif "Highlight Exceptions button in ribbon")  
   
  Sometimes your data might contain peculiar values. For example, a homeowner's age might be listed as five years old. These values, often called *outliers*, might be wrong because of a data input error, or they might indicate unusual trends. Either way, exceptions can affect the quality of your analysis. The **Highlight Exceptions** tool helps you find these values and review them for further action.  
   
@@ -72,13 +72,13 @@ manager: "mblythe"
  The summary chart shows the number of cells in each column that were above the exception threshold.  
   
 ## Related Tools  
- When you are cleaning or reviewing data in preparation for data mining, you might also try the data exploration features in the Data Mining Client for Excel. This add-in provides more advanced tools to help you find outliers, relabel data, or view the distribution of data. For more information about data exploration tools in the Data Mining Client for Excel, see [Exploring and Cleaning Data](../../2014/analysis-services/exploring-and-cleaning-data.md).  
+ When you are cleaning or reviewing data in preparation for data mining, you might also try the data exploration features in the Data Mining Client for Excel. This add-in provides more advanced tools to help you find outliers, relabel data, or view the distribution of data. For more information about data exploration tools in the Data Mining Client for Excel, see [Exploring and Cleaning Data](exploring-and-cleaning-data.md).  
   
- The **Highlight Exceptions** tool uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm. A clustering model detects groups of rows that share similar characteristics. The Data Mining Client for Excel provides a **Browse** window that uses graphs and characteristic profiles to let you explore data mining models created by clustering. For information about how to browse the clustering model created by the **Highlight Exceptions** tool, see [Browse Models (Data Mining Client for Excel)](../../2014/analysis-services/highlight-exceptions-table-analysis-tools-for-excel.md).  
+ The **Highlight Exceptions** tool uses the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm. A clustering model detects groups of rows that share similar characteristics. The Data Mining Client for Excel provides a **Browse** window that uses graphs and characteristic profiles to let you explore data mining models created by clustering. For information about how to browse the clustering model created by the **Highlight Exceptions** tool, see [Browse Models (Data Mining Client for Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  For more information about the [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm, see the topic "Microsoft Clustering Algorithm" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

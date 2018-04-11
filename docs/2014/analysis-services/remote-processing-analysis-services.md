@@ -20,13 +20,13 @@ manager: "mblythe"
   
 ## Prerequisites  
   
--   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that is processing the model. For example, if processing is on a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, then the computer from which the request originates must have the client library corresponding to [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. See [Data providers used for Analysis Services connections](../../2014/analysis-services/data-providers-used-for-analysis-services-connections.md).  
+-   If you are running different versions of SQL Server on each computer, the client libraries must match the version of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that is processing the model. For example, if processing is on a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, then the computer from which the request originates must have the client library corresponding to [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. See [Data providers used for Analysis Services connections](instances/data-providers-used-for-analysis-services-connections.md).  
   
 -   On the remote server, **Allow remote connections to this computer** must be enabled, and the account issuing the processing request must be listed as an allowed user.  
   
--   Windows firewall rules must be configured to allow inbound connections to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Verify you can connect to the remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. See [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Windows firewall rules must be configured to allow inbound connections to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Verify you can connect to the remote [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. See [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
--   Resolve any existing local processing errors before attempting remote processing. Verify that when the processing request is local, data can be successfully retrieved from the external relational data source. See [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/set-impersonation-options-ssas-multidimensional.md) for instructions on specifying credentials used to retrieve data.  
+-   Resolve any existing local processing errors before attempting remote processing. Verify that when the processing request is local, data can be successfully retrieved from the external relational data source. See [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md) for instructions on specifying credentials used to retrieve data.  
   
 ## On-demand remote processing  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] accepts processing requests from user or application accounts that have [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrator permissions. If you are an administrator, verify that you can connect to the remote instance and process the database manually over the remote connection.  
@@ -90,9 +90,9 @@ manager: "mblythe"
   
 ## See Also  
  [SQL Server Agent Components](../../2014/database-engine/sql-server-agent.md#Components)   
- [Schedule SSAS Administrative Tasks with SQL Server Agent](../../2014/analysis-services/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Batch Processing &#40;Analysis Services&#41;](../../2014/analysis-services/batch-processing-analysis-services.md)   
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)   
- [Processing Objects &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/processing-objects-xmla.md)  
+ [Schedule SSAS Administrative Tasks with SQL Server Agent](instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)   
+ [Processing Objects &#40;XMLA&#41;](dev-guide/processing-objects-xmla.md)  
   
   

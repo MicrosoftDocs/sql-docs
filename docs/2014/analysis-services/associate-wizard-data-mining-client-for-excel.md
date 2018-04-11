@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Associate Wizard (Data Mining Client for Excel)
-  ![Associate wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-associate.gif "Associate wizard in Data Mining ribbon")  
+  ![Associate wizard in Data Mining ribbon](media/dmc-associate.gif "Associate wizard in Data Mining ribbon")  
   
  The Associate wizard helps you create a data mining model using the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm. Such mining models are particularly useful for creating *recommendation systems*.  
   
@@ -35,7 +35,7 @@ manager: "mblythe"
   
      The sample data workbook contains an example, in the Associate tab, of how transaction data is typically arranged if, for example, you have multiple products in each transaction or multiple purchasing records per customer that you want to analyze.  
   
-     If you want to use external data to build an association model using the Associate wizard, you must add the data to Excel first, and *flatten* the data. For more information about preparing data for association modeling, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md), in SQL Server Books Online.  
+     If you want to use external data to build an association model using the Associate wizard, you must add the data to Excel first, and *flatten* the data. For more information about preparing data for association modeling, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), in SQL Server Books Online.  
   
 3.  On the **Association** page, choose the column that identifies the transaction.  
   
@@ -59,11 +59,11 @@ manager: "mblythe"
   
     -   As you lower the probability of a rule, you lower the requirements that a combination must meet to be considered important in the context of the total data set.  
   
-     **Tip:** It is a good idea to create multiple mining models using different combinations of support and probability. To track which settings you used for each model, you can use the **Document Model** wizard, available in the Data Mining Client for Excel, and use the **Detailed** report option. For more information, see [Documenting Mining Models &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/documenting-mining-models-data-mining-add-ins-for-excel.md).  
+     **Tip:** It is a good idea to create multiple mining models using different combinations of support and probability. To track which settings you used for each model, you can use the **Document Model** wizard, available in the Data Mining Client for Excel, and use the **Detailed** report option. For more information, see [Documenting Mining Models &#40;Data Mining Add-ins for Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
 6.  Optionally, click **Parameters** to change the algorithm parameters and customize the behavior of the mining model.  
   
-     The Algorithm Parameters dialog box includes all of the parameters you set in the wizard, plus a few that are less commonly used, such as MAXIMUM_SUPPORT. For information about how to use these parameters, see [Microsoft Association Algorithm Technical Reference](../../2014/analysis-services/microsoft-association-algorithm-technical-reference.md).  
+     The Algorithm Parameters dialog box includes all of the parameters you set in the wizard, plus a few that are less commonly used, such as MAXIMUM_SUPPORT. For information about how to use these parameters, see [Microsoft Association Algorithm Technical Reference](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
 7.  On the **Finish** page, type a unique name for the data set and the model.  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
   
     -   **Browse**.  When the model is ready, the wizard opens a window that displays the rules, the itemsets, and a dependency network graph that depicts associations.  
   
-         For more information about how to interpret the data in the association model viewer, see [Browsing an Association Rules Model](../../2014/analysis-services/browsing-an-association-rules-model.md).  
+         For more information about how to interpret the data in the association model viewer, see [Browsing an Association Rules Model](browsing-an-association-rules-model.md).  
   
     -   **Enable drillthrough**. Select this option to gain access to the underlying data, via the model.  
   
@@ -96,9 +96,9 @@ manager: "mblythe"
  Your source data must be sorted by the transaction identifier column.  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   
- [Browsing an Association Rules Model](../../2014/analysis-services/browsing-an-association-rules-model.md)   
- [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](../../2014/analysis-services/shopping-basket-analysis-table-analysistools-for-excel.md)   
- [Dependency Network Diagram Walkthrough &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)   
+ [Browsing an Association Rules Model](browsing-an-association-rules-model.md)   
+ [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)   
+ [Dependency Network Diagram Walkthrough &#40;Data Mining Add-ins&#41;](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
   

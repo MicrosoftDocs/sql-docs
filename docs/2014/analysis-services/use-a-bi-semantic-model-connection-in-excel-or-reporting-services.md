@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Use a BI Semantic Model Connection in Excel or Reporting Services
-  This topic explains how to use the BI semantic model connections you created using instructions in other topics. If you have not yet created a BI semantic model, see [Create a BI Semantic Model Connection to a PowerPivot Workbook](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-powerpivot-workbook.md) and [Create a BI Semantic Model Connection to a Tabular Model Database](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+  This topic explains how to use the BI semantic model connections you created using instructions in other topics. If you have not yet created a BI semantic model, see [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-powerpivot-workbook.md) and [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Connect from Excel  
  You can specify a BI semantic model connection as a data source in Excel or any other business application that uses Analysis Services tabular model data. This section explains the two approaches for connecting to BI semantic model data using Excel.  
@@ -27,7 +27,7 @@ manager: "mblythe"
   
 -   Right-click a BI semantic model connection in a library and select **Launch Excel**.  
   
- ![Screenshot of BISM quick launch command](../../2014/analysis-services/media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
+ ![Screenshot of BISM quick launch command](media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
   
  Click **Enable** when prompted to enable data connections. Excel opens a workbook that contains a PivotTable field list populated with fields from the underlying data source.  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
   
  You must also have Read permissions on the BI semantic model file in SharePoint. Read permissions include download rights. Excel downloads the BI semantic model connection information from SharePoint and opens a direct connection to the database via `HTTP Get`. Connection requests do not flow through SharePoint once BI semantic model connection information is stored locally.  
   
- If you are connecting to a tabular model database that runs on an Analysis Services server, SharePoint permissions are not sufficient. You must also have database read permissions on the server. This step should have been performed when you created the BI semantic model connection. For more information, see [Create a BI Semantic Model Connection to a Tabular Model Database](../../2014/analysis-services/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+ If you are connecting to a tabular model database that runs on an Analysis Services server, SharePoint permissions are not sufficient. You must also have database read permissions on the server. This step should have been performed when you created the BI semantic model connection. For more information, see [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_use"></a> Connect from Reporting Services in SharePoint  
  You can use a BI semantic model connection the same way you use most data sources, by specifying the file as a data source in the document or tool that uses the data. Although a BI semantic model connection points to a physical database on another server, you use the connection file as if it were the data source. The SharePoint URL of the BI semantic model connection is a valid data source location for [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] reports that use BI semantic model data.  

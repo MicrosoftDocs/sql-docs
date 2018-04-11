@@ -28,9 +28,9 @@ manager: "mblythe"
 |Existing Session|42|Collects all session events since the trace started.|  
 |Session Initialize|43|Collects the session initialization events.|  
   
- For information about the columns associated with each of the Session Events event classes, see [Session Events Data Columns](../../2014/analysis-services/session-events-data-columns.md).  
+ For information about the columns associated with each of the Session Events event classes, see [Session Events Data Columns](session-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

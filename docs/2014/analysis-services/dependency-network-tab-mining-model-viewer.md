@@ -22,11 +22,11 @@ manager: "mblythe"
   
  The **Dependency Net**  tab is used for several types of mining models, including Naïve Bayes models, decision tree models, and association models. For more information about how to interpret the contents of the **Dependency Net**  tab in the context of these models, see the following links:  
   
- [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Browse a Model Using the Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
- [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Browse a Model Using the Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
- [Browse a Model Using the Microsoft Association Rules Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Browse a Model Using the Microsoft Association Rules Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -62,8 +62,8 @@ manager: "mblythe"
  A general rule for all model types is that the stronger the link, the stronger the predictive relationship between the two attributes.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

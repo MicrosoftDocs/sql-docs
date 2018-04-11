@@ -63,9 +63,9 @@ manager: "mblythe"
   
  If the data type is supported, but the model designer finds values that are not supported within the new data type, you will get another error, and will need to correct the data values before proceeding.  
   
- For detailed information about the data types used in business intelligence semantic models, how they are implicitly converted, and how different data types are used in formulas, see [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md).  
+ For detailed information about the data types used in business intelligence semantic models, how they are implicitly converted, and how different data types are used in formulas, see [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ## See Also  
- [Data Types Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-types-supported-ssas-tabular.md)  
+ [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md)  
   
   

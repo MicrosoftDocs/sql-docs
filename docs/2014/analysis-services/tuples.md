@@ -19,7 +19,7 @@ manager: "mblythe"
   A tuple uniquely identifies a slice of data from a cube. The tuple is formed by a combination of dimension members, as long as there are no two or more members that belong to the same hierarchy.  
   
 ## Implicit or default attribute members in a tuple  
- When defining a tuple in an MDX query or expression, you do not need to explicitly include the attribute member from every attribute hierarchy. If a member from an attribute hierarchy is not explicitly included in a query or an expression, the default member for that attribute hierarchy is the attribute member implicitly included in the tuple. Unless otherwise explicitly defined in a cube, the default member for every attribute hierarchy is the (All) member, if an (All) member exists. If an (All) member does not exist within an attribute hierarchy, the default member is a member of the attribute hierarchy's top level. The default measure is the first measure specified in the cube, unless a default measure is explicitly defined. For more information, see [Define a Default Member](../../2014/analysis-services/define-a-default-member.md) and [DefaultMember &#40;MDX&#41;](~/mdx/defaultmember-mdx.md).  
+ When defining a tuple in an MDX query or expression, you do not need to explicitly include the attribute member from every attribute hierarchy. If a member from an attribute hierarchy is not explicitly included in a query or an expression, the default member for that attribute hierarchy is the attribute member implicitly included in the tuple. Unless otherwise explicitly defined in a cube, the default member for every attribute hierarchy is the (All) member, if an (All) member exists. If an (All) member does not exist within an attribute hierarchy, the default member is a member of the attribute hierarchy's top level. The default measure is the first measure specified in the cube, unless a default measure is explicitly defined. For more information, see [Define a Default Member](define-a-default-member.md) and [DefaultMember &#40;MDX&#41;](~/mdx/defaultmember-mdx.md).  
   
  For example, the following tuple identifies a single cell in the Adventure Works database by explicitly defining only a single member of the Measures dimension.  
   
@@ -38,7 +38,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  When you specify an axis for a set (in this case composed of a single tuple) in a query, you must begin by specifying a set for the column axis before specifying a set for the row axis. The column axis can also be referred to as *axis(0)* or simply *0*. For more information about MDX queries, see [The Basic MDX Query &#40;MDX&#41;](../../2014/analysis-services/the-basic-mdx-query-mdx.md).  
+>  When you specify an axis for a set (in this case composed of a single tuple) in a query, you must begin by specifying a set for the column axis before specifying a set for the row axis. The column axis can also be referred to as *axis(0)* or simply *0*. For more information about MDX queries, see [The Basic MDX Query &#40;MDX&#41;](the-basic-mdx-query-mdx.md).  
   
 ### Tuples as values or member references  
  You can use a tuple in a query to return the value in the cell that is referenced by the tuple, as in the previous example. Or you can use a tuple in an expression to explicitly refer to the members specified in the tuple. The query or the expression can utilize functions that either return or consume tuples. A tuple can be used to either refer to the value of the cell that the tuple specifies, or to specify a combination of members when utilized in a function.  
@@ -61,9 +61,9 @@ FROM [Adventure Works]
 >  An attribute member can be referred by either its member name or its member key. In the previous example, you could replace the reference to [CY 2004] with &[2004].  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../2014/analysis-services/cube-space.md)   
- [Autoexists](../../2014/analysis-services/autoexists.md)   
- [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md)  
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Cube Space](cube-space.md)   
+ [Autoexists](autoexists.md)   
+ [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

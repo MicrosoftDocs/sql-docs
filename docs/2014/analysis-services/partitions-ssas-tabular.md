@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Partitions (SSAS Tabular)
-  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions created by using the Partitions dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] during model authoring apply to the model workspace database. When the model is deployed, the partitions defined for the model workspace database are duplicated in the deployed model database. You can further create and manage partitions for a deployed model database by using the Partitions dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  Information provided in this topic describes partitions created during model authoring by using the Partition Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For information about creating and managing partitions for a deployed model, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions created by using the Partitions dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] during model authoring apply to the model workspace database. When the model is deployed, the partitions defined for the model workspace database are duplicated in the deployed model database. You can further create and manage partitions for a deployed model database by using the Partitions dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  Information provided in this topic describes partitions created during model authoring by using the Partition Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For information about creating and managing partitions for a deployed model, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
  Sections in this topic:  
   
@@ -40,17 +40,17 @@ manager: "mblythe"
  You can create new partitions, edit, merge, or delete partitions using the Partition Manager in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Partition Manager provides two modes for selecting tables, rows, and columns for a partition: Table Preview mode and SQL query mode. All partitions are defined by using a SQL query; however, by using the Table Preview mode, you can preview and select the data you want to include in the partition. The SQL query is automatically created and validated for you. Because the Table Preview mode is the same table preview that is in the Edit Table Properties dialog box and in the Table Preview page of the Table Import Wizard, the maximum number of rows in preview is 50.  
   
 ### Partitions in a deployed model database  
- When you deploy a model, the partitions for the deployed model database will appear as database objects in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You can create, edit, merge, and delete partitions for a deployed model by using the Partitions dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Managing partitions for a deployed model in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is outside the scope of this topic. To learn about managing partitions in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+ When you deploy a model, the partitions for the deployed model database will appear as database objects in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. You can create, edit, merge, and delete partitions for a deployed model by using the Partitions dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Managing partitions for a deployed model in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is outside the scope of this topic. To learn about managing partitions in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_related_tasks"></a> Related Tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to create and manage partitions in the model workspace database by using Partition Manager in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].|  
-|[Process Partitions in the Workspace Databse &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
+|[Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to create and manage partitions in the model workspace database by using Partition Manager in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].|  
+|[Process Partitions in the Workspace Databse &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
   
 ## See Also  
- [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md)   
- [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)   
+ [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)  
   
   

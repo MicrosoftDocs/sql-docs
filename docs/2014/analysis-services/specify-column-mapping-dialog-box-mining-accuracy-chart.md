@@ -20,7 +20,7 @@ manager: "mblythe"
 # Specify Column Mapping Dialog Box (Mining Accuracy Chart)
   Use the **Specify Column Mapping** tab to select tables from an external data source and map the columns to a data mining model. You can then use the external data to test the accuracy of a mining model and displays the results in the accuracy chart.  
   
- **For more information:** [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ **For more information:** [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## Options  
  **Mining Structure**  
@@ -50,7 +50,7 @@ manager: "mblythe"
  Opens the **Specify Nested Join** dialog box. This button is active only if the nested table is selected.  
   
 ## See Also  
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)  
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

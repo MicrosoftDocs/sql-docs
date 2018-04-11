@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Shopping Basket Analysis (Table AnalysisTools for Excel)
-  ![Shopping Basket Tool](../../2014/analysis-services/media/tat-shopbskt.gif "Shopping Basket Tool")  
+  ![Shopping Basket Tool](media/tat-shopbskt.gif "Shopping Basket Tool")  
   
  The **Shopping Basket Analysis** tool helps you find `associations` in your data. An association might tell you which items are frequently purchased at the same time. In data mining, this technique is a well-known method known as *market basket analysis*, used to analyze the purchasing behavior of customers in very large data sets. Marketers might use the information to make recommend related products to customers and to promote related products by placing them in close proximity on web pages, in catalogs, or on the shelf.  
   
@@ -123,11 +123,11 @@ manager: "mblythe"
 |Lift|Indicates the strength of the correlation between the items in the first column and the items in the second column. Also referred to as *importance*.<br /><br /> A lift of 0 means that there is no correlation. A positive value means that the items in the first column predict the item in the second column. The higher the number, the stronger the correlation.|  
   
 ## Related Tools  
- The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, also contains a wizard that performs association analysis. For more information, see [Associate Wizard &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/associate-wizard-data-mining-client-for-excel.md).  
+ The Data Mining Client for Excel, which is a separate add-in that provides more advanced data mining functionality, also contains a wizard that performs association analysis. For more information, see [Associate Wizard &#40;Data Mining Client for Excel&#41;](associate-wizard-data-mining-client-for-excel.md).  
   
  For more information about the algorithm used to perform this analysis, see the topic "Microsoft Association Algorithm" in SQL Server Books Online.  
   
 ## See Also  
- [Table Analysis Tools for Excel](../../2014/analysis-services/table-analysis-tools-for-excel.md)  
+ [Table Analysis Tools for Excel](table-analysis-tools-for-excel.md)  
   
   

@@ -75,9 +75,9 @@ manager: "mblythe"
   
  For more information about how data is collected, see the following:  
   
--   [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md)  
+-   [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md)  
   
--   [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
+-   [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
   
  To capture data about the PowerPivot server system, verify event messaging, data refresh history, and other usage history is enabled for each PowerPivot service application. The server and usage data gathered during normal server operations is the source data that ends up in the internal data model. **Note:** If you turn off events or usage history, the composite reports will be incomplete or erroneous.  
   
@@ -147,7 +147,7 @@ manager: "mblythe"
     9. In Specify MDX Query, click **Design** to open the MDX query designer to assemble the data you want to work with, and then create PivotTable or PivotChart reports to visualize the data in Excel.  
   
 ## See Also  
- [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
+ [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
   
   

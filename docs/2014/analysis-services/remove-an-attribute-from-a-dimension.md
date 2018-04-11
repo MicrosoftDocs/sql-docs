@@ -23,7 +23,7 @@ manager: "mblythe"
   To remove an attribute from a dimension in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then click **Delete**. In the **Delete Objects** dialog box, click **OK**. This removes the attribute from the dimension, but does not affect the data source view for the dimension.  
   
 ## See Also  
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

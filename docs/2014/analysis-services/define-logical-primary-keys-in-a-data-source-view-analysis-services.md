@@ -43,7 +43,7 @@ manager: "mblythe"
      Notice that after you set the key, a key icon now identifies the primary key columns.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

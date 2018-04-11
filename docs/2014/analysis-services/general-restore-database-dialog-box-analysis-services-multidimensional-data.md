@@ -53,7 +53,7 @@ manager: "mblythe"
  Select the backup file from which to restore the selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
  **Browse**  
- Click to display the **Locate Database Files** dialog box and select the path and file name of the backup file to use. For more information about the **Locate Database Files** dialog box, see [Locate Database Files Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to display the **Locate Database Files** dialog box and select the path and file name of the backup file to use. For more information about the **Locate Database Files** dialog box, see [Locate Database Files Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Allow database overwrite**  
  Select to allow [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to restore the contents of the selected backup file over any existing objects in the selected [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
@@ -72,8 +72,8 @@ manager: "mblythe"
  If the backup file is encrypted, type the password used to encrypt the backup file.  
   
 ## See Also  
- [Restore Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Restore Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
   
   

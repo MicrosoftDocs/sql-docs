@@ -28,7 +28,7 @@ manager: "mblythe"
 |`AggregationPrefix`|Applies to ROLAP storage. Assigns a common prefix to the indexed views in SQL Server, used to store aggregations for the partitions associated with this measure group.|  
 |`DataAggregation`|This property is reserved for future use and currently has no effect. Therefore, it is recommended that you do not modify this setting.|  
 |`Description`|You can use this property to document the measure group.|  
-|`ErrorConfiguration`|Configurable error handling settings for handling of duplicate keys, unknown keys, null keys, error limits, action upon error detection, and the error log file. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/error-configuration-for-cube-partition-and-dimension-processing.md).|  
+|`ErrorConfiguration`|Configurable error handling settings for handling of duplicate keys, unknown keys, null keys, error limits, action upon error detection, and the error log file. See [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |`EstimatedRows`|Specifies the estimated number of rows in the fact table.|  
 |`EstimatedSize`|Specifies the estimated size (in bytes) of the measure group.|  
 |`ID`|Specifies the identifier of the object.|  

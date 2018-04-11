@@ -18,16 +18,16 @@ manager: "mblythe"
 # Dialog Boxes Reference (SSAS)
   To learn about the dialog boxes in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], see the following topics.  
   
--   [Column Width Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/column-width-dialog-box-ssas.md)  
+-   [Column Width Dialog Box &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
   
--   [Mark as Date Table Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/mark-as-date-table-dialog-box-ssas.md)  
+-   [Mark as Date Table Dialog Box &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [Edit Table Properties Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/edit-table-properties-dialog-box-ssas.md)  
+-   [Edit Table Properties Dialog Box &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
--   [Go To Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/go-to-dialog-box-ssas.md)  
+-   [Go To Dialog Box &#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
   
--   [Insert Function Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/insert-function-dialog-box-ssas.md)  
+-   [Insert Function Dialog Box &#40;SSAS&#41;](insert-function-dialog-box-ssas.md)  
   
--   [Move Table Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/move-table-dialog-box-ssas.md)  
+-   [Move Table Dialog Box &#40;SSAS&#41;](move-table-dialog-box-ssas.md)  
   
   

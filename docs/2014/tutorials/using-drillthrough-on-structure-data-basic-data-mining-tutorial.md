@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 3.  In the Mining Models tab, right-click the model, and select **Process Model**.  
   
- For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md)  
+ For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
 ### To view drillthrough data from a mining model  
   
@@ -50,6 +50,6 @@ manager: "jhubbard"
  [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

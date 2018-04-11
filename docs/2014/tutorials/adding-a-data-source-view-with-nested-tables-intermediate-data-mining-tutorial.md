@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   You define how the columns of data are used in the model.  
   
- For more information about working with case and nested tables, and how to choose a nested table key, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md).  
+ For more information about working with case and nested tables, and how to choose a nested table key, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ### To add a data source view  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)   
- [Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-models-analysis-services-data-mining.md)  
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

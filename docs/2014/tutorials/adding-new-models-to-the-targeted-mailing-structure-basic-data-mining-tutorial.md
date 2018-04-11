@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Adding New Models to the Targeted Mailing Structure (Basic Data Mining Tutorial)
-  In this task, you will define two additional models by using the **Mining Models** tab of Data Mining Designer. You will use the Microsoft Clustering and Microsoft Naive Bayes algorithms to create the models. These two algorithms are selected because of their ability to predict a discrete value (i.e., bike purchase). For more information about these algorithms, see [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md) and [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/microsoft-naive-bayes-algorithm.md)  
+  In this task, you will define two additional models by using the **Mining Models** tab of Data Mining Designer. You will use the Microsoft Clustering and Microsoft Naive Bayes algorithms to create the models. These two algorithms are selected because of their ability to predict a discrete value (i.e., bike purchase). For more information about these algorithms, see [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) and [Microsoft Naive Bayes Algorithm](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
 ### To create a clustering mining model  
   
@@ -52,8 +52,8 @@ manager: "jhubbard"
  [Processing Models in the Targeted Mailing Structure &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Add Mining Models to a Structure &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/add-mining-models-to-a-structure-analysis-services-data-mining.md)   
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)   
- [Moving Data Mining Objects](../../2014/analysis-services/moving-data-mining-objects.md)  
+ [Add Mining Models to a Structure &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)   
+ [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Moving Data Mining Objects](../../2014/analysis-services/data-mining/moving-data-mining-objects.md)  
   
   

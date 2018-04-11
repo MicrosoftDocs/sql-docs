@@ -23,7 +23,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You can add tables later from the **Mining Structure** tab in **Data Mining Designer**.  
   
- **For More Information:** [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Nested Tables &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Tables**  
@@ -39,8 +39,8 @@ manager: "mblythe"
 >  These tables must have a many-to-one relationship with the case table, not a one-to-many relationship. You must specify this relationship in the data source view before you can select the table as nested.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)   
- [Specify the Training Data &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Data Source View &#40;Data Mining Wizard&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Specify the Training Data &#40;Data Mining Wizard&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

@@ -22,7 +22,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Modify or Delete a Database Dimension in Solution Explorer
-  You can modify or delete a dimension by using Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. When you modify a dimension, your changes are not available to users until you process the dimension. For more information, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+  You can modify or delete a dimension by using Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. When you modify a dimension, your changes are not available to users until you process the dimension. For more information, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To modify a dimension in SQL Server Data Tools  
   
@@ -30,13 +30,13 @@ manager: "mblythe"
   
 2.  On the **Dimension Structure** tab, in the **Attributes**, **Hierarchies**, or **Data Source View** panes, click the item that you want to modify, and then make the changes.  
   
-     For more information about the types of changes that you can make, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+     For more information about the types of changes that you can make, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
 ### To delete a dimension in SQL Server Data Tools  
   
 -   In Solution Explorer, right-click the dimension that you want to delete, and then click **Delete**.  
   
 ## See Also  
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

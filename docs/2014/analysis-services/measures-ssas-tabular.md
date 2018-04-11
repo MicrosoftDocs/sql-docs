@@ -75,7 +75,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  You can group measures from multiple tables into one table by creating an empty table, and then moving or create new measures into it. Keep in-mind, you may need to include table names in DAX formulas when referencing columns in other tables.  
   
- If perspectives have been defined for the model, measures are not automatically added to any of those perspectives. You must manually add measures to a perspective by using the Perspectives dialog box. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/perspectives-ssas-tabular.md).  
+ If perspectives have been defined for the model, measures are not automatically added to any of those perspectives. You must manually add measures to a perspective by using the Perspectives dialog box. For more information, see [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Measure Properties  
  Each measure has properties that define it. Measure properties, along with the associated column properties can be edited in the Properties window. Measures have the following properties:  
@@ -90,17 +90,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> Using a Measure in a KPI  
  A KPI (Key Performance Indicator) is defined by a *Base* value, defined by a measure, against a *Target* value, also defined by a measure or by an absolute value. A KPI also includes *Status*, a calculation where the Base value evaluates against the Target value between thresholds, displayed in graphical format. KPIs are often used by business professionals to identify trends in critical business metrics.  
   
- Any measure can serve as the Base measure of a KPI. To create a KPI, in the measure grid, right-click a measure, and then click **Create KPI**. The Key Performance Indicator dialog box appears where you can then specify a target value (defined by a measure or an absolute value) and define status thresholds, and a graphic type. For more information, see [KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/kpis-ssas-tabular.md).  
+ Any measure can serve as the Base measure of a KPI. To create a KPI, in the measure grid, right-click a measure, and then click **Create KPI**. The Key Performance Indicator dialog box appears where you can then specify a target value (defined by a measure or an absolute value) and define status thresholds, and a graphic type. For more information, see [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md).  
   
 ##  <a name="bkmk_rel_tasks"></a> Related Tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-measures-ssas-tabular.md)|Describes how to create and manage measures using the measure grid in the model designer.|  
+|[Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md)|Describes how to create and manage measures using the measure grid in the model designer.|  
   
 ## See Also  
- [KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/kpis-ssas-tabular.md)   
- [Create and Manage KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculated-columns-ssas-tabular.md)  
+ [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
+ [Create and Manage KPIs &#40;SSAS Tabular&#41;](create-and-manage-kpis-ssas-tabular.md)   
+ [Calculated Columns &#40;SSAS Tabular&#41;](calculated-columns-ssas-tabular.md)  
   
   

@@ -23,7 +23,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  You cannot enable drillthrough on an existing mining structure. Instead, you must re-create the mining structure and enable drillthrough during the creation process.  
   
- For information about how to access case data from each of the mining model viewers that support drillthrough, **see** [Drill Through to Case Data from a Mining Model](../../2014/analysis-services/drill-through-to-case-data-from-a-mining-model.md).  
+ For information about how to access case data from each of the mining model viewers that support drillthrough, **see** [Drill Through to Case Data from a Mining Model](data-mining/drill-through-to-case-data-from-a-mining-model.md).  
   
 ## Options  
  **Cases Classified To**  
@@ -43,8 +43,8 @@ manager: "mblythe"
  Click the green arrow button to refresh the data.  
   
 ## See Also  
- [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Mining Model Viewer Tasks and How-tos](../../2014/analysis-services/mining-model-viewer-tasks-and-how-tos.md)  
+ [Drillthrough Queries &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Model Viewer Tasks and How-tos](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

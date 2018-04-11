@@ -30,7 +30,7 @@ manager: "mblythe"
   
 -   Converting data types or categorizing values where necessary for analysis.  
   
- If you are new to data modeling, we recommend that you read the related topic, [Checklist of Preparation for Data Mining](../../2014/analysis-services/checklist-of-preparation-for-data-mining.md).  
+ If you are new to data modeling, we recommend that you read the related topic, [Checklist of Preparation for Data Mining](checklist-of-preparation-for-data-mining.md).  
   
 ## Data Preparation Tools  
  The Data Mining Add-ins for Office includes the following tools for data cleansing and preparation:  
@@ -44,7 +44,7 @@ manager: "mblythe"
   
 -   Identify columns that are useful for analysis, and plan the data modeling phase.  
   
- [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md).  
+ [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### Detect and Handle Outliers  
  The **Outliers** wizard graphs the distribution of values in your data and helps you remove extreme values. Use the **Outliers** tool for the following data preparation tasks:  
@@ -55,7 +55,7 @@ manager: "mblythe"
   
 -   Scope a model to a specific range of values. For example, if you know that you have outliers at a particular store, you can eliminate that value and get a model that better predicts other stores.  
   
- [Outliers &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/outliers-sql-server-data-mining-add-ins.md).  
+ [Outliers &#40;SQL Server Data Mining Add-ins&#41;](outliers-sql-server-data-mining-add-ins.md).  
   
 ### Relabel and Bin Data  
  The **Relabel** wizard groups data by values so that you can change the labels on the data. Use the Relabel tool for these data preparation tasks:  
@@ -72,7 +72,7 @@ manager: "mblythe"
   
      For example, if you have too many individual products to detect a pattern among purchases, you could try assigning products into broader categories.  
   
- [Relabel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md)  
+ [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
 ### Cleanse Data  
  Data cleansing encompasses a wide range of activities, most of which are supported by the add-ins  
@@ -81,11 +81,11 @@ manager: "mblythe"
   
 -   Detect missing values, and then remove them, or impute an appropriate value, such as a mean, null, or other value.  
   
- [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/explore-data-sql-server-data-mining-add-ins.md)  
+ [Explore Data &#40;SQL Server Data Mining Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
- [Relabel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md)  
+ [Relabel &#40;SQL Server Data Mining Add-ins&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
- [Fill From Example](../../2014/analysis-services/fill-from-example-table-analysis-tools-for-excel.md)  
+ [Fill From Example](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ### Sample Data  
  The Sample Data wizard provides two methods for creating balanced data sets for training and testing models.  
@@ -94,11 +94,11 @@ manager: "mblythe"
   
 -   **Oversampling.** Use this option when you have less data than you would like for a target outcome, and need to weight that data more heavily. For example, fraud might be relatively rare, but you can oversample cases involving fraud to get adequate data for modeling.  
   
- [Sample Data &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/sample-data-sql-server-data-mining-add-ins.md).  
+ [Sample Data &#40;SQL Server Data Mining Add-ins&#41;](sample-data-sql-server-data-mining-add-ins.md).  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Deploying and Scaling Mining Models &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)   
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Deploying and Scaling Mining Models &#40;Data Mining Add-ins for Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

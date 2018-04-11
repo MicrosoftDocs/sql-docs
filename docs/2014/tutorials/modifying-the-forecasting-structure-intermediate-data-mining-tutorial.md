@@ -51,7 +51,7 @@ manager: "jhubbard"
  [Customizing and Processing the Forecasting Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)   
- [Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-models-analysis-services-data-mining.md)  
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

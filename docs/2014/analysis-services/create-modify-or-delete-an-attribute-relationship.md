@@ -58,6 +58,6 @@ manager: "mblythe"
 3.  In the **Delete Objects** dialog box, click **OK**.  
   
 ## See Also  
- [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md)  
+ [Attribute Relationships](dev-guide/attribute-relationships.md)  
   
   

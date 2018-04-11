@@ -28,7 +28,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Specifying Partition and Role Deployment Options
-  The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard reads the partition and role deployment options from the \<*project name*>.deploymentoptions file. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates this file when you build the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] uses the partition and role deployment options of the current project when the \<*project name*>.deploymentoptions file is created. For more information about configuration settings, see [Understanding the Input Files Used to Create the Deployment Script](../../2014/analysis-services/understanding-the-input-files-used-to-create-the-deployment-script.md).  
+  The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard reads the partition and role deployment options from the \<*project name*>.deploymentoptions file. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates this file when you build the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] uses the partition and role deployment options of the current project when the \<*project name*>.deploymentoptions file is created. For more information about configuration settings, see [Understanding the Input Files Used to Create the Deployment Script](understanding-the-input-files-used-to-create-the-deployment-script.md).  
   
 ## Reviewing the Partition and Role Deployment Options  
  The deployment options in the \<*project name*>.deploymentoptions file include the following:  
@@ -61,15 +61,15 @@ manager: "mblythe"
   
      —or—  
   
--   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt, and set the wizard to run in answer file mode. (For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md).)  
+-   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt, and set the wizard to run in answer file mode. (For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).)  
   
      —or—  
   
 -   Open the \<*project name*>.deploymentoptions in any text editor and manually change the options.  
   
 ## See Also  
- [Specifying the Installation Target](../../2014/analysis-services/specifying-the-installation-target.md)   
- [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md)   
- [Specifying Processing Options](../../2014/analysis-services/specifying-processing-options.md)  
+ [Specifying the Installation Target](specifying-the-installation-target.md)   
+ [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md)   
+ [Specifying Processing Options](specifying-processing-options.md)  
   
   

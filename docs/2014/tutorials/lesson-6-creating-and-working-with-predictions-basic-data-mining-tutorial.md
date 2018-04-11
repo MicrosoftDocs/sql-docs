@@ -38,7 +38,7 @@ manager: "jhubbard"
  [Creating Predictions &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
- [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   
+ [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

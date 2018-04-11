@@ -20,7 +20,7 @@ manager: "mblythe"
 # Cluster Profiles Tab (Mining Model Viewer)
   Use the **Cluster Profiles** tab for an overall view of the clusters that the algorithm discovered within a clustering model. The tab displays each attribute, together with the distribution of the attribute in each cluster.  
   
- **For More Information:** [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md), [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **For More Information:** [Microsoft Clustering Algorithm](data-mining/microsoft-clustering-algorithm.md), [Browse a Model Using the Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -48,8 +48,8 @@ manager: "mblythe"
  This section contains a column for each cluster in the model. For each attribute, the histogram shows the distribution of the values in the attribute for just that cluster. The chart also has a column for **Population**, which also uses histograms to display the distribution of values for each attribute, but for all cases in the model.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

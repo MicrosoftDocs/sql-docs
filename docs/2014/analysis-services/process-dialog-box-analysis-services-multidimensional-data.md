@@ -41,28 +41,28 @@ manager: "mblythe"
  Displays the type of the object to be processed.  
   
  **Process Options**  
- Select the type of processing to perform on the selected object. For more information about available processing options, see [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md).  
+ Select the type of processing to perform on the selected object. For more information about available processing options, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
   
  **Settings**  
- Displays the **Configure** hyperlink when you choose **Process Incremental** in **Process Options** for cubes, measure groups, or partitions. Click **Configure** to launch the **Incremental Update** dialog box. For more information about the **Incremental Update** dialog box, see [Incremental Update Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays the **Configure** hyperlink when you choose **Process Incremental** in **Process Options** for cubes, measure groups, or partitions. Click **Configure** to launch the **Incremental Update** dialog box. For more information about the **Incremental Update** dialog box, see [Incremental Update Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Remove**  
  Click to remove the selected items from **Object list**.  
   
  **Impact Analysis**  
- Click to open the **Impact Analysis** dialog box and display the objects that will be affected by the processing task. For more information about the **Impact Analysis** dialog box, see [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to open the **Impact Analysis** dialog box and display the objects that will be affected by the processing task. For more information about the **Impact Analysis** dialog box, see [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  This option is disabled when the **Process affected objects** option is selected in the **Change Settings** dialog box.  
   
  **Change Settings**  
- Click to open the **Change Settings** dialog box and change the settings that govern processing of the selected objects, including batch processing settings, writeback settings, and dimension key error settings. For more information about the **Change Settings** dialog box, see [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to open the **Change Settings** dialog box and change the settings that govern processing of the selected objects, including batch processing settings, writeback settings, and dimension key error settings. For more information about the **Change Settings** dialog box, see [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Run**  
  Click to process the objects.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Process Progress Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Process Progress Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

@@ -60,7 +60,7 @@ manager: "mblythe"
   
 |Option|Definition|  
 |------------|----------------|  
-|**Add Business Intelligence**|Click to display the **Business Intelligence Wizard** and add business intelligence features to the cube. For more information about the **Business Intelligence Wizard**, see [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md).|  
+|**Add Business Intelligence**|Click to display the **Business Intelligence Wizard** and add business intelligence features to the cube. For more information about the **Business Intelligence Wizard**, see [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md).|  
 |**New Partition**|Click to display the **Partition Wizard** and create a new partition in the selected measure group.|  
 |**Rename Partition**|Select to rename the selected partition.|  
 |**Delete**|Click to display the **Delete Objects** dialog box and delete the selected action.<br /><br /> Note: This option is disabled if a writeback partition is selected.|  

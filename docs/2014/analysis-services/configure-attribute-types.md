@@ -26,17 +26,17 @@ manager: "mblythe"
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], attribute types help classify an attribute in terms of business functionality. There are many attribute types, most of which are used by client applications to display or support an attribute. However, some attribute types also have specific meaning to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For example, some attribute types identify attributes that represent time periods in various calendars for time dimensions.  
   
 ##  <a name="setting_attibute_types"></a> Setting Attribute Types  
- The value of the `Type` property for an attribute determines the attribute type for that attribute. Several wizards in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] set attribute types when defining dimensions or attributes. These [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wizards also set attribute types when the wizards add functionality to dimensions. For example, the Business Intelligence Wizard applies several attribute types to attributes in a dimension when the wizard adds account intelligence to identify attributes that contain the names, codes, numbers, and structure of accounts in the dimension. The Business Intelligence Wizard also consumes attribute types, such as for currency conversion. For more information, see [Create a Currency type Dimension](../../2014/analysis-services/create-a-currency-type-dimension.md).  
+ The value of the `Type` property for an attribute determines the attribute type for that attribute. Several wizards in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] set attribute types when defining dimensions or attributes. These [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wizards also set attribute types when the wizards add functionality to dimensions. For example, the Business Intelligence Wizard applies several attribute types to attributes in a dimension when the wizard adds account intelligence to identify attributes that contain the names, codes, numbers, and structure of accounts in the dimension. The Business Intelligence Wizard also consumes attribute types, such as for currency conversion. For more information, see [Create a Currency type Dimension](create-a-currency-type-dimension.md).  
   
  The following tables list the attribute types available in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. These tables separate attribute types into the following categories:  
   
 |Term|Definition|  
 |----------|----------------|  
 |[General attribute types](#general_attribute_types)|These values are available to all attributes, and exist only to enable classification of attributes for client application purposes.|  
-|[Account dimension attribute types](#account_dimension_attribute_types)|These values identify an attribute that belongs to an account dimension. For more information about account dimension, see [Create a Finance Account of parent-child type Dimension](../../2014/analysis-services/create-a-finance-account-of-parent-child-type-dimension.md).|  
-|[Currency dimension attribute type](#currency_dimension_attribute_types)|These values identify an attribute that belongs to a currency dimension. For more information about currency dimensions, see [Create a Currency type Dimension](../../2014/analysis-services/create-a-currency-type-dimension.md).|  
+|[Account dimension attribute types](#account_dimension_attribute_types)|These values identify an attribute that belongs to an account dimension. For more information about account dimension, see [Create a Finance Account of parent-child type Dimension](create-a-finance-account-of-parent-child-type-dimension.md).|  
+|[Currency dimension attribute type](#currency_dimension_attribute_types)|These values identify an attribute that belongs to a currency dimension. For more information about currency dimensions, see [Create a Currency type Dimension](create-a-currency-type-dimension.md).|  
 |[Slowly changing dimension attributes](#slowly_changing_dimension_attribute_types)|These values identify an attribute that belongs to a slowly changing dimension.|  
-|[Time dimension attributes](#time_dimension_attribute_types)|These values identify an attribute that belongs to a time dimension. For more information about time dimensions, see [Create a Date type Dimension](../../2014/analysis-services/create-a-date-type-dimension.md).|  
+|[Time dimension attributes](#time_dimension_attribute_types)|These values identify an attribute that belongs to a time dimension. For more information about time dimensions, see [Create a Date type Dimension](create-a-date-type-dimension.md).|  
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
@@ -163,10 +163,10 @@ manager: "mblythe"
   
 |Attribute Type Value|Description|  
 |--------------------------|-----------------|  
-|`CurrencyDestination`|Represents the destination currency of a currency exchange. This attribute type is typically applied to the key attribute of a reporting dimension, for use in currency conversion. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md).|  
-|`CurrencyIsoCode`|Represents the International Standards Organization (ISO) code of a currency. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md).|  
-|`CurrencyName`|Represents the name of a currency. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md).|  
-|`CurrencySource`|Represents the source currency of a currency exchange. This attribute type is typically applied to the key attribute of a currency dimension, for use in currency conversion. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md).|  
+|`CurrencyDestination`|Represents the destination currency of a currency exchange. This attribute type is typically applied to the key attribute of a reporting dimension, for use in currency conversion. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md).|  
+|`CurrencyIsoCode`|Represents the International Standards Organization (ISO) code of a currency. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md).|  
+|`CurrencyName`|Represents the name of a currency. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md).|  
+|`CurrencySource`|Represents the source currency of a currency exchange. This attribute type is typically applied to the key attribute of a currency dimension, for use in currency conversion. For more information about currency conversion, see [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md).|  
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Slowly Changing Dimension Attribute Types  
   
@@ -304,7 +304,7 @@ manager: "mblythe"
 |`Years`|Represents years.|  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md)   
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

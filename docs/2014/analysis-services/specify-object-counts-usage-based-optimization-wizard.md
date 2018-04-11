@@ -34,7 +34,7 @@ manager: "mblythe"
  Calculates and repopulates the values in the **Estimated count** column for all empty fields. Fields that already display a count are not updated.  
   
 ## See Also  
- [Aggregation Design Wizard F1 Help](../../2014/analysis-services/aggregation-design-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Aggregation Design Wizard F1 Help](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -41,13 +41,13 @@ manager: "mblythe"
  Select to explicitly set storage mode, proactive caching, and notification options.  
   
  **Options**  
- Click to display the **Storage Options** dialog box to explicitly set storage mode, proactive caching, and notification options. For more information about the **Storage Options** dialog box, see [Storage Options Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/storage-options-dialog-box-analysis-services-multidimensional-data.md).  
+ Click to display the **Storage Options** dialog box to explicitly set storage mode, proactive caching, and notification options. For more information about the **Storage Options** dialog box, see [Storage Options Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Proactive Caching &#40;Partitions&#41;](../../2014/analysis-services/dev-guide/proactive-caching-partitions.md)   
- [Partition Properties Dialog Box &#40;SSMS&#41;](../../2014/analysis-services/partition-properties-dialog-box-ssms.md)   
- [Selection &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](../../2014/analysis-services/selection-partition-properties-dialog-box-ssms.md)   
- [General &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](../../2014/analysis-services/general-partition-properties-dialog-box-ssms.md)   
- [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/error-configuration-for-cube-partition-and-dimension-processing.md)  
+ [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md)   
+ [Partition Properties Dialog Box &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [Selection &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   
+ [General &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
+ [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

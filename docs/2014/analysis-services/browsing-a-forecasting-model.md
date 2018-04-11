@@ -31,7 +31,7 @@ manager: "mblythe"
   
 -   [Model view](#bkmk_Model)  
   
- To experiment with a forecasting model, you can use the sample data on the Forecast tab of the sample data workbook, and build a time series model using the [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/forecast-wizard-data-mining-add-ins-for-excel.md) in the **Data Mining** ribbon, or [Forecast &#40;Table Analysis Tools for Excel&#41;](../../2014/analysis-services/forecast-table-analysis-tools-for-excel.md) in the **Analyze** ribbon.  
+ To experiment with a forecasting model, you can use the sample data on the Forecast tab of the sample data workbook, and build a time series model using the [Forecast Wizard &#40;Data Mining Add-ins for Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) in the **Data Mining** ribbon, or [Forecast &#40;Table Analysis Tools for Excel&#41;](forecast-table-analysis-tools-for-excel.md) in the **Analyze** ribbon.  
   
 ###  <a name="bkmk_charts"></a> Chart  
  The **Chart** tab displays the trend in your data series over time, together with the predicted values. The vertical axis of the chart represents the values of the series, and the horizontal axis represents time.  
@@ -40,7 +40,7 @@ manager: "mblythe"
   
 1.  This model contains multiple time series, but to simplify the chart, you can display a single series, or just a few related series.  
   
-     ![historical predictions in the forecasting model](../../2014/analysis-services/media/dm13-forecast-chart-historicpredictions.gif "historical predictions in the forecasting model")  
+     ![historical predictions in the forecasting model](media/dm13-forecast-chart-historicpredictions.gif "historical predictions in the forecasting model")  
   
      Use the check boxes to select the forecast for just North America, and just for sales Amount.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
 5.  Select the **Show historic predictions** option to get a sense for the stability of the time series.  
   
-     ![forecasts for a single series in the model](../../2014/analysis-services/media/dm13-forecast-chart-singleseries.gif "forecasts for a single series in the model")  
+     ![forecasts for a single series in the model](media/dm13-forecast-chart-singleseries.gif "forecasts for a single series in the model")  
   
      Historical predictions are values predicted based on the series to that point, which are compared to actual historical values. If the dotted line (with the predicted values) is far apart from the solid line (the actual values), it means the first part of the series perhaps does not accurately predict the later values. You might need more data, or it might simply be an indicator of volatility in the cycle.  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
   
 -   To get a copy of the current chart, click **Copy to Excel**, then click a worksheet in Excel. A graphic is inserted in the sheet using all the options you had set, including a legend.  
   
-     However, this graphic is static so you cannot edit the legend or view the underlying data; if you need a more interactive chart view, use the [Visio viewers](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     However, this graphic is static so you cannot edit the legend or view the underlying data; if you need a more interactive chart view, use the [Visio viewers](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
 -   Click **Abs** in the viewer menu bar to toggle between absolute and relative curves.  
   
@@ -89,7 +89,7 @@ manager: "mblythe"
   
  For example, in this model, there is a difference in the regression formula based on a certain condition, so the tree splits into two branches, each with a different regression formula.  
   
- ![Filter single series in the forecasting model](../../2014/analysis-services/media/dm13-forecast-model-northamerica.gif "Filter single series in the forecasting model")  
+ ![Filter single series in the forecasting model](media/dm13-forecast-model-northamerica.gif "Filter single series in the forecasting model")  
   
 ##### Explore the forecasting model as a tree  
   
@@ -108,6 +108,6 @@ manager: "mblythe"
  [Explore the Model](#bkmk_Top)  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

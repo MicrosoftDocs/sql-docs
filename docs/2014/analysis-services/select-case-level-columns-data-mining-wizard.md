@@ -23,15 +23,15 @@ manager: "mblythe"
 > [!NOTE]  
 >  This page will appear only if you have selected **From existing cube** on the **Select the Definition Method** page of the wizard.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Related Attributes and Measures**  
  Select the attributes and measures that will be the case level columns of the mining structure. All selected attributes must be in hierarchies or have their attribute hierarchies enabled.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select the Case Key &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-case-key-data-mining-wizard.md)   
- [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select the Case Key &#40;Data Mining Wizard&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

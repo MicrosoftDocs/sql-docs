@@ -23,14 +23,14 @@ manager: "mblythe"
 > [!NOTE]  
 >  This page will appear only if you have selected **From existing relational database or data warehouse** on the **Select the Definition Method** page of the wizard.  
   
- **For More information:** [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More information:** [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Zoom**  
  Use to change the level of detail that is shown in the diagram.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Data Source View &#40;Data Mining Wizard&#41;](select-data-source-view-data-mining-wizard.md)  
   
   

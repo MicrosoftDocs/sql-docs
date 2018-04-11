@@ -25,7 +25,7 @@ manager: "mblythe"
  Displays the progress of the wizard as each object in the database is imported into the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.  
   
 ## See Also  
- [Import Analysis Services Database Wizard F1 Help](../../2014/analysis-services/import-analysis-services-database-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Import Analysis Services Database Wizard F1 Help](import-analysis-services-database-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

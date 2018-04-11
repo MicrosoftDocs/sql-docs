@@ -33,6 +33,6 @@ manager: "mblythe"
 5.  Under Permissions and Management, click **Delete this library**.  
   
 ## See Also  
- [PowerPivot Data Feeds](../../2014/analysis-services/powerpivot-data-feeds.md)  
+ [PowerPivot Data Feeds](powerpivot-data-feeds.md)  
   
   

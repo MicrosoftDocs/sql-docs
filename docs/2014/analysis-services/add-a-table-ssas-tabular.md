@@ -37,7 +37,7 @@ manager: "mblythe"
 >  When importing multiple tables at the same time from a single data source, any relationships between those tables at the source will automatically be created in the model. When adding a table later; however, you may need to manually create relationships in the model between newly added tables and the tables that were previously imported.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)   
- [Delete a Table &#40;SSAS Tabular&#41;](../../2014/analysis-services/delete-a-table-ssas-tabular.md)  
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
+ [Delete a Table &#40;SSAS Tabular&#41;](delete-a-table-ssas-tabular.md)  
   
   

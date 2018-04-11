@@ -31,9 +31,9 @@ manager: "mblythe"
   
  Each Progress Report Begin event begins with a stream of progress events and is terminated with a Progress Report End event. The stream may contain any number of Progress Report Current and Progress Report Error events.  
   
- For information about the columns associated with each of the Progress Reports event classes, see [Progress Reports Data Columns](../../2014/analysis-services/progress-reports-data-columns.md).  
+ For information about the columns associated with each of the Progress Reports event classes, see [Progress Reports Data Columns](progress-reports-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

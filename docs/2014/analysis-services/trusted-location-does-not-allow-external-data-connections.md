@@ -45,6 +45,6 @@ manager: "mblythe"
   
 6.  Click **OK**.  
   
- Alternatively, you can create a new trusted location for sites that contain PowerPivot workbooks, and then modify the configuration settings for just that site. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](../../2014/analysis-services/create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
+ Alternatively, you can create a new trusted location for sites that contain PowerPivot workbooks, and then modify the configuration settings for just that site. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-powerpivot-sites-in-central-administration.md).  
   
   

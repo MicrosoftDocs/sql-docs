@@ -140,6 +140,6 @@ manager: "mblythe"
 |ServerName|43|8|Contains the name of the instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] on which the reported event occurred.|  
   
 ## See Also  
- [Progress Reports Event Category](../../2014/analysis-services/progress-reports-event-category.md)  
+ [Progress Reports Event Category](progress-reports-event-category.md)  
   
   

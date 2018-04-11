@@ -24,9 +24,9 @@ manager: "mblythe"
   
  If you are unfamiliar with slices and cubes, we recommend that you review these articles:  
   
--   [Set the Partition Slice Property &#40;Analysis Services&#41;](../../2014/analysis-services/set-the-partition-slice-property-analysis-services.md)  
+-   [Set the Partition Slice Property &#40;Analysis Services&#41;](set-the-partition-slice-property-analysis-services.md)  
   
--   [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-local-partition-analysis-services.md)  
+-   [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](~/mdx/generate-mdx.md) or [Except &#40;MDX&#41;](~/mdx/except-mdx-function.md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
@@ -35,7 +35,7 @@ manager: "mblythe"
 >   
 >  If you need to define a complex slice, we recommend that you define the tuples in the slice by using an XMLA Alter script. Then, you can use either the ascmd command-line tool or the SSIS [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md) to run the script and create the specified set of members immediately before you process the partition.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Dimension**  
@@ -58,8 +58,8 @@ manager: "mblythe"
  This option is not used for data mining models.  
   
 ## See Also  
- [Completing the Wizard &#40;Data Mining Wizard&#41;](../../2014/analysis-services/completing-the-wizard-data-mining-wizard.md)   
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Completing the Wizard &#40;Data Mining Wizard&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Specify Mining Model Column Usage &#40;Data Mining Wizard&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

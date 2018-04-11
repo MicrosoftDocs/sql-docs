@@ -40,7 +40,7 @@ manager: "mblythe"
  **New Attribute Relationship**  
  Opens the **Create Attribute Relationship** dialog box in which you can define a new attribute relationship.  
   
- For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+ For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](define-attribute-relationships.md).  
   
  **Rename**  
  Highlights the attribute's name in the list and enables you to modify this text.  
@@ -49,9 +49,9 @@ manager: "mblythe"
  Displays the attribute's properties in the **Properties** window.  
   
 ## See Also  
- [Attribute Relationships &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attribute Relationship Diagram &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
- [Attribute Relationships &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attribute Relationships &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attribute Relationship Diagram &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
+ [Attribute Relationships &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

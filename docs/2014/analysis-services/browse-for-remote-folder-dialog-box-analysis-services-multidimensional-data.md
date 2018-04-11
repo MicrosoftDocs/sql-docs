@@ -36,9 +36,9 @@ manager: "mblythe"
  Type to modify the path selected from **Select the folder**, or to select a folder not listed in **Select the folder**.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Processing and Storage Locations &#40;Partition Wizard&#41;](../../2014/analysis-services/processing-and-storage-locations-partition-wizard.md)   
- [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Remote Partitions - Advanced Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Processing and Storage Locations &#40;Partition Wizard&#41;](processing-and-storage-locations-partition-wizard.md)   
+ [Partitions &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Remote Partitions - Advanced Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
   
   

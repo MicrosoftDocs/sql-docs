@@ -36,10 +36,10 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Import from a Relational Data Source &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-a-relational-data-source-ssas-tabular.md)|Describes how to import data from relational data sources such as a Microsoft SQL Server, Oracle, or Teradata database.|  
-|[Import from a Multidimensional Data Source &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-a-multidimensional-data-source-ssas-tabular.md)|Describes how to import data from a multidimensional SQL Server Analysis Services cube.|  
-|[Import from a Data Feed &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-a-data-feed-ssas-tabular.md)|Describes how to import data from a data feed such as a Microsoft Reporting Services report or Azure Data Market Dataset.|  
-|[Import from a Text File &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-a-text-file-ssas-tabular.md)|Describes how to import data from a Microsoft Excel Workbook or text file.|  
-|[Copy and Paste Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/copy-and-paste-data-ssas-tabular.md)|Describes how to add data to an existing table in the model designer by using Paste and Paste Append.|  
+|[Import from a Relational Data Source &#40;SSAS Tabular&#41;](import-from-a-relational-data-source-ssas-tabular.md)|Describes how to import data from relational data sources such as a Microsoft SQL Server, Oracle, or Teradata database.|  
+|[Import from a Multidimensional Data Source &#40;SSAS Tabular&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Describes how to import data from a multidimensional SQL Server Analysis Services cube.|  
+|[Import from a Data Feed &#40;SSAS Tabular&#41;](import-from-a-data-feed-ssas-tabular.md)|Describes how to import data from a data feed such as a Microsoft Reporting Services report or Azure Data Market Dataset.|  
+|[Import from a Text File &#40;SSAS Tabular&#41;](import-from-a-text-file-ssas-tabular.md)|Describes how to import data from a Microsoft Excel Workbook or text file.|  
+|[Copy and Paste Data &#40;SSAS Tabular&#41;](copy-and-paste-data-ssas-tabular.md)|Describes how to add data to an existing table in the model designer by using Paste and Paste Append.|  
   
   

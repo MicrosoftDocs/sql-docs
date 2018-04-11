@@ -25,12 +25,12 @@ manager: "mblythe"
  This section provides information to help you make best use of data feeds to get existing corporate or workgroup data into PowerPivot workbooks. It also provides information on how share data feeds with others in your organization, and how data feeds are constructed and used in case you need to troubleshoot any problems that arise.  
   
 ## Related Tasks  
- [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/create-or-customize-a-data-feed-library-powerpivot-for-sharepoint.md)  
+ [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-powerpivot-for-sharepoint.md)  
   
- [Delete a PowerPivot Data Feed Library](../../2014/analysis-services/delete-a-powerpivot-data-feed-library.md)  
+ [Delete a PowerPivot Data Feed Library](delete-a-powerpivot-data-feed-library.md)  
   
- [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/use-data-feeds-powerpivot-for-sharepoint.md)  
+ [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-powerpivot-for-sharepoint.md)  
   
- [Share Data Feeds Using a Data Feed Library &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint.md)  
+ [Share Data Feeds Using a Data Feed Library &#40;PowerPivot for SharePoint&#41;](share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint.md)  
   
   

@@ -34,7 +34,7 @@ manager: "mblythe"
   
  After you modify a dimension, attribute, or hierarchy, you must process that dimension to view the changes. When working in project mode, you deploy the changes to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance before processing.  
   
- For more information about how to open a dimension in Dimension Designer, see [Modify or Delete a Database Dimension in Solution Explorer](../../2014/analysis-services/modify-or-delete-a-database-dimension-in-solution-explorer.md).  
+ For more information about how to open a dimension in Dimension Designer, see [Modify or Delete a Database Dimension in Solution Explorer](modify-or-delete-a-database-dimension-in-solution-explorer.md).  
   
  Dimension Designer has three different tabs, which are described in the following table.  
   
@@ -47,16 +47,16 @@ manager: "mblythe"
   
  The following topics describe the tasks that you can perform in Dimension Designer.  
   
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
  Describes how to define and configure a dimension attribute.  
   
- [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)  
+ [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)  
  Describes how to define and configure a user-defined hierarchy.  
   
- [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md)  
+ [Define Attribute Relationships](define-attribute-relationships.md)  
  Describes how to define and configure an attribute relationship.  
   
- [Use the Business Intelligence Wizard to Enhance Dimensions](../../2014/analysis-services/use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Use the Business Intelligence Wizard to Enhance Dimensions](use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Describes how to use the Business Intelligence Wizard to enhance a dimension.  
   
   

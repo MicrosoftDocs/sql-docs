@@ -63,7 +63,7 @@ manager: "mblythe"
 |Statement|Returns a command string to be run by the client application.|  
 |URL|Returns a Uniform Resource Location (URL) string to be opened by the client application, typically with an Internet browser.|  
   
- For more information about action types, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md).  
+ For more information about action types, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  **Action expression**  
  Type the Multidimensional Expressions (MDX) expression that returns the string returned by the action to the client application for execution.  
@@ -107,11 +107,11 @@ manager: "mblythe"
  Select **True** to indicate that **Caption** contains an MDX expression that returns a string representing a caption to be displayed for the action in the client application. The MDX expression must be resolved before the action is returned to the client application.  
   
 ## See Also  
- [Actions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [Actions &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

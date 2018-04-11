@@ -306,14 +306,14 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/supported-xmla-properties-xmla.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
+ Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](dev-guide/supported-xmla-properties-xmla.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../2014/analysis-services/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../2014/analysis-services/cube-space.md)   
- [Tuples](../../2014/analysis-services/tuples.md)   
- [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md)   
- [Visual Totals and Non Visual Totals](../../2014/analysis-services/visual-totals-and-non-visual-totals.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Cube Space](cube-space.md)   
+ [Tuples](tuples.md)   
+ [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Visual Totals and Non Visual Totals](visual-totals-and-non-visual-totals.md)   
  [MDX Language Reference &#40;MDX&#41;](~/mdx/mdx-language-reference-mdx.md)   
  [Multidimensional Expressions &#40;MDX&#41; Reference](~/mdx/multidimensional-expressions-mdx-reference.md)  
   

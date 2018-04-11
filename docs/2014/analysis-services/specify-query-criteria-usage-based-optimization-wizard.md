@@ -47,13 +47,13 @@ manager: "mblythe"
 >  If **Beginning date** is not selected, all queries in the query log on or before the date and time specified for this option are considered.  
   
  **Users**  
- Filters queries in the query log based on a specified set of users. Click the ellipsis (**...**) button to display the **User Selection** dialog box and choose users on which to filter queries. For more information about the **User Selection** dialog box, see [User Selection Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/user-selection-dialog-box-analysis-services-multidimensional-data.md).  
+ Filters queries in the query log based on a specified set of users. Click the ellipsis (**...**) button to display the **User Selection** dialog box and choose users on which to filter queries. For more information about the **User Selection** dialog box, see [User Selection Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Most frequent queries**  
  Filters queries in the query log based on the topmost percentage of the distinct queries most often run for the selected partitions. Choose or type a percent value in the text box.  
   
 ## See Also  
- [Usage-Based Optimization Wizard F1 Help](../../2014/analysis-services/usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Usage-Based Optimization Wizard F1 Help](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

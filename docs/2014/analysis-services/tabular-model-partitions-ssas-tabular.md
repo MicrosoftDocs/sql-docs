@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Tabular Model Partitions (SSAS Tabular)
-  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions and create new partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or by using a script. Information provided in this topic describes partitions in a deployed tabular model database. For more information about creating and managing partitions during model authoring, see [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md).  
+  Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions and create new partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or by using a script. Information provided in this topic describes partitions in a deployed tabular model database. For more information about creating and managing partitions during model authoring, see [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
  Sections in this topic:  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
 |Process|Read, process|  
 |Read Only|Read|  
   
- To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-roles-ssas-tabular.md).  
+ To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_partitions"></a> Process Partitions  
  Partitions can be processed (refreshed) independent of other partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or by using a script. Processing has the following options:  
@@ -75,7 +75,7 @@ manager: "mblythe"
   
 |Task|Description|  
 |----------|-----------------|  
-|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[Process Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-tabular-model-partitions-ssas-tabular.md)|Describes how to process partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[Process Tabular Model Partitions &#40;SSAS Tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)|Describes how to process partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
   
   

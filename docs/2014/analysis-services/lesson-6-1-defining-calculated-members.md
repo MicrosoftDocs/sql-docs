@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Defining Calculated Members
   Calculated members are members of a dimension or a measure group that are defined based on a combination of cube data, arithmetic operators, numbers, and functions. For example, you can create a calculated member that calculates the sum of two physical measures in the cube. Calculated member definitions are stored in cubes, but their values are calculated at query time.  
   
- To create a calculated member, use the **New Calculated Member** command on the **Calculations** tab of Cube Designer. You can create a calculated member within any dimension, including the measures dimension. You can also place a calculated member within a display folder in the **Calculation Properties** dialog box. For more information, see [Calculations](../../2014/analysis-services/dev-guide/calculations.md), [Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md), and [Create Calculated Members](../../2014/analysis-services/create-calculated-members.md).  
+ To create a calculated member, use the **New Calculated Member** command on the **Calculations** tab of Cube Designer. You can create a calculated member within any dimension, including the measures dimension. You can also place a calculated member within a display folder in the **Calculation Properties** dialog box. For more information, see [Calculations](dev-guide/calculations.md), [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md), and [Create Calculated Members](create-calculated-members.md).  
   
  In the tasks in this topic, you define calculated measures to let users view the gross profit margin percentage and sales ratios for Internet sales, reseller sales, and for all sales.  
   
@@ -288,8 +288,8 @@ manager: "jhubbard"
  [Defining Named Sets](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
 ## See Also  
- [Calculations](../../2014/analysis-services/dev-guide/calculations.md)   
- [Calculations in Multidimensional Models](../../2014/analysis-services/calculations-in-multidimensional-models.md)   
- [Create Calculated Members](../../2014/analysis-services/create-calculated-members.md)  
+ [Calculations](dev-guide/calculations.md)   
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)   
+ [Create Calculated Members](create-calculated-members.md)  
   
   

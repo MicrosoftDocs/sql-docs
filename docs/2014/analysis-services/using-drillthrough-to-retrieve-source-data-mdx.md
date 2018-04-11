@@ -54,6 +54,6 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
 ```  
   
 ## See Also  
- [Manipulating Data &#40;MDX&#41;](../../2014/analysis-services/manipulating-data-mdx.md)  
+ [Manipulating Data &#40;MDX&#41;](manipulating-data-mdx.md)  
   
   

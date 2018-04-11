@@ -540,6 +540,6 @@ manager: "mblythe"
 |ServerName|43|8|Name of the server producing the event.|  
   
 ## See Also  
- [Query Processing Events Category](../../2014/analysis-services/query-processing-events-category.md)  
+ [Query Processing Events Category](query-processing-events-category.md)  
   
   

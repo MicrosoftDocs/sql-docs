@@ -27,7 +27,7 @@ manager: "mblythe"
  In the SELECT statement, the FROM clause determines the cube context. This context can be the whole cube or just a subcube from that cube. Having specified cube context through the FROM clause, you can use additional functions to expand or restrict that context.  
   
 > [!NOTE]  
->  The SCOPE and CALCULATE statements also let you manage cube context from within an MDX script. For more information, see [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md).  
+>  The SCOPE and CALCULATE statements also let you manage cube context from within an MDX script. For more information, see [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md).  
   
 ## FROM Clause Syntax  
  The following syntax describes the FROM clause:  
@@ -57,6 +57,6 @@ FROM [Adventure Works]
  You can use the MDX [LookupCube](~/mdx/lookupcube-mdx.md) function to retrieve data from cubes outside the cube context. Additionally, functions such as the [Filter](~/mdx/filter-mdx.md) function, are available that allow temporary restriction of the context while evaluating the query.  
   
 ## See Also  
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

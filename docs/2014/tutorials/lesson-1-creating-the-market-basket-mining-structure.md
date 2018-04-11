@@ -16,11 +16,11 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1: Creating the Market Basket Mining Structure
-  In this lesson, you will create a mining structure that allows you to predict what [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] products a customer tends to purchase at the same time. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md).  
+  In this lesson, you will create a mining structure that allows you to predict what [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] products a customer tends to purchase at the same time. If you are unfamiliar with mining structures and their role in data mining, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- The association mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md). In later lessons, you will use the mining models to predict the type of products a customer tends to purchase at the same time, which is called a market basket analysis. For example, you may find that customers tend to buy mountain bikes, bike tires, and helmets at the same time.  
+ The association mining structure that you will create in this lesson supports adding mining models based on the [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). In later lessons, you will use the mining models to predict the type of products a customer tends to purchase at the same time, which is called a market basket analysis. For example, you may find that customers tend to buy mountain bikes, bike tires, and helmets at the same time.  
   
- In this lesson, the mining structure is defined by using nested tables. Nested tables are used because the data domain that will be defined by the structure is contained within two different source tables. For more information on nested tables, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/nested-tables-analysis-services-data-mining.md).  
+ In this lesson, the mining structure is defined by using nested tables. Nested tables are used because the data domain that will be defined by the structure is contained within two different source tables. For more information on nested tables, see [Nested Tables &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ## CREATE MINING STRUCTURE Statement  
  In order to create a mining structure containing a nested table, you use the [CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md) statement. The code in the statement can be broken into the following parts:  
@@ -75,7 +75,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- For information about the types of mining structure columns that you can define, see [Mining Structure Columns](../../2014/analysis-services/mining-structure-columns.md).  
+ For information about the types of mining structure columns that you can define, see [Mining Structure Columns](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
 > [!NOTE]  
 >  By default, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creates a 30 percent holdout data set for each mining structure; however, when you use DMX to create a mining structure, you must manually add the holdout data set, if desired.  

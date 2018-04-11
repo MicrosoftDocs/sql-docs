@@ -37,7 +37,7 @@ manager: "mblythe"
 |**Current Storage Mode**|Displays the current storage mode for the dimension. For more information about the values for this property, see <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)  
   
   

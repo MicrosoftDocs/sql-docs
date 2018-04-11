@@ -34,25 +34,25 @@ manager: "mblythe"
   
 ## Options  
  Decision Trees models  
- [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Browse a Model Using the Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
  Naïve Bayes models  
- [Browse a Model Using the Microsoft Naive Bayes Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Browse a Model Using the Microsoft Naive Bayes Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
  Clustering models  
- [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Browse a Model Using the Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
- [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
  Time series models  
- [Browse a Model Using the Microsoft Time Series Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Browse a Model Using the Microsoft Time Series Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
  Linear regression models  
- [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Browse a Model Using the Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

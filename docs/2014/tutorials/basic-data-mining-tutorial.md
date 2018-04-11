@@ -79,8 +79,8 @@ manager: "jhubbard"
 >  When you are working through a tutorial, you might find it easier to move back and forth between the steps if you add the **Next topic** and **Previous topic** buttons to the document viewer toolbar.  
   
 ## See Also  
- [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)   
- [Mining Model Tasks and How-tos](../../2014/analysis-services/mining-model-tasks-and-how-tos.md)   
+ [Data Mining Solutions](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
+ [Mining Model Tasks and How-tos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

@@ -40,6 +40,6 @@ manager: "mblythe"
  For PowerPivot workbooks that were created in a SQL Server 2008 R2 version of PowerPivot for Excel, you must install the SQL Server 2008 R2 version of the Analysis Services OLE DB provider. This error will occur if you installed the provider, but did not register the Microsoft.AnalysisServices.ChannelTransport.dll file. For more information about file registration, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## See Also  
- [The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: PowerPivot Data](../../2014/analysis-services/the-data-connection-user-could-not-be-delegated.md)  
+ [The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: PowerPivot Data](the-data-connection-user-could-not-be-delegated.md)  
   
   

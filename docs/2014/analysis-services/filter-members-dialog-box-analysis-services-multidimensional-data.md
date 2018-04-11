@@ -31,7 +31,7 @@ manager: "mblythe"
 |**Test**|Click to test the criteria specified in **Filter expression**.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Browser &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

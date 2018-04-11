@@ -141,7 +141,7 @@ FROM [Call Center EQ4].CONTENT
 WHERE NODE_NAME = '10000000000000000'  
 ```  
   
- You can also use the node hierarchy and the details in the NODE_DISTRIBUTION table to traverse individual paths in the neural network and view statistics from the hidden layer. For more information, see [Neural Network Model Query Examples](../../2014/analysis-services/neural-network-model-query-examples.md).  
+ You can also use the node hierarchy and the details in the NODE_DISTRIBUTION table to traverse individual paths in the neural network and view statistics from the hidden layer. For more information, see [Neural Network Model Query Examples](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md).  
   
  [Back to Top](#bkmk_NNviewer)  
   
@@ -149,9 +149,9 @@ WHERE NODE_NAME = '10000000000000000'
  [Adding a Logistic Regression Model to the Call Center Structure &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## See Also  
- [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Neural Network Model Query Examples](../../2014/analysis-services/neural-network-model-query-examples.md)   
- [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)   
- [Change the Discretization of a Column in a Mining Model](../../2014/analysis-services/change-the-discretization-of-a-column-in-a-mining-model.md)  
+ [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Neural Network Model Query Examples](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Change the Discretization of a Column in a Mining Model](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

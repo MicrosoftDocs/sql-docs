@@ -52,6 +52,6 @@ manager: "mblythe"
 8.  To change the order of key columns, select a column, and then click the **Up** or **Down** button.  
   
 ## See Also  
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

@@ -44,7 +44,7 @@ manager: "mblythe"
  Select this option to use the impersonation behavior, defined at the database level, which has been set by the server administrator using the `DataSourceImpersonation` database property.  
   
 ## See Also  
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)  
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
   
   

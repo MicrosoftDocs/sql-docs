@@ -31,7 +31,7 @@ manager: "mblythe"
 3.  Follow the steps in the Table Import Wizard. You will be able to specify an MDX query on the **Specify a MDX Query** page. To use the MDX Query Designer, on the Specify a MDX Query page, click **Design**.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)  
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
   
   

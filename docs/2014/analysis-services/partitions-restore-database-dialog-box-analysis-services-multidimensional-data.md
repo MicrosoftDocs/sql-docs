@@ -64,7 +64,7 @@ manager: "mblythe"
 |**Partition**|Displays the name of the local partition.|  
 |**Size (MB)**|Displays the size, in megabytes, of the local partition.|  
 |**Original Folder**|Displays the name of the original folder in which the local partition was stored.|  
-|**Restoration Folder**|Type the name of the restoration folder for the local partition, or click the ellipsis button (**...**) to display the **Browse for Remote Folder** dialog box and select the path of the folder to use. For more information about the **Browse for Remote Folder** dialog box, see [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Restoration Folder**|Type the name of the restoration folder for the local partition, or click the ellipsis button (**...**) to display the **Browse for Remote Folder** dialog box and select the path of the folder to use. For more information about the **Browse for Remote Folder** dialog box, see [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Restore remote partitions**  
  Select to restore remote partitions stored in remote backup files.  
@@ -78,12 +78,12 @@ manager: "mblythe"
 |------------|-----------------|  
 |**Server**|Displays the name of the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that manages the remote partition.|  
 |**Data Source**|Displays the name of the data source in the backup file that represents the database that contains the remote partition.|  
-|**Backup File**|Type the full path and file name of the remote backup file to use, or click the ellipsis button (**...**) to display the **Locate Database Files** dialog box and select the path and file name of the remote backup file to use. For more information about the **Locate Database Files** dialog box, see [Locate Database Files Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
-|**...**|Click to display the **Remote Partitions - Advanced Settings** dialog box and modify advanced options, such as the connection string for the data source, for restoring the remote partition. For more information about the **Remote Partitions - Advanced Settings** dialog box, see [Remote Partitions - Advanced Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
+|**Backup File**|Type the full path and file name of the remote backup file to use, or click the ellipsis button (**...**) to display the **Locate Database Files** dialog box and select the path and file name of the remote backup file to use. For more information about the **Locate Database Files** dialog box, see [Locate Database Files Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**...**|Click to display the **Remote Partitions - Advanced Settings** dialog box and modify advanced options, such as the connection string for the data source, for restoring the remote partition. For more information about the **Remote Partitions - Advanced Settings** dialog box, see [Remote Partitions - Advanced Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Restore Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [General &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](../../2014/analysis-services/backup-and-restore-of-analysis-services-databases.md)  
+ [Restore Database Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [General &#40;Restore Database Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
   
   

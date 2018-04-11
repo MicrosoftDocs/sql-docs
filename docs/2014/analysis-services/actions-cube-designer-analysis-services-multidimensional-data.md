@@ -22,32 +22,32 @@ manager: "mblythe"
   
 ## Panes  
  **Toolbar**  
- Use the toolbar to perform common actions on this tab. For more information about this pane, see [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the toolbar to perform common actions on this tab. For more information about this pane, see [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Action Organizer**  
- Use the **Action Organizer** pane in form view to display the actions contained by the cube in an ordered format. For more information about this pane, see [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/action-organizer-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Action Organizer** pane in form view to display the actions contained by the cube in an ordered format. For more information about this pane, see [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Calculation Tools**  
- Use the **Calculation Tools** pane in form view to display metadata, functions, and tools available to the cube. For more information about this pane, see [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Calculation Tools** pane in form view to display metadata, functions, and tools available to the cube. For more information about this pane, see [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Action Form Editor**  
- Use the **Action Form Editor** pane in form view to edit standard actions contained by the cube. For more information about this pane, see [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Action Form Editor** pane in form view to edit standard actions contained by the cube. For more information about this pane, see [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Drillthrough Action Form Editor**  
- Use the **Drillthrough Action Form Editor** pane to edit drillthrough actions contained by the cube. For more information about this pane, see [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Drillthrough Action Form Editor** pane to edit drillthrough actions contained by the cube. For more information about this pane, see [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Report Action Form Editor**  
- Use the **Report Action Form Editor** pane to edit report actions contained by the cube. For more information about this pane, see [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Use the **Report Action Form Editor** pane to edit report actions contained by the cube. For more information about this pane, see [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md)   
- [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-scripting-fundamentals-analysis-services.md)   
- [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)  
+ [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [MDX Scripting Fundamentals &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)   
+ [Toolbar &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Action Organizer &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculation Tools &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

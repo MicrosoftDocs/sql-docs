@@ -24,7 +24,7 @@ manager: "mblythe"
  As discussed in this topic, the syntax of the WITH keyword is straightforward and easy to use.  
   
 > [!NOTE]  
->  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](../../2014/analysis-services/building-named-sets-in-mdx-mdx.md).  
+>  For more information about named sets, see [Building Named Sets in MDX &#40;MDX&#41;](building-named-sets-in-mdx-mdx.md).  
   
 ## CREATE SET Syntax  
  Use the following syntax for the CREATE SET statement:  
@@ -51,6 +51,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## See Also  
- [Creating Query-Scoped Named Sets &#40;MDX&#41;](../../2014/analysis-services/creating-query-scoped-named-sets-mdx.md)  
+ [Creating Query-Scoped Named Sets &#40;MDX&#41;](creating-query-scoped-named-sets-mdx.md)  
   
   

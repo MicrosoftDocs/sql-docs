@@ -63,7 +63,7 @@ manager: "mblythe"
  In theory, you could create a dimension table that uses the same key information as the FactResellerSales table and move the other two attribute columns, CarrierTrackingNumber and CustomerPONumber, to that dimension table. However, you would be duplicating a significant portion of data and adding unnecessary complexity to the data warehouse to represent just two attributes as a separate dimension.  
   
 > [!NOTE]  
->  Fact dimensions are frequently used to support drillthrough actions. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/actions-analysis-services-multidimensional-data.md).  
+>  Fact dimensions are frequently used to support drillthrough actions. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  Fact dimensions must be incrementally updated after every update to the measure group that is referenced by the fact relationship. If the fact dimension is a ROLAP dimension, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] processing engine drops any caches and incrementally processes the measure group.  

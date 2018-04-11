@@ -23,7 +23,7 @@ manager: "mblythe"
  If you change the source to a table that has different columns than the current table, a message is displayed warning that the columns are different. You must then select the columns that you want to put in the current table and click **Save**. You can replace the entire table by selecting the check box at the left of the table.  
   
 > [!NOTE]  
->  If your table has more than one partition, you cannot use the Edit Table Properties dialog box to change row filter mappings. To change row filter mappings for tables with multiple partitions, use Partition Manager. For more information, see [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md).  
+>  If your table has more than one partition, you cannot use the Edit Table Properties dialog box to change row filter mappings. To change row filter mappings for tables with multiple partitions, use Partition Manager. For more information, see [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
   
 #### To change table, column, or row filter mappings  
   
@@ -42,6 +42,6 @@ manager: "mblythe"
          If you make a mistake and need to start over, click **Clear Row Filters**.  
   
 ## See Also  
- [Edit Table Properties Dialog Box &#40;SSAS&#41;](../../2014/analysis-services/edit-table-properties-dialog-box-ssas.md)  
+ [Edit Table Properties Dialog Box &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
   

@@ -39,7 +39,7 @@ manager: "mblythe"
   
 -   Use a regular hierarchy but set the `HideMemberIf` property on each level to specify whether a missing level is visualized to the user. When setting `HideMemberIf`, you should also set `MDXCompatibility` on the connection string to override default navigation behaviors. Instructions for setting these properties are in this topic.  
   
--   Create a parent-child hierarchy that explicitly manages the level members. For an illustration of the technique, see [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). For more information in Books Online, see [Parent-Child Hierarchy](../../2014/analysis-services/parent-child-hierarchy.md). Downsides to creating a parent-child hierarchy are that you can only have one per dimension, and you typically incur a performance penalty when calculating aggregations for intermediate members.  
+-   Create a parent-child hierarchy that explicitly manages the level members. For an illustration of the technique, see [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). For more information in Books Online, see [Parent-Child Hierarchy](parent-child-hierarchy.md). Downsides to creating a parent-child hierarchy are that you can only have one per dimension, and you typically incur a performance penalty when calculating aggregations for intermediate members.  
   
  If your dimension contains more than one ragged hierarchy, you should use the first approach, setting `HideMemberIf`. BI Developers with practical experience in working with ragged hierarchies go further in advocating for additional changes in the physical data tables, creating separate tables for each level. See [Martin Mason's the SSAS Financial Cube–Part 1a–Ragged Hierarchies (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) for details about this technique.  
   
@@ -69,9 +69,9 @@ manager: "mblythe"
 |**2**|Hide a placeholder value (either a null value or a duplicate of the parent level), but show other levels and nodes having relevant values.|`MDX Compatibility`=2 is typically viewed as the preferred setting in terms of ragged hierarchies. A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report and some third-party client applications can persist this setting.|  
   
 ## See Also  
- [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md)   
- [User Hierarchies](../../2014/analysis-services/dev-guide/user-hierarchies.md)   
- [Parent-Child Hierarchy](../../2014/analysis-services/parent-child-hierarchy.md)   
- [Connection String Properties &#40;Analysis Services&#41;](../../2014/analysis-services/connection-string-properties-analysis-services.md)  
+ [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)   
+ [User Hierarchies](dev-guide/user-hierarchies.md)   
+ [Parent-Child Hierarchy](parent-child-hierarchy.md)   
+ [Connection String Properties &#40;Analysis Services&#41;](instances/connection-string-properties-analysis-services.md)  
   
   

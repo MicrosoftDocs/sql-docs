@@ -30,6 +30,6 @@ manager: "mblythe"
 |**Friendly Query Name**|Type a unique name for the query. This is a required field.|  
 |**SQL Statement**|Type or paste a SQL statement.|  
 |**Validate**|Determine if the SQL statement is valid.|  
-|**Design**|Design a SQL statement by using the query designer dialog box. For more information, see [Relational Query Designer &#40;SSAS&#41;](../../2014/analysis-services/relational-query-designer-ssas.md).|  
+|**Design**|Design a SQL statement by using the query designer dialog box. For more information, see [Relational Query Designer &#40;SSAS&#41;](relational-query-designer-ssas.md).|  
   
   

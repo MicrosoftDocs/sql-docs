@@ -216,6 +216,6 @@ manager: "mblythe"
 |ServerName|43|8|Name of the server producing the event.|  
   
 ## See Also  
- [File Load and Save Event Category](../../2014/analysis-services/file-load-and-save-event-category.md)  
+ [File Load and Save Event Category](file-load-and-save-event-category.md)  
   
   

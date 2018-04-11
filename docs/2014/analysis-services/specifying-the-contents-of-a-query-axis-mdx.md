@@ -44,7 +44,7 @@ manager: "mblythe"
   
  However, you can specify a SELECT clause without any axes (that is, an empty SELECT clause). In this case, all dimensions are slicer dimensions, and the MDX query selects one cell.  
   
- In the query axis syntax previously shown, each `Set_Expression` value specifies the set that defines the contents of the query axis. For more information about sets, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](../../2014/analysis-services/working-with-members-tuples-and-sets-mdx.md).  
+ In the query axis syntax previously shown, each `Set_Expression` value specifies the set that defines the contents of the query axis. For more information about sets, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md).  
   
 ## Examples  
  The following simple SELECT statement returns the measure Internet Sales Amount on the Columns axis, and uses the MDX MEMBERS function to return all the members from the Calendar hierarchy on the Date dimension on the Rows axis:  
@@ -113,6 +113,6 @@ FROM [Adventure Works]
 ```  
   
 ## See Also  
- [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](../../2014/analysis-services/specifying-the-contents-of-a-slicer-axis-mdx.md)  
+ [Specifying the Contents of a Slicer Axis &#40;MDX&#41;](specifying-the-contents-of-a-slicer-axis-mdx.md)  
   
   

@@ -34,9 +34,9 @@ manager: "mblythe"
 |**Add**|Click to add the currently selected item. **Note:**  This option is enabled only if an item is selected.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Create or Edit Named Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Create Polling Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Create Processing Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Create or Edit Named Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Create Polling Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Create Processing Query Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

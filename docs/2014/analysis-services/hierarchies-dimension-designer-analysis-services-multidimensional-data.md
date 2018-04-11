@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Hierarchies (Dimension Structure Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
-  Use the **Hierarchies** pane to manage the hierarchies and levels for the currently selected dimension. For more information, see [Create User-Defined Hierarchies](../../2014/analysis-services/create-user-defined-hierarchies.md).  
+  Use the **Hierarchies** pane to manage the hierarchies and levels for the currently selected dimension. For more information, see [Create User-Defined Hierarchies](create-user-defined-hierarchies.md).  
   
  You can use the Hierarchies pane to do the following procedures:  
   
@@ -39,9 +39,9 @@ manager: "mblythe"
  Displays the currently created hierarchies. Within each hierarchy are the attributes that make up the levels of the hierarchy. Attribute relationships are also shown but they are read-only.  
   
 ## See Also  
- [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Attributes &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Data Source View &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Dimension Structure &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attributes &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Data Source View &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

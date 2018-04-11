@@ -29,9 +29,9 @@ manager: "mblythe"
 |Server State Discover Data|34|Collects all server-state XMLA discover data events since the trace started. These events capture the contents of the response to the discover request.|  
 |Server State Discover End|35|Collects all server-state XMLA discover end events since the trace started.|  
   
- For information about the columns associated with each of the Query Events event classes, see [Discover Server State Events Data Columns](../../2014/analysis-services/discover-server-state-events-data-columns.md).  
+ For information about the columns associated with each of the Query Events event classes, see [Discover Server State Events Data Columns](discover-server-state-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

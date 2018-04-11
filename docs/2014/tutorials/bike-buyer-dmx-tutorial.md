@@ -41,13 +41,13 @@ manager: "jhubbard"
   
 -   The DMX query language  
   
--   The [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md) and the [Microsoft Clustering Algorithm](../../2014/analysis-services/microsoft-clustering-algorithm.md)  
+-   The [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) and the [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
  Data Mining Extensions (DMX) is a query language provided by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you can use to create and work with mining models. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees algorithm creates models that can be used to predict whether someone will purchase a bicycle. The resulting model can take an individual customer or a table of customers as an input. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering algorithm can create groupings of customers based on shared characteristics. The goal of this tutorial is to provide the DMX scripts that will be used in the custom application.  
   
- **For more information:** [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)  
+ **For more information:** [Data Mining Solutions](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## Mining Structure and Mining Models  
  Before you begin to create DMX statements, it is important to understand the main objects that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses to create mining models. The mining structure is a data structure that defines the data domain from which mining models are built. A single mining structure can contain multiple mining models that share the same domain. A mining model applies a mining model algorithm to the data, which is represented by a mining structure.  

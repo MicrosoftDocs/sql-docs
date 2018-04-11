@@ -53,8 +53,8 @@ manager: "mblythe"
  <sup>5</sup> Some features require a SQL Server relational database that runs on-premises. Specifically, writeback and ROLAP storage require that the underlying data source is a SQL Server relational database.  
   
 ## See Also  
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)   
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)   
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)  
   
   

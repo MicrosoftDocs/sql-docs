@@ -41,7 +41,7 @@ manager: "mblythe"
 > [!NOTE]  
 >  The preview window in the Select Tables and Views page in the Table Import Wizard, Edit Table Properties dialog box, and Partition Manager dialog box show tables, columns, and rows at the data source, and may not show the same tables, columns, and rows as the workspace database.  
   
- When you deploy a tabular model project, the deployed model database, which is essentially a copy of the workspace database, is created on the Analysis Services server instance specified in the Deployment Server property. For more information about the Deployment Server property, see [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md).  
+ When you deploy a tabular model project, the deployed model database, which is essentially a copy of the workspace database, is created on the Analysis Services server instance specified in the Deployment Server property. For more information about the Deployment Server property, see [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md).  
   
  The model workspace database typically resides on localhost or a local named instance of an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. You can use a remote instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to host the workspace database, however, this configuration is not recommended due to latency during data queries and other restrictions. Optimally, the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that will host the workspace databases is on the same computer as [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Authoring model projects on the same computer as the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance that hosts the workspace database can improve performance.  
   
@@ -57,7 +57,7 @@ manager: "mblythe"
  Workspace database properties are included in the model properties. To view model properties, in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], in **Solution Explorer**, click the **Model.bim** file. Model properties can be configured using the **Properties** window. Workspace database specific properties include:  
   
 > [!NOTE]  
->  **Workspace Server**, **Workspace Retention**, and **Data Backup** properties have default settings applied when you create a new model project. You can change the default settings for new model projects on the **Data Modeling** page in **Analysis Server** settings in the Tools\Options dialog box. These properties, as well as others, can also be set for each model project in the **Properties** window. Changing default settings will not apply to model projects already created. For more information, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  **Workspace Server**, **Workspace Retention**, and **Data Backup** properties have default settings applied when you create a new model project. You can change the default settings for new model projects on the **Data Modeling** page in **Analysis Server** settings in the Tools\Options dialog box. These properties, as well as others, can also be set for each model project in the **Properties** window. Changing default settings will not apply to model projects already created. For more information, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
@@ -75,10 +75,10 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Model Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model’s workspace database properties.|  
+|[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model’s workspace database properties.|  
   
 ## See Also  
- [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md)  
+ [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md)  
   
   

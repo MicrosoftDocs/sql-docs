@@ -36,6 +36,6 @@ manager: "mblythe"
  On the second **Create a Custom Member Formula** page, you associate the source column that contains the custom member formula with one or more attributes in the dimension. In the **Attribute** column, select the check box next to the attribute that you want to associate with the custom member formula column. After you select each attribute, the wizard displays the **Select a Column** dialog box. In this dialog box, click the column in the dimension table that contains the formula. If you want to change a selection after you close the **Select a Column** dialog box, click the **Source Column** cell that you want to change, and then click the ellipsis (**...**) to open the **Select a Column** dialog box again.  
   
 ## See Also  
- [Use the Business Intelligence Wizard to Enhance Dimensions](../../2014/analysis-services/use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Use the Business Intelligence Wizard to Enhance Dimensions](use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
   
   

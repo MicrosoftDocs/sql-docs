@@ -56,7 +56,7 @@ manager: "mblythe"
  Click to toggle the display of all attributes defined for the selected dimension, including attributes for which attribute hierarchies are disabled.  
   
 ## See Also  
- [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Translation Details &#40;Translations Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Translation Details &#40;Translations Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

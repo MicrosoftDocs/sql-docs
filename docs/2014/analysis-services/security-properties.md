@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Security Properties
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the security server properties listed in the following table. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md).  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the security server properties listed in the following table. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional and Tabular server mode  
   
@@ -67,7 +67,7 @@ manager: "mblythe"
  An advanced property that you should not change, except under the guidance of [!INCLUDE[msCoName](../includes/msconame-md.md)] support.  
   
 ## See Also  
- [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

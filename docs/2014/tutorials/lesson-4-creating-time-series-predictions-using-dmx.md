@@ -31,7 +31,7 @@ manager: "jhubbard"
  Default time series prediction  
  Use [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) to return the specified number of predictions from the trained mining model.  
   
- For example, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) or [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md).  
+ For example, see [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) or [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
   
  EXTEND_MODEL_CASES  
  Use [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md) with the EXTEND_MODEL_CASES argument to add new data, extend the series, and create predictions based on the updated mining model.  
@@ -147,7 +147,7 @@ WHERE [<criteria>]
 ## See Also  
  [PredictTimeSeries &#40;DMX&#41;](~/dmx/predicttimeseries-dmx.md)   
  [Lag &#40;DMX&#41;](~/dmx/lag-dmx.md)   
- [Time Series Model Query Examples](../../2014/analysis-services/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [Lesson 2: Building a Forecasting Scenario &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

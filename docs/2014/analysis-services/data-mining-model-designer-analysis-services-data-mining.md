@@ -28,15 +28,15 @@ manager: "mblythe"
   
 -   [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
--   [Data Mining Concepts](../../2014/analysis-services/data-mining-concepts.md)  
+-   [Data Mining Concepts](data-mining/data-mining-concepts.md)  
   
 ## See Also  
- [Mining Structure View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-structure-view-data-mining-model-designer.md)   
- [Mining Models View &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-models-view-data-mining-model-designer.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)  
+ [Mining Structure View &#40;Data Mining Model Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Mining Models View &#40;Data Mining Model Designer&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

@@ -18,7 +18,7 @@ manager: "mblythe"
 # Process Partitions in the Workspace Databse (SSAS Tabular)
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. The tasks in this topic describe how to process partitions in the model workspace database by using the **Process Partitions** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], by script, or by using an IS package. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+ After a model has been deployed to another Analysis Services instance, database administrators can create and manage partitions in the (deployed) model by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], by script, or by using an IS package. For more information, see [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ###  <a name="bkmk_create_new"></a> To process a partition  
   
@@ -37,7 +37,7 @@ manager: "mblythe"
 3.  In the **Process** checkbox column, select the partitions you want to process with the selected mode, and then click **Ok**.  
   
 ## See Also  
- [Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/partitions-ssas-tabular.md)   
- [Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
+ [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
+ [Create and Manage Partitions in the Workspace Database &#40;SSAS Tabular&#41;](create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

@@ -76,7 +76,7 @@ manager: "jhubbard"
  [Modifying and Processing the Market Basket Model &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md)   
- [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/content-types-data-mining.md)  
+ [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
+ [Content Types &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

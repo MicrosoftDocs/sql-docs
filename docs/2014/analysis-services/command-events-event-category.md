@@ -27,9 +27,9 @@ manager: "mblythe"
 |Command Begin|15|Collects all command begin events since the trace started.|  
 |Command End|16|Collects all command end events since the trace started.|  
   
- For information about the columns associated with each of the Command Events event classes, see [Command Events Data Columns](../../2014/analysis-services/command-events-data-columns.md).  
+ For information about the columns associated with each of the Command Events event classes, see [Command Events Data Columns](command-events-data-columns.md).  
   
 ## See Also  
- [Analysis Services Trace Events](../../2014/analysis-services/analysis-services-trace-events.md)  
+ [Analysis Services Trace Events](analysis-services-trace-events.md)  
   
   

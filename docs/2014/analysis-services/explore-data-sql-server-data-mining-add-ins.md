@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Explore Data (SQL Server Data Mining Add-ins)
-  ![Explore Data wizard](../../2014/analysis-services/media/dmc-explore.gif "Explore Data wizard")  
+  ![Explore Data wizard](media/dmc-explore.gif "Explore Data wizard")  
   
  The **Explore Data** wizard helps you understand the type and amount of data in your data table. The wizard graphs the distribution and values for the selected columns, one column at a time. You can then experiment with changing the way that data is grouped, or copy the chart that shows the content to an Excel workbook for review.  
   
@@ -32,7 +32,7 @@ manager: "mblythe"
   
  When the wizard finds groups in the data, it uses the actual distribution of data values. Therefore, the bar chart does not show typical whole-number numeric axis markers such as 10 or 100. Instead, the ranges shown in the bar chart might be something like 43521-55603 (for the Income column).  
   
- If you want to group your data into other ranges, you should do this in Excel before analyzing the data. Or, you can relabel the data by using the [Relabel](../../2014/analysis-services/relabel-sql-server-data-mining-add-ins.md) wizard.  
+ If you want to group your data into other ranges, you should do this in Excel before analyzing the data. Or, you can relabel the data by using the [Relabel](relabel-sql-server-data-mining-add-ins.md) wizard.  
   
 ## Using the Explore Data Wizard  
   
@@ -50,6 +50,6 @@ manager: "mblythe"
  To use the **Explore Data** wizard, your data must be in an Excel data table.   
   
 ## See Also  
- [Checklist of Preparation for Data Mining](../../2014/analysis-services/checklist-of-preparation-for-data-mining.md)  
+ [Checklist of Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)  
   
   

@@ -40,7 +40,7 @@ manager: "mblythe"
   
 -   You must be db_owner on the farm’s configuration database.  
   
--   There are no TCP/IP port requirements for using the configuration tools and therefore you should not have to configure your firewall to accommodate the configuration tools. The configuration tool expects the web applications and shared services are available as part of the SharePoint platform. You may need to configure your firewall for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   There are no TCP/IP port requirements for using the configuration tools and therefore you should not have to configure your firewall to accommodate the configuration tools. The configuration tool expects the web applications and shared services are available as part of the SharePoint platform. You may need to configure your firewall for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. For more information, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_twoversions"></a> Two Versions of the Configuration Tool  
  The [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Setup Wizard installs the PowerPivot Configuration Tool for SharePoint 2010 as well as a PowerPivot Configuration Tool for SharePoint 2013.  
@@ -49,8 +49,8 @@ manager: "mblythe"
   
 |Name|Supported version of SharePoint|Detailed Configuration|  
 |----------|-------------------------------------|----------------------------|  
-|PowerPivot for SharePoint 2013 Configuration|SharePoint 2013|[Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|PowerPivot Configuration Tool|SharePoint 2010 with SharePoint 2010|[Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)|  
+|PowerPivot for SharePoint 2013 Configuration|SharePoint 2013|[Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
+|PowerPivot Configuration Tool|SharePoint 2010 with SharePoint 2010|[Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](configure-repair-powerpivot-sharepoint-2010.md)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> How the Two Configuration Tools are Different  
  The two versions of the Configuration tool are similar but there are differences in the configuration steps the two tools run. The differences are due to changes between SharePoint 2010 and SharePoint 2013 as well as the architecture differences between the SQL Server 2012 SP1 version of PowerPivot for SharePoint and the previous versions of PowerPivot for SharePoint.  
@@ -59,10 +59,10 @@ manager: "mblythe"
   
 |PowerPivot for SharePoint 2013 Configuration|PowerPivot Configuration Tool|  
 |--------------------------------------------------|-----------------------------------|  
-|The main page has a new option for **PowerPivot Server for Excel Services**. The option supports the new architecture with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] running outside of the SharePoint farm. You configure Excel Services to use one or more [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers that are running in SharePoint mode.<br /><br /> ![PowerPivot Server in the new configuration tool](../../2014/analysis-services/media/as-powerpivot-configtool-differences-new-mainpage.gif "PowerPivot Server in the new configuration tool")||  
-||The 2010 tool includes the page **Register SQL Server Analysis Services (PowerPivot) on Local Server** to configure a local instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. This page is not part of the 2013 tool because there is no local instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> ![AS service account in the old configuration tool](../../2014/analysis-services/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "AS service account in the old configuration tool")|  
-||The page **Create PowerPivot Service Application** has an extra option of **Upgrade Workbooks to enable data refresh**. This option is not available in the 2013 tool.<br /><br /> ![upgrade workbooks in old configuration tool](../../2014/analysis-services/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "upgrade workbooks in old configuration tool")|  
-|The 2013 tool has a new page **Configure PowerPivot Servers**. This page supports the new architecture of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] running outside the SharePoint farm. By default, the server name that was typed on the main page in the text box **PowerPivot Server for Excel Services**, is also be listed on the **Configure PowerPivot Servers**.<br /><br /> ![Register PowerPivot servers new configuration tool](../../2014/analysis-services/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "Register PowerPivot servers new configuration tool")||  
+|The main page has a new option for **PowerPivot Server for Excel Services**. The option supports the new architecture with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] running outside of the SharePoint farm. You configure Excel Services to use one or more [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servers that are running in SharePoint mode.<br /><br /> ![PowerPivot Server in the new configuration tool](media/as-powerpivot-configtool-differences-new-mainpage.gif "PowerPivot Server in the new configuration tool")||  
+||The 2010 tool includes the page **Register SQL Server Analysis Services (PowerPivot) on Local Server** to configure a local instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. This page is not part of the 2013 tool because there is no local instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> ![AS service account in the old configuration tool](media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "AS service account in the old configuration tool")|  
+||The page **Create PowerPivot Service Application** has an extra option of **Upgrade Workbooks to enable data refresh**. This option is not available in the 2013 tool.<br /><br /> ![upgrade workbooks in old configuration tool](media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "upgrade workbooks in old configuration tool")|  
+|The 2013 tool has a new page **Configure PowerPivot Servers**. This page supports the new architecture of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] running outside the SharePoint farm. By default, the server name that was typed on the main page in the text box **PowerPivot Server for Excel Services**, is also be listed on the **Configure PowerPivot Servers**.<br /><br /> ![Register PowerPivot servers new configuration tool](media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "Register PowerPivot servers new configuration tool")||  
 |The 2013 tool has a new page **Register PowerPivot addin as Excel Services Usage Tracker**. SharePoint 2010 Excel Services does not track usage data for PowerPivot.||  
 ||The 2010 tool includes the page **Add MSOLAP.5 as a trusted Provider** to register MSOLAP so that Excel Services in SharePoint 2010 can load PowerPivot models. This page is not part of the 2013 tool. SharePoint 2013 Excel Services does not use the MSOLAP provider to load models.|  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
  You can review the **Script** tab to learn and understand how to configure PowerPivot and SharePoint using Windows PowerShell. For more information, see the following:  
   
--   [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
+-   [PowerPivot Configuration using Windows PowerShell](powerpivot-configuration-using-windows-powershell.md)  
   
 -   [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
@@ -97,7 +97,7 @@ manager: "mblythe"
   
     -   **PowerPivot for SharePoint 2013 Configuration**.  
   
-     ![two powerpivot configuratoin tools](../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
+     ![two powerpivot configuratoin tools](media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   
      **Note:** The tools are available only when [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] is installed on the local server.  
   
@@ -113,7 +113,7 @@ manager: "mblythe"
   
      For example, the image shows the startup page of the PowerPivot Configuration for SharePoint 2013 tool.  
   
-     ![PowerPivot for SharePoint 2013 Configuration Tool](../../2014/analysis-services/media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "PowerPivot for SharePoint 2013 Configuration Tool")  
+     ![PowerPivot for SharePoint 2013 Configuration Tool](media/ssas-powerpivot-configtool-4-sharepoint2013-choosemode.gif "PowerPivot for SharePoint 2013 Configuration Tool")  
   
  Each task is composed of individual actions that address some aspect of server configuration. For example, the configuration task includes actions for deploying solutions, creating a PowerPivot service application, activating features, and configuring data refresh. The list of actions will vary based on the current state of your installation. If an action is not needed, the tool excludes it from the task list.  
   
@@ -124,8 +124,8 @@ manager: "mblythe"
   
  [Uninstall PowerPivot for SharePoint](../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md) Describes the workflow that removes PowerPivot for SharePoint services, solutions, and application pages from a farm.  
   
- [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
+ [PowerPivot Configuration using Windows PowerShell](powerpivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)  
   
   

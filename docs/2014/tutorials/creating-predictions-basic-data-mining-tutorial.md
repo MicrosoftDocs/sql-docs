@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  The Prediction Query Builder has three views. With the **Design** and **Query** views, you can build and examine your query. You can then run the query and view the results in the **Result** view.  
   
- All prediction queries use DMX, which is short for the Data Mining Extensions (DMX) language. DMX has syntax like that of T-SQL but is used for queries against data mining objects. Although DMX syntax is not complicated, using a query builder like this one, or the one in the [SQL Server Data Mining Add-Ins for Office](../../2014/analysis-services/sql-server-data-mining-add-ins-for-office.md), makes it much easier to select inputs and build expressions, so we highly recommend that you learn the basics.  
+ All prediction queries use DMX, which is short for the Data Mining Extensions (DMX) language. DMX has syntax like that of T-SQL but is used for queries against data mining objects. Although DMX syntax is not complicated, using a query builder like this one, or the one in the [SQL Server Data Mining Add-Ins for Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), makes it much easier to select inputs and build expressions, so we highly recommend that you learn the basics.  
   
 ## Creating the Query  
  The first step in creating a prediction query is to select a mining model and input table.  
@@ -168,6 +168,6 @@ manager: "jhubbard"
  [Using Drillthrough on Structure Data &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Create a Prediction Query Using the Prediction Query Builder](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

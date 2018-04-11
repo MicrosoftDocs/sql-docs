@@ -33,14 +33,14 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md)|Describes the various ways in which you can run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard.|  
-|[Understanding the Input Files Used to Create the Deployment Script](../../2014/analysis-services/understanding-the-input-files-used-to-create-the-deployment-script.md)|Describes which files the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard uses as input values, what each of those files contains, and provides links to topics that describe how to modify the values in each of the input files.|  
-|[Understanding the Analysis Services Deployment Script](../../2014/analysis-services/understanding-the-analysis-services-deployment-script.md)|Describes what the deployment script contains and how the script runs.|  
+|[Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)|Describes the various ways in which you can run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard.|  
+|[Understanding the Input Files Used to Create the Deployment Script](understanding-the-input-files-used-to-create-the-deployment-script.md)|Describes which files the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard uses as input values, what each of those files contains, and provides links to topics that describe how to modify the values in each of the input files.|  
+|[Understanding the Analysis Services Deployment Script](understanding-the-analysis-services-deployment-script.md)|Describes what the deployment script contains and how the script runs.|  
   
 ## See Also  
- [Deploy Model Solutions Using XMLA](../../2014/analysis-services/deploy-model-solutions-using-xmla.md)   
- [Synchronize Analysis Services Databases](../../2014/analysis-services/synchronize-analysis-services-databases.md)   
- [Understanding the Input Files Used to Create the Deployment Script](../../2014/analysis-services/understanding-the-input-files-used-to-create-the-deployment-script.md)   
- [Deploy Model Solutions with the Deployment Utility](../../2014/analysis-services/deploy-model-solutions-with-the-deployment-utility.md)  
+ [Deploy Model Solutions Using XMLA](deploy-model-solutions-using-xmla.md)   
+ [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)   
+ [Understanding the Input Files Used to Create the Deployment Script](understanding-the-input-files-used-to-create-the-deployment-script.md)   
+ [Deploy Model Solutions with the Deployment Utility](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

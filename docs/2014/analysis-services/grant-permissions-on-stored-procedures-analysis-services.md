@@ -18,7 +18,7 @@ manager: "mblythe"
 # Grant permissions on stored procedures (Analysis Services)
   Stored procedures, or assemblies, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] are external routines, written in a [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET programming language, that extend the capabilities of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Assemblies let the developer take advantage of cross-language integration, exception handling, versioning support, deployment support, and debugging support.  
   
- You must be a Server Administrator to register an assembly. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md).  
+ You must be a Server Administrator to register an assembly. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
 ## Security context for stored procedure execution  
  Any user can call a stored procedure. Depending on how the stored procedure was configured, the procedure can run either in the context of the user calling the procedure or in the context of an anonymous user. Because an anonymous user has no security context, use this capability together with configuring the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to permit anonymous access.  
@@ -34,6 +34,6 @@ manager: "mblythe"
 -   **Unrestricted** With the Unrestricted permission set, a stored procedure can access external resources by using any code. With this permission set, there are no security or reliability guarantees for stored procedures.  
   
 ## See Also  
- [Multidimensional Model Assemblies Management](../../2014/analysis-services/multidimensional-model-assemblies-management.md)  
+ [Multidimensional Model Assemblies Management](multidimensional-model-assemblies-management.md)  
   
   

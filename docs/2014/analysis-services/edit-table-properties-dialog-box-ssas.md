@@ -97,6 +97,6 @@ manager: "mblythe"
  Click to apply all changes that you made, including replacing columns.  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/tables-and-columns-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)  
   
   

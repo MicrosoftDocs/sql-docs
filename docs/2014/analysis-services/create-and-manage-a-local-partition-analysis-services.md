@@ -53,7 +53,7 @@ manager: "mblythe"
   
 3.  In the Source column, click the browse (. .) button to open the Partition Source dialog box.  
   
-     ![Source column in Partition pane](../../2014/analysis-services/media/ssas-partitionsource.png "Source column in Partition pane")  
+     ![Source column in Partition pane](media/ssas-partitionsource.png "Source column in Partition pane")  
   
 4.  In Binding Type, select **Query Binding**. The SQL query that selects the data appears automatically.  
   
@@ -85,12 +85,12 @@ manager: "mblythe"
 ## Option 2: Use Tables, Views, or Named Queries  
  If the DSV already organizes facts into individual tables (for example, by year or quarter), you can create partitions based on an individual table, where each partition has its own data source table. This is essentially how measure groups are partitioned by default but in the case of multiple partitions, you break the original partition into multiple partitions, and map each new partition to the data source table providing the data.  
   
- Views and named queries are functional equivalent to tables, in that all three objects are defined in the DSV and bound to a partition using the Table Binding option in the Partition Source dialog box. You can create a view or named query to generate the data segment needed for each partition. For more information, see [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-queries-in-a-data-source-view-analysis-services.md).  
+ Views and named queries are functional equivalent to tables, in that all three objects are defined in the DSV and bound to a partition using the Table Binding option in the Partition Source dialog box. You can create a view or named query to generate the data segment needed for each partition. For more information, see [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  When you create mutually exclusive named queries for partitions in a DSV, ensure that the combined data for the partitions includes all data from a measure group that you want to include in the cube. Make sure that you do not leave a default partition based on the entire table for the measure group, or else the query based partitions will overlap the query based on the complete table.  
   
-1.  Create one or more named queries to use as the partition source. For more information, see [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](../../2014/analysis-services/define-named-queries-in-a-data-source-view-analysis-services.md).  
+1.  Create one or more named queries to use as the partition source. For more information, see [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md).  
   
      The named query must be based on the fact table associated with the measure group. For example, if you are partitioning the FactInternetSales measure group, the named queries in the DSV must specify the FactInternetSales table in the FROM statement.  
   
@@ -120,8 +120,8 @@ manager: "mblythe"
  As a final step, you normally want to remove the default partition that was based on the table itself (if it still exists), or else the query based partitions will overlap the query based on the complete table.  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)   
- [Remote Partitions](../../2014/analysis-services/dev-guide/remote-partitions.md)   
- [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitions](dev-guide/remote-partitions.md)   
+ [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

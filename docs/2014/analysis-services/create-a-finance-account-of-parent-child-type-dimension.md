@@ -46,14 +46,14 @@ manager: "mblythe"
   
 -   An account number attribute—an attribute that is used for reporting purposes. You identify an account number attribute by setting the `Type` property of the attribute to `AccountNumber`.  
   
- For more information about attribute types, see [Configure Attribute Types](../../2014/analysis-services/configure-attribute-types.md).  
+ For more information about attribute types, see [Configure Attribute Types](configure-attribute-types.md).  
   
 ## Adding Account Intelligence with the Business Intelligence Wizard  
- After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to adding account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](../../2014/analysis-services/add-account-intelligence-to-a-dimension.md).  
+ After you have defined an account dimension and added that dimension to a cube, you can use the Business Intelligence Wizard to adding account intelligence functionality, such as identifying and mapping account types, to the dimension. For more information, see [Add Account Intelligence to a Dimension](add-account-intelligence-to-a-dimension.md).  
   
 ## See Also  
- [Attributes and Attribute Hierarchies](../../2014/analysis-services/dev-guide/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence Wizard F1 Help](../../2014/analysis-services/business-intelligence-wizard-f1-help.md)   
- [Dimension Types](../../2014/analysis-services/dev-guide/dimension-types.md)  
+ [Attributes and Attribute Hierarchies](dev-guide/attributes-and-attribute-hierarchies.md)   
+ [Business Intelligence Wizard F1 Help](business-intelligence-wizard-f1-help.md)   
+ [Dimension Types](dev-guide/dimension-types.md)  
   
   

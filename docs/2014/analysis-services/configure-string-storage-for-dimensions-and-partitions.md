@@ -57,7 +57,7 @@ manager: "mblythe"
   
  Dimensions and partitions must use MOLAP storage.  
   
- The database compatibility level must be set to 1100. If you created or deployed a database using [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] and the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or later version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the database compatibility level is already set to 1100. If you moved a database created in an earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to ssSQL11 or later, you must update the compatibility level. For databases that you are moving, but not redeploying, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the compatibility level. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../2014/analysis-services/set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ The database compatibility level must be set to 1100. If you created or deployed a database using [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] and the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] or later version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the database compatibility level is already set to 1100. If you moved a database created in an earlier version of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] to ssSQL11 or later, you must update the compatibility level. For databases that you are moving, but not redeploying, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the compatibility level. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](set-the-compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
 ##  <a name="bkmk_step1"></a> Step 1: Set the StringStoreCompatiblityLevel Property in SQL Server Data Tools  
   
@@ -85,9 +85,9 @@ manager: "mblythe"
  You must use the Process Full option on each object that is using the new string store architecture. Before processing, be sure to run an impact analysis on the dimension to check whether dependent objects also require reprocessing.  
   
 ## See Also  
- [Tools and Approaches for Processing &#40;Analysis Services&#41;](../../2014/analysis-services/tools-and-approaches-for-processing-analysis-services.md)   
- [Processing Options and Settings &#40;Analysis Services&#41;](../../2014/analysis-services/processing-options-and-settings-analysis-services.md)   
- [Partition Storage Modes and Processing](../../2014/analysis-services/dev-guide/partition-storage-modes-and-processing.md)   
- [Dimension Storage](../../2014/analysis-services/dev-guide/dimension-storage.md)  
+ [Tools and Approaches for Processing &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Processing Options and Settings &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [Partition Storage Modes and Processing](dev-guide/partition-storage-modes-and-processing.md)   
+ [Dimension Storage](dev-guide/dimension-storage.md)  
   
   

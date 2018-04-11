@@ -85,7 +85,7 @@ manager: "mblythe"
  The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../2014/analysis-services/dev-guide/mdschema-members-rowset.md).  
+>  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](dev-guide/mdschema-members-rowset.md).  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -213,7 +213,7 @@ FROM [Adventure Works]
  [DrilldownLevel &#40;MDX&#41;](~/mdx/drilldownlevel-mdx.md)   
  [Properties &#40;MDX&#41;](~/mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](~/mdx/prevmember-mdx.md)   
- [Using Member Properties &#40;MDX&#41;](../../2014/analysis-services/using-member-properties-mdx.md)   
+ [Using Member Properties &#40;MDX&#41;](using-member-properties-mdx.md)   
  [MDX Function Reference &#40;MDX&#41;](~/mdx/mdx-function-reference-mdx.md)  
   
   

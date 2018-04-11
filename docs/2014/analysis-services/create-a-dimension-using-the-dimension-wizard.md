@@ -27,7 +27,7 @@ manager: "mblythe"
 2.  On the **Select Creation Method** page of the Dimension Wizard, select **Use an existing table**, and then click **Next**.  
   
     > [!NOTE]  
-    >  You might occasionally have to create a dimension without using an existing table. For more information, see [Create a Dimension by Generating a Non-Time Table in the Data Source](../../2014/analysis-services/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md) and [Create a Time Dimension by Generating a Time Table](../../2014/analysis-services/create-a-time-dimension-by-generating-a-time-table.md).  
+    >  You might occasionally have to create a dimension without using an existing table. For more information, see [Create a Dimension by Generating a Non-Time Table in the Data Source](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md) and [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md).  
   
 3.  On the **Specify Source Information** page, do the following procedures:  
   
@@ -70,6 +70,6 @@ manager: "mblythe"
     >  You can use Dimension Designer after you complete the Dimension Wizard to add, remove, and configure attributes and hierarchies in the dimension.  
   
 ## See Also  
- [Create a Dimension by Using an Existing Table](../../2014/analysis-services/create-a-dimension-by-using-an-existing-table.md)  
+ [Create a Dimension by Using an Existing Table](create-a-dimension-by-using-an-existing-table.md)  
   
   

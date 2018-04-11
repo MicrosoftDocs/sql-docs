@@ -86,6 +86,6 @@ manager: "jhubbard"
 ## See Also  
  [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Intermediate Data Mining Tutorial &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md)  
+ [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

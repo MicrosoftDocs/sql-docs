@@ -28,7 +28,7 @@ manager: "mblythe"
   
  [Update an expired password for SQL Server Analysis Services (PowerPivot) instance](#bkmk_passwordssas)  
   
- [Update an expired password for the PowerPivot Service Application](../../2014/analysis-services/configure-powerpivot-service-accounts.md#bkmk_passwordapp)  
+ [Update an expired password for the PowerPivot Service Application](configure-powerpivot-service-accounts.md#bkmk_passwordapp)  
   
  [Change the account under which each service runs](#bkmk_newacct)  
   
@@ -178,7 +178,7 @@ manager: "mblythe"
  If Reporting Services is installed, use the Reporting Services Configuration Manager to update passwords for the report server and the connection to the report server database. For more information, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
 ## See Also  
- [Start or Stop a PowerPivot for SharePoint Server](../../2014/analysis-services/start-or-stop-a-powerpivot-for-sharepoint-server.md)   
- [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
+ [Start or Stop a PowerPivot for SharePoint Server](start-or-stop-a-powerpivot-for-sharepoint-server.md)   
+ [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)  
   
   

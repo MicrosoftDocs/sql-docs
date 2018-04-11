@@ -25,7 +25,7 @@ manager: "mblythe"
   
  The templates offer many advantages over static graphs and screen captures – they interact with the underlying data mining models, which are stored on an instance of Analysis Services, and let you customize the way that the patterns in the mining model are displayed. You can collapse and expand a tree model, filter on data nodes or by attributes, and display model statistics such as probabilities and coefficients.  
   
- ![DM](../../2014/analysis-services/media/dm-stencil.gif "DM")  
+ ![DM](media/dm-stencil.gif "DM")  
   
  The Visio templates include these wizards:  
   
@@ -55,7 +55,7 @@ manager: "mblythe"
   
 5.  After you have completed the **Data Mining Shape Wizard**, you have a diagram that you can modify and enhance using the features of Visio.  
   
- For more information about how to work with and enhance Visio model diagrams, see [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ For more information about how to work with and enhance Visio model diagrams, see [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
 ## Requirements  
   
@@ -63,7 +63,7 @@ manager: "mblythe"
   
      The wizard will prompt you to select an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server and specify the database that contains the mining model.  
   
-     For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+     For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 -   If you are using the Table Analysis Tools, make sure that you save your models to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server, and do not use temporary models.  
   

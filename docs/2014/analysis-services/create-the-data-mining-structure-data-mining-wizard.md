@@ -22,7 +22,7 @@ manager: "mblythe"
   
  If you choose to create a mining model, you must also specify the data mining algorithm that you want to use. If you create only the structure now, you can add a mining model to the structure later.  
   
- **For More Information:** [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Create mining structure with a mining model**  
@@ -41,8 +41,8 @@ manager: "mblythe"
  Displays a description of the selected algorithm.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Select Data Source View &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-data-source-view-data-mining-wizard.md)   
- [Select the Definition Method &#40;Data Mining Wizard&#41;](../../2014/analysis-services/select-the-definition-method-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Select Data Source View &#40;Data Mining Wizard&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Select the Definition Method &#40;Data Mining Wizard&#41;](select-the-definition-method-data-mining-wizard.md)  
   
   

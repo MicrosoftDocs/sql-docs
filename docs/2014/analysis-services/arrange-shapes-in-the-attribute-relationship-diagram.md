@@ -29,7 +29,7 @@ manager: "mblythe"
      You can also click **Arrange Shapes** to automatically arrange all shapes according to the layout algorithm that Dimension Designer uses.  
   
 ## See Also  
- [Attribute Relationships](../../2014/analysis-services/dev-guide/attribute-relationships.md)   
- [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md)  
+ [Attribute Relationships](dev-guide/attribute-relationships.md)   
+ [Define Attribute Relationships](define-attribute-relationships.md)  
   
   

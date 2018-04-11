@@ -29,8 +29,8 @@ manager: "mblythe"
  Displays additional information about the selected message or operation.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Process Progress Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/process-progress-dialog-box-analysis-services-multidimensional-data.md)   
- [Multidimensional Model Object Processing](../../2014/analysis-services/multidimensional-model-object-processing.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Process Progress Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
+ [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
   
   

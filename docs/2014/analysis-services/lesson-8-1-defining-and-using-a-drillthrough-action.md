@@ -144,10 +144,10 @@ manager: "jhubbard"
  [Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## See Also  
- [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/actions-analysis-services-multidimensional-data.md)   
- [Actions in Multidimensional Models](../../2014/analysis-services/actions-in-multidimensional-models.md)   
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
+ [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)   
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
  [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
- [Define a Fact Relationship and Fact Relationship Properties](../../2014/analysis-services/define-a-fact-relationship-and-fact-relationship-properties.md)  
+ [Define a Fact Relationship and Fact Relationship Properties](define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

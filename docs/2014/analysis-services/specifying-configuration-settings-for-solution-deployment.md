@@ -43,7 +43,7 @@ manager: "mblythe"
  To modify the deployment of partitions and roles in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, you must change this information within the \<*project name*>.configsettings file, as described in the procedure below. You cannot change the partition and roles settings within the project because the *\<project name>* **Properties Pages** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] does not display these options.  
   
 > [!NOTE]  
->  Configuration settings can apply to all objects or only to newly created objects. Apply configuration settings to newly created objects only when you are deploying additional objects to a previously deployed [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and do not want to overwrite existing objects. To specify whether configuration settings apply to all objects or only to newly created ones, set this option in the \<*project name*>.deploymentoptions file. For more information, see [Specifying Partition and Role Deployment Options](../../2014/analysis-services/specifying-partition-and-role-deployment-options.md).  
+>  Configuration settings can apply to all objects or only to newly created objects. Apply configuration settings to newly created objects only when you are deploying additional objects to a previously deployed [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database and do not want to overwrite existing objects. To specify whether configuration settings apply to all objects or only to newly created ones, set this option in the \<*project name*>.deploymentoptions file. For more information, see [Specifying Partition and Role Deployment Options](specifying-partition-and-role-deployment-options.md).  
   
 #### To change configuration settings after the input files have been generated  
   
@@ -51,15 +51,15 @@ manager: "mblythe"
   
      —or—  
   
--   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md).  
+-   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
      —or—  
   
 -   Modify the \<*project name*>.configsettings file by using any text editor.  
   
 ## See Also  
- [Specifying the Installation Target](../../2014/analysis-services/specifying-the-installation-target.md)   
- [Specifying Partition and Role Deployment Options](../../2014/analysis-services/specifying-partition-and-role-deployment-options.md)   
- [Specifying Processing Options](../../2014/analysis-services/specifying-processing-options.md)  
+ [Specifying the Installation Target](specifying-the-installation-target.md)   
+ [Specifying Partition and Role Deployment Options](specifying-partition-and-role-deployment-options.md)   
+ [Specifying Processing Options](specifying-processing-options.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Browsing Models in Excel (SQL Server Data Mining Add-ins)
-  ![Browse Model button in Data Mining ribbon](../../2014/analysis-services/media/dmc-browse.gif "Browse Model button in Data Mining ribbon")  
+  ![Browse Model button in Data Mining ribbon](media/dmc-browse.gif "Browse Model button in Data Mining ribbon")  
   
  Visually exploring the model is usually the fastest and easiest way to get an understanding of the rules and relationships discovered by analysis. By using the Data Mining Client for Excel, you can browse both temporary models created during the current Excel session, and models stored in an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -41,20 +41,20 @@ manager: "mblythe"
   
  The following topics provide guidance in how to use each of the viewers, including tips on interpreting the complex graphs, and how to change, copy, or work with the results.  
   
- [Browsing an Association Rules Model](../../2014/analysis-services/browsing-an-association-rules-model.md)  
+ [Browsing an Association Rules Model](browsing-an-association-rules-model.md)  
   
- [Browsing a Clustering Model](../../2014/analysis-services/browsing-a-clustering-model.md)  
+ [Browsing a Clustering Model](browsing-a-clustering-model.md)  
   
- [Browsing a Decision Trees Model](../../2014/analysis-services/browsing-a-decision-trees-model.md)  
+ [Browsing a Decision Trees Model](browsing-a-decision-trees-model.md)  
   
- [Browsing a Forecasting Model](../../2014/analysis-services/browsing-a-forecasting-model.md)  
+ [Browsing a Forecasting Model](browsing-a-forecasting-model.md)  
   
- [Browsing a Naive Bayes Model](../../2014/analysis-services/browsing-a-naive-bayes-model.md)  
+ [Browsing a Naive Bayes Model](browsing-a-naive-bayes-model.md)  
   
- [Browsing a Neural Network Model](../../2014/analysis-services/browsing-a-neural-network-model.md)  
+ [Browsing a Neural Network Model](browsing-a-neural-network-model.md)  
   
 ## See Also  
- [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/manage-models-sql-server-data-mining-add-ins.md)  
+ [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   
   

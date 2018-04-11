@@ -33,7 +33,7 @@ manager: "mblythe"
   
     |Property|Default setting|Description|  
     |--------------|---------------------|-----------------|  
-    |**Default compatibility level for new projects**|SQL Server 2012 (1100)|This setting specifies the default compatibility level to use when creating a new Tabular model project. You can choose SQL Server 2012 RTM (1100) if you will deploy to an Analysis Services instance without SP1 applied, or SQL Server 2012 SP1 if your deployment instance has SP1 applied, or SQL Server 2014. For more information, see [Compatibility Level &#40;SSAS Tabular SP1&#41;](../../2014/analysis-services/compatibility-level-ssas-tabular-sp1.md).|  
+    |**Default compatibility level for new projects**|SQL Server 2012 (1100)|This setting specifies the default compatibility level to use when creating a new Tabular model project. You can choose SQL Server 2012 RTM (1100) if you will deploy to an Analysis Services instance without SP1 applied, or SQL Server 2012 SP1 if your deployment instance has SP1 applied, or SQL Server 2014. For more information, see [Compatibility Level &#40;SSAS Tabular SP1&#41;](compatibility-level-ssas-tabular-sp1.md).|  
     |**Compatibility level options**|All checked|Specifies compatibility level options for new Tabular model projects and when deploying to another Analysis Services instance.|  
   
 #### To configure the default deployment server property setting for new model projects  
@@ -69,8 +69,8 @@ manager: "mblythe"
 >  Changes to default model properties will not affect properties for existing models created prior to the change.  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md)   
- [Model Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/model-properties-ssas-tabular.md)   
- [Compatibility Level &#40;SSAS Tabular SP1&#41;](../../2014/analysis-services/compatibility-level-ssas-tabular-sp1.md)  
+ [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md)   
+ [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)   
+ [Compatibility Level &#40;SSAS Tabular SP1&#41;](compatibility-level-ssas-tabular-sp1.md)  
   
   

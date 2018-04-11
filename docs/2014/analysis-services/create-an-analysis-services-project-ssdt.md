@@ -158,8 +158,8 @@ manager: "mblythe"
 ||Mining Structure|Starts the Data Mining Wizard to add a new mining structure and associated mining model to the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project.|  
   
 ## See Also  
- [Configure Analysis Services Project Properties &#40;SSDT&#41;](../../2014/analysis-services/configure-analysis-services-project-properties-ssdt.md)   
- [Build Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/build-analysis-services-projects-ssdt.md)   
- [Deploy Analysis Services Projects &#40;SSDT&#41;](../../2014/analysis-services/deploy-analysis-services-projects-ssdt.md)  
+ [Configure Analysis Services Project Properties &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Build Analysis Services Projects &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

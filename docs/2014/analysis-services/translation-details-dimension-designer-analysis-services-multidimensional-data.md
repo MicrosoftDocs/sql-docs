@@ -57,11 +57,11 @@ manager: "mblythe"
   
 -   `NamingTemplate` property  
   
-     Displays the [Level Naming Template Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
+     Displays the [Level Naming Template Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
 -   `Caption` property (for attributes)  
   
-     Displays the [Attribute Data Translation Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+     Displays the [Attribute Data Translation Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## Shortcut Menu  
  The following options are available in the shortcut menu displayed by right-clicking a translation in the **Translation Details** pane:  
@@ -97,6 +97,6 @@ manager: "mblythe"
  Select to toggle the display of all attributes defined for the selected dimension, including attributes for which attribute hierarchies are disabled.  
   
 ## See Also  
- [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Translations &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

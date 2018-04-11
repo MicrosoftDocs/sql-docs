@@ -54,8 +54,8 @@ manager: "mblythe"
  Moreover, any calculations that use the renamed table, or that use columns from the renamed table, must also be updated, and the data derived from those calculations must be refreshed and recalculated. Depending on how many tables and calculations are affected, this can take some time to complete. Therefore, the best time to rename tables is either during the import process, or before you start to build complex relationships and calculations.  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/tables-and-columns-ssas-tabular.md)   
- [Import from PowerPivot &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-powerpivot-ssas-tabular.md)   
- [Import from Analysis Services &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-from-analysis-services-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)   
+ [Import from PowerPivot &#40;SSAS Tabular&#41;](import-from-powerpivot-ssas-tabular.md)   
+ [Import from Analysis Services &#40;SSAS Tabular&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

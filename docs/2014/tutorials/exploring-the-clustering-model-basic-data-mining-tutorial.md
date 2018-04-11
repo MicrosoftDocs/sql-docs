@@ -117,7 +117,7 @@ manager: "jhubbard"
  [Exploring the Decision Tree Model &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## See Also  
- [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-cluster-viewer.md)   
+ [Browse a Model Using the Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
  [Cluster Discrimination Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
  [Cluster Profiles Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   
  [Cluster Characteristics Tab &#40;Mining Model Viewer&#41;](../../2014/analysis-services/cluster-characteristics-tab-mining-model-viewer.md)   

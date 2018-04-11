@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot Usage Data Collection
-  Usage data collection is a farm-level SharePoint feature. PowerPivot for SharePoint uses and extends this system to provide reports in the PowerPivot Management Dashboard that show how PowerPivot data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the PowerPivot Management Dashboard. For more information on how to enable and configure usage data collection for PowerPivot events see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
+  Usage data collection is a farm-level SharePoint feature. PowerPivot for SharePoint uses and extends this system to provide reports in the PowerPivot Management Dashboard that show how PowerPivot data and services are used. Depending on how you install SharePoint, usage data collection might be turned off for the farm. A farm administrator must enable usage logging to create the usage data that appears in the PowerPivot Management Dashboard. For more information on how to enable and configure usage data collection for PowerPivot events see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
   
- For information on usage data in the PowerPivot Management Dashboard, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+ For information on usage data in the PowerPivot Management Dashboard, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
  **In this topic:**  
   
@@ -35,9 +35,9 @@ manager: "mblythe"
   
  In the usage data collection system, event information enters the usage collection system on the application server or Web front end. Usage data moves through the system in response to timer jobs that cause data to move from temporary data files on the physical server to persistent storage on a database server. The following diagram illustrates the components and processes that move usage data through the data collection and reporting system.  
   
- **Note:** Verify usage data collection is enabled. To verify, go to **Monitoring** in SharePoint Central Administration. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
+ **Note:** Verify usage data collection is enabled. To verify, go to **Monitoring** in SharePoint Central Administration. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).  
   
- ![Components and processes of usage data collection.](../../2014/analysis-services/media/gmni-usagedata.gif "Components and processes of usage data collection.")  
+ ![Components and processes of usage data collection.](media/gmni-usagedata.gif "Components and processes of usage data collection.")  
   
 |Phase|Description|  
 |-----------|-----------------|  
@@ -52,15 +52,15 @@ manager: "mblythe"
   
 |Event|Description|Configurable|  
 |-----------|-----------------|------------------|  
-|Connections|Server connections made on behalf of a user who is querying PowerPivot data in an Excel workbook. Connection events identify who opened a connection to a PowerPivot workbook. In reports, this information is used to identify the most frequent users, the PowerPivot data sources that are accessed by the same users, and trends in connections over time.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
-|Query response times|Query response statistics that categorize queries based on how long they take to complete. Query response statistics show patterns in how long it takes the server to respond to query requests.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
-|Data load|Data load operations by the [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)]. Data load events identify which data sources are used most often.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
-|Data unload|Data unload operations by PowerPivot service applications. An [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] unloads inactive PowerPivot data sources if it is not being used, or when the server is under memory pressure or needs additional memory to run data refresh jobs.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
+|Connections|Server connections made on behalf of a user who is querying PowerPivot data in an Excel workbook. Connection events identify who opened a connection to a PowerPivot workbook. In reports, this information is used to identify the most frequent users, the PowerPivot data sources that are accessed by the same users, and trends in connections over time.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
+|Query response times|Query response statistics that categorize queries based on how long they take to complete. Query response statistics show patterns in how long it takes the server to respond to query requests.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
+|Data load|Data load operations by the [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)]. Data load events identify which data sources are used most often.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
+|Data unload|Data unload operations by PowerPivot service applications. An [!INCLUDE[ssGeminiSrv](../includes/ssgeminisrv-md.md)] unloads inactive PowerPivot data sources if it is not being used, or when the server is under memory pressure or needs additional memory to run data refresh jobs.|You can enable and disable [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md).|  
 |Server health|Server operations that indicate server health, measured in CPU and memory utilization. This data is historical. It does not provide real time information about the current processing load on the server.|No. Usage data is always collected for this event.|  
 |Data refresh|Data refresh operations initiated by the PowerPivot service for scheduled data updates. Usage history for data refresh is collected at the application level for operational reports, and is reflected in the Manage Data Refresh pages for individual workbooks.<br /><br /> **Note:** For [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] and SharePoint 2013 deployments, data refresh is managed by Excel Services and not the Analysis Services Server.|No. Data refresh usage data is always collected if you enable data refresh for the PowerPivot service application.|  
   
 ##  <a name="servicesjobs"></a> Services and Timer Jobs  
- The following table describes the services and data collection stores in the usage data collection system. For instructions on how to override the timer job schedules to force a data refresh of server health and usage data in PowerPivot Management Dashboard reports, see [PowerPivot Data Refresh with SharePoint 2010](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md). You can see the timer jobs in SharePoint central Administration. Go to **Monitoring**, then click **Check Job Status**. Click **Review Job Definitions**.  
+ The following table describes the services and data collection stores in the usage data collection system. For instructions on how to override the timer job schedules to force a data refresh of server health and usage data in PowerPivot Management Dashboard reports, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md). You can see the timer jobs in SharePoint central Administration. Go to **Monitoring**, then click **Check Job Status**. Click **Review Job Definitions**.  
   
 |Component|Default schedule|Description|  
 |---------------|----------------------|-----------------|  
@@ -72,11 +72,11 @@ manager: "mblythe"
 ##  <a name="reporting"></a> Reporting on Usage Data  
  To view usage data on PowerPivot data, you can view built-in reports in the PowerPivot Management Dashboard. The built-in reports consolidate usage data that is retrieved from reporting data structures in the service application database. Because the underlying report data is updated on a daily basis, the built-in usage reports will show updated information only after the Microsoft SharePoint Foundation Usage Data Processing timer job copies data to a PowerPivot service application database. By default, this occurs once a day.  
   
- For more information about how to view reports, see [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md).  
+ For more information about how to view reports, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
   
 ## See Also  
- [PowerPivot Management Dashboard and Usage Data](../../2014/analysis-services/powerpivot-management-dashboard-and-usage-data.md)   
- [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configuration-setting-reference-powerpivot-for-sharepoint.md)   
- [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](../../2014/analysis-services/configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
+ [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md)   
+ [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-powerpivot-for-sharepoint.md)   
+ [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-powerpivot-for-sharepoint.md)  
   
   

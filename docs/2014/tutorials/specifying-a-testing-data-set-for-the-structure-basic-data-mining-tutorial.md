@@ -19,7 +19,7 @@ manager: "jhubbard"
   In the final few screens of the Data Mining Wizard you will split your data into a testing set and a training set. You will then name your structure and enable drillthrough on the model.  
   
 ## Specifying a Testing Set  
- Separating data into training and testing sets when you create a mining structure makes it possible to easily assess the accuracy of the mining models that you create later. For more information on testing sets, see [Training and Testing Data Sets](../../2014/analysis-services/training-and-testing-data-sets.md).  
+ Separating data into training and testing sets when you create a mining structure makes it possible to easily assess the accuracy of the mining models that you create later. For more information on testing sets, see [Training and Testing Data Sets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### To specify the testing set  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
 ## Specifying Drillthrough  
  Drillthrough can be enabled on models and on structures. The checkbox in this dialog box enables drillthrough on the named model. After the model has been processed,  you will be able to retrieve detailed information from the training data that were used to create the model.  
   
- If the underlying mining structure has also been configured to allow drillthrough, you can retrieve detailed information from both the model cases and the mining structure, including columns that were not included in the mining model. For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md).  
+ If the underlying mining structure has also been configured to allow drillthrough, you can retrieve detailed information from both the model cases and the mining structure, including columns that were not included in the mining model. For more information, see [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 #### To name the model and structure and specify drillthrough  
   
@@ -53,8 +53,8 @@ manager: "jhubbard"
  [Lesson 3: Adding and Processing Models](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## See Also  
- [Enable Drillthrough for a Mining Model](../../2014/analysis-services/enable-drillthrough-for-a-mining-model.md)   
- [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/drillthrough-queries-data-mining.md)   
+ [Enable Drillthrough for a Mining Model](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
+ [Drillthrough Queries &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [Specify the Training Data &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

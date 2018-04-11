@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Data Mining Query Task Editor (Output Tab)
   Use the **Output** tab of the **Data Mining Query Task Editor** dialog box to specify the destination of the prediction query.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md) and [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../2014/integration-services/data-mining-query-task.md) and [Data Mining Solutions](../analysis-services/data-mining/data-mining-solutions.md).  
   
 ## General Options  
  **Name**  
@@ -51,6 +51,6 @@ manager: "jhubbard"
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Data Mining Query Task Editor &#40;Mining Model Tab&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Data Mining Query Task Editor &#40;Query Tab&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Data Mining Designer](../../2014/analysis-services/data-mining-designer.md)  
+ [Data Mining Designer](../analysis-services/data-mining/data-mining-designer.md)  
   
   

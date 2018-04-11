@@ -30,6 +30,6 @@ manager: "mblythe"
  Use the **Perspective Details** pane to create and modify perspectives for the selected cube.  
   
 ## See Also  
- [Perspectives](../../2014/analysis-services/dev-guide/perspectives.md)  
+ [Perspectives](dev-guide/perspectives.md)  
   
   

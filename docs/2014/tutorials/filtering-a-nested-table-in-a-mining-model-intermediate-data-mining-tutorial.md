@@ -108,7 +108,7 @@ manager: "jhubbard"
  [Predicting Associations &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## See Also  
- [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

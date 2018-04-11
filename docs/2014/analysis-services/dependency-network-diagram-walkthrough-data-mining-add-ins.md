@@ -121,6 +121,6 @@ manager: "mblythe"
 >  Highlighting of dependent nodes and other shortcut menu options that were available in previous versions of the Add-Ins do not work in Office 2013.  
   
 ## See Also  
- [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
+ [Troubleshooting Visio Data Mining Diagrams &#40;SQL Server Data Mining Add-ins&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

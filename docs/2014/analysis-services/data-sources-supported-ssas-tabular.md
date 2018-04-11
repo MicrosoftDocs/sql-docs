@@ -72,7 +72,7 @@ manager: "mblythe"
 4.  OLE DB providers can sometimes offer faster performance for large scale data. When choosing between different providers for the same data source, you should try the OLE DB provider first.  
   
 ## See Also  
- [Data Sources &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)  
+ [Data Sources &#40;SSAS Tabular&#41;](data-sources-ssas-tabular.md)   
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
   
   

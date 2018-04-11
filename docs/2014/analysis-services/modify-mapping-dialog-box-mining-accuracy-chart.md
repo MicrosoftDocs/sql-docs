@@ -28,8 +28,8 @@ manager: "mblythe"
  A list of the input columns that are associated with each mining structure column. To change the input column, click a cell and select a new input column from the list of columns that the input table contains.  
   
 ## See Also  
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testing and Validation &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-data-mining.md)  
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

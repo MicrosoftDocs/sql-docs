@@ -32,10 +32,10 @@ manager: "mblythe"
 |**Type**|Displays the type of the assembly reference. The following values are displayed:<br /><br /> **.NET Assembly**: The assembly reference refers to a [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework assembly.<br /><br /> **COM DLL**: The assembly reference refers to a COM library.|  
 |**Source**|Displays the source of the assembly reference. This property typically contains the full path and file name of the assembly referred to by the assembly reference.|  
 |**Permission Set**|Select the permission set used to determine access to the assembly reference. For more information about the available values for this property, see <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
-|**Impersonation Info**|Select the impersonation information to use when accessing the assembly reference. For more information about the available values for this property, see [ImpersonationInfo Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/impersonationinfo-element-assl.md)|  
+|**Impersonation Info**|Select the impersonation information to use when accessing the assembly reference. For more information about the available values for this property, see [ImpersonationInfo Element &#40;ASSL&#41;](dev-guide/impersonationinfo-element-assl.md)|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Assemblies Management](../../2014/analysis-services/multidimensional-model-assemblies-management.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Multidimensional Model Assemblies Management](multidimensional-model-assemblies-management.md)  
   
   

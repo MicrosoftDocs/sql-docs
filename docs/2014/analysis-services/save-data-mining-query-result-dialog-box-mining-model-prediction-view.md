@@ -53,8 +53,8 @@ manager: "mblythe"
  This option is useful if you want to keep all related tables for a model—such as training data, prediction source data, and query results—in the same data source.  
   
 ## See Also  
- [Prediction Query Builder &#40;Data Mining&#41;](../../2014/analysis-services/prediction-query-builder-data-mining.md)   
- [Data Mining Query Interfaces](../../2014/analysis-services/data-mining-query-interfaces.md)   
+ [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
+ [Data Mining Query Interfaces](data-mining/data-mining-query-tools.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](~/dmx/data-mining-extensions-dmx-statements.md)  
   
   

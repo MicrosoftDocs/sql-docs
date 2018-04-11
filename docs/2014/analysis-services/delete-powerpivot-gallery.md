@@ -19,13 +19,13 @@ manager: "mblythe"
   Deleting a [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Gallery also deletes all of its items, including the data refresh history for [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks that are configured for scheduled data refresh.  
   
 > [!NOTE]  
->  This topic provides instructions on how to delete a SharePoint library. For instructions on how to delete individual documents in the library, see [Use PowerPivot Gallery](../../2014/analysis-services/use-powerpivot-gallery.md).  
+>  This topic provides instructions on how to delete a SharePoint library. For instructions on how to delete individual documents in the library, see [Use PowerPivot Gallery](use-powerpivot-gallery.md).  
   
  You must be a site owner to delete a library.  
   
 ### Delete PowerPivot Gallery SharePoint 2013  
   
-1.  Click Settings ![SharePoint Settings](../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
+1.  Click Settings ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
   
 2.  Click **Site Settings**.  
   

@@ -32,17 +32,17 @@ manager: "mblythe"
  To preserve role definitions over successive solution deployments, a best practice is to define roles in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] as an integral part of the model, and then have a database administrator assign role memberships in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] after the database is published. But you can use either tool for both tasks. To simplify the exercise, we'll use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] for both role definition and membership.  
   
 > [!NOTE]  
->  Only server administrators, or database administrators having Full Control permissions, can deploy a cube from source files to a server, or create roles and assign members. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md) and [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md) for details about these permission levels.  
+>  Only server administrators, or database administrators having Full Control permissions, can deploy a cube from source files to a server, or create roles and assign members. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) and [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) for details about these permission levels.  
   
 #### Step 1: Create the role  
   
-1.  In SSMS, connect to Analysis Services. See [Connect from client applications &#40;Analysis Services&#41;](../../2014/analysis-services/connect-from-client-applications-analysis-services.md) if you need help with this step.  
+1.  In SSMS, connect to Analysis Services. See [Connect from client applications &#40;Analysis Services&#41;](instances/connect-from-client-applications-analysis-services.md) if you need help with this step.  
   
 2.  Open the **Databases** folder in Object Explorer, and select a database.  
   
 3.  Right-click **Roles** and choose **New Role**. Notice that roles are created at the database level and apply to objects within it. You cannot share roles across databases.  
   
-4.  In the **General** pane, enter a name, and optionally, a description. This pane also contains several database permissions, such as Full Control, Process Database, and Read Definition. None of these permissions are needed for querying a cube or tabular model. See [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md) for more information about these permissions.  
+4.  In the **General** pane, enter a name, and optionally, a description. This pane also contains several database permissions, such as Full Control, Process Database, and Read Definition. None of these permissions are needed for querying a cube or tabular model. See [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) for more information about these permissions.  
   
 5.  Continue to the next step after entering a name and optional description.  
   
@@ -52,23 +52,23 @@ manager: "mblythe"
   
 2.  Continue to the next step, setting cube permissions.  
   
-     Notice that we are skipping the Data Source pane. Most regular consumers of Analysis Services data do not need permissions on the data source object. See [Grant permissions on a data source object &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-data-source-object-analysis-services.md) for details on when you might set this permission.  
+     Notice that we are skipping the Data Source pane. Most regular consumers of Analysis Services data do not need permissions on the data source object. See [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) for details on when you might set this permission.  
   
 #### Step 3: Set Cube Permissions  
   
 1.  In the **Cubes** pane, select a cube, and then click `Read` or **Read/Write** access.  
   
-     `Read` access is sufficient for most operations. **Read/Write** is used only for writeback, not processing. See [Set Partition Writeback](../../2014/analysis-services/set-partition-writeback.md) for more information about this capability.  
+     `Read` access is sufficient for most operations. **Read/Write** is used only for writeback, not processing. See [Set Partition Writeback](set-partition-writeback.md) for more information about this capability.  
   
      Notice that you can select multiple cubes, as well as other objects available in the Create Role dialog box. Granting permissions to a cube authorizes access to the dimensions and perspectives associated with the cube. It's not necessary to manually add objects already represented in the cube.  
   
-     If you need to vary authorization by objects or user, for example to make certain measures unavailable, you can allow or deny access atomically on specific objects, even on cells. See [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md) and [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md) for details.  
+     If you need to vary authorization by objects or user, for example to make certain measures unavailable, you can allow or deny access atomically on specific objects, even on cells. See [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) and [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md) for details.  
   
 2.  At this point, after you click **OK**, all members of this role have access to the cubes, at the permission levels you specified.  
   
      Notice that on the **Cubes** pane, you can grant users permission to create local cubes from a server cube via **Drillthrough and Local Cube**, or allow drillthrough only, via the **Drillthrough** permission.  
   
-     Finally, this pane lets you grant **Process Database** rights on the cube to give all members of this role the ability to process data for this cube. Because processing is typically a restricted operation, we recommend that you leave that task to the administrators, or define separate roles specifically for that task. See [Grant process permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-process-permissions-analysis-services.md) for more information about processing permission best practices.  
+     Finally, this pane lets you grant **Process Database** rights on the cube to give all members of this role the ability to process data for this cube. Because processing is typically a restricted operation, we recommend that you leave that task to the administrators, or define separate roles specifically for that task. See [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) for more information about processing permission best practices.  
   
 #### Step 4: Test  
   
@@ -79,9 +79,9 @@ manager: "mblythe"
   
 2.  Hold-down the Shift key and right-click the **Excel** shortcut to access the **Run as different user** option. Enter one of the Windows user or group accounts having membership in this role.  
   
-3.  When Excel opens, use the Data tab to connect to Analysis Services. Because you are running Excel as a different Windows user, the **Use Windows Authentication** option is the right credential type to use when testing roles. See [Connect from client applications &#40;Analysis Services&#41;](../../2014/analysis-services/connect-from-client-applications-analysis-services.md) if you need help with this step.  
+3.  When Excel opens, use the Data tab to connect to Analysis Services. Because you are running Excel as a different Windows user, the **Use Windows Authentication** option is the right credential type to use when testing roles. See [Connect from client applications &#40;Analysis Services&#41;](instances/connect-from-client-applications-analysis-services.md) if you need help with this step.  
   
-     If you get errors on the connection, check the port configuration for Analysis Services and verify that the server accepts remote connections. See [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md) for port configuration.  
+     If you get errors on the connection, check the port configuration for Analysis Services and verify that the server accepts remote connections. See [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) for port configuration.  
   
 #### Step 5: Script role definition and assignments  
   
@@ -96,11 +96,11 @@ manager: "mblythe"
 4.  Save the file with an .xmla file extension. To test the script, delete the current role, open the file in SSMS, and press F5 to execute the script.  
   
 ## Next step  
- You can refine cube permissions to restrict access to cell or dimension data. See [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md) and [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md) for details.  
+ You can refine cube permissions to restrict access to cell or dimension data. See [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) and [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md) for details.  
   
 ## See Also  
- [Authentication methodologies supported by Analysis Services](../../2014/analysis-services/authentication-methodologies-supported-by-analysis-services.md)   
- [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Grant permissions on a data source object &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

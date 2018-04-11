@@ -18,7 +18,7 @@ manager: "mblythe"
 # Configure In-Memory or DirectQuery Access for a Tabular Model Database
   This topic describes how to change the connection properties of a tabular model that has already been deployed, to enable use of the model in Direct Query mode.  
   
- For more information about these properties, and configuration for the most common scenarios, see [DirectQuery Deployment Scenarios &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-deployment-scenarios-ssas-tabular.md).  
+ For more information about these properties, and configuration for the most common scenarios, see [DirectQuery Deployment Scenarios &#40;SSAS Tabular&#41;](directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## Requirements  
  Enabling the use of Direct Query mode on a tabular model is a multistep process. You must:  

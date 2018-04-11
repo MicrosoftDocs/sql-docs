@@ -167,12 +167,12 @@ manager: "mblythe"
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Attach and Detach Analysis Services Databases](../../2014/analysis-services/attach-and-detach-analysis-services-databases.md)   
- [Database Storage Location](../../2014/analysis-services/database-storage-location.md)   
- [Database ReadWriteModes](../../2014/analysis-services/database-readwritemodes.md)   
- [Attach Element](../../2014/analysis-services/dev-guide/attach-element.md)   
- [Detach Element](../../2014/analysis-services/dev-guide/detach-element.md)   
- [ReadWriteMode Element](../../2014/analysis-services/dev-guide/readwritemode-element.md)   
- [DbStorageLocation Element](../../2014/analysis-services/dev-guide/dbstoragelocation-element.md)  
+ [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
+ [Database Storage Location](database-storage-location.md)   
+ [Database ReadWriteModes](database-readwritemodes.md)   
+ [Attach Element](dev-guide/attach-element.md)   
+ [Detach Element](dev-guide/detach-element.md)   
+ [ReadWriteMode Element](dev-guide/readwritemode-element.md)   
+ [DbStorageLocation Element](dev-guide/dbstoragelocation-element.md)  
   
   

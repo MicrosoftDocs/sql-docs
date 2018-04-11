@@ -31,7 +31,7 @@ manager: "mblythe"
  The following options are available in the context menu displayed by right-clicking the diagram background of the **Data Source View** pane:  
   
  **Show Tables**  
- Displays the **Show Table** dialog box. For more information about the **Show Table** dialog box, see [Show Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/show-table-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays the **Show Table** dialog box. For more information about the **Show Table** dialog box, see [Show Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Show All Tables**  
  Displays in the pane all tables included in the data source view associated with the cube.  
@@ -46,7 +46,7 @@ manager: "mblythe"
  Selects all of the objects in the pane.  
   
  **Find Table**  
- Displays the **Find Table** dialog box. For more information about the **Find Table** dialog box, see [Find Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/find-table-dialog-box-analysis-services-multidimensional-data.md).  
+ Displays the **Find Table** dialog box. For more information about the **Find Table** dialog box, see [Find Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Arrange Tables**  
  Arranges the objects in the pane according to the layout specified by selecting either **Switch to Diagonal Layout** or **Switch to Rectangular Layout**.  
@@ -64,7 +64,7 @@ manager: "mblythe"
 >  This option is displayed only if **Switch to Diagonal Layout** is selected.  
   
  **Edit Data Source View**  
- Displays Data Source View Designer for the data source view associated with the object. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Displays Data Source View Designer for the data source view associated with the object. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Show Data Source View In**  
  Select one of the following options to toggle between viewing the **Data Source View** pane in the following modes:  
@@ -99,7 +99,7 @@ manager: "mblythe"
  Display the **Explore Data** dialog box for the selected table.  
   
  **Edit Data Source View**  
- Displays Data Source View Designer for the data source view that contains the selected table. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Displays Data Source View Designer for the data source view that contains the selected table. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **New Measure Group from Table**  
  Defines a new measure group in the **Measures** pane based on the selected table.  
@@ -120,7 +120,7 @@ manager: "mblythe"
  Display the **Explore Data** dialog box for the table that contains the selected column.  
   
  **Edit Data Source View**  
- Displays Data Source View Designer for the data source view that contains the selected column. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Displays Data Source View Designer for the data source view that contains the selected column. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Properties**  
  Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected column.  
@@ -129,15 +129,15 @@ manager: "mblythe"
  The following options are available in the context menu displayed by right-clicking a relationship in the **Data Source View** pane:  
   
  **Edit Data Source View**  
- Displays Data Source View Designer for the data source view that contains the selected relationship. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Displays Data Source View Designer for the data source view that contains the selected relationship. For more information about Data Source View Designer, see [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Properties**  
  Displays the **Properties** window in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected relationship.  
   
 ## See Also  
- [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Measures &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensions &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+ [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Measures &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimensions &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

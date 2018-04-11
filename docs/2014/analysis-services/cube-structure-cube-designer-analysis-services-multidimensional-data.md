@@ -26,17 +26,17 @@ manager: "mblythe"
   
 |Pane|Definition|  
 |----------|----------------|  
-|**Toolbar**|Use the toolbar to perform common actions in this tab. For more information about this pane, see [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Measures**|Use the **Measures** pane to create and modify measure groups and measures for the selected cube. For more information about this pane, see [Measures &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Dimensions**|Use the **Dimensions** pane to include and modify cube dimensions for the selected cube. For more information about this pane, see [Dimensions &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Data Source View**|Use the **Data Source View** pane to view and edit the data source view associated with the selected cube. For more information about this pane, see [Data Source View &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Toolbar**|Use the toolbar to perform common actions in this tab. For more information about this pane, see [Toolbar &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Measures**|Use the **Measures** pane to create and modify measure groups and measures for the selected cube. For more information about this pane, see [Measures &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Dimensions**|Use the **Dimensions** pane to include and modify cube dimensions for the selected cube. For more information about this pane, see [Dimensions &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Data Source View**|Use the **Data Source View** pane to view and edit the data source view associated with the selected cube. For more information about this pane, see [Data Source View &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](../../2014/analysis-services/cubes-in-multidimensional-models.md)   
- [Configure Measure Properties](../../2014/analysis-services/configure-measure-properties.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)  
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Configure Measure Properties](configure-measure-properties.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

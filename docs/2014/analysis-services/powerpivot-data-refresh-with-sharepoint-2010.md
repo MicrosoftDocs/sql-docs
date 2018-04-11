@@ -27,7 +27,7 @@ manager: "mblythe"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](powerpivot-data-refresh-with-sharepoint-2013.md).  
   
  **In this topic:**  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
  [Disable the Data Refresh Timer Job](#bkmk_disableDR)  
   
- After you ensure that the server environment and permissions are configured, data refresh is ready to use. To use data refresh, a SharePoint user creates a schedule on a PowerPivot workbook that specifies how often data refresh occurs. Creating the schedule is typically done by the workbook owner or author who published the file to SharePoint. This person creates and manages the data refresh schedules for the workbooks that he or she owns. For more information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
+ After you ensure that the server environment and permissions are configured, data refresh is ready to use. To use data refresh, a SharePoint user creates a schedule on a PowerPivot workbook that specifies how often data refresh occurs. Creating the schedule is typically done by the workbook owner or author who published the file to SharePoint. This person creates and manages the data refresh schedules for the workbooks that he or she owns. For more information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_services"></a> Step 1: Enable Secure Store Service and Generate a Master Key  
  PowerPivot data refresh depends on Secure Store Service to provide credentials used to run data refresh jobs and to connect to external data sources that use stored credentials.  
@@ -100,19 +100,19 @@ manager: "mblythe"
   
  You must have at least one option that is available in order for data refresh to work.  
   
- ![SSAS_PowerpivotKJ_DataRefreshCreds](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
+ ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- Option 1, **Use the data refresh account configured by the administrator**, always appears on the schedule definition page, but only works if you configure the unattended data refresh account. For more information on how to create the account, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+ Option 1, **Use the data refresh account configured by the administrator**, always appears on the schedule definition page, but only works if you configure the unattended data refresh account. For more information on how to create the account, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
  Option 2, **Connect using the following windows credentials**, always appears on the page, but only works when you enable the **Allow users to enter custom Windows credentials** option in the service application configuration page. This option is enabled by default, but you can disable it if the disadvantages of using it outweigh the advantages (see below).  
   
- Option 3, **Connect using the credentials saved in Secure Store Service**, always appears on the page, but only works when a schedule owner provides a valid target application. An administrator must create these target applications in advance and then provide the application name to those who create the data refresh schedules. For more information on how to create a target application for data refresh operations, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Option 3, **Connect using the credentials saved in Secure Store Service**, always appears on the page, but only works when a schedule owner provides a valid target application. An administrator must create these target applications in advance and then provide the application name to those who create the data refresh schedules. For more information on how to create a target application for data refresh operations, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
  **Configuring credential option 2, “Connect using the following Windows user credentials”**  
   
  PowerPivot service application includes a credential option that allows schedule owners to enter an arbitrary Windows user name and password for running a data refresh job. This is the second credential option in the schedule definition page:  
   
- ![SSAS_PPS_ScheduleDataRefreshCreds](../../2014/analysis-services/media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
+ ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
  This credential option is enabled by default. When this credential option is enabled, PowerPivot System Service will generate a target application in Secure Store Service to store the user name and password entered by the schedule owner. A generated target application is created using this naming convention: PowerPivotDataRefresh_\<guid>. One target application is created for each set of Windows credentials. If a target application already exists that is owned by the PowerPivot System Service and stores the username and password entered by the person defining the schedule, PowerPivot System Service will use that target application rather than create a new one.  
   
@@ -134,14 +134,14 @@ manager: "mblythe"
   
 4.  In the Data Refresh section, clear the **Allow users to enter custom Windows credentials** checkbox.  
   
-     ![SSAS_PowerPivotDatarefreshOptions_AllowUser](../../2014/analysis-services/media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
+     ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
 ##  <a name="bkmk_stored"></a> Step 3: Create target applications to store credentials used in data refresh  
  Once Secure Store Service is configured, SharePoint administrators can create target applications to make stored credentials available for data refresh purposes, including the PowerPivot unattended data refresh account or any other account that is used to either run the job or connect to external data sources.  
   
  Recall from the previous section that you need to create target applications in order for certain credential options to be usable. Specifically, you must create target applications for the PowerPivot unattended data refresh account, plus any additional stored credentials that you expect would be used in data refresh operations.  
   
- For more information about how to create target applications that contain stored credentials, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) and [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ For more information about how to create target applications that contain stored credentials, see [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) and [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="bkmk_scale"></a> Step 4: Configure the server for scalable data refresh  
  By default, each PowerPivot for SharePoint installation supports both on-demand queries and scheduled data refresh.  
@@ -150,7 +150,7 @@ manager: "mblythe"
   
  Additionally, if the underlying hardware supports it, you can increase the number of data refresh jobs that run in parallel. By default, the number of jobs that can run in parallel is calculated based on system memory, but you can increase that number if you have additional CPU capacity to support the workload.  
   
- For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md).  
+ For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md).  
   
 ##  <a name="bkmk_installdp"></a> Step 5: Install Data Providers Used to Import PowerPivot Data  
  A data refresh operation is essentially a repeat of an import operation that retrieved the original data. This means that the same data providers used to import the data in the PowerPivot client application must also be installed on the PowerPivot server.  
@@ -206,17 +206,17 @@ manager: "mblythe"
   
  **How to override credentials in the connection string**  
   
- Overriding credentials is done by specifying data source credentials in the data refresh schedule. As an administrator, you can provide a target application in Secure Store Service that maps the credentials used to access external data. The schedule owner can then enter the target application ID in the data refresh schedule that he or she defines. For more information about creating this target application, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Overriding credentials is done by specifying data source credentials in the data refresh schedule. As an administrator, you can provide a target application in Secure Store Service that maps the credentials used to access external data. The schedule owner can then enter the target application ID in the data refresh schedule that he or she defines. For more information about creating this target application, see [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
  Alternatively, the schedule owner can type in the set of credentials that are used to connect to data sources during data refresh. The following illustration shows this data source option in the schedule definition page.  
   
- ![SSAS_PowerPivotKJ_DataRefreshDSOptions](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshdsoptions.gif "SSAS_PowerPivotKJ_DataRefreshDSOptions")  
+ ![SSAS_PowerPivotKJ_DataRefreshDSOptions](media/ssas-powerpivotkj-datarefreshdsoptions.gif "SSAS_PowerPivotKJ_DataRefreshDSOptions")  
   
  **Identifying data access requirements**  
   
  As noted in previous sections, the account used to run data refresh and connect to external data sources is often one and the same. As such, the account used to access external data sources is determined by the options set in this part of the data refresh schedule page. This might be the PowerPivot unattended data refresh account, the Windows account of an individual user, or the account that is stored in a predefined target application.  
   
- ![SSAS_PowerpivotKJ_DataRefreshCreds](../../2014/analysis-services/media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
+ ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  In cases where the account used to run data refresh is different from the account used to import data (for example, the PowerPivot unattended data refresh account via credential option one, or some other set of stored credentials via credential option three), you will need to create a new database login for that account and grant it read permissions on the external data sources.  
   
@@ -230,7 +230,7 @@ manager: "mblythe"
   
  When you create the schedule, select the **Also refresh as soon as possible** checkbox to run data refresh immediately. You can then check the data refresh history page of that workbook to verify that it ran successfully. Recall that the PowerPivot Data Refresh timer job runs every minute. It will take at least that long to get confirmation that data refresh succeeded.  
   
- Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/view-data-refresh-history-powerpivot-for-sharepoint.md).  
+ Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md).  
   
  If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
   
@@ -269,9 +269,9 @@ manager: "mblythe"
   
 5.  Click **OK**.  
   
- History information is made available to SharePoint users when they choose the Manage Data Refresh option on a workbook that has a data refresh history. This information is also used in the PowerPivot Management Dashboard used by farm administrators to manage PowerPivot service operations. For more information, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/view-data-refresh-history-powerpivot-for-sharepoint.md).  
+ History information is made available to SharePoint users when they choose the Manage Data Refresh option on a workbook that has a data refresh history. This information is also used in the PowerPivot Management Dashboard used by farm administrators to manage PowerPivot service operations. For more information, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md).  
   
- Long-term physical storage of history data is in the PowerPivot service application database for the PowerPivot service application. For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](../../2014/analysis-services/powerpivot-usage-data-collection.md).  
+ Long-term physical storage of history data is in the PowerPivot service application database for the PowerPivot service application. For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md).  
   
 ##  <a name="configTimerJob"></a> Reschedule the PowerPivot Data Refresh timer job  
  Scheduled data refresh is triggered by a PowerPivot Data Refresh timer job that scans schedule information in the PowerPivot service application database at one minute intervals. When data refresh is scheduled to begin, the timer job adds the request to a processing queue on an available PowerPivot server.  
@@ -282,7 +282,7 @@ manager: "mblythe"
   
  If you raise the scan interval so that it runs very infrequently (for example, once a day at midnight), all of the data refresh operations that were scheduled to run during that interval are added to the processing queue all at once, potentially overwhelming the server and starving other applications of system resources. Depending on the number of scheduled refreshes, the processing queue for data refresh operations might build up to such an extent that not all jobs will be able to complete. Data refresh requests at the end of the queue might be dropped if they run into the next processing interval.  
   
- If your hardware supports it, you can mitigate this problem by specifying additional processors to run more data refresh jobs in parallel. For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). For more information about how data refresh requests are discovered, added to a queue, and processed, see [PowerPivot Data Refresh](../../2014/analysis-services/powerpivot-data-refresh.md).  
+ If your hardware supports it, you can mitigate this problem by specifying additional processors to run more data refresh jobs in parallel. For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). For more information about how data refresh requests are discovered, added to a queue, and processed, see [PowerPivot Data Refresh](powerpivot-data-refresh.md).  
   
 1.  In Central Administration, click **Monitoring**.  
   
@@ -300,9 +300,9 @@ manager: "mblythe"
  Disabling the timer job has no effect on feature availability in application pages. There is no way to remove or hide the data refresh feature in web applications. Users who have Contribute permissions or above will still be able to create new schedules for data refresh operations, even if the timer job is permanently disabled.  
   
 ## See Also  
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)   
- [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
- [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
+ [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)   
+ [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
+ [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

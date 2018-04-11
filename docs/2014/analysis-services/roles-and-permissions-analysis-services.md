@@ -27,34 +27,34 @@ manager: "mblythe"
   
  It is common practice to create roles and assign membership as separate operations. Often, the model designer adds roles during the design phase. This way, all role definitions are reflected in the project files that define the model. Role membership is typically rolled out later as the database moves into production, usually by database administrators who create scripts that can be developed, tested, and run as an independent operation.  
   
- All authorization is predicated on a valid Windows user identity. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses Windows authentication exclusively to authenticate user identities. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides no proprietary authentication method.See [Authentication methodologies supported by Analysis Services](../../2014/analysis-services/authentication-methodologies-supported-by-analysis-services.md).  
+ All authorization is predicated on a valid Windows user identity. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses Windows authentication exclusively to authenticate user identities. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides no proprietary authentication method.See [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Permissions are additive for each Windows user or group, across all roles in the database. If one role denies a user or group permission to perform certain tasks or view certain data, but another role grants this permission to that user or group, the user or group will have permission to perform the task or view the data.  
   
 ## In this section  
   
--   [Authorizing access to objects and operations &#40;Analysis Services&#41;](../../2014/analysis-services/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Authorizing access to objects and operations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md)  
+-   [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
--   [Grant cube or model permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-cube-or-model-permissions-analysis-services.md)  
+-   [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Grant process permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-process-permissions-analysis-services.md)  
+-   [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
--   [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](../../2014/analysis-services/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [Grant permissions on a data source object &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [Grant permissions on a dimension &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-a-dimension-analysis-services.md)  
+-   [Grant permissions on a dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Grant custom access to dimension data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Grant custom access to cell data &#40;Analysis Services&#41;](../../2014/analysis-services/grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
- [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md)  
+ [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md)  
   
   

@@ -127,15 +127,15 @@ manager: "mblythe"
 5.  Open the `Source` property and modify the WHERE clause so that it includes the partition data you just merged. Recall that the `Source` property is not updated automatically. If you reprocess without first updating the `Source`, you might not get all of the expected data.  
   
 ##  <a name="bkmk_partitionsXMLA"></a> How to merge partitions using XMLA  
- See this topic for information, [Merging Partitions &#40;XMLA&#41;](../../2014/analysis-services/dev-guide/merging-partitions-xmla.md).  
+ See this topic for information, [Merging Partitions &#40;XMLA&#41;](dev-guide/merging-partitions-xmla.md).  
   
 ## See Also  
- [Processing Analysis Services Objects](../../2014/analysis-services/processing-analysis-services-objects.md)   
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)   
- [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-local-partition-analysis-services.md)   
- [Create and Manage a Remote Partition &#40;Analysis Services&#41;](../../2014/analysis-services/create-and-manage-a-remote-partition-analysis-services.md)   
- [Set Partition Writeback](../../2014/analysis-services/set-partition-writeback.md)   
- [Write-Enabled Partitions](../../2014/analysis-services/dev-guide/write-enabled-partitions.md)   
- [Configure String Storage for Dimensions and Partitions](../../2014/analysis-services/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Processing Analysis Services Objects](processing-analysis-services-objects.md)   
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)   
+ [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Create and Manage a Remote Partition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [Set Partition Writeback](set-partition-writeback.md)   
+ [Write-Enabled Partitions](dev-guide/write-enabled-partitions.md)   
+ [Configure String Storage for Dimensions and Partitions](configure-string-storage-for-dimensions-and-partitions.md)  
   
   

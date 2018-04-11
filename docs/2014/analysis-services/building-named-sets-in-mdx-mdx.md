@@ -31,15 +31,15 @@ manager: "mblythe"
   
 -   **Query-scoped** To create a named set that is defined as part of an MDX query, and therefore whose scope is limited to the query, you use the WITH keyword. You can then use the named set within an MDX SELECT statement. Using this approach, the named set created by using the WITH keyword can be changed without disturbing the SELECT statement.  
   
-     For more information about how to use the WITH keyword to create named sets, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](../../2014/analysis-services/creating-query-scoped-named-sets-mdx.md).  
+     For more information about how to use the WITH keyword to create named sets, see [Creating Query-Scoped Named Sets &#40;MDX&#41;](creating-query-scoped-named-sets-mdx.md).  
   
 -   **Session-scoped** To create a named set whose scope is wider than the context of the query, that is, whose scope is the lifetime of the MDX session, you use the CREATE SET statement. A named set defined by using the CREATE SET statement is available to all MDX queries in that session. The CREATE SET statement makes sense, for example, in a client application that consistently reuses a set in a variety of queries.  
   
-     For more information about how to use the CREATE SET statement to create named sets in a session, see [Creating Session-Scoped Named Sets &#40;MDX&#41;](../../2014/analysis-services/creating-session-scoped-named-sets-mdx.md).  
+     For more information about how to use the CREATE SET statement to create named sets in a session, see [Creating Session-Scoped Named Sets &#40;MDX&#41;](creating-session-scoped-named-sets-mdx.md).  
   
 ## See Also  
  [SELECT Statement &#40;MDX&#41;](~/mdx/mdx-data-manipulation-select.md)   
  [CREATE SET Statement &#40;MDX&#41;](~/mdx/mdx-data-definition-create-set.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

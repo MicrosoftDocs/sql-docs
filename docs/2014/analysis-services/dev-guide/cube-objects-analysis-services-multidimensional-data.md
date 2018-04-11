@@ -32,7 +32,7 @@ manager: "mblythe"
 |||  
 |-|-|  
 |Topic||  
-|[Actions &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/actions-analysis-services-multidimensional-data.md)||  
+|[Actions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Aggregations and Aggregation Designs](../../../2014/analysis-services/dev-guide/aggregations-and-aggregation-designs.md)||  
 |[Calculations](../../../2014/analysis-services/dev-guide/calculations.md)||  
 |[Cube Cells &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/dev-guide/cube-cells-analysis-services-multidimensional-data.md)||  

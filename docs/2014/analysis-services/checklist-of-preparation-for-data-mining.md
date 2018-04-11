@@ -109,6 +109,6 @@ manager: "mblythe"
 -   Can domain experts help understand interpret the results and suggest improvements?  
   
 ## See Also  
- [Choosing Data for Data Mining](../../2014/analysis-services/choosing-data-for-data-mining.md)  
+ [Choosing Data for Data Mining](choosing-data-for-data-mining.md)  
   
   

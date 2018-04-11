@@ -58,6 +58,6 @@ manager: "mblythe"
     2.  Start the Claims to Windows Token Service if it is not running.  
   
 ## See Also  
- [Configure PowerPivot Service Accounts](../../2014/analysis-services/configure-powerpivot-service-accounts.md)  
+ [Configure PowerPivot Service Accounts](configure-powerpivot-service-accounts.md)  
   
   

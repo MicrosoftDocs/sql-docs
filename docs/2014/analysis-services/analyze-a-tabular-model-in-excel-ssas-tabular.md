@@ -39,16 +39,16 @@ manager: "mblythe"
   
     -   To use a security role, select **Role**, and then in the listbox, select one or more roles.  
   
-         Security roles must be defined using the Role Manager. For more information, see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-roles-ssas-tabular.md).  
+         Security roles must be defined using the Role Manager. For more information, see [Create and Manage Roles &#40;SSAS Tabular&#41;](create-and-manage-roles-ssas-tabular.md).  
   
 3.  To use a perspective, in the **Perspective** listbox, select a perspective.  
   
-     Perspectives (other than default) must be defined using the Perspectives dialog box. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-perspectives-ssas-tabular.md).  
+     Perspectives (other than default) must be defined using the Perspectives dialog box. For more information, see [Create and Manage Perspectives &#40;SSAS Tabular&#41;](create-and-manage-perspectives-ssas-tabular.md).  
   
 > [!NOTE]  
 >  The PivotTable Field List in Excel does not refresh automatically as you make changes to the model project in the model designer. To refresh the PivotTable Field List, in Excel, on the **Options** ribbon, click **Refresh**.  
   
 ## See Also  
- [Analyze in Excel &#40;SSAS Tabular&#41;](../../2014/analysis-services/analyze-in-excel-ssas-tabular.md)  
+ [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

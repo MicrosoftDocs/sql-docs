@@ -34,17 +34,17 @@ manager: "mblythe"
   
 |Option|Definition|  
 |------------|----------------|  
-|**New KPI**|Select to display the **KPI Form Editor** and create a new KPI. For more information about the **KPI Form Editor**, see [KPI Form Editor &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**New KPI**|Select to display the **KPI Form Editor** and create a new KPI. For more information about the **KPI Form Editor**, see [KPI Form Editor &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Move Up**|Select to move the selected KPI up one place in the **KPI Organizer** and to determine the order in which KPIs are displayed in the **KPI Browser**.<br /><br /> Note: This option is disabled if the selected KPI cannot be moved further.|  
 |**Move Down**|Select to move the selected KPI down one place in the **KPI Organizer** and to determine the order in which KPIs are displayed in the **KPI Browser**.<br /><br /> Note: This option is disabled if the selected KPI cannot be moved further.|  
 |**Delete**|Select to delete the selected KPI.|  
   
 ## See Also  
- [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-designer-analysis-services-multidimensional-data.md)   
- [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Toolbar &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Calculation Tools &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [KPI Form Editor &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [KPI Browser &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Toolbar &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Calculation Tools &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI Form Editor &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI Browser &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -45,9 +45,9 @@ manager: "mblythe"
  Text  
   
 ## Measures and Formulas  
- The **Insert Function** dialog box is available only when you are building a formula. You can create calculations either in a calculated column, or in a PivotTable or PivotChart. Formulas that you build expressly for use in a PivotTable are also called *measures*. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-calculated-column-ssas-tabular.md) and [Create and Manage Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-and-manage-measures-ssas-tabular.md).  
+ The **Insert Function** dialog box is available only when you are building a formula. You can create calculations either in a calculated column, or in a PivotTable or PivotChart. Formulas that you build expressly for use in a PivotTable are also called *measures*. For more information, see [Create a Calculated Column &#40;SSAS Tabular&#41;](create-a-calculated-column-ssas-tabular.md) and [Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md).  
   
 ## See Also  
- [Calculations &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculations-ssas-tabular.md)  
+ [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)  
   
   

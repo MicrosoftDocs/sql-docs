@@ -49,7 +49,7 @@ manager: "mblythe"
   
 |Issue|Description|  
 |-----------|-----------------|  
-|Setup commands removed for a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installation.|Setup installs, but no longer configures, a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. Setup commands that collected values used for configuration actions are now removed. These include /FARMACCOUNT, /FARMPASSWORD, /PASSPHRASE, and /FARMADMINPORT.<br /><br /> If you created installation scripts for unattended setup, you will need to modify those scripts for a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installation. The alternative is to use PowerShell cmdlets to configure the server in unattended mode. For more information, see [Install PowerPivot from the Command Prompt](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md) and [PowerPivot Configuration using Windows PowerShell](../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md).|  
+|Setup commands removed for a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installation.|Setup installs, but no longer configures, a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]. Setup commands that collected values used for configuration actions are now removed. These include /FARMACCOUNT, /FARMPASSWORD, /PASSPHRASE, and /FARMADMINPORT.<br /><br /> If you created installation scripts for unattended setup, you will need to modify those scripts for a [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] installation. The alternative is to use PowerShell cmdlets to configure the server in unattended mode. For more information, see [Install PowerPivot from the Command Prompt](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md) and [PowerPivot Configuration using Windows PowerShell](powerpivot-configuration-using-windows-powershell.md).|  
   
 ##  <a name="bkmk_sql10"></a> Breaking Changes in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  This section contains the breaking changes from previous releases. If you are upgrading from [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], you should review the breaking changes that were introduced in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)].  
@@ -63,6 +63,6 @@ manager: "mblythe"
 |You might get unexpected results for queries that use the "EXISTING" MDX keyword in ProClarity Analytics Server and Microsoft Office PerformancePoint Server 2007.|ProClarity Analytics Server and Microsoft Office PerformancePoint Server 2007 use the EXISTING keyword in MDX incorrectly in certain scenarios. Due to changes made in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services, these queries might return unexpected results.|  
   
 ## See Also  
- [Analysis Services Backward Compatibility](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

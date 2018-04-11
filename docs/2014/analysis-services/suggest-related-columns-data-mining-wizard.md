@@ -20,7 +20,7 @@ manager: "mblythe"
 # Suggest Related Columns (Data Mining Wizard)
   Use the **Suggest Related Columns** page to view the recommendations of the **Suggest** feature, which you selected on the previous page of the wizard. Input columns will be pre-selected based on their association with the **Predictable** column that you selected. If you accept the changes in this dialog box, the changes will be reflected on the **Specify the Training Data** page.  
   
- **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](../../2014/analysis-services/create-a-relational-mining-structure.md)  
+ **For More Information:** [Data Mining Wizard &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Create a Relational Mining Structure](data-mining/create-a-relational-mining-structure.md)  
   
 ## Options  
  **Column Name**  
@@ -33,7 +33,7 @@ manager: "mblythe"
  Select to include this column for calculating predictions.  
   
 ## See Also  
- [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Specify the Training Data &#40;Data Mining Wizard&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
+ [Data Mining Wizard F1 Help &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Specify the Training Data &#40;Data Mining Wizard&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

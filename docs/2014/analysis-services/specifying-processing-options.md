@@ -60,15 +60,15 @@ manager: "mblythe"
   
      —or—  
   
--   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md).  
+-   Run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
      —or—  
   
 -   Modify the \<*project name*>.deploymentoptions file by using any text editor.  
   
 ## See Also  
- [Specifying the Installation Target](../../2014/analysis-services/specifying-the-installation-target.md)   
- [Specifying Partition and Role Deployment Options](../../2014/analysis-services/specifying-partition-and-role-deployment-options.md)   
- [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md)  
+ [Specifying the Installation Target](specifying-the-installation-target.md)   
+ [Specifying Partition and Role Deployment Options](specifying-partition-and-role-deployment-options.md)   
+ [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md)  
   
   

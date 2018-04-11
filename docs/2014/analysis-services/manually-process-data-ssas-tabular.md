@@ -71,7 +71,7 @@ manager: "mblythe"
  Click to halt the process operation. This option is useful if the operation is taking too long, or if there are too many errors.  
   
 ## See Also  
- [Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-data-ssas-tabular.md)   
- [Troubleshoot Process Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/troubleshoot-process-data-ssas-tabular.md)  
+ [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
+ [Troubleshoot Process Data &#40;SSAS Tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

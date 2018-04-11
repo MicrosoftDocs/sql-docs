@@ -29,7 +29,7 @@ manager: "mblythe"
  Displays the rows and columns for the first 1000 rows of the fact table containing the selected source column.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Select Measures &#40;Cube Wizard&#41;](../../2014/analysis-services/select-measures-cube-wizard.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Select Measures &#40;Cube Wizard&#41;](select-measures-cube-wizard.md)  
   
   

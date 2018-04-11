@@ -43,9 +43,9 @@ manager: "mblythe"
 8.  Click **Finish**. In the **Choose Destination** dialog  box, specify where you want the result saved. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  If you executed a statement successfully, the DMX statement that you sent to the server is also recorded in the **Trace** window. For more information about how to use the Trace feature, see [Trace &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/trace-data-mining-client-for-excel.md).  
+>  If you executed a statement successfully, the DMX statement that you sent to the server is also recorded in the **Trace** window. For more information about how to use the Trace feature, see [Trace &#40;Data Mining Client for Excel&#41;](trace-data-mining-client-for-excel.md).  
   
- For more information about how to use the Data Mining Advanced Query Editor, see [Query &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/query-sql-server-data-mining-add-ins.md) and [Advanced Data Mining Query Editor](../../2014/analysis-services/advanced-data-mining-query-editor.md).  
+ For more information about how to use the Data Mining Advanced Query Editor, see [Query &#40;SQL Server Data Mining Add-ins&#41;](query-sql-server-data-mining-add-ins.md) and [Advanced Data Mining Query Editor](advanced-data-mining-query-editor.md).  
   
 ## List of DMX Templates  
  The following DMX templates are included in the Data Mining Client for Excel.  
@@ -124,6 +124,6 @@ manager: "mblythe"
  Depending on which template you are using, you might need administrative permissions to access the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server and execute the query.  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)  
   
   

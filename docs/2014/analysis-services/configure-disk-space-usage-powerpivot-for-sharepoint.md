@@ -89,9 +89,9 @@ manager: "mblythe"
 5.  Click **OK** to save your changes.  
   
 ## Next Steps  
- A PowerPivot for SharePoint installation provides health rules so that you can take corrective action when problems are detected in server health, configuration, or availability. Some of these rules use configuration settings to determine the conditions under which health rules are triggered. If you are actively tuning server performance, you might also want to review these settings to ensure the defaults are the best choice for your system. For more information, see [PowerPivot Health Rules - Configure](../../2014/analysis-services/powerpivot-health-rules-configure.md).  
+ A PowerPivot for SharePoint installation provides health rules so that you can take corrective action when problems are detected in server health, configuration, or availability. Some of these rules use configuration settings to determine the conditions under which health rules are triggered. If you are actively tuning server performance, you might also want to review these settings to ensure the defaults are the best choice for your system. For more information, see [PowerPivot Health Rules - Configure](powerpivot-health-rules-configure.md).  
   
 ## See Also  
- [PowerPivot Server Administration and Configuration in Central Administration](../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](powerpivot-server-administration-and-configuration-in-central-administration.md)  
   
   

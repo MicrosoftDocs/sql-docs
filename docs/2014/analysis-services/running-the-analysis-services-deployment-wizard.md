@@ -20,7 +20,7 @@ manager: "mblythe"
 # Running the Analysis Services Deployment Wizard
   When you use the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard to deploy a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project, you can run the wizard in the following ways:  
   
--   **Interactively** When run interactively, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard generates an XML deployment script based on the input files, as modified interactively by user input. The wizard applies any user modifications only to the deployment script. The wizard does not modify the input files. For more information about the input files, see [Understanding the Input Files Used to Create the Deployment Script](../../2014/analysis-services/understanding-the-input-files-used-to-create-the-deployment-script.md).  
+-   **Interactively** When run interactively, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard generates an XML deployment script based on the input files, as modified interactively by user input. The wizard applies any user modifications only to the deployment script. The wizard does not modify the input files. For more information about the input files, see [Understanding the Input Files Used to Create the Deployment Script](understanding-the-input-files-used-to-create-the-deployment-script.md).  
   
 -   **From the command prompt** When run at the command prompt, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard generates an XML for Analysis (XMLA) deployment script based upon the switches that you use to run the wizard. The wizard may any one of the following: prompt you for user input and modify input files based on that input; run a silent, unattended deployment using the input files as is; or create a deployment script that you can use later.  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
  To run the wizard in output mode, use the **/o** switch and provide an output file name.  
   
- For more information about these command line switches, see [Deploy Model Solutions with the Deployment Utility](../../2014/analysis-services/deploy-model-solutions-with-the-deployment-utility.md).  
+ For more information about these command line switches, see [Deploy Model Solutions with the Deployment Utility](deploy-model-solutions-with-the-deployment-utility.md).  
   
  The following procedure describes how to run the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt.  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
 2.  Type **Microsoft.AnalysisServices.Deployment.exe** followed by the switches that correspond to the mode in which you want to run the wizard.  
   
 ## See Also  
- [Understanding the Analysis Services Deployment Script](../../2014/analysis-services/understanding-the-analysis-services-deployment-script.md)   
- [Deploy Model Solutions Using the Deployment Wizard](../../2014/analysis-services/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Understanding the Analysis Services Deployment Script](understanding-the-analysis-services-deployment-script.md)   
+ [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

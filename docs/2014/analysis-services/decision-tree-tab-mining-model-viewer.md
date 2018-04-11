@@ -20,7 +20,7 @@ manager: "mblythe"
 # Decision Tree Tab (Mining Model Viewer)
   The **DecisionTree** pane displays a visual representation of the decision rules that are created in a decision tree model. Decision rules describe path paths towards a certain outcome.  
   
- **For More Information:** [Microsoft Decision Trees Algorithm](../../2014/analysis-services/microsoft-decision-trees-algorithm.md), [Browse a Model Using the Microsoft Tree Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **For More Information:** [Microsoft Decision Trees Algorithm](data-mining/microsoft-decision-trees-algorithm.md), [Browse a Model Using the Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -63,8 +63,8 @@ manager: "mblythe"
  Move the slider bar right or left to adjust the number of levels that are displayed in the tree graph. To see all the nodes in the model, slide the bar all the way to the right.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)  
   
   

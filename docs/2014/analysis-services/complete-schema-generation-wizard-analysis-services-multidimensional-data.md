@@ -25,7 +25,7 @@ manager: "mblythe"
  Displays the options that you set.  
   
 ## See Also  
- [Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Schema Generation Wizard F1 Help &#40;Analysis Services - Multidimensional Data&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

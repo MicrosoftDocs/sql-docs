@@ -21,7 +21,7 @@ manager: "mblythe"
   You can use the **Advanced** data modeling options to create custom data mining structures and models with parameters different from those created by the wizards. The two wizards described in this section help you create a completely new data mining structure, and a new mining model to apply to an existing data mining structure.  
   
 ## Create Mining Structure  
- ![Create Mining Structure button, Data Mining ribbon](../../2014/analysis-services/media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  
+ ![Create Mining Structure button, Data Mining ribbon](media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  
   
  The **Create Mining Structure Wizard** helps you build a new data mining structure. A structure is a collection of data extracted from a specified data source.  A mining structure can be updated with new data at the source, but when you create the mining structure, you define data types and names that define how the data is used for analysis.  
   
@@ -31,10 +31,10 @@ manager: "mblythe"
   
  After you have created a mining structure, you can add multiple models to apply different methods of analysis.  
   
- For more information about how to use the **Create Mining Structure Wizard**, see [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/create-mining-structure-sql-server-data-mining-add-ins.md).  
+ For more information about how to use the **Create Mining Structure Wizard**, see [Create Mining Structure &#40;SQL Server Data Mining Add-ins&#41;](create-mining-structure-sql-server-data-mining-add-ins.md).  
   
 ## Add Model to Structure  
- ![Add Model to Structure button](../../2014/analysis-services/media/dmc-addmodel.gif "Add Model to Structure button")  
+ ![Add Model to Structure button](media/dmc-addmodel.gif "Add Model to Structure button")  
   
  When you add a new model to a structure, you analyze the data by using a different algorithm, or with different parameters. This option is particularly useful if you want to create a model using one of the algorithms not exposed in the Data Mining Client tools.  
   
@@ -50,10 +50,10 @@ manager: "mblythe"
   
  You are limited to data mining structures that were created during the current session, or mining structures that were saved to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- For more information, see [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md).  
+ For more information, see [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
   
 ## See Also  
- [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/manage-models-sql-server-data-mining-add-ins.md)   
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md)   
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

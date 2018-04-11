@@ -33,9 +33,9 @@ manager: "mblythe"
 |Polling query|`SELECT`<br /><br /> `MAX([CustomerKey]) AS LastCustomerKey`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`|  
 |Processing query|`SELECT`<br /><br /> `*`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`<br /><br /> `WHERE`<br /><br /> `(CustomerKey > COALESCE (@Param1, - 1))`<br /><br /> `AND (CustomerKey <= @Param2)`|  
   
- For more information about incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](../../2014/analysis-services/dev-guide/proactive-caching-partitions.md).  
+ For more information about incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md).  
   
- You can display the **Create Processing Query** dialog box by clicking **...** on the **Processing Query** column of the grid for the **Scheduled polling** option on the **Notifications** tab of the **Storage Options** dialog box. For more information about the **Notifications** tab of the **Storage Options** dialog box, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+ You can display the **Create Processing Query** dialog box by clicking **...** on the **Processing Query** column of the grid for the **Scheduled polling** option on the **Notifications** tab of the **Storage Options** dialog box. For more information about the **Notifications** tab of the **Storage Options** dialog box, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  The query entered must be a valid query command for the underlying provider. The query is prepared with the underlying provider for validation, and to identify the columns returned. The dialog box can present two views:  
   
@@ -71,7 +71,7 @@ manager: "mblythe"
 |**Sort Descending**|Sorts output rows on the selected column in the **Grid pane**, in descending order.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
 |**Remove Filter**|Removes sort criteria, if applicable, for the selected row in the **Grid pane**.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
 |**Use Group By**|Adds grouping functionality to the query.<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
-|**Add Table**|Displays the **Add Table** dialog box to add a new table or view to the query. For more information about the **Add Table** dialog box, see [Add Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
+|**Add Table**|Displays the **Add Table** dialog box to add a new table or view to the query. For more information about the **Add Table** dialog box, see [Add Table Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Note: This option is displayed only if **Switch to VDT Query Builder** is selected.|  
   
  **Diagram pane**  
  Displays the objects referenced by the query as a diagram. The diagram shows the tables included in the query, and how they are joined. Select or clear the check box next to a column in a table to add or remove it from the query output.  
@@ -102,6 +102,6 @@ manager: "mblythe"
  Displays the results of the query when you click **Run** on the **Toolbar** pane.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

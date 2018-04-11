@@ -41,7 +41,7 @@ manager: "mblythe"
 |||**Dimension table** : Displays the main table for the dimension.|  
 |||**Measure group table** : Displays the fact table for the measure group.|  
 |||**Relationship**: Displays a grid of dimension columns and measure group columns on which the relationship is based. The grid contains the following columns:<br /><br /> **Dimension Columns**: Displays the columns associated with the selected granularity attribute. Note: If the dimension has not yet been generated, this option is set to **Generate**.<br />**Measure Group Columns** :<br />                              Select the columns in the measure group that are related to the dimension columns.|  
-|||**Advanced**:<br />                      Click to display the **Measure Group Bindings** dialog box and edit advanced properties, such as null processing, on relationships between attributes and measure groups columns. For more information about the **Measure Group Bindings** dialog box, see [Measure Group Bindings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
+|||**Advanced**:<br />                      Click to display the **Measure Group Bindings** dialog box and edit advanced properties, such as null processing, on relationships between attributes and measure groups columns. For more information about the **Measure Group Bindings** dialog box, see [Measure Group Bindings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Fact**|Specifies a fact dimension relationship. The following options are displayed in the **Detail** pane:|**Granularity attribute**: Select the attribute that defines the granularity of the measure group with respect to the dimension. This attribute is usually the key attribute of the dimension.|  
 |||**Dimension table**: Displays the primary dimension table.|  
 |||**Measure group table**: <br />                      Displays the table on which the measure group is based.|  
@@ -56,8 +56,8 @@ manager: "mblythe"
 |||**Source dimension**: Select the dimension on which the data mining dimension provides predictive analysis.|  
   
 ## See Also  
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

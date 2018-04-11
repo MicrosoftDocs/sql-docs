@@ -30,14 +30,14 @@ manager: "mblythe"
   
 ## In This Section  
   
--   [Select how to define the connection &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/select-how-to-define-the-connection-data-source-wizard-analysis-services.md)  
+-   [Select how to define the connection &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](select-how-to-define-the-connection-data-source-wizard-analysis-services.md)  
   
--   [Data sources from existing objects &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/data-sources-from-existing-objects-data-source-wizard-analysis-services.md)  
+-   [Data sources from existing objects &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](data-sources-from-existing-objects-data-source-wizard-analysis-services.md)  
   
--   [Completing the Wizard &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](../../2014/analysis-services/completing-the-wizard-data-source-wizard-analysis-services.md)  
+-   [Completing the Wizard &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
   
 ## See Also  
- [Data Sources in Multidimensional Models](../../2014/analysis-services/data-sources-in-multidimensional-models.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](../../2014/analysis-services/data-sources-supported-ssas-multidimensional.md)  
+ [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
   
   

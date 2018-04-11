@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Lesson 1: Creating a Time Series Mining Model and Mining Structure
   In this lesson, you will create a mining model that allows you to predict values over time, based on historical data. When you create the model, the underlying structure will be generated automatically and can be used as the basis for additional mining models.  
   
- This lesson assumes that you are familiar with forecasting models and with the requirements of the Microsoft Time Series algorithm. For more information, see [Microsoft Time Series Algorithm](../../2014/analysis-services/microsoft-time-series-algorithm.md).  
+ This lesson assumes that you are familiar with forecasting models and with the requirements of the Microsoft Time Series algorithm. For more information, see [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## CREATE MINING MODEL Statement  
  In order to create a mining model directly and automatically generate the underlying mining structure, you use the [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md) statement. The code in the statement can be broken into the following parts:  
@@ -196,7 +196,7 @@ CREATE MINING MODEL [Mining Model Name]
  [Lesson 2: Adding Mining Models to the Time Series Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## See Also  
- [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
- [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/microsoft-time-series-algorithm-technical-reference.md)  
+ [Mining Model Content for Time Series Models &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

@@ -42,7 +42,7 @@ manager: "mblythe"
  After you create a time dimension that is based on a range of dates, you can use Dimension Designer to add or remove time attributes. Because the Date attribute is the key attribute for the dimension, you cannot remove it from the dimension. To hide the Date attribute from users, you can change the `AttributeHierarchyVisible` property on the attribute to `False`.  
   
 ## Select Calendars  
- The standard (Gregorian) 12-month calendar, starting on January 1 and ending on December 31, is always included when you create a time dimension. On the **Select Calendars** page of the wizard, you can specify additional calendars on which to base hierarchies in the dimension. For descriptions of the calendar types, see [Create a Date type Dimension](../../2014/analysis-services/create-a-date-type-dimension.md).  
+ The standard (Gregorian) 12-month calendar, starting on January 1 and ending on December 31, is always included when you create a time dimension. On the **Select Calendars** page of the wizard, you can specify additional calendars on which to base hierarchies in the dimension. For descriptions of the calendar types, see [Create a Date type Dimension](create-a-date-type-dimension.md).  
   
  Depending on which time periods you select on the **Define Time Periods** page of the wizard, the calendar selections determine attributes that are created in the dimension. For example, if you select the **Year** and **Quarter** time periods on the **Define Time Periods** page of the wizard and select **Fiscalcalendar** on the **Select Calendars** page, the FiscalYear, FiscalQuarter, and FiscalQuarterOfYear attributes are created for the fiscal calendar.  
   
@@ -52,11 +52,11 @@ manager: "mblythe"
  On the **Completing the Wizard** page, review the attributes and hierarchies created by the wizard, and then name the time dimension. Click **Finish** to complete the wizard and create the dimension. After you complete the dimension, you can change it by using Dimension Designer.  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)   
- [Create a Date type Dimension](../../2014/analysis-services/create-a-date-type-dimension.md)   
- [Database Dimension Properties](../../2014/analysis-services/dev-guide/database-dimension-properties.md)   
- [Dimension Relationships](../../2014/analysis-services/dev-guide/dimension-relationships.md)   
- [Create a Dimension by Using an Existing Table](../../2014/analysis-services/create-a-dimension-by-using-an-existing-table.md)   
- [Create a Dimension by Generating a Non-Time Table in the Data Source](../../2014/analysis-services/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Create a Date type Dimension](create-a-date-type-dimension.md)   
+ [Database Dimension Properties](dev-guide/database-dimension-properties.md)   
+ [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Create a Dimension by Using an Existing Table](create-a-dimension-by-using-an-existing-table.md)   
+ [Create a Dimension by Generating a Non-Time Table in the Data Source](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

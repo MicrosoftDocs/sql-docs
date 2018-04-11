@@ -59,8 +59,8 @@ manager: "mblythe"
 |**Messages window**|Displays information about how an XMLA statement or script executed. For example, this window displays any errors encountered during execution or the number of cells retrieved after execution.|  
   
 ## See Also  
- [MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)   
- [DMX Query Editor &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/dmx-query-editor-analysis-services-data-mining.md)   
+ [MDX Query Editor &#40;Analysis Services - Multidimensional Data&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
+ [DMX Query Editor &#40;Analysis Services - Data Mining&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)   
  [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)  
   

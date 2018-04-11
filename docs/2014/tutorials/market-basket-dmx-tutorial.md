@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The DMX query language  
   
--   The [Microsoft Association Algorithm](../../2014/analysis-services/microsoft-association-algorithm.md)  
+-   The [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)  
   
 -   Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  The goal of this tutorial is to provide the DMX queries that will be used in the custom application.  
   
- **For more information:** [Data Mining Solutions](../../2014/analysis-services/data-mining-solutions.md)  
+ **For more information:** [Data Mining Solutions](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## Mining Structure and Mining Models  
  Before you begin to create DMX statements, it is important to understand the main objects that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses to create mining models. The *mining structure* is a data structure that defines the data domain from which mining models are built. A single mining structure can contain multiple *mining models* that share the same domain. A mining model applies a mining model algorithm to the data, which is represented by a mining structure.  

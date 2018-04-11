@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Accuracy Chart (SQL Server Data Mining Add-ins)
-  ![Accuracy Chart button in Data Mining ribbon](../../2014/analysis-services/media/dmc-accchart.gif "Accuracy Chart button in Data Mining ribbon")  
+  ![Accuracy Chart button in Data Mining ribbon](media/dmc-accchart.gif "Accuracy Chart button in Data Mining ribbon")  
   
  An accuracy chart enables you to apply a model to a new set of data and then evaluate how well the model performs. The accuracy chart created by this wizard is a *lift chart*, which is a type of chart that is frequently used to measure the accuracy of a data mining model. This type of accuracy chart displays a graphical representation of the improvement that you obtain from using the specified data mining model, as compared to random predictions, and to the ideal case where 100 percent of predictions are accurate. You can compare multiple models within a single chart.  
   
@@ -39,7 +39,7 @@ manager: "mblythe"
 ## Using the Accuracy Chart Wizard  
  To create an accuracy chart, you must reference an existing data mining structure. You can measure the accuracy of multiple models that are based on that structure, as long as they predict the same thing.  
   
- If you are not sure which structures are available, you can browse the server. For more information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
+ If you are not sure which structures are available, you can browse the server. For more information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).  
   
 #### To create an accuracy chart  
   
@@ -82,6 +82,6 @@ manager: "mblythe"
  For more information about how a lift chart works, and how accuracy is calculated based on the random and ideal prediction lines, see the topic "Lift Chart" in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

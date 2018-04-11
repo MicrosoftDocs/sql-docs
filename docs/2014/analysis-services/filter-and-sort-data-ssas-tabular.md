@@ -24,7 +24,7 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Sort Data in a Table &#40;SSAS Tabular&#41;](../../2014/analysis-services/sort-data-in-a-table-ssas-tabular.md)Sort Data in a Table|Tasks in this topic describe how to sort data in a table by letters or by numbers.|  
-|[Filter Data in a Table &#40;SSAS Tabular&#41;](../../2014/analysis-services/filter-data-in-a-table-ssas-tabular.md)|Tasks in this topic describe how to apply custom filters to control the way that rows are displayed.|  
+|[Sort Data in a Table &#40;SSAS Tabular&#41;](sort-data-in-a-table-ssas-tabular.md)Sort Data in a Table|Tasks in this topic describe how to sort data in a table by letters or by numbers.|  
+|[Filter Data in a Table &#40;SSAS Tabular&#41;](filter-data-in-a-table-ssas-tabular.md)|Tasks in this topic describe how to apply custom filters to control the way that rows are displayed.|  
   
   

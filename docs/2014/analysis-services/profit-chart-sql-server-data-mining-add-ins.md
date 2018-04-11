@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Profit Chart (SQL Server Data Mining Add-ins)
-  ![Profit Chart button in Data Mining ribbon](../../2014/analysis-services/media/dmc-profitchart.gif "Profit Chart button in Data Mining ribbon")  
+  ![Profit Chart button in Data Mining ribbon](media/dmc-profitchart.gif "Profit Chart button in Data Mining ribbon")  
   
  A profit chart displays the estimated profit increase that is associated with using a mining model to determine which customers a company should contact in a business scenario. The Y-axis of the chart represents the profit, while the X-axis represents the percentage of the population that the company contacted. A typical profit chart shows an increase in profits up to a point, after which profits decrease as more of the population is contacted.  
   
@@ -47,7 +47,7 @@ manager: "mblythe"
 ## Using the Profit Chart Wizard  
  To create a profit chart, you must reference an existing data mining model. You can browse models to find a model that matches your data by clicking **Manage Models** or **Browse** to see details about the algorithm that was used and the columns in the mining model.  
   
- For more information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md) and [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/manage-models-sql-server-data-mining-add-ins.md).  
+ For more information, see [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md) and [Manage Models &#40;SQL Server Data Mining Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md).  
   
 #### To create a profit chart  
   
@@ -74,6 +74,6 @@ manager: "mblythe"
  For example, if the peak of the profit curve is at 55 percent of the population and the associated predict probability is 20 percent, this indicates that to achieve maximum profits you should only contact those customers whose response is predicted with a 20 percent or greater probability.  
   
 ## See Also  
- [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validating Models and Using Models for Prediction &#40;Data Mining Add-ins for Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

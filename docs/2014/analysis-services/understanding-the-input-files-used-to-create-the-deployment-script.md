@@ -41,16 +41,16 @@ manager: "mblythe"
   
  The following topics explain how to modify values in the various input files:  
   
--   [Specifying the Installation Target](../../2014/analysis-services/specifying-the-installation-target.md)  
+-   [Specifying the Installation Target](specifying-the-installation-target.md)  
   
--   [Specifying Partition and Role Deployment Options](../../2014/analysis-services/specifying-partition-and-role-deployment-options.md)  
+-   [Specifying Partition and Role Deployment Options](specifying-partition-and-role-deployment-options.md)  
   
--   [Specifying Configuration Settings for Solution Deployment](../../2014/analysis-services/specifying-configuration-settings-for-solution-deployment.md)  
+-   [Specifying Configuration Settings for Solution Deployment](specifying-configuration-settings-for-solution-deployment.md)  
   
--   [Specifying Processing Options](../../2014/analysis-services/specifying-processing-options.md)  
+-   [Specifying Processing Options](specifying-processing-options.md)  
   
 ## See Also  
- [Running the Analysis Services Deployment Wizard](../../2014/analysis-services/running-the-analysis-services-deployment-wizard.md)   
- [Understanding the Analysis Services Deployment Script](../../2014/analysis-services/understanding-the-analysis-services-deployment-script.md)  
+ [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)   
+ [Understanding the Analysis Services Deployment Script](understanding-the-analysis-services-deployment-script.md)  
   
   

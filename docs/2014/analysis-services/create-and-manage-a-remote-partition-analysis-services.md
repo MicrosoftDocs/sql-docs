@@ -34,7 +34,7 @@ manager: "mblythe"
   
 -   Both instances must be configured for TCP connections. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not support creation of remote partitions by using the HTTP protocol.  
   
--   Firewall settings on both computers must be set to accept outside connections. For information about setting the firewall, see [Configure the Windows Firewall to Allow Analysis Services Access](../../2014/analysis-services/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Firewall settings on both computers must be set to accept outside connections. For information about setting the firewall, see [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   The service account for the instance running the master database must have administrative access to the remote instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. If the service account changes, you must update permissions on both the server and database.  
   
@@ -130,6 +130,6 @@ manager: "mblythe"
 >  Although databases dedicated to storage of remote partitions are not exposed to schema rowsets, applications that use Analysis Management Objects (AMO) can still discover a dedicated database by using the XML for Analysis Discover command. Any CREATE or DELETE command that is sent directly to a dedicated database by using a TCP or HTTP client will succeed, but the server will return a warning indicating that the action may damage this closely managed database.  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)  
   
   

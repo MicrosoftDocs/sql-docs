@@ -22,7 +22,7 @@ manager: "mblythe"
   
  Use this view of a sequence clustering model to get a quick view of how the sequences found by the model are grouped. You can see at a glance how many sequences are long and how many are short. You can also click a cluster and display the **Mining Legend** to see exactly which states the colors in each sequence represent.  
   
- **For More Information:**  [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **For More Information:**  [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md), [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## Options  
  **Refresh viewer content**  
@@ -55,10 +55,10 @@ manager: "mblythe"
  This column in the chart is optional, and can be displayed or removed by selecting the **Show Legend** option. The **States** column provides a guide as to which state is represented by which color in the corresponding clusters histogram.  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/microsoft-sequence-clustering-algorithm.md)   
- [Mining Model Viewers &#40;Data Mining Model Designer&#41;](../../2014/analysis-services/mining-model-viewers-data-mining-model-designer.md)   
- [Data Mining Model Viewers](../../2014/analysis-services/data-mining-model-viewers.md)   
- [Browse a Model Using the Microsoft Sequence Cluster Viewer](../../2014/analysis-services/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Mining Model Viewers &#40;Data Mining Model Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Data Mining Model Viewers](data-mining/data-mining-model-viewers.md)   
+ [Browse a Model Using the Microsoft Sequence Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

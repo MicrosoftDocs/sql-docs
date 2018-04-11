@@ -19,7 +19,7 @@ manager: "mblythe"
   Calculated columns, in tabular models, allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
   
 > [!NOTE]  
->  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../../2014/analysis-services/directquery-mode-ssas-tabular.md).  
+>  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md).  
   
  Sections in this topic:  
   
@@ -79,11 +79,11 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a Calculated Column &#40;SSAS Tabular&#41;](../../2014/analysis-services/create-a-calculated-column-ssas-tabular.md)|Tasks in this topic describe how to add a new calculated column to a table.|  
+|[Create a Calculated Column &#40;SSAS Tabular&#41;](create-a-calculated-column-ssas-tabular.md)|Tasks in this topic describe how to add a new calculated column to a table.|  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/tables-and-columns-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)   
- [Calculations &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculations-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)   
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)  
   
   

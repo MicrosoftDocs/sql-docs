@@ -61,7 +61,7 @@ manager: "mblythe"
 -   In the **Partitions** dialog box, in the **Partitions** list, select the partition you want to delete, and then click the **Delete** button.  
   
 ## See Also  
- [Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-partitions-ssas-tabular.md)   
- [Process Tabular Model Partitions &#40;SSAS Tabular&#41;](../../2014/analysis-services/process-tabular-model-partitions-ssas-tabular.md)  
+ [Tabular Model Partitions &#40;SSAS Tabular&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [Process Tabular Model Partitions &#40;SSAS Tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

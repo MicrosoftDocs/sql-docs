@@ -113,6 +113,6 @@ manager: "mblythe"
  Type the optional description of the KPI.  
   
 ## See Also  
- [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpis-cube-designer-analysis-services-multidimensional-data.md)  
+ [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

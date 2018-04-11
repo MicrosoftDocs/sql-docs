@@ -58,8 +58,8 @@ manager: "mblythe"
 -   In the measure grid, right-click a measure, and then click **Delete**.  
   
 ## See Also  
- [Measures &#40;SSAS Tabular&#41;](../../2014/analysis-services/measures-ssas-tabular.md)   
- [KPIs &#40;SSAS Tabular&#41;](../../2014/analysis-services/kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/calculated-columns-ssas-tabular.md)  
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
+ [Calculated Columns &#40;SSAS Tabular&#41;](calculated-columns-ssas-tabular.md)  
   
   

@@ -32,7 +32,7 @@ manager: "mblythe"
  A translation consists of a locale identifier (LCID), a translated caption for the object (for example, the dimension or attribute name), and optionally, a binding to a column that provides data values in the target language. You can have multiple translations, but you can only use one for any given connection. There is no theoretical limit on the number of translations you can embed in model, but each translation adds complexity to testing, and all translations must share the same collation, so when designing your solution keep these natural constraints in mind.  
   
 > [!TIP]  
->  You can use client applications such as Excel, Management Studio, and [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to return translated strings. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md) for details.  
+>  You can use client applications such as Excel, Management Studio, and [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to return translated strings. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) for details.  
   
 ## Setting up a model to support translated members  
  A data model used in a multi-lingual solution needs more than translated labels (field names and descriptions). It also needs to provide data values that are articulated in various language scripts. Achieving a multi-lingual solution requires that you have individual attributes, bound to columns in an external database that return the data.  
@@ -49,7 +49,7 @@ manager: "mblythe"
   
 4.  Right-click any field and select **Explore Data**. You will see English, Spanish, and French translations of each member.  
   
- Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and `FormatString` property. See [Currency Conversions &#40;Analysis Services&#41;](../../2014/analysis-services/currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/formatstring-element-assl.md) for details.  
+ Formats for date, time, and currency are not implemented through translations. To dynamically provide culturally specific formats based on the client's locale, use the Currency Conversion Wizard and `FormatString` property. See [Currency Conversions &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) and [FormatString Element &#40;ASSL&#41;](dev-guide/formatstring-element-assl.md) for details.  
   
  [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) in the Analysis Services Tutorial will walk you through the steps for creating and testing translations.  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
   
 4.  Build and deploy the project.  
   
-5.  Connect to the database using a client application, such as Excel, modifying the connection string to use the locale identifier. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md) for details.  
+5.  Connect to the database using a client application, such as Excel, modifying the connection string to use the locale identifier. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) for details.  
   
 ### Add translations to a dimension and attributes  
  You can add translations to database dimensions, attributes, hierarchies, and levels within a hierarchy.  
@@ -98,7 +98,7 @@ manager: "mblythe"
   
 4.  Build and deploy the project.  
   
-5.  Connect to the database using a client application, such as Excel, modifying the connection string to use the locale identifier. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md) for details.  
+5.  Connect to the database using a client application, such as Excel, modifying the connection string to use the locale identifier. See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) for details.  
   
 ### Add a translation of the database name  
  At the database level, you can add translations for the database name and description. The translated database name might be visible on client connections that specify the LCID of the language, but that depends on the tool. For example, viewing the database in Management Studio will not show the translated name, even if you specify the locale identifier on the connection. The API used by Management Studio to connect to Analysis Services does not read the `Language` property.  
@@ -115,9 +115,9 @@ manager: "mblythe"
  If a client application requests a locale identifier, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance attempts to resolve data and metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects to the closest matching LCID. If the client application does not specify a default language, or specifies the neutral locale identifier (0) or process default language identifier (1024), then [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses the default language for the instance to return data and metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects.  
   
 ## See Also  
- [Globalization scenarios for Analysis Services Multiidimensional](../../2014/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Languages and Collations &#40;Analysis Services&#41;](../../2014/analysis-services/languages-and-collations-analysis-services.md)   
+ [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md)   
- [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../../2014/analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

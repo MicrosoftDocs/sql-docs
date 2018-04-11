@@ -71,6 +71,6 @@ manager: "mblythe"
 |ClientProcessID|Contains the unique client process ID associated with the command event.|  
   
 ## See Also  
- [Command Events Event Category](../../2014/analysis-services/command-events-event-category.md)  
+ [Command Events Event Category](command-events-event-category.md)  
   
   

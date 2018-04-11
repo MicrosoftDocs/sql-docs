@@ -42,11 +42,11 @@ manager: "mblythe"
 ||**Scheduled MOLAP**<br /><br /> Select to use the following storage and proactive caching settings:|MOLAP storage mode<br /><br /> Enable proactive caching<br /><br /> Updates cache periodically, with a rebuild interval of 1 day|  
 ||**MOLAP**<br /><br /> Select to use the following storage and proactive caching settings:|MOLAP storage mode|  
 |**Custom setting**|Select to explicitly set storage mode, proactive caching, and notification options.||  
-|**Options**|Click to display the **Storage Options** dialog box to explicitly set storage mode, proactive caching, and notification options. For more information about the **Storage Options** dialog box, see [Storage Options Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
+|**Options**|Click to display the **Storage Options** dialog box to explicitly set storage mode, proactive caching, and notification options. For more information about the **Storage Options** dialog box, see [Storage Options Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Proactive Caching &#40;Partitions&#41;](../../2014/analysis-services/dev-guide/proactive-caching-partitions.md)   
- [Cube Storage &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-storage-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md)   
+ [Cube Storage &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-storage-analysis-services-multidimensional-data.md)  
   
   

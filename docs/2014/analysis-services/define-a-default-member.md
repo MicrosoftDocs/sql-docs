@@ -42,6 +42,6 @@ manager: "mblythe"
  When levels in a hierarchy aggregate naturally, you can define a default member for any attribute in the hierarchy without regard to other attributes in the hierarchy. For example, in the hierarchy Country–Province–City, you can define a default member for City such as [City].[Montreal] without defining the default member for State or for Country.  
   
 ## See Also  
- [Configure the &#40;All&#41; Level for Attribute Hierarchies](../../2014/analysis-services/configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configure the &#40;All&#41; Level for Attribute Hierarchies](configure-the-all-level-for-attribute-hierarchies.md)  
   
   

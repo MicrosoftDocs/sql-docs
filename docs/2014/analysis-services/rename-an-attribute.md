@@ -23,9 +23,9 @@ manager: "mblythe"
 # Rename an Attribute
   The name of an attribute in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] is defined by its **Name** property. To rename an attribute, right-click the attribute in the **Attributes** pane of the **Dimension Structure** tab of Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then click **Rename**. If the **Attributes** pane is in grid view, click the attribute's name and edit it directly in the grid. You can also select an attribute and set its **Name** property in the **Properties** window.  
   
- For more information about how to rename an attribute, see [Bind an attribute to a Key column](../../2014/analysis-services/bind-an-attribute-to-a-key-column.md).  
+ For more information about how to rename an attribute, see [Bind an attribute to a Key column](bind-an-attribute-to-a-key-column.md).  
   
 ## See Also  
- [Dimension Attribute Properties Reference](../../2014/analysis-services/dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
   
   

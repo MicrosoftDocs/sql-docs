@@ -24,20 +24,20 @@ manager: "mblythe"
   
 -   [Creating and Querying Data Mining Models with DMX: Tutorials &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Data Mining Queries](../../2014/analysis-services/data-mining-queries.md)  
+-   [Data Mining Queries](data-mining/data-mining-queries.md)  
   
--   [Data Mining Query Tasks and How-tos](../../2014/analysis-services/data-mining-query-tasks-and-how-tos.md)  
+-   [Data Mining Query Tasks and How-tos](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
  The **Mining Model Prediction** view has the following tools and dialog boxes:  
   
--   [Design Pane &#40;Mining Model Prediction View&#41;](../../2014/analysis-services/design-pane-mining-model-prediction-view.md)  
+-   [Design Pane &#40;Mining Model Prediction View&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [Query Pane &#40;Mining Model Prediction View&#41;](../../2014/analysis-services/query-pane-mining-model-prediction-view.md)  
+-   [Query Pane &#40;Mining Model Prediction View&#41;](query-pane-mining-model-prediction-view.md)  
   
--   [Result Pane &#40;Mining Model Prediction View&#41;](../../2014/analysis-services/result-pane-mining-model-prediction-view.md)  
+-   [Result Pane &#40;Mining Model Prediction View&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [Select Mining Model Dialog Box &#40;Mining Model Prediction View&#41;](../../2014/analysis-services/select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [Select Mining Model Dialog Box &#40;Mining Model Prediction View&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [Save Data Mining Query Result Dialog Box &#40;Mining Model Prediction View&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [Save Data Mining Query Result Dialog Box &#40;Mining Model Prediction View&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

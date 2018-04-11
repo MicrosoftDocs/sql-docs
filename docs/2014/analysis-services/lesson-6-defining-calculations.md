@@ -55,7 +55,7 @@ manager: "jhubbard"
 ## See Also  
  [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Create Named Sets](../../2014/analysis-services/create-named-sets.md)   
- [Create Calculated Members](../../2014/analysis-services/create-calculated-members.md)  
+ [Create Named Sets](create-named-sets.md)   
+ [Create Calculated Members](create-calculated-members.md)  
   
   

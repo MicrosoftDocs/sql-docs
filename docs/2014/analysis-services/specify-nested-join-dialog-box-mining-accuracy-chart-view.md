@@ -30,8 +30,8 @@ manager: "mblythe"
  Click to delete a relationship that you select in the **Diagram** pane.  
   
 ## See Also  
- [Mining Accuracy Chart Designer &#40;Data Mining&#41;](../../2014/analysis-services/mining-accuracy-chart-designer-data-mining.md)   
- [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](../../2014/analysis-services/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Create or Edit Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
+ [Mining Accuracy Chart Designer &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
+ [Testing and Validation Tasks and How-tos &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Create or Edit Relationship Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
   
   

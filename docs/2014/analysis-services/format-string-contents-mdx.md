@@ -147,9 +147,9 @@ manager: "mblythe"
 |`Short Time`|Displays a time using the 24-hour format, for example, 17:45.|  
   
 ## See Also  
- [LANGUAGE and FORMAT_STRING on FORMATED_VALUE](../../2014/analysis-services/language-and-format-string-on-formated-value.md)   
- [Using Cell Properties &#40;MDX&#41;](../../2014/analysis-services/using-cell-properties-mdx.md)   
- [Creating and Using Property Values &#40;MDX&#41;](../../2014/analysis-services/creating-and-using-property-values-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../../2014/analysis-services/mdx-query-fundamentals-analysis-services.md)  
+ [LANGUAGE and FORMAT_STRING on FORMATED_VALUE](language-and-format-string-on-formated-value.md)   
+ [Using Cell Properties &#40;MDX&#41;](using-cell-properties-mdx.md)   
+ [Creating and Using Property Values &#40;MDX&#41;](creating-and-using-property-values-mdx.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

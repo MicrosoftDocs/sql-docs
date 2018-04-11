@@ -34,6 +34,6 @@ manager: "mblythe"
 5.  In **Database Name**, select the tabular model database that contains the model metadata you want to import, and then click **OK**.  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/project-properties-ssas-tabular.md)  
+ [Project Properties &#40;SSAS Tabular&#41;](project-properties-ssas-tabular.md)  
   
   

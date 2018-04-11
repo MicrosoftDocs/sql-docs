@@ -53,6 +53,6 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
 ## See Also  
  [Analysis Services Schema Rowsets](../../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md)   
  [Querying the SQL Server System Catalog](https://technet.microsoft.com/en-us/library/ms189082\(v=sql.110\).aspx)   
- [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](../../../2014/analysis-services/querying-the-data-mining-schema-rowsets-analysis-services-data-mining.md)  
+ [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](../data-mining/data-mining-schema-rowsets-ssas.md)  
   
   

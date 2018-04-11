@@ -93,7 +93,7 @@ manager: "mblythe"
 |UnaryOperatorColumn|1|  
   
 ## See Also  
- [Understanding Incremental Generation](../../2014/analysis-services/understanding-incremental-generation.md)   
- [Manage Changes to Data Source Views and Data Sources](../../2014/analysis-services/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Understanding Incremental Generation](understanding-incremental-generation.md)   
+ [Manage Changes to Data Source Views and Data Sources](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

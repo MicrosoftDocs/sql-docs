@@ -23,7 +23,7 @@ manager: "mblythe"
   Permission to read an object definition, or metadata, on selected objects lets an administrator grant permission to view object information, without also granting permission to modify the object's definition, modify the object's structure, or view the actual data for the object. `Read Definition` permissions can be granted at the database, data source, dimension, mining structure, and mining model levels. If you require `Read Definition` permissions for a cube, you must enable `Read Definition` for the database.Remember that permissions are additive. For example, one role grants permission to read the metadata for a cube, while a second role grants the same user permission to read the metadata for a dimension. The permissions from the two different roles combine to give the user permission to both read metadata for the cube and the metadata for the dimension within that database.  
   
 > [!NOTE]  
->  Permission to read a database's metadata is the minimum permission required to connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database using either [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. A user who has permission to read metadata can also use the DISCOVER_XML_METADATA schema rowset to query the object and view its metadata. For more information, see [DISCOVER_XML_METADATA Rowset](../../2014/analysis-services/dev-guide/discover-xml-metadata-rowset.md).  
+>  Permission to read a database's metadata is the minimum permission required to connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database using either [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] or [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. A user who has permission to read metadata can also use the DISCOVER_XML_METADATA schema rowset to query the object and view its metadata. For more information, see [DISCOVER_XML_METADATA Rowset](dev-guide/discover-xml-metadata-rowset.md).  
   
 ## Set read definition permissions on a database  
  Granting permission to read database metadata also grants permission to read the metadata of all objects in the database.  
@@ -50,14 +50,14 @@ manager: "mblythe"
   
     -   In the **Dimensions** pane, click the `Read Definition` check box for that dimension. Experienced analysts and developers may need to view the definition without permission to modify it or view the definitions of other objects (such as other dimensions, cube objects, or mining structures and models).  
   
-    -   In the Mining Structures pane, click the `Read Definition` check box for data mining structures or models. `Read Definition` is required for browsing the data model. See [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../../2014/analysis-services/grant-permissions-on-data-mining-structures-and-models-analysis-services.md) for details.  
+    -   In the Mining Structures pane, click the `Read Definition` check box for data mining structures or models. `Read Definition` is required for browsing the data model. See [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md) for details.  
   
 4.  In the **Membership** pane, enter the Windows user and group accounts that connect to Analysis Services using this role.  
   
 5.  Click **OK** to finish creating the role.  
   
 ## See Also  
- [Grant database permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-database-permissions-analysis-services.md)   
- [Grant process permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-process-permissions-analysis-services.md)  
+ [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

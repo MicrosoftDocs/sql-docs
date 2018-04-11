@@ -29,7 +29,7 @@ manager: "mblythe"
 -   [Deploy Status](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> Configure Deployment Options and Deployment Server Properties  
- Before you deploy your tabular model solution, you must first specify the Deployment Options and Deployment Server properties. For more information about deployment properties and settings, see [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-solution-deployment-ssas-tabular.md).  
+ Before you deploy your tabular model solution, you must first specify the Deployment Options and Deployment Server properties. For more information about deployment properties and settings, see [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### To configure Deployment Options and Deployment Server properties  
   
@@ -46,7 +46,7 @@ manager: "mblythe"
 3.  In **Deployment Server**, specify the **Server** (name), **Edition**, **Database** (name), and **Cube Name** property settings, if different from the default settings, and then click **OK**.  
   
 > [!NOTE]  
->  You can also specify the Default Deployment Server property setting so any new projects you create will automatically be deployed to the specified server. For more information, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  You can also specify the Default Deployment Server property setting so any new projects you create will automatically be deployed to the specified server. For more information, see [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
 ##  <a name="bkmk_deploy_proc"></a> Deploy a Tabular Model Solution  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
  Click to halt the Deploy operation. This option is useful if the Deploy operation is taking too long, or if there are too many errors.  
   
 ## See Also  
- [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](../../2014/analysis-services/tabular-model-solution-deployment-ssas-tabular.md)   
- [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](../../2014/analysis-services/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+ [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   

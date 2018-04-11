@@ -18,7 +18,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes (Attribute Relationship Designer Tab, Dimension Designer) (Analysis Services - Multidimensional Data)
-  Use the **Create Attribute Relationship** dialog box to define new attribute relationships and the **Edit Attribute Relationship** dialog box to change an attribute relationship. For more information, see [Define Attribute Relationships](../../2014/analysis-services/define-attribute-relationships.md).  
+  Use the **Create Attribute Relationship** dialog box to define new attribute relationships and the **Edit Attribute Relationship** dialog box to change an attribute relationship. For more information, see [Define Attribute Relationships](define-attribute-relationships.md).  
   
  **To view the Create Attribute Relationship dialog box**  
   
@@ -52,6 +52,6 @@ manager: "mblythe"
  Specifies the type of relationship to create, either **Flexible (may change over time)** or **Rigid (will not change over time)**.  
   
 ## See Also  
- [Attribute Relationships &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Attribute Relationships &#40;Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

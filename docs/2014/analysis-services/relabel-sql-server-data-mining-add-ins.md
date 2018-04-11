@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Relabel (SQL Server Data Mining Add-ins)
-  ![Office 13 icon for Relabel tool](../../2014/analysis-services/media/dm13-relabel.gif "Office 13 icon for Relabel tool")  
+  ![Office 13 icon for Relabel tool](media/dm13-relabel.gif "Office 13 icon for Relabel tool")  
   
  The Data Mining Client for Excel helps you create new labels for data to make it easier to understand the results of analysis.  
   
@@ -65,6 +65,6 @@ manager: "mblythe"
          Click to replace the original data with the new values.  
   
 ## See Also  
- [Exploring and Cleaning Data](../../2014/analysis-services/exploring-and-cleaning-data.md)  
+ [Exploring and Cleaning Data](exploring-and-cleaning-data.md)  
   
   

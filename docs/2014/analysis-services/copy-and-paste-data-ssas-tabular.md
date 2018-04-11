@@ -84,8 +84,8 @@ manager: "mblythe"
  Shows a sample of the Clipboard contents. The existing data in the destination table will be deleted and the new rows will be inserted into the table.  
   
 ## See Also  
- [Import Data &#40;SSAS Tabular&#41;](../../2014/analysis-services/import-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../2014/analysis-services/data-sources-supported-ssas-tabular.md)   
- [Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../2014/analysis-services/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)   
+ [Set the Data Type of a Column &#40;SSAS Tabular&#41;](set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

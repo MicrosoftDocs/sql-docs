@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Estimate Wizard (Data Mining Add-ins for Excel)
-  ![Estimate wizard in Data Mining ribbon](../../2014/analysis-services/media/dmc-estimate.gif "Estimate wizard in Data Mining ribbon")  
+  ![Estimate wizard in Data Mining ribbon](media/dmc-estimate.gif "Estimate wizard in Data Mining ribbon")  
   
  The **Estimate** wizard helps you create an estimation model. An estimation model extracts patterns from data and uses the patterns to predict the factors that affect outcomes.  
   
@@ -79,23 +79,23 @@ manager: "mblythe"
   
  In the **Algorithm Parameters** dialog box, you can set additional advanced options, depending on which algorithm you chose. For information on the options for each algorithm see these topics in SQL Server Books Online:  
   
- [Microsoft Decision Trees Algorithm Technical Reference](../../2014/analysis-services/microsoft-decision-trees-algorithm-technical-reference.md)  
+ [Microsoft Decision Trees Algorithm Technical Reference](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
- [Microsoft Linear Regression Algorithm Technical Reference](../../2014/analysis-services/microsoft-linear-regression-algorithm-technical-reference.md)  
+ [Microsoft Linear Regression Algorithm Technical Reference](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)  
   
- [Microsoft Logistic Regression Algorithm Technical Reference](../../2014/analysis-services/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Microsoft Logistic Regression Algorithm Technical Reference](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
- [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/microsoft-neural-network-algorithm-technical-reference.md)  
+ [Microsoft Neural Network Algorithm Technical Reference](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### Requirements  
  To use the Estimate Data Wizard, you must be connected to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  
   
- For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/connect-to-source-data-data-mining-client-for-excel.md).  
+ For information about how to create a connection, see [Connect to Source Data &#40;Data Mining Client for Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  To use the estimation algorithm, the outcome that you are trying to predict must be expressed as a numeric value, such as a currency, sales amount, date, or time.  
   
 ## See Also  
- [Creating a Data Mining Model](../../2014/analysis-services/creating-a-data-mining-model.md)   
- [Decision Tree Diagram Walkthrough  &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
+ [Creating a Data Mining Model](creating-a-data-mining-model.md)   
+ [Decision Tree Diagram Walkthrough  &#40;Data Mining Add-ins&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
   

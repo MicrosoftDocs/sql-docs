@@ -32,37 +32,37 @@ manager: "mblythe"
   
 -   **1103** is the default compatibility level for deployment modes 1 or 2, for installations supporting Tabular mode or [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](../../2014/analysis-services/dev-guide/discover-xml-metadata-rowset.md) for more details.  
+ The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](dev-guide/discover-xml-metadata-rowset.md) for more details.  
   
 ## General Properties  
  Use this page to set the basic and advanced general properties, such as folder locations and network settings, for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  
   
  The server properties page shows only those properties an administrator is more likely to change, such as memory and thread pool properties used to tune the server for certain configurations. The following list provides links to the main property groups:  
   
--   [General Properties](../../2014/analysis-services/general-properties.md)  
+-   [General Properties](general-properties.md)  
   
--   [Data Mining Properties](../../2014/analysis-services/data-mining-properties.md)  
+-   [Data Mining Properties](data-mining-properties.md)  
   
--   [Feature Properties](../../2014/analysis-services/feature-properties.md)  
+-   [Feature Properties](feature-properties.md)  
   
--   [Filestore Properties](../../2014/analysis-services/filestore-properties.md)  
+-   [Filestore Properties](filestore-properties.md)  
   
--   [Lock Manager Properties](../../2014/analysis-services/lock-manager-properties.md)  
+-   [Lock Manager Properties](lock-manager-properties.md)  
   
--   [Log Properties](../../2014/analysis-services/log-properties.md)  
+-   [Log Properties](log-properties.md)  
   
--   [Memory Properties](../../2014/analysis-services/memory-properties.md)  
+-   [Memory Properties](memory-properties.md)  
   
--   [Network Properties](../../2014/analysis-services/network-properties.md)  
+-   [Network Properties](network-properties.md)  
   
--   [OLAP Properties](../../2014/analysis-services/olap-properties.md)  
+-   [OLAP Properties](olap-properties.md)  
   
--   [Security Properties](../../2014/analysis-services/security-properties.md)  
+-   [Security Properties](security-properties.md)  
   
--   [Thread Pool Properties](../../2014/analysis-services/thread-pool-properties.md)  
+-   [Thread Pool Properties](thread-pool-properties.md)  
   
 ## Language Collation Properties  
- Use this page to set the default language and collation options for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The following list contains short descriptions of each option. See [Languages and Collations &#40;Analysis Services&#41;](../../2014/analysis-services/languages-and-collations-analysis-services.md) for more detailed descriptions.  
+ Use this page to set the default language and collation options for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The following list contains short descriptions of each option. See [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) for more detailed descriptions.  
   
 -   **Binary** is used to sort and compare data based on the bit patterns defined for each character. Binary sort order is case-sensitive, that is, lowercase precedes uppercase, and accent-sensitive. This is the fastest sorting order.  
   
@@ -90,13 +90,13 @@ manager: "mblythe"
      If this option is not selected, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considers the single-byte and double-byte representation of the same character to be equal.  
   
 ## Security Properties  
- Use this page to specify the Windows user and group accounts belonging to the server administrator role for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Membership in this role conveys permission to perform server-wide tasks, such as creating or processing a database, modifying server properties, adding or removing other members of this role, or launching a trace. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/grant-server-administrator-permissions-analysis-services.md) for details.  
+ Use this page to specify the Windows user and group accounts belonging to the server administrator role for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. Membership in this role conveys permission to perform server-wide tasks, such as creating or processing a database, modifying server properties, adding or removing other members of this role, or launching a trace. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for details.  
   
 ## See Also  
- [Determine the Server Mode of an Analysis Services Instance](../../2014/analysis-services/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configure Server Properties in Analysis Services](../../2014/analysis-services/configure-server-properties-in-analysis-services.md)   
- [Authentication methodologies supported by Analysis Services](../../2014/analysis-services/authentication-methodologies-supported-by-analysis-services.md)   
- [Roles and Permissions &#40;Analysis Services&#41;](../../2014/analysis-services/roles-and-permissions-analysis-services.md)   
- [Languages and Collations &#40;Analysis Services&#41;](../../2014/analysis-services/languages-and-collations-analysis-services.md)  
+ [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
+ [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   
   

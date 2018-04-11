@@ -39,7 +39,7 @@ manager: "mblythe"
 ###  <a name="BKMK_Itemsets"></a> Itemsets  
  The **Itemsets** tab is a good place to begin exploring an association model. This tab shows a list of the items that the model frequently found together.  
   
- ![List of items in an association model](../../2014/analysis-services/media/dm13-association-itemsets.gif "List of items in an association model")  
+ ![List of items in an association model](media/dm13-association-itemsets.gif "List of items in an association model")  
   
  The most common example of itemsets is in a shopping basket model, where an itemset represents pairs or sets of products that lots of customers purchase at the same time. However, depending on how you group and order your items, the itemset might contain a sequence of movies that customers order over a period of time, or events that tend to occur in  a particular location.  
   
@@ -75,7 +75,7 @@ manager: "mblythe"
   
      Notice how the name changes. In the case of a market basket model, which is built on nested tables of products that were purchased by multiple customers, the attribute name is typically the product name, and the presence of the product in the list is marked as `Existing`, meaning that the customer did buy the item.  
   
-     The opposite of `Existing` is `Missing`, which can be a very useful attribute to investigate in data mining. For example, suppose the itemset A +B is so very popular that you wanted to find customers who purchased Item A but not item B. You could do this by using a prediction query and retrieving the transactions with one but not the other, and do some further analysis on those. For information about how to create prediction queries on association models, see [Association Model Query Examples](../../2014/analysis-services/association-model-query-examples.md) in SQL Server Books Online  
+     The opposite of `Existing` is `Missing`, which can be a very useful attribute to investigate in data mining. For example, suppose the itemset A +B is so very popular that you wanted to find customers who purchased Item A but not item B. You could do this by using a prediction query and retrieving the transactions with one but not the other, and do some further analysis on those. For information about how to create prediction queries on association models, see [Association Model Query Examples](data-mining/association-model-query-examples.md) in SQL Server Books Online  
   
 5.  To force the list of itemsets to redisplay using your new filter criteria, you can select or clear the **Show long name** check box.  
   
@@ -84,13 +84,13 @@ manager: "mblythe"
 ###  <a name="BKMK_Rules"></a> Rules  
  The **Rules** tab combines information about the itemsets and their relative value.  
   
- ![List of rules created by an association model](../../2014/analysis-services/media/dm13-association-rules.gif "List of rules created by an association model")  
+ ![List of rules created by an association model](media/dm13-association-rules.gif "List of rules created by an association model")  
   
  *Probability* represents the fraction of cases in the dataset that contain the targeted combination of items. Probability is similar to the statistical concept of *confidence*, and gives you an indication of how likely the result of a rule is to occur. You can change the value of **Minimum probability** in this pane to filter the rules that are displayed.  
   
  The value for **Minimum probability** that you initially see is the threshold value that was used by the algorithm when building the model. After the model is complete, you can’t decrease this value, but you can increase it to show only the higher probability items.  
   
- *Importance* is designed to measure the usefulness of a rule. A rule that is very common might be so ubiquitous that is has little information value. The greater the importance, the more valuable the rule is for predicting the outcome. In the [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](../../2014/analysis-services/shopping-basket-analysis-table-analysistools-for-excel.md) tool, importance can be combined with the price of items to determine the bundles that are potentially most valuable in terms of sales.  
+ *Importance* is designed to measure the usefulness of a rule. A rule that is very common might be so ubiquitous that is has little information value. The greater the importance, the more valuable the rule is for predicting the outcome. In the [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) tool, importance can be combined with the price of items to determine the bundles that are potentially most valuable in terms of sales.  
   
 ##### Explore the rules list  
   
@@ -115,7 +115,7 @@ manager: "mblythe"
 ###  <a name="BKMK_Dependency"></a> Dependency Network  
  The **Dependency Network** tab is a visual map of the correlations among items. Each oval in the graph (referred to as a *node*) represents an attribute-value pair, such as "Vest = Existing" or "Age = 1-30".  Each line connecting the ovals (referred to as an *edge*) represents a type of correlation.  
   
- ![Dependency network graph for an association model](../../2014/analysis-services/media/dm13-association-dependencynetwork.gif "Dependency network graph for an association model")  
+ ![Dependency network graph for an association model](media/dm13-association-dependencynetwork.gif "Dependency network graph for an association model")  
   
 ##### Explore the dependency network  
   
@@ -135,24 +135,24 @@ manager: "mblythe"
   
 3.  Click **Copy to Excel** to copy a snapshot of the current window to Excel.  
   
-     You won’t be able to work with the graph that you copy into Excel; if you need an interactive network graph, use the [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](../../2014/analysis-services/viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
+     You won’t be able to work with the graph that you copy into Excel; if you need an interactive network graph, use the [Viewing Data Mining Models in Visio &#40;Data Mining Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md).  
   
  [Back to Top](#BKMK_ViewerTabs)  
   
 ## More about Association Models  
- You can use the **Browse** feature to open and explore any model that was created using the Microsoft Association Rules algorithm. This includes models built using the [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](../../2014/analysis-services/shopping-basket-analysis-table-analysistools-for-excel.md) tool, in the **Table Analysis Tools** ribbon, or in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ You can use the **Browse** feature to open and explore any model that was created using the Microsoft Association Rules algorithm. This includes models built using the [Shopping Basket Analysis &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) tool, in the **Table Analysis Tools** ribbon, or in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  If you create an association rules model using the Shopping Basket Analysis tool, many of the advanced options are configured automatically for you.  
   
- If you want to set advanced parameters or alter minimum probability and support, use the [Associate Wizard &#40;Data Mining Client for Excel&#41;](../../2014/analysis-services/associate-wizard-data-mining-client-for-excel.md) wizard, or build your own model using the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](../../2014/analysis-services/add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option.  
+ If you want to set advanced parameters or alter minimum probability and support, use the [Associate Wizard &#40;Data Mining Client for Excel&#41;](associate-wizard-data-mining-client-for-excel.md) wizard, or build your own model using the [Add Model to Structure &#40;Data Mining Add-ins for Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modeling option.  
   
 -   **Itemsets:** When you create the model, you can also control the number of itemsets that are generated by assigning a value to the MINIMUM_PROBABILITY parameter. This parameter is available in the Algorithm Parameters dialog box.  
   
 -   **Rules:** The [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules algorithm uses probability values to restrict the number of rules that are generated. You can control the number of rules by setting the parameters, `MINIMUM_PROBABILITY` or `MINIMUM _IMPORTANCE`.  
   
- For more information about configuring advanced parameters, see [Data Mining Algorithms &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/data-mining-algorithms-sql-server-data-mining-add-ins.md).  
+ For more information about configuring advanced parameters, see [Data Mining Algorithms &#40;SQL Server Data Mining Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   
 ## See Also  
- [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](../../2014/analysis-services/browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Browsing Models in Excel &#40;SQL Server Data Mining Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

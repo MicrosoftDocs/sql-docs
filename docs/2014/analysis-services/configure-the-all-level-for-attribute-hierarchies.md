@@ -36,6 +36,6 @@ manager: "mblythe"
  The single member of the (All) level is called the All member. The `AttributeAllMemberName`property on a dimension specifies the name of the All member for attributes in a dimension. The `AllMemberName` property on a hierarchy specifies the name of the All member for the hierarchy.  
   
 ## See Also  
- [Define a Default Member](../../2014/analysis-services/define-a-default-member.md)  
+ [Define a Default Member](define-a-default-member.md)  
   
   

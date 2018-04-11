@@ -28,7 +28,7 @@ manager: "mblythe"
  Type or select the database from which to create the project.  
   
 ## See Also  
- [Import Analysis Services Database Wizard F1 Help](../../2014/analysis-services/import-analysis-services-database-wizard-f1-help.md)   
- [Analysis Services Wizards &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-wizards-multidimensional-data.md)  
+ [Import Analysis Services Database Wizard F1 Help](import-analysis-services-database-wizard-f1-help.md)   
+ [Analysis Services Wizards &#40;Multidimensional Data&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

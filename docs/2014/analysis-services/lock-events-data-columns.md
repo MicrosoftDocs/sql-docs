@@ -114,6 +114,6 @@ manager: "mblythe"
 |ServerName|43|8|Name of the server producing the event.|  
   
 ## See Also  
- [Lock Events Category](../../2014/analysis-services/lock-events-category.md)  
+ [Lock Events Category](lock-events-category.md)  
   
   

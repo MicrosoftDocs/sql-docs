@@ -46,6 +46,6 @@ manager: "mblythe"
   
 ## See Also  
  [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../../../2014/analysis-services/multidimensional-model-data-access-analysis-services-multidimensional-data.md)   
- [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../../2014/analysis-services/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

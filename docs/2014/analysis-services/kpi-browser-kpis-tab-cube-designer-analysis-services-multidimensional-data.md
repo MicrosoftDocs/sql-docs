@@ -84,6 +84,6 @@ manager: "mblythe"
 >  If an error occurs while calculating a KPI on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance, this option displays information associated with the error.  
   
 ## See Also  
- [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/kpis-cube-designer-analysis-services-multidimensional-data.md)  
+ [KPIs &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

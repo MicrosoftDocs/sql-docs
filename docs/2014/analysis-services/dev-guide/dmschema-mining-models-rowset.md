@@ -66,7 +66,7 @@ manager: "mblythe"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Optional.|  
 |`MINING_STRUCTURE`|`DBTYPE_WSTR`|Optional.|  
   
- For examples of how to query this rowset, see [Query the Parameters Used to Create a Mining Model](../../../2014/analysis-services/query-the-parameters-used-to-create-a-mining-model.md).  
+ For examples of how to query this rowset, see [Query the Parameters Used to Create a Mining Model](../data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## See Also  
  [Data Mining Schema Rowsets](../../../2014/analysis-services/dev-guide/data-mining-schema-rowsets.md)  

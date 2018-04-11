@@ -56,7 +56,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The value of the `DiscretizationMethod` element determines how values for the `DimensionAttribute` or `ScalarMiningStructureColumn` are discretized, or organized into a specific set of groups. For more information about discretization methods, see [Discretization Methods &#40;Data Mining&#41;](../../../2014/analysis-services/discretization-methods-data-mining.md).  
+ The value of the `DiscretizationMethod` element determines how values for the `DimensionAttribute` or `ScalarMiningStructureColumn` are discretized, or organized into a specific set of groups. For more information about discretization methods, see [Discretization Methods &#40;Data Mining&#41;](../data-mining/discretization-methods-data-mining.md).  
   
  The value of this element is limited to one of the strings in the following table.  
   

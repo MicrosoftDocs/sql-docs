@@ -25,7 +25,7 @@ manager: "mblythe"
   
 ## Options  
  **Time Property Name**  
- Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](../../2014/analysis-services/dev-guide/type-element-dimensionattribute-assl.md).  
+ Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](dev-guide/type-element-dimensionattribute-assl.md).  
   
 > [!NOTE]  
 >  The `Date` attribute type should be used only for columns with a DateTime data type.  
@@ -36,8 +36,8 @@ manager: "mblythe"
  To change the column, click the column, and then select a different column from the list.  
   
 ## See Also  
- [Dimension Wizard F1 Help](../../2014/analysis-services/dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](../../2014/analysis-services/dimensions-in-multidimensional-models.md)  
+ [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
   
   

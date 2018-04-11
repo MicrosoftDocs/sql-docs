@@ -31,6 +31,6 @@ manager: "mblythe"
 -   If you created any calculated columns using that table, columns in that table are also deleted; any calculated columns in other tables that use columns from the deleted table will display an error.  
   
 ## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../2014/analysis-services/tables-and-columns-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)  
   
   

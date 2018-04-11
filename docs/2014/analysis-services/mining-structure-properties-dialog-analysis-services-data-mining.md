@@ -28,10 +28,10 @@ manager: "mblythe"
   
 |Page|Description|  
 |----------|-----------------|  
-|**General**|Use the **General** page to display and modify the general properties of the mining structure. For more information about this page, see [General &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
-|**Error Configuration**|Use the **Error Configuration** page to display and modify the error configuration settings for the mining structure. For more information about this page, see [Error Configuration &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
+|**General**|Use the **General** page to display and modify the general properties of the mining structure. For more information about this page, see [General &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Data Mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
+|**Error Configuration**|Use the **Error Configuration** page to display and modify the error configuration settings for the mining structure. For more information about this page, see [Error Configuration &#40;Mining Structure Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/mining-structures-analysis-services-data-mining.md)  
+ [Mining Structures &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

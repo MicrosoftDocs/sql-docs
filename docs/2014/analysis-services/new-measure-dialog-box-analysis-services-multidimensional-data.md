@@ -40,7 +40,7 @@ manager: "mblythe"
  Select to display all columns in the fact table for the measure group in which the new measure is to be created. If not selected, **Source column** only displays numeric columns that are not used as logical primary keys or involved in relationships.  
   
 ## See Also  
- [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

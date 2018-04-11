@@ -22,11 +22,11 @@ manager: "mblythe"
   
  This dialog box also has tabs for the following properties:  
   
--   [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+-   [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
--   [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](../../2014/analysis-services/error-configuration-for-cube-partition-and-dimension-processing.md)  
+-   [Error Configuration for Cube, Partition, and Dimension Processing &#40;SSAS - Multidimensional&#41;](error-configuration-for-cube-partition-and-dimension-processing.md)  
   
--   [Proactive Caching &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](../../2014/analysis-services/proactive-caching-partition-properties-dialog-box-ssms.md)  
+-   [Proactive Caching &#40;Partition Properties Dialog Box&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
 ## Options  
   
@@ -39,12 +39,12 @@ manager: "mblythe"
 |**Last Schema Update**|Displays the date and time the metadata for the cube or model was last updated.|  
 |**Script Cache Processing Mode**|Select the processing mode to use for the script cache of the cube or model. For more information about the values for this property, see <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Processing Mode**|Select the processing mode to use for the cube or model. For more information about the values for this property, see <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Storage Location**|Type the folder to use as the default storage location for measure groups and partitions associated with the cube or model, or click the ellipsis button (**...**) to display the **Browse for Remote Folder** dialog box to select a folder. For more information about the **Browse for Remote Folder** dialog box, see [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> For more information about the values for this property, see <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**Storage Location**|Type the folder to use as the default storage location for measure groups and partitions associated with the cube or model, or click the ellipsis button (**...**) to display the **Browse for Remote Folder** dialog box to select a folder. For more information about the **Browse for Remote Folder** dialog box, see [Browse for Remote Folder Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> For more information about the values for this property, see <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**State**|Displays the processing state of the cube or model. For more information about the values for this property, see <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Displays the date and time the cube or model was last processed.|  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../../2014/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](../../2014/analysis-services/dev-guide/cube-objects-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)  
   
   

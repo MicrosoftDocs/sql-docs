@@ -10,7 +10,7 @@ ms.component: "ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
@@ -61,6 +61,6 @@ ms.workload: "Inactive"
 |ITableDefinition|There is no change to this interface for sparse columns or for **column_set** columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] directly.|  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

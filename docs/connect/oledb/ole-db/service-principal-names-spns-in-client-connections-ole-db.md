@@ -10,7 +10,7 @@ ms.component: "ole-db"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
@@ -61,6 +61,6 @@ ms.workload: "Inactive"
 |IDBProperties::SetProperties|IDBProperties::SetProperties can be called to set the values of the new data source initialization properties SSPROP_INITSERVERSPN and SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> These properties can be set at any time, but if the data source is already open, the following error will be returned: DB_E_ERRORSOCCURRED, "Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done."|  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

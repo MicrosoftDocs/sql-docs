@@ -10,7 +10,7 @@ ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology:
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords:
@@ -20,11 +20,13 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, building applications"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Building Applications with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   When developing an application that uses the OLE DB Driver for SQL Server library, there are a number of issues that come into play. The topics in this section discuss many of these issues including upgrading from MDAC to OLE DB Driver for SQL Server, using the OLE DB Driver for SQL Server header and library files, and an overview of the various connection strings that can be used with OLE DB Driver for SQL Server.  
 
@@ -54,5 +56,5 @@ ms.workload: "On Demand"
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

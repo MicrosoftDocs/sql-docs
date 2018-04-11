@@ -1,7 +1,7 @@
 ---
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "04/04/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -56,7 +56,7 @@ Is an expression that represents the name of the database property to return. *p
 |---|---|---|
 |Collation|Default collation name for the database.|Collation name<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **nvarchar(128)**|  
 |ComparisonStyle|The Windows comparison style of the collation. ComparisonStyle is a bitmap that is calculated by using the following values for the possible styles.<br /><br /> Ignore case : 1<br /><br /> Ignore accent : 2<br /><br /> Ignore Kana : 65536<br /><br /> Ignore width : 131072<br /><br /> <br /><br /> For example, the default of 196609 is the result of combining the Ignore case, Ignore Kana, and Ignore width options.|Returns the comparison style.<br /><br /> Returns 0 for all binary collations.<br /><br /> Base data type: **int**|  
-|Edition|The database edition or service tier.|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Web Edition Database<br /><br /> Business = Business Edition Database<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> System (for master database)<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **nvarchar**(64)|  
+|Edition|The database edition or service tier.|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> General Purpose<br /><br /> Business Critical<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> System (for master database)<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **nvarchar**(64)|  
 |IsAnsiNullDefault|Database follows ISO rules for allowing null values.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input not valid<br /><br /> Base data type: **int**|  
 |IsAnsiNullsEnabled|All comparisons to a null evaluate to unknown.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input not valid<br /><br /> Base data type: **int**|  
 |IsAnsiPaddingEnabled|Strings are padded to the same length before comparison or insert.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input not valid<br /><br /> Base data type: **int**|  

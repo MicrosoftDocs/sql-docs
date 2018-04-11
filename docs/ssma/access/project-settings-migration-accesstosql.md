@@ -22,7 +22,7 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (AccessToSQL)

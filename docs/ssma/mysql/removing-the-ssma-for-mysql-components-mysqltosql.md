@@ -22,7 +22,7 @@ ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Removing the SSMA for MySQL Components (MySQLToSql)

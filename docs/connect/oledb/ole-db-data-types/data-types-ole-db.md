@@ -10,7 +10,7 @@ ms.component: "ole-db-data-types"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -37,6 +37,6 @@ ms.workload: "Inactive"
 -   [SSVARIANT Structure](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

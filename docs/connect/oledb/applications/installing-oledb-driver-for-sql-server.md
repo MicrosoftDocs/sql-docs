@@ -10,7 +10,7 @@ ms.component: "oledb|applications"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology:
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords:
@@ -35,7 +35,7 @@ ms.workload: "Active"
 To install the OLE DB Driver for SQL Server you need msoledbsql.msi installer.
 Run the installer and make your preferred selections. The OLE DB Driver for SQL Server can be installed side-by-side with earlier versions of Microsoft OLE DB providers.
 
-To download the most recent version of the OLE DB Driver for SQL Server go to [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=56730).
+To download the most recent version of the OLE DB Driver for SQL Server go to [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=871294).
 
 The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are installed to the following location:  
 

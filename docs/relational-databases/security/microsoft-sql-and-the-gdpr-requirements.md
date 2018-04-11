@@ -5,15 +5,14 @@ ms.date: "05/24/2017"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
-ms.component: "security"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: "sql-security"
+ms.technology: "security"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 caps.latest.revision: 2
-author: "barbkess"
-ms.author: "ronitr"
+author: "edmacauley"
+ms.author: "edmaca"
 manager: "craigg"
 ---
 # Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform

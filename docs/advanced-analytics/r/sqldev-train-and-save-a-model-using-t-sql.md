@@ -16,11 +16,9 @@ applies_to:
 dev_langs: 
   - "R"
   - "TSQL"
-ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
-caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Lesson 5: Train and save a model using T-SQL

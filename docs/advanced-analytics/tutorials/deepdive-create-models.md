@@ -16,11 +16,9 @@ applies_to:
   - "SQL Server 2017"
 dev_langs: 
   - "R"
-ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
-caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Create R models (SQL and R deep dive)

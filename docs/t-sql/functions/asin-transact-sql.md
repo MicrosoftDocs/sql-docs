@@ -31,7 +31,7 @@ ms.workload: "Inactive"
 # ASIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the angle, in radians, whose sine is the specified **float** expression. This is also called arcsine.
+A function that returns the angle, in radians, whose sine is the specified **float** expression. This is also called **arcsine**.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,13 +43,13 @@ ASIN ( float_expression )
   
 ## Arguments  
 *float_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the type **float** or of a type that can be implicitly converted to float, with a value from -1 through 1. Values outside this range return NULL and report a domain error.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL, and ASIN will report a domain error.
   
 ## Return types
 **float**
   
 ## Examples  
-The following example takes a **float** expression and returns the ASIN of the specified angle.
+This example takes a **float** expression and returns the ASIN value of the specified angle.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -91,13 +91,13 @@ The ASIN of the angle is: 0.147811
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example returns the arcsine of 1.00.
+This example returns the arcsine of 1.00.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-The following example returns an error, because it requests the arcsine for a value outside the allowed range.
+This example returns an error, because it requests the arcsine for a value outside the allowed range.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  

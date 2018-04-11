@@ -14,10 +14,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "R"
-caps.latest.revision: 1
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Troubleshoot data collection for machine learning

@@ -19,7 +19,7 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Passwords (DB2ToSQL)

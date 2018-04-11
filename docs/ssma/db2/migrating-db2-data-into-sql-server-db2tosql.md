@@ -19,7 +19,7 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migrating DB2 Data into SQL Server (DB2ToSQL)

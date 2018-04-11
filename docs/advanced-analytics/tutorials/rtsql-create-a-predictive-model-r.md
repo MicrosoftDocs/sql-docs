@@ -14,11 +14,9 @@ ms.topic: "tutorial"
 dev_langs: 
   - "R"
   - "SQL"
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "On Demand"
 ---
 # Create a predictive model (R in SQL quickstart)
@@ -137,7 +135,7 @@ EXEC sp_execute_external_script
 
 -- Save the generated model
 INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES (' latest model', @model)
+VALUES ('latest model', @model)
 ```
 
 **Results**

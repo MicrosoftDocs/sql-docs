@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2018"
+ms.date: "04/06/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -147,7 +147,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 The following are issues and limitations with this 17.6 release:
 
-There are currently no known issues.
+There is currently a known issue where SSMS 17.6 crashes when configuring the schedule in a maintenance plan.
 
 
 ## Previous releases

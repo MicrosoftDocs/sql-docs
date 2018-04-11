@@ -19,7 +19,7 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Refresh from database (MySQLToSQL)

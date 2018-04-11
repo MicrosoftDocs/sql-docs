@@ -15,7 +15,7 @@ ms.custom:
 ms.component: "security"
 ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
-ms.devlang: "na"
+
 ms.topic: "article"
 ms.date: "04/03/2018"
 ms.author: "aliceku"
@@ -55,7 +55,7 @@ When TDE is first configured to use a TDE protector from Key Vault, the server s
 ### General Guidelines
 - Ensure Azure Key Vault and Azure SQL Database are going to be in the same tenant.  Cross-tenant key vault and server interactions **are not supported**.
 - Decide which subscriptions are going to be used for the required resources – moving the server across subscriptions later requires a new setup of TDE with BYOKs.
-- When configuring TDE with BYOK, it is important to consider the load placed on the key vault by repeated wrap/unwrap operations. For example, since all databases associated with a logical server use the same TDE protector, a failover of that server will trigger as many key operations against the vault as there are databases in the server. Based on our experience and documented [key vault service limits](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits), we recommend associating at most 500 Standard or 200 Premium databases with one Azure Key Vault in a single subscription to ensure consistently high availability when accessing the TDE protector in the vault. 
+- When configuring TDE with BYOK, it is important to consider the load placed on the key vault by repeated wrap/unwrap operations. For example, since all databases associated with a logical server use the same TDE protector, a failover of that server will trigger as many key operations against the vault as there are databases in the server. Based on our experience and documented [key vault service limits](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits), we recommend associating at most 500 Standard / General Purpose or 200 Premium / Business Critical databases with one Azure Key Vault in a single subscription to ensure consistently high availability when accessing the TDE protector in the vault. 
 - Recommended: Keep a copy of the TDE protector on premises.  This requires an HSM device to create a TDE Protector locally and a key escrow system to store a local copy of the TDE Protector.
 
 

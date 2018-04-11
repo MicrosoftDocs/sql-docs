@@ -13,11 +13,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
-ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
+ms.author: "heidist"
+author: "HeidiSteen"
+manager: "cgronlun"
 ms.workload: "Inactive"
 ---
 # Data science scenarios and solution templates
@@ -37,7 +35,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 
 ## Fraud detection
 
-[Online fraud detection template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Online fraud detection template (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **What:** The ability to detect fraudulent transactions is important for online businesses. To reduce charge-back losses, businesses need to quickly identify transactions that were made using stolen payment instruments or credentials. When fraudulent transactions are discovered, businesses typically take measures to block certain accounts as soon as possible, to prevent further losses. In this scenario, you learn how to use data from online purchase transactions to identify likely fraud.
 

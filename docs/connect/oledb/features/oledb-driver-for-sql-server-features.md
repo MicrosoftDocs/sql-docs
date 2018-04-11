@@ -10,7 +10,7 @@ ms.component: "oledb|features"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 
-  - "docset-sql-devref"
+  - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -24,6 +24,8 @@ ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In addition to exposing features of the Windows (formerly Microsoft) Data Access Components (WDAC), OLE DB Driver for SQL Server also implements many other features to expose [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] functionality.  
   
@@ -95,7 +97,7 @@ ms.workload: "On Demand"
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
   
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../../oledb/oledb-driver-for-sql-server-programming.md)      
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

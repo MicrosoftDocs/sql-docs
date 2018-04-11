@@ -138,8 +138,8 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
  [AMO Fundamental Classes](../../dev-guide/amo-fundamental-classes.md)   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [AMO Data Mining Classes](amo-data-mining-classes.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

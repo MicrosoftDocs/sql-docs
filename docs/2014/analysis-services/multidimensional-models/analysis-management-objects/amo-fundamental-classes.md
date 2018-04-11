@@ -67,7 +67,7 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)  
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [Programming AMO Fundamental Objects](programming-amo-fundamental-objects.md)  
   
   

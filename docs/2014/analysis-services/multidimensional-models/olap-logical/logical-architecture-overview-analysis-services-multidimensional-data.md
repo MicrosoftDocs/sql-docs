@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Example  
  The Imports cube contains two measures, Packages and Last, and three related dimensions, Route, Source, and Time.  
   
- ![Cube Example 1](../../../2014/analysis-services/dev-guide/../media/cubeintro1.gif "Cube Example 1")  
+ ![Cube Example 1](../../../2014/analysis-services/dev-guide/media/cubeintro1.gif "Cube Example 1")  
   
  The smaller alphanumeric values around the cube are the members of the dimensions. Example members are ground (member of the Route dimension), Africa (member of the Source dimension), and 1st quarter (member of the Time dimension).  
   
@@ -73,7 +73,7 @@ manager: "mblythe"
 ### Aggregates  
  Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierachy in the Time dimension as illustrated in the following diagram.  
   
- ![Diagram of measures organized along time dimension](../../../2014/analysis-services/dev-guide/../media/cubeintro2.gif "Diagram of measures organized along time dimension")  
+ ![Diagram of measures organized along time dimension](../../../2014/analysis-services/dev-guide/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
   
  In addition to aggregating measures by using a single dimension, you can aggregate measures by using combinations of members from different dimensions. This allows business users to evaluate measures in multiple dimensions simultaneously. For example, if a business user wants to analyze quarterly imports that arrived by air from the Eastern Hemisphere and Western Hemisphere, the business user can issue a query on the cube to retrieve the following dataset.  
   
@@ -88,7 +88,7 @@ manager: "mblythe"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- After a cube is defined, you can create new aggregations, or you can change existing aggregations to set options such as whether aggregations are precalculated during processing or calculated at query time. **Related topic:**[Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ After a cube is defined, you can create new aggregations, or you can change existing aggregations to set options such as whether aggregations are precalculated during processing or calculated at query time. **Related topic:**[Aggregations and Aggregation Designs](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### Mapping Measures, Attributes, and Hierarchies  
  The measures, attributes, and hierarchies in the example cube are derived from the following columns in the cube's fact and dimension tables.  
@@ -118,11 +118,11 @@ manager: "mblythe"
   
  In the preceding table, each row has the same values for the **RouteKey**, **SourceKey**, and **TimeKey** columns, indicating that these rows contribute to the same cube cell.  
   
- The example shown here represents a very simple cube, in that the cube has a single measure group, and all the dimension tables are joined to the fact table in a star schema. Another common schema is a snowflake schema, in which one or more dimension tables join to another dimension table, rather than joining directly to the fact table. **Related topic:**[Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ The example shown here represents a very simple cube, in that the cube has a single measure group, and all the dimension tables are joined to the fact table in a star schema. Another common schema is a snowflake schema, in which one or more dimension tables join to another dimension table, rather than joining directly to the fact table. **Related topic:**[Dimensions &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- The example shown here contains only a single fact table. When a cube has multiple fact tables, the measures from each fact table are organized into measure groups, and a measure group is related to a specific set of dimensions by defined dimension relationships. These relationships are defined by specifying the participating tables in the data source view and the granularity of the relationship. **Related topic:**[Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ The example shown here contains only a single fact table. When a cube has multiple fact tables, the measures from each fact table are organized into measure groups, and a measure group is related to a specific set of dimensions by defined dimension relationships. These relationships are defined by specifying the participating tables in the data source view and the granularity of the relationship. **Related topic:**[Dimension Relationships](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## See Also  
- [Multidimensional Model Databases &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

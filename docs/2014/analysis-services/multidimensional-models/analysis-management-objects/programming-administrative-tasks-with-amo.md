@@ -36,7 +36,7 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

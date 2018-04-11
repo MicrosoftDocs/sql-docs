@@ -23,7 +23,7 @@ manager: "mblythe"
 # AMO Data Mining Classes
   Data mining classes help you create, modify, delete, and process data mining objects. Working with data mining objects includes creating data mining structures, creating data mining models, and processing the models.  
   
- For more information about how to set up the environment, and about <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, and <xref:Microsoft.AnalysisServices.DataSourceView> objects, see [AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
+ For more information about how to set up the environment, and about <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>, and <xref:Microsoft.AnalysisServices.DataSourceView> objects, see [AMO Fundamental Classes](amo-fundamental-classes.md).  
   
  Defining objects in Analysis Management Objects (AMO) requires setting a number of properties on each object to set up the correct context. Complex objects, such as OLAP and data mining objects, require lengthy and detailed coding.  
   
@@ -103,9 +103,9 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [Programming AMO Data Mining Objects](../multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
+ [AMO Fundamental Classes](amo-fundamental-classes.md)   
+ [Programming AMO Data Mining Objects](programming-amo-data-mining-objects.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

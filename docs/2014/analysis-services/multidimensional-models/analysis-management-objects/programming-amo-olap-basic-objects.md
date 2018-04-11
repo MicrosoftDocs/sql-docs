@@ -562,8 +562,8 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [AMO OLAP Classes](../multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [AMO OLAP Classes](amo-olap-classes.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md)  

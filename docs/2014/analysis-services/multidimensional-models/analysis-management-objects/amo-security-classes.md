@@ -46,9 +46,9 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Programming AMO Security Objects](../multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
+ [Programming AMO Security Objects](programming-amo-security-objects.md)   
  [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

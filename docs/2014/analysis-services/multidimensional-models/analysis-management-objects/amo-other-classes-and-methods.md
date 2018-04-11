@@ -147,7 +147,7 @@ manager: "mblythe"
 6.  Continue with your application.  
   
 ##  <a name="CaptureLog"></a> CaptureLog Class and CaptureXML Attribute  
- All actions to be executed by AMO are sent to the server as XMLA messages. AMO provides the means to capture all these messages without the SOAP headers. For more information, see [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md). CaptureLog is the mechanism in AMO for scripting out objects and operations; objects and operations will be scripted in XMLA.  
+ All actions to be executed by AMO are sent to the server as XMLA messages. AMO provides the means to capture all these messages without the SOAP headers. For more information, see [Introducing AMO Classes](amo-classes-introduction.md). CaptureLog is the mechanism in AMO for scripting out objects and operations; objects and operations will be scripted in XMLA.  
   
  To start capturing the XML, the CaptureXML server object property needs to be set to `true`. Then all actions that are to be sent to the server will start being captured in the CaptureLog class, without the actions being sent to the server. CaptureLog is considered a class because it has a method, Clear, which is used to clear the capture log.  
   
@@ -168,7 +168,7 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

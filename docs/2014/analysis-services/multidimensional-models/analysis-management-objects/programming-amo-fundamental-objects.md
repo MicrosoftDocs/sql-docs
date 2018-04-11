@@ -552,8 +552,8 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [AMO Fundamental Classes](amo-fundamental-classes.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

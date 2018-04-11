@@ -71,11 +71,11 @@ manager: "mblythe"
   
 |Class Set|Purpose|  
 |---------------|-------------|  
-|[AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Classes required in order to work with any other set of classes.|  
-|[AMO OLAP Classes](../multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[AMO Data Mining Classes](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[AMO Security Classes](../multidimensional-models/analysis-management-objects/amo-security-classes.md)|Classes that let you control access to other objects and maintain security.|  
-|[AMO Other Classes and Methods](../multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Classes and methods that help OLAP or data mining administrators to complete their daily tasks.|  
+|[AMO Fundamental Classes](amo-fundamental-classes.md)|Classes required in order to work with any other set of classes.|  
+|[AMO OLAP Classes](amo-olap-classes.md)|Classes that let you manage the OLAP objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[AMO Data Mining Classes](amo-data-mining-classes.md)|Classes that let you manage the data mining objects in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[AMO Security Classes](amo-security-classes.md)|Classes that let you control access to other objects and maintain security.|  
+|[AMO Other Classes and Methods](amo-other-classes-and-methods.md)|Classes and methods that help OLAP or data mining administrators to complete their daily tasks.|  
   
 ##  <a name="bkmk_UsingAMO"></a> Using AMO  
  AMO is especially useful for automating repetitive tasks, for example creating new partitions in a measure group based on new data in the fact table, or re-training a mining model based on new data. These tasks that create new objects are usually performed on a monthly, weekly, or quarterly basis, and the new objects can easily be named, based in the new data, by the application.  

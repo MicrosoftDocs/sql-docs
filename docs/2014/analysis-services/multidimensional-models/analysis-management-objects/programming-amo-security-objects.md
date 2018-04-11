@@ -139,8 +139,8 @@ static public void CreateRolesAndPermissions(Database db, Cube cube)
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Programming AMO Security objects](../multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [Programming AMO Security objects](programming-amo-security-objects.md)   
  [Permissions and Access Rights &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/ms174786(v=sql.120).aspx)   
  [Securing the Analysis Services Instance](https://technet.microsoft.com/library/ms175663\(v=sql.110\).aspx)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   

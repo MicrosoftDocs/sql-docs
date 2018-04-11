@@ -23,7 +23,7 @@ manager: "mblythe"
 # AMO OLAP Classes
   Analysis Management Objects (AMO) OLAP classes help you create, modify, delete, and process cubes, dimensions, and related objects such as Key Performance Indicators (KPIs), actions, and proactive caching.  
   
- For more information about setting up the AMO programming environment, how to establish a connection with a server, accessing a database or defining data sources and data source views, see [AMO Fundamental Classes](../multidimensional-models/analysis-management-objects/amo-fundamental-classes.md).  
+ For more information about setting up the AMO programming environment, how to establish a connection with a server, accessing a database or defining data sources and data source views, see [AMO Fundamental Classes](amo-fundamental-classes.md).  
   
  This topic contains the following sections:  
   
@@ -155,9 +155,9 @@ manager: "mblythe"
   
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
- [Introducing AMO Classes](../multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Programming AMO OLAP Basic Objects](../multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)   
- [Programming AMO OLAP Advanced Objects](../multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)   
+ [Introducing AMO Classes](amo-classes-introduction.md)   
+ [Programming AMO OLAP Basic Objects](programming-amo-olap-basic-objects.md)   
+ [Programming AMO OLAP Advanced Objects](programming-amo-olap-advanced-objects.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

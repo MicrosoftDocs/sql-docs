@@ -1,23 +1,15 @@
 ---
-title: "Create a local package repository using miniCRAN | Microsoft Docs"
-titleSuffix: "SQL Server"
-ms.custom: ""
-ms.date: "02/20/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Create a local R package repository using miniCRAN (SQL Server Machine Learning) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Create a local package repository using miniCRAN
+# Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)  package was created by Andre de Vries to support these common scenarios: 

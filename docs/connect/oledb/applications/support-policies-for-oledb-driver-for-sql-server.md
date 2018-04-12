@@ -21,6 +21,8 @@ ms.workload: "On Demand"
 # Support Policies for OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   This article discusses how various data-access components can be used with OLE DB Driver for SQL Server.  
 
 ## Server Support  

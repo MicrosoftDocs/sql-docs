@@ -25,6 +25,8 @@ ms.workload: "Inactive"
 # Components of OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   OLE DB Driver for SQL Server contains the following components:  
 
 |Component|Description|  

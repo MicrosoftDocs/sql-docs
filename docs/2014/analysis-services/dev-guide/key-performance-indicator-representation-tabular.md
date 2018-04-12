@@ -83,8 +83,8 @@ private void addStaticKPI(object sender, EventArgs e)
     }  
   
     //Set working variables  
-    string kpiTableName = ((DataRowView)MeasuresInModelList.CheckedItems[0])[0].ToString();  
-    string kpiMeasureName = ((DataRowView)MeasuresInModelList.CheckedItems[0])[1].ToString();  
+    string kpiTableName = (DataRowView)MeasuresInModelList.CheckedItems[0])[0].ToString();  
+    string kpiMeasureName = (DataRowView)MeasuresInModelList.CheckedItems[0])[1].ToString();  
   
     //Verify if KPI is already defined  
     if (modelCube.MdxScripts["MdxScript"].CalculationProperties.Contains(string.Format("KPIs.[{0}]", kpiMeasureName)))  
@@ -109,7 +109,7 @@ private void addStaticKPI(object sender, EventArgs e)
     }  
     else  
     {//Measure KPI Goal selected  
-        string measureGoalMeasureName = ((DataRowView)KpiTargetMeasures.CheckedItems[0])[1].ToString();  
+        string measureGoalMeasureName = (DataRowView)KpiTargetMeasures.CheckedItems[0])[1].ToString();  
         goalExpression = string.Format("[Measures].[{0}]", measureGoalMeasureName);  
     }  
   
@@ -123,7 +123,7 @@ private void addStaticKPI(object sender, EventArgs e)
     }  
     else  
     {//Measure KPI Goal selected  
-        string measureGoalMeasureName = ((DataRowView)KpiTargetMeasures.CheckedItems[0])[1].ToString().Trim();  
+        string measureGoalMeasureName = (DataRowView)KpiTargetMeasures.CheckedItems[0])[1].ToString().Trim();  
   
         string M = string.Format("[Measures].[{0}]", kpiMeasureName);  
         string T = string.Format("[Measures].[{0}]", measureGoalMeasureName);  

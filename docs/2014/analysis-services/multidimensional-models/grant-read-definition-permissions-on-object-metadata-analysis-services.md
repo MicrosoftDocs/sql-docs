@@ -57,7 +57,7 @@ manager: "mblythe"
 5.  Click **OK** to finish creating the role.  
   
 ## See Also  
- [Grant database permissions &#40;Analysis Services&#41;](../grant-database-permissions-analysis-services.md)   
+ [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
  [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

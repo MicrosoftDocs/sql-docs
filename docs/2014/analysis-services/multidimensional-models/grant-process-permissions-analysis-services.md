@@ -90,7 +90,7 @@ manager: "mblythe"
 ## See Also  
  [Process Database, Table, or Partition](../process-database-table-or-partition.md)   
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)   
- [Grant database permissions &#40;Analysis Services&#41;](../grant-database-permissions-analysis-services.md)   
+ [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
  [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

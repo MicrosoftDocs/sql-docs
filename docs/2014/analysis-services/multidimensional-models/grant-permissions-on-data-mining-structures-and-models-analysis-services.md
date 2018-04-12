@@ -36,7 +36,7 @@ manager: "mblythe"
   
 3.  Right-click **Roles** and choose **New Role**.  
   
-4.  In the General page, enter a name, and optionally, a description. The page also contains several database permissions, such as Full Control, Process Database, and Read Definition. None of these permissions are needed for data mining access. See [Grant database permissions &#40;Analysis Services&#41;](../grant-database-permissions-analysis-services.md) for more information about database permissions.  
+4.  In the General page, enter a name, and optionally, a description. The page also contains several database permissions, such as Full Control, Process Database, and Read Definition. None of these permissions are needed for data mining access. See [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) for more information about database permissions.  
   
 5.  In the **Mining Structure** pane, select **Read** or **Read/Write**  for each data mining structure.  
   

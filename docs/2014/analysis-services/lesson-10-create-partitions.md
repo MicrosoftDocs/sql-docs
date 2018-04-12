@@ -70,7 +70,7 @@ manager: "jhubbard"
     [dbo].[FactInternetSales].[DueDate],  
     [dbo].[FactInternetSales].[ShipDate]   
     FROM [dbo].[FactInternetSales]  
-    WHERE (([OrderDate] >= N'2005-01-01 00:00:00') AND ([OrderDate] < N'2006-01-01 00:00:00'))  
+    WHERE ([OrderDate] >= N'2005-01-01 00:00:00') AND ([OrderDate] < N'2006-01-01 00:00:00'))  
     ```  
   
      This statement specifies the partition should include all of the data in those rows where the OrderDate is for the 2005 calendar year as specified in the WHERE clause.  
@@ -88,7 +88,7 @@ manager: "jhubbard"
 3.  In the SQL Statement, in-order for the partition to include only those rows for the 2006 year, replace the WHERE clause with the following:  
   
     ```  
-    WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
+    WHERE ([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
 #### To create a partition for the 2007 year in the Internet Sales table  
@@ -102,7 +102,7 @@ manager: "jhubbard"
 4.  In the SQL Statement, in-order for the partition to include only those rows for the 2007 year, replace the WHERE clause with the following:  
   
     ```  
-    WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
+    WHERE ([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
 #### To create a partition for the 2008 year in the Internet Sales table  
@@ -116,7 +116,7 @@ manager: "jhubbard"
 4.  In the SQL Statement, in-order for the partition to include only those rows for the 2008 year, replace the WHERE clause with the following:  
   
     ```  
-    WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
+    WHERE ([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
     ```  
   
 #### To create a partition for the 2009 year in the Internet Sales table  
@@ -130,7 +130,7 @@ manager: "jhubbard"
 4.  In the SQL Statement, in-order for the partition to include only those rows for the 2009 year, replace the WHERE clause with the following:  
   
     ```  
-    WHERE (([OrderDate] >= N'2009-01-01 00:00:00') AND ([OrderDate] < N'2010-01-01 00:00:00'))  
+    WHERE ([OrderDate] >= N'2009-01-01 00:00:00') AND ([OrderDate] < N'2010-01-01 00:00:00'))  
     ```  
   
 ## Process Partitions  

@@ -25,11 +25,11 @@ manager: "mblythe"
 # Grant permissions on a dimension (Analysis Services)
   Dimension security is used to set permissions on a dimension object, not its data. Typically, allowing or denying access to processing operations is the main objective when setting permissions on a dimension.  
   
- But perhaps your objective is not to control processing operations, but rather data access to a dimension, or the attributes and hierarchies it contains. For example, a company with regional sales divisions might want to make sales performance information off limits to those outside the division. To allow or deny access to portions of dimension data for different constituents, you can set permissions on dimension attributes and dimension members. Notice that you cannot deny access to an individual dimension object itself, only to its data. If your immediate goal is to allow or deny access to members in a dimension, including access rights to individual attribute hierarchies, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../grant-custom-access-to-dimension-data-analysis-services.md) for more information.  
+ But perhaps your objective is not to control processing operations, but rather data access to a dimension, or the attributes and hierarchies it contains. For example, a company with regional sales divisions might want to make sales performance information off limits to those outside the division. To allow or deny access to portions of dimension data for different constituents, you can set permissions on dimension attributes and dimension members. Notice that you cannot deny access to an individual dimension object itself, only to its data. If your immediate goal is to allow or deny access to members in a dimension, including access rights to individual attribute hierarchies, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) for more information.  
   
  The remainder of this topic covers permissions that you can set on the dimension object itself, including:  
   
--   Read or Read/Write permissions (you can only choose from Read or Read/Write; specifying "none" is not an option). As noted, if your goal is to restrict access to dimension data, see [Grant custom access to dimension data &#40;Analysis Services&#41;](../grant-custom-access-to-dimension-data-analysis-services.md) for details.  
+-   Read or Read/Write permissions (you can only choose from Read or Read/Write; specifying "none" is not an option). As noted, if your goal is to restrict access to dimension data, see [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) for details.  
   
 -   Processing permissions (do this when scenarios require a processing strategy that calls for custom permissions on individual objects)  
   
@@ -69,7 +69,7 @@ manager: "mblythe"
  [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Grant permissions on data mining structures and models &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Grant custom access to dimension data &#40;Analysis Services&#41;](../grant-custom-access-to-dimension-data-analysis-services.md)   
- [Grant custom access to cell data &#40;Analysis Services&#41;](../grant-custom-access-to-cell-data-analysis-services.md)  
+ [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

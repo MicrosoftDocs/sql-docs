@@ -45,7 +45,7 @@ CREATE [SESSION] MEMBER [<cube-name>.]<fully-qualified-member-name> AS <expressi
   
 ```  
 Create Session Member [Store].[Measures].LastFourStores as   
-sum(([Stores].[ByLocation].Lag(3) :  
+sum([Stores].[ByLocation].Lag(3) :  
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   

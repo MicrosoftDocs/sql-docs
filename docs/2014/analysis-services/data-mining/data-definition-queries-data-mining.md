@@ -51,7 +51,7 @@ manager: "mblythe"
   
 -   Create specific types of models, such as a clustering model or decision tree model, by using [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
   
--   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
+-   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
   
 -   Make a copy of a mining model and then alter it, by using [SELECT INTO &#40;DMX&#41;](~/dmx/select-into-dmx.md).  
   

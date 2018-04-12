@@ -66,7 +66,7 @@ private void addHierarchy(
             //  must come with: The columnId of the attribute in the dimension --> this represents the SourceAttributeID  
             //  optional: A display name for the Level (if this argument doesn't come the default is the SourceAttributeID)  
             string line;  
-            while ((line = levels.ReadLine()) != null)  
+            while (line = levels.ReadLine()) != null)  
             {  
                 if (string.IsNullOrEmpty(line) || string.IsNullOrWhiteSpace(line)) continue;  
                 line = line.Trim();  

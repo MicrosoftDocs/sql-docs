@@ -35,7 +35,7 @@ manager: "mblythe"
   
 3.  Type a rule condition into the **Filter Rule** box. For example, a rule condition might be "Bike Stand", which also returns "Bike Stands".  
   
-     The **Filter Rule** text box supports regular expressions as defined by the .NET language. Therefore, you can use expressions such as the following: `((.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`. This expression would return any itemsets that include attributes with the words Helmets and Fenders, in any order.  
+     The **Filter Rule** text box supports regular expressions as defined by the .NET language. Therefore, you can use expressions such as the following: `(.Helmets.*Fenders.*)|(.*Fenders.*Helmets.*))`. This expression would return any itemsets that include attributes with the words Helmets and Fenders, in any order.  
   
 4.  For **Minimum probability**, increase the value of probability to see fewer rules, or decrease the value to see more rules.  
   

@@ -36,7 +36,7 @@ manager: "mblythe"
   
 -   [Authorizing access to objects and operations &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Grant database permissions &#40;Analysis Services&#41;](../grant-database-permissions-analysis-services.md)  
+-   [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
 -   [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
@@ -50,9 +50,9 @@ manager: "mblythe"
   
 -   [Grant permissions on a dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Grant custom access to dimension data &#40;Analysis Services&#41;](../grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Grant custom access to dimension data &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Grant custom access to cell data &#40;Analysis Services&#41;](../grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
  [Create and Manage Roles &#40;SSAS Tabular&#41;](../create-and-manage-roles-ssas-tabular.md)  

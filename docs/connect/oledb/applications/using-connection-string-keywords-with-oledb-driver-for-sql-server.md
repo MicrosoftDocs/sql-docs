@@ -28,6 +28,8 @@ ms.workload: "Active"
 # Using Connection String Keywords with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   Some OLE DB Driver for SQL Server APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  
   
 > **NOTE:** OLE DB Driver for SQL Server allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). Future releases of OLE DB Driver for SQL Server might not allow ambiguity in connection strings. It is good practice when modifying applications to use OLE DB Driver for SQL Server to eliminate any dependency on connection string ambiguity.  

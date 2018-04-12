@@ -23,6 +23,8 @@ ms.workload: "Inactive"
 # Updating an Application from SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   This topic discusses the breaking changes in OLE DB Driver for SQL Server since [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
  When you upgrade from Microsoft Data Access Components (MDAC) to OLE DB Driver for SQL Server, you might also see some behavior differences. For more information, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  

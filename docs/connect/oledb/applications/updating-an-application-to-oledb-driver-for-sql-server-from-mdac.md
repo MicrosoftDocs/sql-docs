@@ -27,6 +27,8 @@ ms.workload: "Inactive"
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   There are a number of differences between OLE DB Driver for SQL Server and Microsoft Data Access Components (MDAC); starting with Windows Vista, the data access components are now called Windows Data Access Components (or Windows DAC). Although both provide native data access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases, OLE DB Driver for SQL Server has been specifically designed to expose the new features of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], while at the same time maintaining backward compatibility with earlier versions.   
 
  In addition, although MDAC contains components for using OLE DB, ODBC, and ActiveX Data Objects (ADO), OLE DB Driver for SQL Server only implements OLE DB (although ADO can access the functionality of OLE DB Driver for SQL Server).  

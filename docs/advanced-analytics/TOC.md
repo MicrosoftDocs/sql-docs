@@ -114,7 +114,8 @@
 ### [How to perform real-time or native scoring](r/how-to-do-realtime-scoring.md)
 ### [Load R objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
-### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Create multiple small models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Create partition-based models](r/create-models-per-partition.md)
 ### [Use data from OLAP cubes in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Create a stored procedure using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 

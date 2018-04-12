@@ -1,6 +1,6 @@
 ---
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
-ms.date: "03/19/2018"
+ms.date: "04/12/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
@@ -32,7 +32,7 @@ There are two main workflows you can use to contribute:
 
 ## <a id="githubui"></a> Edit in your browser
 
-The following steps provide an overview of making simple edits to SQL Server content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/contribute/light-workflow).
+The following steps provide an overview of making simple edits to SQL Server content in your browser. The complete process is documented in the article, [GitHub contribution workflow for minor or infrequent changes](https://docs.microsoft.com/contribute/light-workflow).
 
 1. Every article, including this one, has an **Edit** button on the right. Find an article you want to change, and click the **Edit** button to get started.
 
@@ -45,7 +45,7 @@ The following steps provide an overview of making simple edits to SQL Server con
    ![Edit button](./media/sql-server-docs-contribute/edit-button.png)
 
    > [!NOTE]
-   > You must be signed in to GitHub to edit an article. If you do not have a GitHub account, see [GitHub account setup](https://docs.microsoft.com/contribute/contribute/get-started-setup-github). After creating a new account, you must also verify your email address with GitHub before you can edit.
+   > You must be signed in to GitHub to edit an article. If you do not have a GitHub account, see [GitHub account setup](https://docs.microsoft.com/contribute/get-started-setup-github). After creating a new account, you must also verify your email address with GitHub before you can edit.
 
 1. Edit the article in the browser. All of the articles are written in Markdown. If you need help with Markdown, you can review [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/). You can also learn by observing how published articles render existing Markdown.
 
@@ -61,7 +61,7 @@ The following steps provide an overview of making simple edits to SQL Server con
 
    ![Create pull request](./media/sql-server-docs-contribute/create-pull-request2.png)
 
-At this point, you should be guided through the rest of the process in the comments of the pull request. The complete process and additional details can be found in the [contributor guide](https://docs.microsoft.com/contribute/contribute/light-workflow).
+At this point, you should be guided through the rest of the process in the comments of the pull request. The complete process and additional details can be found in the [contributor guide](https://docs.microsoft.com/contribute/light-workflow).
 
 ## <a id="tools"></a> Edit locally with tools
 
@@ -69,10 +69,10 @@ Another editing option is to fork the **sql-docs** or **azure-docs** repositorie
 
 To contribute with this method, see the following articles:
 
-- [Create a GitHub account](https://docs.microsoft.com/contribute/contribute/get-started-setup-github)
-- [Install content authoring tools](https://docs.microsoft.com/contribute/contribute/get-started-setup-tools)
-- [Set up a Git repository locally](https://docs.microsoft.com/contribute/contribute/get-started-setup-local)
-- [Use tools to contribute](https://docs.microsoft.com/contribute/contribute/full-workflow)
+- [Create a GitHub account](https://docs.microsoft.com/contribute/get-started-setup-github)
+- [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools)
+- [Set up a Git repository locally](https://docs.microsoft.com/contribute/get-started-setup-local)
+- [Use tools to contribute](https://docs.microsoft.com/contribute/full-workflow)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
 

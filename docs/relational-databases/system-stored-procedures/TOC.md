@@ -240,6 +240,10 @@
 ## [sp_tables_ex](sp-tables-ex-transact-sql.md)  
 ## [sp_testlinkedserver](sp-testlinkedserver-transact-sql.md)  
 
+# [Filestream and Filetable](filestream-and-filetable-system-stored-procedures.md)
+## [sp_filestream_force_garbage_collection](filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+## [sp_kill_filestream_non_transacted_handles](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) 
+
 # [Firewall Rules (Azure SQL Database)](firewall-rules-stored-procedures-azure-sql-database.md)  
 ## [sp_set_firewall_rule (Azure SQL Database)](sp-set-firewall-rule-azure-sql-database.md)  
 ## [sp_set_database_firewall_rule (Azure SQL Database)](sp-set-database-firewall-rule-azure-sql-database.md)  
@@ -266,9 +270,7 @@
 ## [sp_help_fulltext_tables](sp-help-fulltext-tables-transact-sql.md)  
 ## [sp_help_fulltext_tables_cursor](sp-help-fulltext-tables-cursor-transact-sql.md)  
 
-# Filestream and Filetable
-## [sp_filestream_force_garbage_collection](filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
-## [sp_kill_filestream_non_transacted_handles](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)  
+ 
 
 # [General Extended](general-extended-stored-procedures-transact-sql.md)  
 ## [xp_cmdshell](xp-cmdshell-transact-sql.md)  

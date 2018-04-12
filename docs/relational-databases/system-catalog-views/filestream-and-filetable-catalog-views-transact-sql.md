@@ -36,8 +36,6 @@ ms.workload: "Inactive"
   
  [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
  Returns a row for each FileTable. Inherits from **sys.tables**.  
-  
- For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
 
 ## See Also
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)

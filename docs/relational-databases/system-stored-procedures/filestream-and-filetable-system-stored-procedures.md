@@ -29,9 +29,11 @@ ms.workload: "Inactive"
   This section describes the system stored procedures to the FileTable and Filestreamfeature.  
 
   [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
+
    Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.
 
   [sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+
   Closes non-transactional file handles to FileTable data.
 
 

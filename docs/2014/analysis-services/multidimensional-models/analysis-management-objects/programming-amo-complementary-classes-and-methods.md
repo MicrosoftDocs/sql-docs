@@ -79,10 +79,10 @@ static public void CreateStoredProcedures(Database db)
 static public void BackUpAllDatabases(Server svr)  
 {  
     string fileName;  
-    if (svr != null) && ( svr.Connected))  
+    if ((svr != null) && ( svr.Connected))  
         foreach (Database db in svr.Databases)  
         {  
-            fileName = db.Name + "_" + (Int64)(DateTime.Today.Year * 10000 + DateTime.Today.Month * 100 + DateTime.Today.Day)).ToString()+ ".abf";  
+            fileName = db.Name + "_" + ((Int64)(DateTime.Today.Year * 10000 + DateTime.Today.Month * 100 + DateTime.Today.Day)).ToString()+ ".abf";  
             db.Backup(fileName, true);  
         }  
 }  
@@ -178,8 +178,8 @@ static public void TestServerTraces(Server svr)
         if (trc != null)  
             trc.Drop();  
         trc = svr.Traces.Add("TestServerTraces", "TestServerTraces");  
-        trc.LogFileName = ("TestServerTraces_" +(Int64)(DateTime.Now.Year * 10000 + DateTime.Now.Month * 100 + DateTime.Now.Day)).ToString() + "_" +  
-                (Int64)(DateTime.Now.Hour * 10000 + DateTime.Now.Minute * 100 + DateTime.Now.Second)).ToString() + ".trc");  
+        trc.LogFileName = ("TestServerTraces_" +((Int64)(DateTime.Now.Year * 10000 + DateTime.Now.Month * 100 + DateTime.Now.Day)).ToString() + "_" +  
+                ((Int64)(DateTime.Now.Hour * 10000 + DateTime.Now.Minute * 100 + DateTime.Now.Second)).ToString() + ".trc");  
         trc.LogFileSize = 100;  
         trc.LogFileRollover = true;  
         trc.AutoRestart = false;  
@@ -251,7 +251,7 @@ static public void TestServerTraces(Server svr)
 static public string TestCaptureLog(Server svr)  
 {  
     String capturedXmla = "";  
-    if (svr != null) && (svr.Connected))  
+    if ((svr != null) && (svr.Connected))  
     {  
         svr.CaptureXml = true;  
   

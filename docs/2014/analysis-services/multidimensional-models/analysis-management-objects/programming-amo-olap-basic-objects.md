@@ -148,7 +148,7 @@ static void CreateProductDimension(Database db, string datasourceName)
   
 static DataItem CreateDataItem(DataSourceView dsv, string tableName, string columnName)  
 {  
-    DataTable dataTable = (DataSourceView)dsv).Schema.Tables[tableName];  
+    DataTable dataTable = ((DataSourceView)dsv).Schema.Tables[tableName];  
     DataColumn dataColumn = dataTable.Columns[columnName];  
     return new DataItem(tableName, columnName,  
         OleDbTypeConverter.GetRestrictedOleDbType(dataColumn.DataType));  
@@ -546,7 +546,7 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
     ad = mg.AggregationDesigns.Add();  
     ad.Name = aggDesignName;  
     ad.InitializeDesign();  
-    while (!finished) && (optimization < optimizationWanted) && (storage < maxStorageBytes))  
+    while ((!finished) && (optimization < optimizationWanted) && (storage < maxStorageBytes))  
     {  
         ad.DesignAggregations(out optimization, out storage, out aggCount, out finished);  
     }  

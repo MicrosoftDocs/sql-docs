@@ -221,7 +221,7 @@ private Boolean CreateTable(
         {  
             foreach (AMO.DataItem di in ca.Attribute.KeyColumns)  
             {  
-                AMO.DataItem keyColumn = new AMO.DataItem(new AMO.ColumnBinding(tableID, (AMO.ColumnBinding)di.Source).ColumnID));  
+                AMO.DataItem keyColumn = new AMO.DataItem(new AMO.ColumnBinding(tableID, ((AMO.ColumnBinding)di.Source).ColumnID));  
                 keyColumn.DataType = di.DataType;  
                 keyColumn.NullProcessing = AMO.NullProcessing.Preserve;  
                 keyColumn.InvalidXmlCharacters = AMO.InvalidXmlCharacters.Remove;  

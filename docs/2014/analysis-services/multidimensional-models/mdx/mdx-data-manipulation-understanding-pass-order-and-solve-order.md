@@ -158,7 +158,7 @@ FROM [Adventure Works]
  The result in the shared cell is based on the formula for `Profit Margin`. That is, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calculates the result in the shared cell with the `Year Difference` data, producing the following formula (the result is rounded for clarity):  
   
 ```  
-(9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
+((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
  or  
@@ -198,7 +198,7 @@ FROM [Adventure Works]
  Because this query uses the `Year Difference` formula with the `Profit Margin` data, the formula for the shared cell resembles the following calculation:  
   
 ```  
-($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - (9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
+(($9,770,899.74 - 5,721,205.24) / $9,770,899.74) - ((9,791,060.30 - 5,718,327.17) / 9,791,060.30) = -0.15   
 ```  
   
  Or  

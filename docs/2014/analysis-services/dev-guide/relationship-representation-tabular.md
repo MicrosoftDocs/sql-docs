@@ -67,7 +67,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //   
     foreach (AMO.Relationship currentRelationship in tabularDb.Dimensions[MVTableName].Relationships)  
     {  
-        if (currentRelationship.FromRelationshipEnd.Attributes[0].AttributeID == MVColumnName)  
+        if ((currentRelationship.FromRelationshipEnd.Attributes[0].AttributeID == MVColumnName)  
             && (currentRelationship.ToRelationshipEnd.DimensionID == PKTableName)  
             && (currentRelationship.ToRelationshipEnd.Attributes[0].AttributeID == PKColumnName))  
         {  
@@ -179,7 +179,7 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
         //Find all 'unwanted' Key attributes, remove their Key definitions and include the attributes in the ["RowNumber"].AttributeRelationships  
         foreach (AMO.DimensionAttribute currentDimAttribute in tabularDb.Dimensions[PKTableName].Attributes)  
         {  
-            if (currentDimAttribute.Usage == AMO.AttributeUsage.Key) && (currentDimAttribute.ID != PKColumnName))  
+            if ((currentDimAttribute.Usage == AMO.AttributeUsage.Key) && (currentDimAttribute.ID != PKColumnName))  
             {  
                 currentDimAttribute.Usage = AMO.AttributeUsage.Regular;  
                 if (currentDimAttribute.ID != "RowNumber")  

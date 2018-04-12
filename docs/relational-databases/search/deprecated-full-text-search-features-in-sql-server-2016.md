@@ -2,7 +2,7 @@
 title: "Deprecated Full-Text Search Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "search"

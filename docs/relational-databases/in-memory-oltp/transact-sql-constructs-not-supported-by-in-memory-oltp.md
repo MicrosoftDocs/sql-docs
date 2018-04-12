@@ -2,7 +2,7 @@
 title: "Transact-SQL Constructs Not Supported by In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"

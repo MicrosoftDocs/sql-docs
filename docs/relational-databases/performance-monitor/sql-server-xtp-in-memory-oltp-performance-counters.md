@@ -2,7 +2,7 @@
 title: "SQL Server XTP (In-Memory OLTP) Performance Counters | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "performance-monitor"

@@ -2,7 +2,7 @@
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 07/10/2017
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""

@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[DataItem](../data-type/dataitem-data-type-assl.md), [Measure](measure-element-assl.md)|  
+|Parent element|[DataItem](../data-type/dataitem-data-type-assl.md), [Measure](../objects/measure-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

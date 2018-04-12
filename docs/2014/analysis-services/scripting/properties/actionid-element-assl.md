@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ActionID Element (ASSL)
-  Contains the name of an [Action](action-element-assl.md) element defined on a [Cube](../objects/cube-element-assl.md) element that is made available in a [Perspective](../objects/perspective-element-assl.md) element as a [PerspectiveAction](../data-type/action-data-type-assl.md) element.  
+  Contains the name of an [Action](../objects/action-element-assl.md) element defined on a [Cube](../objects/cube-element-assl.md) element that is made available in a [Perspective](../objects/perspective-element-assl.md) element as a [PerspectiveAction](../data-type/action-data-type-assl.md) element.  
   
 ## Syntax  
   

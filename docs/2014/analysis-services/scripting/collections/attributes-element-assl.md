@@ -54,7 +54,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[AggregationDesignDimension](../data-type/dimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/cubedimension-data-type-assl.md), [CubeDimension](cubedimension-data-type-assl.md), [Dimension](../objects/dimension-element-assl.md), [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
+|Parent elements|[AggregationDesignDimension](../data-type/dimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/cubedimension-data-type-assl.md), [CubeDimension](../data-types/cubedimension-data-type-assl.md), [Dimension](../objects/dimension-element-assl.md), [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
 |Child elements|[Attribute](../objects/attribute-element-assl.md)|  
   
 ## Remarks  

@@ -56,7 +56,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[AggregationInstances](../collections/aggregationinstances-element-assl.md)|  
-|Child elements|[AggregationID](../properties/id-element-assl.md), [AggregationType](../properties/aggregationtype-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Dimensions](dimensions-element-assl.md), [Measures](../collections/measures-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
+|Child elements|[AggregationID](../properties/id-element-assl.md), [AggregationType](../properties/aggregationtype-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [Measures](../collections/measures-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
   
 ## Remarks  
  When a [Partition](partition-element-assl.md) element uses an [AggregationDesign](aggregationdesign-element-assl.md) element to generate aggregations for that partition, each [Aggregation](aggregation-element-assl.md) in the `AggregationDesign` is instantiated for that partition. Multiple partitions can use the same aggregation design to generate multiple instances of a defined aggregation. The `AggregationInstance` element represents an instance of a defined aggregation.  

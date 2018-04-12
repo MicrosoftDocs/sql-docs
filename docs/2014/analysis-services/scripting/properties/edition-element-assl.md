@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Edition Element (ASSL)
-  Contains the read-only edition of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] represented by the [Server](server-element-assl.md) element.  
+  Contains the read-only edition of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] represented by the [Server](../objects/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Server](server-element-assl.md)|  
+|Parent elements|[Server](../objects/server-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

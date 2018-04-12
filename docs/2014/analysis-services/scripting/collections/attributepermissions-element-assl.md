@@ -61,7 +61,7 @@ manager: "mblythe"
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.AttributePermissionCollection>.  
   
 ## See Also  
- [Permission Data Type &#40;ASSL&#41;](permission-data-type-assl.md)   
+ [Permission Data Type &#40;ASSL&#41;](../data-types/permission-data-type-assl.md)   
  [Collections &#40;ASSL&#41;](collections-assl.md)  
   
   

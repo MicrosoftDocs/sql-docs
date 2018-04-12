@@ -55,7 +55,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Attribute](../objects/attribute-element-assl.md) of type [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Child elements|[NamingTemplateTranslation](../objects/translation-element-assl.md) of type [Translation](translation-element-assl.md)|  
+|Child elements|[NamingTemplateTranslation](../objects/translation-element-assl.md) of type [Translation](translations-element-assl.md)|  
   
 ## Remarks  
  The value of the `NamingTemplateTranslation` element is used only by parent attributes (in other words, the value of the [Usage](../properties/usage-element-dimensionattribute-assl.md) element of the parent `DimensionAttribute` is set to *Parent*.)  

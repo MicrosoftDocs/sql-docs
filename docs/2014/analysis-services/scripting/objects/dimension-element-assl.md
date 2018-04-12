@@ -71,7 +71,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Dimensions](dimensions-element-assl.md)|  
+|Parent elements|[Dimensions](../collections/dimensions-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

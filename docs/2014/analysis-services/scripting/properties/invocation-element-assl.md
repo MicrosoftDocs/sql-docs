@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Invocation Element (ASSL)
-  Specifies how an [Action](action-element-assl.md) should be invoked.  
+  Specifies how an [Action](../objects/action-element-assl.md) should be invoked.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Action](action-element-assl.md)|  
+|Parent element|[Action](../objects/action-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

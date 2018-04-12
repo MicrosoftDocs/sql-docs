@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[CalculationProperty](../objects/calculationproperty-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Measure](../objects/measure-element-assl.md), [Translation](../data-type/translation-element-assl.md)|  
+|Parent elements|[CalculationProperty](../objects/calculationproperty-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Measure](../objects/measure-element-assl.md), [Translation](../objects/translation-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

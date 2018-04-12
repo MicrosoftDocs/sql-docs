@@ -70,7 +70,7 @@ manager: "mblythe"
  [ComAssembly Data Type &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
  [Assemblies Element &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Database Element &#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Server Element &#40;ASSL&#41;](server-element-assl.md)   
+ [Server Element &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   
   

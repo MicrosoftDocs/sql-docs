@@ -40,7 +40,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[RelationshipEndTranslation](../data-type/translation-element-assl.md)|  
+|Parent elements|[RelationshipEndTranslation](../objects/translation-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

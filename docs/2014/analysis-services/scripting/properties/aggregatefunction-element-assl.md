@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # AggregateFunction Element (ASSL)
-  Defines the type of aggregate function used by a [Measure](measure-element-assl.md) element.  
+  Defines the type of aggregate function used by a [Measure](../objects/measure-element-assl.md) element.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Measure](measure-element-assl.md)|  
+|Parent elements|[Measure](../objects/measure-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

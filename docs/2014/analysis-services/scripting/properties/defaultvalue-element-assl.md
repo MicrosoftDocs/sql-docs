@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ## See Also  
  [ServerProperties Element &#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Server Element &#40;ASSL&#41;](server-element-assl.md)   
+ [Server Element &#40;ASSL&#41;](../objects/server-element-assl.md)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   
   

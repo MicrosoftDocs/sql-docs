@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ProductName Element (ASSL)
-  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that is associated with a [Server](server-element-assl.md) element.  
+  Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that is associated with a [Server](../objects/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Server](server-element-assl.md)|  
+|Parent element|[Server](../objects/server-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

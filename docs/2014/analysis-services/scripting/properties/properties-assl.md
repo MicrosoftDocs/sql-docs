@@ -113,9 +113,9 @@ manager: "mblythe"
 |[DisplayFlag Element &#40;ASSL&#41;](displayflag-element-assl.md)|Contains a read-only hint that indicates whether user interface components should display the associated `ServerProperty` element.|  
 |[DisplayFolder Element &#40;ASSL&#41;](displayfolder-element-assl.md)|Specifies the folder in which to list the parent element. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] applications for developers and administrators may support the use of display folders to categorize multiple elements visually.|  
 |[Distribution Element &#40;ASSL&#41;](distribution-element-assl.md)|Contains a provider-specific value that describes how scalar values are distributed within a column of a `MiningStructure` element.|  
-|[Edition Element &#40;ASSL&#41;](edition-element-assl.md)|Contains the read-only edition of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the [Server](server-element-assl.md) element.|  
+|[Edition Element &#40;ASSL&#41;](edition-element-assl.md)|Contains the read-only edition of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the [Server](../objects/server-element-assl.md) element.|  
 |[Enabled Element &#40;ASSL&#41;](enabled-element-assl.md)|Indicates whether the parent element is enabled.|  
-|[EndOfData Element &#40;ASSL&#41;](data-element-assl.md)|Indicates the end of data received from a [PushedDataSource](../data-type/datasource-data-type-assl.md) element.|  
+|[EndOfData Element &#40;ASSL&#41;](../objects/data-element-assl.md)|Indicates the end of data received from a [PushedDataSource](../data-type/datasource-data-type-assl.md) element.|  
 |[EstimatedCount Element &#40;ASSL&#41;](estimatedcount-element-assl.md)|Contains the estimated number of members for an attribute.|  
 |[EstimatedPerformanceGain Element &#40;ASSL&#41;](estimatedperformancegain-element-assl.md)|Contains the read-only percentage of estimated performance gain for the partition.|  
 |[EstimatedRows Element &#40;ASSL&#41;](estimatedrows-element-assl.md)|Contains the estimated number of rows represented by the parent element.|  

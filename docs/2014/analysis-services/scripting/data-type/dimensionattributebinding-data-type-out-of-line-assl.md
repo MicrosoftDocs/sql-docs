@@ -55,7 +55,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[AttributeID](../properties/id-element-assl.md), [DatabaseID](databaseid-element-xmla.md), [DimensionID](../properties/dimensionid-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [NameColumn](../objects/column-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
-|Derived elements|[Binding](binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](batch-element-xmla.md) and [Process](process-element-xmla.md) commands)|  
+|Derived elements|[Binding](../../dev-guide/binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](../../dev-guide/batch-element-xmla.md) and [Process](../../dev-guide/process-element-xmla.md) commands)|  
   
 ## Remarks  
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

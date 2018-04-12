@@ -61,7 +61,7 @@ manager: "mblythe"
  The element that corresponds to the parent of `AttributeAllMemberTranslations` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## See Also  
- [Translation Element &#40;ASSL&#41;](translation-element-assl.md)   
+ [Translation Element &#40;ASSL&#41;](translations-element-assl.md)   
  [Collections &#40;ASSL&#41;](collections-assl.md)  
   
   

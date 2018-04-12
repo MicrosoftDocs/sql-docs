@@ -51,14 +51,14 @@ manager: "mblythe"
   
 |Ancestor or Parent|Cardinality|  
 |------------------------|-----------------|  
-|[Translation](../data-type/translation-element-assl.md)|1-1: Required element that occurs once and only once.|  
+|[Translation](../objects/translation-element-assl.md)|1-1: Required element that occurs once and only once.|  
 |All others|0-1: Optional element that can occur once and only once.|  
   
 ## Element Relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Cube](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Translation](../data-type/translation-element-assl.md)|  
+|Parent elements|[Cube](../objects/cube-element-assl.md), [Database](../objects/database-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Translation](../objects/translation-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

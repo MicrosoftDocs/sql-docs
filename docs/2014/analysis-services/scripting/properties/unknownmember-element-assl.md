@@ -68,7 +68,7 @@ manager: "mblythe"
   
 ## See Also  
  [UnknownMemberName Element &#40;ASSL&#41;](name-element-assl.md)   
- [UnknownMemberTranslation Element &#40;ASSL&#41;](../data-type/translation-element-assl.md)   
+ [UnknownMemberTranslation Element &#40;ASSL&#41;](../objects/translation-element-assl.md)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   
   

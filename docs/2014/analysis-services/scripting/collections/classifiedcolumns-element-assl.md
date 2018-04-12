@@ -54,14 +54,14 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[MiningStructureColumn](miningstructurecolumn-data-type-assl.md) of type[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
+|Parent elements|[MiningStructureColumn](../data-types/miningstructurecolumn-data-type-assl.md) of type[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Child elements|[ClassifiedColumnID](../properties/id-element-assl.md)|  
   
 ## Remarks  
  The element that corresponds to the parent of `ClassifiedColumns` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## See Also  
- [MiningStructureColumn Data Type &#40;ASSL&#41;](miningstructurecolumn-data-type-assl.md)   
+ [MiningStructureColumn Data Type &#40;ASSL&#41;](../data-types/miningstructurecolumn-data-type-assl.md)   
  [MiningStructure Element &#40;ASSL&#41;](../objects/miningstructure-element-assl.md)   
  [Collections &#40;ASSL&#41;](collections-assl.md)  
   

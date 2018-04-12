@@ -58,7 +58,7 @@ manager: "mblythe"
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   
 ## See Also  
- [Discover Method &#40;XMLA&#41;](discover-method-xmla.md)   
+ [Discover Method &#40;XMLA&#41;](../../dev-guide/discover-method-xmla.md)   
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

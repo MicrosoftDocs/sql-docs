@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# Filestream and FileTable System Stored Procedures (Transact-SQL)
+# Filestream and FileTable System stored procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section describes the system stored procedures to the FileTable and Filestreamfeature.  
@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   Closes non-transactional file handles to FileTable data.
 
 
-## See Also
+**See also**
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

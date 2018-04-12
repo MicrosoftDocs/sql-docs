@@ -29,7 +29,7 @@ manager: "mblythe"
  Excel is also the recommended application for browsing tabular models in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The tool includes an **Analyze in Excel** option that starts a new instance of Excel, creates an Excel workbook, and opens a data connection from the workbook to the model workspace database. When browsing tabular model data in Excel, be aware that Excel issues queries against the model using the Excel PivotTable client. Accordingly, operations within the Excel workbook result in MDX queries being sent to the workspace database, not DAX queries. If you are using SQL Profiler or another monitoring tool to monitor queries, you can expect to see MDX and not DAX in the profiler trace. For more information about the Analyze in Excel feature, see [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ### Power View  
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] is a Reporting Services reporting client application that runs in a SharePoint 2010 environment. It combines data exploration, query design, and presentation layout into an integrated ad-hoc reporting experience. [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] can use tabular models as data sources, regardless of whether the model is hosted on an instance of Analysis Services running in tabular mode, or retrieved from a relational data store by using DirectQuery mode. To connect to a tabular model in [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], you must create a connection file that contains the server location and database name. You can create a Reporting Services shared data source or a BI semantic model connection file in SharePoint. For more information about BI semantic model connections, see [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](powerpivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] is a Reporting Services reporting client application that runs in a SharePoint 2010 environment. It combines data exploration, query design, and presentation layout into an integrated ad-hoc reporting experience. [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] can use tabular models as data sources, regardless of whether the model is hosted on an instance of Analysis Services running in tabular mode, or retrieved from a relational data store by using DirectQuery mode. To connect to a tabular model in [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], you must create a connection file that contains the server location and database name. You can create a Reporting Services shared data source or a BI semantic model connection file in SharePoint. For more information about BI semantic model connections, see [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  The [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] client determines the structure of the specified model by sending a request to the specified data source, which returns a schema that can be used by the client to create queries against the model as a data source and perform operations based on the data. Subsequent operations in the [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] user interface to filter data, perform calculations or aggregations, and display associated data are controlled by the client and cannot be programmatically manipulated.  
   
@@ -103,11 +103,11 @@ manager: "mblythe"
 ### Schema Rowsets  
  Client applications can use the schema rowsets to examine the metadata of tabular models and to retrieve support and monitoring information from the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server. In this release of SQL Server new schema rowsets have been added and existing schema rowsets extended to support features related to tabular models and to enhance monitoring and performance analysis across [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY Rowset](dev-guide/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY Rowset](schema-rowsets/xml/discover-calc-dependency-rowset.md)  
   
      New schema rowset for tracking dependencies among the columns and references in a tabular model  
   
--   [DISCOVER_CSDL_METADATA Rowset](dev-guide/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA Rowset](schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
   
      New schema rowset for obtaining the CSDL representation of a tabular model  
   
@@ -115,11 +115,11 @@ manager: "mblythe"
   
      New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [DISCOVER_TRACES Rowset](dev-guide/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES Rowset](schema-rowsets/xml/discover-traces-rowset.md)  
   
      New `Type` column lets you filter traces by category. For more information, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES Rowset](dev-guide/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES Rowset](schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
      New `STRUCTURE_TYPE` enumeration supports identification of user-defined hierarchies created in tabular models. For more information, see [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md).  
   
@@ -130,7 +130,7 @@ manager: "mblythe"
   
 ## See Also  
  [Connect to a Tabular Model Database &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
- [PowerPivot Data Access](powerpivot-data-access.md)   
+ [PowerPivot Data Access](power-pivot-sharepoint/power-pivot-data-access.md)   
  [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
   
   

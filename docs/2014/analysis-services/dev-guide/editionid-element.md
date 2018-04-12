@@ -17,7 +17,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # EditionId Element
-  Contains the numeric edition identifier code of the parent [Server Element (ASSL)](../../../2014/analysis-services/dev-guide/server-element-assl.md) element.  
+  Contains the numeric edition identifier code of the parent [Server Element (ASSL)](../scripting/objects/server-element-assl.md) element.  
   
 ## Syntax  
   
@@ -42,7 +42,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Server Element (ASSL)](../../../2014/analysis-services/dev-guide/server-element-assl.md)|  
+|Parent elements|[Server Element (ASSL)](../scripting/objects/server-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

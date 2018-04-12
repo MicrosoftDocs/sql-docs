@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The `RequestType` element determines the schema rowset from which the `Discover` method returns data. This enumeration is limited to the names of the schema rowsets supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md).  
+ The `RequestType` element determines the schema rowset from which the `Discover` method returns data. This enumeration is limited to the names of the schema rowsets supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about schema rowsets, see [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  The `RequestType` element enumerates only schema rowset names. An error occurs if the schema rowset GUID is used.  

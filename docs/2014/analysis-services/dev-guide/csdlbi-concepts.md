@@ -128,7 +128,7 @@ manager: "mblythe"
   
  **Dimensions:** A dimension is represented in CSDLBI as an entity (table) with columns and properties. Note that even if not included in a perspective, a dimension that is included in the model will be represented in the CSDL output, marked as `Hidden`.  
   
- **Perspectives:** A client can request CSDL for individual perspectives. For more information, see [DISCOVER_CSDL_METADATA Rowset](../../../2014/analysis-services/dev-guide/discover-csdl-metadata-rowset.md).  
+ **Perspectives:** A client can request CSDL for individual perspectives. For more information, see [DISCOVER_CSDL_METADATA Rowset](../schema-rowsets/xml/discover-csdl-metadata-rowset.md).  
   
  **Hierarchies:** Hierarchies are supported and represented in CSDLBI as a set of levels.  
   

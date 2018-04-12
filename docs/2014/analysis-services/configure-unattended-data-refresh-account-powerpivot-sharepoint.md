@@ -189,6 +189,6 @@ manager: "mblythe"
 ## See Also  
  [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   
- [PowerPivot Data Refresh](powerpivot-data-refresh.md)  
+ [PowerPivot Data Refresh](power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

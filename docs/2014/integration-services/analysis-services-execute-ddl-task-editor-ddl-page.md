@@ -62,7 +62,7 @@ manager: "jhubbard"
  [Analysis Services Execute DDL Task Editor &#40;General Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-general-page.md)   
  [Expressions Page](../../2014/integration-services/expressions-page.md)   
  [Control Flow](../../2014/integration-services/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md)  
   
   

@@ -32,7 +32,7 @@ manager: "mblythe"
   
 -   **1103** is the default compatibility level for deployment modes 1 or 2, for installations supporting Tabular mode or [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](dev-guide/discover-xml-metadata-rowset.md) for more details.  
+ The server returns this value when a client supporting the namespace requests DISCOVER_XML_METADATA. See [DISCOVER_XML_METADATA Rowset](schema-rowsets/xml/discover-xml-metadata-rowset.md) for more details.  
   
 ## General Properties  
  Use this page to set the basic and advanced general properties, such as folder locations and network settings, for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance.  

@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 8.  Click **Default PowerPivot Service Application** to open PowerPivot Management Dashboard for this application. On first use, the dashboard takes several minutes to load.  
   
-     Alternatively, click the empty space next to **Default PowerPivot Service Application** to select the row, and click **Properties** to view the configuration settings for this service application. You can modify both configuration settings and application properties to change your server configuration. For more information about these settings, see [Create and Configure a PowerPivot Service Application in Central Administration](../../create-and-configure-a-powerpivot-service-application-in-central-administration.md).  
+     Alternatively, click the empty space next to **Default PowerPivot Service Application** to select the row, and click **Properties** to view the configuration settings for this service application. You can modify both configuration settings and application properties to change your server configuration. For more information about these settings, see [Create and Configure a PowerPivot Service Application in Central Administration](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## Verify Integration at the Site Level  
  To verify PowerPivot integration with a SharePoint site, do the following:  

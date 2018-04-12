@@ -83,7 +83,7 @@ manager: "jhubbard"
   
  For more information on Changes to Analysis Services features, see [Behavior Changes to Analysis Services Features in SQL Server 2014](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- For more information on refresh history, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../view-data-refresh-history-powerpivot-for-sharepoint.md).  
+ For more information on refresh history, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> Upgrade to Office 2013 workbooks from Versions created by using the 2012 PowerPivot Add-In for Excel  
  This section describes Upgrading **to** SQL Server 2012 SP1 PowerPivot in Excel 2013 **from** SQL Server 2012 PowerPivot for Excel 2010 workbooks.  
@@ -171,6 +171,6 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [Migrate PowerPivot to SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [Upgrade PowerPivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [What's New in Analysis Services and Business Intelligence](../../../analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
- [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../view-data-refresh-history-powerpivot-for-sharepoint.md)  
+ [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

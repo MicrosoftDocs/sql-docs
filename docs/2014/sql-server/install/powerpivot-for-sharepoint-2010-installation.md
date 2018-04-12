@@ -47,6 +47,6 @@ manager: "jhubbard"
  [Initial Configuration &#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## See Also  
- [PowerPivot Server Administration and Configuration in Central Administration](../../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

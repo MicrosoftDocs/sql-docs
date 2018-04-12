@@ -66,7 +66,7 @@ manager: "mblythe"
  For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
- [StorageLocation Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/storagelocation-element-assl.md)   
+ [StorageLocation Element &#40;ASSL&#41;](../scripting/properties/storagelocation-element-assl.md)   
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  
   
   

@@ -77,7 +77,7 @@ manager: "mblythe"
 |**Caption is MDX**|Specify `True` if the caption is MDX or `False` if it is not.|  
   
 > [!NOTE]  
->  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](../dev-guide/action-element-assl.md), [Type Element &#40;Action&#41; &#40;ASSL&#41;](../dev-guide/type-element-action-assl.md), and [Programming AMO OLAP Advanced Objects](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
+>  You must use Analysis Services Scripting Language (ASSL) or Analysis Management Objects (AMO) to define HTML and Command Line action types. For more information, see [Action Element &#40;ASSL&#41;](../scripting/objects/action-element-assl.md), [Type Element &#40;Action&#41; &#40;ASSL&#41;](../scripting/properties/type-element-action-assl.md), and [Programming AMO OLAP Advanced Objects](analysis-management-objects/programming-amo-olap-advanced-objects.md).  
   
 ## Creating a Reporting Action  
  The report server responds to URL-based requests for reports. To create a reporting action, on the **Cube** menu, click **New Reporting Action**. The following options are specific to a reporting action.  

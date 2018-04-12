@@ -25,7 +25,7 @@ manager: "mblythe"
   
 ## Options  
  **Time Property Name**  
- Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](dev-guide/type-element-dimensionattribute-assl.md).  
+ Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
   
 > [!NOTE]  
 >  The `Date` attribute type should be used only for columns with a DateTime data type.  

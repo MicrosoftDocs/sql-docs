@@ -34,7 +34,7 @@ manager: "mblythe"
 |Analysis Management Objects||Analysis Management Objects (AMO) is managed interface that programmers can use to develop custom applications that automate administrative operations. Using AMO, you can develop a custom application that runs XMLA, MDX, or DMX scripts that you provide.|[Programming Administrative Tasks with AMO](multidimensional-models/analysis-management-objects/programming-administrative-tasks-with-amo.md)|  
   
 ## See Also  
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](dev-guide/analysis-services-scripting-language-assl-reference.md)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Developing with Analysis Management Objects &#40;AMO&#41;](multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)   
  [Multidimensional Model Object Processing](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

@@ -31,6 +31,6 @@ manager: "mblythe"
   
  [Data Mining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- [PowerPivot for SharePoint &#40;SSAS&#41;](powerpivot-for-sharepoint-ssas.md)  
+ [PowerPivot for SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
   

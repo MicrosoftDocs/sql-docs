@@ -37,16 +37,12 @@ ms.workload: "Active"
 To install the OLE DB Driver for SQL Server you need msoledbsql.msi installer.
 Run the installer and make your preferred selections. The OLE DB Driver for SQL Server can be installed side-by-side with earlier versions of Microsoft OLE DB providers.
 
-The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are installed to the following location:  
-
-`%SYSTEMROOT%\system32\`  
+The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are installed in `%SYSTEMROOT%\system32\` . Additionally, the x64 msoledbsql.msi installs 32-bit binaries in `%SYSTEMROOT%\SysWOW64\`.
 
 > [!NOTE]  
 > All appropriate registry settings for the OLE DB Driver for SQL Server are made as part of the installation process.  
 
-The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in the following location:  
-
-`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`  
+The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`. Additionally, the x64 msoledbsql.msi installs the same files in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`.  
 
 You can distribute OLE DB Driver for SQL Server through msoledbsql.msi. You might have to install OLE DB Driver for SQL Server when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) and [Adding Custom Prerequisites](http://go.microsoft.com/fwlink/?LinkId=115668).  
   
@@ -59,7 +55,7 @@ When you invoke msoledbsql.msi, only the client components are installed by defa
 ## Silent Install  
  If you use the /passive, /qn, /qb, or /qr option with msiexec, you must also specify IACCEPTMSOLEDBSQLLICENSETERMS=YES, to explicitly indicate that you accept the terms of the end user license. This option must be specified in all capital letters.  
 
-## Uninstalling OLE DB Driver for SQL Server  
+## Installing OLE DB Driver for SQL Server as a Dependency  
 It is important not to uninstall OLE DB Driver for SQL Server until all dependent applications are uninstalled. To provide users with a warning that your application depends on OLE DB Driver for SQL Server, use the APPGUID install option in your MSI, as follows:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  

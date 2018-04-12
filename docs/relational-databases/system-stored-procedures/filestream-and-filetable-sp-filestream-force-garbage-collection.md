@@ -108,6 +108,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## See Also  
- [FILESTREAM Storage in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

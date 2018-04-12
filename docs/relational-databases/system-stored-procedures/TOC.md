@@ -337,8 +337,8 @@
 
 
 # PolyBase
-## [PolyBase stored procedures - sp_polybase_join_group](polybase-stored-procedures-sp-polybase-join-group.md)  
-## [PolyBase stored procedures - sp_polybase_leave_group](polybase-stored-procedures-sp-polybase-leave-group.md) 
+## [polybase_join_group](polybase-stored-procedures-sp-polybase-join-group.md)  
+## [sp_polybase_leave_group](polybase-stored-procedures-sp-polybase-leave-group.md) 
 
 # [Policy-Based Management](policy-based-management-stored-procedures-transact-sql.md)  
 ## [sp_syspolicy_add_policy_category](sp-syspolicy-add-policy-category-transact-sql.md)  

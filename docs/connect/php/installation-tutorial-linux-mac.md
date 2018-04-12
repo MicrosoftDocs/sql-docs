@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "04/10/2018"
+ms.date: "04/11/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "drivers"
 ms.service: ""
@@ -31,8 +31,8 @@ These instruction install PHP 7.2 by default -- see the notes at the beginning o
 
 ## Installing the drivers on Ubuntu 16.04 and 17.10
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
+> [!NOTE]
+> To install PHP 7.0 or 7.1, replace 7.2 with 7.0 or 7.1 in the following commands.
 
 ### Step 1. Install PHP
 ```
@@ -71,8 +71,8 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing the drivers on Red Hat 7
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
+> [!NOTE]
+> To install PHP 7.0 or 7.1, replace remi-php72 with remi-php70 or remi-php71 respectively in the following commands.
 
 ### Step 1. Install PHP
 
@@ -134,8 +134,8 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing the drivers on Debian 8 and 9
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
+> [!NOTE]
+> To install PHP 7.0 or 7.1, replace 7.2 in the following commands with 7.0 or 7.1.
 
 ### Step 1. Install PHP
 ```
@@ -183,9 +183,9 @@ To test your installation, see [Testing your installation](#testing-your-install
 
 ## Installing the drivers on Suse 12
 
-    > [!NOTE]
-    > To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
-    > To install PHP 7.1, replace the repository URL below with the following URL:
+> [!NOTE]
+> To install PHP 7.0, skip the command below adding the repository - 7.0 is the default PHP on suse 12.
+> To install PHP 7.1, replace the repository URL below with the following URL:
       `http://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
 
 ### Step 1. Install PHP
@@ -228,8 +228,8 @@ If you do not already have it, install brew as follows:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-    > [!NOTE]
-    > To install PHP 7.0 or 7.1, replace php@7.2 with php@7.0 or php@7.1 respectively in the following commands.
+> [!NOTE]
+> To install PHP 7.0 or 7.1, replace php@7.2 with php@7.0 or php@7.1 respectively in the following commands.
 
 ### Step 1. Install PHP
 

@@ -25,7 +25,7 @@ manager: "mblythe"
   
 ### Delete PowerPivot Gallery SharePoint 2013  
   
-1.  Click Settings ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
+1.  Click Settings ![SharePoint Settings](..media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"), then click **Site settings**.  
   
 2.  Click **Site Settings**.  
   

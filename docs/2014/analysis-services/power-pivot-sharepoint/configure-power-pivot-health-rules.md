@@ -62,7 +62,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  At the top of the page, select the server in your SharePoint farm that has an instance of Analysis Services (in the following illustration, the server name is AW-SRV033). **SQL Server Analysis Services** will appear in the list of services.  
   
-     ![Screenshot of Manage Services on Server page](media/ssas-centraladmin-servicesonserver.gif "Screenshot of Manage Services on Server page")  
+     ![Screenshot of Manage Services on Server page](..media/ssas-centraladmin-servicesonserver.gif "Screenshot of Manage Services on Server page")  
   
 3.  Click **SQL Server Analysis Services**.  
   
@@ -102,11 +102,11 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  In the Service Applications page, click **Default PowerPivot Service Application**.  
   
-     ![Screenshot of ManageService Application page](media/ssas-centraladmin-app.gif "Screenshot of ManageService Application page")  
+     ![Screenshot of ManageService Application page](..media/ssas-centraladmin-app.gif "Screenshot of ManageService Application page")  
   
 3.  The PowerPivot Management Dashboard appears. Click the **Configure service application settings** in the **Actions** list to open the service application settings page.  
   
-     ![Screenshot of dashboard, focus on Actions list](media/ssas-centraladmin-actionslist.gif "Screenshot of dashboard, focus on Actions list")  
+     ![Screenshot of dashboard, focus on Actions list](..media/ssas-centraladmin-actionslist.gif "Screenshot of dashboard, focus on Actions list")  
   
 4.  In Health Rule Settings, modify the following settings:  
   

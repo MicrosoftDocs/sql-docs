@@ -37,9 +37,9 @@ manager: "mblythe"
   
  The following diagram illustrates an example [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 deployment. This example supports good availability of the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] services and assumes the databases are backed up on a regular basis.  
   
- ![powerpivot availability in 2013](media/ssas-powerpivot-services-2013.png "powerpivot availability in 2013")  
+ ![powerpivot availability in 2013](..media/ssas-powerpivot-services-2013.png "powerpivot availability in 2013")  
   
--   **(1)** The Web front-end servers. Use the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 Add-in to install the data providers on each server. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** The Web front-end servers. Use the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 Add-in to install the data providers on each server. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] shared service runs **on each** application server and allows the service application to run **across** application servers. Therefore if a single application server goes offline, the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] application will still be available.  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
  The following diagram illustrates an example [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 deployment. This example supports good availability of the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] services and assumes the databases are backed up on a regular basis.  
   
- ![powerpivot availability in sharepoint 2010](media/ssas-powerpivot-services-2010.png "powerpivot availability in sharepoint 2010")  
+ ![powerpivot availability in sharepoint 2010](..media/ssas-powerpivot-services-2010.png "powerpivot availability in sharepoint 2010")  
   
 -   **(1)** The Web front-end servers. Install the data providers on each server. For more information, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -89,7 +89,7 @@ manager: "mblythe"
  For more information on how to plan a cold standby scenario with [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], see [PowerPivot Disaster Recovery](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## Verification  
- For guidance and scripts to help you verify a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment before and after a disaster recovery cycle, see [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
+ For guidance and scripts to help you verify a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment before and after a disaster recovery cycle, see [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links to more information  
   

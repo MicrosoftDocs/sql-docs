@@ -37,7 +37,7 @@ manager: "mblythe"
   
  **Note:** Verify usage data collection is enabled. To verify, go to **Monitoring** in SharePoint Central Administration. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Components and processes of usage data collection.](media/gmni-usagedata.gif "Components and processes of usage data collection.")  
+ ![Components and processes of usage data collection.](..media/gmni-usagedata.gif "Components and processes of usage data collection.")  
   
 |Phase|Description|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ manager: "mblythe"
 |Data refresh|Data refresh operations initiated by the PowerPivot service for scheduled data updates. Usage history for data refresh is collected at the application level for operational reports, and is reflected in the Manage Data Refresh pages for individual workbooks.<br /><br /> **Note:** For [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] and SharePoint 2013 deployments, data refresh is managed by Excel Services and not the Analysis Services Server.|No. Data refresh usage data is always collected if you enable data refresh for the PowerPivot service application.|  
   
 ##  <a name="servicesjobs"></a> Services and Timer Jobs  
- The following table describes the services and data collection stores in the usage data collection system. For instructions on how to override the timer job schedules to force a data refresh of server health and usage data in PowerPivot Management Dashboard reports, see [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md). You can see the timer jobs in SharePoint central Administration. Go to **Monitoring**, then click **Check Job Status**. Click **Review Job Definitions**.  
+ The following table describes the services and data collection stores in the usage data collection system. For instructions on how to override the timer job schedules to force a data refresh of server health and usage data in PowerPivot Management Dashboard reports, see [PowerPivot Data Refresh with SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). You can see the timer jobs in SharePoint central Administration. Go to **Monitoring**, then click **Check Job Status**. Click **Review Job Definitions**.  
   
 |Component|Default schedule|Description|  
 |---------------|----------------------|-----------------|  

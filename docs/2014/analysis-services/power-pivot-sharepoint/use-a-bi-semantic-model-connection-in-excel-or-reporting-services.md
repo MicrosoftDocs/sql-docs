@@ -27,7 +27,7 @@ manager: "mblythe"
   
 -   Right-click a BI semantic model connection in a library and select **Launch Excel**.  
   
- ![Screenshot of BISM quick launch command](media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
+ ![Screenshot of BISM quick launch command](..media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
   
  Click **Enable** when prompted to enable data connections. Excel opens a workbook that contains a PivotTable field list populated with fields from the underlying data source.  
   

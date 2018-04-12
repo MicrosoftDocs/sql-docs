@@ -108,7 +108,7 @@ manager: "mblythe"
   
 9. Click **OK**.  
   
-10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. The new Target Application ID is added to the list. Select the Target application ID and click **Set Credentials**![as_powerpivot_refresh_sss_set_key](..media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   

@@ -68,7 +68,7 @@ manager: "mblythe"
   
     3.  Under Libraries, click **PowerPivot Gallery**.  
   
-    1.  **SharePoint 2013**: Click the settings icon ![SharePoint Settings](media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Click **Site Contents**  
+    1.  **SharePoint 2013**: Click the settings icon ![SharePoint Settings](..media/as-sharepoint2013-settings-gear.gif "SharePoint Settings"). Click **Site Contents**  
   
     2.  Click **add an app**.  
   
@@ -117,7 +117,7 @@ manager: "mblythe"
 ####  <a name="bkmk_hide_refresh_button"></a> Disable or Hide the Refresh Button  
  You cannot hide the **Manage Data Refresh** button. However the button is disabled if the user does not sufficient permissions.  
   
- ![as_powerpivot_refresh_manage_reresh](media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
+ ![as_powerpivot_refresh_manage_reresh](..media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
  Workbook owners or authors must have **Contribute** permission to schedule data refresh on a workbook. Users with Contribute permissions can open and edit the workbook’s data refresh configuration page to specify the credentials and schedule information used to refresh the data.  
   
@@ -126,7 +126,7 @@ manager: "mblythe"
 ##  <a name="switch"></a> Switch to Theater View or Gallery View  
  Preview varies depending on how you configure the view for the library. In Gallery view, you can hover the mouse pointer over individual worksheets in the workbook to bring a sheet into focus in the preview area.  
   
- ![GMNI_ReportGallery](media/gmni-reportgallery.gif "GMNI_ReportGallery")  
+ ![GMNI_ReportGallery](..media/gmni-reportgallery.gif "GMNI_ReportGallery")  
   
  The following table describes the different layouts for presenting thumbnail sketches of each previewed page:  
   

@@ -25,7 +25,7 @@ manager: "mblythe"
   
 -   Share and manage data service documents in a central location.  
   
--   Visually identify data service documents by an icon, so that you can easily distinguish service documents from other documents stored in the same library: ![GMNI_IconDataFeed](media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   Visually identify data service documents by an icon, so that you can easily distinguish service documents from other documents stored in the same library: ![GMNI_IconDataFeed](..media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  A data feed library always contains data service document (.atomsvc) files, and never the data feed itself. Unlike a data feed, which consists of static XML data, the data service document specifies a URL to a service or application that generates a feed upon request, providing reusable connection information for repeatable import operations.  
   

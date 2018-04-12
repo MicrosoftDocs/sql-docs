@@ -2,7 +2,7 @@
 title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "dmv's"

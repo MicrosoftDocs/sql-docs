@@ -2,7 +2,7 @@
 title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "tables"

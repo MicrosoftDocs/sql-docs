@@ -1,21 +1,13 @@
 ---
-title: "Operationalize R code (Machine Learning Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/26/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Operationalize R code in SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Operationalize R code (Machine Learning Services)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +18,7 @@ This article summarizes the key points for the database developer to consider wh
 
 ## Get started with R code in SQL Server
 
-Traditionally, integration of machine learning solutions has meant extensive recoding to support performance and integration. However, moving R and Python code to a production environment is much easier in Microsoft Machine Learning Services, because the code can be run in SQL Server and called using stored procedures. You can continue to use familiar tools and don't need to install an R development environment. 
+Traditionally, integration of machine learning solutions has meant extensive recoding to support performance and integration. However, moving R and Python code to a production environment is much easier in SQL Server Machine Learning Services, because the code can be run in SQL Server and called using stored procedures. You can continue to use familiar tools and don't need to install an R development environment. 
 
 For more information about basic syntax, see:
 

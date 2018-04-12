@@ -31,6 +31,8 @@ ms.workload: "On Demand"
 # Using the OLE DB Driver for SQL Server Header and Library Files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
   The OLE DB Driver for SQL Server header and library files are installed when the OLE DB Driver for SQL Server SDK option is selected during installation process. When developing an application, it is important to copy and install all of the required files for development to your development environment. For more information about installing and redistributing OLE DB Driver for SQL Server, see [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md).  
   
  The OLE DB Driver for SQL Server header and library files are installed in the following location:  

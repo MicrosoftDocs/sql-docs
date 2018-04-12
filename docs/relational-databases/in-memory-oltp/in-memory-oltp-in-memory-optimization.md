@@ -1,4 +1,4 @@
----
+﻿---
 title: "In-Memory OLTP (In-Memory Optimization) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2016"
@@ -21,6 +21,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # In-Memory OLTP (In-Memory Optimization)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Descriptor Fields for Table-Valued Parameter Constituent Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,6 +20,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

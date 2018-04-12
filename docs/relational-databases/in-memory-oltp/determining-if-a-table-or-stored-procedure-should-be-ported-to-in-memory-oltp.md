@@ -1,4 +1,4 @@
----
+﻿---
 title: "Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2017"
@@ -21,6 +21,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -29,6 +29,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]

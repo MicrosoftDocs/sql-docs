@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
 description: Learn how to view automatic tuning options on a SQL Database
 ms.custom: ""
@@ -29,6 +29,7 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

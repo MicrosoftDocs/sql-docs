@@ -1,36 +1,46 @@
 {
   "build": {
+
     "content": [
+
       {
+        "group": "gr-sql-2016-a",
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "breadcrumb/toc.yml"
         ],
         "exclude": [
-          "**/obj/**",
           "**/includes/**",
+          "**/mref/**",
+          "**/obj/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-           "**/mref/**"
+          "index.md"
         ]
       }
     ],
+
     "resource": [
+
       {
+        "group": "gr-sql-2016-a",
         "files": [
           "**/*.png",
           "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
-          "**/obj/**",
-          "**/includes/*.md"
+          "index.md",
+          "**/obj/**"
         ]
       }
     ],
+
     "overwrite": [],
     "externalReference": [],
+
     "globalMetadata": {
       "layout": "Conceptual",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
@@ -43,9 +53,41 @@
         }
       }
     },
-    "fileMetadata": {},
+
+    "fileMetadata": {
+
+      "monikerRange": {
+
+        "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "analysis-services/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
+        "database-engine/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "dmx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "linux/**/*.md": ">= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "mdx/**/*.md": ">= sql-analysis-services-2016 || = sqlallproducts-allversions",
+        "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "relational-databases/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "ssdt/**/*.md": ">= ssdt-15vs2017 || = sqlallproducts-allversions",
+        "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "tools/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "xquery/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions"
+      }
+    },
+
     "template": [],
     "dest": "docs",
+
+    "groups": {
+
+      "gr-sql-2016-a": {
+        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-analysis-services-2017 || >= sql-server-2016 || >= sql-server-2017 || >= sql-server-linux-2017 || >= ssdt-15vs2017 || = sqlallproducts-allversions"
+      }
+    },
+
     "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"]
   }
 }

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Disconnecting from a Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -31,6 +31,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disconnecting from a Data Source
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

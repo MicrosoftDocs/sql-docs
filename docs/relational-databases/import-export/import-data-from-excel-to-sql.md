@@ -1,4 +1,4 @@
----
+﻿---
 title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"
@@ -16,6 +16,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

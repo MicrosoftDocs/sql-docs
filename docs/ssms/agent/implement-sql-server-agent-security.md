@@ -1,4 +1,4 @@
----
+﻿---
 title: "Implement SQL Server Agent Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -23,6 +23,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Implement SQL Server Agent Security
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,6 +23,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

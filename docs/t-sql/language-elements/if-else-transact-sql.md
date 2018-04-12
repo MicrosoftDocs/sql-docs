@@ -1,4 +1,4 @@
----
+﻿---
 title: "IF...ELSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2016"
@@ -28,6 +28,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

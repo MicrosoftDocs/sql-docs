@@ -1,4 +1,4 @@
----
+﻿---
 title: "Azure Active Directory support in SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
@@ -16,6 +16,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure Active Directory support in SQL Server Data Tools (SSDT)
 

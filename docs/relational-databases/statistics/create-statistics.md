@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,6 +26,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

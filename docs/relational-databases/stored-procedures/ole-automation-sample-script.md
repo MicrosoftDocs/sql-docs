@@ -1,4 +1,4 @@
----
+﻿---
 title: "OLE Automation Sample Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE Automation Sample Script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

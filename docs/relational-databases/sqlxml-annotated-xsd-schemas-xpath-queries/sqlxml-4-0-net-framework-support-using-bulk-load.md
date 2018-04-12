@@ -1,4 +1,4 @@
----
+﻿---
 title: "Using SQLXML Bulk Load in the .NET Environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -23,6 +23,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

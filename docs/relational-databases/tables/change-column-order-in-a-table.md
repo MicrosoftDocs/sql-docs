@@ -1,4 +1,4 @@
----
+﻿---
 title: "Change Column Order in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -21,6 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Change Column Order in a Table
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
@@ -27,6 +27,7 @@ ms.author: "carlrab"
 manager: "craigg"
 
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

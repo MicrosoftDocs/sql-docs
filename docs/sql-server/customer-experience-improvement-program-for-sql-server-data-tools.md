@@ -1,4 +1,4 @@
----
+﻿---
 title: "Customer Experience Improvement Program for SQL Server Data Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
@@ -18,6 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Customer Experience Improvement Program for SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

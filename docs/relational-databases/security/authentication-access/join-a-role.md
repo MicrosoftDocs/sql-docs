@@ -1,4 +1,4 @@
----
+﻿---
 title: "Join a Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2016"
@@ -23,6 +23,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Join a Role
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

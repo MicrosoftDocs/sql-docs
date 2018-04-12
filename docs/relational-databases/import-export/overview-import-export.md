@@ -1,4 +1,4 @@
----
+﻿---
 title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2017"
@@ -16,6 +16,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Import and export data from SQL Server and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

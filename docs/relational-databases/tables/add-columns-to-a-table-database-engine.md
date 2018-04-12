@@ -1,4 +1,4 @@
----
+﻿---
 title: "Add Columns to a Table (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
@@ -22,6 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Add Columns to a Table (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

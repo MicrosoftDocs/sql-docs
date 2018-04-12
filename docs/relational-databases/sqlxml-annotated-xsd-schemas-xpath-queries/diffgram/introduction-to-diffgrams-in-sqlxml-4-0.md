@@ -1,4 +1,4 @@
----
+﻿---
 title: "Introduction to DiffGrams in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,6 +21,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Introduction to DiffGrams in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "&amp;= (Bitwise AND Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
@@ -28,6 +28,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # &amp;= (Bitwise AND Assignment) (Transact-SQL)

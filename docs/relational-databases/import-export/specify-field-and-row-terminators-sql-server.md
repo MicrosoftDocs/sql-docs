@@ -1,4 +1,4 @@
----
+﻿---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
@@ -24,6 +24,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Field and Row Terminators (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

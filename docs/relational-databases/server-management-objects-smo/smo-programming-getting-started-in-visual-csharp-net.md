@@ -1,4 +1,4 @@
----
+﻿---
 title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SMO Programming - Getting Started in Visual C# .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

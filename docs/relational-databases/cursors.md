@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,6 +25,7 @@ caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Cursors
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

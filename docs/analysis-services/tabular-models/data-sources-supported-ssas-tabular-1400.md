@@ -1,4 +1,4 @@
----
+﻿---
 title: "Data sources supported in SQL Server Analysis Services tabular 1400 models | Microsoft Docs"
 ms.date: "03/26/2018"
 ms.prod: analysis-services
@@ -8,6 +8,7 @@ ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Data sources supported in SQL Server Analysis Services tabular 1400 models
 

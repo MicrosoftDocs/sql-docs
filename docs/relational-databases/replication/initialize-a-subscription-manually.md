@@ -1,4 +1,4 @@
----
+﻿---
 title: "Initialize a Subscription Manually | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"
@@ -22,6 +22,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Initialize a Subscription Manually
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

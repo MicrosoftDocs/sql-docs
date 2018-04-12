@@ -1,4 +1,4 @@
----
+﻿---
 title: "Disable Check Constraints for Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,6 +23,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disable Check Constraints for Replication
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

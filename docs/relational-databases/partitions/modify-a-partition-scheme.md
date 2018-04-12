@@ -1,4 +1,4 @@
----
+﻿---
 title: "Modify a Partition Scheme | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,6 +18,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Modify a Partition Scheme
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

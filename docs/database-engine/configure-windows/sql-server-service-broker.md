@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server Service Broker | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -30,6 +30,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2016"
@@ -36,6 +36,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]

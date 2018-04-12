@@ -1,4 +1,4 @@
----
+﻿---
 title: "Rotate Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
@@ -18,6 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rotate Always Encrypted Keys using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Graph Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
@@ -21,6 +21,7 @@ author: "shkale-msft"
 ms.author: "shkale"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Graph Architecture  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

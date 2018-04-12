@@ -1,4 +1,4 @@
----
+﻿---
 title: "View or Change the Compatibility Level of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2017"
@@ -22,6 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View or Change the Compatibility Level of a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

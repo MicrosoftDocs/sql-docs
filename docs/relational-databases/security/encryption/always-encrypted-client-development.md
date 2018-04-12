@@ -1,4 +1,4 @@
----
+﻿---
 title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2016"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Always Encrypted (client development)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

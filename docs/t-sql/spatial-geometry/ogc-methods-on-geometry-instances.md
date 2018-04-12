@@ -1,4 +1,4 @@
----
+﻿---
 title: "OGC Methods on Geometry Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,6 +22,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OGC Methods on Geometry Instances
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

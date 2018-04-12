@@ -1,4 +1,4 @@
----
+﻿---
 title: "Deprecated Database Engine Features in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -22,6 +22,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Deprecated Database Engine Features in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

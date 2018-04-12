@@ -1,4 +1,4 @@
----
+﻿---
 title: "Specify Computed Columns in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Computed Columns in a Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

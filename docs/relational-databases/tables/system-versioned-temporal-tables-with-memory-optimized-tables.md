@@ -1,4 +1,4 @@
----
+﻿---
 title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2016"
@@ -18,6 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

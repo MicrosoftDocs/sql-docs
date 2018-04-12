@@ -1,4 +1,4 @@
----
+﻿---
 title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

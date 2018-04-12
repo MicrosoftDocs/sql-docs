@@ -1,4 +1,4 @@
----
+﻿---
 title: "Estimate the Size of a Heap | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -24,6 +24,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Estimate the Size of a Heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

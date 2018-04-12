@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2018"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

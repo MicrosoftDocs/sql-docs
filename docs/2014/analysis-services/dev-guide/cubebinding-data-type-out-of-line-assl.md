@@ -57,7 +57,7 @@ manager: "mblythe"
 |Derived elements|[Binding](../../../2014/analysis-services/dev-guide/binding-element-xmla.md) ([Bindings](../../../2014/analysis-services/dev-guide/bindings-element-xmla.md) collection of [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md) or [Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md) commands)|  
   
 ## Remarks  
- For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../2014/analysis-services/data-sources-and-bindings-ssas-multidimensional.md).  
+ For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## See Also  
  [Binding Data Type &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/binding-data-type-assl.md)   

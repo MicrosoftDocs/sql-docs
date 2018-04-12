@@ -61,7 +61,7 @@ manager: "mblythe"
 ## Remarks  
  The `Insert` command inserts new attribute members into a write-enabled dimension.  
   
- For more information about deleting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For more information about deleting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## See Also  
  [Drop Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/drop-element-xmla.md)   

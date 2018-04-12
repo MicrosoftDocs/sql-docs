@@ -124,6 +124,6 @@ manager: "jhubbard"
  [Reviewing Cube and Dimension Properties](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## See Also  
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
+ [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

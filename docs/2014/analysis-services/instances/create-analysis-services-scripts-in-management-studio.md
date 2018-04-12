@@ -46,7 +46,7 @@ manager: "mblythe"
   
  Objects that you can script include the elements of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database, including data sources, data source views, cubes, dimensions, mining structures, and roles.  
   
- Prerequisites include an understanding of XML for Analysis (XMLA). Fortunately, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a feature that automatically creates the XMLA script required to create objects, such as cubes. This automation feature helps reduce the learning curve for XMLA. For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../dev-guide/developing-with-xmla-in-analysis-services.md). For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../dev-guide/developing-with-xmla-in-analysis-services.md).  
+ Prerequisites include an understanding of XML for Analysis (XMLA). Fortunately, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has a feature that automatically creates the XMLA script required to create objects, such as cubes. This automation feature helps reduce the learning curve for XMLA. For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md). For more information about how to use XMLA, see [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  When scripting the Role Object, be aware that security permissions are contained by the objects they secure rather than with the security role with which they are associated.  

@@ -30,7 +30,7 @@ manager: "mblythe"
  Use the **Translation Details** pane to create and modify translations for the selected cube.  
   
 ## See Also  
- [Cube Translations](dev-guide/cube-translations.md)   
+ [Cube Translations](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   

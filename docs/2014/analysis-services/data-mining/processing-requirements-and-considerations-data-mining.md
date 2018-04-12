@@ -87,6 +87,6 @@ manager: "mblythe"
 ## See Also  
  [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
  [Mining Structures &#40;Analysis Services - Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

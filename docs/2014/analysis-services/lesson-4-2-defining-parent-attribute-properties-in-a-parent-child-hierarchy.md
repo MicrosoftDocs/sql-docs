@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Defining Parent Attribute Properties in a Parent-Child Hierarchy
   A parent-child hierarchy is a hierarchy in a dimension that is based on two table columns. Together, these columns define the hierarchical relationships among the members of the dimension. The first column, called the *member key column*, identifies each dimension member. The other column, called the *parent column*, identifies the parent of each dimension member. The **NamingTemplate** property of a parent attribute determines the name of each level in the parent-child hierarchy, and the **MembersWithData** property determines whether data for parent members should be displayed.  
   
- For more information, see [Parent-Child Hierarchy](parent-child-hierarchy.md), [Attributes in Parent-Child Hierarchies](attributes-in-parent-child-hierarchies.md)  
+ For more information, see [Parent-Child Hierarchy](multidimensional-models/parent-child-dimension.md), [Attributes in Parent-Child Hierarchies](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  When you use the Dimension Wizard to create a dimension, the wizard recognizes the tables that have parent-child relationships and automatically defines the parent-child hierarchy for you.  
@@ -105,7 +105,7 @@ manager: "jhubbard"
  [Automatically Grouping Attribute Members](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## See Also  
- [Parent-Child Hierarchy](parent-child-hierarchy.md)   
- [Attributes in Parent-Child Hierarchies](attributes-in-parent-child-hierarchies.md)  
+ [Parent-Child Hierarchy](multidimensional-models/parent-child-dimension.md)   
+ [Attributes in Parent-Child Hierarchies](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

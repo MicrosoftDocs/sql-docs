@@ -35,15 +35,15 @@ manager: "mblythe"
 |[XML for Analysis Compliance &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-for-analysis-compliance-xmla.md)|Describes the level of compliance with the XMLA 1.1 specification.|  
   
 ## Related Sections  
- [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md)  
+ [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [XML for Analysis Schema Rowsets](../../../2014/analysis-services/dev-guide/xml-for-analysis-schema-rowsets.md)  
   
- [Developing with ADOMD.NET](../../../2014/analysis-services/dev-guide/developing-with-adomd-net.md)  
+ [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
- [Developing with Analysis Management Objects &#40;AMO&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-management-objects-amo.md)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
 ## See Also  
- [Understanding Microsoft OLAP Architecture](../../../2014/analysis-services/dev-guide/understanding-microsoft-olap-architecture.md)  
+ [Understanding Microsoft OLAP Architecture](../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   

@@ -66,7 +66,7 @@ manager: "jhubbard"
  [Modifying the Customer Dimension](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## See Also  
- [Define Database Dimensions](define-database-dimensions.md)   
- [Configure Measure Properties](configure-measure-properties.md)  
+ [Define Database Dimensions](multidimensional-models/define-database-dimensions.md)   
+ [Configure Measure Properties](multidimensional-models/configure-measure-properties.md)  
   
   

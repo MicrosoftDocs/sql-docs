@@ -62,7 +62,7 @@ manager: "mblythe"
 ## Remarks  
  The `Drop` command deletes attribute members from a write-enabled dimension.  
   
- For more information about deleting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For more information about deleting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
 ## See Also  
  [Insert Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/insert-element-xmla.md)   

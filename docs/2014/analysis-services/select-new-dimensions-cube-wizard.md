@@ -29,6 +29,6 @@ manager: "mblythe"
  To rename a dimension, click the dimension name and enter a new name. You cannot rename the tables.  
   
 ## See Also  
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

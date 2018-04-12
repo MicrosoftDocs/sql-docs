@@ -94,6 +94,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
+ [Backup and Restore of Analysis Services Databases](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

@@ -70,7 +70,7 @@ manager: "mblythe"
  For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](../dev-guide/execute-method-xmla.md) and [Cancel Element &#40;XMLA&#41;](../dev-guide/cancel-element-xmla.md).  
   
 ## See Also  
- [Managing Connections and Sessions &#40;XMLA&#41;](../dev-guide/managing-connections-and-sessions-xmla.md)   
+ [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [BeginSession Element &#40;XMLA&#41;](../dev-guide/beginsession-element-xmla.md)   
  [EndSession Element &#40;XMLA&#41;](../dev-guide/endsession-element-xmla.md)   
  [Session Element &#40;XMLA&#41;](../dev-guide/session-element-xmla.md)  

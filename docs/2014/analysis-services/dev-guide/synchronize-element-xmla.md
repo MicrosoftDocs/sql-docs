@@ -73,7 +73,7 @@ manager: "mblythe"
   
  During a `Synchronize` command, a read lock is placed on the source database and a write lock is placed on the target database. Both locks are released after the `Synchronize` command has completed.  
   
- For more information about synchronizing databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about synchronizing databases, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Backup Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backup-element-xmla.md)   

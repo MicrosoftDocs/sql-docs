@@ -27,7 +27,7 @@ manager: "mblythe"
   
  [Tabular Modeling &#40;SSAS Tabular&#41;](tabular-modeling-ssas-tabular.md)  
   
- [Multidimensional Modeling &#40;SSAS&#41;](multidimensional-modeling-ssas.md)  
+ [Multidimensional Modeling &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
  [Data Mining &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   

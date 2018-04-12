@@ -32,11 +32,11 @@ manager: "mblythe"
 |**Data Source View**|Use the **Data Source View** pane to view and edit the data source view associated with the selected cube. For more information about this pane, see [Data Source View &#40;Cube Structure Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/logical-architecture-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
- [Configure Measure Properties](configure-measure-properties.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Configure Measure Properties](multidimensional-models/configure-measure-properties.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

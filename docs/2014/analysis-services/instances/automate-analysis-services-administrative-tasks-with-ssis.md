@@ -39,7 +39,7 @@ manager: "mblythe"
  [Partition Processing Destination](../../integration-services/partition-processing-destination.md)   
  [Dimension Processing Destination](../../integration-services/dimension-processing-destination.md)   
  [Data Mining Query Transformation](../../integration-services/data-mining-query-transformation.md)   
- [Multidimensional Model Object Processing](../multidimensional-model-object-processing.md)   
+ [Multidimensional Model Object Processing](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

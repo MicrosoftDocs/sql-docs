@@ -43,14 +43,14 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|Rename columns or tables, or create new calculated columns. For example, concatenate a first name and last name into a new full-name column.|[Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)|  
-|Manually add table relationships|[Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
-|Create a named query to define a new object based on a T-SQL query.|[Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|Explore underlying data to view actual data values represented by model objects.<br /><br /> Data exploration lets you visually inspect and copy data that is returned from the underlying dimensional table or query. By default, data exploration uses the top count sampling methodology, with a sample count of 5000, but you can revise these settings.|[Explore Data in a Data Source View &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)|  
-|Diagram all or part of the tables and relationships in a DSV|[Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|Rename columns or tables, or create new calculated columns. For example, concatenate a first name and last name into a new full-name column.|[Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
+|Manually add table relationships|[Define Logical Relationships in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
+|Create a named query to define a new object based on a T-SQL query.|[Define Named Queries in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
+|Explore underlying data to view actual data values represented by model objects.<br /><br /> Data exploration lets you visually inspect and copy data that is returned from the underlying dimensional table or query. By default, data exploration uses the top count sampling methodology, with a sample count of 5000, but you can revise these settings.|[Explore Data in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|Diagram all or part of the tables and relationships in a DSV|[Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## See Also  
- [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
+ [Data Source Views in Multidimensional Models](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Tabular Model Data Access
-  Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+  Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
  This topic describes the clients, query languages, and programmatic interfaces that work with tabular models.  
   
@@ -66,7 +66,7 @@ manager: "mblythe"
  For examples of queries on a tabular model using DAX, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
   
 ### MDX  
- You can use MDX to create queries against tabular models that use the in-memory cache as the preferred query method (that is, models that have not been deployed in DirectQuery mode). Although clients such as [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] use DAX both for creating aggregations and for querying the model as a data source, if you are familiar with MDX it can be a shortcut to create sample queries in MDX, see [Building Measures in MDX](building-measures-in-mdx.md).  
+ You can use MDX to create queries against tabular models that use the in-memory cache as the preferred query method (that is, models that have not been deployed in DirectQuery mode). Although clients such as [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] use DAX both for creating aggregations and for querying the model as a data source, if you are familiar with MDX it can be a shortcut to create sample queries in MDX, see [Building Measures in MDX](multidimensional-models/mdx/mdx-building-measures.md).  
   
 ### CSDL  
  The Conceptual Schema Definition Language is not a query language, per se, but it can be used to retrieve information about the model and model metadata, that can later be used to create reports or create queries against the model.  

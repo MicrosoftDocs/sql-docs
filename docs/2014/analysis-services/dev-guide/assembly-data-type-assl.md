@@ -61,7 +61,7 @@ manager: "mblythe"
 |Derived elements|None|  
   
 ## Remarks  
- The `Assembly` data type serves as the base data type for the `ComAssembly` element, which represents COM libraries associated with the instance or database, and the `ClrAssembly` element, which represents [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies associated with the instance or database. For more information about assemblies, see [Multidimensional Model Assemblies Management](../../../2014/analysis-services/multidimensional-model-assemblies-management.md).  
+ The `Assembly` data type serves as the base data type for the `ComAssembly` element, which represents COM libraries associated with the instance or database, and the `ClrAssembly` element, which represents [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies associated with the instance or database. For more information about assemblies, see [Multidimensional Model Assemblies Management](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Assembly>.  
   

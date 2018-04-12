@@ -47,8 +47,8 @@ manager: "mblythe"
   
 ## See Also  
  [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Select Calendars &#40;Dimension Wizard&#41;](select-calendars-dimension-wizard.md)  
   
   

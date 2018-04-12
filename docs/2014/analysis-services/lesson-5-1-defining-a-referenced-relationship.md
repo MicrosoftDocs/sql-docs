@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Defining a Referenced Relationship
-  Up to this point in the tutorial, each cube dimension that you defined was based on a table that was directly linked to the fact table for a measure group by a primary key to foreign key relationship. In the tasks in this topic, you link the **Geography** dimension to the fact table for reseller sales through the **Reseller** dimension, which is called a *reference dimension*. This enables users to dimension reseller sales by geography. For more information, see [Define a Referenced Relationship and Referenced Relationship Properties](define-a-referenced-relationship-and-referenced-relationship-properties.md).  
+  Up to this point in the tutorial, each cube dimension that you defined was based on a table that was directly linked to the fact table for a measure group by a primary key to foreign key relationship. In the tasks in this topic, you link the **Geography** dimension to the fact table for reseller sales through the **Reseller** dimension, which is called a *reference dimension*. This enables users to dimension reseller sales by geography. For more information, see [Define a Referenced Relationship and Referenced Relationship Properties](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## Dimensioning Reseller Sales by Geography  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
  [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## See Also  
- [Attribute Relationships](dev-guide/attribute-relationships.md)   
- [Define a Referenced Relationship and Referenced Relationship Properties](define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ [Attribute Relationships](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [Define a Referenced Relationship and Referenced Relationship Properties](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

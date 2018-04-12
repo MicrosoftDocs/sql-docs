@@ -41,7 +41,7 @@ manager: "mblythe"
  Displays the type of the object to be processed.  
   
  **Process Options**  
- Select the type of processing to perform on the selected object. For more information about available processing options, see [Multidimensional Model Object Processing](multidimensional-model-object-processing.md).  
+ Select the type of processing to perform on the selected object. For more information about available processing options, see [Multidimensional Model Object Processing](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Settings**  
  Displays the **Configure** hyperlink when you choose **Process Incremental** in **Process Options** for cubes, measure groups, or partitions. Click **Configure** to launch the **Incremental Update** dialog box. For more information about the **Incremental Update** dialog box, see [Incremental Update Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  

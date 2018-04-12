@@ -148,7 +148,7 @@ manager: "jhubbard"
 9. On the **File** menu, click **Save All**.  
   
 ## Defining Attribute Relationships  
- If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](define-attribute-relationships.md) and [Attribute Relationships](dev-guide/attribute-relationships.md).  
+ If the underlying data supports it, you should define attribute relationships between attributes. Defining attribute relationships speeds up dimension, partition, and query processing. For more information, see [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md) and [Attribute Relationships](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 #### To define attribute relationships  
   
@@ -180,8 +180,8 @@ manager: "jhubbard"
  [Modifying the Date Dimension](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## See Also  
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [Create User-Defined Hierarchies](create-user-defined-hierarchies.md)   
- [Configure the &#40;All&#41; Level for Attribute Hierarchies](configure-the-all-level-for-attribute-hierarchies.md)  
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Create User-Defined Hierarchies](multidimensional-models/user-defined-hierarchies-create.md)   
+ [Configure the &#40;All&#41; Level for Attribute Hierarchies](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

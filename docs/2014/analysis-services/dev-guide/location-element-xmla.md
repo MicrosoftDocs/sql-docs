@@ -85,7 +85,7 @@ manager: "mblythe"
   
  For `Synchronize` commands, the `Location` element describes either a data source to be used by the target instance or a remote instance defined on the source instance that must be synchronized with the target instance, depending on the value of the `DataSourceType` element for the parent `Synchronize` command.  
   
- For more information about backing up and restoring remote instances, see [Backing Up and Restoring Objects (XMLA)](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring remote instances, see [Backing Up and Restoring Objects (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [BackupRemotePartitions Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backupremotepartitions-element-xmla.md)   

@@ -58,7 +58,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- If `BackupRemotePartitions` is set to `True`, a `Locations` element that contains one or more `Location` elements must be included in the `Backup` command, or an error occurs. For more information about backing up and restoring remote partitions, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ If `BackupRemotePartitions` is set to `True`, a `Locations` element that contains one or more `Location` elements must be included in the `Backup` command, or an error occurs. For more information about backing up and restoring remote partitions, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Locations Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/locations-element-xmla.md)   

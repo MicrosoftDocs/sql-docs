@@ -45,8 +45,8 @@ manager: "mblythe"
 -   [Completing the Wizard &#40;Cube Wizard&#41;](completing-the-wizard-cube-wizard.md)  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

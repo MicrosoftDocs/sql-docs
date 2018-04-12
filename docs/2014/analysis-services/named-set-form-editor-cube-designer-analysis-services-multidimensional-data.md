@@ -36,8 +36,8 @@ manager: "mblythe"
 >  This option must contain a valid set expression.  
   
 ## See Also  
- [Calculations](dev-guide/calculations.md)   
- [Create Named Sets](create-named-sets.md)   
+ [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Create Named Sets](multidimensional-models/create-named-sets.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   

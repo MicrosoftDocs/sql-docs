@@ -152,7 +152,7 @@ manager: "mblythe"
   
 -   SQL Server 2012  
   
- You can also get data from any other relational data source that is supported as a data source by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For information about supported data sources, see [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)  
+ You can also get data from any other relational data source that is supported as a data source by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For information about supported data sources, see [Data Sources in Multidimensional Models](multidimensional-models/data-sources-in-multidimensional-models.md)  
   
  Note that the following data types cannot be used for data mining and will result in an error if included when you build a model:  
   

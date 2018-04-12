@@ -84,7 +84,7 @@ manager: "mblythe"
  Protocol capabilities do not have to be explicitly negotiated. That is, a client application does not have to include a `ProtocolCapabilities` element as part of the SOAP request. If a SOAP request does not include a `ProtocolCapabilities` element, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance responds using the same format as the SOAP request.  
   
 ## See Also  
- [Managing Connections and Sessions &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/managing-connections-and-sessions-xmla.md)   
+ [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [Headers &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/headers-xmla.md)  
   
   

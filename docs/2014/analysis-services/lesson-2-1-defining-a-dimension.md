@@ -73,8 +73,8 @@ manager: "jhubbard"
  [Defining a Cube](lesson-2-2-defining-a-cube.md)  
   
 ## See Also  
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
- [Create a Dimension by Using an Existing Table](create-a-dimension-by-using-an-existing-table.md)   
- [Create a Dimension Using the Dimension Wizard](create-a-dimension-using-the-dimension-wizard.md)  
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)   
+ [Create a Dimension by Using an Existing Table](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [Create a Dimension Using the Dimension Wizard](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

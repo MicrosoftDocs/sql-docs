@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Defining Named Sets
   A named set is a Multidimensional Expressions (MDX) expression that returns a set of dimension members. You can define named sets and save them as part of the cube definition; you can also create named sets in client applications. You create named sets by combining cube data, arithmetic operators, numbers, and functions. Named sets can be used by users in MDX queries in client applications and can also be used to define sets in subcubes. A subcube is a collection of crossjoined sets that restricts the cube space to the defined subspace for subsequent statements. Defining a restricted cube space is a fundamental concept to MDX scripting.  
   
- Named sets simplify MDX queries and provide useful aliases for complex, typically used, set expressions. For example, you can define a named set called Large Resellers that contains the set of members in the Reseller dimension that have the most employees. End users could then use the Large Resellers named set in queries, or you could use the named set to define a set in a subcube. Named set definitions are stored in cubes, but their values exist only in memory. To create a named set, use the **New Named Set** command on the **Calculations** tab of Cube Designer. For more information, see [Calculations](dev-guide/calculations.md), [Create Named Sets](create-named-sets.md).  
+ Named sets simplify MDX queries and provide useful aliases for complex, typically used, set expressions. For example, you can define a named set called Large Resellers that contains the set of members in the Reseller dimension that have the most employees. End users could then use the Large Resellers named set in queries, or you could use the named set to define a set in a subcube. Named set definitions are stored in cubes, but their values exist only in memory. To create a named set, use the **New Named Set** command on the **Calculations** tab of Cube Designer. For more information, see [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md), [Create Named Sets](multidimensional-models/create-named-sets.md).  
   
  In the tasks in this topic, you will define two named sets: a Core Products named set and a Large Resellers named set.  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 8.  Open Dimension Designer for the **Reseller** dimension, and then click **Number of Employees** in the **Attributes** pane.  
   
-9. In the Properties window, change the `DiscretizationMethod` property to **Automatic**, and then change the `DiscretizationBucketCount` property to `5`. For more information, see [Group Attribute Members &#40;Discretization&#41;](group-attribute-members-discretization.md).  
+9. In the Properties window, change the `DiscretizationMethod` property to **Automatic**, and then change the `DiscretizationBucketCount` property to `5`. For more information, see [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
  [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## See Also  
- [Calculations](dev-guide/calculations.md)   
- [Create Named Sets](create-named-sets.md)  
+ [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Create Named Sets](multidimensional-models/create-named-sets.md)  
   
   

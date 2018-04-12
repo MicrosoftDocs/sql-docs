@@ -95,7 +95,7 @@ manager: "mblythe"
   
 -   The property, **DirectQueryMode**, was set when you defined the deployment properties.  
   
--   The property, **Data Source Impersonation Info**, was set when you defined the user impersonation options. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
+-   The property, **Data Source Impersonation Info**, was set when you defined the user impersonation options. For more information, see [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 -   You can change these properties any time after the model has been deployed.  
   

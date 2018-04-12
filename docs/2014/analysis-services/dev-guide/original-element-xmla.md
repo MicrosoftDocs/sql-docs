@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The `Original` element contains a UNC path to be replaced with the value of the [New](../../../2014/analysis-services/dev-guide/new-element-xmla.md) element contained by the parent `Folder` element for all objects restored or synchronized, respectively, during a [Restore](../../../2014/analysis-services/dev-guide/restore-element-xmla.md) or [Synchronize](../../../2014/analysis-services/dev-guide/synchronize-element-xmla.md) command. The value of this element is compared to the value of the [StorageLocation](../../../2014/analysis-services/dev-guide/storagelocation-element-assl.md) element for each cube, measure group, or partition and, if a match is found, the value of the `New` element is used to update the `StorageLocation` of the object during restoration or synchronization.  
   
- For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

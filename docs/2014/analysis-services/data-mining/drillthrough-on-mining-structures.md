@@ -53,7 +53,7 @@ manager: "mblythe"
 |-|-|  
 |Use drillthrough to structure from the mining model viewers|[Use Drillthrough from the Model Viewers](use-drillthrough-from-the-model-viewers.md)|  
 |See examples of drillthrough queries for specific model types.|[Data Mining Queries](data-mining-queries.md)|  
-|Get information about permissions that apply to specific mining structures and mining models.|[Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Get information about permissions that apply to specific mining structures and mining models.|[Grant permissions on data mining structures and models &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## See Also  
  [Drillthrough on Mining Models](drillthrough-on-mining-models.md)  

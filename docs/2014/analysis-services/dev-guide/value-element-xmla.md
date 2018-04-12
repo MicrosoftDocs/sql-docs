@@ -58,13 +58,13 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- For `Attribute` elements, the `Value` element contains the desired value that the member should contain after the `Insert` command is committed. For more information about inserting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/inserting-updating-and-dropping-members-xmla.md).  
+ For `Attribute` elements, the `Value` element contains the desired value that the member should contain after the `Insert` command is committed. For more information about inserting members, see [Inserting, Updating, and Dropping Members &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
  For `Cell` elements, the `Value` element contains the desired value that the cell should contain after the `UpdateCells` command is committed. The actual value stored in the writeback table for that cell is the difference between the original value of the cell and the desired value of the cell.  
   
  The data type used by this element should match the data type of the cell to be updated.  
   
- For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/updating-cells-xmla.md).  
+ For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## See Also  
  [CellOrdinal Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/cellordinal-element-xmla.md)   

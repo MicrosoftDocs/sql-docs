@@ -64,7 +64,7 @@ manager: "mblythe"
   
  For `Source` elements, the `ConnectionString` element contains the connection string used by the `Synchronize` command to connect to the source instance.  
   
- For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring objects, see [Backing Up, Restoring, and Synchronizing Databases &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Restore Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/restore-element-xmla.md)   

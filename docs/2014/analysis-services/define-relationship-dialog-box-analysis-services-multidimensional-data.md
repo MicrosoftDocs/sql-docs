@@ -56,7 +56,7 @@ manager: "mblythe"
 |||**Source dimension**: Select the dimension on which the data mining dimension provides predictive analysis.|  
   
 ## See Also  
- [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Dimension Usage &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

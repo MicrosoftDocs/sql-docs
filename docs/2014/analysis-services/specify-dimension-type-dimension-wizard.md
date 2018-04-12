@@ -29,21 +29,21 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Accounts**|Account dimensions contain data and metadata that represents a list of accounts.<br /><br /> For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](create-a-finance-account-of-parent-child-type-dimension.md).|  
-|**BillOfMaterials**|Bill-of-material (or BOM) dimensions are regular dimensions in which the data and metadata represent inventory or manufacturing information, such as part lists for products.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Channel**|Channel dimensions are regular dimensions in which the data and metadata represent channel information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Currency**|Currency dimensions contain data and metadata that represent currency information.<br /><br /> For more information about currency dimensions, see [Create a Currency type Dimension](create-a-currency-type-dimension.md).|  
-|**Customers**|Customer dimensions are regular dimensions in which the data and metadata represent customer or contact information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Geography**|Geography dimensions are regular dimensions in which the data and metadata represent geographic information, such as cities or postal codes.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Organization**|Organization dimensions are regular dimensions in which the data and metadata represent organizational information, such as employees or subsidiaries.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Products**|Product dimensions are regular dimensions in which the data and metadata represent product information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Promotion**|Promotion dimensions are regular dimensions in which the data and metadata represent marketing promotion information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Quantitative**|Quantitative dimensions are regular dimensions in which the data and metadata represent quantitative information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
+|**Accounts**|Account dimensions contain data and metadata that represents a list of accounts.<br /><br /> For more information about account dimensions, see [Create a Finance Account of parent-child type Dimension](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
+|**BillOfMaterials**|Bill-of-material (or BOM) dimensions are regular dimensions in which the data and metadata represent inventory or manufacturing information, such as part lists for products.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Channel**|Channel dimensions are regular dimensions in which the data and metadata represent channel information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Currency**|Currency dimensions contain data and metadata that represent currency information.<br /><br /> For more information about currency dimensions, see [Create a Currency type Dimension](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
+|**Customers**|Customer dimensions are regular dimensions in which the data and metadata represent customer or contact information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Geography**|Geography dimensions are regular dimensions in which the data and metadata represent geographic information, such as cities or postal codes.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Organization**|Organization dimensions are regular dimensions in which the data and metadata represent organizational information, such as employees or subsidiaries.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Products**|Product dimensions are regular dimensions in which the data and metadata represent product information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Promotion**|Promotion dimensions are regular dimensions in which the data and metadata represent marketing promotion information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Quantitative**|Quantitative dimensions are regular dimensions in which the data and metadata represent quantitative information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Rates**|Rate dimensions contain data and metadata that represent exchange rate and currency conversion information.|  
-|**Regular**|Regular dimensions are the most common dimension type used in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Scenario**|Scenario dimensions are regular dimensions in which the data and metadata represent planning or strategic analysis information.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
-|**Time**|Time dimensions contain time-oriented data and metadata.<br /><br /> For more information about time dimensions, see [Create a Date type Dimension](create-a-date-type-dimension.md).|  
-|**Utility**|Utility dimensions are regular dimensions in which the data and metadata represents information that does not readily match another dimension type.<br /><br /> For more information about regular dimensions, see [Dimension Types](dev-guide/dimension-types.md).|  
+|**Regular**|Regular dimensions are the most common dimension type used in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Scenario**|Scenario dimensions are regular dimensions in which the data and metadata represent planning or strategic analysis information.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Time**|Time dimensions contain time-oriented data and metadata.<br /><br /> For more information about time dimensions, see [Create a Date type Dimension](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
+|**Utility**|Utility dimensions are regular dimensions in which the data and metadata represents information that does not readily match another dimension type.<br /><br /> For more information about regular dimensions, see [Dimension Types](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
   
 ## Dimension attributes Options  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
   
 ## See Also  
  [Dimension Wizard F1 Help](dimension-wizard-f1-help.md)   
- [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/dimensions-analysis-services-multidimensional-data.md)   
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
+ [Dimensions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

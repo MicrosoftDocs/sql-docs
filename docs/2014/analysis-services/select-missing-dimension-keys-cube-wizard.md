@@ -27,6 +27,6 @@ manager: "mblythe"
  If you select multiple key columns, a composite key will be created.  
   
 ## See Also  
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)  
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

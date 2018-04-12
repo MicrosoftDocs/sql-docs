@@ -60,7 +60,7 @@ manager: "mblythe"
 ## Remarks  
  The `New` element contains a UNC path that replaces the value of the `Original` element contained by the parent `Folder` element for all objects restored or synchronized, respectively, during a `Restore` or `Synchronize` command. The value of the `Original` element is compared to the value of the `StorageLocation` element for each cube, measure group, or partition and, if a match is found, the value of this element is used to update the `StorageLocation` of the object during restoration or synchronization.  
   
- For more information about backing up and restoring objects, see [Backing Up and Restoring Objects (XMLA)](../../../2014/analysis-services/dev-guide/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ For more information about backing up and restoring objects, see [Backing Up and Restoring Objects (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## See Also  
  [Original Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/original-element-xmla.md)   

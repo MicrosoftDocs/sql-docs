@@ -40,7 +40,7 @@ manager: "mblythe"
  **New Attribute Relationship**  
  Opens the **Create Attribute Relationship** dialog box in which you can define a new attribute relationship.  
   
- For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](define-attribute-relationships.md).  
+ For more information, see [Create Attribute Relationship and Edit Attribute Relationship Dialog Boxes &#40;Attribute Relationship Designer Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) and [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md).  
   
  **Rename**  
  Highlights the attribute's name in the list and enables you to modify this text.  

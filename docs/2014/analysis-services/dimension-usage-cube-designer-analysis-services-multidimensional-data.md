@@ -28,7 +28,7 @@ manager: "mblythe"
 |**Grid**|Use the grid to view and edit dimension relationships between cube dimensions and measure groups in the cube. For more information about this pane, see [Grid &#40;Dimension Usage Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## See Also  
- [Dimension Relationships](dev-guide/dimension-relationships.md)   
+ [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Cube Structure &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   

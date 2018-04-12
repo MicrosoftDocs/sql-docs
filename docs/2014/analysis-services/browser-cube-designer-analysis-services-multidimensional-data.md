@@ -60,8 +60,8 @@ manager: "mblythe"
  Use this area of the design surface to build MDX queries, by dragging and dropping objects from the **Metadata** pane, and by specifying filter criteria on the source cube or dimension. For more information, see [Query and Filter &#40;Browser Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## See Also  
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

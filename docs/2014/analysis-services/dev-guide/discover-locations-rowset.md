@@ -44,7 +44,7 @@ manager: "mblythe"
 |`LOCATION_PASSWORD PF_DBTYPE`|`DBTYPE_WSTR`|Required if it was specified during backup. This restriction is not used to restrict the rows returned. It is used to provide the password to access the location.|  
   
 ## Using ADOMD.NET to return the rowset  
- When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../../../2014/analysis-services/dev-guide/working-with-schema-rowsets-in-adomd-net.md).  
+ When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](../multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
   
  The following table provides the GUID and string values that identify this rowset.  
   

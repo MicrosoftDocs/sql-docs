@@ -33,7 +33,7 @@ manager: "mblythe"
 |Polling query|`SELECT`<br /><br /> `MAX([CustomerKey]) AS LastCustomerKey`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`|  
 |Processing query|`SELECT`<br /><br /> `*`<br /><br /> `FROM`<br /><br /> `[dbo].[DimCustomer]`<br /><br /> `WHERE`<br /><br /> `(CustomerKey > COALESCE (@Param1, - 1))`<br /><br /> `AND (CustomerKey <= @Param2)`|  
   
- For more information about incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md).  
+ For more information about incremental updates for scheduled polling notifications, see [Proactive Caching &#40;Partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
  You can display the **Create Processing Query** dialog box by clicking **...** on the **Processing Query** column of the grid for the **Scheduled polling** option on the **Notifications** tab of the **Storage Options** dialog box. For more information about the **Notifications** tab of the **Storage Options** dialog box, see [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   

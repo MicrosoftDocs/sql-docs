@@ -104,7 +104,7 @@ manager: "mblythe"
 15. When the job finishes, click **Close**.  
   
 ## Example 2: Batch processing a dimension and a partition in a scheduled task  
- The procedures in this example demonstrate how to create and schedule a job that batch processes an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database dimension, and at the same time to process a  cube partition that depends on the dimension for aggregation. For more information about batch processing of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Batch Processing &#40;Analysis Services&#41;](../batch-processing-analysis-services.md).  
+ The procedures in this example demonstrate how to create and schedule a job that batch processes an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database dimension, and at the same time to process a  cube partition that depends on the dimension for aggregation. For more information about batch processing of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Batch Processing &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Create a script for batch processing a dimension and partition in a SQL Server Agent job  
   
@@ -220,7 +220,7 @@ manager: "mblythe"
 16. When the job finishes, click **Close**.  
   
 ## See Also  
- [Processing Options and Settings &#40;Analysis Services&#41;](../processing-options-and-settings-analysis-services.md)   
+ [Processing Options and Settings &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Script Administrative Tasks in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

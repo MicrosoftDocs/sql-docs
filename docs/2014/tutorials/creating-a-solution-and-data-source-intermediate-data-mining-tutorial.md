@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  When you create the project, your solution is stored as a local file until the solution is deployed. When you deploy the solution, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] looks for the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server specified in the project properties, and creates a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database with the same name as the project. By default, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses the **localhost** instance for new projects. If you are using a named instance, or if you specified a different name for the default instance, you must change the deployment database property of the project to the location where you want to create your data mining objects.  
   
- For more information about [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projects, see [Create an Analysis Services Project &#40;SSDT&#41;](../../2014/analysis-services/create-an-analysis-services-project-ssdt.md).  
+ For more information about [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projects, see [Create an Analysis Services Project &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### To create a new Analysis Services project for this tutorial  
   
@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Mining Projects](../../2014/analysis-services/data-mining/data-mining-projects.md)   
- [Data Source Views in Multidimensional Models](../../2014/analysis-services/data-source-views-in-multidimensional-models.md)  
+ [Data Source Views in Multidimensional Models](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

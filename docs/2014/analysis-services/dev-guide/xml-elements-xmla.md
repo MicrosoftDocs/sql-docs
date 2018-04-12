@@ -35,6 +35,6 @@ manager: "mblythe"
   
 ## See Also  
  [XML Data Types &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-data-types-xmla.md)   
- [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/developing-with-analysis-services-scripting-language-assl.md)  
+ [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

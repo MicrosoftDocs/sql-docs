@@ -54,7 +54,7 @@ manager: "mblythe"
 |Derived elements|None|  
   
 ## Remarks  
- For more information about fact dimensions, see [Dimension Relationships](../../../2014/analysis-services/dev-guide/dimension-relationships.md).  
+ For more information about fact dimensions, see [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  
   

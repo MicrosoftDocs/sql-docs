@@ -66,7 +66,7 @@ manager: "mblythe"
 |CellOrdinal|Required `Long` attribute. Contains the zero-based ordinal position of the cell to be updated.|  
   
 ## Remarks  
- For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/updating-cells-xmla.md).  
+ For more information about updating cells, see [Updating Cells &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

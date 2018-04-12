@@ -64,7 +64,7 @@ manager: "mblythe"
 |Child elements|[Bindings](../../../2014/analysis-services/dev-guide/bindings-element-xmla.md), [DataSource](../../../2014/analysis-services/dev-guide/datasource-element-xmla.md), [DataSourceView](../../../2014/analysis-services/dev-guide/datasourceview-element-xmla.md), [ErrorConfiguration](../../../2014/analysis-services/dev-guide/errorconfiguration-element-xmla.md), [Object](../../../2014/analysis-services/dev-guide/object-element-xmla.md), [Type Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/type-element-xmla.md), [WriteBackTableCreation](../../../2014/analysis-services/dev-guide/writebacktablecreation-element-xmla.md)|  
   
 ## Remarks  
- For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/processing-objects-xmla.md).  
+ For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
 ## See Also  
  [Commands &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/commands-xmla.md)  

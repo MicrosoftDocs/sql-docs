@@ -21,7 +21,7 @@ manager: "mblythe"
   Use the **General** tab of the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the storage mode and proactive caching settings for a dimension, cube, measure group, or partition.  
   
 > [!NOTE]  
->  You should be familiar with storage mode and proactive caching functionality before modifying these settings. For more information, see [Proactive Caching &#40;Partitions&#41;](dev-guide/proactive-caching-partitions.md).  
+>  You should be familiar with storage mode and proactive caching functionality before modifying these settings. For more information, see [Proactive Caching &#40;Partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## Options  
   

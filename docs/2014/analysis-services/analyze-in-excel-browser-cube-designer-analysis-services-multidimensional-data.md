@@ -46,7 +46,7 @@ manager: "mblythe"
   
  [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
- [Browse data and metadata in Cube](browse-data-and-metadata-in-cube.md)  
+ [Browse data and metadata in Cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
 ## See Also  
  [Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   

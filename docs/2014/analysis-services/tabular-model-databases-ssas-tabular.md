@@ -39,18 +39,18 @@ manager: "mblythe"
   
  [Restore from PowerPivot](restore-from-powerpivot.md)  
   
- [Move an Analysis Services Database](move-an-analysis-services-database.md)  
+ [Move an Analysis Services Database](multidimensional-models/move-an-analysis-services-database.md)  
   
- [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)  
+ [Synchronize Analysis Services Databases](multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Switch an Analysis Services database between ReadOnly and ReadWrite modes](multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
- [Modify or Delete an Analysis Services Database](modify-or-delete-an-analysis-services-database.md)  
+ [Modify or Delete an Analysis Services Database](multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   
- [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)  
+ [Document and Script an Analysis Services Database](multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
- [Backup and Restore of Analysis Services Databases](backup-and-restore-of-analysis-services-databases.md)  
+ [Backup and Restore of Analysis Services Databases](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
- [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)  
+ [Attach and Detach Analysis Services Databases](multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   

@@ -93,8 +93,8 @@ manager: "mblythe"
   
 ## See Also  
  [Cube Wizard F1 Help](cube-wizard-f1-help.md)   
- [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/cube-objects-analysis-services-multidimensional-data.md)   
- [Cubes in Multidimensional Models](cubes-in-multidimensional-models.md)   
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)  
+ [Cube Objects &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Cubes in Multidimensional Models](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

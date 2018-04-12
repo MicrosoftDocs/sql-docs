@@ -101,7 +101,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |Describes how filters on a model interact with training and testing data sets.|[Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md)|  
 |Describes how the use of training and testing data affects cross-validation.|[Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Provides information on the programmatic interfaces for working with training and testing sets in a mining structure.|[AMO Concepts and Object Model](../dev-guide/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure Element &#40;ASSL&#41;](../dev-guide/miningstructure-element-assl.md)|  
+|Provides information on the programmatic interfaces for working with training and testing sets in a mining structure.|[AMO Concepts and Object Model](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure Element &#40;ASSL&#41;](../dev-guide/miningstructure-element-assl.md)|  
 |Provides DMX syntax for creating holdout sets.|[CREATE MINING STRUCTURE &#40;DMX&#41;](~/dmx/create-mining-structure-dmx.md)|  
 |Retrieve information about cases in the training and testing sets.|[Data Mining Schema Rowsets](../dev-guide/data-mining-schema-rowsets.md)<br /><br /> [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](data-mining-schema-rowsets-ssas.md)|  
   

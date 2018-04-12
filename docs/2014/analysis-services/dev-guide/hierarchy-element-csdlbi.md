@@ -82,6 +82,6 @@ manager: "mblythe"
 ## See Also  
  [Understanding the Tabular Object Model](../../../2014/analysis-services/dev-guide/understanding-the-tabular-object-model.md)   
  [Understanding Functions for Parent-Child Hierarchies in DAX](https://msdn.microsoft.com/library/gg492192(v=sql.120).aspx)   
- [Configure the &#40;All&#41; Level for Attribute Hierarchies](../../../2014/analysis-services/configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configure the &#40;All&#41; Level for Attribute Hierarchies](../multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -24,9 +24,9 @@ manager: "mblythe"
   
  If you are unfamiliar with slices and cubes, we recommend that you review these articles:  
   
--   [Set the Partition Slice Property &#40;Analysis Services&#41;](set-the-partition-slice-property-analysis-services.md)  
+-   [Set the Partition Slice Property &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+-   [Create and Manage a Local Partition &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](~/mdx/generate-mdx.md) or [Except &#40;MDX&#41;](~/mdx/except-mdx-function.md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  

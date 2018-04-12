@@ -88,7 +88,7 @@ manager: "mblythe"
  Select to display the **Properties** window of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the selected measure group or measure.  
   
 ## See Also  
- [Configure Measure Properties](configure-measure-properties.md)   
- [Measures and Measure Groups](measures-and-measure-groups.md)  
+ [Configure Measure Properties](multidimensional-models/configure-measure-properties.md)   
+ [Measures and Measure Groups](multidimensional-models/measures-and-measure-groups.md)  
   
   

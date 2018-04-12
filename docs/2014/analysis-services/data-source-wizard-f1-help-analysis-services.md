@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [Completing the Wizard &#40;Data Source Wizard&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
   
 ## See Also  
- [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)   
- [Data Sources Supported &#40;SSAS Multidimensional&#41;](data-sources-supported-ssas-multidimensional.md)  
+ [Data Sources in Multidimensional Models](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Data Sources Supported &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

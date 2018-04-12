@@ -31,6 +31,6 @@ manager: "mblythe"
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Process Progress Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
- [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

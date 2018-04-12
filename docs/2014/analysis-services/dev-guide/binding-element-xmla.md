@@ -60,9 +60,9 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- `Binding` elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects to be processed by a `Batch` or `Process` command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/processing-objects-xmla.md).  
+ `Binding` elements define out-of-line bindings, other than data sources and data source views, for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects to be processed by a `Batch` or `Process` command. For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md).  
   
- For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../../2014/analysis-services/data-sources-and-bindings-ssas-multidimensional.md).  
+ For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

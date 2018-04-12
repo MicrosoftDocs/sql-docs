@@ -38,7 +38,7 @@ manager: "mblythe"
 5.  Right-click the attribute and then click **Properties** to configure its other properties.  
   
 ## See Also  
- [Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)   
- [Dimension Attribute Properties Reference](dimension-attribute-properties-reference.md)  
+ [Dimensions in Multidimensional Models](multidimensional-models/dimensions-in-multidimensional-models.md)   
+ [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

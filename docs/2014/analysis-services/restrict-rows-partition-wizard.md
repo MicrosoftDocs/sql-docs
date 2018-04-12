@@ -42,6 +42,6 @@ manager: "mblythe"
  Verifies that the statement in **Query** is a valid SQL statement.  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](dev-guide/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

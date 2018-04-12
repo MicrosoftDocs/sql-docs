@@ -54,7 +54,7 @@ manager: "mblythe"
  **Format string**  
  Type the MDX format string used to format the value returned by the calculated member, or select a predefined format string.  
   
- For more information about MDX format strings, see [FORMAT_STRING Contents &#40;MDX&#41;](format-string-contents-mdx.md).  
+ For more information about MDX format strings, see [FORMAT_STRING Contents &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
   
  **Visible**  
  Select **True** to allow the calculated member to be visible to client applications.  
@@ -73,14 +73,14 @@ manager: "mblythe"
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- Click the color selection button to display the **Color** dialog box and insert the RGB (Red-Green-Blue) value for a specified color into the MDX expression. For more information about RGB values, see [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](fore-color-and-back-color-contents-mdx.md).  
+ Click the color selection button to display the **Color** dialog box and insert the RGB (Red-Green-Blue) value for a specified color into the MDX expression. For more information about RGB values, see [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).  
   
  **Back color**  
  Type the MDX expression that provides the background color of the calculated member.  
   
  Drag selected elements from the **Calculation Tools** pane to this option to include the MDX syntax for the selected element.  
   
- Click the color selection button to display the **Color** dialog box and insert the RGB (Red-Green-Blue) value for a specified color into the MDX expression. For more information about RGB values, see [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](fore-color-and-back-color-contents-mdx.md).  
+ Click the color selection button to display the **Color** dialog box and insert the RGB (Red-Green-Blue) value for a specified color into the MDX expression. For more information about RGB values, see [FORE_COLOR and BACK_COLOR Contents &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).  
   
  **Font Expressions**  
  Expand to view the **Font name**, **Font size**, and **Font flags** options.  
@@ -107,8 +107,8 @@ manager: "mblythe"
  Click the font selection button to display the **Font** dialog box and insert the property values for a specified font into the MDX expression. For more information about property values, see [Creating and Using Property Values &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
 ## See Also  
- [Calculations](dev-guide/calculations.md)   
- [Create Calculated Members](create-calculated-members.md)   
+ [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Create Calculated Members](multidimensional-models/create-calculated-members.md)   
  [Cube Designer &#40;Analysis Services - Multidimensional Data&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Calculations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Toolbar &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   

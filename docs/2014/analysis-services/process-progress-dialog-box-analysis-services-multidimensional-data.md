@@ -38,6 +38,6 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Multidimensional Model Object Processing](multidimensional-model-object-processing.md)  
+ [Multidimensional Model Object Processing](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

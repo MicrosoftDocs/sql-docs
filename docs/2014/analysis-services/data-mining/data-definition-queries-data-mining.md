@@ -51,7 +51,7 @@ manager: "mblythe"
   
 -   Create specific types of models, such as a clustering model or decision tree model, by using [CREATE MINING MODEL &#40;DMX&#41;](~/dmx/create-mining-model-dmx.md).  
   
--   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
+-   Alter an existing mining structure by adding a model or by changing the columns, by using [ALTER MINING STRUCTURE &#40;DMX&#41;](~/dmx/alter-mining-structure-dmx.md). Note that you cannot alter a mining model by using DMX; you only add new models to an existing structure.  
   
 -   Make a copy of a mining model and then alter it, by using [SELECT INTO &#40;DMX&#41;](~/dmx/select-into-dmx.md).  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
 |Work with templates for DMX queries.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Design queries of all kinds, using Prediction Query Builder.|[Create a Prediction Query Using the Prediction Query Builder](create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |Capture query definitions by using SQL Server Profiler, and use traces to monitor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../dev-guide/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../dev-guide/developing-with-analysis-management-objects-amo.md)|  
+|Learn more about the scripting languages and programming languages provided for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[XML for Analysis  &#40;XMLA&#41; Reference](../dev-guide/xml-for-analysis-xmla-reference.md)<br /><br /> [Developing with Analysis Management Objects &#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |Learn how to manage models in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Export and Import Data Mining Objects](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](~/dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](~/dmx/import-dmx.md)|  
 |Learn more about OPENROWSET and other ways to query external data.|[&#60;source data query&#62;](~/dmx/source-data-query.md).|  
   

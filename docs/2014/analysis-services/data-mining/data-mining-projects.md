@@ -22,9 +22,9 @@ manager: "mblythe"
   
  
 ##  <a name="bkmk_Overview"></a> Creating Data Mining Projects  
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build data mining projects using the template, **OLAP and Data Mining Project**. You can also create data mining projects programmatically, by using AMO. Individual data mining objects can be scripted using the Analysis Services Scripting language (ASSL). For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+ In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you build data mining projects using the template, **OLAP and Data Mining Project**. You can also create data mining projects programmatically, by using AMO. Individual data mining objects can be scripted using the Analysis Services Scripting language (ASSL). For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- If you create a data mining project within an existing solution, by default the data mining objects will be deployed to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the same name as the solution file. You can change this name and the target server by using the **Project Properties** dialog box. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../configure-analysis-services-project-properties-ssdt.md).  
+ If you create a data mining project within an existing solution, by default the data mining objects will be deployed to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the same name as the solution file. You can change this name and the target server by using the **Project Properties** dialog box. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
 >  To successfully build and deploy your project, you must have access to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that is running in OLAP/Data Mining mode. You cannot develop or deploy data mining solutions on an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that supports tabular models, nor can you use data directly from a PowerPivot workbook or from a tabular model that uses the in-memory data store. To determine whether the instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that you have can support data mining, see [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -60,7 +60,7 @@ manager: "mblythe"
   
  For example, a single data mining project can contain a reference to multiple data sources, with each data source supporting multiple data source views. In turn, each data source view can support multiple mining structures, each with many related mining models.  
   
- Additionally, your project might include plug-in algorithms, custom assemblies, or custom stored procedures; however, these objects are not described here. For more information, see [Developer's Guide &#40;Analysis Services&#41;](../dev-guide/developer-s-guide-analysis-services.md).  
+ Additionally, your project might include plug-in algorithms, custom assemblies, or custom stored procedures; however, these objects are not described here. For more information, see [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -97,7 +97,7 @@ manager: "mblythe"
   
 -   Restrict data temporarily, or sample data  
   
- For more information about how you can modify data within a data source view, see [Data Source Views in Multidimensional Models](../data-source-views-in-multidimensional-models.md).  
+ For more information about how you can modify data within a data source view, see [Data Source Views in Multidimensional Models](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 > [!WARNING]  
 >  If you want to filter the data, you can do so in the data source view, but you can also create filters on the data at the level of the mining model. Because the filter definition is stored with the mining model, using model filters makes it easier to determine the data that was used for training the model. Moreover, you can create multiple related models, with different filter criteria. For more information, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
@@ -185,7 +185,7 @@ manager: "mblythe"
 ##  <a name="bkmk_API"></a> Programmatic Access to Data Mining Objects  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several tools that you can use to programmatically work with data mining projects and the objects in them. The DMX language provides statements that you can use to create data sources and data source views, and to create, train, and use data mining structure and models. For more information, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
   
- You can also perform these tasks by using the Analysis Services Scripting Language (ASSL), or by using Analysis Management Objects (AMO). For more information, see [Developing with XMLA in Analysis Services](../dev-guide/developing-with-xmla-in-analysis-services.md).  
+ You can also perform these tasks by using the Analysis Services Scripting Language (ASSL), or by using Analysis Management Objects (AMO). For more information, see [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
   
@@ -200,11 +200,11 @@ manager: "mblythe"
 |Provides links to information about each of the mining model viewers|[Data Mining Model Viewers](data-mining-model-viewers.md)|  
 |Learn how to create a lift chart, profit chart, or classification matrix, or test a mining structure|[Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md)|  
 |Learn about processing options and permissions|[Processing Data Mining Objects](processing-data-mining-objects.md)|  
-|Provides more information about Analysis Services|[Multidimensional Model Databases &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)|  
+|Provides more information about Analysis Services|[Multidimensional Model Databases &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## See Also  
  [Data Mining Designer](data-mining-designer.md)   
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Workspace Database &#40;SSAS Tabular&#41;](../workspace-database-ssas-tabular.md)  
   
   

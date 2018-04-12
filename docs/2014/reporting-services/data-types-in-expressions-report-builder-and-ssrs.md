@@ -138,7 +138,7 @@ manager: "mblythe"
   
  For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database data types, see [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md), and [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](~/t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../../2014/analysis-services/dev-guide/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
+ For more information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data types, see [Data Types in Analysis Services](../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## See Also  
  [Formatting Report Items &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/formatting-report-items-report-builder-and-ssrs.md)  

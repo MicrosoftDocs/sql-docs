@@ -45,7 +45,7 @@ manager: "mblythe"
 ## Importing Data Mining Structures and Models  
  When you import a data mining object, the object is imported to the server and database to which you are connected when you execute the IMPORT statement. If the import file includes a database that does not exist on the server, the database will be created.  
   
- You can also import a mining structure or mining model by using the `Restore` command. Your models or structures will be restored into the database that has the same name as the database from which they were exported. For more information, see [Restore Options](../restore-options.md).  
+ You can also import a mining structure or mining model by using the `Restore` command. Your models or structures will be restored into the database that has the same name as the database from which they were exported. For more information, see [Restore Options](../multidimensional-models/restore-options.md).  
   
 ## Remarks  
  You cannot import a model or structure to a server if a model or structure of the same name already exists on that server. Also, you cannot export a data mining object and then modify the name of that object in the export file. Therefore, if you anticipate naming conflicts, you should either delete the data mining object on the target server, or rename the data mining object before you export the definition.  

@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Creating an Analysis Services Project
-  In the following task, you use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project named `Analysis Services Tutorial`, based on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md).  
+  In the following task, you use [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create a new [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project named `Analysis Services Tutorial`, based on the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project template. A *project* is a collection of related objects. Projects exist within a solution, which includes one or more projects. For more information, see [Create an Analysis Services Project &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### To create a new Analysis Services project  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
  [Defining a Data Source](lesson-1-2-defining-a-data-source.md)  
   
 ## See Also  
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Create an Analysis Services Project &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Create an Analysis Services Project &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

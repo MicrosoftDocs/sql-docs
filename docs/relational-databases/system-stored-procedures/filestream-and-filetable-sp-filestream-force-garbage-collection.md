@@ -27,7 +27,7 @@ ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# Filestream and FileTable - sp_filestream_force_garbage_collection
+# sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.  

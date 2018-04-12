@@ -25,8 +25,8 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[OLAP Engine Server Components](../../../dev-guide/olap-engine-server-components.md)|Describes the components of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server.|  
-|[Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../../../dev-guide/local-cubes-analysis-services-multidimensional-data.md)|Describes how stand-alone cubes are implemented and the scope of such implementation under an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
-|[Client Architecture Requirements for Analysis Services Development](../../../dev-guide/client-architecture-requirements-for-analysis-services-development.md)|Describes the client architecture to access data and metadata from an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
+|[OLAP Engine Server Components](olap-engine-server-components.md)|Describes the components of an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server.|  
+|[Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](local-cubes-analysis-services-multidimensional-data.md)|Describes how stand-alone cubes are implemented and the scope of such implementation under an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
+|[Client Architecture Requirements for Analysis Services Development](client-architecture-requirements-for-analysis-services-development.md)|Describes the client architecture to access data and metadata from an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] solution.|  
   
   

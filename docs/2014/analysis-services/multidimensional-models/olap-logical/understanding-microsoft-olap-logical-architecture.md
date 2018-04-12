@@ -32,7 +32,7 @@ manager: "mblythe"
   
 ## In This Section  
  **Logical Architecture Overview**  
- [Logical Architecture Overview &#40;Analysis Services - Multidimensional Data&#41;](../../dev-guide/logical-architecture-overview-analysis-services-multidimensional-data.md)  
+ [Logical Architecture Overview &#40;Analysis Services - Multidimensional Data&#41;](logical-architecture-overview-analysis-services-multidimensional-data.md)  
   
  **Server Objects**  
  [Server Objects &#40;Analysis Services - Multidimensional Data&#41;](server-objects-analysis-services-multidimensional-data.md)  

@@ -30,7 +30,7 @@ manager: "mblythe"
   
  The following illustration shows the relationship of the classes that are explained in this topic.  
   
- ![AMO DataMining Classes](../../../2014/analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO DataMining Classes")  
+ ![AMO DataMining Classes](../../../analysis-services/dev-guide/media/amo-dataminingclasses.gif "AMO DataMining Classes")  
   
 ##  <a name="MiningStructure"></a> MiningStructure Objects  
  A mining structure is the container for mining models. The structure defines all possible columns that the mining models may use. Each mining model defines its own columns from the set of defined columns in the structure.  

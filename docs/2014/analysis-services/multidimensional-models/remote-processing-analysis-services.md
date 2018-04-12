@@ -48,7 +48,7 @@ manager: "mblythe"
   
 -   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](../instances/sql-server-agent.md#components) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
+-   [SQL Server Agent Components](../../database-engine/sql-server-agent.md#Components) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
   
  After account permissions are configured, continue with these steps.  
   
@@ -89,7 +89,7 @@ manager: "mblythe"
 2.  As a final step, modify the job to run on a schedule that you define, adding any alerts or notifications necessary to administer the job. You might also want to refine the processing script, or create multiple steps in the job to process objects independently.  
   
 ## See Also  
- [SQL Server Agent Components](../instances/sql-server-agent.md#components)   
+ [SQL Server Agent Components](../../database-engine/sql-server-agent.md#Components)   
  [Schedule SSAS Administrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)   

@@ -131,7 +131,7 @@ manager: "mblythe"
 ## See Also  
  [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Define Logical Primary Keys in a Data Source View &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Define Named Queries in a Data Source View &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
  [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
  [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

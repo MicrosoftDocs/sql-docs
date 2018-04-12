@@ -102,7 +102,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> AmoException Exception Objects  
- AMO will throw exceptions at different problems found. For a detailed explanation of exceptions, see [AMO Other Classes and Methods](../../dev-guide/amo-other-classes-and-methods.md). The following sample code shows the correct way to capture exceptions in AMO:  
+ AMO will throw exceptions at different problems found. For a detailed explanation of exceptions, see [AMO Other Classes and Methods](amo-other-classes-and-methods.md). The following sample code shows the correct way to capture exceptions in AMO:  
   
 ```  
 try  

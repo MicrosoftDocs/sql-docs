@@ -132,7 +132,7 @@ manager: "mblythe"
 ## See Also  
  [Processing Analysis Services Objects](processing-analysis-services-objects.md)   
  [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Create and Manage a Local Partition &#40;Analysis Services&#41;](../create-and-manage-a-local-partition-analysis-services.md)   
+ [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [Create and Manage a Remote Partition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [Set Partition Writeback](set-partition-writeback.md)   
  [Write-Enabled Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   

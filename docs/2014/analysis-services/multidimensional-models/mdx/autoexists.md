@@ -60,7 +60,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Notice that 0 is used to designate the column axis, which is shorthand for axis(0) - which is the column axis.  
   
- The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [* (Crossjoin) (MDX)](../Topic/*%20\(Crossjoin\)%20\(MDX\).md) function.  
+ The previous query only returns cells for members from each attribute hierarchy in the query that exist with each other. The previous query can also be written using the new * variant of the [Crossjoin (MDX)](~/mdx/crossjoin-mdx.md) function.  
   
 ```  
 SELECT   
@@ -306,10 +306,10 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](dev-guide/supported-xmla-properties-xmla.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
+ Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](../../dev-guide/supported-xmla-properties-xmla.md) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube Space](cube-space.md)   
  [Tuples](tuples.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

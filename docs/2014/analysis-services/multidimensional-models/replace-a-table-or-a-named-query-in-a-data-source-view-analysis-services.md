@@ -29,7 +29,7 @@ manager: "mblythe"
  You most frequently replace a table in the data source view with another table in the data source. However, you can also replace a named query with a table. For example, you previously replaced a table with a named query, and now want to revert to a table.  
   
 > [!IMPORTANT]  
->  If you rename a table in a data source, follow the steps for replacing a table and specify the renamed table as the source of the corresponding table in the DSV before you refresh a DSV. Completing the replacement and renaming process preserves the table, the table's references, and the table's relationships in the DSV. Otherwise, when you refresh the DSV, a renamed table in data source is interpreted as being deleted. For more information, see [Refresh the Schema in a Data Source View &#40;Analysis Services&#41;](../refresh-the-schema-in-a-data-source-view-analysis-services.md).  
+>  If you rename a table in a data source, follow the steps for replacing a table and specify the renamed table as the source of the corresponding table in the DSV before you refresh a DSV. Completing the replacement and renaming process preserves the table, the table's references, and the table's relationships in the DSV. Otherwise, when you refresh the DSV, a renamed table in data source is interpreted as being deleted. For more information, see [Refresh the Schema in a Data Source View &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_nq"></a> Replace a table with a named query  
   

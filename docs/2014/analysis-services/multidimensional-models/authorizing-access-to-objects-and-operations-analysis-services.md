@@ -91,6 +91,6 @@ manager: "mblythe"
 ## See Also  
  [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Roles and Permissions &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Authentication methodologies supported by Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

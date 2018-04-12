@@ -35,7 +35,7 @@ manager: "jhubbard"
 ## See Also  
  [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Perspectives](dev-guide/perspectives.md)   
+ [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectives in Multidimensional Models](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Cube Translations](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   

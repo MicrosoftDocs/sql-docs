@@ -25,7 +25,7 @@ manager: "mblythe"
  Partitions can be created in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] during model design, or after the solution is deployed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or XMLA. We recommend that you choose one approach only. If you alternate between tools, you might find that changes made to a deployed database in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are overwritten when you subsequently redeploy the solution from [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## Before you start  
- Check whether you have either the business intelligence edition or enterprise edition. Standard edition does not support multiple partitions. To check the edition, right-click the server node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and choose **Reports** | **General**. For more information about feature availability, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Check whether you have either the business intelligence edition or enterprise edition. Standard edition does not support multiple partitions. To check the edition, right-click the server node in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and choose **Reports** | **General**. For more information about feature availability, see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  From the outset, it's important to understand that partitions must share the same aggregation design if you want to merge them later. Partitions can be merged only if they have identical aggregation designs and storage modes.  
   
@@ -120,8 +120,8 @@ manager: "mblythe"
  As a final step, you normally want to remove the default partition that was based on the table itself (if it still exists), or else the query based partitions will overlap the query based on the complete table.  
   
 ## See Also  
- [Partitions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Remote Partitions](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
+ [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Merge Partitions in Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

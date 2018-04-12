@@ -88,6 +88,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
- [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

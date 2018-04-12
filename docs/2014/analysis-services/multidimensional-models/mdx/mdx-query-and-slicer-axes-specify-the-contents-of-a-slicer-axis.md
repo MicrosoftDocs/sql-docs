@@ -34,7 +34,7 @@ manager: "mblythe"
 >  Unlike the WHERE clause in SQL, the WHERE clause of an MDX SELECT statement never directly filters what is returned on the Rows axis of a query. To filter what appears on the Rows or Columns axis of a query, you can use a variety of MDX functions, for example FILTER, NONEMPTY and TOPCOUNT.  
   
 ### Implicit Slicer Axis  
- If a member from a hierarchy within the cube is not explicitly included in a query axis, the default member from that hierarchy is implicitly included in the slicer axis. For more information about default members, see [Define a Default Member](attribute-properties-define-a-default-member.md).  
+ If a member from a hierarchy within the cube is not explicitly included in a query axis, the default member from that hierarchy is implicitly included in the slicer axis. For more information about default members, see [Define a Default Member](../attribute-properties-define-a-default-member.md).  
   
 ## Examples  
  The following query does not include a WHERE clause, and returns the value of the Internet Sales Amount measure for all Calendar Years:  

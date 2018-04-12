@@ -61,7 +61,7 @@ FROM [Adventure Works]
 >  An attribute member can be referred by either its member name or its member key. In the previous example, you could replace the reference to [CY 2004] with &[2004].  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube Space](cube-space.md)   
  [Autoexists](autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  

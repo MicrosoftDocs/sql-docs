@@ -38,7 +38,7 @@ manager: "mblythe"
   
  For more information, see [User-Defined Member Properties &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Both intrinsic and user-defined member properties can be retrieved through the use of the `PROPERTIES` keyword or the [Properties](../../properties-mdx.md) function.  
+ Both intrinsic and user-defined member properties can be retrieved through the use of the `PROPERTIES` keyword or the [Properties](~/mdx/properties-mdx.md) function.  
   
 ## Using the PROPERTIES Keyword  
  The `PROPERTIES` keyword specifies the member properties that are to be used for a given axis dimension. The `PROPERTIES` keyword is buried within the `<axis specification>` clause of the MDX [SELECT](~/mdx/mdx-data-manipulation-select.md) statement:  
@@ -72,6 +72,6 @@ SELECT [<axis_specification>
 -   User-defined member properties should be preceded by the name of the level in which they reside. For more information about how to use the `PROPERTIES` keyword with user-defined member properties, see [User-Defined Member Properties &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
 ## See Also  
- [Creating and Using Property Values &#40;MDX&#41;](creating-and-using-property-values-mdx.md)  
+ [Creating and Using Property Values &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

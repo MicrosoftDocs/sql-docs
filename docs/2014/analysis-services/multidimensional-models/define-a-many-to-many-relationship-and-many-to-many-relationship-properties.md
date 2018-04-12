@@ -184,8 +184,8 @@ manager: "mblythe"
  [Tutorial: Many-to-many dimension example for SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## See Also  
- [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md)   
+ [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../install-sample-data-and-projects.md)   
  [Deploy Analysis Services Projects &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)  
   

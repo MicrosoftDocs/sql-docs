@@ -88,7 +88,7 @@ manager: "mblythe"
   
 ## See Also  
  [MDX Reserved Words](~/mdx/mdx-reserved-words.md)   
- [Translations &#40;Analysis Services&#41;](../../../2014/analysis-services/translations-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-for-analysis-compliance-xmla.md)  
+ [Translations &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
+ [XML for Analysis Compliance &#40;XMLA&#41;](../../../analysis-services/dev-guide/xml-for-analysis-compliance-xmla.md)  
   
   

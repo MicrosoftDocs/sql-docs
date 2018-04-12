@@ -32,7 +32,7 @@ manager: "mblythe"
 |Element|Description|  
 |-------------|-----------------|  
 |Dimensions|[Dimensions in Multidimensional Models](dimensions-in-multidimensional-models.md)|  
-|Measures and Measure Groups|[Create Measures and Measure Groups in Multidimensional Models](../create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Measures and Measure Groups|[Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitions|[Partitions in Multidimensional Models](partitions-in-multidimensional-models.md)|  
 |Perspectives|[Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)|  
 |Hierarchies|[Create User-Defined Hierarchies](user-defined-hierarchies-create.md)|  
@@ -46,7 +46,7 @@ manager: "mblythe"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Create a Cube Using the Cube Wizard](create-a-cube-using-the-cube-wizard.md)|Describes how to use the Cube Wizard to define a cube, dimensions, dimension attributes, and user-defined hierarchies.|  
-|[Create Measures and Measure Groups in Multidimensional Models](../create-measures-and-measure-groups-in-multidimensional-models.md)|Describes how to define measure groups.|  
+|[Create Measures and Measure Groups in Multidimensional Models](create-measures-and-measure-groups-in-multidimensional-models.md)|Describes how to define measure groups.|  
 |[Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)|Describes how to define and configure a calculation in an MDX script.|  
 |[Actions in Multidimensional Models](actions-in-multidimensional-models.md)|Describes how to define and configure an action.|  
 |[Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)|Describes how to define and configure a perspective.|  

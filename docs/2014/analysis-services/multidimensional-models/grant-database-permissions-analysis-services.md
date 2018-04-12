@@ -53,7 +53,7 @@ manager: "mblythe"
   
 -   Register assemblies (or stored procedures) for the database.  
   
- Notice that a database administrator cannot add or delete databases on the server, or grant administrator rights to other databases on the same server. That privilege belongs to server administrators alone. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for more information about this permission level.  
+ Notice that a database administrator cannot add or delete databases on the server, or grant administrator rights to other databases on the same server. That privilege belongs to server administrators alone. See [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for more information about this permission level.  
   
  Because all roles are user-defined, we recommend that you create a role dedicated for this purpose (for example, a role named "dbadmin"), and then assign Windows user and group accounts accordingly.  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
  Like `Process Database`, setting `Read Definition` permissions at the database level has a cascading effect on other objects within the database. If you want to set Read Definition permissions at a more granular level, you must clear Read Definition as a database property in the General pane. See [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) for more information.  
   
 ## See Also  
- [Grant Server Administrator Permissions &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Grant Server Administrator Permissions &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

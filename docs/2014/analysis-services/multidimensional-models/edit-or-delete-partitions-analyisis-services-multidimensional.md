@@ -28,7 +28,7 @@ manager: "mblythe"
  Deleting partitions occurs automatically when you merge a source partition into a destination partition. The partition specified as the Source is deleted after the merge is completed. You can also delete partitions manually in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or in the Partitions tab in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. Right-click and choose **Delete**. Remember that deleting a partition also deletes data and aggregations. As a precaution, make sure you have a recent back up of the database in case you need to reverse this step later.  
   
 > [!NOTE]  
->  Alternatively, you can use XMLA scripts that automate tasks for building, merging, and deleting partitions. XMLA script can be created and executed in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], or in custom SSIS packages that runs as a scheduled task. For more information, see [Automate Analysis Services Administrative Tasks with SSIS](instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
+>  Alternatively, you can use XMLA scripts that automate tasks for building, merging, and deleting partitions. XMLA script can be created and executed in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], or in custom SSIS packages that runs as a scheduled task. For more information, see [Automate Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## Partition source  
  Specifies the source table or named query for the partition. To change the source table, click the cell and then click the browse (**...**) button.  

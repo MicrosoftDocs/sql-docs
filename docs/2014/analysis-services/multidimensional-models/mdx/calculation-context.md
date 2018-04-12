@@ -70,6 +70,6 @@ WHERE (Customer.Country.France,
 ## See Also  
  [Establishing Cube Context in a Query &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)  
+ [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

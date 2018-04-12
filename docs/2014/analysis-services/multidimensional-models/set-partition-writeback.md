@@ -51,7 +51,7 @@ manager: "mblythe"
  You can convert the data in a partition's writeback table to a partition. This procedure causes the writeback table to become the new partition's fact table.  
   
 > [!CAUTION]  
->  Incorrect use of partitions can result in inaccurate cube data. For more information, see [Create and Manage a Local Partition &#40;Analysis Services&#41;](../create-and-manage-a-local-partition-analysis-services.md).  
+>  Incorrect use of partitions can result in inaccurate cube data. For more information, see [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
  Converting the writeback data table to a partition also write-disables the partition. All unrestricted read/write policies and read/write permissions for the partition's cells are disabled, and end users will not be able to change displayed cube data. (End users with disabled unrestricted read/write policies or disabled read/write permissions will still be able to browse the cube.) Read and read-contingent permissions are not affected.  
   

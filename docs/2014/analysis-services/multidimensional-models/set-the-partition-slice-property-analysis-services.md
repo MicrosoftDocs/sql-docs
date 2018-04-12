@@ -41,9 +41,9 @@ manager: "mblythe"
 > [!NOTE]  
 >  Note that dynamic MDX functions (such as [Generate &#40;MDX&#41;](~/mdx/generate-mdx.md) or [Except &#40;MDX&#41;](~/mdx/except-mdx-function.md)) are not supported in the Slice property for partitions. You must define the slice by using explicit tuples or member references.  
 >   
->  For example, rather than using the [: &#40;Range&#41; &#40;MDX&#41;](../Topic/:%20\(Range\)%20\(MDX\).md) function to define a range, you would need to enumerate each member by the specific years.  
+>  For example, rather than using the [: &#40;Range&#41; &#40;MDX&#41;](~/mdx/range-mdx.md) function to define a range, you would need to enumerate each member by the specific years.  
 >   
->  If you need to define a complex slice, we recommend that you define the tuples in the slice by using an XMLA Alter script. Then, you can use either the ascmd command-line tool or the SSIS [Analysis Services Execute DDL Task](../../2014/integration-services/analysis-services-execute-ddl-task.md) task to run the script and create the specified set of members immediately before you process the partition.  
+>  If you need to define a complex slice, we recommend that you define the tuples in the slice by using an XMLA Alter script. Then, you can use either the ascmd command-line tool or the SSIS [Analysis Services Execute DDL Task](../../integration-services/analysis-services-execute-ddl-task.md) task to run the script and create the specified set of members immediately before you process the partition.  
   
 ## See Also  
  [Create and Manage a Local Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  

@@ -95,7 +95,7 @@ manager: "mblythe"
  When compared with the previous results, you can observe that the [All Resellers] row now adds up to the displayed values for [Value Added Reseller] and [Warehouse] but that the [All Products] column shows the total value for all products, including those not displayed.  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../../key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [MDX Query Fundamentals &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   

@@ -24,7 +24,7 @@ manager: "mblythe"
   
  **Power View for Multidimensional Models architecture**  
   
- ![Power View for Multidimensional Models Architecure](../media/daxmd-architecture.gif "Power View for Multidimensional Models Architecure")  
+ ![Power View for Multidimensional Models Architecture](../media/daxmd-architecture.gif "Power View for Multidimensional Models Architecture")  
   
 ## Prerequisites  
  **Server Requirements**  
@@ -35,7 +35,7 @@ manager: "mblythe"
   
  **Client Requirements**  
   
--   Power View client functionality requires Microsoft Silverlight 5. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   Power View client functionality requires Microsoft Silverlight 5. For more information, see [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 ## Features  
  **Native support for Power View**  
@@ -223,7 +223,7 @@ manager: "mblythe"
   
  The return CSDL out document represents the model as a namespace, containing entities, associations, and properties.  
   
- For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](dev-guide/technical-reference-for-bi-annotations-to-csdl.md) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ For more detailed information about CSDLBI annotations for tabular models, see [Technical Reference for BI Annotations to CSDL](../dev-guide/technical-reference-for-bi-annotations-to-csdl.md) on MSDN, and [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
   
 ## Client Help on Office.com  
  The following articles are provided on Office.com to help users learn about how Multidimensional Model objects appear in Power View and how to create a sample report:  

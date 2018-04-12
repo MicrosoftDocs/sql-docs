@@ -37,7 +37,7 @@ manager: "mblythe"
 -   [CaptureLog class and CaptureXML attribute](#CL)  
   
 ##  <a name="Assembly"></a> Assembly Class  
- Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](../../dev-guide/amo-other-classes-and-methods.md).  
+ Assemblies let users extend the functionality of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by adding new stored procedures or Multidimensional Expressions (MDX) functions. For more information, see [AMO Other Classes and Methods](amo-other-classes-and-methods.md).  
   
  Adding and dropping assemblies is simple and can be performed online. You must be a database administrator to add an assembly to the database or a server administrator to add the assembly to the server object.  
   
@@ -277,7 +277,7 @@ static public string TestCaptureLog(Server svr)
 ## See Also  
  <xref:Microsoft.AnalysisServices>   
  [Introducing AMO Classes](amo-classes-introduction.md)   
- [AMO Other Classes and Methods](../../dev-guide/amo-other-classes-and-methods.md)   
+ [AMO Other Classes and Methods](amo-other-classes-and-methods.md)   
  [Logical Architecture &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md)  

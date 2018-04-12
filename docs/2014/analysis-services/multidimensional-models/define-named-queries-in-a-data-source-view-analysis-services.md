@@ -60,6 +60,6 @@ manager: "mblythe"
   
 ## See Also  
  [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)   
- [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

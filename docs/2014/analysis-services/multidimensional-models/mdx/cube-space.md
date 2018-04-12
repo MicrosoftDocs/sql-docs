@@ -127,7 +127,7 @@ FROM [Adventure Works]
 ## Calculation Context  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuples](tuples.md)   
  [Autoexists](autoexists.md)   
  [Working with Members, Tuples, and Sets &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

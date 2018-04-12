@@ -57,13 +57,13 @@ manager: "mblythe"
 |2012 PowerPivot for Excel|Supported|Not supported. Upgrade the workbook **(\*)**|  
 |Excel 2013|Supported|Supported|  
   
- **(\*)** For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ **(\*)** For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Interactive, or manual data refresh in SharePoint Server 2013 Excel Services can refresh data models with data from the original data source. Interactive data refresh is available after you configure an Excel Services application by registering an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, running in SharePoint mode. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
->  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+>  Interactive data refresh is only available for workbooks that created in Excel 2013. If you try to refresh an Excel 2010 workbook, Excel Services displays an error message similar to “PowerPivot Operation Failed: The Workbook was created in an older version of Excel and PowerPivot cannot be refreshed until the file is upgraded”. For more information on upgrading workbooks, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  **Interactive refresh key point of interest:**  
   
@@ -85,7 +85,7 @@ manager: "mblythe"
   
 4.  **Note:** The updated workbook is not automatically saved back to the document library.  
   
- ![interactive data refresh](media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
+ ![interactive data refresh](../media/as-interactive-datarefresh-sharepoint2013.gif "interactive data refresh")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows Authentication with Workbook Data Connections and Interactive Data Refresh  
  Excel Services sends the Analysis Services server a process command that instructs the server to impersonate a user account. To obtain system rights sufficient to perform the user impersonation-delegation process, the Analysis Services service account, requires **Act as part of the operating system** privilege on the local server. The Analysis Services server also needs to be able to delegate the user's credentials to data sources. The query result is sent to Excel Services.  
@@ -122,14 +122,14 @@ manager: "mblythe"
   
 3.  Delegation from the Excel Services service account or from Claims to Windows token service (C2WTS) to the Analysis services instance is not required. Therefore no configuration for KCD from Excel Services or C2WTS to PowerPivot AS service is necessary. If the backend data source is on the same server as the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, Kerberos Constrained Delegation is not required. However, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service account requires the right to Act As Part Of The Operating System.  
   
- ![as_interactive_data_refresh2012SP1_windowsauth](media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
+ ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
  For more information, see [Act as part of the operating system](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx).  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Scheduled data refresh key points of interest:**  
   
--   Requires the deployment of the PowerPivot for SharePoint add-in. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Requires the deployment of the PowerPivot for SharePoint add-in. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   A user configures a refresh schedule for a workbook. At the scheduled time, the PowerPivot System Service sends a request to Excel Services to:  
   
@@ -141,7 +141,7 @@ manager: "mblythe"
   
 -   **Credentials:** Uses stored credentials. Does not use the identity of the current user.  
   
--   **Supported Workbooks:** Workbooks created using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot add-in for Excel 2010 or using Excel 2013. Workbooks created in Excel 2010 with the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot add-in are not supported. Upgrade the workbook to at least the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot format. For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Supported Workbooks:** Workbooks created using the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot add-in for Excel 2010 or using Excel 2013. Workbooks created in Excel 2010 with the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot add-in are not supported. Upgrade the workbook to at least the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot format. For more information on workbook upgrades, see [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  To display the **Manage Data Refresh** page:  
   
@@ -161,7 +161,7 @@ manager: "mblythe"
   
     -   Save the workbook back to the content database.  
   
- ![manage data refresh context menu](media/as-manage-datarefresh-sharepoint2013.gif "manage data refresh context menu")  
+ ![manage data refresh context menu](../media/as-manage-datarefresh-sharepoint2013.gif "manage data refresh context menu")  
   
 > [!TIP]  
 >  For information on refreshing workbooks from SharePoint online, see [Refreshing Excel workbooks with embedded PowerPivot models from SharePoint Online (white paper)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx).  
@@ -169,7 +169,7 @@ manager: "mblythe"
 ##  <a name="bkmk_refresh_architecture"></a> Scheduled Data Refresh Architecture in SharePoint 2013  
  The following illustration summarizes the data refresh architecture in SharePoint 2013 and SQL Server 2012 SP1.  
   
- ![architecture of SQL Server 2012 SP1 data refresh](media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture of SQL Server 2012 SP1 data refresh")  
+ ![architecture of SQL Server 2012 SP1 data refresh](../media/as-scheduled-data-refresh2012sp1-architecture.gif "architecture of SQL Server 2012 SP1 data refresh")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -223,7 +223,7 @@ manager: "mblythe"
   
 4.  In the **Connection properties** dialog, click **Definition**, and then click the **Authentication Settings…** button.  
   
- ![excel services authentication settings](media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
+ ![excel services authentication settings](../media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  For more information on data refresh authentication and usage of credentials, see the blog post [Refreshing PowerPivot Data in SharePoint 2013](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
@@ -233,7 +233,7 @@ manager: "mblythe"
  [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
 ## See Also  
- [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Upgrade Workbooks and Scheduled Data Refresh &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

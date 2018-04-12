@@ -56,11 +56,11 @@ manager: "mblythe"
   
 |Icon|Description|  
 |----------|-----------------|  
-|![GMNI_PowerPivotGalleryIcon_Hourglass](media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|The hourglass icon appears when a thumbnail image of each page in the document is being generated. Refresh the page to display the update the image.|  
-|![GMNI_PowerPivotGalleryIcon_Truncated](media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|The pages icon appears when a workbook or report has more pages than can be displayed in PowerPivot Gallery. To view all the pages, you must use a client application.|  
-|![GMNI_PowerPivotGalleryIcon_Error](media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|The error icon appears when a thumbnail image could not be rendered for the document. The document is published to the library, but it cannot be rendered in the custom PowerPivot Gallery views. You should be able to view the document in a client application, such as the PowerPivot for Excel add-in.|  
-|![GMNI_PowerPivotGalleryIcon_badtype](media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|The unavailable content icon appears when the document you uploaded cannot be rendered in PowerPivot Gallery. Supported document types include PowerPivot workbooks and reports created in SQL Server 2008 R2 Reporting Services Report Builder.<br /><br /> This icon also appears if you recycle a document from Recycle Bin.<br /><br /> If you are getting this icon for a document that previously presented a valid preview image, you can refresh the image by editing a document property and then saving your changes.|  
-|![GMNI_PowerPivotGalleryIcon_Locked](media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|The locked content icon appears when thumbnail images are purposely disabled for this document. PowerPivot Gallery does not generate thumbnail images for Excel workbooks that contain no PowerPivot data, or for PowerPivot workbooks or Reporting Services reports that do not meet the requirements for snapshot generation. For more information, see the Prerequisites section in this topic.|  
+|![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|The hourglass icon appears when a thumbnail image of each page in the document is being generated. Refresh the page to display the update the image.|  
+|![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|The pages icon appears when a workbook or report has more pages than can be displayed in PowerPivot Gallery. To view all the pages, you must use a client application.|  
+|![GMNI_PowerPivotGalleryIcon_Error](../media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|The error icon appears when a thumbnail image could not be rendered for the document. The document is published to the library, but it cannot be rendered in the custom PowerPivot Gallery views. You should be able to view the document in a client application, such as the PowerPivot for Excel add-in.|  
+|![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|The unavailable content icon appears when the document you uploaded cannot be rendered in PowerPivot Gallery. Supported document types include PowerPivot workbooks and reports created in SQL Server 2008 R2 Reporting Services Report Builder.<br /><br /> This icon also appears if you recycle a document from Recycle Bin.<br /><br /> If you are getting this icon for a document that previously presented a valid preview image, you can refresh the image by editing a document property and then saving your changes.|  
+|![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|The locked content icon appears when thumbnail images are purposely disabled for this document. PowerPivot Gallery does not generate thumbnail images for Excel workbooks that contain no PowerPivot data, or for PowerPivot workbooks or Reporting Services reports that do not meet the requirements for snapshot generation. For more information, see the Prerequisites section in this topic.|  
   
 ##  <a name="add"></a> Save an Excel Workbook to PowerPivot Gallery  
  You can publish [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks to the library using all of the sharing techniques that Excel 2010 provides. For example, in Excel 2010, you can use Save As to specify all or part of a SharePoint path to a library.  
@@ -79,7 +79,7 @@ manager: "mblythe"
   
 3.  In the Save As dialog box, in File name, enter a full or partial URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery. If you enter a portion of the URL address, such as the server name, you can browse the site to find the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery. To do this, click **Save** to open a connection to the server you specified.  
   
-     ![GMNI_ExcelSaveAs](media/gmni-excelsaveas.gif "GMNI_ExcelSaveAs")  
+     ![GMNI_ExcelSaveAs](../media/gmni-excelsaveas.gif "GMNI_ExcelSaveAs")  
   
 1.  Using the Save As dialog box, select [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery on your site.  
   
@@ -103,7 +103,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDocReportGallery](media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Click the downward arrow portion of the New Report button to launch Report Builder or Excel 2010. PowerPivot Gallery must use one of the predesigned views (Theater, Gallery, or Carousel) in order for the New Report button to be available.|  
+|![GMNI_btn_NewDocReportGallery](../media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|Click the downward arrow portion of the New Report button to launch Report Builder or Excel 2010. PowerPivot Gallery must use one of the predesigned views (Theater, Gallery, or Carousel) in order for the New Report button to be available.|  
   
 #### Create Report Builder Report  
  Creating a new report based on an existing PowerPivot workbook in the library requires that Reporting Services is configured for SharePoint integration for the same sites that contain PowerPivot Gallery. When you select the Create Report Builder Report option, Report Builder is downloaded from the report server and installed on the local workstation on first use. A placeholder report file is created for the new report and saved to PowerPivot Gallery. Connection information to the PowerPivot workbook is created for you as a new data source in the report. As a next step, you can build the datasets and report layout in the design workspace. As you use Report Builder to assemble your report, you can save your changes and the final result to the report document in the gallery. To avoid data disconnections later, be sure to keep the report and workbook files together in the same library.  
@@ -121,7 +121,7 @@ manager: "mblythe"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Click the Manage Data refresh button to create or view a schedule that retrieves updated data from connected data sources. For instructions on how to create a schedule, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-power-pivot-for-sharepoint.md).|  
   
 ##  <a name="delete"></a> Delete a workbook or report in PowerPivot Gallery  
  To delete a document from the library, switch to the All Documents view first.  
@@ -162,6 +162,6 @@ manager: "mblythe"
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Delete PowerPivot Gallery](delete-power-pivot-gallery.md)   
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
- [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
+ [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-power-pivot-for-sharepoint.md)  
   
   

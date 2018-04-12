@@ -20,7 +20,7 @@ manager: "mblythe"
   
  A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report.  
   
- ![Screenshot of BISM quick launch command](media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
+ ![Screenshot of BISM quick launch command](../media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
   
 ##  <a name="bkmk_prereq"></a> Supported databases  
  A BI semantic model connection points to tabular model data. There are three sources for this data:  
@@ -44,7 +44,7 @@ manager: "mblythe"
   
  The following illustration shows this connection sequence. It starts with a request for the .bism connection, followed by the download of connection information to the client, and finally the single-hop connection to the database. The connection is made using the Windows credentials of the Excel user, who has read permissions on the Analysis Services database. It is a single hop, so even if Kerberos is enabled, it is not required for this scenario.  
   
- ![Connections from Excel to tabular model database](media/ssas-powerpivotbismconnection-1.gif "Connections from Excel to tabular model database")  
+ ![Connections from Excel to tabular model database](../media/ssas-powerpivotbismconnection-1.gif "Connections from Excel to tabular model database")  
   
  **Connecting from Power View to tabular data on a network**  
   
@@ -58,7 +58,7 @@ manager: "mblythe"
   
  The following illustration shows a connection sequence that uses the same Windows user identity for each connection. On the last connection to Analysis Services, the connection is made by the Reporting Services service application identity, passing the Windows user identity using `effectiveusername`.  
   
- ![Imersonated connection to tabular db](media/ssas-powerpivotbismconnection-2.gif "Imersonated connection to tabular db")  
+ ![Imersonated connection to tabular db](../media/ssas-powerpivotbismconnection-2.gif "Imersonated connection to tabular db")  
   
  **Connecting from Power View to PowerPivot data in SharePoint**  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
  [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
 ## See Also  
- [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Connect to Analysis Services](instances/connect-to-analysis-services.md)  
+ [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Connect to Analysis Services](../instances/connect-to-analysis-services.md)  
   
   

@@ -2,7 +2,7 @@
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"

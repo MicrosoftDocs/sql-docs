@@ -2,7 +2,7 @@
 title: "DROP SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "pdw, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"

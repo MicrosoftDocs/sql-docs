@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Condition Element (ASSL)
-  Contains a Multidimensional Expressions (MDX) expression that determines whether the [Action](../../dev-guide/action-element-assl.md) parent element applies to the target.  
+  Contains a Multidimensional Expressions (MDX) expression that determines whether the [Action](action-element-assl.md) parent element applies to the target.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Action](../../dev-guide/action-element-assl.md)|  
+|Parent element|[Action](action-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

@@ -57,7 +57,7 @@ manager: "mblythe"
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## See Also  
- [ProactiveCachingQueryBinding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md)   
+ [ProactiveCachingQueryBinding Data Type &#40;ASSL&#41;](binding-data-type-assl.md)   
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

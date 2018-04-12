@@ -67,7 +67,7 @@ manager: "mblythe"
  [DataBlock Data Type &#40;ASSL&#41;](datablock-data-type-assl.md)   
  [Blocks Element &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Block Element &#40;ASSL&#41;](../objects/block-element-assl.md)   
- [ComAssembly Data Type &#40;ASSL&#41;](../../dev-guide/assembly-data-type-assl.md)   
+ [ComAssembly Data Type &#40;ASSL&#41;](assembly-data-type-assl.md)   
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

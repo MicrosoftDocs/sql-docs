@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [Attributes](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
-|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../../dev-guide/dimensions-element-assl.md) collection of [Aggregation](../objects/aggregation-element-assl.md))|  
+|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](dimensions-element-assl.md) collection of [Aggregation](../objects/aggregation-element-assl.md))|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is [AggregationDimension](dimension-data-type-assl.md).  

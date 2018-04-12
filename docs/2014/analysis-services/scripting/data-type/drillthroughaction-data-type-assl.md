@@ -44,7 +44,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[Action](../../dev-guide/action-data-type-assl.md)|  
+|Base data types|[Action](action-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  

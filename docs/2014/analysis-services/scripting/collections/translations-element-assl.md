@@ -65,7 +65,7 @@ manager: "mblythe"
 |Ancestor or Parent|Child Element|  
 |------------------------|-------------------|  
 |[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) or [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[Translation](../objects/translation-element-assl.md) of type [AttributeTranslation](../data-type/translation-data-type-assl.md)|  
-|[RelationshipEnd](../data-type/relationshipendtranslation-element-assl.md) of type [RelationshipEndTranslation](../../dev-guide/relationshipendtranslation-element-assl.md)|  
+|[RelationshipEnd](../data-type/relationshipendtranslation-element-assl.md) of type [RelationshipEndTranslation](relationshipendtranslation-element-assl.md)|  
 |All others|[Translation](../objects/translation-element-assl.md)|  
   
 ## Remarks  

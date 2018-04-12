@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PerspectiveAttribute Data Type (ASSL)
-  Defines a primitive data type that represents information about an attribute in a [PerspectiveDimension](../../dev-guide/dimension-data-type-assl.md) element.  
+  Defines a primitive data type that represents information about an attribute in a [PerspectiveDimension](dimension-data-type-assl.md) element.  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [AttributeHierarchyVisible](../properties/visible-element-assl.md), [AttributeID](../properties/id-element-assl.md), [DefaultMember](../objects/member-element-assl.md)|  
-|Derived elements|[Attribute](../objects/attribute-element-assl.md) ([Attributes](../collections/attributes-element-assl.md) collection of [PerspectiveDimension](../../dev-guide/dimension-data-type-assl.md))|  
+|Derived elements|[Attribute](../objects/attribute-element-assl.md) ([Attributes](../collections/attributes-element-assl.md) collection of [PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  

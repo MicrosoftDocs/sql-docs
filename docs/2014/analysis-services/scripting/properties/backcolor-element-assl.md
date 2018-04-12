@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[CalculationProperty](../objects/calculationproperty-element-assl.md), [Measure](../../dev-guide/measure-element-assl.md)|  
+|Parent element|[CalculationProperty](../objects/calculationproperty-element-assl.md), [Measure](measure-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

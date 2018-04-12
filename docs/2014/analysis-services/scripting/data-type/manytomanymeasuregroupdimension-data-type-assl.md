@@ -44,7 +44,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[MeasureGroupDimension](../../dev-guide/dimension-data-type-assl.md)|  
+|Base data types|[MeasureGroupDimension](dimension-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  

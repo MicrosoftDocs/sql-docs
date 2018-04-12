@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # ClrAssemblyFile Data Type (ASSL)
-  Defines a primitive data type that represents one of the files that compose a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](../../dev-guide/assembly-data-type-assl.md) element).  
+  Defines a primitive data type that represents one of the files that compose a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md) element).  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Data](../objects/data-element-assl.md), [Name](../properties/name-element-assl.md), [Type](../properties/type-element-clrassemblyfile-assl.md)|  
-|Derived elements|[File](../objects/file-element-assl.md) ([Files](../collections/files-element-assl.md) collection of [ClrAssembly](../../dev-guide/assembly-data-type-assl.md))|  
+|Derived elements|[File](../objects/file-element-assl.md) ([Files](../collections/files-element-assl.md) collection of [ClrAssembly](assembly-data-type-assl.md))|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  

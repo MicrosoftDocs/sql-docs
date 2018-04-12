@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PerspectiveHierarchy Data Type (ASSL)
-  Defines a primitive data type that represents information about a hierarchy in a [PerspectiveDimension](../../dev-guide/dimension-data-type-assl.md) element.  
+  Defines a primitive data type that represents information about a hierarchy in a [PerspectiveDimension](dimension-data-type-assl.md) element.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [HierarchyID](../properties/id-element-assl.md)|  
-|Derived elements|[Hierarchy](../objects/hierarchy-element-assl.md) ([Hierarchies](../collections/hierarchies-element-assl.md) collection of [PerspectiveDimension](../../dev-guide/dimension-data-type-assl.md))|  
+|Derived elements|[Hierarchy](../objects/hierarchy-element-assl.md) ([Hierarchies](../collections/hierarchies-element-assl.md) collection of [PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  

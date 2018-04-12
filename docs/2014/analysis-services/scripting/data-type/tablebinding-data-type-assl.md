@@ -45,7 +45,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[TabularBinding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[TabularBinding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -54,7 +54,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[DataSourceID](../properties/id-element-assl.md), [DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
  Note that referencing other tables in the filter expression by use of a subselect could have performance implications in some data sources. However, the designer can totally control the SQL expression by defining a named query in the data source view, and then referencing that.  
@@ -73,14 +73,14 @@ SELECT Date, Product ID, Qty, Price, Qty * Price AS Amount
   
  The calculated expression still applies, even if the expression used qualified table names (for example, Sales.Qty). The same applies if instead the table were replaced by some query "SELECT…" The FROM clause above would become "FROM SELECT ... As Sales."  
   
- For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of type `Binding` and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md).  
+ For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of type `Binding` and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.TableBinding>.  
   
 ## See Also  
- [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md)   
+ [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md)   
  [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)   
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  
   

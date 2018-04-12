@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Application Element (ASSL)
-  Identifies the application associated with an [Action](../../dev-guide/action-element-assl.md) element.  
+  Identifies the application associated with an [Action](action-element-assl.md) element.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Action](../../dev-guide/action-element-assl.md) or one of its derived elements: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
+|Parent element|[Action](action-element-assl.md) or one of its derived elements: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

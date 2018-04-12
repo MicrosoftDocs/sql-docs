@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # CaptionIsMdx Element (ASSL)
-  Defines whether the caption for the [Action](../../dev-guide/action-element-assl.md) element is a Multidimensional Expressions (MDX) expression.  
+  Defines whether the caption for the [Action](action-element-assl.md) element is a Multidimensional Expressions (MDX) expression.  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Action](../../dev-guide/action-element-assl.md)|  
+|Parent element|[Action](action-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

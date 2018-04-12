@@ -52,7 +52,7 @@ manager: "mblythe"
 |[Calculations Element &#40;ASSL&#41;](calculations-element-assl.md)|Contains the collection of [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elements associated with a [Perspective](../objects/perspective-element-assl.md) element.|  
 |[CellPermissions Element &#40;ASSL&#41;](cellpermissions-element-assl.md)|Contains the collection of permissions for cells in the associated [Cube](../objects/cube-element-assl.md) element.|  
 |[ClassifiedColumns Element &#40;ASSL&#41;](columns-element-assl.md)|Contains the collection of related columns that are classified by the [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) element.|  
-|[Columns Element &#40;ASSL&#41;](../../dev-guide/columns-element-assl.md)|Contains the collection of columns associated with the parent element.|  
+|[Columns Element &#40;ASSL&#41;](columns-element-assl.md)|Contains the collection of columns associated with the parent element.|  
 |[Commands Element &#40;ASSL&#41;](commands-element-assl.md)|Contains the collection of [Command](../objects/command-element-assl.md) elements associated with an [MdxScript](../objects/mdxscript-element-assl.md) element.|  
 |[CubePermissions Element &#40;ASSL&#41;](cubepermissions-element-assl.md)|Contains the collection of permissions applicable to a [Cube](../objects/cube-element-assl.md) element.|  
 |[Cubes Element &#40;ASSL&#41;](cubes-element-assl.md)|Contains the collection of [Cube](../objects/cube-element-assl.md) elements associated with a [Database](../objects/database-element-assl.md) element.|  
@@ -69,7 +69,7 @@ manager: "mblythe"
 |[Groups Element &#40;ASSL&#41;](groups-element-assl.md)|Contains the collection of groups of members bound to an attribute.|  
 |[Hierarchies Element &#40;ASSL&#41;](hierarchies-element-assl.md)|Contains the collection of [Hierarchy](../objects/hierarchy-element-assl.md) elements associated with the parent element.|  
 |[IncrementalProcessingNotifications Element &#40;ASSL&#41;](incrementalprocessingnotifications-element-assl.md)|Contains the collection of [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) elements that provide information to the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about queries to execute to determine the progress of incremental processing.|  
-|[KeyColumns Element &#40;ASSL&#41;](../../dev-guide/keycolumns-element-assl.md)|Contains the collection of [KeyColumn](../objects/column-element-assl.md) element definitions for a parent object.|  
+|[KeyColumns Element &#40;ASSL&#41;](keycolumns-element-assl.md)|Contains the collection of [KeyColumn](../objects/column-element-assl.md) element definitions for a parent object.|  
 |[Kpis Element &#40;ASSL&#41;](kpis-element-assl.md)|Contains the collection of [Kpi](../objects/kpi-element-assl.md) elements associated with the parent element.|  
 |[Levels Element &#40;ASSL&#41;](levels-element-assl.md)|Contains the collection of [Level](../objects/level-element-assl.md) elements in a [Hierarchy](../objects/hierarchy-element-assl.md) element.|  
 |[MdxScripts Element &#40;ASSL&#41;](mdxscripts-element-assl.md)|Contains the collection of [MdxScript](../objects/mdxscript-element-assl.md) elements associated with a [Cube](../objects/cube-element-assl.md) element.|  
@@ -91,7 +91,7 @@ manager: "mblythe"
 |[ServerProperties Element &#40;ASSL&#41;](serverproperties-element-assl.md)|Contains the collection of [ServerProperty](../objects/serverproperty-element-assl.md) elements associated with a [Server](../objects/server-element-assl.md) element.|  
 |[TableNotifications Element &#40;ASSL&#41;](tablenotifications-element-assl.md)|Contains the collection of [TableNotification](../objects/tablenotification-element-assl.md) elements that provide information for the [ProactiveCaching](../objects/proactivecaching-element-assl.md) element about tables or views in a data source that have been modified.|  
 |[Traces Element &#40;ASSL&#41;](traces-element-assl.md)|Contains the collection of [Trace](../objects/trace-element-assl.md) elements associated with a [Server](../objects/server-element-assl.md) element.|  
-|[Translations Element &#40;ASSL&#41;](../../dev-guide/translations-element-assl.md)|Contains the collection of [Translation](../objects/translation-element-assl.md) elements associated with the parent element.|  
+|[Translations Element &#40;ASSL&#41;](translations-element-assl.md)|Contains the collection of [Translation](../objects/translation-element-assl.md) elements associated with the parent element.|  
 |[UnknownMemberTranslations Element &#40;ASSL&#41;](unknownmembertranslations-element-assl.md)|Contains the collection of translations for the caption of the [UnknownMember](../properties/unknownmember-element-assl.md) element of a dimension.|  
   
 ## See Also  

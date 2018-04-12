@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Member Element (ASSL)
-  Contains the name of a member of a [Group](../../dev-guide/group-element-assl.md) element or of a [Role](role-element-assl.md) element.  
+  Contains the name of a member of a [Group](group-element-assl.md) element or of a [Role](role-element-assl.md) element.  
   
 ## Syntax  
   

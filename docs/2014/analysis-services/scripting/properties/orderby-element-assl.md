@@ -62,7 +62,7 @@ manager: "mblythe"
 |-----------|-----------------|  
 |*Name*|Order by the member name.|  
 |*Key*|Order by the member key.|  
-|*AttributeKey*|Order by the member key of the attribute specified in the [OrderByAttributeID](../../dev-guide/id-element-assl.md) element of `DimensionAttribute`.|  
+|*AttributeKey*|Order by the member key of the attribute specified in the [OrderByAttributeID](id-element-assl.md) element of `DimensionAttribute`.|  
 |*AttributeName*|Order by the member name of the attribute specified in the `OrderByAttributeID` element of `DimensionAttribute`.|  
   
  The enumeration that corresponds to the allowed values for `OrderBy` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.OrderBy>.  

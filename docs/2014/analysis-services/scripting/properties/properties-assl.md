@@ -36,7 +36,7 @@ manager: "mblythe"
 |[Access Element &#40;ASSL&#41;](access-element-assl.md)|Indicates the level of access given to a [CellPermission](../objects/cellpermission-element-assl.md) element.|  
 |[Account Element &#40;ImpersonationInfo&#41; &#40;ASSL&#41;](account-element-impersonationinfo-assl.md)|Contains the name of the user account for the [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) data type.|  
 |[AccountType Element &#40;ASSL&#41;](accounttype-element-assl.md)|Contains the name of an account type defined in a [Database](../objects/database-element-assl.md) element.|  
-|[ActionID Element &#40;ASSL&#41;](../../dev-guide/id-element-assl.md)|Contains the name of an [Action](../objects/action-element-assl.md) element defined on a [Cube](../objects/cube-element-assl.md) element which is made available in a [Perspective](../objects/perspective-element-assl.md) element as a [PerspectiveAction](../data-type/action-data-type-assl.md) element.|  
+|[ActionID Element &#40;ASSL&#41;](id-element-assl.md)|Contains the name of an [Action](../objects/action-element-assl.md) element defined on a [Cube](../objects/cube-element-assl.md) element which is made available in a [Perspective](../objects/perspective-element-assl.md) element as a [PerspectiveAction](../data-type/action-data-type-assl.md) element.|  
 |[Administer Element &#40;ASSL&#41;](administer-element-assl.md)|Indicates whether the associated permission includes the right to administer a `Database` element.|  
 |[AggregateFunction Element &#40;ASSL&#41;](aggregatefunction-element-assl.md)|Defines the type of aggregate function used by a [Measure](../objects/measure-element-assl.md) element.|  
 |[AggregationDesignID Element &#40;ASSL&#41;](aggregationdesignid-element-assl.md)|Identifies the [AggregationDesign](../objects/aggregationdesign-element-assl.md) element associated with the [Partition](../objects/partition-element-assl.md) element.|  
@@ -50,7 +50,7 @@ manager: "mblythe"
 |[Algorithm Element &#40;ASSL&#41;](algorithm-element-assl.md)|Defines the algorithm used by a [MiningModel](../objects/miningmodel-element-assl.md) element.|  
 |[Alias Element &#40;ASSL&#41;](alias-element-assl.md)|Defines an alias for an [Account](../objects/account-element-assl.md) element.|  
 |[AllMemberAggregationUsage Element &#40;ASSL&#41;](allmemberaggregationusage-element-assl.md)|Controls how the Aggregation Designer in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] designs aggregations.|  
-|[AllMemberName Element &#40;ASSL&#41;](../../dev-guide/name-element-assl.md)|Contains the caption in the default language for the All member of a [Hierarchy](../objects/hierarchy-element-assl.md) element.|  
+|[AllMemberName Element &#40;ASSL&#41;](name-element-assl.md)|Contains the caption in the default language for the All member of a [Hierarchy](../objects/hierarchy-element-assl.md) element.|  
 |[AllowBrowsing Element &#40;ASSL&#41;](allowbrowsing-element-assl.md)|Defines whether the members of a [Role](../objects/role-element-assl.md) element have browse permission on a `MiningModel` element.|  
 |[AllowDrillThrough Element &#40;ASSL&#41;](allowdrillthrough-element-assl.md)|Determines whether drillthrough is permitted on the parent element.|  
 |[AllowDuplicateNames Element &#40;ASSL&#41;](allowduplicatenames-element-assl.md)|Determines whether duplicate names are allowed in a `Hierarchy` element.|  
@@ -59,11 +59,11 @@ manager: "mblythe"
 |[AssociatedMeasureGroupID Element &#40;ASSL&#41;](measuregroupid-element-assl.md)|Contains the identifier (ID) of the [MeasureGroup](../objects/group-element-assl.md) element associated with a [CalculationProperty](../objects/calculationproperty-element-assl.md) element or a [Kpi](../objects/kpi-element-assl.md) element.|  
 |[AttributeAllMemberName Element &#40;ASSL&#41;](attributeallmembername-element-assl.md)|Contains the caption, in the default language, for the All member of the dimension.|  
 |[AttributeHierarchyDisplayFolder Element &#40;ASSL&#41;](displayfolder-element-assl.md)|Identifies the folder in which to display the associated attribute hierarchy.|  
-|[AttributeHierarchyEnabled Element &#40;ASSL&#41;](../../dev-guide/enabled-element-assl.md)|Determines whether an attribute hierarchy is enabled for the attribute.|  
+|[AttributeHierarchyEnabled Element &#40;ASSL&#41;](enabled-element-assl.md)|Determines whether an attribute hierarchy is enabled for the attribute.|  
 |[AttributeHierarchyOptimizedState Element &#40;ASSL&#41;](state-element-assl.md)|Determines the level of optimization applied to the attribute hierarchy.|  
 |[AttributeHierarchyOrdered Element &#40;ASSL&#41;](attributehierarchyordered-element-assl.md)|Determines whether the associated attribute hierarchy is ordered.|  
 |[AttributeHierarchyVisible Element &#40;ASSL&#41;](visible-element-assl.md)|Determines whether the attribute hierarchy is visible to client applications.|  
-|[AttributeID Element &#40;ASSL&#41;](../../dev-guide/attributeid-element-assl.md)|Contains the ID of the attribute associated with the parent element.|  
+|[AttributeID Element &#40;ASSL&#41;](attributeid-element-assl.md)|Contains the ID of the attribute associated with the parent element.|  
 |[Audit Element &#40;ASSL&#41;](audit-element-assl.md)|Specifies that a [Trace](../objects/trace-element-assl.md) element cannot drop any events, even if this results in degraded performance on the server.|  
 |[AutoRestart Element &#40;ASSL&#41;](autorestart-element-assl.md)|Determines whether a `Trace` element should automatically restart if the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] service stops and restarts.|  
 |[BackColor Element &#40;ASSL&#41;](backcolor-element-assl.md)|Describes color-related display characteristics of the parent element.|  
@@ -89,11 +89,11 @@ manager: "mblythe"
 |[CubeDimensionID Element &#40;ASSL&#41;](cubedimensionid-element-assl.md)|Identifies the [CubeDimension](../data-type/cubedimension-data-type-assl.md) element associated with the parent element.|  
 |[CubeID Element &#40;ASSL&#41;](cubeid-element-assl.md)|Identifies the `Cube` element associated with a [Binding](../data-type/binding-data-type-assl.md) element.|  
 |[CurrentStorageMode Element &#40;ASSL&#41;](storagemode-element-assl.md)|Determines the current storage mode for the parent element.|  
-|[CurrentTimeMember Element &#40;ASSL&#41;](../../dev-guide/member-element-assl.md)|Defines the current member of a time dimension associated with a `Kpi` element.|  
+|[CurrentTimeMember Element &#40;ASSL&#41;](member-element-assl.md)|Defines the current member of a time dimension associated with a `Kpi` element.|  
 |[DataAggregation Element &#40;ASSL&#41;](../objects/aggregation-element-assl.md)|Determines whether the instance can aggregate persisted data or cached data for the `MeasureGroup`.|  
 |[DatabaseID Element &#40;ASSL&#41;](databaseid-element-assl.md)|Identifies the `Database` element associated with an out-of-line `Binding` element.|  
 |[DataSize Element &#40;ASSL&#41;](datasize-element-assl.md)|Contains the size in bytes of a [DataItem](../data-type/dataitem-data-type-assl.md) element.|  
-|[DataSourceID Element &#40;ASSL&#41;](../../dev-guide/datasourceid-element-assl.md)|Identifies the `DataSource` element associated with the parent element.|  
+|[DataSourceID Element &#40;ASSL&#41;](datasourceid-element-assl.md)|Identifies the `DataSource` element associated with the parent element.|  
 |[DataSourceImpersonationInfo Element &#40;ASSL&#41;](impersonationinfo-element-assl.md)|Contains the information used to determine impersonation behavior when connecting to the data source for a `Database` element.|  
 |[DataSourceViewID Element &#40;ASSL&#41;](datasourceviewid-element-assl.md)|Identifies the [DataSourceView](../objects/datasourceview-element-assl.md) element associated with the `Binding` parent element.|  
 |[DataType Element &#40;ASSL&#41;](datatype-element-assl.md)|Defines the data type of the associated element.|  
@@ -113,9 +113,9 @@ manager: "mblythe"
 |[DisplayFlag Element &#40;ASSL&#41;](displayflag-element-assl.md)|Contains a read-only hint that indicates whether user interface components should display the associated `ServerProperty` element.|  
 |[DisplayFolder Element &#40;ASSL&#41;](displayfolder-element-assl.md)|Specifies the folder in which to list the parent element. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] applications for developers and administrators may support the use of display folders to categorize multiple elements visually.|  
 |[Distribution Element &#40;ASSL&#41;](distribution-element-assl.md)|Contains a provider-specific value that describes how scalar values are distributed within a column of a `MiningStructure` element.|  
-|[Edition Element &#40;ASSL&#41;](edition-element-assl.md)|Contains the read-only edition of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the [Server](../../dev-guide/server-element-assl.md) element.|  
-|[Enabled Element &#40;ASSL&#41;](../../dev-guide/enabled-element-assl.md)|Indicates whether the parent element is enabled.|  
-|[EndOfData Element &#40;ASSL&#41;](../../dev-guide/data-element-assl.md)|Indicates the end of data received from a [PushedDataSource](../data-type/datasource-data-type-assl.md) element.|  
+|[Edition Element &#40;ASSL&#41;](edition-element-assl.md)|Contains the read-only edition of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the [Server](server-element-assl.md) element.|  
+|[Enabled Element &#40;ASSL&#41;](enabled-element-assl.md)|Indicates whether the parent element is enabled.|  
+|[EndOfData Element &#40;ASSL&#41;](data-element-assl.md)|Indicates the end of data received from a [PushedDataSource](../data-type/datasource-data-type-assl.md) element.|  
 |[EstimatedCount Element &#40;ASSL&#41;](estimatedcount-element-assl.md)|Contains the estimated number of members for an attribute.|  
 |[EstimatedPerformanceGain Element &#40;ASSL&#41;](estimatedperformancegain-element-assl.md)|Contains the read-only percentage of estimated performance gain for the partition.|  
 |[EstimatedRows Element &#40;ASSL&#41;](estimatedrows-element-assl.md)|Contains the estimated number of rows represented by the parent element.|  
@@ -140,7 +140,7 @@ manager: "mblythe"
 |[HideMemberIf Element &#40;ASSL&#41;](hidememberif-element-assl.md)|Indicates whether and when a member in a level should be hidden from client applications.|  
 |[HierarchyID Element &#40;ASSL&#41;](hierarchyid-element-assl.md)|Contains the ID for a [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [MeasureGroupHierarchy](../data-type/measuregrouphierarchy-data-type-assl.md), or [PerspectiveHierarchy](../data-type/perspectivehierarchy-data-type-assl.md) element.|  
 |[HierarchyUniqueNameStyle Element &#40;ASSL&#41;](hierarchyuniquenamestyle-element-assl.md)|Determines how unique names are generated for hierarchies that are contained within the `CubeDimension`.|  
-|[ID Element &#40;ASSL&#41;](../../dev-guide/id-element-assl.md)|Contains the unique ID of the parent element.|  
+|[ID Element &#40;ASSL&#41;](id-element-assl.md)|Contains the unique ID of the parent element.|  
 |[IgnoreUnrelatedDimensions Element &#40;ASSL&#41;](../collections/dimensions-element-assl.md)|Determines whether unrelated dimensions are forced to their top level when members of dimensions that are unrelated to the measure group are included in a query.|  
 |[ImpersonationInfo Element &#40;ASSL&#41;](impersonationinfo-element-assl.md)|Contains the information that is used to determine impersonation behavior when accessing or executing an assembly.|  
 |[ImpersonationInfoSecurity Element &#40;ASSL&#41;](impersonationinfosecurity-element-assl.md)|Contains a read-only value that indicates if any changes were made to the security credentials that are supplied in the `ImpersonationInfo` data type.|  
@@ -188,7 +188,7 @@ manager: "mblythe"
 |[MembersWithDataCaption Element &#40;ASSL&#41;](memberswithdatacaption-element-assl.md)|Provides a template string that is used to create captions for system-generated data members.|  
 |[MimeType Element &#40;ASSL&#41;](mimetype-element-assl.md)|Contains the Multipurpose Internet Mail Extensions (MIME) type, if applicable, of the data represented by the parent `DataItem` element.|  
 |[MiningModelID Element &#40;ASSL&#41;](miningmodelid-element-assl.md)|Associates a mining model with a data mining dimension.|  
-|[Name Element &#40;ASSL&#41;](../../dev-guide/name-element-assl.md)|Contains the name of the parent element.|  
+|[Name Element &#40;ASSL&#41;](name-element-assl.md)|Contains the name of the parent element.|  
 |[NamingTemplate Element &#40;ASSL&#41;](namingtemplate-element-assl.md)|Defines how levels are named in a parent-child hierarchy constructed from the `DimensionAttribute` parent element.|  
 |[NonEmptyBehavior Element &#40;ASSL&#41;](nonemptybehavior-element-assl.md)|Determines the non-empty behavior associated with the parent of the `CalculationProperty` element.|  
 |[NotificationTechnique Element &#40;ASSL&#41;](notificationtechnique-element-assl.md)|Specifies whether [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or an external client application processes the notifications.|  
@@ -209,11 +209,11 @@ manager: "mblythe"
 |[PermissionSet Element &#40;ASSL&#41;](permissionset-element-assl.md)|Identifies the permission set associated with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.|  
 |[Persistence Element &#40;ASSL&#41;](persistence-element-assl.md)|Determines which parts of the bound source data are dynamic and are checked for updates using the frequency specified by the [RefreshPolicy](refreshpolicy-element-assl.md) element.|  
 |[Process Element &#40;ASSL&#41;](process-element-assl.md)|Determines whether a user can process the owner of the parent element.|  
-|[ProcessingMode Element &#40;ASSL&#41;](../../dev-guide/processingmode-element-assl.md)|Indicates whether the instance should index and aggregate during or after processing.|  
+|[ProcessingMode Element &#40;ASSL&#41;](processingmode-element-assl.md)|Indicates whether the instance should index and aggregate during or after processing.|  
 |[ProcessingPriority Element &#40;ASSL&#41;](processingpriority-element-assl.md)|Determines the processing priority of the parent object during background operations, for example lazy aggregation, indexing, or clustering.|  
 |[ProcessingQuery Element &#40;ASSL&#41;](query-element-assl.md)|Contains the parameterized text of the query to execute for notification of incremental processing status.|  
 |[ProductName Element &#40;ASSL&#41;](productname-element-assl.md)|Contains the read-only product name of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that is associated with a `Server` element.|  
-|[Query Element &#40;ASSL&#41;](../../dev-guide/query-element-assl.md)|Contains the text of the query to execute for the notification.|  
+|[Query Element &#40;ASSL&#41;](query-element-assl.md)|Contains the text of the query to execute for the notification.|  
 |[QueryDefinition Element &#40;ASSL&#41;](querydefinition-element-assl.md)|Contains an opaque expression for a query associated with a `DataSource` element in a [QueryBinding](../data-type/querybinding-data-type-assl.md) element.|  
 |[Read Element &#40;ASSL&#41;](read-element-assl.md)|Determines whether data or metadata can be read for a given [CubeDimensionPermission](../data-type/permission-data-type-assl.md) or [Permission](../data-type/permission-data-type-assl.md) element.|  
 |[ReadDefinition Element &#40;ASSL&#41;](readdefinition-element-assl.md)|Determines whether members can read the definition of the database or the definition of objects in the database.|  
@@ -241,12 +241,12 @@ manager: "mblythe"
 |[Source Element &#40;Measure&#41; &#40;ASSL&#41;](source-element-measure-assl.md)|Contains the details of the source containing the value of the `Measure` element.|  
 |[SourceAttributeID Element &#40;ASSL&#41;](sourceattributeid-element-assl.md)|Contains the ID of the source attribute on which the [Level](../objects/level-element-assl.md) element is based.|  
 |[SourceColumnID Element &#40;ASSL&#41;](sourcecolumnid-element-assl.md)|Contains the ID of the source mining structure column in the ancestor `MiningStructure` element.|  
-|[State Element &#40;ASSL&#41;](../../dev-guide/state-element-assl.md)|Contains a read-only value that describes the current processing state of the parent element.|  
+|[State Element &#40;ASSL&#41;](state-element-assl.md)|Contains a read-only value that describes the current processing state of the parent element.|  
 |[Status Element &#40;ASSL&#41;](status-element-assl.md)|Contains an MDX expression that returns a status indicator for a `Kpi` element.|  
 |[StatusGraphic Element &#40;ASSL&#41;](statusgraphic-element-assl.md)|Contains the recommended graphical representation of the status of the `Kpi` element.|  
 |[StopTime Element &#40;ASSL&#41;](stoptime-element-assl.md)|Specifies the date and time at which a `Trace` element should stop.|  
 |[StorageLocation Element &#40;ASSL&#41;](storagelocation-element-assl.md)|Contains the file system storage location for the contents of the parent element.|  
-|[StorageMode Element &#40;ASSL&#41;](../../dev-guide/storagemode-element-assl.md)|Determines the storage mode for the parent element.|  
+|[StorageMode Element &#40;ASSL&#41;](storagemode-element-assl.md)|Determines the storage mode for the parent element.|  
 |[TableID Element &#40;ASSL&#41;](tableid-element-assl.md)|Contains the ID of the table (from the `DataSourceView` element) associated with the parent element.|  
 |[Target Element &#40;ASSL&#41;](target-element-assl.md)|Identifies the target of the `Action` element.|  
 |[TargetType Element &#40;ASSL&#41;](targettype-element-assl.md)|Identifies the item type of the item identified in the [Target](target-element-assl.md) element.|  
@@ -269,10 +269,10 @@ manager: "mblythe"
 |[UnknownMemberName Element &#40;ASSL&#41;](unknownmembername-element-assl.md)|Contains the caption, in the default language of the dimension, for the unknown member of the dimension.|  
 |[Usage Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](usage-element-dimensionattribute-assl.md)|Describes how an attribute is used.|  
 |[Usage Element &#40;MiningModelColumn&#41; &#40;ASSL&#41;](usage-element-miningmodelcolumn-assl.md)|Describes how the associated column in the parent `MiningStructure` is used.|  
-|[Value Element &#40;ASSL&#41;](../../dev-guide/value-element-assl.md)|Contains the value of the parent element.|  
+|[Value Element &#40;ASSL&#41;](value-element-assl.md)|Contains the value of the parent element.|  
 |[Version Element &#40;ASSL&#41;](version-element-assl.md)|Contains the read-only version number of the instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] represented by the `Server` element.|  
 |[Visibility Element &#40;ASSL&#41;](visibility-element-assl.md)|Defines the visibility of an [Annotation](../objects/annotation-element-assl.md) element.|  
-|[Visible Element &#40;ASSL&#41;](../../dev-guide/visible-element-assl.md)|Determines the visibility of the parent element.|  
+|[Visible Element &#40;ASSL&#41;](visible-element-assl.md)|Determines the visibility of the parent element.|  
 |[VisualTotals Element &#40;ASSL&#41;](visualtotals-element-assl.md)|Contains an MDX expression that determines whether visual totals are displayed for members of this attribute.|  
 |[Write Element &#40;ASSL&#41;](write-element-assl.md)|Determines whether data or metadata can be written for a given `CubeDimensionPermission` or `Permission` element.|  
 |[WriteEnabled Element &#40;ASSL&#41;](writeenabled-element-assl.md)|Indicates whether dimension writebacks are available (subject to security permissions).|  

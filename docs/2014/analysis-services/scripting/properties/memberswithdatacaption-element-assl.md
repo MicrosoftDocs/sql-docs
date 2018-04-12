@@ -61,7 +61,7 @@ manager: "mblythe"
  The elements that correspond to the parents of `MembersWithDataCaption` in the Analysis Management Objects (AMO) object model are <xref:Microsoft.AnalysisServices.AttributeTranslation> and <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## See Also  
- [MembersWithData Element &#40;ASSL&#41;](../../dev-guide/data-element-assl.md)   
+ [MembersWithData Element &#40;ASSL&#41;](data-element-assl.md)   
  [AttributeTranslation Data Type &#40;ASSL&#41;](../data-type/translation-data-type-assl.md)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   

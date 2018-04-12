@@ -55,8 +55,8 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[Dimensions](../../dev-guide/dimensions-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Measures](../collections/measures-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Child elements|[Dimensions](dimensions-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Measures](../collections/measures-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
  For more information, see the section, Out of Line Bindings, in [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

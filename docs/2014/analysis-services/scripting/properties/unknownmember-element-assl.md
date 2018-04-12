@@ -67,7 +67,7 @@ manager: "mblythe"
  The enumeration that corresponds to the allowed values for `UnknownMember` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.UnknownMemberBehavior>.  
   
 ## See Also  
- [UnknownMemberName Element &#40;ASSL&#41;](../../dev-guide/name-element-assl.md)   
+ [UnknownMemberName Element &#40;ASSL&#41;](name-element-assl.md)   
  [UnknownMemberTranslation Element &#40;ASSL&#41;](../data-type/translation-element-assl.md)   
  [Properties &#40;ASSL&#41;](properties-assl.md)  
   

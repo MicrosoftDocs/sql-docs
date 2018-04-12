@@ -54,7 +54,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- The table in the [DataSourceView](../objects/datasourceview-element-assl.md) that is referenced by the `ProcessingQuery` is identified by the sibling element, [TableID](../../dev-guide/id-element-assl.md).  
+ The table in the [DataSourceView](../objects/datasourceview-element-assl.md) that is referenced by the `ProcessingQuery` is identified by the sibling element, [TableID](id-element-assl.md).  
   
  The element that corresponds to the parent of `ProcessingQuery` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   

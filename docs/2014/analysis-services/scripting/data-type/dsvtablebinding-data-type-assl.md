@@ -44,7 +44,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[TabularBinding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[TabularBinding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -53,10 +53,10 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[DataSourceViewID](../properties/id-element-assl.md), [TableID](../properties/tableid-element-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
- For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding](../../dev-guide/binding-data-type-assl.md) element.  
+ For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding](binding-data-type-assl.md) element.  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

@@ -47,7 +47,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[RelationshipEnd](relationshipend-data-type-assl.md)|  
-|Child elements|[FolderPosition](../../dev-guide/folderposition-element-xml.md), [ContextualNameRule](../../dev-guide/contextualnamerule-element-xml.md), [DefaultDetailsPosition](../../dev-guide/defaultdetailsposition-element-xml.md), [DisplayKeyPosition](../../dev-guide/displaykeyposition-element-xml.md), [CommonIdentifierPosition](../../dev-guide/commonidentifierposition-element-xml.md), [IsDefaultMeasure](../../dev-guide/isdefaultmeasure-element-xml.md), [IsDefaultImage](../../dev-guide/isdefaultimage-element-xml.md), [SortPropertiesPosition](../../dev-guide/sortpropertiesposition-element-xml.md)|  
+|Child elements|[FolderPosition](folderposition-element-xml.md), [ContextualNameRule](contextualnamerule-element-xml.md), [DefaultDetailsPosition](defaultdetailsposition-element-xml.md), [DisplayKeyPosition](displaykeyposition-element-xml.md), [CommonIdentifierPosition](commonidentifierposition-element-xml.md), [IsDefaultMeasure](isdefaultmeasure-element-xml.md), [IsDefaultImage](isdefaultimage-element-xml.md), [SortPropertiesPosition](sortpropertiesposition-element-xml.md)|  
 |Derived elements||  
   
 ## Remarks  

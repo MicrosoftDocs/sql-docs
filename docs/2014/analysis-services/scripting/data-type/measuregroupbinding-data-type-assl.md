@@ -49,7 +49,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[Binding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -58,10 +58,10 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[CubeID](../properties/id-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [Filter](../properties/filter-element-binding-assl.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [Persistence](../properties/persistence-element-assl.md), [RefreshInterval](../properties/refreshinterval-element-assl.md), [RefreshPolicy](../properties/refreshpolicy-element-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
- For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the Binding type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md).  
+ For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the Binding type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

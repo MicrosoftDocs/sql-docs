@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # UnknownMemberTranslation Element (ASSL)
-  Contains a translation for the caption of the [UnknownMember](../../dev-guide/member-element-assl.md) element for a [Dimension](dimension-element-assl.md) element.  
+  Contains a translation for the caption of the [UnknownMember](member-element-assl.md) element for a [Dimension](dimension-element-assl.md) element.  
   
 ## Syntax  
   

@@ -60,7 +60,7 @@ manager: "mblythe"
 |Child elements|None|  
   
 ## Remarks  
- If the [KeyColumns](../collections/columns-element-assl.md) collection of `DimensionAttribute` contains a single [KeyColumn](../../dev-guide/column-element-assl.md) element representing a key column with a string data type, the same `DataItem` values are used as default values for the `NameColumn` element.  
+ If the [KeyColumns](../collections/columns-element-assl.md) collection of `DimensionAttribute` contains a single [KeyColumn](column-element-assl.md) element representing a key column with a string data type, the same `DataItem` values are used as default values for the `NameColumn` element.  
   
  For more information about the `DataItem` type, including a table of Analysis Services Scripting Language (ASSL) objects and properties of the `DataItem` type, see [DataItem Data Type &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   

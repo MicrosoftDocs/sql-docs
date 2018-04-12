@@ -50,7 +50,7 @@ manager: "mblythe"
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
-|Derived data types|[ClrAssembly](../../dev-guide/assembly-data-type-assl.md), [ComAssembly](comassembly-data-type-assl.md)|  
+|Derived data types|[ClrAssembly](assembly-data-type-assl.md), [ComAssembly](comassembly-data-type-assl.md)|  
   
 ## Data Type Relationships  
   

@@ -45,7 +45,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[Binding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -53,8 +53,8 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[CubeID](../properties/id-element-assl.md), [DatabaseID](../../dev-guide/databaseid-element-xmla.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [GranularityAttributeID](../properties/attributeid-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
-|Derived elements|[Binding](../../dev-guide/binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](../../dev-guide/batch-element-xmla.md) and [Process](../../dev-guide/process-element-xmla.md) commands)|  
+|Child elements|[CubeID](../properties/id-element-assl.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [GranularityAttributeID](../properties/attributeid-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
+|Derived elements|[Binding](binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](batch-element-xmla.md) and [Process](process-element-xmla.md) commands)|  
   
 ## Remarks  
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

@@ -27,7 +27,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Partition Element (ASSL)
-  Defines a partition of a [MeasureGroup](../../dev-guide/group-element-assl.md) element or a partition binding in an out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  
+  Defines a partition of a [MeasureGroup](group-element-assl.md) element or a partition binding in an out-of-line [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  
   
 ## Syntax  
   
@@ -76,7 +76,7 @@ manager: "mblythe"
   
 |Ancestor or Parent|Data Type|  
 |------------------------|---------------|  
-|[MeasureGroup](../../dev-guide/group-element-assl.md)|None|  
+|[MeasureGroup](group-element-assl.md)|None|  
 |[MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
   
 ## Element Relationships  
@@ -87,7 +87,7 @@ manager: "mblythe"
   
 |Ancestor or Parent|Child elements|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../../dev-guide/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../../dev-guide/storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
+|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|None|  
   
 ## Remarks  
@@ -117,7 +117,7 @@ manager: "mblythe"
   
     -   [CurrentStorageMode](../properties/storagemode-element-assl.md)  
   
-    -   [AggregationDesignID](../../dev-guide/aggregationdesignid-element-assl.md)  
+    -   [AggregationDesignID](aggregationdesignid-element-assl.md)  
   
     -   [AggregationInstances](../collections/aggregationinstances-element-assl.md)  
   

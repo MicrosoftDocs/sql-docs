@@ -52,7 +52,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent element|[Action](../../dev-guide/action-element-assl.md), [Translation](../data-type/translation-element-assl.md)|  
+|Parent element|[Action](action-element-assl.md), [Translation](../data-type/translation-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

@@ -62,7 +62,7 @@ manager: "mblythe"
  [Assemblies Element &#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly Element &#40;ASSL&#41;](assembly-element-assl.md)   
  [ClrAssembly Data Type &#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   
- [Data Element &#40;ASSL&#41;](../../dev-guide/data-element-assl.md)   
+ [Data Element &#40;ASSL&#41;](data-element-assl.md)   
  [DataBlock Data Type &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
  [Blocks Element &#40;ASSL&#41;](../collections/blocks-element-assl.md)   
  [Block Element &#40;ASSL&#41;](block-element-assl.md)   

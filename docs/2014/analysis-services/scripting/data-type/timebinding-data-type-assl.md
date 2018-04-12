@@ -55,7 +55,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[Binding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -64,10 +64,10 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[CalendarEndDate](../properties/calendarenddate-element-assl.md), [CalendarLanguage](../properties/language-element-assl.md), [CalendarStartDate](../properties/calendarstartdate-element-assl.md), [FirstDayOfWeek](../properties/firstdayofweek-element-assl.md), [FiscalFirstDayOfMonth](../properties/fiscalfirstdayofmonth-element-assl.md), [FiscalFirstMonth](../properties/fiscalfirstmonth-element-assl.md), [FiscalYearName](../properties/name-element-assl.md), [ManufacturingExtraMonthQuarter](../properties/manufacturingextramonthquarter-element-assl.md), [ManufacturingFirstMonth](../properties/manufacturingfirstmonth-element-assl.md), [ManufacturingFirstWeekOfMonth](../properties/manufacturingfirstweekofmonth-element-assl.md), [ReportingFirstMonth](../properties/reportingfirstmonth-element-assl.md), [ReportingFirstWeekOfMonth](../properties/reportingfirstweekofmonth-element-assl.md), [ReportingWeekToMonthPattern](../properties/reportingweektomonthpattern-element-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
- For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md).  
+ For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

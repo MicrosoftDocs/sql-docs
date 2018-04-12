@@ -42,7 +42,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[DataSource](../../dev-guide/datasource-data-type-assl.md)|  
+|Base data types|[DataSource](datasource-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  

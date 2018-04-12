@@ -54,7 +54,7 @@ manager: "mblythe"
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
-|Derived data types|[RelationalDataSource](../../dev-guide/datasource-data-type-assl.md), [OlapDataSource](olapdatasource-data-type-assl.md), [PushedDataSource](pusheddatasource-data-type-assl.md)|  
+|Derived data types|[RelationalDataSource](datasource-data-type-assl.md), [OlapDataSource](olapdatasource-data-type-assl.md), [PushedDataSource](pusheddatasource-data-type-assl.md)|  
   
 ## Data Type Relationships  
   

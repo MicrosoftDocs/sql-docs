@@ -61,7 +61,7 @@ manager: "mblythe"
  The element that corresponds to the parent of `CustomRollupPropertiesColumn` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## See Also  
- [CustomRollupColumn Element &#40;ASSL&#41;](../../dev-guide/column-element-assl.md)   
+ [CustomRollupColumn Element &#40;ASSL&#41;](column-element-assl.md)   
  [Objects &#40;ASSL&#41;](objects-assl.md)  
   
   

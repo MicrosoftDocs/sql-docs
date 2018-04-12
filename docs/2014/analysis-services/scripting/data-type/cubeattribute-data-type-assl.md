@@ -63,7 +63,7 @@ manager: "mblythe"
   
  An attribute cannot be added as a level of a hierarchy when the property, *AtttributeHierarchyEnabled*, is set to FALSE and the instance is operating under DeploymentMode 1 or 2 (SharePoint or Tabular server mode).  
   
- Attributes in the [CubeDimension](dimension-data-type-assl.md) element that are not explicitly included in the [Attributes](../collections/attributes-element-assl.md) collection become part of the collection with default values assigned to them. After attributes are added to the collection, the attributes can be returned by the [Discover](../../dev-guide/discover-method-xmla.md) method.  
+ Attributes in the [CubeDimension](dimension-data-type-assl.md) element that are not explicitly included in the [Attributes](../collections/attributes-element-assl.md) collection become part of the collection with default values assigned to them. After attributes are added to the collection, the attributes can be returned by the [Discover](discover-method-xmla.md) method.  
   
  The [AggregationUsage](../properties/aggregationusage-element-assl.md) element controls how [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] automatically designs aggregations for the attribute. The `AggregationUsage` element does not constrain any aggregations that are manually created for the cube.  
   

@@ -47,7 +47,7 @@ manager: "mblythe"
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
-|Derived data types|[ScalarMiningStructureColumn](../../dev-guide/miningstructurecolumn-data-type-assl.md), [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)|  
+|Derived data types|[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md), [TableMiningStructureColumn](tableminingstructurecolumn-data-type-assl.md)|  
   
 ## Data Type Relationships  
   

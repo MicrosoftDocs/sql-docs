@@ -44,7 +44,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[Binding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[ColumnID](../properties/columnid-element-eventcolumn-assl.md), [TableID](../properties/id-element-assl.md)|  
-|Derived elements|See [Binding](../../dev-guide/binding-data-type-assl.md)|  
+|Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  
  To create valid XML element names, [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] `DataSet` objects encode table names as they serialize to XML Schema Definition (XSD); for example, the name "Order Details" becomes "Order_x0020_Details". Likewise, the `ColumnID` and `TableID` elements contained by the `ColumnBinding` element and which reference objects in the data source view (DSV) must also encode names during serialization, to ensure that the names directly match the text in the DSV. The Analysis Services instance will decode these names, just as the `DataSet` object model does.  
@@ -66,7 +66,7 @@ manager: "mblythe"
   
  Table and column names do not include delimiters (for example, "[" for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
- For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md).  
+ For additional information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

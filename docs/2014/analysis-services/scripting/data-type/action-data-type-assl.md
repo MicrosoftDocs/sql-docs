@@ -53,7 +53,7 @@ manager: "mblythe"
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
-|Derived data types|[DrillThroughAction](../../dev-guide/action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
+|Derived data types|[DrillThroughAction](action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
   
 ## Data Type Relationships  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|[Actions](../collections/actions-element-assl.md)|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [Application](../properties/application-element-assl.md), [Caption](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [Condition](../properties/condition-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Invocation](../properties/invocation-element-assl.md), [Name](../properties/name-element-assl.md), [Target](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-action-assl.md)|  
-|Derived elements|[DrillThroughAction](../../dev-guide/action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
+|Derived elements|[DrillThroughAction](action-data-type-assl.md), [ReportAction](reportaction-data-type-assl.md), [StandardAction](standardaction-data-type-assl.md)|  
   
 ## Remarks  
  For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../../multidimensional-models/actions-analysis-services-multidimensional-data.md).  

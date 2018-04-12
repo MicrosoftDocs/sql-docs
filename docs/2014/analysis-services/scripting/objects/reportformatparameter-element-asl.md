@@ -61,7 +61,7 @@ manager: "mblythe"
   
 ## See Also  
  [ReportAction Data Type &#40;ASSL&#41;](../data-type/action-data-type-assl.md)   
- [Action Element &#40;ASSL&#41;](../../dev-guide/action-element-assl.md)   
+ [Action Element &#40;ASSL&#41;](action-element-assl.md)   
  [Objects &#40;ASSL&#41;](objects-assl.md)  
   
   

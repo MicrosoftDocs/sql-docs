@@ -45,7 +45,7 @@ manager: "mblythe"
 |Characteristic|Description|  
 |--------------------|-----------------|  
 |Base data types|None|  
-|Derived data types|[DataMiningMeasureGroupDimension](../../dev-guide/dimension-data-type-assl.md), [DegenerateMeasureGroupDimension](../../dev-guide/measuregroupdimension-data-type-assl.md), [ManyToManyMeasureGroupDimension](manytomanymeasuregroupdimension-data-type-assl.md), [ReferenceMeasureGroupDimension](referencemeasuregroupdimension-data-type-assl.md), [RegularMeasureGroupDimension](regularmeasuregroupdimension-data-type-assl.md)|  
+|Derived data types|[DataMiningMeasureGroupDimension](dimension-data-type-assl.md), [DegenerateMeasureGroupDimension](measuregroupdimension-data-type-assl.md), [ManyToManyMeasureGroupDimension](manytomanymeasuregroupdimension-data-type-assl.md), [ReferenceMeasureGroupDimension](referencemeasuregroupdimension-data-type-assl.md), [RegularMeasureGroupDimension](regularmeasuregroupdimension-data-type-assl.md)|  
   
 ## Data Type Relationships  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
-|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../../dev-guide/dimensions-element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
+|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](dimensions-element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
   
 ## Remarks  
  Each `MeasureGroupDimension` is a reference to one of the dimensions on the cube. These define which cube dimensions apply to the measure group.  

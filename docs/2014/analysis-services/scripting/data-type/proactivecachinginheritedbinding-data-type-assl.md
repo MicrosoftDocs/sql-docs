@@ -40,7 +40,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Base data types|[ProactiveCachingObjectNotificationBinding](../../dev-guide/binding-data-type-assl.md)|  
+|Base data types|[ProactiveCachingObjectNotificationBinding](binding-data-type-assl.md)|  
 |Derived data types|None|  
   
 ## Data Type Relationships  
@@ -54,7 +54,7 @@ manager: "mblythe"
 ## Remarks  
  For more information about the `ProactiveCachingBinding` type, including a table of the inheritance hierarchy of `ProactiveCachingBinding` types, see [ProactiveCachingBinding Data Type &#40;ASSL&#41;](proactivecachingbinding-data-type-assl.md).  
   
- For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](../../dev-guide/binding-data-type-assl.md).  
+ For more information about the `Binding` type, including tables of Analysis Services Scripting Language (ASSL) objects of the `Binding` type and the inheritance hierarchy of `Binding` types, see [Binding Data Type &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  For an overview of data bindings in ASSL, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   

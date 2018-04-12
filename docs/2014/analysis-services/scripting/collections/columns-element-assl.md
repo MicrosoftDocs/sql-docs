@@ -71,7 +71,7 @@ manager: "mblythe"
 |[DrillThroughAction](../data-type/binding-data-type-assl.md) or [MeasureBinding](../data-type/measurebinding-data-type-assl.md)|  
 |[Event](../data-type/eventcolumn-data-type-assl.md)|  
 |[MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../../dev-guide/miningstructurecolumn-data-type-assl.md)|  
+|[MiningStructure](../objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)|  
   
 ## Remarks  
  For `DrillThroughAction` elements, the `Columns` collection identifies the columns that contain data to be returned when the action is performed.  

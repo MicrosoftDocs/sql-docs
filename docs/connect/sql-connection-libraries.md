@@ -5,7 +5,7 @@ author: MightyPen
 ms.service: ""
 ms.component: "connect"
 ms.suite: "sql"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.technology: "dbe-data-tier-apps"
 ms.custom: ""

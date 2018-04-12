@@ -2,7 +2,7 @@
 title: "Step 3: Proof of concept connecting to SQL using Ruby | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ruby"

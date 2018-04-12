@@ -2,7 +2,7 @@
 title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"

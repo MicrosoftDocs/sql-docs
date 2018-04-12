@@ -49,7 +49,7 @@ manager: "mblythe"
   
 |Name|Supported version of SharePoint|Detailed Configuration|  
 |----------|-------------------------------------|----------------------------|  
-|PowerPivot for SharePoint 2013 Configuration|SharePoint 2013|[Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
+|PowerPivot for SharePoint 2013 Configuration|SharePoint 2013|[Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |PowerPivot Configuration Tool|SharePoint 2010 with SharePoint 2010|[Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](configure-repair-powerpivot-sharepoint-2010.md)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> How the Two Configuration Tools are Different  
@@ -75,7 +75,7 @@ manager: "mblythe"
   
  You can review the **Script** tab to learn and understand how to configure PowerPivot and SharePoint using Windows PowerShell. For more information, see the following:  
   
--   [PowerPivot Configuration using Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+-   [PowerPivot Configuration using Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
 -   [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
@@ -124,8 +124,8 @@ manager: "mblythe"
   
  [Uninstall PowerPivot for SharePoint](../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md) Describes the workflow that removes PowerPivot for SharePoint services, solutions, and application pages from a farm.  
   
- [PowerPivot Configuration using Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+ [PowerPivot Configuration using Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

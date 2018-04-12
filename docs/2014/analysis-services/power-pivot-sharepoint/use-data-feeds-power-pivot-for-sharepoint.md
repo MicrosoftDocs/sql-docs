@@ -68,7 +68,7 @@ manager: "mblythe"
 ##  <a name="dsdoc"></a> Create a Data Feed from a Data Service Document  
  If you have a custom data service that generates Atom feeds, you can set up a data service document as a way to make the data available to users and applications. A *data service document* (.atomsvc) file specifies one or more connections to online sources that publish data in the Atom wire format. Data service documents can be created in a *data feed library*, which is a special-purpose library that provides a common access point for browsing data service documents that have been published to a SharePoint server. Information workers who have permission to access data service documents in the data feed library can reference the document's SharePoint URL to import the data feeds to their workbooks and applications.  
   
-1.  Open a data feed library that was created by your site administrator. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
+1.  Open a data feed library that was created by your site administrator. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
 2.  In Library Tools, click **Documents**.  
   
@@ -87,7 +87,7 @@ manager: "mblythe"
 6.  Enter a **Table Name**, one table for each feed. This value is required. The table name is used by a client application that consumes the data feed. In PowerPivot for Excel, the table name is used to name tables in the PowerPivot window that will contain the imported data.  
   
 ## See Also  
- [Activate PowerPivot Feature Integration for Site Collections in Central Administration](power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
- [Share Data Feeds Using a Data Feed Library &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
+ [Activate PowerPivot Feature Integration for Site Collections in Central Administration](activate-power-pivot-integration-for-site-collections-in-ca.md)   
+ [Share Data Feeds Using a Data Feed Library &#40;PowerPivot for SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   

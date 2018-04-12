@@ -25,7 +25,7 @@ manager: "mblythe"
 ##  <a name="bkmk_prereq"></a> Supported databases  
  A BI semantic model connection points to tabular model data. There are three sources for this data:  
   
--   A tabular model database running on a standalone Analysis Services instance in tabular server mode. A deployment of a standalone Analysis Services instance is external to the farm. Accessing data sources off the farm requires additional permissions, which you can read about in this topic: [Create a BI Semantic Model Connection to a Tabular Model Database](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   A tabular model database running on a standalone Analysis Services instance in tabular server mode. A deployment of a standalone Analysis Services instance is external to the farm. Accessing data sources off the farm requires additional permissions, which you can read about in this topic: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   PowerPivot workbooks saved to SharePoint. Embedded PowerPivot databases inside Excel workbooks are equivalent to tabular model databases that run on a standalone Analysis Services tabular mode server. If you already use PowerPivot for Excel and PowerPivot for SharePoint, you can define a BI semantic model connection that points to PowerPivot workbooks in a SharePoint library and build [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports using existing PowerPivot data.  You can use workbooks created in either SQL Server 2008 R2 or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versions of PowerPivot for Excel.  
   
@@ -54,7 +54,7 @@ manager: "mblythe"
   
  If Kerberos is not configured and the request fails, Reporting Services makes a second attempt. Under this scenario, the client library connects to Analysis Services using the Reporting Services service identity and NTLM authentication. The identity of the Power View user is passed on the connection string using the `effectiveusername` parameter.  
   
- Only a member of the system administrator role on the Analysis Services instance has permission to make a connection using the `effectiveusername` parameter and impersonate another user on the server instance. For this reason, the execution account of the Reporting Services shared service must have administrative rights on the Analysis Services instance.  Instructions for granting administrative permissions to the service account is provided in this topic, [Create a BI Semantic Model Connection to a Tabular Model Database](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+ Only a member of the system administrator role on the Analysis Services instance has permission to make a connection using the `effectiveusername` parameter and impersonate another user on the server instance. For this reason, the execution account of the Reporting Services shared service must have administrative rights on the Analysis Services instance.  Instructions for granting administrative permissions to the service account is provided in this topic, [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
  The following illustration shows a connection sequence that uses the same Windows user identity for each connection. On the last connection to Analysis Services, the connection is made by the Reporting Services service application identity, passing the Windows user identity using `effectiveusername`.  
   
@@ -67,13 +67,13 @@ manager: "mblythe"
  In this scenario, all connections occur within the same farm, so there is no requirement for Kerberos or constrained delegation.  
   
 ##  <a name="bkmk_rel"></a> Related Tasks  
- [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
+ [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
- [Create a BI Semantic Model Connection to a PowerPivot Workbook](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
- [Use a BI Semantic Model Connection in Excel or Reporting Services](power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

@@ -19,7 +19,7 @@ manager: "mblythe"
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special-purpose SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain PowerPivot data.  
   
 > [!NOTE]  
->  Depending on how your server is configured, you might see warning or error messages in the preview area for specific documents. Messages can appear when an Excel workbook is set to automatically refresh its data whenever it is opened. Data refresh warning messages will appear as the preview image if Excel Services is configured to show Warn on data refresh error messages. Farm or service administrators can modify configuration settings to allow a preview of the actual worksheet to appear. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  Depending on how your server is configured, you might see warning or error messages in the preview area for specific documents. Messages can appear when an Excel workbook is set to automatically refresh its data whenever it is opened. Data refresh warning messages will appear as the preview image if Excel Services is configured to show Warn on data refresh error messages. Farm or service administrators can modify configuration settings to allow a preview of the actual worksheet to appear. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> In this topic  
   
@@ -49,7 +49,7 @@ manager: "mblythe"
 > To change  the default view , click  the **Library** tab and then click  Modify View. Click  "Make this the default view" and then click OK to save the  default view.  
 >  For more information on what Edge supports, see the Windows blog, [A break from the past, part 2: Saying goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- For a complete list of prerequisites, see [Create and Customize PowerPivot Gallery](power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md).  
+ For a complete list of prerequisites, see [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md).  
   
 ##  <a name="icons"></a> Icons in PowerPivot Gallery  
  Icons provide a visual indicator on content availability and status.  
@@ -159,9 +159,9 @@ manager: "mblythe"
  The **PowerPivot Gallery Document** content type is not automatically added to document libraries,  You will not encounter this issue unless you manually enable the unsupported content type.  
   
 ## See Also  
- [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Delete PowerPivot Gallery](power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Create and Customize PowerPivot Gallery](power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Delete PowerPivot Gallery](delete-power-pivot-gallery.md)   
+ [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

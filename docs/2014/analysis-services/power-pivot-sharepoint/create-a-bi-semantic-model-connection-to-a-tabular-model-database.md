@@ -142,6 +142,6 @@ manager: "mblythe"
   
 ## See Also  
  [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Create a BI Semantic Model Connection to a PowerPivot Workbook](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

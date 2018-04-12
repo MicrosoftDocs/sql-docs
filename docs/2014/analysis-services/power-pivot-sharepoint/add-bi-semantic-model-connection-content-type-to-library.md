@@ -24,7 +24,7 @@ manager: "mblythe"
 ##  <a name="bkmk_addtype"></a> Add the content type to a document library  
  You must have at least the Manage Lists permission to add and configure a content type. This permission is built into the Design permission level and above.  
   
- The site that contains the document library must have feature activation for PowerPivot for SharePoint. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ The site that contains the document library must have feature activation for PowerPivot for SharePoint. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Open the document library for which you want to enable the BI Semantic Model Connection content type.  
   
@@ -54,12 +54,12 @@ manager: "mblythe"
   
  After you enable the BI semantic model connection content type for a library, you can create a connection that provides redirection to business semantic model data that can be used by Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports. Choose from the following links to learn more about this next step:  
   
- [Create a BI Semantic Model Connection to a PowerPivot Workbook](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
 ## See Also  
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Use a BI Semantic Model Connection in Excel or Reporting Services](power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Use a BI Semantic Model Connection in Excel or Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

@@ -40,7 +40,7 @@ manager: "mblythe"
 ##  <a name="prereq"></a> Prerequisites  
  You must have a deployment of [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot for SharePoint that adds [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] query processing to a SharePoint farm. Data Feed support is deployed through the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution package.  
   
- You must have a SharePoint library that supports the data service document content type. A default Data Feed library is recommended for this purpose, but you can manually add the content type to any library. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
+ You must have a SharePoint library that supports the data service document content type. A default Data Feed library is recommended for this purpose, but you can manually add the content type to any library. For more information, see [Create or Customize a Data Feed Library &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
  You must have a data service or online data source that provides XML tabular data in the Atom 1.0 format.  
   
@@ -105,12 +105,12 @@ manager: "mblythe"
  Because there is no persistent link between a data service document on a SharePoint site and the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that contains the imported feed, modifying any part of a data service document has no effect on existing [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks.  
   
 > [!IMPORTANT]  
->  Although the data service document is read only once, data services that provide the actual data can be accessed at regular intervals to get newer feeds. For more information about how to refresh data, see [PowerPivot Data Refresh](power-pivot-sharepoint/power-pivot-data-refresh.md).  
+>  Although the data service document is read only once, data services that provide the actual data can be accessed at regular intervals to get newer feeds. For more information about how to refresh data, see [PowerPivot Data Refresh](power-pivot-data-refresh.md).  
   
 ##  <a name="usedsdoc"></a> Next Step: Use a Data Service Document  
  To use a data service document that you created in a SharePoint library, you use the **From Data Feeds** import option in a PowerPivot data source. For instructions, see [Use Data Feeds &#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## See Also  
- [PowerPivot Data Feeds](power-pivot-sharepoint/power-pivot-data-feeds.md)  
+ [PowerPivot Data Feeds](power-pivot-data-feeds.md)  
   
   

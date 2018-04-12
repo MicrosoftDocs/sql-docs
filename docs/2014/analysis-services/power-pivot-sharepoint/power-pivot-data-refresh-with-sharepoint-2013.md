@@ -192,7 +192,7 @@ manager: "mblythe"
   
 2.  At the bottom of the dashboard, see the **Data Refresh – Recent Activity** and **Data Refresh – Recent Failures**.  
   
-3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
+3.  For more information on usage data and how to enable it, see [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Diagnostic log data:** You can view SharePoint diagnostic log data related to data refresh. First, verify the configuration of diagnostic logging for the **PowerPivot Service** in SharePoint Central Administration **Monitoring** page. You may need to increase the level of logging for the “least critical event” to log. For example, temporarily set the value to **Verbose** and then rerun data refresh operations.  
   
@@ -202,7 +202,7 @@ manager: "mblythe"
   
 -   The category of **Data Refresh**.  
   
- Review the **configure diagnostic logging**. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+ Review the **configure diagnostic logging**. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="datarefresh_additional_authentication"></a> Additional Authentication Considerations  
  The settings in the **Excel Services Authentication Settings** dialog in Excel 2013, determine the Windows identity that Excel Services and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use for data refresh.  

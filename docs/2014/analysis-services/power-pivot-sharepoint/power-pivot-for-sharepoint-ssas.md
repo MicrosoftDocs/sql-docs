@@ -52,27 +52,27 @@ manager: "mblythe"
  An Analysis Service server instance in SharePoint integrated mode completes the deployment. It loads, queries, and unloads data. It also processes data if the workbook is configured for PowerPivot data refresh.  Each instance is tightly coupled with the local PowerPivot System Service that is part of the same installation.  
   
 ##  <a name="bkmk_RelatedContent"></a> In This Section  
- [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot Configuration using Windows PowerShell](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+ [PowerPivot Configuration using Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
- [PowerPivot Authentication and Authorization](power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)  
+ [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)  
   
- [PowerPivot Health Rules - Configure](power-pivot-sharepoint/configure-power-pivot-health-rules.md)  
+ [PowerPivot Health Rules - Configure](configure-power-pivot-health-rules.md)  
   
- [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)  
   
  [PowerPivot Gallery](~/2014/books-online-for-sql-server-2014.md)  
   
- [PowerPivot Data Access](power-pivot-sharepoint/power-pivot-data-access.md)  
+ [PowerPivot Data Access](power-pivot-data-access.md)  
   
- [PowerPivot Data Refresh](power-pivot-sharepoint/power-pivot-data-refresh.md)  
+ [PowerPivot Data Refresh](power-pivot-data-refresh.md)  
   
- [PowerPivot Data Feeds](power-pivot-sharepoint/power-pivot-data-feeds.md)  
+ [PowerPivot Data Feeds](power-pivot-data-feeds.md)  
   
- [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+ [PowerPivot BI Semantic Model Connection &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **In other sections**  
   

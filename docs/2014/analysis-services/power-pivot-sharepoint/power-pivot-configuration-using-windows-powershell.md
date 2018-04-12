@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot Configuration using Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includes Windows PowerShell cmdlets that you can use to configure an installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. To fully configure an installation with PowerShell requires the use of both SharePoint cmdlets and PowerPivot for SharePoint cmdlets. A majority of configuration can be completed using one of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tools. For more information on the tools, see [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] includes Windows PowerShell cmdlets that you can use to configure an installation of [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. To fully configure an installation with PowerShell requires the use of both SharePoint cmdlets and PowerPivot for SharePoint cmdlets. A majority of configuration can be completed using one of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tools. For more information on the tools, see [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
 >  For a SharePoint 2010 farm, SharePoint 2010 SP1 must be installed before you can configure either PowerPivot for SharePoint, or a SharePoint farm that uses a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] database server. If you have not yet installed the service pack, install it before you begin configuring the server.  
@@ -81,7 +81,7 @@ manager: "mblythe"
 ## Related Content  
  [PowerPivot Server Administration and Configuration in Central Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   

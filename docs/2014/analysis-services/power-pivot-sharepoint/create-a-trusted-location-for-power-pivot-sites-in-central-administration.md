@@ -61,7 +61,7 @@ manager: "mblythe"
   
 ## See Also  
  [PowerPivot Gallery](../../books-online-for-sql-server-2014.md)   
- [Create and Customize PowerPivot Gallery](power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Use PowerPivot Gallery](use-power-pivot-gallery.md)  
   
   

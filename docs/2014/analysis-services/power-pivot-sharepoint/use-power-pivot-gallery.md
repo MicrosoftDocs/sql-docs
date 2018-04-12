@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Use PowerPivot Gallery
-  [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery is a special-purpose SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain PowerPivot data.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special-purpose SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain PowerPivot data.  
   
 > [!NOTE]  
 >  Depending on how your server is configured, you might see warning or error messages in the preview area for specific documents. Messages can appear when an Excel workbook is set to automatically refresh its data whenever it is opened. Data refresh warning messages will appear as the preview image if Excel Services is configured to show Warn on data refresh error messages. Farm or service administrators can modify configuration settings to allow a preview of the actual worksheet to appear. For more information, see [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
@@ -63,7 +63,7 @@ manager: "mblythe"
 |![GMNI_PowerPivotGalleryIcon_Locked](media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|The locked content icon appears when thumbnail images are purposely disabled for this document. PowerPivot Gallery does not generate thumbnail images for Excel workbooks that contain no PowerPivot data, or for PowerPivot workbooks or Reporting Services reports that do not meet the requirements for snapshot generation. For more information, see the Prerequisites section in this topic.|  
   
 ##  <a name="add"></a> Save an Excel Workbook to PowerPivot Gallery  
- You can publish [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] workbooks to the library using all of the sharing techniques that Excel 2010 provides. For example, in Excel 2010, you can use Save As to specify all or part of a SharePoint path to a library.  
+ You can publish [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks to the library using all of the sharing techniques that Excel 2010 provides. For example, in Excel 2010, you can use Save As to specify all or part of a SharePoint path to a library.  
   
 1.  Save the file.  
   
@@ -77,29 +77,29 @@ manager: "mblythe"
   
     2.  Click **Browser View Options** if you want to use Excel Services Options to select individual sheets or parameters that you want to publish. For example, the Parameters tab in Excel Services Options lets you choose which slicers appear in the published workbook.  
   
-3.  In the Save As dialog box, in File name, enter a full or partial URL to [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery. If you enter a portion of the URL address, such as the server name, you can browse the site to find the [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery. To do this, click **Save** to open a connection to the server you specified.  
+3.  In the Save As dialog box, in File name, enter a full or partial URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery. If you enter a portion of the URL address, such as the server name, you can browse the site to find the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery. To do this, click **Save** to open a connection to the server you specified.  
   
      ![GMNI_ExcelSaveAs](media/gmni-excelsaveas.gif "GMNI_ExcelSaveAs")  
   
-1.  Using the Save As dialog box, select [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery on your site.  
+1.  Using the Save As dialog box, select [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery on your site.  
   
 2.  Click **Open** to open the library.  
   
 3.  Click **Save** to publish the workbook to the library.  
   
- In a browser window, verify that the document appears in [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery. Newly published documents will appear in the list. Library settings determine where the document appears (for example, sorted in ascending order by date, or alphabetically by name). You might need to refresh the browser window to view the most recent additions.  
+ In a browser window, verify that the document appears in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery. Newly published documents will appear in the list. Library settings determine where the document appears (for example, sorted in ascending order by date, or alphabetically by name). You might need to refresh the browser window to view the most recent additions.  
   
 #### Upload a workbook into PowerPivot Gallery  
  You can also upload a workbook if you want to start from SharePoint and select from your computer which file to publish.  
   
-1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery.  
+1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery.  
   
 2.  In Library ribbon, click **Documents**.  
   
 3.  In **Upload Document**, select an upload option and then enter the name and location of the file you want to upload. Library settings determine where the document appears. You might need to refresh the browser window to view the latest addition.  
   
 ##  <a name="newdocs"></a> Create new reports or workbooks based on a published PowerPivot workbook  
- For [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] workbooks that you publish to [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery, you can create additional workbooks or Reporting Services reports that use the published workbook as a connected data source.  
+ For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that you publish to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery, you can create additional workbooks or Reporting Services reports that use the published workbook as a connected data source.  
   
 |||  
 |-|-|  
@@ -109,15 +109,15 @@ manager: "mblythe"
  Creating a new report based on an existing PowerPivot workbook in the library requires that Reporting Services is configured for SharePoint integration for the same sites that contain PowerPivot Gallery. When you select the Create Report Builder Report option, Report Builder is downloaded from the report server and installed on the local workstation on first use. A placeholder report file is created for the new report and saved to PowerPivot Gallery. Connection information to the PowerPivot workbook is created for you as a new data source in the report. As a next step, you can build the datasets and report layout in the design workspace. As you use Report Builder to assemble your report, you can save your changes and the final result to the report document in the gallery. To avoid data disconnections later, be sure to keep the report and workbook files together in the same library.  
   
 #### Open New Excel Workbook  
- To create a new Excel workbook from an existing workbook, you must already have Excel and [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] on the local computer. Choosing Open New Excel Workbook starts Excel, opens a blank workbook (.xlsx) file, and loads [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] data in the background as a connected data source. Only the data from the PowerPivot window in the original workbook is used in the new workbook. PivotTables or PivotCharts from the original workbook are excluded. The new workbook links to data in the original workbook. The data is not copied to the new workbook itself.  
+ To create a new Excel workbook from an existing workbook, you must already have Excel and [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] on the local computer. Choosing Open New Excel Workbook starts Excel, opens a blank workbook (.xlsx) file, and loads [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in the background as a connected data source. Only the data from the PowerPivot window in the original workbook is used in the new workbook. PivotTables or PivotCharts from the original workbook are excluded. The new workbook links to data in the original workbook. The data is not copied to the new workbook itself.  
   
 ##  <a name="view"></a> Open a workbook or report in full page mode  
- Click on any visible thumbnail image of the previewed document to open it in full page mode independent of [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery preview. [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] workbooks will open in a browser. Reporting Services reports will open in the ReportViewer web part that is part of Reporting Services deployment on a SharePoint server.  
+ Click on any visible thumbnail image of the previewed document to open it in full page mode independent of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery preview. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks will open in a browser. Reporting Services reports will open in the ReportViewer web part that is part of Reporting Services deployment on a SharePoint server.  
   
- An alternative approach to viewing the workbook in a browser is to open it in Excel on a client workstation. You must have Excel 2013 or Excel 2010 and the [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] add-in to view the file. You can use Excel 2007 to open the file but you cannot use it to pivot on the data. For this reason, Excel 2013 or Excel 2010 are recommended for both viewing and creating PowerPivot data. If you do not have the required applications, you must use a browser to view the workbook from SharePoint.  
+ An alternative approach to viewing the workbook in a browser is to open it in Excel on a client workstation. You must have Excel 2013 or Excel 2010 and the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] add-in to view the file. You can use Excel 2007 to open the file but you cannot use it to pivot on the data. For this reason, Excel 2013 or Excel 2010 are recommended for both viewing and creating PowerPivot data. If you do not have the required applications, you must use a browser to view the workbook from SharePoint.  
   
 ##  <a name="newdr"></a> Schedule data refresh for PowerPivot workbooks in PowerPivot Gallery  
- [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] data in a published Excel workbook can be refreshed at scheduled intervals.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in a published Excel workbook can be refreshed at scheduled intervals.  
   
 |||  
 |-|-|  
@@ -126,7 +126,7 @@ manager: "mblythe"
 ##  <a name="delete"></a> Delete a workbook or report in PowerPivot Gallery  
  To delete a document from the library, switch to the All Documents view first.  
   
-1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../../../../../../../../../../../../../../includes/ssgemini-md.md)] Gallery.  
+1.  In a SharePoint site, open [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery.  
   
 2.  In the ribbon, click **Library**.  
   

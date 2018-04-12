@@ -16,9 +16,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # PowerPivot BI Semantic Model Connection (.bism)
-  A BI semantic model connection (.bism) is a portable connection that connects Excel or [!INCLUDE[ssCrescent](../../../../includes/sscrescent-md.md)] reports to an [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] tabular model database or an [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] instance in multidimensional mode. If you are familiar with office data connection (.odc) files, you will notice a similarity in how a .bism connection file is defined and used.  
+  A BI semantic model connection (.bism) is a portable connection that connects Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model database or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in multidimensional mode. If you are familiar with office data connection (.odc) files, you will notice a similarity in how a .bism connection file is defined and used.  
   
- A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../../../includes/sscrescent-md.md)] report.  
+ A BI semantic model connection is created and accessed via SharePoint. Creating BI semantic model connections enables quick launch commands on a BI semantic model connection in a library. Quick launch commands open a new Excel workbook or options for editing the connection file. If [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is installed, you will also see a command to create a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report.  
   
  ![Screenshot of BISM quick launch command](media/ssas-bism-quicklaunch.gif "Screenshot of BISM quick launch command")  
   
@@ -27,9 +27,9 @@ manager: "mblythe"
   
 -   A tabular model database running on a standalone Analysis Services instance in tabular server mode. A deployment of a standalone Analysis Services instance is external to the farm. Accessing data sources off the farm requires additional permissions, which you can read about in this topic: [Create a BI Semantic Model Connection to a Tabular Model Database](power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
--   PowerPivot workbooks saved to SharePoint. Embedded PowerPivot databases inside Excel workbooks are equivalent to tabular model databases that run on a standalone Analysis Services tabular mode server. If you already use PowerPivot for Excel and PowerPivot for SharePoint, you can define a BI semantic model connection that points to PowerPivot workbooks in a SharePoint library and build [!INCLUDE[ssCrescent](../../../../includes/sscrescent-md.md)] reports using existing PowerPivot data.  You can use workbooks created in either SQL Server 2008 R2 or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versions of PowerPivot for Excel.  
+-   PowerPivot workbooks saved to SharePoint. Embedded PowerPivot databases inside Excel workbooks are equivalent to tabular model databases that run on a standalone Analysis Services tabular mode server. If you already use PowerPivot for Excel and PowerPivot for SharePoint, you can define a BI semantic model connection that points to PowerPivot workbooks in a SharePoint library and build [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports using existing PowerPivot data.  You can use workbooks created in either SQL Server 2008 R2 or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versions of PowerPivot for Excel.  
   
--   A multidimensional data model on an [!INCLUDE[ssASnoversion](../../../../includes/ssasnoversion-md.md)] instance.  
+-   A multidimensional data model on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  
   
  For a comparison of the data sources, see the community  content [Understanding the SQL Server 2012 BI Semantic Model (BISM)](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/).  
   

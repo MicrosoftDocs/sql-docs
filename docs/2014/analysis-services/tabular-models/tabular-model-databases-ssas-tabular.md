@@ -29,9 +29,9 @@ manager: "mblythe"
 ## Related Tasks  
  [Process Database, Table, or Partition](process-database-table-or-partition-analysis-services.md)  
   
- [Tabular Model Roles &#40;SSAS Tabular&#41;](../roles-ssas-tabular.md)  
+ [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Tabular Model Partitions &#40;SSAS Tabular&#41;](../partitions-ssas-tabular.md)  
+ [Tabular Model Partitions &#40;SSAS Tabular&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configure In-Memory or DirectQuery Access for a Tabular Model Database](enable-directquery-mode-in-ssms.md)  
   

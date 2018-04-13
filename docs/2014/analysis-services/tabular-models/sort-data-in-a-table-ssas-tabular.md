@@ -47,6 +47,6 @@ manager: "mblythe"
 ## See Also  
  [Filter and Sort Data &#40;SSAS Tabular&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../roles-ssas-tabular.md)  
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
   
   

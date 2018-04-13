@@ -25,6 +25,6 @@ manager: "mblythe"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](power-view-configure-default-field-set-for-reports.md)|Describes how to configure a Default Field Set; a predefined list of columns and measures that are automatically added to a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report canvas when the table is selected in the report field list.|  
-|[Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Describes how to configure table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information in tile, card, and chart layouts.|  
+|[Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](power-view-configure-table-behavior-properties-for-reports.md)|Describes how to configure table behavior properties that expose detail rows at a more granular level. Setting table behavior properties changes the grouping behavior of detail rows and produces a better default placement of identifying information in tile, card, and chart layouts.|  
   
   

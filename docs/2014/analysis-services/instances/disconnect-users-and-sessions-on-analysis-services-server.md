@@ -71,8 +71,8 @@ manager: "mblythe"
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)   
+ [BeginSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/beginsession-element-xmla.md)   
  [EndSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
- [Session Element &#40;XMLA&#41;](../dev-guide/session-element-xmla.md)  
+ [Session Element &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)  
   
   

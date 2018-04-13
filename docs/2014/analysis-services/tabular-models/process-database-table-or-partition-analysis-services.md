@@ -20,7 +20,7 @@ manager: "mblythe"
 # Process Database, Table, or Partition
   The tasks in this topic describe how to process a tabular model database, table, or partitions manually by using the **Process \<object>** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- For more information about tabular model processing, see [Process Data &#40;SSAS Tabular&#41;](../process-data-ssas-tabular.md).  
+ For more information about tabular model processing, see [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Tasks  
   
@@ -75,6 +75,6 @@ manager: "mblythe"
   
 ## See Also  
  [Tabular Model Partitions &#40;SSAS Tabular&#41;](../partitions-ssas-tabular.md)   
- [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](tabular-models/create-and-manage-../partitions-ssas-tabular.md)  
+ [Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

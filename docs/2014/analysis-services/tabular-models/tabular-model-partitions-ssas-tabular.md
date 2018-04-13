@@ -58,7 +58,7 @@ manager: "mblythe"
 |Process|Read, process|  
 |Read Only|Read|  
   
- To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](../roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-../roles-ssas-tabular.md).  
+ To learn more about creating roles during model authoring by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md). To learn more about managing role members for deployed tabular model roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_partitions"></a> Process Partitions  
  Partitions can be processed (refreshed) independent of other partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or by using a script. Processing has the following options:  
@@ -75,7 +75,7 @@ manager: "mblythe"
   
 |Task|Description|  
 |----------|-----------------|  
-|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Create and Manage Tabular Model Partitions &#40;SSAS Tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)|Describes how to create and manage partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |[Process Tabular Model Partitions &#40;SSAS Tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)|Describes how to process partitions in a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
   

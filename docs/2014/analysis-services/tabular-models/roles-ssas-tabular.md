@@ -21,7 +21,7 @@ manager: "mblythe"
 > [!IMPORTANT]  
 >  In-order for users to connect to a deployed model by using a reporting or data analysis client application, you must create at least one role with at least Read permission to which those users are members.  
   
- Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](../roles-ssas-tabular.md).  
+ Information in this topic is meant for tabular model authors who define roles by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Roles defined during model authoring apply to the model workspace database. After a model database has been deployed, model database administrators can manage (add, edit, delete) role members using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To learn about managing members of roles in a deployed database, see [Tabular Model Roles &#40;SSAS Tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../tabular-modeling-adventure-works-tutorial.md) includes additional information and lessons on how to use this feature.  
   

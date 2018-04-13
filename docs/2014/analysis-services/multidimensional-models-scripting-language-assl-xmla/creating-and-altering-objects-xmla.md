@@ -69,7 +69,7 @@ manager: "mblythe"
 >  When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), or [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL elements.  
   
 ## Altering Objects  
- When modifying objects by using the `Alter` method, you must first identify the object to be modified by providing an object reference in the [Object](../dev-guide/object-element-xmla.md) property of the `Alter` command. Each object reference contains the object identifiers needed to uniquely identify the object for the `Alter` command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
+ When modifying objects by using the `Alter` method, you must first identify the object to be modified by providing an object reference in the [Object](../xmla/xml-elements-properties/object-element-xmla.md) property of the `Alter` command. Each object reference contains the object identifiers needed to uniquely identify the object for the `Alter` command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](../xmla/xml-elements-objects.md).  
   
  For example, you must provide an object reference to a cube in order to modify the structure of a cube. The object reference for the cube in the `Object` property contains both a database identifier and a cube identifier, as the same cube identifier could potentially be used on a different database.  
   

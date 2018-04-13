@@ -52,7 +52,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[CaseCubeDimensionID](../properties/id-element-assl.md)|  
-|Derived elements|See [Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions/element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
+|Derived elements|See [Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions-element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>.  

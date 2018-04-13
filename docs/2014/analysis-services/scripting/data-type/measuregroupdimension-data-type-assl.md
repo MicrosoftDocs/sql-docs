@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Annotations](../collections/annotations-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
-|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions/element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
+|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions-element-assl.md) collection of [MeasureGroup](../objects/group-element-assl.md))|  
   
 ## Remarks  
  Each `MeasureGroupDimension` is a reference to one of the dimensions on the cube. These define which cube dimensions apply to the measure group.  

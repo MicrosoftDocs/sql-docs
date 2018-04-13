@@ -55,7 +55,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[Dimensions](../collections/dimensions/element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Measures](../collections/measures-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
+|Child elements|[Dimensions](../collections/dimensions-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [ID](../properties/id-element-assl.md), [Measures](../collections/measures-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
 |Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  

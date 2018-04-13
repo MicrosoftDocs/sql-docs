@@ -2,7 +2,7 @@
 title: "Join a Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "security"

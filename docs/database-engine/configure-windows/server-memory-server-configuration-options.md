@@ -2,7 +2,7 @@
 title: "Server Memory Server Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

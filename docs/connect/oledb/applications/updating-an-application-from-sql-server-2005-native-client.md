@@ -3,7 +3,7 @@ title: "Updating an Application from SQL Server 2005 Native Client | Microsoft D
 description: "Updating an application from SQL Server 2005 Native Client"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|applications"

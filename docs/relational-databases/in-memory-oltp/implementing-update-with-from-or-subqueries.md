@@ -2,7 +2,7 @@
 title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"

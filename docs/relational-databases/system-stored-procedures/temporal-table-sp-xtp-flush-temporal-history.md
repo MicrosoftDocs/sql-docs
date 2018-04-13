@@ -1,4 +1,4 @@
----
+﻿---
 title: "sp_xtp_flush_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
@@ -27,6 +27,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/26/2017"
@@ -21,6 +21,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitoring performance by using the Query Store
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2018"
@@ -21,6 +21,7 @@ ms.author: "elbutter;barbkess"
 manager: "jrj"
 
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Columnstore indexes - defragmentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/27/2017"
@@ -18,6 +18,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Columnstore indexes - defragmentation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

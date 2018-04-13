@@ -1,4 +1,4 @@
----
+﻿---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
@@ -26,6 +26,7 @@ author: "shkale-msft"
 ms.author: "shkale"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

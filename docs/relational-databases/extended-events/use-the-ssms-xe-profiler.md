@@ -1,4 +1,4 @@
----
+﻿---
 title: "Use the SSMS XEvent Profiler | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2016"
@@ -20,6 +20,7 @@ author: "yualan"
 ms.author: "alayu"
 manager: "craigg"   
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use the SSMS XEvent Profiler
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

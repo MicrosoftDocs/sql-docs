@@ -1,4 +1,4 @@
----
+﻿---
 title: "Back Up and Restore of SQL Server Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -30,6 +30,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Back Up and Restore of SQL Server Databases
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

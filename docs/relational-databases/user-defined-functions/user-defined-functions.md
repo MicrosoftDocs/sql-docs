@@ -1,4 +1,4 @@
----
+﻿---
 title: "User-Defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
@@ -21,6 +21,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # User-Defined Functions
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

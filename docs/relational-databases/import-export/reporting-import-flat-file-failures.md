@@ -24,6 +24,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 
 The [Import Flat File Wizard](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard/) in SSMS is powered by the Microsoft PROSE SDK, which is a framework for automatic programming or data wrangling from input-output examples. Although the Wizard can convert most Flat File sources, the PROSE team will consider updates to their algorithm based on any failures you experience.
 
+## Send an email
+
 If you run into an import failure or have a suggestion for feature improvement, send an email to sqltoolsprosesupport@microsoft.com
 
 In this email:

@@ -25,7 +25,7 @@ manager: "mblythe"
 # DISCOVER_XML_METADATA Rowset
   Returns an XML document describing a requested object. The rowset that is returned always consists of one row and one column.  
   
- If you call the [Discover](../../dev-guide/discover-method-xmla.md) method with the `DISCOVER_XML_METATDATA` enumeration value in the [RequestType](../../dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_XML_METATDATA` rowset.  
+ If you call the [Discover](../../xmla/xml-elements-methods-discover.md) method with the `DISCOVER_XML_METATDATA` enumeration value in the [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) element, the `Discover` method returns the `DISCOVER_XML_METATDATA` rowset.  
   
 ## Rowset Columns  
  The `DISCOVER_XML_METADATA` rowset contains the following column.  
@@ -67,7 +67,7 @@ manager: "mblythe"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|Optional.|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|Optional.|  
   
- The restriction, `ObjectExpansion`, is available for every major object of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the `ObjectExpansion` restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../dev-guide/alter-element-xmla.md) commands.  
+ The restriction, `ObjectExpansion`, is available for every major object of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. The client typically uses restrictions to describe the OLAP objects for which the DDL is to be returned, and uses the `ObjectExpansion` restriction to define the degree of expansion in the returned DDL. The following table indicates whether the enumeration value is allowed for [Alter Element &#40;XMLA&#41;](../../xmla/xml-elements-commands/alter-element-xmla.md) commands.  
   
 |Enumeration Value|Description|  
 |-----------------------|-----------------|  

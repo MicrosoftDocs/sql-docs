@@ -67,12 +67,12 @@ manager: "mblythe"
   
  In rare cases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will not close a connection if it cannot track all the sessions and SPIDs associated with the connection (for example, when multiple sessions are open in an HTTP scenario).  
   
- For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](../dev-guide/execute-method-xmla.md) and [Cancel Element &#40;XMLA&#41;](../dev-guide/cancel-element-xmla.md).  
+ For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](../xmla/xml-elements-methods-execute.md) and [Cancel Element &#40;XMLA&#41;](../xmla/xml-elements-commands/cancel-element-xmla.md).  
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [BeginSession Element &#40;XMLA&#41;](../dev-guide/beginsession-element-xmla.md)   
- [EndSession Element &#40;XMLA&#41;](../dev-guide/endsession-element-xmla.md)   
+ [BeginSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/session-element-xmla.md)   
+ [EndSession Element &#40;XMLA&#41;](../xmla/xml-elements-headers/endsession-element-xmla.md)   
  [Session Element &#40;XMLA&#41;](../dev-guide/session-element-xmla.md)  
   
   

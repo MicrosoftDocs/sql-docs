@@ -42,6 +42,6 @@ manager: "jhubbard"
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](../../2014/database-engine/audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](../../2014/database-engine/audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](../../2014/analysis-services/security-audit-event-category.md)  
+ [Security Audit Event Category](../analysis-services/trace-events/security-audit-event-category.md)  
   
   

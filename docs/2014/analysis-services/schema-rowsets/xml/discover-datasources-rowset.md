@@ -25,12 +25,12 @@ manager: "mblythe"
 # DISCOVER_DATASOURCES Rowset
   Returns a list of the XML for Analysis (XMLA) provider data sources that are available on the server or Web service. The published data sources are returned from a URL of the application Web server. The client can connect to one of the data sources in this list.  
   
- If you call the [Discover](../../dev-guide/discover-method-xmla.md) method with the `DISCOVER_DATASOURCES` enumeration value in the [RequestType](../../dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_DATASOURCES` rowset.  
+ If you call the [Discover](../../xmla/xml-elements-methods-discover.md) method with the `DISCOVER_DATASOURCES` enumeration value in the [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) element, the `Discover` method returns the `DISCOVER_DATASOURCES` rowset.  
   
  **Applies to:** tabular models, multidimensional models  
   
 ## Rowset Columns  
- The client selects a data source by setting the `DataSourceInfo` property in the [Properties](../../dev-guide/properties-element-xmla.md) element that is sent along with the [Command](../../dev-guide/command-element-xmla.md) element by the [Execute](../../dev-guide/execute-method-xmla.md) method. A client should not construct the contents of the `DataSourceInfo` property to send to the server. Instead, the client should use the `Discover` method to find the data sources that the provider supports. The client then sends back the same value for the `DataSourceInfo` property that it gets from the `DISCOVER_DATASOURCES` rowset.  
+ The client selects a data source by setting the `DataSourceInfo` property in the [Properties](../../xmla/xml-elements-properties/properties-element-xmla.md) element that is sent along with the [Command](../../xmla/xml-elements-properties/command-element-xmla.md) element by the [Execute](../../xmla/xml-elements-methods-execute.md) method. A client should not construct the contents of the `DataSourceInfo` property to send to the server. Instead, the client should use the `Discover` method to find the data sources that the provider supports. The client then sends back the same value for the `DataSourceInfo` property that it gets from the `DISCOVER_DATASOURCES` rowset.  
   
  The `DISCOVER_DATASOURCES` rowset contains the following columns.  
   

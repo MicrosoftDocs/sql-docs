@@ -59,7 +59,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configure In-Memory or DirectQuery Access for a Tabular Model Database](../../../analysis-services/configure-in-memory-or-directquery-access-for-a-tabular-model-database.md)   
- [Tabular Modeling &#40;SSAS Tabular&#41;](../../../analysis-services/tabular-modeling-ssas-tabular.md)  
+ [Configure In-Memory or DirectQuery Access for a Tabular Model Database](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [Tabular Modeling &#40;SSAS Tabular&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

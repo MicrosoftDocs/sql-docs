@@ -55,6 +55,6 @@ manager: "mblythe"
 -   [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## See Also  
- [Create and Manage Roles &#40;SSAS Tabular&#41;](../create-and-manage-roles-ssas-tabular.md)  
+ [Create and Manage Roles &#40;SSAS Tabular&#41;](../tabular-models/roles-ssas-tabular.md)  
   
   

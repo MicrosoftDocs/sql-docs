@@ -41,7 +41,7 @@
 ### [Protocols for MSSQLSERVER Properties (Flags Tab)](protocols-for-mssqlserver-properties-flags-tab.md)
 ### [Protocols for MSSQLSERVER Properties (Certificate Tab)](protocols-for-mssqlserver-properties-certificate-tab.md)
 ### [Protocols for MSSQLSERVER Properties (Advanced Tab)](protocols-for-mssqlserver-properties-advanced-tab.md)
-### [Shared Memory Properties](shared-memory-properties.md)
+### [Shared Memory Properties](../../analysis-services/server-properties/memory-properties.md)
 ### [Named Pipes Properties](named-pipes-properties.md)
 ### [TCP/IP Properties (Protocols Tab)](tcp-ip-properties-protocols-tab.md)
 ### [TCP/IP Properties (IP Addresses Tab)](tcp-ip-properties-ip-addresses-tab.md)

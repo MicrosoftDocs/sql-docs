@@ -36,7 +36,7 @@ manager: "mblythe"
 |[Behavior Changes to Analysis Services Features in SQL Server 2014](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|Describes existing features that have different behaviors in this release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Common examples include changing a default to a new or different value, disallowing a previously allowable operation or configuration, or a introducing a requirement to manually revise or replace a setting or configuration that is lost during upgrade.<br /> .|  
   
 ## See Also  
- [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services.md)   
  [Upgrade Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

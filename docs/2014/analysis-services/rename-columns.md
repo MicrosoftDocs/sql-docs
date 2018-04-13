@@ -16,7 +16,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Lesson 3: Rename Columns
-  In this lesson, you will rename many of the columns in each table you imported. Renaming makes columns more identifiable and easier to navigate in both the model designer as well by users selecting fields in a client application. To learn more, see [Rename a Table or Column &#40;SSAS Tabular&#41;](rename-a-table-or-column-ssas-tabular.md).  
+  In this lesson, you will rename many of the columns in each table you imported. Renaming makes columns more identifiable and easier to navigate in both the model designer as well by users selecting fields in a client application. To learn more, see [Rename a Table or Column &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
   
 > [!IMPORTANT]  
 >  Renaming columns is not necessary to complete this tutorial; however, remaining lessons, in particular those that include creating relationships and creating calculated columns and measures using DAX formulas, refer to the column friendly names described in this lesson. If you choose not to rename columns, you will have to edit the DAX formulas in lessons 5, 6, and 7 to use the original source column names provided in this lesson.  

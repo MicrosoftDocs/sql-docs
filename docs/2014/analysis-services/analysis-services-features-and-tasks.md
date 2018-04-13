@@ -25,7 +25,7 @@ manager: "mblythe"
   
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)  
   
- [Tabular Modeling &#40;SSAS Tabular&#41;](tabular-modeling-ssas-tabular.md)  
+ [Tabular Modeling &#40;SSAS Tabular&#41;](tabular-models/tabular-models-ssas.md)  
   
  [Multidimensional Modeling &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   

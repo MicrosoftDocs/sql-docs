@@ -18,7 +18,7 @@ manager: "mblythe"
 # Set the Compatibility Level of a Multidimensional Database (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the database compatibility level property determines the functional level of a database. Compatibility levels are unique to each model type. For example, a compatibility level of `1100` has a different meaning depending on whether the database is multidimensional or tabular.  
   
- This topic describes compatibility level for multidimensional databases only. For more information about tabular solutions, see [Compatibility Level &#40;SSAS Tabular SP1&#41;](../compatibility-level-ssas-tabular-sp1.md).  
+ This topic describes compatibility level for multidimensional databases only. For more information about tabular solutions, see [Compatibility Level &#40;SSAS Tabular SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
 > [!NOTE]  
 >  Tabular models have additional database compatibility levels that are not applicable to multidimensional models. Compatibility level `1103` does not exist for multidimensional models. See [What is new for the Tabular model in SQL Server 2012 SP1 and compatibility level](http://go.microsoft.com/fwlink/?LinkId=301727) for more information about `1103` for tabular solutions.  

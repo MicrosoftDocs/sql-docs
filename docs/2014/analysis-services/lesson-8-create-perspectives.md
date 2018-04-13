@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  The purpose of this lesson is to describe how to create perspectives and become familiar with the tabular model authoring tools. If you later expand this model to include additional tables, you can create additional perspectives to define different viewpoints of the model, for example, Inventory and Sales Force.  
   
- To learn more, see [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md).  
+ To learn more, see [Perspectives &#40;SSAS Tabular&#41;](tabular-models/perspectives-ssas-tabular.md).  
   
  Estimated time to complete this lesson: **5 minutes**  
   

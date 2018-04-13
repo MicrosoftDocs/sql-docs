@@ -25,7 +25,7 @@ manager: "mblythe"
   
 -   [Security Roles  &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
--   [Security Properties](../security-properties.md)  
+-   [Security Properties](../server-properties/security-properties.md)  
   
 -   [Configure Service Accounts &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   

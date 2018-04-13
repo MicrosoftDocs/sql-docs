@@ -29,7 +29,7 @@ manager: "mblythe"
   
  For information about other [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] products and technologies, see [What's New in SQL Server 2014](../../2014/getting-started/what-s-new-in-sql-server-2014.md).  
   
- For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md).  
+ For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
   
 ## See Also  
  [Reporting Services Backward Compatibility](../../2014/reporting-services/reporting-services-backward-compatibility.md)   

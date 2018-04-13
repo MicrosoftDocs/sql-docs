@@ -54,7 +54,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[DataSource](../objects/datasource-element-assl.md), [DataSourceID](../properties/id-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureGroup](../objects/group-element-assl.md)|  
-|Derived elements|[Binding](../../dev-guide/binding-element-xmla.md) ([Bindings](../../dev-guide/bindings-element-xmla.md) collection of [Process](../../dev-guide/process-element-xmla.md) or [Batch](../../dev-guide/batch-element-xmla.md) commands)|  
+|Derived elements|[Binding](../../xmla/xml-elements-properties/binding-element-xmla.md) ([Bindings](../../xmla/xml-elements-properties/bindings-element-xmla.md) collection of [Process](../../xmla/xml-elements-commands/process-element-xmla.md) or [Batch](../../xmla/xml-elements-commands/batch-element-xmla.md) commands)|  
   
 ## Remarks  
  For more information about out-of-line bindings, see [Data Sources and Bindings &#40;SSAS Multidimensional&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

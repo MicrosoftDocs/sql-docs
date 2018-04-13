@@ -49,7 +49,7 @@ manager: "mblythe"
   
  The server deployment mode must be identical on each server. If the database you are synchronizing is multidimensional, both source and destination servers must be configured for multidimensional server mode. For more information about deployment modes, see [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
- Turn off lazy aggregation processing if you are using it on the source server. Aggregations that are processing in the background can interfere with database synchronization. For more information about setting this server property, see [OLAP Properties](../olap-properties.md).  
+ Turn off lazy aggregation processing if you are using it on the source server. Aggregations that are processing in the background can interfere with database synchronization. For more information about setting this server property, see [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
 >  Database size is a factor in determining whether synchronization is a suitable approach. There are no hard requirements, but if synchronization is too slow, consider synchronizing multiple servers in parallel, as described in this technical paper: [Analysis Services Synchronization Best Practices](http://go.microsoft.com/fwlink/?LinkID=253136).  
@@ -185,7 +185,7 @@ manager: "mblythe"
  If you did not synchronize roles or membership, remember to specify user access permissions now on the destination database.  
   
 ## See Also  
- [Synchronize Element &#40;XMLA&#41;](../dev-guide/synchronize-element-xmla.md)   
+ [Synchronize Element &#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Deploy Model Solutions Using XMLA](deploy-model-solutions-using-xmla.md)   
  [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   

@@ -25,7 +25,7 @@ manager: "mblythe"
 # DISCOVER_LITERALS Rowset
   Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  
   
- If you call the [Discover](../../dev-guide/discover-method-xmla.md) method with the `DISCOVER_LITERALS` enumeration value in the [RequestType](../../dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_LITERALS` rowset.  
+ If you call the [Discover](../../xmla/xml-elements-methods-discover.md) method with the `DISCOVER_LITERALS` enumeration value in the [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) element, the `Discover` method returns the `DISCOVER_LITERALS` rowset.  
   
 ## Rowset Columns  
  The `DISCOVER_LITERALS` rowset contains the following columns.  

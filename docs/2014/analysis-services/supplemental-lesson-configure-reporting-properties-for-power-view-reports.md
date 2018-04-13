@@ -76,7 +76,7 @@ manager: "jhubbard"
 ## Default Field Set  
  The Default Field Set is a predefined list of columns and measures for a table that are automatically added to the Power View report canvas when the table is clicked on in the report field list. Essentially, you can specify the default columns, measures, and field ordering users will want to see when this table is visualized in Power View reports.  For the Internet Sales model, you will define a default field set and order for the Customer, Geography, and Product tables. Included are only those most common columns that users will want to see when analyzing Adventure Works Internet Sales data by using Power View reports.  
   
- For detailed information about Default Field Set, see [Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](configure-default-field-set-for-power-view-reports-ssas-tabular.md) in SQL Server Books Online.  
+ For detailed information about Default Field Set, see [Configure Default Field Set for Power View Reports &#40;SSAS Tabular&#41;](tabular-models/power-view-configure-default-field-set-for-reports.md) in SQL Server Books Online.  
   
 #### To set Default Field Set for tables  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
 ## Table Behavior  
  By using Table Behavior properties, you can change the default behavior for different visualization types and grouping behavior for tables used in Power View reports. This allows better default placement of identifying information such as names, images, or titles in tile, card, and chart layouts.  
   
- For detailed information about Table Behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](configure-table-behavior-properties-for-power-view-reports-ssas-tabular.md) in SQL Server Books Online.  
+ For detailed information about Table Behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](tabular-models/power-view-configure-table-behavior-properties-for-reports.md) in SQL Server Books Online.  
   
 #### To set Table Behavior for tables  
   
@@ -136,7 +136,7 @@ manager: "jhubbard"
 ## Reporting Properties for Columns  
  There are a number of basic column properties and specific reporting properties on columns you can set to improve the model reporting experience. For example, it may not be necessary for users to see every column in every table. Just as you hid the Product Category and Product Subcategory tables earlier, by using a column’s Hidden property, you can hide particular columns from a table that is otherwise shown. Other properties, such as Data Format and Sort by Column, can also affect how column data can appear in reports. You will set some of those on particular columns now. Other columns require no action, and are not shown below.  
   
- You will only set a few different column properties here, but there are many others. For more detailed information about column reporting properties, see [Column Properties &#40;SSAS Tabular&#41;](column-properties-ssas-tabular.md) in SQL Server Books Online.  
+ You will only set a few different column properties here, but there are many others. For more detailed information about column reporting properties, see [Column Properties &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md) in SQL Server Books Online.  
   
 #### To set properties for columns  
   
@@ -158,7 +158,7 @@ manager: "jhubbard"
      **Date**  
   
     > [!NOTE]  
-    >  Because the Date table was selected as the models date table by using the Mark as Date Table setting, in Lesson 7: Mark as Date Table, and the Date column in the Date table as the column to be used as the unique identifier, the Row Identifier property for the Date column will automatically be set to True, and cannot be changed. When using time-intelligence functions in DAX formulas, you must specify a date table. In this model, you created a number of measures using time-intelligence functions to calculate sales data for various periods such as previous and current quarters, and also for use in KPIs. For more information about specifying a date table, see [Specify Mark as Date Table for use with Time Intelligence &#40;SSAS Tabular&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server Books Online.  
+    >  Because the Date table was selected as the models date table by using the Mark as Date Table setting, in Lesson 7: Mark as Date Table, and the Date column in the Date table as the column to be used as the unique identifier, the Row Identifier property for the Date column will automatically be set to True, and cannot be changed. When using time-intelligence functions in DAX formulas, you must specify a date table. In this model, you created a number of measures using time-intelligence functions to calculate sales data for various periods such as previous and current quarters, and also for use in KPIs. For more information about specifying a date table, see [Specify Mark as Date Table for use with Time Intelligence &#40;SSAS Tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in SQL Server Books Online.  
   
     |Column|Property|Value|  
     |------------|--------------|-----------|  

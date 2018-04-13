@@ -205,6 +205,6 @@ manager: "mblythe"
 ## See Also  
  [Data Mining Designer](data-mining-designer.md)   
  [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Workspace Database &#40;SSAS Tabular&#41;](../workspace-database-ssas-tabular.md)  
+ [Workspace Database &#40;SSAS Tabular&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

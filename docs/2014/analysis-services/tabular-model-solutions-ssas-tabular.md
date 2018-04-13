@@ -21,38 +21,38 @@ manager: "mblythe"
 ## In This Section  
  [Tabular Model Designer &#40;SSAS Tabular&#41;](tabular-model-designer-ssas-tabular.md)  
   
- [Workspace Database &#40;SSAS Tabular&#41;](workspace-database-ssas-tabular.md)  
+ [Workspace Database &#40;SSAS Tabular&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
- [Compatibility Level &#40;SSAS Tabular SP1&#41;](compatibility-level-ssas-tabular-sp1.md)  
+ [Compatibility Level &#40;SSAS Tabular SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md)  
+ [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
- [Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)  
+ [Properties &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md)  
   
  [Data Sources &#40;SSAS Tabular&#41;](data-sources-ssas-tabular.md)  
   
- [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md)  
   
- [Tables and Columns &#40;SSAS Tabular&#41;](tables-and-columns-ssas-tabular.md)  
+ [Tables and Columns &#40;SSAS Tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
- [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md)  
+ [Relationships &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md)  
   
- [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)  
+ [Calculations &#40;SSAS Tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
   
- [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)  
+ [Measures &#40;SSAS Tabular&#41;](tabular-models/measures-ssas-tabular.md)  
   
- [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)  
+ [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md)  
   
- [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md)  
+ [Hierarchies &#40;SSAS Tabular&#41;](tabular-models/hierarchies-ssas-tabular.md)  
   
- [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
+ [Partitions &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md)  
   
- [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)  
+ [Perspectives &#40;SSAS Tabular&#41;](tabular-models/perspectives-ssas-tabular.md)  
   
- [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)  
+ [Roles &#40;SSAS Tabular&#41;](tabular-models/roles-ssas-tabular.md)  
   
- [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Analyze in Excel &#40;SSAS Tabular&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

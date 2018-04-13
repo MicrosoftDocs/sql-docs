@@ -43,6 +43,6 @@ manager: "mblythe"
 4.  Choose a different partition from the **Partition Name** dropdown list, and then change processing options on the partition if necessary.  
   
 ## See Also  
- [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)  
+ [Partitions &#40;SSAS Tabular&#41;](tabular-models/partitions-ssas-tabular.md)  
   
   

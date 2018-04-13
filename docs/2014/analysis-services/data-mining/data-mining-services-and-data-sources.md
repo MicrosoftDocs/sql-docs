@@ -68,7 +68,7 @@ manager: "mblythe"
 ## Configuring Permissions and Server Properties  
  Data mining requires additional permissions on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Most data mining properties can be set by using the [Analysis Server Properties Dialog Box &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- For more information about the properties that you can configure, see [Configure Server Properties in Analysis Services](../configure-server-properties-in-analysis-services.md).  
+ For more information about the properties that you can configure, see [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
   
  The following server properties are of particular relevance to data mining:  
   
@@ -81,9 +81,9 @@ manager: "mblythe"
   
 -   **MaxConcurrentPredictionQueries** Controls the load on the server caused by predictions. The default value of 0 allows unlimited queries for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, and a maximum of five concurrent queries for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. Queries above the limit are serialized and may time out.  
   
- The server provides additional properties that control which data mining algorithms are available, including any restrictions on the algorithms, and the defaults for all data mining services. However, there are no settings that allow you to control access to data mining stored procedures specifically. For more information, see [Data Mining Properties](../data-mining-properties.md).  
+ The server provides additional properties that control which data mining algorithms are available, including any restrictions on the algorithms, and the defaults for all data mining services. However, there are no settings that allow you to control access to data mining stored procedures specifically. For more information, see [Data Mining Properties](../server-properties/data-mining-properties.md).  
   
- You can also set properties that let you tune the server and control security for client usage. For more information, see [Feature Properties](../feature-properties.md).  
+ You can also set properties that let you tune the server and control security for client usage. For more information, see [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
 >  For more information about Support for plug-in algorithms by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  

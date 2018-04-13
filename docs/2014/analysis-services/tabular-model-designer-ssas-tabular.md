@@ -123,7 +123,7 @@ manager: "mblythe"
  The Analysis Services keyboard shortcuts can be configured/remapped through the Tools->Options->Keyboard dialog. Some global [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] shortcuts, such as build, save, debug, new project, etc. are supported in the tabular model designer context. Other tabular model designer specific shortcuts are in the Analysis Services context.  
   
 ## See Also  
- [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md)   
- [Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md)  
+ [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [Properties &#40;SSAS Tabular&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

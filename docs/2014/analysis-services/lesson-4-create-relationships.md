@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Lesson 5: Create Relationships
-  In this lesson, you will verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the Product table and the Product Subcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  In this lesson, you will verify the relationships that were created automatically when you imported data and add new relationships between different tables. A relationship is a connection between two tables that establishes how the data in those tables should be correlated. For example, the Product table and the Product Subcategory table have a relationship based on the fact that each product belongs to a subcategory. To learn more, see [Relationships &#40;SSAS Tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
   
  Estimated time to complete this lesson: **10 minutes**  
   

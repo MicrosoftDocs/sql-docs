@@ -159,7 +159,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### Processing a Dimension  
  Processing a dimension is as simple as using the Process method of the <xref:Microsoft.AnalysisServices.Dimension> object.  
   
- Processing a dimension can affect all cubes that use the dimension. For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
+ Processing a dimension can affect all cubes that use the dimension. For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md) and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
   
  The following code does an incremental update in all dimensions of a supplied database:  
   
@@ -246,7 +246,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### Processing a Cube  
  Processing a cube is as simple as using the Process method of the <xref:Microsoft.AnalysisServices.Cube> object. Processing a cube also processes all measure groups in the cube, and all partitions in the measure group. In a cube, partitions are the only objects that can be processed; for the purposes of processing, measure groups are only containers of partitions. The specified type of processing for the cube propagates to the partitions. Processing of cube and measure group internally is resolved to processing of dimensions and partitions.  
   
- For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
+ For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
   
  The following code will do a full process on all cubes in a specified database:  
   
@@ -413,7 +413,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### Processing a Measure Group  
  Processing a measure group is as simple as using the Process method of the <xref:Microsoft.AnalysisServices.MeasureGroup> object. Processing a measure group will process all partitions that belong to the measure group. Processing a measure group internally is resolved to processing dimensions and partitions. See [Processing a Partition](#ProcPart) in this document.  
   
- For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
+ For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md), and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
   
  The following code will do a full process in all measure groups of a supplied cube.  
   
@@ -479,7 +479,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Processing a Partition  
  Processing a partition is as simple as using the Process method of the <xref:Microsoft.AnalysisServices.Partition> object.  
   
- For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
+ For more information about processing options, see [Processing Objects &#40;XMLA&#41;](../../xmla/xml-elements-objects.md) and [Multidimensional Model Object Processing](../processing-a-multidimensional-model-analysis-services.md).  
   
  The following code sample does a full process in all partitions of a specified measure group.  
   

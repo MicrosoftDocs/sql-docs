@@ -1,6 +1,6 @@
 ---
 title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"

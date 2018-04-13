@@ -2,7 +2,7 @@
 title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "security"

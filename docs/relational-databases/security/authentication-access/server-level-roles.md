@@ -2,7 +2,7 @@
 title: "Server-Level Roles | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, pdw"
 ms.service: ""
 ms.component: "security"

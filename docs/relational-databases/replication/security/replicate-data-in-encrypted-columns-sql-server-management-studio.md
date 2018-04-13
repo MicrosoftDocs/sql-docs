@@ -2,7 +2,7 @@
 title: "Replicate Data in Encrypted Columns (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"

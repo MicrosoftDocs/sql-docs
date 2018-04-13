@@ -1,7 +1,7 @@
 ---
 title: "Consolidate assessment reports (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/15/2018"
+ms.date: "04/16/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""

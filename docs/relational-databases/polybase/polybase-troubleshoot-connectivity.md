@@ -18,7 +18,7 @@ ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
 ms.date: 07/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.author: alazad
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
 ms.date: "09/23/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "logs"

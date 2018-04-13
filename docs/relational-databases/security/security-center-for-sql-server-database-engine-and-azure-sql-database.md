@@ -2,7 +2,7 @@
 title: "Security Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: ""

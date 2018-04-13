@@ -2,7 +2,7 @@
 title: "Troubleshooting Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.service: ""

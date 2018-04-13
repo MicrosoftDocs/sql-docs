@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
 ms.date: "05/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "polybase"

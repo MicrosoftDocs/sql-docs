@@ -3,7 +3,7 @@ title: "Fetching BLOB Data Using IRow::GetColumns and ISequentialStream | Micros
 description: "Fetching BLOB data using IRow::GetColumns and ISequentialStream"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-rowsets"

@@ -2,7 +2,7 @@
 title: "Azure Key Vault Sample Version 6.0.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"

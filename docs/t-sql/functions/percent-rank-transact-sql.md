@@ -2,7 +2,7 @@
 title: "PERCENT_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|functions"

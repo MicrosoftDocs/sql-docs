@@ -2,7 +2,7 @@
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"

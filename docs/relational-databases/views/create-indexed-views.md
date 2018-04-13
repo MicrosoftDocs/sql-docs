@@ -2,7 +2,7 @@
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "views"

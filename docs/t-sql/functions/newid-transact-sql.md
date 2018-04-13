@@ -2,7 +2,7 @@
 title: "NEWID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, sql-database"
 ms.service: ""
 ms.component: "t-sql|functions"

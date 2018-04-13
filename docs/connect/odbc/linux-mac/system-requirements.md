@@ -2,7 +2,7 @@
 title: "System Requirements (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/14/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"

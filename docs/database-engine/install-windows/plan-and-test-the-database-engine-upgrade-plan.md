@@ -2,7 +2,7 @@
 title: "Plan and Test the Database Engine Upgrade Plan | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/20/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install-windows"

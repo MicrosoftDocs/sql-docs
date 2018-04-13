@@ -2,7 +2,7 @@
 title: "Start Data Movement on an Always On Secondary Database (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"

@@ -2,7 +2,7 @@
 title: "Sample Database for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"

@@ -2,7 +2,7 @@
 title: "Administer Multiple Servers Using Central Management Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "relational-databases-misc"

@@ -18,7 +18,7 @@ ms.assetid: c9d9a32d-5dc2-4189-9bfb-2b008bc3d6a3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetData (Desktop Database Drivers)

@@ -18,7 +18,7 @@ ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setup DLL Function Summary

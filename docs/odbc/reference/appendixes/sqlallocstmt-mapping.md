@@ -19,7 +19,7 @@ ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocStmt Mapping

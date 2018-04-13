@@ -16,7 +16,7 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Validating User Input

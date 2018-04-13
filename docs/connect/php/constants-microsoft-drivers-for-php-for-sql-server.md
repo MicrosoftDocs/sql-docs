@@ -18,7 +18,7 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 caps.latest.revision: 72
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Constants (Microsoft Drivers for PHP for SQL Server)

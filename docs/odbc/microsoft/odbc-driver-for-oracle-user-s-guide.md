@@ -18,7 +18,7 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC Driver for Oracle User&#39;s Guide

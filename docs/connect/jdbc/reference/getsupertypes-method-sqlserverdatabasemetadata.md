@@ -21,7 +21,7 @@ ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSuperTypes Method (SQLServerDatabaseMetaData)

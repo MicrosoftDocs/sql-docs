@@ -21,7 +21,7 @@ ms.assetid: d4f59d5e-af85-491d-abde-eb06684745ce
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTimestamp Method (SQLServerCallableStatement)

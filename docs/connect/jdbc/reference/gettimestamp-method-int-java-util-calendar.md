@@ -21,7 +21,7 @@ ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTimestamp Method (int, java.util.Calendar)

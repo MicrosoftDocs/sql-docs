@@ -16,7 +16,7 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Connecting with SSL Encryption

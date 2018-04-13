@@ -21,7 +21,7 @@ ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBigDecimal Method (int, java.math.BigDecimal)

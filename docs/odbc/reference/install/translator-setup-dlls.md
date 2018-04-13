@@ -18,7 +18,7 @@ ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Translator Setup DLLs

@@ -21,7 +21,7 @@ ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsTransactions Method (SQLServerDatabaseMetaData)

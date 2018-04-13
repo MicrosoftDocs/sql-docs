@@ -21,7 +21,7 @@ ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getByte Method (int)

@@ -21,7 +21,7 @@ ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getObject Method (java.lang.String, java.util.Map)

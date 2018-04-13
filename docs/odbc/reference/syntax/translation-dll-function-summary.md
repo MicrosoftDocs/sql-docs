@@ -19,7 +19,7 @@ ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Translation DLL Function Summary

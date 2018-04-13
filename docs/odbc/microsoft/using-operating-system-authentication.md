@@ -19,7 +19,7 @@ ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Operating System Authentication

@@ -16,7 +16,7 @@ ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSQLXML Method (SQLServerCallableStatement)

@@ -21,7 +21,7 @@ ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDate Method (SQLServerResultSet)

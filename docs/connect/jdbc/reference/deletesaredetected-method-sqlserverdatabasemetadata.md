@@ -21,7 +21,7 @@ ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # deletesAreDetected Method (SQLServerDatabaseMetaData)

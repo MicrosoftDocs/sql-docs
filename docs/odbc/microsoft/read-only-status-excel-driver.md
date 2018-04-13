@@ -19,7 +19,7 @@ ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Read-Only Status (Excel Driver)

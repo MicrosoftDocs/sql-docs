@@ -20,7 +20,7 @@ ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Vertical Applications

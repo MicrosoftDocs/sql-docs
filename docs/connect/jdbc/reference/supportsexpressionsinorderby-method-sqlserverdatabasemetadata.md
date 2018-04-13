@@ -21,7 +21,7 @@ ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsExpressionsInOrderBy Method (SQLServerDatabaseMetaData)

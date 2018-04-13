@@ -18,7 +18,7 @@ ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Specify Parameter Direction Using the SQLSRV Driver

@@ -20,7 +20,7 @@ ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Explicitly Allocated Descriptors

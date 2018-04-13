@@ -21,7 +21,7 @@ ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # cancel Method (SQLServerStatement)

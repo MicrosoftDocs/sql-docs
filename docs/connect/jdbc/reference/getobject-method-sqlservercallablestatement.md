@@ -21,7 +21,7 @@ ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getObject Method (SQLServerCallableStatement)

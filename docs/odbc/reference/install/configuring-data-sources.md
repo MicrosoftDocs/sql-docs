@@ -18,7 +18,7 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Configuring Data Sources

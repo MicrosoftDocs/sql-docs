@@ -25,7 +25,7 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLMoreResults Function

@@ -18,7 +18,7 @@ ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET UNIQUE Command

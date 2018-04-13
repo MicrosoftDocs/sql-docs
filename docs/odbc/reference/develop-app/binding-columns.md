@@ -19,7 +19,7 @@ ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Binding Columns

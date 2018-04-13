@@ -19,7 +19,7 @@ ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Multiple hstmts (Paradox Driver)

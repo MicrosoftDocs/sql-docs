@@ -18,7 +18,7 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Source Example

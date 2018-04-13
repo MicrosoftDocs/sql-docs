@@ -21,7 +21,7 @@ ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCursorName Method (SQLServerResultSet)

@@ -21,7 +21,7 @@ ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isReadOnly Method (SQLServerConnection)

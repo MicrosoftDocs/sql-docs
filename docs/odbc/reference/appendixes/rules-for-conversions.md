@@ -21,7 +21,7 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Rules for Conversions

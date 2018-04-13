@@ -21,7 +21,7 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Data Overview

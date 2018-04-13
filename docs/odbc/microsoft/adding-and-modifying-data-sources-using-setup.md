@@ -23,7 +23,7 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Adding and Modifying Data Sources Using Setup

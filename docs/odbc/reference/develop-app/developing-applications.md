@@ -20,7 +20,7 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Developing Applications

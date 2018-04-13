@@ -18,7 +18,7 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLCleanupConnectionPoolID Function

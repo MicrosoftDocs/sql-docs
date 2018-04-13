@@ -16,7 +16,7 @@ ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isClosed Method (SQLServerResultSet)

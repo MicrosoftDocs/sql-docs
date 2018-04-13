@@ -16,7 +16,7 @@ ms.assetid: b942f78e-7ce1-44ef-923d-a7c3d7c76b83
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAuthenticationScheme (SQLServerDataSource)

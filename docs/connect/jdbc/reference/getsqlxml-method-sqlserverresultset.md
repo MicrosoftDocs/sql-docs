@@ -16,7 +16,7 @@ ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSQLXML Method (SQLServerResultSet)

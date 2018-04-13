@@ -21,7 +21,7 @@ ms.assetid: 91020fad-a9e2-4ea4-9c72-c63cf6b1051c
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getClob Method (int) (SQLServerResultSet)

@@ -23,7 +23,7 @@ ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching Rows with SQLBulkOperations

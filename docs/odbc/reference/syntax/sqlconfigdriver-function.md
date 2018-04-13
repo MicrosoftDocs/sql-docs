@@ -25,7 +25,7 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLConfigDriver Function

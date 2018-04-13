@@ -19,7 +19,7 @@ ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_has_rows

@@ -19,7 +19,7 @@ ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Executing Procedures

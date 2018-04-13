@@ -20,7 +20,7 @@ ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Gateways Diagnostic Example

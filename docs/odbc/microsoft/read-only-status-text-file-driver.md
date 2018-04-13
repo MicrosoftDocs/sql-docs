@@ -19,7 +19,7 @@ ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Read-Only Status (Text File Driver)

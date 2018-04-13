@@ -18,7 +18,7 @@ ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Comparing Execution Functions

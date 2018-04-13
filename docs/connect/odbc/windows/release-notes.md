@@ -16,7 +16,7 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Release Notes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

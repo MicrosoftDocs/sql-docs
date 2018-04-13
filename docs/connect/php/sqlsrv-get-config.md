@@ -22,7 +22,7 @@ ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_get_config

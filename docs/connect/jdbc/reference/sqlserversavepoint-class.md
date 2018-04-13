@@ -16,7 +16,7 @@ ms.assetid: 1ae7db7b-959f-4142-8d9f-aa427869c6ac
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerSavepoint Class

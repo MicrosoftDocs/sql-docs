@@ -22,7 +22,7 @@ ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Use the Visual FoxPro ODBC Driver with Your C or Visual C++ Application

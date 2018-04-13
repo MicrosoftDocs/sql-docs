@@ -19,7 +19,7 @@ ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (dBASE Driver)

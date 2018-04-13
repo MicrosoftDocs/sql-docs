@@ -21,7 +21,7 @@ ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isBeforeFirst Method (SQLServerResultSet)

@@ -13,7 +13,7 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitor performance for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

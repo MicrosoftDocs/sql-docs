@@ -16,7 +16,7 @@ ms.assetid: 2adb2b88-96d6-4645-86d0-0388c8186691
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBinaryStream Method (SQLServerPreparedStatement)

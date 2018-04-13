@@ -21,7 +21,7 @@ ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsTransactionIsolationLevel Method (SQLServerDatabaseMetaData)

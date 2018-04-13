@@ -20,7 +20,7 @@ ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL-92 CAST Function

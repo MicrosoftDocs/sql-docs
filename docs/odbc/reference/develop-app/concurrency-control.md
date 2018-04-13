@@ -19,7 +19,7 @@ ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Concurrency Control

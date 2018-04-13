@@ -16,7 +16,7 @@ ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setSQLXML Method (SQLServerPreparedStatement)

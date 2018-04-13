@@ -18,7 +18,7 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 caps.latest.revision: 41
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Example Application (SQLSRV Driver)

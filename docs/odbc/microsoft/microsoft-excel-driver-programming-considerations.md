@@ -21,7 +21,7 @@ ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Microsoft Excel Driver Programming Considerations

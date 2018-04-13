@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "MS DTC, about distributed transaction support"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supporting Distributed Transactions

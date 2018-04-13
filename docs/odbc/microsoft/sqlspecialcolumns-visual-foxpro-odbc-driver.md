@@ -18,7 +18,7 @@ ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSpecialColumns (Visual FoxPro ODBC Driver)

@@ -21,7 +21,7 @@ ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDouble Method (java.lang.String, double)

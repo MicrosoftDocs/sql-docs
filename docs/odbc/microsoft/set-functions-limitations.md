@@ -19,7 +19,7 @@ ms.assetid: 18e7a0fd-cc5d-4109-b542-cac6893a29c3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Set Functions Limitations

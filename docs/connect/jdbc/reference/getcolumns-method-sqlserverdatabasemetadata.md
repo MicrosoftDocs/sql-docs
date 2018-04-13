@@ -21,7 +21,7 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 caps.latest.revision: 39
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumns Method (SQLServerDatabaseMetaData)

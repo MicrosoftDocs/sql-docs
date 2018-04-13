@@ -20,7 +20,7 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Data Buffers

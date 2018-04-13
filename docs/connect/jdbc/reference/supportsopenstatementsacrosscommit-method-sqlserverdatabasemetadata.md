@@ -21,7 +21,7 @@ ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsOpenStatementsAcrossCommit Method (SQLServerDatabaseMetaData)

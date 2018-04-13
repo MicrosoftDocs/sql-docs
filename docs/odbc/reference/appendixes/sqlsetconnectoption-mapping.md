@@ -19,7 +19,7 @@ ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectOption Mapping

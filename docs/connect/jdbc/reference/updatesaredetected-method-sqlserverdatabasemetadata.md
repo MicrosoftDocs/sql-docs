@@ -21,7 +21,7 @@ ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updatesAreDetected Method (SQLServerDatabaseMetaData)

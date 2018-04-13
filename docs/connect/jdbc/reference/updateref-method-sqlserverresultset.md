@@ -21,7 +21,7 @@ ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateRef Method (SQLServerResultSet)

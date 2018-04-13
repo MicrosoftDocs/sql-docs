@@ -20,7 +20,7 @@ ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Status Records

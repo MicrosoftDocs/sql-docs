@@ -21,7 +21,7 @@ ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getAttributes Method (SQLServerDatabaseMetaData)

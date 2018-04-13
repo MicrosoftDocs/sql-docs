@@ -21,7 +21,7 @@ ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBytes Method (int) (SQLServerResultSet)

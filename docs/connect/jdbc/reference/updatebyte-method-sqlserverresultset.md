@@ -21,7 +21,7 @@ ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateByte Method (SQLServerResultSet)

@@ -15,7 +15,7 @@ ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""

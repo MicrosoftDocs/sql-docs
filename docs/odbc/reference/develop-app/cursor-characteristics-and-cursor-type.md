@@ -20,7 +20,7 @@ ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Cursor Characteristics and Cursor Type

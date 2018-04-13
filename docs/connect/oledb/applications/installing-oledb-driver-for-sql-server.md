@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "removing OLE DB Driver for SQL Server"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Installing OLE DB Driver for SQL Server

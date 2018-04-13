@@ -18,7 +18,7 @@ ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLCancel (Visual FoxPro ODBC Driver)

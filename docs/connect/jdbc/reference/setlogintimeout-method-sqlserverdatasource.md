@@ -21,7 +21,7 @@ ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setLoginTimeout Method (SQLServerDataSource)

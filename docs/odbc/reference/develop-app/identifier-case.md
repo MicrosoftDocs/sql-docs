@@ -20,7 +20,7 @@ ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Identifier Case

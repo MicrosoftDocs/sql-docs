@@ -25,7 +25,7 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetConnectAttr Function

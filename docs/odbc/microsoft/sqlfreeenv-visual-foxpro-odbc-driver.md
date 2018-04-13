@@ -18,7 +18,7 @@ ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeEnv (Visual FoxPro ODBC Driver)

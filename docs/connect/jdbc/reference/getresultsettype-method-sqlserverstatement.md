@@ -21,7 +21,7 @@ ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getResultSetType Method (SQLServerStatement)

@@ -24,7 +24,7 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 caps.latest.revision: 67
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # sqlsrv_connect

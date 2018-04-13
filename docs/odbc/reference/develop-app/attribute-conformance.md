@@ -21,7 +21,7 @@ ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Attribute Conformance

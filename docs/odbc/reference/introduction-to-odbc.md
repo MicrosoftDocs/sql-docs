@@ -19,7 +19,7 @@ ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Introduction to ODBC

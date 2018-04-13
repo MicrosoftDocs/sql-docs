@@ -16,7 +16,7 @@ ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Result Set Data Sample

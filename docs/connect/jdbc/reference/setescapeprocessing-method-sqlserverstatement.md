@@ -21,7 +21,7 @@ ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setEscapeProcessing Method (SQLServerStatement)

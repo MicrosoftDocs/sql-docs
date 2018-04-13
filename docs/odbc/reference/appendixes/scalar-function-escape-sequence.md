@@ -20,7 +20,7 @@ ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Scalar Function Escape Sequence

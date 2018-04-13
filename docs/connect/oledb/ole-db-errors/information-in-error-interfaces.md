@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "errors [OLE DB], error interfaces"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Information in Error Interfaces

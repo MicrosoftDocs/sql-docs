@@ -13,7 +13,7 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 caps.latest.revision: 4
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQL Server error log (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

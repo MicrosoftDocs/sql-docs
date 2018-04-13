@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "ISSCommandWithParameters interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using User-Defined Types

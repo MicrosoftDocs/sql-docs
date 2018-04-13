@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters, rowset creation"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Rowset Creation

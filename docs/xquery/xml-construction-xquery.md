@@ -29,7 +29,7 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # XML Construction (XQuery)

@@ -21,7 +21,7 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Manager&#39;s Role in the Connection Process

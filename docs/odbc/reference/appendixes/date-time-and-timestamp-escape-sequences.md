@@ -21,7 +21,7 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Date, Time, and Timestamp Escape Sequences

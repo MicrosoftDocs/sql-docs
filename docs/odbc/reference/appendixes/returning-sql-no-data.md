@@ -20,7 +20,7 @@ ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Returning SQL_NO_DATA

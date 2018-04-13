@@ -16,7 +16,7 @@ ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Basic Data Types Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

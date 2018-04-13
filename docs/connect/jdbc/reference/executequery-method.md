@@ -21,7 +21,7 @@ ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # executeQuery Method ()

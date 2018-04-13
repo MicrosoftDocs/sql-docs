@@ -21,7 +21,7 @@ ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getFloat Method (int) (SQLServerResultSet)

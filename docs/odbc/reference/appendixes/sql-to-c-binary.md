@@ -21,7 +21,7 @@ ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL to C: Binary

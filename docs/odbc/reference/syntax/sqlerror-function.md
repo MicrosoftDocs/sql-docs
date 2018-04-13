@@ -25,7 +25,7 @@ ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLError Function

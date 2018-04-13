@@ -19,7 +19,7 @@ ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Testing Interoperable Applications

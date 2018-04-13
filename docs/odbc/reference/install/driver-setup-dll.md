@@ -20,7 +20,7 @@ ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Setup DLL

@@ -21,7 +21,7 @@ ms.assetid: 7f520e96-5313-468f-b987-535ddaea027e
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getConnection Method ()

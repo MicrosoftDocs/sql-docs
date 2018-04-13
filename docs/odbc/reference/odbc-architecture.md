@@ -19,7 +19,7 @@ ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Architecture

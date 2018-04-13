@@ -20,7 +20,7 @@ ms.assetid: 4862f098-41a4-4bd2-894e-f71bb97f9bc0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Scrolling by Bookmark

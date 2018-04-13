@@ -21,7 +21,7 @@ ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerSavepoint Constructor (SQLServerConnection, java.lang.StringName)

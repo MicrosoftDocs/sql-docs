@@ -21,7 +21,7 @@ ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setWorkstationID Method (SQLServerDataSource)

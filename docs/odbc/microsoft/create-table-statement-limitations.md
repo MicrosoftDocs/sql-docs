@@ -19,7 +19,7 @@ ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE TABLE Statement Limitations

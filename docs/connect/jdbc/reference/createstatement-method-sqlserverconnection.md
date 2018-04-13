@@ -21,7 +21,7 @@ ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # createStatement Method (SQLServerConnection)

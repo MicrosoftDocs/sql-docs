@@ -20,7 +20,7 @@ ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXAResource Fields

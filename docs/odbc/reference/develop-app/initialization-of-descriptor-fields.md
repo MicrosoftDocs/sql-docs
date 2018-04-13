@@ -20,7 +20,7 @@ ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Initialization of Descriptor Fields

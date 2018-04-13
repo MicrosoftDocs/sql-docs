@@ -19,7 +19,7 @@ ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectOption (Excel Driver)

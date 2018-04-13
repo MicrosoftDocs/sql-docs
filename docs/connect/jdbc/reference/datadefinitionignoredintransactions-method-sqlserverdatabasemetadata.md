@@ -21,7 +21,7 @@ ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # dataDefinitionIgnoredInTransactions Method (SQLServerDatabaseMetaData)

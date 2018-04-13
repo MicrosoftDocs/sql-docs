@@ -20,7 +20,7 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Statement Transitions

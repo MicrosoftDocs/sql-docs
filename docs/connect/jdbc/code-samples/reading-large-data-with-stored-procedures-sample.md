@@ -16,7 +16,7 @@ ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reading Large Data with Stored Procedures Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

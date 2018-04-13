@@ -16,7 +16,7 @@ ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateCharacterStream Method (int, java.io.Reader)

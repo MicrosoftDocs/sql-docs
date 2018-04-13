@@ -21,7 +21,7 @@ ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCatalogSeparator Method (SQLServerDatabaseMetaData)

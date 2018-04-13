@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "OLE DB, data types"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Type Mapping in ITableDefinition

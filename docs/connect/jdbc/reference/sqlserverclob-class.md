@@ -16,7 +16,7 @@ ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerClob Class

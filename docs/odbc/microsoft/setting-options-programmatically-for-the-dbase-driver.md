@@ -21,7 +21,7 @@ ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setting Options Programmatically for the dBASE Driver

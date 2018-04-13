@@ -20,7 +20,7 @@ ms.assetid: ac80c798-d9b2-4430-85ed-bd2461db0ac7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # 64-Bit Integer Structures

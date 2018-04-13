@@ -21,7 +21,7 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # C Data Types

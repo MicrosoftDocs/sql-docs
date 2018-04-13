@@ -23,7 +23,7 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Connecting Using File Data Sources

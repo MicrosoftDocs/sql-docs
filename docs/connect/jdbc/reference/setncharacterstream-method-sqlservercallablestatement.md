@@ -16,7 +16,7 @@ ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNCharacterStream Method (SQLServerCallableStatement)

@@ -16,7 +16,7 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Programming with SQLXML

@@ -16,7 +16,7 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 caps.latest.revision: 53
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Adaptive Buffering

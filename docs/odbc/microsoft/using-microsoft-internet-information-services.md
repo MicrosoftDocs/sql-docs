@@ -20,7 +20,7 @@ ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Microsoft Internet Information Services

@@ -19,7 +19,7 @@ ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact (Excel Driver)

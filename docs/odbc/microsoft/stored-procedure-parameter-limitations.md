@@ -19,7 +19,7 @@ ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Stored Procedure Parameter Limitations

@@ -16,7 +16,7 @@ ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNCharacterStream Method (SQLServerResultSet)

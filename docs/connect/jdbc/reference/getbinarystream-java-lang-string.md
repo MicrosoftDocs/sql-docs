@@ -21,7 +21,7 @@ ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBinaryStream (java.lang.String)

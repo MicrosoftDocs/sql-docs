@@ -21,7 +21,7 @@ ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getAutoCommit Method (SQLServerConnection)

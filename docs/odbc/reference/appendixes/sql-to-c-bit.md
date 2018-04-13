@@ -20,7 +20,7 @@ ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL to C: Bit

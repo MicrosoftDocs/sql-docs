@@ -16,7 +16,7 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLXML Data Type Sample

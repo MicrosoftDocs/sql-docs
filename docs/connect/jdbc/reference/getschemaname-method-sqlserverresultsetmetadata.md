@@ -21,7 +21,7 @@ ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSchemaName Method (SQLServerResultSetMetaData)

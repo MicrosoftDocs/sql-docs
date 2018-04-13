@@ -18,7 +18,7 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # INDEX Command

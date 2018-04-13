@@ -16,7 +16,7 @@ ms.assetid: fac054f1-60dc-4261-bc1b-ed70d1ceb85f
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDataSource Methods

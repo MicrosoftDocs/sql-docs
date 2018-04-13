@@ -19,7 +19,7 @@ ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Constructing Interoperable SQL Statements

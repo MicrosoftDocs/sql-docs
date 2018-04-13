@@ -21,7 +21,7 @@ ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # absolute Method (SQLServerResultSet)

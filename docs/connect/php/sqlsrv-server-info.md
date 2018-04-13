@@ -22,7 +22,7 @@ ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_server_info

@@ -21,7 +21,7 @@ ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setCharacterStream Method (java.lang.String, java.io.Reader, int)

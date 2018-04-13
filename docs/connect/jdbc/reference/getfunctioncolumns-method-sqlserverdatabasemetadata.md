@@ -16,7 +16,7 @@ ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getFunctionColumns Method (SQLServerDatabaseMetaData)

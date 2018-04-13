@@ -23,7 +23,7 @@ ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Datetime Data Type Changes

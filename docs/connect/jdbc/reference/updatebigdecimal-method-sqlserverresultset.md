@@ -21,7 +21,7 @@ ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBigDecimal Method (SQLServerResultSet)

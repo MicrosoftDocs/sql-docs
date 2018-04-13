@@ -21,7 +21,7 @@ ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPortNumber Method (SQLServerDataSource)

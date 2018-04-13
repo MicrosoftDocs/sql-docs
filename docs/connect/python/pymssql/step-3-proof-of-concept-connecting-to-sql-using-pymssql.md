@@ -16,7 +16,7 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql

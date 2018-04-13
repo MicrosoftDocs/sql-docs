@@ -20,7 +20,7 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Binding Arrays of Parameters

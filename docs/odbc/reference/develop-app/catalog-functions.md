@@ -21,7 +21,7 @@ ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Catalog Functions

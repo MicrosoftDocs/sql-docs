@@ -20,7 +20,7 @@ ms.assetid: a2cf98ef-1c71-4742-8ee2-b53fd8e04333
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating and Terminating Threads

@@ -16,7 +16,7 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNCharacterStream Method (int, java.io.Reader, long)

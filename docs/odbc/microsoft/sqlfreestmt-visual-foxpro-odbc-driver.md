@@ -18,7 +18,7 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeStmt (Visual FoxPro ODBC Driver)

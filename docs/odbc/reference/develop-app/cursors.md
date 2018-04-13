@@ -24,7 +24,7 @@ ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Cursors

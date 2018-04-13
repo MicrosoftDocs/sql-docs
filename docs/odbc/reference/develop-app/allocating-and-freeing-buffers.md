@@ -20,7 +20,7 @@ ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating and Freeing Buffers

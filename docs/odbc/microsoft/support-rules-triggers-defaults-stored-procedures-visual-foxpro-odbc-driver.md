@@ -34,7 +34,7 @@ ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)

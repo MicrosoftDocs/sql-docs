@@ -19,7 +19,7 @@ ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Disable Multiple Active Resultsets (MARS)

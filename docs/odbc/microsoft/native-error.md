@@ -20,7 +20,7 @@ ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Native Error

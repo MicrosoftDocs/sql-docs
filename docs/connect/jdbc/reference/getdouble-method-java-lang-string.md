@@ -21,7 +21,7 @@ ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDouble Method (java.lang.String)

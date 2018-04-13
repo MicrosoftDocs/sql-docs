@@ -20,7 +20,7 @@ ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setting the Transaction Isolation Level

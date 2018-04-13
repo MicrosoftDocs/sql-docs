@@ -16,7 +16,7 @@ ms.assetid: 04cf56ad-11a8-4ae5-a612-39f3f8680501
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerNClob Methods

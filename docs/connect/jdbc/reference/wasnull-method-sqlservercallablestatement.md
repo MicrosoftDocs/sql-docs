@@ -21,7 +21,7 @@ ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # wasNull Method (SQLServerCallableStatement)

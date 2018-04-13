@@ -21,7 +21,7 @@ ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSchemasInIndexDefinitions Method (SQLServerDatabaseMetaData)

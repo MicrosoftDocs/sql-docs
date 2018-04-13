@@ -20,7 +20,7 @@ ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported Data Types (Visual FoxPro ODBC Driver)

@@ -22,7 +22,7 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # New Features

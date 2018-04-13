@@ -21,7 +21,7 @@ ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateInt Method (SQLServerResultSet)

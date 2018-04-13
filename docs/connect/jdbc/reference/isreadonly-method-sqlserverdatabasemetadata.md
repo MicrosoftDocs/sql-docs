@@ -21,7 +21,7 @@ ms.assetid: d1569e03-b7bd-486a-af0b-d3f108f712dc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isReadOnly Method (SQLServerDatabaseMetaData)

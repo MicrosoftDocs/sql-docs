@@ -16,7 +16,7 @@ ms.assetid: 89543177-b77c-4220-9f49-5d0c5379b567
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXAConnection Methods

@@ -18,7 +18,7 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE TABLE - SQL Command

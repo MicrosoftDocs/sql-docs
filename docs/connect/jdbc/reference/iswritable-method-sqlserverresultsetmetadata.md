@@ -21,7 +21,7 @@ ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isWritable Method (SQLServerResultSetMetaData)

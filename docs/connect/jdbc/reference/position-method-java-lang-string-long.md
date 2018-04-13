@@ -21,7 +21,7 @@ ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (java.lang.String, long)

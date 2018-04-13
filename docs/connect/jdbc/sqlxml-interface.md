@@ -16,7 +16,7 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLXML Interface

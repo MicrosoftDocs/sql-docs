@@ -217,7 +217,7 @@ manager: "mblythe"
   
 |Value|Description|  
 |-----------|-----------------|  
-|*Tabular*|Returns a result set using the [Rowset](../xmla/xml-data-types/rowset-data-type-xmla.md) data type.|  
+|*Tabular*|Returns a result set using the [Rowset](../xml-data-types/rowset-data-type-xmla.md) data type.|  
 |*Multidimensional*|Returns a rowset using the [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) data type.|  
 |*Native*|No format is explicitly specified. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] returns the appropriate format for the command. The actual result type is identified by the namespace of the result.|  
   

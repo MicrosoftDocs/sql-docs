@@ -2,7 +2,7 @@
 title: "Node.js Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.component: "node-js"
 ms.reviewer: ""

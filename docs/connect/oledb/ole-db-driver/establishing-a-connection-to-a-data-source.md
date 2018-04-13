@@ -3,7 +3,7 @@ title: "Establishing a Connection to a Data Source | Microsoft Docs"
 description: "Establishing a connection to a data source using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb-driver-for-sql-server"
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Establishing a Connection to a Data Source

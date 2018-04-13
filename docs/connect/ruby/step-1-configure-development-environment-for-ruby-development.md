@@ -2,7 +2,7 @@
 title: "Step 1: Configure development environment for Ruby development | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ruby"
@@ -16,7 +16,7 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 1: Configure development environment for Ruby development

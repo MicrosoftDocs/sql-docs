@@ -2,7 +2,7 @@
 title: "Release Notes (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Release Notes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

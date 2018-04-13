@@ -2,7 +2,7 @@
 title: "Date and Time Data Types and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|functions"

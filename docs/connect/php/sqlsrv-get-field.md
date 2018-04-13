@@ -2,7 +2,7 @@
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -23,7 +23,7 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_get_field

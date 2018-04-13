@@ -2,7 +2,7 @@
 title: "Utility Explorer F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "maintenance-plans"

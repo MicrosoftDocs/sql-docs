@@ -2,7 +2,7 @@
 title: "updateTime Method (int, java.sql.Time) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateTime Method (int, java.sql.Time)

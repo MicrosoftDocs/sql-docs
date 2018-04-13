@@ -20,7 +20,7 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 caps.latest.revision: 47
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Upgrade a SQL Server Failover Cluster Instance

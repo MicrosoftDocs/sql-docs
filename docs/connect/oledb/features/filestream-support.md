@@ -3,7 +3,7 @@ title: "FILESTREAM Support | Microsoft Docs"
 description: "FILESTREAM support in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb|features"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # FILESTREAM Support

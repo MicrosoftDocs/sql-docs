@@ -2,7 +2,7 @@
 title: "setTimestamp Method to timestamp and calendar values | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTimestamp Method (java.lang.String, java.sql.Timestamp, java.util.Calendar)

@@ -2,7 +2,7 @@
 title: "SQLGetDescField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,7 +25,7 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetDescField Function

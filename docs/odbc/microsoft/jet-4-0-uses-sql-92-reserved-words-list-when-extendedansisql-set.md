@@ -2,7 +2,7 @@
 title: "Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set

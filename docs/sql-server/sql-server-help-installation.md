@@ -19,7 +19,7 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server offline help and Help Viewer

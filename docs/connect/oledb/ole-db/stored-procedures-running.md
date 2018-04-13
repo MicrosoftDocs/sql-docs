@@ -3,7 +3,7 @@ title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
 description: "Running Stored Procedures (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, stored procedures"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Stored Procedures - Running

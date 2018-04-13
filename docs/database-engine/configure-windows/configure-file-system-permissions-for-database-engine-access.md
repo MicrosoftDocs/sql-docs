@@ -2,7 +2,7 @@
 title: "Configure File System Permissions for Database Engine Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

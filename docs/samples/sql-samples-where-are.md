@@ -1,4 +1,4 @@
----
+﻿---
 title: "Microsoft SQL samples | Microsoft Docs"
 description: Documentation for sample databases and links to samples for Microsoft SQL products.
 ms.date: "04/04/2018"
@@ -16,6 +16,7 @@ ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL samples
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

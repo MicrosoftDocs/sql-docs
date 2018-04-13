@@ -2,7 +2,7 @@
 title: "updateBinaryStream Method (int, java.io.InputStream, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: c8e55377-aaea-4415-8159-938fab1b2a93
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBinaryStream Method (int, java.io.InputStream, int)

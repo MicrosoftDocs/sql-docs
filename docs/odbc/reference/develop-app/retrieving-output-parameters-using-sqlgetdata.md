@@ -2,7 +2,7 @@
 title: "Retrieving Output Parameters Using SQLGetData | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Output Parameters Using SQLGetData

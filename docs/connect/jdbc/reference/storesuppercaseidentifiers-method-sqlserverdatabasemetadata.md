@@ -2,7 +2,7 @@
 title: "storesUpperCaseIdentifiers Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # storesUpperCaseIdentifiers Method (SQLServerDatabaseMetaData)

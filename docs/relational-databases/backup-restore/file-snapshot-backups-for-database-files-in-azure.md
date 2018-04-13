@@ -2,7 +2,7 @@
 title: "File-Snapshot Backups for Database Files in Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "backup-restore"

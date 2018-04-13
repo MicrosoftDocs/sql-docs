@@ -2,7 +2,7 @@
 title: "Live Query Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "performance"

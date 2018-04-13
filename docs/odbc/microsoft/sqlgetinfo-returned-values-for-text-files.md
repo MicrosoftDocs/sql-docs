@@ -2,7 +2,7 @@
 title: "SQLGetInfo Returned Values for Text Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,7 +22,7 @@ ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo Returned Values for Text Files

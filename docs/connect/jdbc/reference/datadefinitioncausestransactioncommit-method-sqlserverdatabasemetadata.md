@@ -2,7 +2,7 @@
 title: "Does Data Definition Statement Force Transaction Commit. | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)

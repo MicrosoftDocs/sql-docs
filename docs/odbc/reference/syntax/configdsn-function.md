@@ -2,7 +2,7 @@
 title: "ConfigDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -25,7 +25,7 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ConfigDSN Function

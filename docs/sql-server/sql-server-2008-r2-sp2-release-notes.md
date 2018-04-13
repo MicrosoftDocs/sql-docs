@@ -18,7 +18,7 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server 2008 R2 SP2 Release Notes

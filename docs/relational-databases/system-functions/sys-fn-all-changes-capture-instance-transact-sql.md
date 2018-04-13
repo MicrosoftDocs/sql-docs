@@ -2,7 +2,7 @@
 title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-functions"

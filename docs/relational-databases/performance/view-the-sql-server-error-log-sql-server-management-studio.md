@@ -2,7 +2,7 @@
 title: "View the SQL Server error log (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "performance"

@@ -54,7 +54,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[AttributeID](../properties/id-element-assl.md), [DatabaseID](databaseid-element-xmla.md), [DimensionID](../properties/dimensionid-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [NameColumn](../objects/column-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
+|Child elements|[AttributeID](../properties/id-element-assl.md), [DatabaseID](../../dev-guide/databaseid-element-xmla.md), [DimensionID](../properties/dimensionid-element-assl.md), [KeyColumns](../collections/columns-element-assl.md), [NameColumn](../objects/column-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
 |Derived elements|[Binding](../../dev-guide/binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](../../dev-guide/batch-element-xmla.md) and [Process](../../dev-guide/process-element-xmla.md) commands)|  
   
 ## Remarks  

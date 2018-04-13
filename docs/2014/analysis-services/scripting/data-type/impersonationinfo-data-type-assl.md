@@ -52,7 +52,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Account](../properties/account-element-impersonationinfo-assl.md), [ImpersonationInfoSecurity](../properties/impersonationinfosecurity-element-assl.md), [ImpersonationMode](../properties/impersonationmode-element-assl.md), [Password](../properties/password-element-assl.md)|  
-|Derived elements|[DataSourceImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ImpersonationInfo](impersonationinfo-element-assl.md)|  
+|Derived elements|[DataSourceImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md)|  
   
 ## See Also  
  [Analysis Services Scripting Language XML Data Types &#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

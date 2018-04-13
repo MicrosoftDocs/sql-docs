@@ -57,7 +57,7 @@ manager: "mblythe"
  The element that corresponds to the parent of `UnknownMemberTranslation` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## See Also  
- [Translation Element &#40;ASSL&#41;](../data-type/translation-element-assl.md)   
+ [Translation Element &#40;ASSL&#41;](translation-element-assl.md)   
  [Objects &#40;ASSL&#41;](objects-assl.md)  
   
   

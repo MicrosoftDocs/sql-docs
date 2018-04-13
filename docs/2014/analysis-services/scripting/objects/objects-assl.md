@@ -43,7 +43,7 @@ manager: "mblythe"
 |[Annotation Element &#40;ASSL&#41;](annotation-element-assl.md)|Contains elements that are used to extend the ASSL schema.|  
 |[Assembly Element &#40;ASSL&#41;](assembly-element-assl.md)|Represents a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assembly or a COM dynamic link library (DLL) associated with a [Server](server-element-assl.md) element or a [Database](database-element-assl.md) element.|  
 |[Attribute Element &#40;ASSL&#41;](attribute-element-assl.md)|Contains the description of an attribute.|  
-|[AttributeAllMemberTranslation Element &#40;ASSL&#41;](attributetranslation-element-assl.md)|Contains a translation for the caption of the All member of a [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) element.|  
+|[AttributeAllMemberTranslation Element &#40;ASSL&#41;](attributeallmembertranslation-element-assl.md)|Contains a translation for the caption of the All member of a [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) element.|  
 |[AttributePermission Element &#40;ASSL&#41;](attributepermission-element-assl.md)|Defines the permissions that members of a [Role](role-element-assl.md) element have on the attributes of an individual dimension in a [Cube](cube-element-assl.md) element.|  
 |[AttributeRelationship Element &#40;ASSL&#41;](attributerelationship-element-assl.md)|Provides details about the relationship between two attributes.|  
 |[Block Element &#40;ASSL&#41;](block-element-assl.md)|Contains all or a portion of the binary contents of a [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) element.|  

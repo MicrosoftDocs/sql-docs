@@ -53,7 +53,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[CubeID](../../dev-guide/cubeid-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [PartitionID](../../dev-guide/partitionid-element-xmla.md), [Source](../properties/source-element-binding-assl.md)|  
+|Child elements|[CubeID](../../dev-guide/cubeid-element-xmla.md), [DatabaseID](../../dev-guide/databaseid-element-xmla.md), [PartitionID](../../dev-guide/partitionid-element-xmla.md), [Source](../properties/source-element-binding-assl.md)|  
 |Derived elements|See [Binding](binding-data-type-assl.md)|  
   
 ## Remarks  

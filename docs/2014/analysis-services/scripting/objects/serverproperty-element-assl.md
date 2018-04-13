@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[ServerProperties](../collections/serverproperties-element-assl.md)|  
-|Child elements|[DefaultValue](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [Name](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [Value](value-element-assl.md)|  
+|Child elements|[DefaultValue](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [Name](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [Value](../properties/value-element-assl.md)|  
   
 ## Remarks  
  The `ServerProperty` element describes the data and metadata for a server property associated with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Unlike elements contained by other collections in the Analysis Services Scripting Language (ASSL), the `ServerProperty` element uses name/value pairs instead of explicitly named elements to describe server properties. The name/value pairs provide for flexibility and extensibility.  

@@ -61,7 +61,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[AllMemberAggregationUsage](../properties/aggregationusage-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Attributes](../collections/attributes-element-assl.md), [DimensionID](../properties/id-element-assl.md), [Hierarchies](../collections/hierarchies-element-assl.md), [HierarchyUniqueNameStyle](../properties/hierarchyuniquenamestyle-element-assl.md), [ID](../properties/id-element-assl.md), [MemberUniqueNameStyle](../properties/memberuniquenamestyle-element-assl.md), [Name](../properties/name-element-assl.md), [Visible](../properties/visible-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
-|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../objects/dimensions-element-assl.md) collection of [Cube](../objects/cube-element-assl.md))|  
+|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions/element-assl.md) collection of [Cube](../objects/cube-element-assl.md))|  
   
 ## Remarks  
  There is one `CubeDimension` for each dimension relationship on a `Cube`. The `CubeDimension` covers all the `MeasureGroups` of the cube.  

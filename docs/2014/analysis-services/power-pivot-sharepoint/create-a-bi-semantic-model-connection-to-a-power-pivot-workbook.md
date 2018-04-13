@@ -45,7 +45,7 @@ manager: "mblythe"
   
 1.  In the library that will contain the BI semantic model connection, click **Documents** on the SharePoint ribbon. Click the down arrow on New Document, and select **BISM Connection File** to open the New BI Semantic Model Connection page.  
   
-     ![New Document submenu in a SharePoint library](..media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
+     ![New Document submenu in a SharePoint library](../media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
 2.  Set the **Server** property to the SharePoint URL of the PowerPivot workbook (for example, **http://mysharepoint/shared documents/myWorkbook.xlsx**. In a PowerPivot for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to PowerPivot data specify just the path to the workbook. The PowerPivot System Service determines which server loads the data.  
   
@@ -53,7 +53,7 @@ manager: "mblythe"
   
      Your page should look similar to the following illustration.  
   
-     ![BISM connection page showing URL to workbook](..media/ssas-bismconnection-ppvtds.gif "BISM connection page showing URL to workbook")  
+     ![BISM connection page showing URL to workbook](../media/ssas-bismconnection-ppvtds.gif "BISM connection page showing URL to workbook")  
   
      Optionally, if you have SharePoint permissions to the workbook, an extra validation step is performed, ensuring that the location is valid. If you do not have permission to access the data, you are given the option of saving the BI semantic model connection without the validation response.  
   

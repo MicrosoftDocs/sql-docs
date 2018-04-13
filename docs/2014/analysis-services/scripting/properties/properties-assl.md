@@ -89,7 +89,7 @@ manager: "mblythe"
 |[CubeDimensionID Element &#40;ASSL&#41;](cubedimensionid-element-assl.md)|Identifies the [CubeDimension](../data-type/cubedimension-data-type-assl.md) element associated with the parent element.|  
 |[CubeID Element &#40;ASSL&#41;](cubeid-element-assl.md)|Identifies the `Cube` element associated with a [Binding](../data-type/binding-data-type-assl.md) element.|  
 |[CurrentStorageMode Element &#40;ASSL&#41;](storagemode-element-assl.md)|Determines the current storage mode for the parent element.|  
-|[CurrentTimeMember Element &#40;ASSL&#41;](member-element-assl.md)|Defines the current member of a time dimension associated with a `Kpi` element.|  
+|[CurrentTimeMember Element &#40;ASSL&#41;](../objects/member-element-assl.md)|Defines the current member of a time dimension associated with a `Kpi` element.|  
 |[DataAggregation Element &#40;ASSL&#41;](../objects/aggregation-element-assl.md)|Determines whether the instance can aggregate persisted data or cached data for the `MeasureGroup`.|  
 |[DatabaseID Element &#40;ASSL&#41;](databaseid-element-assl.md)|Identifies the `Database` element associated with an out-of-line `Binding` element.|  
 |[DataSize Element &#40;ASSL&#41;](datasize-element-assl.md)|Contains the size in bytes of a [DataItem](../data-type/dataitem-data-type-assl.md) element.|  

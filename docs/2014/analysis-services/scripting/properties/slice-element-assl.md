@@ -61,6 +61,6 @@ manager: "mblythe"
  The element that corresponds to the parent of `Slice` in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## See Also  
- [Properties &#40;ASSL&#41;](../scripting/properties/properties-assl.md)  
+ [Properties &#40;ASSL&#41;](properties-assl.md)  
   
   

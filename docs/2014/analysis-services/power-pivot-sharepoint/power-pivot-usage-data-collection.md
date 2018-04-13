@@ -37,7 +37,7 @@ manager: "mblythe"
   
  **Note:** Verify usage data collection is enabled. To verify, go to **Monitoring** in SharePoint Central Administration. For more information, see [Configure Usage Data Collection for &#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Components and processes of usage data collection.](..media/gmni-usagedata.gif "Components and processes of usage data collection.")  
+ ![Components and processes of usage data collection.](../media/gmni-usagedata.gif "Components and processes of usage data collection.")  
   
 |Phase|Description|  
 |-----------|-----------------|  

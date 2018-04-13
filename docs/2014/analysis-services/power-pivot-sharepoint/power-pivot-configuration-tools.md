@@ -50,7 +50,7 @@ manager: "mblythe"
 |Name|Supported version of SharePoint|Detailed Configuration|  
 |----------|-------------------------------------|----------------------------|  
 |PowerPivot for SharePoint 2013 Configuration|SharePoint 2013|[Configure or Repair PowerPivot for SharePoint 2013 &#40;PowerPivot Configuration Tool&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|PowerPivot Configuration Tool|SharePoint 2010 with SharePoint 2010|[Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../configure-repair-power-pivot-sharepoint-2010.md)|  
+|PowerPivot Configuration Tool|SharePoint 2010 with SharePoint 2010|[Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> How the Two Configuration Tools are Different  
  The two versions of the Configuration tool are similar but there are differences in the configuration steps the two tools run. The differences are due to changes between SharePoint 2010 and SharePoint 2013 as well as the architecture differences between the SQL Server 2012 SP1 version of PowerPivot for SharePoint and the previous versions of PowerPivot for SharePoint.  

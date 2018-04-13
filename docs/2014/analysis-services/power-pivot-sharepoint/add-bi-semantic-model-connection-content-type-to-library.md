@@ -50,7 +50,7 @@ manager: "mblythe"
   
 12. To verify you added the content type, go back to the library and click **New Document** on the Documents area of the library ribbon. You should see **BI Semantic Model Connection File** in the New Documents list.  
   
-     ![New Document submenu in a SharePoint library](..media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
+     ![New Document submenu in a SharePoint library](../media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
  After you enable the BI semantic model connection content type for a library, you can create a connection that provides redirection to business semantic model data that can be used by Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports. Choose from the following links to learn more about this next step:  
   

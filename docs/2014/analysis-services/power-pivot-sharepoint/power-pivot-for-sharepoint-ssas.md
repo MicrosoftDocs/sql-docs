@@ -33,7 +33,7 @@ manager: "mblythe"
   
  Deploying the PowerPivot for SharePoint 2013 add-in enables additional functionality and features in your SharePoint farm. The additional features include PowerPivot Gallery, Schedule Data Refresh, and the PowerPivot Management Dashboard.  
   
- ![SSAS PowerPivot Mode 2 Server Deployment](..media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
+ ![SSAS PowerPivot Mode 2 Server Deployment](../media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
 ## PowerPivot for SharePoint 2010  
  PowerPivot for SharePoint 2010 provides server hosting of PowerPivot data in a SharePoint 2010 farm. PowerPivot data is an analytical data model that you build in Excel using the PowerPivot for Excel add-in. Server hosting of that data requires SharePoint 2010, Excel Services, and an installation of PowerPivot for SharePoint. Data is loaded on PowerPivot for SharePoint instances in the farm, where it can be refreshed at scheduled intervals using the PowerPivot data refresh capability that the server provides.  
@@ -43,7 +43,7 @@ manager: "mblythe"
   
  A complete deployment of PowerPivot for SharePoint includes client and server components that integrate with Excel and Excel Services in a SharePoint farm. The PowerPivot data inside an Excel workbook is an Analysis Services database that requires an Analysis Services xVelocity in-memory analytics engine (VertiPaq) to load and query the data. On a client workstation, the xVelocity engine runs in-process within Excel. On a SharePoint farm, Analysis Services runs on an application server where it is paired with related services that handle requests for PowerPivot data. The following diagram illustrates PowerPivot client and server components:  
   
- ![GMNI_GeminiArch2](..media/gmni-geminiarch2.gif "GMNI_GeminiArch2")  
+ ![GMNI_GeminiArch2](../media/gmni-geminiarch2.gif "GMNI_GeminiArch2")  
   
  PowerPivot Web service runs on a web application server. It redirects requests from the web application to a PowerPivot System Service instance in the farm.  
   
@@ -77,13 +77,13 @@ manager: "mblythe"
  **In other sections**  
   
 ## Additional topics  
- [Upgrade PowerPivot for SharePoint](../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [PowerShell Reference for PowerPivot for SharePoint](~/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
- [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## See Also  
  [PowerPivot Planning and Deployment](http://go.microsoft.com/fwlink/?linkID=220972)   

@@ -37,7 +37,7 @@ manager: "mblythe"
 ##  <a name="bkmk_prereq"></a> Review Prerequisites  
  You must have Contribute permissions or above to create a BI semantic model connection file.  
   
- You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](../add-bi-semantic-model-connection-content-type-to-library.md).  
+ You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
  You must know the server and database name for which you are setting up a BI semantic model connection. Analysis Services must be configured for tabular mode. Databases running on the server must be tabular model databases. For instructions on how to check for server mode, see [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   

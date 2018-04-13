@@ -31,7 +31,7 @@ manager: "mblythe"
   
  The following diagram shows how a request for query processing moves through the farm. Because PowerPivot data is part of an Excel 2010 workbook, a request for query processing occurs when a user opens an Excel workbook from a SharePoint library and interacts with a PivotTable or PivotChart that contains PowerPivot data.  
   
- ![GMNI_DataProcReq](..media/gmni-dataprocreq.gif "GMNI_DataProcReq")  
+ ![GMNI_DataProcReq](../media/gmni-dataprocreq.gif "GMNI_DataProcReq")  
   
  Excel Services and PowerPivot for SharePoint components process different parts of the same workbook (.xlsx) file. Excel Services detects PowerPivot data and requests processing from a PowerPivot server in the farm. The PowerPivot server allocates the request to an [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instance, which extracts the data from the workbook in the content library and loads the data. Data that is stored in memory is merged back into the rendered workbook, and passed back to Excel Web Access for presentation in a browser window.  
   

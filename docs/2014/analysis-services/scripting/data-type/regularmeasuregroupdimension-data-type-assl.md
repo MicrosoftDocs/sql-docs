@@ -53,7 +53,7 @@ manager: "mblythe"
 |------------------|-------------|  
 |Parent elements|None|  
 |Child elements|[Attributes](../collections/attributes-element-assl.md), [Cardinality](../properties/cardinality-element-assl.md)|  
-|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../objects/dimensions-element-assl.md) collection)|  
+|Derived elements|[Dimension](../objects/dimension-element-assl.md) ([Dimensions](../collections/dimensions/element-assl.md) collection)|  
   
 ## Remarks  
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  

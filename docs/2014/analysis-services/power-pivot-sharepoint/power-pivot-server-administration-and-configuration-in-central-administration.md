@@ -64,7 +64,7 @@ manager: "mblythe"
 |[Add a BI Semantic Model Connection Content Type to a Library &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Optional|Explains how to extend a document library to support the creation of BI semantic model connection files.|  
   
 ## See Also  
- [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
+ [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Configuration Setting Reference &#40;PowerPivot for SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Disaster Recovery for PowerPivot for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

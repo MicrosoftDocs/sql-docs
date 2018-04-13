@@ -53,7 +53,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|None|  
-|Child elements|[CubeID](../properties/id-element-assl.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [GranularityAttributeID](../properties/attributeid-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
+|Child elements|[CubeID](../properties/id-element-assl.md), [DatabaseID](../../dev-guide/databaseid-element-xmla.md), [MeasureGroupID](../properties/measuregroupid-element-assl.md), [GranularityAttributeID](../properties/attributeid-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
 |Derived elements|[Binding](../../dev-guide/binding-element-xmla.md) ([Bindings](../collections/attributes-element-assl.md) collection of XML for Analysis (XMLA) [Batch](../../dev-guide/batch-element-xmla.md) and [Process](../../dev-guide/process-element-xmla.md) commands)|  
   
 ## Remarks  

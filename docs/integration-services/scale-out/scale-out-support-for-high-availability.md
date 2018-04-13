@@ -25,7 +25,7 @@ In SSIS Scale Out, high availability on the Scale Out Worker side is provided by
 
 High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover clustering. In this solution, multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers.
 
-Alternatively, high availability on the Scale Out Master side can be achieved with SQL Server failover cluster instance. See [Scale Out support for high availability via SQL Server failover cluster instance](scale-out-support-for-high-availability-fci.md).
+Alternatively, high availability on the Scale Out Master side can be achieved with SQL Server failover cluster instance. See [Scale Out support for high availability via SQL Server failover cluster instance](scale-out-failover-cluster-instance.md).
 
 To set up high availability on the Scale Out Master side with always on for SSIS catalog, do the following things:
 

@@ -73,3 +73,8 @@ Install the worker certificate on all nodes in the SQL Server failover cluster. 
 
 > [!NOTE]
 > Scale Out Manager has not supported SQL Server failover cluster. If you use Scale Out Manager to add Scale Out Worker, you still need to install worker certificate to all master nodes manually.
+
+## Next steps
+For more info, see the following articles:
+-   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

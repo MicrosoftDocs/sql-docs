@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Data Mining Schema Rowsets
-  A server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following data mining schema rowsets. To check whether a particular XML/A provider supports a specific rowset, use the [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) rowset with the [Discover](../../dev-guide/discover-method-xmla.md) method.  
+  A server that is running [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following data mining schema rowsets. To check whether a particular XML/A provider supports a specific rowset, use the [DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md) rowset with the [Discover](../../xmla/xml-elements-methods-discover.md) method.  
   
  In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], the data mining schema rowsets are exposed as tables in the Transact-SQL language, in the $SYSTEM schema. For example, the following query on an Analysis Services instance returns a list of the schemas that are available on the current instance.  
   

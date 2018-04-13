@@ -98,7 +98,7 @@ manager: "mblythe"
 ##  <a name="bkmk_rest_changes"></a> Restrictions on Changes to a Data Source  
  There are some restrictions on the changes that you can make to a data source:  
   
--   The data types of a column can only be changed to a compatible data type. For example, if the data in the column includes decimal numbers, you cannot change the data type to an integer. However, you can change numeric data to text. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
+-   The data types of a column can only be changed to a compatible data type. For example, if the data in the column includes decimal numbers, you cannot change the data type to an integer. However, you can change numeric data to text. For more information about data types, see [Data Types Supported &#40;SSAS Tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md).  
   
 -   You cannot multi-select columns in different tables and change properties of the columns. You can work with only one table or view at a time.  
   

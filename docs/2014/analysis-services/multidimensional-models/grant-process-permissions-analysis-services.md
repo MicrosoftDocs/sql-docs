@@ -88,7 +88,7 @@ manager: "mblythe"
 5.  Click **OK** to complete the role definition.  
   
 ## See Also  
- [Process Database, Table, or Partition](../process-database-table-or-partition.md)   
+ [Process Database, Table, or Partition](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)   
  [Grant database permissions &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
  [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  

@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ## See Also  
  [What's New &#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)   
- [What's New in Analysis Services and Business Intelligence](../../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   

@@ -46,7 +46,7 @@ manager: "jhubbard"
 6.  In the **Impersonation Information** page, you need to specify the credentials Analysis Services will use to connect to the data source when importing and processing data. Verify **Specific Windows user name and password** is selected, and then in **User Name** and **Password**, enter your Windows logon credentials, and then click **Next**.  
   
     > [!NOTE]  
-    >  Using a Windows user account and password provides the most secure method of connecting to a data source. For more information, see [Impersonation &#40;SSAS Tabular&#41;](impersonation-ssas-tabular.md).  
+    >  Using a Windows user account and password provides the most secure method of connecting to a data source. For more information, see [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 7.  In the **Choose How to Import the Data** page, verify **Select from a list of tables and views to choose the data to import** is selected. You want to select from a list of tables and views, so click **Next** to display a list of all the source tables in the source database.  
   

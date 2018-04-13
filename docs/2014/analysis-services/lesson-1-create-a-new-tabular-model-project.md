@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Lesson 1: Create a New Tabular Model Project
   In this lesson, you will create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Once your new project is created, you can begin adding data by using the Table Import Wizard. In addition to creating a new project, this lesson also includes a brief introduction to the tabular model authoring environment in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
- To learn more about the different types of tabular model projects, see [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer &#40;SSAS Tabular&#41;](tabular-model-designer-ssas-tabular.md).  
+ To learn more about the different types of tabular model projects, see [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer &#40;SSAS Tabular&#41;](tabular-model-designer-ssas-tabular.md).  
   
  Estimated time to complete this lesson: **10 minutes**  
   

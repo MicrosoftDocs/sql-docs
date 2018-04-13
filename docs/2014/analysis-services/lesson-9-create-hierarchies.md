@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Lesson 10: Create Hierarchies
-  In this lesson, you will create hierarchies. Hierarchies are groups of columns arranged in levels; for example, a Geography hierarchy might have sub-levels for Country, State, County, and City. Hierarchies can appear separate from other columns in a reporting client application field list, making them easier for client users to navigate and include in a report. To learn more, see [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md).  
+  In this lesson, you will create hierarchies. Hierarchies are groups of columns arranged in levels; for example, a Geography hierarchy might have sub-levels for Country, State, County, and City. Hierarchies can appear separate from other columns in a reporting client application field list, making them easier for client users to navigate and include in a report. To learn more, see [Hierarchies &#40;SSAS Tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  To create hierarchies, you will use the model designer in *Diagram View*. Creating and managing hierarchies is not supported in the model designer in Data View.  
   

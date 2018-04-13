@@ -37,7 +37,7 @@ manager: "mblythe"
   
 ## See Also  
  [Modify or Delete an Analysis Services Database](modify-or-delete-an-analysis-services-database.md)   
- [Alter Element &#40;XMLA&#41;](../dev-guide/alter-element-xmla.md)   
- [Create Element &#40;XMLA&#41;](../dev-guide/create-element-xmla.md)  
+ [Alter Element &#40;XMLA&#41;](../xmla/xml-elements-commands/alter-element-xmla.md)   
+ [Create Element &#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)  
   
   

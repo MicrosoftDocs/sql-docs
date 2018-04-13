@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "jhubbard"
 ---
 # Lesson 8: Create Key Performance Indicators
-  In this lesson, you will create Key Performance Indicators (KPIs). KPIs are used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. In reporting client applications, KPIs can provide business professionals a quick and easy way to understand a summary of business success or to identify trends. To learn more, see [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md).  
+  In this lesson, you will create Key Performance Indicators (KPIs). KPIs are used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. In reporting client applications, KPIs can provide business professionals a quick and easy way to understand a summary of business success or to identify trends. To learn more, see [KPIs &#40;SSAS Tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
   
  Estimated time to complete this lesson: **15 minutes**  
   

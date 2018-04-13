@@ -128,7 +128,7 @@ manager: "mblythe"
 ## See Also  
  [Connect to Analysis Services](connect-to-analysis-services.md)   
  [Authentication methodologies supported by Analysis Services](authentication-methodologies-supported-by-analysis-services.md)   
- [Impersonation &#40;SSAS Tabular&#41;](../impersonation-ssas-tabular.md)   
+ [Impersonation &#40;SSAS Tabular&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [Create a Data Source &#40;SSAS Multidimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

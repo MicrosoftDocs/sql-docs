@@ -39,6 +39,6 @@ manager: "mblythe"
   
 ## See Also  
  [Connect to Analysis Services](../instances/connect-to-analysis-services.md)   
- [Tabular Model Data Access](../tabular-model-data-access.md)  
+ [Tabular Model Data Access](../tabular-models/tabular-model-data-access.md)  
   
   

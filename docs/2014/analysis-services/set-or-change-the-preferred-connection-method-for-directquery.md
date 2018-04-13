@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Set or Change the Preferred Connection Method for DirectQuery
-  When you create a model for use in DirectQuery mode, you must first configure the design environment to support use of DirectQuery. To do this, see [Enable DirectQuery Design Mode &#40;SSAS Tabular&#41;](enable-directquery-design-mode-ssas-tabular.md).  
+  When you create a model for use in DirectQuery mode, you must first configure the design environment to support use of DirectQuery. To do this, see [Enable DirectQuery Design Mode &#40;SSAS Tabular&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
   
  When you are ready to deploy the model, you must set some additional properties to enable users to access your model using one of the DirectQuery modes:  
   
@@ -61,7 +61,7 @@ manager: "mblythe"
  Note that these properties are the same as the properties that you set on the project before deployment in Visual Studio. You can change the preferred connection mode for DirectQuery mode at any time, provided that you have configured the model to support DirectQuery usage.  
   
 ## See Also  
- [DirectQuery Mode &#40;SSAS Tabular&#41;](directquery-mode-ssas-tabular.md)   
- [Enable DirectQuery Design Mode &#40;SSAS Tabular&#41;](enable-directquery-design-mode-ssas-tabular.md)  
+ [DirectQuery Mode &#40;SSAS Tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
+ [Enable DirectQuery Design Mode &#40;SSAS Tabular&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

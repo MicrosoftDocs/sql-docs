@@ -70,7 +70,7 @@ manager: "mblythe"
 |**Link**|**Summary of supported options**|  
 |--------------|--------------------------------------|  
 |[Data Sources Supported &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Multidimensional models use data from relational data sources.|  
-|[Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)|Tabular models support a broader range of data sources, including flat files, data feeds, and data sources that are accessed via ODBC data providers.|  
+|[Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Tabular models support a broader range of data sources, including flat files, data feeds, and data sources that are accessed via ODBC data providers.|  
   
  Both modeling approaches can use data from multiple data sources in the same model.  
   
@@ -82,7 +82,7 @@ manager: "mblythe"
   
  Tabular databases can sometimes get greater amounts of compression, about one tenth the size, especially if most of the data is imported from fact tables. For tabular, memory requirements will be larger than the size of data on disk due to additional data structures that are created when the tabular database is loaded into memory. Under load, both disk and memory requirements for either solution type can be expected to increase as Analysis Services caches, stores, scans, and queries data.  
   
- For some projects, data requirements might be so large as to become a factor in choosing between the model types. If the data you need to load is many terabytes in size, a tabular solution might not meet your requirements if available memory cannot accommodate the data. There is a paging option that swaps in-memory data to disk, but very large amounts of data are better accommodated in multidimensional solutions. The largest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases in production today are multidimensional. For more information about memory paging options for tabular solutions, see [Memory Properties](memory-properties.md). For more information about scaling a multidimensional solution, see [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=251711).  
+ For some projects, data requirements might be so large as to become a factor in choosing between the model types. If the data you need to load is many terabytes in size, a tabular solution might not meet your requirements if available memory cannot accommodate the data. There is a paging option that swaps in-memory data to disk, but very large amounts of data are better accommodated in multidimensional solutions. The largest [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases in production today are multidimensional. For more information about memory paging options for tabular solutions, see [Memory Properties](server-properties/memory-properties.md). For more information about scaling a multidimensional solution, see [Scale-Out Querying for Analysis Services with Read-Only Databases](http://go.microsoft.com/fwlink/?LinkId=251711).  
   
 ##  <a name="bkmk_models"></a> Model Features  
  The following table summarizes feature availability at the model level. If you already installed Analysis Services, you can use this information to understand the capabilities of the server mode you installed. If you are already familiar with model features in Analysis Services and your business requirements include one or more of these features, you can review this list to ensure that the feature you want to use is available in the type of model you plan to build.  
@@ -107,8 +107,8 @@ manager: "mblythe"
 |Linked measure groups|[Yes](multidimensional-models/linked-measure-groups.md)|No|  
 |Many-to-many relationships|[Yes](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Parent-child Hierarchies|[Yes](multidimensional-models/parent-child-dimension.md)|Yes (via DAX)|  
-|Partitions|[Yes](multidimensional-models/partitions-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
-|Perspectives|[Yes](multidimensional-models/perspectives-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Partitions|[Yes](tabular-models/partitions-ssas-tabular.md)|  
+|Perspectives|[Yes](multidimensional-models/perspectives-in-multidimensional-models.md)|[Yes](tabular-models/partitions-ssas-tabular.md)|  
 |Semi-additive Measures|[Yes](multidimensional-models/define-semiadditive-behavior.md)|Yes (via DAX)|  
 |Translations|[Yes](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |User-defined Hierarchies|[Yes](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  
@@ -201,7 +201,7 @@ manager: "mblythe"
   
 ## See Also  
  [Analysis Services Instance Management](instances/analysis-services-instance-management.md)   
- [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services-and-business-intelligence.md)   
+ [What's New in Analysis Services and Business Intelligence](what-s-new-in-analysis-services.md)   
  [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
  [What’s New in PowerPivot](http://go.microsoft.com/fwlink/?LinkId=238141)   
  [PowerPivot Help for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkID=220946)   

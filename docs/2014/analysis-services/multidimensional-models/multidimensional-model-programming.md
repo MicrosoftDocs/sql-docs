@@ -35,7 +35,7 @@ manager: "mblythe"
  [Analysis Services OLE DB Provider &#40;Analysis Services - Multidimensional Data&#41;](../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
   
 ## See Also  
- [Tabular Model Programming](../dev-guide/tabular-model-programming.md)   
+ [Tabular Model Programming](../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [Data Mining Programming](../dev-guide/data-mining-programming.md)  
   
   

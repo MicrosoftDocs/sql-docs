@@ -141,7 +141,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Open **Template Explorer**, and drag the template, **Discover Schema Rowsets**, into the blank query window.  
   
-3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](../dev-guide/requesttype-element-xmla.md) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  In the template, replace the [RequestType Element &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md) element with the following text: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Click **Execute**.  
   

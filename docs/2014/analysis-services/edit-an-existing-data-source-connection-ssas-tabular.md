@@ -77,6 +77,6 @@ manager: "mblythe"
   
 ## See Also  
  [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
+ [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

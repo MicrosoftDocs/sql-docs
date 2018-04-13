@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # OLE DB Schema Rowsets
-  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the `DISCOVER_ENUMERATORS` rowset with the [Discover](../../dev-guide/discover-method-xmla.md) method to check whether a particular data source provider supports a rowset.  
+  The following OLE DB schema rowsets are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider. Use the `DISCOVER_ENUMERATORS` rowset with the [Discover](../../xmla/xml-elements-methods-discover.md) method to check whether a particular data source provider supports a rowset.  
   
  You can also find detailed information about these rowsets by searching for the topic "Schema Rowsets" in the OLE DB Programmer's Reference portion of the MSDN® Library at the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Web site.  
   

@@ -22,7 +22,7 @@ manager: "mblythe"
 # Developer&#39;s Guide (Analysis Services)
     
 ## In This Section  
- [Tabular Model Programming](dev-guide/tabular-model-programming.md)  
+ [Tabular Model Programming](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
  Describes the CSDL extensions that define a tabular model in XML syntax. It also includes information about the tabular object model.  
   
  [Data Mining Programming](dev-guide/data-mining-programming.md)  
@@ -37,7 +37,7 @@ manager: "mblythe"
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
  Describes the ASSL extensions to XMLA. ASSL provides a data definition and manipulation language for Analysis Services multidimensional models that supplements the XMLA specification.  
   
- [XML for Analysis  &#40;XMLA&#41; Reference](dev-guide/xml-for-analysis-xmla-reference.md)  
+ [XML for Analysis  &#40;XMLA&#41; Reference](xmla/xml-for-analysis-xmla-reference.md)  
  Describes XMLA concepts that can help you understand how XMLA contributes to your custom solution. It also describes the level of compliance with the XMLA 1.1 specification.  
   
   

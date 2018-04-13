@@ -188,9 +188,9 @@ manager: "mblythe"
 12. In the **Select Tables and Views** page, click **Finish**.  
   
 ## See Also  
- [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)   
- [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md)   
- [Impersonation &#40;SSAS Tabular&#41;](impersonation-ssas-tabular.md)   
+ [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Data Types Supported &#40;SSAS Tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [Process Data &#40;SSAS Tabular&#41;](process-data-ssas-tabular.md)   
  [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)  
   

@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
--   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md).  
+-   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
   
  If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../2014/integration-services/file-connection-manager.md).  
   

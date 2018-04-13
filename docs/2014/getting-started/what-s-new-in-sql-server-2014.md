@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   [What's New &#40;Database Engine&#41;](../../2014/database-engine/what-s-new-database-engine.md)  
   
--   [What's New in Analysis Services and Business Intelligence](../../2014/analysis-services/what-s-new-in-analysis-services-and-business-intelligence.md)  
+-   [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)  
   
 -   [What's New in SQL Server Installation](../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
   

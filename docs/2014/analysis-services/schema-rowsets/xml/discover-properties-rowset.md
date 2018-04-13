@@ -25,7 +25,7 @@ manager: "mblythe"
 # DISCOVER_PROPERTIES Rowset
   Returns a list of information and values about the standard and provider-specific properties that are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider for the specified data source. Unsupported properties are not listed in the returned result set.  
   
- If you call the [Discover](../../dev-guide/discover-method-xmla.md) method with the `DISCOVER_PROPERTIES` enumeration value in the [RequestType](../../dev-guide/requesttype-element-xmla.md) element, the `Discover` method returns the `DISCOVER_PROPERTIES` rowset..  
+ If you call the [Discover](../../xmla/xml-elements-methods-discover.md) method with the `DISCOVER_PROPERTIES` enumeration value in the [RequestType](../../xmla/xml-elements-properties/type-element-xmla.md) element, the `Discover` method returns the `DISCOVER_PROPERTIES` rowset..  
   
 ## Rowset Columns  
  The `DISCOVER_PROPERTIES` rowset contains the following columns.  

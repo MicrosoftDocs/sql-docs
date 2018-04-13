@@ -54,6 +54,6 @@ manager: "mblythe"
   
 -   Compression  
   
--   Group affinity. See [Thread Pool Properties](../thread-pool-properties.md) for details.  
+-   Group affinity. See [Thread Pool Properties](../server-properties/thread-pool-properties.md) for details.  
   
   

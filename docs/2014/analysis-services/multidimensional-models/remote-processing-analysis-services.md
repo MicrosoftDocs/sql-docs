@@ -93,6 +93,6 @@ manager: "mblythe"
  [Schedule SSAS Administrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Multidimensional Model Object Processing](processing-a-multidimensional-model-analysis-services.md)   
- [Processing Objects &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Processing Objects &#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
   
   

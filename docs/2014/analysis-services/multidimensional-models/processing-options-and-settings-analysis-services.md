@@ -32,7 +32,7 @@ manager: "mblythe"
  Processing settings let you control the objects that are processed, and the methods that are used to process those objects. Some processing settings are primarily used for batch processing jobs. For more information about batch processing, see [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 > [!NOTE]  
->  This topic applies to multidimensional and data mining solutions. For information about tabular solutions, see [Process Database, Table, or Partition](../process-database-table-or-partition.md).  
+>  This topic applies to multidimensional and data mining solutions. For information about tabular solutions, see [Process Database, Table, or Partition](../tabular-models/process-database-table-or-partition-analysis-services.md).  
   
 ## Processing Options  
  The following table describes the processing methods that are available in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and identifies the objects for which each method is supported.  

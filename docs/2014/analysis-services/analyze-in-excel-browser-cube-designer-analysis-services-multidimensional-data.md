@@ -42,9 +42,9 @@ manager: "mblythe"
   
  For more information about the **Analyze in Excel** feature, see these resources:  
   
- [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Analyze in Excel &#40;SSAS Tabular&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [Browse data and metadata in Cube](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

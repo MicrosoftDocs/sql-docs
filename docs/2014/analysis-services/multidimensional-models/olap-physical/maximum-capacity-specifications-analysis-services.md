@@ -98,6 +98,6 @@ manager: "mblythe"
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](../../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [General Properties](../../general-properties.md)  
+ [General Properties](../../server-properties/general-properties.md)  
   
   

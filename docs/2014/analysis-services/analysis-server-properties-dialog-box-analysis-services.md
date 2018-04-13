@@ -39,27 +39,27 @@ manager: "mblythe"
   
  The server properties page shows only those properties an administrator is more likely to change, such as memory and thread pool properties used to tune the server for certain configurations. The following list provides links to the main property groups:  
   
--   [General Properties](general-properties.md)  
+-   [General Properties](server-properties/general-properties.md)  
   
--   [Data Mining Properties](data-mining-properties.md)  
+-   [Data Mining Properties](server-properties/data-mining-properties.md)  
   
--   [Feature Properties](feature-properties.md)  
+-   [Feature Properties](server-properties/feature-properties.md)  
   
--   [Filestore Properties](filestore-properties.md)  
+-   [Filestore Properties](server-properties/filestore-properties.md)  
   
--   [Lock Manager Properties](lock-manager-properties.md)  
+-   [Lock Manager Properties](server-properties/lock-manager-properties.md)  
   
--   [Log Properties](log-properties.md)  
+-   [Log Properties](server-properties/log-properties.md)  
   
--   [Memory Properties](memory-properties.md)  
+-   [Memory Properties](server-properties/memory-properties.md)  
   
--   [Network Properties](network-properties.md)  
+-   [Network Properties](server-properties/network-properties.md)  
   
--   [OLAP Properties](olap-properties.md)  
+-   [OLAP Properties](server-properties/olap-properties.md)  
   
--   [Security Properties](security-properties.md)  
+-   [Security Properties](server-properties/security-properties.md)  
   
--   [Thread Pool Properties](thread-pool-properties.md)  
+-   [Thread Pool Properties](server-properties/thread-pool-properties.md)  
   
 ## Language Collation Properties  
  Use this page to set the default language and collation options for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The following list contains short descriptions of each option. See [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) for more detailed descriptions.  
@@ -94,7 +94,7 @@ manager: "mblythe"
   
 ## See Also  
  [Determine the Server Mode of an Analysis Services Instance](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configure Server Properties in Analysis Services](configure-server-properties-in-analysis-services.md)   
+ [Configure Server Properties in Analysis Services](server-properties/server-properties-in-analysis-services.md)   
  [Authentication methodologies supported by Analysis Services](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Roles and Permissions &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  

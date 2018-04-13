@@ -48,7 +48,7 @@ manager: "mblythe"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
- [Detach Element](../dev-guide/detach-element.md)   
- [Attach Element](../dev-guide/attach-element.md)  
+ [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
+ [Attach Element](../xmla/xml-elements-commands/attach-element.md)  
   
   

@@ -85,7 +85,7 @@ manager: "mblythe"
   
 ## See Also  
  [Import Data &#40;SSAS Tabular&#41;](import-data-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)   
- [Set the Data Type of a Column &#40;SSAS Tabular&#41;](set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Set the Data Type of a Column &#40;SSAS Tabular&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

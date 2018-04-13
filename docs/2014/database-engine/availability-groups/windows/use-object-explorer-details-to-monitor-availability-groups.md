@@ -78,7 +78,7 @@ manager: "jhubbard"
  Displays the name of the server instance that hosts the availability replica, along with an icon that indicates the current connection state of the server instance to the local server instance.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md).  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  **Connection Mode in Secondary Role**  
  Indicates whether the databases of a given availability replica that is performing the secondary role (that is, is acting as a secondary replica) can accept connections from clients.  

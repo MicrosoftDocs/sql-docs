@@ -43,7 +43,7 @@ manager: "jhubbard"
  Use the availability replica policy state to find the availability replica that is DISCONNECTED, and then resolve the issue at the availability replica.  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

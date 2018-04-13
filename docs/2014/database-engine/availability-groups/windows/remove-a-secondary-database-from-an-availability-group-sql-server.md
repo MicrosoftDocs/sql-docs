@@ -114,7 +114,7 @@ manager: "jhubbard"
  When a secondary database is removed, it is no longer joined to the availability group and all information about the removed secondary database is discarded by the availability group. The removed secondary database is placed in the RESTORING state.  
   
 > [!TIP]  
->  For a short time after removing a secondary database, you might be able to restart AlwaysOn data synchronization on the database by re-joining it to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+>  For a short time after removing a secondary database, you might be able to restart AlwaysOn data synchronization on the database by re-joining it to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  At this point there are alternative ways of dealing with a removed secondary database:  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
      For more information, see [Recover a Database Without Restoring Data &#40;Transact-SQL&#41;](../../2014/database-engine/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](/remove-a-primary-database-from-an-availability-group-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
   

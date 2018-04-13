@@ -106,12 +106,12 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [View Availability Group Listener Properties &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md)  
   
   

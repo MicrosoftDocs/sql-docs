@@ -130,9 +130,9 @@ manager: "jhubbard"
   
 -   Add more log space for the primary database.  
   
--   Resume the secondary database before the log fills up. For more information, see [Resume an Availability Database &#40;SQL Server&#41;](/resume-an-availability-database-sql-server.md).  
+-   Resume the secondary database before the log fills up. For more information, see [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
--   Remove the secondary database. For more information, see [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](/remove-a-secondary-database-from-an-availability-group-sql-server.md).  
+-   Remove the secondary database. For more information, see [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
  **To troubleshoot a full transaction log**  
   
@@ -140,10 +140,10 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Resume an Availability Database &#40;SQL Server&#41;](/resume-an-availability-database-sql-server.md)  
+-   [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Resume an Availability Database &#40;SQL Server&#41;](/resume-an-availability-database-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
   

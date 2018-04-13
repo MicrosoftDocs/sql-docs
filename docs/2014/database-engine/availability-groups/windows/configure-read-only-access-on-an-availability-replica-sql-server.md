@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Configure Read-Only Access on an Availability Replica (SQL Server)
   By default both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas of an AlwaysOn availability group. This topic describes how to configure connection access on an availability replica of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell.  
   
- For information about the implications of enabling read-only access for a secondary replica and for an introduction to connection access, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](/about-client-connection-access-to-availability-replicas-sql-server.md) and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ For information about the implications of enabling read-only access for a secondary replica and for an introduction to connection access, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md) and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
   
   
@@ -189,8 +189,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||Prerequisite|Link|  
     |-|------------------|----------|  
-    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the availability group has a listener.|[Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configure read-only routing for the availability group.|[Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the availability group has a listener.|[Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configure read-only routing for the availability group.|[Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Factors that might affect triggers and jobs after a failover**  
   
@@ -205,9 +205,9 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](/configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
   
 ##  <a name="RelatedContent"></a> Related Content  
@@ -234,8 +234,8 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   

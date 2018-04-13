@@ -120,7 +120,7 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To Configure a Database Mirroring Endpoint**  
   
--   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 -   [Specify a Server Network Address &#40;Database Mirroring&#41;](database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **To View Information About the Database Mirroring Endpoint**  
   
@@ -140,17 +140,17 @@ manager: "jhubbard"
   
  **To add an availability replica**  
   
--   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
 -   [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## See Also  
- [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](/creation-and-configuration-of-availability-groups-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
   

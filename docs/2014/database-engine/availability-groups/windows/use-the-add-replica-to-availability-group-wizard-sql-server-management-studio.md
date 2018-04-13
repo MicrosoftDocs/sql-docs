@@ -53,7 +53,7 @@ manager: "jhubbard"
   
     -   You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   
-     If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -73,9 +73,9 @@ manager: "jhubbard"
   
 3.  Right-click the availability group to which you are adding a secondary replica, and select the **Add Replica** command. This launches the Add Replica to Availability Group Wizard.  
   
-4.  On the **Connect to Existing Secondary Replicas** page, connect to every secondary replica in the availability group. For more information, see [Connect to Existing Secondary Replicas Page &#40;Add Replica Wizard and Add Databases Wizard&#41;](/connect-to-existing-secondary-replicas-page.md).  
+4.  On the **Connect to Existing Secondary Replicas** page, connect to every secondary replica in the availability group. For more information, see [Connect to Existing Secondary Replicas Page &#40;Add Replica Wizard and Add Databases Wizard&#41;](connect-to-existing-secondary-replicas-page.md).  
   
-5.  On the **Specify Replicas** page, specify and configure one or more new secondary replicas for the availability group. This page contains three tabs. The following table introduces these tabs. For more information, see [Specify Replicas Page &#40;New Availability Group Wizard: Add Replica Wizard&#41;](/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  On the **Specify Replicas** page, specify and configure one or more new secondary replicas for the availability group. This page contains three tabs. The following table introduces these tabs. For more information, see [Specify Replicas Page &#40;New Availability Group Wizard: Add Replica Wizard&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Tab|Brief Description|  
     |---------|-----------------------|  
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
     -   **Skip initial data synchronization**  
   
-         Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 7.  The **Validation** page verifies whether the values you specified in this Wizard meet the requirements of the Add Replica to Availability Group Wizard. To make a change, click **Previous** to return to an earlier wizard page to change one or more values. The click **Next** to return to the **Validation** page, and click **Re-run Validation**.  
   
@@ -128,7 +128,7 @@ manager: "jhubbard"
 
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../prereqs-restrictions-recommendations-always-on-availability.md)   
  [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

@@ -121,8 +121,8 @@ manager: "jhubbard"
  Removing a replica causes it to stop receiving data. After a secondary replica confirms that it has been removed from the global store, the replica removes the availability group settings from its databases, which remain on the local server instance in the RECOVERING state.  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
- [Remove an Availability Group &#40;SQL Server&#41;](/remove-an-availability-group-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
+ [Remove an Availability Group &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
   

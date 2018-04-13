@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Monitoring of Availability Groups &#40;SQL Server&#41;](/monitoring-of-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Monitoring of Availability Groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

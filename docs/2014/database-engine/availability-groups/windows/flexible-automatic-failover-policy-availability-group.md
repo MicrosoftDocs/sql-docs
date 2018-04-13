@@ -21,7 +21,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)
-  A flexible failover policy provides granular control over the conditions that cause [automatic failover](/failover-and-failover-modes-always-on-availability-groups.md) for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
+  A flexible failover policy provides granular control over the conditions that cause [automatic failover](failover-and-failover-modes-always-on-availability-groups.md) for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
   
  The flexible failover policy of an availability group is defined by its failure-condition level and health-check timeout threshold. On detecting that an availability group has exceeded its failure condition level or its health-check timeout threshold, the availability group's resource DLL responds back to the Windows Server Failover Clustering (WSFC) cluster. The WSFC cluster then initiates an automatic failover to the secondary replica.  
   
@@ -58,11 +58,11 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To configure automatic failover**  
   
--   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-availability-mode-of-an-availability-replica-sql-server.md) (automatic failover requires synchronous-commit availability mode)  
+-   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (automatic failover requires synchronous-commit availability mode)  
   
--   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (AlwaysOn Availability Groups)](/configure-flexible-automatic-failover-policy.md)  
+-   [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (AlwaysOn Availability Groups)](configure-flexible-automatic-failover-policy.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -70,8 +70,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Modes (AlwaysOn Availability Groups)](/availability-modes-always-on-availability-groups.md)   
- [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md)   
+ [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  

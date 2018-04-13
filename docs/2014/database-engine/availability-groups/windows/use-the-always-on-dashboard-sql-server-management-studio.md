@@ -122,7 +122,7 @@ manager: "jhubbard"
  The name of the server instance that hosts the availability replica. This column is shown by default.  
   
  **Role**  
- Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
+ Indicates the current role of the availability replica, either **Primary** or **Secondary**. For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] roles, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). This column is shown by default.  
   
  **Failover Mode**  
  Displays the failover mode for which the replica is configured. The possible failover mode values are:  
@@ -348,10 +348,10 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Monitoring of Availability Groups &#40;SQL Server&#41;](/monitoring-of-availability-groups-sql-server.md)  
+ [Monitoring of Availability Groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

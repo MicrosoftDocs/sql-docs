@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  For more information on the required hotfix, see [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896).  
   
- For information on other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requirements, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md).  
+ For information on other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requirements, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration files such as **RSreportserver.config** are not supported as part of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] functionality. If you manually make changes to a configuration file on one of the report servers, you will need to manually update the replicas.  
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 -   For more information on the available connection string properties, see [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
--   For more information on availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md).  
+-   For more information on availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Considerations:** Secondary replicas will typically experience a delay in receiving data changes from the primary replica. The following factors can affect the update latency between the primary and secondary replicas:  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 -   Geographic location and distance between the primary and secondary replicas. For example the delay is typically larger if the secondary replicas are in a different data center than if they were in the same building as the primary replica.  
   
--   Configuration of the availability mode for each replica. The availability mode determines whether the primary replica waits to commit transactions on a database until a secondary replica has written the transaction to disk. For more information, see the ‘Availability Modes’ section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md).  
+-   Configuration of the availability mode for each replica. The availability mode determines whether the primary replica waits to commit transactions on a database until a secondary replica has written the transaction to disk. For more information, see the ‘Availability Modes’ section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  When using a read-only secondary as a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data source, it is important to ensure that data update latency meets the needs of the report users.  
   
@@ -136,7 +136,7 @@ manager: "jhubbard"
   
 -   **Primary Replica:** Configure the report server databases to be part of a single availability group and create a primary replica that includes all of the report server databases.  
   
--   **Secondary Replicas:** Create one or more secondary replicas. The common approach to copying the databases from the primary replica to the secondary replica(s) is to restore the databases to each secondary replica using ‘RESTORE WITH NORECOVERY’. For more information on creating secondary replicas and verifying data synchronization is working, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+-   **Secondary Replicas:** Create one or more secondary replicas. The common approach to copying the databases from the primary replica to the secondary replica(s) is to restore the databases to each secondary replica using ‘RESTORE WITH NORECOVERY’. For more information on creating secondary replicas and verifying data synchronization is working, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 -   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
@@ -170,10 +170,10 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client Support for High Availability, Disaster Recovery](../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
-  [AlwaysOn Availability Groups (SQL Server)](/always-on-availability-groups-sql-server.md)
- [Getting Started with AlwaysOn Availability Groups &#40;SQL Server&#41;](/getting-started-with-always-on-availability-groups-sql-server.md)   
+  [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)
+ [Getting Started with AlwaysOn Availability Groups &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
  [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)   
  [SQL Server Native Client Support for High Availability, Disaster Recovery](../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](/about-client-connection-access-to-availability-replicas-sql-server.md)  
+ [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   

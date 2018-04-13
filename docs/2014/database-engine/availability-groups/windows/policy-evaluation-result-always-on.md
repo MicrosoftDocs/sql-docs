@@ -40,14 +40,14 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)
- [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](/always-on-policies-for-operational-issues-always-on-availability.md) 
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)
+ [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

@@ -124,9 +124,9 @@ manager: "jhubbard"
 -   [Part 4: Integration with SQL Server Agent](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
- [Administration of an Availability Group &#40;SQL Server&#41;](/administration-of-an-availability-group-sql-server.md)   
- [Monitoring of Availability Groups &#40;SQL Server&#41;](/monitoring-of-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Administration of an Availability Group &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [Monitoring of Availability Groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

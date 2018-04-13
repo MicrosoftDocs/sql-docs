@@ -64,43 +64,43 @@ manager: "jhubbard"
   
 -   [View Availability Replica Properties &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [View Availability Group Listener Properties &#40;SQL Server&#41;](/view-availability-group-listener-properties-sql-server.md)  
+-   [View Availability Group Listener Properties &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](/always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [Monitor Availability Groups &#40;Transact-SQL&#41;](/monitor-availability-groups-transact-sql.md)  
+-   [Monitor Availability Groups &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
  **To configure an existing availability group**  
   
--   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](/remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
+-   [Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [Add a Database to an Availability Group &#40;SQL Server&#41;](/availability-group-add-a-database.md)  
+-   [Add a Database to an Availability Group &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
--   [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](/remove-a-secondary-database-from-an-availability-group-sql-server.md)  
+-   [Remove a Secondary Database from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Remove an Availability Group Listener &#40;SQL Server&#41;](/remove-an-availability-group-listener-sql-server.md)  
+-   [Remove an Availability Group Listener &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
--   [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](/remove-a-primary-database-from-an-availability-group-sql-server.md)  
+-   [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
   
--   [Remove an Availability Group &#40;SQL Server&#41;](/remove-an-availability-group-sql-server.md)  
+-   [Remove an Availability Group &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
  **To manually fail over an availability group**  
   
--   [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)
- [Monitor Availability Groups &#40;Transact-SQL&#41;](/monitor-availability-groups-transact-sql.md)
- [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](/always-on-policies-for-operational-issues-always-on-availability.md) 
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)
+ [Monitor Availability Groups &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)
+ [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

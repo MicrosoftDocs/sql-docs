@@ -89,7 +89,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To see this [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](/create-an-availability-group-transact-sql.md).  
+    >  To see this [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement used in context, see [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To join a secondary database to an availability group**  

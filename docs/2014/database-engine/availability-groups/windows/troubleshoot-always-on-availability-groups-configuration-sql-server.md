@@ -23,7 +23,7 @@ manager: "jhubbard"
   This topic provides information to help you troubleshoot typical problems with configuring server instances for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Typical configuration problems include [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is disabled, accounts are incorrectly configured, the database mirroring endpoint does not exist, the endpoint is inaccessible (SQL Server Error 1418), network access does not exist, and a join database command fails (SQL Server Error 35250).  
   
 > [!NOTE]  
->  Ensure that you are meeting the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Ensure that you are meeting the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
  **In This Topic:**  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |[Related Content](#RelatedContent)|Contains a list of relevant resources that are external to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
   
 ##  <a name="IsHadrEnabled"></a> AlwaysOn Availability Groups Is Not Enabled  
- The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](/enable-and-disable-always-on-availability-groups-sql-server.md).  
+ The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must be enabled on each of the instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="Accounts"></a> Accounts  
  The accounts under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running must be correctly configured.  
@@ -108,7 +108,7 @@ manager: "jhubbard"
     ```  
   
 ##  <a name="SystemName"></a> System Name  
- For the system name of a server instance in an endpoint URL, you can use any name that unambiguously identifies the system. The server address can be a system name (if the systems are in the same domain), a fully qualified domain name, or an IP address (preferably, a static IP address). Using the fully qualified domain name is guaranteed to work. For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ For the system name of a server instance in an endpoint URL, you can use any name that unambiguously identifies the system. The server address can be a system name (if the systems are in the same domain), a fully qualified domain name, or an IP address (preferably, a static IP address). Using the fully qualified domain name is guaranteed to work. For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  
@@ -135,19 +135,19 @@ manager: "jhubbard"
 |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port.|—|[Configure a Windows Firewall for Database Engine Access](configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verify that:<br /><br /> SQL Server remote connectivity is enabled.<br /><br /> TCP/IP is enabled.<br /><br /> The IP addresses are configured correctly.|—|[View or Change Server Properties &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
 |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|Ensure that the READ_ONLY_ROUTING_URL (TCP**://*`system-address`*:***port*) contains the correct fully-qualified domain name (FQDN) and port number.|—|[Calculating read_only_routing_url for AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Client system|Verify that the client driver supports read-only routing.|—|[AlwaysOn Client Connectivity (SQL Server)](/always-on-client-connectivity-sql-server.md)|  
+|![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Client system|Verify that the client driver supports read-only routing.|—|[AlwaysOn Client Connectivity (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](/creation-and-configuration-of-availability-groups-sql-server.md)  
+-   [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
 -   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 -   [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md)  
   
@@ -164,6 +164,6 @@ manager: "jhubbard"
 ## See Also  
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Client Network Configuration](configure-windows/client-network-configuration.md)   
- [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -42,7 +42,7 @@ manager: "jhubbard"
 -   [Monitoring availability group health](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  For a list of topics in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md).  
+>  For a list of topics in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for AlwaysOn Availability Groups  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
 |`Backup-SqlDatabase`|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
 |`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
   
- For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+ For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
  For more information, see [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)  
   
   

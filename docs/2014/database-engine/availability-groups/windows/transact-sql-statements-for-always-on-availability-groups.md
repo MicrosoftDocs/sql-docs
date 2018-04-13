@@ -30,7 +30,7 @@ manager: "jhubbard"
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md) creates a new availability group and optionally an availability group listener. Minimally, you must specify your local server instance, which will become the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
   
- Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you want to host the initial primary replica of your new availability group. This server instance must reside on a node of a Windows Server Failover Cluster (WSFC) (for more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you want to host the initial primary replica of your new availability group. This server instance must reside on a node of a Windows Server Failover Cluster (WSFC) (for more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) supports changing an existing availability group or availability group listener and for failing over an availability group.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
  The CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP, and DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements have the following limitations:  
   
--   With the exception of DROP AVAILABILITY GROUP, executing these statements requires that the HADR service is enabled on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   With the exception of DROP AVAILABILITY GROUP, executing these statements requires that the HADR service is enabled on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 -   These statements cannot be executed within transactions or batches.  
   
@@ -57,6 +57,6 @@ manager: "jhubbard"
 -   If a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement is executed while another availability group action or recovery is in process, the statement returns an error. Wait for the action or recovery to complete, and retry the statement, if necessary.  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -2,7 +2,7 @@
 title: "Parse and Transform JSON Data with OPENJSON (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""

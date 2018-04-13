@@ -2,7 +2,7 @@
 title: "Enable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "backup-restore"

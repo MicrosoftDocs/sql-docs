@@ -1,23 +1,18 @@
 ---
-title: "Install pre-trained machine learning models on SQL Server | Microsoft Docs"
-ms.date: "03/14/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Install pre-trained machine learning models on SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Install pre-trained machine learning models on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article describes how to add pre-trained models to an instance of SQL Server that already has R Services or SQL Server Machine Learning Services installed. 
+This article describes how to add pre-trained models to an (In-Database) instance of SQL Server that already has R Services or SQL Server Machine Learning Services installed. 
 
 Pre-trained models exist to help customers who need to perform tasks such as sentiment analysis or image featurization, but who do not have the resources to obtain the large datasets or train a complex model. The Machine Learning Server team created and trained these models to help you get started on text and image processing efficiently. For more information, see the [Resources](#bkmk_resources) section of this article.
 

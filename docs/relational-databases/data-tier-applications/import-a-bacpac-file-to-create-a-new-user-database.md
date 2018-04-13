@@ -2,7 +2,7 @@
 title: "Import a BACPAC File to Create a New User Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "data-tier-applications"

@@ -13,7 +13,7 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Always On Availability Groups ring buffers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

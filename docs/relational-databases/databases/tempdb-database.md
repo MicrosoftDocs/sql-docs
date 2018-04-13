@@ -3,7 +3,7 @@ title: "tempdb Database | Microsoft Docs"
 description: This topic provides details regarding the configuration and use of the tempdb database in SQL Server and Azure SQL Database
 ms.custom: "P360"
 ms.date: "12/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: 
 ms.component: "databases"
@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: "stevestein"
 ms.author: "sstein"
-manager: jhubbard
+manager: craigg
 ms.reviewer: carlrab
 ---
 # tempdb Database

@@ -2,7 +2,7 @@
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-functions"

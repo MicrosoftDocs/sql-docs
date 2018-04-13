@@ -2,7 +2,7 @@
 title: "Step 1:  Configure development environment for Node.js development | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "node-js"
@@ -16,7 +16,7 @@ ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 1:  Configure development environment for Node.js development

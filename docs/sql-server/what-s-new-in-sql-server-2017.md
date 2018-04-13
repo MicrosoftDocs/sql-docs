@@ -16,7 +16,7 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 caps.latest.revision: 71
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # What's new in SQL Server 2017

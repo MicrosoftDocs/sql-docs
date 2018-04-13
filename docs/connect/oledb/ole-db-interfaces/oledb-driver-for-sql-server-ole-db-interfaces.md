@@ -3,7 +3,7 @@ title: "OLE DB Driver for SQL Server (OLE DB) Reference | Microsoft Docs"
 description: "OLE DB Driver for SQL Server (OLE DB) reference"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-interfaces"
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # OLE DB Driver for SQL Server (OLE DB) Interfaces

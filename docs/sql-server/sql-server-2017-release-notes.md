@@ -15,7 +15,7 @@ ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # SQL Server 2017 Release Notes

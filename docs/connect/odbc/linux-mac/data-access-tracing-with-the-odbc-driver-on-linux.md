@@ -2,7 +2,7 @@
 title: "Data Access Tracing with the ODBC Driver on Linux and macOS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,7 +19,7 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Access Tracing with the ODBC Driver on Linux and macOS

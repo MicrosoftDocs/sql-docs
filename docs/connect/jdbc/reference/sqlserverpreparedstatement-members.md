@@ -2,7 +2,7 @@
 title: "SQLServerPreparedStatement Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 caps.latest.revision: 38
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerPreparedStatement Members

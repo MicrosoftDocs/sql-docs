@@ -2,7 +2,7 @@
 title: "Desktop Database Driver Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,7 +23,7 @@ ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Desktop Database Driver Compatibility

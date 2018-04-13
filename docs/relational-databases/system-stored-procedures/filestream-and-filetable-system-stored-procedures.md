@@ -37,7 +37,7 @@ ms.workload: "Inactive"
   Closes non-transactional file handles to FileTable data.
 
 
-**See also**
+**For more information, see the following articles**:
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

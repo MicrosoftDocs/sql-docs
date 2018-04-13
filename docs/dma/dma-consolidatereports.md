@@ -1,7 +1,7 @@
 ---
 title: "Consolidate assessment reports (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "04/15/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "dma"
 ms.service: ""
@@ -35,6 +35,9 @@ For information on how to run Data Migration Assistant from the command line, se
 ## Import assessment results into a SQL Server database
 
 Use the PowerShell script available in this [Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) to import the assessment results from JSON files into a SQL Server database.
+
+> [!NOTE]
+> PowerShell v5 or higher is required.
 
 When you execute the script, you need to provide the following information: 
 

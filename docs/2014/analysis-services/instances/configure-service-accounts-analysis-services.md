@@ -21,7 +21,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Configure Service Accounts (Analysis Services)
-  Product-wide account provisioning is documented in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows-service-accounts-and-permissions.md), a topic that provides comprehensive service account information for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, including [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Refer to it to learn about valid account types, Windows privileges assigned by setup, file system permissions, registry permissions, and more.  
+  Product-wide account provisioning is documented in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), a topic that provides comprehensive service account information for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, including [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Refer to it to learn about valid account types, Windows privileges assigned by setup, file system permissions, registry permissions, and more.  
   
  This topic provides supplemental information for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], including additional permissions necessary for tabular and clustered installations. It also covers permissions needed to support server operations. For example, you can configure processing and query operations to execute under the service account ─ in which case you will need to grant additional permissions to get this to work.  
   
@@ -94,7 +94,7 @@ manager: "mblythe"
 ##  <a name="bkmk_FilePermissions"></a> File System Permissions assigned to the Analysis Services service account  
   
 > [!NOTE]  
->  See [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows-service-accounts-and-permissions.md) for a list of permissions associated with each program folder.  
+>  See [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) for a list of permissions associated with each program folder.  
 >   
 >  See [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md) for file permission information related to IIS configuration and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -147,7 +147,7 @@ manager: "mblythe"
 |Write to a query log table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|Create a database login for the service account and assign write permissions on the query log table|You can enable query logging to collect usage data in a database table for subsequent analysis. The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service account must have write permissions to the query log table in the designated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. If this table does not already exist and needs to be created, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] logon account must also have create table permissions within the designated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard (Blog)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) and [Query Logging in Analysis Services (Blog)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx).|  
   
 ## See Also  
- [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows-service-accounts-and-permissions.md)   
+ [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server Service Account and Per-Service SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server uses a service SID to provide service isolation (KB Article)](http://support.microsoft.com/kb/2620201)   
  [Access Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   

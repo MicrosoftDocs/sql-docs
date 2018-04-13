@@ -102,7 +102,7 @@ manager: "jhubbard"
 10. On the **Action** page, review the options. In this example, you are not using the firewall to force secure connections. Therefore, click **Allow the connection**, and then click **Next**.  
   
     > [!NOTE]  
-    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Your environment might require secure connections. If you select one of the secure connections options, you might have to configure a certificate and the **Force Encryption** option. For more information about secure connections, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) and [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. On the **Profile** page, select one or more profiles for the rule. If you are unfamiliar with firewall profiles, click the **Learn more about profiles** link in the firewall program.  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
 9. To configure the other IP addresses on a multi-homed computer, repeat this procedure by using another IP address and another rule.  
   
 ## See Also  
- [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../../2014/database-engine/sql-server-browser-service-database-engine-and-ssas.md)   
- [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
+ [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Connect to SQL Server Through a Proxy Server &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   

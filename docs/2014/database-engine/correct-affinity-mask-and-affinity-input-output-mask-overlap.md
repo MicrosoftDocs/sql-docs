@@ -32,13 +32,13 @@ manager: "jhubbard"
 -   1 in the affinity mask option and 0 in the affinity I/O mask option  
   
 ## For More Information  
- [affinity mask Server Configuration Option](../../2014/database-engine/affinity-mask-server-configuration-option.md)  
+ [affinity mask Server Configuration Option](configure-windows/affinity-mask-server-configuration-option.md)  
   
- [affinity Input-Output mask Server Configuration Option](../../2014/database-engine/affinity-input-output-mask-server-configuration-option.md)  
+ [affinity Input-Output mask Server Configuration Option](configure-windows/affinity-input-output-mask-server-configuration-option.md)  
   
- [affinity64 mask Server Configuration Option](../../2014/database-engine/affinity64-mask-server-configuration-option.md)  
+ [affinity64 mask Server Configuration Option](configure-windows/affinity64-mask-server-configuration-option.md)  
   
- [affinity64 Input-Output mask Server Configuration Option](../../2014/database-engine/affinity64-input-output-mask-server-configuration-option.md)  
+ [affinity64 Input-Output mask Server Configuration Option](configure-windows/affinity64-input-output-mask-server-configuration-option.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

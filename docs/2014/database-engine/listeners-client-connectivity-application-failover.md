@@ -35,9 +35,9 @@ manager: "jhubbard"
   
  An availability group listener consists of a Domain Name System (DNS) listener name, listener port designation, and one or more IP addresses. Only the TCP protocol is supported by availability group listener.  The DNS name of the listener must also be unique in the domain and in NetBIOS.  When you create a new availability group listener it becomes a resource in a cluster with an associated virtual network name (VNN), virtual IP (VIP), and availability group dependency. A client uses DNS to resolve the VNN into multiple IP addresses and then tries to connect to each address, until a connection request succeeds or until the connection requests time out.  
   
- If read-only routing is configured for one or more[readable secondary replicas](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
+ If read-only routing is configured for one or more[readable secondary replicas](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
   
- For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/create-or-configure-an-availability-group-listener-sql-server.md).  
+ For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  
   
@@ -101,9 +101,9 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 ####  <a name="RelatedTasksROR"></a> Related Tasks  
   
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ###  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
  The application intent connection string property expresses the client application’s request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
@@ -142,7 +142,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  When using database mirroring connection strings, the client can use either [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The connection string provided by a client must minimally supply the name of one server instance, the *initial partner name*, to identify the server instance that initially hosts the availability replica to which you intend to connect. Optionally, the connection string can also supply the name of another server instance, the *failover partner name*, to identify the server instance that initially hosts the secondary replica as the failover partner name.  
   
- For more information about database mirroring connection strings, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ For more information about database mirroring connection strings, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="CCBehaviorOnFailover"></a> Behavior of Client Connections on Failover  
  When an availability group failover occurs, existing persistent connections to the availability group are terminated and the client must establish a new connection in order to continue working with the same primary database or read-only secondary database.  While a failover is occurring on the server side, connectivity to the availability group may fail, forcing the client application to retry connecting until the primary is brought fully back online.  
@@ -186,21 +186,21 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- For more information about manual registration of a SPN for SQL Server, see [Register a Service Principal Name for Kerberos Connections](../../2014/database-engine/register-a-service-principal-name-for-kerberos-connections.md).  
+ For more information about manual registration of a SPN for SQL Server, see [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [AlwaysOn Client Connectivity &#40;SQL Server&#41;](../../2014/database-engine/always-on-client-connectivity-sql-server.md)
+-   [AlwaysOn Client Connectivity &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [View Availability Group Listener Properties &#40;SQL Server&#41;](../../2014/database-engine/view-availability-group-listener-properties-sql-server.md)  
+-   [View Availability Group Listener Properties &#40;SQL Server&#41;](availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
--   [Remove an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/remove-an-availability-group-listener-sql-server.md)  
+-   [Remove an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -211,10 +211,10 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [AlwaysOn Client Connectivity &#40;SQL Server&#41;](../../2014/database-engine/always-on-client-connectivity-sql-server.md)  
- [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../2014/database-engine/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../2014/database-engine/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md)
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn Client Connectivity &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

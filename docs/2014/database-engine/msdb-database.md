@@ -108,6 +108,6 @@ manager: "jhubbard"
   
  [Database Mail](../../2014/database-engine/database-mail.md)  
   
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

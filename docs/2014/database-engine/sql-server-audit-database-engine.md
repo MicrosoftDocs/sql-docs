@@ -107,7 +107,7 @@ manager: "jhubbard"
   
  When an audit failure causes the server to shut down or not to start because ON_FAILURE=SHUTDOWN is specified for the audit, the MSG_AUDIT_FORCED_SHUTDOWN event will be written to the log. Because the shutdown will occur on the first encounter of this setting, the event will be written one time. This event is written after the failure message for the audit causing the shutdown. An administrator can bypass audit-induced shutdowns by starting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in Single User mode using the **–m** flag. If you start in Single User mode, you will downgrade any audit where ON_FAILURE=SHUTDOWN is specified to run in that session as ON_FAILURE=CONTINUE. When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is started by using the **–m** flag, the MSG_AUDIT_SHUTDOWN_BYPASSED message will be written to the error log.  
   
- For more information about service startup options, see [Database Engine Service Startup Options](../../2014/database-engine/database-engine-service-startup-options.md).  
+ For more information about service startup options, see [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md).  
   
 ### Attaching a Database with an Audit Defined  
  Attaching a database that has an audit specification and specifies a GUID that does not exist on the server will cause an *orphaned* audit specification. Because an audit with a matching GUID does not exist on the server instance, no audit events will be recorded. To correct this situation, use the ALTER DATABASE AUDIT SPECIFICATION command to connect the orphaned audit specification to an existing server audit. Or, use the CREATE SERVER AUDIT command to create a new server audit with the specified GUID.  
@@ -196,10 +196,10 @@ manager: "jhubbard"
  [Write SQL Server Audit Events to the Security Log](../../2014/database-engine/write-sql-server-audit-events-to-the-security-log.md)  
   
 ## Topics Closely Related to Auditing  
- [Server Properties &#40;Security Page&#41;](../../2014/database-engine/server-properties-security-page.md)  
+ [Server Properties &#40;Security Page&#41;](configure-windows/server-properties-security-page.md)  
  Explains how to turn on login auditing for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The audit records are stored in the Windows application log.  
   
- [c2 audit mode Server Configuration Option](../../2014/database-engine/c2-audit-mode-server-configuration-option.md)  
+ [c2 audit mode Server Configuration Option](configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explains the C2 security compliance auditing mode in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../2014/database-engine/security-audit-event-category-sql-server-profiler.md)  

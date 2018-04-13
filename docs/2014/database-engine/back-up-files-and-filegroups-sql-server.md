@@ -131,7 +131,7 @@ manager: "jhubbard"
   
      **To view the current backup compression default**  
   
-    -   [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

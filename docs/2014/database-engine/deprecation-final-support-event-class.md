@@ -56,6 +56,6 @@ manager: "jhubbard"
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Deprecation Announcement Event Class](../../2014/database-engine/deprecation-announcement-event-class.md)   
- [Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md)  
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

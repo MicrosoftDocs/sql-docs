@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   Snapshot databases for creating read-only copies of databases.  
   
--   [!INCLUDE[ssSB](../../includes/sssb-md.md)] support for message-based communication. For more information, see [SQL Server Service Broker](../../../2014/database-engine/sql-server-service-broker.md).  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)] support for message-based communication. For more information, see [SQL Server Service Broker](../configure-windows/sql-server-service-broker.md).  
   
 -   Synonym support for multiple names of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects. For more information, see [Synonyms &#40;Database Engine&#41;](../../../2014/database-engine/synonyms-database-engine.md).  
   

@@ -37,7 +37,7 @@ manager: "jhubbard"
  Force protocol encryption. Encryption is a method for keeping sensitive information confidential by changing data into an unreadable form. Encryption ensures that data remains secure, even if the transmission packets are viewed during the transmission process. To use channel binding, set **Force Encryption** to **On** and configure **Extended Protection** on the **Advanced** tab.  
   
  **HideInstance**  
- Prevent the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service from exposing this instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button. In the case of named instances on the server, to connect, client applications must specify the protocol endpoint information. For example, the port number or the named pipe name, such as `tcp:server,5000`. For more information, see [Logging In to SQL Server](../../../2014/database-engine/logging-in-to-sql-server.md).  
+ Prevent the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service from exposing this instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button. In the case of named instances on the server, to connect, client applications must specify the protocol endpoint information. For example, the port number or the named pipe name, such as `tcp:server,5000`. For more information, see [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md).  
   
  For more information, see "How to: Enable Encryption Connections to the Database Engine (SQL Server Configuration Manager)" in Books Online.  
   

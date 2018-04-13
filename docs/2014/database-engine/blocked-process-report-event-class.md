@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Blocked Process Report Event Class
   The **Blocked Process Report** event class indicates that a task has been blocked for more than a specified amount of time. This event class does not include system tasks or tasks that are waiting on non deadlock-detectable resources.  
   
- To configure the threshold and frequency at which reports are generated, use the **sp_configure** command to configure the **blocked process threshold** option, which can be set in seconds. By default, no blocked process reports are produced. For more information about setting the **blocked process threshold** option, see [blocked process threshold Server Configuration Option](../../2014/database-engine/blocked-process-threshold-server-configuration-option.md).  
+ To configure the threshold and frequency at which reports are generated, use the **sp_configure** command to configure the **blocked process threshold** option, which can be set in seconds. By default, no blocked process reports are produced. For more information about setting the **blocked process threshold** option, see [blocked process threshold Server Configuration Option](configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
  For information about filtering the data returned by the **Blocked Process Report** event class, see [Filter Events in a Trace &#40;SQL Server Profiler&#41;](../../2014/database-engine/filter-events-in-a-trace-sql-server-profiler.md), [Set a Trace Filter &#40;Transact-SQL&#41;](../../2014/database-engine/set-a-trace-filter-transact-sql.md), or [sp_trace_setfilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
   

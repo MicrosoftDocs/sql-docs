@@ -41,7 +41,7 @@ manager: "jhubbard"
 ###  <a name="HowToFilestream"></a> How To: Enable FILESTREAM at the Instance Level  
  For information about how to enable FILESTREAM, see [Enable and Configure FILESTREAM](../../2014/database-engine/enable-and-configure-filestream.md).  
   
- When you call `sp_configure` to enable FILESTREAM at the instance level, you have to set the filestream_access_level option to 2. For more information, see [filestream access level Server Configuration Option](../../2014/database-engine/filestream-access-level-server-configuration-option.md).  
+ When you call `sp_configure` to enable FILESTREAM at the instance level, you have to set the filestream_access_level option to 2. For more information, see [filestream access level Server Configuration Option](configure-windows/filestream-access-level-server-configuration-option.md).  
   
 ###  <a name="firewall"></a> How To: Allow FILESTREAM through the Firewall  
  For information about how to allow FILESTREAM through the firewall, see [Configure a Firewall for FILESTREAM Access](../../2014/database-engine/configure-a-firewall-for-filestream-access.md).  

@@ -109,7 +109,7 @@ manager: "jhubbard"
  Is relevant only for updating subscriptions that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] based queues. Specifies how often, in seconds, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue is polled for pending queued transactions. The value can be between 0 and 240 seconds. The default is 5 seconds.  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** *agent_profile_name*  
  Is the name of an agent profile used to supply a set of default values to the agent. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  

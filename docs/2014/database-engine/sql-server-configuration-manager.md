@@ -39,12 +39,12 @@ manager: "jhubbard"
 > -   **Windows 8**:  
 >          To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager\<version>.msc** such as `SQLServerManager12.msc`, and then press **Enter**.  
   
- To start, stop, pause, resume, or configure services on another computer by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, see [Connect to Another Computer &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/connect-to-another-computer-sql-server-configuration-manager.md).  
+ To start, stop, pause, resume, or configure services on another computer by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, see [Connect to Another Computer &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-connect-to-another-computer.md).  
   
 ## Managing Services  
  Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start, pause, resume, or stop the services, to view service properties, or to change service properties.  
   
- Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] using startup parameters.  For more information, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/configure-server-startup-options-sql-server-configuration-manager.md).  
+ Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to start the [!INCLUDE[ssDE](../includes/ssde-md.md)] using startup parameters.  For more information, see [Configure Server Startup Options &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-configure-server-startup-options.md).  
   
 ## Changing the Accounts Used by the Services  
  Manage the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
@@ -55,7 +55,7 @@ manager: "jhubbard"
  As an additional benefit, passwords changed using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, SMO, or WMI take affect immediately without restarting the service.  
   
 ## Manage Server & Client Network Protocols  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to configure server and client network protocols, and connectivity options. After the correct protocols are enabled, you usually do not need to change the server network connections. However, you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager if you need to reconfigure the server connections so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] listens on a particular network protocol, port, or pipe. For more information about enabling protocols, see [Enable or Disable a Server Network Protocol](../../2014/database-engine/enable-or-disable-a-server-network-protocol.md). For information about enabling access to protocols through a firewall, see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to configure server and client network protocols, and connectivity options. After the correct protocols are enabled, you usually do not need to change the server network connections. However, you can use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager if you need to reconfigure the server connections so [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] listens on a particular network protocol, port, or pipe. For more information about enabling protocols, see [Enable or Disable a Server Network Protocol](configure-windows/enable-or-disable-a-server-network-protocol.md). For information about enabling access to protocols through a firewall, see [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager allows you to manage server and client network protocols, including the ability to force protocol encryption, view alias properties, or enable/disable a protocol.  
   
@@ -70,17 +70,17 @@ manager: "jhubbard"
  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager also allows you to view information about failover cluster instances, though Cluster Administrator should be used for some actions such as starting and stopping the services.  
   
 ### Available Network Protocols  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports Shared Memory, TCP/IP, and Named Pipes protocols. For information about choosing a network protocols, see [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support the VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX/SPX network protocols. Clients previously connecting with these protocols must select a different protocol to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You cannot use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to configure the WinSock proxy. To configure the WinSock proxy, see your ISA Server documentation.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports Shared Memory, TCP/IP, and Named Pipes protocols. For information about choosing a network protocols, see [Configure Client Protocols](configure-windows/configure-client-protocols.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support the VIA, Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk, or NWLink IPX/SPX network protocols. Clients previously connecting with these protocols must select a different protocol to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You cannot use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to configure the WinSock proxy. To configure the WinSock proxy, see your ISA Server documentation.  
   
 ## Related Tasks  
  [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
   
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
  [Start, Stop, or Pause the SQL Server Agent Service](../../2014/database-engine/start-stop-or-pause-the-sql-server-agent-service.md)  
   
- [Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/scm-services-set-an-instance-to-start-automatically.md)  
+ [Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
- [Prevent Automatic Startup of an Instance of SQL Server &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/scm-services-prevent-automatic-startup-of-an-instance.md)  
+ [Prevent Automatic Startup of an Instance of SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   

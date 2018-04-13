@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   Rewrite the query to produce a different query execution plan.  
   
--   Force serial execution of the query by adding the MAXDOP = 1 option to the end of the query or index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../2014/database-engine/configure-the-max-degree-of-parallelism-server-configuration-option.md) and [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md).  
+-   Force serial execution of the query by adding the MAXDOP = 1 option to the end of the query or index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) and [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md).  
   
 > [!IMPORTANT]  
 >  To determine where the **Exchange Spill** event is occurring when the query optimizer generates an execution plan, you should also collect a Showplan event class in the trace. You can choose any of the Showplan event classes except the **Showplan Text** and **Showplan Text (Unencoded)** event classes, which do not return a Node ID. Node IDs in Showplans identify each operation the query optimizer performs when it generates a query execution plan. These operations are called operators and each operator in a Showplan has a Node ID. The **ObjectID** column for **Exchange Spill** events corresponds to the Node ID in Showplans so you can determine which operator, or operation, is causing the error.  

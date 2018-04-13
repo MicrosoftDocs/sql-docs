@@ -61,7 +61,7 @@ manager: "jhubbard"
 -   The workload group returned by the classifier function is outside the scope of the schema-binding restriction. For example, you cannot drop a table, but you can drop a workload group.  
   
 > [!IMPORTANT]  
->  We recommend enabling the Dedicated Administrator Connection (DAC) on the server. The DAC is not subject to Resource Governor classification and can be used to monitor and troubleshoot a classifier function. For more information, see [Diagnostic Connection for Database Administrators](../../2014/database-engine/diagnostic-connection-for-database-administrators.md). If a DAC is not available for troubleshooting, the other option is to restart the system in single user mode. Although single user mode is not subject to classification, it does not give you the ability to diagnose Resource Governor classification while it is running.  
+>  We recommend enabling the Dedicated Administrator Connection (DAC) on the server. The DAC is not subject to Resource Governor classification and can be used to monitor and troubleshoot a classifier function. For more information, see [Diagnostic Connection for Database Administrators](configure-windows/diagnostic-connection-for-database-administrators.md). If a DAC is not available for troubleshooting, the other option is to restart the system in single user mode. Although single user mode is not subject to classification, it does not give you the ability to diagnose Resource Governor classification while it is running.  
   
 ### Classification Process  
  In the context of Resource Governor, the login process for a session consists of the following steps:  

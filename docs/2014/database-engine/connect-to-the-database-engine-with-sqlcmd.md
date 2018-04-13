@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   **sqlcmd** uses the protocol specified as part of the connection string as described below.  
   
--   If no protocol is specified as part the connection string, **sqlcmd** will use the protocol defined as part of the alias that it is connecting to. To configure **sqlcmd** to use a specific network protocol by creating an alias, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/create-or-delete-a-server-alias-for-use-by-a-client.md).  
+-   If no protocol is specified as part the connection string, **sqlcmd** will use the protocol defined as part of the alias that it is connecting to. To configure **sqlcmd** to use a specific network protocol by creating an alias, see [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
 -   If the protocol is not specified in some other way, **sqlcmd** will use the network protocol determined by the protocol order in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  
   

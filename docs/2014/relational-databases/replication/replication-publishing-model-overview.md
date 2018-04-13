@@ -65,7 +65,7 @@ manager: "jhubbard"
 ## See Also  
  [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
  [Types of Replication](../../../2014/relational-databases/replication/types-of-replication.md)   
- [Configure Replication for AlwaysOn Availability Groups (SQL Server)](../../../2014/database-engine/configure-replication-for-always-on-availability-groups-sql-server.md)
- [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../../2014/database-engine/maintaining-an-alwayson-publication-database-sql-server.md)  
+ [Configure Replication for AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)
+ [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

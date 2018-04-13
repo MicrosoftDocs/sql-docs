@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   The system databases cannot be attached.  
   
--   Attach and detach disable cross-database ownership chaining for the database by setting its **cross db ownership chaining** option to 0. For information about enabling chaining, see [cross db ownership chaining Server Configuration Option](../../2014/database-engine/cross-db-ownership-chaining-server-configuration-option.md).  
+-   Attach and detach disable cross-database ownership chaining for the database by setting its **cross db ownership chaining** option to 0. For information about enabling chaining, see [cross db ownership chaining Server Configuration Option](configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
 -   When attaching a replicated database that was copied instead of detached:  
   

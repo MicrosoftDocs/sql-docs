@@ -37,7 +37,7 @@ manager: "jhubbard"
  After re-creating a WSFC cluster, disable and then re-enable AlwaysOn on every cluster node on which an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is enabled for AlwaysOn. You can use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager for this task.  
   
 ## See Also  
- [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-alwayson-availability-groups-sql-server.md)   
+ [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

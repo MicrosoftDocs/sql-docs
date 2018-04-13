@@ -160,7 +160,7 @@ manager: "mblythe"
  For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../2014/reporting-services/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## See Also  
- [Connect to the Database Engine Using Extended Protection](../../2014/database-engine/connect-to-the-database-engine-using-extended-protection.md)   
+ [Connect to the Database Engine Using Extended Protection](../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
  [Microsoft Security Advisory: Extended protection for authentication](http://go.microsoft.com/fwlink/?LinkId=179923)   

@@ -42,6 +42,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Server Memory Server Configuration Options](../../2014/database-engine/server-memory-server-configuration-options.md)  
+ [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)  
   
   

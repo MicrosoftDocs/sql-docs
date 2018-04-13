@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Secondary Database Settings
   Use this dialog box to configure and to modify the properties of a secondary database in the log shipping configuration.  
   
- For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+ For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ## Options  
  **Secondary server instance**  
@@ -115,6 +115,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)  
+ [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)  
   
   

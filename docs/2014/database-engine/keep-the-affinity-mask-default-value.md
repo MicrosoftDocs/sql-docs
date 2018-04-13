@@ -21,7 +21,7 @@ manager: "jhubbard"
   This rule checks whether the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  
   
 ## For More Information  
- [affinity mask Server Configuration Option](../../2014/database-engine/affinity-mask-server-configuration-option.md)  
+ [affinity mask Server Configuration Option](configure-windows/affinity-mask-server-configuration-option.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

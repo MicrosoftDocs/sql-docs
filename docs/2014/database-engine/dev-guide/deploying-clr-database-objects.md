@@ -34,7 +34,7 @@ manager: "jhubbard"
  Make sure that all compiler errors and warnings are resolved. The assemblies containing the CLR routines can then be registered in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Visual Studio or [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
 > [!NOTE]  
->  The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../../../2014/database-engine/configure-client-protocols.md).  
+>  The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../configure-windows/configure-client-protocols.md).  
   
 #### To deploy the assembly using Visual Studio  
   

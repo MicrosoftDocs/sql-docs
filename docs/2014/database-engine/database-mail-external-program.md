@@ -42,7 +42,7 @@ manager: "jhubbard"
 |Specify the time that the External Program before exiting.|[sysmail_configure_sp &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)   
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)   
  [Database Mail Log and Audits](../../2014/database-engine/database-mail-log-and-audits.md)   
  [Database Mail](../../2014/database-engine/database-mail.md)  
   

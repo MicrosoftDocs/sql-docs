@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Log Shipping Monitor Settings
   Use this page to configure and to modify the properties of the log shipping monitor server.  
   
- For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+ For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ## Options  
  **Monitor server instance**  

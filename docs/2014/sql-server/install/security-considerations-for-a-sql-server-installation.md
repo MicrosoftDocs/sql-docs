@@ -78,7 +78,7 @@ manager: "jhubbard"
 ###  <a name="isolated_services"></a> Isolate Services  
  Isolating services reduces the risk that one compromised service could be used to compromise others. To isolate services, consider the following guidelines:  
   
--   Run separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services under separate Windows accounts. Whenever possible, use separate, low-rights Windows or Local user accounts for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. For more information, see [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+-   Run separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services under separate Windows accounts. Whenever possible, use separate, low-rights Windows or Local user accounts for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Using the correct file system increases security. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations, you should do the following tasks:  
@@ -131,13 +131,13 @@ manager: "jhubbard"
   
 -   Associate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services with low privileged Windows local user accounts, or domain user accounts.  
   
--   For more information, see [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+-   For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Authentication mode**  
   
 -   Require Windows Authentication for connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Use Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections](../../../2014/database-engine/register-a-service-principal-name-for-kerberos-connections.md).  
+-   Use Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
  **Strong passwords**  
   
@@ -153,6 +153,6 @@ manager: "jhubbard"
 ## See Also  
  [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Network Protocols and Network Libraries](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
- [Register a Service Principal Name for Kerberos Connections](../../../2014/database-engine/register-a-service-principal-name-for-kerberos-connections.md)  
+ [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   
   

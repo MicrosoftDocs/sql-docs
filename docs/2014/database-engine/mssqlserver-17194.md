@@ -40,7 +40,7 @@ manager: "jhubbard"
   
  To determine a possible solution for other error message values, use the operating system command **net helpmsg** and specify the decimal value of the error code.  
   
- For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Server Network Configuration](../../2014/database-engine/server-network-configuration.md) and [Client Network Configuration](../../2014/database-engine/client-network-configuration.md).  
+ For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Server Network Configuration](configure-windows/server-network-configuration.md) and [Client Network Configuration](configure-windows/client-network-configuration.md).  
   
 ## Internal-Only  
   

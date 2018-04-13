@@ -143,7 +143,7 @@ manager: "mblythe"
 |XML data source, XML document|`http://localhost/XML/Customers.xml`|Set the data source type to `XML`. The connection string is a URL to the XML document.|  
 |XML data source, embedded XML document|*Empty*|Set the data source type to `XML`. The XML data is embedded in the report definition.|  
   
- If you fail to connect to a report server using `localhost`, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md).  
+ If you fail to connect to a report server using `localhost`, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
  For more information about the configurations needed to connect to these data source types, see the specific data connection topic under [Add Data from External Data Sources &#40;SSRS&#41;](../../2014/reporting-services/add-data-from-external-data-sources-ssrs.md) or [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md).  
   

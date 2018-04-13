@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
- For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../2014/database-engine/select-an-account-for-the-sql-server-agent-service.md) and [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+ For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../2014/database-engine/select-an-account-for-the-sql-server-agent-service.md) and [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  For more information, see:  
   
--   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
+-   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
 -   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../../2014/database-engine/autostart-sql-server-agent-sql-server-management-studio.md)  
   

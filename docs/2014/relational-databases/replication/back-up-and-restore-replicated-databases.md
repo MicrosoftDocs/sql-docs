@@ -36,7 +36,7 @@ manager: "jhubbard"
  Replication supports restoring replicated databases to the same server and database from which the backup was created. If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must recreate all publications and subscriptions after backups are restored.  
   
 > [!NOTE]  
->  It is possible to restore a replicated database to a standby server if log shipping is being used. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../../2014/database-engine/log-shipping-and-replication-sql-server.md).  
+>  It is possible to restore a replicated database to a standby server if log shipping is being used. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  Replicated databases and their associated system databases should be backed up regularly. Back up the following databases:  
   

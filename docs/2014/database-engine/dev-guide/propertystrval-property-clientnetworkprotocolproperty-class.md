@@ -45,6 +45,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](../../../2014/database-engine/configure-client-protocols.md)  
+ [Configure Client Protocols](../configure-windows/configure-client-protocols.md)  
   
   

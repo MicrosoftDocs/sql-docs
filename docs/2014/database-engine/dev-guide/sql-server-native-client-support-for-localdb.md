@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   [SQL Server Express LocalDB Reference](../../../2014/database-engine/dev-guide/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2014 Express LocalDB](../../../2014/database-engine/sql-server-2014-express-localdb.md)  
+-   [SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md)  
   
  To summarize, LocalDB allows you to:  
   

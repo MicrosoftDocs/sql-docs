@@ -46,10 +46,10 @@ manager: "jhubbard"
     >  You can drop the mirror database when mirroring is still enabled only after a failed SET PARTNER OFF statement.  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [Setting Up Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/setting-up-database-mirroring-sql-server.md)   
- [Removing Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/removing-database-mirroring-sql-server.md)   
- [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+ [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/setting-up-database-mirroring-sql-server.md)   
+ [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring/removing-database-mirroring-sql-server.md)   
+ [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
   

@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Log Shipping Transaction Log Backup Settings
   Use this dialog box to configure and modify the transaction log backup settings for a log shipping configuration.  
   
- For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+ For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ## Options  
  **Network path to the backup folder**  
@@ -64,12 +64,12 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|**Use the default server setting**|Click to use the server-level default.<br /><br /> This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option, see [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Use the default server setting**|Click to use the server-level default.<br /><br /> This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option, see [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
 |**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely impact concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by the [Resource Governor](../../2014/database-engine/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
 ## See Also  
  [Configure a User to Create and Manage SQL Server Agent Jobs](../../2014/database-engine/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)  
+ [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)  
   
   

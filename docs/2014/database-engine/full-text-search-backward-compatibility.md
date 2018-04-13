@@ -30,6 +30,6 @@ manager: "jhubbard"
 |[Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md)|Other changes in behavior to full-text search.|  
   
 ## See Also  
- [SQL Server Database Engine Backward Compatibility](../../2014/database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)  
   
   

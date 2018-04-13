@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  Row filegroups contain regular data and log files. FILESTREAM data filegroups contain FILESTREAM data files. These data files store information about how binary large object (BLOB) data is stored on the file system when you are using FILESTREAM storage. The options are the same for both types of filegroups.  
   
- If FILESTREAM is not enabled, the **Filestream** section will not be available. You can enable FILESTREAM storage by using [Server Properties (Advanced Page)](../../2014/database-engine/server-properties-advanced-page.md).  
+ If FILESTREAM is not enabled, the **Filestream** section will not be available. You can enable FILESTREAM storage by using [Server Properties (Advanced Page)](configure-windows/server-properties-advanced-page.md).  
   
  For information about how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses row filegroups, see [Database Files and Filegroups](../../2014/database-engine/database-files-and-filegroups.md). For more information about FILESTREAM data and filegroups, see [FILESTREAM &#40;SQL Server&#41;](../../2014/database-engine/filestream-sql-server.md).  
   

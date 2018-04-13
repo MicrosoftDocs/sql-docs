@@ -154,7 +154,7 @@ manager: "jhubbard"
   
 2.  Start [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from the command line using the command: `NET START MSSQLSERVER /T3608`  
   
-     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  In another command line window, detach the `msdb` database by executing the following command, replacing *\<servername>* with the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   

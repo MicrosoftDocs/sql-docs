@@ -22,7 +22,7 @@ manager: "jhubbard"
   Find information that anyone—designer, developer, analyst, or administrator—requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  
   
 ## In This Section  
- [Database Engine Instances &#40;SQL Server&#41;](../../2014/database-engine/database-engine-instances-sql-server.md)  
+ [Database Engine Instances &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
  [Database Features](../../2014/database-engine/database-features.md)  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## For More Information  
  [Microsoft Knowledge Base article 329204](http://go.microsoft.com/fwlink/?linkid=117786)  
   
- [Configure the max degree of parallelism Server Configuration Option](../../2014/database-engine/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
+ [Configure the max degree of parallelism Server Configuration Option](configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

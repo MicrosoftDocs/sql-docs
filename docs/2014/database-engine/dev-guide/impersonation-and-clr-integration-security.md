@@ -26,7 +26,7 @@ manager: "jhubbard"
   When managed code accesses external resources, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not automatically impersonate the current execution context under which the routine is executing. Code in `EXTERNAL_ACCESS` and `UNSAFE` assemblies can explicitly impersonate the current execution context.  
   
 > [!NOTE]  
->  For information on behavior changes in impersonation, see [Breaking Changes to Database Engine Features in SQL Server 2014](../../../2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2014.md).  
+>  For information on behavior changes in impersonation, see [Breaking Changes to Database Engine Features in SQL Server 2014](../breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
  The in-process data access provider provides an application programming interface, `SqlContext.WindowsIdentity`, that can be used to retrieve the token associated with the current security context. Managed code in `EXTERNAL_ACCESS` and `UNSAFE` assemblies can use this method to retrieve the context and use the .NET Framework `WindowsIdentity.Impersonate` method to impersonate that context. The following restrictions apply when user code explicitly impersonates:  
   

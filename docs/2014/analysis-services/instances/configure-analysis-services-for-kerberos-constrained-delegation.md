@@ -82,7 +82,7 @@ manager: "mblythe"
   
 4.  On the Select Users or Computer page, enter the account used to run the SQL Server instance providing data to Analysis Services tabular model databases. Click **OK** to accept the service account.  
   
-     If you cannot select the account you want, verify that SQL Server is running and has an SPN registered for that account. For more information about SPNs for the database engine, see [Register a Service Principal Name for Kerberos Connections](../../database-engine/register-a-service-principal-name-for-kerberos-connections.md).  
+     If you cannot select the account you want, verify that SQL Server is running and has an SPN registered for that account. For more information about SPNs for the database engine, see [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

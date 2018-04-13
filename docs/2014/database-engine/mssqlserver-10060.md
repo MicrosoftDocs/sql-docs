@@ -43,11 +43,11 @@ manager: "jhubbard"
 -   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to accept remote connections.  
   
 ## See Also  
- [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)   
- [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md)   
+ [Configure a Windows Firewall for Database Engine Access](configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+ [Configure Client Protocols](configure-windows/configure-client-protocols.md)   
  [Network Protocols and Network Libraries](../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
- [Client Network Configuration](../../2014/database-engine/client-network-configuration.md)   
- [Configure Client Protocols](../../2014/database-engine/configure-client-protocols.md)   
- [Enable or Disable a Server Network Protocol](../../2014/database-engine/enable-or-disable-a-server-network-protocol.md)  
+ [Client Network Configuration](configure-windows/client-network-configuration.md)   
+ [Configure Client Protocols](configure-windows/configure-client-protocols.md)   
+ [Enable or Disable a Server Network Protocol](configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

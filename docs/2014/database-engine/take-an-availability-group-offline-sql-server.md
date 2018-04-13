@@ -36,7 +36,7 @@ manager: "jhubbard"
 -   The availability group must currently be online.  
   
 ###  <a name="Recommendations"></a> Recommendations  
- Before you take the availability group offline, delete the availability group listener or listeners. For more information, see [Remove an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/remove-an-availability-group-listener-sql-server.md).  
+ Before you take the availability group offline, delete the availability group listener or listeners. For more information, see [Remove an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -69,9 +69,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Remove an Availability Group Listener &#40;SQL Server&#41;](../../2014/database-engine/remove-an-availability-group-listener-sql-server.md)  
+-   [Remove an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
--   [Change the HADR Cluster Context of Server Instance &#40;SQL Server&#41;](../../2014/database-engine/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
+-   [Change the HADR Cluster Context of Server Instance &#40;SQL Server&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -80,6 +80,6 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
 -   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
- [AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

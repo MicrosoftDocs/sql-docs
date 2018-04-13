@@ -88,6 +88,6 @@ manager: "jhubbard"
 |Describes how to view Resource Governor properties.|[View Resource Governor Properties](../../2014/database-engine/view-resource-governor-properties.md)|  
   
 ## See Also  
- [Database Engine Instances &#40;SQL Server&#41;](../../2014/database-engine/database-engine-instances-sql-server.md)  
+ [Database Engine Instances &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
   

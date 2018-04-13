@@ -61,6 +61,6 @@ manager: "jhubbard"
  The TextData column of this event contains a description of the reason that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dropped the message.  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

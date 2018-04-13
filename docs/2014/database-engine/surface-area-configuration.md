@@ -58,7 +58,7 @@ manager: "jhubbard"
   
  To periodically check the configuration of a facet, use Policy-Based Management. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md).  
   
- You can also set [!INCLUDE[ssDE](../includes/ssde-md.md)] options using the `sp_configure` stored procedure. For more information, see [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md).  
+ You can also set [!INCLUDE[ssDE](../includes/ssde-md.md)] options using the `sp_configure` stored procedure. For more information, see [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md).  
   
  To change the **EnableIntegrated Security** property of [!INCLUDE[ssRS](../includes/ssrs-md.md)], use the property settings in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To change the **Schedule events and report delivery** property and the **Web service and HTTP access** property, edit the **RSReportServer.config** configuration file.  
   

@@ -81,11 +81,11 @@ manager: "jhubbard"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Stop the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or shut down the system to perform maintenance. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Move the file or files to the new location.  
   
-4.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
+4.  Restart the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or the server. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
 5.  Verify the file change by running the following query.  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+     For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  For each file to be moved, use **sqlcmd** commands or [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to run the following statement.  
   
@@ -181,6 +181,6 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
  [Move Database Files](../../2014/database-engine/move-database-files.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

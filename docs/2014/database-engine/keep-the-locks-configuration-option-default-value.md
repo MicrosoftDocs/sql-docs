@@ -30,7 +30,7 @@ EXEC sp_configure 'locks', 0;
 ```  
   
 ## For More Information  
- [Configure the locks Server Configuration Option](../../2014/database-engine/configure-the-locks-server-configuration-option.md)  
+ [Configure the locks Server Configuration Option](configure-windows/configure-the-locks-server-configuration-option.md)  
   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

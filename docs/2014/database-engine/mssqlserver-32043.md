@@ -42,7 +42,7 @@ manager: "jhubbard"
  Check the loads on the principal and mirror server instances and their network connection for the cause.  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](../../2014/database-engine/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   

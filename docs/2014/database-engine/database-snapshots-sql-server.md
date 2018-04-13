@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 -   Using a mirror database that you are maintaining for availability purposes to offload reporting.  
   
-     Using database snapshots with database mirroring permits you to make the data on the mirror server accessible for reporting. Additionally, running queries on the mirror database can free up resources on the principal. For more information, see [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-database-snapshots-sql-server.md).  
+     Using database snapshots with database mirroring permits you to make the data on the mirror server accessible for reporting. Additionally, running queries on the mirror database can free up resources on the principal. For more information, see [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-database-snapshots-sql-server.md).  
   
 -   Safeguarding data against administrative error.  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
   
      We recommend that the database synchronization state be SYNCHRONIZING or SYNCHRONIZED when you create a database snapshot. However, database snapshots can be created when the database synchronization state is NOT SYNCHRONIZING.  
   
-     For more information, see [Database Snapshots with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-with-alwayson-availability-groups-sql-server.md).  
+     For more information, see [Database Snapshots with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md).  
   
 -   To create a database snapshot on a mirror database, the database must be in the SYNCHRONIZED mirroring state.  
   
@@ -234,6 +234,6 @@ manager: "jhubbard"
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../2014/database-engine/drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-database-snapshots-sql-server.md)  
+ [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

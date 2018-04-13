@@ -161,7 +161,7 @@ manager: "jhubbard"
   
      **To view or change the current backup compression default**  
   
-    -   [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
 19. Specify whether to use encryption for the backup. Select an encryption algorithm to use for the encryption step, and provide a Certificate or Asymmetric key from a list of existing certificates or asymmetric keys. Encryption is supported in SQL Server 2014 or later. For more details on the Encryption options, see [Back Up Database &#40;Backup Options Page&#41;](../../2014/database-engine/back-up-database-backup-options-page.md).  
   

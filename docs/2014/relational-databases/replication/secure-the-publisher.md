@@ -70,7 +70,7 @@ manager: "jhubbard"
  There is one Queue Reader Agent for all Publishers and publications (that allow queued updating subscriptions) associated with a given Distributor. For more information, see [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
  [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
   

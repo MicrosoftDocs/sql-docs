@@ -24,7 +24,7 @@ manager: "jhubbard"
  The tool components of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] include Registered Servers, Object Explorer, Solution Explorer, Template Explorer, the Object Explorer Details page, and the document window. To display a tool, on the **View** menu, click the tool name. To display the Query Editor tool, click the **New Query** button on the toolbar.  
   
 > [!IMPORTANT]  
->  Network traffic between [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] unless you have established an encrypted connection. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md).  
+>  Network traffic between [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is unencrypted by default. Do not work with sensitive data (including passwords) in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] unless you have established an encrypted connection. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  Use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to:  
   
@@ -58,6 +58,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)   
- [View or Change Server Properties &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-server-properties-sql-server.md)  
+ [View or Change Server Properties &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

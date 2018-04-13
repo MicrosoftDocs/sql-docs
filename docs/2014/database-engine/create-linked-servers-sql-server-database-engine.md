@@ -150,12 +150,12 @@ manager: "jhubbard"
      **Connection Timeout**  
      Time-out value in seconds for connecting to a linked server.  
   
-     If 0, use the **sp_configure** default [remote login timeout](../../2014/database-engine/configure-the-remote-login-timeout-server-configuration-option.md) option value.  
+     If 0, use the **sp_configure** default [remote login timeout](configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) option value.  
   
      **Query Timeout**  
      Time-out value in seconds for queries against a linked server.  
   
-     If 0, use the **sp_configure** default [remote query timeout](../../2014/database-engine/configure-the-remote-query-timeout-server-configuration-option.md) option value.  
+     If 0, use the **sp_configure** default [remote query timeout](configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) option value.  
   
      **Enable Promotion of Distributed Transactions**  
      Use this option to protect the actions of a server-to-server procedure through a [!INCLUDE[msCoName](../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) transaction. When this option is TRUE, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).  

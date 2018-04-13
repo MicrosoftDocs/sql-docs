@@ -35,7 +35,7 @@ GO
 ```  
   
 ## For More Information  
- [blocked process threshold Server Configuration Option](../../2014/database-engine/blocked-process-threshold-server-configuration-option.md)  
+ [blocked process threshold Server Configuration Option](configure-windows/blocked-process-threshold-server-configuration-option.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

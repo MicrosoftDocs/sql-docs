@@ -68,6 +68,6 @@ manager: "jhubbard"
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates an END CONVERSATION WITH CLEANUP event when the [!INCLUDE[ssDE](../includes/ssde-md.md)] executes an END CONVERSATION statement that includes the WITH CLEANUP clause.|  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use this tab to view or specify options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
 > [!NOTE]  
->  To connect with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must be configured in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows Authentication mode. For more information about how to determine the authentication mode and to change the authentication mode, see [Change Server Authentication Mode](../../2014/database-engine/change-server-authentication-mode.md).  
+>  To connect with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must be configured in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows Authentication mode. For more information about how to determine the authentication mode and to change the authentication mode, see [Change Server Authentication Mode](configure-windows/change-server-authentication-mode.md).  
   
 ## Options  
  **Server type**  

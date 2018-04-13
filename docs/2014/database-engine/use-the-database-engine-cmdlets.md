@@ -59,6 +59,6 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 ## See Also  
  [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)   
- [Overview of PowerShell Cmdlets for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server.md)  
+ [Overview of PowerShell Cmdlets for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

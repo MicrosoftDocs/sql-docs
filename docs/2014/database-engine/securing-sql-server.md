@@ -47,17 +47,17 @@ manager: "jhubbard"
   
 |For information about|See|  
 |---------------------------|---------|  
-|Configuring a firewall to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)|  
+|Configuring a firewall to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[Configure a Windows Firewall for Access to the SSIS Service](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../2014/database-engine/connect-to-the-database-engine-using-extended-protection.md)|  
+|Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   
  Surface area reduction is a security measure that involves stopping or disabling unused components. Surface area reduction helps improve security by providing fewer avenues for potential attacks on a system. The key to limiting the surface area of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes running required services that have "least privilege" by granting services and users only the appropriate rights. The following table contains more information about services and system access.  
   
 |For information about|See|  
 |---------------------------|---------|  
-|Services required for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)|  
+|Services required for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md)|  
   
  If your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system uses Internet Information Services (IIS), additional steps are required to help secure the surface of the platform. The following table contains information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Internet Information Services.  
   
@@ -98,7 +98,7 @@ GO
 |For information about|See|  
 |---------------------------|---------|  
 |The encryption hierarchy in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md)|  
-|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)|  
+|Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
 |Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cryptographic-functions-transact-sql.md)|  
   
  Certificates are software "keys" shared between two servers that enable secure communications by way of strong authentication. You can create and use certificates in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to enhance object and connection security. The following table contains information about how to use certificates with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -106,12 +106,12 @@ GO
 |For information about|See|  
 |---------------------------|---------|  
 |Creating a certificate for use by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)|  
-|Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../2014/database-engine/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## Application Security  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security best practices include writing secure client applications.  
   
- For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](../../2014/database-engine/client-network-configuration.md).  
+ For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](configure-windows/client-network-configuration.md).  
   
 ## SQL Server Security Tools, Utilities, Views, and Functions  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides tools, utilities, views, and functions that can be used to configure and administer security.  

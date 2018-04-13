@@ -30,7 +30,7 @@ manager: "jhubbard"
  For an overview of the SSISDB catalog functionality, see [SSIS Catalog](../../2014/integration-services/ssis-catalog.md).  
   
 ## High Availability  
- Like other user databases, the `SSISDB` database does support database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
+ Like other user databases, the `SSISDB` database does support database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  You can also provide high-availability of SSISDB and its contents by making use of SSIS and AlwaysOn Availability Groups. For more information, see this blog post by Matt Masson, [SSIS with AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   

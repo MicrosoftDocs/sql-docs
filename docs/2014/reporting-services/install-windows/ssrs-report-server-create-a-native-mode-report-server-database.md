@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 6.  Restart the service.  
   
-7.  Open your firewall software and open the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on. For the default instance, this is typically port 1433 for TCP/IP connections. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-a-windows-firewall-for-database-engine-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+7.  Open your firewall software and open the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens on. For the default instance, this is typically port 1433 for TCP/IP connections. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ### To create a local report server database  
   

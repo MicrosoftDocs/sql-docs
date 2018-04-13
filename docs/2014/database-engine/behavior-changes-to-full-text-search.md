@@ -81,7 +81,7 @@ manager: "jhubbard"
   
     -   Full-text indexes are stored inside the database filegroups, rather than in the file system. Administrative operations on a database, such as creating a backup, automatically affect its full-text indexes.  
   
-    -   A full-text catalog is now a virtual object that does not belong to any filegroup; it is a logical concept that refers to a group of full-text indexes. Therefore, many catalog-management features have been deprecated, and deprecation has created breaking changes for some features. For more information, see [Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md) and [Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md).  
+    -   A full-text catalog is now a virtual object that does not belong to any filegroup; it is a logical concept that refers to a group of full-text indexes. Therefore, many catalog-management features have been deprecated, and deprecation has created breaking changes for some features. For more information, see [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md) and [Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md).  
   
         > [!NOTE]  
         >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL statements that specify full-text catalogs work correctly.  

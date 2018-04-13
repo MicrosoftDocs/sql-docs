@@ -24,6 +24,6 @@ manager: "jhubbard"
 ## See Also  
  [Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md)   
  [Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md)   
- [Discontinued Database Engine Functionality in SQL Server 2014](../../2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2014.md)  
+ [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  Before you begin the renaming process, review the items below.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not support renaming servers involved in replication, except in the case of using log shipping with replication. The secondary server in log shipping can be renamed if the primary server is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../../database-engine/log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not support renaming servers involved in replication, except in the case of using log shipping with replication. The secondary server in log shipping can be renamed if the primary server is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   When renaming a virtual server that is configured to use database mirroring, you must turn off database mirroring before the renaming operation, and then re-establish database mirroring with the new virtual server name. Metadata for database mirroring will not be updated automatically to reflect the new virtual server name.  
   
@@ -75,9 +75,9 @@ manager: "jhubbard"
   
 -   Reconfigure the Log Shipping so that updated server name is used to backup and restore logs. For more information, see the following topics:  
   
-    -   [Configure Log Shipping &#40;SQL Server&#41;](../../../database-engine/configure-log-shipping-sql-server.md)  
+    -   [Configure Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
-    -   [Remove Log Shipping &#40;SQL Server&#41;](../../../database-engine/remove-log-shipping-sql-server.md)  
+    -   [Remove Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
 -   Update the Jobsteps that depend on server name. For more information, see [Manage Job Steps](../../../database-engine/manage-job-steps.md).  
   

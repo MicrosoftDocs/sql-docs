@@ -33,7 +33,7 @@ manager: "jhubbard"
 6.  Close the trace with **sp_trace_setstatus**.  
   
     > [!NOTE]  
-    >  Using [!INCLUDE[tsql](../includes/tsql-md.md)] system stored procedures creates a server-side trace, which guarantees that no events will be lost as long as there is space on the disk and no write errors occur. If the disk becomes full or the disk fails, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to run, but tracing stops. If the **c2 audit mode** is set, and there is a write failure, tracing stops and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance shuts down. For more information about the **c2 audit mode** setting, see [c2 audit mode Server Configuration Option](../../2014/database-engine/c2-audit-mode-server-configuration-option.md).  
+    >  Using [!INCLUDE[tsql](../includes/tsql-md.md)] system stored procedures creates a server-side trace, which guarantees that no events will be lost as long as there is space on the disk and no write errors occur. If the disk becomes full or the disk fails, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance continues to run, but tracing stops. If the **c2 audit mode** is set, and there is a write failure, tracing stops and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance shuts down. For more information about the **c2 audit mode** setting, see [c2 audit mode Server Configuration Option](configure-windows/c2-audit-mode-server-configuration-option.md).  
   
 ## In This Section  
   

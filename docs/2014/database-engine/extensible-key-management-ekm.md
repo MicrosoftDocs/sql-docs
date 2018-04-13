@@ -131,7 +131,7 @@ DECRYPTION BY EKM_AKey1
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support signing modules with asymmetric keys generated from EKM provider.  
   
 ## Related Tasks  
- [EKM provider enabled Server Configuration Option](../../2014/database-engine/ekm-provider-enabled-server-configuration-option.md)  
+ [EKM provider enabled Server Configuration Option](configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Enable TDE Using EKM](../../2014/database-engine/enable-tde-using-ekm.md)  
   

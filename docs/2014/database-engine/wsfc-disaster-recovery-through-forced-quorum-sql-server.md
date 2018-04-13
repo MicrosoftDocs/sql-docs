@@ -105,13 +105,13 @@ manager: "jhubbard"
   
 -   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
--   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [View Cluster Quorum NodeWeight Settings](../../2014/database-engine/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Configure Cluster Quorum NodeWeight Settings](../../2014/database-engine/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/use-the-alwayson-dashboard-sql-server-management-studio.md)  
+-   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

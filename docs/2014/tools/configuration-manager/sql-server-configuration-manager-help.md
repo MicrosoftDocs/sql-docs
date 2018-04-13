@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Services](../../../2014/tools/configuration-manager/sql-server-services.md)   
- [SQL Server Network Configuration](../../../2014/tools/configuration-manager/sql-server-network-configuration.md)   
+ [SQL Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
  [SQL Native Client 11.0 Configuration](../../../2014/tools/configuration-manager/sql-native-client-11-0-configuration.md)   
  [Choosing a Network Protocol](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   

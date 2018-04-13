@@ -34,7 +34,7 @@ manager: "jhubbard"
  Although [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] allows you to work with queries without first establishing a connection to a data source, most other tasks require a connection. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides the **Connect to Server** dialog box to configure connection properties to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. When [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] starts, it opens the **Connect to Server** dialog box and prompts you to connect to a server. The **Connect to Server** dialog box retains the connection settings from the last time it was used.  
   
 > [!NOTE]  
->  This feature can be turned off so no connection is automatically initiated. For more information, see [Database Engine Service Startup Options](../../2014/database-engine/database-engine-service-startup-options.md).  
+>  This feature can be turned off so no connection is automatically initiated. For more information, see [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md).  
   
 ## Saving Connections  
  You can save connections to specific servers in Registered Servers, or you can save connections in projects with Solution Explorer.  

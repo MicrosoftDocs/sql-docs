@@ -28,7 +28,7 @@ manager: "jhubbard"
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Provides sample syntax for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] at a command prompt.|  
   
 ## See Also  
- [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../../2014/database-engine/minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md)   
+ [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Backward Compatibility](../../../2014/getting-started/backward-compatibility.md)  
   

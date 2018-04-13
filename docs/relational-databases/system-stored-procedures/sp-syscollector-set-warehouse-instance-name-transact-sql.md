@@ -2,7 +2,7 @@
 title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"

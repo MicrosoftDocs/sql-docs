@@ -2,7 +2,7 @@
 title: "Check the ODBC SQL Server Driver Version (Windows) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "configure-windows"

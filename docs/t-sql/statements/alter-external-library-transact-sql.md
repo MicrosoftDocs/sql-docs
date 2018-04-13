@@ -2,7 +2,7 @@
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "t-sql|statements"

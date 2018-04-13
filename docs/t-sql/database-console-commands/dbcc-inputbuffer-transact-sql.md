@@ -2,7 +2,7 @@
 title: "DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|database-console-commands"

@@ -2,7 +2,7 @@
 title: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|language-elements"

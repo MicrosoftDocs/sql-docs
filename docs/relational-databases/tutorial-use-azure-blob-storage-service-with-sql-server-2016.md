@@ -2,7 +2,7 @@
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "tutorial"

@@ -2,7 +2,7 @@
 title: "sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"

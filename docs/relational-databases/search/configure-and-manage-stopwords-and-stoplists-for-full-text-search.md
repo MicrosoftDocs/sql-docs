@@ -2,7 +2,7 @@
 title: "Configure and Manage Stopwords and Stoplists for Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "search"

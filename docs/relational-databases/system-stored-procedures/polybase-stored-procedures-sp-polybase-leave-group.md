@@ -24,7 +24,7 @@ ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# PolyBase stored procedures - sp_polybase_leave_group
+# sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Removes a SQL Server instance from a PolyBase group for scale-out computation. 

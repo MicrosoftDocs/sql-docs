@@ -67,7 +67,7 @@ dm_exec_xml_handles (session_id | 0 )
  The lifetime of **sql_handles** used to retrieve the SQL text that executed a call to **sp_xml_preparedocument** outlives the cached plan used to execute the query. If the query text is not available in the cache, the data cannot be retrieved using the information provided in the function result. This can occur if you are running many large batches.  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server to see all sessions or session IDs that are not owned by the caller. A caller can always see the data for his or her own current session ID.  
+ Requires VIEW SERVER STATE permission on the server to see all sessions or session IDs that are not owned by the caller. A caller can always see the data for his or her own current session ID.      
   
 ## Examples  
  The following example selects all active handles.  
@@ -77,7 +77,12 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
 ```  
   
 ## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ <br>[Dynamic Management Views and Functions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+ <br>[Execution Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+ <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+
+
+ 
   
   

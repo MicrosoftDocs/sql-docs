@@ -16,7 +16,7 @@ ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnectionPoolDataSource Class

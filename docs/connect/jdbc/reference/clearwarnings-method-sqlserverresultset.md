@@ -21,7 +21,7 @@ ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # clearWarnings Method (SQLServerResultSet)

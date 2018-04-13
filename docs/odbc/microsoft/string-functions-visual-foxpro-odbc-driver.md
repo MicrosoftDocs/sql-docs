@@ -21,7 +21,7 @@ ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # String Functions (Visual FoxPro ODBC Driver)

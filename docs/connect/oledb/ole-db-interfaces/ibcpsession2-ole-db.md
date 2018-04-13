@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "IBCPSession2 interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IBCPSession2 (OLE DB)

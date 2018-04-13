@@ -16,7 +16,7 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Handling Errors and Warnings

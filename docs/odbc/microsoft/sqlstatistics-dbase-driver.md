@@ -19,7 +19,7 @@ ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLStatistics (dBASE Driver)

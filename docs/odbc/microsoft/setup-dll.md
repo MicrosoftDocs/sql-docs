@@ -21,7 +21,7 @@ ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setup DLL

@@ -16,7 +16,7 @@ ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Developing an ODBC Driver

@@ -16,7 +16,7 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 caps.latest.revision: 73
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Overview of the Microsoft Drivers for PHP for SQL Server

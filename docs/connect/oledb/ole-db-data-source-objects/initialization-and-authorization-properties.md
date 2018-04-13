@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "initialization properties [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Initialization and Authorization Properties

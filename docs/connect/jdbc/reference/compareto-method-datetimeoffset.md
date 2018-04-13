@@ -16,7 +16,7 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # compareTo Method (DateTimeOffset)

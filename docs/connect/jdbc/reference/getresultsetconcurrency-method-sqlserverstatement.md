@@ -21,7 +21,7 @@ ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getResultSetConcurrency Method (SQLServerStatement)

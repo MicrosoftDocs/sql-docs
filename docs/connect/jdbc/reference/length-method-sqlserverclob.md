@@ -21,7 +21,7 @@ ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # length Method (SQLServerClob)

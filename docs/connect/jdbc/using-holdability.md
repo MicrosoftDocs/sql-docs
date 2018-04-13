@@ -16,7 +16,7 @@ ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Holdability

@@ -23,7 +23,7 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Overriding Default Leading and Seconds Precision for Interval Data Types

@@ -20,7 +20,7 @@ ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Generic Applications

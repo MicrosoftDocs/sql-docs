@@ -21,7 +21,7 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTrustServerCertificate Method (SQLServerDataSource)

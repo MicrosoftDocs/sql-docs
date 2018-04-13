@@ -21,7 +21,7 @@ ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Freeing Descriptors

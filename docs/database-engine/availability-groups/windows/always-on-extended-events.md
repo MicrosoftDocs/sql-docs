@@ -13,7 +13,7 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 caps.latest.revision: 6
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Always On Availability Groups extended events
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

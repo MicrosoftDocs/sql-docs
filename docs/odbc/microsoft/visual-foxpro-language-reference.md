@@ -19,7 +19,7 @@ ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Visual FoxPro Language Reference

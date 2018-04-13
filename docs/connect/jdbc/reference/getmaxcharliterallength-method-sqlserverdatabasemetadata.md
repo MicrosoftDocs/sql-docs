@@ -21,7 +21,7 @@ ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxCharLiteralLength Method (SQLServerDatabaseMetaData)

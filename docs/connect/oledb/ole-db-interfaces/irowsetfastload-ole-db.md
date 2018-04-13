@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "IRowsetFastLoad interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IRowsetFastLoad (OLE DB)

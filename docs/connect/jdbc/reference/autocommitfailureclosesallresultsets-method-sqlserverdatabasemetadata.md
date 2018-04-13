@@ -16,7 +16,7 @@ ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # autoCommitFailureClosesAllResultSets Method (SQLServerDatabaseMetaData)

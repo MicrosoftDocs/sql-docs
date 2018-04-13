@@ -25,7 +25,7 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLDriverConnect Function

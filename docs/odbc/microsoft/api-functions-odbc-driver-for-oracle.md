@@ -20,7 +20,7 @@ ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # API Functions (ODBC Driver for Oracle)

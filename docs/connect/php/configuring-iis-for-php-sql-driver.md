@@ -18,7 +18,7 @@ ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Configuring IIS for the Microsoft Drivers for PHP for SQL Server

@@ -16,7 +16,7 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Connection Pooling

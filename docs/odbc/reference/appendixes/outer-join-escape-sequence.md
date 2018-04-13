@@ -20,7 +20,7 @@ ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Outer Join Escape Sequence

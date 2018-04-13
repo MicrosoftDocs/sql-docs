@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Data in SQL Server Cursors

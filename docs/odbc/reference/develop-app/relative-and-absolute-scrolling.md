@@ -21,7 +21,7 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Relative and Absolute Scrolling

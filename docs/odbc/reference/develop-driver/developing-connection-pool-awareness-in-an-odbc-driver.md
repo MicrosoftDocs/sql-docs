@@ -16,7 +16,7 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Developing Connection-Pool Awareness in an ODBC Driver

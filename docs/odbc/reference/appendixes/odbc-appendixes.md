@@ -16,7 +16,7 @@ ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Appendixes

@@ -25,7 +25,7 @@ ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDisconnect Function

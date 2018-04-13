@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], upgrading"
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 

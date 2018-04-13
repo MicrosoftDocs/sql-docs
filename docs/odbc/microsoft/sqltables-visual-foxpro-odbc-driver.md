@@ -18,7 +18,7 @@ ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (Visual FoxPro ODBC Driver)

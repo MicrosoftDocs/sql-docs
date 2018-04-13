@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "conversions [OLE DB], server to client"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Conversions Performed from Server to Client

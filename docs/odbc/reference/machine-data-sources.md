@@ -19,7 +19,7 @@ ms.assetid: 371bb5b5-1258-4657-acb5-d2b688b2ab4c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Machine Data Sources

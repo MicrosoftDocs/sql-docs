@@ -21,7 +21,7 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setCatalog Method (SQLServerConnection)

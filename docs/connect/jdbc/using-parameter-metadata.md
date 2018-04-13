@@ -16,7 +16,7 @@ ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Parameter Metadata

@@ -16,7 +16,7 @@ ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # National Character Set Support

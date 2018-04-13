@@ -21,7 +21,7 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBestRowIdentifier Method (SQLServerDatabaseMetaData)

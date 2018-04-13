@@ -31,7 +31,7 @@ ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Interval Data Types

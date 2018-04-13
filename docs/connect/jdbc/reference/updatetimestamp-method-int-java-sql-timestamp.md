@@ -21,7 +21,7 @@ ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateTimestamp Method (int, java.sql.Timestamp)

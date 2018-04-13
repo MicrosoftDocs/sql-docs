@@ -21,7 +21,7 @@ ms.assetid: 21c55c0b-76f0-411d-aa13-f606d3524b0e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # TRANSACTION_SNAPSHOT Field (SQLServerConnection)

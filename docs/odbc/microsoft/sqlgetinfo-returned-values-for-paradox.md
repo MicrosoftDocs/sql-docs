@@ -22,7 +22,7 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo Returned Values for Paradox

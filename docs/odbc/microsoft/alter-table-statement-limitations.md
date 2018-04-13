@@ -19,7 +19,7 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ALTER TABLE Statement Limitations

@@ -20,7 +20,7 @@ ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Data with SQLBulkOperations

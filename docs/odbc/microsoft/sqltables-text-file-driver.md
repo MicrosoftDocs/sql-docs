@@ -19,7 +19,7 @@ ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (Text File Driver)

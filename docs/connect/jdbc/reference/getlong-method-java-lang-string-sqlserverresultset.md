@@ -21,7 +21,7 @@ ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getLong Method (java.lang.String) (SQLServerResultSet)

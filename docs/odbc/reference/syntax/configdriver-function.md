@@ -25,7 +25,7 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ConfigDriver Function

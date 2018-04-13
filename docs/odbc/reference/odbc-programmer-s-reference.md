@@ -18,7 +18,7 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC Programmer&#39;s Reference

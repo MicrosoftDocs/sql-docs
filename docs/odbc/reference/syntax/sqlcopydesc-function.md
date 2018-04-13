@@ -25,7 +25,7 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLCopyDesc Function

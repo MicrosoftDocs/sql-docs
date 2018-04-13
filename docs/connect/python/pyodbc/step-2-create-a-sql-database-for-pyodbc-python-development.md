@@ -16,7 +16,7 @@ ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 2: Create a SQL database for pyodbc Python development

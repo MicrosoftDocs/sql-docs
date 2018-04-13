@@ -21,7 +21,7 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Writing ODBC 3.x Drivers

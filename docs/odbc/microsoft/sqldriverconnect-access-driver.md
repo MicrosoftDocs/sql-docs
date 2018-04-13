@@ -19,7 +19,7 @@ ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDriverConnect (Access Driver)

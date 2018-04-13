@@ -21,7 +21,7 @@ ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Registry Entries (Visual FoxPro ODBC Driver)

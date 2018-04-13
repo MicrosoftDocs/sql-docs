@@ -20,7 +20,7 @@ ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Function Mapping in the Driver Manager

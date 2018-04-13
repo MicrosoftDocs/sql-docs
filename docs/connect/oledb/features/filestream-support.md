@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # FILESTREAM Support

@@ -20,7 +20,7 @@ ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 6: Disconnect from the Data Source

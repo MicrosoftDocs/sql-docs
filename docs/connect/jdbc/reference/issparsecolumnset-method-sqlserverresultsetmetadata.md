@@ -16,7 +16,7 @@ ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isSparseColumnSet Method (SQLServerResultSetMetaData)

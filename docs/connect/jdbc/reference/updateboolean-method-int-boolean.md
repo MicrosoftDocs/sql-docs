@@ -21,7 +21,7 @@ ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBoolean Method (int, boolean)

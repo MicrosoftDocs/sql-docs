@@ -19,7 +19,7 @@ ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How is Metadata Used?

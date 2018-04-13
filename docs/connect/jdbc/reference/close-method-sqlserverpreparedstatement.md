@@ -21,7 +21,7 @@ ms.assetid: 36db9ff7-5819-4827-9803-4a81c99069b3
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # close Method (SQLServerPreparedStatement)

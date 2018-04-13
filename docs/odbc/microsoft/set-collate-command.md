@@ -18,7 +18,7 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET COLLATE Command

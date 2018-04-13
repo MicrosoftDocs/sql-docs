@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], RPC syntax"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Execute Stored Procedure with RPC and Process Output

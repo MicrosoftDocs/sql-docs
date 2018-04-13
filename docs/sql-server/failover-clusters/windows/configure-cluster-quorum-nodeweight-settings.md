@@ -19,7 +19,7 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Configure Cluster Quorum NodeWeight Settings

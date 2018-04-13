@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Establishing a Connection to a Data Source

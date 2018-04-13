@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, properties"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Rowset Properties and Behaviors

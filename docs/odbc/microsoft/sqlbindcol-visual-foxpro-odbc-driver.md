@@ -18,7 +18,7 @@ ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)

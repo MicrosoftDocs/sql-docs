@@ -22,7 +22,7 @@ ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Call-Level Interfaces

@@ -13,7 +13,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "MightyPen"
 ms.author: "v-jizho2"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 

@@ -20,7 +20,7 @@ ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Statements Constructed at Run Time

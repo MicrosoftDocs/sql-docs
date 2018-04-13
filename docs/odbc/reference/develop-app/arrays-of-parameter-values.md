@@ -19,7 +19,7 @@ ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Arrays of Parameter Values

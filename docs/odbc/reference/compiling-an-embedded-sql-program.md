@@ -21,7 +21,7 @@ ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Compiling an Embedded SQL Program

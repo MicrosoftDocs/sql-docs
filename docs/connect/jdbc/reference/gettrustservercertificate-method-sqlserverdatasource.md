@@ -21,7 +21,7 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)

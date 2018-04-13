@@ -23,7 +23,7 @@ ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # dBASE Data Types

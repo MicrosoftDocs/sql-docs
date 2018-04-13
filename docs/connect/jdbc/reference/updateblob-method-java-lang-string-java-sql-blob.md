@@ -21,7 +21,7 @@ ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBlob Method (java.lang.String, java.sql.Blob)

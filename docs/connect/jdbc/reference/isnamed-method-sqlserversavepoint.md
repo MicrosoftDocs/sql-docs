@@ -21,7 +21,7 @@ ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isNamed Method (SQLServerSavepoint)

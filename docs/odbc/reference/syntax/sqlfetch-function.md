@@ -25,7 +25,7 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLFetch Function

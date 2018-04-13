@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)

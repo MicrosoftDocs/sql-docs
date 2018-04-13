@@ -21,7 +21,7 @@ ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Conformance Levels

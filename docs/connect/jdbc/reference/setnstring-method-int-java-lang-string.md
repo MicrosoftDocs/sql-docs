@@ -16,7 +16,7 @@ ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNString Method (int, java.lang.String)

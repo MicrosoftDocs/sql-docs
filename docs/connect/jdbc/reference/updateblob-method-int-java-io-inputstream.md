@@ -16,7 +16,7 @@ ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBlob Method (int, java.io.InputStream)

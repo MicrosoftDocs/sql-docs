@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "adding columns"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Adding a Column to a SQL Server Table

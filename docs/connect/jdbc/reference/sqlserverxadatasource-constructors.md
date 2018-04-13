@@ -16,7 +16,7 @@ ms.assetid: 8b734305-b007-41bd-819a-69792fac0781
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXADataSource Constructors

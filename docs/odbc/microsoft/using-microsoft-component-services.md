@@ -19,7 +19,7 @@ ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Microsoft Component Services

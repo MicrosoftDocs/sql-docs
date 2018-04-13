@@ -16,7 +16,7 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using Kerberos Integrated Authentication to Connect to SQL Server

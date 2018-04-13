@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "large CLR user-defined types"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Large CLR User-Defined Types

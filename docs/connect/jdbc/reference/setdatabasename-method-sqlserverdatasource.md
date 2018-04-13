@@ -21,7 +21,7 @@ ms.assetid: 4df1bfdb-eea3-4a00-a99f-750a69795ab3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDatabaseName Method (SQLServerDataSource)

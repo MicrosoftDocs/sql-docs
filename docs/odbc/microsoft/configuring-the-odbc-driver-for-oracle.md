@@ -19,7 +19,7 @@ ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Configuring the ODBC Driver for Oracle

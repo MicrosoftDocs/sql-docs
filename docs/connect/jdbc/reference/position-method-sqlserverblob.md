@@ -21,7 +21,7 @@ ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (SQLServerBlob)

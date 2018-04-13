@@ -25,7 +25,7 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLNumResultCols Function

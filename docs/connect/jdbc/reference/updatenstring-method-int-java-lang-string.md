@@ -16,7 +16,7 @@ ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateNString Method (int, java.lang.String)

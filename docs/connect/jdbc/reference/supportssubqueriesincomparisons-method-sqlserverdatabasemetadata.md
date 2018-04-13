@@ -21,7 +21,7 @@ ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSubqueriesInComparisons Method (SQLServerDatabaseMetaData)

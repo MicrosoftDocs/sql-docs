@@ -21,7 +21,7 @@ ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setHoldability Method (SQLServerConnection)

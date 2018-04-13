@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "property values [OLE DB Driver for SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # About OLE DB Properties

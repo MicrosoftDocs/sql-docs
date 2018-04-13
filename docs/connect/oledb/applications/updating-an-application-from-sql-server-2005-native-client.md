@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating an Application from SQL Server 2005 Native Client

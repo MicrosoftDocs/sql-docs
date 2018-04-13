@@ -16,7 +16,7 @@ ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Programming Guide for the Microsoft Drivers for PHP for SQL Server

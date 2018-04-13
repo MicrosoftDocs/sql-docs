@@ -19,7 +19,7 @@ ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Revoking and Granting Rights When Using Stored Procedures

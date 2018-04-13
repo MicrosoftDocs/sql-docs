@@ -27,7 +27,7 @@ helpviewer_keywords:
   - "errors [OLE DB], return codes"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Return Codes

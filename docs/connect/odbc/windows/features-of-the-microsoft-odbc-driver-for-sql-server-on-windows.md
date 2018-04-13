@@ -16,7 +16,7 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Features of the Microsoft ODBC Driver for SQL Server on Windows

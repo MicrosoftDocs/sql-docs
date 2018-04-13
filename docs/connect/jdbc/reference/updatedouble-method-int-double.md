@@ -21,7 +21,7 @@ ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDouble Method (int, double)

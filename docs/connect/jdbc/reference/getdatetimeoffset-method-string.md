@@ -16,7 +16,7 @@ ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDateTimeOffset Method (String)

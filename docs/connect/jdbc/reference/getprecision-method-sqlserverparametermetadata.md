@@ -21,7 +21,7 @@ ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPrecision Method (SQLServerParameterMetaData)

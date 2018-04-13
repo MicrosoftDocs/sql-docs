@@ -19,7 +19,7 @@ ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Identifiers Limitations

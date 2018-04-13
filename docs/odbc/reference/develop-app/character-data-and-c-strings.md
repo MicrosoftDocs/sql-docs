@@ -26,7 +26,7 @@ ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Character Data and C Strings

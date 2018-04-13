@@ -19,7 +19,7 @@ ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Additional Supported ODBC SQL Grammar

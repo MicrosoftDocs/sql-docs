@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching Rows - Next Fetch Position

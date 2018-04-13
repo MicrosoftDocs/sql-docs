@@ -21,7 +21,7 @@ ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getUnicodeStream Method (SQLServerResultSet)

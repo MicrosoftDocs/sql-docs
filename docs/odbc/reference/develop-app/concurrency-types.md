@@ -22,7 +22,7 @@ ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Concurrency Types

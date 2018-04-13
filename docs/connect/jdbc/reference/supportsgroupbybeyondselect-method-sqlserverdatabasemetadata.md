@@ -21,7 +21,7 @@ ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsGroupByBeyondSelect Method (SQLServerDatabaseMetaData)

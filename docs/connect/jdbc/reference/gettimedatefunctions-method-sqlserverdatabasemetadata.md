@@ -21,7 +21,7 @@ ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTimeDateFunctions Method (SQLServerDatabaseMetaData)

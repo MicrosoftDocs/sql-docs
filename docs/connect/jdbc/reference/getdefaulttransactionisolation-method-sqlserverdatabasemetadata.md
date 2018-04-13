@@ -21,7 +21,7 @@ ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDefaultTransactionIsolation Method (SQLServerDatabaseMetaData)

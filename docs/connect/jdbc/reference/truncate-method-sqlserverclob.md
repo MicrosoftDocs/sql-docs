@@ -21,7 +21,7 @@ ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # truncate Method (SQLServerClob)

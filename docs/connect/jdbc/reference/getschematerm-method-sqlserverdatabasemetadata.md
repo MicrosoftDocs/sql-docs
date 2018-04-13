@@ -21,7 +21,7 @@ ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSchemaTerm Method (SQLServerDatabaseMetaData)

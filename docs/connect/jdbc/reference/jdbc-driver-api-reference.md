@@ -16,7 +16,7 @@ ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 caps.latest.revision: 46
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # JDBC Driver API Reference

@@ -20,7 +20,7 @@ ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Data Sources Subkey

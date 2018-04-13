@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, connection string keywords"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Using Connection String Keywords with OLE DB Driver for SQL Server

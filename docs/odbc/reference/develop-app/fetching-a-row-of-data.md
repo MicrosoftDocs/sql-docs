@@ -21,7 +21,7 @@ ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching a Row of Data

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "OLE DB, date/time improvements"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Date and Time Improvements (OLE DB)

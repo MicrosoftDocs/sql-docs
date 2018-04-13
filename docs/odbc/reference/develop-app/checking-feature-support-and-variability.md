@@ -21,7 +21,7 @@ ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Checking Feature Support and Variability

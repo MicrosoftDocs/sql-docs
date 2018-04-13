@@ -21,7 +21,7 @@ ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # executeUpdate Method (java.lang.String)

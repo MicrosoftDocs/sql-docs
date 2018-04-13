@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB, bulk copy operations"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)

@@ -20,7 +20,7 @@ ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Statements Entered by the User

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "data sources [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Enumerate OLE DB Data Sources (OLE DB)

@@ -18,7 +18,7 @@ ms.assetid: 9bd7c87b-d99d-4e23-b2db-868d3b461c94
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetCursorName (Desktop Database Drivers)

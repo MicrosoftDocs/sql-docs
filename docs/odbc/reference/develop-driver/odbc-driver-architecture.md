@@ -18,7 +18,7 @@ ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Driver Architecture

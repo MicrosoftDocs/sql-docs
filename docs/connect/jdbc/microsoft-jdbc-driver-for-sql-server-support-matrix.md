@@ -16,7 +16,7 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Microsoft JDBC Driver for SQL Server Support Matrix

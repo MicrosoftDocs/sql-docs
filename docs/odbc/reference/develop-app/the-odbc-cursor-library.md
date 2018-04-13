@@ -23,7 +23,7 @@ ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # The ODBC Cursor Library

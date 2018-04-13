@@ -16,7 +16,7 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNString Method (int)

@@ -19,7 +19,7 @@ ms.assetid: 4ae40066-5911-4d32-937a-040bacc853ec
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Date Arithmetic Limitations

@@ -20,7 +20,7 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Loading by Ordinal

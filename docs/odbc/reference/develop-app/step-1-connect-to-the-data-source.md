@@ -20,7 +20,7 @@ ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 1: Connect to the Data Source

@@ -19,7 +19,7 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Returning Array Parameters from Stored Procedures

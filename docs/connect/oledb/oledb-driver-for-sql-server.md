@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "native data access [OLE DB Driver for SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server

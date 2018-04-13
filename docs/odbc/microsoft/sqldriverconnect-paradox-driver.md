@@ -19,7 +19,7 @@ ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDriverConnect (Paradox Driver)

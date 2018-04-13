@@ -21,7 +21,7 @@ ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDate Method (java.lang.String, java.sql.Date)

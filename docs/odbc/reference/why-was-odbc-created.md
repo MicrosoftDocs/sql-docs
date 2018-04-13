@@ -18,7 +18,7 @@ ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Why Was ODBC Created?

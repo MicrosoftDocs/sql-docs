@@ -16,7 +16,7 @@ ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Understanding Data Type Differences

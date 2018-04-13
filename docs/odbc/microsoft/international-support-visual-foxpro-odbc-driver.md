@@ -24,7 +24,7 @@ ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # International Support (Visual FoxPro ODBC Driver)

@@ -20,7 +20,7 @@ ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 4b: Fetch the Row Count

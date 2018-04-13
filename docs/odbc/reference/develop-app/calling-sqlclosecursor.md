@@ -22,7 +22,7 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Calling SQLCloseCursor

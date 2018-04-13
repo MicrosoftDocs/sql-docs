@@ -21,7 +21,7 @@ ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getString Method (int) (SQLServerResultSet)

@@ -16,7 +16,7 @@ ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setString Method (SQLServerNClob)

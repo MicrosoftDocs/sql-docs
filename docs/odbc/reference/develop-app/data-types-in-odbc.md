@@ -19,7 +19,7 @@ ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Types in ODBC

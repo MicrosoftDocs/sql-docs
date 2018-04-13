@@ -21,7 +21,7 @@ ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getImportedKeys Method (SQLServerDatabaseMetaData)

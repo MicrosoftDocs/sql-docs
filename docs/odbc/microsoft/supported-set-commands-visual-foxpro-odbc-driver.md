@@ -24,7 +24,7 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported SET Commands (Visual FoxPro ODBC Driver)

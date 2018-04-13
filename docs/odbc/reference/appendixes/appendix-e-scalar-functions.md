@@ -20,7 +20,7 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Appendix E: Scalar Functions

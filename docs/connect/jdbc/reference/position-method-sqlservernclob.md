@@ -16,7 +16,7 @@ ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (SQLServerNClob)

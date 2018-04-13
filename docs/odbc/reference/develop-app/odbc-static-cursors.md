@@ -19,7 +19,7 @@ ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Static Cursors

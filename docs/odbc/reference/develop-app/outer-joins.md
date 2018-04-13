@@ -19,7 +19,7 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Outer Joins

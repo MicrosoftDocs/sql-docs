@@ -19,7 +19,7 @@ ms.assetid: f6e494ed-c7cb-4b1b-bf3b-c4361850b51a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Aggregate Function Limitations

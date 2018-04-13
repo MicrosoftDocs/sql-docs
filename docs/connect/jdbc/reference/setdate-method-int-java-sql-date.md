@@ -21,7 +21,7 @@ ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDate Method (int, java.sql.Date)

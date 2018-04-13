@@ -21,7 +21,7 @@ ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # nullsAreSortedLow Method (SQLServerDatabaseMetaData)

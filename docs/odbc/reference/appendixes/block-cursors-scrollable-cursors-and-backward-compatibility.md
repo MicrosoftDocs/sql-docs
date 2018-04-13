@@ -22,7 +22,7 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Block Cursors, Scrollable Cursors, and Backward Compatibility

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sparse columns, OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Sparse Columns Support in OLE DB Driver for SQL Server

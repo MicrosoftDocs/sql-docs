@@ -26,7 +26,7 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting with SQLConnect

@@ -18,7 +18,7 @@ ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectOption (Visual FoxPro ODBC Driver)

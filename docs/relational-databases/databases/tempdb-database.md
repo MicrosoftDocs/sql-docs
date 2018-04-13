@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: "stevestein"
 ms.author: "sstein"
-manager: jhubbard
+manager: craigg
 ms.reviewer: carlrab
 ---
 # tempdb Database

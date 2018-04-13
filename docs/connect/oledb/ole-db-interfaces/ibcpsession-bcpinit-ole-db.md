@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "BCPInit method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IBCPSession::BCPInit (OLE DB)

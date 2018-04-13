@@ -19,7 +19,7 @@ ms.assetid: 1d203f69-ec46-457f-8d07-b22d282b6bf1
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # GROUP BY expression-list

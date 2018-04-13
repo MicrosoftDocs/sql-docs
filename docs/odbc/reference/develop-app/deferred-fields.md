@@ -19,7 +19,7 @@ ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Deferred Fields

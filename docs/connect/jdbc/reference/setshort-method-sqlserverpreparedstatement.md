@@ -21,7 +21,7 @@ ms.assetid: 6a9171a4-3e44-44ea-a453-23f57e5320e9
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setShort Method (SQLServerPreparedStatement)

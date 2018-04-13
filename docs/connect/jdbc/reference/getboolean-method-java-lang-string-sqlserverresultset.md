@@ -21,7 +21,7 @@ ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBoolean Method (java.lang.String) (SQLServerResultSet)

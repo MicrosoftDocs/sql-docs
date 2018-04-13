@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB error handling, SQL Server message results"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server Message Results

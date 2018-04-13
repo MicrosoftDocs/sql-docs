@@ -21,7 +21,7 @@ ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (java.sql.Clob, long)

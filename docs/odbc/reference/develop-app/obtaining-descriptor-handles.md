@@ -18,7 +18,7 @@ ms.assetid: 936f983f-c7e9-43f3-97ea-dd4b1bbf4654
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Obtaining Descriptor Handles

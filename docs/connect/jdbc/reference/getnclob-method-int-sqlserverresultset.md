@@ -16,7 +16,7 @@ ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNClob Method (int) (SQLServerResultSet)

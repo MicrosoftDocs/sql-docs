@@ -18,7 +18,7 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ALTER TABLE - SQL Command

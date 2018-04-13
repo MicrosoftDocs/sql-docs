@@ -22,7 +22,7 @@ ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Type Conversions

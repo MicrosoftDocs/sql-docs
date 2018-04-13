@@ -16,7 +16,7 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 caps.latest.revision: 4
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # What&#39;s New in SQL Server Installation

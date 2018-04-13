@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters, inserting data into"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Inserting Data into Table-Valued Parameters

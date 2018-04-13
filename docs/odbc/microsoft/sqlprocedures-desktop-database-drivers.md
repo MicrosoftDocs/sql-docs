@@ -18,7 +18,7 @@ ms.assetid: c996ad6f-e790-40f4-a962-843422496149
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLProcedures (Desktop Database Drivers)

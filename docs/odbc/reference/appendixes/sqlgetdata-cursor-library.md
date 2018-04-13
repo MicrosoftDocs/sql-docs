@@ -18,7 +18,7 @@ ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetData (Cursor Library)

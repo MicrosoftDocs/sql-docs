@@ -18,7 +18,7 @@ ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLPutData (Visual FoxPro ODBC Driver)

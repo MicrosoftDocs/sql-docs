@@ -19,7 +19,7 @@ ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_num_rows

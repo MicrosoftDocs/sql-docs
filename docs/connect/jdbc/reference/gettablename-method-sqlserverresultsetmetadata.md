@@ -21,7 +21,7 @@ ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTableName Method (SQLServerResultSetMetaData)

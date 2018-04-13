@@ -21,7 +21,7 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # addBatch Method (java.lang.String)

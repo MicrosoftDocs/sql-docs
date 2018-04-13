@@ -16,7 +16,7 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Data (Microsoft Drivers for PHP for SQL Server)

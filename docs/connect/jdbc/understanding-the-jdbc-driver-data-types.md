@@ -16,7 +16,7 @@ ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Understanding the JDBC Driver Data Types

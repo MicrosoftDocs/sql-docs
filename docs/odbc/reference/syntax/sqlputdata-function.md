@@ -25,7 +25,7 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLPutData Function

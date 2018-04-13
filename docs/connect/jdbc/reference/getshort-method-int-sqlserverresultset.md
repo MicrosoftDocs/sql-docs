@@ -21,7 +21,7 @@ ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getShort Method (int) (SQLServerResultSet)

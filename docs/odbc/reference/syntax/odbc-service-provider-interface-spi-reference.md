@@ -16,7 +16,7 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Service Provider Interface (SPI) Reference

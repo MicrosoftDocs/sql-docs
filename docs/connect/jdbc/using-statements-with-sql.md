@@ -16,7 +16,7 @@ ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Statements with SQL

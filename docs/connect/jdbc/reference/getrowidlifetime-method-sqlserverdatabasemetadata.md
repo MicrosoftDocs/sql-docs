@@ -16,7 +16,7 @@ ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getRowIdLifetime Method (SQLServerDatabaseMetaData)

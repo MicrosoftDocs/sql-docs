@@ -19,7 +19,7 @@ ms.assetid: 9cfa6ea3-7e33-46c7-99fd-3c717fbcc4e6
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ALTER TABLE Statement

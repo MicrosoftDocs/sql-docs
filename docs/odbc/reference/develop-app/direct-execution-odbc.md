@@ -20,7 +20,7 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Direct Execution ODBC

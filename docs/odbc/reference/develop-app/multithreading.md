@@ -20,7 +20,7 @@ ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Multithreading

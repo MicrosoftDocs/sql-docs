@@ -18,7 +18,7 @@ ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact (Visual FoxPro ODBC Driver)

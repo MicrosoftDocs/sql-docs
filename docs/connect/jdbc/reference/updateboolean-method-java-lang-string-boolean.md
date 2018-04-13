@@ -21,7 +21,7 @@ ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBoolean Method (java.lang.String, boolean)

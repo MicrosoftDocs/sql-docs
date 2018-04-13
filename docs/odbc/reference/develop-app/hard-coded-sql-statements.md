@@ -20,7 +20,7 @@ ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Hard-Coded SQL Statements

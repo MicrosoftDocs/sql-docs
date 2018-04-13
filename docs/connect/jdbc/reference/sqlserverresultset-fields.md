@@ -16,7 +16,7 @@ ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResultSet Fields

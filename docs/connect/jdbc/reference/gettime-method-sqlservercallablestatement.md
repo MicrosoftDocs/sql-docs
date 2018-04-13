@@ -21,7 +21,7 @@ ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTime Method (SQLServerCallableStatement)

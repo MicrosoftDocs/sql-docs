@@ -22,7 +22,7 @@ ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Getting Long Data

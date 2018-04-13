@@ -25,7 +25,7 @@ ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeConnect Function

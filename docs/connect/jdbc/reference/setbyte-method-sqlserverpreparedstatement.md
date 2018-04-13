@@ -21,7 +21,7 @@ ms.assetid: 39c5ca20-d5f0-40dd-a853-29c3b8cd38e8
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setByte Method (SQLServerPreparedStatement)

@@ -21,7 +21,7 @@ ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getInt Method (int)

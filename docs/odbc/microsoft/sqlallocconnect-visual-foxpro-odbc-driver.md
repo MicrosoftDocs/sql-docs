@@ -18,7 +18,7 @@ ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocConnect (Visual FoxPro ODBC Driver)

@@ -18,7 +18,7 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Perform Transactions

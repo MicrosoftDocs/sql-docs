@@ -19,7 +19,7 @@ ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact (dBASE Driver)

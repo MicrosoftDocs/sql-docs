@@ -19,7 +19,7 @@ ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 4a: Fetch the Results

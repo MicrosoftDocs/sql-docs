@@ -20,7 +20,7 @@ ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes

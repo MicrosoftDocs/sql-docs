@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters

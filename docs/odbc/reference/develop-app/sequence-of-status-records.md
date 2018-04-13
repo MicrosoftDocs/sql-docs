@@ -20,7 +20,7 @@ ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Sequence of Status Records

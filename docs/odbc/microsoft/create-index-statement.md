@@ -19,7 +19,7 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE INDEX Statement

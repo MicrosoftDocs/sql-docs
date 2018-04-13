@@ -25,7 +25,7 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLGetInfo Function

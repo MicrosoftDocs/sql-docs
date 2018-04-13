@@ -21,7 +21,7 @@ ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getReference Method (SQLServerConnectionPoolDataSource)

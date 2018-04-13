@@ -20,7 +20,7 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLCancelHandle Function

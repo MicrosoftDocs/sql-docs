@@ -66,7 +66,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  These steps are taken from [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
   
-2.  Open a query window and paste in the following script. This script does three things: enables readable connections to a secondary replica (which is off by default), sets the read-only routing URL, and creates the routing list that prioritizes how connection requests are directed.  The first statement, allowing readable connections, is redundant if you already set the properties in [!INCLUDE[ssManStudio](../../../../../../../../../../../includes/ssmanstudio-md.md)], but are included for completeness.  
+2.  Open a query window and paste in the following script. This script does three things: enables readable connections to a secondary replica (which is off by default), sets the read-only routing URL, and creates the routing list that prioritizes how connection requests are directed.  The first statement, allowing readable connections, is redundant if you already set the properties in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], but are included for completeness.  
   
     ```  
     ALTER AVAILABILITY GROUP [AG1]  
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
     -   Replace ‘Computer02’ with the name of the server instance that hosts the secondary replica.  
   
-    -   Replace ‘contoso.com’ with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../../../../../../../../../includes/ssmanstudio-md.md)].  
+    -   Replace ‘contoso.com’ with the name of your domain, or omit it from the script if all computers are in the same domain. Keep the port number if the listener is using the default port. The port that is actually used by the listener is listed in the properties page in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
 4.  Execute the script.  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
 ##  <a name="bkmk_ssasAODB"></a> Create an Analysis Services data source using an AlwaysOn availability database  
  This section explains how to create an Analysis Services data source that connects to a database in an availability group. You can use these instructions to configure a connection to either a primary replica (default) or a readable secondary replica that you configured based on steps in a previous section. AlwaysOn configuration settings, plus the connection properties set in the client, will determine whether a primary or secondary replica is used.  
   
-1.  In [!INCLUDE[ssBIDevStudio](../../../../../../../includes/ssbidevstudio-md.md)], in an Analysis Services Multidimensional and Data Mining Model project, right-click **Data Sources** and select **New Data Source**. Click **New** to create a new data source.  
+1.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], in an Analysis Services Multidimensional and Data Mining Model project, right-click **Data Sources** and select **New Data Source**. Click **New** to create a new data source.  
   
      Alternatively, for a tabular model project, click the Model menu, and then click **Import from Data Source**.  
   
@@ -155,11 +155,11 @@ manager: "jhubbard"
   
      As the trace runs, the `SQL:BatchStarting` and `SQL:BatchCompleting` events will show the queries issued from Analysis Services that are executing on the database engine instance. These events are selected by default so all you need to do is start the trace.  
   
-2.  In [!INCLUDE[ssBIDevStudio](../../../../../../../includes/ssbidevstudio-md.md)], open the Analysis Services project or solution containing a data source connection you want to test. Be sure that the data source specifies the availability group listener and not an instance in the group.  
+2.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], open the Analysis Services project or solution containing a data source connection you want to test. Be sure that the data source specifies the availability group listener and not an instance in the group.  
   
      This step is important. Routing to the secondary replica will not occur if you specify a server instance name.  
   
-3.  Arrange the application windows so that you can view SQL Server Profiler and [!INCLUDE[ssBIDevStudio](../../../../../../../includes/ssbidevstudio-md.md)] side by side.  
+3.  Arrange the application windows so that you can view SQL Server Profiler and [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] side by side.  
   
 4.  Deploy the solution, and when it completes, stop the trace.  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
   
 #### Step 2: Perform a planned failover to test the configuration  
   
-1.  In [!INCLUDE[ssManStudio](../../../../../../../../../../../includes/ssmanstudio-md.md)] check the primary and secondary replicas to ensure that both are configured for synchronous-commit mode and are currently synchronized.  
+1.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] check the primary and secondary replicas to ensure that both are configured for synchronous-commit mode and are currently synchronized.  
   
      The following steps assume a secondary replica is configured for synchronous commit.  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
   
 3.  Execute a processing or query command from within Analysis Services. Because you configured the data source for a read-only connection, you should see the command execute on the secondary replica.  
   
-4.  In [!INCLUDE[ssManStudio](../../../../../../../../../../../includes/ssmanstudio-md.md)], connect to the secondary replica.  
+4.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], connect to the secondary replica.  
   
 5.  Expand the **AlwaysOn High Availability** node and the **Availability Groups** node.  
   
@@ -188,7 +188,7 @@ manager: "jhubbard"
   
 7.  Confirm that failover succeeded:  
   
-    -   In [!INCLUDE[ssManStudio](../../../../../../../../../../../includes/ssmanstudio-md.md)], expand the availability groups to view the (primary) and (secondary) designations. The instance that was previously a primary replica should now be a secondary replica.  
+    -   In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], expand the availability groups to view the (primary) and (secondary) designations. The instance that was previously a primary replica should now be a secondary replica.  
   
     -   View the dashboard to determine if any health issues were detected. Right-click the availability group and select **Show Dashboard**.  
   

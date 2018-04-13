@@ -166,10 +166,10 @@ manager: "jhubbard"
 >  If you expect the witness to remain disconnected for a significant amount of time, we recommend that you remove the witness from the session until it becomes available.  
   
 ##  <a name="TsqlSettingsAndOpModes"></a> Transact-SQL Settings and Database Mirroring Operating Modes  
- This section describes a database mirroring session in terms of the ALTER DATABASE settings and states of the mirrored database and witness, if any. The section is aimed at users who manage database mirroring primarily or exclusively using [!INCLUDE[tsql](../../../includes/tsql-md.md)], rather than using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ This section describes a database mirroring session in terms of the ALTER DATABASE settings and states of the mirrored database and witness, if any. The section is aimed at users who manage database mirroring primarily or exclusively using [!INCLUDE[tsql](../../includes/tsql-md.md)], rather than using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  As an alternative to using [!INCLUDE[tsql](../../../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  As an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 
   

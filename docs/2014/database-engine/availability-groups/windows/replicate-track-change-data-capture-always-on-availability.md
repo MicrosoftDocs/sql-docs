@@ -185,13 +185,13 @@ manager: "jhubbard"
   
 ### Prerequisites  
   
--   When using transactional replication and the publishing database is in an availability group both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../../../../../../../../includes/sssql11-md.md)]. The subscriber can be using a lower level of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   When using transactional replication and the publishing database is in an availability group both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. The subscriber can be using a lower level of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   When using merge replication and the publishing database is in an availability group:  
   
-    -   Push subscription: Both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../../../../../../../../includes/sssql11-md.md)].  
+    -   Push subscription: Both the publisher and the distributor must run at least [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../../../../../../../../../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
+    -   Pull subscription: The publisher, distributor, and subscriber databases must be on at least [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. This is because the merge agent on the subscriber must understand how an availability group can fail over to its secondary.  
   
 -   Placing the distribution database on an availability group is not supported.  
   
@@ -218,7 +218,7 @@ manager: "jhubbard"
   
 -   The distribution database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
--   Subscriber failover to a secondary database, while supported, is a relatively complex manual procedure. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Subscribers must be running [!INCLUDE[ssSQL11](../../../../../../../../../includes/sssql11-md.md)] or later to participate in an availability group.  
+-   Subscriber failover to a secondary database, while supported, is a relatively complex manual procedure. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Subscribers must be running [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or later to participate in an availability group.  
   
 -   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md).  
   

@@ -53,7 +53,7 @@ manager: "jhubbard"
   
      For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md).  
   
-     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement:  
+     To view the logins on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.server_principals  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
      For more information, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
   
-     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement:  
+     To view the users on this server instance, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.sysusers;  
@@ -101,7 +101,7 @@ manager: "jhubbard"
   
      For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
   
-     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement:  
+     To view the certificates on this server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
     SELECT * FROM sys.certificates  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 5.  Grant CONNECT permission on the login for the remote mirroring endpoint.  
   
-     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements:  
+     For example, to grant permission on HOST_A to the remote server instance on HOST_B to connect to its local login—that is, to connect to `HOST_B_login`—use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  

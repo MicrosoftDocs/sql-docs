@@ -65,27 +65,27 @@ manager: "jhubbard"
  The default language for all new logins, unless otherwise specified.  
   
  **Full-Text Upgrade Option**  
- Controls how full-text indexes are migrated when upgrading a database from [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. This property applies to upgrading by attaching a database, restoring a database backup, restoring a file backup, or copying the database by using the Copy Database Wizard.  
+ Controls how full-text indexes are migrated when upgrading a database from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. This property applies to upgrading by attaching a database, restoring a database backup, restoring a file backup, or copying the database by using the Copy Database Wizard.  
   
  The alternatives are as follows:  
   
  **Import**  
  Full-text catalogs are imported. This operation is significantly faster than **Rebuild**. However, an imported full-text catalog does not use the new and enhanced word breakers that are introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Therefore, you might want to rebuild your full-text catalogs eventually.  
   
- If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] databases.  
+ If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] databases.  
   
  **Rebuild**  
  Full-text catalogs are rebuilt using the new and enhanced word breakers. Rebuilding indexes can take awhile, and a significant amount of CPU and memory might be required after the upgrade.  
   
  **Reset**  
- Full-text catalogs are reset. [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
+ Full-text catalogs are reset. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
   
  For information about how to choose the full-text upgrade option, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
   
 > [!NOTE]  
 >  The full-text upgrade option can also be set by using the [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)upgrade_option action.  
   
- After you attach, restore, or copy a [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database becomes available immediately and is then automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../2014/database-engine/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ After you attach, restore, or copy a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database becomes available immediately and is then automatically upgraded. If the database has full-text indexes, the upgrade process either imports, resets, or rebuilds them, depending on the setting of the **Full-Text Upgrade Option** server property. If the upgrade option is set to **Import** or **Rebuild**, the full-text indexes will be unavailable during the upgrade. Depending on the amount of data being indexed, importing can take several hours, and rebuilding can take up to ten times longer. Note also that when the upgrade option is set to **Import**, if a full-text catalog is not available, the associated full-text indexes are rebuilt. For information about viewing or changing the setting of the **Full-Text Upgrade Option** property, see [Manage and Monitor Full-Text Search for a Server Instance](../../2014/database-engine/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Max Text Replication Size**  
  Specifies the maximum size (in bytes) of `text`, `ntext`, `varchar(max)`, `nvarchar(max)`, `xml`, and `image` data that can be added to a replicated column or captured column in a single INSERT, UPDATE, WRITETEXT, or UPDATETEXT statement. Changing the setting takes effect immediately. For more information, see [Configure the max text repl size Server Configuration Option](configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  

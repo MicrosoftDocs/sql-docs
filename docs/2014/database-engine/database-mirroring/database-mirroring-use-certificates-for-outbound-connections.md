@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 1.  On the **master** database, create the database Master Key, if none exists. To view the existing keys for a database, use the [sys.symmetric_keys](~/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) catalog view.  
   
-     To create the database Master Key, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] command:  
+     To create the database Master Key, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command:  
   
     ```  
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<1_Strong_Password!>';  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
      For more information, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md).  
   
-     To view the certificates in the **master** database, you can use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements:  
+     To view the certificates in the **master** database, you can use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  

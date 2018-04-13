@@ -190,10 +190,10 @@ manager: "jhubbard"
   
 1.  After a forced failover, the secondary replica to which you failed over becomes the new primary replica. However, to make that availability replica accessible to clients, you might need to reconfigure the WSFC quorum or adjust the availability-mode configuration of the availability group, as follows:  
   
-    -   **If you failed over outside of the [!INCLUDE[ssFosAuto](../../../../../includes/ssfosauto-md.md)]:**  Adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. If the WSFC node that hosts the target secondary replica does not have a WSFC quorum vote, you might need to force WSFC quorum.  
+    -   **If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:**  Adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. If the WSFC node that hosts the target secondary replica does not have a WSFC quorum vote, you might need to force WSFC quorum.  
   
         > [!NOTE]  
-        >  An [!INCLUDE[ssFosAuto](../../../../../includes/ssfosauto-md.md)] exists only if two availability replicas (including the previous primary replica) are configured for synchronous-commit mode with automatic failover.  
+        >  An [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] exists only if two availability replicas (including the previous primary replica) are configured for synchronous-commit mode with automatic failover.  
   
          **To adjust quorum votes**  
   
@@ -203,10 +203,10 @@ manager: "jhubbard"
   
         -   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **If you failed over outside of the [!INCLUDE[ssFosSync](../../../../../includes/ssfossync-md.md)]:** We recommend that you consider adjusting the availability mode and failover mode on the new primary replica and on remaining secondary replicas to reflect your desired synchronous-commit and automatic failover configuration.  
+    -   **If you failed over outside of the [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]:** We recommend that you consider adjusting the availability mode and failover mode on the new primary replica and on remaining secondary replicas to reflect your desired synchronous-commit and automatic failover configuration.  
   
         > [!NOTE]  
-        >  A [!INCLUDE[ssFosSync](../../../../../includes/ssfossync-md.md)] exists only if the current primary replica is configured for synchronous-commit mode.  
+        >  A [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] exists only if the current primary replica is configured for synchronous-commit mode.  
   
          **To change the availability mode and failover mode**  
   

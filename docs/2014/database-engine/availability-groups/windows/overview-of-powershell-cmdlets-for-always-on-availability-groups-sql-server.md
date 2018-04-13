@@ -48,9 +48,9 @@ manager: "jhubbard"
   
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
-|`Disable-SqlAlwaysOn`|Disables the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the `Path`, `InputObject`, or `Name` parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
-|`Enable-SqlAlwaysOn`|Enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
-|`New-SqlHadrEndPoint`|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)]|  
+|`Disable-SqlAlwaysOn`|Disables the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on a server instance.|The server instance that is specified by the `Path`, `InputObject`, or `Name` parameter. (Must be an edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
+|`Enable-SqlAlwaysOn`|Enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that supports the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature. For information about support for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Any edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|`New-SqlHadrEndPoint`|Creates a new database mirroring endpoint on a server instance. This endpoint is required for data movement between primary and secondary databases.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Changes the properties of an existing database mirroring endpoint, such as the name, state, or authentication properties.|A server instance that supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and lacks a database mirroring endpoint|  
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
@@ -58,7 +58,7 @@ manager: "jhubbard"
 |Cmdlets|Description|Supported on|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Creates a data or log backup.|Any online database (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a database on the server instance that hosts the primary replica)|  
-|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
+|`Restore-SqlDatabase`|Restores a backup.|Any instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], a server instance that hosts a secondary replica)<br /><br /> **\*\* Important \*\*** When preparing a secondary database, you must use the `-NoRecovery` parameter in every `Restore-SqlDatabase` command.|  
   
  For information about using these cmdlets to prepare a secondary database, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 |`Suspend-SqlAvailabilityDatabase`|Suspends the data movement for an availability database.|Any server instance that hosts an availability replica.|  
   
 ##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
- The following [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
+ The following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlets enable you to monitor the health of an availability group and its replicas and databases.  
   
 > [!IMPORTANT]  
 >  You must have CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions to execute these cmdlets.  

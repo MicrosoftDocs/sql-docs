@@ -145,9 +145,9 @@ manager: "jhubbard"
 >  For information about how to perform these backup and restore operations, see [Related Backup and Restore Tasks](#RelatedTasks), later in this topic.  
   
 ###  <a name="ExampleTsql"></a> Transact-SQL Example  
- The following example prepares a secondary database. This example uses the [!INCLUDE[ssSampleDBobject](../../../../../../../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
+ The following example prepares a secondary database. This example uses the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] sample database, which uses the simple recovery model by default.  
   
-1.  To use the [!INCLUDE[ssSampleDBobject](../../../../../../../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
+1.  To use the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database, modify it to use the full recovery model:  
   
     ```  
     USE master;  
@@ -157,7 +157,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-2.  After modifying the recovery model of the database from SIMPLE to FULL, create a full backup, which can be used to create the secondary database. Because the recovery model has just been changed, the WITH FORMAT option is specified to create a new media set. This is useful to separate the backups under the full recovery model from any previous backups made under the simple recovery model. For the purpose of this example, the backup file (C:\\[!INCLUDE[ssSampleDBobject](../../../../../../../includes/sssampledbobject-md.md)].bak) is created on the same drive as the database.  
+2.  After modifying the recovery model of the database from SIMPLE to FULL, create a full backup, which can be used to create the secondary database. Because the recovery model has just been changed, the WITH FORMAT option is specified to create a new media set. This is useful to separate the backups under the full recovery model from any previous backups made under the simple recovery model. For the purpose of this example, the backup file (C:\\[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].bak) is created on the same drive as the database.  
   
     > [!NOTE]  
     >  For a production database, you should always back up to a separate device.  

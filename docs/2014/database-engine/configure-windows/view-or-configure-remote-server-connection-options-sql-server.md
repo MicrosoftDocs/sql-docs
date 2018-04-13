@@ -77,7 +77,7 @@ EXEC sp_helpserver ;
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_serveroption](~/relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) to configure a remote server. The example configures a remote server corresponding to another instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `SEATTLE3`, to be collation compatible with the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_serveroption](~/relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md) to configure a remote server. The example configures a remote server corresponding to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `SEATTLE3`, to be collation compatible with the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```tsql  
 USE master;  

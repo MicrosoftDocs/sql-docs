@@ -60,7 +60,7 @@ manager: "jhubbard"
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
+5.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
 6.  At the secondary server, restore the service master key that was backed up from the primary. For more information, see [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-service-master-key-transact-sql.md).  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
-4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
+4.  At the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
      You might receive an error message from the Log Reader Agent that the publication database and the distribution database are not synchronized.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
   
-2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
+2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
 3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
     -   If the publication is filtered, you might not be able to bring the publication database up-to-date. Consider a table that is partitioned such that each subscription receives customer data only for a single region: North, East, South, and West. If there is at least one Subscriber for each partition of data, synchronizing with a Subscriber for each partition should bring the publication database up-to-date. However, if data in the West partition, for example, was not replicated to any Subscribers, this data at the Publisher cannot be brought up-to-date. In this case, we recommend reinitializing all subscriptions so that the data at the Publisher and Subscribers converges. For more information, see [Reinitialize Subscriptions](../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
   
-     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../2014/relational-databases/replication/synchronize-data.md).  
+     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../2014/relational-databases/replication/synchronize-data.md).  
   
 ## See Also  
  [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   

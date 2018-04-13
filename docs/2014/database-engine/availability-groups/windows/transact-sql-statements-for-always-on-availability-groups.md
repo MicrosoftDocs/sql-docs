@@ -30,12 +30,12 @@ manager: "jhubbard"
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md) creates a new availability group and optionally an availability group listener. Minimally, you must specify your local server instance, which will become the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
   
- Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)] that you want to host the initial primary replica of your new availability group. This server instance must reside on a node of a Windows Server Failover Cluster (WSFC) (for more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that you want to host the initial primary replica of your new availability group. This server instance must reside on a node of a Windows Server Failover Cluster (WSFC) (for more information, see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md) supports changing an existing availability group or availability group listener and for failing over an availability group.  
   
- Execute ALTER AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)] that hosts the current primary replica.  
+ Execute ALTER AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the current primary replica.  
   
 ##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
  The options of the [SET HADR](~/t-sql/statements/alter-database-transact-sql-set-hadr.md) clause of the ALTER DATABASE statement enables you to join a secondary database to the availability group of the corresponding primary database, remove a joined database, and suspend data synchronization on a joined database, and resume data synchronization.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ##  <a name="Restrictions"></a> Restrictions on the AVAILABILITY GROUP Transact-SQL Statements  
  The CREATE AVAILABILITY GROUP, ALTER AVAILABILITY GROUP, and DROP AVAILABILITY GROUP [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements have the following limitations:  
   
--   With the exception of DROP AVAILABILITY GROUP, executing these statements requires that the HADR service is enabled on the instance of [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
+-   With the exception of DROP AVAILABILITY GROUP, executing these statements requires that the HADR service is enabled on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 -   These statements cannot be executed within transactions or batches.  
   

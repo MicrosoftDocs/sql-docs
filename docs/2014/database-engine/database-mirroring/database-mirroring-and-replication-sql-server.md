@@ -83,7 +83,7 @@ manager: "jhubbard"
   
     -   Merge Agent (for merge subscriptions)  
   
-    -   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] replication listener (replisapi.dll: for merge subscriptions synchronized using Web synchronization)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication listener (replisapi.dll: for merge subscriptions synchronized using Web synchronization)  
   
     -   SQL Merge ActiveX Control (for merge subscriptions synchronized with the control)  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
 ## Maintaining a Mirrored Publication Database  
  Maintaining a mirrored publication database is essentially the same as maintaining a non-mirrored database, with the following considerations:  
   
--   Administration and monitoring must occur at the active server. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder only for the active server. For example, if you failover to the mirror, the publications are displayed at the mirror and are no longer displayed at the principal. If the database fails over to the mirror, you might need to manually refresh [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] and Replication Monitor for the change to be reflected.  
+-   Administration and monitoring must occur at the active server. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], publications appear under the **Local Publications** folder only for the active server. For example, if you failover to the mirror, the publications are displayed at the mirror and are no longer displayed at the principal. If the database fails over to the mirror, you might need to manually refresh [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and Replication Monitor for the change to be reflected.  
   
 -   Replication Monitor displays Publisher nodes in the object tree for both the principal and the mirror. If the principal is the active server, publication information is displayed only under the principal node in Replication Monitor.  
   
@@ -136,9 +136,9 @@ manager: "jhubbard"
      If you enable a publication database at the mirror after failover to the mirror, the Publisher instance name stored in system tables is the name of the mirror; in this case, you would use the name of the mirror for the **@publisher** parameter.  
   
     > [!NOTE]  
-    >  In some cases, such as **sp_addpublication**, the **@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] database mirroring.  
+    >  In some cases, such as **sp_addpublication**, the **@publisher** parameter is supported only for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers; in these cases, it is not relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring.  
   
--   To synchronize a subscription in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] after a failover: synchronize pull subscriptions from the Subscriber; and synchronize push subscriptions from the active Publisher.  
+-   To synchronize a subscription in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] after a failover: synchronize pull subscriptions from the Subscriber; and synchronize push subscriptions from the active Publisher.  
   
 ### Replication Behavior if Mirroring is Removed  
  Keep the following issues in mind if database mirroring is removed from a published database:  

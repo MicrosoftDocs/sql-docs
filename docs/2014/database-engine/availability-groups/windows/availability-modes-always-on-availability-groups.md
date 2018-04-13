@@ -23,14 +23,14 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Availability Modes (Always On Availability Groups)
-  In [!INCLUDE[ssHADR](../../../../../../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode or asynchronous-commit mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).  
+  In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode or asynchronous-commit mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).  
   
 > [!NOTE]  
 >  If primary's session-timeout period is exceeded by a secondary replica, the primary replica temporarily shifts into asynchronous-commit mode for that secondary replica. When the secondary replica reconnects with the primary replica, they resume synchronous-commit mode.  
   
   
 ##  <a name="SupportedAvModes"></a> Supported Availability Modes  
- [!INCLUDE[ssHADR](../../../../../../../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
   
 -   *Asynchronous-commit mode* is a disaster-recovery solution that works well when the availability replicas are distributed over considerable distances. If every secondary replica is running under asynchronous-commit mode, the primary replica does not wait for any of the secondary replicas to harden the log. Rather, immediately after writing the log record to the local log file, the primary replica sends the transaction confirmation to the client. The primary replica runs with minimum transaction latency in relation to a secondary replica that is configured for asynchronous-commit mode.  If the current primary is configured for asynchronous commit availability mode, it will commit transactions asynchronously for all secondary replicas regardless of their individual availability mode settings.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Furthermore, for an automatic failover to be possible at a given time, this secondary replica must be synchronized with the primary replica (that is, the secondary databases are all synchronized), and the Windows Server Failover Clustering (WSFC) cluster must have quorum. If the primary replica becomes unavailable under these conditions, automatic failover occurs. The secondary replica switches to the role of primary, and it offers its database as the primary database. For more information, see the "Automatic Failover " section of the [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) topic.  
   
 > [!NOTE]  
->  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../../../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+>  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To change the availability mode and failover mode**  

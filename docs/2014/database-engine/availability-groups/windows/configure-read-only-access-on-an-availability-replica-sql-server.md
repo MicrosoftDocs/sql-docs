@@ -22,7 +22,7 @@ ms.author: "jroth"
 manager: "jhubbard"
 ---
 # Configure Read-Only Access on an Availability Replica (SQL Server)
-  By default both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas of an AlwaysOn availability group. This topic describes how to configure connection access on an availability replica of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../../../../../includes/tsql-md.md)], or PowerShell.  
+  By default both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas of an AlwaysOn availability group. This topic describes how to configure connection access on an availability replica of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell.  
   
  For information about the implications of enabling read-only access for a secondary replica and for an introduction to connection access, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) and [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../../../../../includes/tsql-md.md)] statement. If you are adding or modifying a replica of an existing availability group, use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../../../../../includes/tsql-md.md)] statement.  
+2.  If you are specifying a replica for a new availability group, use the [CREATE AVAILABILITY GROUP](~/t-sql/statements/create-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. If you are adding or modifying a replica of an existing availability group, use the [ALTER AVAILABILITY GROUP](~/t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement.  
   
     -   To configure connection access for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
@@ -160,7 +160,7 @@ GO
          All connections are allowed to the databases in the primary replica. This is the default setting.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   

@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../mssqlserver-1418.md).  
   
-4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement.  
+4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT state_desc FROM sys.database_mirroring_endpoints  
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
      For more information about the **state_desc** column, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
   
-     To start an endpoint, use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement.  
+     To start an endpoint, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
     ```  
     ALTER ENDPOINT Endpoint_Mirroring   
@@ -80,7 +80,7 @@ manager: "jhubbard"
   
      For more information, see [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md).  
   
-5.  Check that the ROLE is correct. On each server instance use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement.  
+5.  Check that the ROLE is correct. On each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT role FROM sys.database_mirroring_endpoints;  
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
      For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
   
-6.  The login for the service account from the other server instance requires CONNECT permission. Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement.  
+6.  The login for the service account from the other server instance requires CONNECT permission. Make sure that the login from the other server has CONNECT permission. To determine who has CONNECT permission for an endpoint, on each server instance use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
     ```  
     SELECT 'Metadata Check';  

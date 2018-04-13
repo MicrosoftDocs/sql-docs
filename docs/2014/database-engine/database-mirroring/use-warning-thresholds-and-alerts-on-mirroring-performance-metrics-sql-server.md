@@ -71,7 +71,7 @@ manager: "jhubbard"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|Drops the warning for a specified performance metric.|  
   
 ## Performance-Threshold Events Sent to the Windows Event Log  
- If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
+ If warning thresholdis defined for a performance metric, when the status table is updated, the latest value is evaluated against the threshold. If the threshold has been reached, the update procedure, **sp_dbmmonitorupdate**, generates an informational event—a *performance-threshold event*— for the metric and writes the event to the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log. The following table lists the event IDs of the performance-threshold events.  
   
 |Performance metric|Event ID|  
 |------------------------|--------------|  
@@ -99,7 +99,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  For more information, see [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
   
- A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Operations Manager.  
+ A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager.  
   
  When you define alerts on database mirroring events, we recommend that you define warning thresholds and alerts at both partner server instances. Individual events are generated at either the principal server or the mirror server, but each partner can perform either role at any time. To make sure that an alert continues to operate after a failover, the alert must be defined at both partners.  
   

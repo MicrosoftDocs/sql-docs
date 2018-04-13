@@ -74,16 +74,16 @@ manager: "jhubbard"
   
     -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
-         Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] that hosts the availability replica to be altered. The components of this address are as follows:  
+         Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the availability replica to be altered. The components of this address are as follows:  
   
          *system_name*  
          Is the NetBIOS name of the computer system on which a stand-alone server instance resides.  
   
          *FCI_network_name*  
-         Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] failover cluster in which a target server instance is a [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] failover partner (an FCI).  
+         Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster in which a target server instance is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover partner (an FCI).  
   
          *instance_name*  
-         Is the name of the instance of [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] that hosts the target availability replica. For a default server instance, *instance_name* is optional.  
+         Is the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the target availability replica. For a default server instance, *instance_name* is optional.  
   
      For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md).  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   

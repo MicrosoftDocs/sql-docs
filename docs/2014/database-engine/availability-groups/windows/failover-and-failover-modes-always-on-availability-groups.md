@@ -48,13 +48,13 @@ manager: "jhubbard"
  Forced failover (with possible data loss)  
  A failover that can be initiated by a database administrator when no secondary replica is SYNCHRONIZED with the primary replica or the primary replica is not running and no secondary replica is failover ready. Forced failover risks possible data loss and is recommended strictly for disaster recovery. Forced failover is also known as forced manual failover because it can only be initiated manually. This is the only form of failover supported by in asynchronous-commit availability mode.  
   
- [!INCLUDE[ssFosAutoC](../../../../../includes/ssfosautoc-md.md)]  
- Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../../../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+ [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
+ Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- [!INCLUDE[ssFosSyncC](../../../../../includes/ssfossyncc-md.md)]  
+ [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- [!INCLUDE[ssFosEntireC](../../../../../includes/ssfosentirec-md.md)]  
+ [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]  
  Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The [!INCLUDE[ssFosEntire](../../../includes/ssfosentire-md.md)]becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
   
 ##  <a name="Overview"></a> Overview of Failover  
@@ -76,13 +76,13 @@ manager: "jhubbard"
 ### Failover Sets  
  The forms of failover that are possible for a given availability group can be understood in terms of failover sets. A failover set consists of the primary replica and secondary replicas that support a given form of failover, as follows:  
   
--   **[!INCLUDE[ssFosAutoC](../../../../../includes/ssfosautoc-md.md)] (optional):**  Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An automatic failover set takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (optional):**  Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An automatic failover set takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
--   **[!INCLUDE[ssFosSyncC](../../../../../includes/ssfossyncc-md.md)] (optional):**  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A synchronous-commit failover set takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (optional):**  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A synchronous-commit failover set takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
   
--   **[!INCLUDE[ssFosEntireC](../../../../../includes/ssfosentirec-md.md)] :**  Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The entire failover set becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Within a given availability group, the set of all availability replicas whose operational state is currently ONLINE, regardless of availability mode and of failover mode. The entire failover set becomes relevant when no secondary replica is currently SYNCHRONIZED with the primary replica.  
   
- When you configure an availability replica as synchronous commit with automatic failover, the availability replica becomes part of the [!INCLUDE[ssFosAuto](../../../../../includes/ssfosauto-md.md)]. However whether the set takes effect depends the current primary. The forms of failover that are actually possible at a given time depends on what failover sets are currently in effect.  
+ When you configure an availability replica as synchronous commit with automatic failover, the availability replica becomes part of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. However whether the set takes effect depends the current primary. The forms of failover that are actually possible at a given time depends on what failover sets are currently in effect.  
   
  For example, consider an availability group that has four availability replicas, as follows:  
   

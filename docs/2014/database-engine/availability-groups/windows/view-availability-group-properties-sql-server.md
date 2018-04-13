@@ -43,7 +43,7 @@ manager: "jhubbard"
  To query the properties and states of the availability groups for which the server instance hosts an availability replica, use the following views:  
   
  [sys.availability_groups](~/relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
- Returns a row for each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
+ Returns a row for each availability group for which the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
   
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
  **Column names:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
  [sys.dm_hadr_availability_group_states](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
- Returns a row for each availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
+ Returns a row for each availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   
  **Column names:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   

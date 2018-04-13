@@ -80,7 +80,7 @@ For info about how to connect to files and file shares, see [Store and retrieve 
 
 When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to various **Azure** data sources and to **Excel and Access** files, in addition to the data sources supported by the built-in components.
 
-You can also install additional components. For more info, see [Custom setup for the Azure-SSIS integration runtime](how-to-configure-azure-ssis-ir-custom-setup.md).
+You can also install additional components. For more info, see [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## Deploy and run packages
 You have to use the **project deployment model**, not the package deployment model, when you deploy projects to SSISDB on Azure.

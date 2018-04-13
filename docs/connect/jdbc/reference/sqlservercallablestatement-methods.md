@@ -2,7 +2,7 @@
 title: "SQLServerCallableStatement Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 2af91aa4-f725-4cfe-9fbc-b91b4784c437
 caps.latest.revision: 39
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerCallableStatement Methods

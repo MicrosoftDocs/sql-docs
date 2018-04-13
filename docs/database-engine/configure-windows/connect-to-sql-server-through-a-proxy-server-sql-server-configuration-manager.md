@@ -2,7 +2,7 @@
 title: "Connect to SQL Server with Proxy Server-SQL Server Config Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/15/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

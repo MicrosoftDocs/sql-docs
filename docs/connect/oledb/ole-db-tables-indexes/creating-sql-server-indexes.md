@@ -3,7 +3,7 @@ title: "Creating SQL Server Indexes | Microsoft Docs"
 description: "Creating SQL Server indexes using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-tables-indexes"
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "adding indexes"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating SQL Server Indexes

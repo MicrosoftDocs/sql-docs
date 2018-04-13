@@ -3,7 +3,7 @@ title: "Creating a Rowset with IOpenRowset | Microsoft Docs"
 description: "Creating a rowset with IOpenRowset interface of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-rowsets"
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating a Rowset with IOpenRowset

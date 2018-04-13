@@ -2,7 +2,7 @@
 title: "Publication Information, Tracer Tokens (SQL Server 2005 and Later) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "replication"

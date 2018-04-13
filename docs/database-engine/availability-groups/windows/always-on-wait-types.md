@@ -13,7 +13,7 @@ ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 caps.latest.revision: 6
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Always On Availability Groups wait types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

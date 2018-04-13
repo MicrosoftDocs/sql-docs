@@ -3,7 +3,7 @@ title: "IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs"
 description: "Using IBCPSession::BCPReadFmt for reading data from a format file (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-interfaces"
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "BCPReadFmt method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IBCPSession::BCPReadFmt (OLE DB)

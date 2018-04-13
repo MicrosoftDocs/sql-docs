@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server Data Tools and Visual Studio 2017 - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
@@ -18,6 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Data Tools - License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

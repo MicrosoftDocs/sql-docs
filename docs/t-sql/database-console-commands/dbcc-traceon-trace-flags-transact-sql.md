@@ -2,7 +2,7 @@
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|database-console-commands"

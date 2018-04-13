@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tutorial: Configure Replication between a Server and Mobile Clients (Merge) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
@@ -22,6 +22,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tutorial: Configure Replication between a Server and Mobile Clients (Merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

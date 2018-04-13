@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
@@ -27,6 +27,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

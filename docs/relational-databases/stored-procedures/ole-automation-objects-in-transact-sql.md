@@ -1,4 +1,4 @@
----
+﻿---
 title: "OLE Automation Objects in Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -23,6 +23,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE Automation Objects in Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

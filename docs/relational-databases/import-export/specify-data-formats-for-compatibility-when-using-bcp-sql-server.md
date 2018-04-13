@@ -1,4 +1,4 @@
----
+﻿---
 title: "Specify Data Formats for Compatibility when Using bcp (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,6 +24,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Specify Data Formats for Compatibility when Using bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

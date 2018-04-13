@@ -1,4 +1,4 @@
----
+﻿---
 title: "What's new in SQL Server 2017 Analysis Services | Microsoft Docs"
 ms.date: "10/27/2017"
 ms.prod: analysis-services
@@ -16,6 +16,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
 ms.workload: "On Demand"
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
@@ -35,6 +35,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # Transact-SQL Syntax Conventions (Transact-SQL)

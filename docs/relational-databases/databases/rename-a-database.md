@@ -1,4 +1,4 @@
----
+﻿---
 title: "Rename a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2017"
@@ -21,6 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename a Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

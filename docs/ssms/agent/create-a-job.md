@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create a Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -21,6 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

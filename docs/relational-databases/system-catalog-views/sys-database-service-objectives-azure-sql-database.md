@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.database_service_objectives (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2016"
@@ -23,6 +23,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

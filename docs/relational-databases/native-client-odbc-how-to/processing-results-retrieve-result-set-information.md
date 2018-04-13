@@ -1,4 +1,4 @@
----
+﻿---
 title: "Retrieve Result Set Information (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -21,6 +21,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Processing Results - Retrieve Result Set Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.database_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
@@ -27,6 +27,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -36,6 +36,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

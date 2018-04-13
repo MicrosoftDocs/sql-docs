@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.fulltext_languages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -28,6 +28,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

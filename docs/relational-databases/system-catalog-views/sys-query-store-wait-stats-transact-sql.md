@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2017"
@@ -26,6 +26,7 @@ author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

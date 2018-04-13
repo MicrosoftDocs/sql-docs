@@ -1,4 +1,4 @@
----
+﻿---
 title: "+ (Addition) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -31,6 +31,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # + (Addition) (Transact-SQL)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

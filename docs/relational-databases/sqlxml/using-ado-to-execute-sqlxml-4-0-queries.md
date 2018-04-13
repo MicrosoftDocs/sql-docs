@@ -1,4 +1,4 @@
----
+﻿---
 title: "Using ADO to Execute SQLXML 4.0 Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,6 +24,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using ADO to Execute SQLXML 4.0 Queries
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

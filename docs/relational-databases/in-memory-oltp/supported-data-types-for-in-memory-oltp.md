@@ -1,4 +1,4 @@
----
+﻿---
 title: "Supported Data Types for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Supported Data Types for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

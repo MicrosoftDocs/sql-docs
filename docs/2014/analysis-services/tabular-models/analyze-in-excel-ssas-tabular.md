@@ -55,7 +55,7 @@ manager: "mblythe"
   
 ## See Also  
  [Analyze a Tabular Model in Excel &#40;SSAS Tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [Roles &#40;SSAS Tabular&#41;](../roles-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../perspectives-ssas-tabular.md)  
+ [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)  
   
   

@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Attribute Element (XMLA)
-  Defines or filters a member in an attribute on which a parent [Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../../dev-guide/update-element-xmla.md), or [Drop](../xml-elements-commands/drop-element-xmla.md) command performs.  
+  Defines or filters a member in an attribute on which a parent [Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), or [Drop](../xml-elements-commands/drop-element-xmla.md) command performs.  
   
 ## Syntax  
   
@@ -72,7 +72,7 @@ manager: "mblythe"
 |-|-|  
 |**Ancestor or Parent**|**Child Element**|  
 |[Drop](../xml-elements-commands/drop-element-xmla.md), [Where](name-element-xmla.md), [Keys](keys-element-xmla.md)|  
-|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../../dev-guide/update-element-xmla.md)|[AttributeName](../../dev-guide/name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md), [CustomRollupProperties](properties-element-xmla.md), [Keys](keys-element-xmla.md), [Name](../../dev-guide/name-element-xmla.md), [SkippedLevels](skippedlevels-element-xmla.md), [Translations](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
+|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md)|[AttributeName](name-element-xmla.md), [CustomRollup](customrollup-element-xmla.md), [CustomRollupProperties](properties-element-xmla.md), [Keys](keys-element-xmla.md), [Name](name-element-xmla.md), [SkippedLevels](skippedlevels-element-xmla.md), [Translations](translations-element-xmla.md), [UnaryOperator](unaryoperator-element-xmla.md)|  
   
 ## Remarks  
  The `Attribute` element defines the attribute member that is inserted, updated, or deleted, respectively, by the `Insert`, `Update`, or `Drop` command. As these commands can operate only on one attribute member at a time, the [Attributes](attributes-element-xmla.md) collection of the `Insert`, `Update`, and `Drop` commands can contain only one `Attribute` element. However, the `Attributes` collection of the `Where` element for the `Drop` and `Update` commands can contain more than one `Attribute` element, so that you can filter the attributes to be dropped or updated in a write-enabled dimension.  

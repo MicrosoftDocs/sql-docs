@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[CubeInfo](cubeinfo-element-xmla.md)|  
-|Child elements|[CubeName](name-element-xmla.md), [LastDataUpdate](../../dev-guide/update-element-xmla.md), [LastSchemaUpdate](lastschemaupdate-element-xmla.md)|  
+|Child elements|[CubeName](name-element-xmla.md), [LastDataUpdate](../xml-elements-commands/update-element-xmla.md), [LastSchemaUpdate](lastschemaupdate-element-xmla.md)|  
   
 ## Remarks  
   

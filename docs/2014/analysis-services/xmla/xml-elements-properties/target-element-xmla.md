@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Target Element (XMLA)
-  Represents the target partition to be merged during a [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) command.  
+  Represents the target partition to be merged during a [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) command.  
   
 ## Syntax  
   
@@ -57,14 +57,14 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)|  
-|Child elements|[CubeID](../xmla/xml-elements-properties/id-element-xmla.md), [DatabaseID](../xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../xmla/xml-elements-properties/partitionid-element-xmla.md)|  
+|Parent elements|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
+|Child elements|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## Remarks  
- The `Target` element is an object reference to a single partition into which the contents of the source partitions, specified by the [Sources](../xmla/xml-elements-properties/sources-element-xmla.md) element of the parent `MergePartitions` element, are to be merged.  
+ The `Target` element is an object reference to a single partition into which the contents of the source partitions, specified by the [Sources](sources-element-xmla.md) element of the parent `MergePartitions` element, are to be merged.  
   
 ## Example  
- The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  
+ The following example combines all four partitions of the Internet Sales measure group into the `Internet_Sales_2004` target partition. The example refers to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] cube of the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
   
 ```  
 <MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -93,7 +93,7 @@ manager: "mblythe"
 ```  
   
 ## See Also  
- [Source Element &#40;XMLA&#41;](../xmla/xml-elements-properties/source-element-xmla.md)   
- [Properties &#40;XMLA&#41;](../xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Source Element &#40;XMLA&#41;](source-element-xmla.md)   
+ [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

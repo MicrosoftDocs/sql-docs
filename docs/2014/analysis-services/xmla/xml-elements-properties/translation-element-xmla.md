@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Translations](translations-element-xmla.md)|  
-|Child elements|[Language](language-element-xmla.md), [Name](../../dev-guide/name-element-xmla.md)|  
+|Child elements|[Language](language-element-xmla.md), [Name](name-element-xmla.md)|  
   
 ## Remarks  
  A `Translation` element defines the information needed to associate an attribute member to a translation defined for a given attribute during an [Insert](../xml-elements-commands/insert-element-xmla.md) or [Update](../xml-elements-commands/update-element-xmla.md) command.  

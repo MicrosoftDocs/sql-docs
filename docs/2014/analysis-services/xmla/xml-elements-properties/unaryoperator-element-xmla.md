@@ -63,8 +63,8 @@ manager: "mblythe"
  For more information about MDX expressions, see [Expressions &#40;MDX&#41;](~/mdx/expressions-mdx.md).  
   
 ## See Also  
- [Insert Element &#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update Element &#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
+ [Insert Element &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
+ [Update Element &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

@@ -56,7 +56,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|Child elements|[Sources](../xml-elements-properties/sources-element-xmla.md), [Target](../../dev-guide/target-element-xmla.md)|  
+|Child elements|[Sources](../xml-elements-properties/sources-element-xmla.md), [Target](../xml-elements-properties/target-element-xmla.md)|  
   
 ## Remarks  
  All object references in the `Sources` and `Target` elements must point to distinct partitions in the same measure group. Otherwise, an error occurs.  

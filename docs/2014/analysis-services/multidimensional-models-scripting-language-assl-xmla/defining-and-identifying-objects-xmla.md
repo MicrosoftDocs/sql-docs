@@ -40,7 +40,7 @@ manager: "mblythe"
  [Object Element &#40;XMLA&#41;](../xmla/xml-elements-properties/object-element-xmla.md)   
  [ParentObject Element &#40;XMLA&#41;](../xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [Source Element &#40;XMLA&#41;](../xmla/xml-elements-properties/source-element-xmla.md)   
- [Target Element &#40;XMLA&#41;](../dev-guide/target-element-xmla.md)   
+ [Target Element &#40;XMLA&#41;](../xmla/xml-elements-properties/target-element-xmla.md)   
  [Developing with XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

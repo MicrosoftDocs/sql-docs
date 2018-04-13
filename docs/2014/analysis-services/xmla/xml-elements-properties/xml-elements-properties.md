@@ -141,7 +141,7 @@ manager: "mblythe"
 |[SynchronizeSecurity Element &#40;XMLA&#41;](synchronizesecurity-element-xmla.md)||  
 |[TableNotification Element &#40;XMLA&#41;](tablenotification-element-xmla.md)||  
 |[TableNotifications Element &#40;XMLA&#41;](tablenotifications-element-xmla.md)||  
-|[Target Element &#40;XMLA&#41;](../../dev-guide/target-element-xmla.md)||  
+|[Target Element &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)||  
 |[Time Element &#40;XMLA&#41;](time-element-xmla.md)||  
 |[Translation Element &#40;XMLA&#41;](translation-element-xmla.md)||  
 |[Translations Element &#40;XMLA&#41;](translations-element-xmla.md)||  

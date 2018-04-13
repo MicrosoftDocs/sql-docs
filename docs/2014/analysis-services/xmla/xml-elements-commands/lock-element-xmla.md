@@ -69,7 +69,7 @@ manager: "mblythe"
  All locks are held in the context of the current transaction. When the current transaction is committed or rolled back, all locks defined within the transaction are automatically released.  
   
 ## See Also  
- [Unlock Element &#40;XMLA&#41;](../../dev-guide/lock-element-xmla.md)   
+ [Unlock Element &#40;XMLA&#41;](lock-element-xmla.md)   
  [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

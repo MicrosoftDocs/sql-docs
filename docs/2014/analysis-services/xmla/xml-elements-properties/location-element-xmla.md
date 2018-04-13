@@ -74,7 +74,7 @@ manager: "mblythe"
   
 |Ancestor or Parent|Child Element|  
 |------------------------|-------------------|  
-|[Backup](../../dev-guide/id-element-xmla.md), [File](file-element-xmla.md)|  
+|[Backup](id-element-xmla.md), [File](file-element-xmla.md)|  
 |[Restore](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [File](file-element-xmla.md), [Folders](folders-element-xmla.md)|  
 |[Synchronize](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md), [DataSourceID](datasourceid-element-xmla.md), [DataSourceType](type-element-xmla.md), [Folders](folders-element-xmla.md)|  
   

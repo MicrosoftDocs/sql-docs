@@ -61,7 +61,7 @@ manager: "mblythe"
   
 ## See Also  
  [CancelAssociated Element &#40;XMLA&#41;](cancelassociated-element-xmla.md)   
- [ConnectionID Element &#40;XMLA&#41;](../../dev-guide/id-element-xmla.md)   
+ [ConnectionID Element &#40;XMLA&#41;](id-element-xmla.md)   
  [SPID Element &#40;XMLA&#41;](spid-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   

@@ -62,6 +62,6 @@ manager: "mblythe"
   
 ## See Also  
  [Tabular Model Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
- [Process Tabular Model Partitions &#40;SSAS Tabular&#41;](process-partitions-ssas-tabular.md)  
+ [Process Tabular Model Partitions &#40;SSAS Tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

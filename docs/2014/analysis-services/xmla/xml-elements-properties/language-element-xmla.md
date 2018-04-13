@@ -63,7 +63,7 @@ manager: "mblythe"
 ## See Also  
  [Insert Element &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [Name Element &#40;XMLA&#41;](name-element-xmla.md)   
- [Update Element &#40;XMLA&#41;](../../dev-guide/update-element-xmla.md)   
+ [Update Element &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

@@ -50,7 +50,7 @@ manager: "mblythe"
 |[Subscribe Element](subscribe-element-xmla.md)|Subscribes to a trace and returns a rowset containing the trace events from an Analysis Services instance.|  
 |[Synchronize Element](synchronize-element-xmla.md)|Synchronizes an Analysis Services database with another existing database.|  
 |[Unlock Element](unlock-element-xmla.md)|Unlocks a specified lock on an Analysis Services instance.|  
-|[Update Element](../../dev-guide/update-element-xmla.md)|Updates attribute members in a dimension.|  
+|[Update Element](../xml-elements-commands/update-element-xmla.md)|Updates attribute members in a dimension.|  
 |[UpdateCells Element](updatecells-element-xmla.md)|Updates cells in a write-enabled cube.|  
   
   

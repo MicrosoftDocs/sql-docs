@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Sources](sources-element-xmla.md)|  
-|Child elements|[CubeID](../../dev-guide/id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
+|Child elements|[CubeID](id-element-xmla.md), [DatabaseID](databaseid-element-xmla.md), [MeasureGroupID](measuregroupid-element-xmla.md), [PartitionID](partitionid-element-xmla.md)|  
   
 ## Remarks  
  The `Source` element is an object reference to a single partition to be merged into a target partition specified by the `Target` element of the parent `MergePartitions` element.  
@@ -81,7 +81,7 @@ manager: "mblythe"
 ```  
   
 ## See Also  
- [Target Element &#40;XMLA&#41;](../../dev-guide/target-element-xmla.md)   
+ [Target Element &#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

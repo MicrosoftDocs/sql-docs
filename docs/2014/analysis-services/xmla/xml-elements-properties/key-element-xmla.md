@@ -66,7 +66,7 @@ manager: "mblythe"
  [Drop Element &#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
  [Insert Element &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [KeyColumn Element &#40;ASSL&#41;](../../scripting/objects/column-element-assl.md)   
- [Update Element &#40;XMLA&#41;](../../dev-guide/update-element-xmla.md)   
+ [Update Element &#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [Where Element &#40;XMLA&#41;](where-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   

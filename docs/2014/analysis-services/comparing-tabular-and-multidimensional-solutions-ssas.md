@@ -108,7 +108,7 @@ manager: "mblythe"
 |Many-to-many relationships|[Yes](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Parent-child Hierarchies|[Yes](multidimensional-models/parent-child-dimension.md)|Yes (via DAX)|  
 |Partitions|[Yes](tabular-models/partitions-ssas-tabular.md)|  
-|Perspectives|[Yes](multidimensional-models/perspectives-in-multidimensional-models.md)|[Yes](partitions-ssas-tabular.md)|  
+|Perspectives|[Yes](multidimensional-models/perspectives-in-multidimensional-models.md)|[Yes](tabular-models/partitions-ssas-tabular.md)|  
 |Semi-additive Measures|[Yes](multidimensional-models/define-semiadditive-behavior.md)|Yes (via DAX)|  
 |Translations|[Yes](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |User-defined Hierarchies|[Yes](multidimensional-models/user-defined-hierarchies-create.md)|Yes|  

@@ -66,7 +66,7 @@ manager: "mblythe"
 |*CommitExclusive*|An exclusive lock is established on the specified object. Other shared or exclusive locks cannot be created for the same object.<br /><br /> An exclusive lock prevents transactions containing either read or write operations on a specified object from committing until the exclusive lock is removed.|  
   
 ## See Also  
- [ID Element &#40;XMLA&#41;](../../dev-guide/id-element-xmla.md)   
+ [ID Element &#40;XMLA&#41;](id-element-xmla.md)   
  [Object Element &#40;XMLA&#41;](object-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   

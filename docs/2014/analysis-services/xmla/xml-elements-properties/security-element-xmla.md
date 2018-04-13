@@ -69,7 +69,7 @@ manager: "mblythe"
 |*IgnoreSecurity*|Exclude security definitions during `Backup` or `Restore` commands.|  
   
 ## See Also  
- [SynchronizeSecurity Element &#40;XMLA&#41;](../../dev-guide/security-element-xmla.md)   
+ [SynchronizeSecurity Element &#40;XMLA&#41;](security-element-xmla.md)   
  [Properties &#40;XMLA&#41;](xml-elements-properties.md)  
   
   

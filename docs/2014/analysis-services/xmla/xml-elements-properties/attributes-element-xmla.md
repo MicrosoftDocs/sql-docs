@@ -29,7 +29,7 @@ ms.author: "mblythe"
 manager: "mblythe"
 ---
 # Attributes Element (XMLA)
-  Contains a collection of [Attribute](attribute-element-xmla.md) elements used by the parent [Insert](../xml-elements-commands/insert-element-xmla.md) or [Update](../../dev-guide/update-element-xmla.md) command, or by the parent [Where](where-element-xmla.md) element.  
+  Contains a collection of [Attribute](attribute-element-xmla.md) elements used by the parent [Insert](../xml-elements-commands/insert-element-xmla.md) or [Update](../xml-elements-commands/update-element-xmla.md) command, or by the parent [Where](where-element-xmla.md) element.  
   
 ## Syntax  
   
@@ -56,7 +56,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../../dev-guide/update-element-xmla.md), [Where](where-element-xmla.md)|  
+|Parent elements|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [Where](where-element-xmla.md)|  
 |Child elements|[Attribute](attribute-element-xmla.md)|  
   
 ## Remarks  

@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[TableNotifications](tablenotifications-element-xmla.md)|  
-|Child elements|[DbSchemaName](../../dev-guide/name-element-xmla.md), [DbTableName](dbtablename-element-xmla.md)|  
+|Child elements|[DbSchemaName](name-element-xmla.md), [DbTableName](dbtablename-element-xmla.md)|  
   
 ## Remarks  
   

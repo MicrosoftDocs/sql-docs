@@ -33,7 +33,7 @@ manager: "mblythe"
  Both partitions use different storage settings, but use the same aggregation design. Instead of processing the cube across years of historical data at the end of the year, you can instead use the `MergePartitions` command to merge the partition for the current year into the partition for previous years. This preserves the aggregation data without requiring a potentially time-consuming full processing of the cube.  
   
 ## Specifying Partitions to Merge  
- When the `MergePartitions` command runs, the aggregation data stored in the source partitions specified in the [Source](../xmla/xml-elements-properties/source-element-xmla.md) property is added to the target partition specified in the [Target](../dev-guide/target-element-xmla.md) property.  
+ When the `MergePartitions` command runs, the aggregation data stored in the source partitions specified in the [Source](../xmla/xml-elements-properties/source-element-xmla.md) property is added to the target partition specified in the [Target](../xmla/xml-elements-properties/target-element-xmla.md) property.  
   
 > [!NOTE]  
 >  The `Source` property can contain more than one partition object reference. However, the `Target` property cannot.  

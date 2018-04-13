@@ -82,7 +82,7 @@ manager: "mblythe"
   
 ## See Also  
  [KPIs &#40;SSAS Tabular&#41;](kpis-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../measures-ssas-tabular.md)   
- [Create and Manage Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)  
+ [Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md)   
+ [Create and Manage Measures &#40;SSAS Tabular&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

@@ -53,14 +53,14 @@ manager: "mblythe"
   
 |Ancestor or Parent|Cardinality|  
 |------------------------|-----------------|  
-|[Source](source-element-xmla.md), [Target](../../dev-guide/target-element-xmla.md)|1-1: Required element that occurs once and only once.|  
+|[Source](source-element-xmla.md), [Target](../xml-elements-properties/target-element-xmla.md)|1-1: Required element that occurs once and only once.|  
 |All others|0-1: Optional element that can occur once and only once.|  
   
 ## Element Relationships  
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Object](object-element-xmla.md), [ParentObject](parentobject-element-xmla.md), [Source](source-element-xmla.md), [Target](../../dev-guide/target-element-xmla.md)|  
+|Parent elements|[Object](object-element-xmla.md), [ParentObject](parentobject-element-xmla.md), [Source](source-element-xmla.md), [Target](../xml-elements-properties/target-element-xmla.md)|  
 |Child elements|None|  
   
 ## Remarks  

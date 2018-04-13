@@ -97,7 +97,7 @@ manager: "jhubbard"
      These are Windows Management Instrumentation (WMI) events that are generated when changes occur in the internal state of a database mirroring session.  
   
     > [!NOTE]  
-    >  For more information, see [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
+    >  For more information, see [WMI Provider for Server Events Concepts](../dev-guide/wmi-provider-for-server-events-concepts.md).  
   
  A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager.  
   
@@ -111,9 +111,9 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create an alert using SQL Server Management Studio**  
   
--   [Create an Alert Using an Error Number](../../2014/database-engine/create-an-alert-using-an-error-number.md)  
+-   [Create an Alert Using an Error Number](../create-an-alert-using-an-error-number.md)  
   
--   [Create a WMI Event Alert](../../2014/database-engine/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../create-a-wmi-event-alert.md)  
   
  **To monitor database mirroring**  
   

@@ -40,11 +40,11 @@ manager: "jhubbard"
  A WSFC resource group is created for every availability group that you create. The WSFC cluster monitors this resource group to evaluate the health of the primary replica. The quorum for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is based on all nodes in the WSFC cluster regardless of whether a given cluster node hosts any availability replicas. In contrast to database mirroring, there is no witness role in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 > [!NOTE]  
->  For information about the relationship of SQL Server AlwaysOn components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+>  For information about the relationship of SQL Server AlwaysOn components to the WSFC cluster, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
  The following illustration shows an availability group that contains one primary replica and four secondary replicas. Up to eight secondary replicas are supported, including one primary replica and two synchronous-commit secondary replicas.  
   
- ![Availabilty group with five replicas](../../2014/database-engine/media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
+ ![Availabilty group with five replicas](../../media/aoag-agintrofigure.gif "Availabilty group with five replicas")  
   
   
 ##  <a name="AvDbs"></a> Availability Databases  
@@ -106,7 +106,7 @@ manager: "jhubbard"
 ##  <a name="ClientConnections"></a> Client Connections  
  You can provide client connectivity to the primary replica of a given availability group by creating an availability group listener. An *availability group listener* provides a set of resources that is attached to a given availability group to direct client connections to the appropriate availability replica.  
   
- An availability group listener is associated with a unique DNS name that serves as a virtual network name (VNN), one or more virtual IP addresses (VIPs), and a TCP port number. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md).  
+ An availability group listener is associated with a unique DNS name that serves as a virtual network name (VNN), one or more virtual IP addresses (VIPs), and a TCP port number. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 > [!TIP]  
 >  If an availability group possesses only two availability replicas and is not configured to allow read-access to the secondary replica, clients can connect to the primary replica by using a [database mirroring connection string](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). This approach can be useful temporarily after you migrate a database from database mirroring to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Before you add additional secondary replicas, you will need to create an availability group listener the availability group and update your applications to use the network name of the listener.  
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
      Any availability replica can be configured to allow read-only access to its local databases when performing the secondary role, though some operations are not fully supported. Also, if you would like to prevent read-only workloads from running on the primary replica, you can configure the replicas to allow only read-write access when running under the primary role. For more information, see [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
-     If an availability group currently possesses an availability group listener and one or more readable secondary replicas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can route read-intent connection requests to one of them (*read-only routing*). For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md).  
+     If an availability group currently possesses an availability group listener and one or more readable secondary replicas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can route read-intent connection requests to one of them (*read-only routing*). For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="SessionTimeoutPerios"></a> Session-Timeout Period  
  The session-timeout period is an availability-replica property that determines how long connection with another availability replica can remain inactive before the connection is closed. The primary and secondary replicas ping each other to signal that they are still active. Receiving a ping from the other replica during the timeout period indicates that the connection is still open and that the server instances are communicating. On receiving a ping, an availability replica resets its session-timeout counter on that connection.  
@@ -137,7 +137,7 @@ manager: "jhubbard"
 ##  <a name="APR"></a> Automatic Page Repair  
  Each availability replica tries to automatically recover from corrupted pages on a local database by resolving certain types of errors that prevent reading a data page. If a secondary replica cannot read a page, the replica requests a fresh copy of the page from the primary replica. If the primary replica cannot read a page, the replica broadcasts a request for a fresh copy to all the secondary replicas and gets the page from the first to respond. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error.  
   
- For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../2014/database-engine/automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+ For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -172,11 +172,11 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Overview of Transact-SQL Statements for AlwaysOn Availability Groups &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Overview of PowerShell Cmdlets for AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)   
- [High Availability Support for In-Memory OLTP databases](../../2014/database-engine/high-availability-support-for-in-memory-oltp-databases.md)   
+ [High Availability Support for In-Memory OLTP databases](../../high-availability-support-for-in-memory-oltp-databases.md)   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Active Secondaries: Backup on Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md)  
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

@@ -74,7 +74,7 @@ manager: "jhubbard"
          All connections are allowed to the databases in the primary replica. This is the default setting.  
   
          **Allow read/write connections**  
-         When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. Connections where the Application Intent connection property is set to **ReadOnly** are not allowed. This can help prevent customers from connecting a read-intent work load to the primary replica by mistake. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+         When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. Connections where the Application Intent connection property is set to **ReadOnly** are not allowed. This can help prevent customers from connecting a read-intent work load to the primary replica by mistake. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
@@ -109,7 +109,7 @@ manager: "jhubbard"
      where,  
   
      READ_WRITE  
-     Connections where the Application Intent connection property is set to **ReadOnly** are disallowed.  When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+     Connections where the Application Intent connection property is set to **ReadOnly** are disallowed.  When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      All connections are allowed to the databases in the primary replica. This is the default setting.  
@@ -146,7 +146,7 @@ GO
          No direct connections are allowed to the databases in the secondary replica and the databases are not available for read access. This is the default setting.  
   
          `AllowReadIntentConnectionsOnly`  
-         Connections are allowed only to the databases in the secondary replica where the Application Intent property is set to **ReadOnly**. For more information about this property, see [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+         Connections are allowed only to the databases in the secondary replica where the Application Intent property is set to **ReadOnly**. For more information about this property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
          `AllowAllConnections`  
          All connections are allowed to the databases in the secondary replica for read-only access.  
@@ -154,17 +154,17 @@ GO
     -   To configure connection access for the primary role, specify `ConnectionModeInPrimaryRole`*primary_role_keyword*, where *primary_role_keyword* equals one of the following values:  
   
          `AllowReadWriteConnections`  
-         Connections where the Application Intent connection property is set to ReadOnly are disallowed. When the Application Intent property is set to ReadWrite or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+         Connections where the Application Intent connection property is set to ReadOnly are disallowed. When the Application Intent property is set to ReadWrite or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
          `AllowAllConnections`  
          All connections are allowed to the databases in the primary replica. This is the default setting.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
 ###  <a name="PSExample"></a> Example (PowerShell)  
  The following example, sets the both the `ConnectionModeInSecondaryRole` and `ConnectionModeInPrimaryRole` parameters to `AllowAllConnections`.  
@@ -183,14 +183,14 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Read-Only Access for an Availability Replica  
  **Read-only access to a readable secondary replica**  
   
--   When using the [bcp Utility](../../2014/database-engine/bcp-utility.md) or [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
+-   When using the [bcp Utility](../../bcp-utility.md) or [sqlcmd Utility](../../sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
   
 -   To enable client applications to connect to readable secondary replicas:  
   
     ||Prerequisite|Link|  
     |-|------------------|----------|  
-    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the availability group has a listener.|[Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../2014/database-engine/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configure read-only routing for the availability group.|[Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the availability group has a listener.|[Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Configure read-only routing for the availability group.|[Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **Factors that might affect triggers and jobs after a failover**  
   

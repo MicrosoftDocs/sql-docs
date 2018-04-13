@@ -21,7 +21,7 @@ manager: "jhubbard"
   It is possible to preserve log shipping configurations when upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This topic describes alternative scenarios and best practices for upgrading a log shipping configuration.  
   
 > [!NOTE]  
->  [Backup compression](../../2014/database-engine/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
+>  [Backup compression](../backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
   
 ##  <a name="ProtectData"></a> Protect Your Data Before the Upgrade  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 1.  Perform a full database backup on every primary database.  
   
-     For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md).  
+     For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../create-a-full-database-backup-sql-server.md).  
   
 2.  Run the [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on every primary database.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
 ##  <a name="UpgradeSingleSecondary"></a> Upgrading Log Shipping Configurations with a Single Secondary Server  
  The upgrade process described in this section assumes a configuration consisting of the primary server and only one secondary server. This configuration is represented in the following illustration, which shows a primary server instance, A, and a single secondary server instance, B.  
   
- ![One secondary server and no monitor server](../../2014/database-engine/media/ls-2-wayconfig-nomonitor.gif "One secondary server and no monitor server")  
+ ![One secondary server and no monitor server](../media/ls-2-wayconfig-nomonitor.gif "One secondary server and no monitor server")  
   
  For information about upgrading multiple secondary servers, see [Upgrading Multiple Secondary Server Instances](#MultipleSecondaries), later in this topic.  
  
@@ -89,7 +89,7 @@ manager: "jhubbard"
 #####  <a name="Procedure1"></a> Procedure 1: Perform a Controlled Failover to the Secondary Server  
  Controlled failover to the secondary server:  
   
-1.  Manually perform a [tail-log backup](../../2014/database-engine/tail-log-backups-sql-server.md) of the transaction log on the primary database specifying WITH NORECOVERY. This log backup captures any log records that have not been backed up yet and takes the database offline. Note that while the database is offline, the log shipping backup job will fail.  
+1.  Manually perform a [tail-log backup](../tail-log-backups-sql-server.md) of the transaction log on the primary database specifying WITH NORECOVERY. This log backup captures any log records that have not been backed up yet and takes the database offline. Note that while the database is offline, the log shipping backup job will fail.  
   
      The following example creates a tail log backup of the `AdventureWorks` database on the primary server. The backup file is named `Failover_AW_20080315.trn`:  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
     1.  Ensure that all backups taken automatically by the log shipping backup jobs have been applied. To check which backup jobs have been applied, use the [sp_help_log_shipping_monitor](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md) system stored procedure on the monitor server or on the primary and secondary servers. The same file should be listed in the **last_backup_file**, **last_copied_file**, and **last_restored_file** columns. If any of the backup files have not been copied and restored, manually invoke the agent copy and restore jobs for the log shipping configuration.  
   
-         For information about starting a job, see [Start a Job](../../2014/database-engine/start-a-job.md).  
+         For information about starting a job, see [Start a Job](../start-a-job.md).  
   
     2.  Copy your the final log backup file that you created in step 1 from the file share to the local location that is used by log shipping on the secondary server.  
   
@@ -179,12 +179,12 @@ manager: "jhubbard"
 5.  Fail over the database by redirecting clients from the original primary server (server A) to the online secondary server (server B).  
   
     > [!IMPORTANT]  
-    >  When you failover to a new primary database, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  When you failover to a new primary database, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="MultipleSecondaries"></a> Upgrading Multiple Secondary Server Instances  
  This configuration is represented in the following illustration, which shows a primary server instance, A, and two secondary server instances, B and C.  
   
- ![Two secondary servers and no monitor server](../../2014/database-engine/media/ls-3-wayconfig-nomonitor.gif "Two secondary servers and no monitor server")  
+ ![Two secondary servers and no monitor server](../media/ls-3-wayconfig-nomonitor.gif "Two secondary servers and no monitor server")  
   
  This section discusses how to upgrade using a failover and then switching back to the original primary server. When upgrading the primary instance with failover the process is more complex when there are multiple secondary server instances. In the following procedure, after all the secondary servers are upgraded, the primary server is failed over to one of the upgraded secondary databases. The original primary server is upgraded, and log shipping is failed over back to it.  
   
@@ -220,8 +220,8 @@ manager: "jhubbard"
  For information about enabling log shipping, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
 ## See Also  
- [Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/transaction-log-backups-sql-server.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
+ [Transaction Log Backups &#40;SQL Server&#41;](../transaction-log-backups-sql-server.md)   
+ [Apply Transaction Log Backups &#40;SQL Server&#41;](../apply-transaction-log-backups-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](/log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -79,7 +79,7 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [Create Nested Triggers](../../2014/database-engine/create-nested-triggers.md)   
+ [Create Nested Triggers](../create-nested-triggers.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

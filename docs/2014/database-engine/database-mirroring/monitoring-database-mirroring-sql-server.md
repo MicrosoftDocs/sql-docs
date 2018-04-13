@@ -280,11 +280,11 @@ manager: "jhubbard"
 ###  <a name="DbmPerfCounters"></a> Database Mirroring Performance Counters  
  Performance counters let you monitor database mirroring performance. For example, you can examine the **Transaction Delay** counter to see if database mirroring is impacting performance on the principal server, you can examine the **Redo Queue** and **Log Send Queue** counters to see how well the mirror database is keeping up with the principal database. You can examine the **Log Bytes Sent/sec** counter to monitor the amount of log sent per second.  
   
- In Performance Monitor on either partner, performance counters are available in the database mirroring performance object (**SQLServer:Database Mirroring**). For more information, see [SQL Server, Database Mirroring Object](../../2014/database-engine/sql-server-database-mirroring-object.md).  
+ In Performance Monitor on either partner, performance counters are available in the database mirroring performance object (**SQLServer:Database Mirroring**). For more information, see [SQL Server, Database Mirroring Object](../sql-server-database-mirroring-object.md).  
   
  **To start the performance monitor**  
   
--   [Start System Monitor &#40;Windows&#41;](../../2014/database-engine/start-system-monitor-windows.md)  
+-   [Start System Monitor &#40;Windows&#41;](../start-system-monitor-windows.md)  
   
 ###  <a name="DbmEventNotif"></a> Database Mirroring Event Notifications  
  Event notifications are a special kind of database object. Event notifications execute in response to a variety of Transact-SQL data definition language (DDL) statements and SQL Trace events and send information about server and database events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service.  
@@ -293,11 +293,11 @@ manager: "jhubbard"
   
 -   **Database Mirroring State Change** event class  
   
-     This indicates when the mirroring state of a mirrored database changes. For more information, see [Database Mirroring State Change Event Class](../../2014/database-engine/database-mirroring-state-change-event-class.md).  
+     This indicates when the mirroring state of a mirrored database changes. For more information, see [Database Mirroring State Change Event Class](../database-mirroring-state-change-event-class.md).  
   
 -   **Audit Database Mirroring Login** event class  
   
-     This reports audit messages related to database mirroring transport security. For more information, see [Audit Database Mirroring Login Event Class](../../2014/database-engine/audit-database-mirroring-login-event-class.md).  
+     This reports audit messages related to database mirroring transport security. For more information, see [Audit Database Mirroring Login Event Class](../audit-database-mirroring-login-event-class.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -329,6 +329,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
+ [WMI Provider for Server Events Concepts](../dev-guide/wmi-provider-for-server-events-concepts.md)  
   
   

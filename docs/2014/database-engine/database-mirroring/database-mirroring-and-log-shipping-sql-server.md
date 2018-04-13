@@ -61,7 +61,7 @@ manager: "jhubbard"
 ## Failing over from the Principal to the Mirror database  
  The following figure shows how log shipping and database mirroring work together when mirroring is running in high-safety mode with automatic failover. Initially, **Server_A** is both the principal server for mirroring and the primary server for log shipping. **Server_B** is the mirror server and is also configured as a primary server, which is currently inactive. **Server_C** and **Server_D** are log shipping secondary servers. To maximize availability of the log shipping session, the backup location is on a share directory on a separate host computer.  
   
- ![Log shipping and database mirroring](../../2014/database-engine/media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
+ ![Log shipping and database mirroring](../media/logshipping-and-dbm-automatic-failover.gif "Log shipping and database mirroring")  
   
  After a mirroring failover, the primary server name defined on the secondary server is unchanged. .  
   

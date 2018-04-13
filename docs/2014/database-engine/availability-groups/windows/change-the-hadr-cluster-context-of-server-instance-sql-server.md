@@ -50,7 +50,7 @@ manager: "jhubbard"
   
     |Replica Role|Action|Link|  
     |------------------|------------|----------|  
-    |Primary|Take the availability group offline.|[Take an Availability Group Offline &#40;SQL Server&#41;](../../2014/database-engine/take-an-availability-group-offline-sql-server.md)|  
+    |Primary|Take the availability group offline.|[Take an Availability Group Offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
     |Secondary|Remove the replica from its availability group|[Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   Before you can switch from a remote cluster to the local cluster, all synchronous-commit replicas must be SYNCHRONIZED.  
@@ -138,7 +138,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Remove an Availability Group Listener &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
--   [Take an Availability Group Offline &#40;SQL Server&#41;](../../2014/database-engine/take-an-availability-group-offline-sql-server.md)  
+-   [Take an Availability Group Offline &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
 -   [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -160,7 +160,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ## See Also  
  [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

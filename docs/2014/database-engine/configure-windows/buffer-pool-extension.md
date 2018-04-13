@@ -52,14 +52,14 @@ manager: "jhubbard"
  Also called buffer cache. The buffer pool is a global resource shared by all databases for their cached data pages. The maximum and minimum size of the buffer pool cache is determined during startup or when the instance of SQL server is dynamically reconfigured by using sp_configure. This size determines the maximum number of pages that can be cached in the buffer pool at any time in the running instance.  
   
  Checkpoint  
- A checkpoint creates a known good point from which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can start applying changes contained in the transaction log during recovery after an unexpected shutdown or crash. A checkpoint writes the dirty pages and transaction log information from memory to disk and, also, records information about the transaction log. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../2014/database-engine/database-checkpoints-sql-server.md).  
+ A checkpoint creates a known good point from which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can start applying changes contained in the transaction log during recovery after an unexpected shutdown or crash. A checkpoint writes the dirty pages and transaction log information from memory to disk and, also, records information about the transaction log. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../database-checkpoints-sql-server.md).  
   
 ## Buffer Pool Extension Details  
  SSD storage is used as an extension to the memory subsystem rather than the disk storage subsystem. That is, the buffer pool extension file allows the buffer pool manager to use both DRAM and NAND-Flash memory to maintain a much larger buffer pool of lukewarm pages in nonvolatile random access memory backed by SSDs. This creates a multilevel caching hierarchy with level 1 (L1) as the DRAM and level 2 (L2) as the buffer pool extension file on the SSD. Only clean pages are written to the L2 cache, which helps maintain data safety. The buffer manager handles the movement of clean pages between the L1 and L2 caches.  
   
  The following illustration provides a high-level architectural overview of the buffer pool relative to other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
   
- ![SSD Buffer Pool Extension Architecture](../../2014/database-engine/media/ssdbufferpoolextensionarchitecture.gif "SSD Buffer Pool Extension Architecture")  
+ ![SSD Buffer Pool Extension Architecture](../media/ssdbufferpoolextensionarchitecture.gif "SSD Buffer Pool Extension Architecture")  
   
  When enabled, the buffer pool extension specifies the size and file path of the buffer pool caching file on the SSD. This file is a contiguous extent of storage on the SSD and is statically configured during startup of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alterations to the file configuration parameters can only be done when the buffer pool extension feature is disabled. When the buffer pool extension is disabled, all related configuration settings are removed from the registry. The buffer pool extension file is deleted upon shutdown of the instance of SQL Server.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
- Performance counters are available in the SQL Server, Buffer Manager Object to track the data pages in the buffer pool extension file. For more information, see [buffer pool extension performance counters](../../2014/database-engine/sql-server-buffer-manager-object.md).  
+ Performance counters are available in the SQL Server, Buffer Manager Object to track the data pages in the buffer pool extension file. For more information, see [buffer pool extension performance counters](../sql-server-buffer-manager-object.md).  
   
  The following Xevents are available.  
   
@@ -98,6 +98,6 @@ manager: "jhubbard"
 |Enable and configure the buffer pool extension.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modify the buffer pool extension configuration|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |View the buffer pool extension configuration|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  
-|Monitor the buffer pool extension|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Performance counters](../../2014/database-engine/sql-server-buffer-manager-object.md)|  
+|Monitor the buffer pool extension|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Performance counters](../sql-server-buffer-manager-object.md)|  
   
   

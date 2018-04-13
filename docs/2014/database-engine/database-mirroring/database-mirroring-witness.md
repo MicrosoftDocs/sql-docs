@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  The following illustration shows a high-safety mode session with a witness.  
   
- ![Mirroring session with a witness](../../2014/database-engine/media/dbm-3-way-session-intro.gif "Mirroring session with a witness")  
+ ![Mirroring session with a witness](../media/dbm-3-way-session-intro.gif "Mirroring session with a witness")  
   
  **In This Topic:**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
 ##  <a name="InMultipleSessions"></a> Using a Witness in Multiple Sessions  
  A specific server instance can act as a witness in concurrent database mirroring sessions, each for a different database. Different sessions can be with different partners. The following illustration shows a server instance that is a witness in two database mirroring sessions with different partners.  
   
- ![Server instance that is a witness for 2 databases](../../2014/database-engine/media/dbm-witness-in-2-sessions.gif "Server instance that is a witness for 2 databases")  
+ ![Server instance that is a witness for 2 databases](../media/dbm-witness-in-2-sessions.gif "Server instance that is a witness for 2 databases")  
   
  A single-server instance can also function at the same time as a witness in some sessions and a partner in other sessions. However, in practice, a server instance typically functions as either a witness or a partner. This is because the partners require sophisticated computers that have enough hardware to support a production database, whereas the witness can run on any available Windows system that supports [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  The following figure shows the configuration of a session using high-performance mode.  
   
- ![Partner-only configuration of a session](../../2014/database-engine/media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
+ ![Partner-only configuration of a session](../media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
   
  In high-performance mode, as soon as the principal server sends the log for a transaction to the mirror server, the principal server sends a confirmation to the client, without waiting for an acknowledgement from the mirror server. Transactions commit without waiting for the mirror server to write the log to disk. Asynchronous operation permits the principal server to run with minimum transaction latency.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  High-performance mode can be useful in a disaster-recovery scenario in which the principal and mirror servers are separated by a significant distance and where you do not want small errors to impact the principal server.  
   
 > [!NOTE]  
->  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md).  
+>  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../high-availability-solutions-sql-server.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="WitnessImpactOnHighPerf"></a> The Impact of a Witness on High-Performance Mode  
  If you use Transact-SQL to configure high-performance mode, whenever the SAFETY property is set to OFF, we strongly recommend that the WITNESS property also be set to OFF. A witness can coexist with high-performance mode, but the witness provides no benefit and introduces risk.  
@@ -108,7 +108,7 @@ manager: "jhubbard"
  To achieve synchronous operation for a session, the mirror server must synchronize the mirror database with the principal database. When the session begins, the principal server begins sending its active log to the mirror server. The mirror server writes all of the incoming log records to disk as quickly as possible. As soon as all of the received log records have been written to disk, the databases are synchronized. As long as the partners remain in communication, the databases remain synchronized.  
   
 > [!NOTE]  
->  To monitor state changes in a database mirroring session, use the **Database Mirroring State Change** event class. For more information, see [Database Mirroring State Change Event Class](../../2014/database-engine/database-mirroring-state-change-event-class.md).  
+>  To monitor state changes in a database mirroring session, use the **Database Mirroring State Change** event class. For more information, see [Database Mirroring State Change Event Class](../database-mirroring-state-change-event-class.md).  
   
  After synchronization finishes, every transaction committed on the principal database is also committed on the mirror server, guaranteeing protection of the data. This is achieved by waiting to commit a transaction on the principal database, until the principal server receives a message from the mirror server stating that it has hardened the transaction's log to disk. Note the wait for this message increases the latency of the transaction.  
   
@@ -133,14 +133,14 @@ manager: "jhubbard"
 ###  <a name="HighSafetyWithOutAutoFailover"></a> High-Safety Mode Without Automatic Failover  
  The following figure shows the configuration of high-safety mode without automatic failover. The configuration consists of only the two partners.  
   
- ![Partners communicating without a witness](../../2014/database-engine/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
+ ![Partners communicating without a witness](../media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
   
  When the partners are connected and the database is already synchronized, manual failover is supported. If the mirror server instance goes down, the principal server instance is unaffected and runs exposed (that is without mirroring the data). If the principal server is lost, the mirror is suspended, but service can be forced to the mirror server (with possible data loss). For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> High-Safety Mode with Automatic Failover  
  Automatic failover provides high availability by ensuring that the database is still served after the loss of one server. Automatic failover requires that the session possess a third server instance, the *witness*, which ideally resides on a third computer. The following figure shows the configuration of a high-safety mode session that supports automatic failover.  
   
- ![The witness and two partners of a session](../../2014/database-engine/media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
+ ![The witness and two partners of a session](../media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
   
  Unlike the two partners, the witness does not serve the database. The witness simply supports automatic failover by verifying whether the principal server is up and functioning. The mirror server initiates automatic failover only if the mirror and the witness remain connected to each other after both have been disconnected from the principal server.  
   

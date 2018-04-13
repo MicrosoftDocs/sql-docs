@@ -104,23 +104,23 @@ manager: "jhubbard"
 ###  <a name="RelatedTasks"></a> Related Backup and Restore Tasks  
  **To create a database backup**  
   
--   [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md)  
+-   [Create a Full Database Backup &#40;SQL Server&#41;](../../create-a-full-database-backup-sql-server.md)  
   
--   [Create a Differential Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-differential-database-backup-sql-server.md)  
+-   [Create a Differential Database Backup &#40;SQL Server&#41;](../../create-a-differential-database-backup-sql-server.md)  
   
  **To create a log backup**  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](../../back-up-a-transaction-log-sql-server.md)  
   
  **To restore backups**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../restore-a-database-backup-sql-server-management-studio.md)  
   
--   [Restore a Differential Database Backup &#40;SQL Server&#41;](../../2014/database-engine/restore-a-differential-database-backup-sql-server.md)  
+-   [Restore a Differential Database Backup &#40;SQL Server&#41;](../../restore-a-differential-database-backup-sql-server.md)  
   
--   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../2014/database-engine/restore-a-transaction-log-backup-sql-server.md)  
+-   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../restore-a-transaction-log-backup-sql-server.md)  
   
--   [Restore a Database to a New Location &#40;SQL Server&#41;](../../2014/database-engine/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Restore a Database to a New Location &#40;SQL Server&#41;](../../restore-a-database-to-a-new-location-sql-server.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To prepare a secondary database**  
@@ -252,13 +252,13 @@ manager: "jhubbard"
 4.  To restore the database and log backups of each primary database, use the `restore-SqlDatabase` cmdlet, specifying the `NoRecovery` restore parameter. If the file paths differ between the computers that host the primary replica and the target secondary replica, also use the `RelocateFile` restore parameter.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
 5.  To complete configuration of the secondary database, you need to join it to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
 ###  <a name="ExamplePSscript"></a> Sample Backup and Restore Script and Command  
  The following PowerShell commands back up a full database backup and transaction log to a network share and restore those backups from that share. This example assumes that the file path to which the database is restored is the same as the file path on which the database was backed up.  

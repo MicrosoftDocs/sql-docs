@@ -123,20 +123,20 @@ manager: "jhubbard"
         ```  
   
 > [!NOTE]  
->  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+>  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md)   
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Failover Policy for Failover Cluster Instances](../../failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   

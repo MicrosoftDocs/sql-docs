@@ -63,7 +63,7 @@ manager: "jhubbard"
   
      IIn the endpoint URL, only the number of the port identifies the server instance that is associated with the mirroring endpoint on the target computer. The following figure illustrates the endpoint URLs of two server instances on a single computer. The default instance uses port `7022` and the named instance uses port `7033`. The endpoint URL for these two server instances are, respectively: `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` and `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`. Note that the address does not contain the name of the server instance.  
   
-     ![Server network addresses of a default instance](../../2014/database-engine/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
+     ![Server network addresses of a default instance](../../media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
   
      To identify the port currently associated with database mirroring endpoint of a server instance, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   

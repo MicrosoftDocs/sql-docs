@@ -121,7 +121,7 @@ manager: "jhubbard"
   
     -   One insures that connection requests are directed to a read-only secondary replica.  
   
-     If used to locate a read-only secondary replica, a read-only routing list must also be defined for the availability group. For more information about routing access to readable secondaries, see [To Configure Availability Replicas for Read-Only Routing](../../2014/database-engine/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
+     If used to locate a read-only secondary replica, a read-only routing list must also be defined for the availability group. For more information about routing access to readable secondaries, see [To Configure Availability Replicas for Read-Only Routing](../../listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
   
     > [!NOTE]  
     >  There is some propagation delay associated with the creation of an availability group listener name and its use by client applications to access an availability group database replica.  
@@ -216,11 +216,11 @@ manager: "jhubbard"
   
 ### Considerations  
   
--   The distribution database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+-   The distribution database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../always-on-failover-cluster-instances-sql-server.md).  
   
 -   Subscriber failover to a secondary database, while supported, is a relatively complex manual procedure. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Subscribers must be running [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or later to participate in an availability group.  
   
--   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md).  
+-   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Replication**  
@@ -233,30 +233,30 @@ manager: "jhubbard"
   
  **Change data capture**  
   
--   [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-change-data-capture-sql-server.md)  
+-   [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../enable-and-disable-change-data-capture-sql-server.md)  
   
--   [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/administer-and-monitor-change-data-capture-sql-server.md)  
+-   [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../administer-and-monitor-change-data-capture-sql-server.md)  
   
--   [Work with Change Data &#40;SQL Server&#41;](../../2014/database-engine/work-with-change-data-sql-server.md)  
+-   [Work with Change Data &#40;SQL Server&#41;](../../work-with-change-data-sql-server.md)  
   
  **Change tracking**  
   
--   [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-change-tracking-sql-server.md)  
+-   [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../enable-and-disable-change-tracking-sql-server.md)  
   
--   [Manage Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/manage-change-tracking-sql-server.md)  
+-   [Manage Change Tracking &#40;SQL Server&#41;](../../manage-change-tracking-sql-server.md)  
   
--   [Work with Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/work-with-change-tracking-sql-server.md)  
+-   [Work with Change Tracking &#40;SQL Server&#41;](../../work-with-change-tracking-sql-server.md)  
   
 ## See Also  
  [Replication Subscribers and AlwaysOn Availability Groups &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn Availability Groups: Interoperability (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)
- [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md)   
- [About Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/about-change-data-capture-sql-server.md)   
- [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md)   
+ [ AlwaysOn Failover Cluster Instances (SQL Server)](../../always-on-failover-cluster-instances-sql-server.md)   
+ [About Change Data Capture &#40;SQL Server&#41;](../../about-change-data-capture-sql-server.md)   
+ [About Change Tracking &#40;SQL Server&#41;](../../about-change-tracking-sql-server.md)   
  [SQL Server Replication](../../2014/relational-databases/replication/sql-server-replication.md)   
- [Track Data Changes &#40;SQL Server&#41;](../../2014/database-engine/track-data-changes-sql-server.md)   
+ [Track Data Changes &#40;SQL Server&#41;](../../track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

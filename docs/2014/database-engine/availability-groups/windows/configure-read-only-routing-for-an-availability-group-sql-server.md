@@ -164,13 +164,13 @@ GO
         >  You must set the read-only routing URL of a replica before configuring its read-only routing list.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md)  
   
 ###  <a name="PSExample"></a> Example (PowerShell)  
  The following example configures the primary replica and one secondary replica in an availability group for read-only routing. First, the example assigns a read-only routing URL to each replica. Then it sets the read-only routing list on the primary replica. Connections with the "ReadOnly" property set in the connection string will be redirected to the secondary replica. If this secondary replica is not readable (as determined by the `ConnectionModeInSecondaryRole` setting), the connection will be directed back to the primary replica.  
@@ -189,7 +189,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  Once the current primary replica and the readable secondary replicas are configured to support read-only routing in both roles, the readable secondary replicas can receive read read-intent connection requests from clients that connect via the availability group listener.  
   
 > [!TIP]  
->  When using the [bcp Utility](../../2014/database-engine/bcp-utility.md) or [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
+>  When using the [bcp Utility](../../bcp-utility.md) or [sqlcmd Utility](../../sqlcmd-utility.md), you can specify read-only access to any secondary replica that is enabled for read-only access by specifying the `-K ReadOnly` switch.  
   
 ###  <a name="ConnStringReqsRecs"></a> Requirements and Recommendations for Client Connection-Strings  
  For a client application to use read-only routing, its connection string must satisfy the following requirements:  
@@ -230,9 +230,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
  **To use connection strings in applications**  
   
--   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+-   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

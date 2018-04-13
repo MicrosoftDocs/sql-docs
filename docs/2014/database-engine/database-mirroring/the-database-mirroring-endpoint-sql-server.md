@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  The following figure illustrates how two server instances on the same server are uniquely identified. The server network addresses of both server instances contain the same system name, `MYSYSTEM`, and domain name, `Adventure-Works.MyDomain.com`. To enable the system to route connections to a server instance, a server network address includes the port number associated with the mirroring endpoint of a particular server instance.  
   
- ![Server network addresses of a default instance](../../2014/database-engine/media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
+ ![Server network addresses of a default instance](../media/dbm-2-instances-ports-1-system.gif "Server network addresses of a default instance")  
   
  By default, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not contain a database mirroring endpoint. These must be created manually as part of setting up a database mirroring session. The system administrator must create a separate endpoint in each server instance that is to participate in database mirroring. Note that if more than one server instance on a given computer requires a database mirroring endpoint, specify a different port number for each endpoint.  
   

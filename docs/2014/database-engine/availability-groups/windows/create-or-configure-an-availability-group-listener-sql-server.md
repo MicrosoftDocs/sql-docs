@@ -190,11 +190,11 @@ manager: "jhubbard"
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help**  cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help**  cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
 ## Troubleshooting  
   
@@ -245,7 +245,7 @@ manager: "jhubbard"
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sets the  `RegisterAllProvidersIP` property to 1 in order to reduce re-connection time after a failover for clients whose client connection strings specify `MultiSubnetFailover = True`, as recommended. Note that to take advantage of the listener multi-subnet feature, your clients might require a data provider that supports the `MultiSubnetFailover` keyword. For information about driver support for multi-subnet failover, see [AlwaysOn Client Connectivity &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
-     For information about multi-subnet clustering, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../2014/database-engine/sql-server-multi-subnet-clustering-sql-server.md).  
+     For information about multi-subnet clustering, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!TIP]  
     >  When `RegisterAllProvidersIP = 1`, if you run the WSFC Validate a Configuration Wizard on the WSFC cluster, the wizard generates the following warning message:  
@@ -275,7 +275,7 @@ Stop-ClusterResource yourListenerName
 Start-ClusterResource yourAGResource  
 ```  
   
- For more information about recovery times during failover, see [Client Recovery Latency During Failover](../../2014/database-engine/sql-server-multi-subnet-clustering-sql-server.md#DNS).  
+ For more information about recovery times during failover, see [Client Recovery Latency During Failover](../../sql-server-multi-subnet-clustering-sql-server.md#DNS).  
   
 ###  <a name="FollowUpRecommendations"></a> Follow-up Recommendations  
  After you create an availability group listener:  
@@ -329,7 +329,7 @@ Start-ClusterResource yourAGResource
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md)   
- [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../2014/database-engine/sql-server-multi-subnet-clustering-sql-server.md)  
+ [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../sql-server-multi-subnet-clustering-sql-server.md)  
   
   

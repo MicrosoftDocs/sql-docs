@@ -48,7 +48,7 @@ manager: "jhubbard"
 ## Rolling Upgrade/Update Process  
  In practice, the exact process will depend on factors such as the deployment topology of your availability groups and the commit mode of each replica. But in the simplest scenario, a rolling upgrade/update is a multi-stage process that in its simplest form involves the following steps:  
   
- ![Availability Group Upgrade in HADR Scenario](../../2014/database-engine/media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
+ ![Availability Group Upgrade in HADR Scenario](../../media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
   
 1.  Remove automatic failover on all synchronous-commit replicas  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
 ## Availability Group with One Remote Secondary Replica  
  If you have deployed an availability group only for disaster recovery, you may need to fail over the availability group to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  
   
- ![Availability Group Upgrade in DR Scenario](../../2014/database-engine/media/agupgrade-ag-dr.gif "Availability Group Upgrade in DR Scenario")  
+ ![Availability Group Upgrade in DR Scenario](../../media/agupgrade-ag-dr.gif "Availability Group Upgrade in DR Scenario")  
   
  In this situation, you must fail over the availability group to the asynchronous-commit secondary replica during the rolling upgrade/update. To prevent data loss, change the commit mode to synchronous commit and wait for the secondary replica to be synchronized before you fail over the availability group. Therefore, the rolling upgrade/update process may look as follows:  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
 ## Availability Group with Failover Cluster Instance Nodes  
  If an availability group contains failover cluster instance (FCI) nodes, you should upgrade/update the inactive nodes before you upgrade/update the active nodes. The figure below illustrates a common availability group scenario with FCIs for local high availability and asynchronous commit between the FCIs for remote disaster recovery, and the upgrade sequence.  
   
- ![Availability Group Upgrade with FCIs](../../2014/database-engine/media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade with FCIs")  
+ ![Availability Group Upgrade with FCIs](../../media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade with FCIs")  
   
 1.  Upgrade/update REMOTE2  
   

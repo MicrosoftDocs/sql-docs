@@ -35,7 +35,7 @@ manager: "jhubbard"
 -   **Asynchronous-commit replicas** support only the manual failover mode. Moreover, because they are never synchronized, they support only forced failover.  
   
 > [!NOTE]  
->  After a failover, client applications that need to access the primary databases must connect to the new primary replica. Also, if the new secondary replica is configured to allow read-only access, read-only client applications can connect to it. For information about how clients connect to an availability group, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md).  
+>  After a failover, client applications that need to access the primary databases must connect to the new primary replica. Also, if the new secondary replica is configured to allow read-only access, read-only client applications can connect to it. For information about how clients connect to an availability group, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Terms and Definitions  
@@ -71,7 +71,7 @@ manager: "jhubbard"
  The amount of time that the database is unavailable during a failover depends on the type of failover and its cause.  
   
 > [!IMPORTANT]  
->  To support client connections after failover, except for contained databases, logins and jobs defined on any of the former primary databases must be manually recreated on the new primary database. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md).  
+>  To support client connections after failover, except for contained databases, logins and jobs defined on any of the former primary databases must be manually recreated on the new primary database. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md).  
   
 ### Failover Sets  
  The forms of failover that are possible for a given availability group can be understood in terms of failover sets. A failover set consists of the primary replica and secondary replicas that support a given form of failover, as follows:  
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
  The failover behavior for each secondary replica depends on which availability replica is currently the primary replica. Basically, for a given secondary replica, the failover behavior is the worst case given the current primary replica. The following figure illustrates how the failover behavior of secondary replicas varies depending on the current primary replica, and whether it is configured for asynchronous-commit mode (with only forced failover) or synchronous-commit mode (with or without automatic failover).  
   
- ![How primary replica configuration affects failover](../../2014/database-engine/media/aoag-failoversetexample.gif "How primary replica configuration affects failover")  
+ ![How primary replica configuration affects failover](../../media/aoag-failoversetexample.gif "How primary replica configuration affects failover")  
   
 ##  <a name="AutomaticFailover"></a> Automatic Failover  
  An automatic failover causes a qualified secondary replica to automatically transition to the primary role after the primary replica becomes unavailable. Automatic failover is best suited when the WSFC node that hosts the primary replica is local to the node that hosts the secondary replica. This is because data synchronization works best with low message latency between computers and because client connections can remain local.  
@@ -115,7 +115,7 @@ manager: "jhubbard"
     >   
     >  For more information, see [Use AlwaysOn Policies to View the Health of an Availability Group &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md) and [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
--   The Windows Server Failover Clustering (WSFC) cluster has quorum. For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+-   The Windows Server Failover Clustering (WSFC) cluster has quorum. For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 -   The primary replica has become unavailable, and the failover-condition levels defined by your the flexible failover policy have been met. For information about failover-condition levels, see [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md).  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
 2.  Set the failover mode to automatic. For more information, see [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md).  
   
-3.  Optionally, change the flexible failover policy of the availability group to specify the sorts of failures that can cause an automatic failover to occur. For more information, see [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover &#40;AlwaysOn Availability Groups&#41;](configure-flexible-automatic-failover-policy.md) HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce"  and [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md).  
+3.  Optionally, change the flexible failover policy of the availability group to specify the sorts of failures that can cause an automatic failover to occur. For more information, see [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover &#40;AlwaysOn Availability Groups&#41;](configure-flexible-automatic-failover-policy.md) HYPERLINK "file:///C:\\\Users\\\marshow\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\6a8d98a9-6e6a-40d1-9809-efa9013d7452\\\HTM\\\html\\\1ed564b4-9835-4245-ae35-9ba67419a4ce"  and [Failover Policy for Failover Cluster Instances](../../failover-policy-for-failover-cluster-instances.md).  
   
 ##  <a name="ManualFailover"></a> Planned Manual Failover (Without Data Loss)  
  A manual failover causes a synchronized secondary replica to transition to the primary role after a database administrator issues a manual-failover command on the server instance that hosts the target secondary replica. To support manual failover, the secondary replica and the current primary replica must both be configured for synchronous-commit mode, if any. Every secondary database on the availability replica must be joined to the availability group and synchronized with its corresponding primary database (that is, the secondary replica must be synchronized). This guarantees that every transaction that was committed on a former primary database has also been committed on the new primary database. Therefore, the new primary databases are identical to the old primary databases.  
@@ -157,7 +157,7 @@ manager: "jhubbard"
   
 3.  The failover target (on `Node02`) becomes the new primary replica. Because this is a planned failover, the former primary replica switches to the secondary role during the failover and brings its databases online as secondary databases immediately.  
   
- ![Illustation of a planned manual failover](../../2014/database-engine/media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
+ ![Illustation of a planned manual failover](../../media/aoag-plannedmanualfailover.gif "Illustation of a planned manual failover")  
   
   
 ###  <a name="ManualFailoverConditions"></a> Conditions Required for a Manual Failover  
@@ -174,7 +174,7 @@ manager: "jhubbard"
   
 1.  To ensure that no new user transactions occur on the original primary databases, the WSFC cluster sends a request to the primary replica to go offline.  
   
-2.  If any log is waiting in the recovery queue of any secondary database, the secondary replica finishes rolling forward that secondary database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the recovery queue. To learn the current size of the recovery queue, use the **Recovery Queue** performance counter. For more information, see [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md).  
+2.  If any log is waiting in the recovery queue of any secondary database, the secondary replica finishes rolling forward that secondary database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the recovery queue. To learn the current size of the recovery queue, use the **Recovery Queue** performance counter. For more information, see [SQL Server, Database Replica](../../sql-server-database-replica.md).  
   
     > [!NOTE]  
     >  The failover time can be regulated by limiting the size of the recovery queue. However, this can cause the primary replica to slow down to allow the secondary replica to keep up.  
@@ -188,7 +188,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  As soon as the new secondary replica has resynchronized the databases, failover is again possible, but in the reverse direction.  
   
- After failover, clients must reconnect to the current primary database. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md).  
+ After failover, clients must reconnect to the current primary database. For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> Maintaining Availability During Upgrades  
  The database administrator for your availability groups can use manual failovers to maintain database availability when you upgrade hardware or software. To use an availability group for software upgrades, the server instance and/or computer node that hosts the target secondary replica must have already received the upgrades. For more information, see [Upgrade and Update of Availability Group Servers with Minimal Downtime and Data Loss](upgrading-always-on-availability-group-replica-instances.md).  
@@ -197,7 +197,7 @@ manager: "jhubbard"
  Forcing failover of an availability group (with possible data loss) is a disaster recovery method that allows you to use a secondary replica as a warm standby server.Because forcing failover risks possible data loss, it should be used cautiously and sparingly. We recommend forcing failover only if you must restore service to your availability databases immediately and are willing to risk losing data. For more information about the prerequisites and recommendations for forcing failover and for an example scenario that uses a forced failover to recover from a catastrophic failure, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
 > [!WARNING]  
->  Forcing failover requires that the WSFC cluster have quorum. For information about configuring quorum and forcing quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+>  Forcing failover requires that the WSFC cluster have quorum. For information about configuring quorum and forcing quorum, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
   
 ###  <a name="ForcedFailoverHowWorks"></a> How Forced Failover Works  
@@ -293,15 +293,15 @@ manager: "jhubbard"
   
 -   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/logins-and-jobs-for-availability-group-databases.md)  
+-   [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
  **To configure WSFC Quorum Configuration**  
   
--   [Configure Cluster Quorum NodeWeight Settings](../../2014/database-engine/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](../../configure-cluster-quorum-nodeweight-settings.md)  
   
--   [View Cluster Quorum NodeWeight Settings](../../2014/database-engine/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](../../view-cluster-quorum-nodeweight-settings.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -312,9 +312,9 @@ manager: "jhubbard"
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Modes &#40;AlwaysOn Availability Groups&#41;](availability-modes-always-on-availability-groups.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)   
- [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
+ [Failover Policy for Failover Cluster Instances](../../failover-policy-for-failover-cluster-instances.md)   
  [Flexible Failover Policy for Automatic Failover of an Availability Group &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)  
   
   

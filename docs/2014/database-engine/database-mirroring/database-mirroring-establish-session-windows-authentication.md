@@ -214,7 +214,7 @@ manager: "jhubbard"
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
  [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md)   

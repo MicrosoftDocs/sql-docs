@@ -57,6 +57,6 @@ manager: "jhubbard"
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Create a Database](../../2014/database-engine/create-a-database.md)  
+ [Create a Database](../create-a-database.md)  
   
   

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  The following illustration shows an availability group with five availability replicas. The primary replica and one secondary replica are configured for synchronous-commit mode with automatic failover. Another secondary replica is configured for synchronous-commit mode with only planned manual failover, and two secondary replicas are configured for asynchronous-commit mode, which supports only forced manual failover (typically called *forced failover*).  
   
- ![Availability and failover modes of replicas](../../2014/database-engine/media/aoag-availabilityandfailovermodes.gif "Availability and failover modes of replicas")  
+ ![Availability and failover modes of replicas](../../media/aoag-availabilityandfailovermodes.gif "Availability and failover modes of replicas")  
   
  The synchronization and failover behavior between two availability replicas depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the current primary replica and the secondary replica in question must be configured for synchronous commit. Likewise, for automatic failover to occur, both replicas need to be configured for automatic failover. Therefore, the behavior for the illustrated deployment scenario above can be summarized in the following table, which explores the behavior with each potential primary replica:  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Furthermore, for an automatic failover to be possible at a given time, this secondary replica must be synchronized with the primary replica (that is, the secondary databases are all synchronized), and the Windows Server Failover Clustering (WSFC) cluster must have quorum. If the primary replica becomes unavailable under these conditions, automatic failover occurs. The secondary replica switches to the role of primary, and it offers its database as the primary database. For more information, see the "Automatic Failover " section of the [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md) topic.  
   
 > [!NOTE]  
->  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+>  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To change the availability mode and failover mode**  
@@ -123,11 +123,11 @@ manager: "jhubbard"
   
  **To adjust quorum votes**  
   
--   [View Cluster Quorum NodeWeight Settings](../../2014/database-engine/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](../../view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../../2014/database-engine/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](../../configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
  **To perform a manual failover**  
   
@@ -154,6 +154,6 @@ manager: "jhubbard"
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

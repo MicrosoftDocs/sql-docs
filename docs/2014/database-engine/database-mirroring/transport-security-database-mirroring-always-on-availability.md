@@ -89,11 +89,11 @@ manager: "jhubbard"
 -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
 ## See Also  
- [Choose an Encryption Algorithm](../../2014/database-engine/choose-an-encryption-algorithm.md)   
+ [Choose an Encryption Algorithm](../choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/drop-endpoint-transact-sql.md)   
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   

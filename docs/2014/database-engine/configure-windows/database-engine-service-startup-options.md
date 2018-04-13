@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## See Also  
  [CHECKPOINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/checkpoint-transact-sql.md)   
- [sqlservr Application](../../2014/database-engine/sqlservr-application.md)  
+ [sqlservr Application](../sqlservr-application.md)  
   
   

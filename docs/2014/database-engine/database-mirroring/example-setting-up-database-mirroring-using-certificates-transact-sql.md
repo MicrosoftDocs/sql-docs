@@ -277,6 +277,6 @@ manager: "jhubbard"
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

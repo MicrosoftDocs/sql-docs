@@ -199,7 +199,7 @@ manager: "jhubbard"
  Timestamp of the last connection error. This value is hidden by default.  
   
 > [!NOTE]  
->  For information about performance counters for availability replicas, see [SQL Server, Availability Replica](../../2014/database-engine/sql-server-availability-replica.md).  
+>  For information about performance counters for availability replicas, see [SQL Server, Availability Replica](../../sql-server-availability-replica.md).  
   
 ##  <a name="AvDbDetails"></a> To Group Availability Group Information  
  To group the information, click **Group by**, and select one of the following:  

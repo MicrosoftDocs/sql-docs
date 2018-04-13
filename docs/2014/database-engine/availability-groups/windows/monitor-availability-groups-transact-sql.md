@@ -78,7 +78,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Also see **sys.dm_hadr_availability_replica_cluster_nodes** and **sys.dm_hadr_availability_replica_cluster_states** in the [Monitoring Availability Replicas](#AvReplicas) section and **sys.availability_databases_cluster** and **sys.dm_hadr_database_replica_cluster_states** in the [Monitoring Availability Databases](#AvDbs) section, later in this topic.  
   
- For information about WSFC clusters and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md) and [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ For information about WSFC clusters and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md) and [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="AvGroups"></a> Monitoring Availability Groups  
  To monitor the availability groups for which the server instance hosts an availability replica, use the following views:  
@@ -130,7 +130,7 @@ manager: "jhubbard"
  Determines whether the current replica is the preferred backup replica.  
   
 > [!NOTE]  
->  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../2014/database-engine/sql-server-availability-replica.md).  
+>  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../sql-server-availability-replica.md).  
   
 ##  <a name="AvDbs"></a> Monitoring Availability Databases  
  To monitor availability databases, use the following views:  
@@ -167,7 +167,7 @@ manager: "jhubbard"
 >  The primary replica location is the authoritative source for an availability group.  
   
 > [!NOTE]  
->  For information about the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] performance counters for availability databases (the **SQLServer:Database Replica** performance object), see [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md). Also, to monitor transaction-log activity on availability databases, use the following counters of the **SQLServer:Databases** performance object: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, and **Log Pool Requests/sec**. For more information, see [SQL Server, Databases Object](../../2014/database-engine/sql-server-databases-object.md).  
+>  For information about the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] performance counters for availability databases (the **SQLServer:Database Replica** performance object), see [SQL Server, Database Replica](../../sql-server-database-replica.md). Also, to monitor transaction-log activity on availability databases, use the following counters of the **SQLServer:Databases** performance object: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, and **Log Pool Requests/sec**. For more information, see [SQL Server, Databases Object](../../sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoring Availability Group Listeners  
  To monitor the availability group listeners on subnets of the WSFC cluster, use the following views:  
@@ -189,7 +189,7 @@ manager: "jhubbard"
   
  **Primary key:** listener_id  
   
- For information about availability group listeners, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md).  
+ For information about availability group listeners, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **AlwaysOn Availability Groups monitoring tasks:**  
@@ -258,11 +258,11 @@ manager: "jhubbard"
   
  **AlwaysOn performance counters:**  
   
--   [SQL Server, Availability Replica](../../2014/database-engine/sql-server-availability-replica.md)  
+-   [SQL Server, Availability Replica](../../sql-server-availability-replica.md)  
   
--   [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md)  
+-   [SQL Server, Database Replica](../../sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../2014/database-engine/sql-server-databases-object.md)  
+-   [SQL Server, Databases Object](../../sql-server-databases-object.md)  
   
  **Policy-based management for AlwaysOn Availability Groups**  
   

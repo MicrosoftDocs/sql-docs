@@ -35,7 +35,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If quorum is regained by natural means instead of being forced, the availability replicas will go through normal recovery. If the primary replica is still unavailable after quorum is regained, you can perform a planned manual failover to a synchronized secondary replica.  
   
-     For information about forcing quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). For information about why forcing failover is required after forcing quorum, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+     For information about forcing quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md). For information about why forcing failover is required after forcing quorum, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   If the primary replica becomes unavailable when the WSFC cluster has a healthy quorum, you can force failover (with possible data loss), to any replica whose role is in the SECONDARY or RESOLVING state. If possible, force failover to a synchronous-commit secondary replica that was synchronized when the primary replica was lost.  
   
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   The WSFC cluster has quorum. If the cluster lacks quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+-   The WSFC cluster has quorum. If the cluster lacks quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   You must be able to connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state.  
   
@@ -178,13 +178,13 @@ manager: "jhubbard"
         ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md).  
   
 3.  After forcing an availability group to fail over, complete the necessary follow-up steps. For more information, see [Follow Up: Essential Tasks After a Forced Failover](#FollowUp), later in this topic.  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Follow Up: Essential Tasks After a Forced Failover  
   
@@ -197,11 +197,11 @@ manager: "jhubbard"
   
          **To adjust quorum votes**  
   
-        -   [View Cluster Quorum NodeWeight Settings](../../2014/database-engine/view-cluster-quorum-nodeweight-settings.md)  
+        -   [View Cluster Quorum NodeWeight Settings](../../view-cluster-quorum-nodeweight-settings.md)  
   
-        -   [Configure Cluster Quorum NodeWeight Settings](../../2014/database-engine/configure-cluster-quorum-nodeweight-settings.md)  
+        -   [Configure Cluster Quorum NodeWeight Settings](../../configure-cluster-quorum-nodeweight-settings.md)  
   
-        -   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+        -   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
     -   **If you failed over outside of the [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]:** We recommend that you consider adjusting the availability mode and failover mode on the new primary replica and on remaining secondary replicas to reflect your desired synchronous-commit and automatic failover configuration.  
   
@@ -223,7 +223,7 @@ manager: "jhubbard"
   
      **To create a database snapshot**  
   
-    -   [Create a Database Snapshot &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-snapshot-transact-sql.md)  
+    -   [Create a Database Snapshot &#40;Transact-SQL&#41;](../../create-a-database-snapshot-transact-sql.md)  
   
      **To resume an availability database**  
   
@@ -242,18 +242,18 @@ manager: "jhubbard"
   
      **To perform a log backup**  
   
-    -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)  
+    -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../back-up-a-transaction-log-sql-server.md)  
   
 ##  <a name="ExampleRecoveryFromCatastrophy"></a> Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure  
  If the primary replica fails and no synchronized secondary replica is available, forcing the availability group to fail over might be an appropriate response. The appropriateness of forcing a failover depends on: (1) whether you expect the primary replica to be offline for longer than your service level agreement (SLA) tolerates, and (2) whether you are willing to risk potential data loss in order to make primary databases available quickly. If you decide that an availability group requires a forced failover, the actual forced failover is but one step of a multi-step process.  
   
  To illustrate the steps that are required to use a forced failover to recover from a catastrophic failure, this topic presents one possible disaster recovery scenario. The example scenario considers an availability group whose original topology consists of a main data center that hosts three synchronous-commit availability replicas, including the primary replica, and a remote data center that hosts two asynchronous-commit secondary replicas. The following figure illustrates the original topology of this example availability group. The availability group is hosted by a multi-subnet WSFC cluster with three nodes in the main data center (**Node 01**, **Node 02**, and **Node 03**) and two nodes in a remote data center (**Node 04** and **Node 05**).  
   
- ![Original topology of availability group](../../2014/database-engine/media/aoag-failurerecovery-origtopology.gif "Original topology of availability group")  
+ ![Original topology of availability group](../../media/aoag-failurerecovery-origtopology.gif "Original topology of availability group")  
   
  The main data center shuts down unexpectedly. Its three availability replicas to go offline, and their databases become unavailable. The following figure illustrates the impact of this failure on the topology of the availability group.  
   
- ![Topology after failure of main data center](../../2014/database-engine/media/aoag-failurerecovery-catastrophy.gif "Topology after failure of main data center")  
+ ![Topology after failure of main data center](../../media/aoag-failurerecovery-catastrophy.gif "Topology after failure of main data center")  
   
  The database administrator (DBA) determines that the best possible response is to force failover of the availability group to one of the remote, asynchronous-commit secondary replicas. This example illustrates the typical steps involved when you force failover of the availability group to a remote replica and, eventually, return the availability group to its original topology.  
   
@@ -261,13 +261,13 @@ manager: "jhubbard"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  The following figure illustrates the series of actions performed at the remote data center in response a catastrophic failure at the main data center.  
   
- ![Steps for responding to failure of main data cente](../../2014/database-engine/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data cente")  
+ ![Steps for responding to failure of main data cente](../../media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data cente")  
   
  The steps in this figure indicate the following steps:  
   
 |Step|Action|Links|  
 |----------|------------|-----------|  
-|**1.**|The DBA or network administrator ensures that the WSFC cluster has a healthy quorum. In this example, quorum needs to be forced.|[WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
+|**1.**|The DBA or network administrator ensures that the WSFC cluster has a healthy quorum. In this example, quorum needs to be forced.|[WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
 |**2.**|The DBA connects to the server instance with the least latency (on **Node 04**) and performs a forced manual failover. The forced failover transitions this secondary replica to the primary role and suspends the secondary databases on the remaining secondary replica (on **Node 05**).|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (Query the **end_of_log_lsn** column. For more information, see [Recommendations](#Recommendations), earlier in this topic.)|  
 |**3.**|The DBA manually resumes each of the secondary databases on the remaining secondary replica.|[Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)|  
   
@@ -275,9 +275,9 @@ manager: "jhubbard"
  The following figure illustrates the series of actions that return the availability group to its original topology after the main data center comes back online and the WSFC nodes re-establish communication with the WSFC cluster.  
   
 > [!IMPORTANT]  
->  If the WSFC cluster quorum has been forced, as the offline nodes restart they could form a new quorum if the following conditions both exist: (a) there is no network connectivity between any of the nodes in the forced-quorum set, and (b) the restarting nodes are the majority of the cluster nodes. This would result in a "split brain" condition in which the availability group would possess two independent primary replicas, one at each data center. Before forcing quorum to create a minority quorum set, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  If the WSFC cluster quorum has been forced, as the offline nodes restart they could form a new quorum if the following conditions both exist: (a) there is no network connectivity between any of the nodes in the forced-quorum set, and (b) the restarting nodes are the majority of the cluster nodes. This would result in a "split brain" condition in which the availability group would possess two independent primary replicas, one at each data center. Before forcing quorum to create a minority quorum set, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
- ![Steps to return the group to its original topology](../../2014/database-engine/media/aoag-failurerecovery-actions-part2.gif "Steps to return the group to its original topology")  
+ ![Steps to return the group to its original topology](../../media/aoag-failurerecovery-actions-part2.gif "Steps to return the group to its original topology")  
   
  The steps in this figure indicate the following steps:  
   
@@ -291,11 +291,11 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To adjust quorum votes**  
   
--   [View Cluster Quorum NodeWeight Settings](../../2014/database-engine/view-cluster-quorum-nodeweight-settings.md)  
+-   [View Cluster Quorum NodeWeight Settings](../../view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configure Cluster Quorum NodeWeight Settings](../../2014/database-engine/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configure Cluster Quorum NodeWeight Settings](../../configure-cluster-quorum-nodeweight-settings.md)  
   
--   [Force a WSFC Cluster to Start Without a Quorum](../../2014/database-engine/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
+-   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
  **Planned manual failover:**  
   
@@ -331,6 +331,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+ [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

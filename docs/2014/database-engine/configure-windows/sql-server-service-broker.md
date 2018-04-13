@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
--   [ssbdiagnose Utility &#40;Service Broker&#41;](../../2014/database-engine/ssbdiagnose-utility-service-broker.md)  
+-   [ssbdiagnose Utility &#40;Service Broker&#41;](../ssbdiagnose-utility-service-broker.md)  
   
  See the [previously published documentation](http://go.microsoft.com/fwlink/?LinkId=231312) for [!INCLUDE[ssSB](../../includes/sssb-md.md)] concepts and for development and management tasks. This documentation is not reproduced in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation due to the small number of changes in [!INCLUDE[ssSB](../../includes/sssb-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

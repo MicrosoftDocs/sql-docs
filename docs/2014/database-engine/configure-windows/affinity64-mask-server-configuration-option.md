@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## See Also  
  [affinity mask Server Configuration Option](affinity-mask-server-configuration-option.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)   
+ [Monitor Resource Usage &#40;System Monitor&#41;](../monitor-resource-usage-system-monitor.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)  

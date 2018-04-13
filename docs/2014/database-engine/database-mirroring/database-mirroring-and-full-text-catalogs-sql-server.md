@@ -58,6 +58,6 @@ manager: "jhubbard"
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+ [Back Up and Restore Full-Text Catalogs and Indexes](../back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
   

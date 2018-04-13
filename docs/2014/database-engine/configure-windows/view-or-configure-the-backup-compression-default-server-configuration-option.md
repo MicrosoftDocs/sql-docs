@@ -121,6 +121,6 @@ GO
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)  
+ [Backup Overview &#40;SQL Server&#41;](../backup-overview-sql-server.md)  
   
   

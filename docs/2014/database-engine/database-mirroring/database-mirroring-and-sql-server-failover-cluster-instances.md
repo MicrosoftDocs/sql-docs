@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Mirroring and SQL Server Failover Cluster Instances
-  A failover cluster is a combination of one or more physical disks in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) cluster group, known as a resource group, that are participating nodes of the cluster. The resource group is configured as a failover clustered instance that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clustered instance appears on the network as if it were a single computer, but has functionality that provides failover from one node to another if one node becomes unavailable. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+  A failover cluster is a combination of one or more physical disks in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS) cluster group, known as a resource group, that are participating nodes of the cluster. The resource group is configured as a failover clustered instance that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clustered instance appears on the network as if it were a single computer, but has functionality that provides failover from one node to another if one node becomes unavailable. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../always-on-failover-cluster-instances-sql-server.md).  
   
  Failover clusters provide high-availability support for an entire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, in contrast to database mirroring, which provides high-availability support for a single database. Database mirroring works between failover clusters and, also, between a failover cluster and a nonclustered host.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The following illustration shows an automatic failover between clusters in a mirroring session running in high-safety mode with a witness (which supports automatic failover).  
   
- ![A failover on a cluster](../../2014/database-engine/media/dbm-and-failover-clustering.gif "A failover on a cluster")  
+ ![A failover on a cluster](../media/dbm-and-failover-clustering.gif "A failover on a cluster")  
   
  The three server instances in the mirroring session reside on three distinct clusters: **Cluster_A**, **Cluster_B**, and **Cluster_C**. On each cluster, a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover clustered instance. When the mirroring session starts, the failover clustered instance on **Cluster_A** is the principal server, the failover clustered instance on **Cluster_B** is the mirror server, and the failover clustered instance on **Cluster_C** is the witness in the mirroring session. Eventually, the active node on **Cluster_A** fails, which causes the principal server to become unavailable.  
   
@@ -64,6 +64,6 @@ manager: "jhubbard"
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
- [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md) 
+ [AlwaysOn Failover Cluster Instances (SQL Server)](../always-on-failover-cluster-instances-sql-server.md) 
   
   

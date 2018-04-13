@@ -110,7 +110,7 @@ manager: "jhubbard"
 |**NULL**|Unknown state. This value occurs when the local server instance cannot communicate with the WSFC failover cluster (that is the local node is not part of WSFC quorum).|  
   
 > [!NOTE]  
->  For information about performance counters for availability replicas, see [SQL Server, Availability Replica](../../2014/database-engine/sql-server-availability-replica.md).  
+>  For information about performance counters for availability replicas, see [SQL Server, Availability Replica](../../sql-server-availability-replica.md).  
   
 ##  <a name="AvDbDetails"></a> Availability Database Details  
  The **Availability Database** details screen displays the following properties of the availability databases in a given availability group:  
@@ -138,7 +138,7 @@ manager: "jhubbard"
 |**Not Connected**|Indicates that the secondary replica is currently unable to connect to the primary replica.|  
   
 > [!NOTE]  
->  For information about performance counters for availability databases, see [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md).  
+>  For information about performance counters for availability databases, see [SQL Server, Database Replica](../../sql-server-database-replica.md).  
   
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   

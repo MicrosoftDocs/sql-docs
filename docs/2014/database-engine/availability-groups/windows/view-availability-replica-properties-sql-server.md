@@ -69,7 +69,7 @@ manager: "jhubbard"
  Determines whether the current replica is the preferred backup replica. Returns 1 if the database on the current server instance is the preferred replica. Otherwise, it returns 0.  
   
 > [!NOTE]  
->  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../2014/database-engine/sql-server-availability-replica.md).  
+>  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../sql-server-availability-replica.md).  
   
   
 ##  <a name="RelatedTasks"></a> Related Tasks  

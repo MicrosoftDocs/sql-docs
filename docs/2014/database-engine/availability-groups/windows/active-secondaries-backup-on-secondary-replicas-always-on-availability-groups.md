@@ -61,14 +61,14 @@ manager: "jhubbard"
   
  **To create a backup job**  
   
--   [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)  
+-   [Use the Maintenance Plan Wizard](../../use-the-maintenance-plan-wizard.md)  
   
--   [Implement Jobs](../../2014/database-engine/implement-jobs.md)  
+-   [Implement Jobs](../../implement-jobs.md)  
   
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Copy-Only Backups &#40;SQL Server&#41;](../../2014/database-engine/copy-only-backups-sql-server.md)   
+ [Copy-Only Backups &#40;SQL Server&#41;](../../copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-availability-group-transact-sql.md)  
   

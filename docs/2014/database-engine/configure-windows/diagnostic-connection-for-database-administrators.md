@@ -109,7 +109,7 @@ manager: "jhubbard"
 ## Related Content  
  [Use sqlcmd with Scripting Variables](../use-sqlcmd-with-scripting-variables.md)  
   
- [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md)  
+ [sqlcmd Utility](../sqlcmd-utility.md)  
   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
   

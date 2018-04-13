@@ -203,6 +203,6 @@ manager: "jhubbard"
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
- [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
   

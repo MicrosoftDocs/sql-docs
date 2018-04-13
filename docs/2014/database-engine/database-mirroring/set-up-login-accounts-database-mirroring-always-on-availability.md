@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Login](../../2014/database-engine/create-a-login.md)  
+-   [Create a Login](../create-a-login.md)  
   
--   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-allow-network-access-windows-authentication.md).  
+-   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

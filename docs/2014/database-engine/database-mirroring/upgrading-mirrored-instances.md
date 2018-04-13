@@ -23,7 +23,7 @@ manager: "jhubbard"
   When upgrading server instances to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can reduce downtime for each mirrored database to only a single manual failover by performing a sequential upgrade, known as a *rolling upgrade*. A rolling upgrade is a multi-stage process that in its simplest form involves upgrading the server instance that is currently acting as the mirror server in a mirroring session, then manually failing over the mirrored database, upgrading the former principal server, and resuming mirroring. In practice, the exact process will depend on the operating mode and the number and layout of mirroring session running on the server instances that you are upgrading.  
   
 > [!NOTE]  
->  For information about performing a rolling upgrade to install a service pack or hotfix, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../../2014/database-engine/install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  For information about performing a rolling upgrade to install a service pack or hotfix, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Recommended Preparation (Best Practices)**  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
     1.  Perform a full database backup on every principal database:  
   
-         [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md).  
+         [Create a Full Database Backup &#40;SQL Server&#41;](../create-a-full-database-backup-sql-server.md).  
   
     2.  Run the [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on every principal database.  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  The following illustration is a flowchart that shows the basic stages of a rolling upgrade for each operating mode. The corresponding procedures are described after the illustration.  
   
- ![Flowchart showing steps of a rolling upgrade](../../2014/database-engine/media/dbm-rolling-upgrade.gif "Flowchart showing steps of a rolling upgrade")  
+ ![Flowchart showing steps of a rolling upgrade](../media/dbm-rolling-upgrade.gif "Flowchart showing steps of a rolling upgrade")  
   
 > [!IMPORTANT]  
 >  A server instance might be performing different mirroring roles (principal server, mirror server, or witness) in concurrent mirroring sessions. In this case, you will have to adapt the basic rolling upgrade process accordingly. For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -67,7 +67,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If the mirror server is geographically distant from the principal server, a rolling upgrade might be inappropriate.  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../../2014/database-engine/database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
     -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Set transaction safety to FULL. For more information, see [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 1.  Optionally, return to high-performance mode by using one of the following methods:  
   
-    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High performance (asynchronous)** by using the [Mirroring Page](../../2014/database-engine/database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
+    -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High performance (asynchronous)** by using the [Mirroring Page](../database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
   
     -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)to set transaction safety to OFF.  
   
@@ -143,7 +143,7 @@ manager: "jhubbard"
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../../2014/database-engine/install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   

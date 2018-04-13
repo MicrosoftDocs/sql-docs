@@ -135,7 +135,7 @@ manager: "jhubbard"
  To prevent this availability replica from ever being be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
   
 ##  <a name="Listener"></a> Listener Tab  
- Specify your preference for an[availability group listener](../../2014/database-engine/listeners-client-connectivity-application-failover.md)that will provide a client connection point, one of:  
+ Specify your preference for an[availability group listener](../../listeners-client-connectivity-application-failover.md)that will provide a client connection point, one of:  
   
  **Do not create an availability group listener now.**  
  Select to skip this step. You can create a listener later. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  

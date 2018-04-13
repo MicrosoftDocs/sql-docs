@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 -   [Enable and Configure FILESTREAM](../../enable-and-configure-filestream.md)  
   
--   [Enable the Prerequisites for FileTable](../../2014/database-engine/enable-the-prerequisites-for-filetable.md)  
+-   [Enable the Prerequisites for FileTable](../../enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
  None.  

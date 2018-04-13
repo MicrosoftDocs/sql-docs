@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 3.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
-4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
+4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 2.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
-3.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
+3.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
-4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
+4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
      These databases must be consistent with the publication database at the primary in terms of replication configuration and settings.  
   

@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Connect Clients to a Database Mirroring Session (SQL Server)
-  To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../../2014/database-engine/dev-guide/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  
+  To connect to a database mirroring session, a client can use either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When configured for a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, these data access providers both fully support database mirroring. For information about programming considerations for using a mirrored database, see [Using Database Mirroring](../dev-guide/using-database-mirroring.md). In addition, the current principal server instance must be available and the login of the client must have been created on the server instance. For more information, see [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../troubleshoot-orphaned-users-sql-server.md). Client connections to a database mirroring session do not involve the witness server instance, if one exists.  
   
  ##  <a name="InitialConnection"></a> Making the Initial Connection to a Database Mirroring Session  
  For the initial connection to a mirrored database, a client must supply a connection string that minimally supplies the name of a server instance. This required server name should identify the current principal server instance and is known as the *initial partner name*.  
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  The following figure illustrates a client connection to the initial partner, **Partner_A**, for a mirrored database named **Db_1**. This figure shows a case in which the initial partner name supplied by the client correctly identifies the current principal server, **Partner_A**. The initial connection attempt succeeds, and the data access provider stores the name of the mirror server (currently **Partner_B**) as the failover partner name in the local cache. Finally, the client connects to the principal copy of the **Db_1** database.  
   
- ![Client connection if initial partner is principal](../../2014/database-engine/media/dbm-initial-connection.gif "Client connection if initial partner is principal")  
+ ![Client connection if initial partner is principal](../media/dbm-initial-connection.gif "Client connection if initial partner is principal")  
   
  The initial connection attempt may fail, for example, because of a network error or an inactive server instance. Because the initial partner is unavailable, for the data access provider to attempt to connect to the failover partner, the client must have supplied the failover partner name in the connection string.  
   
@@ -179,7 +179,7 @@ Server=123.34.45.56,4724;
   
  The following figure illustrates these retry times for successive connection attempts, each of which times out.  
   
- ![Maximum retry delays for 15 second login timeout](../../2014/database-engine/media/dbm-retry-algorithm.gif "Maximum retry delays for 15 second login timeout")  
+ ![Maximum retry delays for 15 second login timeout](../media/dbm-retry-algorithm.gif "Maximum retry delays for 15 second login timeout")  
   
  For the default login time-out period, the maximum time allotted to the first three rounds of connection attempts is 14.4 seconds. If every attempt were to use all of its allotted time, only 0.6 seconds of time would remain before the login period times out. In that case, the fourth round would be curtailed, allowing only a final quick attempt to connect using the initial partner name. However, a connection attempt may fail in less than its allotted retry time, particularly in later rounds. For example, receiving a network error can cause an attempt to end before the retry time expires. If earlier attempts fail due to a network error, additional time would be available for the fourth round and, perhaps, additional rounds.  
   
@@ -197,7 +197,7 @@ Server=123.34.45.56,4724;
   
  The following figure illustrates how the retry delay affects connection attempts during a manual failover, in which the partners switch their roles. The login time-out period is 15 seconds.  
   
- ![Retry-delay algorithm](../../2014/database-engine/media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
+ ![Retry-delay algorithm](../media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
   
 ##  <a name="Reconnecting"></a> Reconnecting to a Database Mirroring Session  
  If an established connection to a database mirroring session fails for any reason, for example, due to a database mirroring failover, and the application attempts to reconnect to the initial server, the data access provider can attempt to reconnect using the failover partner name stored in the client's cache. Reconnecting is not automatic, however. The application must become aware of the error. Then, the application needs to close the failed connection and open a new connection using the same connection string attributes. At this point, the data access provider redirects the connection to the failover partner. If the server instance identified by this name is currently the principal server, the connection attempt usually succeeds. If it is unclear whether a transaction was committed or rolled back, the application must check on the state of the transaction, in the same way as when reconnecting to a stand-alone server instance.  

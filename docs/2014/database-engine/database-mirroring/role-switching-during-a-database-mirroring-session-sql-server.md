@@ -32,10 +32,10 @@ manager: "jhubbard"
   
  The following illustration shows mirroring partners, **Partner_A** and **Partner_B**, switching the principal and mirror roles over a series of automatic or manual failovers.  
   
- ![Partners switching twice between roles](../../2014/database-engine/media/dbm-roleswitching.gif "Partners switching twice between roles")  
+ ![Partners switching twice between roles](../media/dbm-roleswitching.gif "Partners switching twice between roles")  
   
 > [!IMPORTANT]  
->  After a role switch, jobs that ran on the former principal database must be recreated on the new principal server to run there. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  After a role switch, jobs that ran on the former principal database must be recreated on the new principal server to run there. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  Three types of role switching exist: automatic failover, manual failover, and forced service (with possible data loss). Support for each form depends on the operating mode of the session.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
 |Manual failover|No|Yes|Yes|  
 |Forced service|Yes|Yes|No|  
   
- After a role switch, certain metadata must exist on both partners to ensure that all of the database users can access the new principal database. In addition, backup jobs must be created on the new principal server, to ensure that the database continues to be backed up on its regular schedule. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+ After a role switch, certain metadata must exist on both partners to ensure that all of the database users can access the new principal database. In addition, backup jobs must be created on the new principal server, to ensure that the database continues to be backed up on its regular schedule. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and on the cause. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
  The following figure illustrates an instance of using manual failover to maintain database availability while you upgrade a database server instance. When the upgrade is completed, an administrator may optionally fail over back to the original server instance. This is useful when the administrator wants to stop the mirroring session and use the mirror server elsewhere. In this way, a single server instance can be used repeatedly when updating a series of database server instances.  
   
- ![Planned manual failover](../../2014/database-engine/media/dbm-failovmanuplanned.gif "Planned manual failover")  
+ ![Planned manual failover](../media/dbm-failovmanuplanned.gif "Planned manual failover")  
   
 ###  <a name="ConditionsForManualFo"></a> Conditions Required for a Manual Failover  
  Manual failover requires transaction safety to be set to FULL (that is, high-safety mode). When the partners are connected and the database is already synchronized, manual failover is supported.  
@@ -164,7 +164,7 @@ manager: "jhubbard"
   
  The following illustration shows a single instance of automatic failover.  
   
- ![Automatic failover](../../2014/database-engine/media/dbm-failovauto1round.gif "Automatic failover")  
+ ![Automatic failover](../media/dbm-failovauto1round.gif "Automatic failover")  
   
  Initially, all three servers are connected (the session has full quorum). **Partner_A** is the principal server and **Partner_B** is the mirror server. **Partner_A** (or the principal database on **Partner_A**) becomes unavailable. The witness and **Partner_B** both recognize that the principal is no longer available the session retains quorum. **Partner_B** becomes the principal server and makes its copy of the database available as the new principal database. Eventually, **Partner_A** reconnects to the session and discovers that **Partner_B** now owns the principal role. **Partner_A** then takes on the mirror role.  
   
@@ -215,7 +215,7 @@ manager: "jhubbard"
 ###  <a name="TypicalCaseFS"></a> Typical Case of Forced Service  
  The following figure illustrates a typical case of forced service (with possible data loss).  
   
- ![Forcing service with possible data loss](../../2014/database-engine/media/dbm-forced-service.gif "Forcing service with possible data loss")  
+ ![Forcing service with possible data loss](../media/dbm-forced-service.gif "Forcing service with possible data loss")  
   
  In the figure, the original principal server, **Partner_A**, becomes unavailable to the mirror server, **Partner_B**, causing the mirror database to be disconnected. After ensuring that **Partner_A** is not available to clients, the database administrator forces service, with possible data loss, on **Partner_B**. **Partner_B** becomes the principal server and runs with the database *exposed* (that is, unmirrored). At this point, clients can reconnect to **Partner_B**.  
   
@@ -290,7 +290,7 @@ manager: "jhubbard"
  [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
  [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)   
- [Complete Database Restores &#40;Full Recovery Model&#41;](../../2014/database-engine/complete-database-restores-full-recovery-model.md)   
+ [Complete Database Restores &#40;Full Recovery Model&#41;](../complete-database-restores-full-recovery-model.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Mirroring States &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

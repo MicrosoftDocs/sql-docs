@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   You can override the max degree of parallelism value in queries by specifying the MAXDOP query hint in the query statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md).  
   
--   Index operations that create or rebuild an index, or that drop a clustered index, can be resource intensive. You can override the max degree of parallelism value for index operations by specifying the MAXDOP index option in the index statement. The MAXDOP value is applied to the statement at execution time and is not stored in the index metadata. For more information, see [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md).  
+-   Index operations that create or rebuild an index, or that drop a clustered index, can be resource intensive. You can override the max degree of parallelism value for index operations by specifying the MAXDOP index option in the index statement. The MAXDOP value is applied to the statement at execution time and is not stored in the index metadata. For more information, see [Configure Parallel Index Operations](../configure-parallel-index-operations.md).  
   
 -   In addition to queries and index operations, this option also controls the parallelism of DBCC CHECKTABLE, DBCC CHECKDB, and DBCC CHECKFILEGROUP. You can disable parallel execution plans for these statements by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
@@ -113,8 +113,8 @@ GO
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)   
- [Configure Parallel Index Operations](../../2014/database-engine/configure-parallel-index-operations.md)   
+ [Configure Parallel Index Operations](../configure-parallel-index-operations.md)   
  [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
- [Set Index Options](../../2014/database-engine/set-index-options.md)  
+ [Set Index Options](../set-index-options.md)  
   
   

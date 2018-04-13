@@ -121,7 +121,7 @@ manager: "jhubbard"
   
  The primary and secondary server instances send their own history and status to the monitor server instance.  
   
- ![Configuration showing backup, copy, & restore jobs](../../2014/database-engine/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
+ ![Configuration showing backup, copy, & restore jobs](../media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
   
 ##  <a name="Interoperability"></a> Interoperability  
  Log shipping can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

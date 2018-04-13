@@ -144,7 +144,7 @@ manager: "jhubbard"
   
 9. On the primary server, execute [sp_add_log_shipping_primary_secondary](~/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) to add the required information about the new secondary database to the primary server.  
   
-10. On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](../../2014/database-engine/disable-or-enable-a-job.md).  
+10. On the secondary server, enable the copy and restore jobs. For more information, see [Disable or Enable a Job](../disable-or-enable-a-job.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

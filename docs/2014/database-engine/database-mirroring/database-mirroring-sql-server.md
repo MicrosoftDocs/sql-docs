@@ -51,11 +51,11 @@ manager: "jhubbard"
   
      Database mirroring provides complete or almost complete redundancy of the data, depending on whether the operating mode is high-safety or high-performance. For more information, see [Operating Modes](#OperatingModes), later in this topic.  
   
-     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../2014/database-engine/automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
+     A database mirroring partner running on [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] or later versions automatically tries to resolve certain types of errors that prevent reading a data page. The partner that is unable to read a page requests a fresh copy from the other partner. If this request succeeds, the unreadable page is replaced by the copy, which usually resolves the error. For more information, see [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../automatic-page-repair-for-availability-groups-and-database-mirroring.md).  
   
 -   Improves the availability of the production database during upgrades.  
   
-     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../../2014/database-engine/install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+     To minimize downtime for a mirrored database, you can sequentially upgrade the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are hosting the failover partners. This will incur the downtime of only a single failover. This form of upgrade is known as a *rolling upgrade*. For more information, see [Install a Service Pack on a System with Minimal Downtime for Mirrored Databases](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Database Mirroring Terms and Definitions  
  automatic failover  
@@ -139,13 +139,13 @@ manager: "jhubbard"
   
  All database mirroring sessions support only one principal server and one mirror server. This configuration is shown in the following illustration.  
   
- ![Partners in a database mirroring session](../../2014/database-engine/media/dbm-2-way-session-intro.gif "Partners in a database mirroring session")  
+ ![Partners in a database mirroring session](../media/dbm-2-way-session-intro.gif "Partners in a database mirroring session")  
   
  High-safety mode with automatic failover requires a third server instance, known as a *witness*. Unlike the two partners, the witness does not serve the database. The witness supports automatic failover by verifying whether the principal server is up and functioning. The mirror server initiates automatic failover only if the mirror and the witness remain connected to each other after both have been disconnected from the principal server.  
   
  The following illustration shows a configuration that includes a witness.  
   
- ![A mirroring session that includes a witness](../../2014/database-engine/media/dbm-3-way-session-intro-ov.gif "A mirroring session that includes a witness")  
+ ![A mirroring session that includes a witness](../media/dbm-3-way-session-intro-ov.gif "A mirroring session that includes a witness")  
   
  For more information, see [Role Switching](#RoleSwitching), later in this topic.  
   
@@ -198,7 +198,7 @@ manager: "jhubbard"
   
  The following figure illustrates two server instances that are participating as partners together in two mirroring sessions. One session is for a database named **Db_1**, and the other session is for a database named **Db_2**.  
   
- ![Two server instances in two concurrent sessions](../../2014/database-engine/media/dbm-concurrent-sessions.gif "Two server instances in two concurrent sessions")  
+ ![Two server instances in two concurrent sessions](../media/dbm-concurrent-sessions.gif "Two server instances in two concurrent sessions")  
   
  Each of the databases is independent of the others. For example, a server instance might initially be the mirror server for two databases. If one of those databases fails over, the server instance becomes the principal server for the failed-over database while remaining the mirror server for the other database.  
   
@@ -276,7 +276,7 @@ manager: "jhubbard"
   
  **Using Transact-SQL**  
   
--   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
 -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
@@ -325,7 +325,7 @@ manager: "jhubbard"
   
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../../2014/database-engine/automatic-page-repair-for-availability-groups-and-database-mirroring.md)   
+ [Automatic Page Repair &#40;For Availability Groups and Database Mirroring&#41;](../automatic-page-repair-for-availability-groups-and-database-mirroring.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   

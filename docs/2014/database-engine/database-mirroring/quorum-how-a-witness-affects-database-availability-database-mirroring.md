@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The following figure shows these types of quorum.  
   
- ![Quorums: full; witness and partner; both partners](../../2014/database-engine/media/dbm-failovautoquorum.gif "Quorums: full; witness and partner; both partners")  
+ ![Quorums: full; witness and partner; both partners](../media/dbm-failovautoquorum.gif "Quorums: full; witness and partner; both partners")  
   
  As long as the current principal server has quorum, this server owns the role of principal and continues to serve the database, unless the database owner performs a manual failover. If the principal server loses quorum, it stops serving the database. Automatic failover can occur only if the principal database has lost quorum, which guarantees that it is no longer serving the database.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
 ### How Quorum Affects Database Availability  
  The following illustration shows how the witness and the partners cooperate to make sure that, at given time, only one partner owns the role of principal and only the current principal server can bring its database online. Both scenarios start with full quorum, and **Partner_A** in the principal role and **Partner_B** in the mirror role.  
   
- ![How the witness and partners cooperate](../../2014/database-engine/media/dbm-quorum-scenarios.gif "How the witness and partners cooperate")  
+ ![How the witness and partners cooperate](../media/dbm-quorum-scenarios.gif "How the witness and partners cooperate")  
   
  Scenario 1 shows how after the original principal server (**Partner_A**) fails, the witness and mirror agree that the principal, **Partner_A**, is not available any longer and form quorum. The mirror, **Partner_B** then assumes the principal role. Automatic failover occurs, and **Partner_B**, brings its copy of the database online. Then **Partner_B** goes down, and the database goes offline. Later, the former principal server, **Partner_A**, reconnects to the witness regaining quorum, but on communicating with the witness, **Partner_A** learns that it cannot bring its copy of the database online, because **Partner_B** now owns the principal role. When **Partner_B** rejoins the session, it brings the database back online.  
   

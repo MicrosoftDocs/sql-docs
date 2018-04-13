@@ -23,11 +23,12 @@ ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# Filestream and FileTable System stored procedures (Transact-SQL)
+# Filestream and FileTable system stored procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  This section describes the system stored procedures to the FileTable and Filestreamfeature.  
+  This section describes the system stored procedures to the FileTable and Filestream feature.  
 
+## Filestream and Filetable system stored procedures
   [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
 
    Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.
@@ -37,7 +38,7 @@ ms.workload: "Inactive"
   Closes non-transactional file handles to FileTable data.
 
 
-**For more information, see the following articles**:
+## See also
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

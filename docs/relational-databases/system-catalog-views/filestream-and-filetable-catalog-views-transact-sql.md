@@ -28,6 +28,7 @@ ms.workload: "Inactive"
 
   This section describes the catalog views related to the FileTable feature.  
   
+## Filestream and filetable Catalog Views (Transact-SQL)
  [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
  Displays information about the level of non-transactional access to FILESTREAM data in FileTables that is enabled. Contains one row for each database in the SQL Server instance.  
   
@@ -37,7 +38,7 @@ ms.workload: "Inactive"
  [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
  Returns a row for each FileTable. Inherits from **sys.tables**.  
 
-**For more information, see the following articles**:
+## See Also
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

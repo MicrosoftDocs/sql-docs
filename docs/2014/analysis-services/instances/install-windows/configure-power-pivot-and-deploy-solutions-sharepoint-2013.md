@@ -134,6 +134,6 @@ manager: "jhubbard"
   
  For more information on trouble shooting data refresh, see [Troubleshooting PowerPivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- For more information on the configuration tool, see [PowerPivot Configuration Tools](../../../analysis-services/powerpivot-configuration-tools.md).  
+ For more information on the configuration tool, see [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   

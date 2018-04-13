@@ -177,7 +177,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
 4.  Click **PowerPivot for SharePoint 2013 Configuration**.  
   
- For more information on the configuration tool, see [PowerPivot Configuration Tools](../../../analysis-services/powerpivot-configuration-tools.md).  
+ For more information on the configuration tool, see [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
 ##  <a name="bkmk_remove_addin"></a> Uninstall or repair the add-in  
   

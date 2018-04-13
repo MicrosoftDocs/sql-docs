@@ -58,7 +58,7 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md), [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md)|  
-|Child elements|[DatabaseID](../../../2014/analysis-services/dev-guide/databaseid-element-xmla.md), [DataSourceViewID](../../../2014/analysis-services/dev-guide/datasourceviewid-element-assl.md)|  
+|Child elements|[DatabaseID](../../../2014/analysis-services/dev-guide/databaseid-element-xmla.md), [DataSourceViewID](../scripting/properties/id-element-assl.md)|  
   
 ## Remarks  
  The `DataSourceView` element represents an out-of-line binding to a data source view, used by the `Batch` or `Process` command to temporarily override the data source view binding for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects processed by the command.  

@@ -46,7 +46,7 @@ manager: "mblythe"
 ### Analysis Services, Multidimensional Mode  
   
 #### NullProcessing option set to Preserve is no longer supported for distinct count measures  
- Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](dev-guide/nullprocessing-element-assl.md) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
+ Prior to [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], it was possible to set [NullProcessing Element &#40;ASSL&#41;](scripting/properties/nullprocessing-element-assl.md) to `Preserve` for distinct count measures.  Unfortunately, this practice often produced invalid results and sometimes even crashed the processing job. As a result, this configuration is no longer valid in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Attempting to use it will cause the following validation error to occur: "Errors in the metadata manager. Preserve is not a valid NullProcessing value for the \<measurename> distinct count measure."  
   
 #### Cube browser in Management Studio and Cube Designer has been removed  
  The cube browser control that let you drag and drop fields onto a PivotTable structure in Management Studio or in Cube Designer has been removed from the product. The control was an Office Web Control (OWC) component. OWC was deprecated by Office and is no longer available.  
@@ -100,7 +100,7 @@ manager: "mblythe"
 #### New default setting for load balancing requests changed from Round-Robin to Health-Based  
  A PowerPivot service application has default settings that determine how requests for PowerPivot data are distributed across multiple PowerPivot for SharePoint servers in a farm. In the previous release, the default setting was **Round Robin**, where requests were distributed sequentially among the available servers. In this release, the default is now **Health Based**. The PowerPivot service application uses server health statistics, such as available memory or CPU, to determine which server instance gets the xt request.  
   
- If you upgraded your server from the previous release, the PowerPivot service application retains the previous default setting (**Round Robin**). To use the **Health Based** allocation method setting, you must modify the configuration settings. For more information, see [Create and Configure a PowerPivot Service Application in Central Administration](create-and-configure-a-powerpivot-service-application-in-central-administration.md).  
+ If you upgraded your server from the previous release, the PowerPivot service application retains the previous default setting (**Round Robin**). To use the **Health Based** allocation method setting, you must modify the configuration settings. For more information, see [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)   

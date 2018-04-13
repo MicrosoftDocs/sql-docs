@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## DDL Statements  
  The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
   
--   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../../2014/analysis-services/dev-guide/analysis-services-scripting-language-assl-reference.md).  
+-   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
 -   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../2014/analysis-services/dev-guide/xml-for-analysis-xmla-reference.md).  
   

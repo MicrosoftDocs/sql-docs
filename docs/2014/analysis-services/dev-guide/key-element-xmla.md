@@ -65,7 +65,7 @@ manager: "mblythe"
  [AttributeName Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/attributename-element-xmla.md)   
  [Drop Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/drop-element-xmla.md)   
  [Insert Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/insert-element-xmla.md)   
- [KeyColumn Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/keycolumn-element-assl.md)   
+ [KeyColumn Element &#40;ASSL&#41;](../scripting/objects/column-element-assl.md)   
  [Update Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/update-element-xmla.md)   
  [Where Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/where-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

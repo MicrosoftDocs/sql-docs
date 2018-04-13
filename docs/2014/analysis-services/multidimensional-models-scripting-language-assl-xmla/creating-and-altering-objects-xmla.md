@@ -66,7 +66,7 @@ manager: "mblythe"
  Session objects are temporary objects that are available only to the explicit or implicit session used by a client application and are deleted when the session is ended. You can create session objects by setting the `Scope` attribute of the `Create` command to *Session*.  
   
 > [!NOTE]  
->  When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../dev-guide/dimension-element-assl.md), [Cube](../dev-guide/cube-element-assl.md), or [MiningModel](../dev-guide/miningmodel-element-assl.md) ASSL elements.  
+>  When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), or [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL elements.  
   
 ## Altering Objects  
  When modifying objects by using the `Alter` method, you must first identify the object to be modified by providing an object reference in the [Object](../dev-guide/object-element-xmla.md) property of the `Alter` command. Each object reference contains the object identifiers needed to uniquely identify the object for the `Alter` command. For more information about object references, see [Defining and Identifying Objects &#40;XMLA&#41;](defining-and-identifying-objects-xmla.md).  
@@ -86,7 +86,7 @@ manager: "mblythe"
  To modify session objects created by the `Create` command, set the `Scope` attribute of the `Alter` command to *Session*.  
   
 > [!NOTE]  
->  When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../dev-guide/dimension-element-assl.md), [Cube](../dev-guide/cube-element-assl.md), or [MiningModel](../dev-guide/miningmodel-element-assl.md) ASSL elements.  
+>  When using the *Session* setting, the `ObjectDefinition` element can only contain [Dimension](../scripting/objects/dimension-element-assl.md), [Cube](../scripting/objects/cube-element-assl.md), or [MiningModel](../scripting/objects/miningmodel-element-assl.md) ASSL elements.  
   
 ## Creating or Altering Subordinate Objects  
  Although a `Create` or `Alter` command creates or alters only one topmost major object, the major object being created or modified can contain definitions within the enclosing `ObjectDefinition` property for other major and minor objects that are subordinate to it. For example, if you define a cube, you specify the parent database in `ParentObject`, and within the cube definition in `ObjectDefinition` you can define measure groups for the cube, and within the measure groups you can define partitions for each measure group. A minor object can be defined only under the major object that contains it. For more information about major and minor objects, see [Database Objects &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
@@ -142,7 +142,7 @@ manager: "mblythe"
 ```  
   
 ### Comments  
- The `ObjectExpansion` attribute of the `Alter` command was set to *ObjectProperties*. This setting allows the [ImpersonationInfo](../dev-guide/impersonationinfo-element-assl.md) element, a minor object, to be excluded from the data source defined in `ObjectDefinition`. Therefore, the impersonation information for that data source remains set to the service account, as specified in the first example.  
+ The `ObjectExpansion` attribute of the `Alter` command was set to *ObjectProperties*. This setting allows the [ImpersonationInfo](../scripting/properties/impersonationinfo-element-assl.md) element, a minor object, to be excluded from the data source defined in `ObjectDefinition`. Therefore, the impersonation information for that data source remains set to the service account, as specified in the first example.  
   
 ## See Also  
  [Execute Method &#40;XMLA&#41;](../dev-guide/execute-method-xmla.md)   

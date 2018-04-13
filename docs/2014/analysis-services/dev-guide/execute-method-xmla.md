@@ -92,6 +92,6 @@ manager: "mblythe"
  [Discover Method &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/discover-method-xmla.md)   
  [Methods &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/methods-xmla.md)   
  [XML Elements &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/xml-elements-xmla.md)   
- [Analysis Services Schema Rowsets](../../../2014/analysis-services/dev-guide/analysis-services-schema-rowsets.md)  
+ [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

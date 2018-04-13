@@ -154,11 +154,11 @@ manager: "mblythe"
  Review the PowerPivot data refresh troubleshooting page on the TechNet WIKI for help on resolving data refresh problems. For more information see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkId=251594).  
   
 > [!NOTE]  
->  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](powerpivot-management-dashboard-and-usage-data.md).  
+>  SharePoint administrators can help you troubleshoot data refresh problems by viewing the consolidated data refresh reports in the PowerPivot Management Dashboard in Central Administration. For more information, see [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
 ## See Also  
  [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md)   
+ [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
  [Configure Stored Credentials for PowerPivot Data Refresh &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

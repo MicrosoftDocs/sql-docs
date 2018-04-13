@@ -54,7 +54,7 @@ manager: "mblythe"
  Select to include the attribute type in the dimension.  
   
  **Attribute Type**  
- Displays the attribute type associated with the dimension type selected in **Dimension type**. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](dev-guide/type-element-dimensionattribute-assl.md).  
+ Displays the attribute type associated with the dimension type selected in **Dimension type**. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](scripting/properties/type-element-dimensionattribute-assl.md).  
   
  **Dimension Attribute**  
  Select the dimension attribute to which the Dimension Wizard will assign the special attribute type displayed in **Attribute Type**.  

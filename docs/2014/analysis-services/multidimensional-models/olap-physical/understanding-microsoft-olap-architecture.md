@@ -48,6 +48,6 @@ manager: "mblythe"
  [Globalization scenarios for Analysis Services Multiidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## See Also  
- [Technical Reference &#40;SSAS&#41;](../../../analysis-services/technical-reference-ssas.md)  
+ [Technical Reference &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
   
   

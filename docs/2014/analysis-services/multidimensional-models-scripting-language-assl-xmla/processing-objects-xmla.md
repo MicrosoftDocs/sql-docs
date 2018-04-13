@@ -98,7 +98,7 @@ manager: "mblythe"
  For more information about merging partitions using XML for Analysis (XMLA), see [Merging Partitions &#40;XMLA&#41;](merging-partitions-xmla.md).  
   
 ## Handling Processing Errors  
- The [ErrorConfiguration](../dev-guide/errorconfiguration-element-xmla.md) property of the `Process` command lets you specify how to handle errors encountered while processing an object. For example, while processing a dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encounters a duplicate value in the key column of the key attribute. Because attribute keys must be unique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discards the duplicate records. Based on the [KeyDuplicate](../dev-guide/keyduplicate-element-assl.md) property of `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] could:  
+ The [ErrorConfiguration](../dev-guide/errorconfiguration-element-xmla.md) property of the `Process` command lets you specify how to handle errors encountered while processing an object. For example, while processing a dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] encounters a duplicate value in the key column of the key attribute. Because attribute keys must be unique, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discards the duplicate records. Based on the [KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md) property of `ErrorConfiguration`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] could:  
   
 -   Ignore the error and continue processing the dimension.  
   

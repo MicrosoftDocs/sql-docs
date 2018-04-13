@@ -42,12 +42,12 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)|  
+|Parent elements|[Server](../scripting/objects/server-element-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  
   
 ## See Also  
- [Server](../../../2014/analysis-services/dev-guide/server-element-assl.md)  
+ [Server](../scripting/objects/server-element-assl.md)  
   
   

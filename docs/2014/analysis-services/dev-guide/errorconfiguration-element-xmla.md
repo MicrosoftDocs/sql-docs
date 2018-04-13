@@ -64,10 +64,10 @@ manager: "mblythe"
 |Relationship|Element|  
 |------------------|-------------|  
 |Parent elements|[Batch](../../../2014/analysis-services/dev-guide/batch-element-xmla.md), [Process](../../../2014/analysis-services/dev-guide/process-element-xmla.md)|  
-|Child elements|[KeyDuplicate](../../../2014/analysis-services/dev-guide/keyduplicate-element-assl.md), [KeyErrorAction](../../../2014/analysis-services/dev-guide/keyerroraction-element-assl.md), [KeyErrorLimit](../../../2014/analysis-services/dev-guide/keyerrorlimit-element-assl.md), [KeyErrorLimitAction](../../../2014/analysis-services/dev-guide/keyerrorlimitaction-element-assl.md), [KeyErrorLogFile](../../../2014/analysis-services/dev-guide/keyerrorlogfile-element-assl.md), [KeyNotFound](../../../2014/analysis-services/dev-guide/keynotfound-element-assl.md), [NullKeyConvertedToUnknown](../../../2014/analysis-services/dev-guide/nullkeyconvertedtounknown-element-assl.md), [NullKeyNotAllowed](../../../2014/analysis-services/dev-guide/nullkeynotallowed-element-assl.md)|  
+|Child elements|[KeyDuplicate](../scripting/properties/keyduplicate-element-assl.md), [KeyErrorAction](../scripting/objects/action-element-assl.md), [KeyErrorLimit](../scripting/properties/keyerrorlimit-element-assl.md), [KeyErrorLimitAction](../scripting/properties/keyerrorlimitaction-element-assl.md), [KeyErrorLogFile](../scripting/objects/file-element-assl.md), [KeyNotFound](../scripting/properties/keynotfound-element-assl.md), [NullKeyConvertedToUnknown](../scripting/properties/nullkeyconvertedtounknown-element-assl.md), [NullKeyNotAllowed](../scripting/properties/nullkeynotallowed-element-assl.md)|  
   
 ## Remarks  
- The structure of this element is identical to the structure of the `ErrorConfiguration` element in Analysis Services Scripting Language (ASSL). For more information about the `ErrorConfiguration` element, see [ErrorConfiguration Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/errorconfiguration-element-assl.md).  
+ The structure of this element is identical to the structure of the `ErrorConfiguration` element in Analysis Services Scripting Language (ASSL). For more information about the `ErrorConfiguration` element, see [ErrorConfiguration Element &#40;ASSL&#41;](../scripting/objects/errorconfiguration-element-assl.md).  
   
 ## See Also  
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  

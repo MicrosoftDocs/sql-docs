@@ -65,7 +65,7 @@ manager: "mblythe"
 ## See Also  
  [Original Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/original-element-xmla.md)   
  [Restore Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/restore-element-xmla.md)   
- [StorageLocation Element &#40;ASSL&#41;](../../../2014/analysis-services/dev-guide/storagelocation-element-assl.md)   
+ [StorageLocation Element &#40;ASSL&#41;](../scripting/properties/storagelocation-element-assl.md)   
  [Synchronize Element &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/synchronize-element-xmla.md)   
  [Properties &#40;XMLA&#41;](../../../2014/analysis-services/dev-guide/properties-xmla.md)  
   

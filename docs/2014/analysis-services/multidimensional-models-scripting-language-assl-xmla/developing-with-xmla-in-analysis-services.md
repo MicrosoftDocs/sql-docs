@@ -52,7 +52,7 @@ manager: "mblythe"
 |[Monitoring Traces &#40;XMLA&#41;](monitoring-traces-xmla.md)|Describes how to use the [Subscribe](../dev-guide/subscribe-element-xmla.md) command to subscribe to and monitor an existing trace on an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.|  
   
 ## Data Mining with XMLA  
- XML for Analysis fully supports data mining schema rowsets. These rowsets provide information for querying data mining models using the [Discover](../dev-guide/discover-method-xmla.md) method. For more information about data mining schema rowsets, see [Data Mining Schema Rowsets](../dev-guide/data-mining-schema-rowsets.md)  
+ XML for Analysis fully supports data mining schema rowsets. These rowsets provide information for querying data mining models using the [Discover](../dev-guide/discover-method-xmla.md) method. For more information about data mining schema rowsets, see [Data Mining Schema Rowsets](../schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
  For more information about DMX, see [Data Mining Extensions &#40;DMX&#41; Reference](~/dmx/data-mining-extensions-dmx-reference.md).  
   

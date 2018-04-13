@@ -49,9 +49,9 @@ manager: "jhubbard"
   
 1.  Delete all PowerPivot workbooks, documents, and libraries that are associated with a PowerPivot for SharePoint installation. Neither the libraries nor the documents will function once the software is uninstalled.  
   
-    -   [Delete PowerPivot Gallery](../../../2014/analysis-services/delete-powerpivot-gallery.md)  
+    -   [Delete PowerPivot Gallery](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
-    -   [Delete a PowerPivot Data Feed Library](../../../2014/analysis-services/delete-a-powerpivot-data-feed-library.md)  
+    -   [Delete a PowerPivot Data Feed Library](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
 2.  Delete Excel workbooks or Reporting Services reports in other libraries that contain or reference PowerPivot data.  
   
@@ -110,7 +110,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  To find and remove a deployment or retraction job that is already in the queue, do the following:  
   
-1.  For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+1.  For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 2.  Start the SharePoint Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
@@ -171,9 +171,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 2.  Delete all PowerPivot workbooks, documents, and libraries if you have not already done so.  
   
-    -   [Delete PowerPivot Gallery](../../../2014/analysis-services/delete-powerpivot-gallery.md)  
+    -   [Delete PowerPivot Gallery](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
-    -   [Delete a PowerPivot Data Feed Library](../../../2014/analysis-services/delete-a-powerpivot-data-feed-library.md)  
+    -   [Delete a PowerPivot Data Feed Library](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
 3.  In Secure Store Service, delete any target applications that contain stored credentials used by PowerPivot for SharePoint. Some, but not all, entries in Secure Store Service are deleted when you uninstall PowerPivot for SharePoint. Target applications created for the PowerPivot unattended data refresh account plus any target applications you created for data refresh still exist and must be deleted manually.  
   
@@ -187,6 +187,6 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 ## See Also  
  [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot Configuration Tools](../../../2014/analysis-services/powerpivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   

@@ -42,7 +42,7 @@ manager: "mblythe"
   
 |Relationship|Element|  
 |------------------|-------------|  
-|Parent elements|[RelationshipEndVisualizationProperties](../../../2014/analysis-services/dev-guide/relationshipendvisualizationproperties-data-type-assl.md)|  
+|Parent elements|[RelationshipEndVisualizationProperties](../scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
 |Child elements|None|  
   
 ## Remarks  

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 7.  The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instance cannot be part of a SQL Server Failover Cluster. Use high availability features of the SharePoint Product. For example, Excel Services manages load balancing of PowerPivot for SharePoint servers. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx).  
   
-8.  If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on an existing farm, you must have one or more SharePoint web applications that are configured for classic mode authentication. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will only work if the web application supports classic mode authentication. For more information about classic mode requirements, see [PowerPivot Authentication and Authorization](../../../2014/analysis-services/powerpivot-authentication-and-authorization.md).  
+8.  If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] on an existing farm, you must have one or more SharePoint web applications that are configured for classic mode authentication. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will only work if the web application supports classic mode authentication. For more information about classic mode requirements, see [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
   
 9. Review the following additional topics to understand system and version requirements:  
   
@@ -122,9 +122,9 @@ manager: "jhubbard"
   
 -   [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
--   [PowerPivot Server Administration and Configuration in Central Administration](../../../2014/analysis-services/powerpivot-server-administration-and-configuration-in-central-administration.md)  
+-   [PowerPivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
--   [PowerPivot Configuration using Windows PowerShell](../../../2014/analysis-services/powerpivot-configuration-using-windows-powershell.md)  
+-   [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
  **Connecting to the Database Engine Instance.** When you installed [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], SQL Server Setup gave you the option of adding an instance of the Database Engine to your installation. You might have added a Database Engine instance to your installation if you are setting up a new farm and need a database server to run the farm’s configuration and content databases. If you added the Database Engine, it was installed as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance. Whenever you need to specify a connection to this instance (for example, in the farm configuration wizard if you are using that wizard to configure the farm), remember to enter the database name in this format: <`servername`>\PowerPivot.  
   

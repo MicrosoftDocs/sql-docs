@@ -48,7 +48,7 @@ manager: "mblythe"
   
 |Characteristic|Description|  
 |--------------------|-----------------|  
-|Data type and length|[DimensionAttributeBinding](../../../2014/analysis-services/dev-guide/dimensionattributebinding-data-type-out-of-line-assl.md), [MeasureGroupAttributeBinding](../../../2014/analysis-services/dev-guide/measuregroupattributebinding-data-type-out-of-line-assl.md), [PartitionBinding](../../../2014/analysis-services/dev-guide/partitionbinding-data-type-assl.md)|  
+|Data type and length|[DimensionAttributeBinding](../scripting/data-type/dimensionattributebinding-data-type-out-of-line-assl.md), [MeasureGroupAttributeBinding](../scripting/data-type/measuregroupattributebinding-data-type-out-of-line-assl.md), [PartitionBinding](../scripting/data-type/binding-data-type-assl.md)|  
 |Default value|None|  
 |Cardinality|0-n: Optional element that can occur more than once.|  
   

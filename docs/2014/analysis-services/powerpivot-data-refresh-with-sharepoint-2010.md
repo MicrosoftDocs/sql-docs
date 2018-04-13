@@ -27,7 +27,7 @@ manager: "mblythe"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](powerpivot-data-refresh-with-sharepoint-2013.md).  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SharePoint Server 2013 Excel Services use a different architecture for data refresh of [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] data models. The new architecture utilizes Excel Services as the primary component to load PowerPivot data models. The previous data refresh architecture used relied on a server running PowerPivot System Service and [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in SharePoint mode to load data models. For more information, see [PowerPivot Data Refresh with SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md).  
   
  **In this topic:**  
   
@@ -230,7 +230,7 @@ manager: "mblythe"
   
  When you create the schedule, select the **Also refresh as soon as possible** checkbox to run data refresh immediately. You can then check the data refresh history page of that workbook to verify that it ran successfully. Recall that the PowerPivot Data Refresh timer job runs every minute. It will take at least that long to get confirmation that data refresh succeeded.  
   
- Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md).  
+ Be sure to try all of the credential options you plan to support. For example, if you configured the PowerPivot unattended data refresh account, verify that data refresh succeeds using that option. For more information about scheduling and viewing status information, see [Schedule a Data Refresh &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md) and [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
  If data refresh fails, refer to the [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/?LinkID=223279) page on the TechNet wiki for possible solutions.  
   
@@ -269,9 +269,9 @@ manager: "mblythe"
   
 5.  Click **OK**.  
   
- History information is made available to SharePoint users when they choose the Manage Data Refresh option on a workbook that has a data refresh history. This information is also used in the PowerPivot Management Dashboard used by farm administrators to manage PowerPivot service operations. For more information, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](view-data-refresh-history-powerpivot-for-sharepoint.md).  
+ History information is made available to SharePoint users when they choose the Manage Data Refresh option on a workbook that has a data refresh history. This information is also used in the PowerPivot Management Dashboard used by farm administrators to manage PowerPivot service operations. For more information, see [View Data Refresh History &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- Long-term physical storage of history data is in the PowerPivot service application database for the PowerPivot service application. For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](powerpivot-usage-data-collection.md).  
+ Long-term physical storage of history data is in the PowerPivot service application database for the PowerPivot service application. For more information about how usage data is collected and stored, see [PowerPivot Usage Data Collection](power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="configTimerJob"></a> Reschedule the PowerPivot Data Refresh timer job  
  Scheduled data refresh is triggered by a PowerPivot Data Refresh timer job that scans schedule information in the PowerPivot service application database at one minute intervals. When data refresh is scheduled to begin, the timer job adds the request to a processing queue on an available PowerPivot server.  
@@ -282,7 +282,7 @@ manager: "mblythe"
   
  If you raise the scan interval so that it runs very infrequently (for example, once a day at midnight), all of the data refresh operations that were scheduled to run during that interval are added to the processing queue all at once, potentially overwhelming the server and starving other applications of system resources. Depending on the number of scheduled refreshes, the processing queue for data refresh operations might build up to such an extent that not all jobs will be able to complete. Data refresh requests at the end of the queue might be dropped if they run into the next processing interval.  
   
- If your hardware supports it, you can mitigate this problem by specifying additional processors to run more data refresh jobs in parallel. For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). For more information about how data refresh requests are discovered, added to a queue, and processed, see [PowerPivot Data Refresh](powerpivot-data-refresh.md).  
+ If your hardware supports it, you can mitigate this problem by specifying additional processors to run more data refresh jobs in parallel. For more information, see [Configure Dedicated Data Refresh or Query-Only Processing &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md). For more information about how data refresh requests are discovered, added to a queue, and processed, see [PowerPivot Data Refresh](power-pivot-sharepoint/power-pivot-data-refresh.md).  
   
 1.  In Central Administration, click **Monitoring**.  
   

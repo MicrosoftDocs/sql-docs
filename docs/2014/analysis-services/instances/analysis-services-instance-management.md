@@ -38,7 +38,7 @@ manager: "mblythe"
  As a general rule, most of the administrative tasks you must perform do not vary by mode. As an Analysis Services system administrator, you can use the same procedures and scripts to manage any Analysis Services instance on your network regardless of how it was installed.  
   
 > [!NOTE]  
->  The exception is PowerPivot for SharePoint. Server administration of a PowerPivot deployment is always within the context of a SharePoint farm. PowerPivot differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the PowerPivot Configuration Tool. Although it is possible to connect to PowerPivot for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about PowerPivot server administration, see [PowerPivot for SharePoint &#40;SSAS&#41;](../powerpivot-for-sharepoint-ssas.md).  
+>  The exception is PowerPivot for SharePoint. Server administration of a PowerPivot deployment is always within the context of a SharePoint farm. PowerPivot differs from other server modes in that it is always single-instance, and always managed through SharePoint Central Administration or the PowerPivot Configuration Tool. Although it is possible to connect to PowerPivot for SharePoint in SQL Server Management Studio or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], it is not desirable. A SharePoint farm includes infrastructure that synchronizes server state and oversees server availability. Using other tools can interfere with these operations. For more information about PowerPivot server administration, see [PowerPivot for SharePoint &#40;SSAS&#41;](../power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
 ## In This Section  
   
@@ -53,8 +53,8 @@ manager: "mblythe"
   
 ## See Also  
  [Comparing Tabular and Multidimensional Solutions &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
- [PowerPivot Configuration Tools](../powerpivot-configuration-tools.md)   
- [PowerPivot Server Administration and Configuration in Central Administration](../powerpivot-server-administration-and-configuration-in-central-administration.md)   
+ [PowerPivot Configuration Tools](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
+ [PowerPivot Server Administration and Configuration in Central Administration](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Determine the Server Mode of an Analysis Services Instance](determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

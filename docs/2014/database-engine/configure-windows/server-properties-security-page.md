@@ -64,12 +64,12 @@ manager: "jhubbard"
   
 ## Options  
  **Enable C2 audit tracing**  
- Audits all attempts to access statements and objects and records them to a file in the \MSSQL\Data directory for default instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or the \MSSQL$*instancename*\Data directory for named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [c2 audit mode Server Configuration Option](configure-windows/c2-audit-mode-server-configuration-option.md).  
+ Audits all attempts to access statements and objects and records them to a file in the \MSSQL\Data directory for default instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or the \MSSQL$*instancename*\Data directory for named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [c2 audit mode Server Configuration Option](c2-audit-mode-server-configuration-option.md).  
   
  **Cross database ownership chaining**  
- Select to allow the database to be the source or target of a cross-database ownership chain. For more information, see [cross db ownership chaining Server Configuration Option](configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
+ Select to allow the database to be the source or target of a cross-database ownership chain. For more information, see [cross db ownership chaining Server Configuration Option](cross-db-ownership-chaining-server-configuration-option.md).  
   
 ## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  
+ [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

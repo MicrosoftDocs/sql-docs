@@ -99,6 +99,6 @@ manager: "jhubbard"
 -   Query **session_timeout** in [sys.availability_replicas &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)  
   
   

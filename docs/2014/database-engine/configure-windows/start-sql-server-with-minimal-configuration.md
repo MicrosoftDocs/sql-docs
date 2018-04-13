@@ -40,6 +40,6 @@ manager: "jhubbard"
  [sqlcmd Utility](../sqlcmd-utility.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md)  
+ [Database Engine Service Startup Options](database-engine-service-startup-options.md)  
   
   

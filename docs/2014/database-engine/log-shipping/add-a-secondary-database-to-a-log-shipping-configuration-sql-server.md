@@ -109,7 +109,7 @@ manager: "jhubbard"
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## See Also  
- [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [About Log Shipping &#40;SQL Server&#41;](/about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](-tables-and-stored-procedures.md)  
   
   

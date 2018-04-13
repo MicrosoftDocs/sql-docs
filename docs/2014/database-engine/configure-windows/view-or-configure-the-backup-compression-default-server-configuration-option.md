@@ -111,14 +111,14 @@ GO
   
 ```  
   
- For more information, see [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md).  
+ For more information, see [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After you configure the backup compression default option  
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)   
+ [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Backup Overview &#40;SQL Server&#41;](../../2014/database-engine/backup-overview-sql-server.md)  

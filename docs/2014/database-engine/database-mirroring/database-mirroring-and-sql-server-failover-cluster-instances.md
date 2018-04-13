@@ -25,12 +25,12 @@ manager: "jhubbard"
  Failover clusters provide high-availability support for an entire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, in contrast to database mirroring, which provides high-availability support for a single database. Database mirroring works between failover clusters and, also, between a failover cluster and a nonclustered host.  
   
 > [!NOTE]  
->  For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
+>  For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ## Mirroring and Clustering  
  Typically, when mirroring is used with clustering, the principal server and mirror server both reside on clusters, with the principal server running on the failover clustered instance of one cluster and the mirror server running on the failover clustered instance of a different cluster. You can establish a mirroring session in which one partner resides on the failover clustered instance of a cluster and the other partner resides on a separate, unclustered computer, however.  
   
- If a cluster failover makes a principal server temporarily unavailable, client connections are disconnected from the database. After the cluster failover completes, clients can reconnect to the principal server on the same cluster, or on a different cluster or an unclustered computer, depending on the [operating mode](database-mirroring/database-mirroring-operating-modes.md). Therefore, when deciding how to configure database mirroring in a clustered environment, the operating mode you use for mirroring is significant.  
+ If a cluster failover makes a principal server temporarily unavailable, client connections are disconnected from the database. After the cluster failover completes, clients can reconnect to the principal server on the same cluster, or on a different cluster or an unclustered computer, depending on the [operating mode](database-mirroring-operating-modes.md). Therefore, when deciding how to configure database mirroring in a clustered environment, the operating mode you use for mirroring is significant.  
   
 ### High-Safety mode Session with Automatic Failover  
  If you intend to mirror a database in high-safety mode with automatic failover, a two-cluster configuration is recommended for the partners. This configuration provides maximum availability. The witness can reside either on a third cluster or on an unclustered computer.  
@@ -57,13 +57,13 @@ manager: "jhubbard"
   
  **To set up database mirroring**  
   
--   [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/setting-up-database-mirroring-sql-server.md)  
+-   [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md) 
   
   

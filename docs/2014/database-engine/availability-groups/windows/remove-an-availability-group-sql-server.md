@@ -123,7 +123,7 @@ manager: "jhubbard"
 -   [How It Works: DROP AVAILABILITY GROUP Behaviors](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server Engineers blog)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](/creation-and-configuration-of-availability-groups-sql-server.md)  
   
   

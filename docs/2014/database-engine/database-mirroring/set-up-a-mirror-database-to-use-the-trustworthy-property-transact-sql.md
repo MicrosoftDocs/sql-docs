@@ -49,9 +49,9 @@ manager: "jhubbard"
   
      This can be done in either SQL Server Management Studio or using Transact-SQL:  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 4.  Turn on the trustworthy database property using the following ALTER DATABASE command:  
   
@@ -67,13 +67,13 @@ manager: "jhubbard"
   
      In Transact-SQL:  
   
-    -   [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-    -   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+    -   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
      In SQL Server Management Studio:  
   
-    -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+    -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
  [TRUSTWORTHY Database Property](../trustworthy-database-property.md)   

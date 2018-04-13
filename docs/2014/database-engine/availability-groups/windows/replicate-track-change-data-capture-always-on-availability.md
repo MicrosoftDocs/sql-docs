@@ -140,7 +140,7 @@ manager: "jhubbard"
   
      While in many cases a client application will always want to connect to the current primary replica that is not the only way to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. If an availability group is configured to support readable secondary replicas, change data can also be gathered from secondary nodes.  
   
-     When an availability group is configured, the ALLOW_CONNECTIONS attribute associated with the SECONDARY_ROLE is used to specify the type of secondary access supported. If configured as ALL, all connections to the secondary will be allowed, but only those requiring read only access will succeed. If configured as READ_ONLY, it is necessary to specify read only intent when making the connection to the secondary database in order for the connection to succeed. For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     When an availability group is configured, the ALLOW_CONNECTIONS attribute associated with the SECONDARY_ROLE is used to specify the type of secondary access supported. If configured as ALL, all connections to the secondary will be allowed, but only those requiring read only access will succeed. If configured as READ_ONLY, it is necessary to specify read only intent when making the connection to the secondary database in order for the connection to succeed. For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      The following query can be used to determine whether read-only intent is needed to connect to a readable secondary replica.  
   
@@ -195,7 +195,7 @@ manager: "jhubbard"
   
 -   Placing the distribution database on an availability group is not supported.  
   
--   The Publisher instances satisfy all the prerequisites required to participate in an AlwaysOn availability group. For more information see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   The Publisher instances satisfy all the prerequisites required to participate in an AlwaysOn availability group. For more information see [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### Restrictions  
  Supported combinations of replication on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
@@ -225,9 +225,9 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Replication**  
   
--   [Configure Replication for AlwaysOn Availability Groups (SQL Server)](availability-groups/windows/always-on-availability-groups-sql-server.md)  
+-   [Configure Replication for AlwaysOn Availability Groups (SQL Server)](/always-on-availability-groups-sql-server.md)  
   
--   [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+-   [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](/maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [Administration &#40;Replication&#41;](../../2014/relational-databases/replication/administration-replication.md)  
   
@@ -249,9 +249,9 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication Subscribers and AlwaysOn Availability Groups &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn Availability Groups: Interoperability (SQL Server)](availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)
+ [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn Availability Groups: Interoperability (SQL Server)](/always-on-availability-groups-interoperability-sql-server.md)
  [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md)   
  [About Change Data Capture &#40;SQL Server&#41;](../../2014/database-engine/about-change-data-capture-sql-server.md)   
  [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md)   

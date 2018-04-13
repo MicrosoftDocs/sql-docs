@@ -21,7 +21,7 @@ manager: "jhubbard"
   It is possible to preserve log shipping configurations when upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This topic describes alternative scenarios and best practices for upgrading a log shipping configuration.  
   
 > [!NOTE]  
->  [Backup compression](../../2014/database-engine/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+>  [Backup compression](../../2014/database-engine/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
   
 ##  <a name="ProtectData"></a> Protect Your Data Before the Upgrade  
@@ -83,7 +83,7 @@ manager: "jhubbard"
  Upgrading the primary server instance with failover involves three general procedures: performing a controlled failover to the secondary server, upgrading the original primary server instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and setting up log shipping on a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] primary server instance. These procedures are described in this section.  
   
 > [!IMPORTANT]  
->  If you plan to have the secondary server instance as the new primary server instance, you need to remove the log shipping configuration. Log shipping will need to be reconfigured from the new primary to the new secondary, after the original primary server instance has been upgraded. For more information, see [Remove Log Shipping &#40;SQL Server&#41;](log-shipping/remove-log-shipping-sql-server.md).  
+>  If you plan to have the secondary server instance as the new primary server instance, you need to remove the log shipping configuration. Log shipping will need to be reconfigured from the new primary to the new secondary, after the original primary server instance has been upgraded. For more information, see [Remove Log Shipping &#40;SQL Server&#41;](/remove-log-shipping-sql-server.md).  
   
   
 #####  <a name="Procedure1"></a> Procedure 1: Perform a Controlled Failover to the Secondary Server  
@@ -174,7 +174,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  If you use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], specify that the secondary database is already initialized.  
   
-     For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+     For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
 5.  Fail over the database by redirecting clients from the original primary server (server A) to the online secondary server (server B).  
   
@@ -217,11 +217,11 @@ manager: "jhubbard"
 ##  <a name="Redeploying"></a> Redeploying Log Shipping  
  If you do not want to migrate your log shipping configuration using one of the procedures shown above, you can redeploy log shipping from scratch by reinitializing your secondary database with a full backup and restore of the primary database. This may be a desirable option if you have a small database or if high availability is not crucial during the upgrade procedure.  
   
- For information about enabling log shipping, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+ For information about enabling log shipping, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
 ## See Also  
  [Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/transaction-log-backups-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping/log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](/log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -60,7 +60,7 @@ manager: "jhubbard"
   
  An asynchronous-commit secondary replica attempts to keep up with the log records received from the primary replica. But asynchronous-commit secondary databases always remain unsynchronized and are likely to lag somewhat behind the corresponding primary databases. Typically the gap between an asynchronous-commit secondary database and the corresponding primary database is small. But the gap can become substantial if the server hosting the secondary replica is over loaded or the network is slow.  
   
- The only form of failover supported by asynchronous-commit mode is forced failover (with possible data loss). Forcing failover is a last resort intended only for situations in which the current primary replica will remain unavailable for an extended period and immediate availability of primary databases is more critical than the risk of possible data loss.The failover target must be a replica whose role is in the SECONDARY or RESOLVING state. The failover target transitions to the primary role, and its copies of the databases become the primary database. Any remaining secondary databases, along with the former primary databases, once they become available, are suspended until you manually resume them individually. Under asynchronous-commit mode, any transaction logs that the original primary replica had not yet sent to the former secondary replica are lost. This means that some or all of the new primary databases might be lacking recently committed transactions. For more information on how forced failover works and on best practices for using it, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ The only form of failover supported by asynchronous-commit mode is forced failover (with possible data loss). Forcing failover is a last resort intended only for situations in which the current primary replica will remain unavailable for an extended period and immediate availability of primary databases is more critical than the risk of possible data loss.The failover target must be a replica whose role is in the SECONDARY or RESOLVING state. The failover target transitions to the primary role, and its copies of the databases become the primary database. Any remaining secondary databases, along with the former primary databases, once they become available, are suspended until you manually resume them individually. Under asynchronous-commit mode, any transaction logs that the original primary replica had not yet sent to the former secondary replica are lost. This means that some or all of the new primary databases might be lacking recently committed transactions. For more information on how forced failover works and on best practices for using it, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  Under synchronous-commit availability mode (*synchronous-commit mode*), after being joined to an availability group, a secondary database catches up to the corresponding primary database and enters the SYNCHRONIZED state. The secondary database remains SYNCHRONIZED as long as data synchronization continues. This guarantees that every transaction that is committed on a given primary database has also been committed on the corresponding secondary database. When every secondary database on a given secondary replica is synchronized, the synchronization-health state of the secondary replica as a whole is HEALTHY.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 -   A network or computer delay or glitch causes the session between the secondary replica and primary replica to timeout.  
   
     > [!NOTE]  
-    >  For information about the session-time property of availability replicas, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+    >  For information about the session-time property of availability replicas, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md).  
   
 -   You suspend a secondary database on the secondary replica. The secondary replica ceases to be synchronized, and its synchronization-health state is marked as NOT_HEALTHY. the secondary replica cannot become healthy again until the suspended secondary database is either resumed and resynchronized or removed from the availability group.  
   
@@ -104,12 +104,12 @@ manager: "jhubbard"
  Synchronous-commit mode protects your data by requiring the data to be synchronized between two places, at the cost of somewhat increasing the latency of the transaction.  
   
 ### Synchronous-Commit Mode with Only Manual Failover  
- When these replicas are connected and the database is synchronized, manual failover is supported. If the secondary replica goes down, the primary replica is unaffected. The primary replica runs exposed if no SYNCHRONIZED replicas exist (that is, without sending data to any secondary replica). If the primary replica is lost, the secondary replicas enter the RESOLVING state, but the database owner can force a failover to the secondary replica (with possible data loss). For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ When these replicas are connected and the database is synchronized, manual failover is supported. If the secondary replica goes down, the primary replica is unaffected. The primary replica runs exposed if no SYNCHRONIZED replicas exist (that is, without sending data to any secondary replica). If the primary replica is lost, the secondary replicas enter the RESOLVING state, but the database owner can force a failover to the secondary replica (with possible data loss). For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md).  
   
 ###  <a name="SyncCommitWithAuto"></a> Synchronous-Commit Mode with Automatic Failover  
  Automatic failover provides high availability by ensuring that the database is quickly made available again after the loss of the primary replica. To configure an availability group for automatic failover, you need to set both the current primary replica and one secondary replica to synchronous-commit mode with automatic failover.  
   
- Furthermore, for an automatic failover to be possible at a given time, this secondary replica must be synchronized with the primary replica (that is, the secondary databases are all synchronized), and the Windows Server Failover Clustering (WSFC) cluster must have quorum. If the primary replica becomes unavailable under these conditions, automatic failover occurs. The secondary replica switches to the role of primary, and it offers its database as the primary database. For more information, see the "Automatic Failover " section of the [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) topic.  
+ Furthermore, for an automatic failover to be possible at a given time, this secondary replica must be synchronized with the primary replica (that is, the secondary databases are all synchronized), and the Windows Server Failover Clustering (WSFC) cluster must have quorum. If the primary replica becomes unavailable under these conditions, automatic failover occurs. The secondary replica switches to the role of primary, and it offers its database as the primary database. For more information, see the "Automatic Failover " section of the [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md) topic.  
   
 > [!NOTE]  
 >  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
@@ -117,9 +117,9 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To change the availability mode and failover mode**  
   
--   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
  **To adjust quorum votes**  
   
@@ -131,11 +131,11 @@ manager: "jhubbard"
   
  **To perform a manual failover**  
   
--   [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+-   [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
  **To view availability group, availability replica, and database states**  
   
@@ -152,8 +152,8 @@ manager: "jhubbard"
 -   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

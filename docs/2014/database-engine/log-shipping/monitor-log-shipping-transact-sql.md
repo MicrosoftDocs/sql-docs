@@ -59,6 +59,6 @@ manager: "jhubbard"
   
 ## See Also  
  [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
- [Log Shipping Stored Procedures and Tables](log-shipping/log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Stored Procedures and Tables](/log-shipping-tables-and-stored-procedures.md)  
   
   

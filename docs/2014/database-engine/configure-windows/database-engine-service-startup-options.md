@@ -68,7 +68,7 @@ manager: "jhubbard"
  The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  
   
 ## Related Tasks  
- [Configure the scan for startup procs Server Configuration Option](configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
+ [Configure the scan for startup procs Server Configuration Option](configure-the-scan-for-startup-procs-server-configuration-option.md)  
   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](start-stop-pause-resume-restart-sql-server-services.md)  
   

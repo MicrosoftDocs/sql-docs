@@ -41,20 +41,20 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To remove database mirroring**  
   
--   [Remove Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
+-   [Remove Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
  **To start database mirroring**  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
 
   
 ## See Also  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
+ [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](pausing-and-resuming-database-mirroring-sql-server.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   

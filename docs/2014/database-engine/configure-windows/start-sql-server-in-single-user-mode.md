@@ -63,6 +63,6 @@ manager: "jhubbard"
  [sqlcmd Utility](../sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md)  
+ [Database Engine Service Startup Options](database-engine-service-startup-options.md)  
   
   

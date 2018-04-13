@@ -133,7 +133,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Availability Modes (AlwaysOn Availability Groups)](availability-groups/windows/availability-modes-always-on-availability-groups.md)   
+ [Availability Modes (AlwaysOn Availability Groups)](/availability-modes-always-on-availability-groups.md)   
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   

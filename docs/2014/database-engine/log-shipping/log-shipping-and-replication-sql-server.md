@@ -52,9 +52,9 @@ manager: "jhubbard"
   
 1.  If the sync with backup option is not set on the publication database, execute `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`. For more information, see [sp_replicationdboption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
   
-2.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+2.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
-3.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+3.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
@@ -66,9 +66,9 @@ manager: "jhubbard"
   
  **To configure transactional replication and log shipping without the sync with backup option**  
   
-1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
-2.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+2.  If the Publisher fails, restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 3.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
@@ -91,11 +91,11 @@ manager: "jhubbard"
   
  **To configure merge replication and log shipping**  
   
-1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+1.  Configure log shipping for the publication database. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
 2.  If the Publisher fails, at the secondary server, rename the computer and then rename the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to match the primary server name. For information about renaming the computer, see the Windows documentation. For information about renaming the server, see [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) and [Rename a SQL Server Failover Cluster Instance](../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   
-3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+3.  Restore the last log of the database to the secondary server, using the KEEP_REPLICATION option of RESTORE LOG. This retains all replication settings for the database. For more information, see [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md) and [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 4.  Restore the **msdb** database and **master** databases from the primary to the secondary. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md). If the primary was also a Distributor, restore the distribution database from the primary to the secondary.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   
- [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)   
+ [About Log Shipping &#40;SQL Server&#41;](/about-log-shipping-sql-server.md)   
  [Database Mirroring and Replication &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   

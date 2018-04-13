@@ -99,7 +99,7 @@ GO
 ## Related Content  
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
- [Configure the remote access Server Configuration Option](configure-windows/configure-the-remote-access-server-configuration-option.md)  
+ [Configure the remote access Server Configuration Option](configure-the-remote-access-server-configuration-option.md)  
   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)  
   

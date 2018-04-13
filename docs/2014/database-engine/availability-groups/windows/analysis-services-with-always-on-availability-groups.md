@@ -34,14 +34,14 @@ manager: "jhubbard"
  By default, both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas. Additional configuration is required to set up a read-only client connection to a secondary replica. Configuration requires setting properties on the secondary replica and running a T-SQL script that defines a read-only routing list. Use the following procedures to ensure you have performed both steps.  
   
 > [!NOTE]  
->  The following steps assume an existing AlwaysOn availability group and databases. If you are configuring a new group, use the New Availability Group Wizard to create the group and join the databases. The wizard checks for prerequisites, provides guidance for each step, and performs the initial synchronization. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
+>  The following steps assume an existing AlwaysOn availability group and databases. If you are configuring a new group, use the New Availability Group Wizard to create the group and join the databases. The wizard checks for prerequisites, provides guidance for each step, and performs the initial synchronization. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
 #### Step 1: Configure access on an availability replica  
   
 1.  In Object Explorer, connect to the server instance that hosts the primary replica, and expand the server tree.  
   
     > [!NOTE]  
-    >  These steps are taken from [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md), which provides additional information and alternative instructions for performing this task.  
+    >  These steps are taken from [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](/configure-read-only-access-on-an-availability-replica-sql-server.md), which provides additional information and alternative instructions for performing this task.  
   
 2.  Expand the **AlwaysOn High Availability** node and the **Availability Groups** node.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 1.  Connect to the primary replica.  
   
     > [!NOTE]  
-    >  These steps are taken from [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
+    >  These steps are taken from [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](/configure-read-only-routing-for-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
   
 2.  Open a query window and paste in the following script. This script does three things: enables readable connections to a secondary replica (which is off by default), sets the read-only routing URL, and creates the routing list that prioritizes how connection requests are directed.  The first statement, allowing readable connections, is redundant if you already set the properties in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], but are included for completeness.  
   
@@ -174,7 +174,7 @@ manager: "jhubbard"
      To verify synchronization, open a connection to each instance that hosts the primary and secondary replicas, expand the Databases folder, and ensure that the database has **(Synchronized)** and **(Synchronizing)** appended to its name in each replica.  
   
     > [!NOTE]  
-    >  These steps are taken from [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
+    >  These steps are taken from [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md), which provides additional information and alternative instructions for performing this task.  
   
 2.  In SQL Server Profiler, start traces for each replica and view the traces side-by-side. In the following steps, you will compare traces, confirming that the SQL queries used for processing or querying from Analysis Services switch from one replica to the other.  
   
@@ -197,7 +197,7 @@ manager: "jhubbard"
 9. Repeat the processing or query command in the Analysis Services solution, and then watch the traces side by side in SQL Server Profiler. You should see evidence of processing on the other instance, which is now the new secondary replica.  
   
 ##  <a name="bkmk_whathappens"></a> What happens after a failover occurs  
- During a failover, a secondary replica transitions to the primary role and the former primary replica transitions to the secondary role. All client connections are terminated, ownership of the availability group listener moves with the primary replica role to a new SQL Server instance, and the listener endpoint is bound to the new instance’s virtual IP addresses and TCP ports. For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+ During a failover, a secondary replica transitions to the primary role and the former primary replica transitions to the secondary role. All client connections are terminated, ownership of the availability group listener moves with the primary replica role to a new SQL Server instance, and the listener endpoint is bound to the new instance’s virtual IP addresses and TCP ports. For more information, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
  If failover occurs during processing, the following error occurs in Analysis Services in the log file or output window: “OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.”  
   
@@ -216,8 +216,8 @@ manager: "jhubbard"
   
 ## See Also  
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md)   
- [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Create a Data Source &#40;SSAS Multidimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Enable Dimension Writeback](../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a firewall, the firewall configuration must allow both incoming and outgoing connections for the port specified in the endpoint.  
   
- For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the endpoint. For more information, see [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+ For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the endpoint. For more information, see [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  Do not reconfigure an in-use database mirroring endpoint. The server instances use each other's endpoints to learn the state of the other systems. If the endpoint is reconfigured, it might restart, which can appear to be an error to the other server instances. This is particularly important for automatic failover mode, in which reconfiguring the endpoint on a partner could cause a failover to occur.  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   If every server instance is running under a domain service account, you can use Windows Authentication for your database mirroring endpoints. If all the server instances run as the same domain user account, the correct user logins exist automatically in both **master** databases. This simplifies the security configuration for the availability databases and is recommended.  
   
-     If any server instances that are hosting the availability replicas for an availability group run as different accounts, the login each account must be created in **master** on the other server instance. Then, that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     If any server instances that are hosting the availability replicas for an availability group run as different accounts, the login each account must be created in **master** on the other server instance. Then, that login must be granted CONNECT permissions to connect to the database mirroring endpoint of that server instance. For more information, [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
      If your server instances use Windows Authentication, you can create database mirroring endpoints by using [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell, or the New Availability Group Wizard.  
   
@@ -65,21 +65,21 @@ manager: "jhubbard"
   
 -   If any server instance is running under a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication. If you are using certificates for your database mirroring endpoints, your system administrator must configure each server instance to use certificates on both outbound and inbound connections.  
   
-     There is no automated method for configuring database mirroring security using certificates. You will need to use either CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the `New-SqlHadrEndpoint` PowerShell cmdlet. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md). For information about enabling certificate authentication on a server instance, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     There is no automated method for configuring database mirroring security using certificates. You will need to use either CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or the `New-SqlHadrEndpoint` PowerShell cmdlet. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md). For information about enabling certificate authentication on a server instance, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To Configure a Database Mirroring Endpoint**  
   
--   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Specify a Server Network Address &#40;Database Mirroring&#41;](database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+-   [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md)  
   
 -   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -91,8 +91,8 @@ manager: "jhubbard"
   
   
 ## See Also  
- [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)  
   

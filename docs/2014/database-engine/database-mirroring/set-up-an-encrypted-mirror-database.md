@@ -32,6 +32,6 @@ manager: "jhubbard"
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md)   
  [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md)   
- [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
+ [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

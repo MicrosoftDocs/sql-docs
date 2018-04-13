@@ -137,7 +137,7 @@ RECONFIGURE;
 GO  
 ```  
   
- For more information, see [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md).  
+ For more information, see [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using SQL Server Configuration Manager  
  Some server properties can be viewed or changed by using SQL Server Configuration Manager. For example, you can view the version and edition of the instance of SQL Server, or change the location where error log files are stored. These properties can also be viewed by querying the [Server-Related Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md).  
@@ -156,7 +156,7 @@ GO
  For some properties, the server might have to be restarted before the change can take effect.  
   
 ## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)   
+ [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [SET Statements &#40;Transact-SQL&#41;](~/t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

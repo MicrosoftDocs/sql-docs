@@ -103,7 +103,7 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [affinity mask Server Configuration Option](configure-windows/affinity-mask-server-configuration-option.md)   
+ [affinity mask Server Configuration Option](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

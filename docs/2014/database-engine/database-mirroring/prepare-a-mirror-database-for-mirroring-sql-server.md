@@ -62,7 +62,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  Adding a file during a mirroring session without impacting the session requires that the path of the file exists on both servers. Therefore, if you move the database files when creating the mirror database, a later add-file operation might fail on the mirror database and cause mirroring to be suspended. For information about dealing with a failed create-file operation, see [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md).  
   
--   If the principal database has any full-text catalogs, we recommend that you see [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md).  
+-   If the principal database has any full-text catalogs, we recommend that you see [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md).  
   
 -   For a production database, always back up to a separate device.  
   
@@ -214,13 +214,13 @@ manager: "jhubbard"
     GO  
     ```  
   
- For a complete example of setting up database mirroring, showing security setup, preparing the mirror database, setting up the partners, and adding a witness, see [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
+ For a complete example of setting up database mirroring, showing security setup, preparing the mirror database, setting up the partners, and adding a witness, see [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Preparing a Mirror Database  
   
 1.  If any additional log backups have been taken since your most recent RESTORE LOG operation, you must manually apply every additional log backup, using RESTORE WITH NORECOVERY.  
   
-2.  Start the mirroring session. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md) or [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-establish-session-windows-authentication.md).  
+2.  Start the mirroring session. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) or [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md).  
   
 3.  If you disabled the backup job on the principal database, reenable the job.  
   
@@ -232,9 +232,9 @@ manager: "jhubbard"
   
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../2014/database-engine/restore-a-transaction-log-backup-sql-server.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)  
   
@@ -243,10 +243,10 @@ manager: "jhubbard"
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)   
- [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md)   
+ [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
+ [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)  

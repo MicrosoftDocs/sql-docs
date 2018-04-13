@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 3.  Join the new secondary replica to the availability group. For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  For each database in the availability group, create a secondary database by restoring recent backups of the primary database, using RESTORE WITH NORECOVERY. For more information, see [Example: Setting Up an Availability Group Using Windows Authentication (Transact-SQL)](availability-groups/windows/create-an-availability-group-transact-sql.md), starting with the step that restores the database backup.  
+4.  For each database in the availability group, create a secondary database by restoring recent backups of the primary database, using RESTORE WITH NORECOVERY. For more information, see [Example: Setting Up an Availability Group Using Windows Authentication (Transact-SQL)](/create-an-availability-group-transact-sql.md), starting with the step that restores the database backup.  
   
 5.  Join every new secondary database to the availability group. For more information, see [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
@@ -448,23 +448,23 @@ GO
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To configure availability group and replica properties**  
   
--   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [Change the Availability Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Change the Failover Mode of an Availability Replica &#40;SQL Server&#41;](/change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (AlwaysOn Availability Groups)](availability-groups/windows/configure-flexible-automatic-failover-policy.md)  
+-   [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (AlwaysOn Availability Groups)](/configure-flexible-automatic-failover-policy.md)  
   
 -   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Configure Backup on Availability Replicas &#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
+-   [Configure Backup on Availability Replicas &#40;SQL Server&#41;](/configure-backup-on-availability-replicas-sql-server.md)  
   
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Change the Session-Timeout Period for an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [Change the Session-Timeout Period for an Availability Replica &#40;SQL Server&#41;](/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **To complete availability group configuration**  
   

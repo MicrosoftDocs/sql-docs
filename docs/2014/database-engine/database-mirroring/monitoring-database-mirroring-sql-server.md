@@ -328,7 +328,7 @@ manager: "jhubbard"
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
   
   

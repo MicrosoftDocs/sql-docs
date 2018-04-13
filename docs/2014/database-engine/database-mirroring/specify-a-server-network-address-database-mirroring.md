@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Specify a Server Network Address (Database Mirroring)
   Setting up a database mirroring session requires a server network address for each of the server instances. The server network address of a server instance must unambiguously identify the instance by providing a system address and the number of the port on which the instance is listening.  
   
- Before you can specify a port in a server network address, the database mirroring endpoint must exist on the server instance. For more information, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+ Before you can specify a port in a server network address, the database mirroring endpoint must exist on the server instance. For more information, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
   
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
         > [!NOTE]  
         >  For information about how to find a fully qualified domain name, see "Finding the Fully Qualified Domain Name," later in this topic.  
   
--   *\<port>* is the port number used by the mirroring endpoint of the partner server instance. For information about specifying an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* is the port number used by the mirroring endpoint of the partner server instance. For information about specifying an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      A database mirroring endpoint can use any available port on the computer system. Each port number on a computer system must be associated with only one endpoint, and each endpoint is associated with a single server instance; thus, different server instances on the same server listen on different endpoints with different ports. Therefore, the port you specify in the server network address when you set up a database mirroring session will always direct the session to the server instance whose endpoint is associated with that port.  
   
@@ -129,10 +129,10 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

@@ -46,6 +46,6 @@ manager: "jhubbard"
 3.  Click **Transaction Log Shipping Status**.  
   
 ## See Also  
- [Monitor Log Shipping &#40;Transact-SQL&#41;](log-shipping/monitor-log-shipping-transact-sql.md)  
+ [Monitor Log Shipping &#40;Transact-SQL&#41;](/monitor-log-shipping-transact-sql.md)  
   
   

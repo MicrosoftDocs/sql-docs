@@ -103,12 +103,12 @@ manager: "jhubbard"
 -   Query **mirroring_connection_timeout** in [sys.database_mirroring](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 ## Responding to an Error  
- Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the operating mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+ Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the operating mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 ## See Also  
- [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
+ [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

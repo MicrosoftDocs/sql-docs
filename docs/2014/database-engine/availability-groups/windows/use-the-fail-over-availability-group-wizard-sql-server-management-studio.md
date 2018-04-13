@@ -152,7 +152,7 @@ manager: "jhubbard"
 |**Automatic**|A secondary replica that is configured for automatic failover also supports planned manual failover whenever the secondary replica is synchronized with the primary replica.|  
 |**Manual**|Two types of manual failover exist: planned (without data loss) and forced (with possible data loss). For a given secondary replica, only one of these is supported, depending on the availability mode and, for synchronous-commit mode, the synchronization state of the secondary replica. To determine which form of manual failover is currently supported by a given secondary replica, see the **Failover Readiness** column of this grid.|  
   
- For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ For more information, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Failover Readiness**  
  Displays failover readiness of the secondary replica, one of:  
@@ -198,9 +198,9 @@ manager: "jhubbard"
  Click to cancel the wizard. On the **Connect to Replica** page, cancelling the wizard cause it to exit without performing any actions.  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
  [ Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md)   
- [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md)   
  [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

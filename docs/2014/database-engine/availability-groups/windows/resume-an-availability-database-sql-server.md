@@ -117,6 +117,6 @@ manager: "jhubbard"
 -   [Suspend an Availability Database &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)  
   
   

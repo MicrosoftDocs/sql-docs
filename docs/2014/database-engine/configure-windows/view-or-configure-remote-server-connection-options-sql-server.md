@@ -88,8 +88,8 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  The remote server must be stopped and restarted before the setting can take effect.  
   
 ## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)   
- [Remote Servers](configure-windows/remote-servers.md)   
+ [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
+ [Remote Servers](remote-servers.md)   
  [Linked Servers &#40;Database Engine&#41;](../../2014/database-engine/linked-servers-database-engine.md)   
  [sp_linkedservers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   

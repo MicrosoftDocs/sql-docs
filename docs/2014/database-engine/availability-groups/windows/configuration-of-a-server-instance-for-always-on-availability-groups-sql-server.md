@@ -88,7 +88,7 @@ manager: "jhubbard"
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [AlwaysOn Availability Groups: Interoperability (SQL Server)](availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn Availability Groups: Interoperability (SQL Server)](/always-on-availability-groups-interoperability-sql-server.md)   
  [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [AlwaysOn Failover Cluster Instances](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md)  

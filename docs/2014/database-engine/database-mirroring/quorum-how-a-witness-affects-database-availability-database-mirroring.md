@@ -46,7 +46,7 @@ manager: "jhubbard"
  A disconnected server instance saves its most recent role in the session. Typically, a disconnected server instance reconnects to the session when it restarts and regains quorum.  
   
 > [!IMPORTANT]  
->  The witness should be set only when you intend to use high-safety mode with automatic failover. In high-performance mode, for which a witness is never required, we strongly recommend setting the WITNESS property to OFF. For information about the impact of a witness on high-performance mode, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+>  The witness should be set only when you intend to use high-safety mode with automatic failover. In high-performance mode, for which a witness is never required, we strongly recommend setting the WITNESS property to OFF. For information about the impact of a witness on high-performance mode, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 ## Quorum in High-Safety Mode Sessions  
  In high-safety mode, quorum allows automatic failover by providing a context in which the server instances with quorum arbitrate which partner owns the role of principal. The principal server serves the database if it has quorum. If the principal server loses quorum when the synchronized mirror server and witness retain quorum, automatic failover occurs.  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
     -   The principal server is lost, and the witness and the mirror server retain quorum.  
   
-         In this case, automatic failover occurs. For more information, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+         In this case, automatic failover occurs. For more information, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
     -   All the server instances lose quorum, but subsequently the mirror and witness reconnect. The database will not be served in this case.  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
     -   When all three server instances have reconnected, full quorum is regained, and the session resumes its regular operation.  
   
 > [!IMPORTANT]  
->  When a session has a partner-to-partner quorum, if either partner loses quorum, the session loses quorum. Therefore, if you expect the witness to remain disconnected for lots of time, we recommend that you temporarily remove the witness from the session. Removing the witness removes the requirement for quorum. Then, if the mirror server becomes disconnected, the principal server can continue to serve the database. For information about how to add or remove a witness, see [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md).  
+>  When a session has a partner-to-partner quorum, if either partner loses quorum, the session loses quorum. Therefore, if you expect the witness to remain disconnected for lots of time, we recommend that you temporarily remove the witness from the session. Removing the witness removes the requirement for quorum. Then, if the mirror server becomes disconnected, the principal server can continue to serve the database. For information about how to add or remove a witness, see [Database Mirroring Witness](database-mirroring-witness.md).  
   
 ### How Quorum Affects Database Availability  
  The following illustration shows how the witness and the partners cooperate to make sure that, at given time, only one partner owns the role of principal and only the current principal server can bring its database online. Both scenarios start with full quorum, and **Partner_A** in the principal role and **Partner_B** in the mirror role.  
@@ -100,10 +100,10 @@ manager: "jhubbard"
  In Scenario 2, the witness loses quorum, while the partners, **Partner_A** and **Partner_B**, retain quorum with each other, and the database remains online. Then the partners lose their quorum, too, and the database goes offline. Later, the principal server, **Partner_A**, reconnects to the witness regaining quorum. The witness confirms that **Partner_A** still owns the principal role, and **Partner_A** brings the database back online.  
   
 ## See Also  
- [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)   
- [Possible Failures During Database Mirroring](database-mirroring/possible-failures-during-database-mirroring.md)   
- [Mirroring States &#40;SQL Server&#41;](database-mirroring/mirroring-states-sql-server.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)   
+ [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
+ [Mirroring States &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

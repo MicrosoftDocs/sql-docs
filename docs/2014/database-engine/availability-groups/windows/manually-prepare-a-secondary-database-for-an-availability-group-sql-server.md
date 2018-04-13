@@ -82,7 +82,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 > [!NOTE]  
->  If the backup and restore file paths are identical between the server instance that hosts the primary replica and every instance that hosts a secondary replica, you should be able create secondary databases by using [New Availability Group Wizard](use-the-availability-group-wizard-sql-server-management-studio.md), [Add Replica to Availability Group Wizard](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md), or [Add Database to Availability Group Wizard](availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
+>  If the backup and restore file paths are identical between the server instance that hosts the primary replica and every instance that hosts a secondary replica, you should be able create secondary databases by using [New Availability Group Wizard](use-the-availability-group-wizard-sql-server-management-studio.md), [Add Replica to Availability Group Wizard](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md), or [Add Database to Availability Group Wizard](/availability-group-add-database-to-group-wizard.md).  
   
  **To prepare a secondary database**  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
   
      If the file paths of the primary database and the secondary database differ, for example, if the primary database is on drive 'F:' but the server instance that hosts the secondary replica lacks an F: drive, include the MOVE option in your WITH clause.  
   
-4.  To complete configuration of the secondary database, you need to join the secondary database to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+4.  To complete configuration of the secondary database, you need to join the secondary database to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
 >  For information about how to perform these backup and restore operations, see [Related Backup and Restore Tasks](#RelatedTasks), later in this section.  
@@ -139,7 +139,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  A log backup would not exist if the primary database has just been created and no log backup has been taken yet or if the recovery model has just been changed from simple to full.  
   
-4.  To complete configuration of the secondary database, you need to join the secondary database to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+4.  To complete configuration of the secondary database, you need to join the secondary database to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
 >  For information about how to perform these backup and restore operations, see [Related Backup and Restore Tasks](#RelatedTasks), later in this topic.  
@@ -254,7 +254,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md).  
   
-5.  To complete configuration of the secondary database, you need to join it to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+5.  To complete configuration of the secondary database, you need to join it to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
@@ -276,7 +276,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Preparing a Secondary Database  
- To complete configuration of the secondary database, join the newly restored database to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+ To complete configuration of the secondary database, join the newly restored database to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

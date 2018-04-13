@@ -32,7 +32,7 @@ manager: "jhubbard"
  This topic discusses considerations for combining log shipping and database mirroring.  
   
 > [!NOTE]  
->  For introductions to these technologies, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md) and [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
+>  For introductions to these technologies, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md) and [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ## Combining Log Shipping and Database Mirroring  
  The principal database in a mirroring session can also act as the primary database in a log shipping configuration, or vice versa, as the log shipping backup share is intact. The database mirroring session run in any operating mode, whether synchronous (with transaction safety set to FULL) or asynchronous (with transaction safety set to OFF).  
@@ -73,9 +73,9 @@ manager: "jhubbard"
 ## Setting Up Mirroring and Log Shipping Together  
  To set up database mirroring and log shipping together, the following steps are required:  
   
-1.  Restore backups of the principal/primary database with NORECOVERY onto another server instance to be later used as database mirroring mirror database for the principal/primary database. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Restore backups of the principal/primary database with NORECOVERY onto another server instance to be later used as database mirroring mirror database for the principal/primary database. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
-2.  Set up database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md) or [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/setting-up-database-mirroring-sql-server.md).  
+2.  Set up database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) or [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md).  
   
 3.  Restore backups of the principal/primary database to other server instances to be later used as log shipping secondary databases for the primary database.  
   
@@ -89,9 +89,9 @@ manager: "jhubbard"
   
      To perform a manual failover:  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 6.  Set up log shipping on the new principal (previously mirror) as the primary database.  
   

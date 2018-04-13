@@ -83,17 +83,17 @@ manager: "jhubbard"
  **Column names:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
->  For more information about using [!INCLUDE[tsql](../../../includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](availability-groups/windows/monitor-availability-groups-transact-sql.md).  
+>  For more information about using [!INCLUDE[tsql](../../../includes/tsql-md.md)] to monitor your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment, see [Monitor Availability Groups &#40;Transact-SQL&#41;](/monitor-availability-groups-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Remove an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
+-   [Remove an Availability Group Listener &#40;SQL Server&#41;](/remove-an-availability-group-listener-sql-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../2014/database-engine/listeners-client-connectivity-application-failover.md)   
- [Monitor Availability Groups &#40;Transact-SQL&#41;](availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [Monitor Availability Groups &#40;Transact-SQL&#41;](/monitor-availability-groups-transact-sql.md)  
   
   

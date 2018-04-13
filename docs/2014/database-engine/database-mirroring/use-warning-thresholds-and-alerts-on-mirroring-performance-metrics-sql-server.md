@@ -138,7 +138,7 @@ manager: "jhubbard"
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/monitoring-database-mirroring-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   
   

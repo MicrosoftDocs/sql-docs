@@ -79,7 +79,7 @@ manager: "jhubbard"
     ```  
   
 ##  <a name="FollowUp"></a> Follow Up: After Removing the Witness  
- Turning off the witness changes the [operating mode](database-mirroring/database-mirroring-operating-modes.md)in accordance with the transaction-safety setting:  
+ Turning off the witness changes the [operating mode](database-mirroring-operating-modes.md)in accordance with the transaction-safety setting:  
   
 -   If transaction safety is set to FULL (the default), the session uses high-safety, synchronous mode without automatic failover.  
   
@@ -90,14 +90,14 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## See Also  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
- [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
- [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
- [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)  
+ [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
+ [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

@@ -162,7 +162,7 @@ GO
  Copy the certificate to the other system using any secure method you choose. Be extremely careful to keep all of your certificates secure.  
   
 > [!IMPORTANT]  
->  After you set up outbound connections, you must configure inbound connections on each server instance for the other server instance or instances. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
+>  After you set up outbound connections, you must configure inbound connections on each server instance for the other server instance or instances. For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
  For information on creating a mirror database, including a Transact-SQL example, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   

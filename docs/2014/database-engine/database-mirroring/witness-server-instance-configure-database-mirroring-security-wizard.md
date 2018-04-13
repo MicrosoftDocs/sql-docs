@@ -62,11 +62,11 @@ manager: "jhubbard"
  To disable encryption, clear the check box. To re-enable encryption, select the check box.  
   
 ## See Also  
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
- [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)  
+ [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

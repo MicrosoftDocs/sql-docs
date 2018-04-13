@@ -337,7 +337,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [Start SQL Server with Minimal Configuration](configure-windows/start-sql-server-with-minimal-configuration.md)   
+ [Start SQL Server with Minimal Configuration](start-sql-server-with-minimal-configuration.md)   
  [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

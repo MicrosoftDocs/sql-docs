@@ -41,12 +41,12 @@ manager: "jhubbard"
  **Automatic Failover (Up to 2)**  
  Select this checkbox only if you want this availability replica to be an automatic-failover partner. To configure automatic failover, you must choose this option for the initial primary replica and for one secondary replica. Both of these replicas will use the synchronous-commit availability mode. Only two replicas can support automatic failover.  
   
- For information about the synchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about automatic failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ For information about the synchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about automatic failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Synchronous Commit (Up to 3)**  
  If you selected **Automatic Failover (Up to 2)** for the replica, **Synchronous Commit (Up to 3)** is also selected. If the check box is blank, select it only if you want this replica to use synchronous-commit mode with only planned manual failover. Only three replicas can use synchronous-commit mode.  
   
- If you want this replica to use asynchronous-commit availability mode, leave this checkbox blank. The replica will support only forced manual failover (with possible data loss). For information about the asynchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about planned manual failover and forced manual failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ If you want this replica to use asynchronous-commit availability mode, leave this checkbox blank. The replica will support only forced manual failover (with possible data loss). For information about the asynchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about planned manual failover and forced manual failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Readable Secondary Role**  
  Select a value from the **Readable secondary** drop list, as follows:  
@@ -76,7 +76,7 @@ manager: "jhubbard"
  Displays the name of a server instance that will host an availability replica.  
   
  **Endpoint URL**  
- Displays the actual or proposed URL of the database mirroring endpoint. For a proposed new endpoint, you can change this value. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ Displays the actual or proposed URL of the database mirroring endpoint. For a proposed new endpoint, you can change this value. For information the format of these URLs, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
  **Port Number**  
  Displays the actual or proposed port number of the endpoint. For a proposed new endpoint, you can change this value.  
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
     -   Use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager to change the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to a domain account. For more information, see [Change the Service Startup Account for SQL Server &#40;SQL Server Configuration Manager&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
-    -   Use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md) or [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md).  
+    -   Use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell to manually create a database mirroring endpoint that uses a certificate. For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md) or [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](/database-mirroring-always-on-availability-groups-powershell.md).  
   
      If you leave the **Specify Availability Replicas** page open while you configure endpoints, return to the **Endpoints** tab and click **Refresh** to update the **Endpoint values** grid.  
   
@@ -120,7 +120,7 @@ manager: "jhubbard"
  Specifies that you prefer that backup jobs ignore the role of the availability replicas when choosing the replica to perform backups. Note backup jobs might evaluate other factors such as backup priority of each availability replica in combination with its operational state and connected state.  
   
 > [!IMPORTANT]  
->  There is no enforcement of the backup-preference setting. The interpretation of this preference depends on the logic, if any, that you script into back jobs for the databases in a given availability group. For more information, see [Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  There is no enforcement of the backup-preference setting. The interpretation of this preference depends on the logic, if any, that you script into back jobs for the databases in a given availability group. For more information, see [Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### Replica backup priorities grid  
  Use the **Replica backup priorities** grid to specify your backup priorities for each of replicas of the availability group. This grid contains the following columns:  
@@ -138,7 +138,7 @@ manager: "jhubbard"
  Specify your preference for an[availability group listener](../../2014/database-engine/listeners-client-connectivity-application-failover.md)that will provide a client connection point, one of:  
   
  **Do not create an availability group listener now.**  
- Select to skip this step. You can create a listener later. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Select to skip this step. You can create a listener later. For more information, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Create an availability group listener.**  
  Specify your listener preferences for this availability group, as follows:  
@@ -170,7 +170,7 @@ manager: "jhubbard"
  Displays the IPv4 or IPv6 address that you specified for a given subnet.  
   
  **Add**  
- Click to add a subnet to this listener. This opens the **Add IP Address** dialog box. For more information, see the [Add IP Address Dialog Box &#40;SQL Server Management Studio&#41;](availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md) help topic.  
+ Click to add a subnet to this listener. This opens the **Add IP Address** dialog box. For more information, see the [Add IP Address Dialog Box &#40;SQL Server Management Studio&#41;](/add-ip-address-dialog-box-sql-server-management-studio.md) help topic.  
   
  **Remove**  
  Click to remove the subnet that is currently selected in the grid.  
@@ -198,17 +198,17 @@ manager: "jhubbard"
   
 -   [Use the Add Replica to Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)  
   
--   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](/database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/create-availability-group-transact-sql.md)   
- [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

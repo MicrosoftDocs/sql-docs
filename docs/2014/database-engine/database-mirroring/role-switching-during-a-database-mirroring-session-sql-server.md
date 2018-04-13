@@ -28,7 +28,7 @@ manager: "jhubbard"
   Within the context of a database mirroring session, the principal and mirror roles are typically interchangeable in a process known as *role switching*. In role switching, the mirror server acts as the *failover partner* for the principal server, taking over the principal role, recovering its copy of the database and bringing it online as the new principal database. The former principal server, when available, assumes the mirror role, and its database becomes the new mirror database. Potentially, the roles can switch back and forth either in response to multiple failures or for administrative purposes.  
   
 > [!NOTE]  
->  This topic assumes that you are familiar with the database mirroring operating modes. For more information, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+>  This topic assumes that you are familiar with the database mirroring operating modes. For more information, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  The following illustration shows mirroring partners, **Partner_A** and **Partner_B**, switching the principal and mirror roles over a series of automatic or manual failovers.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
  Three types of role switching exist: automatic failover, manual failover, and forced service (with possible data loss). Support for each form depends on the operating mode of the session.  
   
 > [!NOTE]  
->  If you are unfamiliar with these operating modes, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+>  If you are unfamiliar with these operating modes, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 -   **Manual failover**  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  After a role switch, certain metadata must exist on both partners to ensure that all of the database users can access the new principal database. In addition, backup jobs must be created on the new principal server, to ensure that the database continues to be backed up on its regular schedule. For more information, see [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
- During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and on the cause. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+ During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and on the cause. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 ##  <a name="ManualFailover"></a> Manual Failover  
  Manual failover disconnects the clients from the database and reverses the roles of the partners. Only high-safety mode supports manual failover.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
  The database administrator can use manual failover for upgrading hardware or software without sacrificing availability. To use database mirroring for software upgrades, the mirror server and/or system must have already received the upgrades.  
   
 > [!NOTE]  
->  Database mirroring should be able to do a rolling upgrade, but this is not guaranteed, because future changes are unknown. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](database-mirroring/upgrading-mirrored-instances.md).  
+>  Database mirroring should be able to do a rolling upgrade, but this is not guaranteed, because future changes are unknown. For more information, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
  The following figure illustrates an instance of using manual failover to maintain database availability while you upgrade a database server instance. When the upgrade is completed, an administrator may optionally fail over back to the original server instance. This is useful when the administrator wants to stop the mirroring session and use the mirror server elsewhere. In this way, a single server instance can be used repeatedly when updating a series of database server instances.  
   
@@ -103,7 +103,7 @@ manager: "jhubbard"
 3.  If any log is waiting in the redo queue, the mirror server finishes rolling forward the mirror database. The amount of time required depends on the speed of the system, the recent workload, and the amount of log in the redo queue. For a synchronous operating mode, the failover time can be regulated by limiting the size of the redo queue. However, this can cause the principal server to slow down to allow the mirror server to keep up.  
   
     > [!NOTE]  
-    >  To learn the current size of the redo queue, use the **Redo Queue** performance counter in the database mirroring performance object (for more information, see [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)).  
+    >  To learn the current size of the redo queue, use the **Redo Queue** performance counter in the database mirroring performance object (for more information, see [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)).  
   
 4.  The mirror server becomes the new principal server, and the former principal server becomes the new mirror server.  
   
@@ -114,13 +114,13 @@ manager: "jhubbard"
     > [!NOTE]  
     >  As soon as the new mirror server has resynchronized the databases, failover is again possible, but in the reverse direction.  
   
- After failover, clients must reconnect to the current principal database. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ After failover, clients must reconnect to the current principal database. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
  **To initiate manual failover**  
   
--   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
--   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+-   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
 ##  <a name="AutomaticFailover"></a> Automatic Failover  
  Automatic failover is supported only in database mirroring sessions running with a witness in high-safety mode (*high-safety mode with automatic failover*). In high-safety mode with automatic failover, once the database is synchronized, if the principal database becomes unavailable, an automatic failover occurs. An automatic failover causes the mirror server to take over the role of principal server and bring its copy of the database online as the principal database. Requiring that the database be synchronized prevents data loss during failover, because every transaction committed on the principal database is also committed on the mirror database.  
@@ -133,18 +133,18 @@ manager: "jhubbard"
 ###  <a name="ConditionsForAutoFo"></a> Conditions Required for an Automatic Failover  
  Automatic failover requires the following conditions:  
   
--   The database mirroring session must be running in high-safety mode and must possess a witness. For more information, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+-   The database mirroring session must be running in high-safety mode and must possess a witness. For more information, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 -   The mirror database must already be synchronized. This guarantees that all of the log sent to the mirror server has been written to disk.  
   
 -   The principal server has lost communication with the rest of the database mirroring configuration, while the mirror and witness retain quorum. If all server instances lose communication, however, and the witness and the mirror server later regain communication, automatic failover does not occur.  
   
     > [!NOTE]  
-    >  For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   The mirror server has detected the loss of the principal server.  
   
-     How the mirror server detects a failure of the principal server depends on whether it is a hard or soft failure. For more information, see [Possible Failures During Database Mirroring](database-mirroring/possible-failures-during-database-mirroring.md).  
+     How the mirror server detects a failure of the principal server depends on whether it is a hard or soft failure. For more information, see [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md).  
   
 ###  <a name="HowAutoFoWorks"></a> How Automatic Failover Works  
  Under the preceding conditions, automatic failover initiates the following sequence of actions:  
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
  Initially, all three servers are connected (the session has full quorum). **Partner_A** is the principal server and **Partner_B** is the mirror server. **Partner_A** (or the principal database on **Partner_A**) becomes unavailable. The witness and **Partner_B** both recognize that the principal is no longer available the session retains quorum. **Partner_B** becomes the principal server and makes its copy of the database available as the new principal database. Eventually, **Partner_A** reconnects to the session and discovers that **Partner_B** now owns the principal role. **Partner_A** then takes on the mirror role.  
   
- After failover, clients must reconnect to the current principal database. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ After failover, clients must reconnect to the current principal database. For more information, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 > [!NOTE]  
 >  Transactions that have been prepared using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator but are still not committed when a failover occurs, are considered aborted after the database has failed over.  
@@ -189,7 +189,7 @@ manager: "jhubbard"
   
  **To turn off the witness**  
   
--   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+-   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
     > [!NOTE]  
     >  Turning off the witness while retaining full transaction safety puts the session into high-safety mode without automatic failover.  
@@ -269,29 +269,29 @@ manager: "jhubbard"
 ###  <a name="RelatedTasksForFS"></a> Related Tasks For Managing a Forced Failover  
  **To force service**  
   
--   [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md).  
+-   [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md).  
   
  **To resume database mirroring**  
   
--   [Pause or Resume a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
+-   [Pause or Resume a Database Mirroring Session &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
  **To create a new mirror database**  
   
- [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+ [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
  **To start up database mirroring**  
   
--   [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/setting-up-database-mirroring-sql-server.md)  
+-   [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
- [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Possible Failures During Database Mirroring](database-mirroring/possible-failures-during-database-mirroring.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)   
+ [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
+ [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)   
  [Complete Database Restores &#40;Full Recovery Model&#41;](../../2014/database-engine/complete-database-restores-full-recovery-model.md)   
- [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
- [Mirroring States &#40;SQL Server&#41;](database-mirroring/mirroring-states-sql-server.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Mirroring States &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

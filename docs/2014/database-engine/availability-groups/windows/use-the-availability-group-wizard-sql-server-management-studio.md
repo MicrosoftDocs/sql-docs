@@ -26,7 +26,7 @@ manager: "jhubbard"
   This topic describes how to use the New Availability Group Wizard (in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) to create and configure an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
->  For an introduction to availability groups, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+>  For an introduction to availability groups, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md).  
   
 -   **Before you begin:**  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
 -   **To create and configure an availability group, using:**  [New Availability Group Wizard (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
->  As an alternative to using the New Availability Group Wizard, you can use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Create an Availability Group &#40;Transact-SQL&#41;](availability-groups/windows/create-an-availability-group-transact-sql.md) or [Create an Availability Group &#40;SQL Server PowerShell&#41;](availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+>  As an alternative to using the New Availability Group Wizard, you can use [!INCLUDE[tsql](../../../includes/tsql-md.md)] or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Create an Availability Group &#40;Transact-SQL&#41;](/create-an-availability-group-transact-sql.md) or [Create an Availability Group &#40;SQL Server PowerShell&#41;](/create-an-availability-group-sql-server-powershell.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  We strongly recommend that you read this section before attempting to create your first availability group.  
@@ -45,7 +45,7 @@ manager: "jhubbard"
 ###  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
  In most cases, you can use the New Availability Group Wizard to complete all of the tasks require to create and configure an availability group. However, you might need to complete some of the tasks manually.  
   
--   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the wizard can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the New Availability Group Wizard.  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
         > [!IMPORTANT]  
         >  The log backups will be part of your log backup chain. Store the log backup files appropriately.  
   
-     If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -105,11 +105,11 @@ manager: "jhubbard"
   
 6.  On the **Select Databases** page, the grid lists user databases on the connected server instance that are eligible to become the *availability databases*. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial *primary databases*.  
   
-     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
+     For each listed database, the **Size** column displays the database size, if known. The **Status** column indicates whether a given database meets the [prerequisites](/prereqs-restrictions-recommendations-always-on-availability.md)for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.  
   
      If you change a database to make it eligible, click **Refresh** to update the databases grid.  
   
-7.  On the **Specify Replicas** page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page &#40;New Availability Group Wizard: Add Replica Wizard&#41;](availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) topic.  
+7.  On the **Specify Replicas** page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page &#40;New Availability Group Wizard: Add Replica Wizard&#41;](/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) topic.  
   
     |Tab|Brief Description|  
     |---------|-----------------------|  
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
     -   **Skip initial data synchronization**  
   
-         Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 9. The **Validation** page verifies whether the values you specified in this Wizard meet the requirements of the New Availability Group Wizard. To make a change, click **Previous** to return to an earlier wizard page to change one or more values. The click **Next** to return to the **Validation** page, and click **Re-run Validation**.  
   
@@ -154,41 +154,41 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To complete availability group configuration**  
   
--   [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](/create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **Alternative ways to create an availability group**  
   
 -   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Create an Availability Group &#40;Transact-SQL&#41;](availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [Create an Availability Group &#40;Transact-SQL&#41;](/create-an-availability-group-transact-sql.md)  
   
--   [Create an Availability Group &#40;SQL Server PowerShell&#41;](availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
+-   [Create an Availability Group &#40;SQL Server PowerShell&#41;](/create-an-availability-group-sql-server-powershell.md)  
   
  **To enable AlwaysOn Availability Groups**  
   
--   [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **To configure a database mirroring endpoint**  
   
--   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **To troubleshoot AlwaysOn Availability Groups configuration**  
   
--   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Troubleshoot a Failed Add-File Operation &#40;AlwaysOn Availability Groups&#41;](/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -216,7 +216,7 @@ manager: "jhubbard"
   
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](/overview-of-always-on-availability-groups-sql-server.md)   
+ [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -130,30 +130,30 @@ manager: "jhubbard"
   
 -   [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [Log Shipping and Replication &#40;SQL Server&#41;](log-shipping/log-shipping-and-replication-sql-server.md)  
+-   [Log Shipping and Replication &#40;SQL Server&#41;](/log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] and database mirroring are mutually exclusive. A database that is configured for one of these features cannot be configured for the other.  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Upgrade Log Shipping to SQL Server 2014 &#40;Transact-SQL&#41;](log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [Upgrade Log Shipping to SQL Server 2014 &#40;Transact-SQL&#41;](/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md)  
+-   [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md)  
   
--   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [Remove a Secondary Database from a Log Shipping Configuration &#40;SQL Server&#41;](log-shipping/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Remove a Secondary Database from a Log Shipping Configuration &#40;SQL Server&#41;](/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
--   [Remove Log Shipping &#40;SQL Server&#41;](log-shipping/remove-log-shipping-sql-server.md)  
+-   [Remove Log Shipping &#40;SQL Server&#41;](/remove-log-shipping-sql-server.md)  
   
--   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](/view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [Monitor Log Shipping &#40;Transact-SQL&#41;](log-shipping/monitor-log-shipping-transact-sql.md)  
+-   [Monitor Log Shipping &#40;Transact-SQL&#41;](/monitor-log-shipping-transact-sql.md)  
   
--   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   

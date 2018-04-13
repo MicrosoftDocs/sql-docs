@@ -56,7 +56,7 @@ manager: "jhubbard"
 -   Verify that the mirror server has sufficient disk space for the mirror database.  
   
     > [!NOTE]  
-    >  For information about how to use database mirroring on a replicated database, see [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md).  
+    >  For information about how to use database mirroring on a replicated database, see [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md).  
   
 -   When you are creating the mirror database on the mirror server, make sure that you restore the backup of the principal database specifying the same database name WITH NORECOVERY. Also, all log backups that were created after that backup was taken must also be applied, again WITH NORECOVERY.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 -   All of the server instances in a mirroring session should use the same master code page and collation. Differences can cause a problem during mirroring setup.  
   
--   Optionally, estimate the time to fail over a database, to make sure that the system configuration will provide the performance you require. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+-   Optionally, estimate the time to fail over a database, to make sure that the system configuration will provide the performance you require. For more information, see [Estimate the Interruption of Service During Role Switching &#40;Database Mirroring&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 -   For best performance, use a dedicated network adapter (network interface card) for mirroring.  
   
@@ -110,12 +110,12 @@ manager: "jhubbard"
   
  Therefore, for production environments we recommend that you adhere to the following deployment guidelines:  
   
-1.  Start running in asynchronous, high-performance mode. This mode is the least sensitive to the network environment and provides the best configuration for exploring how mirroring works. We recommend that you run your system asynchronously until you are confident that your bandwidth supports mirroring and you have developed an understanding of mirroring setup and of the performance of asynchronous mode in your environment. For more information, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+1.  Start running in asynchronous, high-performance mode. This mode is the least sensitive to the network environment and provides the best configuration for exploring how mirroring works. We recommend that you run your system asynchronously until you are confident that your bandwidth supports mirroring and you have developed an understanding of mirroring setup and of the performance of asynchronous mode in your environment. For more information, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
     > [!IMPORTANT]  
-    >  Throughout testing, we recommend that you monitor your sessions for network errors that cause database mirroring to fail. For more information about potential sources of failure, see [Possible Failures During Database Mirroring](database-mirroring/possible-failures-during-database-mirroring.md). For information about how to monitor database mirroring, see [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/monitoring-database-mirroring-sql-server.md).  
+    >  Throughout testing, we recommend that you monitor your sessions for network errors that cause database mirroring to fail. For more information about potential sources of failure, see [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md). For information about how to monitor database mirroring, see [Monitoring Database Mirroring &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md).  
   
-2.  When you are confident that asynchronous operation is meeting the business needs, you might want to try synchronous operation to improve your data protection. When you test how synchronous mirroring works in your environment, we recommend that first you test high-safety mode without automatic failover. The primary purpose of this testing is to see how synchronous operation affects the database performance. For more information, see [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md).  
+2.  When you are confident that asynchronous operation is meeting the business needs, you might want to try synchronous operation to improve your data protection. When you test how synchronous mirroring works in your environment, we recommend that first you test high-safety mode without automatic failover. The primary purpose of this testing is to see how synchronous operation affects the database performance. For more information, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
 3.  Wait to enable automatic failover until you are confident that high-safety mode without automatic failover is meeting the business needs and that network errors are not causing failures. For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   

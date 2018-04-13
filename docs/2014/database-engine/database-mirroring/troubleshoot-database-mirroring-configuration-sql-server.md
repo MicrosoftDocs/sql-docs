@@ -52,7 +52,7 @@ manager: "jhubbard"
 ##  <a name="Endpoints"></a> Endpoints  
  Endpoints must be correctly configured.  
   
-1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+1.  Make sure that each server instance (the principal server, mirror server, and witness, if any) has a database mirroring endpoint. For more information, see [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and, depending on the form of authentication, either [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) or [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
 2.  Check that the port numbers are correct.  
   
@@ -107,7 +107,7 @@ manager: "jhubbard"
     ```  
   
 ##  <a name="SystemAddress"></a> System Address  
- For the system name of a server instance in a database mirroring configuration, you can use any name that unambiguously identifies the system. The server address can be a system name (if the systems are in the same domain), a fully qualified domain name, or an IP address (preferably, a static IP address). Using the fully qualified domain name is guaranteed to work. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+ For the system name of a server instance in a database mirroring configuration, you can use any name that unambiguously identifies the system. The server address can be a system name (if the systems are in the same domain), a fully qualified domain name, or an IP address (preferably, a static IP address). Using the fully qualified domain name is guaranteed to work. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md).  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  Each server instance must be able to access the ports of the other server instance or instances over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains). This restricts much of the communication between the server instances.  
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
  If database mirroring has been stopped, all subsequent log backups taken on the principal database must be applied to the mirror database before mirroring can be restarted.  
   
- For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Adding a file without impacting a mirroring session requires that the path of the file exist on both servers. Therefore, if you move the database files when creating the mirror database, a later add-file operation might fail on the mirror database and cause mirroring to be suspended.  
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
 3.  To prepare the database for a new mirroring session, the owner must also restore WITH NO RECOVERY any other outstanding log backups from the principal server.  
   
- For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md), [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+ For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md), [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Establish a Database Mirroring Session Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Starting mirroring by Using Transact-SQL  
  The order in which the ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** statements are issued is very important.  
@@ -149,7 +149,7 @@ manager: "jhubbard"
  For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 > [!NOTE]  
->  For information about using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to start mirroring, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  For information about using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to start mirroring, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="CrossDbTxns"></a> Cross-Database Transactions  
  When a database is being mirrored in high-safety mode with automatic failover, an automatic failover could lead to automatic and possibly incorrect resolution of in-doubt transactions. If an automatic failover occurs on either database while a cross-database transaction is being committed, logical inconsistencies can occur between the databases.  
@@ -163,7 +163,7 @@ manager: "jhubbard"
  For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 ## See Also  
- [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
+ [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
+ [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

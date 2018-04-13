@@ -21,7 +21,7 @@ manager: "jhubbard"
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  
   
 > [!NOTE]  
->  For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
+>  For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
  High-performance mode can be useful in a disaster-recovery scenario in which the principal and mirror servers are separated by a significant distance and where you do not want small errors to impact the principal server.  
   
 > [!NOTE]  
->  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  Log shipping can be a supplement to database mirroring and is a favorable alternative to asynchronous database mirroring. For information about the advantages of log shipping, see [High Availability Solutions &#40;SQL Server&#41;](../../2014/database-engine/high-availability-solutions-sql-server.md). For information on using log shipping with database mirroring, see [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="WitnessImpactOnHighPerf"></a> The Impact of a Witness on High-Performance Mode  
  If you use Transact-SQL to configure high-performance mode, whenever the SAFETY property is set to OFF, we strongly recommend that the WITNESS property also be set to OFF. A witness can coexist with high-performance mode, but the witness provides no benefit and introduces risk.  
@@ -78,7 +78,7 @@ manager: "jhubbard"
 -   If the principal server is lost, forcing service to the mirror server requires that the mirror server be connected to the witness.  
   
 > [!NOTE]  
->  For information about the types of quorums, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  For information about the types of quorums, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Responding to Failure of the Principal  
  When the principal fails, the database owner has several choices, as follows:  
@@ -98,7 +98,7 @@ manager: "jhubbard"
   
      Forced service is strictly a disaster recovery method and should be used sparingly. Forcing service is possible only if the principal server is down, the session is asynchronous (transaction safety is set to OFF), and either the session does not have any witness (the WITNESS property is set to OFF) or the witness is connected to the mirror server (that is, they have quorum).  
   
-     Forcing service causes the mirror server to assume the role of principal and serve its copy of the database for clients. When service is forced, whatever transaction logs the principal has not yet sent to the mirror server are lost. Therefore, you should limit forced service to situations where possible data loss is acceptable and immediate database availability is critical. For information on how forced service works and on best practices for using it, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+     Forcing service causes the mirror server to assume the role of principal and serve its copy of the database for clients. When service is forced, whatever transaction logs the principal has not yet sent to the mirror server are lost. Therefore, you should limit forced service to situations where possible data loss is acceptable and immediate database availability is critical. For information on how forced service works and on best practices for using it, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="Sync"></a> Synchronous Database Mirroring (High-Safety Mode)  
  This section describes how synchronous database mirroring works, including the alternative high-safety modes (with automatic failover and without automatic failover), and contains information about the role of the witness in automatic failover.  
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
  ![Partners communicating without a witness](../../2014/database-engine/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
   
- When the partners are connected and the database is already synchronized, manual failover is supported. If the mirror server instance goes down, the principal server instance is unaffected and runs exposed (that is without mirroring the data). If the principal server is lost, the mirror is suspended, but service can be forced to the mirror server (with possible data loss). For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+ When the partners are connected and the database is already synchronized, manual failover is supported. If the mirror server instance goes down, the principal server instance is unaffected and runs exposed (that is without mirroring the data). If the principal server is lost, the mirror is suspended, but service can be forced to the mirror server (with possible data loss). For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> High-Safety Mode with Automatic Failover  
  Automatic failover provides high availability by ensuring that the database is still served after the loss of one server. Automatic failover requires that the session possess a third server instance, the *witness*, which ideally resides on a third computer. The following figure shows the configuration of a high-safety mode session that supports automatic failover.  
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
  Unlike the two partners, the witness does not serve the database. The witness simply supports automatic failover by verifying whether the principal server is up and functioning. The mirror server initiates automatic failover only if the mirror and the witness remain connected to each other after both have been disconnected from the principal server.  
   
- When a witness is set, the session requires *quorum*—a relationship between at least two server instances that allows the database to be made available. For more information, see [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md) and [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ When a witness is set, the session requires *quorum*—a relationship between at least two server instances that allows the database to be made available. For more information, see [Database Mirroring Witness](database-mirroring-witness.md) and [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Automatic failover requires the following conditions:  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
 -   If the principal server becomes unavailable under the above conditions, automatic failover occurs. The mirror server switches to the role of principal, and it offers its database as the principal database.  
   
--   If the principal server becomes unavailable when those conditions are not met, forcing service (with possible data loss) might be possible. For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   If the principal server becomes unavailable when those conditions are not met, forcing service (with possible data loss) might be possible. For more information, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 -   If the only mirror server becomes unavailable, the principal and witness continue.  
   
@@ -169,7 +169,7 @@ manager: "jhubbard"
  This section describes a database mirroring session in terms of the ALTER DATABASE settings and states of the mirrored database and witness, if any. The section is aimed at users who manage database mirroring primarily or exclusively using [!INCLUDE[tsql](../../includes/tsql-md.md)], rather than using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!TIP]  
->  As an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  As an alternative to using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can control the operating mode of a session in Object Explorer using the **Mirroring** page of the **Database Properties** dialog box. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
 
   
@@ -206,7 +206,7 @@ manager: "jhubbard"
   
 -   When the witness exists but is not connected to a partner, the witness is in the UNKOWN or DISCONNECTED state relative to that partner. In this case, the witness lacks quorum with that partner, and if the partners are not connected to each other, the database becomes unavailable.  
   
- For information about quorum, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ For information about quorum, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  The state of each witness on a server instance is recorded in the **sys.database_mirroring** catalog view in the **mirroring_witness_state** and **mirroring_witness_state_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
@@ -220,7 +220,7 @@ manager: "jhubbard"
   
  <sup>1</sup> If the witness becomes disconnected, we recommend that you set WITNESS OFF until the witness server instance becomes available.  
   
- <sup>2</sup> If a witness is present in high-performance mode, the witness does not participate in the session. However, to make the database available, at least two of the server instances must remain connected. Therefore, we recommend keeping the WITNESS property set to OFF in high-performance mode sessions. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> If a witness is present in high-performance mode, the witness does not participate in the session. However, to make the database available, at least two of the server instances must remain connected. Therefore, we recommend keeping the WITNESS property set to OFF in high-performance mode sessions. For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Viewing the Safety Setting and State of the Witness  
  To view the safety setting and the state of the witness for a database, use the **sys.database_mirroring** catalog view. The relevant columns are as follows:  
@@ -251,18 +251,18 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+-   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ## See Also  
- [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)  
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

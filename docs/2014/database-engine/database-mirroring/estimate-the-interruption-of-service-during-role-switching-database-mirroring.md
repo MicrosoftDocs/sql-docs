@@ -37,10 +37,10 @@ manager: "jhubbard"
 ## Error detection  
  The time for the system to notice an error depends on the type of error; for example, a network error is noticed almost instantly, while noticing a server hang by default takes 10 seconds, which is the default timeout period.  
   
- For information on errors that can cause a failure during a database mirroring session and timeout detection in high-safety mode with automatic failover, see [Possible Failures During Database Mirroring](database-mirroring/possible-failures-during-database-mirroring.md)).  
+ For information on errors that can cause a failure during a database mirroring session and timeout detection in high-safety mode with automatic failover, see [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)).  
   
 ## Failover time  
- Failover time consists mainly of the time that the former mirror server requires to roll forward any log remaining in its redo queue, plus a short additional time (for more information about how the mirror server processes log records, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)). For information on estimating failover time, see Estimating Your Failover Redo Rate, later in this topic.  
+ Failover time consists mainly of the time that the former mirror server requires to roll forward any log remaining in its redo queue, plus a short additional time (for more information about how the mirror server processes log records, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)). For information on estimating failover time, see Estimating Your Failover Redo Rate, later in this topic.  
   
 > [!IMPORTANT]  
 >  If failover occurs during a transaction in which an index or table is created and then changed, failover might take longer than usual.  For example, failing over during the following series of operations might increase failover time:  BEGIN TRANSACTION, CREATE INDEX on a table, and SELECT INTO the table. The possibility of increased failover time during such a transaction remains until it is completed with either a COMMIT TRANSACTION or ROLLBACK TRANSACTION statement.  
@@ -73,8 +73,8 @@ manager: "jhubbard"
  ![Error detection and failover time](../../2014/database-engine/media/dbm-failovauto-time.gif "Error detection and failover time")  
   
 ## See Also  
- [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/monitoring-database-mirroring-sql-server.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   
   

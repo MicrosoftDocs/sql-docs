@@ -150,7 +150,7 @@ manager: "jhubbard"
   
 -   [Upgrade Log Shipping to SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
 -   [Remove a Secondary Database from a Log Shipping Configuration &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
@@ -163,7 +163,7 @@ manager: "jhubbard"
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## See Also  
- [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [About Log Shipping &#40;SQL Server&#41;](/about-log-shipping-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](-tables-and-stored-procedures.md)  
   
   

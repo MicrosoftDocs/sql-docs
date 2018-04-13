@@ -2,7 +2,7 @@
 title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create a Server Role | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,6 +24,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Server Role
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

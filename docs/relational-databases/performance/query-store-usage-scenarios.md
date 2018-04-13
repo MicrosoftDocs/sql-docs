@@ -1,4 +1,4 @@
----
+﻿---
 title: "Query Store Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2018"
@@ -20,6 +20,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Query Store Usage Scenarios
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

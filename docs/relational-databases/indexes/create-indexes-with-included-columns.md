@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create Indexes with Included Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
@@ -28,6 +28,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create Indexes with Included Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "sqlsrv_cancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -22,7 +22,7 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_cancel

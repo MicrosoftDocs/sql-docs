@@ -3,7 +3,7 @@ title: Migrate the Oracle HR Schema to SQL Server on Linux | Microsoft Docs
 description: Convert sample Oracle schema to SQL Server on Linux
 author: edmacauley
 ms.author: edmacauley
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: "sql-non-specified"

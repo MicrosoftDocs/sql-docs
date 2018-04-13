@@ -1,4 +1,4 @@
----
+﻿---
 title: "Format JSON Output Automatically with AUTO Mode (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -20,6 +20,7 @@ ms.author: "jovanpop"
 ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

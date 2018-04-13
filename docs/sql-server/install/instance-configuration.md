@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 62
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 robots: noindex,nofollow
 ms.workload: "On Demand"
 ---

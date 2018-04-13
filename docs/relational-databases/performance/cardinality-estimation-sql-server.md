@@ -1,4 +1,4 @@
----
+﻿---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/06/2017"
@@ -22,6 +22,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Cardinality Estimation (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

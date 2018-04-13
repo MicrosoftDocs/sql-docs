@@ -2,7 +2,7 @@
 title: "getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource)

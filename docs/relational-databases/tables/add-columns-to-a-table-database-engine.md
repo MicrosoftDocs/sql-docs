@@ -2,7 +2,7 @@
 title: "Add Columns to a Table (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "tables"

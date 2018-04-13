@@ -2,7 +2,7 @@
 title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""

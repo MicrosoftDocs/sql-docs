@@ -2,14 +2,12 @@
 title: "Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
-ms.service: ""
 ms.component: "search"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "dbe-search"
+ms.technology: database-engine
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

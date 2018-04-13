@@ -4,7 +4,7 @@ description: Lists of third-party partners with solutions to monitor Server.
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
+manager: craigg
 editor: ''
 ms.assetid: 
 ms.service: ""

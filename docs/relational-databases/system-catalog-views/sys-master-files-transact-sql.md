@@ -2,7 +2,7 @@
 title: "sys.master_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, pdw"
 ms.service: ""
 ms.component: "system-catalog-views"

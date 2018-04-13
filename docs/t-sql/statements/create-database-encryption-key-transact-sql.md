@@ -2,7 +2,7 @@
 title: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "pdw, sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"

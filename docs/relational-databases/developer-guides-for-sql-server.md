@@ -1,7 +1,7 @@
 ﻿---
 title: "Developer Guides for SQL Server | Microsoft Docs"
 ms.date: "10/19/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services"
 ms.service: ""
 ms.component: "relational-databases-misc"

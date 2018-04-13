@@ -21,7 +21,7 @@ ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 caps.latest.revision: 38
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)

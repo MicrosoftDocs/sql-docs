@@ -39,7 +39,7 @@ ms.assetid:
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---

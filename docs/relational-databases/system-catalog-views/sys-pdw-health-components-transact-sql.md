@@ -2,7 +2,7 @@
 title: "sys.pdw_health_components (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "pdw"
 ms.service: ""
 ms.component: "system-catalog-views"

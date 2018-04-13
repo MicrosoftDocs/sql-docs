@@ -2,7 +2,7 @@
 title: "Default PHP Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -19,7 +19,7 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Default PHP Data Types

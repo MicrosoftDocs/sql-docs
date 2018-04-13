@@ -2,7 +2,7 @@
 title: "Binding and Data Transfer of Table-Valued Parameters and Column Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "native-client-odbc-table-valued-parameters"

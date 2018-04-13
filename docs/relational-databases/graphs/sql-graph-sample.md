@@ -2,7 +2,7 @@
 title: SQL Graph Database Sample | Microsoft Docs
 description: A quick sample that will help you get started with the new syntax introduced in SQL graph database. 
 ms.date: "04/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "graphs"

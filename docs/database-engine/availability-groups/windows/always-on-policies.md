@@ -13,7 +13,7 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Always On Availability Groups policies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

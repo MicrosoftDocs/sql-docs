@@ -2,7 +2,7 @@
 title: "Partitioning with Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/26/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "tables"

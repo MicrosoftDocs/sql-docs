@@ -2,7 +2,7 @@
 title: "SQLServerClob Constructors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -17,7 +17,7 @@ ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerClob Constructors

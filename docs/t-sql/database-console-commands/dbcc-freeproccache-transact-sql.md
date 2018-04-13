@@ -2,7 +2,7 @@
 title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.service: ""
 ms.component: "t-sql|database-console-commands"

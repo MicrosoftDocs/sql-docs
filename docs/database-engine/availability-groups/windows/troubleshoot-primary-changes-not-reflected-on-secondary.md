@@ -13,7 +13,7 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 caps.latest.revision: 9
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot: Changes on the primary replica are not reflected on the secondary replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

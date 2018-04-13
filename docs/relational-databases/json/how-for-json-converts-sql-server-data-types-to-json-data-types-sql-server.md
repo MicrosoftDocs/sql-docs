@@ -2,7 +2,7 @@
 title: "How FOR JSON converts SQL Server data types to JSON data types (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""

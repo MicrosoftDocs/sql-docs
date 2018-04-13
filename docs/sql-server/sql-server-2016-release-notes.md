@@ -19,7 +19,7 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 caps.latest.revision: 276
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes

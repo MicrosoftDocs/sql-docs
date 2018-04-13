@@ -2,7 +2,7 @@
 title: "sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.service: ""

@@ -2,7 +2,7 @@
 title: "Altering Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "in-memory-oltp"

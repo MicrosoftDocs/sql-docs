@@ -2,7 +2,7 @@
 title: "sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "pdw"
 ms.service: ""
 ms.component: "dmv's"

@@ -2,7 +2,7 @@
 title: "Display an Actual Execution Plan | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "performance"

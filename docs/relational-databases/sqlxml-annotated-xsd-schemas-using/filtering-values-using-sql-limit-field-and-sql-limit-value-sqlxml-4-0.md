@@ -2,7 +2,7 @@
 title: "Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "sqlxml"

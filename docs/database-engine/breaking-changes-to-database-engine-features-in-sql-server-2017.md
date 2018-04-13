@@ -2,7 +2,7 @@
 title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
 description: "Breaking changes to Database Engine Features in SQL Server 2017"
 ms.date: "04/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "database-engine"

@@ -13,7 +13,7 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 caps.latest.revision: 7
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Troubleshoot: Availability group exceeded RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

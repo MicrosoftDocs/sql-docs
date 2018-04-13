@@ -2,7 +2,7 @@
 title: "Back Up and Restore of SQL Server Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "backup-restore"

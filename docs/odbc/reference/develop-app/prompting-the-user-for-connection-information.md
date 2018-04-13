@@ -2,7 +2,7 @@
 title: "Prompting the User for Connection Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -26,7 +26,7 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Prompting the User for Connection Information

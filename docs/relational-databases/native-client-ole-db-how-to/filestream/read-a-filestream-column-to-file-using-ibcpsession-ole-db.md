@@ -2,7 +2,7 @@
 title: "Read a FILESTREAM Column to File Using IBCPSession (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "native-client-ole-db-how-to"

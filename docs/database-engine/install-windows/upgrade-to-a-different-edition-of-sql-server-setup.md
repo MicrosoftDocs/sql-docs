@@ -2,7 +2,7 @@
 title: "Upgrade to a Different Edition of SQL Server 2016 (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "install-windows"

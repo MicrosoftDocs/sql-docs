@@ -16,13 +16,15 @@ ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "On Demand"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL samples
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Locations of sample databases and code samples for Microsoft SQL products.
 
 ## SQL samples repository
+
 Code samples for SQL products are in the [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) GitHub repository. Each sample includes a README file that explains how to run and use the sample. The main README for the samples repository explains how to contribute. 
 
 The samples and templates are all licensed under the MIT license. See the license.txt file in the root.

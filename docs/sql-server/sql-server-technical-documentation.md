@@ -37,13 +37,13 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
-|[What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
 
 ::: moniker range="=sql-server-2014"
 The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
 - [Books Online for SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
 - [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
 - [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
+- [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
 ::: moniker-end
 
 **Try SQL Server!**
@@ -52,6 +52,7 @@ The SQL Server 2014 content will soon be merged into the .docs site.  For now, s
     + [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     + [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+::: moniker range=">=sql-server-2016"
 ## SQL Server Technologies
 
 |||
@@ -64,6 +65,7 @@ The SQL Server 2014 content will soon be merged into the .docs site.  For now, s
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) provides you with a knowledge-driven data cleansing solution. DQS enables you to build a knowledge base, and then use that knowledge base to perform data correction and deduplication on your data, using both computer-assisted and interactive means. You can use cloud-based reference data services, and you can build a data management solution that integrates DQS with SQL Server Integration Services and Master Data Services.|
 |![Replication services](../sql-server/media/replication-services.png "Replication services")|**[Replication](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Replication is a set of technologies for copying and distributing data and database objects from one database to another, and then synchronizing between databases to maintain consistency. By using replication, you can distribute data to different locations and to remote or mobile users by means of local and wide area networks, dial-up connections, wireless connections, and the Internet.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
+::: moniker-end
 
 ## Migrate and move data
 

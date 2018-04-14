@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2018"
 ms.prod: "sql"
 ms.prod_service: "sql-non-specified"
-ms.service: ""
 ms.component: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""
@@ -17,7 +16,7 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: "Inactive"
-monikerRange: '= sql-server-2014'
+monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

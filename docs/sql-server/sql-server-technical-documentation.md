@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "Books Online [SQL Server], home page"
   - "portal page [SQL Server]"
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 106
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard

@@ -1,7 +1,7 @@
 ﻿---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2018"
+ms.date: "04/13/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
@@ -137,8 +137,8 @@ When *expression* is a date or time data type,  *style* can be one of the values
   
 <sup>5</sup> Hijri is a calendar system with several variations. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Kuwaiti algorithm.
   
-> [!IMPORTANT]  
->  By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That is, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950. Many client applications, such as those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option that changes the cutoff year used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and allows for the consistent treatment of dates. We recommend specifying four-digit years.  
+> [!IMPORTANT]
+> By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That is, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950. Many client applications, such as those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option that changes the cutoff year used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and allows for the consistent treatment of dates. We recommend specifying four-digit years.  
   
 <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When character data that represents only date or only time components is cast to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.
   

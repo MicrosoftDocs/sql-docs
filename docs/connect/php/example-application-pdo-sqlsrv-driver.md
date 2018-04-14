@@ -16,7 +16,7 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Example Application (PDO_SQLSRV Driver)

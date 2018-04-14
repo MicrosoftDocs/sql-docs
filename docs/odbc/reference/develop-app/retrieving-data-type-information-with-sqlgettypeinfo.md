@@ -23,7 +23,7 @@ ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Data Type Information with SQLGetTypeInfo

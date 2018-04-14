@@ -25,7 +25,7 @@ ms.assetid: db803266-57df-4864-a41b-901247549c1f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLRemoveDefaultDataSource Function

@@ -19,7 +19,7 @@ ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Dynamic Tracing

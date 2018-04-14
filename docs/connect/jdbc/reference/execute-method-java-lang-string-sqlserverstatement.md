@@ -21,7 +21,7 @@ ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # execute Method (java.lang.String) (SQLServerStatement)

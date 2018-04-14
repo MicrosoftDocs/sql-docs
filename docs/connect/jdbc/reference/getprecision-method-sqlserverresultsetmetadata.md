@@ -21,7 +21,7 @@ ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPrecision Method (SQLServerResultSetMetaData)

@@ -16,7 +16,7 @@ ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Python SQL Driver - pyodbc

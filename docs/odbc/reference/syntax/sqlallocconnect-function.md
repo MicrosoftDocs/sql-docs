@@ -25,7 +25,7 @@ ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocConnect Function

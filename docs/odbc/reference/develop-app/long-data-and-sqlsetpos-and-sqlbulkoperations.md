@@ -22,7 +22,7 @@ ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Long Data and SQLSetPos and SQLBulkOperations

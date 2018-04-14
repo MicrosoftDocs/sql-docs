@@ -21,7 +21,7 @@ ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDate Method (int, java.util.Calendar)

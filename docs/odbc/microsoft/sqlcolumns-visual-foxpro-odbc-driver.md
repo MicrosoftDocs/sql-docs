@@ -18,7 +18,7 @@ ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColumns (Visual FoxPro ODBC Driver)

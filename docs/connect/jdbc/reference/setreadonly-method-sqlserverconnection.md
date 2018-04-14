@@ -21,7 +21,7 @@ ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setReadOnly Method (SQLServerConnection)

@@ -18,7 +18,7 @@ ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetCursorName (Visual FoxPro ODBC Driver)

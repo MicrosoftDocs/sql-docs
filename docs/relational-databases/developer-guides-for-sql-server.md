@@ -1,4 +1,4 @@
----
+﻿---
 title: "Developer Guides for SQL Server | Microsoft Docs"
 ms.date: "10/19/2016"
 ms.prod: "sql"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Developer Guides for SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

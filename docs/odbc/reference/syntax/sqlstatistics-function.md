@@ -25,7 +25,7 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLStatistics Function

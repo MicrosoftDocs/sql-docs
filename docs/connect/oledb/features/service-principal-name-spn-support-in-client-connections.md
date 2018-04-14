@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Service Principal Name (SPN) Support in Client Connections

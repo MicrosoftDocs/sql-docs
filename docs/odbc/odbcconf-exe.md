@@ -18,7 +18,7 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBCCONF.EXE

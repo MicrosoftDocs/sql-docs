@@ -20,7 +20,7 @@ ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Microsoft-Supplied ODBC Drivers

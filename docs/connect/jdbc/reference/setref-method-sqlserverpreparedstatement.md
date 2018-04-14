@@ -21,7 +21,7 @@ ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setRef Method (SQLServerPreparedStatement)

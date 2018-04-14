@@ -20,7 +20,7 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Numeric Literal Syntax

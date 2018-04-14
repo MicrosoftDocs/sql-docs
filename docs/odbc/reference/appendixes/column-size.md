@@ -21,7 +21,7 @@ ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Column Size

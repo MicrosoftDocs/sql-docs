@@ -21,7 +21,7 @@ ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Descriptor Field Conformance

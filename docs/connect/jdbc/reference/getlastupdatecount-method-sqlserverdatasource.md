@@ -21,7 +21,7 @@ ms.assetid: 4c4fbb24-0b02-42da-928c-a903bb591cc7
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getLastUpdateCount Method (SQLServerDataSource)

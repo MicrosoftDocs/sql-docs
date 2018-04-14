@@ -18,7 +18,7 @@ ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # INSERT - SQL Command

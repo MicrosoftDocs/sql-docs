@@ -21,7 +21,7 @@ ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Cursor Type and Concurrency Combinations

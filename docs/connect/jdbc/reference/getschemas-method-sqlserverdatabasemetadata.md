@@ -16,7 +16,7 @@ ms.assetid: d26ea46d-a9f5-40ed-af56-2b10a0364882
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSchemas Method (SQLServerDatabaseMetaData)

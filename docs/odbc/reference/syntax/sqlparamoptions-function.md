@@ -25,7 +25,7 @@ ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLParamOptions Function

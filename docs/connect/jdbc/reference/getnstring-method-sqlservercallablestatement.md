@@ -16,7 +16,7 @@ ms.assetid: 5ac360e8-a1ee-4577-93b4-bb2018f1087a
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNString Method (SQLServerCallableStatement)

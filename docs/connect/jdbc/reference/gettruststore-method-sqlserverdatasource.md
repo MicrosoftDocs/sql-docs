@@ -21,7 +21,7 @@ ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTrustStore Method (SQLServerDataSource)

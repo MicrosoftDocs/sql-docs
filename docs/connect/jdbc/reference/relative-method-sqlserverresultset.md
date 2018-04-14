@@ -21,7 +21,7 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # relative Method (SQLServerResultSet)

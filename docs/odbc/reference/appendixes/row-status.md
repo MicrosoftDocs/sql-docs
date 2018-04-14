@@ -21,7 +21,7 @@ ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Row Status

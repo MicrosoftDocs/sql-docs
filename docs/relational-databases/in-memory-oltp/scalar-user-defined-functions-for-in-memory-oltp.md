@@ -1,4 +1,4 @@
----
+﻿---
 title: "Scalar User-Defined Functions for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Scalar User-Defined Functions for In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

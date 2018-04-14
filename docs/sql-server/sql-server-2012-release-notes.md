@@ -17,7 +17,7 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server 2012 Release Notes

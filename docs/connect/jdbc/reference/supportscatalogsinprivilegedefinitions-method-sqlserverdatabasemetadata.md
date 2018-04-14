@@ -21,7 +21,7 @@ ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsCatalogsInPrivilegeDefinitions Method (SQLServerDatabaseMetaData)

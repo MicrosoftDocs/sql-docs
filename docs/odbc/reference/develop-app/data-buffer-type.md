@@ -21,7 +21,7 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Buffer Type

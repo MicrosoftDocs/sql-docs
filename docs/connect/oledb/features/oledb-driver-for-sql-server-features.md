@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], features"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # OLE DB Driver for SQL Server Features

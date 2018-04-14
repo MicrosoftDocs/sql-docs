@@ -18,7 +18,7 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET EXACT Command

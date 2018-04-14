@@ -21,7 +21,7 @@ ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setFailoverPartner Method (SQLServerDataSource)

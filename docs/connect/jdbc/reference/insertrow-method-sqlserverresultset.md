@@ -21,7 +21,7 @@ ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # insertRow Method (SQLServerResultSet)

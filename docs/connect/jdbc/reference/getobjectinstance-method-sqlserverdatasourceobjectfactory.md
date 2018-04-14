@@ -21,7 +21,7 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getObjectInstance Method (SQLServerDataSourceObjectFactory)

@@ -19,7 +19,7 @@ ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Version Number

@@ -20,7 +20,7 @@ ms.assetid: feb7ec20-3e0c-4a47-8feb-7dd9f23efdf6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Bookmark Support (Visual FoxPro ODBC Driver)

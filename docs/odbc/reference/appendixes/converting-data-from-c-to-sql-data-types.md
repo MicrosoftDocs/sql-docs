@@ -26,7 +26,7 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Converting Data from C to SQL Data Types

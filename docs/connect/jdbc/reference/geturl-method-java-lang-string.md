@@ -21,7 +21,7 @@ ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getURL Method (java.lang.String)

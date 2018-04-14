@@ -21,7 +21,7 @@ ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setLogWriter Method (SQLServerDataSource)

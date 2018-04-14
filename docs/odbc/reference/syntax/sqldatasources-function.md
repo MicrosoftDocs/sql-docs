@@ -25,7 +25,7 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDataSources Function

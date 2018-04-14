@@ -19,7 +19,7 @@ ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (Access Driver)

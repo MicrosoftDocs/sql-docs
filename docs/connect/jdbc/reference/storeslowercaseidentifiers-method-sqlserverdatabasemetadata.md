@@ -21,7 +21,7 @@ ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)

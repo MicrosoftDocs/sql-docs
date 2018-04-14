@@ -1,6 +1,6 @@
 ---
 title: "Lift and shift SQL Server Integration Services workloads to the cloud | Microsoft Docs"
-ms.date: "10/31/2017"
+ms.date: "04/13/2018"
 ms.topic: "article"
 ms.prod: "sql-non-specified"
 ms.prod_service: "integration-services"
@@ -80,7 +80,7 @@ For info about how to connect to files and file shares, see [Store and retrieve 
 
 When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to various **Azure** data sources and to **Excel and Access** files, in addition to the data sources supported by the built-in components.
 
-You can't install or use **third-party components** for SSIS at this time (including third-party components from Microsoft, such as the Oracle and Teradata components by Attunity and the SAP BI components).
+You can also install additional components. For more info, see [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md).
 
 ## Deploy and run packages
 You have to use the **project deployment model**, not the package deployment model, when you deploy projects to SSISDB on Azure.

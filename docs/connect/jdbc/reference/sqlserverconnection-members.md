@@ -16,7 +16,7 @@ ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnection Members

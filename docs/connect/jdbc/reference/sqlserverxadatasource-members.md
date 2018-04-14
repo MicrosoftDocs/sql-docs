@@ -16,7 +16,7 @@ ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXADataSource Members

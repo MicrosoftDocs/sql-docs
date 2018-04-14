@@ -19,7 +19,7 @@ ms.assetid: 589e3240-a1a9-47ed-a559-abbf6d5ea9a3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fixed-Width Text File

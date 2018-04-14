@@ -21,7 +21,7 @@ ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setting Options Programmatically for the Excel Driver

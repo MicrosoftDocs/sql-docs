@@ -21,7 +21,7 @@ ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBinaryStream Method (SQLServerResultSet)

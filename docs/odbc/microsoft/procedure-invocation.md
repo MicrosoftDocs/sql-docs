@@ -19,7 +19,7 @@ ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Procedure Invocation

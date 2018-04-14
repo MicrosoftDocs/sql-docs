@@ -21,7 +21,7 @@ ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDate Method (java.lang.String) (SQLServerResultSet)

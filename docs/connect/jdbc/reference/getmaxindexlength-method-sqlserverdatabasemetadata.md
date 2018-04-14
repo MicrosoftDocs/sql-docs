@@ -21,7 +21,7 @@ ms.assetid: 7c85d021-d466-4732-85f9-53903d297041
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxIndexLength Method (SQLServerDatabaseMetaData)

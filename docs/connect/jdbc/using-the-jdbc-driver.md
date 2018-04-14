@@ -16,7 +16,7 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 caps.latest.revision: 54
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Using the JDBC Driver

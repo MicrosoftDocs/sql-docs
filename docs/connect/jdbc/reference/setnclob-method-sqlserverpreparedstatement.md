@@ -16,7 +16,7 @@ ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNClob Method (SQLServerPreparedStatement)

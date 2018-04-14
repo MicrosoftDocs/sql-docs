@@ -25,7 +25,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, library files"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using the OLE DB Driver for SQL Server Header and Library Files

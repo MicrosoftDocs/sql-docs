@@ -19,7 +19,7 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DROP INDEX Statement

@@ -25,7 +25,7 @@ ms.assetid: dbf2da44-253b-4094-bd6b-29bafc23c7a3
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLNumParams Function

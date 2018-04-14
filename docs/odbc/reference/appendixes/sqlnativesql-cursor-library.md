@@ -18,7 +18,7 @@ ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLNativeSql (Cursor Library)

@@ -21,7 +21,7 @@ ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTime Method (SQLServerPreparedStatement)

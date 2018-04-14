@@ -27,7 +27,7 @@ ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Datetime Data Types

@@ -21,7 +21,7 @@ ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTimestamp Method (int) (SQLServerResultSet)

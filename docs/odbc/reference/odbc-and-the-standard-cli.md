@@ -22,7 +22,7 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC and the Standard CLI

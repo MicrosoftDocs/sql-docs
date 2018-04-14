@@ -19,7 +19,7 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Executing Batches

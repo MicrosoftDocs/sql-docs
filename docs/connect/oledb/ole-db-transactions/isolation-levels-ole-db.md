@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Isolation Levels (OLE DB)

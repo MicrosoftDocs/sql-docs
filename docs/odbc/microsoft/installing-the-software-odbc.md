@@ -19,7 +19,7 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Installing the Software (ODBC)

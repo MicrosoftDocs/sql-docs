@@ -19,7 +19,7 @@ ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (Excel Driver)

@@ -21,7 +21,7 @@ ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCharacterStream Method (SQLServerResultSet)

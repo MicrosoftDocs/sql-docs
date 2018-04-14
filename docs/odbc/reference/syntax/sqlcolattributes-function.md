@@ -25,7 +25,7 @@ ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes Function

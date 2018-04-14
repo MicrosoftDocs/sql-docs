@@ -22,7 +22,7 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Functions Accepting String Parameters

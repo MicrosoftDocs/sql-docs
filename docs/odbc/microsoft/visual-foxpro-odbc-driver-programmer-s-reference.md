@@ -19,7 +19,7 @@ ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Visual FoxPro ODBC Driver Programmer&#39;s Reference

@@ -21,7 +21,7 @@ ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Unicode Data

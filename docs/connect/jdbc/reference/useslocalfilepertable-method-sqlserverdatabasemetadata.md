@@ -21,7 +21,7 @@ ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # usesLocalFilePerTable Method (SQLServerDatabaseMetaData)

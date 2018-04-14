@@ -15,7 +15,7 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 caps.latest.revision: 100
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server 2014 Release Notes

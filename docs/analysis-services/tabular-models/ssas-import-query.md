@@ -1,4 +1,4 @@
----
+﻿---
 title: "Import data by using a native query (Analysis Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/20/2018"
@@ -17,6 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Import data by using a native query
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]

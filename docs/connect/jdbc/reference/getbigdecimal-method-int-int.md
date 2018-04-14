@@ -21,7 +21,7 @@ ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBigDecimal Method (int, int)

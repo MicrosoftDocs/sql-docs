@@ -22,7 +22,7 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Overriding Default Precision and Scale for Numeric Data Types

@@ -21,7 +21,7 @@ ms.assetid: 3eb5c384-6751-4d50-be23-0c2ccc35593c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # registerOutParameter Method (int, int, java.lang.String)

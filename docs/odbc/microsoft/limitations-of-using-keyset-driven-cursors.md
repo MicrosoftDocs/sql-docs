@@ -19,7 +19,7 @@ ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Limitations of Using Keyset-Driven Cursors

@@ -21,7 +21,7 @@ ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CONCUR_SS_OPTIMISTIC_CCVAL Field (SQLServerResultSet)

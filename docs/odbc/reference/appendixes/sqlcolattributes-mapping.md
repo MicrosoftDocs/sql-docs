@@ -19,7 +19,7 @@ ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes Mapping

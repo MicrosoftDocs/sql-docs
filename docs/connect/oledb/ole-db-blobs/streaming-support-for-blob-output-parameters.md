@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, BLOBs"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Streaming Support for BLOB Output Parameters

@@ -18,7 +18,7 @@ ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLNumParams (Visual FoxPro ODBC Driver)

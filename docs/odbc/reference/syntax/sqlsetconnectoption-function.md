@@ -25,7 +25,7 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectOption Function

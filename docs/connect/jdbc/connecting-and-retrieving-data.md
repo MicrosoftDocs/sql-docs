@@ -16,7 +16,7 @@ ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Connecting and Retrieving Data

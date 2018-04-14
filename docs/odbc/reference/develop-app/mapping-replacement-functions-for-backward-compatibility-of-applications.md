@@ -24,7 +24,7 @@ ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Mapping Replacement Functions for Backward Compatibility of Applications

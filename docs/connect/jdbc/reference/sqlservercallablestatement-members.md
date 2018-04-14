@@ -17,7 +17,7 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 caps.latest.revision: 50
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerCallableStatement Members

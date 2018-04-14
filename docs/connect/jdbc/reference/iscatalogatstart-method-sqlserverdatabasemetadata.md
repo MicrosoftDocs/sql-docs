@@ -21,7 +21,7 @@ ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isCatalogAtStart Method (SQLServerDatabaseMetaData)

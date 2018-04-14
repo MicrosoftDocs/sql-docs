@@ -21,7 +21,7 @@ ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)

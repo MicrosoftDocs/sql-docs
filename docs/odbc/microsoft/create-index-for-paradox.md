@@ -19,7 +19,7 @@ ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE INDEX for Paradox

@@ -16,7 +16,7 @@ ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Wrappers and Interfaces

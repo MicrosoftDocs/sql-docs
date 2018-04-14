@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], schema"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Schema Rowsets - Distributed Query Support

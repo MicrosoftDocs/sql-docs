@@ -19,7 +19,7 @@ ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Function Summary

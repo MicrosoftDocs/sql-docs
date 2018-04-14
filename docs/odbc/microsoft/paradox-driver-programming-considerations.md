@@ -21,7 +21,7 @@ ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Paradox Driver Programming Considerations

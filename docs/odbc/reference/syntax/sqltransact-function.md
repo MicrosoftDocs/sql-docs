@@ -25,7 +25,7 @@ ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact Function

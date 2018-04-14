@@ -21,7 +21,7 @@ ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxFieldSize Method (SQLServerStatement)

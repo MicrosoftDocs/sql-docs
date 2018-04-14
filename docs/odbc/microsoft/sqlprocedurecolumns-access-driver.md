@@ -19,7 +19,7 @@ ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLProcedureColumns (Access Driver)

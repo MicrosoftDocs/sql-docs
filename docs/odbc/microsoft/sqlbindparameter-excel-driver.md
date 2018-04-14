@@ -19,7 +19,7 @@ ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBindParameter (Excel Driver)

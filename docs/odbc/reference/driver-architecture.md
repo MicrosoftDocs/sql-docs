@@ -19,7 +19,7 @@ ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Architecture

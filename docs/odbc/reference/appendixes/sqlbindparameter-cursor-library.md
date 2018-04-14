@@ -18,7 +18,7 @@ ms.assetid: 04c53e4c-cd1d-40b2-9997-684ebe43499f
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBindParameter (Cursor Library)

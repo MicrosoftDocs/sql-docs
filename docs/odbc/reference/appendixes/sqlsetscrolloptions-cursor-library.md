@@ -18,7 +18,7 @@ ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions (Cursor Library)

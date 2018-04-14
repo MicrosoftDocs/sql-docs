@@ -21,7 +21,7 @@ ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateFloat Method (SQLServerResultSet)

@@ -18,7 +18,7 @@ ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeConnect (Visual FoxPro ODBC Driver)

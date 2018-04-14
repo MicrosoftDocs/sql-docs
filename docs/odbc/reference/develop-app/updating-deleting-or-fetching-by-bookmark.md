@@ -22,7 +22,7 @@ ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating, Deleting, or Fetching by Bookmark

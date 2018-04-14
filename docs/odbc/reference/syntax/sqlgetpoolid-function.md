@@ -18,7 +18,7 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetPoolID Function

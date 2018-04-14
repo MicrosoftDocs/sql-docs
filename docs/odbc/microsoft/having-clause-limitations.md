@@ -19,7 +19,7 @@ ms.assetid: 80f3a839-50bb-42cc-b2a4-06a533145edb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # HAVING Clause Limitations

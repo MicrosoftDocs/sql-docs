@@ -20,7 +20,7 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Escape Sequences in ODBC

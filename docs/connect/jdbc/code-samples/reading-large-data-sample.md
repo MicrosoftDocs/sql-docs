@@ -16,7 +16,7 @@ ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Reading Large Data Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

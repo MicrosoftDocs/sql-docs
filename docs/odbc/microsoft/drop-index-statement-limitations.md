@@ -19,7 +19,7 @@ ms.assetid: a8ab9259-af47-438f-9fff-042e8ebb1c58
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DROP INDEX Statement Limitations

@@ -21,7 +21,7 @@ ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getExtraNameCharacters Method (SQLServerDatabaseMetaData)

@@ -18,7 +18,7 @@ ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLExecDirect (Visual FoxPro ODBC Driver)

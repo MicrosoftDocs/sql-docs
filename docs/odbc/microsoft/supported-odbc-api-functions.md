@@ -19,7 +19,7 @@ ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported ODBC API Functions

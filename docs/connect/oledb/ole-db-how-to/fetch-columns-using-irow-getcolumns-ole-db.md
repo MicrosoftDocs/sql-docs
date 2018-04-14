@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "IRow interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)

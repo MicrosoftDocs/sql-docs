@@ -21,7 +21,7 @@ ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setIntegratedSecurity Method (SQLServerDataSource)

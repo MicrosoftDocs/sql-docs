@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (properties)"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)

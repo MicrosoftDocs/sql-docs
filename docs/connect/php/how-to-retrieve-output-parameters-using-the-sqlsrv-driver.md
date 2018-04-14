@@ -18,7 +18,7 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Retrieve Output Parameters Using the SQLSRV Driver

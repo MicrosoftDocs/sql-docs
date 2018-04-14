@@ -18,7 +18,7 @@ ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetEnvAttr and the Cursor Library

@@ -21,7 +21,7 @@ ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsAlterTableWithAddColumn Method (SQLServerDatabaseMetaData)

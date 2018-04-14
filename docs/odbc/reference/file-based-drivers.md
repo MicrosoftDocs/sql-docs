@@ -20,7 +20,7 @@ ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # File-Based Drivers

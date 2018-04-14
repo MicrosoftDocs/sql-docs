@@ -20,7 +20,7 @@ ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Concise Functions

@@ -23,7 +23,7 @@ ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Type Identifiers and Descriptors

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, columns"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Removing a Column from a SQL Server Table

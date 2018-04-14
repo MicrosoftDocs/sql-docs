@@ -21,7 +21,7 @@ ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # allProceduresAreCallable Method (SQLServerDatabaseMetaData)

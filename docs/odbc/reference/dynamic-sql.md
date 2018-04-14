@@ -23,7 +23,7 @@ ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Dynamic SQL

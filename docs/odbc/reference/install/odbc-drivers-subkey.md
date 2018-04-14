@@ -20,7 +20,7 @@ ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Drivers Subkey

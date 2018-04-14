@@ -21,7 +21,7 @@ ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getString Method (java.lang.String)

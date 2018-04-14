@@ -20,7 +20,7 @@ ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Rows in the Rowset with SQLSetPos

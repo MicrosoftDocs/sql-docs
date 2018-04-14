@@ -20,7 +20,7 @@ ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Processing SQL Statements

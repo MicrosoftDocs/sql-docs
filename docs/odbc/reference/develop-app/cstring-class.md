@@ -18,7 +18,7 @@ ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CString Class

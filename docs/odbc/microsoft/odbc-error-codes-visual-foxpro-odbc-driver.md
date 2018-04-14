@@ -22,7 +22,7 @@ ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Error Codes (Visual FoxPro ODBC Driver)

@@ -18,7 +18,7 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Asynchronous Execution (Polling Method)

@@ -21,7 +21,7 @@ ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getServerName Method (SQLServerDataSource)

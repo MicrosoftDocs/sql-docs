@@ -20,7 +20,7 @@ ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Default Subkey

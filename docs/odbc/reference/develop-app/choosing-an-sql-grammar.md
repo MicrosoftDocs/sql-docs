@@ -20,7 +20,7 @@ ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Choosing an SQL Grammar

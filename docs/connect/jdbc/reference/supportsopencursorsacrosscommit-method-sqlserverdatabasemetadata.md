@@ -21,7 +21,7 @@ ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsOpenCursorsAcrossCommit Method (SQLServerDatabaseMetaData)

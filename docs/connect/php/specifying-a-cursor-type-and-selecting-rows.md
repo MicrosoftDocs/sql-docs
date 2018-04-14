@@ -19,7 +19,7 @@ ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Specifying a Cursor Type and Selecting Rows

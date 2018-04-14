@@ -21,7 +21,7 @@ ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getUpdateCount Method (SQLServerStatement)

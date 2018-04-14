@@ -25,7 +25,7 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLProcedureColumns Function

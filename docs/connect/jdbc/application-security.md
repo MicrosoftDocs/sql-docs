@@ -16,7 +16,7 @@ ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Application Security

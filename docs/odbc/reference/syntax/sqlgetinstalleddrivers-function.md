@@ -25,7 +25,7 @@ ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInstalledDrivers Function

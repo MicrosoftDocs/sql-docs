@@ -24,7 +24,7 @@ ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Processing Batches of SQL Statements

@@ -22,7 +22,7 @@ ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connection Attributes

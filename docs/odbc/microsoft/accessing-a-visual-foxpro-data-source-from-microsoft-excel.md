@@ -21,7 +21,7 @@ ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Accessing a Visual FoxPro Data Source from Microsoft Excel

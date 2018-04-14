@@ -16,7 +16,7 @@ ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDriver Members

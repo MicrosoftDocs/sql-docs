@@ -20,7 +20,7 @@ ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Interoperability of SQL Statements

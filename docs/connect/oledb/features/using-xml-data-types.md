@@ -35,7 +35,7 @@ helpviewer_keywords:
   - "COLUMNS rowset"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using XML Data Types

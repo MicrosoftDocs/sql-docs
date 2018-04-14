@@ -1,4 +1,4 @@
----
+﻿---
 title: "Indexes on Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
@@ -24,6 +24,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Indexes on Computed Columns
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

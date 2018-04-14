@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Working with Snapshot Isolation

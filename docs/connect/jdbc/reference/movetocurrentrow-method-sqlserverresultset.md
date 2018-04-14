@@ -21,7 +21,7 @@ ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # moveToCurrentRow Method (SQLServerResultSet)

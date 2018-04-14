@@ -22,7 +22,7 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Registry Entries for ODBC Components

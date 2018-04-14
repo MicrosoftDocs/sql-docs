@@ -21,7 +21,7 @@ ms.assetid: 169229c7-b75d-498b-a5ac-df300424c909
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # registerOutParameter Method (int, int)

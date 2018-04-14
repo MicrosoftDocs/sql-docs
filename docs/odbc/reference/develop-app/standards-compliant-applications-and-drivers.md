@@ -20,7 +20,7 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Standards-Compliant Applications and Drivers

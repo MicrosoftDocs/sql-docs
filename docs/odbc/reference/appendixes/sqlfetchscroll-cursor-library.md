@@ -18,7 +18,7 @@ ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFetchScroll (Cursor Library)

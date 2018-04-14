@@ -23,7 +23,7 @@ ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Microsoft Excel Data Types

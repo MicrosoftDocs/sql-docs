@@ -21,7 +21,7 @@ ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getWarnings Method (SQLServerConnection)

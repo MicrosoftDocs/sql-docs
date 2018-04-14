@@ -21,7 +21,7 @@ ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setArray Method (SQLServerPreparedStatement)

@@ -21,7 +21,7 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Function Conformance

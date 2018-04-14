@@ -20,7 +20,7 @@ ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # VARCHAR Column Size (ODBC Driver for Oracle)

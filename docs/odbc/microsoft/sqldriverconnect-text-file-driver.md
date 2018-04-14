@@ -19,7 +19,7 @@ ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDriverConnect (Text File Driver)

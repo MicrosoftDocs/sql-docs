@@ -16,7 +16,7 @@ ms.assetid: 60abf83d-6f97-4e47-b9d3-5072bd09d869
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDateTimeOffset(int) (SQLServerResultSet)

@@ -19,7 +19,7 @@ ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Testing the ODBC Connection

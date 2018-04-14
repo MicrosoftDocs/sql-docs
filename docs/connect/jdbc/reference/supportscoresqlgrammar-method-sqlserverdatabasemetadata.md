@@ -21,7 +21,7 @@ ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsCoreSQLGrammar Method (SQLServerDatabaseMetaData)

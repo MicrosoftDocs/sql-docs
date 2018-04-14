@@ -19,7 +19,7 @@ ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # File Data Sources

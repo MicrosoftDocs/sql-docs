@@ -19,7 +19,7 @@ ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # FROM Clause Limitations

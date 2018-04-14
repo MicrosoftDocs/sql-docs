@@ -21,7 +21,7 @@ ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateFloat Method (java.lang.String, float)

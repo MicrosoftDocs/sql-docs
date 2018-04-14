@@ -16,7 +16,7 @@ ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNClob Method (int)

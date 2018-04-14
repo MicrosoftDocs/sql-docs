@@ -21,7 +21,7 @@ ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # prepareCall Method (SQLServerConnection)

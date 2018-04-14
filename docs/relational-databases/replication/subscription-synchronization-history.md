@@ -1,4 +1,4 @@
----
+﻿---
 title: "Subscription, Synchronization History | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -20,6 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Subscription, Synchronization History
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

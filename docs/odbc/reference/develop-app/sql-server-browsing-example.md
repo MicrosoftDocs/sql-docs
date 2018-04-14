@@ -20,7 +20,7 @@ ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server Browsing Example

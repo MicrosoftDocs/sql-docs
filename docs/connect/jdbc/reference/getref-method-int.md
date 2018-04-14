@@ -21,7 +21,7 @@ ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getRef Method (int)

@@ -20,7 +20,7 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Level 1 Interface Conformance

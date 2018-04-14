@@ -21,7 +21,7 @@ ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSystemFunctions Method (SQLServerDatabaseMetaData)

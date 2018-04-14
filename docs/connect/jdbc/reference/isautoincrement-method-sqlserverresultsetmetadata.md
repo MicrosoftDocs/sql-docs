@@ -21,7 +21,7 @@ ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isAutoIncrement Method (SQLServerResultSetMetaData)

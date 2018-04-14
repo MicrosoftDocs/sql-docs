@@ -23,7 +23,7 @@ ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Level 2 API Functions (ODBC Driver for Oracle)

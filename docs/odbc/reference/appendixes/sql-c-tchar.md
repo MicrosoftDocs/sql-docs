@@ -20,7 +20,7 @@ ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL_C_TCHAR

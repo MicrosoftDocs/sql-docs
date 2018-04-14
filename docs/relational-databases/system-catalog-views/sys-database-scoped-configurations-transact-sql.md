@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/16/2018"
@@ -25,6 +25,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -21,7 +21,7 @@ ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTime Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)

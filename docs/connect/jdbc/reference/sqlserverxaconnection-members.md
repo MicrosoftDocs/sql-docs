@@ -16,7 +16,7 @@ ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXAConnection Members

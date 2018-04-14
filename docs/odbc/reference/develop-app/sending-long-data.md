@@ -19,7 +19,7 @@ ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Sending Long Data

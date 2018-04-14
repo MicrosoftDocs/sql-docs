@@ -22,7 +22,7 @@ ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL_NO_DATA

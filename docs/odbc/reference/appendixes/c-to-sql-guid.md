@@ -20,7 +20,7 @@ ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL: GUID

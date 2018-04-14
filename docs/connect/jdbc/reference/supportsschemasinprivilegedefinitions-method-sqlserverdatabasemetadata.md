@@ -21,7 +21,7 @@ ms.assetid: 2957af1d-62d6-4375-b214-bbba9aafcc2d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSchemasInPrivilegeDefinitions Method (SQLServerDatabaseMetaData)

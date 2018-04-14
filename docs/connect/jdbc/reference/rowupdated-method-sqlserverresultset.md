@@ -21,7 +21,7 @@ ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # rowUpdated Method (SQLServerResultSet)

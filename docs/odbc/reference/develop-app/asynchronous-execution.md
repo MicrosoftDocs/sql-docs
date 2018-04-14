@@ -16,7 +16,7 @@ ms.assetid: f30f026c-7e8d-4ef2-a2ee-877ce19dd6a3
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Asynchronous Execution

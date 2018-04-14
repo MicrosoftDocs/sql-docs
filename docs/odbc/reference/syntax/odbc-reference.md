@@ -19,7 +19,7 @@ ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC Reference

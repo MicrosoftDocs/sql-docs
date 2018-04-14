@@ -19,7 +19,7 @@ ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocConnect Mapping

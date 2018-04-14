@@ -21,7 +21,7 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTables Method (SQLServerDatabaseMetaData)

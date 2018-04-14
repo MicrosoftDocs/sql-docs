@@ -16,7 +16,7 @@ ms.assetid: 27ed4223-89ff-4044-8bb9-19c8eafa8ad8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Introduction to SQL and ODBC

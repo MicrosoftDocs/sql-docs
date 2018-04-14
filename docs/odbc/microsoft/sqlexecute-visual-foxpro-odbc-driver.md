@@ -18,7 +18,7 @@ ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLExecute (Visual FoxPro ODBC Driver)

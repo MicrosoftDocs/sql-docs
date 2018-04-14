@@ -21,7 +21,7 @@ ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getURL Method (java.lang.String) (SQLServerResultSet)

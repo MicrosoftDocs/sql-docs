@@ -21,7 +21,7 @@ ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Text File Driver Programming Considerations

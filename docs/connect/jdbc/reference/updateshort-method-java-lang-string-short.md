@@ -21,7 +21,7 @@ ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateShort Method (java.lang.String, short)

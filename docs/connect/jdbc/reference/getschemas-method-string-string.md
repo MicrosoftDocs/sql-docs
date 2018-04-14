@@ -16,7 +16,7 @@ ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSchemas Method (String, String)

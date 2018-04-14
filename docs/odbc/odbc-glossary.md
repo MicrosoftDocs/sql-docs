@@ -19,7 +19,7 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Glossary

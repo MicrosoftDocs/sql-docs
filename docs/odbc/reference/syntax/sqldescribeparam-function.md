@@ -25,7 +25,7 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDescribeParam Function

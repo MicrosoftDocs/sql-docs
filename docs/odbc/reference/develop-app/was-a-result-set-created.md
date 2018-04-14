@@ -18,7 +18,7 @@ ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Was a Result Set Created?

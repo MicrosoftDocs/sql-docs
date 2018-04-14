@@ -20,7 +20,7 @@ ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Manager Diagnostic Example

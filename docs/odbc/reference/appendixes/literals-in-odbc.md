@@ -21,7 +21,7 @@ ms.assetid: e66e9ab8-6dcc-47e2-bcb6-efdb324a1d3b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Literals in ODBC

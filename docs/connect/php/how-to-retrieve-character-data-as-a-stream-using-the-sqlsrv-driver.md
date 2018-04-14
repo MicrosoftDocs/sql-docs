@@ -19,7 +19,7 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Retrieve Character Data as a Stream Using the SQLSRV Driver

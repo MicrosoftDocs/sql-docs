@@ -21,7 +21,7 @@ ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxCatalogNameLength Method (SQLServerDatabaseMetaData)

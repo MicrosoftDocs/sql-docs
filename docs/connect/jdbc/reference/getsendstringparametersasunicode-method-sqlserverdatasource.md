@@ -21,7 +21,7 @@ ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSendStringParametersAsUnicode Method (SQLServerDataSource)

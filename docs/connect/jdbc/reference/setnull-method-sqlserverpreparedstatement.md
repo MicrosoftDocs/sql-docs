@@ -21,7 +21,7 @@ ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNull Method (SQLServerPreparedStatement)

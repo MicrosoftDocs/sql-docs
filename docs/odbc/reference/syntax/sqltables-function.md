@@ -25,7 +25,7 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables Function

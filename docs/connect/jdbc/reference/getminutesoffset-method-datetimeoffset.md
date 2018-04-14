@@ -16,7 +16,7 @@ ms.assetid: 18ba844a-ea36-42de-87da-bbc222082efe
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMinutesOffset Method (DateTimeOffset)

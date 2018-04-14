@@ -21,7 +21,7 @@ ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # doesMaxRowSizeIncludeBlobs Method (SQLServerDatabaseMetaData)

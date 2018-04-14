@@ -19,7 +19,7 @@ ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # System Functions

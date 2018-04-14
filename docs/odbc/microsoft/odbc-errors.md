@@ -18,7 +18,7 @@ ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Errors

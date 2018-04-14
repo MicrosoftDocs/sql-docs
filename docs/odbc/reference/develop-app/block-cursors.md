@@ -20,7 +20,7 @@ ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Block Cursors

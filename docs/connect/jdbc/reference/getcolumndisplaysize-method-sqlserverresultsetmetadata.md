@@ -21,7 +21,7 @@ ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumnDisplaySize Method (SQLServerResultSetMetaData)

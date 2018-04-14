@@ -21,7 +21,7 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Functions Executed by the Cursor Library

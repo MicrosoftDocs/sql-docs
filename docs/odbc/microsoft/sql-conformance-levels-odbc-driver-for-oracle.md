@@ -20,7 +20,7 @@ ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Conformance Levels (ODBC Driver for Oracle)

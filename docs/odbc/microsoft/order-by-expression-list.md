@@ -19,7 +19,7 @@ ms.assetid: 5ef88186-a99f-4e2c-a3f3-98a42d4f03a5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ORDER BY expression-list

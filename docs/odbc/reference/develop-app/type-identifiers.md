@@ -21,7 +21,7 @@ ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Type Identifiers

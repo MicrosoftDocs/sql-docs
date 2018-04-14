@@ -21,7 +21,7 @@ ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # createStatement Method ()

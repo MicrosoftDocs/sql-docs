@@ -21,7 +21,7 @@ ms.assetid: a19423a0-e7b6-4f5c-94be-80ddf3fa4717
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsCatalogsInIndexDefinitions Method (SQLServerDatabaseMetaData)

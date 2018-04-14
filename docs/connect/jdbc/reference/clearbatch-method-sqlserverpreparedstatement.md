@@ -21,7 +21,7 @@ ms.assetid: 6e5cda26-e24d-4637-8dfd-8135ba126e3b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # clearBatch Method (SQLServerPreparedStatement)

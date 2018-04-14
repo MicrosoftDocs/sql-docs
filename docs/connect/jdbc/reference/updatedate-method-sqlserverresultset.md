@@ -21,7 +21,7 @@ ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDate Method (SQLServerResultSet)

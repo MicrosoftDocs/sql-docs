@@ -16,7 +16,7 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting to a Data Source or Driver

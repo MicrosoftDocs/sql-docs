@@ -20,7 +20,7 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C Interval Structure

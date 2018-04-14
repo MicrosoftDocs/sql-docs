@@ -19,7 +19,7 @@ ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColumns (dBASE Driver)

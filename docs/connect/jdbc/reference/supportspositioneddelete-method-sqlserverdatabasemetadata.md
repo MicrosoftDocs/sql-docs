@@ -21,7 +21,7 @@ ms.assetid: 8011659a-d74b-489b-a88b-08bd9e8b48b2
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsPositionedDelete Method (SQLServerDatabaseMetaData)

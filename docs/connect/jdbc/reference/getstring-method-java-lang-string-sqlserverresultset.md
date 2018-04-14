@@ -21,7 +21,7 @@ ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # getString Method (java.lang.String) (SQLServerResultSet)

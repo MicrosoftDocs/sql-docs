@@ -25,7 +25,7 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDataSourceToDriver Function

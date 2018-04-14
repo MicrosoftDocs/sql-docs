@@ -21,7 +21,7 @@ ms.assetid: f81e5203-71eb-407e-b71f-1bdc722887a3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDate Method (SQLServerPreparedStatement)

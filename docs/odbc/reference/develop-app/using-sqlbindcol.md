@@ -20,7 +20,7 @@ ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using SQLBindCol

@@ -16,7 +16,7 @@ ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Understanding Row Locking

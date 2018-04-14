@@ -23,7 +23,7 @@ ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Cursor Library Operations

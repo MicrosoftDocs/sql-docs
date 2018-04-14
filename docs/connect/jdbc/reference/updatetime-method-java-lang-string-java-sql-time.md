@@ -21,7 +21,7 @@ ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateTime Method (java.lang.String, java.sql.Time)

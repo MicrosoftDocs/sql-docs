@@ -18,7 +18,7 @@ ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo (Visual FoxPro ODBC Driver)

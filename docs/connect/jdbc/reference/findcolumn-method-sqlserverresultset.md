@@ -21,7 +21,7 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # findColumn Method (SQLServerResultSet)

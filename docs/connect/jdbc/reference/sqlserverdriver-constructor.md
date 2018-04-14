@@ -21,7 +21,7 @@ ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDriver Constructor ()

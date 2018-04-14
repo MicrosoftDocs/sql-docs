@@ -21,7 +21,7 @@ ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getLong Method (java.lang.String)

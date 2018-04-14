@@ -21,7 +21,7 @@ ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Positioned Update and Delete Statements

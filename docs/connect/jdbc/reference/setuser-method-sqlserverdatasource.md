@@ -21,7 +21,7 @@ ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setUser Method (SQLServerDataSource)

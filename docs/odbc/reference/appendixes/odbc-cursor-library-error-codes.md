@@ -20,7 +20,7 @@ ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Cursor Library Error Codes

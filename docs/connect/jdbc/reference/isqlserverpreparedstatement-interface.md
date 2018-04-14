@@ -16,7 +16,7 @@ ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISQLServerPreparedStatement Interface

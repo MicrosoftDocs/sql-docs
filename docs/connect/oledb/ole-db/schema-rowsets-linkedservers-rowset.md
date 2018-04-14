@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "enumerating data sources [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset

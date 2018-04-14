@@ -21,7 +21,7 @@ ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setResponseBuffering Method (SQLServerDataSource)

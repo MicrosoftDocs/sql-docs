@@ -20,7 +20,7 @@ ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL_ARD_TYPE

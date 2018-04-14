@@ -25,7 +25,7 @@ ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocStmt Function

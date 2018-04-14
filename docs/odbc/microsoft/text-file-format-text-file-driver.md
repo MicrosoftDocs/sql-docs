@@ -21,7 +21,7 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Text File Format (Text File Driver)

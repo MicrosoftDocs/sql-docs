@@ -16,7 +16,7 @@ ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDataSourceObjectFactory Members

@@ -22,7 +22,7 @@ ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Calling SQLSetPos

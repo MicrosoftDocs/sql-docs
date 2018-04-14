@@ -16,7 +16,7 @@ ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Connecting to SQL Server with the JDBC Driver

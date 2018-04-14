@@ -21,7 +21,7 @@ ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumnType Method (SQLServerResultSetMetaData)

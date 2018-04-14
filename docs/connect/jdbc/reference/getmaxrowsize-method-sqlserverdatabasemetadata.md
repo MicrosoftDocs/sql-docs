@@ -21,7 +21,7 @@ ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxRowSize Method (SQLServerDatabaseMetaData)

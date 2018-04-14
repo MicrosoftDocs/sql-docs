@@ -21,7 +21,7 @@ ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # cancelRowUpdates Method (SQLServerResultSet)

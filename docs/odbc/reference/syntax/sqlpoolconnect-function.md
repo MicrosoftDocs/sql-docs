@@ -18,7 +18,7 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLPoolConnect Function

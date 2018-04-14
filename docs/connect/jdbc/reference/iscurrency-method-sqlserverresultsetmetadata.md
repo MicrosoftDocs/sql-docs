@@ -21,7 +21,7 @@ ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isCurrency Method (SQLServerResultSetMetaData)

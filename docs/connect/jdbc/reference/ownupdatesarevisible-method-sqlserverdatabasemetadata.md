@@ -21,7 +21,7 @@ ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ownUpdatesAreVisible Method (SQLServerDatabaseMetaData)

@@ -16,7 +16,7 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # About Code Examples in the Documentation

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "fast forward-only cursors"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Obtain a FAST_FORWARD Cursor

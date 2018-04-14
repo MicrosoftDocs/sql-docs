@@ -19,7 +19,7 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Reserved Keywords

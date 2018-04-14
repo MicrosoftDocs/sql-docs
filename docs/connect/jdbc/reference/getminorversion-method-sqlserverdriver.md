@@ -21,7 +21,7 @@ ms.assetid: 5507000a-98b1-40b1-b8a7-16365ae80d7d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMinorVersion Method (SQLServerDriver)

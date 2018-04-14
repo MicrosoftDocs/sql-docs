@@ -18,7 +18,7 @@ ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Product Support

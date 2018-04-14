@@ -14,7 +14,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS

@@ -16,7 +16,7 @@ ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNString Method (java.lang.String)

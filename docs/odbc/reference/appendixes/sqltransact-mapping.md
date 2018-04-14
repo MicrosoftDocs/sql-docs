@@ -19,7 +19,7 @@ ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact Mapping

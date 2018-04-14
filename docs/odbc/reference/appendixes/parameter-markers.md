@@ -20,7 +20,7 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Parameter Markers

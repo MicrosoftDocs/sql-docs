@@ -19,7 +19,7 @@ ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetDescField and SQLGetDescRec (Cursor Library)

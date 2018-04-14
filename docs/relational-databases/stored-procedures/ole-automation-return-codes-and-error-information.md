@@ -1,4 +1,4 @@
----
+﻿---
 title: "OLE Automation Return Codes and Error Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
@@ -22,6 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # OLE Automation Return Codes and Error Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

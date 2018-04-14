@@ -21,7 +21,7 @@ ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSearchStringEscape Method (SQLServerDatabaseMetaData)

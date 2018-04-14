@@ -1,4 +1,4 @@
----
+﻿---
 title: "Best Practices for Calling Natively Compiled Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
@@ -18,6 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

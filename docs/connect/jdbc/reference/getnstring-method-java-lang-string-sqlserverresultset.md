@@ -16,7 +16,7 @@ ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNString Method (java.lang.String) (SQLServerResultSet)

@@ -16,7 +16,7 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Tracing Driver Operation

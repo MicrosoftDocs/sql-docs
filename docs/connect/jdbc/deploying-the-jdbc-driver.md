@@ -16,7 +16,7 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Deploying the JDBC Driver

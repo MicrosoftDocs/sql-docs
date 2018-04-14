@@ -19,7 +19,7 @@ ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Environment Handles

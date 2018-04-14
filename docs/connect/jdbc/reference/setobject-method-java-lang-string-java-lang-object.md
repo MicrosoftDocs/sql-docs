@@ -21,7 +21,7 @@ ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setObject Method (java.lang.String, java.lang.Object)

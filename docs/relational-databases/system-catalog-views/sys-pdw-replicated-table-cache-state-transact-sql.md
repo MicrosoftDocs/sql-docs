@@ -1,4 +1,4 @@
----
+﻿---
 title: "sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2017"
@@ -19,6 +19,7 @@ ms.author: "rortloff"
 manager: "craigg"
 ms.reviewer: "barbkess"
 ms.workload: "Inactive"
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

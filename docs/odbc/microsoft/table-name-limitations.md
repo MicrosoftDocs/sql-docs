@@ -20,7 +20,7 @@ ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Table Name Limitations

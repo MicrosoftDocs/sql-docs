@@ -20,7 +20,7 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Explicit Data Type Conversion Function

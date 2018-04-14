@@ -19,7 +19,7 @@ ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Consistency Check

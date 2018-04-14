@@ -21,7 +21,7 @@ ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBlob Method (int) (SQLServerResultSet)

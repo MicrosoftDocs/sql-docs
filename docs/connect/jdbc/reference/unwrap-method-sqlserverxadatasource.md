@@ -16,7 +16,7 @@ ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # unwrap Method (SQLServerXADataSource)

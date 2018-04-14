@@ -21,7 +21,7 @@ ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Conformance Levels

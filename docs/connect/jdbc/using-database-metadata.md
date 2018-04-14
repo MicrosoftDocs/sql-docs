@@ -16,7 +16,7 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Database Metadata

@@ -20,7 +20,7 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Embedded SQL Example

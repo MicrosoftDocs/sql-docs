@@ -21,7 +21,7 @@ ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDouble Method (SQLServerPreparedStatement)

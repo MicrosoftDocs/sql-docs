@@ -20,7 +20,7 @@ ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported Scalar Functions (Visual FoxPro ODBC Driver)

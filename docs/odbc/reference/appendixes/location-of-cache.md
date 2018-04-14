@@ -20,7 +20,7 @@ ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Location of Cache

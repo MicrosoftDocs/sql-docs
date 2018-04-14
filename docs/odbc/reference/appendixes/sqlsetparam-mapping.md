@@ -19,7 +19,7 @@ ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetParam Mapping

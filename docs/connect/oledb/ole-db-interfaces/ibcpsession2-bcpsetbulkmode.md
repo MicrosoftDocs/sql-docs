@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "BCPSetBulkMode function"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IBCPSession2::BCPSetBulkMode

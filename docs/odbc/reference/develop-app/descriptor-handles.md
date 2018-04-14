@@ -29,7 +29,7 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Descriptor Handles

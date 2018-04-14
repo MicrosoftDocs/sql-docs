@@ -16,7 +16,7 @@ ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCharacterStream Method () (SQLServerNClob)

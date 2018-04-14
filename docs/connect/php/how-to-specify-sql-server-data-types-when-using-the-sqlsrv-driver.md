@@ -19,7 +19,7 @@ ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Specify SQL Server Data Types When Using the SQLSRV Driver

@@ -19,7 +19,7 @@ ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo (Text File Driver)

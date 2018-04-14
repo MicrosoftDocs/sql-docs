@@ -18,7 +18,7 @@ ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Statement Parameters

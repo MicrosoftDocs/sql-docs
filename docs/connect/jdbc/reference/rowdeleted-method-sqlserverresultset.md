@@ -21,7 +21,7 @@ ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # rowDeleted Method (SQLServerResultSet)

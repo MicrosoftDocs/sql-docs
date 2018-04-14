@@ -25,7 +25,7 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLReadFileDSN Function

@@ -18,7 +18,7 @@ ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions (Desktop Database Drivers)

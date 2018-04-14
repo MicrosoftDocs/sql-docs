@@ -20,7 +20,7 @@ ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Diagnostic Messages

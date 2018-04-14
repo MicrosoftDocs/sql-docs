@@ -19,7 +19,7 @@ ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Adding a Visual FoxPro Data Source

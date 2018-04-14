@@ -16,7 +16,7 @@ ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setString Method (long, java.lang.String, int, int) (SQLServerNClob)

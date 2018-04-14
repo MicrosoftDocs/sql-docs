@@ -16,7 +16,7 @@ ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting to Microsoft Azure SQL Database

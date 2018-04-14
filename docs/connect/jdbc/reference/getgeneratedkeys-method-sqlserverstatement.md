@@ -21,7 +21,7 @@ ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getGeneratedKeys Method (SQLServerStatement)

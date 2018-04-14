@@ -21,7 +21,7 @@ ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # commit Method (SQLServerXAResource)

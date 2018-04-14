@@ -16,7 +16,7 @@ ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setCharacterStream Method (SQLServerPreparedStatement)

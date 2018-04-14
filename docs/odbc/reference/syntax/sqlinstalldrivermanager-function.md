@@ -25,7 +25,7 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLInstallDriverManager Function

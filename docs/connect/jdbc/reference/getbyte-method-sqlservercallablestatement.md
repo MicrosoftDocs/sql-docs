@@ -21,7 +21,7 @@ ms.assetid: 4454c22a-5e6d-4edb-9ead-d623a174ce59
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getByte Method (SQLServerCallableStatement)

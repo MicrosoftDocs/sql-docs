@@ -16,7 +16,7 @@ ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Code Samples for the Microsoft Drivers for PHP for SQL Server

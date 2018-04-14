@@ -16,7 +16,7 @@ ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO Class

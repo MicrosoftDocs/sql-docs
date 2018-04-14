@@ -25,7 +25,7 @@ ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetStmtOption Function

@@ -21,7 +21,7 @@ ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Specification Subkeys

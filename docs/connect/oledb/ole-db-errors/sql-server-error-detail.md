@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "ISQLServerErrorInfo interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Server Error Detail

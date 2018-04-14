@@ -21,7 +21,7 @@ ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAsciiStream Method (SQLServerClob)

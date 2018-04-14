@@ -20,7 +20,7 @@ ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Environment Transitions

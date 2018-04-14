@@ -21,7 +21,7 @@ ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxProcedureNameLength Method (SQLServerDatabaseMetaData)

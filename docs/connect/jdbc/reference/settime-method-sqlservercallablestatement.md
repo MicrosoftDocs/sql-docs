@@ -21,7 +21,7 @@ ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTime Method (SQLServerCallableStatement)

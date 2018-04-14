@@ -21,7 +21,7 @@ ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Arguments in Catalog Functions

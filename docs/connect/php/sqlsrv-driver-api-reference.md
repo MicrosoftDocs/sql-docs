@@ -16,7 +16,7 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLSRV Driver API Reference

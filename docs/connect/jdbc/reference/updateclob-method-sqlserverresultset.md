@@ -21,7 +21,7 @@ ms.assetid: e841f9a6-e94f-4552-a0e2-aefe3d84faf0
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateClob Method (SQLServerResultSet)

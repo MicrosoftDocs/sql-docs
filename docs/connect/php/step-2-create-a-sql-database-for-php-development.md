@@ -16,7 +16,7 @@ ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 2: Create a SQL database for PHP development

@@ -19,7 +19,7 @@ ms.assetid: 72cef4bd-13be-430e-9b6a-c75b60f9d1dc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Tables and Views

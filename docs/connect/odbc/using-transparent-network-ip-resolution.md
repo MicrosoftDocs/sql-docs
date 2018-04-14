@@ -16,7 +16,7 @@ ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Transparent Network IP Resolution

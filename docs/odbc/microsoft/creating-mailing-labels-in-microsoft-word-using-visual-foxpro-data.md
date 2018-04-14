@@ -22,7 +22,7 @@ ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data

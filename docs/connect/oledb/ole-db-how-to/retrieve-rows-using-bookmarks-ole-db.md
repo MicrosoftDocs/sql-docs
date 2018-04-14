@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "rows [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)

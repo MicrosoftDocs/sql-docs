@@ -19,7 +19,7 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetStmtOption Mapping

@@ -23,7 +23,7 @@ ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Buffers

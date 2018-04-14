@@ -21,7 +21,7 @@ ms.assetid: 2bcccb16-007f-4a34-a449-61fc89e99218
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBinaryStream Method (SQLServerResultSet)

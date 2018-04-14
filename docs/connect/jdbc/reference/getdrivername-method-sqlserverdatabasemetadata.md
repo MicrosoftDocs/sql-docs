@@ -21,7 +21,7 @@ ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDriverName Method (SQLServerDatabaseMetaData)

@@ -21,7 +21,7 @@ ms.assetid: 6f368df5-e88a-4088-b0de-2b5ab655ebaa
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsGroupBy Method (SQLServerDatabaseMetaData)

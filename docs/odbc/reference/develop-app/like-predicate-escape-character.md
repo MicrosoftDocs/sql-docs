@@ -19,7 +19,7 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # LIKE Predicate Escape Character

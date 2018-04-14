@@ -16,7 +16,7 @@ ms.assetid: 0d57940a-90bc-4f1b-a20f-5a97d7d20b61
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerBlob Methods

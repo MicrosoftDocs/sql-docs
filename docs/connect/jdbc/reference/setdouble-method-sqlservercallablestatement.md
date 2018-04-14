@@ -21,7 +21,7 @@ ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDouble Method (SQLServerCallableStatement)

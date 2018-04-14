@@ -20,7 +20,7 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DBMS-Based Driver Diagnostic Example

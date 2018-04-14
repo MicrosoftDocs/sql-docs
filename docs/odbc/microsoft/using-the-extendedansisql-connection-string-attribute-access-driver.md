@@ -20,7 +20,7 @@ ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using the ExtendedAnsiSQL Connection String Attribute (Access Driver)

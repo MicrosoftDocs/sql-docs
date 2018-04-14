@@ -19,7 +19,7 @@ ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using 32-Bit Applications with 32-Bit Drivers

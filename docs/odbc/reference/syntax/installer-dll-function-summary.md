@@ -19,7 +19,7 @@ ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Installer DLL Function Summary

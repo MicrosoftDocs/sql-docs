@@ -16,7 +16,7 @@ ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Upgrading a 3.5 Driver to a 3.8 Driver

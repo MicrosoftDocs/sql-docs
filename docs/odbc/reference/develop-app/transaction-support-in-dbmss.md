@@ -19,7 +19,7 @@ ms.assetid: 0fc2ae34-4748-4120-9fc3-bb28c8ed867e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transaction Support in DBMSs

@@ -21,7 +21,7 @@ ms.assetid: 9451c7c2-4c0d-4d1e-9b42-a26ff28e3f6a
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # execute Method (java.lang.String, java.lang.String)

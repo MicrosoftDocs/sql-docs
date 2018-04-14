@@ -24,7 +24,7 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating the Environment Handle

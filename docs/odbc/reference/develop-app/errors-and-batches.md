@@ -22,7 +22,7 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Errors and Batches

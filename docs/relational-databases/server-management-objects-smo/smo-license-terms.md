@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server Shared Management Objects (SMO) - License Terms | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -18,6 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

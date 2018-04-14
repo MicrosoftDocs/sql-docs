@@ -18,7 +18,7 @@ ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET DELETED Command

@@ -19,7 +19,7 @@ ms.assetid: 2ac8f012-e46d-41ca-81bb-e4a3246e3241
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Commit and Rollback Behavior

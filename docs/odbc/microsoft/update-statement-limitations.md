@@ -19,7 +19,7 @@ ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # UPDATE Statement Limitations

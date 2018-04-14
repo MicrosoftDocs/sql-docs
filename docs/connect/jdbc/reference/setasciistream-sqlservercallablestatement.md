@@ -16,7 +16,7 @@ ms.assetid: 8de3ae7c-ba7b-4249-8333-71c8416b3bb7
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAsciiStream (SQLServerCallableStatement)

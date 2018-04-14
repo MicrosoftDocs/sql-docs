@@ -21,7 +21,7 @@ ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxConnections Method (SQLServerDatabaseMetaData)

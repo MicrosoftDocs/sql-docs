@@ -138,6 +138,8 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Value data: **0 (False)**
 
+4.  If it is not possible to clean up all non-self-signed certificates in step 2. Set the value of the registry key in step 3 to 2.
+
 ## HTTP request error
 
 ### Symptoms

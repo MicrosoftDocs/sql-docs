@@ -21,7 +21,7 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setting Options Programmatically for the Access Driver

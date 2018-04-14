@@ -16,7 +16,7 @@ ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # valueOf Method (java.sql.Timestamp, int)

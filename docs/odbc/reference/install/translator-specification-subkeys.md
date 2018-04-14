@@ -21,7 +21,7 @@ ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Translator Specification Subkeys

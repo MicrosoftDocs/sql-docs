@@ -16,7 +16,7 @@ ms.assetid: c3db6be0-9e2b-4408-ab22-b6ecfc42961e
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnection Methods

@@ -21,7 +21,7 @@ ms.assetid: 4bc3e82b-a7e7-43a5-8938-6f29c7570163
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsOpenCursorsAcrossRollback Method (SQLServerDatabaseMetaData)

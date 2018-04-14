@@ -18,7 +18,7 @@ ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetStmtOption (Visual FoxPro ODBC Driver)

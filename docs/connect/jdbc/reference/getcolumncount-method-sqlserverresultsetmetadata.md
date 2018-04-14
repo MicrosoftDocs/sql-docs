@@ -21,7 +21,7 @@ ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumnCount Method (SQLServerResultSetMetaData)

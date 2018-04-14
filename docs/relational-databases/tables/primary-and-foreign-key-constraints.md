@@ -1,4 +1,4 @@
----
+﻿---
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
@@ -23,6 +23,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Primary and Foreign Key Constraints
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

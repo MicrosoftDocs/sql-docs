@@ -21,7 +21,7 @@ ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # addConnectionEventListener Method (SQLServerPooledConnection)

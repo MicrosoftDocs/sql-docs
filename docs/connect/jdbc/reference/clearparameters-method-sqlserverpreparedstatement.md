@@ -21,7 +21,7 @@ ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # clearParameters Method (SQLServerPreparedStatement)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2017"
@@ -39,8 +39,9 @@ ms.assetid:
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

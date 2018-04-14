@@ -21,7 +21,7 @@ ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isNullable Method (SQLServerResultSetMetaData)

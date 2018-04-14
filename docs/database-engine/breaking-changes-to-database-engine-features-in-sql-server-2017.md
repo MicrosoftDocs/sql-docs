@@ -1,4 +1,4 @@
----
+﻿---
 title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
 description: "Breaking changes to Database Engine Features in SQL Server 2017"
 ms.date: "04/19/2017"
@@ -21,6 +21,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -16,7 +16,7 @@ ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isPoolable Method (SQLServerStatement)

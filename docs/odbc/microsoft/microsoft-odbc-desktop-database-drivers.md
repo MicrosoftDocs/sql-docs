@@ -23,7 +23,7 @@ ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Microsoft ODBC Desktop Database Drivers

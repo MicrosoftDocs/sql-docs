@@ -16,7 +16,7 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connection Resiliency in the Windows ODBC Driver

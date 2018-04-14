@@ -21,7 +21,7 @@ ms.assetid: 870d0031-6871-4dc0-b03a-fb0a9ff6ab98
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setFloat Method (SQLServerPreparedStatement)

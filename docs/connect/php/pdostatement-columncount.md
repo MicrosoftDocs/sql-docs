@@ -16,7 +16,7 @@ ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::columnCount

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Stored Procedures

@@ -19,7 +19,7 @@ ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Correlation Names

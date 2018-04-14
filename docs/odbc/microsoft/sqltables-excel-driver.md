@@ -19,7 +19,7 @@ ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (Excel Driver)

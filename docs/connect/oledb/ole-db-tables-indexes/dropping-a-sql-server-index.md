@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Dropping a SQL Server Index

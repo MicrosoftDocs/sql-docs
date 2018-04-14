@@ -21,7 +21,7 @@ ms.assetid: 5416aed2-a5b6-4e3b-9750-90db8cda8cec
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateByte Method (java.lang.String, byte)

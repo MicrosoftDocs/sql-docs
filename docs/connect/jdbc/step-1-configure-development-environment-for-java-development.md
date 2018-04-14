@@ -16,7 +16,7 @@ ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 1: Configure development environment for Java development

@@ -22,7 +22,7 @@ ms.assetid: f31dd938-e992-436b-b613-145c23973064
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Network Database Access

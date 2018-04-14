@@ -21,7 +21,7 @@ ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsConvert Method (SQLServerDatabaseMetaData)

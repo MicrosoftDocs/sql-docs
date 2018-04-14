@@ -22,7 +22,7 @@ ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Length, Buffer Length, and Truncation

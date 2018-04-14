@@ -21,7 +21,7 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Display Size

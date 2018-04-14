@@ -21,7 +21,7 @@ ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMetaData Method (SQLServerPreparedStatement)

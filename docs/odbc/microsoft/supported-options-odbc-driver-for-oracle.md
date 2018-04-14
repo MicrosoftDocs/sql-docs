@@ -18,7 +18,7 @@ ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported Options (ODBC Driver for Oracle)

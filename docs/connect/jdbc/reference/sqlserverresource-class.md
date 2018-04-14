@@ -16,7 +16,7 @@ ms.assetid: e7e362d1-6b5f-4e8c-8862-2001102cf4f9
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResource Class

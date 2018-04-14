@@ -21,7 +21,7 @@ ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSubqueriesInQuantifieds Method (SQLServerDatabaseMetaData)

@@ -16,7 +16,7 @@ ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerParameterMetaData Class

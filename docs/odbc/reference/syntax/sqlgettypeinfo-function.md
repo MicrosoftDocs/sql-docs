@@ -25,7 +25,7 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo Function

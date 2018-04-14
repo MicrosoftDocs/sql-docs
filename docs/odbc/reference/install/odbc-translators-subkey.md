@@ -20,7 +20,7 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Translators Subkey

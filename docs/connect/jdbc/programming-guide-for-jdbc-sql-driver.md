@@ -16,7 +16,7 @@ ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Programming Guide for JDBC SQL Driver

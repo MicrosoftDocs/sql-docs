@@ -21,7 +21,7 @@ ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTypeMap Method (SQLServerConnection)

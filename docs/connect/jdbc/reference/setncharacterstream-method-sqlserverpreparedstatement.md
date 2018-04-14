@@ -16,7 +16,7 @@ ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNCharacterStream Method (SQLServerPreparedStatement)

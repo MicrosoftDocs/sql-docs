@@ -16,7 +16,7 @@ ms.assetid: 4e30d242-0c1b-45db-b75f-41b041692f31
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNClob Method (java.lang.String, java.sql.NClob)

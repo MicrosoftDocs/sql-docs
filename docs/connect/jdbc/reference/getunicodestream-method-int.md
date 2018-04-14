@@ -21,7 +21,7 @@ ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getUnicodeStream Method (int)

@@ -21,7 +21,7 @@ ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxCursorNameLength Method (SQLServerDatabaseMetaData)

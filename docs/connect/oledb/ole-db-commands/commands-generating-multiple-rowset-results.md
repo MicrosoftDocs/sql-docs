@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Commands Generating Multiple-Rowset Results

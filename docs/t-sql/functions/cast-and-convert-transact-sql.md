@@ -131,16 +131,16 @@ For a date or time data type *expression*,  *style* can have one of the values s
 <sup>1</sup> These style values return nondeterministic results. Includes all (yy) (without century) styles and a subset of (yyyy) (with century) styles.
   
 <sup>2</sup> The default values (**0** or **100**, **9** or **109**, **13** or **113**, **20** or **120**, and **21** or **121**) always return the century (yyyy).
-  
+
 <sup>3</sup> Input when you convert to **datetime**; output when you convert to character data.
-  
+
 <sup>4</sup> Designed for XML use. For conversion from **datetime** or **smalldatetime** to character data, see the previous table for the output format.
-  
+
 <sup>5</sup> Hijri is a calendar system with several variations. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Kuwaiti algorithm.
-  
+
 > [!IMPORTANT]
-> By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That is, the two-digit year 49 is interpreted as 2049 and the two-digit year 50 is interpreted as 1950. Many client applications, such as those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option that changes the cutoff year used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and allows for the consistent treatment of dates. We recommend specifying four-digit years.  
-  
+>  By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets two-digit years based on a cutoff year of 2049. That means that SQL Server interprets the two-digit year 49 as 2049 and the two-digit year 50 as 1950. Many client applications, including those based on Automation objects, use a cutoff year of 2030. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the two digit year cutoff configuration option to change the cutoff year used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This allows for the consistent treatment of dates. We recommend specifying four-digit years.
+
 <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When casting character data representing only date or only time components to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.
   
 <sup>7</sup>Use the optional time zone indicator **Z** to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z indicates time zone UTC-0. The HH:MM offset, in the + or - direction, indicates other time zones. For example: `2006-12-12T23:45:12-08:00`.

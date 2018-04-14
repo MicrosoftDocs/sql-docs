@@ -41,7 +41,7 @@ manager: "jhubbard"
  For more information about Database Mirroring Monitor, see [Database Mirroring Monitor Overview](database-mirroring-monitor-overview.md).  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
   

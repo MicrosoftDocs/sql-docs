@@ -330,6 +330,6 @@ manager: "jhubbard"
  [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)  
+ [About Log Shipping &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  
   
   

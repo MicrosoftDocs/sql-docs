@@ -64,7 +64,7 @@ manager: "jhubbard"
   
      A prompt asks for confirmation; if you click **Yes**, the session is paused, and the button changes to **Resume**.  
   
-     For more information about the impact of pausing a session, see [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md).  
+     For more information about the impact of pausing a session, see [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 5.  To resume the session, click **Resume**.  
   
@@ -121,6 +121,6 @@ manager: "jhubbard"
 -   [Remove Database Mirroring &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

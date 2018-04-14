@@ -29,7 +29,7 @@ manager: "jhubbard"
  We recommend that you resume a paused session quickly, because as long as a database mirroring session remains paused, the transaction log cannot be truncated. Therefore, if a database mirroring session is paused for too long, the transaction log fills up, making the database unavailable. For an explanation of why this happens, see "How Pausing and Resuming Affect Log Truncation," later in this topic.  
   
 > [!IMPORTANT]  
->  Following a forced service, when the original principal server reconnects mirroring is suspended. Resuming mirroring in this situation could possibly cause data loss on the original principal server. For information about managing the potential data loss, see [Database Mirroring Operating Modes](../database-mirroring-operating-modes.md).  
+>  Following a forced service, when the original principal server reconnects mirroring is suspended. Resuming mirroring in this situation could possibly cause data loss on the original principal server. For information about managing the potential data loss, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  **In this Topic:**  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   Stop the database mirroring session by removing mirroring.  
   
-     Unlike pausing a session, removing mirroring drops all information about the mirroring session. Each partner server instance retains its own copy of the database. If the former mirror copy is recovered, it will have diverged from the former principal copy and be behind by the amount of time that has elapsed since the session was paused. For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md).  
+     Unlike pausing a session, removing mirroring drops all information about the mirroring session. Each partner server instance retains its own copy of the database. If the former mirror copy is recovered, it will have diverged from the former principal copy and be behind by the amount of time that has elapsed since the session was paused. For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To pause or resume database mirroring**  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
- [Removing Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

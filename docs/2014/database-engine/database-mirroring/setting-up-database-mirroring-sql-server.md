@@ -18,7 +18,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Setting Up Database Mirroring (SQL Server)
-  This section describes the prerequisites, recommendations, and steps for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md).  
+  This section describes the prerequisites, recommendations, and steps for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 > [!IMPORTANT]  
 >  We recommend that you configure database mirroring during off-peak hours because configuration can impact performance.  
@@ -153,7 +153,7 @@ manager: "jhubbard"
  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md)  

@@ -28,7 +28,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
   
- This topic describes the prerequisites and recommendations for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md).  
+ This topic describes the prerequisites and recommendations for setting up database mirroring. For an introduction to database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on-disk storage format is the same in the 64-bit and 32-bit environments. Therefore, a database mirroring session can combine server instances that run in a 32-bit environment and server instances that run in a 64-bit environment.  
@@ -124,7 +124,7 @@ manager: "jhubbard"
 ## See Also  
  [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

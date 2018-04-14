@@ -32,7 +32,7 @@ manager: "jhubbard"
  This topic discusses considerations for combining log shipping and database mirroring.  
   
 > [!NOTE]  
->  For introductions to these technologies, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md) and [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
+>  For introductions to these technologies, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md) and [About Log Shipping &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md).  
   
 ## Combining Log Shipping and Database Mirroring  
  The principal database in a mirroring session can also act as the primary database in a log shipping configuration, or vice versa, as the log shipping backup share is intact. The database mirroring session run in any operating mode, whether synchronous (with transaction safety set to FULL) or asynchronous (with transaction safety set to OFF).  
@@ -68,7 +68,7 @@ manager: "jhubbard"
 ## The Impact of Database Mirroring on a Remote Monitoring Instance  
  When log shipping uses with a remote monitoring instance, combining the log shipping session and database mirroring affects the information in the monitor tables. The information about the primary is a combination of the one configured at the principal/primary and the monitor configured on each secondary.  
   
- To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](log-shipping/monitor-log-shipping-transact-sql.md).  
+ To keep monitoring as seamless as possible, when you use a remote monitor, we recommend that you specify the original primary name when configuring the primary at the secondary. This approach also facilitates changing the log shipping configuration from Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about monitoring, see [Monitor Log Shipping &#40;Transact-SQL&#41;](../log-shipping/monitor-log-shipping-transact-sql.md).  
   
 ## Setting Up Mirroring and Log Shipping Together  
  To set up database mirroring and log shipping together, the following steps are required:  
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
      You should set up a single share as the backup directory (a backup share). This ensures that after role switching between the principal and mirror servers, backup jobs continue to write to the same directory as before. A best practice is to ensure that this share is located on a different physical server from the servers hosting the databases involved in mirroring and log shipping.  
   
-     For more information, see [Configure Log Shipping &#40;SQL Server&#41;](log-shipping/configure-log-shipping-sql-server.md).  
+     For more information, see [Configure Log Shipping &#40;SQL Server&#41;](../log-shipping/configure-log-shipping-sql-server.md).  
   
 5.  Manually failover from the principal to the mirror.  
   

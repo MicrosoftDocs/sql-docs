@@ -241,7 +241,7 @@ manager: "jhubbard"
 -   [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Back Up and Restore Full-Text Catalogs and Indexes](../back-up-and-restore-full-text-catalogs-and-indexes.md)   

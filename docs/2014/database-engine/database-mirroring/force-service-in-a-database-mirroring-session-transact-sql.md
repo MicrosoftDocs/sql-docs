@@ -26,7 +26,7 @@ manager: "jhubbard"
 -   WITNESS is set to OFF or is connected to the mirror server.  
   
 > [!CAUTION]  
->  Forced service is strictly a disaster recovery method. Forcing service may involve some data loss. Therefore, force service only if you are willing to risk losing some data in order to restore service to the database immediately. If forcing service risks losing significant data, we recommend that you stop mirroring and manually resynchronize the databases. For more information about the risks of forcing service, see [Database Mirroring Operating Modes](../database-mirroring-operating-modes.md).  
+>  Forced service is strictly a disaster recovery method. Forcing service may involve some data loss. Therefore, force service only if you are willing to risk losing some data in order to restore service to the database immediately. If forcing service risks losing significant data, we recommend that you stop mirroring and manually resynchronize the databases. For more information about the risks of forcing service, see [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  Forcing service suspends the session and starts a new recovery fork. The effect of forcing service is similar to removing mirroring and recovering the former principal database. However, forcing service facilitates resynchronizing the databases (with possible data loss) when mirroring resumes.  
   
@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [Database Mirroring Operating Modes](../database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

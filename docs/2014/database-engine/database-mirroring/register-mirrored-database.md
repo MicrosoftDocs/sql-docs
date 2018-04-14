@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

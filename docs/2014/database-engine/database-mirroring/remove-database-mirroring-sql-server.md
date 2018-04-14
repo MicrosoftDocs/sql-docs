@@ -70,7 +70,7 @@ manager: "jhubbard"
 ##  <a name="FollowUp"></a> Follow Up: Removing Database Mirroring  
   
 > [!NOTE]  
->  For information about the impact of removing mirroring, see [Removing Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md).  
+>  For information about the impact of removing mirroring, see [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 -   **If you intend to restart mirroring on the database**  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
 -   [Example: Setting Up Database Mirroring Using Certificates &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [AlwaysOn Availability Groups (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   

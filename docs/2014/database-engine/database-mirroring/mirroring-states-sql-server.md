@@ -40,6 +40,6 @@ manager: "jhubbard"
 |DISCONNECTED|The partner has lost communication with the other partner.|  
   
 ## See Also  
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../database-mirroring-sql-server.md)  
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

@@ -51,7 +51,7 @@ The SQL Server 2014 content will soon be merged into the .docs site.  For now, s
     + [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     + [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
-::: moniker range=">=sql-server-2016"
+::: moniker range=">=sql-server-2016 || = sqlallproducts-allversions"
 ## SQL Server Technologies
 
 |||

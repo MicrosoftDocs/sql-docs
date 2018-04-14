@@ -21,7 +21,7 @@ ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setFetchSize Method (SQLServerResultSet)

@@ -16,7 +16,7 @@ ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO_SQLSRV Driver Reference

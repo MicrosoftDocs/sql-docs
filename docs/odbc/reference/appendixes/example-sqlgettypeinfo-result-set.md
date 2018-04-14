@@ -20,7 +20,7 @@ ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Example SQLGetTypeInfo Result Set

@@ -20,7 +20,7 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQL Data Types

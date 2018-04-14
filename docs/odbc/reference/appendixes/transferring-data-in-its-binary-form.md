@@ -20,7 +20,7 @@ ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transferring Data in Its Binary Form

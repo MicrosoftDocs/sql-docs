@@ -16,7 +16,7 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerPreparedStatement Class

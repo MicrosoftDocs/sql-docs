@@ -19,7 +19,7 @@ ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SELECT DISTINCT Limitations

@@ -19,7 +19,7 @@ ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Limitations

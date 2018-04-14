@@ -21,7 +21,7 @@ ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsANSI92EntryLevelSQL Method (SQLServerDatabaseMetaData)

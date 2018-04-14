@@ -18,7 +18,7 @@ ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Schema (Text File Driver)

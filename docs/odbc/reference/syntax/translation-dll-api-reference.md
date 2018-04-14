@@ -18,7 +18,7 @@ ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Translation DLL API Reference

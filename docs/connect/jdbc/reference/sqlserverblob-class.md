@@ -21,7 +21,7 @@ ms.assetid: 88bd8623-889d-4b5d-99ff-c85b32f3ff5c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerBlob Class

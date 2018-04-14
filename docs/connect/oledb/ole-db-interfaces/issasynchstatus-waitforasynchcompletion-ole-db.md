@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "WaitForAsynchCompletion method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)

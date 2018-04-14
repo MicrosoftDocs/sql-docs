@@ -20,7 +20,7 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLSTATE Mappings

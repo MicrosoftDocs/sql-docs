@@ -25,7 +25,7 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetPrivateProfileString Function

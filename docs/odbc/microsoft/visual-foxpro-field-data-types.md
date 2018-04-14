@@ -19,7 +19,7 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Visual FoxPro Field Data Types

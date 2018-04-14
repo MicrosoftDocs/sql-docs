@@ -20,7 +20,7 @@ ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Connection Strings

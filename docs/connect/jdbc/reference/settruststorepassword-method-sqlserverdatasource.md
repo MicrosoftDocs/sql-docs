@@ -21,7 +21,7 @@ ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTrustStorePassword Method (SQLServerDataSource)

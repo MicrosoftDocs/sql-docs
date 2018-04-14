@@ -19,7 +19,7 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Arrays of Parameters

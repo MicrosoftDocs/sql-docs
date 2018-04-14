@@ -16,7 +16,7 @@ ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # valueOf Method (DateTimeOffset)

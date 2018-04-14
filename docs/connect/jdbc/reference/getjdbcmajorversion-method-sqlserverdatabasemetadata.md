@@ -21,7 +21,7 @@ ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getJDBCMajorVersion Method (SQLServerDatabaseMetaData)

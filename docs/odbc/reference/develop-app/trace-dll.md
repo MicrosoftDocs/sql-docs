@@ -19,7 +19,7 @@ ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Trace DLL

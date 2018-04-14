@@ -16,7 +16,7 @@ ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Working with a Connection

@@ -21,7 +21,7 @@ ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxRows Method (SQLServerStatement)

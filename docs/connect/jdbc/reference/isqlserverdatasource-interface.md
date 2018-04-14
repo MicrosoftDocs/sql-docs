@@ -16,7 +16,7 @@ ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISQLServerDataSource Interface

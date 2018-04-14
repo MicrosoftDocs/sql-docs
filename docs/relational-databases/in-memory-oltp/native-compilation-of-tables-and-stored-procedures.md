@@ -1,4 +1,4 @@
----
+﻿---
 title: "Native Compilation of Tables and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
@@ -18,6 +18,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Native Compilation of Tables and Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

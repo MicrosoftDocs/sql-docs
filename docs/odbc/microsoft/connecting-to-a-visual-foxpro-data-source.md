@@ -19,7 +19,7 @@ ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting to a Visual FoxPro Data Source

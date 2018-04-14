@@ -21,7 +21,7 @@ ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getFloat Method (java.lang.String)

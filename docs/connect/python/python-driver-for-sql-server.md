@@ -16,7 +16,7 @@ ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Python SQL Driver

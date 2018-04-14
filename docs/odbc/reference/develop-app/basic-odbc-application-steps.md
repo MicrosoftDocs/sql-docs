@@ -19,7 +19,7 @@ ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Basic ODBC Application Steps

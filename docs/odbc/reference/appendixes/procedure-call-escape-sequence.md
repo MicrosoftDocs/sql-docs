@@ -20,7 +20,7 @@ ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Procedure Call Escape Sequence

@@ -13,7 +13,7 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 caps.latest.revision: 5
 author: "rothja"
 ms.author: "jroth"
-manager: "jhubbard"
+manager: craigg
 ---
 # Always On Availability Groups health diagnostics log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

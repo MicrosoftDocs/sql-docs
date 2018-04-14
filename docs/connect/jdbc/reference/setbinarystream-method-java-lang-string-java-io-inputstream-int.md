@@ -21,7 +21,7 @@ ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBinaryStream Method  (java.lang.String, java.io.InputStream, int)

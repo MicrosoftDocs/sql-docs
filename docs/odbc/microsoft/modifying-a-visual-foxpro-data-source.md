@@ -19,7 +19,7 @@ ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Modifying a Visual FoxPro Data Source

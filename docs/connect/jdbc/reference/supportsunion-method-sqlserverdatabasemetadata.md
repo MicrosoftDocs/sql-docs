@@ -21,7 +21,7 @@ ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsUnion Method (SQLServerDatabaseMetaData)

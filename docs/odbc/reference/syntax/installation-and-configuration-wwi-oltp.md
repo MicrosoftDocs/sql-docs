@@ -18,7 +18,7 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetDriverConnectInfo Function

@@ -16,7 +16,7 @@ ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Working with Large Data
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

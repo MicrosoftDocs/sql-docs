@@ -16,7 +16,7 @@ ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # SQLXML Data Type Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

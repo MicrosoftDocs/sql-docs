@@ -20,7 +20,7 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 caps.latest.revision: 41
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Connecting to SQL Server

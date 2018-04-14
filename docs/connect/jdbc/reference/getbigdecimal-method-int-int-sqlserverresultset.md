@@ -21,7 +21,7 @@ ms.assetid: c99d0772-b26c-492c-a643-2813b5429993
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBigDecimal Method (int, int) (SQLServerResultSet)

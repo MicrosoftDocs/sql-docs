@@ -24,7 +24,7 @@ ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating a Connection Handle ODBC

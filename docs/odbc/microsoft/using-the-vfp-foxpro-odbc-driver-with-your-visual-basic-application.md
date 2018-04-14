@@ -21,7 +21,7 @@ ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using the VFP FoxPro ODBC Driver with Your Visual Basic Application

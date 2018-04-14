@@ -20,7 +20,7 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Batches of SQL Statements

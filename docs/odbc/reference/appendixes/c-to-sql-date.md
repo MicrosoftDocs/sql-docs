@@ -20,7 +20,7 @@ ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL: Date

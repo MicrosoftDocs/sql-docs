@@ -16,7 +16,7 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Data as a Stream Using the SQLSRV Driver

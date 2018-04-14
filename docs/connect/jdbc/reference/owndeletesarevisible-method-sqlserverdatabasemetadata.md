@@ -21,7 +21,7 @@ ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ownDeletesAreVisible Method (SQLServerDatabaseMetaData)

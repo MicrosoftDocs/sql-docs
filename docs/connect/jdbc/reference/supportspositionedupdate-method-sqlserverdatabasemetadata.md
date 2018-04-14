@@ -21,7 +21,7 @@ ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsPositionedUpdate Method (SQLServerDatabaseMetaData)

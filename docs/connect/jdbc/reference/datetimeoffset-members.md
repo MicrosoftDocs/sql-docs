@@ -16,7 +16,7 @@ ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DateTimeOffset Members

@@ -19,7 +19,7 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeConnect Mapping

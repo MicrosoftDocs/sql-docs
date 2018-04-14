@@ -20,7 +20,7 @@ ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Interval Escape Sequences

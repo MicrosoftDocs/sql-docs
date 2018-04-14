@@ -20,7 +20,7 @@ ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Freeing a Statement Handle ODBC

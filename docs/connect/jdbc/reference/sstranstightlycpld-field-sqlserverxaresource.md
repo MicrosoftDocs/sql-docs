@@ -21,7 +21,7 @@ ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)

@@ -19,7 +19,7 @@ ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (Access Driver)

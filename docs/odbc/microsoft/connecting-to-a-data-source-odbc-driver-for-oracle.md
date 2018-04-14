@@ -19,7 +19,7 @@ ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting to a Data Source (ODBC Driver for Oracle)

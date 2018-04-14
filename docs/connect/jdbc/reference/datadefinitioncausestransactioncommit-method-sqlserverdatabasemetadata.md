@@ -21,7 +21,7 @@ ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)

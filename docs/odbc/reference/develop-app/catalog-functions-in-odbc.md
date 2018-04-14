@@ -19,7 +19,7 @@ ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Catalog Functions in ODBC

@@ -21,7 +21,7 @@ ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # executeQuery Method (SQLServerPreparedStatement)

@@ -18,7 +18,7 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Installer DLL API Reference Function

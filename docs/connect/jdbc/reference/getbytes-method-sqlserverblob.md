@@ -21,7 +21,7 @@ ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBytes Method (SQLServerBlob)

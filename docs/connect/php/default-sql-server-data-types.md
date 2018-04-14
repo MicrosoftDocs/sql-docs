@@ -19,7 +19,7 @@ ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Default SQL Server Data Types

@@ -21,7 +21,7 @@ ms.assetid: 8955457a-b176-4674-9366-39a1942164a5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSchemasInProcedureCalls Method (SQLServerDatabaseMetaData)

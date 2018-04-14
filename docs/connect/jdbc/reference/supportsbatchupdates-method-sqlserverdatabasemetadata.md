@@ -21,7 +21,7 @@ ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsBatchUpdates Method (SQLServerDatabaseMetaData)

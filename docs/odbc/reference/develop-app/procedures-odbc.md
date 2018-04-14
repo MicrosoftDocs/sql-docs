@@ -19,7 +19,7 @@ ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Procedures ODBC

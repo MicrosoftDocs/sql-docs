@@ -19,7 +19,7 @@ ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Manager Error and Warning Checks

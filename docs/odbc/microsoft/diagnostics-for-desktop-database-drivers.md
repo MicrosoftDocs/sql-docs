@@ -21,7 +21,7 @@ ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Diagnostics for Desktop Database Drivers

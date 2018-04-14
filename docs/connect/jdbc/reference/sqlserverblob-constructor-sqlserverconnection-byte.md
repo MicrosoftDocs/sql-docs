@@ -21,7 +21,7 @@ ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerBlob Constructor (SQLServerConnection, byte)

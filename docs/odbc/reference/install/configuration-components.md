@@ -18,7 +18,7 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Configuration Components

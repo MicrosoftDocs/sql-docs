@@ -21,7 +21,7 @@ ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxColumnsInOrderBy Method (SQLServerDatabaseMetaData)

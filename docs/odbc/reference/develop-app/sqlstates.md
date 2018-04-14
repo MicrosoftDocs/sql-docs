@@ -19,7 +19,7 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSTATEs

@@ -21,7 +21,7 @@ ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setXopenStates Method (SQLServerDataSource)

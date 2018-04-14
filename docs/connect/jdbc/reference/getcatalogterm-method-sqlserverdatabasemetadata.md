@@ -21,7 +21,7 @@ ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCatalogTerm Method (SQLServerDatabaseMetaData)

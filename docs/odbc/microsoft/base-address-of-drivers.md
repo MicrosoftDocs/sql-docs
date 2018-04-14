@@ -21,7 +21,7 @@ ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Base Address of Drivers

@@ -21,7 +21,7 @@ ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateNull Method (int)

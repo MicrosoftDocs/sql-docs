@@ -21,7 +21,7 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTypeInfo Method (SQLServerDatabaseMetaData)

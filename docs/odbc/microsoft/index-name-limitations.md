@@ -19,7 +19,7 @@ ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Index Name Limitations

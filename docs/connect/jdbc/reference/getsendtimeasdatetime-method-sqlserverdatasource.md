@@ -16,7 +16,7 @@ ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSendTimeAsDatetime Method (SQLServerDataSource)

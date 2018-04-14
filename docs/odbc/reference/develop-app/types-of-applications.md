@@ -22,7 +22,7 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Types of Applications

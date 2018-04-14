@@ -21,7 +21,7 @@ ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setString Method (SQLServerCallableStatement)

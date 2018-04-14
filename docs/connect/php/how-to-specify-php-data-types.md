@@ -19,7 +19,7 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Specify PHP Data Types

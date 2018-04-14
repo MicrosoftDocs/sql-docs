@@ -21,7 +21,7 @@ ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getUDTs Method (SQLServerDatabaseMetaData)

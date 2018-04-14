@@ -19,7 +19,7 @@ ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SELECT Statement Limitations

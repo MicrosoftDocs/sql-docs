@@ -21,7 +21,7 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumnPrivileges Method (SQLServerDatabaseMetaData)

@@ -19,7 +19,7 @@ ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Types of Changes

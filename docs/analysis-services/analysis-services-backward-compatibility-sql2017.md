@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server 2017 Analysis Services backward compatibility  | Microsoft Docs"
 ms.date: "07/11/2017"
 ms.prod: analysis-services
@@ -25,6 +25,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "kfile"
 ms.workload: "Inactive"
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Analysis Services backward compatibility (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]

@@ -16,7 +16,7 @@ ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Guidelines for Interval and Numeric Data Types

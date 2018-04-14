@@ -21,7 +21,7 @@ ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Serializability

@@ -20,7 +20,7 @@ ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Inserting Rows with SQLBulkOperations

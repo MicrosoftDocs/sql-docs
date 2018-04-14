@@ -20,7 +20,7 @@ ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Installing ODBC Components

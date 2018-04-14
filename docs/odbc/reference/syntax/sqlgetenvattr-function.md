@@ -25,7 +25,7 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetEnvAttr Function

@@ -21,7 +21,7 @@ ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsResultSetType Method (SQLServerDatabaseMetaData)

@@ -19,7 +19,7 @@ ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLStatistics (Paradox Driver)

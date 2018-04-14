@@ -16,7 +16,7 @@ ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Diagnosing Problems with the JDBC Driver

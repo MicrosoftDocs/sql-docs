@@ -21,7 +21,7 @@ ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Buffer Length

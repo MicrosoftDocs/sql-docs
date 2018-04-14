@@ -19,7 +19,7 @@ ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLStatistics (Access Driver)

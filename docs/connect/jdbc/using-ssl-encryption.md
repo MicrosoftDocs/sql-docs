@@ -16,7 +16,7 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using SSL Encryption

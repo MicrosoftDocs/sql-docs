@@ -19,7 +19,7 @@ ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Data Type Identifiers

@@ -21,7 +21,7 @@ ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxBinaryLiteralLength Method (SQLServerDatabaseMetaData)

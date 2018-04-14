@@ -1,4 +1,4 @@
----
+﻿---
 title: "Collations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,6 +26,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Collations
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

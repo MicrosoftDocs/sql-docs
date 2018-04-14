@@ -22,7 +22,7 @@ ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # State Transitions

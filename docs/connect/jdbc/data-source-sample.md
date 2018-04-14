@@ -16,7 +16,7 @@ ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Data Source Sample

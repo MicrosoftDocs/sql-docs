@@ -20,7 +20,7 @@ ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL to C: Numeric

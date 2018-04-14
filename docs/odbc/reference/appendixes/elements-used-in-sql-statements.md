@@ -20,7 +20,7 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Elements Used in SQL Statements

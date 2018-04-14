@@ -21,7 +21,7 @@ ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTransactionTimeout Method (SQLServerXAResource)

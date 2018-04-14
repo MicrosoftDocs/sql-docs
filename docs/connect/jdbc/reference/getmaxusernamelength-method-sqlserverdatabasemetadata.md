@@ -21,7 +21,7 @@ ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxUserNameLength Method (SQLServerDatabaseMetaData)

@@ -21,7 +21,7 @@ ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData)

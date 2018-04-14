@@ -16,7 +16,7 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Always Encrypted API Reference for the JDBC Driver

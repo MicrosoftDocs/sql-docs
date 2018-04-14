@@ -21,7 +21,7 @@ ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # The Driver Manager

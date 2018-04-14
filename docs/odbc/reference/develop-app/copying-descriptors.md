@@ -19,7 +19,7 @@ ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Copying Descriptors

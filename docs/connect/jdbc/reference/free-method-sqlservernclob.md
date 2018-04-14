@@ -16,7 +16,7 @@ ms.assetid: ff46e669-a719-4dad-8b1a-3a6478175d41
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # free Method (SQLServerNClob)

@@ -19,7 +19,7 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocEnv Mapping

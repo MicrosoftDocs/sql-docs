@@ -25,7 +25,7 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColumnPrivileges Function

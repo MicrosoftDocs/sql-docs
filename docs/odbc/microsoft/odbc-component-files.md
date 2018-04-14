@@ -20,7 +20,7 @@ ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Component Files

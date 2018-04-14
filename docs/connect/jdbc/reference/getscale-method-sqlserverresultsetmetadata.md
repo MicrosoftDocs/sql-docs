@@ -21,7 +21,7 @@ ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getScale Method (SQLServerResultSetMetaData)

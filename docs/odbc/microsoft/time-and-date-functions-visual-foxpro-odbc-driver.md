@@ -23,7 +23,7 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Time and Date Functions (Visual FoxPro ODBC Driver)

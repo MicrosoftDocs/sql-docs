@@ -21,7 +21,7 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Types of Drivers

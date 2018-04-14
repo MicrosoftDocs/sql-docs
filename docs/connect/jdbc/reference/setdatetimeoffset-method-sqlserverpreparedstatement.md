@@ -16,7 +16,7 @@ ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDateTimeOffset Method (SQLServerPreparedStatement)

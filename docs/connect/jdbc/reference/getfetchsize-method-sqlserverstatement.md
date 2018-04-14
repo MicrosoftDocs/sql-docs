@@ -21,7 +21,7 @@ ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getFetchSize Method (SQLServerStatement)

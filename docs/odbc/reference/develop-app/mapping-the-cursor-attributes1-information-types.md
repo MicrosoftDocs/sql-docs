@@ -22,7 +22,7 @@ ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Mapping the Cursor Attributes1 Information Types

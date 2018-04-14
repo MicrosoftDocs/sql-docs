@@ -21,7 +21,7 @@ ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # nullPlusNonNullIsNull Method (SQLServerDatabaseMetaData)

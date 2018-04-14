@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "Abort method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISSAbort::Abort (OLE DB)

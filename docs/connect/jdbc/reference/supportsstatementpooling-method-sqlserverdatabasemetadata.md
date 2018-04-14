@@ -21,7 +21,7 @@ ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsStatementPooling Method (SQLServerDatabaseMetaData)

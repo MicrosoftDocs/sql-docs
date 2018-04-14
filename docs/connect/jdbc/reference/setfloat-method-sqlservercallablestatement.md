@@ -21,7 +21,7 @@ ms.assetid: 26d861da-bb6a-4197-8b32-13dc7781c2bb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setFloat Method (SQLServerCallableStatement)

@@ -16,7 +16,7 @@ ms.assetid: fbdceae5-7e7b-4edb-8c33-c701ca6b2d53
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDriver Class

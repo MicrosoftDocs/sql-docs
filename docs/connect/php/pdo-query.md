@@ -16,7 +16,7 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::query

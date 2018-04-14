@@ -16,7 +16,7 @@ ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::setAttribute

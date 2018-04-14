@@ -20,7 +20,7 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Implementing Desktop Database Drivers

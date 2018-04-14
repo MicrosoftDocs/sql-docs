@@ -19,7 +19,7 @@ ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL Data Conversion Examples

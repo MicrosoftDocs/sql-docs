@@ -18,7 +18,7 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Date, Time, and Timestamp Literals

@@ -16,7 +16,7 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Working with Statements and Result Sets

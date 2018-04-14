@@ -22,7 +22,7 @@ ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Automatic Population of the IPD

@@ -21,7 +21,7 @@ ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # start Method (SQLServerXAResource)

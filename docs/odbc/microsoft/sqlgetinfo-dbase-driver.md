@@ -19,7 +19,7 @@ ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo (dBASE Driver)

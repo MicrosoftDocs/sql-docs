@@ -21,7 +21,7 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getVersionColumns Method (SQLServerDatabaseMetaData)

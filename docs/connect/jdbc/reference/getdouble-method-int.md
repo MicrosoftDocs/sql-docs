@@ -21,7 +21,7 @@ ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDouble Method (int)

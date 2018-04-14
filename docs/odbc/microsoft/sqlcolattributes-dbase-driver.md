@@ -19,7 +19,7 @@ ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (dBASE Driver)

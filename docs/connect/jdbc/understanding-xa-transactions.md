@@ -16,7 +16,7 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 caps.latest.revision: 80
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Understanding XA Transactions

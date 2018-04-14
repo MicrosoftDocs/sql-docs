@@ -18,7 +18,7 @@ ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Row Count (Visual FoxPro ODBC Driver)

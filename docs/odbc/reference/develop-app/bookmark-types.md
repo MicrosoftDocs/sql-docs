@@ -21,7 +21,7 @@ ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Bookmark Types

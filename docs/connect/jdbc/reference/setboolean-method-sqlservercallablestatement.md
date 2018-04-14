@@ -21,7 +21,7 @@ ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBoolean Method (SQLServerCallableStatement)

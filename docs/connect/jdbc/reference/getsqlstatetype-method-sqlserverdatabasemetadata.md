@@ -21,7 +21,7 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSQLStateType Method (SQLServerDatabaseMetaData)

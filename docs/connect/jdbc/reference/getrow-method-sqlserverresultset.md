@@ -21,7 +21,7 @@ ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getRow Method (SQLServerResultSet)

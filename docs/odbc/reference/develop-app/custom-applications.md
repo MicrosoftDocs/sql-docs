@@ -20,7 +20,7 @@ ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Custom Applications

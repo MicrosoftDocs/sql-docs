@@ -20,7 +20,7 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connection Transitions

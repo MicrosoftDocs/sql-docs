@@ -21,7 +21,7 @@ ms.assetid: c21cb48c-a45f-491c-a7cd-4e82d1e178d4
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getArray Method (SQLServerCallableStatement)

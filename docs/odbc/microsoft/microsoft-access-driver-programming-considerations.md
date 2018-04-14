@@ -21,7 +21,7 @@ ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Microsoft Access Driver Programming Considerations

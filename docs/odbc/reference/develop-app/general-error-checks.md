@@ -20,7 +20,7 @@ ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # General Error Checks

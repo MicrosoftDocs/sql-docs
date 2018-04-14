@@ -22,7 +22,7 @@ ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Type Identifiers

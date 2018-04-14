@@ -20,7 +20,7 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Visual FoxPro Setup Dialog Box

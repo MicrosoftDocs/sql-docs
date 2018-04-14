@@ -21,7 +21,7 @@ ms.assetid: 49301bec-6cf2-43fb-9d4e-e3986164a208
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTime Method (java.lang.String, java.sql.Time)

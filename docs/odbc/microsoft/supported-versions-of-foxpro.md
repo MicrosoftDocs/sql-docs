@@ -22,7 +22,7 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported Versions of FoxPro

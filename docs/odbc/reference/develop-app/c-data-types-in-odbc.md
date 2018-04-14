@@ -20,7 +20,7 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C Data Types in ODBC

@@ -27,7 +27,7 @@ ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Column Size, Decimal Digits, Transfer Octet Length, and Display Size - ODBC

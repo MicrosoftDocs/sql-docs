@@ -17,7 +17,7 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC API Reference

@@ -19,7 +19,7 @@ ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Constraints of the Gregorian Calendar

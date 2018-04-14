@@ -20,7 +20,7 @@ ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Literal Prefixes and Suffixes

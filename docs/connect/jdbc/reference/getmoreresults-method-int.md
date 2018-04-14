@@ -21,7 +21,7 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMoreResults Method (int)

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "date/time [OLE DB], schema rowsets"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Metadata - Date and Time and Schema Rowsets

@@ -21,7 +21,7 @@ ms.assetid: ca0e9ae2-86e3-4763-8225-07d36acf8a18
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateNull Method (SQLServerResultSet)

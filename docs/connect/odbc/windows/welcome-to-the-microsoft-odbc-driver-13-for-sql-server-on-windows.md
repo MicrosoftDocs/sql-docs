@@ -16,7 +16,7 @@ ms.assetid: a017f91b-7f07-4a81-aa38-b287f22369e8
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows

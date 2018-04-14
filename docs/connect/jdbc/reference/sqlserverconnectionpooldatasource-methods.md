@@ -16,7 +16,7 @@ ms.assetid: b021a248-e046-4709-bece-9966d3961677
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnectionPoolDataSource Methods

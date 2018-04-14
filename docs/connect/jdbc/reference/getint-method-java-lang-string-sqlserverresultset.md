@@ -21,7 +21,7 @@ ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getInt Method (java.lang.String) (SQLServerResultSet)

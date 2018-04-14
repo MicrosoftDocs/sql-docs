@@ -21,7 +21,7 @@ ms.assetid: 677b0907-316e-40f2-a0d9-d4d0872c7f52
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # executeUpdate Method (SQLServerPreparedStatement)

@@ -21,7 +21,7 @@ ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getShort Method (SQLServerCallableStatement)

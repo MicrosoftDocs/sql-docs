@@ -16,7 +16,7 @@ ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # createClob Method (SQLServerConnection)

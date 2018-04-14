@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "GetErrorInfo method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)

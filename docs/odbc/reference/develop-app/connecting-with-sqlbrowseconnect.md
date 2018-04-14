@@ -20,7 +20,7 @@ ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting with SQLBrowseConnect

@@ -18,7 +18,7 @@ ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Procedure Parameters

@@ -16,7 +16,7 @@ ms.assetid: 3a75f521-c321-4ce2-a14e-9bdaf5b6bf6a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResultSetMetaData Methods

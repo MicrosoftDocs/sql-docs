@@ -21,7 +21,7 @@ ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDriverVersion Method (SQLServerDatabaseMetaData)

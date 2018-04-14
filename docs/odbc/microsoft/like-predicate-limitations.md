@@ -19,7 +19,7 @@ ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # LIKE Predicate Limitations

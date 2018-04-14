@@ -21,7 +21,7 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ownInsertsAreVisible Method (SQLServerDatabaseMetaData)

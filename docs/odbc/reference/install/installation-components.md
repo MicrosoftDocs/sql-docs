@@ -19,7 +19,7 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Installation Components

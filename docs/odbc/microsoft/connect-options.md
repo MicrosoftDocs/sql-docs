@@ -20,7 +20,7 @@ ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connect Options

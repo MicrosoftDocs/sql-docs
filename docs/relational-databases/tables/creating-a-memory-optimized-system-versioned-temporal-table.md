@@ -1,4 +1,4 @@
----
+﻿---
 title: "Creating a Memory-Optimized System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2016"
@@ -18,6 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Creating a Memory-Optimized System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

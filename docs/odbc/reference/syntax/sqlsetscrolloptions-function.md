@@ -25,7 +25,7 @@ ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions Function

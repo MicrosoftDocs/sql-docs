@@ -20,7 +20,7 @@ ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Row-Wise Binding

@@ -16,7 +16,7 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 caps.latest.revision: 58
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using Advanced Data Types

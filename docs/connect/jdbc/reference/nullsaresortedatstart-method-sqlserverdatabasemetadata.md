@@ -21,7 +21,7 @@ ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # nullsAreSortedAtStart Method (SQLServerDatabaseMetaData)

@@ -21,7 +21,7 @@ ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getArray Method (java.lang.String)

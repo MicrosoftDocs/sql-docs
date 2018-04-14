@@ -16,7 +16,7 @@ ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isWrapperFor Method (SQLServerPreparedStatement)

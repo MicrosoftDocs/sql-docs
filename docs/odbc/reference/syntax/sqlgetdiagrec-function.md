@@ -25,7 +25,7 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLGetDiagRec Function

@@ -16,7 +16,7 @@ ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsStoredFunctionsUsingCallSyntax Method (SQLServerDatabaseMetaData)

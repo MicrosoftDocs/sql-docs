@@ -21,7 +21,7 @@ ms.assetid: c39c6b4f-b9e2-423b-94ae-9f82d9e6d08d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setSavepoint Method (SQLServerConnection)

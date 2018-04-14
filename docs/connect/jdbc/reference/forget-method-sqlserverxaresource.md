@@ -21,7 +21,7 @@ ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # forget Method (SQLServerXAResource)

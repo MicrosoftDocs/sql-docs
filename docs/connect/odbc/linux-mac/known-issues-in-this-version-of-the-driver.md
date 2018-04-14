@@ -17,7 +17,7 @@ helpviewer_keywords:
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Known Issues in this Version of the Driver

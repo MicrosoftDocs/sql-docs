@@ -16,7 +16,7 @@ ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::getAvailableDrivers

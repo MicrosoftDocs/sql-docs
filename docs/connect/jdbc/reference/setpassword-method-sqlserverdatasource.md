@@ -21,7 +21,7 @@ ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setPassword Method (SQLServerDataSource)

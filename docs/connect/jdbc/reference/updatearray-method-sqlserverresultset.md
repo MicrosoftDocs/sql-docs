@@ -21,7 +21,7 @@ ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateArray Method (SQLServerResultSet)

@@ -16,7 +16,7 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 caps.latest.revision: 40
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # International Features of the JDBC Driver

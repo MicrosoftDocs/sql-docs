@@ -21,7 +21,7 @@ ms.assetid: cb83b567-4ce5-447a-93cc-895d4eaf3a05
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # prepareCall Method (java.lang.String)

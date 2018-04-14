@@ -23,7 +23,7 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_begin_transaction

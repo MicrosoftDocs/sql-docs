@@ -18,7 +18,7 @@ ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Enabling New Data Types by Setting ExtendedAnsiSQL

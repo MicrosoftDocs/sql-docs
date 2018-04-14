@@ -23,7 +23,7 @@ ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Paradox Data Types

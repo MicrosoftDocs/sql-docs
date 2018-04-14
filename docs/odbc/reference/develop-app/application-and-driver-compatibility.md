@@ -21,7 +21,7 @@ ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Application and Driver Compatibility

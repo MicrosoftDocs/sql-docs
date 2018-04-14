@@ -22,7 +22,7 @@ ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Block Cursors, Scrollable Cursors, and Backward Compatibility for ODBC 3.x Applications

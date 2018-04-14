@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "BCPWriteFmt method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # IBCPSession::BCPWriteFmt (OLE DB)

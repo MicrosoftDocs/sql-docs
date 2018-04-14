@@ -21,7 +21,7 @@ ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsLikeEscapeClause Method (SQLServerDatabaseMetaData)

@@ -19,7 +19,7 @@ ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDriverConnect (dBASE Driver)

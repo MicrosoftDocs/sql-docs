@@ -21,7 +21,7 @@ ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "ISSAsynchStatus interface"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISSAsynchStatus (OLE DB)

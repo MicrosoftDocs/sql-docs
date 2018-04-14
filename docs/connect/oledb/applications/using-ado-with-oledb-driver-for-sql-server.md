@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, ADO"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using ADO with OLE DB Driver for SQL Server

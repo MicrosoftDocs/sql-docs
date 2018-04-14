@@ -18,7 +18,7 @@ ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Determining Installed Oracle Components

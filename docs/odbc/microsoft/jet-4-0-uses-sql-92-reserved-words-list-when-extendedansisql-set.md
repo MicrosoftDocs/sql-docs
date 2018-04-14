@@ -18,7 +18,7 @@ ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set

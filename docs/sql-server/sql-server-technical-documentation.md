@@ -73,19 +73,14 @@ The SQL Server 2014 content will soon be merged into the .docs site.  For now, s
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
-## Earlier SQL Server versions
+## Update your version of SQL Server
 
-- [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-- [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
-- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
-- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
-- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
+- [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) links and information for all supported versions
 
 ## Samples
 
-- [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
-- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
+- [Wide World Importers sample database](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

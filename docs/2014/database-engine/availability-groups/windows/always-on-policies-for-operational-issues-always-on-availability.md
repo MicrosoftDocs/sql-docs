@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 -   [Use the AlwaysOn Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+-   [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 -   [Force a WSFC Cluster to Start Without a Quorum](../../force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   

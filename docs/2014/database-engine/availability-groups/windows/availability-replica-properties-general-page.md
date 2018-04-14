@@ -53,7 +53,7 @@ manager: "jhubbard"
  **Synchronous commit**  
  The primary replica waits to commit a given transaction until the secondary replica has written the transaction to disk.  
   
- For more information, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md).  
+ For more information, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
   
  **Failover mode**  
  The failover mode of the replica, one of:  

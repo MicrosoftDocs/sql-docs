@@ -41,12 +41,12 @@ manager: "jhubbard"
  **Automatic Failover (Up to 2)**  
  Select this checkbox only if you want this availability replica to be an automatic-failover partner. To configure automatic failover, you must choose this option for the initial primary replica and for one secondary replica. Both of these replicas will use the synchronous-commit availability mode. Only two replicas can support automatic failover.  
   
- For information about the synchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about automatic failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ For information about the synchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md). For information about automatic failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Synchronous Commit (Up to 3)**  
  If you selected **Automatic Failover (Up to 2)** for the replica, **Synchronous Commit (Up to 3)** is also selected. If the check box is blank, select it only if you want this replica to use synchronous-commit mode with only planned manual failover. Only three replicas can use synchronous-commit mode.  
   
- If you want this replica to use asynchronous-commit availability mode, leave this checkbox blank. The replica will support only forced manual failover (with possible data loss). For information about the asynchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](../../availability-modes-always-on-availability-groups.md). For information about planned manual failover and forced manual failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ If you want this replica to use asynchronous-commit availability mode, leave this checkbox blank. The replica will support only forced manual failover (with possible data loss). For information about the asynchronous-commit availability mode, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md). For information about planned manual failover and forced manual failover, see [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Readable Secondary Role**  
  Select a value from the **Readable secondary** drop list, as follows:  

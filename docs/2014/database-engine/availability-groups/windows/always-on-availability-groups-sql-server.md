@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
--   [SQL Server Agent](../../../analysis-services/instances/sql-server-agent.md)  
+-   [SQL Server Agent](../../sql-server-agent.md)  
   
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   

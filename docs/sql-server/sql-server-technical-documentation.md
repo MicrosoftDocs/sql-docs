@@ -2,7 +2,7 @@
 title: "SQL Server Documentation | Microsoft Docs"
 ms.date: "02/28/2018"
 ms.prod: "sql"
-ms.prod_service: "sql-non-specified"
+ms.prod_service: "sql"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
@@ -22,9 +22,10 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
 author: craigg-msft
-ms.author: "craigg"
+ms.author: craigg
 manager: jhubbard
 ms.workload: "Active"
+monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
 ---
 
 # SQL Server Documentation
@@ -36,14 +37,22 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
-|[What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
+
+::: moniker range="=sql-server-2014"
+The SQL Server 2014 content will soon be merged into the .docs site.  For now, see:
+- [Books Online for SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)
+- [What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
+- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
+- [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/sql/)
+::: moniker-end
 
 **Try SQL Server!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+    + [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
+    + [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+    + [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+    + [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+::: moniker range=">=sql-server-2016"
 ## SQL Server Technologies
 
 |||
@@ -56,6 +65,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) provides you with a knowledge-driven data cleansing solution. DQS enables you to build a knowledge base, and then use that knowledge base to perform data correction and deduplication on your data, using both computer-assisted and interactive means. You can use cloud-based reference data services, and you can build a data management solution that integrates DQS with SQL Server Integration Services and Master Data Services.|
 |![Replication services](../sql-server/media/replication-services.png "Replication services")|**[Replication](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Replication is a set of technologies for copying and distributing data and database objects from one database to another, and then synchronizing between databases to maintain consistency. By using replication, you can distribute data to different locations and to remote or mobile users by means of local and wide area networks, dial-up connections, wireless connections, and the Internet.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|
+::: moniker-end
 
 ## Migrate and move data
 
@@ -63,19 +73,14 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
-## Earlier SQL Server versions
+## Update your version of SQL Server
 
-- [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-- [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
-- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
-- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
-- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
+- [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) links and information for all supported versions
 
 ## Samples
 
-- [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
-- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
+- [Wide World Importers sample database](https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is)
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/en-us/sql/samples/sql-samples-where-are) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

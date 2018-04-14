@@ -150,11 +150,14 @@ The **event_file** target writes event session output from buffer to a disk file
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
 
+::: moniker range="= azuresqldb-current"
+
 > [!NOTE]
 > Azure SQL Database supports the **event_file** target, but only by using a blob in Azure Storage for the output. SQL Database cannot store event output in a file on your local harddrive.
+>
 > For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
-<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
+::: moniker-end
 
 
 #### CREATE EVENT SESSION with **event_file** target

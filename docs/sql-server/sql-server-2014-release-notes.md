@@ -2,7 +2,7 @@
 title: "SQL Server 2014 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-non-specified"
 ms.service: ""
 ms.component: "sql-non-specified"
@@ -13,10 +13,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 caps.latest.revision: 100
-author: "craigg-msft"
-ms.author: "craigg"
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.workload: "Inactive"
+monikerRange: '= sql-server-2014'
 ---
 # SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

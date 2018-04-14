@@ -21,7 +21,7 @@ ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMajorVersion Method (SQLServerDriver)

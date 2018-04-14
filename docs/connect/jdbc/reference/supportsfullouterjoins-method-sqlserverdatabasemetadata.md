@@ -21,7 +21,7 @@ ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsFullOuterJoins Method (SQLServerDatabaseMetaData)

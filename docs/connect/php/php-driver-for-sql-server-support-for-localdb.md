@@ -15,7 +15,7 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Support for LocalDB

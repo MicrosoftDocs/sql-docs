@@ -21,7 +21,7 @@ ms.assetid: 9d33571b-4887-49d3-96df-8abda7b5a904
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateObject Method (int, java.lang.Object, int)

@@ -16,7 +16,7 @@ ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerNClob Members

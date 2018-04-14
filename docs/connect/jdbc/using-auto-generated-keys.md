@@ -16,7 +16,7 @@ ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Auto Generated Keys

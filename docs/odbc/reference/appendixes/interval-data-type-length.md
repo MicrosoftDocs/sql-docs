@@ -20,7 +20,7 @@ ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Interval Data Type Length

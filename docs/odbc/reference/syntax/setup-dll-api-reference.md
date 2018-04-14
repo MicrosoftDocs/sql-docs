@@ -19,7 +19,7 @@ ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setup DLL API Reference

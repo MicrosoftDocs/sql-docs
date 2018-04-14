@@ -18,7 +18,7 @@ ms.assetid: 676da17b-daea-487f-b2d8-e579db6547cc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLMoreResults (Desktop Database Drivers)

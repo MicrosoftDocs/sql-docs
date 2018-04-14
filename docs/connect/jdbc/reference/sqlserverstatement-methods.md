@@ -16,7 +16,7 @@ ms.assetid: de170a1a-fd06-4b70-8749-d86e2e0fb286
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerStatement Methods

@@ -15,7 +15,7 @@ f1_keywords:
 helpviewer_keywords: 
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # SQL Server Privacy Supplement

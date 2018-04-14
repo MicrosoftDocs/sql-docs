@@ -21,7 +21,7 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSubString Method (SQLServerClob)

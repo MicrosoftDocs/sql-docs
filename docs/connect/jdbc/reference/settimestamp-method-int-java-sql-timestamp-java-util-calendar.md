@@ -21,7 +21,7 @@ ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)

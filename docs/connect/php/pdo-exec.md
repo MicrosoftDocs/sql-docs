@@ -16,7 +16,7 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::exec

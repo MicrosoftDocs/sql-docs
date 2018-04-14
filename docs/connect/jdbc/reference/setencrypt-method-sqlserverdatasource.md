@@ -21,7 +21,7 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setEncrypt Method (SQLServerDataSource)

@@ -20,7 +20,7 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Header Files

@@ -21,7 +21,7 @@ ms.assetid: 9d8b235e-4208-40ee-b5a5-bc76f73b82f8
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getAsciiStream (int)

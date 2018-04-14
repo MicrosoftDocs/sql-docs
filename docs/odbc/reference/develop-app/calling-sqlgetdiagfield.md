@@ -22,7 +22,7 @@ ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Calling SQLGetDiagField

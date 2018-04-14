@@ -20,7 +20,7 @@ ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # LIKE Escape Sequence

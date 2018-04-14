@@ -20,7 +20,7 @@ ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Descriptor Transitions

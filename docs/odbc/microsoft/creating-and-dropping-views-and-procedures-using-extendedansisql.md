@@ -18,7 +18,7 @@ ms.assetid: 3e67627e-dbf2-4f38-b8bb-956c7dec9ad6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating and Dropping Views and Procedures Using ExtendedAnsiSQL

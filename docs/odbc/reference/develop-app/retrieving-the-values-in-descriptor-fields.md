@@ -18,7 +18,7 @@ ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving the Values in Descriptor Fields

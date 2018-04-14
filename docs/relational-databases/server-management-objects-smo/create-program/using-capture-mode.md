@@ -1,4 +1,4 @@
----
+﻿---
 title: "Using Capture Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -22,6 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Using Capture Mode
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

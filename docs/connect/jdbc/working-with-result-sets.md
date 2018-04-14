@@ -16,7 +16,7 @@ ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Working with Result Sets

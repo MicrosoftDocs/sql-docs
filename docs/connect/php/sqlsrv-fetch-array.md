@@ -23,7 +23,7 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 caps.latest.revision: 52
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # sqlsrv_fetch_array

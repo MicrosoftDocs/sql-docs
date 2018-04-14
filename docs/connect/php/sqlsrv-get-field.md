@@ -23,7 +23,7 @@ ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_get_field

@@ -16,7 +16,7 @@ ms.assetid: f9b1be55-6c2b-4568-a768-5294675ae35f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerSavepoint Constructors

@@ -19,7 +19,7 @@ ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Error Messages (ODBC Driver for Oracle)

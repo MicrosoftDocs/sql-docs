@@ -19,7 +19,7 @@ ms.assetid: 132fd1c0-1921-4a7d-910e-aedf1bff5453
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (Text File Driver)

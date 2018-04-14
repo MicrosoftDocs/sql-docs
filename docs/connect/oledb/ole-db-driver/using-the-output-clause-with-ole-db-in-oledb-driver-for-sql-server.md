@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server

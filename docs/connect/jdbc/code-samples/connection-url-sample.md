@@ -16,7 +16,7 @@ ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connection URL Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

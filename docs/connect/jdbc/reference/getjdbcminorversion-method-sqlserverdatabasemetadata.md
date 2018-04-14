@@ -21,7 +21,7 @@ ms.assetid: d9e153b5-51b7-4e44-b342-f147f04dbe19
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getJDBCMinorVersion Method (SQLServerDatabaseMetaData)

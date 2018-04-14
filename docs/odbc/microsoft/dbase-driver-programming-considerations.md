@@ -21,7 +21,7 @@ ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # dBASE Driver Programming Considerations

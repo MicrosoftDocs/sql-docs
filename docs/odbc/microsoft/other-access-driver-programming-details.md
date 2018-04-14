@@ -20,7 +20,7 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Other Access Driver Programming Details

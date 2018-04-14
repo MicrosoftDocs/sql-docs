@@ -21,7 +21,7 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setInt Method (SQLServerPreparedStatement)

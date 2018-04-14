@@ -21,7 +21,7 @@ ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Diagnostic Handling Rules

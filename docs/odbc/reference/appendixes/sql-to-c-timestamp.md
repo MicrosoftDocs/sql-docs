@@ -20,7 +20,7 @@ ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL to C: Timestamp

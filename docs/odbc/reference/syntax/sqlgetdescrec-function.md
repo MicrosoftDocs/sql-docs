@@ -25,7 +25,7 @@ ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetDescRec Function

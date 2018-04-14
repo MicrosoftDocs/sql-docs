@@ -20,7 +20,7 @@ ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Parameter Markers in Procedure Calls

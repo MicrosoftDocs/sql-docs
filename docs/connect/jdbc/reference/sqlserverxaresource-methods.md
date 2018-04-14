@@ -16,7 +16,7 @@ ms.assetid: 050548ca-c708-4224-8014-8b7830a860dd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerXAResource Methods

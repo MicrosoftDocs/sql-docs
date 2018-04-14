@@ -25,7 +25,7 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 caps.latest.revision: 43
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLAllocHandle Function

@@ -16,7 +16,7 @@ ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setClientInfo Method (java.util.Properties)

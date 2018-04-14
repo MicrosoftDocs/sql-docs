@@ -21,7 +21,7 @@ ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # executeBatch Method (SQLServerStatement)

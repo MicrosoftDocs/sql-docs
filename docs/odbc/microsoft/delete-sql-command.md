@@ -18,7 +18,7 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DELETE - SQL Command

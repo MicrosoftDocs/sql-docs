@@ -16,7 +16,7 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # System Requirements, Installation, and Driver Files

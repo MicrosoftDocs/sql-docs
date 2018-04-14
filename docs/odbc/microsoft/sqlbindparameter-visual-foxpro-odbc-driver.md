@@ -18,7 +18,7 @@ ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBindParameter (Visual FoxPro ODBC Driver)

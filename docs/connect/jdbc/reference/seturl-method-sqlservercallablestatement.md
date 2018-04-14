@@ -21,7 +21,7 @@ ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setURL Method (SQLServerCallableStatement)

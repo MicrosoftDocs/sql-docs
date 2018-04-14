@@ -16,7 +16,7 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 caps.latest.revision: 27
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Large Data Sample

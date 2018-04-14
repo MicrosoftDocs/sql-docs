@@ -15,7 +15,7 @@ ms.topic: "article"
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: "v-chojas"
-manager: "jhubbard"
+manager: craigg
 author: "MightyPen"
 ms.workload: "On Demand"
 ---

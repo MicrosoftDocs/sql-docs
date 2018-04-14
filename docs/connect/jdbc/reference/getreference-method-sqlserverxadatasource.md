@@ -21,7 +21,7 @@ ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getReference Method (SQLServerXADataSource)

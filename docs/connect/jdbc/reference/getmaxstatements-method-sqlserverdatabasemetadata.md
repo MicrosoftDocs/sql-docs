@@ -21,7 +21,7 @@ ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxStatements Method (SQLServerDatabaseMetaData)

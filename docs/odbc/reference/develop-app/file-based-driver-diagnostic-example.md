@@ -20,7 +20,7 @@ ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # File-Based Driver Diagnostic Example

@@ -21,7 +21,7 @@ ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # recover Method (SQLServerXAResource)

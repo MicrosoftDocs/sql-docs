@@ -19,7 +19,7 @@ ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (Paradox Driver)

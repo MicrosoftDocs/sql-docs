@@ -16,7 +16,7 @@ ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Modifying Result Set Data Sample

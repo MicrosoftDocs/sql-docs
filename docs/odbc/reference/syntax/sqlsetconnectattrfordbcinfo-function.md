@@ -18,7 +18,7 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectAttrForDbcInfo Function

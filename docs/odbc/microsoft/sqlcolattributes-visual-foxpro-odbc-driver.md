@@ -18,7 +18,7 @@ ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLColAttributes (Visual FoxPro ODBC Driver)

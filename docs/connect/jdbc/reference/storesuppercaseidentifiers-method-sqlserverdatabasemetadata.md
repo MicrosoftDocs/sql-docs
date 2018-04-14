@@ -21,7 +21,7 @@ ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # storesUpperCaseIdentifiers Method (SQLServerDatabaseMetaData)

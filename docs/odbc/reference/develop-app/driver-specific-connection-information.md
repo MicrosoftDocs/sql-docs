@@ -24,7 +24,7 @@ ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver-Specific Connection Information

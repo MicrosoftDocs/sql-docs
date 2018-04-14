@@ -21,7 +21,7 @@ ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet)

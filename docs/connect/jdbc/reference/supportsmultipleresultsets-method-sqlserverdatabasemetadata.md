@@ -21,7 +21,7 @@ ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsMultipleResultSets Method (SQLServerDatabaseMetaData)

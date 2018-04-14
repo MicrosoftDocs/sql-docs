@@ -21,7 +21,7 @@ ms.assetid: 55a182c1-28e5-4d32-aeb1-166a8ac76758
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsAlterTableWithDropColumn Method (SQLServerDatabaseMetaData)

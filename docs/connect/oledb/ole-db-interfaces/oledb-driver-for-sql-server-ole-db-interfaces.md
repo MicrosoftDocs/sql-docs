@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, OLE DB"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # OLE DB Driver for SQL Server (OLE DB) Interfaces

@@ -21,7 +21,7 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Decimal Digits

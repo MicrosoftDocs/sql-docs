@@ -21,7 +21,7 @@ ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateRow Method (SQLServerResultSet)

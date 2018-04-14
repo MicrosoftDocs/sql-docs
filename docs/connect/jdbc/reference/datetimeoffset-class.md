@@ -16,7 +16,7 @@ ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DateTimeOffset Class

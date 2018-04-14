@@ -18,7 +18,7 @@ ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Diagnostic Tools

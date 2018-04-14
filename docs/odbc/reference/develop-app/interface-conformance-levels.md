@@ -21,7 +21,7 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Interface Conformance Levels

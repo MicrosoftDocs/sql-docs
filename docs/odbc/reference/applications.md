@@ -24,7 +24,7 @@ ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Applications

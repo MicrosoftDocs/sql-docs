@@ -16,7 +16,7 @@ ms.assetid: 8b8049d0-8c6d-4476-866b-098709f37eec
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDatabaseMetaData Class

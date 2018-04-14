@@ -19,7 +19,7 @@ ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetConnectOption (Text File Driver)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Extended Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2016"
@@ -19,6 +19,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Extended Events
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -21,7 +21,7 @@ ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL: Day-Time Intervals

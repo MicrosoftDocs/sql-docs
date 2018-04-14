@@ -21,7 +21,7 @@ ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getShort Method (java.lang.String)

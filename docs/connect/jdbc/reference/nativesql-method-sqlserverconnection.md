@@ -21,7 +21,7 @@ ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # nativeSQL Method (SQLServerConnection)

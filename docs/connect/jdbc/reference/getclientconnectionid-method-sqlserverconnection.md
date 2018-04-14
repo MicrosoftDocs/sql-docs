@@ -16,7 +16,7 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getClientConnectionID Method (SQLServerConnection)

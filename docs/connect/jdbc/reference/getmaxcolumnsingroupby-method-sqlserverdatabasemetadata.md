@@ -21,7 +21,7 @@ ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData)

@@ -19,7 +19,7 @@ ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Visual FoxPro Terminology

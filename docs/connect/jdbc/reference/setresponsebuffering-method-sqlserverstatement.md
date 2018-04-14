@@ -21,7 +21,7 @@ ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setResponseBuffering Method (SQLServerStatement)

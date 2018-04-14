@@ -26,7 +26,7 @@ ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Establishing a Connection

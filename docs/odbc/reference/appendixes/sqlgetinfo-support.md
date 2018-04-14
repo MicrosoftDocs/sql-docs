@@ -20,7 +20,7 @@ ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo Support

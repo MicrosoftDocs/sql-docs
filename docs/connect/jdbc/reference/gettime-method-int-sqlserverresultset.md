@@ -21,7 +21,7 @@ ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTime Method (int) (SQLServerResultSet)

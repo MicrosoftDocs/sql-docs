@@ -25,7 +25,7 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 caps.latest.revision: 37
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLConnect Function

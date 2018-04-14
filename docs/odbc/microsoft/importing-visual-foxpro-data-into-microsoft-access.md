@@ -22,7 +22,7 @@ ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Importing Visual FoxPro Data into Microsoft Access

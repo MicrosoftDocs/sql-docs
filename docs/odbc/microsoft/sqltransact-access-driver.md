@@ -19,7 +19,7 @@ ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact (Access Driver)

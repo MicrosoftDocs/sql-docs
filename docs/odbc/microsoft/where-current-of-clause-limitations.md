@@ -19,7 +19,7 @@ ms.assetid: 12404fd7-ae11-4017-85cd-792ce20931f9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # WHERE CURRENT OF Clause Limitations

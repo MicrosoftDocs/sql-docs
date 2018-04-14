@@ -19,7 +19,7 @@ ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Visual Studio Analyzer

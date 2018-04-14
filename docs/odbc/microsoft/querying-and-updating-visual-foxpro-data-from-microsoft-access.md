@@ -23,7 +23,7 @@ ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Querying and Updating Visual FoxPro Data from Microsoft Access

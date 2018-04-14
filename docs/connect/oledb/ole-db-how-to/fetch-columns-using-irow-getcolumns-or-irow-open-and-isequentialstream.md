@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "GetColumns method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream

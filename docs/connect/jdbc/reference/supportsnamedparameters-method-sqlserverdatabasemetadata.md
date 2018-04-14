@@ -21,7 +21,7 @@ ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsNamedParameters Method (SQLServerDatabaseMetaData)

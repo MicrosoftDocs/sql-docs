@@ -20,7 +20,7 @@ ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Escape Sequences

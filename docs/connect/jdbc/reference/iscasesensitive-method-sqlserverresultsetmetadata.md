@@ -21,7 +21,7 @@ ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isCaseSensitive Method (SQLServerResultSetMetaData)

@@ -20,7 +20,7 @@ ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Setting the Commit Mode

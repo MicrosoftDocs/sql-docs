@@ -18,7 +18,7 @@ ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetPos (Desktop Database Drivers)

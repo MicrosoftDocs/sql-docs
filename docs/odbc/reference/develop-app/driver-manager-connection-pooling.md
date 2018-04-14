@@ -21,7 +21,7 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Manager Connection Pooling

@@ -16,7 +16,7 @@ ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)

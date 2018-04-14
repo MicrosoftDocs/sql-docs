@@ -22,7 +22,7 @@ ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Affected ODBC Components

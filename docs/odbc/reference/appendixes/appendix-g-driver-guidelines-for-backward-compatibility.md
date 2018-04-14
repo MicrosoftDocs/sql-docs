@@ -20,7 +20,7 @@ ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Appendix G: Driver Guidelines for Backward Compatibility

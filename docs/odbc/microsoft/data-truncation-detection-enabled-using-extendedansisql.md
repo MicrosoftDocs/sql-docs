@@ -19,7 +19,7 @@ ms.assetid: cec2359b-917d-4e1d-9625-5cd678b62f10
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Truncation Detection Enabled Using ExtendedAnsiSQL

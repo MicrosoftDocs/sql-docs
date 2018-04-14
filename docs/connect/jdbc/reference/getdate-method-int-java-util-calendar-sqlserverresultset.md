@@ -21,7 +21,7 @@ ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDate Method (int, java.util.Calendar) (SQLServerResultSet)

@@ -16,7 +16,7 @@ ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Savepoints

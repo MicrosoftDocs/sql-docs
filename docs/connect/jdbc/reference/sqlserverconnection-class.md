@@ -16,7 +16,7 @@ ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnection Class

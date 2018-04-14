@@ -20,7 +20,7 @@ ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supported Concurrency Model (Visual FoxPro ODBC Driver)

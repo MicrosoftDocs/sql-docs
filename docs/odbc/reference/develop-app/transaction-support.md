@@ -18,7 +18,7 @@ ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transaction Support

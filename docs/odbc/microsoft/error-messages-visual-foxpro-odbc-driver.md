@@ -21,7 +21,7 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Error Messages (Visual FoxPro ODBC Driver)

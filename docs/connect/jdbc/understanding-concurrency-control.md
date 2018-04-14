@@ -16,7 +16,7 @@ ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Understanding Concurrency Control

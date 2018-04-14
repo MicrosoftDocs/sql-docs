@@ -16,7 +16,7 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Uninstall SQL Server 

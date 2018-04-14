@@ -21,7 +21,7 @@ ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Usage Counting

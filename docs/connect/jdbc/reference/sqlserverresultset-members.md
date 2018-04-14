@@ -16,7 +16,7 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResultSet Members

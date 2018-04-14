@@ -16,7 +16,7 @@ ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Finding Additional JDBC Driver Information

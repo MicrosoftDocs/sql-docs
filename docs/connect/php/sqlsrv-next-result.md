@@ -24,7 +24,7 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_next_result

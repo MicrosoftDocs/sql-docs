@@ -21,7 +21,7 @@ ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMoreResults Method (SQLServerStatement)

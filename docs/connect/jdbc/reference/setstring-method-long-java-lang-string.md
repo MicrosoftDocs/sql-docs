@@ -21,7 +21,7 @@ ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setString Method (long, java.lang.String)

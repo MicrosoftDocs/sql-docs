@@ -21,7 +21,7 @@ ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxColumnsInSelect Method (SQLServerDatabaseMetaData)

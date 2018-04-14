@@ -25,7 +25,7 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetPos Function

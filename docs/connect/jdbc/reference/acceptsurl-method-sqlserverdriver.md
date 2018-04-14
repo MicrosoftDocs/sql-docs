@@ -21,7 +21,7 @@ ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # acceptsURL Method (SQLServerDriver)

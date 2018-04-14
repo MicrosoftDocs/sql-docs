@@ -23,7 +23,7 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Disconnecting from a Data Source or Driver

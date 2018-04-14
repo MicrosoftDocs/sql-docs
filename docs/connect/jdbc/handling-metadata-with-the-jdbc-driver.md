@@ -16,7 +16,7 @@ ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Handling Metadata with the JDBC Driver

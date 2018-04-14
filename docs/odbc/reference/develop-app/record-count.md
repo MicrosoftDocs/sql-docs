@@ -19,7 +19,7 @@ ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Record Count

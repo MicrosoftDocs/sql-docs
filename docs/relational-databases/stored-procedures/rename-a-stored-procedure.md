@@ -1,4 +1,4 @@
----
+﻿---
 title: "Rename a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -21,6 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Rename a Stored Procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

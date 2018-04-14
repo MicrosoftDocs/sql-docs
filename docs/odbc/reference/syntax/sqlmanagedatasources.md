@@ -25,7 +25,7 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLManageDataSources

@@ -20,7 +20,7 @@ ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 5: Commit the Transaction

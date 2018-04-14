@@ -23,7 +23,7 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Auto-Commit Mode

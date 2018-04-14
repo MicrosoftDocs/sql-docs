@@ -16,7 +16,7 @@ ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # unwrap Method (SQLServerPreparedStatement)

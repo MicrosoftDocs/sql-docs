@@ -21,7 +21,7 @@ ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getByte Method (java.lang.String)

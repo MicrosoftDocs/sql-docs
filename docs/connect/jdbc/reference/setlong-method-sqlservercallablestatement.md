@@ -21,7 +21,7 @@ ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setLong Method (SQLServerCallableStatement)

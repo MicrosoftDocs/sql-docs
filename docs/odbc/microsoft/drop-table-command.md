@@ -18,7 +18,7 @@ ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DROP TABLE Command

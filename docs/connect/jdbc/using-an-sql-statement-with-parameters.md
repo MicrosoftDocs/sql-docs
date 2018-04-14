@@ -16,7 +16,7 @@ ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using an SQL Statement with Parameters

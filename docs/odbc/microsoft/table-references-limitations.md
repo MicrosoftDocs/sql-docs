@@ -19,7 +19,7 @@ ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Table References Limitations

@@ -19,7 +19,7 @@ ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Tracing

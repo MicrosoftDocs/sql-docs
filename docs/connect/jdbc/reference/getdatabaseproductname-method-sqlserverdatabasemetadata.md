@@ -21,7 +21,7 @@ ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDatabaseProductName Method (SQLServerDatabaseMetaData)

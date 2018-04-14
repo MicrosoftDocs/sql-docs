@@ -21,7 +21,7 @@ ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateLong Method (SQLServerResultSet)

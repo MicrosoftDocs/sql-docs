@@ -16,7 +16,7 @@ ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Getting the Driver Version

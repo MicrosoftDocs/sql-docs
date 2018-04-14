@@ -21,7 +21,7 @@ ms.assetid: 116efee6-2cd1-4d54-a6e4-1ee7b2fe82e2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Accessing Visual FoxPro Data from Microsoft Office

@@ -21,7 +21,7 @@ ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Default Driver Subkey

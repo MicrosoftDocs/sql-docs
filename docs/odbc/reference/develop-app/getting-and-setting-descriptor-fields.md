@@ -18,7 +18,7 @@ ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Getting and Setting Descriptor Fields

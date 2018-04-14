@@ -20,7 +20,7 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Value List Arguments

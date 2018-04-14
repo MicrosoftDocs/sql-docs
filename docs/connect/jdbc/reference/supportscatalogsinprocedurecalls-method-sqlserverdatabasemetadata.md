@@ -21,7 +21,7 @@ ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsCatalogsInProcedureCalls Method (SQLServerDatabaseMetaData)

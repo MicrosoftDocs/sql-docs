@@ -21,7 +21,7 @@ ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setURL Method (SQLServerDataSource)

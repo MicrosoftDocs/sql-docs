@@ -20,7 +20,7 @@ ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Structured Query Language (SQL)

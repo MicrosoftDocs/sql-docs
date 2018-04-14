@@ -21,7 +21,7 @@ ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDouble Method (int) (SQLServerResultSet)

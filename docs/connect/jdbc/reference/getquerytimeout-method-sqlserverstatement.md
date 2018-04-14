@@ -21,7 +21,7 @@ ms.assetid: 8dff954f-b458-4fa6-abe6-be62ff75e2b9
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getQueryTimeout Method (SQLServerStatement)

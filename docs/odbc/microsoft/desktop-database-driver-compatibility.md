@@ -23,7 +23,7 @@ ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Desktop Database Driver Compatibility

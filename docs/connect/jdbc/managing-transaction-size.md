@@ -16,7 +16,7 @@ ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Managing Transaction Size

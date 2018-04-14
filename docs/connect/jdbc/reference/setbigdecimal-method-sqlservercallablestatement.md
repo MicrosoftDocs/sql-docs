@@ -21,7 +21,7 @@ ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBigDecimal Method (SQLServerCallableStatement)

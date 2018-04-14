@@ -22,7 +22,7 @@ ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Simulating Positioned Update and Delete Statements

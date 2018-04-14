@@ -16,7 +16,7 @@ ms.assetid: d028b51e-29a0-4c53-88e0-cdf9fdf68936
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerPooledConnection Methods

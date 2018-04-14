@@ -18,7 +18,7 @@ ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Types of Descriptors

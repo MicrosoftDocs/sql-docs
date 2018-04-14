@@ -19,7 +19,7 @@ ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating and Freeing Descriptors

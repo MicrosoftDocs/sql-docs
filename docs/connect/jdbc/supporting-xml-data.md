@@ -16,7 +16,7 @@ ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Supporting XML Data

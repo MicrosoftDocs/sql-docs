@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, system requirements"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # System Requirements for OLE DB Driver for SQL Server

@@ -18,7 +18,7 @@ ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFetch (Visual FoxPro ODBC Driver)

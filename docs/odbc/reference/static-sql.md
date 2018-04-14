@@ -23,7 +23,7 @@ ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Static SQL

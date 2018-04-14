@@ -21,7 +21,7 @@ ms.assetid: 4d5cecb8-b29b-49c0-a4b1-9472b8709ddf
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CONCUR_SS_OPTIMISTIC_CC Field (SQLServerResultSet)

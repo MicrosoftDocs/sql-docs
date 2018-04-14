@@ -16,7 +16,7 @@ ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerCallableStatement Class

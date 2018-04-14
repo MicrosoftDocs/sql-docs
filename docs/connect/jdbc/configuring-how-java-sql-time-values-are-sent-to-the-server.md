@@ -16,7 +16,7 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Configuring How java.sql.Time Values are Sent to the Server

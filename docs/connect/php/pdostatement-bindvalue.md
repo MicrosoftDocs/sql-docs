@@ -16,7 +16,7 @@ ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::bindValue

@@ -19,7 +19,7 @@ ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # When to Use Procedures

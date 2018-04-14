@@ -21,7 +21,7 @@ ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # isSearchable Method (SQLServerResultSetMetaData)

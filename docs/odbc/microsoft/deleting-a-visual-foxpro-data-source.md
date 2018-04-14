@@ -20,7 +20,7 @@ ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Deleting a Visual FoxPro Data Source

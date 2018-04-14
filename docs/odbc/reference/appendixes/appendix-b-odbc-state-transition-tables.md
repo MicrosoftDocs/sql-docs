@@ -20,7 +20,7 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Appendix B: ODBC State Transition Tables

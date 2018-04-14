@@ -20,7 +20,7 @@ ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DDL Statements

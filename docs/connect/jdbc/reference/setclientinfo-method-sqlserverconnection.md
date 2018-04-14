@@ -16,7 +16,7 @@ ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setClientInfo Method (SQLServerConnection)

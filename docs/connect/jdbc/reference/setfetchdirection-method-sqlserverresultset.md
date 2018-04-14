@@ -21,7 +21,7 @@ ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setFetchDirection Method (SQLServerResultSet)

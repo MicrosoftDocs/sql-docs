@@ -18,7 +18,7 @@ ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLError (Visual FoxPro ODBC Driver)

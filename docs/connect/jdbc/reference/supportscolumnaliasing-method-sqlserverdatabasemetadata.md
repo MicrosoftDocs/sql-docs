@@ -21,7 +21,7 @@ ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsColumnAliasing Method (SQLServerDatabaseMetaData)

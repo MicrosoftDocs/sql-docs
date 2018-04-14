@@ -20,7 +20,7 @@ ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Data with SQLSetPos

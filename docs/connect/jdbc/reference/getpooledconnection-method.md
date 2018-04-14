@@ -21,7 +21,7 @@ ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPooledConnection Method ()

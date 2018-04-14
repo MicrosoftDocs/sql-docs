@@ -16,7 +16,7 @@ ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Getting Started with the JDBC Driver

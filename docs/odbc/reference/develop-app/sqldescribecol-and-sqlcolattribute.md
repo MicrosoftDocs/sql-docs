@@ -22,7 +22,7 @@ ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLDescribeCol and SQLColAttribute

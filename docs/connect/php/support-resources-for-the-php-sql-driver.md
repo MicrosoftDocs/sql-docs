@@ -18,7 +18,7 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 caps.latest.revision: 39
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Support Resources for the Microsoft Drivers for PHP for SQL Server

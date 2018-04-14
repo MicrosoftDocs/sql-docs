@@ -16,7 +16,7 @@ ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 1: Configure environment for PHP development

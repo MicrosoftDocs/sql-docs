@@ -20,7 +20,7 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Diagnostic Handling Examples

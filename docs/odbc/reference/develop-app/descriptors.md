@@ -21,7 +21,7 @@ ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Descriptors

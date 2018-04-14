@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "persisted data source objects"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Persisted Data Source Objects

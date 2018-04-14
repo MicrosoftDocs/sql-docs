@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create a Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -30,6 +30,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Login
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

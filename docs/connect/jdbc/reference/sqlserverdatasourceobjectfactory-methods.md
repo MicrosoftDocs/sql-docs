@@ -16,7 +16,7 @@ ms.assetid: d64064bc-59dc-4614-a078-c2304d2fc236
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerDataSourceObjectFactory Methods

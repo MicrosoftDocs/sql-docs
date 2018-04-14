@@ -21,7 +21,7 @@ ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # removeConnectionEventListener Method (SQLServerPooledConnection)

@@ -21,7 +21,7 @@ ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Scalar Functions

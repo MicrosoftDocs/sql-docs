@@ -21,7 +21,7 @@ ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating a Statement Handle ODBC

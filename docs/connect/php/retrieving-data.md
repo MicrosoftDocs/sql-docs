@@ -16,7 +16,7 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Data

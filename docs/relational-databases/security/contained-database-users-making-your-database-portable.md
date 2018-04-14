@@ -1,4 +1,4 @@
----
+﻿---
 title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/05/2018"
@@ -21,6 +21,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Contained Database Users - Making Your Database Portable
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

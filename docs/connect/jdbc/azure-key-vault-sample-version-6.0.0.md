@@ -16,7 +16,7 @@ ms.assetid:
 caps.latest.revision: 1
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Azure Key Vault Sample Version 6.0.0

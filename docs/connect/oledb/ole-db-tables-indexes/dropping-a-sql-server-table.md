@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "dropping tables"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Dropping a SQL Server Table

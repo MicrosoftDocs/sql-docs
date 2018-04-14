@@ -20,7 +20,7 @@ ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Header Record

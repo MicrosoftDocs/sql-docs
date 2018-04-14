@@ -21,7 +21,7 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getLockTimeout Method (SQLServerDataSource)

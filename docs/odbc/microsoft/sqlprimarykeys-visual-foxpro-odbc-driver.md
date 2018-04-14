@@ -18,7 +18,7 @@ ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLPrimaryKeys (Visual FoxPro ODBC Driver)

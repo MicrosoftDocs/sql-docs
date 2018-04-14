@@ -20,7 +20,7 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Desktop Database Drivers Architecture

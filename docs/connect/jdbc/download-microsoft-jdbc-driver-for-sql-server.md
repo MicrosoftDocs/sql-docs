@@ -16,7 +16,7 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Download Microsoft JDBC Driver for SQL Server

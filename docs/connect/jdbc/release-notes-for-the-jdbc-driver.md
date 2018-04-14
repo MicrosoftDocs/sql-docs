@@ -16,7 +16,7 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 caps.latest.revision: 206
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Release Notes for the JDBC Driver

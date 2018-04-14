@@ -16,7 +16,7 @@ ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ---
 # Caching Result Set Data Sample
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

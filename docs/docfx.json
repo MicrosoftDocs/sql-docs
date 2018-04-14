@@ -16,8 +16,7 @@
           "**/obj/**",
           "README.md",
           "LICENSE",
-          "LICENSE-CODE",
-          "index.md"
+          "LICENSE-CODE"
         ]
       }
     ],
@@ -32,7 +31,6 @@
           "**/*.jpg"
         ],
         "exclude": [
-          "index.md",
           "**/obj/**"
         ]
       }

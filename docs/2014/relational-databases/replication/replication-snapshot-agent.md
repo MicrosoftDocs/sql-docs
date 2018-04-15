@@ -211,7 +211,7 @@ manager: "jhubbard"
 |**1**|Snapshot Agent has priority when a deadlock occurs at the Publisher.|  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** *publisher_login*  
  Is the login used when connecting to the Publisher using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  

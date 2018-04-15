@@ -96,7 +96,7 @@ manager: "jhubbard"
 ##  <a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later versions selectively install and starts key services and features. This helps reduce the attackable surface area of a system. In the default configuration of new installations, many features are not enabled. If the database relies on any service or feature that is off by default, this service or feature must be enabled on the destination server instance.  
   
- For more information about these settings and enabling or disabling them, see [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md).  
+ For more information about these settings and enabling or disabling them, see [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -113,9 +113,9 @@ manager: "jhubbard"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
- Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../2014/database-engine/cross-db-ownership-chaining-server-configuration-option.md).  
+ Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
- For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../2014/database-engine/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+ For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -134,13 +134,13 @@ manager: "jhubbard"
   
  When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md).  
   
- For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../2014/database-engine/set-up-an-encrypted-mirror-database.md).  
+ For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
  For more information, see also:  
   
 -   [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md)  
   
--   [Set Up an Encrypted Mirror Database](../../2014/database-engine/set-up-an-encrypted-mirror-database.md)  
+-   [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Create Identical Symmetric Keys on Two Servers](../../2014/database-engine/create-identical-symmetric-keys-on-two-servers.md)  
   
@@ -209,7 +209,7 @@ manager: "jhubbard"
   
 -   [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
      The service startup account defines the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../2014/database-engine/select-an-account-for-the-sql-server-agent-service.md).  
   
-     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service, which is associated with a specific instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], has its own registry hive, and its jobs typically have dependencies on one or more of the settings in this registry hive. To behave as intended, a job requires those registry settings. If you use a script to re-create a job in another [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service, its registry might not have the correct settings for that job. For re-created jobs to behave correctly on a destination server instance, the original and destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent services should have the same registry settings.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
--   [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])  
+-   [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])  
   
 -   [Configure SQL Server Agent](../../2014/database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])  
   
@@ -274,7 +274,7 @@ manager: "jhubbard"
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
 > [!NOTE]  
->  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -329,7 +329,7 @@ manager: "jhubbard"
 ##  <a name="replication_settings"></a> Replication Settings  
  If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must re-create all publications and subscriptions after backups are restored. To make this process easier, create scripts for your current replication settings and, also, for the enabling and disabling of replication. To help re-create your replication settings, copy these scripts and change the server name references to work for the destination server instance.  
   
- For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](../../2014/database-engine/log-shipping-and-replication-sql-server.md).  
+ For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](log-shipping/log-shipping-and-replication-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -354,9 +354,9 @@ manager: "jhubbard"
  [Contained Databases](../../2014/database-engine/contained-databases.md)   
  [Copy Databases to Other Servers](../../2014/database-engine/copy-databases-to-other-servers.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)   
- [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Set Up an Encrypted Mirror Database](../../2014/database-engine/set-up-an-encrypted-mirror-database.md)   
+ [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md)  
   

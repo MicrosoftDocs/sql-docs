@@ -92,11 +92,11 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)   
- [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)   
- [Specify a Server Network Address &#40;Database Mirroring&#41;](../../2014/database-engine/specify-a-server-network-address-database-mirroring.md)   
+ [Specify a Server Network Address &#40;Database Mirroring&#41;](database-mirroring/specify-a-server-network-address-database-mirroring.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
- [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-database-mirroring-configuration-sql-server.md)  
+ [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

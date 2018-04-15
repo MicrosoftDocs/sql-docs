@@ -16,7 +16,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure Backup Compression (SQL Server)
-  At installation, backup compression is off by default. The default behavior for backup compression is defined by the **backup compression default** Option server-level configuration option. However, you can override the server-level default when creating a single backup or scheduling a series of routine backups. To change the server-level default, see [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
+  At installation, backup compression is off by default. The default behavior for backup compression is defined by the **backup compression default** Option server-level configuration option. However, you can override the server-level default when creating a single backup or scheduling a series of routine backups. To change the server-level default, see [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
 ## Override the Backup Compression Default  
  You can change the backup compression behavior for an individual backup, backup job, or log shipping configuration.  
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   **[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]**  
   
-     For information about how to view or configure the backup compression default option for an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
+     For information about how to view or configure the backup compression default option for an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
      You can override the server backup-compression default when creating a backup by specifying **Compress backup** or **Do not compress backup** in any of the following dialog boxes:  
   

@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  The following information is relevant to replication in all environments:  
   
--   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](../../../2014/relational-databases/replication/securing-replication-over-the-internet.md).  
+-   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](../../../2014/relational-databases/replication/securing-replication-over-the-internet.md).  
   
      If you use SSL to secure the connections between computers in a replication topology, specify a value of **1** or **2** for the **-EncryptionLevel** parameter of each replication agent (a value of **2** is recommended). A value of **1** specifies that encryption is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer; a value of **2** specifies that the certificate is verified. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
@@ -66,7 +66,7 @@ manager: "jhubbard"
     -   In situations that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)   
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication over the Internet](../../../2014/relational-databases/replication/replication-over-the-internet.md)   
  [Secure the Subscriber](../../../2014/relational-databases/replication/secure-the-subscriber.md)   
  [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md)   

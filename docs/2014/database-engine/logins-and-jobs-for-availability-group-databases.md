@@ -28,7 +28,7 @@ manager: "jhubbard"
   
      The server instances that host the availability replicas of an availability group might be configured differently, with different tape drive letters or such. The jobs for each availability replica must allow for any such differences.  
   
-     Notice that backup jobs can use the [sys.fn_hadr_is_preferred_backup_replica](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) function to identify whether the local replica is the preferred one for backups, according to the availability group backup preferences. Backup jobs created using the [Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md) natively use this function. For other backup jobs, we recommend that you use this function as a condition in your backup jobs, so they execute only on the preferred replica. For more information, see [ Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](../../2014/database-engine/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Notice that backup jobs can use the [sys.fn_hadr_is_preferred_backup_replica](~/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) function to identify whether the local replica is the preferred one for backups, according to the availability group backup preferences. Backup jobs created using the [Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md) natively use this function. For other backup jobs, we recommend that you use this function as a condition in your backup jobs, so they execute only on the preferred replica. For more information, see [ Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Logins**  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
 -   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Contained Databases](../../2014/database-engine/contained-databases.md)   
  [Create Jobs](../../2014/database-engine/create-jobs.md)  
   

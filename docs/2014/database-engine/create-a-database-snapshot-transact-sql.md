@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   The source database must be online, unless the database is a mirror database within a database mirroring session.  
   
--   To create a database snapshot on a mirror database, the database must be in the synchronized[mirroring state](../../2014/database-engine/mirroring-states-sql-server.md).  
+-   To create a database snapshot on a mirror database, the database must be in the synchronized[mirroring state](database-mirroring/mirroring-states-sql-server.md).  
   
 -   The source database cannot be configured as a scalable shared database.  
   

@@ -32,7 +32,7 @@ manager: "jhubbard"
 -   If the session includes a witness, we recommend that you remove the witness. Otherwise, when the mirror server instance is being updated, database availability depends on the witness that remains connected to the principal server instance. After you remove a witness, you can update it at any time during the rolling update process without risking database downtime.  
   
     > [!NOTE]  
-    >  For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../2014/database-engine/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  For more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   If a session is running in high-performance mode, change the operating mode to high-safety mode.  
   
@@ -66,15 +66,15 @@ manager: "jhubbard"
   
      **To remove the witness**  
   
-    -   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+    -   [Remove the Witness from a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### To change a session from high-performance mode to high-safety mode  
   
 1.  If a mirroring session is running in high-performance mode, before you perform a rolling update, change the operating mode to high safety without automatic failover. Use one of the following methods:  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../../2014/database-engine/database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../2014/database-engine/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Change the **Operating mode** option to **High safety without automatic failover (synchronous)** by using the [Mirroring Page](../../2014/database-engine/database-properties-mirroring-page.md) of the **Database Properties** dialog box. For information about how to access this page, see [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Set transaction safety to FULL. For more information, see [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](../../2014/database-engine/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Set transaction safety to FULL. For more information, see [Change Transaction Safety in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### To perform the rolling update  
   
@@ -93,11 +93,11 @@ manager: "jhubbard"
   
      **To perform a manual failover**  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](../../2014/database-engine/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [Manually Fail Over a Database Mirroring Session &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](../../2014/database-engine/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
-     For information about how manual failover works, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/role-switching-during-a-database-mirroring-session-sql-server.md).  
+     For information about how manual failover works, see [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 2.  For each mirroring session whose mirror server instance has just been updated, wait for the session to synchronize. Then, connect to the principal server instance, and manually fail over the session. On failover, the updated server instance becomes the principal server for that session, and the former principal server becomes the mirror server.  
   
@@ -131,17 +131,17 @@ manager: "jhubbard"
   
      **To reestablish the witness**  
   
-    -   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](../../2014/database-engine/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+    -   [Add or Replace a Database Mirroring Witness &#40;SQL Server Management Studio&#41;](database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Add a Database Mirroring Witness Using Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## See Also  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [Database Mirroring Operating Modes](../../2014/database-engine/database-mirroring-operating-modes.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../2014/database-engine/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Database Mirroring Operating Modes](database-mirroring/database-mirroring-operating-modes.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [View the State of a Mirrored Database &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

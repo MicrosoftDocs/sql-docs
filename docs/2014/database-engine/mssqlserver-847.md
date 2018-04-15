@@ -55,7 +55,7 @@ manager: "jhubbard"
     -   Set working set size option  
   
     > [!NOTE]  
-    >  The previous settings can frequently be counter-productive if you change them from their default setting of OFF. For more information about the settings, see [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md).  
+    >  The previous settings can frequently be counter-productive if you change them from their default setting of OFF. For more information about the settings, see [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md).  
   
 -   Tune queries to reduce resources used on the system. Performance tuning will help reduce the stress on a system and improve response time for individual queries.  
   

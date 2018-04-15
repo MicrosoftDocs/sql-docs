@@ -32,7 +32,7 @@ manager: "jhubbard"
  
 **Try it out:** ![Azure Virtual Machine small](../../2014/getting-started/media/azure-virtual-machine-small.png)     Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. 
   
--   [What's New &#40;Database Engine&#41;](../../2014/database-engine/what-s-new-database-engine.md)  
+-   [What's New &#40;Database Engine&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
 -   [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 -   If the instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] run as the Network Service account, the login of the each host computer account (*DomainName***\\***ComputerName$*) must be created in **master** on each of the remote server instances and that login must be granted CONNECT permissions on the endpoint. This is because a server instance running under the Network Service account authenticates using the domain account of the host computer.  
   
 > [!NOTE]  
->  Ensure that an endpoint exists for each of the server instances. For more information, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../2014/database-engine/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+>  Ensure that an endpoint exists for each of the server instances. For more information, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
 ### To configure logins for Windows Authentication  
   
@@ -51,9 +51,9 @@ GO
 ```  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/transport-security-database-mirroring-always-on-availability.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../2014/database-engine/the-database-mirroring-endpoint-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

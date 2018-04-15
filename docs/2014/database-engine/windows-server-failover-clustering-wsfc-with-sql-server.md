@@ -85,7 +85,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  To take full advantage of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AlwaysOn technologies, you should apply several WSFC-related prerequisites.  
 >   
->  For more information, see: [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/prereqs-restrictions-recommendations-always-on-availability.md)  
+>  For more information, see: [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### Instance-level High Availability with AlwaysOn Failover Cluster Instances  
  An AlwaysOn *Failover Cluster Instance* (FCI) is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that is installed across nodes in a WSFC cluster. This type of instance has resource dependencies on shared disk storage (via Fibre Channel or iSCSI SAN) and on a virtual network name. The virtual network name has a resource dependency on one or more virtual IP addresses, each in a different subnet. The SQL Server service and the SQL Server Agent service are registered as resources, and both are made dependent upon the virtual network name resource.  
@@ -111,7 +111,7 @@ manager: "jhubbard"
 >   
 >  A Failover Cluster Instance (FCI) may be used together with an availability group to enhance the availability of an availability replica. However, to prevent potential race conditions in the WSFC cluster, automatic failover of the availability group is not supported to or from an availability replica that is hosted on a FCI.  
   
- For more information, see: [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)  
+ For more information, see: [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC Health Monitoring and Failover  
  High availability for an AlwaysOn solution is accomplished though proactive health monitoring of physical and logical WSFC cluster resources, together with automatic failover onto and re-configuration of redundant hardware.  A system administrator can also initiate a *manual failover* of an availability group or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance from one node to another.  
@@ -165,7 +165,7 @@ manager: "jhubbard"
  The Windows Server Failover Cluster (WSFC) service propagates changes to WSFC Configuration metadata and status to all nodes in the cluster. Partial metadata and status may be stored on a WSFC quorum-witness remote file share. Two or more active nodes or witnesses constitute a quorum to vote on the health of the WSFC cluster.  
   
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] registry keys are subkeys of the WSFC cluster.  
- If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] on the original WSFC cluster. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-alwayson-availability-groups-sql-server.md).  
+ If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../includes/sshadr-md.md)] on the original WSFC cluster. For more information, see [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
  ![SQL Server AlwaysOn Component Context Diagram](../../2014/database-engine/media/alwaysoncomponentcontextdiagram.gif "SQL Server AlwaysOn Component Context Diagram")  
   
@@ -189,7 +189,7 @@ manager: "jhubbard"
   
 ## See Also  
  [AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../2014/database-engine/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../2014/database-engine/failover-policy-for-failover-cluster-instances.md)   
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../2014/database-engine/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

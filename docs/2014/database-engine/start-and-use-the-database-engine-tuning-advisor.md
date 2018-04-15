@@ -40,7 +40,7 @@ manager: "jhubbard"
  You can start the Database Engine Tuning Advisor graphical user interface (GUI) in several different ways to support database tuning in a variety of scenarios. The different ways to start Database Engine Tuning Advisor include: from the **Start** menu, from the **Tools** menu in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], from the Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and from the **Tools** menu in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. When you first start Database Engine Tuning Advisor, the application displays a **Connect to Server** dialog box where you can specify the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance to which you want to connect.  
   
 > [!WARNING]  
->  Do not start Database Engine Tuning Advisor when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running in single-user mode. If you attempt to start it while the server is in single-user mode, an error will be returned and Database Engine Tuning Advisor will not start. For more information about single-user mode, see [Start SQL Server in Single-User Mode](../../2014/database-engine/start-sql-server-in-single-user-mode.md).  
+>  Do not start Database Engine Tuning Advisor when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running in single-user mode. If you attempt to start it while the server is in single-user mode, an error will be returned and Database Engine Tuning Advisor will not start. For more information about single-user mode, see [Start SQL Server in Single-User Mode](configure-windows/start-sql-server-in-single-user-mode.md).  
   
 #### To start Database Engine Tuning Advisor from the Windows Start menu  
   

@@ -752,9 +752,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  You can configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services by using a built-in account, local account, or domain account.  
   
 > [!NOTE]  
->  When you use a managed service account, virtual account, or a built-in account, you should not specify the corresponding password parameters. For more information about these service accounts, see **New Account Types Available with [!INCLUDE[win7](../../includes/win7-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** section in [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+>  When you use a managed service account, virtual account, or a built-in account, you should not specify the corresponding password parameters. For more information about these service accounts, see **New Account Types Available with [!INCLUDE[win7](../../includes/win7-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** section in [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
- For more information about service account configuration, see [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+ For more information about service account configuration, see [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Account parameter|Password parameter|Startup type|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
@@ -792,7 +792,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||SDK|Installs the software development kit.|  
 ||LocalDB<sup>1</sup>|Installs LocalDB, an execution mode of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] targeted to program developers.|  
   
- <sup>1</sup> LocalDB is an option when installing any SKU of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. For more information, see [SQL Server 2014 Express LocalDB](../../../2014/database-engine/sql-server-2014-express-localdb.md).  
+ <sup>1</sup> LocalDB is an option when installing any SKU of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. For more information, see [SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md).  
   
 ### Feature parameter examples:  
   

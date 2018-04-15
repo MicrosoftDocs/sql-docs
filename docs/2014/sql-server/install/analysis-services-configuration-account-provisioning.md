@@ -33,6 +33,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Service Accounts &#40;Analysis Services&#41;](../../../2014/analysis-services/instances/configure-service-accounts-analysis-services.md)   
- [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)  
+ [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

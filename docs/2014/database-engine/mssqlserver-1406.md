@@ -37,7 +37,7 @@ manager: "jhubbard"
  Remove database mirroring. You can then recover the mirror database to gain access to it.  
   
 ## See Also  
- [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](../../2014/database-engine/force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Removing Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/removing-database-mirroring-sql-server.md)  
+ [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
   
   

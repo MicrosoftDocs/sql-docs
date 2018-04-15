@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  Provides help for the tools, wizards, and services supplied with [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
- [SQL Server Monitor Overview](../../2014/database-engine/sql-server-monitor-overview.md)  
+ [SQL Server Monitor Overview](configure-windows/sql-server-monitor-overview.md)  
  Provides help for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Monitor and the Database Mirroring Monitor.  
   
  [SQL Server Profiler F1 Help](../../2014/database-engine/sql-server-profiler-f1-help.md)  

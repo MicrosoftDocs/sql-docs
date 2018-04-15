@@ -48,14 +48,14 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Do not use the same account for the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service account and the WSFC service account. If the password changes for the WSFC service account, your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installation will fail.  
   
- On [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+ On [!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)], service SIDs are used for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service accounts. For more information, see [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## Administering a Failover Cluster Instance  
   
 |Task Description|Topic Link|  
 |----------------------|----------------|  
 |Describes how to add dependencies to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] resource.|[Add Dependencies to a SQL Server Resource](../../2014/database-engine/add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos is a network authentication protocol designed to provide strong authentication for client/server applications. Kerberos provides a foundation for interoperability and helps to enhance the security of enterprise-wide network authentication. You can use Kerberos authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stand-alone instances or with AlwaysOn FCIs.|[Register a Service Principal Name for Kerberos Connections](../../2014/database-engine/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos is a network authentication protocol designed to provide strong authentication for client/server applications. Kerberos provides a foundation for interoperability and helps to enhance the security of enterprise-wide network authentication. You can use Kerberos authentication with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stand-alone instances or with AlwaysOn FCIs.|[Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Provides links to content that describes how to enable Kerberos authentication||  
 |Describes the procedure used to recover from a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster failure.|[Recover from Failover Cluster Instance Failure](../../2014/database-engine/recover-from-failover-cluster-instance-failure.md)|  
 |Describe the procedure used to change the IP address resource for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] failover cluster instance.|[Change the IP Address of a Failover Cluster Instance](../../2014/database-engine/change-the-ip-address-of-a-failover-cluster-instance.md)|  

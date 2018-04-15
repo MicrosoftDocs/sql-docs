@@ -79,6 +79,6 @@ manager: "jhubbard"
 |Execute statements against multiple servers simultaneously|[Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](../../2014/database-engine/execute-statements-against-multiple-servers-simultaneously.md)|  
   
 ## See Also  
- [Remote Servers](../../2014/database-engine/remote-servers.md)  
+ [Remote Servers](configure-windows/remote-servers.md)  
   
   

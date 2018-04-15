@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 -   Quit all applications, including all services that have [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dependencies. Upgrade might fail if local applications are connected to the instance being upgraded.  
   
--   If you use Database Mirroring, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../minimize-downtime-for-mirrored-databases-when-upgrading-server-instances.md).  
+-   If you use Database Mirroring, see [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](../database-mirroring/upgrading-mirrored-instances.md).  
   
 ## Upgrading the Database Engine  
  You can overwrite an installation of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later with a version upgrade. If an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is detected when you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, all previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program files are upgraded, and all data stored in the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is preserved. In addition, earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online will remain intact on the computer.  

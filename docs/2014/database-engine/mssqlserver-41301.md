@@ -39,6 +39,6 @@ manager: "jhubbard"
  Don't do any work on the transaction. Call ROLLBACK TRAN to roll back the transaction. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../2014/database-engine/in-memory-oltp-in-memory-optimization.md).  
   
 ## See Also  
- [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/enable-and-disable-alwayson-availability-groups-sql-server.md)  
+ [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   
   

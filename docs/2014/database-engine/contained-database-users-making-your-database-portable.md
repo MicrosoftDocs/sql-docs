@@ -40,7 +40,7 @@ manager: "jhubbard"
 ## Firewalls  
   
 ### [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md).  
+ Windows firewall rules apply to all connections and have the same effects on logins (traditional model connections) and contained database users. For more information about the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### [!INCLUDE[ssSDS](../includes/sssds-md.md)] Firewalls  
  [!INCLUDE[ssSDS](../includes/sssds-md.md)] allows separate firewall rules for sever level connections (logins) and for database level connections (contained database users). When connecting to a user database, first database firewall rules are checked. If there is no rule that allows access to the database, the server level firewall rules are checked, which requires access to the logical server master database. Database level firewall rules combined with contained database users can eliminate necessity to access master database of the server during connection providing improved connection scalability.  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## Remarks  
   
--   In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], contained database users must be enabled for the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [contained database authentication Server Configuration Option](../../2014/database-engine/contained-database-authentication-server-configuration-option.md).  
+-   In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], contained database users must be enabled for the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [contained database authentication Server Configuration Option](configure-windows/contained-database-authentication-server-configuration-option.md).  
   
 -   Contained database users and logins with non-overlapping names can co-exist in your applications.  
   

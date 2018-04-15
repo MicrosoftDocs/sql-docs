@@ -221,7 +221,7 @@ manager: "jhubbard"
 ## Replication and Other Database Features  
   
 ### Does replication work in conjunction with log shipping and database mirroring?  
- Yes. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../../2014/database-engine/log-shipping-and-replication-sql-server.md) and [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md).  
+ Yes. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) and [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
 ### Does replication work in conjunction with clustering?  
  Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  

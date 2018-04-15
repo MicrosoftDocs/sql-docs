@@ -171,7 +171,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [What SPN do I use and how does it get there?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows-service-accounts-and-permissions.md)   
+ [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](http://support.microsoft.com/kb/929650)   
  [what’s new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  

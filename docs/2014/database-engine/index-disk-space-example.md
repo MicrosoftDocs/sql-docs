@@ -73,13 +73,13 @@ manager: "jhubbard"
   
     1.  When SORT_IN_TEMPDB is set to ON, **tempdb** must have sufficient disk space to hold the largest index (1 million * 200 bytes ~ 200 MB). Fill factor is not considered in the sorting operation.  
   
-         Additional disk space (in the **tempdb** location) equal to the [Configure the index create memory Server Configuration Option](../../2014/database-engine/configure-the-index-create-memory-server-configuration-option.md) value = 2 MB.  
+         Additional disk space (in the **tempdb** location) equal to the [Configure the index create memory Server Configuration Option](configure-windows/configure-the-index-create-memory-server-configuration-option.md) value = 2 MB.  
   
          Total size of temporary disk space with SORT_IN_TEMPDB set to ON ~ 202 MB.  
   
     2.  When SORT_IN_TEMPDB is set to OFF (default), the 250 MB of disk space already considered for the new index in step 2 is used for sorting.  
   
-         Additional disk space (in the target location) equal to the [Configure the index create memory Server Configuration Option](../../2014/database-engine/configure-the-index-create-memory-server-configuration-option.md) value = 2 MB.  
+         Additional disk space (in the target location) equal to the [Configure the index create memory Server Configuration Option](configure-windows/configure-the-index-create-memory-server-configuration-option.md) value = 2 MB.  
   
          Total size of temporary disk space with SORT_IN_TEMPDB set to OFF = 2 MB.  
   

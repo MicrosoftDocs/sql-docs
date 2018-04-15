@@ -41,7 +41,7 @@ manager: "jhubbard"
  Type **\\\\.\pipe\acct** to listen on the **acct** pipe.  
   
 ## See Also  
- [Enable or Disable a Server Network Protocol](../../../2014/database-engine/enable-or-disable-a-server-network-protocol.md)   
+ [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Choosing a Network Protocol](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Creating a Valid Connection String Using Named Pipes](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   

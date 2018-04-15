@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   [Service Account &#40;SSRS Native Mode&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
--   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows-service-accounts-and-permissions.md) in SQL Server Books Online.  
+-   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server Books Online.  
   
 -   [The Services and Service Accounts Security Planning Guide](http://go.microsoft.com/fwlink/?LinkId=69155) on MSDN.  
   

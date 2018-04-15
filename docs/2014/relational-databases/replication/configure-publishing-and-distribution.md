@@ -167,6 +167,6 @@ manager: "jhubbard"
  [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
  [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   
- [Configure Replication for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../2014/database-engine/configure-replication-for-always-on-availability-groups-sql-server.md) 
+ [Configure Replication for AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

@@ -55,6 +55,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  If your code uses the Transfer object directly, you will have to link to the Microsoft.SqlServer.Management.SmoExtended namespace.  
   
- When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] features have been deprecated in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2014](../../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
+ When you migrate code, you might have to modify the code. This is because several [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] features have been deprecated in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information about deprecated features, see [Deprecated Database Engine Features in SQL Server 2014](../deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Books Online.  
   
   

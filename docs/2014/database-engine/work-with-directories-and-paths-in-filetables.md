@@ -104,7 +104,7 @@ GO
   
 -   The FILESTREAM and FileTable functions accept or return virtual network names (VNNs) instead of computer names. For more information about these functions, see [Filestream and FileTable Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
--   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/filestream-and-filetable-with-alwayson-availability-groups-sql-server.md).  
+-   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ## See Also  
  [Enable the Prerequisites for FileTable](../../2014/database-engine/enable-the-prerequisites-for-filetable.md)   

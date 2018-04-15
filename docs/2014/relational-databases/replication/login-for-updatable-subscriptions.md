@@ -47,7 +47,7 @@ manager: "jhubbard"
  Re-enter the password to confirm that it was entered correctly.  
   
  **Use a linked server or remote server that you have already defined.**  
- This option requires a linked server or remote server that you have already defined. For more information, see [Linked Servers &#40;Database Engine&#41;](../../../2014/database-engine/linked-servers-database-engine.md) and [Remote Servers](../../../2014/database-engine/remote-servers.md). Ensure that the login used for the linked server or remote server has a strong password and has only the permissions described in this topic.  
+ This option requires a linked server or remote server that you have already defined. For more information, see [Linked Servers &#40;Database Engine&#41;](../../../2014/database-engine/linked-servers-database-engine.md) and [Remote Servers](../../database-engine/configure-windows/remote-servers.md). Ensure that the login used for the linked server or remote server has a strong password and has only the permissions described in this topic.  
   
 ## See Also  
  [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md)   

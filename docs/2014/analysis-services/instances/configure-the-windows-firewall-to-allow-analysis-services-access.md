@@ -230,8 +230,8 @@ manager: "mblythe"
  If you are using SharePoint 2010, you do not need to open ports in Windows Firewall. SharePoint opens the ports that it requires, and add-ins such as PowerPivot for SharePoint operate within the SharePoint environment. In a PowerPivot for SharePoint 2010 installation, the PowerPivot System Service has exclusive use of the local SQL Server Analysis Services (PowerPivot) service instance that is installed with it on the same computer. It uses local connections, not network connections, to access the local Analysis Services engine service that loads, queries, and processes PowerPivot data on the SharePoint server. To request PowerPivot data from client applications, requests are routed through ports that are opened by SharePoint Setup (specifically, inbound rules are defined to allow access to SharePoint – 80, SharePoint Central Administration v4, SharePoint Web Services, and SPUserCodeV4). Because PowerPivot web services run within a SharePoint farm, the SharePoint firewall rules are sufficient for remote access to PowerPivot data in a SharePoint farm.  
   
 ## See Also  
- [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/sql-server-browser-service-database-engine-and-ssas.md)   
- [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/start-stop-pause-resume-restart-sql-server-services.md)   
- [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
+ [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   

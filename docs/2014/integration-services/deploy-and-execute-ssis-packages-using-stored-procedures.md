@@ -93,7 +93,7 @@ manager: "jhubbard"
   
  You need to do the following before running the stored procedures.  
   
--   Create a linked server object. For more information, see [Create Linked Servers &#40;SQL Server Database Engine&#41;](../../2014/database-engine/create-linked-servers-sql-server-database-engine.md).  
+-   Create a linked server object. For more information, see [Create Linked Servers &#40;SQL Server Database Engine&#41;](../database-engine/sql-server-database-engine-overview.md).  
   
      On the **Server Options** page of the **Linked Server Properties** dialog box, set **RPC** and **RPC Out** to **True**. Also, set **Enable Promotion of Distributed Transactions for RPC** to **False**.  
   

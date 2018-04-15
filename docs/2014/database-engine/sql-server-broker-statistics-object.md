@@ -62,7 +62,7 @@ manager: "jhubbard"
 |**SQL SENDs/sec**|The number of [!INCLUDE[tsql](../includes/tsql-md.md)] SEND statements executed per second.|  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)   
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)  
   
   

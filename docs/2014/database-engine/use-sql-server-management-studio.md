@@ -76,6 +76,6 @@ manager: "jhubbard"
  Describes the Visual Database Tools that you can use to create queries, design or modify a database structure, or update data.  
   
 ## See Also  
- [View or Change Server Properties &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-server-properties-sql-server.md)  
+ [View or Change Server Properties &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

@@ -112,11 +112,11 @@ net.exe start clussvc /forcequorum
   
      **For more information:**  
   
-     [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../2014/database-engine/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+     [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
-     [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](../../2014/database-engine/force-service-in-a-database-mirroring-session-transact-sql.md)  
+     [Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  
   
-     [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../2014/database-engine/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+     [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

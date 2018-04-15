@@ -65,6 +65,6 @@ manager: "jhubbard"
 ## See Also  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)  
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
   
   

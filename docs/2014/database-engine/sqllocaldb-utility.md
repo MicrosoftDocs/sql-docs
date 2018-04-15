@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SqlLocalDB Utility
-  Use the `SqlLocalDB` utility to create an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB**. The `SqlLocalDB` utility (SqlLocalDB.exe) is a simple command line tool to enable users and developers to create and manage an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. For information about how to use **LocalDB**, see [SQL Server 2014 Express LocalDB](../../2014/database-engine/sql-server-2014-express-localdb.md).  
+  Use the `SqlLocalDB` utility to create an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)]**LocalDB**. The `SqlLocalDB` utility (SqlLocalDB.exe) is a simple command line tool to enable users and developers to create and manage an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. For information about how to use **LocalDB**, see [SQL Server 2014 Express LocalDB](configure-windows/sql-server-2016-express-localdb.md).  
   
 ## Syntax  
   
@@ -110,6 +110,6 @@ sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## See Also  
- [SQL Server 2014 Express LocalDB](../../2014/database-engine/sql-server-2014-express-localdb.md)  
+ [SQL Server 2014 Express LocalDB](configure-windows/sql-server-2016-express-localdb.md)  
   
   

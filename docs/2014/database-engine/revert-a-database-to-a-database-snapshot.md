@@ -167,6 +167,6 @@ GO
  [Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-and-database-snapshots-sql-server.md)  
+ [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

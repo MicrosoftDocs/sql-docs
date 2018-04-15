@@ -56,7 +56,7 @@ manager: "jhubbard"
 ##  <a name="tuning"></a> Tuning the Performance of Full-Text Indexes  
  To maximize the performance of your full-text indexes, implement the following best practices:  
   
--   To use all processors or cores to the maximum, set [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](../../2014/database-engine/max-full-text-crawl-range-server-configuration-option.md).  
+-   To use all processors or cores to the maximum, set [sp_configure](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)‘`max full-text crawl ranges`’ to the number of CPUs on the system. For information about this configuration option, see [max full-text crawl range Server Configuration Option](configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Make sure that the base table has a clustered index. Use an integer data type for the first column of the clustered index. Avoid using GUIDs in the first column of the clustered index. A multi-range population on a clustered index can produce the highest population speed. We recommend that the column serving as the full-text key be an integer data type.  
   
@@ -160,7 +160,7 @@ GO
   
  **To set the max server memory configuration option**  
   
--   [Server Memory Server Configuration Options](../../2014/database-engine/server-memory-server-configuration-options.md)  
+-   [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)  
   
   
   
@@ -206,8 +206,8 @@ GO
   
   
 ## See Also  
- [Server Memory Server Configuration Options](../../2014/database-engine/server-memory-server-configuration-options.md)   
- [max full-text crawl range Server Configuration Option](../../2014/database-engine/max-full-text-crawl-range-server-configuration-option.md)   
+ [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)   
+ [max full-text crawl range Server Configuration Option](configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)   
  [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md)   
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

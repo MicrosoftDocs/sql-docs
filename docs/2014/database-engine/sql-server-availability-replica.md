@@ -38,6 +38,6 @@ manager: "jhubbard"
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Database Replica](../../2014/database-engine/sql-server-database-replica.md)   
- [AlwaysOn Availability Groups (SQL Server)](../../2014/database-engine/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn Availability Groups (SQL Server)](availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

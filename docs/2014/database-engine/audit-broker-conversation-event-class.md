@@ -58,6 +58,6 @@ manager: "jhubbard"
 |4|Run As Target Failure|The destination user does not have receive permissions on the destination queue. To prevent unauthorized users from receiving messages, Service Broker does not enqueue messages with a destination user that cannot receive from the queue, regardless of whether the initiating user has permission to enqueue messages.|  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

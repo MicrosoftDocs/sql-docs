@@ -46,7 +46,7 @@ manager: "mblythe"
   
 -   The credentials provided to the database server are valid. If you are using Windows user credentials, make sure that the user has permission to the server and database.  
   
--   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Ports used by the database server are open. If you are accessing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational databases on external computers, or if the report server database is on an external [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance, you must open port 1433 and 1434 on the external computer. Be sure to restart the server after you open ports. For more information, see [Configure a Windows Firewall for Database Engine Access](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Remote connections must be enabled. If you are accessing SQL Server relational databases on external computers, you can use SQL Server Configuration Manager tool to verify that remote connections over TCP are enabled.  
   

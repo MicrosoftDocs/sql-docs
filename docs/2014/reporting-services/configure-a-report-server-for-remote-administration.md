@@ -58,7 +58,7 @@ manager: "mblythe"
   
 ### To open ports in Windows Firewall  
   
-1.  [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configure a Windows Firewall for Database Engine Access](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 2.  [Configure a Firewall for Report Server Access](../../2014/reporting-services/configure-a-firewall-for-report-server-access.md).  
   

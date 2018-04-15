@@ -57,9 +57,9 @@ manager: "jhubbard"
   
 ## See Also  
  [log_shipping_monitor_primary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)   
+ [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)   
  [sp_help_log_shipping_monitor_primary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md)  
+ [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md)  
   
   

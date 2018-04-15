@@ -36,7 +36,7 @@ manager: "jhubbard"
  By default, this error causes the Distribution Agent to stop applying changes to that node. For information about how to handle the conflicts that are detected, see "Handling Conflicts" later in this topic.  
   
 > [!NOTE]  
->  The hidden column can be accessed only by a user that is logged in through the Dedicated Administrator Connection (DAC). For information about DAC, see [Diagnostic Connection for Database Administrators](../../../2014/database-engine/diagnostic-connection-for-database-administrators.md).  
+>  The hidden column can be accessed only by a user that is logged in through the Dedicated Administrator Connection (DAC). For information about DAC, see [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
  Peer-to-peer replication detects the following types of conflicts:  
   

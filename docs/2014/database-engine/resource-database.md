@@ -64,12 +64,12 @@ GO
 ## Related Content  
  [System Databases](../../2014/database-engine/system-databases.md)  
   
- [Diagnostic Connection for Database Administrators](../../2014/database-engine/diagnostic-connection-for-database-administrators.md)  
+ [Diagnostic Connection for Database Administrators](configure-windows/diagnostic-connection-for-database-administrators.md)  
   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](~/t-sql/functions/object-definition-transact-sql.md)  
   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
   
- [Start SQL Server in Single-User Mode](../../2014/database-engine/start-sql-server-in-single-user-mode.md)  
+ [Start SQL Server in Single-User Mode](configure-windows/start-sql-server-in-single-user-mode.md)  
   
   

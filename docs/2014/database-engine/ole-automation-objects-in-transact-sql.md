@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md)  
   
- [Ole Automation Procedures Server Configuration Option](../../2014/database-engine/ole-automation-procedures-server-configuration-option.md)  
+ [Ole Automation Procedures Server Configuration Option](configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
  [sp_OACreate &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)  
   

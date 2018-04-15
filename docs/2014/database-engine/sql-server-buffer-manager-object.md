@@ -61,10 +61,10 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server:Buffer Node](../../2014/database-engine/sql-server-buffer-node.md)   
- [Server Memory Server Configuration Options](../../2014/database-engine/server-memory-server-configuration-options.md)   
+ [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Plan Cache Object](../../2014/database-engine/sql-server-plan-cache-object.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Buffer Pool Extension](../../2014/database-engine/buffer-pool-extension.md)  
+ [Buffer Pool Extension](configure-windows/buffer-pool-extension.md)  
   
   

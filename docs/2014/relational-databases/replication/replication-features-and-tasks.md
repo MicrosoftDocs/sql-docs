@@ -44,15 +44,15 @@ manager: "jhubbard"
   
 ##  <a name="Interoperability"></a> Interoperability of Replication and High Availability Features  
   
--   [Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../../2014/database-engine/configure-replication-for-always-on-availability-groups-sql-server.md)  
+-   [Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
--   [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../../2014/database-engine/maintaining-an-alwayson-publication-database-sql-server.md)  
+-   [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../2014/database-engine/replicate-track-change-data-capture-always-on-availability.md)  
+-   [Replication, Change Tracking, Change Data Capture, and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Log Shipping and Replication &#40;SQL Server&#41;](../../../2014/database-engine/log-shipping-and-replication-sql-server.md)  
+-   [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
--   [Database Mirroring and Replication &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-and-replication-sql-server.md)  
+-   [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
 ## See Also  
  [SQL Server Replication](../../../2014/relational-databases/replication/sql-server-replication.md)   

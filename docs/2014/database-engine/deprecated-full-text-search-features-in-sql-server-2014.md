@@ -57,6 +57,6 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server, Deprecated Features Object](../../2014/database-engine/sql-server-deprecated-features-object.md)   
  [Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md)   
- [Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md)  
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

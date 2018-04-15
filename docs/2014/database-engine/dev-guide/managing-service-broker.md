@@ -41,6 +41,6 @@ manager: "jhubbard"
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   
- [SQL Server Service Broker](../../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](../configure-windows/sql-server-service-broker.md)  
   
   

@@ -37,19 +37,19 @@ manager: "jhubbard"
  For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../includes/sshadr-md.md)] is an enterprise-level high-availability and disaster recovery solution introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] to enable you to maximize availability for one or more user databases. [!INCLUDE[ssHADR](../includes/sshadr-md.md)] requires that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances reside on Windows Server Failover Clustering (WSFC) nodes. For more information, see [ AlwaysOn Availability Groups (SQL Server)](../../2014/database-engine/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../includes/sshadr-md.md)] is an enterprise-level high-availability and disaster recovery solution introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] to enable you to maximize availability for one or more user databases. [!INCLUDE[ssHADR](../includes/sshadr-md.md)] requires that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances reside on Windows Server Failover Clustering (WSFC) nodes. For more information, see [ AlwaysOn Availability Groups (SQL Server)](availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
->  An FCI can leverage [!INCLUDE[ssHADR](../includes/sshadr-md.md)] to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/failover-clustering-and-alwayson-availability-groups-sql-server.md).  
+>  An FCI can leverage [!INCLUDE[ssHADR](../includes/sshadr-md.md)] to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
  Database mirroring  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] We recommend that you use [!INCLUDE[ssHADR](../includes/sshadr-md.md)] instead.  
   
- Database mirroring is a solution to increase database availability by supporting almost instantaneous failover. Database mirroring can be used to maintain a single standby database, or *mirror database*, for a corresponding production database that is referred to as the *principal database*. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
+ Database mirroring is a solution to increase database availability by supporting almost instantaneous failover. Database mirroring can be used to maintain a single standby database, or *mirror database*, for a corresponding production database that is referred to as the *principal database*. For more information, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
   
  Log shipping  
- Like [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and database mirroring, log shipping operates at the database level. You can use log shipping to maintain one or more warm standby databases (referred to as *secondary databases*) for a single production database that is referred to as the *primary database*. For more information about log shipping, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+ Like [!INCLUDE[ssHADR](../includes/sshadr-md.md)] and database mirroring, log shipping operates at the database level. You can use log shipping to maintain one or more warm standby databases (referred to as *secondary databases*) for a single production database that is referred to as the *primary database*. For more information about log shipping, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="RecommendedSolutions"></a> Recommended Solutions for Using SQL Server to Protect Data  
  Our recommendation for providing data protection for your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] environment are as follows:  
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../2014/database-engine/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [Deprecated Database Engine Features in SQL Server 2014](../../2014/database-engine/deprecated-database-engine-features-in-sql-server-2014.md)  
+ [Database Mirroring: Interoperability and Coexistence &#40;SQL Server&#41;](database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

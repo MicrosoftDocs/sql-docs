@@ -21,6 +21,6 @@ manager: "jhubbard"
   Use the Cluster Security Policy page to configure the security policy for your failover cluster instance.  
   
 ## Options  
- Specify global or local domain groups for clustered services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts as group members. For more information about service security IDs (SID) functionality on [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)], see [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md).  
+ Specify global or local domain groups for clustered services. All resource permissions are controlled by domain-level groups that include [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts as group members. For more information about service security IDs (SID) functionality on [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)], see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
   

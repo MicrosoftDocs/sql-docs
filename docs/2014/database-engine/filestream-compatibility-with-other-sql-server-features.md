@@ -96,7 +96,7 @@ manager: "jhubbard"
 -   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
   
 ##  <a name="LogShipping"></a> Log Shipping  
- [Log shipping](../../2014/database-engine/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
+ [Log shipping](log-shipping/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
   
 ##  <a name="DatabaseMirroring"></a> Database Mirroring  
  Database mirroring does not support FILESTREAM. A FILESTREAM filegroup cannot be created on the principal server. Database mirroring cannot be configured for a database that contains FILESTREAM filegroups.  

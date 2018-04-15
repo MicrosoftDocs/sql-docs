@@ -50,7 +50,7 @@ manager: "jhubbard"
 
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
- Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](../../2014/database-engine/database-mail-xps-server-configuration-option.md) reference topic.  
+ Use the **DatabaseMail XPs** option to enable Database Mail on this server. For more information, see [Database Mail XPs Server Configuration Option](configure-windows/database-mail-xps-server-configuration-option.md) reference topic.  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
  Enabling [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Service Broker in any database requires a database lock. If Service Broker was deactivated in **msdb**, to enable Database Mail, first stop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent so Service Broker can obtain the necessary lock.  
@@ -88,7 +88,7 @@ manager: "jhubbard"
  Use the **Select Configuration Task** page, to indicate which task you will complete each time you use the wizard. If you change your mind before you complete the wizard, use the **Back** button to return to this page and select a different task.  
   
 > [!NOTE]  
->  If Database Mail has not been enabled, you will receive the message: **The Database Mail feature is not available.  Would you like to enable this feature?** Responding **Yes**, is equivalent to enabling Database Mail by using the [Database Mail XPs option](../../2014/database-engine/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure.  
+>  If Database Mail has not been enabled, you will receive the message: **The Database Mail feature is not available.  Would you like to enable this feature?** Responding **Yes**, is equivalent to enabling Database Mail by using the [Database Mail XPs option](configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure.  
   
  **Set up Database Mail by performing the following tasks**  
  Perform all of the tasks required to set up Database Mail for the first time. This option includes all of the other three options.  

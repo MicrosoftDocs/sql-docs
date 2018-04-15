@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Database Properties (Transaction Log Shipping Page)
   Use this page to configure and modify the properties of log shipping for a database.  
   
- For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](../../2014/database-engine/about-log-shipping-sql-server.md).  
+ For an explanation of log shipping concepts, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
 ## Options  
  **Enable this as a primary database in a log shipping configuration**  

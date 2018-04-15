@@ -128,7 +128,7 @@ manager: "jhubbard"
   
      **To view the current backup compression default**  
   
-    -   [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
     > [!NOTE]  
     >  Alternatively, you can use the Maintenance Plan Wizard to create differential database backups.  

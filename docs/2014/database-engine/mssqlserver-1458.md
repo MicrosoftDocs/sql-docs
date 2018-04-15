@@ -37,6 +37,6 @@ manager: "jhubbard"
  Most cases of this error are self correcting. If the problem persists, restarting the database or server instance typically corrects the problem. For more information, look in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] error log on each partner for the associated error that preceded this message.  
   
 ## See Also  
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/monitoring-database-mirroring-sql-server.md)  
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
   
   

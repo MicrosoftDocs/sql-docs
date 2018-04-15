@@ -130,6 +130,6 @@ manager: "jhubbard"
 ## See Also  
  [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Installation How-to Topics](../../../2014/sql-server/install/installation-how-to-topics.md)   
- [Configure Windows Service Accounts and Permissions](../../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)  
+ [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

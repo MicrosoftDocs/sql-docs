@@ -80,7 +80,7 @@ manager: "jhubbard"
  Contains information about how automated administration in a multiserver environment takes advantage of the self-tuning features of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [SQL Server Database Engine Backward Compatibility](../../2014/database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
  [Register Servers](../../2014/database-engine/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   

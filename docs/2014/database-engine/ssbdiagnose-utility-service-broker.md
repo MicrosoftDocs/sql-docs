@@ -444,7 +444,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 ```  
   
 ## See Also  
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)   
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](~/t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](~/t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)   

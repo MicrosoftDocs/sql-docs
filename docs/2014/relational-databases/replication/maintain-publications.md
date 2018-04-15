@@ -26,6 +26,6 @@ manager: "jhubbard"
  [Administration &#40;Replication&#41;](../../../2014/relational-databases/replication/administration-replication.md)   
  [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)   
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../../2014/database-engine/maintaining-an-alwayson-publication-database-sql-server.md)  
+ [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
   

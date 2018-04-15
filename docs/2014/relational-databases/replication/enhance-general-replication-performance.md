@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Set the minimum and maximum amount of memory allocated to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-     By default, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../../2014/database-engine/server-memory-server-configuration-options.md).  
+     By default, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] changes its memory requirements dynamically based on available system resources. To avoid low memory availability during replication activities, use the **min server memory** option to set the minimum available memory. To avoid having the operating system page to disc for memory, you can also set a maximum amount of memory with the **max server memory** option. For more information, see [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
 -   Ensure proper allocation of database data files and log files. Use a separate disk drive for the transaction log for all databases involved in replication.  
   

@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../2014/database-engine/manage-the-suspect-pages-table-sql-server.md)   
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../2014/database-engine/overview-of-alwayson-availability-groups-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)  
   
   

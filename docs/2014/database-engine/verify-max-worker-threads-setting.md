@@ -24,7 +24,7 @@ manager: "jhubbard"
  Set the max worker threads option to 0. This enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to automatically determine the correct number of active worker threads based on user requests.  
   
 ## For More Information  
- [Configure the max worker threads Server Configuration Option](../../2014/database-engine/configure-the-max-worker-threads-server-configuration-option.md)  
+ [Configure the max worker threads Server Configuration Option](configure-windows/configure-the-max-worker-threads-server-configuration-option.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   You want to use [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] configuration tool.  
   
- One of the primary reasons SP1 is required for SharePoint installations running with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] is the database engine feature **sp_dboption**, that was deprecated in a previous release, is discontinued in the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release. For more information, see [Discontinued Database Engine Functionality in SQL Server 2014](../../../2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2014.md)  
+ One of the primary reasons SP1 is required for SharePoint installations running with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] is the database engine feature **sp_dboption**, that was deprecated in a previous release, is discontinued in the [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] release. For more information, see [Discontinued Database Engine Functionality in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### SharePoint 2010 SP1 Installation Guidance  
  [Download SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697) and apply it on all servers in the farm.  

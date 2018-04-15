@@ -36,7 +36,7 @@
 ### [SQL Full-text Filter Daemon Launcher (Service Tab)](sql-full-text-filter-daemon-launcher-service-tab.md)
 ### [SQL Full-text Filter Daemon Launcher (Advanced)](sql-full-text-filter-daemon-launcher-advanced.md)
 ### [Unknown Service (Log On Tab)](unknown-service-log-on-tab.md)
-## [SQL Server Network Configuration](sql-server-network-configuration.md)
+## [SQL Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)
 ### [Protocols for <server> (SQL Server Configuration Manager)](protocols-for-server-sql-server-configuration-manager.md)
 ### [Protocols for MSSQLSERVER Properties (Flags Tab)](protocols-for-mssqlserver-properties-flags-tab.md)
 ### [Protocols for MSSQLSERVER Properties (Certificate Tab)](protocols-for-mssqlserver-properties-certificate-tab.md)

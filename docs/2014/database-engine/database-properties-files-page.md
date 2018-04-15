@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  Select **Filestream Data** if you are adding files (containers) to a memory-optimized filegroup.  
   
- To add files (containers) to a Filestream data filegroup, FILESTREAM must be enabled. You can enable FILESTREAM by using the [Server Properties (Advanced Page)](../../2014/database-engine/server-properties-advanced-page.md) dialog box.  
+ To add files (containers) to a Filestream data filegroup, FILESTREAM must be enabled. You can enable FILESTREAM by using the [Server Properties (Advanced Page)](configure-windows/server-properties-advanced-page.md) dialog box.  
   
  **Filegroup**  
  Select the filegroup for the file from the list. By default, the filegroup is PRIMARY. You can create a new filegroup by selecting **\<new filegroup>** and entering information about the filegroup in the **New Filegroup** dialog box. A new filegroup can also be created on the **Filegroup** page. You cannot modify the filegroup of an existing file.  

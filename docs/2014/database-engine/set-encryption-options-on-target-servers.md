@@ -36,6 +36,6 @@ manager: "jhubbard"
 >  [!INCLUDE[ssNoteRegistry](../includes/ssnoteregistry-md.md)]  
   
 ## See Also  
- [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)  
+ [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
   

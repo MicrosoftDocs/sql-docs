@@ -37,12 +37,12 @@ manager: "jhubbard"
   
  The production server instance, called the *principal server*, communicates with the standby server instance, called the *mirror server*. The principal and mirror servers act as partners within a database mirroring *session*. If the principal server fails, the mirror server can make its database into the principal database through a process called *failover*. For example, Partner_A and Partner_B are two partner servers, with the principal database initially on Partner_A as principal server, and the mirror database residing on Partner_B as the mirror server. If Partner_A goes offline, the database on Partner_B can fail over to become the current principal database. When Partner_A rejoins the mirroring session, it becomes the mirror server and its database becomes the mirror database.  
   
- Alternative database mirroring configurations offer different levels of performance and data safety, and support different forms of failover. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-sql-server.md).  
+ Alternative database mirroring configurations offer different levels of performance and data safety, and support different forms of failover. For more information, see [Database Mirroring &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md).  
   
  It is possible to use an alias when specifying the mirror database name.  
   
 > [!NOTE]  
->  For information about initial connection attempts and reconnection attempts to a mirrored database, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  For information about initial connection attempts and reconnection attempts to a mirrored database, see [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## Programming Considerations  
  When the principal database server fails, the client application receives errors in response to API calls, which indicate that the connection to the database has been lost. When this happens, any uncommitted changes to the database are lost and the current transaction is rolled back. If this occurs, the application should close the connection (or release the data source object) and re-open it. The connection is transparently re-directed to the mirror database, which now acts as the principal server.  
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client Features](../../../2014/database-engine/dev-guide/sql-server-native-client-features.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../../../2014/database-engine/connect-clients-to-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../../2014/database-engine/database-mirroring-sql-server.md)  
+ [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md)  
   
   

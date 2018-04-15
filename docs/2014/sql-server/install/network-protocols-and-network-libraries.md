@@ -77,11 +77,11 @@ manager: "jhubbard"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] default TCP  
   
- For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../../2014/database-engine/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
+ For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md).  
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] network configurations, see the following topic in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online:  
   
--   [Server Network Configuration](../../../2014/database-engine/server-network-configuration.md)  
+-   [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)  
   
 ## See Also  
  [Surface Area Configuration](../../../2014/database-engine/surface-area-configuration.md)   

@@ -24,7 +24,7 @@ manager: "jhubbard"
  Use the sp_configure stored procedure to enable tracing by setting the value of default trace enabled to 1.  
   
 ## For More Information  
- [Server Configuration Options &#40;SQL Server&#41;](../../2014/database-engine/server-configuration-options-sql-server.md)  
+ [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

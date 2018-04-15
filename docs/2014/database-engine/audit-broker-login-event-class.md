@@ -63,6 +63,6 @@ manager: "jhubbard"
 ## See Also  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)   
- [SQL Server Service Broker](../../2014/database-engine/sql-server-service-broker.md)  
+ [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 |DQS Component|Minimum System Requirements|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memory (RAM):<br />-Minimum: 2 GB<br />-Recommended: 4 GB or more<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine. For more information, see [About the SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memory (RAM):<br />-Minimum: 2 GB<br />-Recommended: 4 GB or more<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine. For more information, see [About the SQL Server Database Engine](../../database-engine/sql-server-database-engine-overview.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installed during the [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] installation, if not already installed)<br /><br /> Internet Explorer 6.0 SP1 or later|  
   
 > [!IMPORTANT]  

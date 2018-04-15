@@ -37,7 +37,7 @@ GO
 ```  
   
 ## For More Information  
- [lightweight pooling Server Configuration Option](../../2014/database-engine/lightweight-pooling-server-configuration-option.md)  
+ [lightweight pooling Server Configuration Option](configure-windows/lightweight-pooling-server-configuration-option.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

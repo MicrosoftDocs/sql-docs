@@ -113,7 +113,7 @@ manager: "jhubbard"
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") **Connection Security: Restricting and Securing**  
  **Firewall Protection**  
   
--   [Configure a Windows Firewall for Database Engine Access](../../2014/database-engine/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Configure a Windows Firewall for Database Engine Access](configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Azure SQL Database Firewall Settings](~/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -121,7 +121,7 @@ manager: "jhubbard"
   
  **Encrypting Data in Transit**  
   
--   [Secure Sockets Layer for the Database Engine](../../2014/database-engine/enable-encrypted-connections-to-the-database-engine.md)  
+-   [Secure Sockets Layer for the Database Engine](configure-windows/enable-encrypted-connections-to-the-database-engine.md)  
   
 -   [Secure Sockets Layer for SQL Database](https://msdn.microsoft.com/library/azure/ff394108.aspx)  
   

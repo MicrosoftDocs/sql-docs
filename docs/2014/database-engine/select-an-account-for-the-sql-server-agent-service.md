@@ -92,7 +92,7 @@ manager: "jhubbard"
 ### Limitation 1: Using Non-administrative Accounts for Multiserver Administration  
  Enlisting target servers to a master server may fail with the following error message: "The enlist operation failed."  
   
- To resolve this error, restart both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent services. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../2014/database-engine/start-stop-pause-resume-restart-sql-server-services.md).  
+ To resolve this error, restart both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent services. For more information, see [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ### Limitation 2: Using the Local System Account for Multiserver Administration  
  Multiserver administration is supported when the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent service is run under the Local System account only when both the master server and the target server reside on the same computer. If you use this configuration, the following message is returned when you enlist target servers to the master server:  
@@ -124,7 +124,7 @@ manager: "jhubbard"
 >  Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager to specify that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent must start up when the operating system starts.  
   
 ## See Also  
- [Configure Windows Service Accounts and Permissions](../../2014/database-engine/configure-windows-service-accounts-and-permissions.md)   
+ [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](../../2014/database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)   
  [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md)  
   

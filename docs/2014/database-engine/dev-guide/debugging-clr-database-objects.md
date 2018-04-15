@@ -43,7 +43,7 @@ manager: "jhubbard"
   
  For more information and scenarios about debugging managed stored procedures, functions, triggers, user-defined types, and aggregates, see the "[SQL Server CLR Integration Database Debugging](http://go.microsoft.com/fwlink/?LinkId=120378)" topic in the Visual Studio documentation.  
   
- The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../../../2014/database-engine/configure-client-protocols.md).  
+ The TCP/IP network protocol must be enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in order to use Visual Studio for remote development, debugging, and development. For more information about enabling TCP/IP protocol on the server, see [Configure Client Protocols](../configure-windows/configure-client-protocols.md).  
   
 #### To debug a managed database object  
   

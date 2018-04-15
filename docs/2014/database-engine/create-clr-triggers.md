@@ -34,7 +34,7 @@ manager: "jhubbard"
 >  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the `SqlTrigger` attribute. For more information, see [Deploying CLR Database Objects](../../2014/database-engine/dev-guide/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
->  The ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unless the [clr enabled Option](../../2014/database-engine/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+>  The ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unless the [clr enabled Option](configure-windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  **To create, modify, or drop an assembly**  
   

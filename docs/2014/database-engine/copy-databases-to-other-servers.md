@@ -37,7 +37,7 @@ manager: "jhubbard"
      To copy an entire database, you can use the BACKUP and RESTORE [!INCLUDE[tsql](../includes/tsql-md.md)] statements. Typically, restoring a full backup of a database is used to copy the database from one computer to another for a variety of reasons. For information on using backup and restore to copy a database, see [Copy Databases with Backup and Restore](../../2014/database-engine/copy-databases-with-backup-and-restore.md).  
   
     > [!NOTE]  
-    >  To set up a mirror database for database mirroring, you must restore the database onto the mirror server by using RESTORE DATABASE *<database_name>* WITH NORECOVERY. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../2014/database-engine/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+    >  To set up a mirror database for database mirroring, you must restore the database onto the mirror server by using RESTORE DATABASE *<database_name>* WITH NORECOVERY. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Using the Generate Scripts Wizard to publish databases  
   

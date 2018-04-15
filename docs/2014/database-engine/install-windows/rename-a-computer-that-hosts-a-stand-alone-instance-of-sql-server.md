@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   When an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is part of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, the computer renaming process differs from a computer that hosts a stand-alone instance.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support renaming computers that are involved in replication, except when you use log shipping with replication. The secondary computer in log shipping can be renamed if the primary computer is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support renaming computers that are involved in replication, except when you use log shipping with replication. The secondary computer in log shipping can be renamed if the primary computer is permanently lost. For more information, see [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   When you rename a computer that is configured to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might not be available after the computer name change. For more information, see [Rename a Report Server Computer](../../reporting-services/rename-a-report-server-computer.md).  
   

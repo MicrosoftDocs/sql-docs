@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  To change the configuration of a job, use the [sys.sp_cdc_change_job](~/relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) stored procedure.  
   
- For information about database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
+ For information about database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
  Change data capture and transactional replication can coexist in the same database, but population of the change tables is handled differently when both features are enabled. Change data capture and transactional replication always use the same procedure, [sp_replcmds](~/relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md), to read changes from the transaction log. When change data capture is enabled on its own, a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job calls `sp_replcmds`. When both features are enabled on the same database, the Log Reader Agent calls `sp_replcmds`. This agent populates both the change tables and the distribution database tables. For more information, see [Replication Log Reader Agent](../../2014/relational-databases/replication/replication-log-reader-agent.md).  

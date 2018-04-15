@@ -99,7 +99,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [Configure Backup Compression &#40;SQL Server&#41;](../../2014/database-engine/configure-backup-compression-sql-server.md)  
   
--   [View or Configure the backup compression default Server Configuration Option](../../2014/database-engine/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+-   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Preparing for a Controlled Failover  
  Typically, the primary and secondary databases are unsynchronized, because the primary database continues to be updated after its latest backup job. Also, in some cases, recent transaction log backups have not been copied to the secondary server instances, or some copied log backups might still not have been applied to the secondary database. We recommend that you begin by synchronizing all of the secondary databases with the primary database, if possible.  
   
- For information about log shipping jobs, see [About Log Shipping &#40;SQL Server&#41;](../about-log-shipping-sql-server.md).  
+ For information about log shipping jobs, see [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md).  
   
 ## Failing Over  
  To fail over to a secondary database:  
@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## See Also  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)   
  [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tail-Log Backups &#40;SQL Server&#41;](tail-log-backups-sql-server.md)  
+ [Tail-Log Backups &#40;SQL Server&#41;](../tail-log-backups-sql-server.md)  
   
   

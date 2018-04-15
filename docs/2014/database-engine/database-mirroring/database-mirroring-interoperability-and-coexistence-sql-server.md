@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Database Mirroring: Interoperability and Coexistence (SQL Server)
   Database mirroring can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [AlwaysOn Failover Cluster Instances (SQL Server Failover Clustering)](../database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [AlwaysOn Failover Cluster Instances (SQL Server Failover Clustering)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
 -   [Change data capture (and change tracking)](../change-data-capture-and-other-sql-server-features.md)  
   
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   [Full-text catalogs](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Log shipping](../database-mirroring-and-log-shipping-sql-server.md)  
+-   [Log shipping](database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Replication](database-mirroring-and-replication-sql-server.md)  
   

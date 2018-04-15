@@ -30,7 +30,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Though you cannot write data to secondary databases, you can write to read-write databases on the server instance that hosts the secondary replica, including user databases and system databases such as **tempdb**.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../listeners-client-connectivity-application-failover.md#connecttosecondary).  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] also supports the re-routing of read-intent connection requests to a readable secondary replica (*read-only routing*). For information about read-only routing, see [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../listeners-client-connectivity-application-failover.md#ConnectToSecondary).  
   
  
   

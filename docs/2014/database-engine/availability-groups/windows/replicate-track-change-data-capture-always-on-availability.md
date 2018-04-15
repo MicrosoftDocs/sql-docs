@@ -229,7 +229,7 @@ manager: "jhubbard"
   
 -   [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administration &#40;Replication&#41;](../../2014/relational-databases/replication/administration-replication.md)  
+-   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration-replication.md)  
   
  **Change data capture**  
   
@@ -255,7 +255,7 @@ manager: "jhubbard"
  [ AlwaysOn Failover Cluster Instances (SQL Server)](../../always-on-failover-cluster-instances-sql-server.md)   
  [About Change Data Capture &#40;SQL Server&#41;](../../about-change-data-capture-sql-server.md)   
  [About Change Tracking &#40;SQL Server&#41;](../../about-change-tracking-sql-server.md)   
- [SQL Server Replication](../../2014/relational-databases/replication/sql-server-replication.md)   
+ [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)   
  [Track Data Changes &#40;SQL Server&#41;](../../track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   

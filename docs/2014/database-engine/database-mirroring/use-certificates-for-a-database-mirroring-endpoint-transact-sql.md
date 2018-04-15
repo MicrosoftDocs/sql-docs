@@ -59,7 +59,7 @@ manager: "jhubbard"
  For more information, see [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
 ## Security  
- Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections. For more information, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../the-database-mirroring-endpoint-sql-server.md).  
+ Unless you can guarantee that your network is secure, we recommend that you use encryption for database mirroring connections. For more information, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
   
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
@@ -68,6 +68,6 @@ manager: "jhubbard"
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../the-database-mirroring-endpoint-sql-server.md)  
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

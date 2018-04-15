@@ -112,6 +112,6 @@ manager: "jhubbard"
  [Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn Availability Groups: Interoperability (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server Replication](../../install-windows/sql-server-replication.md)  
+ [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  
   
   

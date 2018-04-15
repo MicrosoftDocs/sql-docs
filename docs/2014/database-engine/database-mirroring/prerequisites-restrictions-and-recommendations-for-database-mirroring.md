@@ -75,7 +75,7 @@ manager: "jhubbard"
   
 -   On a 32-bit system, database mirroring can support a maximum of about 10 databases per server instance because of the numbers of worker threads that are consumed by each database mirroring session.  
   
--   Database mirroring is not supported with either cross-database transactions or distributed transactions. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+-   Database mirroring is not supported with either cross-database transactions or distributed transactions. For more information, see [Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
 
   

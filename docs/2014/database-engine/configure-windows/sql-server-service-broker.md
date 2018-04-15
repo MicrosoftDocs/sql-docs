@@ -35,9 +35,7 @@ manager: "jhubbard"
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   
--   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../dev-guide/statements.md) for CREATE, ALTER, and DROP statements  
-  
--   [Service Broker Statements](../dev-guide/statements.md)  
+-   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](~/odbc/reference/develop-app/ddl-statements.md) for CREATE, ALTER, and DROP statements  
   
 -   [Service Broker Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -60,6 +58,6 @@ manager: "jhubbard"
  The [CREATE QUEUE &#40;Transact-SQL&#41;](~/t-sql/statements/create-queue-transact-sql.md) and [ALTER QUEUE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-queue-transact-sql.md) statements now have the ability to enable or disable poison message handling by adding the clause, `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. The catalog view **sys.service_queues** now has the column **is_poison_message_handling_enabled** to indicate whether poison message is enabled or disabled.  
   
 ### AlwaysOn support in Service Broker  
- For more information, see [Service Broker with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
+ For more information, see [Service Broker with AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
   
   

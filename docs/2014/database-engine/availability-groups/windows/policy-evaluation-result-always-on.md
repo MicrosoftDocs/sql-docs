@@ -29,8 +29,8 @@ manager: "jhubbard"
   
 |Icon|Severity|  
 |----------|--------------|  
-|![UI icon: error](../../2014/relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|Critical|  
-|![UI icon: warning](../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|Warning|  
+|![UI icon: error](../../../relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|Critical|  
+|![UI icon: warning](../../../relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|Warning|  
   
  **Description**  
  This grid displays a brief description of the selected issue.  

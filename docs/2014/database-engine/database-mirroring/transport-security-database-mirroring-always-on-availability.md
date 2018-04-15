@@ -25,7 +25,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Transport Security for Database Mirroring and AlwaysOn Availability Groups (SQL Server)
-  Transport security involves authentication and, optionally, encryption of messages exchanged between the databases. For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the database mirroring endpoint. For an introduction to database mirroring endpoints, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../the-database-mirroring-endpoint-sql-server.md).  
+  Transport security involves authentication and, optionally, encryption of messages exchanged between the databases. For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the database mirroring endpoint. For an introduction to database mirroring endpoints, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
   
 
   
@@ -94,10 +94,10 @@ manager: "jhubbard"
  [DROP ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/drop-endpoint-transact-sql.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md)   
- [The Database Mirroring Endpoint &#40;SQL Server&#41;](../the-database-mirroring-endpoint-sql-server.md)   
+ [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

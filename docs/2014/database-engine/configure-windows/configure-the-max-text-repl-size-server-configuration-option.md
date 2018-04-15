@@ -86,7 +86,7 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   
+ [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

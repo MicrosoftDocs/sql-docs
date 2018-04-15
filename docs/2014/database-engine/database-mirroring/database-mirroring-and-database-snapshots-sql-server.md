@@ -27,12 +27,12 @@ manager: "jhubbard"
  A new database snapshot is almost empty, but it grows over time as more and more database pages are updated for the first time. Because every snapshot on a database grows incrementally in this way, each database snapshot consumes as much resources as a normal database. Depending on the configurations of the mirror server and principal server, having an excessive number of database snapshots on a mirror database might decrease performance on the principal database. Therefore, we recommend that you keep only a few relatively recent snapshots on your mirror databases. Typically, after you create a replacement snapshot, you should redirect incoming queries to the new snapshot and drop the earlier snapshot after any current queries complete.  
   
 > [!NOTE]  
->  For more information about database snapshots, see [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md).  
+>  For more information about database snapshots, see [Database Snapshots &#40;SQL Server&#41;](../database-snapshots-sql-server.md).  
   
  If role switching occurs, the database and its snapshots are restarted, temporarily disconnecting users. Afterwards, the database snapshots remain on the server instance where they were created, which has become the new principal database. Users can continue to use the snapshots after the failover. However, this places an additional load on the new principal server. If performance is a concern in your environment, we recommend that you create a snapshot on the new mirror database when it becomes available, redirect clients to the new snapshot, and drop all of the database snapshots from the former mirror database.  
   
 > [!NOTE]  
->  For a dedicated reporting solution that scales out well, consider replication. For more information, see [SQL Server Replication](../install-windows/sql-server-replication.md).  
+>  For a dedicated reporting solution that scales out well, consider replication. For more information, see [SQL Server Replication](../install-windows/install-sql-server-replication.md).  
   
 ## Example  
  This example creates snapshots on a mirrored database.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
 
   
 ## See Also  
- [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
- [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](../connect-clients-to-a-database-mirroring-session-sql-server.md)  
+ [Database Snapshots &#40;SQL Server&#41;](../database-snapshots-sql-server.md)   
+ [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

@@ -126,9 +126,9 @@ manager: "jhubbard"
 ##  <a name="Interoperability"></a> Interoperability  
  Log shipping can be used with the following features or components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Prerequisites for Migrating from Log Shipping to AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [Database Mirroring and Log Shipping &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [Database Mirroring and Log Shipping &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Log Shipping and Replication &#40;SQL Server&#41;](/log-shipping-and-replication-sql-server.md)  
   
@@ -141,9 +141,9 @@ manager: "jhubbard"
   
 -   [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md)  
   
--   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [Add a Secondary Database to a Log Shipping Configuration &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [Remove a Secondary Database from a Log Shipping Configuration &#40;SQL Server&#41;](/remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
+-   [Remove a Secondary Database from a Log Shipping Configuration &#40;SQL Server&#41;](remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md)  
   
 -   [Remove Log Shipping &#40;SQL Server&#41;](/remove-log-shipping-sql-server.md)  
   
@@ -151,13 +151,13 @@ manager: "jhubbard"
   
 -   [Monitor Log Shipping &#40;Transact-SQL&#41;](/monitor-log-shipping-transact-sql.md)  
   
--   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## See Also  
- [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

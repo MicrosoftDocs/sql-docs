@@ -61,6 +61,6 @@ manager: "jhubbard"
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;deleted](availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [Troubleshoot AlwaysOn Availability Groups Configuration &#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

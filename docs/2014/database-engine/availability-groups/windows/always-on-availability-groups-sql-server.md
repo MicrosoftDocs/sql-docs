@@ -130,7 +130,7 @@ manager: "jhubbard"
   
 -   [Remote Blob Store (RBS)](../../remote-blob-store-rbs-sql-server.md)  
   
--   [Replication](../../install-windows/sql-server-replication.md)  
+-   [Replication](../../install-windows/install-sql-server-replication.md)  
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   

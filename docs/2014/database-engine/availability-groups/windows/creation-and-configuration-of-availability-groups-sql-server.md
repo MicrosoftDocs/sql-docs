@@ -65,7 +65,7 @@ manager: "jhubbard"
   
 -   [Configure Backup on Availability Replicas &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   

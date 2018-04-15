@@ -144,7 +144,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Click to update the **Status** box.  
   
 ## Remarks  
- If you are unfamiliar with database mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md).  
+ If you are unfamiliar with database mirroring, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
   
 ### Adding a Witness to an Existing Session  
  You can add a witness to an existing session or replace an existing witness. If you know the server network address of the witness, you can enter it into the **Witness** field manually. If you do not know the server network address of the witness, use Configure Database Mirroring Security Wizard to configure the witness. After the address is in the field, make sure that the **High-safety with automatic failover (synchronous)** option is selected.  
@@ -183,8 +183,8 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Database Mirroring &#40;SQL Server&#41;](../../2014/database-engine/database-mirroring-sql-server.md)   
- [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [Removing Database Mirroring &#40;SQL Server&#41;](database-mirroring/removing-database-mirroring-sql-server.md)   
  [Database Mirroring Witness](database-mirroring/database-mirroring-witness.md)  
   

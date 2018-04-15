@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   You cannot mirror the **master**, **msdb**, **temp**, or **model** system databases.  
   
--   You cannot mirror a database that belongs to an [AlwaysOn Availability Groups (SQL Server)](availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   You cannot mirror a database that belongs to an [AlwaysOn Availability Groups (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   

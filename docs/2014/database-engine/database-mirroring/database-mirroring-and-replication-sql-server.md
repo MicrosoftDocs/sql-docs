@@ -63,7 +63,7 @@ manager: "jhubbard"
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='mergepublish', @value=true;  
         ```  
   
-         For more information about creating publications, see [Publish Data and Database Objects](../../2014/relational-databases/replication/publish-data-and-database-objects.md).  
+         For more information about creating publications, see [Publish Data and Database Objects](../../relational-databases/replication/publish-data-and-database-objects.md).  
   
 2.  Configure database mirroring. For more information, see [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) and [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
@@ -91,9 +91,9 @@ manager: "jhubbard"
   
      Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Parameters can be specified in agent profiles and from the command prompt. For more information, see:  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
   
      We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
     exec sp_add_agent_parameter @profile_id = 6, @parameter_name = N'-PublisherFailoverPartner', @parameter_value = N'<Failover Partner Name>';  
     ```  
   
-5.  Add the principal and mirror to Replication Monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../2014/relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
+5.  Add the principal and mirror to Replication Monitor. For more information, see [Add and Remove Publishers from Replication Monitor](../../relational-databases/replication/add-and-remove-publishers-from-replication-monitor.md).  
   
 ## Maintaining a Mirrored Publication Database  
  Maintaining a mirrored publication database is essentially the same as maintaining a non-mirrored database, with the following considerations:  
@@ -159,7 +159,7 @@ manager: "jhubbard"
 |High-safety mode without automatic failover|All committed transactions are guaranteed to be hardened to disk on the mirror. The Log Reader Agent replicates only those transactions that are hardened on the mirror. If the mirror is unavailable, the principal disallows further activity in the database; therefore the Log Reader Agent has no transactions to replicate.|  
   
 ## See Also  
- [Replication Features and Tasks](../../2014/relational-databases/replication/replication-features-and-tasks.md)   
+ [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
  [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

@@ -70,7 +70,7 @@ manager: "jhubbard"
   
  **Additional Resources:**  
   
--   [Manage Report Data Sources](../../2014/reporting-services/manage-report-data-sources.md)  
+-   [Manage Report Data Sources](../../../reporting-services/manage-report-data-sources.md)  
   
 -   For more information on the available connection string properties, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   **Secondary Replicas:** Create one or more secondary replicas. The common approach to copying the databases from the primary replica to the secondary replica(s) is to restore the databases to each secondary replica using ‘RESTORE WITH NORECOVERY’. For more information on creating secondary replicas and verifying data synchronization is working, see [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
--   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
 -   Update the database connection to use the Lister DNS Name. for native mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
   

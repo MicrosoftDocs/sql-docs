@@ -19,7 +19,7 @@ The key value proposition of Machine Learning Services is the power of its propr
 There are two options for using machine learning capabilities in SQL Server: 
 
 + [**SQL Server Machine Learning Services (In-Database)**](r/sql-server-r-services.md) operates within the database engine instance, where the calculation engine is fully integrated with the database engine. Most installations are this option.
-+ [**SQL Server Machine Learning Server (Standalone)**](r/r-server-standalone.md) is a non-SQL installation. Although you use SQL Server Setup to install the server, it is completely decoupled from SQL Server. Functionally, it is equivalent to the non-SQL [Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**SQL Server Machine Learning Server (Standalone)**](r/r-server-standalone.md) is Machine Learning Server for Windows that runs independently of the database engine. Although you use SQL Server Setup to install the server, the feature is not instance-aware. Functionally, it is equivalent to the non-SQL-Server [Microsoft Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## R and Python packages
 

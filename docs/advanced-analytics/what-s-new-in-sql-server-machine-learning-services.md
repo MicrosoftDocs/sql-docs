@@ -1,9 +1,10 @@
 ---
-title: "What&#39;s new in SQL Server Machine Learning Services | Microsoft Docs"
+title: What's new in SQL Server Machine Learning Services | Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/15/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -22,6 +23,7 @@ This release adds several top-requested features for machine learning operations
 |---------|------|----------------|
 | CTP 2.0 | May 2018 | Failover cluster support. You can install SQL Server 2018 Machine Learning Services (In-Database) on a Windows failover cluster to meet your requirements for redundancy and uptime in the event your primary server fails over. SQL Server Setup provides a workflow for install features in a failover cluster, and SQL Server Machine Learning Services (In-Database) is now included in that workflow. |
 | CTP 2.0 | May 2018 | [Process data at the partition level](r/create-models-per-partition.md) using new parameters added to [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Individual models are generated for each partition. |
+| CTP 2.0 | May 2018 | Linux platform support for SQL Server vNext Machine Learning Services (In-Database) with R integration. Python parity is projected for an upcoming CTP release. |
 
 ## New in SQL Server 2017
 

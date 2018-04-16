@@ -1,19 +1,14 @@
 ---
-title: "Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs"
-ms.date: "03/15/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
+title: Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
   
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
-ms.workload: "On Demand"
+ms.date: 05/15/2018
+ms.topic: conceptual
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +16,7 @@ ms.workload: "On Demand"
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 
 + Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes. To get version information, run `@@VERSION` in a query from SQL Server Management Studio.
-+ Upgrade to the most current release or service release as soon as possible, to resolve any issues that were fixed in recent releases.
++ Upgrade to the most current release or service release as soon as possible to resolve any issues that were fixed in recent releases.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
@@ -31,13 +26,10 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-<<<<<<< HEAD
 - Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server vNext does provide failover support if you would like to evaluate this capablity in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
-=======
->>>>>>> c840cfbbe865d969e116c96c1b6b3caa881b25cd
 - Side-by-side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
 
 - Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] tree.

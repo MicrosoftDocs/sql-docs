@@ -1,27 +1,22 @@
 ---
-title: "Create, train, and score partition-based models (SQL Server Machine Learning Services) | Microsoft Docs"
-ms.custom: "sqlseattle"
-ms.date: "03/08/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
+title: Create partition-based models (SQL Server Machine Learning Services) | Microsoft Docs
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
   
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+ms.date: 05/15/2018
+ms.topic: conceptual
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ---
-# Create, train, and score partition-based models in SQL Server Machine Learning Services
+---
+# Create partition-based models in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssvnext-xxxx-xxxx-xxx.md)]
 
 **(Not for production workloads)**
 
-The most common approach for executing R or Python code on your data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. Periodically, parameters are added to this procedure to make it more useful for R and Python scripting. In this release, SQL Server vNext CTP 1.4 adds new parameters to `sp_execute_external_script` to allow parallel processing of partitions:
+The most common approach for executing R or Python code on your data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. In this CTP release, SQL Server vNext adds new parameters to `sp_execute_external_script` to process partitions in parallel:
 
 + **input_data_1_partition_by_columns**, specifying which columns to partition by
 + **input_data_1_order_by_columns**, specifying which columns to order by
@@ -35,9 +30,7 @@ When the scenario is training, one advantage is that any arbitrary training scri
 
 ## R Example
  
-This example uses the NYCTaxi data set, stored in five partitions, resulting in five individual models. 
-
-For more information about the data set, see (LINK)
+This example uses the [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) public data set. Data is stored in five partitions, resulting in five individual models. 
  
 INSERT TRAINING SCRIPT HERE
  

@@ -2,7 +2,7 @@
 title: "SQLGetInfo (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo (Cursor Library)

@@ -2,7 +2,7 @@
 title: "updateNClob Method (java.lang.String, java.io.Reader, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateNClob Method (java.lang.String, java.io.Reader, long)

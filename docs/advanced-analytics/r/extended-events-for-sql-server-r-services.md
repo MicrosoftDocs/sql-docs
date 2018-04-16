@@ -1,22 +1,13 @@
 ---
-title: "Extended Events for SQL Server Machine Learning Services | Microsoft Docs"
-ms.custom: 
-ms.date: "12/21/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 13
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Extended events for SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Extended events for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

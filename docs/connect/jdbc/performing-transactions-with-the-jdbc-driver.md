@@ -2,7 +2,7 @@
 title: "Performing Transactions with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Performing Transactions with the JDBC Driver

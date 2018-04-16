@@ -2,7 +2,7 @@
 title: "Lesson 2: Create a SQL Server credential using a shared access signature | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "tutorial"

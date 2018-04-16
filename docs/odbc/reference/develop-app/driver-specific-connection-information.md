@@ -2,7 +2,7 @@
 title: "Driver-Specific Connection Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,7 +24,7 @@ ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver-Specific Connection Information

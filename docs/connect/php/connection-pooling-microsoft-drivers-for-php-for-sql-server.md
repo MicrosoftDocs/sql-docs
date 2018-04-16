@@ -2,7 +2,7 @@
 title: "Connection Pooling (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,7 +18,7 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connection Pooling (Microsoft Drivers for PHP for SQL Server)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Transparent data encryption for Azure SQL Database and Data Warehouse | Microsoft Docs"
 description: "An overview of transparent data encryption for SQL Database and Data Warehouse. The document covers its benefits and the options for configuration, which includes service-managed transparent data encryption and Bring Your Own Key."
 keywords:
@@ -14,14 +14,15 @@ ms.component: "security"
 ms.custom: 
 ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: "na"
+
 ms.topic: "article"
-ms.date: "08/07/2017"
+ms.date: "04/10/2018"
 ms.author: "rebeccaz"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Transparent data encryption for SQL Database and Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Transparent data encryption helps protect Azure SQL Database and Azure Data Warehouse against the threat of malicious activity. It performs real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
 

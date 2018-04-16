@@ -1,8 +1,8 @@
----
+﻿---
 title: "date (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "7/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|data-types"
@@ -29,6 +29,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

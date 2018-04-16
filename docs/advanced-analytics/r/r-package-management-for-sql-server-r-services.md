@@ -1,25 +1,15 @@
 ---
-title: "Installing and managing machine learning packages in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/19/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: 7
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+title: Install and manage machine learning packages in SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Installing and managing machine learning packages in SQL Server
+# Install and manage machine learning packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how you can install new R or Python packages in SQL Server 2017 and in SQL Server 2016. It also describes limitations on the packages that you can install on SQL Server.

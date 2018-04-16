@@ -1,8 +1,8 @@
----
+﻿---
 title: "sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "dmv's"
@@ -29,6 +29,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -81,11 +82,11 @@ ms.workload: "On Demand"
 |**cores_per_socket** |**int** | **Applies to: Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Specifies the number of processors per socket available on the system. |  
 |**numa_node_count** |**int** | **Applies to: Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Specifies the number of numa nodes available on the system. This column includes physical numa nodes as well as soft numa nodes. |  
   
-## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires `VIEW SERVER STATE` permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+## Permissions
+
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

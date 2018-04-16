@@ -1,24 +1,18 @@
 ---
-title: "Introducing revoscalepy | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
+title: Introducing revoscalepy Python package in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Introducing revoscalepy
+# Introducing revoscalepy in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**revoscalepy** is a new library provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python.
+**revoscalepy** is a new Python library provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python developers.
 
 It is based on the **RevoScaleR** package for R, which was provided in Microsoft R Server and SQL Server R Services, and aims to provide the same functionality:
 

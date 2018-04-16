@@ -23,7 +23,7 @@ ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Managing Passwords (SybaseToSQL)

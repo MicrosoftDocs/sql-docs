@@ -5,7 +5,7 @@ ms.date: "01/19/2018"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,10 +16,13 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Connecting using Azure Active Directory Authentication
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 This article provides information on how to develop Java applications to use the Azure Active Directory authentication feature with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
 
 You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL DB. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
@@ -209,16 +212,15 @@ The example below contains a simple Java application that connects to Azure SQL 
 1.	Create an application account in Azure Active Directory for your service.
 	1. Sign in to the Azure management portal
 	2. Click on Azure Active Directory in the left hand navigation
-	3. Click the directory tenant where you wish to register the sample application. This must be the same directory that is associated with your database (the server hosting your database).
-	4. Click the Applications tab.
-	5. In the drawer, click Add.
-	6. Click "Add an application my organization is developing".
-	7. Enter mytokentest as a friendly name for the application, select "Web Application and/or Web API", and click next.
-	8. Assuming this application is a daemon/service and not a web application, it doesn't have a sign-in URL or app ID URI. For these two fields, enter http://mytokentest
-	9. While still in the Azure portal, click the Configure tab of your application
-	10. Find the Client ID value and copy it aside, you need this later when configuring your application (for example, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). See the following snapshot.
-	11. Under section “Keys”, select the duration of the key, save the configuration, and copy the key for later use. This is the client Secret.
-	12. On the bottom, click on “view endpoints”, and copy the URL under “OAUTH 2.0 AUTHORIZATION ENDPOINT” for later use. This is the STS URL.
+	3. Click the "App registrations" tab.
+	4. In the drawer, click "New application registration".
+	5. Enter mytokentest as a friendly name for the application, select "Web App/API".
+	6. We do not need SIGN-ON URL. Just provide anything: "http://mytokentest".
+	7. Click "Create" at the bottom.
+	9. While still in the Azure portal, click the "Settings" tab of your application, and open the "Properties" tab.
+	10. Find the "Application ID" (AKA Client ID) value and copy it aside, you need this later when configuring your application (for example, 1846943b-ad04-4808-aa13-4702d908b5c1). See the following snapshot.
+	11. Find the "App ID URL" value and copy it aside, this is the STS URL.
+	12. Under section “Keys”, create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 
 	![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Log on to your Azure SQL Server’s user database as an Azure Active Directory admin and using a T-SQL command
@@ -252,8 +254,8 @@ public class TokenBasedExample {
 
 		// Retrieve the access token from the AD.
 		String spn = "https://database.windows.net/";
-		String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-		String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+		String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+		String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
 		String clientSecret = "..."; // Replace with your client secret.
 
 		AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));

@@ -2,7 +2,7 @@
 title: "setNClob Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: fd972acc-57e5-4971-9744-0e8fca5f05a6
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNClob Method (SQLServerCallableStatement)

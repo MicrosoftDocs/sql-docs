@@ -2,7 +2,7 @@
 title: "Parameter Markers in Procedure Calls | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Parameter Markers in Procedure Calls

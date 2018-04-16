@@ -1,22 +1,13 @@
 ---
-title: "Performance for R Services - results and resources| Microsoft Docs"
-ms.custom: ""
-ms.date: "11/09/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Performance for SQL Server R Services - results and resources| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Performance for R Services: results and resources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

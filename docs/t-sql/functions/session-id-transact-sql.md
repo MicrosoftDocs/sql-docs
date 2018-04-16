@@ -1,8 +1,8 @@
----
+﻿---
 title: "SESSION_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -18,6 +18,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

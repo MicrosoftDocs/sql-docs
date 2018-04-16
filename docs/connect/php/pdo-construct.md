@@ -2,7 +2,7 @@
 title: "PDO::__construct | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDO::__construct

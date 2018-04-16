@@ -2,7 +2,7 @@
 title: "Driver Manager Connection Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,7 +21,7 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Driver Manager Connection Pooling

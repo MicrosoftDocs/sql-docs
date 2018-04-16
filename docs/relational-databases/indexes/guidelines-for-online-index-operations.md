@@ -1,8 +1,8 @@
----
+﻿---
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 07/10/2017
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.reviewer: ""
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
@@ -18,12 +18,13 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.suite: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "indexes"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Guidelines for Online Index Operations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

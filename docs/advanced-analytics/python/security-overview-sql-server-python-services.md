@@ -1,24 +1,15 @@
 ---
-title: "Security overview for Python in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Security overview for Python in SQL Server Machine Learning | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Security overview for Python in SQL Server
+# Security overview for Python in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This topic describes the security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and Python components. Examples of the security process are provided for two common scenarios: running Python in SQL Server using a stored procedure, and running Python with the SQL Server as the remote compute context.

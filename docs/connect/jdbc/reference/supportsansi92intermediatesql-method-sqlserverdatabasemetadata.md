@@ -2,7 +2,7 @@
 title: "supportsANSI92IntermediateSQL Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 4d6e8301-0633-4565-91c6-a80910954461
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsANSI92IntermediateSQL Method (SQLServerDatabaseMetaData)

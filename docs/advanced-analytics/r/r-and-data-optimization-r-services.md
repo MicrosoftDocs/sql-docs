@@ -1,22 +1,13 @@
 ---
-title: "Performance for R Services - data optimization | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Performance for SQL Server R Services - data optimization | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Performance for R Services - data optimization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

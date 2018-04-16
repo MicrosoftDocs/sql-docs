@@ -2,7 +2,7 @@
 title: "CREATE TABLE Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,7 +19,7 @@ ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE TABLE Statement Limitations

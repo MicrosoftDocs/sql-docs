@@ -2,7 +2,7 @@
 title: "Asynchronous Execution (Notification Method) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Asynchronous Execution (Notification Method)

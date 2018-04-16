@@ -1,25 +1,13 @@
 ---
-title: "Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-dev_langs: 
-  - "R"
-  - "SQL"
-ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 8
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+title: Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using R functions with SQL Server data (R in SQL quickstart)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

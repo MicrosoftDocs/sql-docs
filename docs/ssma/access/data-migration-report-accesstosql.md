@@ -19,7 +19,7 @@ ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Data Migration Report (AccessToSQL)

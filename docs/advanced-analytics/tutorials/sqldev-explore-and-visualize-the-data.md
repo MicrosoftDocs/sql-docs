@@ -1,27 +1,13 @@
 ---
-title: "Lesson 3: Explore and visualize the data | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: 11
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Lesson 3 Explore and visualize the data | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Lesson 3: Explore and visualize the data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,23 +1,13 @@
 ---
-title: "Using data from OLAP cubes in R | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs:
- 
-ms.assetid: 8093599c-8307-4237-983b-0908d0f8ab77
-caps.latest.revision: 12
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+title: Using data from OLAP cubes in R (SQL Server Machine Learning) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Using data from OLAP cubes in R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

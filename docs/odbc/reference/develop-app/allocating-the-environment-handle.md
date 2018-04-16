@@ -2,7 +2,7 @@
 title: "Allocating the Environment Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,7 +24,7 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Allocating the Environment Handle

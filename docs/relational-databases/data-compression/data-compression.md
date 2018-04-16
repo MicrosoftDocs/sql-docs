@@ -1,8 +1,8 @@
----
+﻿---
 title: "Data Compression | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "compression"
@@ -30,6 +30,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

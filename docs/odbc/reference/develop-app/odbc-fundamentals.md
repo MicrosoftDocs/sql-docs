@@ -2,7 +2,7 @@
 title: "ODBC Fundamentals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Fundamentals

@@ -2,7 +2,7 @@
 title: "updateBlob Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBlob Method (SQLServerResultSet)

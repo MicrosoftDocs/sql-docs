@@ -1,26 +1,13 @@
 ---
-title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/23/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 21
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Create data features using R and SQL (walkthrough) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Create data features using R and SQL (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

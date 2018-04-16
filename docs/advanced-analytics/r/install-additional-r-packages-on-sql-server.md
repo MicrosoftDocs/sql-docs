@@ -1,20 +1,13 @@
 ---
-title: "Install additional R packages on SQL Server | Microsoft Docs"
-ms.date: "03/05/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 16
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "On Demand"
+title: Install additional R packages on SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 
 # Install additional R packages on SQL Server

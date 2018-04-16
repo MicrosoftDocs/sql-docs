@@ -2,7 +2,7 @@
 title: "Data Source Wizard Screen 1 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Source Wizard Screen 1

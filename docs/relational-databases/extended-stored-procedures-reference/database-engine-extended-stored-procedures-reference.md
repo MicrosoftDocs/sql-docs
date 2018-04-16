@@ -2,7 +2,7 @@
 title: "Extended Stored Procedures Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "extended-stored-procedures"

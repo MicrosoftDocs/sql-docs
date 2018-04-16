@@ -1,25 +1,13 @@
 ---
-title: "End-to-end data science walkthrough for R and SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/22/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
+title: End-to-end data science walkthrough for R and SQL Server | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # End-to-end data science walkthrough for R and SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

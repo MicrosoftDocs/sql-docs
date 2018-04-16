@@ -1,27 +1,13 @@
 ---
-title: "Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "R"
-ms.assetid: 47a42e9a-05a0-4a50-871d-de73253cf070
-caps.latest.revision: 14
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Load data into memory using rxImport (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Load data into memory using rxImport (SQL and R deep dive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

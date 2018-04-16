@@ -2,7 +2,7 @@
 title: "setClob Method (int, java.io.Reader) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setClob Method (int, java.io.Reader)

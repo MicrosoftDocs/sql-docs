@@ -2,7 +2,7 @@
 title: "Database Access Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,7 +22,7 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Database Access Architecture

@@ -1,27 +1,13 @@
 ---
-title: "Lesson 5: Train and save a model using T-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.assetid: 3282e8ed-b515-4ed5-8543-fcef68629a92
-caps.latest.revision: 10
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Lesson 5 Train and save a model using T-SQL | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Lesson 5: Train and save a model using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

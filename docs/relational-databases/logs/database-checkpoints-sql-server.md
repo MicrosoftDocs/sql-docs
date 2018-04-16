@@ -1,7 +1,7 @@
----
+﻿---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
 ms.date: "09/23/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "logs"
@@ -34,6 +34,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Database Checkpoints (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

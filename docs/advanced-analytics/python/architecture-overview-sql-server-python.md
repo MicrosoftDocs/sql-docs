@@ -1,20 +1,13 @@
 ---
-title: "Architecture | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Architecture overview for SQL Server Machine Learning Services with Python | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Architecture overview for Machine Learning Services with Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,27 +1,13 @@
 ---
-title: "Score new data (SQL and R deep dive)| Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "tutorial"
-applies_to: 
-  - "SQL Server 2016"
-  - "SQL Server 2017"
-dev_langs: 
-  - "R"
-ms.assetid: 87056467-f67f-4d72-a83c-ac052736d85d
-caps.latest.revision: 17
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Score new data (SQL and R deep dive)| Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: tutorial
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Score new data (SQL and R deep dive)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

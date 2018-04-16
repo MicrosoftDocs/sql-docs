@@ -1,8 +1,8 @@
----
+﻿---
 title: "Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "system-catalog-views"
@@ -30,6 +30,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # System Catalog Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

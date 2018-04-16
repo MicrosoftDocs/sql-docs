@@ -1,4 +1,4 @@
----
+﻿---
 title: "sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -20,6 +20,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

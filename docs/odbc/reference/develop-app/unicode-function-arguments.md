@@ -2,7 +2,7 @@
 title: "Unicode Function Arguments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,7 +19,7 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Unicode Function Arguments

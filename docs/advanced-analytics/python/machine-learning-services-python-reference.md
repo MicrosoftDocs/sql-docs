@@ -1,28 +1,18 @@
 ---
-title: "Python | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: Python API reference for SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Python
+# Python API reference for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This section contains links to API reference specific to Machine Learning Services in SQL Server 2017.
-
-> [!NOTE]
-> Python support is a new feature in SQL Server 2017 and is in prerelease. Look for more information soon.
 
 **Libraries**
 

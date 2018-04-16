@@ -1,26 +1,15 @@
 ---
-title: "How to Create a Stored Procedure Using sqlrutils | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 10
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
-ms.workload: "Inactive"
+title: How to create a stored procedure using sqlrutils | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Create a Stored Procedure Using sqlrutils
+# Create a stored pProcedure using sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.

@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "BLOBs, fetching"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream

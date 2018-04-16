@@ -16,7 +16,7 @@ ms.assetid: f10d228a-9c63-4b68-abec-c10b26b258a1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerConnectionPoolDataSource Constructors

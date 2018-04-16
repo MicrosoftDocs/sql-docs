@@ -25,7 +25,7 @@ ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeEnv Function

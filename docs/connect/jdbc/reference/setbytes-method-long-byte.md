@@ -21,7 +21,7 @@ ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBytes Method (long, byte)

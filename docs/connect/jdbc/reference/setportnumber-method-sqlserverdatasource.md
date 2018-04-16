@@ -21,7 +21,7 @@ ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setPortNumber Method (SQLServerDataSource)

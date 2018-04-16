@@ -18,7 +18,7 @@ ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET REPROCESS Command

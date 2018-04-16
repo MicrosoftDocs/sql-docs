@@ -21,7 +21,7 @@ ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPacketSize Method (SQLServerDataSource)

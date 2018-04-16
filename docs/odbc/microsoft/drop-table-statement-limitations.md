@@ -19,7 +19,7 @@ ms.assetid: 0a1c80f5-c9f2-4655-9bfd-0131b2f015a9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DROP TABLE Statement Limitations

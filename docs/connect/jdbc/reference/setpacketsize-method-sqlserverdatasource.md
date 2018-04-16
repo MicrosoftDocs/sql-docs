@@ -21,7 +21,7 @@ ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setPacketSize Method (SQLServerDataSource)

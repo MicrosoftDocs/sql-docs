@@ -21,7 +21,7 @@ ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # previous Method (SQLServerResultSet)

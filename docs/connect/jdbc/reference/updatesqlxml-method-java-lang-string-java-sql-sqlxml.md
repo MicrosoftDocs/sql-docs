@@ -16,7 +16,7 @@ ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateSQLXML Method (java.lang.String, java.sql.SQLXML)

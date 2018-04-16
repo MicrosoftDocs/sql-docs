@@ -18,7 +18,7 @@ ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ODBC Jet Error Messages

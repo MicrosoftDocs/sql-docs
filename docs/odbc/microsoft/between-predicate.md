@@ -19,7 +19,7 @@ ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # BETWEEN Predicate

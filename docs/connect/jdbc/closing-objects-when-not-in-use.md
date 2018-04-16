@@ -16,7 +16,7 @@ ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Closing Objects when Not In Use

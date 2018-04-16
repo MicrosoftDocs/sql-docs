@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using Multiple Active Result Sets (MARS)

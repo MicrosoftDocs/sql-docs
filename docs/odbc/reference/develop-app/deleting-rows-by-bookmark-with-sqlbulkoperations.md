@@ -20,7 +20,7 @@ ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Deleting Rows by Bookmark with SQLBulkOperations

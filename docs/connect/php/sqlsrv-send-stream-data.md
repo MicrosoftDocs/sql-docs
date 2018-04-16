@@ -23,7 +23,7 @@ ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_send_stream_data

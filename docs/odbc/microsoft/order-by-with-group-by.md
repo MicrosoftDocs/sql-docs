@@ -21,7 +21,7 @@ ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ORDER BY with GROUP BY

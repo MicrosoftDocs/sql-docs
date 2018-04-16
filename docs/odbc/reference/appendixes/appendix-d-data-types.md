@@ -21,7 +21,7 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Appendix D: Data Types

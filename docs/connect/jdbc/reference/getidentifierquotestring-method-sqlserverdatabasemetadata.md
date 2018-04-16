@@ -21,7 +21,7 @@ ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getIdentifierQuoteString Method (SQLServerDatabaseMetaData)

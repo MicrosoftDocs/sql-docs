@@ -25,7 +25,7 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetConfigMode Function

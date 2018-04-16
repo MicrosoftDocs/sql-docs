@@ -21,7 +21,7 @@ ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getAsciiStream Method (SQLServerCallableStatement)

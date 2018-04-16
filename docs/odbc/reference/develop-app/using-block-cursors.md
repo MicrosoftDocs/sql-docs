@@ -20,7 +20,7 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Block Cursors

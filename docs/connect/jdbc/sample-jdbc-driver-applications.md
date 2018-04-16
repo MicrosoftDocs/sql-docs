@@ -16,7 +16,7 @@ ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Sample JDBC Driver Applications

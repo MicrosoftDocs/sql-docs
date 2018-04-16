@@ -19,7 +19,7 @@ ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Step 2: Initialize the Application

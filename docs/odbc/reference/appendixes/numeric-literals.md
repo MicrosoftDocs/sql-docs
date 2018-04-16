@@ -21,7 +21,7 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Numeric Literals

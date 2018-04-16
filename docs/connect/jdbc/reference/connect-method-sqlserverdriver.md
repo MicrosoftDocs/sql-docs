@@ -21,7 +21,7 @@ ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # connect Method (SQLServerDriver)

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2017"
@@ -23,6 +23,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Encrypt a Column of Data
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

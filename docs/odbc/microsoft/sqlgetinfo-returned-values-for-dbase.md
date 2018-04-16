@@ -22,7 +22,7 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo Returned Values for dBASE

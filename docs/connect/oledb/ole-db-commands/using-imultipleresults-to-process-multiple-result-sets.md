@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using IMultipleResults to Process Multiple Result Sets

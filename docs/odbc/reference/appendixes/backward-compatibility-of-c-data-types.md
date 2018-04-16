@@ -21,7 +21,7 @@ ms.assetid: b1453a65-ae03-4061-b0cf-a8434d8bc40b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Backward Compatibility of C Data Types

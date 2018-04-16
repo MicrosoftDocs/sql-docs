@@ -18,7 +18,7 @@ ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions (Visual FoxPro ODBC Driver)

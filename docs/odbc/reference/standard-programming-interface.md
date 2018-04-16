@@ -22,7 +22,7 @@ ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Standard Programming Interface

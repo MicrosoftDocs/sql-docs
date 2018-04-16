@@ -19,7 +19,7 @@ ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTables (Paradox Driver)

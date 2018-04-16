@@ -19,7 +19,7 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Scrollable Cursors

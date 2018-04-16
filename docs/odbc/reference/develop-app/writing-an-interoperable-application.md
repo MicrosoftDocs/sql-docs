@@ -21,7 +21,7 @@ ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Writing an Interoperable Application

@@ -19,7 +19,7 @@ ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLTransact (Text File Driver)

@@ -21,7 +21,7 @@ ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTransactionIsolation Method (SQLServerConnection)

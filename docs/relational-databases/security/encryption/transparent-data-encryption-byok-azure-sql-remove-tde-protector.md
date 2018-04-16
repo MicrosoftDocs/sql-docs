@@ -1,4 +1,4 @@
----
+﻿---
 title: "PowerShell - Remove a TDE protector - Azure SQL | Microsoft Docs"
 description: "How-to guide for responding to a potentially compromised TDE protector for an Azure SQL Database or Data Warehouse using TDE with Bring YOur Own Key (BYOK) support."
 keywords:
@@ -20,6 +20,7 @@ ms.topic: "article"
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

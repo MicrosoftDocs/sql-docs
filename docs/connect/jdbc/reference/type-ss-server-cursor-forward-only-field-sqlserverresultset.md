@@ -21,7 +21,7 @@ ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # TYPE_SS_SERVER_CURSOR_FORWARD_ONLY Field (SQLServerResultSet)

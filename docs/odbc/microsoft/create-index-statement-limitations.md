@@ -19,7 +19,7 @@ ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CREATE INDEX Statement Limitations

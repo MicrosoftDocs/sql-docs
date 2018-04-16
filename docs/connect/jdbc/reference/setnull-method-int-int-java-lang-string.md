@@ -21,7 +21,7 @@ ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNull Method (int, int, java.lang.String)

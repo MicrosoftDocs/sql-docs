@@ -16,7 +16,7 @@ ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISQLServerStatement Interface

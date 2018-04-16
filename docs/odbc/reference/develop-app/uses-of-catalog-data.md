@@ -20,7 +20,7 @@ ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Uses of Catalog Data

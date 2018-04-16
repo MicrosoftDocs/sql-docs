@@ -21,7 +21,7 @@ ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSavepointId Method (SQLServerSavepoint)

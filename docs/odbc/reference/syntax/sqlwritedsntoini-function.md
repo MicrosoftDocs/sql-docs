@@ -25,7 +25,7 @@ ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLWriteDSNToIni Function

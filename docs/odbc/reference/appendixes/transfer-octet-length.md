@@ -21,7 +21,7 @@ ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transfer Octet Length

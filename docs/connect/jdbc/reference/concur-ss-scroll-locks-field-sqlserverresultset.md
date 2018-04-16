@@ -21,7 +21,7 @@ ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)

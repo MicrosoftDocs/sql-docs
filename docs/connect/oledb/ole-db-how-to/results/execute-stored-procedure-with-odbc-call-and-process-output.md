@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "ODBC CALL syntax"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output

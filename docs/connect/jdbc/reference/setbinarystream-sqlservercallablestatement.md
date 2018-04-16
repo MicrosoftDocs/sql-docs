@@ -16,7 +16,7 @@ ms.assetid: 24866ea9-804a-442f-94e2-475c11dd8b9f
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBinaryStream (SQLServerCallableStatement)

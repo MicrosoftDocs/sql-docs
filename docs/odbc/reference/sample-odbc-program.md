@@ -16,7 +16,7 @@ ms.assetid: 38ae6b7f-f53b-48a7-8fe5-4bbd6e0e414b
 caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Sample ODBC Program

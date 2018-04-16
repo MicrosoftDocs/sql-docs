@@ -22,7 +22,7 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # sqlsrv_num_fields

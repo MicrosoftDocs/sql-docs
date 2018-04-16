@@ -22,7 +22,7 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Implementing SQLGetDiagRec and SQLGetDiagField

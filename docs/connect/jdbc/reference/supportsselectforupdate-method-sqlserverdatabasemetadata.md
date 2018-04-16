@@ -21,7 +21,7 @@ ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSelectForUpdate Method (SQLServerDatabaseMetaData)

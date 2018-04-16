@@ -21,7 +21,7 @@ ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateFloat Method (int, float)

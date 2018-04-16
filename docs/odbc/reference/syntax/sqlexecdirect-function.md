@@ -25,7 +25,7 @@ ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # SQLExecDirect Function

@@ -16,7 +16,7 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCharacterStream Method (long, long)

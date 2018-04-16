@@ -21,7 +21,7 @@ ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMaxColumnsInIndex Method (SQLServerDatabaseMetaData)

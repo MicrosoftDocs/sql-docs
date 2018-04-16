@@ -21,7 +21,7 @@ ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBlob Method (SQLServerPreparedStatement)

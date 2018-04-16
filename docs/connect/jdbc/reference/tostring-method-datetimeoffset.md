@@ -16,7 +16,7 @@ ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # toString Method (DateTimeOffset)

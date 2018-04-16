@@ -21,7 +21,7 @@ ms.assetid: ce4ec01f-87a0-4787-81d4-a4bf490d1331
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateDouble Method (SQLServerResultSet)

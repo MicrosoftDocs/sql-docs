@@ -19,7 +19,7 @@ ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # AND Predicate Limitations

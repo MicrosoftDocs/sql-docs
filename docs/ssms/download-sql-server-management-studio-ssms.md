@@ -156,13 +156,9 @@ There is currently a known issue where SSMS 17.6 crashes when configuring the sc
 
 ## Feedback
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## See Also
 
@@ -170,3 +166,5 @@ There is currently a known issue where SSMS 17.6 crashes when configuring the sc
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
 - [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

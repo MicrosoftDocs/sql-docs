@@ -20,7 +20,7 @@ ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support

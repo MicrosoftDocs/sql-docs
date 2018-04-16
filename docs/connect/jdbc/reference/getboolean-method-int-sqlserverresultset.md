@@ -21,7 +21,7 @@ ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getBoolean Method (int) (SQLServerResultSet)

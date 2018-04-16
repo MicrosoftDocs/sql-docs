@@ -21,7 +21,7 @@ ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # rollback Method (SQLServerXAResource)

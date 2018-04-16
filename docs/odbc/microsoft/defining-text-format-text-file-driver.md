@@ -19,7 +19,7 @@ ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Defining Text Format (Text File Driver)

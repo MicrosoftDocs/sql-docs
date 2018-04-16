@@ -21,7 +21,7 @@ ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setLong Method (SQLServerPreparedStatement)

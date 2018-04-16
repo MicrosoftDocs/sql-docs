@@ -21,7 +21,7 @@ ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsDifferentTableCorrelationNames Method (SQLServerDatabaseMetaData)

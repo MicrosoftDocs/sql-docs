@@ -19,7 +19,7 @@ ms.assetid: c59cbda3-e214-4399-9edc-cfac86b378d7
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Executing Catalog Functions

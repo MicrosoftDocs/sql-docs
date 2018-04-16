@@ -21,7 +21,7 @@ ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTime Method (int)

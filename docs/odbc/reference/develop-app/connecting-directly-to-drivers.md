@@ -21,7 +21,7 @@ ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting Directly to Drivers

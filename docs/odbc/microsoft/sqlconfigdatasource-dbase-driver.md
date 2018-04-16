@@ -19,7 +19,7 @@ ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLConfigDataSource (dBASE Driver)

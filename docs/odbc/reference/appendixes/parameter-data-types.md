@@ -21,7 +21,7 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Parameter Data Types

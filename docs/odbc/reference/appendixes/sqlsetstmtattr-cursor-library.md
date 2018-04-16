@@ -18,7 +18,7 @@ ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetStmtAttr (Cursor Library)

@@ -26,7 +26,7 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Prompting the User for Connection Information

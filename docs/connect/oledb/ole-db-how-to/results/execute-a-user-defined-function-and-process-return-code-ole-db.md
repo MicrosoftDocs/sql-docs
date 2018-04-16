@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "user-defined functions [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)

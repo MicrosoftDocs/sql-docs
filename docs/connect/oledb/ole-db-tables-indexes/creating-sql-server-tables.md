@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "CreateTable function"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Creating SQL Server Tables

@@ -16,7 +16,7 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::closeCursor

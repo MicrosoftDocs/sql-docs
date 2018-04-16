@@ -21,7 +21,7 @@ ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getExportedKeys Method (SQLServerDatabaseMetaData)

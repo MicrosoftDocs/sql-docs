@@ -18,7 +18,7 @@ ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DELETE TAG Command

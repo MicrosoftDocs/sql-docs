@@ -16,7 +16,7 @@ ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQL Data Types in ODBC

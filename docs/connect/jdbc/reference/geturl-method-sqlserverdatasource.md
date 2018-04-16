@@ -21,7 +21,7 @@ ms.assetid: dd0d5d2c-91fe-4b0f-a162-69d898ba176e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getURL Method (SQLServerDataSource)

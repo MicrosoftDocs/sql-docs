@@ -16,7 +16,7 @@ ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getHoldability Method (SQLServerResultSet)

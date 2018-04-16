@@ -21,7 +21,7 @@ ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # othersDeletesAreVisible Method (SQLServerDatabaseMetaData)

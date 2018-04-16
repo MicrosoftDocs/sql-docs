@@ -21,7 +21,7 @@ ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL: Year-Month Intervals

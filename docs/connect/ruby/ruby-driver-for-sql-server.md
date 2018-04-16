@@ -16,7 +16,7 @@ ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Ruby Driver for SQL Server

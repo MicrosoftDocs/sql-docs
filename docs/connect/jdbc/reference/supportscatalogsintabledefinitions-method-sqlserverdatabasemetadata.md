@@ -21,7 +21,7 @@ ms.assetid: 1e1e50ac-f3d4-416a-8a69-d8b7b4f30bf3
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsCatalogsInTableDefinitions Method (SQLServerDatabaseMetaData)

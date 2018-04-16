@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, sessions"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Session Properties - OLE DB Driver for SQL Server

@@ -16,7 +16,7 @@ ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Handling Complex Statements

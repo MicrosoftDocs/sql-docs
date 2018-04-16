@@ -18,7 +18,7 @@ ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLAllocEnv (Visual FoxPro ODBC Driver)

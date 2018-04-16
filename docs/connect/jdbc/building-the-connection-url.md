@@ -16,7 +16,7 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 caps.latest.revision: 53
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Building the Connection URL

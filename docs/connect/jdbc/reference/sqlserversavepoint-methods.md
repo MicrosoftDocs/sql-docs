@@ -16,7 +16,7 @@ ms.assetid: a245c0c3-d4a2-4fc6-8adc-0c91091716eb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerSavepoint Methods

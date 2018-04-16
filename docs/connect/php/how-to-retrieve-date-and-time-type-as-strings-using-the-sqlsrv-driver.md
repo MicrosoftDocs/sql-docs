@@ -18,7 +18,7 @@ ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver

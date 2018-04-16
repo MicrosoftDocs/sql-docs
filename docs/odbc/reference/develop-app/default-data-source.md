@@ -27,7 +27,7 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Default Data Source

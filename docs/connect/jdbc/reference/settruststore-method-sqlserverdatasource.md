@@ -21,7 +21,7 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setTrustStore Method (SQLServerDataSource)

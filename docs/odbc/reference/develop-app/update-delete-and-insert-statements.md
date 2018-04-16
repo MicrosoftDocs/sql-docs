@@ -22,7 +22,7 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # UPDATE, DELETE, and INSERT Statements

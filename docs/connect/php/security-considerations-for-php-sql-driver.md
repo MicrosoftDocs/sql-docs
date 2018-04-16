@@ -18,7 +18,7 @@ ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 caps.latest.revision: 37
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Security Considerations for the Microsoft Drivers for PHP for SQL Server

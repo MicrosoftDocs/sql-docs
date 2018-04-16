@@ -21,7 +21,7 @@ ms.assetid: a98d159b-1fae-482a-9465-5411ce60f901
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getArray Method (java.lang.String) (SQLServerResultSet)

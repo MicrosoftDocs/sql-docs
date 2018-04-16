@@ -16,7 +16,7 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # JDBC 4.1 Compliance for the JDBC Driver

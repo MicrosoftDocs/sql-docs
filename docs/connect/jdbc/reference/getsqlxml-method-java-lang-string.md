@@ -16,7 +16,7 @@ ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSQLXML Method (java.lang.String)

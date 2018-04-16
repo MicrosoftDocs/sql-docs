@@ -16,7 +16,7 @@ ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using an SQL Statement with No Parameters

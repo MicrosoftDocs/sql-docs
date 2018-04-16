@@ -21,7 +21,7 @@ ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getXAConnection Method ()

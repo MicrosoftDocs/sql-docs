@@ -16,7 +16,7 @@ ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (java.lang.String, long) (SQLServerNClob)

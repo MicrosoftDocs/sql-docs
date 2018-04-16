@@ -16,7 +16,7 @@ ms.assetid: 9a36885f-83f3-44af-85f0-2b849dfd20d4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResultSetMetaData Class

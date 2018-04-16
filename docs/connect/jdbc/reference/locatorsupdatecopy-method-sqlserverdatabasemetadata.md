@@ -21,7 +21,7 @@ ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # locatorsUpdateCopy Method (SQLServerDatabaseMetaData)

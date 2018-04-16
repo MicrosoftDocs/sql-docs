@@ -25,7 +25,7 @@ ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLInstallTranslator Function

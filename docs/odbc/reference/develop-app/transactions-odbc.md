@@ -19,7 +19,7 @@ ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transactions ODBC

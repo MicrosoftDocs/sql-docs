@@ -18,7 +18,7 @@ ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLStatistics (Visual FoxPro ODBC Driver)

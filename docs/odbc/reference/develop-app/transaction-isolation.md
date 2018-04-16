@@ -19,7 +19,7 @@ ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transaction Isolation

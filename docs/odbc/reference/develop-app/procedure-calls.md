@@ -19,7 +19,7 @@ ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Procedure Calls

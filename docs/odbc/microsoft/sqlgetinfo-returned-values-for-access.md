@@ -22,7 +22,7 @@ ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo Returned Values for Access

@@ -21,7 +21,7 @@ ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getDate Method (java.lang.String)

@@ -21,7 +21,7 @@ ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getReference Method (SQLServerDataSource)

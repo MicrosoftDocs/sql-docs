@@ -21,7 +21,7 @@ ms.assetid: 19d60b8b-7e01-4d7b-afa9-f0705d634cf9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getInt Method (SQLServerCallableStatement)

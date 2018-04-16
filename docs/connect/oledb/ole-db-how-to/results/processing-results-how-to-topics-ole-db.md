@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB, processing results"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Processing Results How-to Topics (OLE DB)

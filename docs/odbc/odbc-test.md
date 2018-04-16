@@ -24,7 +24,7 @@ ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC Test

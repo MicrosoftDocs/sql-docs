@@ -18,7 +18,7 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetFunctions (Visual FoxPro ODBC Driver)

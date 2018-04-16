@@ -19,7 +19,7 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBindParam Mapping

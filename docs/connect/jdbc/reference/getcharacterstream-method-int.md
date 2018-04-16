@@ -21,7 +21,7 @@ ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getCharacterStream Method (int)

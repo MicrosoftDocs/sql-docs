@@ -16,7 +16,7 @@ ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNClob Method (int, java.io.Reader, long)

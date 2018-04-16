@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB, how-to topics"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # OLE DB How-to Topics

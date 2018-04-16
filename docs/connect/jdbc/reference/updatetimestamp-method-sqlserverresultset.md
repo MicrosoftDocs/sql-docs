@@ -21,7 +21,7 @@ ms.assetid: f81f7ba0-7d75-4b42-861c-be00c0032335
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateTimestamp Method (SQLServerResultSet)

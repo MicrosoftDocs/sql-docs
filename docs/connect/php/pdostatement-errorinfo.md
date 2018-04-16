@@ -16,7 +16,7 @@ ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::errorInfo

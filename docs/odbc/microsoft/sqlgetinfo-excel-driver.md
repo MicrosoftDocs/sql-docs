@@ -19,7 +19,7 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetInfo (Excel Driver)

@@ -19,7 +19,7 @@ ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Return Codes ODBC

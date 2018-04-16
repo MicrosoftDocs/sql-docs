@@ -21,7 +21,7 @@ ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsOrderByUnrelated Method (SQLServerDatabaseMetaData)

@@ -20,7 +20,7 @@ ms.assetid: ea347635-fbe3-41c1-b537-4048b7c0f7da
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Comparing Bookmarks

@@ -20,7 +20,7 @@ ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Thread-Safety Notes on API Functions (ODBC Driver for Oracle)

@@ -21,7 +21,7 @@ ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # jdbcCompliant Method (SQLServerDriver)

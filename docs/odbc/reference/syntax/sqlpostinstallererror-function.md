@@ -25,7 +25,7 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLPostInstallerError Function

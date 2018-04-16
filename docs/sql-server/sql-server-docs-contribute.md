@@ -1,4 +1,4 @@
----
+﻿---
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "04/12/2018"
 ms.prod: "sql-non-specified"
@@ -15,6 +15,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # How to contribute to SQL Server Documentation

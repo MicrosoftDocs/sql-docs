@@ -18,7 +18,7 @@ ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Handle Errors and Warnings Using the SQLSRV Driver

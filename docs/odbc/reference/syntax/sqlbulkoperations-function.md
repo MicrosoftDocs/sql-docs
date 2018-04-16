@@ -25,7 +25,7 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLBulkOperations Function

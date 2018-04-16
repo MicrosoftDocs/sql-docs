@@ -19,7 +19,7 @@ ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Binding Result Set Columns

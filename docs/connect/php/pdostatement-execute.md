@@ -16,7 +16,7 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::execute

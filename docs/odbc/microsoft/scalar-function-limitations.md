@@ -19,7 +19,7 @@ ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Scalar Function Limitations

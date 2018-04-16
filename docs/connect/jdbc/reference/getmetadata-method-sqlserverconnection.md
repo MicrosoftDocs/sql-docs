@@ -21,7 +21,7 @@ ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getMetaData Method (SQLServerConnection)

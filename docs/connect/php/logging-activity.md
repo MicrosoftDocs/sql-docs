@@ -18,7 +18,7 @@ ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 caps.latest.revision: 32
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Logging Activity

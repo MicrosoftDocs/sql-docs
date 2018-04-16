@@ -25,7 +25,7 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLFreeStmt Function

@@ -23,7 +23,7 @@ ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Updating Rows by Bookmark with SQLBulkOperations

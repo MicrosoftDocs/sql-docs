@@ -21,7 +21,7 @@ ms.assetid: 2a134217-276a-4d0e-8a75-4e1bf300c946
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setDate Method (SQLServerCallableStatement)

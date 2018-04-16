@@ -20,7 +20,7 @@ ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Statement Options

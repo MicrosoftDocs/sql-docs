@@ -19,7 +19,7 @@ ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # String Limitations

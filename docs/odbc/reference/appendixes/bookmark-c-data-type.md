@@ -22,7 +22,7 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Bookmark C Data Type

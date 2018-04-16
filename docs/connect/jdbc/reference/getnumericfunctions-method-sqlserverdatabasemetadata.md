@@ -21,7 +21,7 @@ ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getNumericFunctions Method (SQLServerDatabaseMetaData)

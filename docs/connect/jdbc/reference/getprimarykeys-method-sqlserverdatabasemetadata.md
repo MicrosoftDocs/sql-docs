@@ -21,7 +21,7 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getPrimaryKeys Method (SQLServerDatabaseMetaData)

@@ -21,7 +21,7 @@ ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Scrolling and Fetching Rows (ODBC)

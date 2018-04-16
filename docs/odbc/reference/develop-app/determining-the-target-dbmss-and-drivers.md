@@ -19,7 +19,7 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Determining the Target DBMSs and Drivers

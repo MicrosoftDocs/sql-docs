@@ -21,7 +21,7 @@ ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # prepare Method (SQLServerXAResource)

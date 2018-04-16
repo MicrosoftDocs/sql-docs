@@ -16,7 +16,7 @@ ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setPoolable Method (SQLServerStatement)

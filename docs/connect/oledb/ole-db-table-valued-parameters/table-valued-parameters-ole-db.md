@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB)"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameters (OLE DB)

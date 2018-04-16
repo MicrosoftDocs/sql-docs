@@ -22,7 +22,7 @@ ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Text File Data Types

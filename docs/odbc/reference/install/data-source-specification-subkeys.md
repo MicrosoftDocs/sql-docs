@@ -20,7 +20,7 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Data Source Specification Subkeys

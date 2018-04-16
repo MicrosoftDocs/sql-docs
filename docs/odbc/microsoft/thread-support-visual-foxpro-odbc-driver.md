@@ -21,7 +21,7 @@ ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Thread Support (Visual FoxPro ODBC Driver)

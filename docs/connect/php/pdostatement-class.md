@@ -16,7 +16,7 @@ ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement Class

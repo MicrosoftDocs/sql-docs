@@ -21,7 +21,7 @@ ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getAsciiStream Method (SQLServerResultSet)

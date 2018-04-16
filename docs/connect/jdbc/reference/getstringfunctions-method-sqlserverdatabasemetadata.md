@@ -21,7 +21,7 @@ ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getStringFunctions Method (SQLServerDatabaseMetaData)

@@ -21,7 +21,7 @@ ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getRef Method (int) (SQLServerResultSet)

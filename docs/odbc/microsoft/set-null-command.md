@@ -18,7 +18,7 @@ ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET NULL Command

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -22,6 +22,7 @@ ms.author: "sstein"
 manager: "craigg"
 
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 #Installing SMO

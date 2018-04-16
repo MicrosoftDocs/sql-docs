@@ -20,7 +20,7 @@ ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Bookmarks

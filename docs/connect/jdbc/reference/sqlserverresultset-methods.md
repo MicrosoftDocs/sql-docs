@@ -16,7 +16,7 @@ ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLServerResultSet Methods

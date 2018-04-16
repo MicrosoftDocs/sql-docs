@@ -1,4 +1,4 @@
----
+﻿---
 title: "Subscription, Distributor to Subscriber History (Transactional Subscription) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -20,6 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Subscription, Distributor to Subscriber History (Transactional Subscription)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -109,7 +109,7 @@ The following table describes the columns in the result set.
 ## Remarks  
 DBCC SHRINKFILE applies to the files in the current database. For more information about how to change the current database, see [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
-DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained.
+DBCC SHRINKFILE operations can be stopped at any point in the process, and any completed work is retained. If the EMPTYFILE parameter is used on a file and the operation is cancelled, the file will not be marked to prevent additional data from being added.
   
 When a DBCC SHRINKFILE operation fails, an error is raised.
   

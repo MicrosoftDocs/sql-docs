@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "table-valued parameters, executing commands containing"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Executing Commands Containing Table-Valued Parameters

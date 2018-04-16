@@ -19,7 +19,7 @@ ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Administration Program

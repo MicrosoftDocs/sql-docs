@@ -20,7 +20,7 @@ ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Pattern Value Arguments

@@ -19,7 +19,7 @@ ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CALL Statement Limitations

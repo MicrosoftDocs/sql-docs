@@ -16,7 +16,7 @@ ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc

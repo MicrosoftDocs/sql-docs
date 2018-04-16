@@ -21,7 +21,7 @@ ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsDataManipulationTransactionsOnly Method (SQLServerDatabaseMetaData)

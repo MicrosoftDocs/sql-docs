@@ -21,7 +21,7 @@ ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # rollback Method ()

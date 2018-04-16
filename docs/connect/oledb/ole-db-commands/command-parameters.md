@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "commands [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Command Parameters

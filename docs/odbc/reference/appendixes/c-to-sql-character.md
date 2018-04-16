@@ -20,7 +20,7 @@ ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # C to SQL: Character

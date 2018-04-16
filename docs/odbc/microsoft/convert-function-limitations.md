@@ -19,7 +19,7 @@ ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CONVERT Function Limitations

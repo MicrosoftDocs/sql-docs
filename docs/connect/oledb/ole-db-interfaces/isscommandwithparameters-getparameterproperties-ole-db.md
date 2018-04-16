@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "GetParameterProperties method"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)

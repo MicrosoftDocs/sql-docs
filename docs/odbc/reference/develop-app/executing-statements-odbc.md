@@ -16,7 +16,7 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Executing Statements ODBC

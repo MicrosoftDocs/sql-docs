@@ -21,7 +21,7 @@ ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsMultipleOpenResults Method (SQLServerDatabaseMetaData)

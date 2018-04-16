@@ -18,7 +18,7 @@ ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Network Example

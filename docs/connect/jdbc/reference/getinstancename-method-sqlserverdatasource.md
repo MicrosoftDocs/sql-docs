@@ -21,7 +21,7 @@ ms.assetid: 3749776b-69b8-4f57-a192-568705200ca6
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getInstanceName Method (SQLServerDataSource)

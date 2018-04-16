@@ -21,7 +21,7 @@ ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateArray Method (java.lang.String, java.sql.Array)

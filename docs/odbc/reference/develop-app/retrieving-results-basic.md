@@ -20,7 +20,7 @@ ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Retrieving Results (Basic)

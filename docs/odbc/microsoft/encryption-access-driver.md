@@ -19,7 +19,7 @@ ms.assetid: d868becd-8d3d-4285-863b-d1d0fcb04b88
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Encryption (Access Driver)

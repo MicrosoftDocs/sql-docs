@@ -19,7 +19,7 @@ ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Closing the Cursor

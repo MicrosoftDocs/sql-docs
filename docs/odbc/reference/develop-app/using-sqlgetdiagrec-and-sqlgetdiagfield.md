@@ -22,7 +22,7 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using SQLGetDiagRec and SQLGetDiagField

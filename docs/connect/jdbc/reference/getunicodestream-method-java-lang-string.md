@@ -21,7 +21,7 @@ ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getUnicodeStream Method (java.lang.String)

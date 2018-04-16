@@ -18,7 +18,7 @@ ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Considering Database Features to Use

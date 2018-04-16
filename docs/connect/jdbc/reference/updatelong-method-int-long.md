@@ -21,7 +21,7 @@ ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateLong Method (int, long)

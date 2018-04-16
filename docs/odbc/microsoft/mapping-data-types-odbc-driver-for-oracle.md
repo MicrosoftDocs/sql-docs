@@ -20,7 +20,7 @@ ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Mapping Data Types (ODBC Driver for Oracle)

@@ -20,7 +20,7 @@ ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Descriptor Fields

@@ -19,7 +19,7 @@ ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo (Access Driver)

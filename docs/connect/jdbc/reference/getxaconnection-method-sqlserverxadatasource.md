@@ -21,7 +21,7 @@ ms.assetid: cb1d53c9-27f1-4880-8f1d-c32df0d2fb27
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getXAConnection Method (SQLServerXADataSource)

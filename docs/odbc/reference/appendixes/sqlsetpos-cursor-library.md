@@ -18,7 +18,7 @@ ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLSetPos (Cursor Library)

@@ -25,7 +25,7 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SQLRemoveDriverManager Function

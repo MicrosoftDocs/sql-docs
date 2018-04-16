@@ -1,4 +1,4 @@
----
+﻿---
 title: "Display and Save Execution Plans | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/21/2017"
@@ -25,6 +25,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Display and Save Execution Plans
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

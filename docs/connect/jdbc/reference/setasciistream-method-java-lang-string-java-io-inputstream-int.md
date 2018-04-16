@@ -21,7 +21,7 @@ ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAsciiStream Method  (java.lang.String, java.io.InputStream, int)

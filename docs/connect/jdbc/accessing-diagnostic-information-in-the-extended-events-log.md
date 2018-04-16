@@ -16,7 +16,7 @@ ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Accessing Diagnostic Information in the Extended Events Log

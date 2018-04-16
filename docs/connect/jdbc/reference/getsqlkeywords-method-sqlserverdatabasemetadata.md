@@ -21,7 +21,7 @@ ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getSQLKeywords Method (SQLServerDatabaseMetaData)

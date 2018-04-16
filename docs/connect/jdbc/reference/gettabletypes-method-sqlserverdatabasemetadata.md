@@ -21,7 +21,7 @@ ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTableTypes Method (SQLServerDatabaseMetaData)

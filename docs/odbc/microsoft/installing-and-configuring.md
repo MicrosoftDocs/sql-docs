@@ -23,7 +23,7 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Installing and Configuring

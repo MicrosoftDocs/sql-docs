@@ -21,7 +21,7 @@ ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateRef Method (int, java.sql.Ref)

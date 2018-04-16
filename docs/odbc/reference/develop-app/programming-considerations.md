@@ -16,7 +16,7 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Programming Considerations

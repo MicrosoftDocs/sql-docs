@@ -19,7 +19,7 @@ ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Bookmarks (ODBC)

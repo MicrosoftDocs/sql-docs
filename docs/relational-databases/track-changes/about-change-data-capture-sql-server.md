@@ -108,6 +108,29 @@ ms.workload: "Active"
  Both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs were designed to be flexible enough and sufficiently configurable to meet the basic needs of change data capture environments. In both cases, however, the underlying stored procedures that provide the core functionality have been exposed so that further customization is possible.  
   
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
+ 
+## Attention
+Attention
+Please be attention when you have different collations between the database and the column of the table configured for CDC. As with many other data capturing or data transfer technologies, CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations different from the database collation, and non-ASCII characters (like double byte DBCS characters)are persisted in such columns, because the interim storage variables can not have collations associated with them, CDC may not able to persist the changed data consistent with the data in the base tables. 
+Please consider the following approaches to ensure change captured data are consistent with base table:
+
+1)Using NCHAR or NVARCHAR data type for columns containing non-ASCII data; or
+2)Using the same collation for columns and for database.
+
+For example, if you have one database which collation is  SQL_Latin1_General_CP1_CI_AS and you have a table below:
+
+CREATE TABLE T1( 
+     C1     INT PRIMARY KEY, 
+     C2  VARCHAR(10) collate Chinese_PRC_CI_AI --The VARHCAR data type may cause issue in CDC because the collation is different from the collation of the dataase
+   )
+
+CDC may fail to capture the binary data for column C2 above since its collation is different. Please use NVARCHAR to avoid this problem:
+
+CREATE TABLE T1( 
+     C1     INT PRIMARY KEY, 
+     C2  NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type
+   )
+   
   
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

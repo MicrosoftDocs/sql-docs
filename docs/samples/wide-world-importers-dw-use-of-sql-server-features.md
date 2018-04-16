@@ -18,6 +18,7 @@ ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "Inactive"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

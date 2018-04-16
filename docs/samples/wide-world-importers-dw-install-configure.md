@@ -18,6 +18,7 @@ ms.author: "barbkess"
 manager: "craigg"
 robots: noindex,nofollow
 ms.workload: "On Demand"
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # WideWorldImportersDW Installation and configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

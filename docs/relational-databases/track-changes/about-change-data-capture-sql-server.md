@@ -109,29 +109,32 @@ ms.workload: "Active"
   
  Change data capture cannot function properly when the Database Engine service or the SQL Server Agent service is running under the NETWORK SERVICE account. This can result in error 22832.  
  
-## Attention
-Attention
-Please be attention when you have different collations between the database and the column of the table configured for CDC. As with many other data capturing or data transfer technologies, CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations different from the database collation, and non-ASCII characters (like double byte DBCS characters)are persisted in such columns, because the interim storage variables can not have collations associated with them, CDC may not able to persist the changed data consistent with the data in the base tables. 
-Please consider the following approaches to ensure change captured data are consistent with base table:
+## Working with database and table collation differences
 
-1)Using NCHAR or NVARCHAR data type for columns containing non-ASCII data; or
-2)Using the same collation for columns and for database.
+It is important to be aware of a situation where you have different collations between the database and the columns of a table configured for change data capture. CDC uses interim storage to populate side tables. If a table has CHAR or VARCHAR columns with collations that are different from the database collation and if those columns store non-ASCII characters (such as double byte DBCS characters), CDC might not be able to persist the changed data consistent with the data in the base tables. This is due to the fact that the interim storage variables cannot have collations associated with them.
 
-For example, if you have one database which collation is  SQL_Latin1_General_CP1_CI_AS and you have a table below:
+Please consider one of the following approaches to ensure change captured data is consistent with base tables:
 
+- Use NCHAR or NVARCHAR data type for columns containing non-ASCII data.
+
+- Or, Use the same collation for columns and for the database.
+
+For example, if you have one database that uses a collation of  SQL_Latin1_General_CP1_CI_AS, consider the following table:
+
+```tsql
 CREATE TABLE T1( 
-     C1     INT PRIMARY KEY, 
-     C2  VARCHAR(10) collate Chinese_PRC_CI_AI --The VARHCAR data type may cause issue in CDC because the collation is different from the collation of the dataase
-   )
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-CDC may fail to capture the binary data for column C2 above since its collation is different. Please use NVARCHAR to avoid this problem:
+CDC might fail to capture the binary data for column C2, because its collation is different (Chinese_PRC_CI_AI). Use NVARCHAR to avoid this problem:
 
+```tsql
 CREATE TABLE T1( 
-     C1     INT PRIMARY KEY, 
-     C2  NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type
-   )
-   
-  
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

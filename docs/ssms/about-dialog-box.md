@@ -23,7 +23,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # About Dialog Box
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
 The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
   
 ## Options  

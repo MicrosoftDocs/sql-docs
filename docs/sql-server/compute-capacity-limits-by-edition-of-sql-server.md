@@ -100,6 +100,7 @@ You might want to disable hyperthreading when the performance for each virtual p
  [Features supported by the editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Maximum capacity specifications for SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [Quickstart installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -1,26 +1,23 @@
 ---
 title: "SQL Server 2016 Release Notes | Microsoft Docs"
 ms.date: "03/14/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.custom: ""
-ms.technology: 
-  - "server-general"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "build notes"
   - "release issues"
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-caps.latest.revision: 276
-author: "craigg-msft"
-ms.author: "craigg"
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.workload: "Active"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2016 Release Notes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

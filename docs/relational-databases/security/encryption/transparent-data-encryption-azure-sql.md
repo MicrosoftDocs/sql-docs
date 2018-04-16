@@ -41,9 +41,9 @@ Microsoft also seamlessly moves and manages the keys as needed for geo-replicati
 > All newly created SQL databases are encrypted by default by using service-managed transparent data encryption. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy aren't encrypted by default.
 >
 
-## Bring Your Own Key (preview)
+## Bring Your Own Key
 
-With Bring Your Own Key (in preview) support, you can take control over your transparent data encryption keys and control who can access them and when. Key Vault, which is the Azure cloud-based external key management system, is the first key management service that transparent data encryption has integrated with Bring Your Own Key support. With Bring Your Own Key support, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key never leaves Key Vault. After the server has permissions to a key vault, the server sends basic key operation requests to it through Key Vault. You set the asymmetric key at the server level, and all databases under that server inherit it.
+With Bring Your Own Key support, you can take control over your transparent data encryption keys and control who can access them and when. Key Vault, which is the Azure cloud-based external key management system, is the first key management service that transparent data encryption has integrated with Bring Your Own Key support. With Bring Your Own Key support, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key never leaves Key Vault. After the server has permissions to a key vault, the server sends basic key operation requests to it through Key Vault. You set the asymmetric key at the server level, and all databases under that server inherit it.
 
 With Bring Your Own Key support, you now can control key management tasks such as key rotations and key vault permissions. You also can delete keys and enable auditing/reporting on all encryption keys. Key Vault provides central key management and uses tightly monitored hardware security modules. Key Vault promotes separation of management of keys and data to help meet regulatory compliance. To learn more about Key Vault, see the [Key Vault documentation page](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 

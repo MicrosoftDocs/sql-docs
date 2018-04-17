@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Hierarchy object [ADO MD], members"
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f

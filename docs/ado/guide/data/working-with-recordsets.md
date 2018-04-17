@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset object [ADO]"
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea

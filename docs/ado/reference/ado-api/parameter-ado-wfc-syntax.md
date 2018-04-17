@@ -11,7 +11,7 @@ ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Parameter collection [ADO], ADO/WFC syntax"

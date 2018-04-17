@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, using with ADO MD"
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875

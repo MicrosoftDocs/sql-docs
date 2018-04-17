@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Schema section [ADO]"
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18

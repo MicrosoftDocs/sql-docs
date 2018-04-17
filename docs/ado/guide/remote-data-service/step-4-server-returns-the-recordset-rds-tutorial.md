@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO], server returns Recordset"
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905

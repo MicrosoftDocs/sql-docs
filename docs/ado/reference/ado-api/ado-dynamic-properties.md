@@ -14,7 +14,7 @@ ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dynamic properties [ADO]"
   - "properties [ADO], dynamic"

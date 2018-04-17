@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO], overview"
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c

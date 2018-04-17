@@ -11,7 +11,7 @@ ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS samples [ADO]"
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00

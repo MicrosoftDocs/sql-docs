@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DataFactory configuration in RDS [ADO]"
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8

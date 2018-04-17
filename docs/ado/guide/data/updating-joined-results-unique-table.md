@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating JOINed results (Unique Table)"
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2

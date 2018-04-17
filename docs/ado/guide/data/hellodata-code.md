@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HelloData sample application [ADO], sample code"
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb

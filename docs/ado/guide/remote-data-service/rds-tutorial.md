@@ -11,7 +11,7 @@ ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO]"
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2

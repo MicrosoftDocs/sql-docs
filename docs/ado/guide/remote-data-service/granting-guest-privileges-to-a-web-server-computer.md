@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "guest privileges in RDS [ADO]"
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63

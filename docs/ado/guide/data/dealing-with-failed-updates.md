@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updates [ADO], dealing with failed updates"
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075

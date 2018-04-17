@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset dynamic properties in XML [ADO]"
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c

@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Dimensions collection [ADO MD], members"
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706

@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TempDB space in RDS [ADO]"
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06

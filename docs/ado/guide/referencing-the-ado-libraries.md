@@ -10,7 +10,7 @@ ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
 ms.technology: "drivers"
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "libraries [ADO]"
   - "referencing libraries [ADO]"

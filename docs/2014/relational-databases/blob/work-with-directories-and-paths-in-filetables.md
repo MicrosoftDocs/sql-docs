@@ -107,9 +107,9 @@ GO
 -   All access to FILESTREAM or FileTable data through the file system APIs should use VNNs instead of computer names. For more information, see [FILESTREAM and FileTable with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ## See Also  
- [Enable the Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
- [Create, Alter, and Drop FileTables](../relational-databases/blob/create-alter-and-drop-filetables.md)   
- [Access FileTables with Transact-SQL](../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
+ [Enable the Prerequisites for FileTable](enable-the-prerequisites-for-filetable.md)   
+ [Create, Alter, and Drop FileTables](create-alter-and-drop-filetables.md)   
+ [Access FileTables with Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Access FileTables with File Input-Output APIs](access-filetables-with-file-input-output-apis.md)  
   
   

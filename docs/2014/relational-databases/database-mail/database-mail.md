@@ -116,15 +116,15 @@ manager: "jhubbard"
   
 ##  <a name="RelatedContent"></a> Database Mail Component Topics  
   
--   [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)  
+-   [Database Mail Configuration Objects](database-mail-configuration-objects.md)  
   
--   [Database Mail Messaging Objects](../relational-databases/database-mail/database-mail-messaging-objects.md)  
+-   [Database Mail Messaging Objects](database-mail-messaging-objects.md)  
   
--   [Database Mail External Program](../relational-databases/database-mail/database-mail-external-program.md)  
+-   [Database Mail External Program](database-mail-external-program.md)  
   
--   [Database Mail Log and Audits](../relational-databases/database-mail/database-mail-log-and-audits.md)  
+-   [Database Mail Log and Audits](database-mail-log-and-audits.md)  
   
--   [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/database-mail.md)  
+-   [Configure SQL Server Agent Mail to Use Database Mail](database-mail.md)  
   
 
   

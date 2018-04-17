@@ -44,6 +44,6 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)   
  [Database Mail Log and Audits](database-mail-log-and-audits.md)   
- [Database Mail](../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](database-mail.md)  
   
   

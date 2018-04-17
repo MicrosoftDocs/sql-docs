@@ -122,7 +122,7 @@ UPDATE PhotoMetadata
  To bulk load files into a FileTable without the overhead of enforcing the system-defined constraints, you can temporarily disable the constraints. For more information, see [Manage FileTables](manage-filetables.md).  
   
 ## See Also  
- [Access FileTables with Transact-SQL](../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
+ [Access FileTables with Transact-SQL](access-filetables-with-transact-sql.md)   
+ [Access FileTables with File Input-Output APIs](access-filetables-with-file-input-output-apis.md)  
   
   

@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ##  <a name="api"></a> Programming APIs  
   
--   [Access FILESTREAM Data with OpenSqlFilestream](../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
 -   [Managed API - SqlFileStream Class](http://go.microsoft.com/fwlink/?LinkId=220875)  
   

@@ -230,7 +230,7 @@ GO
  You can use DBCC CHECKCONSTRAINTS to validate the constraints on a FileTable including system-defined constraints.  
   
 ## See Also  
- [FileTable Compatibility with Other SQL Server Features](../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
- [FileTable DDL, Functions, Stored Procedures, and Views](../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
+ [FileTable Compatibility with Other SQL Server Features](filetable-compatibility-with-other-sql-server-features.md)   
+ [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md)  
   
   

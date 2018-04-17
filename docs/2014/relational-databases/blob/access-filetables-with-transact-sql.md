@@ -69,7 +69,7 @@ manager: "jhubbard"
 ## See Also  
  [Load Files into FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
- [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
+ [Access FileTables with File Input-Output APIs](access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL, Functions, Stored Procedures, and Views](filetable-ddl-functions-stored-procedures-and-views.md)  
   
   

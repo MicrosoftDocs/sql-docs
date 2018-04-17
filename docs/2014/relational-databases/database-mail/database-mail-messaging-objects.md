@@ -33,7 +33,7 @@ manager: "jhubbard"
 |Name|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|`View`|Lists all messages submitted to Database Mail.|  
-|[sysmail_event_log &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|`View`|Lists messages about the behavior of the [Database Mail External Program](../relational-databases/database-mail/database-mail-external-program.md).|  
+|[sysmail_event_log &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|`View`|Lists messages about the behavior of the [Database Mail External Program](database-mail-external-program.md).|  
 |[sysmail_faileditems &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|`View`|Information about messages that Database Mail could not sent.|  
 |[sysmail_mailattachments &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|`View`|Information about attachments to Database Mail messages.|  
 |[sysmail_sentitems &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|`View`|Information about messages that have been sent using Database Mail.|  
@@ -48,7 +48,7 @@ manager: "jhubbard"
 
   
 ## See Also  
- [Database Mail](../relational-databases/database-mail/database-mail.md)   
+ [Database Mail](database-mail.md)   
  [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
   
   

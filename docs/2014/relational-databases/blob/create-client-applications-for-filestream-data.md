@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) returns a token that represents the current transaction of a session. An application uses this token to bind FILESTREAM file system streaming operations to the transaction.  
   
--   The [OpenSqlFilestream API](../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) obtains a Win32 file handle. The application uses the handle to stream the FILESTREAM data, and can then pass the handle to the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If the application calls any other API by using the handle, an ERROR_ACCESS_DENIED error is returned. The application should close the handle by using [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
+-   The [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) obtains a Win32 file handle. The application uses the handle to stream the FILESTREAM data, and can then pass the handle to the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). If the application calls any other API by using the handle, an ERROR_ACCESS_DENIED error is returned. The application should close the handle by using [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428).  
   
  All FILESTREAM data container access is performed in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be executed in the same transaction to maintain consistency between SQL data and FILESTREAM data.  
   
@@ -84,9 +84,9 @@ manager: "jhubbard"
 -   If an application uses Message Block1 (SMB1) protocol, FILESTREAM BLOB data should be read in 60-KB multiples to optimize performance.  
   
 ## See Also  
- [Avoid Conflicts with Database Operations in FILESTREAM Applications](../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
- [Access FILESTREAM Data with OpenSqlFilestream](../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Avoid Conflicts with Database Operations in FILESTREAM Applications](avoid-conflicts-with-database-operations-in-filestream-applications.md)   
+ [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)   
  [Make Partial Updates to FILESTREAM Data](make-partial-updates-to-filestream-data.md)  
   
   

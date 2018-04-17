@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  **View a DAC in a Folder**  
   
--   Unpack the DAC package into a folder by following the instructions in [Unpack a DAC Package](../relational-databases/data-tier-applications/unpack-a-dac-package.md).  
+-   Unpack the DAC package into a folder by following the instructions in [Unpack a DAC Package](unpack-a-dac-package.md).  
   
 -   View the contents of the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts by opening them in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 3.  Select **Cancel** if you do not want to continue with the upgrade.  
   
-4.  For more information on using the wizard, see [Upgrade a Data-tier Application](../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md).  
+4.  For more information on using the wizard, see [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md).  
   
  **View Database Changes by Using PowerShell**  
   
@@ -115,7 +115,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 3.  Select **Cancel** if you do not want to continue with the upgrade.  
   
-4.  For more information on using the wizard, see [Upgrade a Data-tier Application](../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md).  
+4.  For more information on using the wizard, see [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md).  
   
  **Report Upgrade Actions by Using PowerShell**  
   
@@ -169,8 +169,8 @@ $fileStream.Close()
  Alternatively, unpack the DACs into separate folders. You can then use a difference tool, such as the WinDiff utility, to analyze the differences.  
   
 ## See Also  
- [Data-tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Deploy a Data-tier Application](../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [Upgrade a Data-tier Application](../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
+ [Data-tier Applications](data-tier-applications.md)   
+ [Deploy a Data-tier Application](deploy-a-data-tier-application.md)   
+ [Upgrade a Data-tier Application](upgrade-a-data-tier-application.md)  
   
   

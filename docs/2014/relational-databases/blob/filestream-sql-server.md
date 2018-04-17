@@ -149,18 +149,18 @@ manager: "jhubbard"
  Creating memory mapped views (memory mapped I/O) by using a FILESTREAM handle is not supported. If memory mapping is used for FILESTREAM data, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot guarantee consistency and durability of the data or the integrity of the database.  
   
 ##  <a name="reltasks"></a> Related Tasks  
- [Enable and Configure FILESTREAM](../relational-databases/blob/enable-and-configure-filestream.md)  
-  [Create a FILESTREAM-Enabled Database](../relational-databases/blob/create-a-filestream-enabled-database.md)  
-  [Create a Table for Storing FILESTREAM Data](../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
-  [Access FILESTREAM Data with Transact-SQL](../relational-databases/blob/access-filestream-data-with-transact-sql.md)  
-  [Create Client Applications for FILESTREAM Data](../relational-databases/blob/create-client-applications-for-filestream-data.md)  
-  [Access FILESTREAM Data with OpenSqlFilestream](../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+ [Enable and Configure FILESTREAM](enable-and-configure-filestream.md)  
+  [Create a FILESTREAM-Enabled Database](create-a-filestream-enabled-database.md)  
+  [Create a Table for Storing FILESTREAM Data](create-a-table-for-storing-filestream-data.md)  
+  [Access FILESTREAM Data with Transact-SQL](access-filestream-data-with-transact-sql.md)  
+  [Create Client Applications for FILESTREAM Data](create-client-applications-for-filestream-data.md)  
+  [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   [Make Partial Updates to FILESTREAM Data](make-partial-updates-to-filestream-data.md)  
-  [Avoid Conflicts with Database Operations in FILESTREAM Applications](../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+  [Avoid Conflicts with Database Operations in FILESTREAM Applications](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   [Move a FILESTREAM-Enabled Database](move-a-filestream-enabled-database.md)  
   [Set Up FILESTREAM on a Failover Cluster](set-up-filestream-on-a-failover-cluster.md)  
-  [Configure a Firewall for FILESTREAM Access](../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
+  [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)  
   
 ##  <a name="relcontent"></a> Related Content  
- [FILESTREAM Compatibility with Other SQL Server Features](../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
+ [FILESTREAM Compatibility with Other SQL Server Features](filestream-compatibility-with-other-sql-server-features.md)  
   

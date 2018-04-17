@@ -28,10 +28,10 @@ manager: "jhubbard"
   
 |Object|Status|More Information|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)<br /><br /> [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)|Changed|[Enable the Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
-|[ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)|Changed|[Create, Alter, and Drop FileTables](../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
-|[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)|Changed|[Enable the Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
-|[CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)|Changed|[Create, Alter, and Drop FileTables](../relational-databases/blob/create-alter-and-drop-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)<br /><br /> [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)|Changed|[Enable the Prerequisites for FileTable](enable-the-prerequisites-for-filetable.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
+|[ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)|Changed|[Create, Alter, and Drop FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
+|[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)|Changed|[Enable the Prerequisites for FileTable](enable-the-prerequisites-for-filetable.md)|  
+|[CREATE TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/create-table-transact-sql.md)|Changed|[Create, Alter, and Drop FileTables](create-alter-and-drop-filetables.md)|  
 |[RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)<br /><br /> [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)|Changed||  
   
 ##  <a name="func"></a> Functions  
@@ -52,8 +52,8 @@ manager: "jhubbard"
   
 |Object|Status|More Information|  
 |------------|------------|----------------------|  
-|[sys.database_filestream_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**Added**|[Enable the Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
-|[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Added**|[Create, Alter, and Drop FileTables](../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
+|[sys.database_filestream_options &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**Added**|[Enable the Prerequisites for FileTable](enable-the-prerequisites-for-filetable.md)|  
+|[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Added**|[Create, Alter, and Drop FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Manage FileTables](manage-filetables.md)|  
 |[sys.filetables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-filetables-transact-sql.md)|**Added**|[Manage FileTables](manage-filetables.md)|  
 |[sys.tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-tables-transact-sql.md)|Changed|[Manage FileTables](manage-filetables.md)|  
   

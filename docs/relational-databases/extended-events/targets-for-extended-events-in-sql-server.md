@@ -150,7 +150,7 @@ The **event_file** target writes event session output from buffer to a disk file
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
 
-::: moniker range="= azuresqldb-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
 > Azure SQL Database supports the **event_file** target, but only by using a blob in Azure Storage for the output. SQL Database cannot store event output in a file on your local harddrive.

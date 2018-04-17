@@ -1,5 +1,5 @@
 ---
-title:Tempdb database - Parallel Data Warehouse | Microsoft Docs
+title: Tempdb database - Parallel Data Warehouse | Microsoft Docs
 description: Tempdb database in Parallel Data Warehouse.
 author: mzaman1 
 manager: craigg

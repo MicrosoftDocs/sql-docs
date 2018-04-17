@@ -63,5 +63,5 @@ On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.
  
 ## See Also  
 
-For information on Managed Instances, see [SQL Database Managed Instance](sql-database-managed-instance.md).
+For information on Managed Instances, see [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

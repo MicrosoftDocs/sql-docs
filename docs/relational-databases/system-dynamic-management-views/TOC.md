@@ -175,7 +175,7 @@
 ## [sys.dm_db_stats_properties](sys-dm-db-stats-properties-transact-sql.md)  
 ## [sys.dm_sql_referenced_entities](sys-dm-sql-referenced-entities-transact-sql.md)  
 ## [sys.dm_sql_referencing_entities](sys-dm-sql-referencing-entities-transact-sql.md)  
-## [sys.dm_os_job_object](sys-dm-os-job-object.md)
+## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 
 # Query Notifications
 ## [sys.dm_qn_subscriptions](query-notifications-sys-dm-qn-subscriptions.md)  

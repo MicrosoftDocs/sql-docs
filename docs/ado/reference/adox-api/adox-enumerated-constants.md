@@ -1,6 +1,6 @@
 ---
 title: "ADOX Enumerated Constants | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "enumerated constants [ADOX]"
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186

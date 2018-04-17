@@ -24,7 +24,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Inactive"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

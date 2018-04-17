@@ -1,6 +1,6 @@
 ---
 title: "ADO Dynamic Property Index | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.technology:
   - "drivers"
 ms.custom: ""
@@ -8,7 +8,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dynamic properties [ADO], index"
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d

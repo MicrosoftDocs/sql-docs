@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  The following table lists the topics in this section.  
   
- [Requirements for CLR User-Defined Aggregates](../../database-engine/dev-guide/clr-user-defined-aggregates.md)  
+ [Requirements for CLR User-Defined Aggregates](clr-user-defined-aggregates-requirements.md)  
  Provides an overview of the requirements for implementing CLR user-defined aggregate functions.  
   
  [Invoking CLR User-Defined Aggregate Functions](clr-user-defined-aggregate-invoking-functions.md)  

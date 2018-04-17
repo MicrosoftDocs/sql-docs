@@ -114,7 +114,7 @@ manager: "jhubbard"
   
  **To restore backups**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Restore a Differential Database Backup &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   

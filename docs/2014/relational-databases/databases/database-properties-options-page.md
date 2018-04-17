@@ -22,10 +22,10 @@ manager: "jhubbard"
   
 ## Page Header  
  **Collation**  
- Specify the collation of the database by selecting from the list. For more information, see [Set or Change the Database Collation](../relational-databases/collations/set-or-change-the-database-collation.md).  
+ Specify the collation of the database by selecting from the list. For more information, see [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md).  
   
  **Recovery model**  
- Specify one of the following models for recovering the database: **Full**, **Bulk-Logged**, or **Simple**. For more information about recovery models, see [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Specify one of the following models for recovering the database: **Full**, **Bulk-Logged**, or **Simple**. For more information about recovery models, see [Recovery Models &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Compatibility level**  
  Specify the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the database supports. Possible values are  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**, and **SQL Server 2008 (100)**. When a SQL Server 2005 database is upgraded to SQL Server 2014, the compatibility level for that database is changed from 90 to 100.  The 90 compatibility level is not supported in SQL Server 2014. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -91,7 +91,7 @@ manager: "jhubbard"
  Specify the directory name for the FILESTREAM data associated with the selected database.  
   
  **FILESTREAM Non-transacted Access**  
- Specify one of the following options for non-transactional access through the file system to FILESTREAM data stored in FileTables: **OFF**, **READ_ONLY**, or **FULL**. If FILESTREAM is not enabled on the server, this value is set to OFF and is disabled. For more information, see [FileTables &#40;SQL Server&#41;](../relational-databases/blob/filetables-sql-server.md).  
+ Specify one of the following options for non-transactional access through the file system to FILESTREAM data stored in FileTables: **OFF**, **READ_ONLY**, or **FULL**. If FILESTREAM is not enabled on the server, this value is set to OFF and is disabled. For more information, see [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## Miscellaneous  
  **ANSI NULL Default**  
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 ## Recovery  
  **Page Verify**  
- Specify the option used to discover and report incomplete I/O transactions caused by disk I/O errors. Possible values are **None**, **TornPageDetection**, and **Checksum**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+ Specify the option used to discover and report incomplete I/O transactions caused by disk I/O errors. Possible values are **None**, **TornPageDetection**, and **Checksum**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Target Recovery Time (Seconds)**  
  Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../database-engine/database-checkpoints-sql-server.md).  

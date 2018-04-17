@@ -129,7 +129,7 @@ End Sub
 ## See Also  
  [SqlPipe Object](sqlpipe-object.md)   
  [SqlTriggerContext Object](sqltriggercontext-object.md)   
- [CLR Triggers](../../database-engine/clr-triggers.md)   
+ [CLR Triggers](../../database-engine/dev-guide/clr-triggers.md)   
  [SQL Server In-Process Specific Extensions to ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

@@ -28,9 +28,9 @@ manager: "jhubbard"
 > [!NOTE]  
 >  If a read-only database is changed to read/write after a partial backup, there might be read/write secondary filegroups that are not in the partial backup. In this case, if you try to take a differential partial backup, the backup fails. Before you can take a differential partial backup of the database, you must take another partial backup. The new partial backup contains every read/write secondary filegroup and can serve as the base for differential partial backups.  
   
- File backups of read-only filegroups can be combined with partial backups. For information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../database-engine/full-file-backups-sql-server.md).  
+ File backups of read-only filegroups can be combined with partial backups. For information about file backups, see [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md).  
   
- A partial backup can serve as the *differential base* for differential partial backups. For more information, see [Differential Backups &#40;SQL Server&#41;](../../database-engine/differential-backups-sql-server.md).  
+ A partial backup can serve as the *differential base* for differential partial backups. For more information, see [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

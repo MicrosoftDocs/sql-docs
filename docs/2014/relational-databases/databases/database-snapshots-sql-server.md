@@ -125,7 +125,7 @@ manager: "jhubbard"
   
      We recommend that the database synchronization state be SYNCHRONIZING or SYNCHRONIZED when you create a database snapshot. However, database snapshots can be created when the database synchronization state is NOT SYNCHRONIZING.  
   
-     For more information, see [Database Snapshots with AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md).  
+     For more information, see [Database Snapshots with AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md).  
   
 -   To create a database snapshot on a mirror database, the database must be in the SYNCHRONIZED mirroring state.  
   

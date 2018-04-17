@@ -182,10 +182,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 ## See Also  
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Monitoring Database Mirroring &#40;SQL Server&#41;](../database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](../database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
+ [Pausing and Resuming Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
- [Database Mirroring Witness](../database-mirroring/database-mirroring-witness.md)  
+ [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

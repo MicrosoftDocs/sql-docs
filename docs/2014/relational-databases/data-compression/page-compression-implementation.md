@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 3.  Dictionary compression  
   
- When you use page compression, non–leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../relational-databases/data-compression/row-compression-implementation.md).  
+ When you use page compression, non–leaf-level pages of indexes are compressed by using only row compression. For more information about row compression, see [Row Compression Implementation](../data-compression/row-compression-implementation.md).  
   
 ## Prefix Compression  
  For each page that is being compressed, prefix compression uses the following steps:  
@@ -44,18 +44,18 @@ manager: "jhubbard"
   
  The following illustration shows a sample page of a table before prefix compression.  
   
- ![Page before prefix compression](../../media/skt-tblcompression1c.gif "Page before prefix compression")  
+ ![Page before prefix compression](../media/skt-tblcompression1c.gif "Page before prefix compression")  
   
  The following illustration shows the same page after prefix compression. The prefix is moved to the header, and the column values are changed to references to the prefix.  
   
- ![Page after prefix compression](../../media/tblcompression2.gif "Page after prefix compression")  
+ ![Page after prefix compression](../media/tblcompression2.gif "Page after prefix compression")  
   
  In the first column of the first row, the value 4b indicates that the first four characters of the prefix (aaab) are present for that row, and also the character b. This makes the resultant value aaabb, which is the original value.  
   
 ## Dictionary Compression  
  After prefix compression has been completed, dictionary compression is applied. Dictionary compression searches for repeated values anywhere on the page, and stores them in the CI area. Unlike prefix compression, dictionary compression is not restricted to one column. Dictionary compression can replace repeated values that occur anywhere on a page. The following illustration shows the same page after dictionary compression.  
   
- ![Page after dictionary compression](../../media/tblcompression3.gif "Page after dictionary compression")  
+ ![Page after dictionary compression](../media/tblcompression3.gif "Page after dictionary compression")  
   
  Note that the value 4b has been referenced from different columns of the page.  
   

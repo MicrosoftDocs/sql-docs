@@ -81,7 +81,7 @@ manager: "jhubbard"
  Users based on logins in the **master** database can be granted access to a contained database, but that would create a dependency on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Therefore, creating users based on logins see comment for partially contained databases.  
   
 > [!IMPORTANT]  
->  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](../../database-engine/contained-databases.md).  
+>  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
  Database Boundary  
  Because partially contained databases separate the database functionality from those of the instance, there is a clearly defined line between these two elements called the *database boundary*.  

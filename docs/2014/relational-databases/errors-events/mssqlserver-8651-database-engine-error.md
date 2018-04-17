@@ -74,7 +74,7 @@ manager: "jhubbard"
  [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)   
  [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)   
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)   
- [Server Configuration Options &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)   
+ [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SQL Server, Buffer Manager Object](../../database-engine/sql-server-buffer-manager-object.md)   
  [SQL Server, Memory Manager Object](../../database-engine/sql-server-memory-manager-object.md)  
   

@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 -   [Restore Files to a New Location &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-using-ssms.md.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md.md)  
   
  **To restore files and filegroups over existing files**  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
  **To restore a database with a new name**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/database-engine/restore-a-database-backup-using-ssms.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **To restart an interrupted restore operation**  
   

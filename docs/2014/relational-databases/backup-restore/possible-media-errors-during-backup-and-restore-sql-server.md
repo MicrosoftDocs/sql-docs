@@ -32,7 +32,7 @@ manager: "jhubbard"
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gives you the option of recovering a database despite detected errors. An important new error-detection mechanism is the optional creation of a backup checksum that can be created by a backup operation and validated by a restore operation. You can control whether an operation checks for errors and whether the operation stops or continues on encountering an error. If a backup contains a backup checksum, RESTORE and RESTORE VERIFYONLY statements can check for errors.  
   
 > [!NOTE]  
->  Mirrored backups provide up to four copies (mirrors) of a media set, providing alternative copies for recovering from errors caused by damaged media. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../database-engine/mirrored-backup-media-sets-sql-server.md).  
+>  Mirrored backups provide up to four copies (mirrors) of a media set, providing alternative copies for recovering from errors caused by damaged media. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
   
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
- [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../database-engine/mirrored-backup-media-sets-sql-server.md)   
+ [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   

@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)  
   
--   [Enable or Disable Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)  
+-   [Enable or Disable Data Collection](data-collection.md)  
   
 -   [Start or Stop a Collection Set](start-or-stop-a-collection-set.md)  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   [Configure Data Collection Parameters &#40;Transact-SQL&#41;](configure-data-collection-parameters-transact-sql.md)  
   
--   [Enable or Disable Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)  
+-   [Enable or Disable Data Collection](data-collection.md)  
   
 -   [Start or Stop a Collection Set](start-or-stop-a-collection-set.md)  
   
@@ -171,6 +171,6 @@ manager: "jhubbard"
 ## See Also  
  [Execute a Stored Procedure](../../database-engine/execute-a-stored-procedure.md)   
  [Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
- [Data Collection](../../database-engine/data-collection.md)  
+ [Data Collection](data-collection.md)  
   
   

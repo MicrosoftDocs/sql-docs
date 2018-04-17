@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Index object [ADOX], members"
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825

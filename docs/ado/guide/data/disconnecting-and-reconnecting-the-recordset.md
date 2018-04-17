@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset object [ADO], disconnecting and reconnecting"
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e

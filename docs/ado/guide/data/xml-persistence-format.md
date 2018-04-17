@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML persistence [ADO], persistence format"
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead

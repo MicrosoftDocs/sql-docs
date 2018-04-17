@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Fields collection [ADO], members"
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06

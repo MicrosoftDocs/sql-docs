@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Hierarchies collection [ADO MD], members"
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279

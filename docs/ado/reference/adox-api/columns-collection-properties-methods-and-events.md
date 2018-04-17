@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Columns collection [ADOX], members"
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e

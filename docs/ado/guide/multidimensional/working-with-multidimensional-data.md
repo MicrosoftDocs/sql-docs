@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional data [ADO]"
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc

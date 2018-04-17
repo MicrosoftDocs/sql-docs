@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "dcom stream marshaling format in rds [ADO]"
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41

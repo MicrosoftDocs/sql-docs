@@ -10,7 +10,7 @@ ms.service: ""
 ms.component: "ado"
 ms.technology: "drivers"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programmer's guide"
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814

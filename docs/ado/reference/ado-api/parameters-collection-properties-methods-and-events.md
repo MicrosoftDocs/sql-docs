@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Parameters collection [ADO], members"
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06

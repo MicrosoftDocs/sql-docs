@@ -9,7 +9,7 @@ ms.suite: sql
 ms.prod: sql  
 ms.prod_service: drivers
 ms.component: reference
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "SortColumn property [RDS]"

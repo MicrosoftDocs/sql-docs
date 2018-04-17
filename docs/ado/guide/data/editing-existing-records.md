@@ -1,6 +1,6 @@
 ---
 title: "Editing Existing Records | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "editing data [ADO], existing records"
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65

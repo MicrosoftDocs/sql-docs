@@ -45,7 +45,7 @@ ms.workload: "On Demand"
  Enjoy peace of mind as you stretch your most important applications securely to the cloud. SQL Server’s Always Encrypted provides encryption for your data in motion. Row Level Security (RLS) and other advanced SQL Server security features also work with Stretch Database to protect your data.  
   
 ## What does Stretch Database do?  
- After you enable Stretch Database for a SQL Server instance, a database, and select at least one table, Stretch Database silently begins to migrate your cold data to Azure.  
+ After you enable Stretch Database for a SQL Server instance and a database, and select at least one table, Stretch Database silently begins to migrate your cold data to Azure.  
   
 -   If you store cold data in a separate table, you can migrate the entire table.  
   

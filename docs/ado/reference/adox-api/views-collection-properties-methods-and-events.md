@@ -1,6 +1,6 @@
 ---
 title: "Views Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Views collection [ADOX], members"
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27

@@ -24,6 +24,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Overlapping User and Group Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A user's permissions are based on:  
   
 -   Permissions from group memberships.  

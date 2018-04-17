@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ---
 # Reporting Import Flat File failures
 
-The [Import Flat File Wizard](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard/) in SSMS is powered by the Microsoft PROSE SDK, which is a framework for automatic programming or data wrangling from input-output examples. Although the Wizard can convert most Flat File sources, the PROSE team will consider updates to their algorithm based on any failures you experience.
+The [Import Flat File Wizard](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard/) in SSMS is powered by the [Microsoft PROSE SDK](https://microsoft.github.io/prose/), which is a framework for automatic programming or data wrangling from input-output examples. Although the Wizard can convert most Flat File sources, the PROSE team will consider updates to their algorithm based on any failures you experience.
 
 ## Send an email
 
@@ -30,7 +30,7 @@ If you run into an import failure or have a suggestion for feature improvement, 
 
 In this email:
 - Include which version of SSMS you are running (**Help** -> **About**)
-- Attach a snippet/sample of your flat file (**Do not include any Personal identifiable information (PII)**) 
+- Attach a snippet/sample of your flat file, say the first few lines including column names (**Do not include any Personal identifiable information (PII)**) 
 - Brief description of the error you are running into and how you would like it to behave
 
 Sending this sample helps improve the Import Flat File Wizard experience since this information is directly sent to the PROSE team. Thank you for your help.
@@ -39,5 +39,5 @@ Sending this sample helps improve the Import Flat File Wizard experience since t
 
 Learn more about the wizard.
 
-- **Learn more about the Import Flat File Wizard** If you are looking for an overview of the Import Flat File wizard, see [Import Flat File Wizard](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard/).
+- **Learn more about the Import Flat File Wizard.** If you are looking for an overview of the Import Flat File wizard, see [Import Flat File Wizard](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard/).
 - **Learn more about PROSE.** If you are looking for an overview of the intelligent framework used by this wizard, see [PROSE SDK](https://microsoft.github.io/prose/).

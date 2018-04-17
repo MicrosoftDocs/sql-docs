@@ -41,7 +41,7 @@ manager: "jhubbard"
 ## SQL Server Host Policy Level Permission Sets  
  The set of code access security permissions granted to assemblies by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host policy level is determined by the permission set specified when creating the assembly. There are three permission sets: `SAFE`, `EXTERNAL_ACCESS` and `UNSAFE` (specified using the **PERMISSION_SET** option of[CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This policy is not meant for the default application domain that would be in effect when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creates an instance of the CLR.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This policy is not meant for the default application domain that would be in effect when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creates an instance of the CLR.  
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy for system assemblies and user-specified policy for user assemblies.  
   

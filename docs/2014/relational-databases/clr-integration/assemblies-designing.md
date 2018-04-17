@@ -29,7 +29,7 @@ manager: "jhubbard"
 -   Restrictions on assemblies  
   
 ## Packaging Assemblies  
- An assembly can contain functionality for more than one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] routine or type in its classes and methods. Most of the time, it makes sense to package the functionality of routines that perform related functions within the same assembly, especially if these routines share classes whose methods call one another. For example, classes that perform data entry management tasks for common language runtime (CLR) triggers and CLR stored procedures can be packaged in the same assembly. This is because the methods for these classes are more likely to call each other than those of less related tasks.  
+ An assembly can contain functionality for more than one [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] routine or type in its classes and methods. Most of the time, it makes sense to package the functionality of routines that perform related functions within the same assembly, especially if these routines share classes whose methods call one another. For example, classes that perform data entry management tasks for common language runtime (CLR) triggers and CLR stored procedures can be packaged in the same assembly. This is because the methods for these classes are more likely to call each other than those of less related tasks.  
   
  When you are packaging code into assembly, you should consider the following:  
   
@@ -41,22 +41,22 @@ manager: "jhubbard"
  You can control how much an assembly can access resources protected by .NET Code Access Security when it runs managed code. You do this by specifying one of three permission sets when you create or modify an assembly: SAFE, EXTERNAL_ACCESS, or UNSAFE.  
   
 ### SAFE  
- SAFE is the default permission set and it is the most restrictive. Code run by an assembly with SAFE permissions cannot access external system resources such as files, the network, environment variables, or the registry. SAFE code can access data from the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases or perform computations and business logic that do not involve accessing resources outside the local databases.  
+ SAFE is the default permission set and it is the most restrictive. Code run by an assembly with SAFE permissions cannot access external system resources such as files, the network, environment variables, or the registry. SAFE code can access data from the local [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases or perform computations and business logic that do not involve accessing resources outside the local databases.  
   
- Most assemblies perform computation and data management tasks without having to access resources outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, we recommend SAFE as the assembly permission set.  
+ Most assemblies perform computation and data management tasks without having to access resources outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Therefore, we recommend SAFE as the assembly permission set.  
   
 ### EXTERNAL_ACCESS  
- EXTERNAL_ACCESS allows for assemblies to access certain external system resources such as files, networks, Web services, environmental variables, and the registry. Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins with EXTERNAL ACCESS permissions can create EXTERNAL_ACCESS assemblies.  
+ EXTERNAL_ACCESS allows for assemblies to access certain external system resources such as files, networks, Web services, environmental variables, and the registry. Only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins with EXTERNAL ACCESS permissions can create EXTERNAL_ACCESS assemblies.  
   
- SAFE and EXTERNAL_ACCESS assemblies can contain only code that is verifiably type-safe. This means that these assemblies can only access classes through well-defined entry points that are valid for the type definition. Therefore, they cannot arbitrarily access memory buffers not owned by the code. Additionally, they cannot perform operations that might have an adverse effect on the robustness of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  
+ SAFE and EXTERNAL_ACCESS assemblies can contain only code that is verifiably type-safe. This means that these assemblies can only access classes through well-defined entry points that are valid for the type definition. Therefore, they cannot arbitrarily access memory buffers not owned by the code. Additionally, they cannot perform operations that might have an adverse effect on the robustness of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process.  
   
 ### UNSAFE  
- UNSAFE gives assemblies unrestricted access to resources, both within and outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Code that is running from within an UNSAFE assembly can call unmanaged code.  
+ UNSAFE gives assemblies unrestricted access to resources, both within and outside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Code that is running from within an UNSAFE assembly can call unmanaged code.  
   
- Also, specifying UNSAFE allows for the code in the assembly to perform operations that are considered type-unsafe by the CLR verifier. These operations can potentially access memory buffers in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process space in an uncontrolled manner. UNSAFE assemblies can also potentially subvert the security system of either [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or the common language runtime. UNSAFE permissions should be granted only to highly trusted assemblies by experienced developers or administrators. Only members of the **sysadmin** fixed server role can create UNSAFE assemblies.  
+ Also, specifying UNSAFE allows for the code in the assembly to perform operations that are considered type-unsafe by the CLR verifier. These operations can potentially access memory buffers in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process space in an uncontrolled manner. UNSAFE assemblies can also potentially subvert the security system of either [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or the common language runtime. UNSAFE permissions should be granted only to highly trusted assemblies by experienced developers or administrators. Only members of the **sysadmin** fixed server role can create UNSAFE assemblies.  
   
 ## Restrictions on Assemblies  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puts certain restrictions on managed code in assemblies to make sure that they can run in a reliable and scalable manner. This means that certain operations that can compromise the robustness of the server are not permitted in SAFE and EXTERNAL_ACCESS assemblies.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puts certain restrictions on managed code in assemblies to make sure that they can run in a reliable and scalable manner. This means that certain operations that can compromise the robustness of the server are not permitted in SAFE and EXTERNAL_ACCESS assemblies.  
   
 ### Disallowed Custom Attributes  
  Assemblies cannot be annotated with the following custom attributes:  
@@ -82,7 +82,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### Disallowed .NET Framework APIs  
- Any [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API that is annotated with one of the disallowed **HostProtectionAttributes** cannot be called from SAFE and EXTERNAL_ACCESS assemblies.  
+ Any [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API that is annotated with one of the disallowed **HostProtectionAttributes** cannot be called from SAFE and EXTERNAL_ACCESS assemblies.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -97,7 +97,7 @@ eUI
 ```  
   
 ### Supported .NET Framework Assemblies  
- Any assembly that is referenced by your custom assembly must be loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using CREATE ASSEMBLY. The following [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies are already loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and, therefore, can be referenced by custom assemblies without having to use CREATE ASSEMBLY.  
+ Any assembly that is referenced by your custom assembly must be loaded into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using CREATE ASSEMBLY. The following [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] assemblies are already loaded into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and, therefore, can be referenced by custom assemblies without having to use CREATE ASSEMBLY.  
   
 ```  
 custommarshallers.dll  

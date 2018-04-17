@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Manage DQS Databases
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  
   
 ##  <a name="BackupRestore"></a> Backup and Restore the DQS Databases  

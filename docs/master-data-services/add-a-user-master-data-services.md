@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Add a User (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Add a user to the **Users** list in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] to begin the process of assigning permission to the Web application. Before a user in the list can access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], you must give the user permission to one or more functional areas and model objects.  
   
 ## Prerequisites  

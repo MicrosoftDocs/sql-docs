@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Lock a Version (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], lock a version of a model to prevent changes to the model's members and their attributes.  
   
 > [!NOTE]  

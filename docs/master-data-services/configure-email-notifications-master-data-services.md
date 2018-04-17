@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Email Notifications (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Configure notification emails when you want [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] to send email messages automatically.  
   
 ### To configure notifications  

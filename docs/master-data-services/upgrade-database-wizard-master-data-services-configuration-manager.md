@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   
 ## Action  

@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Consolidated Member Staging Table (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Use the consolidated members staging table (stg.name_Consolidated) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete consolidated members. You can also use it to update attribute values for consolidated members.  
   
 ##  <a name="TableColumns"></a> Table Columns  

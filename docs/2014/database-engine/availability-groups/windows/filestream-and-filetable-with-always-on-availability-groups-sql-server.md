@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   
--   Before adding a database that uses FILESTREAM, with or without FileTable, to an availability group, ensure that FILESTREAM is enabled on every server instance that hosts an availability replica for the availability group. For more information, see [Enable and Configure FILESTREAM](../../enable-and-configure-filestream.md).  
+-   Before adding a database that uses FILESTREAM, with or without FileTable, to an availability group, ensure that FILESTREAM is enabled on every server instance that hosts an availability replica for the availability group. For more information, see [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
 ##  <a name="vnn"></a> Using Virtual Network Names (VNNs) for FILESTREAM and FileTable Access  
  When you enable FILESTREAM on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], an instance-level share is created to provide access to the FILESTREAM data. You access this share by using the computer name in the following format:  
@@ -75,9 +75,9 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Enable and Configure FILESTREAM](../../enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
--   [Enable the Prerequisites for FileTable](../../enable-the-prerequisites-for-filetable.md)  
+-   [Enable the Prerequisites for FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
  None.  

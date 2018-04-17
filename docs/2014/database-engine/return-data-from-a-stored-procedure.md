@@ -255,7 +255,7 @@ GO
  [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](~/t-sql/language-elements/print-transact-sql.md)   
  [SET @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-local-variable-transact-sql.md)   
- [Cursors](../../2014/database-engine/cursors.md)   
+ [Cursors](../relational-databases/cursors.md)   
  [RETURN &#40;Transact-SQL&#41;](~/t-sql/language-elements/return-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](~/t-sql/functions/error-transact-sql.md)  
   

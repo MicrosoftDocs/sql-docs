@@ -120,7 +120,7 @@ manager: "jhubbard"
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md)   
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
- [Copy Databases to Other Servers](../../2014/database-engine/copy-databases-to-other-servers.md)   
+ [Copy Databases to Other Servers](../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../2014/database-engine/dev-guide/performing-bulk-load-of-xml-data-sqlxml-4-0.md)   
  [Performing Bulk Copy Operations](../../2014/database-engine/dev-guide/performing-bulk-copy-operations.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   

@@ -68,7 +68,7 @@ manager: "jhubbard"
 7.  (Optional) Start the Distribution Agent. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
   
 ## See Also  
- [Copy Databases with Backup and Restore](../../../2014/database-engine/copy-databases-with-backup-and-restore.md)   
- [Back Up and Restore of SQL Server Databases](../../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)  
+ [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   
+ [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

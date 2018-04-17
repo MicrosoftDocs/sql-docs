@@ -47,8 +47,8 @@ manager: "jhubbard"
 ### Additional Reading  
  Following are some recommended reading to understand the concepts, best practices when using Windows Azure Blob storage service for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups.  
   
-1.  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md)  
+1.  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [SQL Server Backup to URL Best Practices and Troubleshooting](../database-engine/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [SQL Server Backup to URL Best Practices and Troubleshooting](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

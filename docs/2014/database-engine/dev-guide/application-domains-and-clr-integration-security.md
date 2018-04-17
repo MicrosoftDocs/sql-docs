@@ -23,6 +23,6 @@ manager: "jhubbard"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] loads assemblies belonging to the same owner in the same application domain. By virtue of a set of assemblies running in the same application domain, assemblies are able to discover each other at execution time using the.NET Framework reflection application programming interfaces or other means, and can call into them in late-bound fashion. Because such calls are occurring against assemblies belonging to the same owner, there are no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions checked for these calls. The placement scheme of assemblies in application domains is designed primarily to achieve scalability, security, and isolation goals, and can potentially change in future releases. Hence, you should not rely on finding assemblies in the same application domain through late-bound mechanisms.  
   
 ## See Also  
- [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)  
+ [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

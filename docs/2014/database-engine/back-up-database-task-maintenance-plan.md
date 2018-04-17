@@ -89,15 +89,15 @@ manager: "jhubbard"
  Verify that the backup set is complete and that all volumes are readable.  
   
  **Back up the tail of the log, and leave the database in the restoring state**  
- Perform a log backup as the last step before restoring a database. For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../2014/database-engine/tail-log-backups-sql-server.md).  
+ Perform a log backup as the last step before restoring a database. For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  **Set backup compression**  
- In [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or a later version), select one the following [backup compression](../../2014/database-engine/backup-compression-sql-server.md) values:  
+ In [!INCLUDE[ssEnterpriseEd10](../includes/ssenterpriseed10-md.md)] (or a later version), select one the following [backup compression](../relational-databases/backup-restore/backup-compression-sql-server.md) values:  
   
 |||  
 |-|-|  
 |**Use the default server setting**|Click to use the server-level default.<br /><br /> This default is set by the **backup compression default** server-configuration option. For information about how to view the current setting of this option,  see [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../2014/database-engine/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../2014/database-engine/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Compress backup**|Click to compress the backup, regardless of the server-level default.<br /><br /> **\*\* Important \*\*** By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely affect concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by [Resource Governor](../../2014/database-engine/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Do not compress backup**|Click to create an uncompressed backup, regardless of the server-level default.|  
   
  **View T-SQL**  

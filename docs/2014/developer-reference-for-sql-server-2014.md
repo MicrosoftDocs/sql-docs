@@ -21,7 +21,7 @@ manager: "jhubbard"
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)] database.  
   
 ## Programming Reference Sections  
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](http://technet.microsoft.com/library/ms191274.aspx)  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Database Engine Extended Stored Procedure Programming](../2014/database-engine/dev-guide/database-engine-extended-stored-procedure-programming.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Database Engine Extended Stored Procedure Programming](relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Data Collector Programming](../2014/database-engine/dev-guide/data-collector-programming.md)  
   

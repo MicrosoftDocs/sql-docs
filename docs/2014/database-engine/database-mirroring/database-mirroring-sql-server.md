@@ -227,7 +227,7 @@ manager: "jhubbard"
   
 -   [Full-text catalogs](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Database snapshots](database-mirroring-and-database-snapshots-sql-server.md)  
+-   [Database snapshots](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Replication](database-mirroring-and-replication-sql-server.md)  
   

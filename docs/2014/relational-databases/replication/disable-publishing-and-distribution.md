@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   To disable publishing and distribution, all distribution and publication databases must be online. If any *database snapshots* exist for distribution or publication databases, they must be dropped before disabling publishing and distribution. A database snapshot is a read-only offline copy of a database and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../../2014/database-engine/database-snapshots-sql-server.md).  
+-   To disable publishing and distribution, all distribution and publication databases must be online. If any *database snapshots* exist for distribution or publication databases, they must be dropped before disabling publishing and distribution. A database snapshot is a read-only offline copy of a database and is not related to a replication snapshot. For more information, see [Database Snapshots &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Disable publishing and distribution by using the Disable Publishing and Distribution Wizard.  

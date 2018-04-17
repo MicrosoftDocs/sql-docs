@@ -170,7 +170,7 @@ manager: "jhubbard"
   
 -   **Script binding** - Generates a script for binding default and rule objects. The default is **False**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md) and [CREATE RULE &#40;Transact-SQL&#41;](~/t-sql/statements/create-rule-transact-sql.md).  
   
--   **Script collation** - Includes collation information in the script. The default is **False**. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+-   **Script collation** - Includes collation information in the script. The default is **False**. For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
   
@@ -198,7 +198,7 @@ manager: "jhubbard"
   
 -   **Script check constraints** – Adds `CHECK` constraints to the script. The default is **True**. `CHECK` constraints require data that is entered into a table to meet some specified condition. For more information, see [Unique Constraints and Check Constraints](../../2014/database-engine/unique-constraints-and-check-constraints.md).  
   
--   **Script data compression options** - Scripts data compression options if they are configured on the origin database or tables in the origin database. For more information, see [Data Compression](../../2014/database-engine/data-compression.md). The default is **False**.  
+-   **Script data compression options** - Scripts data compression options if they are configured on the origin database or tables in the origin database. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md). The default is **False**.  
   
 -   **Script foreign keys** - Adds foreign keys to the script. The default is **True**. Foreign keys indicate and enforce relationships between tables.  
   
@@ -238,7 +238,7 @@ manager: "jhubbard"
   
 1.  **Convert UDDTs to base types** - When **True**, user-defined data types (UDDT) are converted into the underlying base data types that were used to create them. Use **True** when the UDDT does not exist in the database where the script will be run. When **False**, UDDTs are used. The default is **False**.  
   
-2.  **Publish collation** - Includes collation information for table columns. The default is **False**. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+2.  **Publish collation** - Includes collation information for table columns. The default is **False**. For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 3.  **Publish defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
   
@@ -282,7 +282,7 @@ manager: "jhubbard"
   
 8.  **Publish change tracking** - Includes change tracking in the publishing process, if it is enabled on the origin database or tables in the origin database. The default is **False**. For more information, see [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md).  
   
-9. **Publish data compression options** - Includes data compression options in the publishing process, if they are configured on the origin database or tables in the origin database. The default is **True**. For more information, see [Data Compression](../../2014/database-engine/data-compression.md).  
+9. **Publish data compression options** - Includes data compression options in the publishing process, if they are configured on the origin database or tables in the origin database. The default is **True**. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 ###  <a name="ProvConfig"></a> Provider Configuration Page  
  Use this dialog box to view or modify hosting provider settings. You can use this dialog box to do the following:  
@@ -335,6 +335,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Installing SMO](../../2014/database-engine/dev-guide/installing-smo.md)   
- [Copy Databases to Other Servers](../../2014/database-engine/copy-databases-to-other-servers.md)  
+ [Copy Databases to Other Servers](../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   

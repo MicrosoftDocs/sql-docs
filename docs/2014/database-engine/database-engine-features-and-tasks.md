@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## In This Section  
  [Database Engine Instances &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
- [Database Features](../../2014/database-engine/database-features.md)  
+ [Database Features](../relational-databases/database-features.md)  
   
  [Database Engine Cross-Instance Features](../../2014/database-engine/database-engine-cross-instance-features.md)  
   

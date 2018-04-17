@@ -23,7 +23,7 @@ manager: "jhubbard"
  For general information about credentials, see [Credentials &#40;Database Engine&#41;](../database-engine/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  The requirements for creating a SQL Server credential described below are specific to the [SQL Server Data Files in Windows Azure](../database-engine/sql-server-data-files-in-windows-azure.md) feature. For information on creating credentials for backup processes in Azure storage, see [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  The requirements for creating a SQL Server credential described below are specific to the [SQL Server Data Files in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) feature. For information on creating credentials for backup processes in Azure storage, see [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
  To create a SQL Server Credential, follow these steps:  
   

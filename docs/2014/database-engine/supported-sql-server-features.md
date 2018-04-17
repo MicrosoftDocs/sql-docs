@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Multi-versioning and optimistic concurrency control. For more information, see [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
   
--   Backup and Restore of a database that contains memory-optimized data filegroup. For more information, see [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md).  
+-   Backup and Restore of a database that contains memory-optimized data filegroup. For more information, see [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Catalog views, dynamic management views, and extended events for supportability. For more information, see [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 |Unsupported Feature|Feature Description|  
 |-------------------------|-------------------------|  
-|Data compression for memory-optimized tables.|You can use the data compression feature to help compress the data inside a database, and to help reduce the size of the database. For more information, see [Data Compression](../../2014/database-engine/data-compression.md).|  
+|Data compression for memory-optimized tables.|You can use the data compression feature to help compress the data inside a database, and to help reduce the size of the database. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md).|  
 |Partitioning of memory-optimized tables and HASH indexes.|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. For more information, see [Partitioned Tables and Indexes](../../2014/database-engine/partitioned-tables-and-indexes.md).|  
 |Transparent Data Encryption (TDE) on the memory-optimized data filegroup of a database.|Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and log files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md).<br /><br /> TDE can be enabled on a database that has In-Memory OLTP objects. In-Memory OLTP log records are encrypted if TDE is enabled. The checkpoint files for durable tables are not encrypted, even if TDE is enabled on the database.|  
 |Replication|Replication configurations other than transactional replication to memory-optimized tables on subscribers are incompatible with tables or views referencing memory-optimized tables. Replication using sync_mode=’database snapshot’ is not supported if there is a memory-optimized filegroup. For more information, see [Replication to Memory-Optimized Table Subscribers](../../2014/relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
@@ -89,12 +89,12 @@ manager: "jhubbard"
 |Change tracking|Change tracking can be enabled on a database with In-Memory OLTP objects. However, changes in memory-optimized tables are not tracked.|  
 |DDL triggers|Both database-level and server-level DDL triggers are not supported with In-Memory OLTP tables and natively compiled stored procedures.|  
 |Change Data Capture (CDC)|CDC should not be enabled on a database that has In-Memory OLTP objects, as it prevents certain operations such as DROP.|  
-|Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../../2014/database-engine/contained-databases.md)|  
+|Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../relational-databases/databases/contained-databases.md)|  
 |Context Connections|Accessing memory-optimized tables using the context connection from inside CLR stored procedures is not supported.|  
 |Cursors|Keyset and dynamic cursors on queries accessing memory-optimized tables. These queries are degraded to static becoming read-only.|  
 |TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md) for more information.|  
 |AUTO_CLOSE|AUTO_CLOSE is not supported. For more information, see [Set the AUTO_CLOSE Database Option to OFF](../../2014/database-engine/set-the-auto-close-database-option-to-off.md).|  
-|Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../../2014/database-engine/database-snapshots-sql-server.md).|  
+|Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md).|  
 |Transactional DDL|Transactional DDL is not supported in In-Memory OLTP.|  
 |Event Notifications|Event notifications are not supported. For more information, see [Event Notifications](../../2014/database-engine/event-notifications.md).|  
 |Fiber mode|Fiber mode is not supported with In-Memory OLTP.|  

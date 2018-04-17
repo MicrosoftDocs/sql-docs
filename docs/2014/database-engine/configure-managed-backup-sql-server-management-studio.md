@@ -62,7 +62,7 @@ manager: "jhubbard"
   
  The **File retention** period is specified in days and should be between 1 and 30.  
   
- The **SQL Credential** you select should match the storage account. If you currently do not have a SQL Credential that stores the authentication information, you can create one by clicking **Create**. You can also create credential by using the CREATE CREDENTIAL Transact-SQL statement, and provide the storage account name for Identity and the access key for the SECRET parameters. For more information, see [Create a Credential](../../2014/database-engine/sql-server-backup-to-url.md#credential).  
+ The **SQL Credential** you select should match the storage account. If you currently do not have a SQL Credential that stores the authentication information, you can create one by clicking **Create**. You can also create credential by using the CREATE CREDENTIAL Transact-SQL statement, and provide the storage account name for Identity and the access key for the SECRET parameters. For more information, see [Create a Credential](../relational-databases/backup-restore/sql-server-backup-to-url.md#credential).  
   
  Specify the **Storage URL** for the Windows Azure storage account, the SQL Credential that stores the authentication information for the storage account, and the retention period for the backup files.  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
  To set the encryption settings at the instance level, check **Encrypt Backup** option, and specify the algorithm and a Certificate or Asymmetric Key to use for the encryption.  This is set at the instance level is used for all the new databases created once this configuration has been applied.  
   
 > [!WARNING]  
->  This dialog cannot be used to specify the encryption options without configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. These encryption options only apply to [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operations. To use encryption for other backup procedures, see [Backup Encryption](../../2014/database-engine/backup-encryption.md).  
+>  This dialog cannot be used to specify the encryption options without configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. These encryption options only apply to [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] operations. To use encryption for other backup procedures, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
 ### Considerations  
  If you configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the instance level, the settings are applied to any new database created thereafter.  However, existing database will not automatically inherit these settings. To configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on previously existing databases, you must configure each database specifically. For more information, see [Enable and Configure SQL Server Managed Backup to Windows Azure for a Database](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  

@@ -22,7 +22,7 @@ manager: "jhubbard"
  For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/filestream-support-ole-db.md).  
   
 ## Example  
- Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../../2014/database-engine/enable-and-configure-filestream.md)).  
+ Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  For a sample showing ODBC support for large CLR UDTs, see [Support for Large UDTs](../../../2014/database-engine/dev-guide/support-for-large-udts.md).  
   
- For more information about support for large CLR UDTs in SQL Server Native Client, see [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md).  
+ For more information about support for large CLR UDTs in SQL Server Native Client, see [Large CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## Data Format  
  SQL Server Native Client uses SQL_SS_LENGTH_UNLIMITED to denote that the size of a column is greater than 8,000 bytes for large object (LOB) types. Beginning with SQL Server 2008, the same value is used for CLR UDTs when their size is greater than 8,000 bytes.  
@@ -238,6 +238,6 @@ manager: "jhubbard"
  The values returned for the columns DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH, and DECIMAL_DIGTS UDTs are as described in the "Metadata Returned by SQLColumns and SQLProcedureColumns (Catalog Metadata)" section, earlier in this topic.  
   
 ## See Also  
- [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md)  
+ [Large CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

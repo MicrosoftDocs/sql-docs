@@ -28,9 +28,9 @@ manager: "jhubbard"
   
 3.  Remove all managed instances from the old UCP. For more information, see [Remove an Instance of SQL Server from the SQL Server Utility](../../2014/database-engine/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Back up the utility management data warehouse (UMDW) from the old UCP. The filename is Sysutility_mdw_\<GUID>_DATA, and the database default location is \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> is normally the C:\ drive. For more information, see [Copy Databases with Backup and Restore](../../2014/database-engine/copy-databases-with-backup-and-restore.md).  
+4.  Back up the utility management data warehouse (UMDW) from the old UCP. The filename is Sysutility_mdw_\<GUID>_DATA, and the database default location is \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, where \<System drive> is normally the C:\ drive. For more information, see [Copy Databases with Backup and Restore](../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
-5.  Restore the backup of the UMDW to the new UCP. For more information, see [Copy Databases with Backup and Restore](../../2014/database-engine/copy-databases-with-backup-and-restore.md).  
+5.  Restore the backup of the UMDW to the new UCP. For more information, see [Copy Databases with Backup and Restore](../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 6.  Enroll instances into the new UCP to make them managed by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. For more information, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../2014/database-engine/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   

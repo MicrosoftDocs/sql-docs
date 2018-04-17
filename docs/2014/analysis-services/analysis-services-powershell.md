@@ -273,7 +273,7 @@ Restart-service mssqlserverolapservice
     ```  
   
 ## See Also  
- [Install SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
+ [Install SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   

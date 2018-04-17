@@ -82,8 +82,8 @@ manager: "jhubbard"
 -   Use the same strength passwords that you would normally use for logins.  
   
 ## See Also  
- [Contained Databases](../../2014/database-engine/contained-databases.md)   
- [Security Best Practices with Contained Databases](../../2014/database-engine/security-best-practices-with-contained-databases.md)   
+ [Contained Databases](../relational-databases/databases/contained-databases.md)   
+ [Security Best Practices with Contained Databases](../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
   
   

@@ -96,10 +96,10 @@ manager: "jhubbard"
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../2014/database-engine/monitor-system-activity-using-extended-events.md)|  
   
 ## See Also  
- [Data-tier Applications](../../2014/database-engine/data-tier-applications.md)   
- [DAC Support For SQL Server Objects and Versions](../../2014/database-engine/dac-support-for-sql-server-objects-and-versions.md)   
- [Deploy a Data-tier Application](../../2014/database-engine/deploy-a-data-tier-application.md)   
- [Monitor Data-tier Applications](../../2014/database-engine/monitor-data-tier-applications.md)   
+ [Data-tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [DAC Support For SQL Server Objects and Versions](../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
+ [Deploy a Data-tier Application](../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
+ [Monitor Data-tier Applications](../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Extended Events Dynamic Management Views](~/relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   

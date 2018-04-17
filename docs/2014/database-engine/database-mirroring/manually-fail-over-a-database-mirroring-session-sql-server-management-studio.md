@@ -53,7 +53,7 @@ manager: "jhubbard"
      The dialog box closes automatically.  
   
 ## See Also  
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Manually Fail Over a Database Mirroring Session &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)   
  [Pause or Resume a Database Mirroring Session &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   

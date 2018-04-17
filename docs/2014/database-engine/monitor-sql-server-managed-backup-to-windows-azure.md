@@ -117,7 +117,7 @@ These aggregated counts can be used to monitor system health. For example, if th
   
  **Prerequisites:**  
   
--   Database Mail is required to use this functionality. For more information, about how to enable DB Mail for the instance of SQL Server, see [Configure Database Mail](../../2014/database-engine/configure-database-mail.md).  
+-   Database Mail is required to use this functionality. For more information, about how to enable DB Mail for the instance of SQL Server, see [Configure Database Mail](../relational-databases/database-mail/database-mail.md).  
   
 -   SQL Server Agent Alert System properties should be set to use Database Mail.  
   
@@ -129,7 +129,7 @@ These aggregated counts can be used to monitor system health. For example, if th
   
 ##### Enabling Email Notification  
   
-1.  If Database Mail is not already configured, use the steps described in [Configure Database Mail](../../2014/database-engine/configure-database-mail.md).  
+1.  If Database Mail is not already configured, use the steps described in [Configure Database Mail](../relational-databases/database-mail/database-mail.md).  
   
 2.  Set database as the Mail System for SQL Server Alert System: Right Click on **SQL Server Agent**, select **Alert System**, check the **Enable mail profile** box, Select **Database Mail** as the **Mail System**, and select a previously created Mail profile.  
   

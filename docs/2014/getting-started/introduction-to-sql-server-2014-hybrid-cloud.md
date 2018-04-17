@@ -53,11 +53,11 @@ manager: "jhubbard"
  
  The following is a list of backup and restore capabilities of SQL Server for cloud and on-premises scenarios: 
  
--  The [SQL Server Backup to URL](../../2014/database-engine/sql-server-backup-to-url.md) feature enables you to back up to Azure Storage by specifying URL as the backup destination. With this feature, you can perform a manual backup or configure your own backup strategy like you would for a local storage or other off-site options. 
+-  The [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) feature enables you to back up to Azure Storage by specifying URL as the backup destination. With this feature, you can perform a manual backup or configure your own backup strategy like you would for a local storage or other off-site options. 
  
--  The [Backup Encryption](../../2014/database-engine/backup-encryption.md) feature enables you to encrypt the data while creating a backup for your storage destinations: on-premises and Azure Storage. 
+-  The [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md) feature enables you to encrypt the data while creating a backup for your storage destinations: on-premises and Azure Storage. 
  
--  The [Backup Compression (SQL Server)](../../2014/database-engine/backup-compression-sql-server.md) feature enables you to create a backup, which is smaller than an uncompressed backup of the same data. Compressing a backup needs less device I/O and therefore usually increases backup speed significantly. This can bring great benefits when storing backup files in Azure Storage. 
+-  The [Backup Compression (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) feature enables you to create a backup, which is smaller than an uncompressed backup of the same data. Compressing a backup needs less device I/O and therefore usually increases backup speed significantly. This can bring great benefits when storing backup files in Azure Storage. 
  
 -  The [SQL Server Managed Backup to Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) feature enables you to automatically backup SQL Server databases to [Azure Storage](http://www.azure.com/documentation/services/storage/). With this feature, you can configure SQL Server to manage the backup strategy and schedule backups for a single database, or several databases, or set defaults at the instance level. 
  
@@ -100,7 +100,7 @@ manager: "jhubbard"
  
 -  **Moving just the database:** There are several tools and techniques available to move existing on-premises databases to SQL Server in Azure Virtual Machines. For guidelines and recommendations on migration to SQL Server in Azure Virtual Machines, see [Getting Ready to Migrate to SQL Server in Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx) and also [Migrating to SQL Server in a Azure Virtual Machine](http://msdn.microsoft.com/library/jj156165.aspx). 
  
-   In addition, starting with SQL Server 2014, a new wizard, [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../../2014/database-engine/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) is available for you to deploy the database to another SQL Server instance running in a Azure Virtual Machine. 
+   In addition, starting with SQL Server 2014, a new wizard, [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) is available for you to deploy the database to another SQL Server instance running in a Azure Virtual Machine. 
  
 -  **Moving the entire virtual machine:** You can bring your own SQL Server virtual machines to Azure or create one by using the platform image. Then, you can upload and attach a data disk that already contains data to the virtual machine, or attach an empty disk to the machine. Having a SQL Server data instance on Azure Virtual Machines with attached data disks provides another persistent storage for your data files and application data. For comprehensive information and how-tos, see [SQL Server Deployment in Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx). 
  

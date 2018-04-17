@@ -108,12 +108,12 @@ manager: "jhubbard"
 >  New user databases will inherit the compatibility level of the `model` database.  
   
 ## Migrating Databases  
- You can move user databases to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using backup and restore or detach and attach functionalities in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Copy Databases with Backup and Restore](../copy-databases-with-backup-and-restore.md) or [Database Detach and Attach &#40;SQL Server&#41;](../database-detach-and-attach-sql-server.md).  
+ You can move user databases to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using backup and restore or detach and attach functionalities in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md) or [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 > [!IMPORTANT]  
 >  A database that has the identical name on both source and destination servers cannot be moved or copied. In this case, it will be noted as "Already exists."  
   
- For more information, see [Use the Copy Database Wizard](../use-the-copy-database-wizard.md).  
+ For more information, see [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## After Upgrading the Database Engine  
  After upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete the following tasks:  

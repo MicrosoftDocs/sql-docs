@@ -77,7 +77,7 @@ manager: "jhubbard"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR stored procedures require UNSAFE permissions to be granted to the login because the login requires additional access to restricted resources, such as the Microsoft Win32 API. For more information about the UNSAFE code permission, see [Creating an Assembly](../../2014/database-engine/dev-guide/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR stored procedures require UNSAFE permissions to be granted to the login because the login requires additional access to restricted resources, such as the Microsoft Win32 API. For more information about the UNSAFE code permission, see [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -89,11 +89,11 @@ manager: "jhubbard"
   
 3.  Restore the SSISDB database from the backup by using the **Restore Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see the following topics.  
   
-    -   [Restore Database &#40;General Page&#41;](../../2014/database-engine/restore-database-general-page.md)  
+    -   [Restore Database &#40;General Page&#41;](../relational-databases/backup-restore/restore-database-general-page.md)  
   
-    -   [Restore Database &#40;Files Page&#41;](../../2014/database-engine/restore-database-files-page.md)  
+    -   [Restore Database &#40;Files Page&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Restore Database &#40;Options Page&#41;](../../2014/database-engine/restore-database-options-page.md)  
+    -   [Restore Database &#40;Options Page&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Execute the scripts that you created in the [To Back up the SSIS Database](#backup) for ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup, and SSIS Server Maintenance Job. Confirm that SQL Server Agent has been started.  
   
@@ -144,7 +144,7 @@ manager: "jhubbard"
   
 ### To Move the SSIS Database  
   
--   Follow the instructions for moving user databases. For more information, see [Move User Databases](../../2014/database-engine/move-user-databases.md).  
+-   Follow the instructions for moving user databases. For more information, see [Move User Databases](../relational-databases/databases/move-user-databases.md).  
   
      Ensure that you back up the master key for the SSISDB database and protect the backup file. For more information, see [To Back up the SSIS Database](#backup).  
   

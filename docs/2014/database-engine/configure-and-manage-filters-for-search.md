@@ -42,6 +42,6 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 ## See Also  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
- [FILESTREAM Compatibility with Other SQL Server Features](../../2014/database-engine/filestream-compatibility-with-other-sql-server-features.md)  
+ [FILESTREAM Compatibility with Other SQL Server Features](../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   
   

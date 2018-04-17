@@ -60,7 +60,7 @@ manager: "jhubbard"
 |Connection protocols|Support for the VIA protocol is discontinued.|Use TCP instead.|  
 |Database objects|`WITH APPEND` clause on triggers|Re-create the whole trigger.|  
 |Database options|`sp_dboption`|`ALTER DATABASE`|  
-|Mail|SQL Mail|Use Database Mail. For more information, see [Database Mail](database-mail.md) and  [Use Database Mail Instead of SQL Mail](use-database-mail-instead-of-sql-mail.md).|  
+|Mail|SQL Mail|Use Database Mail. For more information, see [Database Mail](../relational-databases/database-mail/database-mail.md) and  [Use Database Mail Instead of SQL Mail](use-database-mail-instead-of-sql-mail.md).|  
 |Memory Management|32-bit Address Windowing Extensions (AWE) and 32-bit Hot Add memory support.|Use a 64-bit operating system.|  
 |Metadata|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programmability|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|  

@@ -49,6 +49,6 @@ manager: "jhubbard"
 4.  The permission is checked against the current execution context. Procedures and functions can be created with an execution context that is different from the caller. Assemblies are always created with the execution context of the procedure, function, or trigger that is defined against it.  
   
 ## See Also  
- [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)  
+ [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

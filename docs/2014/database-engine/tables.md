@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   You can assign properties to the table and to each column in the table to control the data that is allowed and other properties. For example, you can create constraints on a column to disallow null values or provide a default value if a value is not specified, or you can assign a key constraint on the table that enforces uniqueness or defines a relationship between tables.  
   
--   The data in the table can be compressed either by row or by page. Data compression can allow more rows to be stored on a page. For more information, see [Data Compression](../../2014/database-engine/data-compression.md).  
+-   The data in the table can be compressed either by row or by page. Data compression can allow more rows to be stored on a page. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
 ## Types of Tables  
  Besides the standard role of basic user-defined tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following types of tables that serve special purposes in a database.  

@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   FOREIGN KEY constraints are not enforced on temporary tables.  
   
--   If a foreign key is defined on a CLR user-defined type column, the implementation of the type must support binary ordering. For more information, see [CLR User-Defined Types](../../2014/database-engine/dev-guide/clr-user-defined-types.md).  
+-   If a foreign key is defined on a CLR user-defined type column, the implementation of the type must support binary ordering. For more information, see [CLR User-Defined Types](../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 -   A column of type `varchar(max)` can participate in a FOREIGN KEY constraint only if the primary key it references is also defined as type `varchar(max)`.  
   

@@ -28,7 +28,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes how to configure the properties of an instance. Configure defaults such as file locations and date formats, or how the instance uses operating system resources, such as memory or threads.|[Configure Database Engine Instances &#40;SQL Server&#41;](database-engine-instances-sql-server.md)|  
-|Describes how to manage the collation for an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Collations define the bit patterns used to represent characters, and associated behaviors such as sorting, and case or accent sensitivity in comparison operations.|[Collation and Unicode Support](../collation-and-unicode-support.md)|  
+|Describes how to manage the collation for an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Collations define the bit patterns used to represent characters, and associated behaviors such as sorting, and case or accent sensitivity in comparison operations.|[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)|  
 |Describes how to configure linked server definitions, which allow [!INCLUDE[tsql](../../includes/tsql-md.md)] statements run in an instance to work with data stored in separate OLE DB data sources.|[Linked Servers &#40;Database Engine&#41;](../linked-servers-database-engine.md)|  
 |Describes how to create a logon trigger, which specifies actions to be taken after a logon attempt has been validated, but before it starts working with resources in the instance. Logon triggers support actions such as logging connection activity, or restricting logins based on logic in addition to the credential authentication performed by Windows and SQL Server.|[Logon Triggers](../logon-triggers.md)|  
 |Describes how to manage the service associated with an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. This includes actions such as starting and stopping the service, or configuring startup options.|[Manage the Database Engine Services](manage-the-database-engine-services.md)|  
@@ -37,7 +37,7 @@ manager: "jhubbard"
 |Describes the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors that can be used to design, debug, and run scripts such as [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. Also describes how to code Windows PowerShell scripts to work with SQL Server components.|[Database Engine Scripting](../database-engine-scripting.md)|  
 |Describes how to use maintenance plans to specify a workflow of common administration tasks for an instance. Workflows include tasks such as backing up databases and updating statistics to improve performance.|[Maintenance Plans](../maintenance-plans.md)|  
 |Describes how to use the resource governor to manage resource consumption and workloads by specifying limits to the amount of CPU and memory that application requests can use.|[Resource Governor](../resource-governor.md)|  
-|Describes how database applications can use database mail to send e-mail messages from the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../database-mail.md)|  
+|Describes how database applications can use database mail to send e-mail messages from the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Database Mail](../../relational-databases/database-mail/database-mail.md)|  
 |Describes how to use extended events to capture performance data can be used to build performance baselines or to diagnose performance problems. Extended events are a light-weight, highly scalable system for gathering performance data.|[Extended Events](../extended-events.md)|  
 |Describes how to use SQL Trace to build a customized system for capturing and recording events in the [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[SQL Trace](../sql-trace.md)|  
 |Describes how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler to capture traces of application requests coming in to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. These traces can later be replayed for activities such as performance testing or problem diagnosis.|[SQL Server Profiler](../sql-server-profiler.md)|  
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sqlservr Application](../sqlservr-application.md)   
- [Database Features](../database-features.md)   
+ [Database Features](../../relational-databases/database-features.md)   
  [Database Engine Cross-Instance Features](../database-engine-cross-instance-features.md)  
   
   

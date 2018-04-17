@@ -23,7 +23,7 @@ manager: "jhubbard"
  For information, on other examples where credentials are used, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx).  
   
 > [!IMPORTANT]  
->  The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](../../2014/database-engine/sql-server-backup-to-url.md), and [SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure.md)). SQL Server, when accessing Azure storage to write or read backups uses the storage account name and access key information.  For more information on creating credentials for storing database files in Azure storage, see [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), and [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, when accessing Azure storage to write or read backups uses the storage account name and access key information.  For more information on creating credentials for storing database files in Azure storage, see [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## Create a SQL Server Credential  
  To create a SQL Server Credential, use the following steps:  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 5.  Verify the T-SQL statement and click **Execute**.  
   
- For more information about the Windows Azure Blob storage service for backup concepts and requirements, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../../2014/database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md).  
+ For more information about the Windows Azure Blob storage service for backup concepts and requirements, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### Next Lesson  
  [Lesson 3: Write a Full Database Backup to the Windows Azure Blob Storage Service](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  

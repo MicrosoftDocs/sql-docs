@@ -159,6 +159,6 @@ manager: "mblythe"
   
 ## See Also  
  [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Write International Transact-SQL Statements](../../2014/database-engine/write-international-transact-sql-statements.md)  
+ [Write International Transact-SQL Statements](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

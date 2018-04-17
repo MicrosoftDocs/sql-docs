@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 1.  Copy any uncopied backup files from the backup share to the copy destination folder of each secondary server.  
   
-2.  Apply any unapplied transaction log backups in sequence to each secondary database. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../apply-transaction-log-backups-sql-server.md).  
+2.  Apply any unapplied transaction log backups in sequence to each secondary database. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
 3.  If the primary database is accessible, back up the active transaction log and apply the log backup to the secondary databases.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 4.  After the secondary servers are synchronized, you can fail over to whichever one you prefer by recovering its secondary database and redirecting clients to that server instance. Recovering puts the database into a consistent state and brings it online.  
   
     > [!NOTE]  
-    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  After you have recovered a secondary database, you can reconfigure it to act as a primary database for other secondary databases.  
   
@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## See Also  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)   
  [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tail-Log Backups &#40;SQL Server&#41;](../tail-log-backups-sql-server.md)  
+ [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

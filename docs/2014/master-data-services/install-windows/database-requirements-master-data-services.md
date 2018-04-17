@@ -58,7 +58,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] administrator account|When you create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database, you must specify a domain user account to be the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] system administrator. For all [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web applications associated with this database, this user can update all models and all data in all functional areas. For more information, see [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md).|  
   
 ### Database Backup  
- As a best practice, back up the full database daily at a time of low activity and back up transaction logs more frequently depending on the needs of your environment. For more information about database backups, see [Backup Overview &#40;SQL Server&#41;](../../database-engine/backup-overview-sql-server.md).  
+ As a best practice, back up the full database daily at a time of low activity and back up transaction logs more frequently depending on the needs of your environment. For more information about database backups, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ## See Also  
  [Install Master Data Services](install-master-data-services.md)   

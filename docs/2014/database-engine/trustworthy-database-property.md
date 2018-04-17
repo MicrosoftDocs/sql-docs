@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  This property can be used to reduce certain threats that can exist as a result of attaching a database that contains one of the following objects:  
   
--   Malicious assemblies with an EXTERNAL_ACCESS or UNSAFE permission setting. For more information, see [CLR Integration Security](../../2014/database-engine/dev-guide/clr-integration-security.md).  
+-   Malicious assemblies with an EXTERNAL_ACCESS or UNSAFE permission setting. For more information, see [CLR Integration Security](../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 -   Malicious modules that are defined to execute as high privileged users. For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](~/t-sql/statements/execute-as-clause-transact-sql.md).  
   

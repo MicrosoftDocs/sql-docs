@@ -19,7 +19,7 @@ ms.author: "douglasl"
 manager: "mblythe"
 ---
 # Dataset Properties Dialog Box, Options
-  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and subtotals, for the query. For more information, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and subtotals, for the query. For more information, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Options  
  **Collation**  

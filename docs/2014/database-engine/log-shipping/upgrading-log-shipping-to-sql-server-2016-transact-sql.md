@@ -21,7 +21,7 @@ manager: "jhubbard"
   It is possible to preserve log shipping configurations when upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This topic describes alternative scenarios and best practices for upgrading a log shipping configuration.  
   
 > [!NOTE]  
->  [Backup compression](../backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
+>  [Backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) was introduced in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. An upgraded log shipping configuration uses the **backup compression default** server-level configuration option to control whether backup compression is used for the transaction log backup files. The backup compression behavior of log backups can be specified for each log shipping configuration. For more information, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
   
 ##  <a name="ProtectData"></a> Protect Your Data Before the Upgrade  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 1.  Perform a full database backup on every primary database.  
   
-     For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../create-a-full-database-backup-sql-server.md).  
+     For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  Run the [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) command on every primary database.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
 #####  <a name="Procedure1"></a> Procedure 1: Perform a Controlled Failover to the Secondary Server  
  Controlled failover to the secondary server:  
   
-1.  Manually perform a [tail-log backup](../tail-log-backups-sql-server.md) of the transaction log on the primary database specifying WITH NORECOVERY. This log backup captures any log records that have not been backed up yet and takes the database offline. Note that while the database is offline, the log shipping backup job will fail.  
+1.  Manually perform a [tail-log backup](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) of the transaction log on the primary database specifying WITH NORECOVERY. This log backup captures any log records that have not been backed up yet and takes the database offline. Note that while the database is offline, the log shipping backup job will fail.  
   
      The following example creates a tail log backup of the `AdventureWorks` database on the primary server. The backup file is named `Failover_AW_20080315.trn`:  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
 5.  Fail over the database by redirecting clients from the original primary server (server A) to the online secondary server (server B).  
   
     > [!IMPORTANT]  
-    >  When you failover to a new primary database, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  When you failover to a new primary database, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="MultipleSecondaries"></a> Upgrading Multiple Secondary Server Instances  
  This configuration is represented in the following illustration, which shows a primary server instance, A, and two secondary server instances, B and C.  
@@ -220,8 +220,8 @@ manager: "jhubbard"
  For information about enabling log shipping, see [Configure Log Shipping &#40;SQL Server&#41;](/configure-log-shipping-sql-server.md).  
   
 ## See Also  
- [Transaction Log Backups &#40;SQL Server&#41;](../transaction-log-backups-sql-server.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../apply-transaction-log-backups-sql-server.md)   
+ [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
+ [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](/log-shipping-tables-and-stored-procedures.md)  
   
   

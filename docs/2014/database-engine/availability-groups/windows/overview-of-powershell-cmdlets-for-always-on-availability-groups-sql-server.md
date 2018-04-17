@@ -115,6 +115,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../get-help-sql-server-powershell.md)  
+ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

@@ -27,13 +27,13 @@ manager: "jhubbard"
   
 2.  Expand **Databases**, and select the database to be mirrored.  
   
-3.  Right-click the database, select **Tasks**, and then click **Mirror**. This opens the [Mirroring Page](../database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
+3.  Right-click the database, select **Tasks**, and then click **Mirror**. This opens the [Mirroring Page](../../relational-databases/databases/database-properties-mirroring-page.md) of the **Database Properties** dialog box.  
   
 4.  Click **Configure Security**.  
   
 ## See Also  
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
   

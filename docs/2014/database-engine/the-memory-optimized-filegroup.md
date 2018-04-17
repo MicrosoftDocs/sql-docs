@@ -34,7 +34,7 @@ manager: "jhubbard"
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
     ```  
   
--   You do not need to enable filestream ([Enable and Configure FILESTREAM](../../2014/database-engine/enable-and-configure-filestream.md)) to create a memory-optimized filegroup. The mapping to filestream is done by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine.  
+-   You do not need to enable filestream ([Enable and Configure FILESTREAM](../relational-databases/blob/enable-and-configure-filestream.md)) to create a memory-optimized filegroup. The mapping to filestream is done by the [!INCLUDE[hek_2](../includes/hek-2-md.md)] engine.  
   
 -   You can add new containers to a memory-optimized filegroup. You may need a new container to expand the storage needed for durable memory-optimized table and also to distribute IO across multiple containers.  
   

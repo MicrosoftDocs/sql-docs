@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 ## Options  
  **Mirror server instance**  
- If a mirror server instance is already specified (on the **Mirroring** page of the **Database Properties** dialog box), that instance is displayed; for more information, see [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md).  
+ If a mirror server instance is already specified (on the **Mirroring** page of the **Database Properties** dialog box), that instance is displayed; for more information, see [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
  Otherwise, enter the name of the mirror server instance. Note that the mirror server instance cannot be the same as the principal server instance.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 ## See Also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  

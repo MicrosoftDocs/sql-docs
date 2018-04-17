@@ -118,6 +118,6 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
   
 ## See Also  
  [Enable or Disable a Server Network Protocol](configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
   
   

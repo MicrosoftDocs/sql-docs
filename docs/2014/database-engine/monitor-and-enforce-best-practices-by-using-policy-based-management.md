@@ -52,8 +52,8 @@ manager: "jhubbard"
 |SQL Server Password Expiration|[SQL Server Login Password Expiration](../../2014/database-engine/sql-server-login-password-expiration.md)|  
 |SQL Server Password Policy|[SQL Server Login Password Strength](../../2014/database-engine/sql-server-login-password-strength.md)|  
 |Symmetric Key Encryption for User Databases|[Symmetric Keys on User Databases](../../2014/database-engine/symmetric-keys-on-user-databases.md)|  
-|Symmetric Key for master Database|[Symmetric Keys on System Databases](../../2014/database-engine/symmetric-keys-on-system-databases.md)|  
-|Symmetric Key for System Databases|[Symmetric Keys on System Databases](../../2014/database-engine/symmetric-keys-on-system-databases.md)|  
+|Symmetric Key for master Database|[Symmetric Keys on System Databases](../relational-databases/databases/system-databases.md)|  
+|Symmetric Key for System Databases|[Symmetric Keys on System Databases](../relational-databases/databases/system-databases.md)|  
 |Trustworthy Database|[Trustworthy Bit](../../2014/database-engine/trustworthy-bit.md)|  
 |Windows Event Log Cluster Disk Resource Corruption Error|[Detect SCSI Host Adapter Issues](../../2014/database-engine/detect-scsi-host-adapter-issues.md)|  
 |Windows Event Log Device Driver Control Error|[Device Driver Control Error](../../2014/database-engine/device-driver-control-error.md)|  

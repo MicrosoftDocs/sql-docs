@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Export the data from the user database and import it into new tables that have the same collation as the master and model databases.  
   
--   Rebuild the system databases to use a collation that matches the user database collation. For more information about how to rebuild the system databases, see [Rebuild System Databases](../../2014/database-engine/rebuild-system-databases.md).  
+-   Rebuild the system databases to use a collation that matches the user database collation. For more information about how to rebuild the system databases, see [Rebuild System Databases](../relational-databases/databases/system-databases.md).  
   
 -   Modify any stored procedures that join user tables to tables in tempdb to create the tables in tempdb by using the collation of the user database. To do this, add the `COLLATE database_default` clause to the column definitions of the temporary table, as shown in the following example:  
   
@@ -36,9 +36,9 @@ manager: "jhubbard"
     ```  
   
 ## For More Information  
- [Set or Change the Database Collation](../../2014/database-engine/set-or-change-the-database-collation.md)  
+ [Set or Change the Database Collation](../relational-databases/collations/set-or-change-the-database-collation.md)  
   
- [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md)  
+ [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md)  
   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   

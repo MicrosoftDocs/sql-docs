@@ -27,6 +27,6 @@ manager: "jhubbard"
  The setting takes effect immediately.  
   
 ## See Also  
- [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../../2014/database-engine/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
+ [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

@@ -54,9 +54,9 @@ manager: "jhubbard"
  **To create a transaction log backup**  
   
 > [!IMPORTANT]  
->  If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../../2014/database-engine/tail-log-backups-sql-server.md).  
+>  If the database is damaged, see [Tail-Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
@@ -71,7 +71,7 @@ manager: "jhubbard"
   
  **To move a log file**  
   
--   [Move Database Files](../../2014/database-engine/move-database-files.md)  
+-   [Move Database Files](../relational-databases/databases/move-database-files.md)  
   
 ### Increasing the Size of a Log File  
  If space is available on the log disk, you can increase the size of the log file. The maximum size for log files is two terabytes (TB) per log file.  
@@ -92,12 +92,12 @@ manager: "jhubbard"
   
  **To add a log file**  
   
--   [Add Data or Log Files to a Database](../../2014/database-engine/add-data-or-log-files-to-a-database.md)  
+-   [Add Data or Log Files to a Database](../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [Manage the Size of the Transaction Log File](../../2014/database-engine/manage-the-size-of-the-transaction-log-file.md)   
- [Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/transaction-log-backups-sql-server.md)   
+ [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
   
   

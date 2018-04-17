@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 |Issue|Summary|  
 |-----------|-------------|  
-|Error Message 1418|This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see the [MSSQLSERVER_1418](../mssqlserver-1418.md) topic.|  
+|Error Message 1418|This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see the [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) topic.|  
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses requirements for correctly configuring the database mirroring endpoint of each server instance.|  
 |[SystemAddress](#SystemAddress)|Summarizes the alternatives for specifying the system name of a server instance in a database mirroring configuration.|  
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
     1.  If the accounts are running in the same domain accounts, the chances of misconfiguration are reduced.  
   
-    2.  If the accounts are running in different domains or are not domain accounts, the login of one account must be created in **master** on the other computer, and that login must be granted CONNECT permissions on the endpoint. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md). This includes the Network Service account.  
+    2.  If the accounts are running in different domains or are not domain accounts, the login of one account must be created in **master** on the other computer, and that login must be granted CONNECT permissions on the endpoint. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md). This includes the Network Service account.  
   
 2.  If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running as a service that is using the local system account, you must use certificates for authentication. For more information, see [Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
@@ -58,7 +58,7 @@ manager: "jhubbard"
   
      To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and [sys.tcp_endpoints](~/relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) catalog views.  
   
-3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../mssqlserver-1418.md).  
+3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
 4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   

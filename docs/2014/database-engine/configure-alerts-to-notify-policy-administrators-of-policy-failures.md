@@ -45,6 +45,6 @@ manager: "jhubbard"
   
 -   Alerts are raised only for policies that are enabled. Because **On demand** policies cannot be enabled, alerts are not raised for policies that are executed on demand.  
   
--   If the action you want to take includes sending an e-mail message, you must configure a mail account. We recommend that you use Database Mail. For more information about how to set up Database Mail, see [Create a Database Mail Account](../../2014/database-engine/create-a-database-mail-account.md).  
+-   If the action you want to take includes sending an e-mail message, you must configure a mail account. We recommend that you use Database Mail. For more information about how to set up Database Mail, see [Create a Database Mail Account](../relational-databases/database-mail/create-a-database-mail-account.md).  
   
   

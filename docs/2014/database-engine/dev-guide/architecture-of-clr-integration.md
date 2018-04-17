@@ -26,10 +26,10 @@ manager: "jhubbard"
   
  The following table lists the topics in this section.  
   
- [CLR Hosted Environment](../../../2014/database-engine/dev-guide/clr-hosted-environment.md)  
+ [CLR Hosted Environment](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
  Discusses architectural design goals, mechanisms, and benefits of CLR integration.  
   
- [Performance of CLR Integration](../../../2014/database-engine/dev-guide/performance-of-clr-integration.md)  
+ [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
  Covers performance considerations of the CLR integration architecture.  
   
   

@@ -31,9 +31,9 @@ manager: "jhubbard"
   
  For more information about backing up and restoring the msdb database, click one of the following topics:  
   
--   [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)  
+-   [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
--   [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md)  
+-   [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the **dtutil** command-prompt utility (dtutil.exec), which you can use to manage packages. For more information, see [dtutil Utility](../../2014/integration-services/dtutil-utility.md).  
   

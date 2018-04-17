@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 4.  To add a file (container) to the filegroup, click the **General** page. Under **Database files**, click **Add**. Select **File Type** as **FILESTREAM Data**, specify the logical name of the container, select the memory-optimized filegroup, and make sure that **Autogrowth / Maxsize** is set to **Unlimited**.  
   
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Create a Database](../../2014/database-engine/create-a-database.md).  
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Create a Database](../relational-databases/databases/create-a-database.md).  
   
 ### To create a memory-optimized table  
   

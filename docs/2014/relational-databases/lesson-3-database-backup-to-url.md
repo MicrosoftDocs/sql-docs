@@ -99,7 +99,7 @@ manager: "jhubbard"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     For more information, see [Add Data or Log Files to a Database](../../2014/database-engine/add-data-or-log-files-to-a-database.md).  
+     For more information, see [Add Data or Log Files to a Database](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Keep all other default values.  
   

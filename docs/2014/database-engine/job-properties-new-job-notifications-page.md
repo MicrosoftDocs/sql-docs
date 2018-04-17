@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Implement Jobs](../../2014/database-engine/implement-jobs.md)   
- [Configure SQL Server Agent Mail to Use Database Mail](../../2014/database-engine/configure-sql-server-agent-mail-to-use-database-mail.md)  
+ [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/database-mail.md)  
   
   

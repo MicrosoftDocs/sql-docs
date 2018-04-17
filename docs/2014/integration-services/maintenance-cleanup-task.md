@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Maintenance Cleanup Task
-  The Maintenance Cleanup task removes files related to maintenance plans, including database backup files and reports created by maintenance plans. For more information, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md) and [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md).  
+  The Maintenance Cleanup task removes files related to maintenance plans, including database backup files and reports created by maintenance plans. For more information, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md) and [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  By using the Maintenance Cleanup task, a package can remove the backup files or maintenance plan reports on the specified server. The Maintenance Cleanup task includes an option to remove a specific file or remove a group of files in a folder. Optionally you can specify the extension of the files to delete.  
   

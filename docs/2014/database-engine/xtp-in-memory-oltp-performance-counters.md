@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 |Performance object|Description|  
 |------------------------|-----------------|  
-|[XTP Cursors](../../2014/database-engine/xtp-cursors.md)|The XTP Cursors performance object contains counters related to internal XTP engine cursors. Cursors are the low-level building blocks the XTP engine uses to process [!INCLUDE[tsql](../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.|  
+|[XTP Cursors](../relational-databases/cursors.md)|The XTP Cursors performance object contains counters related to internal XTP engine cursors. Cursors are the low-level building blocks the XTP engine uses to process [!INCLUDE[tsql](../includes/tsql-md.md)] queries. As such, you do not typically have direct control over them.|  
 |[XTP Garbage Collection](../../2014/database-engine/xtp-garbage-collection.md)|The XTP Garbage Collection performance object contains counters related to the XTP engine's garbage collector.|  
 |[XTP Phantom Processor](../../2014/database-engine/xtp-phantom-processor.md)|The XTP Phantom Processor performance object contains counters related to the XTP engine's phantom processing subsystem. This component is responsible for detecting phantom rows in transactions running at the SERIALIZABLE isolation level.|  
 |[XTP Storage](../../2014/database-engine/xtp-storage.md)|The XTP Storage performance object contains counters related to XTP storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  

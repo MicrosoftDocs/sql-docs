@@ -62,12 +62,12 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../2014/database-engine/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
+-   [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
 
   
 ## See Also  
- [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md)   
+ [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   

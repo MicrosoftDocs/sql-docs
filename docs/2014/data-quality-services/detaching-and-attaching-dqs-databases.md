@@ -21,7 +21,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Limitations"></a> Limitations and Restrictions  
- For a list of limitations and restrictions, see [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md).  
+ For a list of limitations and restrictions, see [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 5.  Repeat steps 3 and 4 with the DQS_PROJECTS and DQS_STAGING_DATA databases to detach them.  
   
- You can also detach DQS databases using the Transact-SQL statements by using the sp_detach_db stored procedure. For more information about detaching databases using Transact-SQL statements, see [Using Transact-SQL](../../2014/database-engine/detach-a-database.md#TsqlProcedure) in [Detach a Database](../../2014/database-engine/detach-a-database.md).  
+ You can also detach DQS databases using the Transact-SQL statements by using the sp_detach_db stored procedure. For more information about detaching databases using Transact-SQL statements, see [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) in [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
 ##  <a name="Attach"></a> Attach DQS Databases  
  Use the following instructions to attach a DQS database to the same SQL Server instance (from where you detached) or a different SQL Server instance where [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is installed.  
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 11. Connect to the Data Quality Server using the Data Quality Client to verify if you can connect successfully.  
   
- You can also attach DQS databases using the Transact-SQL statements. For more information about attaching databases using Transact-SQL statements, see [Using Transact-SQL](../../2014/database-engine/attach-a-database.md#TsqlProcedure) in [Attach a Database](../../2014/database-engine/attach-a-database.md).  
+ You can also attach DQS databases using the Transact-SQL statements. For more information about attaching databases using Transact-SQL statements, see [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) in [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 ## See Also  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  

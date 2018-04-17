@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   Select a Windows collation for consistent comparison across data types.  
   
--   Use a new 100-level collation for better linguistic sorting support. For more information, see [Collation and Unicode Support](../../../2014/database-engine/collation-and-unicode-support.md).  
+-   Use a new 100-level collation for better linguistic sorting support. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   If you plan to migrate a database to the upgraded instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select the collation that matches your existing collation of the database.  
   

@@ -41,7 +41,7 @@ manager: "jhubbard"
  Both `EXTERNAL_ACCESS` assemblies and `UNSAFE` assemblies access operating system resources with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, unless they voluntarily impersonate the current security context as previously described. Because of this, the authors of `EXTERNAL_ACCESS` assemblies require a higher level of trust than those of `SAFE` assemblies, which is specified by the `EXTERNAL ACCESS` login-level permission. Only logins who are trusted to run code under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account should be granted the `EXTERNAL ACCESS` permission.  
   
 ## See Also  
- [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)   
- [Impersonation and Credentials for Connections](../../../2014/database-engine/dev-guide/impersonation-and-credentials-for-connections.md)  
+ [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)   
+ [Impersonation and Credentials for Connections](../../relational-databases/clr-integration/data-access/impersonation-and-credentials-for-connections.md)  
   
   

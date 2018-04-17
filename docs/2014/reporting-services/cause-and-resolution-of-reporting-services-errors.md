@@ -32,7 +32,7 @@ manager: "mblythe"
 |[rsProcessingError - Reporting Services Error](../../2014/reporting-services/rsprocessingerror-reporting-services-error.md)|Errors have occurred in report processing.|  
 |[rsServerConfigurationError - Reporting Services Error](../../2014/reporting-services/rsserverconfigurationerror-reporting-services-error.md)|The report server has encountered a configuration error.|  
 |[rrRenderingError - Reporting Services Error](../../2014/reporting-services/rrrenderingerror-reporting-services-error.md)|An error occurred during rendering of the report. (rrRenderingError) %1.|  
-|[Report Server Windows Service &#40;MSSQLServer&#41; 107](../../2014/reporting-services/report-server-windows-service-mssqlserver-107.md)|Report Server Windows service (MSSQLSERVER) cannot connect to the report server database.|  
+|[Report Server Windows Service &#40;MSSQLServer&#41; 107](../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Report Server Windows service (MSSQLSERVER) cannot connect to the report server database.|  
   
 ## See Also  
  [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md)   

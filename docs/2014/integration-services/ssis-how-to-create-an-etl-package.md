@@ -42,7 +42,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  When you attach the database (\*.mdf file), [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] will by default search for an .ldf file. You must manually remove the .ldf file before clicking OK in the **Attach Databases** dialog box.  
     >   
-    >  For more information about attaching databases, see [Attach a Database](../database-engine/attach-a-database.md).  
+    >  For more information about attaching databases, see [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 -   Sample data. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   

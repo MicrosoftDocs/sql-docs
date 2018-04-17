@@ -290,7 +290,7 @@ manager: "jhubbard"
  [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)   
  [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)   
- [Complete Database Restores &#40;Full Recovery Model&#41;](../complete-database-restores-full-recovery-model.md)   
+ [Complete Database Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Mirroring States &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

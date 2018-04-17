@@ -108,7 +108,7 @@ $session.Create()
  To create, alter, or drop an Extended Events session, you must have the ALTER ANY EVENT SESSION permission.  
   
 ## See Also  
- [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)   
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Use the system_health Session](../../2014/database-engine/use-the-system-health-session.md)   
  [Extended Events Tools](../../2014/database-engine/extended-events-tools.md)  
   

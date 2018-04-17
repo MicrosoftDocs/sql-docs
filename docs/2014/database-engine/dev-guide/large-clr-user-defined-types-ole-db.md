@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Large CLR User-Defined Types (OLE DB)
   This topic discusses the changes to OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   
- For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-large-clr-udts-ole-db.md).  
+ For more information about support for large CLR UDTs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, see [Large CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). For a sample, see [Use Large CLR UDTs &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-large-clr-udts-ole-db.md).  
   
 ## Data Format  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client uses ~0 to represent the length of values that are of unlimited size for large object (LOB) types. ~0 also represents the size of CLR UDTs that are larger than 8,000 bytes.  

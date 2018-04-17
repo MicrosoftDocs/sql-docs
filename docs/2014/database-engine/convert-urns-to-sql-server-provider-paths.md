@@ -38,8 +38,8 @@ Get-Help Convert-UrnToPath -Examples
 ```  
   
 ## See Also  
- [Query Expressions and Uniform Resource Names](../../2014/database-engine/query-expressions-and-uniform-resource-names.md)   
- [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)   
- [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)  
+ [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)   
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
   
   

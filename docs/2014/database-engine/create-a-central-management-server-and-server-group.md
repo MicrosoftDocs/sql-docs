@@ -80,6 +80,6 @@ manager: "jhubbard"
 -   After you create a central management server, one or more server groups, and one or more registered servers, you can execute queries against a whole group at the same time. For more information about how to execute [!INCLUDE[tsql](../includes/tsql-md.md)] statements on the servers in a server group at the same time, see [Execute Statements Against Multiple Servers Simultaneously &#40;SQL Server Management Studio&#41;](../../2014/database-engine/execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## See Also  
- [Administer Multiple Servers Using Central Management Servers](../../2014/database-engine/administer-multiple-servers-using-central-management-servers.md)  
+ [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

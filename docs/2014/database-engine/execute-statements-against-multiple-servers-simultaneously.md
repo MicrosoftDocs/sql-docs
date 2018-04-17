@@ -70,6 +70,6 @@ manager: "jhubbard"
 3.  On the **Multiserver Results** page, specify the option settings that you want, and then click **OK**.  
   
 ## See Also  
- [Administer Multiple Servers Using Central Management Servers](../../2014/database-engine/administer-multiple-servers-using-central-management-servers.md)  
+ [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

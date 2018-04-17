@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  To maintain the `SSISDB` database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md).  
   
- The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
+ The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../powershell/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   
  For more information about viewing operations data, see [Monitoring for Package Executions and Other Operations](../../2014/integration-services/monitoring-for-package-executions-and-other-operations.md).  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
   
  To change the **Encryption Algorithm** property setting, set the `SSISDB` database to the single-user mode and then call the catalog.configure_catalog stored procedure. Use ENCRYPTION_ALGORITHM for the *property_name* argument. For the supported property values, see [catalog.catalog_properties &#40;SSISDB Database&#41;](~/integration-services/system-views/catalog-catalog-properties-ssisdb-database.md). For more information about the stored procedure, see [catalog.configure_catalog &#40;SSISDB Database&#41;](~/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
- For more information about single-user mode, see [Set a Database to Single-user Mode](../../2014/database-engine/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../2014/database-engine/sql-server-encryption.md).  
+ For more information about single-user mode, see [Set a Database to Single-user Mode](../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../2014/database-engine/sql-server-encryption.md).  
   
  A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](../../2014/integration-services/create-the-ssis-catalog.md).  
   

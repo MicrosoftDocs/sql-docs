@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Manage the Database Engine Services](manage-the-database-engine-services.md)   
- [Move System Databases](../move-system-databases.md)   
- [Move User Databases](../move-user-databases.md)  
+ [Move System Databases](../../relational-databases/databases/system-databases.md)   
+ [Move User Databases](../../relational-databases/databases/move-user-databases.md)  
   
   

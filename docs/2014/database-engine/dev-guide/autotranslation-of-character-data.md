@@ -59,6 +59,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Processing Results &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/processing-results-odbc.md)   
- [Collation and Unicode Support](../../../2014/database-engine/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

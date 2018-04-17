@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   Using the system-supplied stoplist in the database. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ships with a system stoplist that contains the most commonly used stopwords for each supported language, that is for every language that is associated with given word breakers by default. The system stoplist contains common stopwords for all supported languages.  You can copy the system stoplist, and customize your copy by adding and removing stopwords.  
   
-     The system stoplist is installed in the [Resource](../../2014/database-engine/resource-database.md) database.  
+     The system stoplist is installed in the [Resource](../relational-databases/databases/resource-database.md) database.  
   
 -   Creating your own stoplist, and then adding stopwords to it for any language that you specify. You can also drop stopwords from your stoplist when necessary.  
   

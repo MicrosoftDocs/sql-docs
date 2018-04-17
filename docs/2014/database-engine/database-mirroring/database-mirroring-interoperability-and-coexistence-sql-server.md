@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   [Change data capture (and change tracking)](../change-data-capture-and-other-sql-server-features.md)  
   
--   [Database snapshots](database-mirroring-and-database-snapshots-sql-server.md)  
+-   [Database snapshots](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Full-text catalogs](database-mirroring-and-full-text-catalogs-sql-server.md)  
   

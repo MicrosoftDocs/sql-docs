@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When you rename a trigger, the trigger must be in the current database, and the new name must follow the rules for [identifiers](../../2014/database-engine/database-identifiers.md).  
+-   When you rename a trigger, the trigger must be in the current database, and the new name must follow the rules for [identifiers](../relational-databases/databases/database-identifiers.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   

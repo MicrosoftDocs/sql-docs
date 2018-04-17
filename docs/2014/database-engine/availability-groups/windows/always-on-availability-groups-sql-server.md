@@ -116,19 +116,19 @@ manager: "jhubbard"
   
 -   [About Change Tracking;SQL Serve;](../../about-change-tracking-sql-server.md)  
   
--   [Contained databases](../../contained-databases.md)  
+-   [Contained databases](../../../relational-databases/databases/contained-databases.md)  
   
 -   [Database encryption](../../transparent-data-encryption-tde.md)  
   
 -   [Database snapshots](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
--   [FILESTREAM](../../filestream-sql-server.md)  
+-   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   
--   [FileTable](../../filetables-sql-server.md)  
+-   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
   
 -   [Log shipping](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [Remote Blob Store (RBS)](../../remote-blob-store-rbs-sql-server.md)  
+-   [Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [Replication](../../install-windows/install-sql-server-replication.md)  
   

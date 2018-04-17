@@ -112,7 +112,7 @@ manager: "jhubbard"
  This annotated XSD schema provides the XML view of the relational data. This XML view can be queried using the XPath language. An XPath query returns an XML document as a result, instead of the rowset that is returned by SQL queries.  
   
 > [!NOTE]  
->  In the mapping schema, case-sensitivity for the specified relational values (such as table name and column name) depends upon if SQL Server is using case-sensitive collation settings. For more information, see [Collation and Unicode Support](../../../2014/database-engine/collation-and-unicode-support.md).  
+>  In the mapping schema, case-sensitivity for the specified relational values (such as table name and column name) depends upon if SQL Server is using case-sensitive collation settings. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Other Resources  
  You can find more information about XML Schema Definition language (XSD), XML Path language (XPath), and Extensible Stylesheet Language Transformations (XSLT) at the following Web sites:  

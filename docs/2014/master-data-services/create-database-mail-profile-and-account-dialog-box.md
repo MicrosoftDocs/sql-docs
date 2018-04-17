@@ -24,7 +24,7 @@ manager: "jhubbard"
  A *Database Mail profile* is a collection of Database Mail accounts. A *Database Mail account* contains the information that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses to send email messages to an SMTP server. When you create the profile and account in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], the account is automatically added to the profile and that account information is used to send emails.  
   
 > [!NOTE]  
->  You cannot use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to update existing Database Mail profiles or accounts, nor can you configure more than one account for a profile. To perform more advanced tasks with Database Mail, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Transact-SQL scripts. For more information, see the [Database Mail Configuration Objects](../../2014/database-engine/database-mail-configuration-objects.md) section in SQL Server Books Online.  
+>  You cannot use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to update existing Database Mail profiles or accounts, nor can you configure more than one account for a profile. To perform more advanced tasks with Database Mail, you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or Transact-SQL scripts. For more information, see the [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md) section in SQL Server Books Online.  
   
 |Control Name|Description|  
 |------------------|-----------------|  

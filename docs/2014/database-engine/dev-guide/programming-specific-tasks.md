@@ -42,7 +42,7 @@ manager: "jhubbard"
 |[Backing Up and Restoring Databases and Transaction Logs](../../../2014/database-engine/dev-guide/backing-up-and-restoring-databases-and-transaction-logs.md)|Describes how to back up and restore databases and transaction logs in SMO.|  
 |[Scripting](../../../2014/database-engine/dev-guide/scripting.md)|Describes how to script objects and discover dependencies between objects in SMO.|  
 |[Transferring Data](../../../2014/database-engine/dev-guide/transferring-data.md)|Describes how to transfer data in SMO.|  
-|[Using Database Mail](../../../2014/database-engine/dev-guide/using-database-mail.md)|Describes how SMO makes use of e-mail services.|  
+|[Using Database Mail](../../relational-databases/database-mail/database-mail.md)|Describes how SMO makes use of e-mail services.|  
 |[Managing Service Broker](../../../2014/database-engine/dev-guide/managing-service-broker.md)|Describes how to set up Service Broker using SMO.|  
 |[Using XML Schemas](../../../2014/database-engine/dev-guide/using-xml-schemas.md)|Describes how to use the XML data type in SMO.|  
 |[Using Synonyms](../../../2014/database-engine/dev-guide/using-synonyms.md)|Describes how to create synonyms in SMO.|  

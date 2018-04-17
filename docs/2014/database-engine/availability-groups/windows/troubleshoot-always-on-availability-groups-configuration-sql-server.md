@@ -68,7 +68,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../../mssqlserver-1418.md).  
+3.  For [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
 4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement:  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
  Each server instance that is hosting an availability replica must be able to access the port of each of the other server instance over TCP. This is especially important if the server instances are in different domains that do not trust each other (untrusted domains).  
   
 ##  <a name="Msg1418"></a> Endpoint Access (SQL Server Error 1418)  
- This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see [MSSQLSERVER_1418](../../mssqlserver-1418.md).  
+ This [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] message indicates that the server network address specified in the endpoint URL cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see [MSSQLSERVER_1418](../../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md).  
   
 ##  <a name="JoinDbFails"></a> Join Database Fails (SQL Server Error 35250)  
  This section discusses the possible causes and resolution of a failure to join secondary databases to the availability group because the connection to the primary replica is not active.  
@@ -151,7 +151,7 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
--   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../manage-metadata-when-making-a-database-available-on-another-server.md)  
+-   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

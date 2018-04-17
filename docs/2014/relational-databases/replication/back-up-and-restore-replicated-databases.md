@@ -60,7 +60,7 @@ manager: "jhubbard"
  As part of any recovery strategy, always keep a current script of your replication settings in a safe location. In the event of server failure or the need to set up a test environment, you can modify the script by changing server name references, and it can be used to help recreate your replication settings. In addition to scripting your current replication settings, you should script the enabling and disabling of replication. For information about scripting replication objects, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
   
 ## See Also  
- [Back Up and Restore of SQL Server Databases](../../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   
+ [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)  
   
   

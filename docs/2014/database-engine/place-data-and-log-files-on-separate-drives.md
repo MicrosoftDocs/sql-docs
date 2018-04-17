@@ -33,11 +33,11 @@ manager: "jhubbard"
 -   Specify a new location by running the ALTER DATABASE statement with the MODIFY FILE option, and then restarting the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## For More Information  
- [Move Database Files](../../2014/database-engine/move-database-files.md)  
+ [Move Database Files](../relational-databases/databases/move-database-files.md)  
   
- [Move User Databases](../../2014/database-engine/move-user-databases.md)  
+ [Move User Databases](../relational-databases/databases/move-user-databases.md)  
   
- [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)  
+ [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

@@ -96,6 +96,6 @@ manager: "jhubbard"
 |Web service error: {0}.|45571|Described in the exception.|Enable ExposeExceptionDetails and use extended information from the exception.|  
   
 ## See Also  
- [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../../2014/database-engine/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
+ [Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
   
   

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
--   [Use the Copy Database Wizard](../use-the-copy-database-wizard.md)  
+-   [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
 >  Upgrade of an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is not supported on a computer that is running [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1. For more information on Server Core installations, see [Install SQL Server 2014 on Server Core](install-sql-server-on-server-core.md).  

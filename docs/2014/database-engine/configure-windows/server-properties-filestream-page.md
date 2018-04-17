@@ -36,7 +36,7 @@ manager: "jhubbard"
  Select this control to allow remote clients to access this FILESTREAM data on this server.  
   
 ## See Also  
- [FILESTREAM &#40;SQL Server&#41;](../filestream-sql-server.md)   
+ [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   

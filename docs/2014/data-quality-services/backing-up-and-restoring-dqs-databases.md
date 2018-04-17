@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 2.  In Object Explorer, expand the **Databases** node.  
   
-3.  Back up the DQS_STAGING_DATA database. For step-by-step instructions for backing a SQL Server database, see [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md).  
+3.  Back up the DQS_STAGING_DATA database. For step-by-step instructions for backing a SQL Server database, see [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Back up the DQS_PROJECTS database.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 6.  Disconnect from the current instance of SQL Server, and connect to the SQL Server instance where you want to restore these databases.  
   
-7.  Restore DQS_MAIN database. For step-by-step instructions to restore a SQL Server database, see [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md).  
+7.  Restore DQS_MAIN database. For step-by-step instructions to restore a SQL Server database, see [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restore the DQS_PROJECTS database.  
   

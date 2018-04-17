@@ -128,7 +128,7 @@ manager: "jhubbard"
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
--   [Attach a Database](../relational-databases/databases/attach-a-database.md)  
+-   [Attach a Database](attach-a-database.md)  
   
 -   [sp_attach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
   

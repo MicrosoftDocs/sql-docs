@@ -68,6 +68,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Shrink a Database](shrink-a-database.md)   
- [Add Data or Log Files to a Database](../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
   
   

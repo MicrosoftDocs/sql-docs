@@ -53,13 +53,13 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
--   [Revert a Database to a Database Snapshot](../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [Revert a Database to a Database Snapshot](revert-a-database-to-a-database-snapshot.md)  
   
--   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md)  
+ [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

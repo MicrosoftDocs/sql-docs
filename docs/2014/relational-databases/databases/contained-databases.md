@@ -107,7 +107,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  Because certain objects have a default containment setting of **NONE**, this view can return false positives.  
   
- The behavior of partially contained databases differs most distinctly from that of non-contained databases with regard to collation. For more information about collation issues, see [Contained Database Collations](../relational-databases/databases/contained-database-collations.md).  
+ The behavior of partially contained databases differs most distinctly from that of non-contained databases with regard to collation. For more information about collation issues, see [Contained Database Collations](contained-database-collations.md).  
   
 ##  <a name="benefits"></a> Benefits of using Partially Contained Databases  
  There are issues and complications associated with the non-contained databases that can be resolved by using a partially contained database.  
@@ -159,7 +159,7 @@ manager: "jhubbard"
 ## Related Content  
  [Modified Features &#40;Contained Database&#41;](modified-features-contained-database.md)  
   
- [Contained Database Collations](../relational-databases/databases/contained-database-collations.md)  
+ [Contained Database Collations](contained-database-collations.md)  
   
  [Security Best Practices with Contained Databases](../../database-engine/contained-databases.md)  
   

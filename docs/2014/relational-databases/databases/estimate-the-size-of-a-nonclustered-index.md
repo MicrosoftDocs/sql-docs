@@ -258,8 +258,8 @@ manager: "jhubbard"
  [Create Nonclustered Indexes](../../2014/database-engine/create-nonclustered-indexes.md)   
  [Create Clustered Indexes](../../2014/database-engine/create-clustered-indexes.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
- [Estimate the Size of a Clustered Index](../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   
- [Estimate the Size of a Heap](../relational-databases/databases/estimate-the-size-of-a-heap.md)   
- [Estimate the Size of a Database](../relational-databases/databases/estimate-the-size-of-a-database.md)  
+ [Estimate the Size of a Clustered Index](estimate-the-size-of-a-clustered-index.md)   
+ [Estimate the Size of a Heap](estimate-the-size-of-a-heap.md)   
+ [Estimate the Size of a Database](estimate-the-size-of-a-database.md)  
   
   

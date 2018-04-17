@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 ##  <a name="SSMSProcedure"></a> To Upgrade a Database by Using Detach and Attach  
   
-1.  Detach the database. For more information, see [Detach a Database](../relational-databases/databases/detach-a-database.md).  
+1.  Detach the database. For more information, see [Detach a Database](detach-a-database.md).  
   
 2.  Optionally, move the detached database file or files and the log file or files.  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you try to attach the database without specifying the log file, the attach operation will look for the log file in its original location. If the original copy of the log still exists in that location, that copy is attached. To avoid using the original log file, either specify the path of the new log file or remove the original copy of the log file (after copying it to the new location).  
   
-3.  Attach the copied files to the instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Attach a Database](../relational-databases/databases/attach-a-database.md).  
+3.  Attach the copied files to the instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Attach a Database](attach-a-database.md).  
   
 ## Example  
  The following example upgrades a copy of a database from an earlier version of SQL Server. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
@@ -109,7 +109,7 @@ manager: "jhubbard"
  If the compatibility level of a user database is 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level is 90 before upgrade in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ### Managing Metadata on the Upgraded Server Instance  
- When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins, jobs, and permissions, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+ When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins, jobs, and permissions, on the other server instance. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ### Service Master Key and Database Master Key Encryption changes from 3DES to AES  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and higher versions uses the AES encryption algorithm to protect the service master key (SMK) and the database master key (DMK). AES is a newer encryption algorithm than 3DES used in earlier versions. When a database is first attached or restored to a new instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a copy of the database master key (encrypted by the service master key) is not yet stored in the server. You must use the `OPEN MASTER KEY` statement to decrypt the database master key (DMK). Once the DMK has been decrypted, you have the option of enabling automatic decryption in the future by using the `ALTER MASTER KEY REGENERATE` statement to provision the server with a copy of the DMK, encrypted with the service master key (SMK). When a database has been upgraded from an earlier version, the DMK should be regenerated to use the newer AES algorithm. For more information about regenerating the DMK, see [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md). The time required to regenerate the DMK key to upgrade to AES depends upon the number of objects protected by the DMK. Regenerating the DMK key to upgrade to AES is only necessary once, and has no impact on future regenerations as part of a key rotation strategy.  

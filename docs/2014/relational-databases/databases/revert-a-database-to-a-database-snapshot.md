@@ -123,7 +123,7 @@ manager: "jhubbard"
 -   B. [Reverting a snapshot on the Sales database](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Reverting a snapshot on the AdventureWorks database  
- This example assumes that only one snapshot currently exists on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For the example that creates the snapshot to which the database is reverted here, see [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ This example assumes that only one snapshot currently exists on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For the example that creates the snapshot to which the database is reverted here, see [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -140,7 +140,7 @@ GO
   
 -   For the **Sales** database and the **sales_snapshot0600** snapshot, see "Creating a database with filegroups" and "Creating a database snapshot" in [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md).  
   
--   For the **sales_snapshot1200** snapshot, see "Creating a snapshot on the Sales database" in [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+-   For the **sales_snapshot1200** snapshot, see "Creating a snapshot on the Sales database" in [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  
   
 ```  
 --Test to see if sales_snapshot0600 exists and if it   
@@ -157,14 +157,14 @@ GO
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
 -   [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md)   
+ [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  

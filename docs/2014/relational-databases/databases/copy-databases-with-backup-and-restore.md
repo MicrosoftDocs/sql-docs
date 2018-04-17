@@ -129,7 +129,7 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
 ## See Also  
- [Copy Databases to Other Servers](../relational-databases/databases/copy-databases-to-other-servers.md)   
+ [Copy Databases to Other Servers](copy-databases-to-other-servers.md)   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  

@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 #### To move a database by using detach and attach  
   
-1.  Detach the database. For more information, see [Detach a Database](../relational-databases/databases/detach-a-database.md).  
+1.  Detach the database. For more information, see [Detach a Database](detach-a-database.md).  
   
 2.  In a Windows Explorer or Windows Command Prompt window, move the detached database file or files and log file or files to the new location.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you try to attach the database without specifying the log file, the attach operation will look for the log file in its original location. If a copy of the log still exists in the original location, that copy is attached. To avoid using the original log file, either specify the path of the new log file or remove the original copy of the log file (after copying it to the new location).  
   
-3.  Attach the copied files. For more information, see [Attach a Database](../relational-databases/databases/attach-a-database.md).  
+3.  Attach the copied files. For more information, see [Attach a Database](attach-a-database.md).  
   
 ## Example  
  The following example creates a copy of the [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
@@ -80,6 +80,6 @@ manager: "jhubbard"
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], a newly attached database is not immediately visible in Object Explorer. To view the database, in Object Explorer, click **View,** and then **Refresh**. When the **Databases** node is expanded in Object Explorer, the newly attached database now appears in the list of databases.  
   
 ## See Also  
- [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+ [Database Detach and Attach &#40;SQL Server&#41;](../database-detach-and-attach-sql-server.md)  
   
   

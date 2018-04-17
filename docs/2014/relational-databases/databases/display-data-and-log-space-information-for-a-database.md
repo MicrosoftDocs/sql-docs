@@ -94,7 +94,7 @@ GO
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
- [Add Data or Log Files to a Database](../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
- [Delete Data or Log Files from a Database](../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+ [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)   
+ [Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)  
   
   

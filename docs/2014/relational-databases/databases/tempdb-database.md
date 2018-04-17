@@ -138,7 +138,7 @@ manager: "jhubbard"
   
  [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
- [Move Database Files](../relational-databases/databases/move-database-files.md)  
+ [Move Database Files](move-database-files.md)  
   
 ## See Also  
  [Working with tempdb in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81216)  

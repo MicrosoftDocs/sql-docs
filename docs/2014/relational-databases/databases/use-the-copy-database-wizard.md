@@ -282,7 +282,7 @@ manager: "jhubbard"
  If the compatibility level of a user database was 100 or higher before upgrade, it remains the same after upgrade. If the compatibility level was 90 in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## See Also  
- [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
+ [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)   
  [Create a SQL Server Agent Proxy](../../2014/database-engine/create-a-sql-server-agent-proxy.md)  
   
   

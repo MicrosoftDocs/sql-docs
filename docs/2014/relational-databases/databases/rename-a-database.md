@@ -84,6 +84,6 @@ GO
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
- [Database Identifiers](../relational-databases/databases/database-identifiers.md)  
+ [Database Identifiers](database-identifiers.md)  
   
   

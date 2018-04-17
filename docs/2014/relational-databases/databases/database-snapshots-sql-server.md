@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 -   Using a mirror database that you are maintaining for availability purposes to offload reporting.  
   
-     Using database snapshots with database mirroring permits you to make the data on the mirror server accessible for reporting. Additionally, running queries on the mirror database can free up resources on the principal. For more information, see [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md).  
+     Using database snapshots with database mirroring permits you to make the data on the mirror server accessible for reporting. Additionally, running queries on the mirror database can free up resources on the principal. For more information, see [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md).  
   
 -   Safeguarding data against administrative error.  
   
@@ -223,17 +223,17 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
--   [View a Database Snapshot &#40;SQL Server&#41;](../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
--   [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
--   [Revert a Database to a Database Snapshot](../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [Revert a Database to a Database Snapshot](revert-a-database-to-a-database-snapshot.md)  
   
--   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md)  
+ [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

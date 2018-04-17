@@ -135,8 +135,8 @@ manager: "jhubbard"
   
 ## See Also  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
- [Shrink a Database](../relational-databases/databases/shrink-a-database.md)   
- [Delete Data or Log Files from a Database](../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
+ [Shrink a Database](shrink-a-database.md)   
+ [Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

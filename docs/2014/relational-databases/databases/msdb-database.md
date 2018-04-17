@@ -104,7 +104,7 @@ manager: "jhubbard"
   
  [sys.master_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
- [Move Database Files](../relational-databases/databases/move-database-files.md)  
+ [Move Database Files](move-database-files.md)  
   
  [Database Mail](../relational-databases/database-mail/database-mail.md)  
   

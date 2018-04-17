@@ -107,6 +107,6 @@ manager: "jhubbard"
  [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
- [Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md)  
+ [Database Files and Filegroups](database-files-and-filegroups.md)  
   
   

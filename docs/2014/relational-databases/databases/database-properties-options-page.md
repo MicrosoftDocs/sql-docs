@@ -31,7 +31,7 @@ manager: "jhubbard"
  Specify the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the database supports. Possible values are  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**, and **SQL Server 2008 (100)**. When a SQL Server 2005 database is upgraded to SQL Server 2014, the compatibility level for that database is changed from 90 to 100.  The 90 compatibility level is not supported in SQL Server 2014. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  **Containment type**  
- Specify none or partial to designate if this is a contained database. For more information about contained databases, see [Contained Databases](../relational-databases/databases/contained-databases.md). The server property **Enable Contained Databases** must be set to **TRUE** before a database can be configured as contained.  
+ Specify none or partial to designate if this is a contained database. For more information about contained databases, see [Contained Databases](contained-databases.md). The server property **Enable Contained Databases** must be set to **TRUE** before a database can be configured as contained.  
   
 > [!IMPORTANT]  
 >  Enabling partially contained databases delegates control over access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the owners of the database. For more information, see [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  

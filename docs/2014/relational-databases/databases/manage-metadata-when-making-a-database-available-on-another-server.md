@@ -115,7 +115,7 @@ manager: "jhubbard"
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
- For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+ For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -140,7 +140,7 @@ manager: "jhubbard"
   
 -   [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md)  
   
--   [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md)  
+-   [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Create Identical Symmetric Keys on Two Servers](../../2014/database-engine/create-identical-symmetric-keys-on-two-servers.md)  
   
@@ -184,7 +184,7 @@ manager: "jhubbard"
 ##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../clr-integration/common-language-runtime-integration-overview.md) instead.  
   
  Extended stored procedures are programmed by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Stored Procedure API. A member of the **sysadmin** fixed server role can register an extended stored procedure with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and grant permission to users to execute the procedure. Extended stored procedures can be added only to the **master** database.  
   
@@ -209,7 +209,7 @@ manager: "jhubbard"
   
 -   [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -218,11 +218,11 @@ manager: "jhubbard"
   
 -   The login used by the job  
   
-     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../../2014/database-engine/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
+     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../../database-engine/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service startup account  
   
-     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../2014/database-engine/select-an-account-for-the-sql-server-agent-service.md).  
+     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../database-engine/select-an-account-for-the-sql-server-agent-service.md).  
   
      To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -233,35 +233,35 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxies  
   
-     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../../2014/database-engine/create-a-sql-server-agent-proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../../2014/database-engine/troubleshoot-multiserver-jobs-that-use-proxies.md).  
+     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../../database-engine/create-a-sql-server-agent-proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../../database-engine/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  For more information, see also:  
   
--   [Implement Jobs](../../2014/database-engine/implement-jobs.md)  
+-   [Implement Jobs](../../database-engine/implement-jobs.md)  
   
--   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
+-   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
 -   [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configure SQL Server Agent](../../2014/database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implement SQL Server Agent Security](../../2014/database-engine/implement-sql-server-agent-security.md)  
+-   [Implement SQL Server Agent Security](../../database-engine/implement-sql-server-agent-security.md)  
   
  **To view existing jobs and their properties**  
   
--   [Monitor Job Activity](../../2014/database-engine/monitor-job-activity.md)  
+-   [Monitor Job Activity](../../database-engine/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [View Job Step Information](../../2014/database-engine/view-job-step-information.md)  
+-   [View Job Step Information](../../database-engine/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](~/relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **To create a job**  
   
--   [Create a Job](../../2014/database-engine/create-a-job.md)  
+-   [Create a Job](../../database-engine/create-a-job.md)  
   
--   [Create a Job](../../2014/database-engine/create-a-job.md)  
+-   [Create a Job](../../database-engine/create-a-job.md)  
   
 #### Best Practices for Using a Script to Re-create a Job  
  We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you to identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  
@@ -274,7 +274,7 @@ manager: "jhubbard"
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
 > [!NOTE]  
->  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../2014/database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -322,14 +322,14 @@ manager: "jhubbard"
   
 -   [GRANT Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-permissions-transact-sql.md)  
   
- For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md).  
+ For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../../database-engine/encryption-hierarchy.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="replication_settings"></a> Replication Settings  
  If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must re-create all publications and subscriptions after backups are restored. To make this process easier, create scripts for your current replication settings and, also, for the enabling and disabling of replication. To help re-create your replication settings, copy these scripts and change the server name references to work for the destination server instance.  
   
- For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](log-shipping/log-shipping-and-replication-sql-server.md).  
+ For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](log-shipping/log-shipping-and-replication-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -346,18 +346,18 @@ manager: "jhubbard"
 ##  <a name="triggers"></a> Triggers (at Server Level)  
  DDL triggers fire stored procedures in response to a variety of Data Definition Language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that start with the keywords CREATE, ALTER, and DROP. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
   
- For more information about this feature, see [DDL Triggers](../../2014/database-engine/ddl-triggers.md).  
+ For more information about this feature, see [DDL Triggers](../../database-engine/ddl-triggers.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ## See Also  
- [Contained Databases](../relational-databases/databases/contained-databases.md)   
- [Copy Databases to Other Servers](../relational-databases/databases/copy-databases-to-other-servers.md)   
- [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Contained Databases](contained-databases.md)   
+ [Copy Databases to Other Servers](copy-databases-to-other-servers.md)   
+ [Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)   
- [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md)  
+ [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
+ [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../database-engine/troubleshoot-orphaned-users-sql-server.md)  
   
   

@@ -43,13 +43,13 @@ manager: "jhubbard"
  Temporary tables may not refer to user-defined types, XML schema collections, or user-defined functions.  
   
 ## Collation  
- In the non-contained database model, there are three separate types of collation: Database collation, Instance collation, and tempdb collation. Contained databases use only two collations, database collation and the new catalog collation. See [Contained Database Collations](../relational-databases/databases/contained-database-collations.md) for more details on contained database collation.  
+ In the non-contained database model, there are three separate types of collation: Database collation, Instance collation, and tempdb collation. Contained databases use only two collations, database collation and the new catalog collation. See [Contained Database Collations](contained-database-collations.md) for more details on contained database collation.  
   
 ## User Options  
  When enabling contained databases, the [user options Option](configure-windows/configure-the-user-options-server-configuration-option.md) must be set to 0 for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [Contained Database Collations](../relational-databases/databases/contained-database-collations.md)   
+ [Contained Database Collations](contained-database-collations.md)   
  [Contained Databases](../../database-engine/contained-databases.md)  
   
   

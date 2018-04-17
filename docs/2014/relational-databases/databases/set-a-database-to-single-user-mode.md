@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 5.  If other users are connected to the database, an **Open Connections** message will appear. To change the property and close all other connections, click **Yes**.  
   
- You can also set the database to Multiple or Restricted access by using this procedure. For more information about the Restrict Access options, see [Database Properties &#40;Options Page&#41;](../relational-databases/databases/database-properties-options-page.md).  
+ You can also set the database to Multiple or Restricted access by using this procedure. For more information about the Restrict Access options, see [Database Properties &#40;Options Page&#41;](database-properties-options-page.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

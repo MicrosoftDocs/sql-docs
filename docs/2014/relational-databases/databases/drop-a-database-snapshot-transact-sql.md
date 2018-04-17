@@ -48,11 +48,11 @@ DROP DATABASE SalesSnapshot0600 ;
  Any user connections to SalesSnapshot0600 are terminated, and all of the NTFS file system sparse files used by the snapshot are deleted.  
   
 > [!NOTE]  
->  For information about the use of sparse files by database snapshots, see [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md).  
+>  For information about the use of sparse files by database snapshots, see [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Database Snapshot &#40;Transact-SQL&#41;](../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Create a Database Snapshot &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
 -   [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
@@ -62,6 +62,6 @@ DROP DATABASE SalesSnapshot0600 ;
   
 ## See Also  
  [DROP DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md)  
+ [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

@@ -53,12 +53,12 @@ manager: "jhubbard"
 ## Related Content  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
- [Database States](../relational-databases/databases/database-states.md)  
+ [Database States](database-states.md)  
   
  [Mirroring States &#40;SQL Server&#41;](database-mirroring/mirroring-states-sql-server.md)  
   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
- [Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md)  
+ [Database Files and Filegroups](database-files-and-filegroups.md)  
   
   

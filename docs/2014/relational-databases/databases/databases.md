@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Basic Information about Databases  
  A computer can have one or more than one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed. Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can contain one or many databases.  Within a database, there are one or many object ownership groups called schemas. Within each schema there are database objects such as tables, views, and stored procedures. Some objects such as certificates and asymmetric keys are contained within the database, but are not contained within a schema. For more information about creating tables, see [Tables](../../2014/database-engine/tables.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are stored in the file system in files. Files can be grouped into filegroups. For more information about files and filegroups, see [Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are stored in the file system in files. Files can be grouped into filegroups. For more information about files and filegroups, see [Database Files and Filegroups](database-files-and-filegroups.md).  
   
  When people gain access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] they are identified as a login. When people gain access to a database they are identified as a database user. A database user can be based on a login. If contained databases are enabled, a database user can be created that is not based on a login. For more information about users, see [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md).  
   
@@ -38,19 +38,19 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|[System Databases](../relational-databases/databases/system-databases.md)|[Delete Data or Log Files from a Database](../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[Contained Databases](../relational-databases/databases/contained-databases.md)|[Display Data and Log Space Information for a Database](../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server Data Files in Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md)|[Rename a Database](../relational-databases/databases/rename-a-database.md)|  
-|[Database States](../relational-databases/databases/database-states.md)|[Set a Database to Single-user Mode](../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[File States](../relational-databases/databases/file-states.md)|[Shrink a Database](../relational-databases/databases/shrink-a-database.md)|  
-|[Estimate the Size of a Database](../relational-databases/databases/estimate-the-size-of-a-database.md)|[Shrink a File](../relational-databases/databases/shrink-a-file.md)|  
-|[Copy Databases to Other Servers](../relational-databases/databases/copy-databases-to-other-servers.md)|[View or Change the Properties of a Database](../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)|[View a List of Databases on an Instance of SQL Server](../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[Add Data or Log Files to a Database](../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[View or Change the Compatibility Level of a Database](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[Change the Configuration Settings for a Database](../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)|  
-|[Create a Database](../relational-databases/databases/create-a-database.md)|[Create a User-Defined Data Type Alias](../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[Delete a Database](../relational-databases/databases/delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md)|  
+|[System Databases](system-databases.md)|[Delete Data or Log Files from a Database](delete-data-or-log-files-from-a-database.md)|  
+|[Contained Databases](contained-databases.md)|[Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md)|  
+|[SQL Server Data Files in Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Increase the Size of a Database](increase-the-size-of-a-database.md)|  
+|[Database Files and Filegroups](database-files-and-filegroups.md)|[Rename a Database](rename-a-database.md)|  
+|[Database States](database-states.md)|[Set a Database to Single-user Mode](set-a-database-to-single-user-mode.md)|  
+|[File States](file-states.md)|[Shrink a Database](shrink-a-database.md)|  
+|[Estimate the Size of a Database](estimate-the-size-of-a-database.md)|[Shrink a File](shrink-a-file.md)|  
+|[Copy Databases to Other Servers](copy-databases-to-other-servers.md)|[View or Change the Properties of a Database](view-or-change-the-properties-of-a-database.md)|  
+|[Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[View a List of Databases on an Instance of SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)|[View or Change the Compatibility Level of a Database](view-or-change-the-compatibility-level-of-a-database.md)|  
+|[Change the Configuration Settings for a Database](change-the-configuration-settings-for-a-database.md)|[Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)|  
+|[Create a Database](create-a-database.md)|[Create a User-Defined Data Type Alias](create-a-user-defined-data-type-alias.md)|  
+|[Delete a Database](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## Related Content  
  [Indexes](../../2014/database-engine/indexes.md)  

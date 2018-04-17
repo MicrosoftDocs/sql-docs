@@ -20,7 +20,7 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # Add-Remove Tables Dialog Box (Analysis Services - Multidimensional Data)
-  Use the **Add/Remove Tables** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add or remove tables in a data source to or from a data source view. You can display the **Add/Remove Tables** dialog box by:  
+  Use the **Add/Remove Tables** dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to add or remove tables in a data source to or from a data source view. You can display the **Add/Remove Tables** dialog box by:  
   
 -   Clicking **Add/Remove Objects** in the **Toolbar** pane of **Data Source View Designer**.  
   

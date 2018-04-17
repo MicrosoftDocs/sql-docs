@@ -72,12 +72,12 @@ manager: "jhubbard"
  Allows triggers to fire other triggers. Triggers can be nested to a maximum of 32 levels. For more information, see the "Nested Triggers" section in [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
   
  **Transform Noise Words**  
- Suppress an error message if noise words, that is stopwords, cause a Boolean operation on a full-text query to return zero rows. For more information, see [transform noise words Server Configuration Option](configure-windows/transform-noise-words-server-configuration-option.md).  
+ Suppress an error message if noise words, that is stopwords, cause a Boolean operation on a full-text query to return zero rows. For more information, see [transform noise words Server Configuration Option](../configure-windows/transform-noise-words-server-configuration-option.md).  
   
  **Two Digit Year Cutoff**  
  Indicates the highest year number that can be entered as a two-digit year. The year listed and the previous 99 years can be entered as a two-digit year. All other years must be entered as a four-digit year.  
   
- For example, the default setting of 2049 indicates that a date entered as '3/14/49' will be interpreted as March 14, 2049, and a date entered as '3/14/50' will be interpreted as March 14, 1950. For more information, see [Configure the two digit year cutoff Server Configuration Option](configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ For example, the default setting of 2049 indicates that a date entered as '3/14/49' will be interpreted as March 14, 2049, and a date entered as '3/14/50' will be interpreted as March 14, 1950. For more information, see [Configure the two digit year cutoff Server Configuration Option](../configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## Cursor  
  **Close Cursor on Commit Enabled**  
@@ -130,7 +130,7 @@ manager: "jhubbard"
  Specify whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keywords can be used as identifiers (an object or variable name) if enclosed in quotation marks. Possible values are `True` and `False`. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Recursive Triggers Enabled**  
- Specify whether triggers can be fired by other triggers. Possible values are `True` and `False`. When set to `True`, this enables recursive firing of triggers. When set to `False`, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../2014/database-engine/create-nested-triggers.md).  
+ Specify whether triggers can be fired by other triggers. Possible values are `True` and `False`. When set to `True`, this enables recursive firing of triggers. When set to `False`, only direct recursion is prevented. To disable indirect recursion, set the nested triggers server option to 0 using sp_configure. For more information, see [Create Nested Triggers](../../database-engine/create-nested-triggers.md).  
   
  `Trustworthy`  
  When displaying `True`, this read-only option indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows access to resources outside the database under an impersonation context established within the database. Impersonation contexts can be established within the database using the EXECUTE AS user statement or the EXECUTE AS clause on database modules.  
@@ -155,7 +155,7 @@ manager: "jhubbard"
  Specify the option used to discover and report incomplete I/O transactions caused by disk I/O errors. Possible values are **None**, **TornPageDetection**, and **Checksum**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Target Recovery Time (Seconds)**  
- Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../2014/database-engine/database-checkpoints-sql-server.md).  
+ Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../database-engine/database-checkpoints-sql-server.md).  
   
 ## State  
  **Database Read Only**  
@@ -180,7 +180,7 @@ manager: "jhubbard"
      Only members of the db_owner, dbcreator, or sysadmin roles can use the database.  
   
  **Encryption Enabled**  
- When `True`, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../2014/database-engine/transparent-data-encryption-tde.md).  
+ When `True`, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../database-engine/transparent-data-encryption-tde.md).  
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   

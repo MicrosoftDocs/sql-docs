@@ -182,8 +182,8 @@ manager: "jhubbard"
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
+ [Maintenance Plans](../../database-engine/maintenance-plans.md)   
+ [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

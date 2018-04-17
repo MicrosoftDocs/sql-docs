@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  [Database States](database-states.md)  
   
- [Mirroring States &#40;SQL Server&#41;](database-mirroring/mirroring-states-sql-server.md)  
+ [Mirroring States &#40;SQL Server&#41;](../database-mirroring/mirroring-states-sql-server.md)  
   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

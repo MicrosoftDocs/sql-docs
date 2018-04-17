@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
- [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md)  
+ [Configure and Manage Word Breakers and Stemmers for Search](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Configure and Manage Filters for Search](../../database-engine/configure-and-manage-filters-for-search.md)  
   
   

@@ -130,9 +130,9 @@ manager: "jhubbard"
  Any user can create temporary objects in tempdb. Users can only access their own objects, unless they receive additional permissions. It is possible to revoke the connect permission to tempdb to prevent a user from using tempdb, but this is not recommended as some routine operations require the use of tempdb.  
   
 ## Related Content  
- [SORT_IN_TEMPDB Option For Indexes](../../2014/database-engine/sort-in-tempdb-option-for-indexes.md)  
+ [SORT_IN_TEMPDB Option For Indexes](../../database-engine/sort-in-tempdb-option-for-indexes.md)  
   
- [System Databases](../../2014/database-engine/system-databases.md)  
+ [System Databases](../../database-engine/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

@@ -37,11 +37,11 @@ manager: "jhubbard"
 ##  <a name="Overview"></a> Overview of Database Restore Under the Simple Recovery Model  
  A full database restore under the simple recovery model involves one or two [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statements, depending on whether you want to restore a differential database backup. If you are using only a full database backup, just restore the most recent backup, as shown in the following illustration.  
   
- ![Restoring only a full database backup](../../2014/database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restoring only a full database backup")  
+ ![Restoring only a full database backup](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restoring only a full database backup")  
   
  If you are also using a differential database backup, restore the most recent full database backup without recovering the database, and then restore the most recent differential database backup and recover the database. The following illustration shows this process.  
   
- ![Restoring full and differential database backups](../../2014/database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restoring full and differential database backups")  
+ ![Restoring full and differential database backups](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restoring full and differential database backups")  
   
 > [!NOTE]  
 >  If you plan to restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
@@ -97,7 +97,7 @@ GO
   
 -   [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   

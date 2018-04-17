@@ -62,7 +62,7 @@ manager: "jhubbard"
   
      **To create a user**  
   
-    -   [Create a Database User](../../2014/database-engine/create-a-database-user.md)  
+    -   [Create a Database User](../../database-engine/create-a-database-user.md)  
   
     -   [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
   
@@ -101,7 +101,7 @@ GO
 ##  <a name="configure_RG"></a> Configuring Resource Governor to Limit CPU Usage  
   
 > [!NOTE]  
->  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../../2014/database-engine/enable-resource-governor.md).  
+>  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../../database-engine/enable-resource-governor.md).  
   
  In this Resource Governor scenario, configuration comprises the following basic steps:  
   
@@ -122,11 +122,11 @@ GO
   
  **To configure Resource Governor (SQL Server Management Studio)**  
   
--   [Configure Resource Governor Using a Template](../../2014/database-engine/configure-resource-governor-using-a-template.md)  
+-   [Configure Resource Governor Using a Template](../../database-engine/configure-resource-governor-using-a-template.md)  
   
--   [Create a Resource Pool](../../2014/database-engine/create-a-resource-pool.md)  
+-   [Create a Resource Pool](../../database-engine/create-a-resource-pool.md)  
   
--   [Create a Workload Group](../../2014/database-engine/create-a-workload-group.md)  
+-   [Create a Workload Group](../../database-engine/create-a-workload-group.md)  
   
 ### To configure Resource Governor for limiting CPU usage (Transact-SQL)  
   
@@ -167,7 +167,7 @@ GO
     -   [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md)  
   
         > [!IMPORTANT]  
-        >  SUSER_NAME is just one of several system functions that can be used in a classifier function. For more information, see [Create and Test a Classifier User-Defined Function](../../2014/database-engine/create-and-test-a-classifier-user-defined-function.md).  
+        >  SUSER_NAME is just one of several system functions that can be used in a classifier function. For more information, see [Create and Test a Classifier User-Defined Function](../../database-engine/create-and-test-a-classifier-user-defined-function.md).  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-local-variable-transact-sql.md).  
   
@@ -276,7 +276,7 @@ GO
  [&#91;Top&#93;](#Top)  
   
 ## See Also  
- [Create and Test a Classifier User-Defined Function](../../2014/database-engine/create-and-test-a-classifier-user-defined-function.md)   
+ [Create and Test a Classifier User-Defined Function](../../database-engine/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../database-engine/resource-governor.md)  
   
   

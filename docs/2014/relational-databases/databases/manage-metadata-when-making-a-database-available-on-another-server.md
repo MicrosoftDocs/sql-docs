@@ -113,7 +113,7 @@ manager: "jhubbard"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
- Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
+ Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
  For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
  When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user who initiated the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Distributed Queries and Linked Servers  
- Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../../2014/database-engine/linked-servers-database-engine.md).  
+ Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../../database-engine/linked-servers-database-engine.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -134,15 +134,15 @@ manager: "jhubbard"
   
  When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md).  
   
- For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md).  
+ For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
  For more information, see also:  
   
--   [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md)  
+-   [Encryption Hierarchy](../../database-engine/encryption-hierarchy.md)  
   
 -   [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
--   [Create Identical Symmetric Keys on Two Servers](../../2014/database-engine/create-identical-symmetric-keys-on-two-servers.md)  
+-   [Create Identical Symmetric Keys on Two Servers](../../database-engine/create-identical-symmetric-keys-on-two-servers.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -154,7 +154,7 @@ manager: "jhubbard"
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### Server-Level Event Notifications  
- Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../2014/database-engine/event-notifications.md).  
+ Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../database-engine/event-notifications.md).  
   
  Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
@@ -162,11 +162,11 @@ manager: "jhubbard"
  The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
   
 > [!NOTE]  
->  For more information, see [WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
+>  For more information, see [WMI Provider for Server Events Concepts](../../database-engine/dev-guide/wmi-provider-for-server-events-concepts.md).  
   
  **To create a WMI alert using SQL Server Management Studio**  
   
--   [Create a WMI Event Alert](../../2014/database-engine/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../../database-engine/create-a-wmi-event-alert.md)  
   
 ### How Event Notifications Work for a Mirrored Database  
  Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
@@ -200,14 +200,14 @@ manager: "jhubbard"
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Properties are set on the Full-Text Engine by [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
- Additionally, if the [word breakers and stemmers](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../2014/database-engine/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../2014/database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
+ Additionally, if the [word breakers and stemmers](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../database-engine/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
 > [!NOTE]  
->  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../2014/database-engine/upgrade-full-text-search.md).  
+>  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../database-engine/upgrade-full-text-search.md).  
   
  For more information, see also:  
   
--   [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
      The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../database-engine/select-an-account-for-the-sql-server-agent-service.md).  
   
-     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, which is associated with a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], has its own registry hive, and its jobs typically have dependencies on one or more of the settings in this registry hive. To behave as intended, a job requires those registry settings. If you use a script to re-create a job in another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, its registry might not have the correct settings for that job. For re-created jobs to behave correctly on a destination server instance, the original and destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services should have the same registry settings.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
--   [Configure Windows Service Accounts and Permissions](configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
 -   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
@@ -274,7 +274,7 @@ manager: "jhubbard"
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
 > [!NOTE]  
->  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -329,7 +329,7 @@ manager: "jhubbard"
 ##  <a name="replication_settings"></a> Replication Settings  
  If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must re-create all publications and subscriptions after backups are restored. To make this process easier, create scripts for your current replication settings and, also, for the enabling and disabling of replication. To help re-create your replication settings, copy these scripts and change the server name references to work for the destination server instance.  
   
- For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](log-shipping/log-shipping-and-replication-sql-server.md).  
+ For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -354,9 +354,9 @@ manager: "jhubbard"
  [Contained Databases](contained-databases.md)   
  [Copy Databases to Other Servers](copy-databases-to-other-servers.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Set Up an Encrypted Mirror Database](database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../database-engine/troubleshoot-orphaned-users-sql-server.md)  
   

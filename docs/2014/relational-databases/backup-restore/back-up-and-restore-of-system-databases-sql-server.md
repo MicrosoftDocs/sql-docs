@@ -69,7 +69,7 @@ manager: "jhubbard"
 -   [Move System Databases](../databases/move-system-databases.md)  
   
 ## See Also  
- [Distribution Database](../../2014/relational-databases/replication/distribution-database.md)   
+ [Distribution Database](../../relational-databases/replication/distribution-database.md)   
  [master Database](../databases/master-database.md)   
  [msdb Database](../databases/msdb-database.md)   
  [model Database](../databases/model-database.md)   

@@ -330,6 +330,6 @@ End Structure
 ```  
   
 ## See Also  
- [CLR User-Defined Types](../../database-engine/dev-guide/clr-user-defined-types.md)  
+ [CLR User-Defined Types](clr-user-defined-types.md)  
   
   

@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  Selecting this option is equivalent to using the KEEP_REPLICATION option in a [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement.  
   
- For more information, see [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md).  
+ For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md).  
   
  **Restrict access to the restored database [WITH RESTRICTED_USER]**  
  Makes the restored database available only to the members of **db_owner**, **dbcreator**, or **sysadmin**.  

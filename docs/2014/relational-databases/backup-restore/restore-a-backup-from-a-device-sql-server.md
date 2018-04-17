@@ -89,7 +89,7 @@ RESTORE DATABASE AdventureWorks2012
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
- [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)   
+ [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)   
  [Restore a Differential Database Backup &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

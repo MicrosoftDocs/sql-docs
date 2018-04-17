@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  To store the copied original pages, the snapshot uses one or more *sparse files*. Initially, a sparse file is an essentially empty file that contains no user data and has not yet been allocated disk space for user data. As more and more pages are updated in the source database, the size of the file grows. The following figure illustrates the effects of two contrasting update patterns on the size of a snapshot. Update pattern A reflects an environment in which only 30 percent of the original pages are updated during the life of the snapshot. Update pattern B reflects an environment in which 80 percent of the original pages are updated during the life of the snapshot.  
   
- ![Alternative update patterns and snapshot size](../../2014/database-engine/media/dbview-04.gif "Alternative update patterns and snapshot size")  
+ ![Alternative update patterns and snapshot size](../../database-engine/media/dbview-04.gif "Alternative update patterns and snapshot size")  
   
 ##  <a name="Benefits"></a> Benefits of Database Snapshots  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
 ###  <a name="Prerequisites"></a> Prerequisites  
  The source database, which can use any recovery model, must meet the following prerequisites:  
   
--   The server instance must be running on an edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports database snapshots. For more information, see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   The server instance must be running on an edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that supports database snapshots. For more information, see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   The source database must be online, unless the database is a mirror database within a database mirroring session.  
   
@@ -190,7 +190,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  A SELECT statement that is executed on a database snapshot must not specify a FILESTREAM column; otherwise, the following error message will be returned: `Could not continue scan with NOLOCK due to data movement.`  
   
--   When statistics on a read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in tempdb. For more information, see [Statistics](../../2014/database-engine/statistics.md).  
+-   When statistics on a read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in tempdb. For more information, see [Statistics](../../database-engine/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Disk Space Requirements  
  Database snapshots consume disk space. If a database snapshot runs out of disk space, it is marked as suspect and must be dropped. (The source database, however, is not affected; actions on it continue normally.) Compared to a full copy of a database, however, snapshots are highly space efficient. A snapshot requires only enough storage for the pages that change during its lifetime. Generally, snapshots are kept for a limited time, so their size is not a major concern.  

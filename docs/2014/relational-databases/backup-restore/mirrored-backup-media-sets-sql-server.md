@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  The following illustration shows an example of a mirrored media set that consists of two media families with two mirrors. Each media family contains three media volumes, which are backed up one time per mirror.  
   
- ![Mirrored media set: two families with two mirrors](../../2014/database-engine/media/bnr-backup-media-mirror.gif "Mirrored media set: two families with two mirrors")  
+ ![Mirrored media set: two families with two mirrors](../../database-engine/media/bnr-backup-media-mirror.gif "Mirrored media set: two families with two mirrors")  
   
  Corresponding volumes on the mirrors have identical contents. This makes them interchangeable at restore time. For example, in the previous illustration, the third volume of tape2 is interchangeable with the third volume of tape0.  
   

@@ -40,7 +40,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Registering User-Defined Types in SQL Server
-  In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](../../database-engine/dev-guide/clr-user-defined-types.md).  
+  In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](clr-user-defined-types.md).  
   
 ## Using Visual Studio to Deploy UDTs  
  The easiest way to deploy your UDT is by using [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. For more complex deployment scenarios and the greatest flexibility, however, use [!INCLUDE[tsql](../../includes/tsql-md.md)] as discussed later in this topic.  
@@ -215,6 +215,6 @@ SELECT CAST(content AS varchar(8000))
  Note that you do not need to take any action for using UDTs when [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creates work tables in the **tempdb** system database. This includes the handling of cursors, table variables, and user-defined table-valued functions that include UDTs and that transparently make use of **tempdb**. However, if you explicitly create a temporary table in **tempdb** that defines a UDT column, then the UDT must be registered in **tempdb** the same way as for a user database.  
   
 ## See Also  
- [CLR User-Defined Types](../../database-engine/dev-guide/clr-user-defined-types.md)  
+ [CLR User-Defined Types](clr-user-defined-types.md)  
   
   

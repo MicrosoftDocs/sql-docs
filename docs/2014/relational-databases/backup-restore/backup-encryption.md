@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 1.  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md) On the **Backup Options** page, you can select **Encryption**, and specify the encryption algorithm and the certificate or asymmetric key to use for the encryption.  
   
-2.  [Using Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure) When you select a backup task, on the **Options** tab of the **Define Backup ()Task** page, you can select **Backup Encryption**, and specify the encryption algorithm and the certificate or key to use for the encryption.  
+2.  [Using Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure) When you select a backup task, on the **Options** tab of the **Define Backup ()Task** page, you can select **Backup Encryption**, and specify the encryption algorithm and the certificate or key to use for the encryption.  
   
 ### Using Transact SQL  
  Following is a sample Transact-SQL statement to encrypt the backup file:  
@@ -133,8 +133,8 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Topic/Task|Description|  
 |-----------------|-----------------|  
 |[Create an Encrypted Backup](create-an-encrypted-backup.md)|Describes the basic steps required to create an encrypted backup|  
-|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
-|[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../2014/database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
+|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
+|[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)  

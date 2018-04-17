@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   The current database context is correct. If a database name for the object is not specified, the object must exist in the current database. For more information about setting the database context, see [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md).  
   
--   The object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the **sys.objects** catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about permissions to view object metadata, see [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md).  
+-   The object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the **sys.objects** catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about permissions to view object metadata, see [Metadata Visibility Configuration](../../database-engine/metadata-visibility-configuration.md).  
   
 -   The object is contained in the default schema of the user. If it is not, the object must be specified using the two-part format *schema_name.object_name*. Note that scalar-valued functions must always be invoked by using at least a two-part name.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 ## See Also  
  [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md)   
- [Metadata Visibility Configuration](../../2014/database-engine/metadata-visibility-configuration.md)   
+ [Metadata Visibility Configuration](../../database-engine/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

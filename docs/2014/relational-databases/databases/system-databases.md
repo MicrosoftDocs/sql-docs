@@ -68,6 +68,6 @@ manager: "jhubbard"
 ## Related Content  
  [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
- [Databases](../../2014/database-engine/databases.md)  
+ [Databases](../../database-engine/databases.md)  
   
   

@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
- [Reorganize and Rebuild Indexes](../../2014/database-engine/reorganize-and-rebuild-indexes.md)  
+ [Reorganize and Rebuild Indexes](../../database-engine/reorganize-and-rebuild-indexes.md)  
   
   

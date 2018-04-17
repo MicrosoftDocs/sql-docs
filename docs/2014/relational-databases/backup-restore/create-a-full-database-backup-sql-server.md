@@ -289,7 +289,7 @@ GO
   
 -   [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
 -   [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -297,7 +297,7 @@ GO
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
--   [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)  
+-   [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   

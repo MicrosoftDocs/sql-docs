@@ -181,10 +181,10 @@ manager: "jhubbard"
     |Source of page ID|Topic|  
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)|  
-    |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |Event traces|[Monitor and Respond to Events](../../2014/database-engine/monitor-and-respond-to-events.md)|  
+    |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../database-engine/view-the-sql-server-error-log-sql-server-management-studio.md)|  
+    |Event traces|[Monitor and Respond to Events](../../database-engine/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)|  
-    |WMI provider|[WMI Provider for Server Events Concepts](../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)|  
+    |WMI provider|[WMI Provider for Server Events Concepts](../../database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)|  
   
 2.  Start a page restore with a full database, file, or filegroup backup that contains the page. In the RESTORE DATABASE statement, use the PAGE clause to list the page IDs of all of the pages to be restored.  
   

@@ -150,9 +150,9 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Create a Job](../../2014/database-engine/create-a-job.md)  
+-   [Create a Job](../../database-engine/create-a-job.md)  
   
--   [Disable or Enable a Job](../../2014/database-engine/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../database-engine/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   
@@ -160,7 +160,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
+ [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)  

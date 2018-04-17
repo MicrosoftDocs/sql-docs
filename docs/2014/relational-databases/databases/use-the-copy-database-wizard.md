@@ -283,6 +283,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Upgrade a Database Using Detach and Attach &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [Create a SQL Server Agent Proxy](../../2014/database-engine/create-a-sql-server-agent-proxy.md)  
+ [Create a SQL Server Agent Proxy](../../database-engine/create-a-sql-server-agent-proxy.md)  
   
   

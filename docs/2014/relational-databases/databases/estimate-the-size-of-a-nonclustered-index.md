@@ -187,7 +187,7 @@ manager: "jhubbard"
   
      Because index rows do not span pages, the number of index rows per page should be rounded down to the nearest whole row. The 2 in the formula is for the row's entry in the page's slot array.  
   
-7.  Calculate the number of reserved free rows per page, based on the [fill factor](../../2014/database-engine/specify-fill-factor-for-an-index.md) specified:  
+7.  Calculate the number of reserved free rows per page, based on the [fill factor](../../database-engine/specify-fill-factor-for-an-index.md) specified:  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
@@ -251,12 +251,12 @@ manager: "jhubbard"
   
 -   Sparse columns  
   
-     For information about the space requirements of sparse columns, see [Use Sparse Columns](../../2014/database-engine/use-sparse-columns.md).  
+     For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
   
 ## See Also  
- [Clustered and Nonclustered Indexes Described](../../2014/database-engine/clustered-and-nonclustered-indexes-described.md)   
- [Create Nonclustered Indexes](../../2014/database-engine/create-nonclustered-indexes.md)   
- [Create Clustered Indexes](../../2014/database-engine/create-clustered-indexes.md)   
+ [Clustered and Nonclustered Indexes Described](../../database-engine/clustered-and-nonclustered-indexes-described.md)   
+ [Create Nonclustered Indexes](../../database-engine/create-nonclustered-indexes.md)   
+ [Create Clustered Indexes](../../database-engine/create-clustered-indexes.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
  [Estimate the Size of a Clustered Index](estimate-the-size-of-a-clustered-index.md)   
  [Estimate the Size of a Heap](estimate-the-size-of-a-heap.md)   

@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  Creating a Windows Azure account is the first step to this process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **Windows Azure storage account name** and its **access key** values to authenticate and write and read blobs to the storage service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations. For a complete walkthrough of creating a storage account and performing a simple restore, see [Tutorial Using Windows Azure Storage Service for SQL Server Backup and Restore](http://go.microsoft.com/fwlink/?LinkId=271615).  
   
- ![mapping storage account to sql credentials](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping storage account to sql credentials")  
+ ![mapping storage account to sql credentials](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping storage account to sql credentials")  
   
 ###  <a name="Blob"></a> Windows Azure Blob Storage Service  
  **Storage Account:** The storage account is the starting point for all storage services. To access the Windows Azure Blob Storage service, first create a Windows Azure storage account. The **storage account name** and its **access key** properties are required to authenticate to the Windows Azure Blob Storage service and its components.  
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
  **Blob:** A file of any type and size. There are two types of blobs that can be stored in the Windows Azure Blob storage service: block and page blobs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup uses page Blobs as the Blob type. Blobs are addressable using the following URL format: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>  
   
- ![Azure Blob Storage](../../2014/database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
+ ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
  For more information about the Windows Azure Blob storage service, see [How to use the Windows Azure Blob Storage Service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)  
   
@@ -240,7 +240,7 @@ manager: "jhubbard"
  [Create Credential - Authenticate to Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> SQL Server Backup to URL Using Maintenance Plan Wizard  
- Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio has been enhanced to include **URL** as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential. For more information, see  the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio has been enhanced to include **URL** as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential. For more information, see  the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a> Restoring from Windows Azure storage Using SQL Server Management Studio  
  If you are restoring a database, **URL** is included as the device to restore from. Following steps describe the changes in the Restore task to allow restoring from Windows Azure storage:  

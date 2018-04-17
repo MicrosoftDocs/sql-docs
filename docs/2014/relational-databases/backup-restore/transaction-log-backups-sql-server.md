@@ -63,13 +63,13 @@ manager: "jhubbard"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
- To schedule backup jobs, see [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md).  
+ To schedule backup jobs, see [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md).  
   
 ##  <a name="RelatedContent"></a> Related Content  
  None.  
   
 ## See Also  
- [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
+ [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Tail-Log Backups &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  

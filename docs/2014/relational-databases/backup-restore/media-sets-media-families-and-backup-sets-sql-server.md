@@ -116,7 +116,7 @@ WITH
   
  If successful, this backup operation results in a new media set containing a new media header and one backup set spread across three tapes. The following figure illustrates these results:  
   
- ![Media header and first backup set on 3 tapes](../../2014/database-engine/media/bnr-mediaset-new.gif "Media header and first backup set on 3 tapes")  
+ ![Media header and first backup set on 3 tapes](../../database-engine/media/bnr-mediaset-new.gif "Media header and first backup set on 3 tapes")  
   
  Typically, after a media set is created, subsequent backup operations, one after another, append their backup sets to the media set. All of the media used by a backup set make up the media set, regardless of the number of media or backup devices involved. Backup sets are sequentially numbered by their position in the media set, allowing you to specify which backup set to restore.  
   
@@ -136,7 +136,7 @@ WITH
   
  If the second backup operation succeeds, it writes a second backup set to the media set, with the following distribution of backup content:  
   
- ![Second backup set spread across 3 media-set tapes](../../2014/database-engine/media/bnr-mediaset-appendedto.gif "Second backup set spread across 3 media-set tapes")  
+ ![Second backup set spread across 3 media-set tapes](../../database-engine/media/bnr-mediaset-appendedto.gif "Second backup set spread across 3 media-set tapes")  
   
  When you are restoring backups, you can use you the FILE option to specify which backups you want to use. The following example shows the use of FILE **=***backup_set_file_number* clauses when restoring a full database backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database followed by a differential database backup on the same media set. The media set uses three backup tapes, which are on tape drives `\\.\tape0`, `tape1`, and `tape2`.  
   

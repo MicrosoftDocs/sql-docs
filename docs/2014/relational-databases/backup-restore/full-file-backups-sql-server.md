@@ -79,7 +79,7 @@ manager: "jhubbard"
   
  Restoring a database using just file and log backups can be complex. Therefore, if it is possible, it is a best practice to perform a full database backup and start the log backups before the first file backup. The following illustration shows a strategy in which a full database backup is taken (at time t1) soon after the database is created (at time t0). This first database backup enables transaction log backups to start. Transaction log backups are scheduled to occur at set intervals. File backups occur at whatever interval best meets the business requirements for the database. This illustration shows each of the four filegroups being backed up one at a time. The order in which they are backed up (A, C, B, A) reflects the business requirements of the database.  
   
- ![Strategy combining database, file, and log backups](../../2014/database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
+ ![Strategy combining database, file, and log backups](../../database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
   
 > [!NOTE]  
 >  Under the full recovery model, you must roll forward the transaction log when restoring a read/write file backup to make sure that the file is consistent with the rest of the database. To avoid rolling forward a lot of transaction log backups, consider using differential file backups. For more information, see [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md).  

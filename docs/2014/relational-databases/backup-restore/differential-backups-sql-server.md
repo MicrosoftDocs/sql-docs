@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  The following illustration shows how a differential backup works. The figure shows 24 data extents, 6 of which have changed. The differential backup contains only these 6 data extents. The differential backup operation relies on a bitmap page that contains a bit for every extent. For each extent updated since the base, the bit is set to 1 in the bitmap.  
   
- ![Differential bitmap identifies changed extents](../../2014/database-engine/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
+ ![Differential bitmap identifies changed extents](../../database-engine/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
   
 > [!NOTE]  
 >  The differential bitmap is not updated by a copy-only backup. Therefore, a copy-only backup does not affect subsequent differential backups.  
@@ -49,7 +49,7 @@ manager: "jhubbard"
  At restore time, before you restore a differential backup, you must restore its base. Then, restore only the most recent differential backup to bring the database forward to the time when that differential backup was created. Typically, you would restore the most recent full backup followed by the most recent differential backup that is based on that full backup.  
   
 ## Differential Backups of Databases with Memory-Optimized Tables  
- For information about differential backups and databases with memory-optimized tables, see [Backing Up a Database with Memory-Optimized Tables](../../2014/database-engine/backing-up-a-database-with-memory-optimized-tables.md).  
+ For information about differential backups and databases with memory-optimized tables, see [Backing Up a Database with Memory-Optimized Tables](../../database-engine/backing-up-a-database-with-memory-optimized-tables.md).  
   
 ##  <a name="ReadOnlyDbs"></a> Differential Backups of Read-Only Databases  
  For read-only databases, full backups used alone are easier to manage than when they are used with differential backups. When a database is read-only, backup and other operations cannot change the metadata that is contained in the file. Therefore, metadata that is required by a differential backup, such as the log sequence number at which the differential backup begins (the differential base LSN) is stored in the **master** database. If the differential base is taken when the database is read-only, the differential bitmap indicates more changes than have actually occurred since the base backup. The extra data is read by backup, but is not written to the backup, because the **differential_base_lsn** stored in the [backupset](~/relational-databases/system-tables/backupset-transact-sql.md) system table is used to determine whether the data has actually changed since the base.  

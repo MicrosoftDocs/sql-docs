@@ -33,6 +33,6 @@ manager: "jhubbard"
  Describes how to use [!INCLUDE[tsql](../../includes/tsql-md.md)] to work with UDT data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [CLR User-Defined Types](../../database-engine/dev-guide/clr-user-defined-types.md)  
+ [CLR User-Defined Types](clr-user-defined-types.md)  
   
   

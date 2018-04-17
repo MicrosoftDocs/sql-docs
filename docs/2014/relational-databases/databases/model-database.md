@@ -108,7 +108,7 @@ manager: "jhubbard"
 -   Creating procedures, views, or triggers using the WITH ENCRYPTION option. The encryption key is tied to the database in which the object is created. Encrypted objects created in the **model** database can only be used in **model**.  
   
 ## Related Content  
- [System Databases](../../2014/database-engine/system-databases.md)  
+ [System Databases](../../database-engine/system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

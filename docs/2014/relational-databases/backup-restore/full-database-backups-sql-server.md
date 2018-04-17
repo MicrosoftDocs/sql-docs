@@ -46,7 +46,7 @@ manager: "jhubbard"
 ##  <a name="DbBuRMs"></a> Database Backups Under the Simple Recovery Model  
  Under the simple recovery model, after each backup, the database is exposed to potential work loss if a disaster were to occur. The work-loss exposure increases with each update until the next backup, when the work-loss exposure returns to zero and a new cycle of work-loss exposure starts. Work-loss exposure increases over time between backups. The following illustration shows the work-loss exposure for a backup strategy that uses only full database backups.  
   
- ![Shows work-loss exposure between database backups](../../2014/database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
+ ![Shows work-loss exposure between database backups](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
 ### Example ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  The following example shows how to create a full database backup by using WITH FORMAT to overwrite any existing backups and create a new media set.  
@@ -62,7 +62,7 @@ GO
 ##  <a name="DbBuRMf"></a> Database Backups Under the Full Recovery Model  
  For databases that use full and bulk-logged recovery, database backups are necessary but not sufficient. Transaction log backups are also required. The following illustration shows the least complex backup strategy that is possible under the full recovery model.  
   
- ![Series of full database backups and log backups](../../2014/database-engine/media/bnr-rmfull-1-fulldb-log-backups.gif "Series of full database backups and log backups")  
+ ![Series of full database backups and log backups](../../database-engine/media/bnr-rmfull-1-fulldb-log-backups.gif "Series of full database backups and log backups")  
   
  For information about how to create log backups, see [Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
@@ -97,7 +97,7 @@ GO
   
  **To schedule backup jobs**  
   
- [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)  
+ [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   

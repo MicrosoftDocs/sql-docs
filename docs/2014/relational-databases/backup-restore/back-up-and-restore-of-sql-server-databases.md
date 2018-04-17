@@ -157,7 +157,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  For information about concurrency restrictions during backup, see [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
- After you decide what types of backups you require and how frequently you have to perform each type, we recommend that you schedule regular backups as part of a database maintenance plan for the database. For information about maintenance plans and how to create them for database backups and log backups, see [Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md).  
+ After you decide what types of backups you require and how frequently you have to perform each type, we recommend that you schedule regular backups as part of a database maintenance plan for the database. For information about maintenance plans and how to create them for database backups and log backups, see [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md).  
   
 ### Test Your Backups  
  You do not have a restore strategy until you have tested your backups. It is very important to thoroughly test your backup strategy for each of your databases by restoring a copy of the database onto a test system. You must test restoring every type of backup that you intend to use.  
@@ -168,11 +168,11 @@ manager: "jhubbard"
   
 ### Scheduling Backup Jobs  
   
--   [Create a Maintenance Plan](../../2014/database-engine/create-a-maintenance-plan.md)  
+-   [Create a Maintenance Plan](../../database-engine/create-a-maintenance-plan.md)  
   
--   [Create a Job](../../2014/database-engine/create-a-job.md)  
+-   [Create a Job](../../database-engine/create-a-job.md)  
   
--   [Schedule a Job](../../2014/database-engine/schedule-a-job.md)  
+-   [Schedule a Job](../../database-engine/schedule-a-job.md)  
   
 ### Working with Backup Devices and Backup Media  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
 ### Restoring Data Backups  
  **Using SQL Server Management Studio**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -276,8 +276,8 @@ manager: "jhubbard"
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Backup and Restore of Analysis Services Databases](../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
- [Back Up and Restore Full-Text Catalogs and Indexes](../../2014/database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)   
- [Back Up and Restore Replicated Databases](../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md)   
+ [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  

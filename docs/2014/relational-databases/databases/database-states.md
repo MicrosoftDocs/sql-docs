@@ -50,7 +50,7 @@ manager: "jhubbard"
 ## Related Content  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)  
   
- [Mirroring States &#40;SQL Server&#41;](database-mirroring/mirroring-states-sql-server.md)  
+ [Mirroring States &#40;SQL Server&#41;](../database-mirroring/mirroring-states-sql-server.md)  
   
  [File States](file-states.md)  
   

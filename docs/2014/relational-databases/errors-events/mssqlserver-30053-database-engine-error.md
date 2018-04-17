@@ -58,7 +58,7 @@ manager: "jhubbard"
  [Set the Service Account for the Full-text Filter Daemon Launcher](../../database-engine/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Full-Text Search](../../database-engine/full-text-search.md)   
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
- [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md)  
+ [Configure and Manage Word Breakers and Stemmers for Search](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Configure and Manage Filters for Search](../../database-engine/configure-and-manage-filters-for-search.md)  
   
   

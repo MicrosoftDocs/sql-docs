@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  The following illustration shows this restore sequence. After a failure occurs (1), a tail-log backup is created (2). Next, the database is restored to the point of the failure. This involves restoring a database backup, a subsequent differential backup, and every log backup taken after the differential backup, including the tail-log backup.  
   
- ![Complete database restore to the time of a failure](../../2014/database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Complete database restore to the time of a failure")  
+ ![Complete database restore to the time of a failure](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Complete database restore to the time of a failure")  
   
 > [!NOTE]  
 >  When you restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
@@ -149,7 +149,7 @@ GO
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To restore a full database backup**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   

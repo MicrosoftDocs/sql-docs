@@ -142,23 +142,23 @@ manager: "jhubbard"
   
 -   Recovery Models: Only databases set to Full or Bulk-logged model are supported.  Databases set to simple recovery model are not supported.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery. For more information, see [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery. For more information, see [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 |||  
 |-|-|  
 |**Task descriptions**|**Topic**|  
-|Basic tasks like configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database, or configuring default settings at the instance level, disabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at instance or database level, pausing and restarting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
+|Basic tasks like configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database, or configuring default settings at the instance level, disabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at instance or database level, pausing and restarting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
 |**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Setting up SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for databases in Availability Group.|[Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for databases in Availability Group.|[Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Tools and Concepts and tasks related to monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Monitor SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
-|Tools and steps to troubleshooting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Troubleshooting SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
+|Tools and steps to troubleshooting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Troubleshooting SQL Server Managed  Backup to Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## See Also  
  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)   
- [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
- [Troubleshooting SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
+ [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [Troubleshooting SQL Server Managed  Backup to Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: "Step 1: Specify a Server Program (RDS Tutorial) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO], specifying server program"
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95

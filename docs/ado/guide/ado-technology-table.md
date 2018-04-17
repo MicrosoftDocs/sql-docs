@@ -5,12 +5,12 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
 ms.technology: "drivers"
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, technologies"
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5

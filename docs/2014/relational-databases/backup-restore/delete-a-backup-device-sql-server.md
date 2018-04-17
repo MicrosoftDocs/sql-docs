@@ -85,7 +85,7 @@ GO
  [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
   
   

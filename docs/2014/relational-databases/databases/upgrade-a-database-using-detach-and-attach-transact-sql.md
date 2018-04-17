@@ -54,7 +54,7 @@ manager: "jhubbard"
     -   If you attach the database to a different server instance (regardless of version), you must execute **sp_removedbreplication** to remove replication after the attach operation finishes. For more information, see [sp_removedbreplication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
- We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
+ We recommend that you do not attach or restore databases from unknown or untrusted sources. Such databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
 ##  <a name="SSMSProcedure"></a> To Upgrade a Database by Using Detach and Attach  
   
@@ -70,9 +70,9 @@ manager: "jhubbard"
 3.  Attach the copied files to the instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 ## Example  
- The following example upgrades a copy of a database from an earlier version of SQL Server. The [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
+ The following example upgrades a copy of a database from an earlier version of SQL Server. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are executed in a Query Editor window that is connected to the server instance to which is attached.  
   
-1.  Detach the database by executing the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements:  
+1.  Detach the database by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
     ```  
     USE master;  
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
      To copy files over the network to a disk on a remote computer, use the universal naming convention (UNC) name of the remote location. A UNC name takes the form **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*. As with writing files to the local hard disk, the appropriate permissions that are required to read or write to a file on the remote disk must be granted to the user account used by the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statement:  
+3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
     USE master;  

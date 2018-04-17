@@ -124,7 +124,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The options in the **Transaction log** section are inactive unless you are backing up a transaction log (as specified in the **Backup type** section of the **General** page).  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](../relational-databases/backup-restore/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
   
      **To view the current backup compression default**  
   
@@ -170,7 +170,7 @@ GO
 ## See Also  
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
+ [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Restore a Differential Database Backup &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)   

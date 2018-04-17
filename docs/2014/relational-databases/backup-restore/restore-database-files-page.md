@@ -50,7 +50,7 @@ manager: "jhubbard"
  [Restore Database &#40;General Page&#41;](restore-database-general-page.md)   
  [Restore Database &#40;Options Page&#41;](restore-database-options-page.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -97,7 +97,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Configure Backup Compression &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-compression-sql-server.md)  
+-   [Configure Backup Compression &#40;SQL Server&#41;](backup-compression-sql-server.md)  
   
 -   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Restrictions on Regular and Context Connections
-  This topic discusses the restrictions associated with code executing in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process through context and regular connections.  
+  This topic discusses the restrictions associated with code executing in the [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] process through context and regular connections.  
   
 ## Restrictions on Context Connections  
  When developing your application, take into account the following restrictions that apply to context connections:  

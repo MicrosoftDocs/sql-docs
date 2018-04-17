@@ -76,7 +76,7 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To enable or disable backup checksums**  
   
--   [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
+-   [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
  **To control the response to a error during a backup operation**  
   

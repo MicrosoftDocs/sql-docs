@@ -39,10 +39,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Backup History and Header Information (SQL Server)
-  A complete history of all [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] backup and restore operations on a server instance is stored in the **msdb** database. This topic introduces the backup and restore history tables and also the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are used to access backup history. The topic also discusses when listing database and transaction log files is useful and when to use media-header information compared to when to use backup-header information.  
+  A complete history of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore operations on a server instance is stored in the **msdb** database. This topic introduces the backup and restore history tables and also the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are used to access backup history. The topic also discusses when listing database and transaction log files is useful and when to use media-header information compared to when to use backup-header information.  
   
 > [!IMPORTANT]  
->  To manage the risk of losing recent changes to your backup and restore history, back up **msdb** frequently. For information about which of the system databases you must back up, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  To manage the risk of losing recent changes to your backup and restore history, back up **msdb** frequently. For information about which of the system databases you must back up, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md).  
   
  **In This Topic:**  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
  For more information, see [Comparison of Media-Header and Backup-Header Information](#CompareMediaHeaderBackupHeader), later in this topic.  
   
 ##  <a name="BackupHeader"></a> Backup-Header Information  
- Viewing the backup header displays information about all [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] and non-[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] backup sets on the media. Information that is displayed includes the types of backup devices that are used, the types of backup (for example, database, transaction, file, or differential database), and backup start and stop date/time information. This information is useful when you have to determine which backup set on the tape to restore, or the backups that are contained on the media.  
+ Viewing the backup header displays information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets on the media. Information that is displayed includes the types of backup devices that are used, the types of backup (for example, database, transaction, file, or differential database), and backup start and stop date/time information. This information is useful when you have to determine which backup set on the tape to restore, or the backups that are contained on the media.  
   
 > [!NOTE]  
 >  Viewing backup header information can take a long time for high-capacity tapes, because the whole media must be scanned to display information about each backup on the media.  
@@ -121,14 +121,14 @@ manager: "jhubbard"
 ### Which Backup Set to Restore  
  You can use information in the backup header to identify which backup set to restore. The Database Engine numbers each backup set on the backup media. This lets you identify the backup set you want to restore by using its position on the media. For example, the following media contains three backup sets.  
   
- ![Backup media containing SQL Server backup sets](../../2014/database-engine/media/bnr-media-backup-sets.gif "Backup media containing SQL Server backup sets")  
+ ![Backup media containing SQL Server backup sets](../../database-engine/media/bnr-media-backup-sets.gif "Backup media containing SQL Server backup sets")  
   
  To restore a specific backup set, specify the position number of the backup set you want to restore. For example, to restore the second backup set, specify 2 as the backup set to restore.  
   
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Comparison of Media-Header and Backup-Header Information  
  The following illustration provides an example of the differences between viewing backup-header and media-header information. Obtaining the media header requires retrieving information from only the start of the tape. Obtaining the backup header requires scanning the whole tape to look at the header of every backup set.  
   
- ![Media set containing three SQL Server backup sets](../../2014/database-engine/media/bnr-media-label.gif "Media set containing three SQL Server backup sets")  
+ ![Media set containing three SQL Server backup sets](../../database-engine/media/bnr-media-label.gif "Media set containing three SQL Server backup sets")  
   
 > [!NOTE]  
 >  When you use media sets that have multiple media families, the media header and backup set are written to all media families. Therefore, you only have to provide a single media family for these reporting operations.  
@@ -159,9 +159,9 @@ manager: "jhubbard"
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadMediaHeader%2A> (SMO)  
   
@@ -169,9 +169,9 @@ manager: "jhubbard"
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader%2A> (SMO)  
   
@@ -187,9 +187,9 @@ manager: "jhubbard"
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
--   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadMediaHeader%2A> (SMO)  
   
@@ -197,15 +197,15 @@ manager: "jhubbard"
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
+-   [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader%2A> (SMO)  
   
  **To view the files in a backup set**  
   
--   [View the Data and Log Files in a Backup Set &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [View the Data and Log Files in a Backup Set &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
@@ -217,9 +217,9 @@ manager: "jhubbard"
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Mirrored Backup Media Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)   
- [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)  
+ [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
+ [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
+ [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)  
   
   

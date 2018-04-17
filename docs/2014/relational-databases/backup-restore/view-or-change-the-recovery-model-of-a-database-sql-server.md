@@ -146,9 +146,9 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Create a Job](../../2014/database-engine/create-a-job.md)  
   
@@ -159,10 +159,10 @@ ALTER DATABASE model SET RECOVERY FULL ;
 -   [Database Maintenance Plans](http://msdn.microsoft.com/library/ms187658.aspx) (in [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online)  
   
 ## See Also  
- [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md)   
+ [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md)  
+ [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

@@ -25,7 +25,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication System Stored Procedures Concepts
-  In [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], programmatic access to all of the user-configurable functionality in a replication topology is provided by system stored procedures. While stored procedures may be executed individually using the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] or the sqlcmd command-line utility, it may be beneficial to write [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script files that can be executed to perform a logical sequence of replication tasks.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], programmatic access to all of the user-configurable functionality in a replication topology is provided by system stored procedures. While stored procedures may be executed individually using the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the sqlcmd command-line utility, it may be beneficial to write [!INCLUDE[tsql](../../includes/tsql-md.md)] script files that can be executed to perform a logical sequence of replication tasks.  
   
  Scripting replication tasks provides the following benefits:  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
     >  Scripts can be the source of security vulnerabilities; they can invoke system functions without user knowledge or intervention and may contain security credentials in plain text. Review scripts for security issues before you use them.  
   
 ## Creating Replication Scripts  
- From the standpoint of replication, a script is a series of one or more [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statements where each statement executes a replication stored procedure. Scripts are text files, often with a .sql file extension, that can be run using the sqlcmd utility. When a script file is run, the utility executes the SQL statements stored in the file. Similarly, a script can be stored as a query object in a [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] project.  
+ From the standpoint of replication, a script is a series of one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements where each statement executes a replication stored procedure. Scripts are text files, often with a .sql file extension, that can be run using the sqlcmd utility. When a script file is run, the utility executes the SQL statements stored in the file. Similarly, a script can be stored as a query object in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] project.  
   
  Replication scripts can be created in the following ways:  
   
@@ -47,13 +47,13 @@ manager: "jhubbard"
   
 -   Use the script generation features that are provided in the replication wizards or  
   
--   [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md).  
   
 -   Use Replication Management Objects (RMOs) to programmatically generate the script to create an RMO object.  
   
  When you manually create replication scripts, keep the following considerations in mind:  
   
--   [!INCLUDE[tsql](../../../../includes/tsql-md.md)] scripts have one or more batches. The GO command signals the end of a batch. If a [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script does not have any GO commands, it is executed as a single batch.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts have one or more batches. The GO command signals the end of a batch. If a [!INCLUDE[tsql](../../includes/tsql-md.md)] script does not have any GO commands, it is executed as a single batch.  
   
 -   When executing multiple replication stored procedures in a single batch, after the first procedure, all subsequent procedures in the batch must be preceded by the EXECUTE keyword.  
   
@@ -120,15 +120,15 @@ GO
   
  This script can then be saved locally as `instdistpub.sql` so that it can be run or rerun when needed.  
   
- The previous script includes **sqlcmd** scripting variables, which are used in many of the replication code samples in [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Books Online. Scripting variables are defined by using `$(MyVariable)` syntax. Values for variables can be passed to a script at the command line or in [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)]. For more information, see the next section in this topic, "Executing Replication Scripts."  
+ The previous script includes **sqlcmd** scripting variables, which are used in many of the replication code samples in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Scripting variables are defined by using `$(MyVariable)` syntax. Values for variables can be passed to a script at the command line or in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see the next section in this topic, "Executing Replication Scripts."  
   
 ## Executing Replication Scripts  
  Once created, a replication script can be executed in one of the following ways:  
   
 ### Creating a SQL Query File in SQL Server Management Studio  
- A replication [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script file can be created as a SQL Query file in a [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] project. After the script is written, a connection can be made to the database for this query file and the script can be executed. For more information about how to create [!INCLUDE[tsql](../../../../includes/tsql-md.md)] scripts by using [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)], see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
+ A replication [!INCLUDE[tsql](../../includes/tsql-md.md)] script file can be created as a SQL Query file in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] project. After the script is written, a connection can be made to the database for this query file and the script can be executed. For more information about how to create [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md).  
   
- To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
+ To use a script that includes scripting variables, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] must be running in **sqlcmd** mode. In **sqlcmd** mode, the Query Editor accepts additional syntax specific to **sqlcmd**, such as `:setvar`, which is used to a value for a variable. For more information about **sqlcmd** mode, see [Edit SQLCMD Scripts with Query Editor](../../../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md). In the following script, `:setvar` is used to provide a value for the `$(DistPubServer)` variable.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -158,7 +158,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- In this example, the `-E` switch indicates that Windows Authentication is used when connecting to [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. When using Windows Authentication, there is no need to store a username and password in the script file. The name and path of the script file is specified by the `-i` switch and the name of the output file is specified by the `-o` switch (output from [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] is written to this file instead of the console when this switch is used). The `sqlcmd` utility enables you to pass scripting variables to a [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script at runtime using the `-v` switch. In this example, `sqlcmd` replaces every instance of `$(DistPubServer)` in the script with the value `N'MyDistributorAndPublisher'` before execution.  
+ In this example, the `-E` switch indicates that Windows Authentication is used when connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When using Windows Authentication, there is no need to store a username and password in the script file. The name and path of the script file is specified by the `-i` switch and the name of the output file is specified by the `-o` switch (output from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is written to this file instead of the console when this switch is used). The `sqlcmd` utility enables you to pass scripting variables to a [!INCLUDE[tsql](../../includes/tsql-md.md)] script at runtime using the `-v` switch. In this example, `sqlcmd` replaces every instance of `$(DistPubServer)` in the script with the value `N'MyDistributorAndPublisher'` before execution.  
   
 > [!NOTE]  
 >  The `-X` switch disables scripting variables.  

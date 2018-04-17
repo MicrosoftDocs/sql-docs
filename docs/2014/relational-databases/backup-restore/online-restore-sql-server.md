@@ -75,19 +75,19 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The syntax for an online restore sequence is the same as for an offline restore sequence.  
   
--   [Example: Piecemeal Restore of Database &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Example: Piecemeal Restore of Database &#40;Simple Recovery Model&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Example: Piecemeal Restore of Only Some Filegroups &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Example: Piecemeal Restore of Only Some Filegroups &#40;Simple Recovery Model&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Example: Online Restore of a Read-Only File &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Example: Online Restore of a Read-Only File &#40;Simple Recovery Model&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Example: Piecemeal Restore of Database &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Example: Piecemeal Restore of Database &#40;Full Recovery Model&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Example: Piecemeal Restore of Only Some Filegroups &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Example: Piecemeal Restore of Only Some Filegroups &#40;Full Recovery Model&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Example: Online Restore of a Read-Write File &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Example: Online Restore of a Read-Write File &#40;Full Recovery Model&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Example: Online Restore of a Read-Only File &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Example: Online Restore of a Read-Only File &#40;Full Recovery Model&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -95,15 +95,15 @@ manager: "jhubbard"
   
 -   [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md)  
   
--   [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
+-   [Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)  
   
 -   [Recover a Database Without Restoring Data &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
 -   [Remove Defunct Filegroups &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## See Also  
- [File Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
+ [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
+ [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
  [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

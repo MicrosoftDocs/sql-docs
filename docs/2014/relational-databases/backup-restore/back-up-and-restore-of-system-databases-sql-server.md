@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ## Limitations on Restoring System Databases  
   
--   System databases can be restored only from backups that are created on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the server instance is currently running. For example, to restore a system database on a server instance that is running on [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] SP1, you must use a database backup that was created after the server instance was upgraded to [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] SP1.  
+-   System databases can be restored only from backups that are created on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the server instance is currently running. For example, to restore a system database on a server instance that is running on [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1.  
   
 -   To restore any database, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be running. Startup of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that the **master** database is accessible and at least partly usable. If **master** becomes unusable, you can return the database to a usable state in either of the following ways:  
   

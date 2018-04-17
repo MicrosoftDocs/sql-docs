@@ -51,14 +51,14 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
- [Complete Database Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [Complete Database Restores &#40;Simple Recovery Model&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Complete Database Restores &#40;Full Recovery Model&#41;](complete-database-restores-full-recovery-model.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)   
  [Rebuild System Databases](../databases/system-databases.md)   
  [Database Engine Service Startup Options](configure-windows/database-engine-service-startup-options.md)   
  [SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)   
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+ [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Start SQL Server in Single-User Mode](configure-windows/start-sql-server-in-single-user-mode.md)  
   

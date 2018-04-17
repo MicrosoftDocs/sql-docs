@@ -59,7 +59,7 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create a transaction log backup**  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
   
 ## See Also  
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   
- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Tail-Log Backups &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
   

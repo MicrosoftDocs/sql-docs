@@ -156,7 +156,7 @@ manager: "jhubbard"
 ### Server-Level Event Notifications  
  Server-level event notifications are stored in **msdb**. Therefore, if a database application relies on a server-level event notifications, that event notification must be re-created on the destination server instance. To view the event notifications on a server instance, use the [sys.server_event_notifications](~/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) catalog view. For more information, see [Event Notifications](../../2014/database-engine/event-notifications.md).  
   
- Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../../../../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
+ Additionally, event notifications are delivered by using [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Routes for incoming messages are not included in the database that contains a service. Instead, explicit routes are stored in **msdb**. If your service uses an explicit route in the **msdb** database to route incoming messages to the service, when you attach a database in a different instance, you must re-create this route.  
   
 ### Windows Management Instrumentation (WMI) Events  
  The WMI Provider for Server Events lets you use the Windows Management Instrumentation (WMI) to monitor events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Any application that relies on server-level events exposed through the WMI provider on which a database relies must be defined the computer of the destination server instance. WMI Event provider creates event notifications with a target service that is defined in **msdb**.  
@@ -169,9 +169,9 @@ manager: "jhubbard"
 -   [Create a WMI Event Alert](../../2014/database-engine/create-a-wmi-event-alert.md)  
   
 ### How Event Notifications Work for a Mirrored Database  
- Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../../../../../includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
+ Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
   
- By setting up mirrored routes, you make [!INCLUDE[ssSB](../../../../../../includes/sssb-md.md)] routing aware of database mirroring. The mirrored routes enable [!INCLUDE[ssSB](../../../../../../includes/sssb-md.md)] to transparently redirect conversations to the current principal server instance. For example, consider a service, Service_A, which is hosted by a mirrored database, Database_A. Assume that you need another service, Service_B, which is hosted by Database_B, to have a dialog with Service_A. For this dialog to be possible, Database_B must contain a mirrored route for Service_A. In addition, Database_A must contain a nonmirrored TCP transport route to Service_B, which, unlike a local route, remains valid after failover. These routes enable ACKs to come back after a failover. Because the service of the sender is always named in the same manner, the route must specify the broker instance.  
+ By setting up mirrored routes, you make [!INCLUDE[ssSB](../../includes/sssb-md.md)] routing aware of database mirroring. The mirrored routes enable [!INCLUDE[ssSB](../../includes/sssb-md.md)] to transparently redirect conversations to the current principal server instance. For example, consider a service, Service_A, which is hosted by a mirrored database, Database_A. Assume that you need another service, Service_B, which is hosted by Database_B, to have a dialog with Service_A. For this dialog to be possible, Database_B must contain a mirrored route for Service_A. In addition, Database_A must contain a nonmirrored TCP transport route to Service_B, which, unlike a local route, remains valid after failover. These routes enable ACKs to come back after a failover. Because the service of the sender is always named in the same manner, the route must specify the broker instance.  
   
  The requirement for mirrored routes applies for regardless of whether the service in the mirrored database is the initiator service or the target service:  
   
@@ -334,7 +334,7 @@ manager: "jhubbard"
  [&#91;Top&#93;](#information_entities_and_objects)  
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Many aspects of a [!INCLUDE[ssSB](../../../../../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  
+ Many aspects of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] application move with the database. However, some aspects of the application must be re-created or reconfigured in the new location.  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   

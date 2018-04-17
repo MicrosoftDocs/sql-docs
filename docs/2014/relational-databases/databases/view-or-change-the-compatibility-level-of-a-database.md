@@ -63,11 +63,11 @@ manager: "jhubbard"
   
 #### To view the compatibility level of a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -80,11 +80,11 @@ GO
   
 #### To change the compatibility level of a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database to `120,` which is the compatibility level for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+3.  Copy and paste the following example into the query window and click **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)].  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  

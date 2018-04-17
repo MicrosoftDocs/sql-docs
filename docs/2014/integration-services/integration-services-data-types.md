@@ -208,7 +208,7 @@ manager: "jhubbard"
 |DT_DBTIMESTAMPOFFSET|Removes the fractional second value when its scale is greater than the number of fractional second digits that the destination DT_DBTIMESTAMPOFFSET data type can contain. After removing the fractional second value, generates a report about this data truncation. For more information, see [Error Handling in Data](../../2014/integration-services/error-handling-in-data.md).|  
   
 ## Mapping of Integration Services Data Types to Database Data Types  
- The following table provides guidance on mapping the data types used by certain databases to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types. These mappings are summarized from the mapping files used by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard when it imports data from these sources. For more information about these mapping files, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md).  
+ The following table provides guidance on mapping the data types used by certain databases to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] data types. These mappings are summarized from the mapping files used by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard when it imports data from these sources. For more information about these mapping files, see [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
 > [!IMPORTANT]  
 >  These mappings are not intended to represent strict equivalency, but only to provide guidance. In certain situations, you may need to use a different data type than the one shown in this table.  

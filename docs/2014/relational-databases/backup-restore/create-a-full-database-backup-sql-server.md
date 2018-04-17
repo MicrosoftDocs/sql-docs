@@ -93,9 +93,9 @@ manager: "jhubbard"
   
 6.  In the **Backup type** list box, select **Full**.  
   
-     Note that after creating a full database backup, you can create a differential database backup; for more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
+     Note that after creating a full database backup, you can create a differential database backup; for more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).  
   
-7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
+7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  When the **Differential** option is selected, you cannot create a copy-only backup.  
@@ -123,7 +123,7 @@ manager: "jhubbard"
          Optionally, enter a name in the **Media set name** text box. If no name is specified, a media set with a blank name is created. If you specify a media set name, the media (tape or disk) is checked to see whether the actual name matches the name you enter here.  
   
         > [!IMPORTANT]  
-        >  This option is disabled if you selected **URL** as the backup destination in the **General** page. For more information, see [Back Up Database &#40;Media Options Page&#41;](../relational-databases/backup-restore/back-up-database-media-options-page.md)  
+        >  This option is disabled if you selected **URL** as the backup destination in the **General** page. For more information, see [Back Up Database &#40;Media Options Page&#41;](back-up-database-media-options-page.md)  
         >   
         >  If you plan to use encryption, do not select this option. If you select this option, the encryption options in the **Backup Options** page will be disabled. Encryption is not supported when appending to the existing backup set.  
   
@@ -157,13 +157,13 @@ manager: "jhubbard"
   
          For more information about backup expiration dates, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](../relational-databases/backup-restore/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
   
      **To view or change the current backup compression default**  
   
     -   [View or Configure the backup compression default Server Configuration Option](configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-19. Specify whether to use encryption for the backup. Select an encryption algorithm to use for the encryption step, and provide a Certificate or Asymmetric key from a list of existing certificates or asymmetric keys. Encryption is supported in SQL Server 2014 or later. For more details on the Encryption options, see [Back Up Database &#40;Backup Options Page&#41;](../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
+19. Specify whether to use encryption for the backup. Select an encryption algorithm to use for the encryption step, and provide a Certificate or Asymmetric key from a list of existing certificates or asymmetric keys. Encryption is supported in SQL Server 2014 or later. For more details on the Encryption options, see [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md).  
   
 > [!NOTE]  
 >  Alternatively, you can use the Maintenance Plan Wizard to create database backups.  
@@ -189,7 +189,7 @@ manager: "jhubbard"
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Is the database that is to be backed up.|  
-    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, *o*. For information about some of the basic with options, see step 2.|  
   
 2.  Optionally, specify one or more WITH options. A few basic WITH options are described here. For information about all the WITH options, see [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md).  
@@ -197,7 +197,7 @@ manager: "jhubbard"
     -   Basic backup set WITH options:  
   
          { COMPRESSION | NO_COMPRESSION }  
-         In [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](../relational-databases/backup-restore/backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.  
+         In [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] and later only, specifies whether [backup compression](backup-compression-sql-server.md) is performed on this backup, overriding the server-level default.  
   
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.  
@@ -223,7 +223,7 @@ manager: "jhubbard"
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
   
 #### A. Backing up to a disk device  
- The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
+ The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -237,7 +237,7 @@ GO
 ```  
   
 #### B. Backing up to a tape device  
- The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)]database to tape, appending the backup to the previous backups.  
+ The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database to tape, appending the backup to the previous backups.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -250,7 +250,7 @@ GO
 ```  
   
 #### C. Backing up to a logical tape device  
- The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database to that device.  
+ The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to that device.  
   
 ```tsql  
 -- Create a logical backup device,   
@@ -285,9 +285,9 @@ GO
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Back Up a Database (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Back Up a Database (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
--   [Create a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+-   [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
@@ -305,8 +305,8 @@ GO
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Back Up Database &#40;General Page&#41;](../relational-databases/backup-restore/back-up-database-general-page.md)   
- [Back Up Database &#40;Backup Options Page&#41;](../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
+ [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)   
+ [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
  [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)  
   

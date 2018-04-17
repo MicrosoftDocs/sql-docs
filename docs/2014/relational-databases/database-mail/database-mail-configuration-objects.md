@@ -38,7 +38,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Database Mail Configuration Objects
-  Database Mail has two configuration objects: The database configuration objects provide a way for you to configure the settings that Database mail should use when sending an email from your database application or [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Agent.  
+  Database Mail has two configuration objects: The database configuration objects provide a way for you to configure the settings that Database mail should use when sending an email from your database application or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Database Mail accounts  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
   
 ##  <a name="DBAccount"></a> Database Mail Account  
- A Database Mail account contains the information that Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
+ A Database Mail account contains the information that Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to send e-mail messages to an SMTP server. Each account contains information for one e-mail server.  
   
  A Database Mail supports three methods of authentication to communicate with an SMTP server:  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 -   The name of the e-mail server.  
   
--   The type of the e-mail server. For [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], this is always Simple Mail Transfer Protocol(SMTP).  
+-   The type of the e-mail server. For [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this is always Simple Mail Transfer Protocol(SMTP).  
   
 -   The port number of the e-mail server.  
   

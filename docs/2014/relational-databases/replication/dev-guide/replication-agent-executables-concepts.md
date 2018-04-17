@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Invoking agent executable files from the command prompt with a supplied set of parameters.  
   
- Directly invoking replication agents from the command prompt enables agents to be programmatically accessed from command-line scripting in batch files. When an agent is invoked from the command prompt, it runs under the [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] Windows security account of the user that invoked the agent or started the batch file.  
+ Directly invoking replication agents from the command prompt enables agents to be programmatically accessed from command-line scripting in batch files. When an agent is invoked from the command prompt, it runs under the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security account of the user that invoked the agent or started the batch file.  
   
  Instances of the following replication agents can be run using executable files.  
   

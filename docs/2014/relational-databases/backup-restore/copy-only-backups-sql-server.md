@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
  **To view copy-only backups**  
   
@@ -81,7 +81,7 @@ manager: "jhubbard"
 
   
 ## See Also  
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)   
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

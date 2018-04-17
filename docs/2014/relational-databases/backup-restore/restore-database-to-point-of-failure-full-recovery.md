@@ -62,7 +62,7 @@ manager: "jhubbard"
 ## Example  
  Before you can run the example, you must complete the following preparations:  
   
-1.  The default recovery model of the [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database is the simple recovery model. Because this recovery model does not support restoring to the point of a failure, set [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] to use the full recovery model by running the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
+1.  The default recovery model of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database is the simple recovery model. Because this recovery model does not support restoring to the point of a failure, set [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] to use the full recovery model by running the following [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md) statement:  
   
     ```  
     USE master;  
@@ -82,7 +82,7 @@ manager: "jhubbard"
     BACKUP LOG AdventureWorks2012 TO DISK = 'C:\AdventureWorks2012_Log.bck';  
     ```  
   
- The following example restores the backups that are created previously, after creating a tail-log backup of the [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database. (This step assumes that the log disk can be accessed.)  
+ The following example restores the backups that are created previously, after creating a tail-log backup of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. (This step assumes that the log disk can be accessed.)  
   
  First, the example creates a tail-log backup of the database that captures the active log and leaves the database in the Restoring state. Then, the example restores the database backup, applies the routine log backup created previously, and applies the tail-log backup. Finally, the example recovers the database in a separate step.  
   

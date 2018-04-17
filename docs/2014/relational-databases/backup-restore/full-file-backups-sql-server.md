@@ -29,9 +29,9 @@ manager: "jhubbard"
   
  The files in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database can be backed up and restored individually. Also, you can specify a whole filegroup instead of specifying each constituent file individually. Note that if any file in a filegroup is offline (for example, because the file is being restored), the whole filegroup is offline and cannot be backed up.  
   
- File backups of read-only filegroups can be combined with partial backups. Partial backups include all the read/write filegroups and, optionally, one or more read-only filegroups. For more information, see [Partial Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/partial-backups-sql-server.md).  
+ File backups of read-only filegroups can be combined with partial backups. Partial backups include all the read/write filegroups and, optionally, one or more read-only filegroups. For more information, see [Partial Backups &#40;SQL Server&#41;](partial-backups-sql-server.md).  
   
- A file backup can serve as the *differential base* for differential file backups. For more information, see [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md).  
+ A file backup can serve as the *differential base* for differential file backups. For more information, see [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 > [!NOTE]  
 >  Full file backups are typically called *file backups*, except when they are being explicitly compared with *differential file backups*.  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 >  Individual files can be restored from a database backup; however, locating and restoring a file takes longer from a database backup than from a file backup.  
   
 ### File Backups and the Simple Recovery Model  
- Under the simple recovery model, read/write files must all be backed up together. This makes sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a partial backup. For more information, see [Partial Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/partial-backups-sql-server.md).  
+ Under the simple recovery model, read/write files must all be backed up together. This makes sure that the database can be restored to a consistent point in time. Instead of individually specifying each read/write file or filegroup, use the READ_WRITE_FILEGROUPS option. This option backs up all the read/write filegroups in the database. A backup that is created by specifying READ_WRITE_FILEGROUPS is known as a partial backup. For more information, see [Partial Backups &#40;SQL Server&#41;](partial-backups-sql-server.md).  
   
 ### File Backups and the Full Recovery Model  
  Under the full recovery model, you must back up the transaction log, regardless of the rest of your backup strategy. A complete set of full file backups, together with enough log backups to span all the file backups from the start of the first file backup, is the equivalent of a full database backup.  
@@ -82,12 +82,12 @@ manager: "jhubbard"
  ![Strategy combining database, file, and log backups](../../2014/database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
   
 > [!NOTE]  
->  Under the full recovery model, you must roll forward the transaction log when restoring a read/write file backup to make sure that the file is consistent with the rest of the database. To avoid rolling forward a lot of transaction log backups, consider using differential file backups. For more information, see [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md).  
+>  Under the full recovery model, you must roll forward the transaction log when restoring a read/write file backup to make sure that the file is consistent with the rest of the database. To avoid rolling forward a lot of transaction log backups, consider using differential file backups. For more information, see [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To create a file or filegroup backup**  
   
--   [Back Up Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
@@ -96,12 +96,12 @@ manager: "jhubbard"
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [File Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [Online Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
+ [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
+ [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
+ [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

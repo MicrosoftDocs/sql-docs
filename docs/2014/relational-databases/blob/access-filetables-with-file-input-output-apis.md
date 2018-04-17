@@ -41,11 +41,11 @@ manager: "jhubbard"
 -   Sharing and concurrency of access are enforced when multiple concurrent file I/O operations or [!INCLUDE[tsql](../../includes/tsql-md.md)] operations affect the same file or directory in the hierarchy.  
   
 ##  <a name="read"></a> Reading Files and Directories in a FileTable  
- Read Committed isolation semantics are enforced in [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] for all file I/O access operations on stream and attribute data.  
+ Read Committed isolation semantics are enforced in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for all file I/O access operations on stream and attribute data.  
   
 ##  <a name="write"></a> Writing and Updating Files and Directories in a FileTable  
   
--   All file I/O write or update operations on a FileTable are non-transactional. That is, no [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] transaction is bound to these operations, and no ACID guarantees are provided.  
+-   All file I/O write or update operations on a FileTable are non-transactional. That is, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction is bound to these operations, and no ACID guarantees are provided.  
   
 -   All file I/O streaming/in-place updates are supported for the FileTable.  
   
@@ -84,7 +84,7 @@ manager: "jhubbard"
 ###  <a name="trans"></a> Transactional Semantics  
  When you access the files in a FileTable by using file I/O APIs, these operations are not associated with any user transactions, and have the following additional characteristics:  
   
--   Since non-transacted access to FILESTREAM data in a FileTable is not associated with any transaction, it does not have any specific isolation semantics. However [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] may use internal transactions to enforce locking or concurrency semantics on the FileTable data. Any internal transactions of this type are done with read-committed isolation.  
+-   Since non-transacted access to FILESTREAM data in a FileTable is not associated with any transaction, it does not have any specific isolation semantics. However [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may use internal transactions to enforce locking or concurrency semantics on the FileTable data. Any internal transactions of this type are done with read-committed isolation.  
   
 -   There are no ACID guarantees for these non-transacted operations on FILESTREAM data. The consistency guarantees are similar to those for file updates made by applications in the file system.  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
  However, the FILESTREAM column in a FileTable can also be accessed with transactional FILESTREAM access by calling **OpenSqlFileStream()**. This kind of access can be fully transactional and will honor all the levels of transactional consistently that are currently supported.  
   
 ###  <a name="concurrency"></a> Concurrency Control  
- [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] enforces concurrency control for FileTable access among file system applications, and between file system applications and [!INCLUDE[tsql](../../includes/tsql-md.md)] applications. This concurrency control is achieved by taking appropriate locks on the FileTable rows.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enforces concurrency control for FileTable access among file system applications, and between file system applications and [!INCLUDE[tsql](../../includes/tsql-md.md)] applications. This concurrency control is achieved by taking appropriate locks on the FileTable rows.  
   
 ###  <a name="triggers"></a> Triggers  
  Creating, modifying, or deleting files or directories or their attributes through the file system results in corresponding insert, update, or delete operations in the FileTable. Any associated [!INCLUDE[tsql](../../includes/tsql-md.md)] DML triggers are fired as part of these operations.  
@@ -120,8 +120,8 @@ manager: "jhubbard"
 |**Byte range locking**|Yes|Requests for byte range locking are passed to the NTFS file system.|  
 |**Memory mapped files**|No||  
 |**Cancel I/O**|Yes||  
-|**Security**|No|Windows share level security and [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] table and column level security are enforced.|  
-|**USN journal**|No|Metadata changes to files and directories in a FileTable are DML operations on a [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] database. Therefore they are logged in the corresponding database log file. However they are not logged in the NTFS USN journal (except for changes in size).<br /><br /> [!INCLUDE[ssNoVersion](../../../../../../../../includes/ssnoversion-md.md)] change tracking capabilities can be used to capture similar information.|  
+|**Security**|No|Windows share level security and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table and column level security are enforced.|  
+|**USN journal**|No|Metadata changes to files and directories in a FileTable are DML operations on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Therefore they are logged in the corresponding database log file. However they are not logged in the NTFS USN journal (except for changes in size).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] change tracking capabilities can be used to capture similar information.|  
   
 ## See Also  
  [Load Files into FileTables](load-files-into-filetables.md)   

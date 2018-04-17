@@ -31,7 +31,7 @@ manager: "jhubbard"
  Mirroring a media set increases backup reliability by reducing the impact of backup-device malfunctions. These malfunctions are very serious because backups are the last line of defense against data loss. As databases grow, the probability increases that a failure of a backup device or media will make a backup nonrestorable. Mirroring backup media increases the reliability of backups by providing redundancy.  
   
 > [!NOTE]  
->  For information about media sets in general, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+>  For information about media sets in general, see [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **In this Topic:**  
   
@@ -67,12 +67,12 @@ manager: "jhubbard"
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To back up to mirrored backup devices**  
   
--   [Back Up to a Mirrored Media Set &#40;Transact-SQL&#41;](../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
+-   [Back Up to a Mirrored Media Set &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
 ## See Also  
- [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
+ [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

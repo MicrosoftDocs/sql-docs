@@ -62,11 +62,11 @@ manager: "jhubbard"
   
 #### To view a property of a database by using DATABASEPROPERTYEX  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](~/t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
+3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](~/t-sql/functions/databasepropertyex-transact-sql.md) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -78,11 +78,11 @@ GO
   
 #### To view the properties of a database by querying sys.databases  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
+3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -95,11 +95,11 @@ GO
   
 #### To change the properties of a database  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window. The example determines the state of snapshot isolation on the [!INCLUDE[ssSampleDBobject](../../../../includes/sssampledbobject-md.md)] database, changes the state of the property, and then verifies the change.  
+3.  Copy and paste the following example into the query window. The example determines the state of snapshot isolation on the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, changes the state of the property, and then verifies the change.  
   
      To determine the state of snapshot isolation, select the first `SELECT` statement and click **Execute**.  
   

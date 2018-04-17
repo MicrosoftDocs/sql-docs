@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 6.  To define the new device, click **OK**.  
   
- To back up to this new device, add it to the **Back up to:** field in the **Back up Database** (**General**) dialog box. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ To back up to this new device, add it to the **Back up to:** field in the **Back up Database** (**General**) dialog box. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -94,7 +94,7 @@ GO
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   

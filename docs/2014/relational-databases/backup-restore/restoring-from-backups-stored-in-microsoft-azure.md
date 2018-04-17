@@ -42,16 +42,16 @@ manager: "jhubbard"
   
 ### Topics on Performing Restore Operations  
   
--   [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
+-   [Complete Database Restores &#40;Simple Recovery Model&#41;](complete-database-restores-simple-recovery-model.md)  
   
 -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
--   [Complete Database Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
+-   [Complete Database Restores &#40;Full Recovery Model&#41;](complete-database-restores-full-recovery-model.md)  
   
--   [File Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
+-   [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)  
   
--   [File Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
+-   [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)  
   
--   [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
+-   [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

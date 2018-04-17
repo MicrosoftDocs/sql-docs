@@ -75,7 +75,7 @@ manager: "jhubbard"
 7.  The **Backup sets** grid displays information about the contents of the media set.  
   
 > [!NOTE]  
->  For more information, see [Media Contents Page](../relational-databases/backup-restore/backup-device-media-contents-page.md).  
+>  For more information, see [Media Contents Page](backup-device-media-contents-page.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -102,6 +102,6 @@ GO
  [backupmediaset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)  
   
   

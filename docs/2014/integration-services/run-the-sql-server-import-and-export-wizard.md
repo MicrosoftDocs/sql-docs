@@ -21,7 +21,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Run the SQL Server Import and Export Wizard
-  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard provides the simplest method of copying data between data sources and of constructing basic packages. For more information about the wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md).  
+  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export Wizard provides the simplest method of copying data between data sources and of constructing basic packages. For more information about the wizard, see [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
  For a video that demonstrates how to use the SQL Server Import and Export Wizard to create a package that exports data from a SQL Server database to a Microsoft Excel spreadsheet, see [Exporting SQL Server Data to Excel (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131024).  
   
@@ -125,7 +125,7 @@ manager: "jhubbard"
     >  In [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the option to save the package created by the wizard is not available.  
   
 ## See Also  
- [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md)   
+ [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Create Packages in SQL Server Data Tools](../../2014/integration-services/create-packages-in-sql-server-data-tools.md)  
   
   

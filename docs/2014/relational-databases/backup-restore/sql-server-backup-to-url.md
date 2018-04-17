@@ -33,11 +33,11 @@ manager: "jhubbard"
   
 -   [Support for Backup/Restore Statements](#Support)  
   
--   [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)  
+-   [Using Backup Task in SQL Server Management Studio](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
--   [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
+-   [SQL Server Backup to URL Using Maintenance Plan Wizard](sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [Restoring from Windows Azure storage Using SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> Security  
  The following are security considerations and requirements when backing up to or restoring from the Windows Azure Blob storage services.  
@@ -45,23 +45,23 @@ manager: "jhubbard"
 -   When creating a container for the Windows Azure Blob storage service, we recommend that you set the access to **private**. Setting the access to private restricts the access to users or accounts able to provide the necessary information to authenticate to the Windows Azure account.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] requires Windows Azure account name and access key authentication to be stored in a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Credential. This information is used to authenticate to the Windows Azure account when it performs backup or restore operations.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires Windows Azure account name and access key authentication to be stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential. This information is used to authenticate to the Windows Azure account when it performs backup or restore operations.  
   
 -   The user account that is used to issue BACKUP or RESTORE commands should be in the **db_backup operator** database role with **Alter any credential** permissions.  
   
 ###  <a name="intorkeyconcepts"></a> Introduction to Key Components and Concepts  
- The following two sections introduce the Windows Azure Blob storage service, and the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] components used when backing up to or restoring from the Windows Azure Blob storage service. It is important to understand the components and the interaction between them to do a backup to or restore from the Windows Azure Blob storage service.  
+ The following two sections introduce the Windows Azure Blob storage service, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components used when backing up to or restoring from the Windows Azure Blob storage service. It is important to understand the components and the interaction between them to do a backup to or restore from the Windows Azure Blob storage service.  
   
- Creating a Windows Azure account is the first step to this process. [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] uses the **Windows Azure storage account name** and its **access key** values to authenticate and write and read blobs to the storage service. The [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations. For a complete walkthrough of creating a storage account and performing a simple restore, see [Tutorial Using Windows Azure Storage Service for SQL Server Backup and Restore](http://go.microsoft.com/fwlink/?LinkId=271615).  
+ Creating a Windows Azure account is the first step to this process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **Windows Azure storage account name** and its **access key** values to authenticate and write and read blobs to the storage service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations. For a complete walkthrough of creating a storage account and performing a simple restore, see [Tutorial Using Windows Azure Storage Service for SQL Server Backup and Restore](http://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![mapping storage account to sql credentials](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping storage account to sql credentials")  
   
 ###  <a name="Blob"></a> Windows Azure Blob Storage Service  
  **Storage Account:** The storage account is the starting point for all storage services. To access the Windows Azure Blob Storage service, first create a Windows Azure storage account. The **storage account name** and its **access key** properties are required to authenticate to the Windows Azure Blob Storage service and its components.  
   
- **Container:** A container provides a grouping of a set of Blobs, and can store an unlimited number of Blobs. To write a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] backup to the Windows Azure Blob service, you must have at least the root container created.  
+ **Container:** A container provides a grouping of a set of Blobs, and can store an unlimited number of Blobs. To write a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Windows Azure Blob service, you must have at least the root container created.  
   
- **Blob:** A file of any type and size. There are two types of blobs that can be stored in the Windows Azure Blob storage service: block and page blobs. [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] backup uses page Blobs as the Blob type. Blobs are addressable using the following URL format: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>  
+ **Blob:** A file of any type and size. There are two types of blobs that can be stored in the Windows Azure Blob storage service: block and page blobs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup uses page Blobs as the Blob type. Blobs are addressable using the following URL format: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>  
   
  ![Azure Blob Storage](../../2014/database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -69,17 +69,17 @@ manager: "jhubbard"
   
  For more information about page Blobs, see [Understanding Block and Page Blobs](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Components  
- **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] backup file. In this implementation, the only valid URL is one that points to a page Blob in a Windows Azure storage account. The URL must point to an actual Blob, not just a container. If the Blob does not exist, it is created. If an existing Blob is specified, BACKUP fails, unless the “WITH FORMAT” option is specified.  
+###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
+ **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup file. In this implementation, the only valid URL is one that points to a page Blob in a Windows Azure storage account. The URL must point to an actual Blob, not just a container. If the Blob does not exist, it is created. If an existing Blob is specified, BACKUP fails, unless the “WITH FORMAT” option is specified.  
   
 > [!WARNING]  
 >  If you choose to copy and upload a backup file to the Windows Azure Blob storage service, use page blob as your storage option. Restores from Block Blobs are not supported. RESTORE from a block blob type fails with an error.  
   
  Here is a sample URL value: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>. HTTPS is not required, but is recommended.  
   
- **Credential:** A [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server.  Here, [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to the Windows Azure Blob storage service. The Credential stores the name of the storage account and the storage account **access key** values. Once the credential is created, it must be specified in the WITH CREDENTIAL option when issuing the BACKUP/RESTORE statements. For more information about how to view, copy or regenerate storage account **access keys**, see [Storage Account Access Keys](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+ **Credential:** A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server.  Here, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to the Windows Azure Blob storage service. The Credential stores the name of the storage account and the storage account **access key** values. Once the credential is created, it must be specified in the WITH CREDENTIAL option when issuing the BACKUP/RESTORE statements. For more information about how to view, copy or regenerate storage account **access keys**, see [Storage Account Access Keys](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- For step by step instructions about how to create a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Credential, see [Create a Credential](#credential) example later in this topic.  
+ For step by step instructions about how to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a Credential](#credential) example later in this topic.  
   
  For general information about credentials, see [Credentials](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
 -   Specifying backupset options - `RETAINDAYS` and `EXPIREDATE` are not supported.  
   
--   [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL – ‘https://.blob.core.windows.net//.bak’, leaving 223 characters for account, container, and blob names put together.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a maximum limit of 259 characters for a backup device name. The BACKUP TO URL consumes 36 characters for the required elements used to specify the URL – ‘https://.blob.core.windows.net//.bak’, leaving 223 characters for account, container, and blob names put together.  
   
 ###  <a name="Support"></a> Support for Backup/Restore Statements  
   
@@ -231,13 +231,13 @@ manager: "jhubbard"
   
  When you select URL as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
   
- [Back Up Database &#40;General Page&#41;](../relational-databases/backup-restore/back-up-database-general-page.md)  
+ [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)  
   
- [Back Up Database &#40;Media Options Page&#41;](../relational-databases/backup-restore/back-up-database-media-options-page.md)  
+ [Back Up Database &#40;Media Options Page&#41;](back-up-database-media-options-page.md)  
   
- [Back Up Database &#40;Backup Options Page&#41;](../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
+ [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)  
   
- [Create Credential - Authenticate to Azure Storage](../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
+ [Create Credential - Authenticate to Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> SQL Server Backup to URL Using Maintenance Plan Wizard  
  Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio has been enhanced to include **URL** as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential. For more information, see  the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -251,11 +251,11 @@ manager: "jhubbard"
   
 3.  SQL Server then connects to Windows Azure storage using the SQL Credential information you provided and opens the **Locate Backup File in Windows Azure** dialog. The backup files residing in the storage are displayed on this page. Select the file you want to use to restore and click **OK**. This takes you back to the **Select Backup Devices** dialog, and Clicking **OK** on this dialog takes you back to the main **Restore** dialog where you will be able complete the restore.  For more information see, the following topics:  
   
-     [Restore Database &#40;General Page&#41;](../relational-databases/backup-restore/restore-database-general-page.md)  
+     [Restore Database &#40;General Page&#41;](restore-database-general-page.md)  
   
-     [Restore Database &#40;Files Page&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+     [Restore Database &#40;Files Page&#41;](restore-database-files-page.md)  
   
-     [Restore Database &#40;Options Page&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
+     [Restore Database &#40;Options Page&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a> Code Examples  
  This section contains the following examples.  
@@ -873,8 +873,8 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+ [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+ [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

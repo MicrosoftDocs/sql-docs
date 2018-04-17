@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 #### To enable or disable checksums during a backup operation  
   
-1.  Follow the steps to [create a database backup](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+1.  Follow the steps to [create a database backup](create-a-full-database-backup-sql-server.md).  
   
 2.  On the **Options** page, in the **Reliability** section, click **Perform checksum before writing to media**.  
   

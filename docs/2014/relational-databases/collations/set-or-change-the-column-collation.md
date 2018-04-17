@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
--   Using the `Column.Collation` property in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Using the `Column.Collation` property in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
  You cannot change the collation of a column that is currently referenced by any one of the following:  
   
@@ -53,12 +53,12 @@ manager: "jhubbard"
  When you work with **tempdb**, the [COLLATE](~/t-sql/statements/collations.md) clause includes a *database_default* option to specify that a column in a temporary table uses the collation default of the current user database for the connection instead of the collation of **tempdb**.  
   
 ## Collations and text Columns  
- You can insert or update values in a `text` column whose collation is different from the code page of the default collation of the database. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] implicitly converts the values to the collation of the column.  
+ You can insert or update values in a `text` column whose collation is different from the code page of the default collation of the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implicitly converts the values to the collation of the column.  
   
 ## Collations and tempdb  
- The **tempdb** database is built every time [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] is started and has the same default collation as the **model** database. This is typically the same as the default collation of the instance. If you create a user database and specify a different default collation than **model**, the user database has a different default collation than **tempdb**. All temporary stored procedures or temporary tables are created and stored in **tempdb**. This means that all implicit columns in temporary tables and all coercible-default constants, variables, and parameters in temporary stored procedures have collations that are different from comparable objects created in permanent tables and stored procedures.  
+ The **tempdb** database is built every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started and has the same default collation as the **model** database. This is typically the same as the default collation of the instance. If you create a user database and specify a different default collation than **model**, the user database has a different default collation than **tempdb**. All temporary stored procedures or temporary tables are created and stored in **tempdb**. This means that all implicit columns in temporary tables and all coercible-default constants, variables, and parameters in temporary stored procedures have collations that are different from comparable objects created in permanent tables and stored procedures.  
   
- This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
+ This could lead to problems with a mismatch in collations between user-defined databases and system database objects. For example, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the Latin1_General_CS_AS collation and you execute the following statements:  
   
 ```  
 CREATE DATABASE TestDB COLLATE Estonian_CS_AS;  

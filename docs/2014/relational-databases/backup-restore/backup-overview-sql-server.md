@@ -163,9 +163,9 @@ manager: "jhubbard"
   
 -   [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Back Up Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
 -   [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
 -   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## See Also  
- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)   
  [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md)   

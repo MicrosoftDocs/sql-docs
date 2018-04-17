@@ -114,7 +114,7 @@ manager: "jhubbard"
 3.  Right-click the database, point to **Tasks**, point to **Restore**, and then click **Page**, which opens the **Restore Page** dialog box.  
   
      **Restore**  
-     This section performs the same function as that of **Restore to** on the [Restore Database (General Page)](../relational-databases/backup-restore/restore-database-general-page.md).  
+     This section performs the same function as that of **Restore to** on the [Restore Database (General Page)](restore-database-general-page.md).  
   
      **Database**  
      Specifies the database to restore. You can enter a new database or select an existing database from the drop-down list. The list includes all databases on the server, except the system databases **master** and **tempdb**.  
@@ -153,7 +153,7 @@ manager: "jhubbard"
     > [!WARNING]  
     >  To restore specific pages that are not corrupted, click **Add** and enter the **File ID** and **Page ID** of the pages to be restored.  
   
-5.  The pages grid is used to identify the pages to be restored. Initially, this grid is populated from the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) system table. To add or remove pages from the grid, click **Add** or **Remove**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
+5.  The pages grid is used to identify the pages to be restored. Initially, this grid is populated from the [suspect_pages](~/relational-databases/system-tables/suspect-pages-transact-sql.md) system table. To add or remove pages from the grid, click **Add** or **Remove**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md).  
   
 6.  The **Backup sets** grid lists the backup sets in the default restore plan. Optionally, click **Verify** to verify that the backups are readable and that the backup sets are complete, without restoring them. For more information, see [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
   
     |Source of page ID|Topic|  
     |-----------------------|-----------|  
-    |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
+    |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)|  
     |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../2014/database-engine/view-the-sql-server-error-log-sql-server-management-studio.md)|  
     |Event traces|[Monitor and Respond to Events](../../2014/database-engine/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)|  
@@ -218,7 +218,7 @@ GO
 ## See Also  
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   
+ [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)  
   
   

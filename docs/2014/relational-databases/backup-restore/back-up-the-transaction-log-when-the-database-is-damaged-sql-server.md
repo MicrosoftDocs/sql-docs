@@ -128,7 +128,7 @@ manager: "jhubbard"
   
 15. If you are backing up to a tape drive (as specified in the **Destination** section of the **General** page), the **Unload the tape after backup** option is active. Clicking this option activates the **Rewind the tape before unloading** option.  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](../relational-databases/backup-restore/backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later supports [backup compression](backup-compression-sql-server.md). By default, whether a backup is compressed depends on the value of the **backup-compression default** server configuration option. However, regardless of the current server-level default, you can compress a backup by checking **Compress backup**, and you can prevent compression by checking **Do not compress backup**.  
   
      **To view the current backup compression default**  
   
@@ -165,8 +165,8 @@ GO
 ## See Also  
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Back Up Database &#40;Backup Options Page&#41;](../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
- [Back Up Database &#40;General Page&#41;](../relational-databases/backup-restore/back-up-database-general-page.md)   
+ [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md)   
+ [Back Up Database &#40;General Page&#41;](back-up-database-general-page.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   

@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 3.  Determine the type of restore you want to perform. For more information, see [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
   
-4.  Identify which backups you require and make sure that the necessary media sets and backup devices are available. For more information, see [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md) and [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
+4.  Identify which backups you require and make sure that the necessary media sets and backup devices are available. For more information, see [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md) and [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
 ## To Perform a Restore Sequence  
  To perform a restore sequence, follow these steps:  
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 2.  Optionally, restore the latest differential backups that are based on these full backups.  
   
-     For each full backup that you plan to restore, determine whether it is the base for any differential backups. If so, restore most recent differential backup, if you can. For more information, see [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md).  
+     For each full backup that you plan to restore, determine whether it is the base for any differential backups. If so, restore most recent differential backup, if you can. For more information, see [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
 3.  Roll forward the database by restoring log backups in sequence, finishing with the backup that contains the recovery point. Whether you have to apply all the log backups depends on what log backup contains the target recovery point, as follows:  
   
@@ -60,12 +60,12 @@ manager: "jhubbard"
  If you encounter a problem with the outcome of a restore sequence, you can quit it and restart the restore sequence over from the start. For example, if you accidentally restore too many log backups and overshoot the intended recovery point, you must restart the restore sequence up to log backup that contains the target recovery point.  
   
 ## See Also  
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)   
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
- [Complete Database Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [Online Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/online-restore-sql-server.md)   
- [File Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Complete Database Restores &#40;Full Recovery Model&#41;](complete-database-restores-full-recovery-model.md)   
+ [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
  [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
+ [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

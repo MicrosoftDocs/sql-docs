@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
   Use the **Specify Table Copy or Query** page to specify how to copy data. You can use a graphical interface to select the existing database objects you want to copy, or you can use Transact-SQL to create a more complex query.  
   
- To learn more about this wizard, see [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, as well as the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
+ To learn more about this wizard, see [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md). To learn about the options for starting the wizard, as well as the permissions required to run the wizard successfully, see [Run the SQL Server Import and Export Wizard](../../2014/integration-services/run-the-sql-server-import-and-export-wizard.md).  
   
  The purpose of the SQL Server Import and Export Wizard is to copy data from a source to a destination. The wizard can also create a destination database and destination tables for you. However, if you have to copy multiple databases or tables, or other kinds of database objects, you should use the Copy Database Wizard instead. For more information, see [Use the Copy Database Wizard](../relational-databases/databases/use-the-copy-database-wizard.md).  
   

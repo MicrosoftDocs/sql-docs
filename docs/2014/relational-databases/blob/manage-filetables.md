@@ -114,7 +114,7 @@ GO
 3.  A valid directory has been specified at the database level.  
   
 ##  <a name="BasicsEnabling"></a> Disabling and Re-enabling the FileTable Namespace at the Table Level  
- Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../../../../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
+ Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
   
  Disabling a FileTable namespace has the following results:  
   
@@ -201,18 +201,18 @@ GO
 ```  
   
 ##  <a name="BasicsSecurity"></a> FileTable Security  
- The files and directories stored in FileTables are secured by SQL Server security only. Table and column-based security is enforced for file system access as well as [!INCLUDE[tsql](../../../../includes/tsql-md.md)] access. Windows file system security APIs and ACL settings are not supported.  
+ The files and directories stored in FileTables are secured by SQL Server security only. Table and column-based security is enforced for file system access as well as [!INCLUDE[tsql](../../includes/tsql-md.md)] access. Windows file system security APIs and ACL settings are not supported.  
   
  The security and access permissions that are applicable to FILESTREAM filegroups and containers also apply to FileTables, since the file data is stored as a FILESTREAM column in the FileTable.  
   
  **FileTable Security and Transact-SQL Access**  
- [!INCLUDE[tsql](../../../../includes/tsql-md.md)] access to data in FileTables is secured in the same way as any other table. Appropriate table and column-level security checks are done for every operation that accesses or changes the data.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] access to data in FileTables is secured in the same way as any other table. Appropriate table and column-level security checks are done for every operation that accesses or changes the data.  
   
  **FileTable Security and File System Access**  
- File system APIs require appropriate [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] permissions on the entire row in the FileTable (that is, table-level permission) to open a handle to a file or directory stored in the FileTable. If the user does not have the appropriate [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] permission on any column in the FileTable, then file system access is denied.  
+ File system APIs require appropriate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permissions on the entire row in the FileTable (that is, table-level permission) to open a handle to a file or directory stored in the FileTable. If the user does not have the appropriate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permission on any column in the FileTable, then file system access is denied.  
   
 ##  <a name="OtherBackup"></a> Backup and FileTables  
- When you use [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] to back up a FileTable, the FILESTREAM data is backed up with the structured data in the database. If you do not want to back up FILESTREAM data with relational data, you can use a partial backup to exclude FILESTREAM filegroups.  
+ When you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to back up a FileTable, the FILESTREAM data is backed up with the structured data in the database. If you do not want to back up FILESTREAM data with relational data, you can use a partial backup to exclude FILESTREAM filegroups.  
   
  **Transactional Consistency of FileTable Backups**  
   
@@ -221,7 +221,7 @@ GO
  However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a “point in time” restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
   
 ##  <a name="Monitor"></a> SQL Server Profiler and FileTables  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  
   
 ##  <a name="OtherAuditing"></a> Auditing and FileTables  
  FileTable can be audited just like any other table. Howerver, Win32 access patterns are not set based operations. A single action in the file system translates into multiple Transact-SQL DML operations. For example, opening a file in Microsoft Word translates into multiple open/close/create/rename/delete operations and corresponding Transact-SQL DML activities. This results in verbose audit records where it is hard to correlate records between file system actions and corresponding Transact-SQL DML audit records.  

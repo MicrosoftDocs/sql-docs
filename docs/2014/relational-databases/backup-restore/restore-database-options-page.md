@@ -24,10 +24,10 @@ manager: "jhubbard"
   
 -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
--   [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  When you specify a restore task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate a corresponding [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script containing the RESTORE statements for this restore operation. To generate the script, click **Script** and then select a destination for the script. For information about the RESTORE syntax, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
+>  When you specify a restore task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate a corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)] script containing the RESTORE statements for this restore operation. To generate the script, click **Script** and then select a destination for the script. For information about the RESTORE syntax, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
 ## Options  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
  To modify aspects of the behavior of the restore operation, use the options of the **Restore options** panel.  
   
  **Overwrite the existing database [WITH REPLACE]**  
- The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](../relational-databases/backup-restore/restore-database-general-page.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]).  
+ The restore operation will overwrite the files of any database that is currently using the database name that you are specifying in the **Restore to**field on the [General](restore-database-general-page.md) page of the **Restore Database** dialog box. The files of the existing database will be overwritten even if you are restoring backups from a different database to the existing database name. Selecting this option is equivalent to using the REPLACE option in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  Use this option only after careful consideration. For more information, see [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
@@ -58,7 +58,7 @@ manager: "jhubbard"
  To determine the state of the database after the store operation, you must select one of the options of the **Recovery state** panel.  
   
  **RESTORE WITH RECOVERY**  
- Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](../relational-databases/backup-restore/restore-database-general-page.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]).  
+ Recovers the database after restoring the final backup checked in the **Backup sets to restore**grid on the [General page](restore-database-general-page.md). This is the default option and is equivalent to specifying WITH RECOVERY in a [RESTORE](~/t-sql/statements/restore-statements-arguments-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!NOTE]  
 >  Under the full recovery model or bulk-logged recovery model, choose this option only if you are restoring all the log files now.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
  Check this box to designate that a tail-log backup should be performed.  
   
 > [!NOTE]  
->  If the point-in-time you have selected in the [Backup Timeline](../relational-databases/backup-restore/backup-timeline.md) dialog box requires a tail-log backup, this box will be selected and you will not be able to edit it.  
+>  If the point-in-time you have selected in the [Backup Timeline](backup-timeline.md) dialog box requires a tail-log backup, this box will be selected and you will not be able to edit it.  
   
  **Backup file**  
  Specifies a backup file for the tail of the log. You can browse for the backup file or enter its name directly in the text box.  
@@ -108,14 +108,14 @@ manager: "jhubbard"
   
 -   If the next backup is a file backup, use the **Restore Files and Filegroup**s task. For more information, see [Restore Files and Filegroups &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md).  
   
--   If the next backup is a log backup, use the **Restore Transaction Log** task. For information about resuming a restore sequence by restoring a transaction log, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
+-   If the next backup is a log backup, use the **Restore Transaction Log** task. For information about resuming a restore sequence by restoring a transaction log, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
 ## See Also  
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [Restore a Backup from a Device &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [Restore a Backup from a Device &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
+ [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
+ [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Restore Database &#40;General Page&#41;](../relational-databases/backup-restore/restore-database-general-page.md)  
+ [Restore Database &#40;General Page&#41;](restore-database-general-page.md)  
   
   

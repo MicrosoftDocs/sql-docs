@@ -61,7 +61,7 @@ GO
 ##  <a name="fullpath"></a> The full path to an item stored in a FileTable  
  The full path to a file or directory stored in a FileTable begins with the following elements:  
   
-1.  The share enabled for FILESTREAM file I/O access at the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] instance level.  
+1.  The share enabled for FILESTREAM file I/O access at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level.  
   
 2.  The **DIRECTORY_NAME** specified at the database level.  
   
@@ -73,12 +73,12 @@ GO
   
  This directory hierarchy forms the root of the FileTable’s file namespace. Under this directory hierarchy, the FILESTREAM data for the FileTable is stored as files, and as subdirectories which can also contain files and subdirectories.  
   
- It is important to keep in mind that the directory hierarchy created under the instance-level FILESTREAM share is a virtual directory hierarchy. This hierarchy is stored in the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database and is not represented physically in the NTFS file system. All operations that access files and directories under the FILESTREAM share and in the FileTables that it contains are intercepted and handled by a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] component embedded in the file system.  
+ It is important to keep in mind that the directory hierarchy created under the instance-level FILESTREAM share is a virtual directory hierarchy. This hierarchy is stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and is not represented physically in the NTFS file system. All operations that access files and directories under the FILESTREAM share and in the FileTables that it contains are intercepted and handled by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component embedded in the file system.  
   
 ##  <a name="roots"></a> The semantics of the root directories at the instance, database, and FileTable levels  
  This directory hierarchy observes the following semantics:  
   
--   The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Configuration Manager. A renaming operation does not take effect until the server is restarted.  
+-   The instance-level FILESTREAM share is configured by an administrator and stored as a property of the server. You can rename this share by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. A renaming operation does not take effect until the server is restarted.  
   
 -   The database-level **DIRECTORY_NAME** is null by default when you create a new database. An administrator can set or change this name by using the **ALTER DATABASE** statement. The name must be unique (in a case-insensitive comparison) in that instance.  
   

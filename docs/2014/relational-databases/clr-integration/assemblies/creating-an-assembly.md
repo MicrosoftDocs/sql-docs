@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Creating an Assembly
-  Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  
+  Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  
   
 ## The CREATE ASSEMBLY Statement  
  The CREATE ASSEMBLY statement is used to create an assembly in a database. Here is an example:  
@@ -38,7 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not allow registering different versions of an assembly with the same name, culture and public key.  
   
- It is possible to create assemblies that reference other assemblies. When an assembly is created in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also creates the assemblies referenced by the root-level assembly, if the referenced assemblies are not already created into the database.  
+ It is possible to create assemblies that reference other assemblies. When an assembly is created in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also creates the assemblies referenced by the root-level assembly, if the referenced assemblies are not already created into the database.  
   
  Database users or user roles are given permissions to create, and thereby own, assemblies in a database. In order to create assemblies, the database user or role should have the CREATE ASSEMBLY permission.  
   
@@ -83,7 +83,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  We recommend that the [TRUSTWORTHY Database Property](../../../database-engine/trustworthy-database-property.md) on a database not be set to `ON` only to run common language runtime (CLR) code in the server process. Instead, we recommend that an asymmetric key be created from the assembly file in the master database. A login mapped to this asymmetric key must then be created, and the login must be granted `EXTERNAL ACCESS ASSEMBLY` or `UNSAFE ASSEMBLY` permission.  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements perform the steps that are required to create an asymmetric key, map a login to this key, and then grant `EXTERNAL_ACCESS` permission to the login. You must run the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements before running the CREATE ASSEMBLY statement.  
+ The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements before running the CREATE ASSEMBLY statement.  
   
 ```  
 USE master;   
@@ -106,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements perform the steps that are required to create an asymmetric key, map a login to this key, and then grant `UNSAFE` permission to the login. You must run the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements before running the CREATE ASSEMBLY statement.  
+ The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements before running the CREATE ASSEMBLY statement.  
   
 ```  
 USE master;   

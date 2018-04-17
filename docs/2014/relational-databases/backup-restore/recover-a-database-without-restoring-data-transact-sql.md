@@ -74,23 +74,23 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## Examples of Completing a Piecemeal Restore Scenario with a Recovery-Only Restore  
  **Simple recovery model**  
   
--   [Example: Piecemeal Restore of Database &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Example: Piecemeal Restore of Database &#40;Simple Recovery Model&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Example: Piecemeal Restore of Only Some Filegroups &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Example: Piecemeal Restore of Only Some Filegroups &#40;Simple Recovery Model&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **Full recovery model**  
   
--   [Example: Piecemeal Restore of Database &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Example: Piecemeal Restore of Database &#40;Full Recovery Model&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Example: Piecemeal Restore of Only Some Filegroups &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Example: Piecemeal Restore of Only Some Filegroups &#40;Full Recovery Model&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## See Also  
- [Online Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
- [File Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+ [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md)   
+ [File Restores &#40;Full Recovery Model&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -89,8 +89,8 @@ GO
  [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediaset-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+ [Backup Devices &#40;SQL Server&#41;](backup-devices-sql-server.md)   
+ [Define a Logical Backup Device for a Disk File &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], click **New Query** to display the Query Editor.  
   
-2.  Copy the [!INCLUDE[tsql](../../../includes/tsql-md.md)] code from the following example into the Query Editor. This [!INCLUDE[tsql](../../../includes/tsql-md.md)] code creates a FILESTREAM-enabled database called Archive.  
+2.  Copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] code creates a FILESTREAM-enabled database called Archive.  
   
     > [!NOTE]  
     >  For this script, the directory C:\Data must exist.  

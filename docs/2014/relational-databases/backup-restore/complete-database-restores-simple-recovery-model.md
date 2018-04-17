@@ -95,15 +95,15 @@ GO
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To restore a full database backup**  
   
--   [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [Restore a Database Backup Under the Simple Recovery Model &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)  
   
--   [Restore a Database to a New Location &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
+-   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
  **To restore a differential database backup**  
   
--   [Restore a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
+-   [Restore a Differential Database Backup &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
  **To restore a backup by using SQL Server Management Objects (SMO)**  
   
@@ -115,9 +115,9 @@ GO
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [Full Database Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)   
- [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Restore and Recovery Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
+ [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
+ [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

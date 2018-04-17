@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 |Restore scenario|Under simple recovery model|Under full/bulk-logged recovery models|  
 |----------------------|---------------------------------|----------------------------------------------|  
-|Complete database restore|This is the basic restore strategy. A complete database restore might involve simply restoring and recovering a full database backup. Alternatively, a complete database restore might involve restoring a full database backup followed by restoring and recovering a differential backup.<br /><br /> For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|This is the basic restore strategy. A complete database restore involve restoring a full database backup and, optionally, a differential backup (if any), followed by restoring all subsequent log backups (in sequence). The complete database restore is finished by recovering the last log backup and also restoring it (RESTORE WITH RECOVERY).<br /><br /> For more information, see [Complete Database Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)|  
+|Complete database restore|This is the basic restore strategy. A complete database restore might involve simply restoring and recovering a full database backup. Alternatively, a complete database restore might involve restoring a full database backup followed by restoring and recovering a differential backup.<br /><br /> For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](complete-database-restores-simple-recovery-model.md).|This is the basic restore strategy. A complete database restore involve restoring a full database backup and, optionally, a differential backup (if any), followed by restoring all subsequent log backups (in sequence). The complete database restore is finished by recovering the last log backup and also restoring it (RESTORE WITH RECOVERY).<br /><br /> For more information, see [Complete Database Restores &#40;Full Recovery Model&#41;](complete-database-restores-full-recovery-model.md)|  
 |File restore **\***|Restore one or more damaged read-only files, without restoring the entire database. File restore is available only if the database has at least one read-only filegroup.|Restores one or more files, without restoring the entire database. File restore can be performed while the database is offline or, for some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], while the database remains online. During a file restore, the filegroups that contain the files that are being restored are always offline.|  
 |Page restore|Not applicable|Restores one or more damaged pages. Page restore can be performed while the database is offline or, for some editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], while the database remains online. During a page restore, the pages that are being restored are always offline.<br /><br /> An unbroken chain of log backups must be available, up to the current log file, and they must all be applied to bring the page up to date with the current log file.<br /><br /> For more information, see [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md).|  
 |Piecemeal restore **\***|Restore and recover the database in stages at the filegroup level, starting with the primary and all read/write, secondary filegroups.|Restore and recover the database in stages at the filegroup level, starting with the primary filegroup.|  
@@ -100,13 +100,13 @@ manager: "jhubbard"
 ##  <a name="RMsimpleScenarios"></a> Restore Scenarios Under the Simple Recovery Model  
  The simple recovery model imposes the following restrictions on restore operations:  
   
--   File restore and piecemeal restore are available only for read-only secondary filegroups. For information about these restore scenarios, see [File Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/file-restores-simple-recovery-model.md) and [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+-   File restore and piecemeal restore are available only for read-only secondary filegroups. For information about these restore scenarios, see [File Restores &#40;Simple Recovery Model&#41;](file-restores-simple-recovery-model.md) and [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
   
 -   Page restore is not allowed.  
   
 -   Point-in-time restore is not allowed.  
   
- If any of these restrictions are inappropriate for your recovery needs, we recommend that you consider using the full recovery model. For more information, see [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md).  
+ If any of these restrictions are inappropriate for your recovery needs, we recommend that you consider using the full recovery model. For more information, see [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Regardless of the recovery model of a database, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup cannot be restored by a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is older than the version that created the backup.  
@@ -129,14 +129,14 @@ manager: "jhubbard"
   
 -   Bulk changes must be backed before starting the online restore sequence.  
   
--   If bulk changes exist in the database, all files must be either online or[defunct](../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md). (This means that it is no longer part of the database.)  
+-   If bulk changes exist in the database, all files must be either online or[defunct](remove-defunct-filegroups-sql-server.md). (This means that it is no longer part of the database.)  
   
  If these conditions are not met, the online restore sequence fails.  
   
 > [!NOTE]  
->  We recommend switching to the full recovery model before starting an online restore. For more information, see [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md).  
+>  We recommend switching to the full recovery model before starting an online restore. For more information, see [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md).  
   
- For information about how to perform an online restore, see [Online Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/online-restore-sql-server.md).  
+ For information about how to perform an online restore, see [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
 ##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
  The Database Recovery Advisor facilitates constructing restore plans that implement optimal correct restore sequences. Many known database restore issues and enhancements requested by customers have been addressed. Major enhancements introduced by the Database Recovery Advisor include the following:  
@@ -155,6 +155,6 @@ manager: "jhubbard"
  None.  
   
 ## See Also  
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)  
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)  
   
   

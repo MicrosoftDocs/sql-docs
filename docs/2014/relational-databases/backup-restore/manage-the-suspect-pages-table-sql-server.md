@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   An [824 error](../errors-events/mssqlserver-824-database-engine-error.md), such as a torn page (any logical error)  
   
- The page ID of every suspect page is recorded in the **suspect_pages** table. The [!INCLUDE[ssDE](../../../../includes/ssde-md.md)] records any suspect pages encountered during regular processing, such as the following:  
+ The page ID of every suspect page is recorded in the **suspect_pages** table. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] records any suspect pages encountered during regular processing, such as the following:  
   
 -   A query has to read a page.  
   
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 -   **How the Database Engine Updates the suspect_pages Table**  
   
-     The [!INCLUDE[ssDE](../../../../includes/ssde-md.md)] takes the following actions on the **suspect_pages** table:  
+     The [!INCLUDE[ssDE](../../includes/ssde-md.md)] takes the following actions on the **suspect_pages** table:  
   
     -   If the table is not full, it is updated for every 824 error, to indicate that an error has occurred, and the error counter is incremented. If a page has an error after it is fixed by being repaired, restored, or deallocated, its **number_of_errors** count is incremented and its **last_update** column is updated  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
 #### To manage the suspect_pages table  
   
-1.  Connect to the [!INCLUDE[ssDE](../../../../includes/ssde-md.md)].  
+1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  From the Standard bar, click **New Query**.  
   

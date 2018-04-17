@@ -166,6 +166,6 @@ GO
  [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   
- [Restore Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
+ [Restore Files and Filegroups &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
   

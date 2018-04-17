@@ -82,7 +82,7 @@ manager: "jhubbard"
 |[smart_admin.fn_available_backups &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)|Stored Procedure used to retrieve available backups for a specified database or for all the databases in an instance.|  
 |[smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql.md)|System function that returns the current extended event settings.|  
 |[smart_admin.fn_get_health_status &#40;Transact-SQL&#41;](~/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md)|System function that returns the aggregated counts of errors logged by Extended Events for a specified period.|  
-|[Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)|Extended Events for monitoring, email notification of errors and warnings, SQL Server Policy Based Management for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|  
+|[Monitor SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|Extended Events for monitoring, email notification of errors and warnings, SQL Server Policy Based Management for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|  
   
 #### Backup Strategy  
  **Backup Strategy used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  
@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   Windows Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
   
--   Currently, the maximum file size allowed for a Page Blob in Windows Azure Storage is 1 TB. Backup files larger than 1 TB will fail. In order to avoid this situation, we recommend that for large databases, use compression and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Windows Azure storage using `BACKUP TO URL` Transact-SQL statement. For more information, see [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   Currently, the maximum file size allowed for a Page Blob in Windows Azure Storage is 1 TB. Backup files larger than 1 TB will fail. In order to avoid this situation, we recommend that for large databases, use compression and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Windows Azure storage using `BACKUP TO URL` Transact-SQL statement. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Recovery Models: Only databases set to Full or Bulk-logged model are supported.  Databases set to simple recovery model are not supported.  
   
@@ -150,14 +150,14 @@ manager: "jhubbard"
 |-|-|  
 |**Task descriptions**|**Topic**|  
 |Basic tasks like configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database, or configuring default settings at the instance level, disabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at instance or database level, pausing and restarting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Setting up SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Setting up SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
 |**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for databases in Availability Group.|[Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
-|Tools and Concepts and tasks related to monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)|  
+|Tools and Concepts and tasks related to monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Monitor SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
 |Tools and steps to troubleshooting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Troubleshooting SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## See Also  
  [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
- [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)   
+ [SQL Server Backup to URL](sql-server-backup-to-url.md)   
  [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Troubleshooting SQL Server Managed  Backup to Windows Azure](../../2014/database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   

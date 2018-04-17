@@ -46,10 +46,10 @@ manager: "jhubbard"
 -   Monitor the **database_uncontained_usage** XEvent to see when uncontained features are used.  
   
 ##  <a name="enable"></a> Enable Contained Databases  
- Contained databases must be enabled on the instance of [!INCLUDE[ssDEnoversion](../../../../includes/ssdenoversion-md.md)], before contained databases can be created.  
+ Contained databases must be enabled on the instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], before contained databases can be created.  
   
 ### Enabling Contained Databases Using Transact-SQL  
- The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../../../includes/ssdenoversion-md.md)].  
+ The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,7 +59,7 @@ GO
 ```  
   
 #### Enabling Contained Databases Using Management Studio  
- The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../../../includes/ssdenoversion-md.md)].  
+ The following example enables contained databases on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
 1.  In Object Explorer, right-click the server name, and then click **Properties**.  
   

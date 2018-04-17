@@ -32,10 +32,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started with CLR Integration
-  This topic provides an overview of the namespaces and libraries required to compile database objects using the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). The topic also shows you how to write, compile, and run a simple CLR stored procedure written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+  This topic provides an overview of the namespaces and libraries required to compile database objects using the [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR). The topic also shows you how to write, compile, and run a simple CLR stored procedure written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## Required Namespaces  
- Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the components required to develop basic CLR database objects are installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. CLR integration functionality is exposed in an assembly called system.data.dll, which is part of the .NET Framework. This assembly can be found in the Global Assembly Cache (GAC) as well as in the .NET Framework directory. A reference to this assembly is typically added automatically by both command line tools and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, so there is no need to add it manually.  
+ Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]. CLR integration functionality is exposed in an assembly called system.data.dll, which is part of the .NET Framework. This assembly can be found in the Global Assembly Cache (GAC) as well as in the .NET Framework directory. A reference to this assembly is typically added automatically by both command line tools and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, so there is no need to add it manually.  
   
  The system.data.dll assembly contains the following namespaces, which are required for compiling CLR database objects:  
   
@@ -84,12 +84,12 @@ End Class
   
 ```  
   
- This simple program contains a single static method on a public class. This method uses two new classes, `SqlContext` and `SqlPipe`, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and then run in the same manner as a [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedure.  
+ This simple program contains a single static method on a public class. This method uses two new classes, `SqlContext` and `SqlPipe`, for creating managed database objects to output a simple text message. The method also assigns the string "Hello world!" as the value of an out parameter. This method can be declared as a stored procedure in [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] stored procedure.  
   
  We will now compile this program as a library, load it into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and run it as a stored procedure.  
   
 ## Compiling the "Hello World" Stored Procedure  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installs the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework redistribution files by default. These files include csc.exe and vbc.exe, the command-line compilers for Visual C# and Visual Basic programs. In order to compile our sample, you must modify your path variable to point to the directory containing csc.exe or vbc.exe. The following is the default installation path of the .NET Framework.  
+ [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] .NET Framework redistribution files by default. These files include csc.exe and vbc.exe, the command-line compilers for Visual C# and Visual Basic programs. In order to compile our sample, you must modify your path variable to point to the directory containing csc.exe or vbc.exe. The following is the default installation path of the .NET Framework.  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\(version)  
@@ -118,7 +118,7 @@ vbc /target:library helloworld.vb
  These commands launch the Visual C# or Visual Basic compiler using the /target option to specify building a library DLL.  
   
 ## Loading and Running the "Hello World" Stored Procedure in SQL Server  
- Once the sample procedure has successfully compiled, you can test it in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To do this, open [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and create a new query, connecting to a suitable test database (for example, the AdventureWorks sample database).  
+ Once the sample procedure has successfully compiled, you can test it in [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] and create a new query, connecting to a suitable test database (for example, the AdventureWorks sample database).  
   
  The ability to execute common language runtime (CLR) code is set to OFF by default in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The CLR code can be enabled by using the **sp_configure** system stored procedure. For more information, see [Enabling CLR Integration](../clr-integration-enabling.md).  
   

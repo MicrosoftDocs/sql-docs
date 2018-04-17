@@ -84,7 +84,7 @@ manager: "jhubbard"
 ### Using SQL Server Management Studio  
  You can encrypt a backup when creating the backup of a database in any of the following dialog boxes:  
   
-1.  [Back Up Database &#40;Backup Options Page&#41;](../relational-databases/backup-restore/back-up-database-backup-options-page.md) On the **Backup Options** page, you can select **Encryption**, and specify the encryption algorithm and the certificate or asymmetric key to use for the encryption.  
+1.  [Back Up Database &#40;Backup Options Page&#41;](back-up-database-backup-options-page.md) On the **Backup Options** page, you can select **Encryption**, and specify the encryption algorithm and the certificate or asymmetric key to use for the encryption.  
   
 2.  [Using Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure) When you select a backup task, on the **Options** tab of the **Define Backup ()Task** page, you can select **Backup Encryption**, and specify the encryption algorithm and the certificate or key to use for the encryption.  
   

@@ -112,11 +112,11 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 ## Examples  
   
--   [Example: Online Restore of a Read-Write File &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Example: Online Restore of a Read-Write File &#40;Full Recovery Model&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Example: Online Restore of a Read-Only File &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Example: Online Restore of a Read-Only File &#40;Full Recovery Model&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Example: Offline Restore of Primary and One Other Filegroup &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Example: Offline Restore of Primary and One Other Filegroup &#40;Full Recovery Model&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To restore files and filegroups**  
@@ -130,13 +130,13 @@ RESTORE LOG database_name FROM <tail_log_backup>
 
   
 ## See Also  
- [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [Differential Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/differential-backups-sql-server.md)   
+ [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
- [Backup Overview &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-overview-sql-server.md)   
+ [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
+ [Complete Database Restores &#40;Simple Recovery Model&#41;](complete-database-restores-simple-recovery-model.md)   
  [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

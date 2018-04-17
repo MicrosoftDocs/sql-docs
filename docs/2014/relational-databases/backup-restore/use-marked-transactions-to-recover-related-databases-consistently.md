@@ -169,15 +169,15 @@ GO
  We recommend that you do not run concurrent marked transactions. It is rare but possible for the commit of a distributed marked transaction to deadlock with other distributed marked transactions that are committing at the same time. When this happens, the marking transaction is chosen as the deadlock victim and is rolled back. When this error occurs, the application can retry the marked transaction. When multiple marked transactions try to commit concurrently, there is a higher probability of deadlock.  
   
 ## Recovering to a Marked Transaction  
- For information about how to recover a database that contains marked transactions to or just before a particular mark, see [Recovery of Related  Databases That Contain Marked Transaction](../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).  
+ For information about how to recover a database that contains marked transactions to or just before a particular mark, see [Recovery of Related  Databases That Contain Marked Transaction](recovery-of-related-databases-that-contain-marked-transaction.md).  
   
 ## See Also  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+ [Back Up and Restore of System Databases &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](~/t-sql/language-elements/begin-transaction-transact-sql.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Full Database Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)   
+ [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Full Database Backups &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [Recovery of Related  Databases That Contain Marked Transaction](../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [Recovery of Related  Databases That Contain Marked Transaction](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

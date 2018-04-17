@@ -115,6 +115,6 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Plan and Perform Restore Sequences &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
+ [Plan and Perform Restore Sequences &#40;Full Recovery Model&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

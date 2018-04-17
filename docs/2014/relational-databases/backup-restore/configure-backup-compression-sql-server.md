@@ -33,7 +33,7 @@ manager: "jhubbard"
   
      You can override the server backup-compression default when creating a backup by specifying **Compress backup** or **Do not compress backup** in any of the following dialog boxes:  
   
-    -   [Back Up Database (Options Page)](../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
+    -   [Back Up Database (Options Page)](back-up-database-backup-options-page.md)  
   
          When backing up a database, you can control backup compression for an individual database, file, or log backup.  
   
@@ -51,6 +51,6 @@ manager: "jhubbard"
   
   
 ## See Also  
- [Backup Compression &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-compression-sql-server.md)  
+ [Backup Compression &#40;SQL Server&#41;](backup-compression-sql-server.md)  
   
   

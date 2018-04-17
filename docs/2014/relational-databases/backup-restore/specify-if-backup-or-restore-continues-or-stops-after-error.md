@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 #### To specify whether backup continues or stops after an error is encountered  
   
-1.  Follow the steps to [create a database backup](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+1.  Follow the steps to [create a database backup](create-a-full-database-backup-sql-server.md).  
   
 2.  On the **Options** page, in the **Reliability** section, click **Perform checksum before writing to media** and **Continue on error**.  
   
@@ -98,7 +98,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](~/relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md)   
- [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
+ [Possible Media Errors During Backup and Restore &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

@@ -81,9 +81,9 @@ GO
 ```  
   
 ## See Also  
- [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
- [Back Up Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
- [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
- [Create a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+ [Create a Full Database Backup &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
+ [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [Back Up a Transaction Log &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
   

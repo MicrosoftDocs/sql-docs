@@ -68,16 +68,16 @@ manager: "jhubbard"
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- To create a tail-log backup, see [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
+ To create a tail-log backup, see [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
- To restore a transaction log backup, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
+ To restore a transaction log backup, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Copy-Only Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
+ [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
+ [Copy-Only Backups &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Apply Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
+ [Apply Transaction Log Backups &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

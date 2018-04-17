@@ -22,11 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # CLR Integration Security
-  The security model of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) manages and secures access between different types of CLR and non-CLR objects running within [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These objects may be called by a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement or another CLR object running in the server. The calls between objects are referred to as links. The types of security checks performed on these objects depend on the types of links involved.  
+  The security model of the [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) manages and secures access between different types of CLR and non-CLR objects running within [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] statement or another CLR object running in the server. The calls between objects are referred to as links. The types of security checks performed on these objects depend on the types of links involved.  
   
  The CLR integration security model has the following goals:  
   
--   By default, running managed user code on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] should not compromise the integrity and stability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Performing operations that potentially compromise the robustness of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] should be protected by appropriate high-level permissions.  
+-   By default, running managed user code on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Performing operations that potentially compromise the robustness of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] should be protected by appropriate high-level permissions.  
   
 -   Managed user code should not gain unauthorized access to user data or other user code in the database. User-defined code should run under the security context of the user-session that invoked it, and with the correct privileges for that security context.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   User-defined code should not be able to gain unauthorized access to system resources by virtue of running in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] now integrates the user-based security model of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the code access-based security model of the CLR. Some of the advantages of this combined approach to security are discussed in this section.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the code access-based security model of the CLR. Some of the advantages of this combined approach to security are discussed in this section.  
   
  The following table lists the topics in this section.  
   

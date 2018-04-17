@@ -27,6 +27,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Open, Unlock, Rename, and Delete a Data Quality Project
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

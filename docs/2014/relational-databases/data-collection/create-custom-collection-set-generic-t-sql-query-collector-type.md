@@ -160,7 +160,7 @@ GO
   
 ## See Also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Manage Schedules](../../2014/database-engine/manage-schedules.md)   
+ [Manage Schedules](../../database-engine/manage-schedules.md)   
  [Start or Stop a Collection Set](start-or-stop-a-collection-set.md)  
   
   

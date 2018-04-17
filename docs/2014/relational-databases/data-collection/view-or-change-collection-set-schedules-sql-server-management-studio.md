@@ -160,7 +160,7 @@ manager: "jhubbard"
  Use this page to view a description of the collection set that this properties page refers to.  
   
 ## See Also  
- [Manage Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)   
- [Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)  
+ [Manage Data Collection](manage-data-collection.md)   
+ [Data Collection](data-collection.md)  
   
   

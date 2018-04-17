@@ -124,7 +124,7 @@ manager: "jhubbard"
 3.  Use the `Export` method of the `Microsoft.SqlServer.Management.Dac.DacStore` type to export the DAC. Specify the name of the DAC to be exported, and the path to the folder where the export file is to be placed.  
   
 ## See Also  
- [Data-tier Applications](../../database-engine/data-tier-applications.md)   
+ [Data-tier Applications](data-tier-applications.md)   
  [Extract a DAC From a Database](extract-a-dac-from-a-database.md)  
   
   

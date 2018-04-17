@@ -34,7 +34,7 @@ manager: "jhubbard"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, [Collation and Unicode Support](collation-and-unicode-support.md).  
   
 -   Using the `Column.Collation` property in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   
@@ -110,6 +110,6 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
 ## See Also  
  [Set or Change the Server Collation](set-or-change-the-server-collation.md)   
  [Set or Change the Database Collation](set-or-change-the-database-collation.md)   
- [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](collation-and-unicode-support.md)  
   
   

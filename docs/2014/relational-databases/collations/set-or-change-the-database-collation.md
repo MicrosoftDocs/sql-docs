@@ -132,7 +132,7 @@ GO
 ```  
   
 ## See Also  
- [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)   
+ [Collation and Unicode Support](collation-and-unicode-support.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [SQL Server Collation Name &#40;Transact-SQL&#41;](~/t-sql/statements/sql-server-collation-name-transact-sql.md)   

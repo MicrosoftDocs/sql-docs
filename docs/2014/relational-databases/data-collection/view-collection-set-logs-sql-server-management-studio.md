@@ -40,7 +40,7 @@ manager: "jhubbard"
      The **Log File Viewer** opens, displaying only the log file for the collection set that you selected.  
   
 ## See Also  
- [Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)   
+ [Data Collection](data-collection.md)   
  [Manage Data Collection](manage-data-collection.md)  
   
   

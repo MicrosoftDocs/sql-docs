@@ -115,7 +115,7 @@ manager: "jhubbard"
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
- For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+ For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -134,13 +134,13 @@ manager: "jhubbard"
   
  When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md).  
   
- For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md).  
+ For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
  For more information, see also:  
   
 -   [Encryption Hierarchy](../../database-engine/encryption-hierarchy.md)  
   
--   [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md)  
+-   [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Create Identical Symmetric Keys on Two Servers](../../database-engine/create-identical-symmetric-keys-on-two-servers.md)  
   
@@ -209,7 +209,7 @@ manager: "jhubbard"
   
 -   [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -274,7 +274,7 @@ manager: "jhubbard"
  To generate a script for some or all the objects in the original copy of the database, you can use the Generate Scripts Wizard, and in the **Choose Script Options** dialog box, set the **Script Logins** option to **True**.  
   
 > [!NOTE]  
->  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+>  For information about how to set up logins for a mirrored database, see [Set Up Login Accounts for Database Mirroring or AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) and [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -329,7 +329,7 @@ manager: "jhubbard"
 ##  <a name="replication_settings"></a> Replication Settings  
  If you restore a backup of a replicated database to another server or database, replication settings cannot be preserved. In this case, you must re-create all publications and subscriptions after backups are restored. To make this process easier, create scripts for your current replication settings and, also, for the enabling and disabling of replication. To help re-create your replication settings, copy these scripts and change the server name references to work for the destination server instance.  
   
- For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md).  
+ For more information, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md), [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md), and [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -354,9 +354,9 @@ manager: "jhubbard"
  [Contained Databases](contained-databases.md)   
  [Copy Databases to Other Servers](copy-databases-to-other-servers.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
- [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Set Up an Encrypted Mirror Database](../database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
+ [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../database-engine/troubleshoot-orphaned-users-sql-server.md)  
   

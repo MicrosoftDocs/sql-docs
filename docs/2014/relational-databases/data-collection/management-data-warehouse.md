@@ -126,7 +126,7 @@ manager: "jhubbard"
 ## See Also  
  [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Data Collection](../relational-databases/data-collection/data-collection.md)   
+ [Data Collection](data-collection.md)   
  [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

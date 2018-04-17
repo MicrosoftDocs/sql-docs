@@ -230,7 +230,7 @@ $fileStream.Close()
 ```  
   
 ## See Also  
- [Data-tier Applications](../../database-engine/data-tier-applications.md)   
+ [Data-tier Applications](data-tier-applications.md)   
  [Extract a DAC From a Database](extract-a-dac-from-a-database.md)   
  [Database Identifiers](../databases/database-identifiers.md)  
   

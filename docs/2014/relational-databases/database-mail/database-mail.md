@@ -108,7 +108,7 @@ manager: "jhubbard"
   
  You can configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to send e-mail messages to predefined operators when:  
   
--   An alert is triggered. Alerts can be configured to send e-mail notification of specific events that occur. For example, alerts can be configured to notify an operator of a particular database event or operating system condition that may need immediate action. For more information about configuring alerts, see [Alerts](../../2014/database-engine/alerts.md).  
+-   An alert is triggered. Alerts can be configured to send e-mail notification of specific events that occur. For example, alerts can be configured to notify an operator of a particular database event or operating system condition that may need immediate action. For more information about configuring alerts, see [Alerts](../../database-engine/alerts.md).  
   
 -   A scheduled task, such as a database backup or replication event, succeeds or fails. For example, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail to notify operators if an error occurs during processing at the end of a month.  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 -   [Database Mail Log and Audits](database-mail-log-and-audits.md)  
   
--   [Configure SQL Server Agent Mail to Use Database Mail](database-mail.md)  
+-   [Configure SQL Server Agent Mail to Use Database Mail](configure-sql-server-agent-mail-to-use-database-mail.md)  
   
 
   

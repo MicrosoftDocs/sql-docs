@@ -131,7 +131,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activity|Different aspects of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity can be accessed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activity graph. The reports that you can obtain by clicking a point on the SQL Compilations/sec graph line are as follows:<br /><br /> Connections and sessions<br /><br /> Requests<br /><br /> Plan cache hit ratio<br /><br /> tempdb characteristics|  
   
 ## See Also  
- [Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)   
+ [Data Collection](data-collection.md)   
  [View a Collection Set Report &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

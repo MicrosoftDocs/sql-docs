@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## Database Options and Settings  
  By default, the database created during the import will have all of the default settings from the CREATE DATABASE statement, except that the database collation and compatibility level are set to the values defined in the DAC export file. A DAC export file uses the values from the original database.  
   
- Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../../analysis-services/multidimensional-models/databases.md).  
+ Some database options, such as TRUSTWORTHY, DB_CHAINING, and HONOR_BROKER_PRIORITY, cannot be adjusted as part of the import process. Physical properties, such as the number of filegroups, or the numbers and sizes of files cannot be altered as part of the import process. After the import completes, you can use the ALTER DATABASE statement, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell to tailor the database. For more information, see [Databases](../databases/databases.md).  
   
 ## Limitations and Restrictions  
  A DAC can be imported to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. If you export a DAC from a higher version, the DAC may contain objects not supported by [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. You cannot deploy those DACs to instances of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -148,7 +148,7 @@ manager: "jhubbard"
  Click **Close** to close the wizard.  
   
 ## See Also  
- [Data-tier Applications](../../database-engine/data-tier-applications.md)   
+ [Data-tier Applications](data-tier-applications.md)   
  [Export a Data-tier Application](export-a-data-tier-application.md)  
   
   

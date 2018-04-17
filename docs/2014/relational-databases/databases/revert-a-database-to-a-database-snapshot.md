@@ -70,7 +70,7 @@ manager: "jhubbard"
 -   Verify that the database has not become corrupted.  
   
     > [!NOTE]  
-    >  If the database has been corrupted, you will need to restore it from backups. For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](../../database-engine/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores &#40;Full Recovery Model&#41;](../../database-engine/complete-database-restores-full-recovery-model.md).  
+    >  If the database has been corrupted, you will need to restore it from backups. For more information, see [Complete Database Restores &#40;Simple Recovery Model&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md) or [Complete Database Restores &#40;Full Recovery Model&#41;](../backup-restore/complete-database-restores-full-recovery-model.md).  
   
 -   Identify a recent snapshot that was created before the error. For more information, see [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
   
 2.  Drop any other database snapshots.  
   
-     For information on dropping snapshots, see [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md). If the database uses the full recovery model, before reverting, you should back up the log. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) or [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
+     For information on dropping snapshots, see [Drop a Database Snapshot &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md). If the database uses the full recovery model, before reverting, you should back up the log. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md) or [Back Up the Transaction Log When the Database Is Damaged &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
 3.  Perform the revert operation.  
   
@@ -113,7 +113,7 @@ manager: "jhubbard"
   
 5.  Start the database.  
   
-6.  Optionally, back up the reverted database, especially if it uses the full (or bulk-logged) recovery model. To back up a database, see [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+6.  Optionally, back up the reverted database, especially if it uses the full (or bulk-logged) recovery model. To back up a database, see [Create a Full Database Backup &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This section contains the following examples of reverting a database to a database snapshot:  
@@ -167,6 +167,6 @@ GO
  [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+ [Database Mirroring and Database Snapshots &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

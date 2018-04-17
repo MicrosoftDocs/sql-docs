@@ -216,7 +216,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
 ## See Also  
  [Contained Database Collations](../databases/contained-database-collations.md)   
- [Choose a Language When Creating a Full-Text Index](../../2014/database-engine/choose-a-language-when-creating-a-full-text-index.md)   
+ [Choose a Language When Creating a Full-Text Index](../../database-engine/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

@@ -217,8 +217,8 @@ $dacName  = "MyApplication"
 ```  
   
 ## See Also  
- [Data-tier Applications](../../database-engine/data-tier-applications.md)   
- [Data-tier Applications](../../database-engine/data-tier-applications.md)   
+ [Data-tier Applications](data-tier-applications.md)   
+ [Data-tier Applications](data-tier-applications.md)   
  [Deploy a Data-tier Application](deploy-a-data-tier-application.md)   
  [Register a Database As a DAC](register-a-database-as-a-dac.md)   
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   

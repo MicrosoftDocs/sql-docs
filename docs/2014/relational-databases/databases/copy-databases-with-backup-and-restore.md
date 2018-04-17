@@ -98,21 +98,21 @@ manager: "jhubbard"
   
  **To restore files and filegroups to a new location**  
   
--   [Restore Files to a New Location &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Restore Files to a New Location &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-using-ssms.md.md)  
   
  **To restore files and filegroups over existing files**  
   
--   [Restore Files and Filegroups over Existing Files &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [Restore Files and Filegroups over Existing Files &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
  **To restore a database with a new name**  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/database-engine/restore-a-database-backup-using-ssms.md)  
   
  **To restart an interrupted restore operation**  
   
--   [Restart an Interrupted Restore Operation &#40;Transact-SQL&#41;](../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Restart an Interrupted Restore Operation &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
  **To change the owner of a database**  
   

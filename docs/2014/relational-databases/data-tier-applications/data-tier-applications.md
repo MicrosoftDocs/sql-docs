@@ -118,7 +118,7 @@ manager: "jhubbard"
 |Describes how to use a DAC package file to create a new DAC instance.|[Deploy a Data-tier Application](deploy-a-data-tier-application.md)|  
 |Describes how to use a new DAC package file to upgrade an instance to a new version of the DAC.|[Upgrade a Data-tier Application](upgrade-a-data-tier-application.md)|  
 |Describes how to remove a DAC instance. You can choose to also detach or drop the associated database, or leave the database intact.|[Delete a Data-tier Application](delete-a-data-tier-application.md)|  
-|Describes how to view the health of currently deployed DACs by using the SQL Server Utility.|[Monitor Data-tier Applications](../../database-engine/data-tier-applications.md)|  
+|Describes how to view the health of currently deployed DACs by using the SQL Server Utility.|[Monitor Data-tier Applications](data-tier-applications.md)|  
 |Describes how to create a .bacpac file that contains an archive of the data and metadata in a DAC.|[Export a Data-tier Application](export-a-data-tier-application.md)|  
 |Describes how to use a DAC archive file (.bacpac) to either perform a logical restore of a DAC, or to migrate the DAC to another instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Import a BACPAC File to Create a New User Database](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Describes how to import a BACPAC file to create a new user database within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extract a DAC From a Database](extract-a-dac-from-a-database.md)|  

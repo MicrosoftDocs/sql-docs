@@ -53,7 +53,7 @@ manager: "jhubbard"
  Specify the time range to include in the report. The default value is 240 minutes. The possible values to select from are 15 minutes, 60 minutes, 240 minutes (4 hours), 720 minutes (12 hours), and 1440 minutes (24 hours).  
   
 ## See Also  
- [Data Collection](../../analysis-services/power-pivot-sharepoint/data-collection.md)   
+ [Data Collection](data-collection.md)   
  [Custom Reports in Management Studio](../../database-engine/custom-reports-in-management-studio.md)   
  [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

@@ -284,6 +284,6 @@ $fileStream.Close()
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)   
- [SQL Server PowerShell](../../database-engine/availability-groups/windows/sql-server-powershell.md)  
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

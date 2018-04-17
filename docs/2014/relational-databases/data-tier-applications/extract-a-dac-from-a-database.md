@@ -160,6 +160,6 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## See Also  
- [Data-tier Applications](../../database-engine/data-tier-applications.md)  
+ [Data-tier Applications](data-tier-applications.md)  
   
   

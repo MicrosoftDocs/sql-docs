@@ -25,11 +25,11 @@ manager: "jhubbard"
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
- The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](../../2014/database-engine/dev-guide/data-collector-programming.md).  
+ The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](../../database-engine/dev-guide/data-collector-programming.md).  
   
  The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![The Data Collector's Role in Data Management](../../2014/database-engine/media/datacollectorroleindatastrategy.gif "The Data Collector's Role in Data Management")  
+ ![The Data Collector's Role in Data Management](../../database-engine/media/datacollectorroleindatastrategy.gif "The Data Collector's Role in Data Management")  
   
 ## Data Collector Concepts  
  The data collector is integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and uses both extensively. Before you work with the data collector, you should therefore understand certain concepts related to each of these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Proxy accounts  
   
- For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../2014/database-engine/automated-administration-tasks-sql-server-agent.md).  
+ For more information, see [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../database-engine/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) is used to execute packages that collect data from individual data providers. You should be familiar with the following [!INCLUDE[ssIS](../../includes/ssis-md.md)] tools and concepts:  
   
@@ -54,11 +54,11 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] package configuration  
   
- For more information, see [Integration Services &#40;SSIS&#41; Packages](../../2014/integration-services/integration-services-ssis-packages.md).  
+ For more information, see [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md).  
   
 ## Data Collector Terminology  
  target  
- An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports Data Collection. For more information about supported editions, see the "Manageability" section of [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that supports Data Collection. For more information about supported editions, see the "Manageability" section of [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  A *target root* defines a subtree in the target hierarchy. A *target set* is the group of targets that results from applying a filter to a subtree defined by a target root. A target root can be a database, an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or a computer instance.  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
  The following illustration shows the dependencies and relationships between data collector components.  
   
- ![Data collector functional dependencies](../../2014/database-engine/media/dc-functional-dependencies.gif "Data collector functional dependencies")  
+ ![Data collector functional dependencies](../../database-engine/media/dc-functional-dependencies.gif "Data collector functional dependencies")  
   
  As shown in the illustration, the data provider is external to the data collector and by definition has an implicit relationship with the target. The data provider is specific to a particular target (for example, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service such as the relational engine) and provides data such as system views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Performance Monitor counters, and WMI providers, that can be consumed by the data collector.  
   
@@ -109,8 +109,8 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to manage different aspects of data collection, such as enabling or disabling data collection, changing a collection set configuration, or viewing data in the management data warehouse.|[Manage Data Collection](../relational-databases/data-collection/data-collection.md)|  
-|Describes how to use reports to obtain information for monitoring system capacity and troubleshooting system performance.|[System Data Collection Set Reports](../relational-databases/data-collection/system-data-collection-set-reports.md)|  
-|Describes how to use the Management Data Warehouse to collect data from a server that is a data collection target.|[Management Data Warehouse](../relational-databases/data-collection/management-data-warehouse.md)|  
+|Describes how to manage different aspects of data collection, such as enabling or disabling data collection, changing a collection set configuration, or viewing data in the management data warehouse.|[Manage Data Collection](manage-data-collection.md)|  
+|Describes how to use reports to obtain information for monitoring system capacity and troubleshooting system performance.|[System Data Collection Set Reports](system-data-collection-set-reports.md)|  
+|Describes how to use the Management Data Warehouse to collect data from a server that is a data collection target.|[Management Data Warehouse](management-data-warehouse.md)|  
   
   

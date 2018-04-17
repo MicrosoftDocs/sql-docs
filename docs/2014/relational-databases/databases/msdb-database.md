@@ -38,7 +38,7 @@ manager: "jhubbard"
 |Primary data|MSDBData|MSDBData.mdf|Autogrow by 10 percent until the disk is full.|  
 |Log|MSDBLog|MSDBLog.ldf|Autogrow by 10 percent to a maximum of 2 terabytes.|  
   
- To move the **msdb** database or log files, see [Move System Databases](system-databases.md).  
+ To move the **msdb** database or log files, see [Move System Databases](move-system-databases.md).  
   
 ### Database Options  
  The following table lists the default value for each database option in the **msdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
  [Move Database Files](move-database-files.md)  
   
- [Database Mail](../relational-databases/database-mail/database-mail.md)  
+ [Database Mail](../database-mail/database-mail.md)  
   
  [SQL Server Service Broker](../configure-windows/sql-server-service-broker.md)  
   

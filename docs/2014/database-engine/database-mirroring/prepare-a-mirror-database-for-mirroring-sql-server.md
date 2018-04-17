@@ -108,7 +108,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you restore the database filegroup by filegroup, be sure to restore the whole database.  
   
-    -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../restore-a-database-backup-sql-server-management-studio.md)  
+    -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
     -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
   

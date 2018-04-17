@@ -1,24 +1,17 @@
 ---
-title: "Software Servicing (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
-caps.latest.revision: 33
-
+title: Software servicing - Analytics Platform System | Microsoft Docs
+description: Software servicing in Analytics Platform System (APS).
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Software Servicing
+
+# Software servicing in Analytics Platform System
 This section summarizes the software servicing requirements for Analytics Platform System appliances, including WSUS and Analytics Platform System hotfixes.  
   
 ## <a name="Basics"></a>Software Servicing Basics  

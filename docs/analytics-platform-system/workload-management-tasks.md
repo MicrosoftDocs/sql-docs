@@ -1,22 +1,18 @@
 ---
-title: "Workload Management Tasks"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-
+title: Workload Management Tasks - Analytics Platform System | Microsoft Docs
+description: Workload management tasks in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Workload Management Tasks
+
+# Workload Management Tasks in Analytics Platform System
+Workload management tasks in Analytics Platform System.
 
 ## View Login Members of Each Resource Class
 Describes how to display the login members of each resource class server role in SQL Server PDW. Use this query to figure out the class of resources allowed for requests submitted by each login.  

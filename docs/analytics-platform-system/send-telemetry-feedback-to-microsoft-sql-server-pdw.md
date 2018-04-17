@@ -1,24 +1,17 @@
 ---
-title: "Send Telemetry Feedback to Microsoft (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-
+title: Telemetry feedback - Analytics Platform System | Microsoft Docs
+description: Send telemetry feedback to Microsoft for Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Send Telemetry Feedback to Microsoft
+
+# Send telemetry feedback to Microsoft for Analytics Platform System
 Analytics Platform System has an optional telemetry feature that sends Admin Console data to Microsoft. We encourage you to enable this to help us improve the product.  
   
 > [!NOTE]  

@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Filter Operators (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   When filtering a list of members, the following operators are available.  
   
 > [!NOTE]  

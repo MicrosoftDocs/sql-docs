@@ -24,6 +24,9 @@ ms.workload: "Inactive"
 
 # High Availability and Disaster Recovery for Master Data Services
 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+
 **Summary:** This article describes a solution for Master Data Service
 (MDS) hosted on AlwaysOn Availability Group configuration. The article
 describes how to install and configure SQL 2016 Master Data Services on

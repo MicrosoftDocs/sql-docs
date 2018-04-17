@@ -28,7 +28,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
-monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

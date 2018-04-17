@@ -1,6 +1,6 @@
 ---
 title: "Field Object Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Field object [ADO], members"
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f

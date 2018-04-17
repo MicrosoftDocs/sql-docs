@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # How Permissions Are Determined (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], the simplest way to configure security is to assign model object permissions to a group that the user is a member of.  
   
  Security becomes more complex when:  

@@ -1,6 +1,6 @@
 ---
 title: "Ensuring Sufficient TempDB Space | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "TempDB space in RDS [ADO]"
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06

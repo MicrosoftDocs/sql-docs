@@ -1,6 +1,6 @@
 ---
 title: "ADO MD Code Examples | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO MD code examples"
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af

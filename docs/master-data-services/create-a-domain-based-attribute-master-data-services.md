@@ -24,6 +24,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Create a Domain-Based Attribute (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a domain-based attribute to populate an attribute's values with members from an entity.  
   
 ## Prerequisites  

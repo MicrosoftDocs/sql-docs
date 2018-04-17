@@ -1,4 +1,4 @@
- ---
+---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"

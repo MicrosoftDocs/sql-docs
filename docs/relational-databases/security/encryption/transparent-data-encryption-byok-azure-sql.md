@@ -17,11 +17,11 @@ ms.workload: "On Demand"
 ms.tgt_pltfrm: ""
 
 ms.topic: "article"
-ms.date: "04/03/2018"
+ms.date: "04/16/2018"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 --- 
-# Transparent Data Encryption with Bring Your Own Key (PREVIEW) support for Azure SQL Database and Data Warehouse
+# Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to encrypt the Database Encryption Key (DEK) with an asymmetric key called TDE Protector.  The TDE Protector is stored under your control in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system. Azure Key Vault is the first key management service with which TDE has integrated support for BYOK. The TDE DEK, which is stored on the boot page of a database is encrypted and decrypted by the TDE protector. The TDE Protector is stored in Azure Key Vault and never leaves the key vault. If the server's access to the key vault is revoked, a database cannot be decrypted and read into memory.  The TDE protector is set at the logical server level and is inherited by all databases associated with that server. 
@@ -120,7 +120,8 @@ The following section will go over the setup and configuration steps in more det
 ### Azure Key Vault Configuration Steps
 
 - Install [PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0) 
-- Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL) 
+- Create two Azure Key Vaults in two different regions using [PowerShell to enable the “soft-delete” property](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) on the key vaults (this option is not available from the AKV Portal yet – but required by SQL).
+- Both Azure Key Vaults must be located in the two regions available in the same Azure Geo in order for backup and restore of keys to work.  If you need the two key vaults to be located in different geos to meet SQL Geo-DR requirements, follow the [BYOK Process](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-hsm-protected-keys) that allows keys to be imported from an on-prem HSM.
 - Create a new key in the first key vault:  
   - RSA/RSA-HSA 2048 key 
   - No expiration dates 

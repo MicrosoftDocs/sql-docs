@@ -131,7 +131,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKFILE](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) to shrink the size of a data file named `DataFile1` in the `UserDB` database to 7 MB.  
   
- [!code-sql[DBCC#DBCC_SHRINKFILE1](../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
+ [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
 ## See Also  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   

@@ -107,7 +107,7 @@ GO
   
      To verify the change, select the second `SELECT` statement, and click **Execute**.  
   
- [!code-sql[DatabaseDDL#AlterDatabase9](../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
+ [!code-sql[DatabaseDDL#AlterDatabase9](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
   
 ## See Also  
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

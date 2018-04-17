@@ -47,21 +47,21 @@ manager: "jhubbard"
 ###  <a name="path"></a> Reading the FILESTREAM File Path  
  Each cell in a FILESTREAM table has a file path that is associated with it. To read the path, use the `PathName` property of a `varbinary(max)` column in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The following example shows how to read the file path of a `varbinary(max)` column.  
   
- [!code-sql[FILESTREAM#FS_PathName](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
+ [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   
 ###  <a name="trx"></a> Reading the Transaction Context  
  To obtain the current transaction context, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] [GET_FILESTREAM_TRANSACTION_CONTEXT()](~/t-sql/functions/get-filestream-transaction-context-transact-sql.md) function. The following example shows how to begin a transaction and read the current transaction context.  
   
- [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
+ [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Obtaining a Win32 File Handle  
  To obtain a Win32 file handle, call the OpenSqlFilestream API. This API is exported from the sqlncli.dll file. The returned handle can be passed to any of the following Win32 APIs: [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426), or [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427). The following examples show you how to obtain a Win32 File handle and use it to read and write data to a FILESTREAM BLOB.  
   
- [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
+ [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   
- [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../snippets/tsql/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
+ [!code-vb[FILESTREAM#FS_VB_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/vb/filestream.vb#fs_vb_readandwriteblob)]  
   
- [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
+ [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
 ##  <a name="best"></a> Best Practices for Application Design and Implementation  
   

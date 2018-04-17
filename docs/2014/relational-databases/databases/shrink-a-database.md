@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [DBCC SHRINKDATABASE](~/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) to decreases the size of the data and log files in the `UserDB` database and to allow for `10` percent free space in the database.  
   
- [!code-sql[DBCC#DBCC_SHRINKDB1](../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
+ [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
 ##  <a name="FollowUp"></a> Follow Up: After you shrink a database  
  Data that is moved to shrink a file can be scattered to any available location in the file. This causes index fragmentation and can slow the performance of queries that search a range of the index. To eliminate the fragmentation, consider rebuilding the indexes on the file after shrinking.  

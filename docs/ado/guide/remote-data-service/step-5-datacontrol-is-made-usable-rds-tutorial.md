@@ -1,6 +1,6 @@
 ---
 title: "Step 5: DataControl is Made Usable (RDS Tutorial) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

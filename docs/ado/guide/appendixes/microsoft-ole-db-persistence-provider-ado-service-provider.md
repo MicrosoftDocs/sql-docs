@@ -1,6 +1,6 @@
 ---
 title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

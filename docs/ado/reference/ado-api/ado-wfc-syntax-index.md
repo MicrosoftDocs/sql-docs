@@ -6,7 +6,7 @@ ms.custom:
 ms.date: "02/15/2017"
 ms.reviewer: 
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.prod_service: drivers
 ms.component: reference
 ms.tgt_pltfrm: ""

@@ -1,6 +1,6 @@
 ---
 title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

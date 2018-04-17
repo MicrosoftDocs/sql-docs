@@ -1,6 +1,6 @@
 ---
 title: "Ordinal Property (ADO MD Cell) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

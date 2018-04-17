@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Populate the Fields List Box | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

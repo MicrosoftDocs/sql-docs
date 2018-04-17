@@ -1,6 +1,6 @@
 ---
 title: "Registering Business Objects on the Client for Use with DCOM | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

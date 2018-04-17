@@ -175,7 +175,6 @@
 ## [sys.dm_db_stats_properties](sys-dm-db-stats-properties-transact-sql.md)  
 ## [sys.dm_sql_referenced_entities](sys-dm-sql-referenced-entities-transact-sql.md)  
 ## [sys.dm_sql_referencing_entities](sys-dm-sql-referencing-entities-transact-sql.md)  
-## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 
 # Query Notifications
 ## [sys.dm_qn_subscriptions](query-notifications-sys-dm-qn-subscriptions.md)  
@@ -256,6 +255,7 @@
 ## [sys.dm_os_dispatcher_pools](sys-dm-os-dispatcher-pools-transact-sql.md)  
 ## [sys.dm_os_host_info](sys-dm-os-host-info-transact-sql.md)  
 ## [sys.dm_os_hosts](sys-dm-os-hosts-transact-sql.md)  
+## [sys.dm_os_job_object](sys-dm-os-job-object-transact-sql.md)
 ## [sys.dm_os_latch_stats](sys-dm-os-latch-stats-transact-sql.md)  
 ## [sys.dm_os_loaded_modules](sys-dm-os-loaded-modules-transact-sql.md)  
 ## [sys.dm_os_memory_brokers](sys-dm-os-memory-brokers-transact-sql.md)  

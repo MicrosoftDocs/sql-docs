@@ -1,6 +1,6 @@
 ---
 title: "Ensuring Sufficient TempDB Space | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

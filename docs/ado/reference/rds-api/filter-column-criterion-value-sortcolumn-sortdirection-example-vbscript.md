@@ -1,6 +1,6 @@
 ---
 title: "Set RDS.DataControl Server and Bind to HTML table (VBScript) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

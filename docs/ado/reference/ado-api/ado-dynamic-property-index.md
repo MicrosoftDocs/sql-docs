@@ -1,6 +1,6 @@
 ---
 title: "ADO Dynamic Property Index | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.technology:
   - "drivers"
 ms.custom: ""

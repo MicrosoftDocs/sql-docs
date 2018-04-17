@@ -1,6 +1,6 @@
 ---
 title: "SubmitChanges Method Example (VBScript) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.technology:
   - "drivers"
 ms.custom: ""

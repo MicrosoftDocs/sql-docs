@@ -1,6 +1,6 @@
 ---
 title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

@@ -1,6 +1,6 @@
 ---
 title: "Aggregate Functions, the CALC Function, and the NEW Keyword | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"

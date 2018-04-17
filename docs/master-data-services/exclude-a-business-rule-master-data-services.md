@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Exclude a Business Rule (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], exclude a business rule when you do not want to delete the rule permanently, but you do not want to validate data against it.  
   
 ## Prerequisites  

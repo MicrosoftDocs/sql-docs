@@ -23,6 +23,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete a Business Rule (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  
   
 > [!NOTE]  

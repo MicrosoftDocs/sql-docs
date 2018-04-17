@@ -1,6 +1,6 @@
 ---
 title: "Errors Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors collection [ADO], members"
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619

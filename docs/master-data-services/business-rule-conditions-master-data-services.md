@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Business Rule Conditions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule conditions determine the conditions that must be true for one or more actions to be taken.  
   
 > [!NOTE]  

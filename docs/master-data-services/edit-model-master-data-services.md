@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Edit Model (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name and description of a model and indicate how many days you want to retain transaction logs.  
   
  For more information, see [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  

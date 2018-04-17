@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Change the Entity Transaction Log Type (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   You can change the transaction log type of an entity, to attribute, member, or none.  
   
 |Transaction Log Type|Description|  

@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Member Revision History (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A member revision history is recorded each time a member is changed, if the entity transaction log type is member.  
   
  For information on transaction log types, see [Change the Entity Transaction Log Type &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md).  

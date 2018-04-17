@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import Cleansing Project Values into a Domain
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), you can import data quality knowledge gathered during the cleansing process in a data quality cleansing project or an Integration Services package containing the DQS Cleansing component into a domain. This ensures that trusted knowledge is not lost, and that the knowledge base is continually improved.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

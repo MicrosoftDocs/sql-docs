@@ -64,7 +64,7 @@ manager: "jhubbard"
  [CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describes how to implement and use CLR user-defined types.  
   
- [CLR Stored Procedures](../../native-client/ole-db/stored-procedures.md)  
+ [CLR Stored Procedures](../../../database-engine/dev-guide/clr-stored-procedures.md)  
  Describes how to implement and use CLR stored procedures.  
   
  [CLR Triggers](../../../database-engine/dev-guide/clr-triggers.md)  

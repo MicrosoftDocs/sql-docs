@@ -22,7 +22,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # Columnstore Indexes Described
-  The [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)]*in-memory columnstore index* stores and manages data by using column-based data storage and column-based query processing. Columnstore indexes work well for data warehousing workloads that primarily perform bulk loads and read-only queries. Use the columnstore index to achieve up to **10x query performance** gains over traditional row-oriented storage, and up to **7x data compression** over the uncompressed data size.  
+  The [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)]*in-memory columnstore index* stores and manages data by using column-based data storage and column-based query processing. Columnstore indexes work well for data warehousing workloads that primarily perform bulk loads and read-only queries. Use the columnstore index to achieve up to **10x query performance** gains over traditional row-oriented storage, and up to **7x data compression** over the uncompressed data size.  
   
 > [!NOTE]  
 >  We view the clustered columnstore index as the standard for storing large data warehousing fact tables, and expect it will be used in most data warehousing scenarios. Since the clustered columnstore index is updateable, your workload can perform a large number of insert, update, and delete operations.  
@@ -38,7 +38,7 @@ manager: "jhubbard"
 -   [Related Tasks and Topics](../relational-databases/indexes/columnstore-indexes-overview.md#related)  
   
 ##  <a name="basics"></a> Basics  
- A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
+ A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
   
 ###  <a name="benefits"></a> Benefits  
  Columnstore indexes work well for mostly read-only queries that perform analysis on large data sets. Often, these are queries for data warehousing workloads. Columnstore indexes give high performance gains for queries that use full table scans, and are not well-suited for queries that seek into the data, searching for a particular value.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Columns often have similar data, which results in high compression rates.  
   
--   High compression rates improve query performance by using a smaller in-memory footprint. In turn, query performance can improve because [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)] can perform more query and data operations in-memory.  
+-   High compression rates improve query performance by using a smaller in-memory footprint. In turn, query performance can improve because [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] can perform more query and data operations in-memory.  
   
 -   A new query execution mechanism called batch-mode execution has been added to SQL Server that reduces CPU usage by a large amount. Batch-mode execution is closely integrated with, and optimized around, the columnstore storage format. Batch-mode execution is sometimes known as vector-based or vectorized execution.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- In [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)], a clustered columnstore index:  
+ In [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)], a clustered columnstore index:  
   
 -   Is available in Enterprise, Developer, and Evaluation editions.  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- In [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)], a nonclustered columnstore index:  
+ In [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)], a nonclustered columnstore index:  
   
 -   Can index a subset of columns in the clustered index or heap. For example, it can index the frequently used columns.  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
  The following key terms and concepts are associated with columnstore indexes.  
   
  columnstore index  
- A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
+ A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
   
  columnstore  
  A *columnstore* is data that is logically organized as a table with rows and columns, and physically stored in a column-wise data format.  
@@ -160,11 +160,11 @@ manager: "jhubbard"
 ###  <a name="dataload_cci"></a> Loading Data into a Clustered Columnstore Index  
  ![Loading into a clustered columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- As the diagram suggests, to load data into a clustered columnstore index, [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)]:  
+ As the diagram suggests, to load data into a clustered columnstore index, [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)]:  
   
-1.  Inserts maximum-size rowgroups directly into the columnstore. As the data is loaded, [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)] assigns the data rows in a first-come first-serve order into an open rowgroup.  
+1.  Inserts maximum-size rowgroups directly into the columnstore. As the data is loaded, [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] assigns the data rows in a first-come first-serve order into an open rowgroup.  
   
-2.  For each rowgroup, after it reaches the maximum size, [!INCLUDE[ssNoVersion](../../../../../../../../../../includes/ssnoversion-md.md)]:  
+2.  For each rowgroup, after it reaches the maximum size, [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)]:  
   
     1.  Marks the rowgroup as CLOSED.  
   

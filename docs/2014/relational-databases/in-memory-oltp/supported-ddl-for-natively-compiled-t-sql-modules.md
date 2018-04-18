@@ -43,6 +43,6 @@ manager: "jhubbard"
 -   GRANT and DENY permissions on tables and procedures.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

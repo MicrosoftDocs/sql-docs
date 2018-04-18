@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   [Implementing SQL_VARIANT in a Memory-Optimized Table](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
--   [Migration Issues for Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+-   [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)  
   
 -   [Migrating Computed Columns](migrating-computed-columns.md)  
   

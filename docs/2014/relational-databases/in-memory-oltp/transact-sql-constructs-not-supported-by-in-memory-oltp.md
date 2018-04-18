@@ -22,13 +22,13 @@ manager: "jhubbard"
   
  For more information on supported features with memory-optimized tables and natively compiled stored procedures, see:  
   
--   [Migration Issues for Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+-   [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)  
   
 -   [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Supported SQL Server Features](unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+-   [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
   
 ## Databases That Use In-Memory OLTP  
  The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features and keywords that can appear in the message text of an error involving an In-Memory OLTP database.  
@@ -117,7 +117,7 @@ manager: "jhubbard"
 |Feature|SELECT INTO|The `INTO` clause is not supported with the `SELECT` statement. Rewrite the query as `INSERT INTO`*Table*`SELECT`.|  
 |Feature|OUTPUT|The `OUTPUT` clause is not supported. Remove it from the query.|  
 |Feature|incomplete insert column list|In `INSERT` statements, values must be specified for all columns in the table.|  
-|Function|*Function*|The built-in function is not supported in natively compiled stored procedures. Remove the function from the stored procedure. For more information about supported built-in functions, see [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md).|  
+|Function|*Function*|The built-in function is not supported in natively compiled stored procedures. Remove the function from the stored procedure. For more information about supported built-in functions, see [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Feature|CASE|The `CASE` statement is not supported in queries inside natively compiled stored procedures. Create queries for each case. For more information, see [Implementing a CASE Statement](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
 |Feature|user-defined functions|User-defined functions cannot be used in natively compiled stored procedures. Remove the reference to the function from the procedure definition.|  
 |Feature|user-defined aggregates|User-defined aggregate functions cannot be used in natively compiled stored procedures. Remove the reference to the function from the procedure.|  
@@ -163,7 +163,7 @@ manager: "jhubbard"
 |Operator|TSEQUAL|This operator is not supported. Remove `TSEQUAL` from the natively compiled stored procedure.|  
 |Operator|LIKE|This operator is not supported. Remove `LIKE` from the natively compiled stored procedure.|  
 |Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](implementing-identity-in-a-memory-optimized-table.md).|  
-|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md).|  
+|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Operand|TABLESAMPLE|This operator is not supported. Remove `TABLESAMPLE` from the natively compiled stored procedure.|  
 |Option|RECOMPILE|Natively compiled stored procedures are compiled at create time. To recompile a natively compiled stored procedure, drop and recreate it. Remove `RECOMPILE` from the procedure definition.|  
 |Option|ENCRYPTION|This option is not supported. Remove `ENCRYPTION` from the procedure definition.|  
@@ -175,7 +175,7 @@ manager: "jhubbard"
 |Option|DISTINCT|This option is not supported. Remove `DISTINCT` from the query in the natively compiled stored procedure.|  
 |Option|PERCENT|This option is not supported with `TOP` clauses. Remove `PERCENT` from the query in the natively compiled stored procedure.|  
 |Option|WITH TIES|This option is not supported with `TOP` clauses. Remove `WITH TIES` from the query in the natively compiled stored procedure.|  
-|Aggregate function|*Aggregate function*|This clause is not supported. For more information about aggregate functions in natively compiled stored procedures, see [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md).|  
+|Aggregate function|*Aggregate function*|This clause is not supported. For more information about aggregate functions in natively compiled stored procedures, see [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Ranking function|*Ranking function*|Ranking functions are not supported in natively compiled stored procedures. Remove them from the procedure definition.|  
 |Function|*Function*|This function is not supported. Remove it from the natively compiled stored procedure.|  
 |Statement|*Statement*|This statement is not supported. Remove it from the natively compiled stored procedure.|  

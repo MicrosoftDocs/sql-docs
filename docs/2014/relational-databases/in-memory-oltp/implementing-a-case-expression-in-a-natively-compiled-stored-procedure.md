@@ -72,7 +72,7 @@ GO
 ```  
   
 ## See Also  
- [Migration Issues for Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)   
+ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

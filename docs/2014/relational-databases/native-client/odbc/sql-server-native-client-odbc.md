@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   [Handling Errors and Messages](../../../database-engine/dev-guide/handling-errors-and-messages.md)  
   
--   [Running Stored Procedures](../ole-db/stored-procedures.md)  
+-   [Running Stored Procedures](../../../database-engine/dev-guide/running-stored-procedures.md)  
   
 -   [Using Catalog Functions](using-catalog-functions.md)  
   

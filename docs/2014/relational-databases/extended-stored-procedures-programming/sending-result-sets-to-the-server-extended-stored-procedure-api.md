@@ -33,6 +33,6 @@ manager: "jhubbard"
 -   Sending a row that has not had all its columns defined with **srv_describe** causes the application to raise an informational error message and return FAIL to the client. In this case, the row is not sent.  
   
 ## See Also  
- [Creating Extended Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+ [Creating Extended Stored Procedures](creating-extended-stored-procedures.md)  
   
   

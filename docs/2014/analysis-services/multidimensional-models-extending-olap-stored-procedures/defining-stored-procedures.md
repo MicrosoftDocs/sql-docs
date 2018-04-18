@@ -28,7 +28,7 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Designing Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)|Describes how to design assemblies for use with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Designing Stored Procedures](designing-stored-procedures.md)|Describes how to design assemblies for use with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Creating Stored Procedures](creating-stored-procedures.md)|Describes how to create assemblies for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Calling Stored Procedures](calling-stored-procedures.md)|Provides information on how to use assemblies in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Accessing Query Context in Stored Procedures](accessing-query-context-in-stored-procedures.md)|Describes how to access scope and context information with assemblies.|  

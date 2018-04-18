@@ -93,7 +93,7 @@ manager: "jhubbard"
 |Describes how to convert an existing SQL Trace script to an Extended Events session.|[Convert an Existing SQL Trace Script to an Extended Events Session](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Describes how to determine which queries are holding the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken.|[Determine Which Queries Are Holding Locks](determine-which-queries-are-holding-locks.md)|  
 |Describes how to identify the source of locks that are hindering database performance.|[Find the Objects That Have the Most Locks Taken on Them](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
-|Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../analysis-services/instances/extended-events.md)|  
+|Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](monitor-system-activity-using-extended-events.md)|  
   
 ## See Also  
  [Data-tier Applications](../data-tier-applications/data-tier-applications.md)   

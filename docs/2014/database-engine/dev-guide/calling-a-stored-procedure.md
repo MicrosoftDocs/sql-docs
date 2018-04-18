@@ -90,6 +90,6 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Running Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Running Stored Procedures](running-stored-procedures.md)  
   
   

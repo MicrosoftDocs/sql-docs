@@ -113,7 +113,7 @@ manager: "mblythe"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION Rowset](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../../relational-databases/extended-events/extended-events.md).  
+     New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
 -   [DISCOVER_TRACES Rowset](../schema-rowsets/xml/discover-traces-rowset.md)  
   

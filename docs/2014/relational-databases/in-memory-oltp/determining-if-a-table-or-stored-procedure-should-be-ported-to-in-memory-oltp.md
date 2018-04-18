@@ -49,19 +49,19 @@ manager: "jhubbard"
   
  ![AMR workflow](../../2014/database-engine/media/amr-1.gif "AMR workflow")  
   
- You can use any method to establish a performance baseline, including but not limited to using performance counter logs or the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Activity Monitor. The information to use in your performance baseline and your comparisons are:  
+ You can use any method to establish a performance baseline, including but not limited to using performance counter logs or the [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Activity Monitor. The information to use in your performance baseline and your comparisons are:  
   
--   CPU consumption of [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)].  
+-   CPU consumption of [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)].  
   
--   Memory consumption of [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)].  
+-   Memory consumption of [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)].  
   
--   I/O activity of [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)].  
+-   I/O activity of [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)].  
   
 -   Transaction throughput of the instance while processing transactions.  
   
  The transaction performance collector captures data every 15 minutes. To obtain usable results, run the transaction performance collector for at least one hour. To obtain best results, run the transaction performance collector for as much time as needed to capture data for your primary scenarios. Generate a transaction performance analysis report only after you have finished gathering data.  
   
- Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## Performance Impacts  
  The transaction performance collector consists of two data collection sets:  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 ### Configure Management Data Warehouse  
  Management Data Warehouse must be configured to use the transaction performance collector.  
   
- The version of the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
+ The version of the [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] where Management Data Warehouse is configured.  
   
 1.  In Object Explorer, expand **Management**.  
   
@@ -93,14 +93,14 @@ manager: "jhubbard"
   
 5.  The next step in the wizard lets you add users and logins. You may map logins to role memberships for the MDW instance. This is not required to collect data from the local instance. If you are not collecting data from the local instance, you can grant database role membership `mdw_admin` to the account that will run transactions that will be profiled. When done, click **Next**.  
   
-6.  Make sure that [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent is running.  
+6.  Make sure that [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent is running.  
   
 7.  On the next screen, click **Finish** to exit the wizard.  
   
-### Configure Data Collection on a Local [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Instance  
- Data collection requires [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent to be started. You only need to configure one data collector on a server.  
+### Configure Data Collection on a Local [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Instance  
+ Data collection requires [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent to be started. You only need to configure one data collector on a server.  
   
- A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)].  
+ A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)].  
   
  To configure data collection to upload to a Management Data Warehouse database on the same instance,  
   
@@ -110,18 +110,18 @@ manager: "jhubbard"
   
 3.  Click **Next** to select the database that will collect the profile data.  
   
-4.  Select the current [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
+4.  Select the current [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
   
 5.  In the box labeled **Select data collector sets you want to enable**, select **Transaction Performance Collection Sets**. Click **Next** when done.  
   
 6.  Verify the selections. Click **Back** to modify the settings. Click **Finish** when done.  
   
-###  <a name="xxx"></a> Configure Data Collection on a Remote [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Instance  
- Data collection requires [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent to be started on the instance that will collect the data.  
+###  <a name="xxx"></a> Configure Data Collection on a Remote [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Instance  
+ Data collection requires [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent to be started on the instance that will collect the data.  
   
- A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)].  
+ A data collector can be configured on a SQL Server 2012 or later version of [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)].  
   
- You need a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) for information on how to create a credential.  
+ You need a [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent proxy established with the correct credential for a data collector to upload data to a Management Data Warehouse database on an instance that is different from where transactions will be profiled. To enable a [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent proxy, you must first establish a credential with a domain-enabled login. The domain-enabled login must be a member of `mdw_admin` group for the Management Data Warehouse database. See [How to: Create a Credential (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) for information on how to create a credential.  
   
  To configure data collection to upload to a Management Data Warehouse database on a different instance,  
   
@@ -131,21 +131,21 @@ manager: "jhubbard"
   
 3.  Click **Next** to select the database that will collect the profile data.  
   
-4.  Make sure that a Management Data Warehouse database exists on the other [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance.  
+4.  Make sure that a Management Data Warehouse database exists on the other [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance.  
   
-5.  Select another [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
+5.  Select another [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance and a Management Data Warehouse database on that instance.  
   
-     The version of the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] where Management Data Warehouse is configured.  
+     The version of the [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] instance that you will collect data on (profile) should be the same version or older than the [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] where Management Data Warehouse is configured.  
   
 6.  In the box labeled **Select data collector sets you want to enable**, select **Transaction Performance Collection Sets**.  
   
-7.  Select **Use a [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent proxy for remote uploads**.  
+7.  Select **Use a [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent proxy for remote uploads**.  
   
 8.  Click **Next** when done.  
   
 9. Select the proxy.  
   
-     If you want to create a new [!INCLUDE[ssNoVersion](../../../../../../../../../../../../../../../../../../../../../../../../../../includes/ssnoversion-md.md)] Agent proxy,  
+     If you want to create a new [!INCLUDE[ssNoVersion](../../../includesssnoversion-md.md)] Agent proxy,  
   
     1.  Click **New** to display the **New Proxy Account** dialog box.  
   

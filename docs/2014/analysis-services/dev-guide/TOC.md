@@ -98,7 +98,7 @@
 #### [ADOMD.NET Server Programming](../multidimensional-models-adomd-net-server/adomd-net-server-programming.md)
 ##### [ADOMD.NET Server Functionality](../multidimensional-models-adomd-net-server/adomd-net-server-functionality.md)
 ##### [ADOMD.NET Server Object Architecture](../multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md)
-##### [User Defined Functions and Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)
+##### [User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)
 #### [Redistributing ADOMD.NET](../multidimensional-models/adomd-net/redistributing-adomd-net.md)
 ### [Developing with Analysis Management Objects (AMO)](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)
 #### [AMO Concepts and Object Model](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)

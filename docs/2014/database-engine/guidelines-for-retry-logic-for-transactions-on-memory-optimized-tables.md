@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 -   The client application has retry logic for other error codes, such as 1205, which you can extend.  
   
--   Conflicts are rare, and it is important to reduce end-to-end latency by using prepared execution. For more information about executing natively compiled stored procedures directly, see [Natively Compiled Stored Procedures](../relational-databases/native-client/ole-db/stored-procedures.md).  
+-   Conflicts are rare, and it is important to reduce end-to-end latency by using prepared execution. For more information about executing natively compiled stored procedures directly, see [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
   

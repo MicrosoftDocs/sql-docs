@@ -82,7 +82,7 @@ manager: "jhubbard"
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
- For more information about a full example that shows how to use the ETW target, including how to view the data, see [Monitor System Activity Using Extended Events](extended-events.md).  
+ For more information about a full example that shows how to use the ETW target, including how to view the data, see [Monitor System Activity Using Extended Events](monitor-system-activity-using-extended-events.md).  
   
 ## See Also  
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   

@@ -33,7 +33,7 @@ manager: "mblythe"
   
  [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../../relational-databases/extended-events/extended-events.md)  
+ [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   

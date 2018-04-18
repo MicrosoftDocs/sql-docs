@@ -266,6 +266,6 @@ manager: "jhubbard"
  **Note** In the connection string, the "Old Password" property sets SSPROP_AUTH_OLD_PASSWORD, which is the current (possibly expired) password that is not available via a provider string property.  
   
 ## See Also  
- [Building Applications with SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Building Applications with SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

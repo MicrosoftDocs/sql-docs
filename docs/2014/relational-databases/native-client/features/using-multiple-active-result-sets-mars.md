@@ -195,7 +195,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## See Also  
- [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client Features](sql-server-native-client-features.md)   
  [Using SQL Server Default Result Sets](../../../2014/database-engine/dev-guide/using-sql-server-default-result-sets.md)  
   
   

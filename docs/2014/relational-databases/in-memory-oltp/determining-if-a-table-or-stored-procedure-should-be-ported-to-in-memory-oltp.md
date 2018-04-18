@@ -19,7 +19,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
-  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](../relational-databases/in-memory-oltp/memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](../relational-databases/in-memory-oltp/native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
+  The transaction performance collector in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] helps you evaluate if In-Memory OLTP will improve your database application’s performance. The transaction performance analysis report also indicates how much work you must do to enable In-Memory OLTP in your application. After you identify a disk-based table to port to In-Memory OLTP, you can use the [Memory Optimization Advisor](memory-optimization-advisor.md), to help you migrate the table. Similarly, the [Native Compilation Advisor](native-compilation-advisor.md) will help you port a stored procedure to a natively compiled stored procedure.  
   
  This topic will discuss how to:  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  The transaction performance collector captures data every 15 minutes. To obtain usable results, run the transaction performance collector for at least one hour. To obtain best results, run the transaction performance collector for as much time as needed to capture data for your primary scenarios. Generate a transaction performance analysis report only after you have finished gathering data.  
   
- Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure the transaction performance collector to run on your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance in production and collect the data on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance in your development (test) environment to ensure minimum overhead. For information on how to save data in a Management Data Warehouse database on a remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance, see [Configure Data Collection on a Remote SQL Server Instance](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## Performance Impacts  
  The transaction performance collector consists of two data collection sets:  
@@ -194,7 +194,7 @@ manager: "jhubbard"
   
 -   Migration Difficulties Section  
   
-     This section includes a table that shows the difficulty of converting this database table to a memory-optimized table. A higher difficulty rating indicates more difficultly to convert the table. To see details to convert this database table, please use the [Memory Optimization Advisor](../relational-databases/in-memory-oltp/memory-optimization-advisor.md).  
+     This section includes a table that shows the difficulty of converting this database table to a memory-optimized table. A higher difficulty rating indicates more difficultly to convert the table. To see details to convert this database table, please use the [Memory Optimization Advisor](memory-optimization-advisor.md).  
   
  Scan and contention statistics on the table details report is gathered and aggregated from [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
@@ -220,9 +220,9 @@ manager: "jhubbard"
   
  Execution Statistics on the stored procedure details report is gathered and aggregated from [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md). The references are obtained from [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md).  
   
- To see details about how to convert a stored procedure to a natively compiled stored procedure, please use the [Native Compilation Advisor](../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
+ To see details about how to convert a stored procedure to a natively compiled stored procedure, please use the [Native Compilation Advisor](native-compilation-advisor.md).  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+ [Migrating to In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

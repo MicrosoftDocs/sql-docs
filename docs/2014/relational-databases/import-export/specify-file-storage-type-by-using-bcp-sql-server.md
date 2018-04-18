@@ -126,8 +126,8 @@ manager: "jhubbard"
 ## See Also  
  [bcp Utility](../../database-engine/bcp-utility.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
- [Specify Field Length by Using bcp &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
- [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
+ [Specify Field Length by Using bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
  [Specify Prefix Length in Data Files by Using bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

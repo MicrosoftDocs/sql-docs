@@ -28,6 +28,6 @@ manager: "mblythe"
   
  [Analysis Services Personalization Extensions](analysis-services-personalization-extensions.md)  
   
- [Defining Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Defining Stored Procedures](../../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

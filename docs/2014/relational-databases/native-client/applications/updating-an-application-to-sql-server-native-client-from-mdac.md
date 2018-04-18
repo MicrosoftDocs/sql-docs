@@ -112,6 +112,6 @@ manager: "jhubbard"
  Both [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client and MDAC support read committed transaction isolation using row versioning, but only [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports snapshot transaction isolation. (In programming terms, read committed transaction isolation using row versioning is the same as read-committed transaction.).  
   
 ## See Also  
- [Building Applications with SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Building Applications with SQL Server Native Client](building-applications-with-sql-server-native-client.md)  
   
   

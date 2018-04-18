@@ -52,6 +52,6 @@ manager: "jhubbard"
  At this point, you can create the Resource Pool to Database binding, and then use RESTORE WITH RECOVERY to bring the restored database online.  Since the binding is in place before the database is brought online, its In-Memory OLTP memory consumption is properly accounted for. This requires restoring the database only once. The first RESTORE command is an informational command that only reads the backup header, and the last command simply triggers recovery without actually restoring any bits.  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

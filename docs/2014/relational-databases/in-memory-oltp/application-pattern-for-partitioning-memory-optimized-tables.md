@@ -37,7 +37,7 @@ Active Data Maintenance
   
  The actions starting with Deleting ActiveOrders need to be done during a maintenance window to avoid queries missing data during the time between deleting data and switching in the staging table.  
   
- For a related sample, see [Application-Level Partitioning](../relational-databases/in-memory-oltp/application-level-partitioning.md).  
+ For a related sample, see [Application-Level Partitioning](application-level-partitioning.md).  
   
 ## Code Sample  
  The following sample shows how to use a memory-optimized table with a partitioned disk-based table. Frequently-used data is stored in memory. To save the data to disk, create a new partition and copy the data to the partitioned table.  
@@ -208,6 +208,6 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
 ```  
   
 ## See Also  
- [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

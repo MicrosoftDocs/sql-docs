@@ -259,7 +259,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
  [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)   
  [bcp Utility](../../database-engine/bcp-utility.md)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)  
   

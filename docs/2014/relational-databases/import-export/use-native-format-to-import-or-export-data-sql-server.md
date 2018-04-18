@@ -78,7 +78,7 @@ manager: "jhubbard"
 |**bcp**|**-n**|Causes the **bcp** utility to use the native data types of the data.<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='**native**'**|Uses the native or wide native data types of the data. Note that DATAFILETYPE is not needed if a format file specifies the data types.|  
   
- <sup>1</sup> To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> To load native (**-n**) data to a format compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients, use the **-V** switch. For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  For more information, see [bcp Utility](../../2014/database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), or [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
@@ -146,9 +146,9 @@ GO
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To use data formats for bulk import or bulk export**  
   
--   [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -159,7 +159,7 @@ GO
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant &#40;Transact-SQL&#41;](~/t-sql/data-types/sql-variant-transact-sql.md)   
- [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   

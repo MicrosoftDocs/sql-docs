@@ -72,13 +72,13 @@ manager: "jhubbard"
 ## Related Tasks  
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
   
- [Reorganize and Rebuild Indexes](../relational-databases/indexes/indexes.md)  
+ [Reorganize and Rebuild Indexes](indexes.md)  
   
 ## Related Content  
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
   
  [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Disk Space Requirements for Index DDL Operations](../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
   

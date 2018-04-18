@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)  
   
--   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+-   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
 -   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
 ### Examples  
  For examples of INSERT...SELECT * FROM OPENROWSET(BULK...) statements, see the following topics:  
   
--   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+-   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
 -   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -116,7 +116,7 @@ GO
 ## See Also  
  [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md)   
  [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md)   

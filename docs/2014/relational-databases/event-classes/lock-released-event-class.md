@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Lock:Acquired Event Class](../relational-databases/event-classes/lock-acquired-event-class.md)   
+ [Lock:Acquired Event Class](lock-acquired-event-class.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   
   

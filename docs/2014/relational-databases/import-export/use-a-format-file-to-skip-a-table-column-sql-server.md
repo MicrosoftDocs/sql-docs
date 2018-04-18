@@ -67,7 +67,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  ![default non-XML format file for myTestSkipCol](../../2014/database-engine/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
   
 > [!NOTE]  
->  For more information about the format-file fields, see [Non-XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
+>  For more information about the format-file fields, see [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### Methods for Modifying a Non-XML Format File  
  To skip a table column, edit the default non-XML format file and modify the file by using one of the following alternative methods:  
@@ -101,7 +101,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  The following examples are also based on the `myTestSkipCol` sample table and the `myTestSkipCol2.dat` sample data file that are created in "Sample Table and Data File," earlier in this topic.  
   
 #### Using BULK INSERT  
- This example works by using either of the modified non-XML format files created in "Methods for Modifying a Non-XML Format File," earlier in this topic. In this example, the modified format file is named `C:\myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ This example works by using either of the modified non-XML format files created in "Methods for Modifying a Non-XML Format File," earlier in this topic. In this example, the modified format file is named `C:\myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +169,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 #### Using OPENROWSET(BULK...)  
  The following example uses the `OPENROWSET` bulk rowset provider and the `myTestSkipCol2.xml` format file. The example bulk imports the `myTestSkipCol2.dat` data file into the `myTestSkipCol` table. The statement contains an explicit list of columns in the select list and also in the target table, as required.  
   
- In the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 USE AdventureWorks2012;  
@@ -186,7 +186,7 @@ GO
 #### Using BULK IMPORT on a View  
  The following example creates the `v_myTestSkipCol` on the `myTestSkipCol` table. This view skips the second table column, `Col2`. The example then uses `BULK INSERT` to import the `myTestSkipCol2.dat` data file into this view.  
   
- In the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
 ```  
 CREATE VIEW v_myTestSkipCol AS  
@@ -206,8 +206,8 @@ GO
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
- [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
+ [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
+ [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
+ [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
   

@@ -171,7 +171,7 @@ GO
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
@@ -189,7 +189,7 @@ GO
   
  **To use data formats for bulk import or bulk export**  
   
--   [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   

@@ -29,13 +29,13 @@ manager: "jhubbard"
   
 ## Contents  
   
--   [Basics](../relational-databases/indexes/columnstore-indexes-overview.md#basics)  
+-   [Basics](columnstore-indexes-overview.md#basics)  
   
--   [Loading Data](../relational-databases/indexes/columnstore-indexes-overview.md#dataload)  
+-   [Loading Data](columnstore-indexes-overview.md#dataload)  
   
--   [Performance Tips](../relational-databases/indexes/columnstore-indexes-overview.md#performance)  
+-   [Performance Tips](columnstore-indexes-overview.md#performance)  
   
--   [Related Tasks and Topics](../relational-databases/indexes/columnstore-indexes-overview.md#related)  
+-   [Related Tasks and Topics](columnstore-indexes-overview.md#related)  
   
 ##  <a name="basics"></a> Basics  
  A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
@@ -155,7 +155,7 @@ manager: "jhubbard"
   
  A table with a nonclustered columnstore index is read-only until the index is dropped or disabled. To update the table and the nonclustered columnstore index you can switch partitions in and out. You can also disable the index, update the table, and then rebuild the index.  
   
- For more information see [Using Nonclustered Columnstore Indexes](../relational-databases/indexes/indexes.md)  
+ For more information see [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a> Loading Data into a Clustered Columnstore Index  
  ![Loading into a clustered columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
@@ -194,7 +194,7 @@ manager: "jhubbard"
 ##  <a name="related"></a> Related Tasks and Topics  
   
 ### Nonclustered Columnstore Indexes  
- For common tasks, see [Using Nonclustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ For common tasks, see [Using Nonclustered Columnstore Indexes](indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md)  
   

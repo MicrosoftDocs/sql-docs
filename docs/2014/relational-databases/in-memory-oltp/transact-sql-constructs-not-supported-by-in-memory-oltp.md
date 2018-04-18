@@ -186,7 +186,7 @@ manager: "jhubbard"
 |Feature|ROLLUP|`ROLLUP` cannot be used with `GROUP BY` clauses in natively compiled stored procedures. Remove `ROLLUP` from the procedure definition.|  
 |Feature|CUBE|`CUBE` cannot be used with `GROUP BY` clauses in natively compiled stored procedures. Remove `CUBE` from the procedure definition.|  
 |Feature|GROUPING SETS|`GROUPING SETS` cannot be used with `GROUP BY` clauses in natively compiled stored procedures. Remove `GROUPING SETS` from the procedure definition.|  
-|Feature|BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION|Use ATOMIC blocks to control transactions and error handling. For more information, see [Atomic Blocks](../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).|  
+|Feature|BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION|Use ATOMIC blocks to control transactions and error handling. For more information, see [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
 |Feature|Inline table variable declarations.|Table variables must reference explicitly defined memory-optimized table types. You should create a memory-optimized table type and use that type for the variable declaration, rather than specifying the type inline.|  
 |Feature|sp_recompile|Recompiling natively compiled stored procedures is not supported. Drop and recreate the procedure.|  
 |Feature|EXECUTE AS CALLER|The `EXECUTE AS` clause is required. But `EXECUTE AS CALLER` is not supported. Use `EXECUTE AS OWNER`, `EXECUTE AS`*user*, or `EXECUTE AS SELF`.|  
@@ -204,6 +204,6 @@ manager: "jhubbard"
 |Feature|DTC|Transactions that access memory-optimized tables cannot be distributed transactions.|  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+ [Migrating to In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

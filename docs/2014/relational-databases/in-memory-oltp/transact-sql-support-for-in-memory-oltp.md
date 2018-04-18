@@ -36,19 +36,19 @@ manager: "jhubbard"
   
  Memory-optimized tables support `PRIMARY KEY` and `NOT NULL` constraints. For information on implementing unsupported constraints, see [Migrating Check and Foreign Key Constraints](../../2014/database-engine/migrating-check-and-foreign-key-constraints.md).  
   
- For information on unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ For information on unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ## In This Section  
   
--   [Supported Data Types](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)  
+-   [Supported Data Types](supported-data-types-for-in-memory-oltp.md)  
   
 -   [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   
 -   [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
- [Migration Issues for Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Supported SQL Server Features](unsupported-sql-server-features-for-in-memory-oltp.md)   
  [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
   

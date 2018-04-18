@@ -41,7 +41,7 @@ manager: "jhubbard"
  The examples in this topic bulk import data using INSERT ... SELECT * FROM OPENROWSET(BULK...) and keeping default values.  
   
 ### Sample Table  
- The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -69,7 +69,7 @@ bcp AdventureWorks.HumanResources.Department out myDepartment-n.Dat -n -T
 bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-n-x.Xml -T  
 ```  
   
- For more information about creating a format file, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
+ For more information about creating a format file, see [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### A. Using bcp and Keeping Identity Values  
  The following example demonstrates how to keep identity values when using `bcp` to bulk import data. The `bcp` command uses the format file, `myDepartment-f-n-x.Xml`, and contains the following switches:  
@@ -89,7 +89,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
 ### B. Using BULK INSERT and Keeping Identity Values  
  The following example uses BULK INSERT to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY option to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -110,7 +110,7 @@ SELECT * FROM HumanResources.myDepartment;
 ### C. Using OPENROWSET and Keeping Identity Values  
  The following example uses the OPENROWSET bulk rowset provider to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY hint to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -136,7 +136,7 @@ GO
   
  **To use a format file**  
   
--   [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)  
+-   [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
@@ -148,7 +148,7 @@ GO
   
  **To use data formats for bulk import or bulk export**  
   
--   [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Import Native and Character Format Data from Earlier Versions of SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   

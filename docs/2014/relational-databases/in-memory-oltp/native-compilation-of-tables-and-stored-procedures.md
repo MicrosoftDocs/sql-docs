@@ -107,7 +107,7 @@ go
   
  The DLL for native_sp can interact directly with the DLL for t1, as well as the In-Memory OLTP storage engine, to insert the rows as fast as possible.  
   
- The In-Memory OLTP compiler leverages the query optimizer to create an efficient execution plan for each of the queries in the stored procedure. Note that natively compiled stored procedures are not automatically recompiled if the data in the table changes. For more information on maintaining statistics and stored procedures with In-Memory OLTP see [Statistics for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ The In-Memory OLTP compiler leverages the query optimizer to create an efficient execution plan for each of the queries in the stored procedure. Note that natively compiled stored procedures are not automatically recompiled if the data in the table changes. For more information on maintaining statistics and stored procedures with In-Memory OLTP see [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
   
 ## Security Considerations for Native Compilation  
  Native compilation of tables and stored procedures uses the In-Memory OLTP compiler. This compiler produces files that are written to disk and loaded into memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the following mechanisms to limit access to these files.  

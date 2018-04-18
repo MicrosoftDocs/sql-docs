@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Audit Login Event Class](../relational-databases/event-classes/audit-login-event-class.md)  
+ [Audit Login Event Class](audit-login-event-class.md)  
   
   

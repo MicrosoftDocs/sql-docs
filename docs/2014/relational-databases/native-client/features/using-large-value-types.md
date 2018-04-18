@@ -718,6 +718,6 @@ _ExitProcessResultSet:
 -   [SQLGetTypeInfo](../../native-client-odbc-api/sqlgettypeinfo.md)  
   
 ## See Also  
- [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client Features](sql-server-native-client-features.md)  
   
   

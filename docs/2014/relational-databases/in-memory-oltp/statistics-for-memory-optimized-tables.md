@@ -95,6 +95,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## See Also  
- [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

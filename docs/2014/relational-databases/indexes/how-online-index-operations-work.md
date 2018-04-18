@@ -82,8 +82,8 @@ manager: "jhubbard"
  The lifetime of a cursor declared on a table that is involved in an online index operation is limited by the online index phases. Update cursors are invalidated at each phase. Read-only cursors are invalidated only after the final phase.  
   
 ## Related Content  
- [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md)  
+ [Perform Index Operations Online](perform-index-operations-online.md)  
   
- [Guidelines for Online Index Operations](../relational-databases/indexes/guidelines-for-online-index-operations.md)  
+ [Guidelines for Online Index Operations](guidelines-for-online-index-operations.md)  
   
   

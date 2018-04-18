@@ -53,6 +53,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [SP:CacheInsert Event Class](../relational-databases/event-classes/sp-cacheinsert-event-class.md)  
+ [SP:CacheInsert Event Class](sp-cacheinsert-event-class.md)  
   
   

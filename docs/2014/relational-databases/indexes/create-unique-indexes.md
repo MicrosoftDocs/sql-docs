@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 -   A unique index, UNIQUE constraint, or PRIMARY KEY constraint cannot be created if duplicate key values exist in the data.  
   
--   A unique nonclustered index can contain included nonkey columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).  
+-   A unique nonclustered index can contain included nonkey columns. For more information, see [Create Indexes with Included Columns](create-indexes-with-included-columns.md).  
   
 ###  <a name="Security"></a> Security  
   

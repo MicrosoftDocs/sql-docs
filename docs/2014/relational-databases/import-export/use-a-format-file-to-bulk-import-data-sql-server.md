@@ -45,7 +45,7 @@ manager: "jhubbard"
  The examples in this section illustrate how to use format files to bulk-import data by using the **bcp** command and the BULK INSERT, and INSERT ... SELECT * FROM OPENROWSET(BULK...) statements. Before you can run one of the bulk-import examples, you need to create a sample table, data file, and a format file.  
   
 ### Sample Table  
- The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -91,7 +91,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
   
 ```  
   
- For more information about creating a format file, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
+ For more information about creating a format file, see [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 #### The Sample XML Format File  
  The following example uses **bcp** to create to generate an XML format file from the `myTestFormatFiles` table. The `myTestFormatFiles.Xml` file contains the following information:  
@@ -135,7 +135,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 ### Using BULK INSERT  
  The following example uses BULK INSERT to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. This example uses a non-XML format file, `MyTestFormatFiles.Fmt`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,7 +156,7 @@ GO
 ### Using the OPENROWSET Bulk Rowset Provider  
  The following example uses `INSERT ... SELECT * FROM OPENROWSET(BULK...)` to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the `AdventureWorks` sample database. This example uses an XML format file, `MyTestFormatFiles.Xml`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -182,7 +182,7 @@ DROP TABLE myTestFormatFiles
 >  For more information about the OPENROWSET BULK clause, see [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md).  
   
 ## Additional Examples  
- [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)  
+ [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
  [Use a Format File to Skip a Table Column &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

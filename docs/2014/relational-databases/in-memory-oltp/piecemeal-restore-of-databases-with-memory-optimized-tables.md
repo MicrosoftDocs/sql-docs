@@ -94,6 +94,6 @@ GO
 ```  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

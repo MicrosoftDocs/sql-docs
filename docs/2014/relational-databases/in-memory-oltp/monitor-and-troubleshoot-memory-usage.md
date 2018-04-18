@@ -22,24 +22,24 @@ manager: "jhubbard"
   
 ## Sections in this topic  
   
--   [Create a sample database with memory-optimized tables](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   [Create a sample database with memory-optimized tables](monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
--   [Monitoring Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
+-   [Monitoring Memory Usage](monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
-    -   [Using SQL Server Management Studio](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingSSMS)  
+    -   [Using SQL Server Management Studio](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingSSMS)  
   
-    -   [Using DMVs](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
+    -   [Using DMVs](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   [Managing memory consumed by memory-optimized objects](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   [Managing memory consumed by memory-optimized objects](monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
--   [Troubleshooting Memory Issues](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
+-   [Troubleshooting Memory Issues](monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
 ##  <a name="bkmk_CreateDB"></a> Create a sample database with memory-optimized tables  
  You can skip this section if you already have a database with memory-optimized tables.  
   
  The following steps create a database with three memory-optimized tables that you can use in the remainder of this topic. In the example, we mapped the database to a resource pool so that we can control how much memory can be taken by memory-optimized tables.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)].  
+1.  Launch [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)].  
   
 2.  Click **New Query**.  
   
@@ -123,13 +123,13 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_Monitoring"></a> Monitoring Memory Usage  
   
-###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)]  
+###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
   
 #### Consumption at the database level  
  You can monitor memory use at the database level as follows.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)] and connect to a server.  
+1.  Launch [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] and connect to a server.  
   
 2.  In Object Explorer, right-click the database you want reports on.  
   
@@ -269,7 +269,7 @@ MEMORYCLERK_XTP      Default    64             0
  For more information see [sys.dm_os_memory_clerks (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
 ##  <a name="bkmk_MemOptObjects"></a> Managing memory consumed by memory-optimized objects  
- You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool as described in the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
+ You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool as described in the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Troubleshooting Memory Issues  
  Troubleshooting memory issues is a three step process:  
@@ -278,10 +278,10 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  Determine how memory consumption is growing and how much head room you have left. By monitoring the memory consumption periodically, you can know how the memory use is growing. For example, if you have mapped the database to a named resource pool, you can monitor the performance counter Used Memory (KB) to see how memory usage is growing.  
   
-3.  Take action to mitigate the potential memory issues. For more information see [Resolve Out Of Memory Issues](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
+3.  Take action to mitigate the potential memory issues. For more information see [Resolve Out Of Memory Issues](resolve-out-of-memory-issues.md).  
   
 ## See Also  
- [Bind a Database with Memory-Optimized Tables to a Resource Pool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
+ [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   
   

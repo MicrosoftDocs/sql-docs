@@ -27,10 +27,10 @@ manager: "jhubbard"
 |Clustered|A clustered index sorts and stores the data rows of the table or view in order based on the clustered index key. The clustered index is implemented as a B-tree index structure that supports fast retrieval of the rows, based on their clustered index key values.|[Clustered and Nonclustered Indexes Described](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Create Clustered Indexes](../../database-engine/indexes.md)|  
 |Nonclustered|A nonclustered index can be defined on a table or view with a clustered index or on a heap. Each index row in the nonclustered index contains the nonclustered key value and a row locator. This locator points to the data row in the clustered index or heap having the key value. The rows in the index are stored in the order of the index key values, but the data rows are not guaranteed to be in any particular order unless a clustered index is created on the table.|[Clustered and Nonclustered Indexes Described](clustered-and-nonclustered-indexes-described.md)<br /><br /> [Create Nonclustered Indexes](create-nonclustered-indexes.md)|  
 |Unique|A unique index ensures that the index key contains no duplicate values and therefore every row in the table or view is in some way unique.<br /><br /> Uniqueness can be a property of both clustered and nonclustered indexes.|[Create Unique Indexes](create-unique-indexes.md)|  
-|Columnstore|An in-memory columnstore index stores and manages data by using column-based data storage and column-based query processing.<br /><br /> Columnstore indexes work well for data warehousing workloads that primarily perform bulk loads and read-only queries. Use the columnstore index to achieve up to **10x query performance** gains over traditional row-oriented storage, and up to **7x data compression** over the uncompressed data size.|[Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [Using Nonclustered Columnstore Indexes](../../2014/database-engine/using-nonclustered-columnstore-indexes.md)<br /><br /> [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md)|  
-|Index with included columns|A nonclustered index that is extended to include nonkey columns in addition to the key columns.|[Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)|  
+|Columnstore|An in-memory columnstore index stores and manages data by using column-based data storage and column-based query processing.<br /><br /> Columnstore indexes work well for data warehousing workloads that primarily perform bulk loads and read-only queries. Use the columnstore index to achieve up to **10x query performance** gains over traditional row-oriented storage, and up to **7x data compression** over the uncompressed data size.|[Columnstore Indexes Described](columnstore-indexes-overview.md)<br /><br /> [Using Nonclustered Columnstore Indexes](../../2014/database-engine/using-nonclustered-columnstore-indexes.md)<br /><br /> [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md)|  
+|Index with included columns|A nonclustered index that is extended to include nonkey columns in addition to the key columns.|[Create Indexes with Included Columns](create-indexes-with-included-columns.md)|  
 |Index on computed columns|An index on a column that is derived from the value of one or more other columns, or certain deterministic inputs.|[Indexes on Computed Columns](indexes-on-computed-columns.md)|  
-|Filtered|An optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.|[Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md)|  
+|Filtered|An optimized nonclustered index, especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance, reduce index maintenance costs, and reduce index storage costs compared with full-table indexes.|[Create Filtered Indexes](create-filtered-indexes.md)|  
 |Spatial|A spatial index provides the ability to perform certain operations more efficiently on spatial objects (*spatial data*) in a column of the **geometry** data type. The spatial index reduces the number of objects on which relatively costly spatial operations need to be applied.|[Spatial Indexes Overview](../../2014/database-engine/spatial-indexes-overview.md)|  
 |XML|A shredded, and persisted, representation of the XML binary large objects (BLOBs) in the `xml` data type column.|[XML Indexes &#40;SQL Server&#41;](../../2014/database-engine/xml-indexes-sql-server.md)|  
 |Full-text|A special type of token-based functional index that is built and maintained by the Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It provides efficient support for sophisticated word searches in character string data.|[Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)|  
@@ -40,15 +40,15 @@ manager: "jhubbard"
 ## Related Content  
  [SORT_IN_TEMPDB Option For Indexes](sort-in-tempdb-option-for-indexes.md)  
   
- [Disable Indexes and Constraints](../relational-databases/indexes/disable-indexes-and-constraints.md)  
+ [Disable Indexes and Constraints](disable-indexes-and-constraints.md)  
   
- [Enable Indexes and Constraints](../relational-databases/indexes/enable-indexes-and-constraints.md)  
+ [Enable Indexes and Constraints](enable-indexes-and-constraints.md)  
   
  [Rename Indexes](rename-indexes.md)  
   
  [Set Index Options](set-index-options.md)  
   
- [Disk Space Requirements for Index DDL Operations](../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [Reorganize and Rebuild Indexes](reorganize-and-rebuild-indexes.md)  
   

@@ -74,7 +74,7 @@ manager: "jhubbard"
  [bcp Utility](../../database-engine/bcp-utility.md)   
  [Prepare to Bulk Import Data &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

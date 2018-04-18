@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Options and operations supported on natively compiled stored procedures. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md).  
   
--   Ability to access memory-optimized tables using interpreted [!INCLUDE[tsql](../../../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../../../includes/tsql-md.md)] provides surface area equivalent to accessing tables that are not memory optimized using stored procedures that are not natively compiled and using [!INCLUDE[tsql](../../../../includes/tsql-md.md)]. For more information, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
+-   Ability to access memory-optimized tables using interpreted [!INCLUDE[tsql](../../../includes//tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../../includes//tsql-md.md)] provides surface area equivalent to accessing tables that are not memory optimized using stored procedures that are not natively compiled and using [!INCLUDE[tsql](../../../includes//tsql-md.md)]. For more information, see [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
 -   Multi-versioning and optimistic concurrency control. For more information, see [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
   
@@ -35,9 +35,9 @@ manager: "jhubbard"
   
 -   Catalog views, dynamic management views, and extended events for supportability. For more information, see [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. For more information, see [SQL Server Management Objects Support for In-Memory OLTP](../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. For more information, see [SQL Server Management Objects Support for In-Memory OLTP](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [SQL Server Management Studio Support for In-Memory OLTP](../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [SQL Server Management Studio Support for In-Memory OLTP](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. For more information, see [SQL Server PowerShell Overview](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
 |Policy-based management (PBM).|Prevent and log only modes of PBM are not supported. Existence of such policies on the server may prevent In-Memory OLTP DDL from executing successfully. On demand and on schedule modes are supported.|  
 |DACFX deploy/extract|DAC Framework deploy/extract is not supported in In-Memory OLTP.|  
   
- With a few exceptions, cross-database transactions are not supported. The following table describes which cases are supported, and the corresponding restrictions. (See also, [Cross-Database Queries](../relational-databases/in-memory-oltp/cross-database-queries.md).)  
+ With a few exceptions, cross-database transactions are not supported. The following table describes which cases are supported, and the corresponding restrictions. (See also, [Cross-Database Queries](cross-database-queries.md).)  
   
 |Databases|Allowed|Description|  
 |---------------|-------------|-----------------|  
@@ -110,6 +110,6 @@ manager: "jhubbard"
 |master|read-only|Cross-database transactions that touch In-Memory OLTP and the master database fail to commit if it includes any writes to the master database. Cross-database transactions that only read from master and use only one user database are allowed.|  
   
 ## See Also  
- [SQL Server Support for In-Memory OLTP](../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
+ [SQL Server Support for In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -91,7 +91,7 @@ Memory-optimized table, consisting of indexes and rows.
   
  ![Row structure for a table that has two indexes.](../../2014/database-engine/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
   
- The begin and end timestamps indicate the period in which a particular row version is valid. Transactions that start in this interval can see this row version. For more details see [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ The begin and end timestamps indicate the period in which a particular row version is valid. Transactions that start in this interval can see this row version. For more details see [Transactions in Memory-Optimized Tables](memory-optimized-tables.md).  
   
  The index pointers point to the next row in the chain belonging to the hash bucket. The following figure illustrates the structure of a table with two columns (name, city), and with two indexes, one on the column name, and one on the column city.  
   

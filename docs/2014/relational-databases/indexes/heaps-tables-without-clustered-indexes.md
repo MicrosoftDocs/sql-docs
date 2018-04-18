@@ -52,6 +52,6 @@ manager: "jhubbard"
   
  [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
- [Clustered and Nonclustered Indexes Described](../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
+ [Clustered and Nonclustered Indexes Described](clustered-and-nonclustered-indexes-described.md)  
   
   

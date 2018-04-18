@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  The following recommendations apply to calls of natively compiled stored procedure using the ODBC driver in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- The most efficient way to call a stored procedure once is to issue a direct RPC call using `SQLExecDirect` and ODBC CALL clauses. Do not use the [!INCLUDE[tsql](../../../../includes/tsql-md.md)]`EXECUTE` statement. If a stored procedure is called more than once, prepared execution is more efficient.  
+ The most efficient way to call a stored procedure once is to issue a direct RPC call using `SQLExecDirect` and ODBC CALL clauses. Do not use the [!INCLUDE[tsql](../../../includes//tsql-md.md)]`EXECUTE` statement. If a stored procedure is called more than once, prepared execution is more efficient.  
   
  The most efficient way to call a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedure more than once is through prepared RPC procedure calls. Prepared RPC calls are performed as follows using the ODBC driver in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 2.  Create an ODBC data source called PrepExecSample that points to the database. Use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client driver. You could also modify the sample and use the [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx).  
   
-3.  Run the [!INCLUDE[tsql](../../../../includes/tsql-md.md)] script (below) on the sample database.  
+3.  Run the [!INCLUDE[tsql](../../../includes//tsql-md.md)] script (below) on the sample database.  
   
 4.  Compile and run the sample.  
   
@@ -101,7 +101,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
     SELECT * FROM dbo.Item  
     ```  
   
- The following is the [!INCLUDE[tsql](../../../../includes/tsql-md.md)] code listing that creates the memory-optimized database objects.  
+ The following is the [!INCLUDE[tsql](../../../includes//tsql-md.md)] code listing that creates the memory-optimized database objects.  
   
 ```  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))  

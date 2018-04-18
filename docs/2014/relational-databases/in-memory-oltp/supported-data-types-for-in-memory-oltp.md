@@ -86,6 +86,6 @@ manager: "jhubbard"
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Implementing LOB Columns in a Memory-Optimized Table](../../2014/database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
- [Implementing SQL_VARIANT in a Memory-Optimized Table](../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Implementing SQL_VARIANT in a Memory-Optimized Table](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

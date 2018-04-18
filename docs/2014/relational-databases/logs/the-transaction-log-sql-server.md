@@ -151,7 +151,7 @@ manager: "jhubbard"
 -  [Restore a Transaction Log Backup](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## See Also  
- [Control Transaction Durability](../relational-databases/logs/control-transaction-durability.md)   
+ [Control Transaction Durability](control-transaction-durability.md)   
  [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   

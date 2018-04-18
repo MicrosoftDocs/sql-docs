@@ -39,7 +39,7 @@ manager: "jhubbard"
 |[Broker:Message Drop Event Class](../Topic/Broker:Message%20Drop%20Event%20Class.md)|An event generated when Service Broker is unable to retain a received message that should have been delivered to a service in this instance|  
 |[Broker:Remote Message Ack Event Class](broker-remote-message-ack-event-class.md)|An event generated when Service Broker sends or receives a message acknowledgement.|  
   
- Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](../relational-databases/event-classes/audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
+ Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](audit-broker-conversation-event-class.md).  
   
 ## See Also  
  [Security Audit Event Category](../analysis-services/trace-events/security-audit-event-category.md)  

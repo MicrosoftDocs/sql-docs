@@ -89,11 +89,11 @@ manager: "jhubbard"
   
 7.  Select the filegroup in which to move the index.  
   
-     If the table or index is partitioned, select the partition scheme in which to move the index. For more information about partitioned indexes, see [Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md).  
+     If the table or index is partitioned, select the partition scheme in which to move the index. For more information about partitioned indexes, see [Partitioned Tables and Indexes](indexes.md).  
   
      If you are moving a clustered index, you can use online processing. Online processing allows concurrent user access to the underlying data and to nonclustered indexes during the index operation. For more information, see [Perform Index Operations Online](perform-index-operations-online.md).  
   
-     On multiprocessor computers using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). For more information about Parallel indexed operations, see [Configure Parallel Index Operations](../relational-databases/indexes/configure-parallel-index-operations.md).  
+     On multiprocessor computers using [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can configure the number of processors used to execute the index statement by specifying a maximum degree of parallelism value. The Parallel indexed operations feature is not available in every edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md). For more information about Parallel indexed operations, see [Configure Parallel Index Operations](configure-parallel-index-operations.md).  
   
 8.  Click **OK**.  
   

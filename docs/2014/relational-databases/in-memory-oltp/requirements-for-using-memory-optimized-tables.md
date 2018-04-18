@@ -26,7 +26,7 @@ manager: "jhubbard"
   
      If you have disk-based tables in the database, you need to provide enough memory for the buffer pool and query processing on those tables.  
   
-     It is important to know how much memory your In-Memory OLTP application will require. See [Estimate Memory Requirements for Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md) for more information.  
+     It is important to know how much memory your In-Memory OLTP application will require. See [Estimate Memory Requirements for Memory-Optimized Tables](memory-optimized-tables.md) for more information.  
   
 -   Free disk space for that is two times the size of your durable memory-optimized tables.  
   
@@ -36,15 +36,15 @@ manager: "jhubbard"
   
 -   To install In-Memory OLTP, select **Database Engine Services** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Object Explorer), select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Object Explorer), select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ## Important Notes on Using [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
--   The total in-memory size of all durable tables in a database should not exceed 250 GB. For more information, see [Durability for Memory-Optimized Tables](../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md).  
+-   The total in-memory size of all durable tables in a database should not exceed 250 GB. For more information, see [Durability for Memory-Optimized Tables](durability-for-memory-optimized-tables.md).  
   
 -   This release of [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is targeted to perform optimally on systems with 2 or 4 sockets and fewer than 60 cores.  
   
--   Checkpoint files must not be manually deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically performs garbage collection on unneeded checkpoint files. For more information, see the discussion on merging data and delta files in [Durability for Memory-Optimized Tables](../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md).  
+-   Checkpoint files must not be manually deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically performs garbage collection on unneeded checkpoint files. For more information, see the discussion on merging data and delta files in [Durability for Memory-Optimized Tables](durability-for-memory-optimized-tables.md).  
   
 -   In this first release of In-Memory OLTP (in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), the only way to remove a memory-optimized filegroup is to drop the database.  
   
@@ -56,6 +56,6 @@ manager: "jhubbard"
  What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

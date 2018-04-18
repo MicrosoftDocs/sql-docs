@@ -55,6 +55,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Audit Schema Object Management Event Class](../relational-databases/event-classes/audit-schema-object-management-event-class.md)  
+ [Audit Schema Object Management Event Class](audit-schema-object-management-event-class.md)  
   
   

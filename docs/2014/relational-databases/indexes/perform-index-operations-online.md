@@ -55,7 +55,7 @@ manager: "jhubbard"
   
     -   [ALTER TABLE](~/t-sql/statements/alter-table-transact-sql.md) (To add or drop UNIQUE or PRIMARY KEY constraints with CLUSTERED index option)  
   
--   For more limitations and restrictions concerning creating, rebuilding, or dropping indexes online, see [Guidelines for Online Index Operations](../relational-databases/indexes/guidelines-for-online-index-operations.md).  
+-   For more limitations and restrictions concerning creating, rebuilding, or dropping indexes online, see [Guidelines for Online Index Operations](guidelines-for-online-index-operations.md).  
   
 ###  <a name="Security"></a> Security  
   
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
      The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move.  
   
-     [!code-sql[IndexDDL#DropIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
+     [!code-sql[IndexDDL#DropIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql)]  
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   

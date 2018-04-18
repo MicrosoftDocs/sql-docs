@@ -59,7 +59,7 @@ manager: "jhubbard"
 |XactSequence|`bigint`|Token that describes the current transaction.|50|Yes|  
   
 ## See Also  
- [Plan Guide Successful Event Class](../relational-databases/event-classes/plan-guide-successful-event-class.md)   
+ [Plan Guide Successful Event Class](plan-guide-successful-event-class.md)   
  [Extended Events](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   

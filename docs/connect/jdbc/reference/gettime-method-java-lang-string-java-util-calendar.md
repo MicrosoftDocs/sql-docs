@@ -2,7 +2,7 @@
 title: "getTime Method (java.lang.String, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTime Method (java.lang.String, java.util.Calendar)

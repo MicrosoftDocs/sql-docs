@@ -26,7 +26,7 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 67
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Work with Multiple Versions and Instances of SQL Server

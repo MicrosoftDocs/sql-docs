@@ -2,7 +2,7 @@
 title: "supportsSchemasInDataManipulation Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # supportsSchemasInDataManipulation Method (SQLServerDatabaseMetaData)

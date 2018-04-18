@@ -2,7 +2,7 @@
 title: "Python Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "python"
@@ -16,7 +16,7 @@ ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Python SQL Driver

@@ -26,6 +26,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Configure Threshold Values for Cleansing and Matching
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to configure threshold values that will be used during the computer-assisted cleansing and matching activities in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

@@ -2,7 +2,7 @@
 title: "How to: Connect Using Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,7 +18,7 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 caps.latest.revision: 35
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # How to: Connect Using Windows Authentication

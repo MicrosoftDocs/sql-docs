@@ -2,7 +2,7 @@
 title: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)

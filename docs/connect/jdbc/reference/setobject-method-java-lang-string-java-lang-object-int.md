@@ -2,7 +2,7 @@
 title: "setObject Method (java.lang.String, java.lang.Object, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: a9a0c802-7851-4826-b173-87b0c0acb3a0
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setObject Method (java.lang.String, java.lang.Object, int)

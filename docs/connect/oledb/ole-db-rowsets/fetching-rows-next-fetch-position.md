@@ -3,7 +3,7 @@ title: "Next Fetch Position | Microsoft Docs"
 description: "Fetching rows - next fetch position"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-rowsets"
@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching Rows - Next Fetch Position

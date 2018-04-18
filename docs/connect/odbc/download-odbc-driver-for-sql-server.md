@@ -2,7 +2,7 @@
 title: "Download ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Download ODBC Driver for SQL Server

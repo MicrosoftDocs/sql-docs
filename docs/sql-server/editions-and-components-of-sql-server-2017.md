@@ -1,4 +1,4 @@
----
+﻿---
 title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2017"
@@ -39,8 +39,9 @@ ms.assetid:
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -399,5 +400,6 @@ For information about the Business Intelligence Client features supported by the
  [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
-  
-  
+ [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

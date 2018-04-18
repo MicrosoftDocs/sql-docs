@@ -1,4 +1,4 @@
----
+﻿---
 title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
 ms.date: "08/20/2015"
@@ -21,6 +21,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure SQL Database Catalog Views
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

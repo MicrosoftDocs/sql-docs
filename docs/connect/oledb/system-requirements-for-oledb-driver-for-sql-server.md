@@ -3,7 +3,7 @@ title: "System Requirements for OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Requirements for OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "oledb"
@@ -20,11 +20,13 @@ helpviewer_keywords:
   - "MSOLEDBSQL, system requirements"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # System Requirements for OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
   To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] such as MARS, you must have the following software installed:  
 
@@ -64,7 +66,7 @@ ms.workload: "Inactive"
 
  IDBInfo::GetKeywords will always return a keyword list that corresponds to the server version on the connection and is not affected by **DataTypeCompatibility**.  
 
-|Data type|OLE DB Driver for SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC, and<br /><br /> OLE DB Driver for SQL Server OLE DB applications with DataTypeCompatibility=80|  
+|Data type|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components, MDAC, and<br /><br /> OLE DB Driver for SQL Server OLE DB applications with DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|Image|  
@@ -78,5 +80,5 @@ ms.workload: "Inactive"
 |time|time|varchar|varchar|Varchar|  
 
 ## See Also  
- [OLE DB Driver for SQL Server Programming](../oledb/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)   
  [Installing OLE DB Driver for SQL Server](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

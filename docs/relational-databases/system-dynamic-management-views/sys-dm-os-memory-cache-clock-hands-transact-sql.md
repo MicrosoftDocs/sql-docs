@@ -2,7 +2,7 @@
 title: "sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "dmv's"

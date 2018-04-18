@@ -3,7 +3,7 @@ title: "Transactions | Microsoft Docs"
 description: "Transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-transactions"
@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Transactions
@@ -40,6 +40,6 @@ ms.workload: "Inactive"
 -   [Isolation Levels &#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

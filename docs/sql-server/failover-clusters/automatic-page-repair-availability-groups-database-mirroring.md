@@ -21,7 +21,7 @@ ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)

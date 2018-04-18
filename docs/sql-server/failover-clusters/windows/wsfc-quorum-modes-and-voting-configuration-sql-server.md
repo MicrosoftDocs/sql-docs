@@ -20,7 +20,7 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # WSFC Quorum Modes and Voting Configuration (SQL Server)

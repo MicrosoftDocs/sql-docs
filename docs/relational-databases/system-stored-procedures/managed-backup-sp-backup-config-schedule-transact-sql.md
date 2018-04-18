@@ -2,7 +2,7 @@
 title: "managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"
@@ -40,7 +40,8 @@ ms.workload: "Inactive"
   
 ```vb  
 EXEC managed_backup.sp_backup_config_schedule   
-    [@database_name = ] 'database_name'    ,[@scheduling_option = ] {'Custom' | 'System'}  
+    [@database_name = ] 'database_name'
+    ,[@scheduling_option = ] {'Custom' | 'System'}  
     ,[@full_backup_freq_type = ] {'Daily' | 'Weekly'}  
     ,[@days_of_week = ] 'days_of_the_week'  
     ,[@backup_begin_time = ] 'begin time of the backup window'  

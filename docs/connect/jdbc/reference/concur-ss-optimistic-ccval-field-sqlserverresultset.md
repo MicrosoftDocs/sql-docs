@@ -2,7 +2,7 @@
 title: "CONCUR_SS_OPTIMISTIC_CCVAL Field (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # CONCUR_SS_OPTIMISTIC_CCVAL Field (SQLServerResultSet)

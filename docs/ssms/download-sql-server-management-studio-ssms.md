@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/06/2018"
+ms.date: "04/17/2018"
 ms.prod: "sql-non-specified"
 ms.prod_service: "sql-tools"
 ms.service: ""
@@ -45,6 +45,9 @@ SSMS 17.x is the latest generation of *SQL Server Management Studio* and provide
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6](https://go.microsoft.com/fwlink/?linkid=870039)**
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.6 Upgrade Package (upgrades 17.x to 17.6)](https://go.microsoft.com/fwlink/?linkid=870041)**
+
+> [!WARNING]
+> There is a known issue where SSMS 17.6 becomes unstable and crashes when using [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md). If you use Maintenance Plans, do not install SSMS 17.6. Downgrade to SSMS 17.5 if you already installed 17.6 and this issue is affecting you. 
 
 **Version Information**
 
@@ -156,13 +159,9 @@ There is currently a known issue where SSMS 17.6 crashes when configuring the sc
 
 ## Feedback
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)  
-
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-
-
 
 ## See Also
 
@@ -170,3 +169,5 @@ There is currently a known issue where SSMS 17.6 crashes when configuring the sc
 - [SQL Server Management Studio documentation](sql-server-management-studio-ssms.md)
 - [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

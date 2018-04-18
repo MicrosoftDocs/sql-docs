@@ -3,7 +3,7 @@ title: "Parameter and Rowset Metadata | Microsoft Docs"
 description: "Parameter and rowset metadata"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-date-time"
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "metadata [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Metadata - Parameter and Rowset

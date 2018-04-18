@@ -1,22 +1,20 @@
----
+﻿---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-non-specified"
-ms.service: ""
-ms.component: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "server-general"
+ms.technology: supportability
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
+monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Server 2017 Release Notes
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

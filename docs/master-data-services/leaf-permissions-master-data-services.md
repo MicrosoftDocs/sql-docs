@@ -26,6 +26,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Leaf Permissions (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Leaf permissions apply to the attribute values for all leaf members of an entity.  
   
  For entities without explicit hierarchies enabled, assigning permission to **Leaf** is the same as assigning permission to the entity.  

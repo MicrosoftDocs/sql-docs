@@ -1,8 +1,8 @@
----
+﻿---
 title: "Transactions (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|language-elements"
@@ -20,6 +20,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Transactions (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

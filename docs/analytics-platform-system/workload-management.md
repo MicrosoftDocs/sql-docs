@@ -1,24 +1,18 @@
 ---
-title: "Workload Management (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-
+title: Workload management in Analytics Platform System | Microsoft Docs
+description: Workload management in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Workload Management
+
+# Workload management in Analytics Platform System
+
 SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
   
 For example, with the workload management techniques in SQL Server PDW, you could:  

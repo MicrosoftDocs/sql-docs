@@ -2,7 +2,7 @@
 title: "Understanding Java EE Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Understanding Java EE Support

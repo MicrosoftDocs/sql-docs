@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create an ActiveX Script Job Step | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -21,6 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an ActiveX Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "System Requirements for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,7 +18,7 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 caps.latest.revision: 93
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 
@@ -42,7 +42,7 @@ For information about how to download and install the latest stable PHP binaries
 |5.5|       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |5.4.32  |5.4.32  |
 
--   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Microsoft Drivers for PHP for SQL Server](http://www.microsoft.com/download/details.aspx?id=20098). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
+-   A version of the driver file must be in your PHP extension directory. See [Driver Versions](#driver-versions) for information about the different driver files.  To download the drivers, see [Download the Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md). For information on configuring the driver for the PHP, see [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md).
 
 -   A Web server is required. Your Web server must be configured to run PHP. For information about hosting PHP applications with IIS, see the [tutorial on PHP's web site](http://php.net/manual/fa/install.windows.iis.php).  
 

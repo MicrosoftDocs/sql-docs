@@ -3,7 +3,7 @@ title: "Table-Valued Parameters (OLE DB) | Microsoft Docs"
 description: "Table-Valued Parameters (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-table-valued-parameters"
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB)"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Table-Valued Parameters (OLE DB)
@@ -50,7 +50,7 @@ ms.workload: "Inactive"
 -   [OLE DB Table-Valued Parameter Type Support &#40;Properties&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)   
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

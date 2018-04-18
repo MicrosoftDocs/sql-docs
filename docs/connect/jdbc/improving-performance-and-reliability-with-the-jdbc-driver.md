@@ -3,7 +3,7 @@
 title: "Improving Performance and Reliability with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -17,7 +17,7 @@ ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Improving Performance and Reliability with the JDBC Driver

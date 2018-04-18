@@ -1,22 +1,13 @@
 ---
-title: "SQL Server Machine Learning Server (Standalone) and R Server (Standalone) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/22/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-vms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.author: "heidist"
-author: "HeidiSteen"
-manager: "cgronlun"
+title: SQL Server Machine Learning Server (Standalone) and R Server (Standalone) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # SQL Server Machine Learning Server (Standalone) and R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

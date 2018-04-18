@@ -3,7 +3,7 @@ title: "Sparse Columns Support (OLE DB) | Microsoft Docs"
 description: "Sparse columns support (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db"
@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Sparse Columns Support (OLE DB)
@@ -61,6 +61,6 @@ ms.workload: "Inactive"
 |ITableDefinition|There is no change to this interface for sparse columns or for **column_set** columns. Applications that have to make schema modifications must execute the appropriate [!INCLUDE[tsql](../../../includes/tsql-md.md)] directly.|  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

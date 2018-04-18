@@ -2,7 +2,7 @@
 title: "SQL Server Configuration Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "relational-databases-misc"

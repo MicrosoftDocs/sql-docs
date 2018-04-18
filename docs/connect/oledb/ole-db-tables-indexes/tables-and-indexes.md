@@ -3,7 +3,7 @@ title: "Tables and Indexes | Microsoft Docs"
 description: "Creating, altering, and droping tables and indexes using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-tables-indexes"
@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Tables and Indexes
@@ -57,7 +57,7 @@ ms.workload: "Inactive"
 -   [Dropping a SQL Server Index](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
 ## See Also  
- [OLE DB Driver for SQL Server &#40;OLE DB&#41;](../../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)   
+ [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  

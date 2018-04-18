@@ -27,6 +27,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Database Logins, Users, and Roles (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] includes logins, users, and roles that are automatically installed on the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] instance that hosts the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. These logins, users, and roles should not be modified.  
   
 ## Logins  

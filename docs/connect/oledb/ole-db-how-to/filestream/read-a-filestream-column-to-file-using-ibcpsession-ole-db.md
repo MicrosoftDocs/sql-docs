@@ -3,7 +3,7 @@ title: "Read a FILESTREAM Column to File Using IBCPSession (OLE DB) | Microsoft 
 description: "Read a FILESTREAM column to file using IBCPSession (OLE DB)"
 ms.custom: ""
 ms.date: "03/26/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "ole-db-how-to"
@@ -15,7 +15,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "reference"
 author: "pmasl"
 ms.author: "Pedro.Lopes"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 
   This sample reads a filestream column to a file using the IBCPSession interface and writes a format file.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support](../../../oledb/features/filestream-support.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  

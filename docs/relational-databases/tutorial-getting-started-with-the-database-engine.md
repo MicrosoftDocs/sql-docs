@@ -1,8 +1,8 @@
----
+﻿---
 title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/21/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "tutorial"
@@ -24,6 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Tutorial: Getting Started with the Database Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

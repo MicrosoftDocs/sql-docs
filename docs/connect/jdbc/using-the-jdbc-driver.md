@@ -2,7 +2,7 @@
 title: "Using the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 caps.latest.revision: 54
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Using the JDBC Driver

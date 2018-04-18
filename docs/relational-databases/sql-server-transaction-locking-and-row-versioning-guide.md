@@ -1,8 +1,8 @@
----
+﻿---
 title: "SQL Server Transaction Locking and Row Versioning Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "relational-databases-misc"
@@ -23,6 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Transaction Locking and Row Versioning Guide
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

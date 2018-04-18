@@ -30,7 +30,7 @@ The menu command **File** > **Preferences** > **Settings** (**Code** > **Prefere
 
 You can also open the user and workspace settings from the **Command Palette** (**Ctrl+Shift+P**) with **Preferences: Open User Settings** and **Preferences: Open Workspace Settings** or use the keyboard shortcut (**Ctrl+,**).
 
-The following example disables line numbers in the editor and configures lines of text to wrap automatically based on the size of the editor.
+The following example disables line numbers in the editor and configures lines of code to be indented automatically.
 
 ![Example Settings](media/settings/sample-settings.png)
 

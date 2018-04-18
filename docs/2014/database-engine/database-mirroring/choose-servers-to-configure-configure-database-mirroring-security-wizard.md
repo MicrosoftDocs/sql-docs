@@ -39,7 +39,7 @@ manager: "jhubbard"
  Select to configure security for the witness server (if present).  
   
 ## See Also  
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

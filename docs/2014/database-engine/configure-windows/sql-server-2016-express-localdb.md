@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  The SqlLocalDb utility can create new instances of `LocalDB`, start and stop an instance of `LocalDB`, and includes options to help you manage `LocalDB`.  For more information about the SqlLocalDb utility, see [SqlLocalDB Utility](../sqllocaldb-utility.md).  
   
- The instance collation for `LocalDB` is set to SQL_Latin1_General_CP1_CI_AS and cannot be changed. Database-level, column-level, and expression-level collations are supported normally. Contained databases follow the metadata and tempdb collations rules defined by [Contained Database Collations](../contained-database-collations.md).  
+ The instance collation for `LocalDB` is set to SQL_Latin1_General_CP1_CI_AS and cannot be changed. Database-level, column-level, and expression-level collations are supported normally. Contained databases follow the metadata and tempdb collations rules defined by [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
 ### Restrictions  
  `LocalDB` cannot be a merge replication subscriber.  

@@ -17,4 +17,5 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Management Objects
-   
+
+[See SQL Server Management Objects Programming Guide](sql-server-management-objects-smo-programming-guide.md).

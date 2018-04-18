@@ -72,7 +72,7 @@ manager: "jhubbard"
  Provide a password to use when authenticating. This option is not available.  
   
 ## See Also  
- [Database Mail](../../2014/database-engine/database-mail.md)   
+ [Database Mail](../relational-databases/database-mail/database-mail.md)   
  [sp_notify_operator &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)  
   
   

@@ -80,13 +80,13 @@ manager: "jhubbard"
   
  [Transaction Log Disk Space for Index Operations](../../2014/database-engine/transaction-log-disk-space-for-index-operations.md)  
   
- [Estimate the Size of a Table](../../2014/database-engine/estimate-the-size-of-a-table.md)  
+ [Estimate the Size of a Table](../relational-databases/databases/estimate-the-size-of-a-table.md)  
   
- [Estimate the Size of a Clustered Index](../../2014/database-engine/estimate-the-size-of-a-clustered-index.md)  
+ [Estimate the Size of a Clustered Index](../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)  
   
- [Estimate the Size of a Nonclustered Index](../../2014/database-engine/estimate-the-size-of-a-nonclustered-index.md)  
+ [Estimate the Size of a Nonclustered Index](../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)  
   
- [Estimate the Size of a Heap](../../2014/database-engine/estimate-the-size-of-a-heap.md)  
+ [Estimate the Size of a Heap](../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
 ## Related Content  
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

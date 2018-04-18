@@ -32,7 +32,7 @@ manager: "jhubbard"
 -   Contact the disk manufacturer for the latest driver updates.  
   
 ## For More Information  
- [MSSQLSERVER_825](../../2014/database-engine/mssqlserver-825.md)  
+ [MSSQLSERVER_825](../relational-databases/errors-events/mssqlserver-825-database-engine-error.md)  
   
  [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
   

@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Synonym support for multiple names of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects. For more information, see [Synonyms &#40;Database Engine&#41;](../../../2014/database-engine/synonyms-database-engine.md).  
   
--   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Mail](../../../2014/database-engine/database-mail.md).  
+-   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
 -   Registered Servers support for registering connection information. For more information, see [Register Servers](../../../2014/database-engine/register-servers.md).  
   

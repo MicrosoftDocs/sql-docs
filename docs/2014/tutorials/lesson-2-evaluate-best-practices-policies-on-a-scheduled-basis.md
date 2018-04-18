@@ -40,6 +40,6 @@ manager: "jhubbard"
 -   [Deploy Scheduled Policies to Multiple Instances](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
 ## See Also  
- [Administer Multiple Servers Using Central Management Servers](../../2014/database-engine/administer-multiple-servers-using-central-management-servers.md)  
+ [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

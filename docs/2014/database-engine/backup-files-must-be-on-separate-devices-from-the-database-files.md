@@ -27,9 +27,9 @@ manager: "jhubbard"
 >  This policy cannot detect separate physical devices through mount points.  
   
 ## For More Information  
- [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md)  
+ [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
   
- [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)  
+ [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

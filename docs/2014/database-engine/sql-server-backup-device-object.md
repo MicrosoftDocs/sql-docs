@@ -28,7 +28,7 @@ manager: "jhubbard"
 |**Device Throughput Bytes/sec**|Throughput of read and write operations (in bytes per second) for a backup device used when backing up or restoring databases. This counter exists only while the backup or restore operation is executing.|  
   
 ## See Also  
- [Backup Devices &#40;SQL Server&#41;](../../2014/database-engine/backup-devices-sql-server.md)   
+ [Backup Devices &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)  
   
   

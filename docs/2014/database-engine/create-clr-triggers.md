@@ -26,12 +26,12 @@ manager: "jhubbard"
   
 -   Define the trigger as a class in a .NET Framework-supported language. For more information about how to program triggers in the CLR, see [CLR Triggers](../../2014/database-engine/dev-guide/clr-triggers.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] using the appropriate language compiler.  
   
--   Register the assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../2014/database-engine/dev-guide/assemblies-database-engine.md).  
+-   Register the assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../relational-databases/clr-integration/assemblies-database-engine.md).  
   
 -   Create the trigger that references the registered assembly.  
   
 > [!NOTE]  
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the `SqlTrigger` attribute. For more information, see [Deploying CLR Database Objects](../../2014/database-engine/dev-guide/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR triggers in the database for all methods annotated with the `SqlTrigger` attribute. For more information, see [Deploying CLR Database Objects](../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
 >  The ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unless the [clr enabled Option](configure-windows/clr-enabled-server-configuration-option.md) is enabled using [sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 ## See Also  
  [DML Triggers](../../2014/database-engine/dml-triggers.md)   
- [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md)   
- [Data Access from CLR Database Objects](../../2014/database-engine/dev-guide/data-access-from-clr-database-objects.md)  
+ [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
+ [Data Access from CLR Database Objects](../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

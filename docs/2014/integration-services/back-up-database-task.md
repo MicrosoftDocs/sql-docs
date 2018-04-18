@@ -24,7 +24,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Back Up Database Task
-  The Back Up Database task performs different types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database backups. For more information, see [Back Up and Restore of SQL Server Databases](../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md).  
+  The Back Up Database task performs different types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database backups. For more information, see [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  By using the Back Up Database task, a package can back up a single database or multiple databases. If the task backs up only a single database, you can choose the backup component: the database, or its files and filegroups.  
   

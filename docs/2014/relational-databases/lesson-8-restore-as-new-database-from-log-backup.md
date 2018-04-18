@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   You have created a database in the source machine.  
   
--   You have created a backup of your database (.bak) in Windows Azure Storage by using the [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../database-engine/sql-server-backup-and-restore-with-windows-azure-blob-storage-service.md) feature. Note that you will need to create another SQL Server Credential in this step. This credential uses storage account keys.  
+-   You have created a backup of your database (.bak) in Windows Azure Storage by using the [SQL Server Backup and Restore with Windows Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) feature. Note that you will need to create another SQL Server Credential in this step. This credential uses storage account keys.  
   
 -   You have a Windows Azure Storage account.  
   

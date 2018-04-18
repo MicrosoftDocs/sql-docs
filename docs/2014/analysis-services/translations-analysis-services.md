@@ -76,7 +76,7 @@ manager: "mblythe"
   
  Translated captions are added to the model manually using your keyboard or copy-paste, but for dimension attribute members, you can obtain translated values from an external database. Specifically, the `CaptionColumn` property of an attribute can be bound to a column in a data source view.  
   
- At the attribute level, you can override collation settings, for example you might want to adjust width-sensitivity or use a binary sort for a specific attribute. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], collation is exposed where data bindings are defined. Because you are binding a dimension attribute translation to a different source column in the DSV, a collation setting is available so that you can specify the collation used by the source column. See [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md) for details about column collation in the relational database.  
+ At the attribute level, you can override collation settings, for example you might want to adjust width-sensitivity or use a binary sort for a specific attribute. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], collation is exposed where data bindings are defined. Because you are binding a dimension attribute translation to a different source column in the DSV, a collation setting is available so that you can specify the collation used by the source column. See [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) for details about column collation in the relational database.  
   
 1.  In Solution Explorer, double-click the dimension name to open dimension designer.  
   
@@ -117,7 +117,7 @@ manager: "mblythe"
 ## See Also  
  [Globalization scenarios for Analysis Services Multiidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
- [Set or Change the Column Collation](../../2014/database-engine/set-or-change-the-column-collation.md)   
+ [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

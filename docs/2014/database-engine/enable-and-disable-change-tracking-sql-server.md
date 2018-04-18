@@ -34,7 +34,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- You can also enable change tracking in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../2014/database-engine/database-properties-changetracking-page.md) dialog box.  
+ You can also enable change tracking in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
   
  You can specify the CHANGE_RETENTION and AUTO_CLEANUP options when you enable change tracking, and you can change the values at any time after change tracking is enabled.  
   
@@ -59,7 +59,7 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- You can also enable change tracking for a table in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../../2014/database-engine/database-properties-changetracking-page.md) dialog box.  
+ You can also enable change tracking for a table in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the [Database Properties &#40;ChangeTracking Page&#41;](../relational-databases/databases/database-properties-changetracking-page.md) dialog box.  
   
  When the TRACK_COLUMNS_UPDATED option is set to ON, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] stores extra information about which columns were updated to the internal change tracking table. Column tracking can enable an application to synchronize only those columns that were updated. This can improve efficiency and performance. However, because maintaining column tracking information adds some extra storage overhead, this option is set to OFF by default.  
   
@@ -81,7 +81,7 @@ DISABLE CHANGE_TRACKING;
 ```  
   
 ## See Also  
- [Database Properties &#40;ChangeTracking Page&#41;](../../2014/database-engine/database-properties-changetracking-page.md)   
+ [Database Properties &#40;ChangeTracking Page&#41;](../relational-databases/databases/database-properties-changetracking-page.md)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   

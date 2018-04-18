@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Tutorial: SQL Server Data Files in Windows Azure Storage service
   Welcome to the  SQL Server Data Files in Windows Azure Storage Service tutorial. This tutorial helps you understand how to store SQL Server data files in the Windows Azure Blob storage service directly.  
   
- SQL Server integration support for the Windows Azure Blob storage service is a SQL Server 2014 enhancement. For an overview of the functionality and benefits of using this functionality, see [SQL Server Data Files in Windows Azure](../database-engine/sql-server-data-files-in-windows-azure.md).  
+ SQL Server integration support for the Windows Azure Blob storage service is a SQL Server 2014 enhancement. For an overview of the functionality and benefits of using this functionality, see [SQL Server Data Files in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  
   
 ## What you will learn  
  This tutorial shows you how to store SQL Server Data Files in Windows Azure Storage service in multiple lessons. Each lesson is focused on a specific task. First, you will learn how to create a storage account and a container in Windows Azure. Then, you will learn how to create a SQL Server credential to be able to integrate SQL Server with Windows Azure Storage. Then, you will create a database in Windows Azure Storage directly. In addition, the tutorial will demonstrate encryption, migration, and backup and restore scenarios.  
@@ -53,6 +53,6 @@ manager: "jhubbard"
  In this lesson, you restore a database from Windows Azure Storage using RESTORE Database MOVE option.  
   
 ## See Also  
- [SQL Server Data Files in Windows Azure](../database-engine/sql-server-data-files-in-windows-azure.md)  
+ [SQL Server Data Files in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md)  
   
   

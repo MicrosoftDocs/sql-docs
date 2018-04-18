@@ -66,7 +66,7 @@ manager: "jhubbard"
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
  [CLOSE &#40;Transact-SQL&#41;](~/t-sql/language-elements/close-transact-sql.md)   
- [Cursors](../../../2014/database-engine/cursors.md)   
+ [Cursors](../../relational-databases/cursors.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](~/t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-cursor-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/fetch-transact-sql.md)   

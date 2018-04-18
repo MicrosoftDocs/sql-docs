@@ -48,6 +48,6 @@ GO
 ```  
   
 ## See Also  
- [Database Mail](../database-mail.md)  
+ [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

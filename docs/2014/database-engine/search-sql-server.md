@@ -26,6 +26,6 @@ manager: "jhubbard"
  Identifies the key phrases in text or documents, discovers similar or related documents, and provides information to explain how documents are similar or related.  
   
 ## See Also  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../2014/database-engine/binary-large-object-blob-data-sql-server.md)  
+ [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

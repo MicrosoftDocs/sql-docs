@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ## Containment  
  Enable Contained Databases  
- Indicates if this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits contained databases. When **True**, a contained database can be created, restored, or attached. When **False**, a contained database cannot be created, restored, or attached to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Changing the containment property can have an impact on the security of the database. Enabling contained databases lets database owners grant access to this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabling contained databases can prevent users from connecting. To understand the impact of the containment property, see [Contained Databases](../contained-databases.md) and [Security Best Practices with Contained Databases](../security-best-practices-with-contained-databases.md).  
+ Indicates if this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits contained databases. When **True**, a contained database can be created, restored, or attached. When **False**, a contained database cannot be created, restored, or attached to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Changing the containment property can have an impact on the security of the database. Enabling contained databases lets database owners grant access to this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Disabling contained databases can prevent users from connecting. To understand the impact of the containment property, see [Contained Databases](../../relational-databases/databases/contained-databases.md) and [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## FILESTREAM  
  **FILESTREAM Access Level**  
@@ -44,7 +44,7 @@ manager: "jhubbard"
  When you enable FILESTREAM for the first time, you might have to restart the computer to configure drivers.  
   
  **FILESTREAM Share Name**  
- Displays the read-only name of the FILESTREAM share that was selected during setup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../filestream-sql-server.md).  
+ Displays the read-only name of the FILESTREAM share that was selected during setup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ## Miscellaneous  
  **Allow Triggers to Fire Others**  

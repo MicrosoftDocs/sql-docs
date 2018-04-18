@@ -21,6 +21,6 @@ manager: "jhubbard"
   This topic will be updated with corrective action for validation rules in Data-tier Application Wizards.  
   
 ## Corrective Action  
- For more information about corrective action in this release, see [Data-tier Applications](../../2014/database-engine/data-tier-applications.md).  
+ For more information about corrective action in this release, see [Data-tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md).  
   
   

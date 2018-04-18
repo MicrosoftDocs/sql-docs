@@ -26,7 +26,7 @@ manager: "jhubbard"
  SQL Mail runs in-process to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service. If SQL Mail goes down, so does the server. Database Mail runs outside [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a separate process, is scalable, and does not require Extended MAPI client components to be installed on the production server.  
   
 ## For More Information  
- [Database Mail](../../2014/database-engine/database-mail.md)  
+ [Database Mail](../relational-databases/database-mail/database-mail.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

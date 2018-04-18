@@ -789,7 +789,7 @@
 ##### [Add Cube Dimension Dialog Box](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)
 ##### [Add Reference Dialog Box](add-reference-dialog-box-analysis-services-multidimensional-data.md)
 ##### [Add Table Dialog Box](add-table-dialog-box-analysis-services-multidimensional-data.md)
-##### [Add/Remove Tables Dialog Box](add-remove-tables-dialog-box-analysis-services-multidimensional-data.md)
+##### [Add/Remove Tables Dialog Box](../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)
 ##### [Analysis Server Properties Dialog Box](analysis-server-properties-dialog-box-analysis-services.md)
 ##### [Analysis Services MDX Query Designer (PowerPivot)](analysis-services-mdx-query-designer-powerpivot.md)
 ##### [Assembly Properties Dialog Box](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)

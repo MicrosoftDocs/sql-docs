@@ -93,7 +93,7 @@ manager: "jhubbard"
   
     ```  
   
-     For more information on creating a certificate for encryption, see the **Create a Backup Certificate** step in [Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md).  
+     For more information on creating a certificate for encryption, see the **Create a Backup Certificate** step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Enable and configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for AGTestDB on Node2:** Start SQL Server Management Studio and connect to the instance on Node2 where the availability database  is installed. From the query window run the following statement after you modify the values for the database name, storage URL, SQL Credential and retention period per your requirements:  
   
@@ -120,13 +120,13 @@ manager: "jhubbard"
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     You should see that Admin, Operational  and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable the debug events, but these channels include informational and debug events that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses to detect issues and solve them. For more information, see [Monitor SQL Server Managed Backup to Windows Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
+     You should see that Admin, Operational  and Analytical channel events are enabled by default and cannot be disabled. This should be sufficient to monitor the events that require manual intervention.  You can enable the debug events, but these channels include informational and debug events that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses to detect issues and solve them. For more information, see [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 9. **Enable and Configure Notification for Health Status:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has a stored procedure that creates an agent job to send out e-mail notifications of errors or warnings that may require attention.  To receive such notifications, you must enable run the stored procedure which creates a SQL Server Agent Job. The following steps describe the process to enable and configure e-mail notifications:  
   
-    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../../2014/database-engine/configure-database-mail.md).  
+    1.  Setup Database Mail if it is not already enabled on the instance. For more information, see [Configure Database Mail](../relational-databases/database-mail/database-mail.md).  
   
-    2.  Configure SQL Server Agent Notification to use Database Mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../../2014/database-engine/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Configure SQL Server Agent Notification to use Database Mail. For more information, see [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
     3.  **Enable e-mail notifications to receive backup errors and warnings:** From the query window, run the following Transact-SQL statements:  
   
@@ -137,7 +137,7 @@ manager: "jhubbard"
   
         ```  
   
-         For more information and a full sample script see [Monitor SQL Server Managed Backup to Windows Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
+         For more information and a full sample script see [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 10. **View backup files in the Windows Azure Storage Account:** Connect to the storage account from SQL Server Management Studio or the Azure Management Portal. You will see a container for the instance of SQL Server that hosts the database you configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. You may also see a database and a log backup within 15 minutes of enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database.  
   

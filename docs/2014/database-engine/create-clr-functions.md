@@ -23,14 +23,14 @@ manager: "jhubbard"
   
  Creating a CLR function in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] involves the following steps:  
   
--   Define the function as a static method of a class in a language supported by the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. For more information about how to program functions in the common language runtime, see [CLR User-Defined Functions](../../2014/database-engine/dev-guide/clr-user-defined-functions.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] by using the appropriate language compiler.  
+-   Define the function as a static method of a class in a language supported by the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. For more information about how to program functions in the common language runtime, see [CLR User-Defined Functions](../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md). Then, compile the class to build an assembly in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] by using the appropriate language compiler.  
   
--   Register the assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../../2014/database-engine/dev-guide/assemblies-database-engine.md).  
+-   Register the assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using the CREATE ASSEMBLY statement. For more information about assemblies in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Assemblies &#40;Database Engine&#41;](../relational-databases/clr-integration/assemblies-database-engine.md).  
   
 -   Create the function that references the registered assembly by using the [CREATE FUNCTION](~/t-sql/statements/create-function-transact-sql.md) statement.  
   
 > [!NOTE]  
->  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR functions in the database for all methods annotated with the `SqlFunction` attribute. For more information, see [Deploying CLR Database Objects](../../2014/database-engine/dev-guide/deploying-clr-database-objects.md).  
+>  Deploying a SQL Server Project in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] registers an assembly in the database that was specified for the project. Deploying the project also creates CLR functions in the database for all methods annotated with the `SqlFunction` attribute. For more information, see [Deploying CLR Database Objects](../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
 > [!NOTE]  
 >  The ability of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to execute CLR code is off by default. You can create, alter, and drop database objects that reference managed code modules, but these references will not execute in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unless the [clr enabled Option](configure-windows/clr-enabled-server-configuration-option.md) is enabled by using [sp_configure (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -51,13 +51,13 @@ manager: "jhubbard"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](~/t-sql/statements/create-function-transact-sql.md)  
   
 ## Accessing Native Code  
- CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](http://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../2014/database-engine/dev-guide/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
+ CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](http://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
   
 ## See Also  
  [Create User-defined Functions &#40;Database Engine&#41;](../../2014/database-engine/create-user-defined-functions-database-engine.md)   
  [Create User-defined Aggregates](../../2014/database-engine/create-user-defined-aggregates.md)   
  [Execute User-defined Functions](../../2014/database-engine/execute-user-defined-functions.md)   
  [View User-defined Functions](../../2014/database-engine/view-user-defined-functions.md)   
- [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../2014/database-engine/dev-guide/common-language-runtime-clr-integration-programming-concepts.md)  
+ [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

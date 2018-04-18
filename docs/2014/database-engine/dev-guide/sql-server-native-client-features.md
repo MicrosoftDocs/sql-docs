@@ -64,7 +64,7 @@ manager: "jhubbard"
  [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-sql-server-native-client.md)  
  Discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support for the table-valued parameters.  
   
- [Large CLR User-Defined Types](../../../2014/database-engine/dev-guide/large-clr-user-defined-types.md)  
+ [Large CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Discusses support for large common language runtime (CLR) user-defined types (UDTs).  
   
  [FILESTREAM Support](../../../2014/database-engine/dev-guide/filestream-support.md)  

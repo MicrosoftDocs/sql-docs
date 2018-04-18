@@ -54,6 +54,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Cursors](../../2014/database-engine/cursors.md)  
+ [Cursors](../relational-databases/cursors.md)  
   
   

@@ -34,7 +34,7 @@ manager: "jhubbard"
  Click to configure security without a witness.  
   
 ## See Also  
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)  
   

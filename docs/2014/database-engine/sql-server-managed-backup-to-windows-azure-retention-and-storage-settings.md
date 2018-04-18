@@ -18,7 +18,7 @@ manager: "jhubbard"
 # SQL Server Managed Backup to Windows Azure - Retention and Storage Settings
   This topic describes the basic steps to configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a database and to configure default settings for the instance. The topic also describes the steps necessary to pause and resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] services for the instance.  
   
- For a complete walkthrough of setting up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] see [Setting up SQL Server Managed Backup to Windows Azure](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure.md) and [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ For a complete walkthrough of setting up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] see [Setting up SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  
   
@@ -35,7 +35,7 @@ manager: "jhubbard"
     > [!WARNING]  
     >  If SQL Server Agent is stopped for a period of time and then restarted, you may see an increased backup activity depending on the length of time elapsed between the stop and start of SQL Agent, and there might be a backlog of log backups waiting to run. Consider configuring SQL Server Agent to start automatically on start up.  
   
--   A Windows Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../../2014/database-engine/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+-   A Windows Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using ‘machine name-instance name’ format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 -   SQL Credential used to authenticate to the Windows Azure storage account.  
   
--   Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../../2014/database-engine/backup-encryption.md).  
+-   Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for database level configuration is only supported through Transact-SQL.  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  The retention period can be set to any value from 1 to 30 days.  
     >   
-    >  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md).  
+    >  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
      For more information on this stored procedure, see [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)  
   
@@ -139,7 +139,7 @@ manager: "jhubbard"
   
 -   SQL Credential used to authenticate to the Windows Azure storage account.  
   
--   The encryption option. Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../../2014/database-engine/backup-encryption.md).  
+-   The encryption option. Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  Once enabled these settings are persisted. If you are changing the configuration, only the database name and the setting you want to change is required. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] retains the existing values when not specified.  
   
@@ -173,7 +173,7 @@ GO
 > [!IMPORTANT]  
 >  The retention period can be set to any value from 1 to 30 days.  
 >   
->  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../../2014/database-engine/create-an-encrypted-backup.md).  
+>  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
  To view the default configuration settings for the instance, use the following query:  
   

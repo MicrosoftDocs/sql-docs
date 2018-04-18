@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 |Login|Description|  
 |-----------|-----------------|  
-|`mds_dlp_login`|Allows creation of UNSAFE assemblies.<br /><br /> -Disabled login with randomly-generated password.<br /><br /> -Maps to dbo for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.<br /><br /> -For msdb, mds_clr_user maps to this login.<br /><br /> <br /><br /> For more information, see [Creating an Assembly](../../2014/database-engine/dev-guide/creating-an-assembly.md).|  
+|`mds_dlp_login`|Allows creation of UNSAFE assemblies.<br /><br /> -Disabled login with randomly-generated password.<br /><br /> -Maps to dbo for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.<br /><br /> -For msdb, mds_clr_user maps to this login.<br /><br /> <br /><br /> For more information, see [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Enabled login used for notifications.<br /><br /> For msdb and the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, mds_email_user maps to this login.|  
   
 ## msdb Users  

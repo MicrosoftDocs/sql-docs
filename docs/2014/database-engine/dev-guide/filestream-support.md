@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # FILESTREAM Support
-  FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../2014/database-engine/filestream-sql-server.md).  
+  FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
  When a database connection is opened, `@@TEXTSIZE` will be set to -1 ("unlimited"), by default.  
   
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   [FILESTREAM Support &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/filestream-support-odbc.md)  
   
--   [Access FILESTREAM Data with OpenSqlFilestream](../../../2014/database-engine/access-filestream-data-with-opensqlfilestream.md)  
+-   [Access FILESTREAM Data with OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## Querying for FILESTREAM Columns  
  Schema rowsets in OLE DB will not report whether a column is a FILESTREAM column. ITableDefinition in OLE DB cannot be used to create a FILESTREAM column.  

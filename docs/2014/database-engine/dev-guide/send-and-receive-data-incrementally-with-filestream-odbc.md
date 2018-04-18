@@ -22,7 +22,7 @@ manager: "jhubbard"
  For more information about the FILESTREAM feature, see [FILESTREAM Support &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/filestream-support-odbc.md).  
   
 ## Example  
- Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../../2014/database-engine/enable-and-configure-filestream.md)).  
+ Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a database used by this sample. Your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must have write access to run this script (for example, log on as a local system account).  
   

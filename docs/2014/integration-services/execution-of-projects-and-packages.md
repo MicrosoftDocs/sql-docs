@@ -57,6 +57,6 @@ manager: "jhubbard"
   
 ## See Also  
  [dtexec Utility](../../2014/integration-services/dtexec-utility.md)   
- [SQL Server Import and Export Wizard](../../2014/integration-services/sql-server-import-and-export-wizard.md)  
+ [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
   

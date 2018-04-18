@@ -252,6 +252,6 @@ $udf.Create()
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
- [Database Files and Filegroups](../../../2014/database-engine/database-files-and-filegroups.md)  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

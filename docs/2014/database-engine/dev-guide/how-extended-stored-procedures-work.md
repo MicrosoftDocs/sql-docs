@@ -34,6 +34,6 @@ manager: "jhubbard"
 4.  The extended stored procedure passes result sets and return parameters back to the server by through the Extended Stored Procedure API.  
   
 ## See Also  
- [Database Engine Extended Stored Procedure Programming](../../../2014/database-engine/dev-guide/database-engine-extended-stored-procedure-programming.md)  
+ [Database Engine Extended Stored Procedure Programming](../../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
   

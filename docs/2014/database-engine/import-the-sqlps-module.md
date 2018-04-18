@@ -61,8 +61,8 @@ Import-Module “sqlps” -DisableNameChecking
 
   
 ## See Also  
- [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)   
- [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [Use the Database Engine cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
   
   

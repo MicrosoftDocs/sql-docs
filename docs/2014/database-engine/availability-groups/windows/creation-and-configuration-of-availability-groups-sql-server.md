@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [Create an Availability Group &#40;SQL Server PowerShell&#41;](create-an-availability-group-sql-server-powershell.md)  
+-   [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

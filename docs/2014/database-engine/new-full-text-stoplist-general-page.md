@@ -40,7 +40,7 @@ manager: "jhubbard"
  The new stoplist will not contain any stopwords.  
   
  **Create from the system stoplist**  
- The new stoplist is created from the stoplist that exists by default in the [Resource database](../../2014/database-engine/resource-database.md).  
+ The new stoplist is created from the stoplist that exists by default in the [Resource database](../relational-databases/databases/resource-database.md).  
   
  **Create from an existing full-text stoplist**  
  The new stoplist is created by copying an existing stoplist.  

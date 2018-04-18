@@ -30,7 +30,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  For a format file to work with a Unicode character data file, all the input fields must be Unicode text strings (that is, either fixed-size or character-terminated Unicode strings).  
   
- The `sql_variant` data that is stored in a Unicode character-format data file operates in the same way it operates in a character-format data file, except that the data is stored as `nchar` instead of `char` data. For more information about character format, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+ The `sql_variant` data that is stored in a Unicode character-format data file operates in the same way it operates in a character-format data file, except that the data is stored as `nchar` instead of `char` data. For more information about character format, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  To use a field or row terminator other than the default that is provided with Unicode character format, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md).  
   
@@ -126,6 +126,6 @@ GO
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
- [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

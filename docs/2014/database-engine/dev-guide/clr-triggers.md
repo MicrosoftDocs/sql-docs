@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   Access information about database objects affected by the execution of DDL statements.  
   
- These capabilities are provided inherently in the query language, or by the `SqlTriggerContext` class. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../../2014/database-engine/dev-guide/overview-of-clr-integration.md).  
+ These capabilities are provided inherently in the query language, or by the `SqlTriggerContext` class. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## Using the SqlTriggerContext Class  
  The `SqlTriggerContext` class cannot be publicly constructed and can only be obtained by accessing the `SqlContext.TriggerContext` property within the body of a CLR trigger. The `SqlTriggerContext` class can be obtained from the active `SqlContext` by calling the `SqlContext.TriggerContext` property:  
@@ -659,7 +659,7 @@ DROP TABLE Table1;
  [DML Triggers](../../../2014/database-engine/dml-triggers.md)   
  [DDL Triggers](../../../2014/database-engine/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](~/t-sql/language-elements/try-catch-transact-sql.md)   
- [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../../2014/database-engine/dev-guide/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Building Database Objects with Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](~/t-sql/functions/eventdata-transact-sql.md)  
   
   

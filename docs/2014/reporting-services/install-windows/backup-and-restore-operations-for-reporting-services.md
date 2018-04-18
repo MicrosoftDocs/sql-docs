@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   You can use different backup schedules for each database. The only reason to backup the **reportservertempdb** is to avoid having to recreate it if there is a hardware failure. In the event of hardware failure, it is not necessary to recover the data in **reportservertempdb**, but you do need the table structure. If you lose **reportservertempdb**, the only way to get it back is to recreate the report server database. If you recreate the **reportservertempdb**, it is important that it have the same name as the primary report server database.  
   
- For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases, see [Back Up and Restore of SQL Server Databases](../../database-engine/back-up-and-restore-of-sql-server-databases.md).  
+ For more information about backup and recovery of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 > [!IMPORTANT]  
 >  If your [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server is in SharePoint mode, there are additional databases to be concerned with, including SharePoint configuration databases and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] alerting database. In SharePoint mode, three databases are created for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. The **reportserver**, **reportservertempdb**, and **dataalerting** databases. For more information see [Backup and Restore Reporting Services SharePoint Service Applications](../backup-and-restore-reporting-services-sharepoint-service-applications.md)  
@@ -84,7 +84,7 @@ manager: "jhubbard"
  [Report Server Database &#40;SSRS Native Mode&#41;](../report-server-database-ssrs-native-mode.md)   
  [Reporting Services Configuration Files](../reporting-services-configuration-files.md)   
  [rskeymgmt Utility &#40;SSRS&#41;](../rskeymgmt-utility-ssrs.md)   
- [Copy Databases with Backup and Restore](../../database-engine/copy-databases-with-backup-and-restore.md)   
+ [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Administer a Report Server Database &#40;SSRS Native Mode&#41;](../administer-a-report-server-database-ssrs-native-mode.md)   
  [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   

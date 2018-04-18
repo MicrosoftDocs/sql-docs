@@ -204,7 +204,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [Create an Availability Group &#40;SQL Server PowerShell&#41;](create-an-availability-group-sql-server-powershell.md)  
+-   [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   

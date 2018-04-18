@@ -31,17 +31,17 @@ manager: "jhubbard"
 >  The recommended method for scheduling backups is a database maintenance plan.  
   
 ## For More Information  
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../2014/database-engine/back-up-and-restore-of-system-databases-sql-server.md)  
+ [Back Up and Restore of System Databases &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Recovery Models &#40;SQL Server&#41;](../../2014/database-engine/recovery-models-sql-server.md)  
+ [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
- [Create a Differential Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-differential-database-backup-sql-server.md)  
+ [Create a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- [Create a Full Database Backup &#40;SQL Server&#41;](../../2014/database-engine/create-a-full-database-backup-sql-server.md)  
+ [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
  [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)  
   
- [Transaction Log Backups &#40;SQL Server&#41;](../../2014/database-engine/transaction-log-backups-sql-server.md)  
+ [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   
- [Administer Multiple Servers Using Central Management Servers](../../2014/database-engine/administer-multiple-servers-using-central-management-servers.md)  
+ [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

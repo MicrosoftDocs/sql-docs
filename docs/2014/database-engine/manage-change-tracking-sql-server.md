@@ -102,7 +102,7 @@ sp_spaceused 'sys.syscommittab'
 ## See Also  
  [Track Data Changes &#40;SQL Server&#41;](../../2014/database-engine/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)   
- [Database Properties &#40;ChangeTracking Page&#41;](../../2014/database-engine/database-properties-changetracking-page.md)   
+ [Database Properties &#40;ChangeTracking Page&#41;](../relational-databases/databases/database-properties-changetracking-page.md)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   

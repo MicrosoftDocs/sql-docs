@@ -797,7 +797,7 @@
 ##### [rsProcessingError - Reporting Services Error](rsprocessingerror-reporting-services-error.md)
 ##### [rsServerConfigurationError - Reporting Services Error](rsserverconfigurationerror-reporting-services-error.md)
 ##### [rrRenderingError - Reporting Services Error](rrrenderingerror-reporting-services-error.md)
-##### [Report Server Windows Service (MSSQLServer) 107](report-server-windows-service-mssqlserver-107.md)
+##### [Report Server Windows Service (MSSQLServer) 107](../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)
 ### [Feature Reference](feature-reference-reporting-services.md)
 #### [Device Information Settings for Rendering Extensions](device-information-settings-for-rendering-extensions-reporting-services.md)
 ##### [ATOM Device Information Settings](atom-device-information-settings.md)

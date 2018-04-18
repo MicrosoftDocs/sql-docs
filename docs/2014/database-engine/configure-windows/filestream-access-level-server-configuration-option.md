@@ -32,6 +32,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Engine Configuration - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)   
- [Enable and Configure FILESTREAM](../enable-and-configure-filestream.md)  
+ [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   

@@ -267,7 +267,7 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
--   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
+-   [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
 -   [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

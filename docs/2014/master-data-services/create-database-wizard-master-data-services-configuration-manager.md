@@ -32,7 +32,7 @@ manager: "jhubbard"
 |**Test Connection**|Verify that the specified user account can connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and that the account has permission to create a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database for that instance. If you do not click **Test Connection**, the connection will be tested when you click **Next**.|  
   
 ## Database  
- Specify a database name and collation options for the new database. Collations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types such as char and varchar dictate the code page and corresponding characters that can be represented for that data type. For more information about database collation, see [Collation and Unicode Support](../../2014/database-engine/collation-and-unicode-support.md).  
+ Specify a database name and collation options for the new database. Collations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types such as char and varchar dictate the code page and corresponding characters that can be represented for that data type. For more information about database collation, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 |Control Name|Description|  
 |------------------|-----------------|  

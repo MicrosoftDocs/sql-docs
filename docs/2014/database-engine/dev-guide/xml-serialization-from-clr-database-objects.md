@@ -39,7 +39,7 @@ manager: "jhubbard"
  For information on data types that are not supported by XMLSerializer, see XML Schema Binding Support in the .NET Framework in the .NET Framework documentation.  
   
 ## See Also  
- [Data Access from CLR Database Objects](../../../2014/database-engine/dev-guide/data-access-from-clr-database-objects.md)   
+ [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](~/t-sql/statements/create-assembly-transact-sql.md)  
   
   

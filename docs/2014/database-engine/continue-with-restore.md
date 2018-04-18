@@ -33,9 +33,9 @@ manager: "jhubbard"
  Displays the backup set description.  
   
 ## See Also  
- [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../../2014/database-engine/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
- [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../../2014/database-engine/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
- [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../2014/database-engine/restore-a-database-backup-sql-server-management-studio.md)   
- [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../2014/database-engine/restore-a-transaction-log-backup-sql-server.md)  
+ [View the Contents of a Backup Tape or File &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+ [View the Properties and Contents of a Logical Backup Device &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
+ [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
+ [Restore a Transaction Log Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
   

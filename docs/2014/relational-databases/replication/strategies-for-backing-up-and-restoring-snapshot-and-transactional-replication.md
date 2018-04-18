@@ -344,7 +344,7 @@ manager: "jhubbard"
 2.  Make sure that the database is consistent with the publication database with regard to replication configuration and settings.  
   
 ## See Also  
- [Back Up and Restore of SQL Server Databases](../../../2014/database-engine/back-up-and-restore-of-sql-server-databases.md)   
+ [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Back Up and Restore Replicated Databases](../../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md)   
  [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
  [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   

@@ -23,9 +23,9 @@ manager: "jhubbard"
   
  Example of one such case is a deletion of a backup file resulting in a break of the log chain affecting recoverability – [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will identify the break in log chain and schedule a backup to be taken immediately. However we recommend that you monitor the status and address any errors that require manual intervention.  
   
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] logs events and errors using system stored procedures, system views and extended events. System views and stored procedures provide [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuration information, status of backup scheduled backups, and also the errors captured by Extended Events. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses Extended Events to capture the errors to use for troubleshooting. In addition to logging events, SQL Server Smart Admin Policies provide a health status which is used by an email notification job to provide notification or errors and issues. For more information see [Monitor SQL Server Managed Backup to Windows Azure](../../2014/database-engine/monitor-sql-server-managed-backup-to-windows-azure.md).  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] logs events and errors using system stored procedures, system views and extended events. System views and stored procedures provide [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuration information, status of backup scheduled backups, and also the errors captured by Extended Events. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses Extended Events to capture the errors to use for troubleshooting. In addition to logging events, SQL Server Smart Admin Policies provide a health status which is used by an email notification job to provide notification or errors and issues. For more information see [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] also uses the same logging that is used when manually backing up to Windows Azure storage (SQL Server Backup to URL). For more information on Backup to URL related issues, see the troubleshooting section in [SQL Server Backup to URL Best Practices and Troubleshooting](../../2014/database-engine/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] also uses the same logging that is used when manually backing up to Windows Azure storage (SQL Server Backup to URL). For more information on Backup to URL related issues, see the troubleshooting section in [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
 ### General Troubleshooting Steps  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 2.  **Email Notification Errors:**  
   
-     Error: “Database Mail is not enabled…” – You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../../2014/database-engine/configure-database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../../2014/database-engine/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Error: “Database Mail is not enabled…” – You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../relational-databases/database-mail/database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Following is a list of error numbers you might see that are associated with email notifications:  
   
@@ -94,7 +94,7 @@ manager: "jhubbard"
   
          Storage exceptions are reported in FileRetentionAdminXEvent with event_type = XstoreError. For details of the error, look at the error_message and stack_trace of that event.  
   
-         Since SQL Server Managed Backup uses the underlying Backup to URL technology, the errors related to storage connectivity apply to both the features. For more information on troubleshooting steps, see **troubleshooting section** of the [SQL Server Backup to URL Best Practices and Troubleshooting](../../2014/database-engine/sql-server-backup-to-url-best-practices-and-troubleshooting.md) article.  
+         Since SQL Server Managed Backup uses the underlying Backup to URL technology, the errors related to storage connectivity apply to both the features. For more information on troubleshooting steps, see **troubleshooting section** of the [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) article.  
   
 ### Troubleshooting System Issues  
  Following are some scenarios when there is an issue with the system (SQL Server, SQL Server Agent) and its effects on [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  

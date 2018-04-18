@@ -31,7 +31,7 @@ manager: "jhubbard"
  Remove the UDT that is named after the data type and recreate the UDT with an unreserved name.  
   
 ## External Resources  
- [Creating a User-Defined Type](../../../2014/database-engine/dev-guide/creating-a-user-defined-type.md)  
+ [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
  [Spatial Data Types Overview](../../../2014/database-engine/spatial-data-types-overview.md)  
   

@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Procedure names must comply with the rules for [identifiers](../../2014/database-engine/database-identifiers.md).  
+-   Procedure names must comply with the rules for [identifiers](../relational-databases/databases/database-identifiers.md).  
   
 -   Renaming a stored procedure will not change the name of the corresponding object name in the definition column of the **sys.sql_modules** catalog view. Therefore, we recommend that you do not rename this object type. Instead, drop and re-create the stored procedure with its new name.  
   

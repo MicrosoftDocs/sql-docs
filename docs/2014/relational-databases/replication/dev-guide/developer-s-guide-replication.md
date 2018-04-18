@@ -21,7 +21,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Developer&#39;s Guide (Replication)
-  The ability to programmatically configure, maintain, and monitor a replication topology enables you to both simplify repeated replication tasks and improve the user experience for your replication-based applications. By programming replication, your end-users can be provided with customized replication functionalities without having to be familiar with replication stored procedures and replication agent executables or having to using the replication user interface implemented by [!INCLUDE[ssManStudioFull](../../../../includes/ssmanstudiofull-md.md)].  
+  The ability to programmatically configure, maintain, and monitor a replication topology enables you to both simplify repeated replication tasks and improve the user experience for your replication-based applications. By programming replication, your end-users can be provided with customized replication functionalities without having to be familiar with replication stored procedures and replication agent executables or having to using the replication user interface implemented by [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  The following are scenarios in which your applications might benefit from programmatic access to replication services:  
   
@@ -37,9 +37,9 @@ manager: "jhubbard"
   
 -   Writing customized business rules that are executed when a merge subscription is synchronized.  
   
--   Generating [!INCLUDE[tsql](../../../../includes/tsql-md.md)] scripts that can be run repeated when configuring new Subscribers.  
+-   Generating [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts that can be run repeated when configuring new Subscribers.  
   
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] enables you to programmatically control replication agents and to programmatically administer and monitor a replication topology. To learn more about programming replication, see [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables you to programmatically control replication agents and to programmatically administer and monitor a replication topology. To learn more about programming replication, see [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md).  
   
 ## In This Section  
  [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md)  
@@ -49,7 +49,7 @@ manager: "jhubbard"
  Describes how system stored procedures can be used to proivide programmatic access in a replication topology.  
   
  [Replication Management Objects Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)  
- Explains the concepts for using Replication Management Objects (RMO). This is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Explains the concepts for using Replication Management Objects (RMO). This is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Replication Agent Executables Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
  Describes the use of Replication Agent Executable files.  

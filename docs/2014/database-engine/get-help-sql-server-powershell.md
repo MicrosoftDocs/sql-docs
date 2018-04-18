@@ -25,7 +25,7 @@ manager: "jhubbard"
 ## Before You Begin  
  To learn about Windows PowerShell, see [Windows PowerShell Getting Started Guide](https://technet.microsoft.com/library/hh857337.aspx).  
   
- For an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets and provider, see [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md).  
+ For an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlets and provider, see [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
 ### Help in the Windows PowerShell Environment  
  Use the **Get-Help** cmdlet to get help in the Windows PowerShell environment. **Get-Help** provides basic help for the Windows PowerShell language and the various cmdlets and providers available in Windows PowerShell.  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  For more information on the ways you can use **Get-Help**, see [Get-Help: Getting Help](http://go.microsoft.com/fwlink/?LinkId=102136).  
   
 ### SQL Server PowerShell Provider Help  
- The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider implements several folders on a SQLSERVER virtual drive, such as the SQLSERVER:\SQL and SQLSERVER:\DAC folders. Each folder is associated with one of the SQL Server manageability object models. While you can list the methods and properties associated with each node in a SQL Server path, you cannot get help for them in the PowerShell environment. For a table of the folders with links to the associated programming reference, see [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md).  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider implements several folders on a SQLSERVER virtual drive, such as the SQLSERVER:\SQL and SQLSERVER:\DAC folders. Each folder is associated with one of the SQL Server manageability object models. While you can list the methods and properties associated with each node in a SQL Server path, you cannot get help for them in the PowerShell environment. For a table of the folders with links to the associated programming reference, see [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  
   
 ### Invoke-Sqlcmd Help  
  The **Invoke-Sqlcmd** cmdlet takes as input any query or script file that can be run by the **sqlcmd** utility. You can use **Get-Help** to get information about **Invoke-Sqlcmd** and its parameters, but there is no **Get-Help** coverage for the **sqlcmd** queries.  
@@ -120,7 +120,7 @@ $MyVar | Get-Member -Type Properties
 ```  
   
 ## See Also  
- [SQL Server PowerShell Provider](../../2014/database-engine/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [Use the Database Engine cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
   
   

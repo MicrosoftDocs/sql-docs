@@ -130,7 +130,7 @@ manager: "jhubbard"
   
 -   [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [Create an Availability Group &#40;SQL Server PowerShell&#41;](create-an-availability-group-sql-server-powershell.md)  
+-   [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
  **To enable AlwaysOn Availability Groups**  
   

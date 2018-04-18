@@ -20,7 +20,7 @@
 #### [Uninstall an Existing Instance of Distributed Replay](uninstall-an-existing-instance-of-distributed-replay.md)
 ### [Install SQL Server Replication](../../database-engine/install-windows/install-sql-server-replication.md)
 ### [Install SQL Server Management Tools](install-sql-server-management-tools.md)
-### [Install SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)
+### [Install SQL Server PowerShell](../../powershell/sql-server-powershell.md)
 ### [Install SQL Server 2014 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)
 ### [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)
 ### [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)

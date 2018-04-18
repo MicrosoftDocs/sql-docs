@@ -88,6 +88,6 @@ End Class
  The custom attributes needed for CLR routines, user-defined types, and aggregates are defined in the `Microsoft.SqlServer.Server` namespace.  
   
 ## See Also  
- [Custom Attributes for CLR Routines](../../../2014/database-engine/dev-guide/custom-attributes-for-clr-routines.md)  
+ [Custom Attributes for CLR Routines](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

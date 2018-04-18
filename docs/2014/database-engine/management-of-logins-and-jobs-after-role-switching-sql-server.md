@@ -44,7 +44,7 @@ manager: "jhubbard"
 >  Different instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might be configured differently, with different drive letters or such. The jobs for each partner must allow for any such differences.  
   
 ## See Also  
- [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../2014/database-engine/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../2014/database-engine/troubleshoot-orphaned-users-sql-server.md)  
   
   

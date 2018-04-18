@@ -69,7 +69,7 @@ manager: "jhubbard"
 ## See Also  
  [Database Mirroring Witness](database-mirroring-witness.md)   
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Database Properties &#40;Mirroring Page&#41;](../database-properties-mirroring-page.md)   
+ [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)  
   

@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   The database must use the full recovery model.  
   
-     For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
+     For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) or [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) and [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 -   The name of the mirror database must be the same as the name of the principal database.  
   
@@ -77,9 +77,9 @@ manager: "jhubbard"
 ##  <a name="PrepareToRestartMirroring"></a> To Prepare an Existing Mirror Database to Restart Mirroring  
  If mirroring has been removed and the mirror database is still in the RECOVERING state, you can restart mirroring.  
   
-1.  Take at least one log backup on the principal database. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../back-up-a-transaction-log-sql-server.md).  
+1.  Take at least one log backup on the principal database. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-2.  On the mirror database, use RESTORE WITH NORECOVERY to restore all log backups taken on the principal database since mirroring was removed. For more information, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](../restore-a-transaction-log-backup-sql-server.md).  
+2.  On the mirror database, use RESTORE WITH NORECOVERY to restore all log backups taken on the principal database since mirroring was removed. For more information, see [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
 ##  <a name="CombinedProcedure"></a> To Prepare a New Mirror Database  
  **To prepare a mirror database**  
@@ -91,13 +91,13 @@ manager: "jhubbard"
   
 2.  Create either a full database backup or a differential database backup of the principal database.  
   
-    -   [Create a Full Database Backup &#40;SQL Server&#41;](../create-a-full-database-backup-sql-server.md)  
+    -   [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
-    -   [Create a Differential Database Backup &#40;SQL Server&#41;](../create-a-differential-database-backup-sql-server.md).  
+    -   [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
 3.  Typically, you need to take at least one log backup on the principal database. However, a log backup might be unnecessary, if the database has just been created and no log backup has been taken yet, or if the recovery model has just been changed from SIMPLE to FULL.  
   
-    -   [Back Up a Transaction Log &#40;SQL Server&#41;](../back-up-a-transaction-log-sql-server.md)  
+    -   [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 4.  Unless the backups are on a network drive that is accessible from both systems, copy the database and log backups to the system that will host the mirror server instance.  
   
@@ -108,13 +108,13 @@ manager: "jhubbard"
     > [!NOTE]  
     >  If you restore the database filegroup by filegroup, be sure to restore the whole database.  
   
-    -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../restore-a-database-backup-sql-server-management-studio.md)  
+    -   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
     -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [RESTORE Arguments &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Using RESTORE WITH NORECOVERY, apply any outstanding log backup or backups to the mirror database.  
   
-    -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../restore-a-transaction-log-backup-sql-server.md)  
+    -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  Before you can start a database mirroring session, you must create the mirror database. You should do this just before starting the mirroring session.  
@@ -228,9 +228,9 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Full Database Backup &#40;SQL Server&#41;](../create-a-full-database-backup-sql-server.md)  
+-   [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../restore-a-transaction-log-backup-sql-server.md)  
+-   [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   

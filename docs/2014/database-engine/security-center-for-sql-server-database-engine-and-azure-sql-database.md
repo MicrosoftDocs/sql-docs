@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 -   [Transparent Data Encryption (File Level)](../../2014/database-engine/transparent-data-encryption-tde.md)  
   
--   [Backup Encryption (File Level)](../../2014/database-engine/backup-encryption.md)  
+-   [Backup Encryption (File Level)](../relational-databases/backup-restore/backup-encryption.md)  
   
  **Encrypting Sources**  
   

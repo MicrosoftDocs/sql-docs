@@ -71,7 +71,7 @@ manager: "jhubbard"
 |----------------------|-----------|  
 |Describes how to use the code and text editors in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to interactively develop, debug, and run [!INCLUDE[tsql](../includes/tsql-md.md)] scripts|[Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)|  
 |Describes how to use the `sqlcmd` utility to run [!INCLUDE[tsql](../includes/tsql-md.md)] scripts from the command prompt, including the ability to interactively develop scripts.|[sqlcmd How-to Topics](../../2014/database-engine/sqlcmd-how-to-topics.md)|  
-|Describes how to integrate the SQL Server components into a Windows PowerShell 2.0 environment and then build PowerShell scripts for managing SQL Server instances and objects.|[SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)|  
+|Describes how to integrate the SQL Server components into a Windows PowerShell 2.0 environment and then build PowerShell scripts for managing SQL Server instances and objects.|[SQL Server PowerShell](../powershell/sql-server-powershell.md)|  
 |Describes how to use the **Generate and Publish Scripts** wizard to create [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that recreate one or more of the objects from a database.|[Generate Scripts &#40;SQL Server Management Studio&#41;](../../2014/database-engine/generate-scripts-sql-server-management-studio.md)|  
   
 ## See Also  

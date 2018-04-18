@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   [Implicit Cursor Conversions &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/implicit-cursor-conversions-odbc.md)  
   
--   [Using Autofetch with ODBC Cursors](../../../2014/database-engine/dev-guide/using-autofetch-with-odbc-cursors.md)  
+-   [Using Autofetch with ODBC Cursors](../../relational-databases/cursors.md)  
   
 -   [Fast Forward-Only Cursors &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/fast-forward-only-cursors-odbc.md)  
   

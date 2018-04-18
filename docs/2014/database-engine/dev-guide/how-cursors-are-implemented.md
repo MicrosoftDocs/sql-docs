@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   [Using SQL Server Default Result Sets](../../../2014/database-engine/dev-guide/using-sql-server-default-result-sets.md)  
   
--   [Using Server Cursors](../../../2014/database-engine/dev-guide/using-server-cursors.md)  
+-   [Using Server Cursors](../../relational-databases/cursors.md)  
   
 -   [ODBC Cursor Library](../../../2014/database-engine/dev-guide/odbc-cursor-library.md)  
   

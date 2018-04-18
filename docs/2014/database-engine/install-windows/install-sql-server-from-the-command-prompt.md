@@ -407,7 +407,7 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ```  
   
 ##  <a name="Rebuild"></a> Rebuild System Database Parameters  
- Use the parameters in the following table to develop command-line scripts for rebuilding the master, model, msdb, and tempdb system databases. For more information, see [Rebuild System Databases](../../../2014/database-engine/rebuild-system-databases.md).  
+ Use the parameters in the following table to develop command-line scripts for rebuilding the master, model, msdb, and tempdb system databases. For more information, see [Rebuild System Databases](../../relational-databases/databases/system-databases.md).  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  

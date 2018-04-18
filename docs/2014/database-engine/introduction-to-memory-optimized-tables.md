@@ -54,7 +54,7 @@ manager: "jhubbard"
 |[Memory-Optimized Table Variables](../../2014/database-engine/memory-optimized-table-variables.md)|Yes|Yes|No|  
 |[Natively Compiled Stored Procedures](http://msdn.microsoft.com/library/dn133184.aspx)|You cannot use the EXECUTE statement to execute any stored procedure from a natively compiled stored procedure.|Yes|No <sup>1</sup>|  
   
- <sup>1</sup> You cannot access a memory-optimized table or natively compiled stored procedure from the context connection (the connection from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when executing a CLR module). You can, however, create and open another connection from which you can access memory-optimized tables and natively compiled stored procedures. For more information, see [Regular vs. Context Connections](../../2014/database-engine/dev-guide/regular-vs-context-connections.md).  
+ <sup>1</sup> You cannot access a memory-optimized table or natively compiled stored procedure from the context connection (the connection from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] when executing a CLR module). You can, however, create and open another connection from which you can access memory-optimized tables and natively compiled stored procedures. For more information, see [Regular vs. Context Connections](../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## Performance and Scalability  
  The following factors will affect the performance gains that can be achieved with In-Memory OLTP:  

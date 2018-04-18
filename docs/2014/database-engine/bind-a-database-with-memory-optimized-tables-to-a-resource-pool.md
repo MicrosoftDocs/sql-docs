@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  A database can be bound on only one resource pool. However, you can bind multiple databases to the same pool. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] allows binding a database without memory-optimized tables to a resource pool but it has no effect. You may want to bind a database to a named resource pool if, in future, you may want to create memory-optimized tables in the database.  
   
- Before you can bind a database to a resource pool both the database and the resource pool must exist. The binding takes effect the next time the database is brought online. See [Database States](../../2014/database-engine/database-states.md) for more information.  
+ Before you can bind a database to a resource pool both the database and the resource pool must exist. The binding takes effect the next time the database is brought online. See [Database States](../relational-databases/databases/database-states.md) for more information.  
   
  For information about resource pools, see [Resource Governor Resource Pool](../../2014/database-engine/resource-governor-resource-pool.md).  
   

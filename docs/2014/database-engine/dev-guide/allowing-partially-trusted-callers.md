@@ -1098,6 +1098,6 @@ GO
 ```  
   
 ## See Also  
- [CLR Integration Security](../../../2014/database-engine/dev-guide/clr-integration-security.md)  
+ [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

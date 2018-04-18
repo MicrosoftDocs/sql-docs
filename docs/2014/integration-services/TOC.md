@@ -501,7 +501,7 @@
 ##### [Select Packages (SSIS Package Upgrade Wizard)](select-packages-ssis-package-upgrade-wizard.md)
 ##### [Complete the Wizard (SSIS Package Upgrade Wizard)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ##### [Upgrading the Packages (SSIS Package Upgrade Wizard)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
-#### [SQL Server Import and Export Wizard](sql-server-import-and-export-wizard.md)
+#### [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 ##### [Run the SQL Server Import and Export Wizard](run-the-sql-server-import-and-export-wizard.md)
 ##### [Welcome to SQL Server Import and Export Wizard](welcome-to-sql-server-import-and-export-wizard.md)
 ##### [Choose a Data Source (SQL Server Import and Export Wizard)](choose-a-data-source-sql-server-import-and-export-wizard.md)

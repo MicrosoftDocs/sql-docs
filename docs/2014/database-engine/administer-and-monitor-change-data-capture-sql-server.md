@@ -99,7 +99,7 @@ manager: "jhubbard"
   
  **Configuring Data Collection**  
   
-1.  Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../../2014/database-engine/manage-data-collection.md).  
+1.  Enable data collector and configure a management data warehouse. For more information, see [Manage Data Collection](../relational-databases/data-collection/data-collection.md).  
   
 2.  Execute the following code to create a custom collector for change data capture.  
   

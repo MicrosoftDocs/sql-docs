@@ -67,7 +67,7 @@ go
   
 -   Use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication.  
   
- You may also see error 15517 when creating a natively compiled stored procedure. For more information, see [MSSQLSERVER_15517](../../2014/database-engine/mssqlserver-15517.md).  
+ You may also see error 15517 when creating a natively compiled stored procedure. For more information, see [MSSQLSERVER_15517](../relational-databases/errors-events/mssqlserver-15517-database-engine-error.md).  
   
 ## Updating a Natively Compiled Stored Procedure  
  Performing alter operations on natively compiled stored procedures is not supported. One way to modify a natively compiled stored procedure is to drop and recreate the stored procedure:  

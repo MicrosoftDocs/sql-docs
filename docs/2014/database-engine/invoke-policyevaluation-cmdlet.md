@@ -86,7 +86,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** takes an object or array of objects that represent the SQL Server objects in the target set. For example, you could create an array of <xref:Microsoft.SqlServer.Management.Smo.Database> class objects to pass in to **-TargetObjects**.  
   
--   **-TargetExpressions** takes a string containing a query expression that specifies the objects in the target set. The query expression is in the form of nodes separated by the '/' character. Each node is in the form ObjectType[Filter]. Object type is one of the objects in a SQL Server Management Object (SMO) object hieararchy. Filter is an expression that filters for objects at that node. For more information, see [Query Expressions and Uniform Resource Names](../../2014/database-engine/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** takes a string containing a query expression that specifies the objects in the target set. The query expression is in the form of nodes separated by the '/' character. Each node is in the form ObjectType[Filter]. Object type is one of the objects in a SQL Server Management Object (SMO) object hieararchy. Filter is an expression that filters for objects at that node. For more information, see [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Specify either **-TargetObjects** or **-TargetExpression**, not both.  
   

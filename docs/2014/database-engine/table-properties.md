@@ -95,7 +95,7 @@ manager: "jhubbard"
  For more information about Change Tracking, see [About Change Tracking &#40;SQL Server&#41;](../../2014/database-engine/about-change-tracking-sql-server.md).  
   
 ##  <a name="FileTable"></a> FileTable Page  
- Displays properties of the table related to FileTables. For more information, see [FileTables &#40;SQL Server&#41;](../../2014/database-engine/filetables-sql-server.md).  
+ Displays properties of the table related to FileTables. For more information, see [FileTables &#40;SQL Server&#41;](../relational-databases/blob/filetables-sql-server.md).  
   
  **FileTable name column collation**  
  The collation that is applied to the **Name** column in a FileTable. The **Name** column contains file and directory names.  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
 ### Compression  
  **Compression type**  
- The compression type of the table. This property is only available for tables that are not partitioned. For more information, see [Data Compression](../../2014/database-engine/data-compression.md).  
+ The compression type of the table. This property is only available for tables that are not partitioned. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
  **Partitions using page compression**  
  The partition numbers that are using page compression. This property is only available for partitioned tables.  

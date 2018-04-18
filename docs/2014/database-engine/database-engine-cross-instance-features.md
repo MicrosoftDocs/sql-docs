@@ -27,9 +27,9 @@ manager: "jhubbard"
 |[Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)|  
 |[Register Servers](../../2014/database-engine/register-servers.md)|  
 |[SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)|  
-|[Data Collection](../../2014/database-engine/data-collection.md)|  
+|[Data Collection](../relational-databases/data-collection/data-collection.md)|  
 |[Monitor Resource Usage &#40;System Monitor&#41;](../../2014/database-engine/monitor-resource-usage-system-monitor.md)|  
-|[Administer Multiple Servers Using Central Management Servers](../../2014/database-engine/administer-multiple-servers-using-central-management-servers.md)|  
+|[Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)|  
 |[SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)|  
 |[Activity Monitor](../../2014/database-engine/activity-monitor.md)|  
   

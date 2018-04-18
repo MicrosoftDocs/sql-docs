@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 4.  In the **New Database** dialog box, in the **Database name** box, enter the name of the new database.  
   
-5.  In the **Owner** box, enter the name of the new database's owner. Alternately, click the ellipsis **(…)** to open the **Select Database Owner** dialog box. For more information on creating a new database, see [Create a Database](../../2014/database-engine/create-a-database.md).  
+5.  In the **Owner** box, enter the name of the new database's owner. Alternately, click the ellipsis **(…)** to open the **Select Database Owner** dialog box. For more information on creating a new database, see [Create a Database](../relational-databases/databases/create-a-database.md).  
   
 6.  In Object Explorer, click the plus sign to expand the **Databases** folder.  
   
@@ -320,6 +320,6 @@ manager: "jhubbard"
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 ## See Also  
- [Database Detach and Attach &#40;SQL Server&#41;](../../2014/database-engine/database-detach-and-attach-sql-server.md)  
+ [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

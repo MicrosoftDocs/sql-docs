@@ -51,6 +51,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Extended Events](../../2014/database-engine/extended-events.md)   
- [Assemblies &#40;Database Engine&#41;](../../2014/database-engine/dev-guide/assemblies-database-engine.md)  
+ [Assemblies &#40;Database Engine&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   
   

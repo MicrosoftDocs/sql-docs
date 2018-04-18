@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   [Rowset Properties and Behaviors](../../../2014/database-engine/dev-guide/rowset-properties-and-behaviors.md)  
   
--   [Rowsets and SQL Server Cursors](../../../2014/database-engine/dev-guide/rowsets-and-sql-server-cursors.md)  
+-   [Rowsets and SQL Server Cursors](../../relational-databases/cursors.md)  
   
 -   [Fetching Rows](../../../2014/database-engine/dev-guide/fetching-rows.md)  
   

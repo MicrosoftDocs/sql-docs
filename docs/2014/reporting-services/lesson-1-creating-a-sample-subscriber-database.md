@@ -62,7 +62,7 @@ manager: "mblythe"
   
 ## See Also  
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Create a Database](../database-engine/create-a-database.md)   
+ [Create a Database](../relational-databases/databases/create-a-database.md)   
  [Create a Basic Table Report &#40;SSRS Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

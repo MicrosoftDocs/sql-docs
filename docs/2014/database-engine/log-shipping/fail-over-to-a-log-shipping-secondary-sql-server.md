@@ -33,18 +33,18 @@ manager: "jhubbard"
   
 1.  Copy any uncopied backup files from the backup share to the copy destination folder of each secondary server.  
   
-2.  Apply any unapplied transaction log backups in sequence to each secondary database. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../apply-transaction-log-backups-sql-server.md).  
+2.  Apply any unapplied transaction log backups in sequence to each secondary database. For more information, see [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
 3.  If the primary database is accessible, back up the active transaction log and apply the log backup to the secondary databases.  
   
      If the original primary server instance is not damaged, back up the tail of the transaction log of the primary database using WITH NORECOVERY. This leaves the database in the restoring state and therefore unavailable to users. Eventually you will be able to roll this database forward by applying transaction log backups from the replacement primary database.  
   
-     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../transaction-log-backups-sql-server.md).  
+     For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
 4.  After the secondary servers are synchronized, you can fail over to whichever one you prefer by recovering its secondary database and redirecting clients to that server instance. Recovering puts the database into a consistent state and brings it online.  
   
     > [!NOTE]  
-    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  When you make a secondary database available, you should ensure that its metadata is consistent with the metadata of the original primary database. For more information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  After you have recovered a secondary database, you can reconfigure it to act as a primary database for other secondary databases.  
   
@@ -59,6 +59,6 @@ manager: "jhubbard"
 ## See Also  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)   
  [About Log Shipping &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tail-Log Backups &#40;SQL Server&#41;](../tail-log-backups-sql-server.md)  
+ [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

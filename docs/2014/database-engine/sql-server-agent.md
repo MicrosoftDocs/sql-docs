@@ -107,7 +107,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
- To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to use Database Mail. For more information, see [Database Mail](../../2014/database-engine/database-mail.md).  
+ To send notifications to operators by using e-mail or pagers, you must configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent to use Database Mail. For more information, see [Database Mail](../relational-databases/database-mail/database-mail.md).  
   
  You can define an operator as the alias for a group of individuals. In this way, all members of that alias are notified at the same time. For more information, see [Operators](../../2014/database-engine/operators.md).  
   

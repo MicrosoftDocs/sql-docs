@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 2.  Specify the lowest setting possible for the publication retention period. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
-3.  As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+3.  As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../indexes/indexes.md).  
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  

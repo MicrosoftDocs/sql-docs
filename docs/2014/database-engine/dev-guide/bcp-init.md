@@ -76,7 +76,7 @@ eDirection
 ## Remarks  
  Call **bcp_init** before calling any other bulk-copy function. **bcp_init** performs the necessary initializations for a bulk copy of data between the workstation and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- The **bcp_init** function must be provided with an ODBC connection handle enabled for use with bulk copy functions. To enable the handle, use [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_BCP set to SQL_BCP_ON on an allocated, but not connected, connection handle. Attempting to assign the attribute on a connected handle results in an error.  
+ The **bcp_init** function must be provided with an ODBC connection handle enabled for use with bulk copy functions. To enable the handle, use [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_BCP set to SQL_BCP_ON on an allocated, but not connected, connection handle. Attempting to assign the attribute on a connected handle results in an error.  
   
  When a data file is specified, **bcp_init** examines the structure of the database source or target table, not the data file. **bcp_init** specifies data format values for the data file based on each column in the database table, view, or SELECT result set. This specification includes the data type of each column, the presence or absence of a length or null indicator and terminator byte strings in the data, and the width of fixed-length data types. **bcp_init** sets these values as follows:  
   
@@ -94,7 +94,7 @@ eDirection
   
  To change data format values specified for a data file, call [bcp_columns](../../../2014/database-engine/dev-guide/bcp-columns.md) and [bcp_colfmt](../../../2014/database-engine/dev-guide/bcp-colfmt.md).  
   
- Bulk copies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database recovery model to SIMPLE or BULK_LOGGED. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md) and [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md).  
+ Bulk copies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be optimized for tables that do not contain indexes by setting the database recovery model to SIMPLE or BULK_LOGGED. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) and [ALTER DATABASE](~/t-sql/statements/alter-database-transact-sql.md).  
   
  If no data file is used, you must call [bcp_bind](../../../2014/database-engine/dev-guide/bcp-bind.md) to specify the format and location in memory of the data fsor each column, then copy data rows to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [bcp_sendrow](../../../2014/database-engine/dev-guide/bcp-sendrow.md).  
   

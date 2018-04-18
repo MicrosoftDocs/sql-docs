@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  The figure has three buckets with rows. The second bucket from the top contains the three red rows. The fourth bucket contains the single blue row. The bottom bucket contains the two green rows. These could be different versions of the same row.  
   
- For more information about indexes for memory-optimized tables, see [Guidelines for Using Indexes on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables.md).  
+ For more information about indexes for memory-optimized tables, see [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## See Also  
  [Indexes on Memory-Optimized Tables](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

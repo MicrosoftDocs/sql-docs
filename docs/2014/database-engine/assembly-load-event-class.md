@@ -50,7 +50,7 @@ manager: "jhubbard"
 |**TextData**|**ntext**|"Assembly Load Succeeded" if the load succeeds; otherwise, "Assembly Load Failed".|1|Yes|  
   
 ## See Also  
- [Extended Events](../../2014/database-engine/extended-events.md)   
+ [Extended Events](../relational-databases/extended-events/extended-events.md)   
  [Assemblies &#40;Database Engine&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   
   

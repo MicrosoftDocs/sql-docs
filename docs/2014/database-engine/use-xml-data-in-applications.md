@@ -94,7 +94,7 @@ Set objConn = Nothing
   
 1.  Verify that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client is installed and that MDAC 2.6.0or later is available on the client computer.  
   
-     For more information, see [SQL Server Native Client Programming](../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).  
+     For more information, see [SQL Server Native Client Programming](../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 2.  Verify that the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] sample database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is installed.  
   

@@ -32,10 +32,10 @@ manager: "jhubbard"
  Extended stored procedures allow you to create your own external routines in a programming language such as C. The extended stored procedures appear to users as typical stored procedures and are executed in the same way. Parameters can be passed to extended stored procedures, and they can return results and return status.  
   
 ## In This Section  
- [Programming Extended Stored Procedures](../database-engine/dev-guide/programming-extended-stored-procedures.md)  
+ [Programming Extended Stored Procedures](extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Explains how to create, manage, and use extended stored procedures.  
   
- [Extended Stored Procedures Programmer's Reference](../database-engine/dev-guide/extended-stored-procedures-programmer-s-reference.md)  
+ [Extended Stored Procedures Programmer's Reference](extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
  Contains reference topics for the Extended Stored Procedure API.  
   
   

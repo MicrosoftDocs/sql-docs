@@ -21,7 +21,7 @@ manager: "jhubbard"
   
  This sample will not work with any version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- For more information, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../../2014/database-engine/dev-guide/service-principal-name-spn-support-in-client-connections.md).  
+ For more information, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## Example  
  If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  

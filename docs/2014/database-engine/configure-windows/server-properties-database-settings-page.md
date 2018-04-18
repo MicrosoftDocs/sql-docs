@@ -71,6 +71,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [Specify Fill Factor for an Index](../specify-fill-factor-for-an-index.md)  
+ [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   

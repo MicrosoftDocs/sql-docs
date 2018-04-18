@@ -58,7 +58,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
    SQL Server Parse and Compile Time: cpu time = 0 ms."  
 ```  
   
- The output of SET STATISTICS IO is not available until the end of a result set. To get STATISTICS IO output, the application calls **SQLGetDiagRec** at the time **SQLFetch** or [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) returns SQL_NO_DATA. The output of STATISTICS IO comes back in the format:  
+ The output of SET STATISTICS IO is not available until the end of a result set. To get STATISTICS IO output, the application calls **SQLGetDiagRec** at the time **SQLFetch** or [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) returns SQL_NO_DATA. The output of STATISTICS IO comes back in the format:  
   
 ```  
 szSqlState="01000", *pfNativeError= 3615,  
@@ -142,7 +142,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  In this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns a result set for every SELECT statement executed in a batch or stored procedure. If the batch or procedure contains PRINT or RAISERROR statements, the output for these is interleaved with the SELECT statement result sets. If the first statement in the batch or procedure is a PRINT or RAISERROR, the **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR, and the application needs to call **SQLGetDiagRec** until it returns SQL_NO_DATA to retrieve the PRINT or RAISERROR information.  
   
- If the PRINT or RAISERROR statement comes after an SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md)positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
+ If the PRINT or RAISERROR statement comes after an SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
   
 ## See Also  
  [Handling Errors and Messages](../../../2014/database-engine/dev-guide/handling-errors-and-messages.md)  

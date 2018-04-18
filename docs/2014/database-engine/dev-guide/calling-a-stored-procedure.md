@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  where *procedure_name* specifies the name of a procedure and *parameter* specifies a procedure parameter. Named parameters are only supported in statements using the ODBC CALL escape sequence.  
   
- A procedure can have zero or more parameters. It can also return a value (as indicated by the optional parameter marker ?= at the start of the syntax). If a parameter is an input or an input/output parameter, it can be a literal or a parameter marker. If the parameter is an output parameter, it must be a parameter marker because the output is unknown. Parameter markers must be bound with [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) before the procedure call statement is executed.  
+ A procedure can have zero or more parameters. It can also return a value (as indicated by the optional parameter marker ?= at the start of the syntax). If a parameter is an input or an input/output parameter, it can be a literal or a parameter marker. If the parameter is an output parameter, it must be a parameter marker because the output is unknown. Parameter markers must be bound with [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) before the procedure call statement is executed.  
   
  Input and input/output parameters can be omitted from procedure calls. If a procedure is called with parentheses but without any parameters, the driver instructs the data source to use the default value for the first parameter. For example:  
   
@@ -90,6 +90,6 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Running Stored Procedures](../../../2014/database-engine/dev-guide/running-stored-procedures.md)  
+ [Running Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

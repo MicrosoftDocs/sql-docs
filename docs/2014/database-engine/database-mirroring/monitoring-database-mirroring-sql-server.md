@@ -293,11 +293,11 @@ manager: "jhubbard"
   
 -   **Database Mirroring State Change** event class  
   
-     This indicates when the mirroring state of a mirrored database changes. For more information, see [Database Mirroring State Change Event Class](../database-mirroring-state-change-event-class.md).  
+     This indicates when the mirroring state of a mirrored database changes. For more information, see [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
 -   **Audit Database Mirroring Login** event class  
   
-     This reports audit messages related to database mirroring transport security. For more information, see [Audit Database Mirroring Login Event Class](../audit-database-mirroring-login-event-class.md).  
+     This reports audit messages related to database mirroring transport security. For more information, see [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

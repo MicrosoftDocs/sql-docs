@@ -49,14 +49,14 @@ manager: "jhubbard"
 |Bytes per foreign key|900|900|  
 |Bytes per primary key|900|900|  
 |Bytes per row<br /><br /> Note:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports row-overflow storage which enables variable length columns to be pushed off-row. Only a 24-byte root is stored in the main record for variable length columns pushed out of row; because of this, the effective row limit is higher than in previous releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see the "Row-Overflow Data Exceeding 8 KB" topic in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online.|8,060|8,060|  
-|Bytes per row in memory-optimized tables<br /><br /> Note:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory OLTP does not support row-overflow storage. Variable length columns are not pushed off row. This limits the maximum width of variable-length columns you can specify in a memory-optimized table to the maximum row size. For more information, see [Table and Row Size in Memory-Optimized Tables](../../2014/database-engine/table-and-row-size-in-memory-optimized-tables.md).|Not supported|8,060|  
+|Bytes per row in memory-optimized tables<br /><br /> Note:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] In-Memory OLTP does not support row-overflow storage. Variable length columns are not pushed off row. This limits the maximum width of variable-length columns you can specify in a memory-optimized table to the maximum row size. For more information, see [Table and Row Size in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).|Not supported|8,060|  
 |Bytes in source text of a stored procedure|Lesser of batch size or 250 MB|Lesser of batch size or 250 MB|  
 |Bytes per `varchar(max)`, `varbinary(max)`, `xml`, `text`, or `image` column|2^31-1|2^31-1|  
 |Characters per `ntext` or `nvarchar(max)` column|2^30-1|2^30-1|  
 |Clustered indexes per table|1|1|  
 |Columns in GROUP BY, ORDER BY|Limited only by number of bytes|Limited only by number of bytes|  
 |Columns or expressions in a GROUP BY WITH CUBE or WITH ROLLUP statement|10|10|  
-|Columns per index key<br /><br /> Note: If the table contains one or more XML indexes, the clustering key of the user table is limited to 15 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](../../2014/database-engine/create-indexes-with-included-columns.md).|16|16|  
+|Columns per index key<br /><br /> Note: If the table contains one or more XML indexes, the clustering key of the user table is limited to 15 columns because the XML column is added to the clustering key of the primary XML index. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], you can include nonkey columns in a nonclustered index to avoid the limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
 |Columns per foreign key|16|16|  
 |Columns per primary key|16|16|  
 |Columns per nonwide table|1,024|1,024|  
@@ -114,7 +114,7 @@ manager: "jhubbard"
 |Log files per database|1|1|  
 |Volumes per computer|3|3|  
   
- *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility might vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility might vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier Application Objects  
  The following table specifies the maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).  
@@ -146,6 +146,6 @@ manager: "jhubbard"
 ## See Also  
  [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Check Parameters for the System Configuration Checker](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
- [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)  
+ [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

@@ -137,7 +137,7 @@ manager: "mblythe"
   
 2.  Click **Edit**, and then click **All** on the left navigation pane.  
   
-3.  The property grid appears, showing available properties of the data provider you are using. For more information about these properties, see the product documentation of the provider.  For SQL Server native client, see [Using Connection String Keywords with SQL Server Native Client](../../database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+3.  The property grid appears, showing available properties of the data provider you are using. For more information about these properties, see the product documentation of the provider.  For SQL Server native client, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  If you have multiple data source objects in the solution and you prefer to maintain the connection string in one place, you can configure the current data source to reference the other data source object.  
   

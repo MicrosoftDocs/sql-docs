@@ -57,6 +57,6 @@ manager: "jhubbard"
 ## See Also  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)  
+ [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
   

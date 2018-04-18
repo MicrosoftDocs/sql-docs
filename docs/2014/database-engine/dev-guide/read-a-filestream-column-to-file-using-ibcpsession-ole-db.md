@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
   This sample reads a filestream column to a file using the IBCPSession interface and writes a format file.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  

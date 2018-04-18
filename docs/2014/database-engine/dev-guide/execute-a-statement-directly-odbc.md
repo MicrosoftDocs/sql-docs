@@ -22,15 +22,15 @@ manager: "jhubbard"
     
 ### To execute a statement directly and one time only  
   
-1.  If the statement has parameter markers, use [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) to bind each parameter to a program variable. Fill the program variables with data values, and then set up any data-at-execution parameters.  
+1.  If the statement has parameter markers, use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) to bind each parameter to a program variable. Fill the program variables with data values, and then set up any data-at-execution parameters.  
   
 2.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement.  
   
-3.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md).  
+3.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To execute a statement multiple times by using column-wise parameter binding  
   
-1.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+1.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
      Set SQL_ATTR_PARAMSET_SIZE to the number of sets (S) of parameters.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
   
      Allocate an array of S parameter buffers to store data lengths.  
   
-     Call [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) to bind the parameter data value and data length arrays to the statement parameter.  
+     Call [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) to bind the parameter data value and data length arrays to the statement parameter.  
   
      Set up any data-at-execution text or image parameters.  
   
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 3.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
   
-4.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md).  
+4.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To execute a statement multiple times by using row-wise parameter binding  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
      The second part is a SQLINTEGER variable to hold the status indicator.  
   
-2.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+2.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
      Set SQL_ATTR_PARAMSET_SIZE to the number of sets (S) of parameters.  
   
@@ -74,13 +74,13 @@ manager: "jhubbard"
   
      Set SQL_ATTR_PARAMS_STATUS_PTR to point to an array[S] of SQLUSSMALLINT variables to hold the parameter status indicators.  
   
-3.  For each parameter marker, call [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) to point the parameter's data value and data length pointer to their variables in the first element of the array of structures allocated in Step 1. If the parameter is a data-at-execution parameter, set it up.  
+3.  For each parameter marker, call [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) to point the parameter's data value and data length pointer to their variables in the first element of the array of structures allocated in Step 1. If the parameter is a data-at-execution parameter, set it up.  
   
 4.  Fill the bound parameter buffer array with data values.  
   
 5.  Call [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) to execute the statement. The driver efficiently executes the statement S times, once for each set of parameters.  
   
-6.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md).  
+6.  If data-at-execution input parameters are used, [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
  **Note** Column-wise and row-wise binding are more typically used in conjunction with [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) and [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) than with [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   

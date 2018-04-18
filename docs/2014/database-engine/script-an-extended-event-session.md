@@ -49,6 +49,6 @@ manager: "jhubbard"
 3.  In the **Session Properties** dialog box, modify the event session, and then select where you want to script the modified session from the **Script** drop-down list.  
   
 ## See Also  
- [Extended Events](../../2014/database-engine/extended-events.md)  
+ [Extended Events](../relational-databases/extended-events/extended-events.md)  
   
   

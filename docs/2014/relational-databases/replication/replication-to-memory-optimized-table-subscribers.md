@@ -295,11 +295,11 @@ GO
   
 -   Tables replicated to memory-optimized tables on a subscriber are limited to the 8060 bytes per row limit of memory-optimized tables.  
   
--   Tables replicated to memory-optimized tables on a subscriber are limited to the data types permitted in memory-optimized tables. For more information, see [Supported Data Types](../../../2014/database-engine/supported-data-types.md).  
+-   Tables replicated to memory-optimized tables on a subscriber are limited to the data types permitted in memory-optimized tables. For more information, see [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
 -   There are restrictions on updating the primary key of tables being replicated to a memory-optimized table on a subscriber. For more information, see [Replicating changes to a primary key](#PrimaryKey).  
   
--   Foreign key, unique constraint, triggers, schema modifications, ROWGUIDCOL, computed columns, data compression, alias data types, versioning, and locks are not supported in memory-optimized tables. See [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../../2014/database-engine/transact-sql-constructs-not-supported-by-in-memory-oltp.md) for information.  
+-   Foreign key, unique constraint, triggers, schema modifications, ROWGUIDCOL, computed columns, data compression, alias data types, versioning, and locks are not supported in memory-optimized tables. See [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) for information.  
   
 ##  <a name="Schema"></a> Modifying a schema file  
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
 # Assigning Storage
   An application can assign storage for results before or after it executes a SQL statement. If an application prepares or executes the SQL statement first, it can inquire about the result set before it assigns storage for results. For example, if the result set is unknown, the application must retrieve the number of columns before it can assign storage for them.  
   
- To associate storage for a column of data, an application calls [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md)and passes it:  
+ To associate storage for a column of data, an application calls [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)and passes it:  
   
 -   The data type to which the data is to be converted.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   Column-wise binding is finished when each column is bound to its own array of variables.  
   
-     Column-wise binding is specified by calling [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) with *Attribute* set to SQL_ATTR_ROW_BIND_TYPE and *ValuePtr* set to SQL_BIND_BY_COLUMN. All the arrays must have the same number of elements.  
+     Column-wise binding is specified by calling [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) with *Attribute* set to SQL_ATTR_ROW_BIND_TYPE and *ValuePtr* set to SQL_BIND_BY_COLUMN. All the arrays must have the same number of elements.  
   
 -   Row-wise binding is finished when all the parameters in the SQL statement are bound as a unit to an array of structures that contain the individual variables for the parameters.  
   

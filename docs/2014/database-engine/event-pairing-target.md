@@ -60,7 +60,7 @@ ADD TARGET package0.pair_matching
    respond_to_memory_pressure = 1)  
 ```  
   
- For more information, see [Determine Which Queries Are Holding Locks](../../2014/database-engine/determine-which-queries-are-holding-locks.md).  
+ For more information, see [Determine Which Queries Are Holding Locks](../relational-databases/extended-events/determine-which-queries-are-holding-locks.md).  
   
 ## Reviewing the Target Output  
  To review the output for the pair matching target, you can use the following query, replacing *session_name* with the name of the event session.  

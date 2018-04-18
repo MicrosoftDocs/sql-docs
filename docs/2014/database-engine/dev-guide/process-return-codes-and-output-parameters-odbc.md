@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Process Return Codes and Output Parameters (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are not available to the application until [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) returns SQL_NO_DATA. If an error is returned from a stored procedure, call SQLMoreResults to advance to the next result until SQL_NO_DATA is returned.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are not available to the application until [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) returns SQL_NO_DATA. If an error is returned from a stored procedure, call SQLMoreResults to advance to the next result until SQL_NO_DATA is returned.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 1.  Construct an SQL statement that uses the ODBC CALL escape sequence. The statement should use parameter markers for each input, input/output, and output parameter, and for the procedure return value (if any).  
   
-2.  Call [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
+2.  Call [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
   
 3.  Execute the statement with `SQLExecDirect`.  
   

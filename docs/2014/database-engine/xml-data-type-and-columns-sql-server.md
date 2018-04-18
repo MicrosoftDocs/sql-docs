@@ -173,6 +173,6 @@ manager: "jhubbard"
 -   It cannot be used as a key column in an index. However, it can be included as data in a clustered index or explicitly added to a nonclustered index by using the INCLUDE keyword when the nonclustered index is created.  
   
 ## See Also  
- [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+ [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

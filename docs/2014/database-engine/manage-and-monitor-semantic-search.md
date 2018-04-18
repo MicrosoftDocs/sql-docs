@@ -79,7 +79,7 @@ GO
 ```  
   
 ##  <a name="HowToForcePopulation"></a> How To: Force the Population of the Semantic Indexes  
- You can force the population of full-text and semantic indexes by using the START/STOP/PAUSE or RESUME POPULATION clause with the same syntax and behavior that is described for full-text indexes. For more information, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md) and [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md).  
+ You can force the population of full-text and semantic indexes by using the START/STOP/PAUSE or RESUME POPULATION clause with the same syntax and behavior that is described for full-text indexes. For more information, see [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md) and [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).  
   
  Since semantic indexing is dependent on full-text indexing, semantic indexes are only populated when the associated full-text indexes are populated.  
   

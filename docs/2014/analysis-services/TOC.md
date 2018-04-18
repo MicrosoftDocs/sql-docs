@@ -67,7 +67,7 @@
 ##### [Use SQL Server Profiler to Monitor Analysis Services](instances/use-sql-server-profiler-to-monitor-analysis-services.md)
 ###### [Introduction to Monitoring Analysis Services with SQL Server Profiler](instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)
 ###### [Create Profiler Traces for Replay (Analysis Services)](instances/create-profiler-traces-for-replay-analysis-services.md)
-##### [Use SQL Server Extended Events (XEvents) to Monitor Analysis Services](instances/monitor-analysis-services-with-sql-server-extended-events.md)
+##### [Use SQL Server Extended Events (XEvents) to Monitor Analysis Services](../relational-databases/extended-events/extended-events.md)
 ##### [Use Dynamic Management Views (DMVs) to Monitor Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)
 ##### [Performance Counters](instances/performance-counters-ssas.md)
 ##### [Clear the Analysis Services Caches](instances/clear-the-analysis-services-caches.md)

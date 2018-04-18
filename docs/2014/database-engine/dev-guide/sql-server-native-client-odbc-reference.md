@@ -32,9 +32,9 @@ manager: "jhubbard"
   
 -   [SQL Server Driver Extensions](../../../2014/database-engine/dev-guide/sql-server-driver-extensions.md)  
   
--   [ODBC API Implementation Details](../../../2014/database-engine/dev-guide/odbc-api-implementation-details.md)  
+-   [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

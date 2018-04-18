@@ -173,7 +173,7 @@ GO
  [Back Up Files and Filegroups &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Restore a Differential Database Backup &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)   
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
- [Maintenance Plans](../../database-engine/maintenance-plans.md)   
+ [Maintenance Plans](../maintenance-plans/maintenance-plans.md)   
  [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
   
   

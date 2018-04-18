@@ -31,7 +31,7 @@ manager: "jhubbard"
  Besides the standard role of basic user-defined tables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides the following types of tables that serve special purposes in a database.  
   
  Partitioned Tables  
- Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../../2014/database-engine/partitioned-tables-and-indexes.md).  
+ Partitioned tables are tables whose data is horizontally divided into units which may be spread across more than one filegroup in a database. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. By default, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports up to 15,000 partitions. For more information, see [Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md).  
   
  Temporary Tables  
  Temporary tables are stored in `tempdb`. There are two types of temporary tables: local and global. They differ from each other in their names, their visibility, and their availability. Local temporary tables have a single number sign (#) as the first character of their names; they are visible only to the current connection for the user, and they are deleted when the user disconnects from the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Global temporary tables have two number signs (##) as the first characters of their names; they are visible to any user after they are created, and they are deleted when all users referencing the table disconnect from the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  Wide tables have the following performance implications.  
   
--   Wide tables can increase the cost to maintain indexes on the table. We recommend that the number of indexes on a wide table be limited to the indexes that are required by the business logic. As the number of indexes increases, so does the DML compile-time and memory requirement. Nonclustered indexes should be filtered indexes that are applied to data subsets. For more information, see [Create Filtered Indexes](../../2014/database-engine/create-filtered-indexes.md).  
+-   Wide tables can increase the cost to maintain indexes on the table. We recommend that the number of indexes on a wide table be limited to the indexes that are required by the business logic. As the number of indexes increases, so does the DML compile-time and memory requirement. Nonclustered indexes should be filtered indexes that are applied to data subsets. For more information, see [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
 -   Applications can dynamically add and remove columns from wide tables. When columns are added or removed, compiled query plans are also invalidated. We recommend that you design an application to match the projected workload so that schema changes are minimized.  
   

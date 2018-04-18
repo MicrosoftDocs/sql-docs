@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Bulk Insert Task Editor (Connection Page)
   Use the **Connection** page of the **Bulk Insert Task Editor** dialog box to specify the source and destination of the bulk insert operation and the format to use.  
   
- To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
+ To learn about working with bulk inserts, see [Bulk Insert Task](../../2014/integration-services/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## Options  
  **Connection**  

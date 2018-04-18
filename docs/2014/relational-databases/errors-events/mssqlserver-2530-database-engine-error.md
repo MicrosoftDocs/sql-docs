@@ -44,7 +44,7 @@ manager: "jhubbard"
 2.  Rerun the DBCC statement.  
   
 ## See Also  
- [Enable Indexes and Constraints](../../database-engine/enable-indexes-and-constraints.md)   
+ [Enable Indexes and Constraints](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)  

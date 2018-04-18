@@ -39,7 +39,7 @@ manager: "jhubbard"
 ### Retrieving Data from the Server  
  ODBC does not have a concept of variant types, limiting the use of the **sql_variant** data type with an ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if binding is specified, the **sql_variant** data type must be bound to one of the documented ODBC data types. **SQL_CA_SS_VARIANT_TYPE**, a new attribute specific to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, returns the data type of an instance in the **sql_variant** column to the user.  
   
- If no binding is specified, the [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) function can be used to determine the data type of an instance in the **sql_variant** column.  
+ If no binding is specified, the [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) function can be used to determine the data type of an instance in the **sql_variant** column.  
   
  To retrieve **sql_variant** data follow these steps.  
   
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 2.  Call **SQLGetData**, specifying SQL_C_BINARY for the type and 0 for the data length. This forces the driver to read the **sql_variant** header. The header provides the data type of that instance in the **sql_variant** column. **SQLGetData** returns the size (in bytes) of the value.  
   
-3.  Call [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md) by specifying **SQL_CA_SS_VARIANT_TYPE** as its attribute value. This function will return the C data type of the instance in the **sql_variant** column to the client.  
+3.  Call [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) by specifying **SQL_CA_SS_VARIANT_TYPE** as its attribute value. This function will return the C data type of the instance in the **sql_variant** column to the client.  
   
  Here is a code segment showing the preceding steps.  
   
@@ -82,10 +82,10 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- If the user creates the binding using [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md), the driver reads the metadata and the data. The driver then converts the data to the appropriate ODBC type specified in the binding.  
+ If the user creates the binding using [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md), the driver reads the metadata and the data. The driver then converts the data to the appropriate ODBC type specified in the binding.  
   
 ### Sending Data to the Server  
- **SQL_SS_VARIANT**, a new data type specific to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, is used for data sent to an **sql_variant** column. When sending data to the server using parameters (for example, INSERT INTO TableName VALUES (?,?)), [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) is used to specify the parameter information including the C type and the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver will convert the C data type to one of the appropriate **sql_variant** subtypes.  
+ **SQL_SS_VARIANT**, a new data type specific to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, is used for data sent to an **sql_variant** column. When sending data to the server using parameters (for example, INSERT INTO TableName VALUES (?,?)), [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) is used to specify the parameter information including the C type and the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver will convert the C data type to one of the appropriate **sql_variant** subtypes.  
   
 ## See Also  
  [Processing Results &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/processing-results-odbc.md)  

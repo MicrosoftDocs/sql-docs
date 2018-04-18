@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  The full-text protocol handler is hosted in the filter daemon host and is used to fetch from SQL Server the data to be full-text indexed. For more information about full-text search components, see [Full-Text Search](../full-text-search.md).  
   
- When attempting to fetch a data row, if the protocol handler cannot connect to SQL Server within the specified time, it reports a time-out error for that row. The full-text gatherer will retry the row later. For more information about the full-text gatherer, see [Populate Full-Text Indexes](../populate-full-text-indexes.md).  
+ When attempting to fetch a data row, if the protocol handler cannot connect to SQL Server within the specified time, it reports a time-out error for that row. The full-text gatherer will retry the row later. For more information about the full-text gatherer, see [Populate Full-Text Indexes](../../relational-databases/indexes/indexes.md).  
   
 ## See Also  
  [Full-Text Search](../full-text-search.md)   

@@ -23,7 +23,7 @@ manager: "jhubbard"
 ||  
 |-|  
 |[SQL Server Management Studio](../../2014/database-engine/sql-server-management-studio.md)|  
-|[SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)|  
+|[SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)|  
 |[Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)|  
 |[Register Servers](../../2014/database-engine/register-servers.md)|  
 |[SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)|  

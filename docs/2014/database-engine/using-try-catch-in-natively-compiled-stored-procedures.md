@@ -59,6 +59,6 @@ go
 ```  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

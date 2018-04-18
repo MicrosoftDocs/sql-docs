@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   DB-Library applications pass a pointer to a DBPROCESS structure as the first parameter of bulk copy functions. In ODBC applications, the DBPROCESS pointer is replaced with an ODBC connection handle.  
   
--   DB-Library applications call **BCP_SETL** before connecting to enable bulk copy operations on a DBPROCESS. ODBC applications instead call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) before connecting to enable bulk operations on a connection handle:  
+-   DB-Library applications call **BCP_SETL** before connecting to enable bulk copy operations on a DBPROCESS. ODBC applications instead call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) before connecting to enable bulk operations on a connection handle:  
   
     ```  
     SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP,  

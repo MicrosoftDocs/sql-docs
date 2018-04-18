@@ -77,7 +77,7 @@ manager: "jhubbard"
  Describes how to perform common tasks.  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
- [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

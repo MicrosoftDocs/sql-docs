@@ -38,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler Templates and Permissions](../../database-engine/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Native Client &#40;OLE DB&#41;](../../database-engine/dev-guide/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -155,7 +155,7 @@ manager: "jhubbard"
  Specify the option used to discover and report incomplete I/O transactions caused by disk I/O errors. Possible values are **None**, **TornPageDetection**, and **Checksum**. For more information, see [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Target Recovery Time (Seconds)**  
- Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../database-engine/database-checkpoints-sql-server.md).  
+ Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../logs/database-checkpoints-sql-server.md).  
   
 ## State  
  **Database Read Only**  

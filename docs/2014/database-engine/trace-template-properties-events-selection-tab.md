@@ -26,7 +26,7 @@ manager: "jhubbard"
  **Events** column  
  Specify events that should be traced by selecting or clearing the check box in the event column. Events are organized by event category.  
   
- If you selected **Base new template on existing one** on the **General** tab, events are automatically selected according to the specified template. For more information about event classes, see [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md).  
+ If you selected **Base new template on existing one** on the **General** tab, events are automatically selected according to the specified template. For more information about event classes, see [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Data columns  
  Specify data columns that should be traced by checking the box that corresponds with the event and the data column you need. All relevant event columns are checked by default for each event included in the trace, if the checkbox corresponding to the event is checked. If you checked **Base new template on existing one** on the **General** tab, data columns and filters are automatically selected according to the specified template.  

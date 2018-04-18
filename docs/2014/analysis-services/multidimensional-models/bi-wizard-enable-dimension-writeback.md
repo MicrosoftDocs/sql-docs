@@ -48,7 +48,7 @@ manager: "mblythe"
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  For more information see [Using Multiple Active Result Sets &#40;MARS&#41;](../../database-engine/dev-guide/using-multiple-active-result-sets-mars.md).  
+>  For more information see [Using Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## See Also  
  [Write-Enabled Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  

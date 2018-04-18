@@ -47,7 +47,7 @@ manager: "jhubbard"
 ## Moving a Transaction Out of the DEFERRED State  
   
 > [!IMPORTANT]  
->  Deferred transactions keep the transaction log active. A virtual log file that contains any deferred transactions cannot be truncated until those transactions are moved out of the deferred state. For more information about log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md).  
+>  Deferred transactions keep the transaction log active. A virtual log file that contains any deferred transactions cannot be truncated until those transactions are moved out of the deferred state. For more information about log truncation, see [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md).  
   
  To move the transaction out of the deferred state, the database must start cleanly without any I/O errors. If deferred transactions exist, you must fix the source of the I/O errors. The available solutions, listed in the order in which they are typically tried, are as follows:  
   

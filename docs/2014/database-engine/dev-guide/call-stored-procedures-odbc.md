@@ -31,7 +31,7 @@ manager: "jhubbard"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  Call [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
+2.  Call [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) for each input, input/output, and output parameter, and for the procedure return value (if any).  
   
 3.  Execute the statement with [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ## See Also  
  [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [Batching Stored Procedure Calls](../../../2014/database-engine/dev-guide/batching-stored-procedure-calls.md)   
- [Running Stored Procedures](../../../2014/database-engine/dev-guide/running-stored-procedures.md)   
+ [Running Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)   
  [Calling a Stored Procedure](../../../2014/database-engine/dev-guide/calling-a-stored-procedure.md)   
  [Procedures](../../../2014/database-engine/dev-guide/procedures.md)  
   

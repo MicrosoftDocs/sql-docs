@@ -89,6 +89,6 @@ manager: "jhubbard"
 |**Repopulate catalog**|Updates the catalog with recent changes to the data. This option does require catalog downtime.|  
   
 ## See Also  
- [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)  
+ [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
   

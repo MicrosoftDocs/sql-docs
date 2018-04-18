@@ -171,7 +171,7 @@ manager: "jhubbard"
 |Describes how to use the SQL Server Agent error log.|[SQL Server Agent Error Log](../../2014/database-engine/sql-server-agent-error-log.md)|  
 |||  
 |Describes how to use performance objects.|[Use Performance Objects](../../2014/database-engine/use-performance-objects.md)|  
-|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](../../2014/database-engine/use-the-maintenance-plan-wizard.md)|  
+|Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Describes how to automate administrative tasks using SQL Server Agent.|[Automated Administration Tasks &#40;SQL Server Agent&#41;](../../2014/database-engine/automated-administration-tasks-sql-server-agent.md)|  
   
 ## See Also  

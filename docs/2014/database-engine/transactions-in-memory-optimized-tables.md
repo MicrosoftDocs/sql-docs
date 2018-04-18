@@ -48,7 +48,7 @@ manager: "jhubbard"
  In addition, if a transaction (TxA) reads rows that have been inserted or modified by another transaction (TxB) that is in the process of committing, it will optimistically assume the other transaction will commit rather than wait for the commit to occur. In this case, transaction TxA will take a commit dependency on transaction TxB.  
   
 ## Conflict Detection, Validation, and Commit Dependency Checks  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detects conflicts between concurrent transactions, as well as isolation level violations, and will doom one of the conflicting transactions. This transaction will need to be retried. (For more information, see [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md).)  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detects conflicts between concurrent transactions, as well as isolation level violations, and will doom one of the conflicting transactions. This transaction will need to be retried. (For more information, see [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
   
  The system optimistically assumes there are no conflicts and no violations of transaction isolation. If any conflicts occur that may cause inconsistencies in the database or that may violate transaction isolation, these conflicts are detected, and the transaction is terminated.  
   

@@ -62,7 +62,7 @@ iValue
   
  A sequence error will also occur if you call `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` after calling `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` and bcp_writefmt.  
   
- For more information, see [Metadata Discovery](../../../2014/database-engine/dev-guide/metadata-discovery.md).  
+ For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contains the number of the code page for the data file. You can specify the number of the code page, such as 1252 or 850, or one of these values:  

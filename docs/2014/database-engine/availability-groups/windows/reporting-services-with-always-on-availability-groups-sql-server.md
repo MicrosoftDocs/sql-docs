@@ -72,7 +72,7 @@ manager: "jhubbard"
   
 -   [Manage Report Data Sources](../../../reporting-services/manage-report-data-sources.md)  
   
--   For more information on the available connection string properties, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+-   For more information on the available connection string properties, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 -   For more information on availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -169,11 +169,11 @@ manager: "jhubbard"
 -   After the database failover completes and after the report server service is re-started, SQL Server Agent jobs will be re-created automatically. Until the SQL agent jobs are recreated, any background executions associated with SQL Server Agent jobs will not be processed. This includes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscriptions, schedules, an snapshots.  
   
 ## See Also  
- [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
+ [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
   [AlwaysOn Availability Groups (SQL Server)](always-on-availability-groups-sql-server.md)
  [Getting Started with AlwaysOn Availability Groups &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)   
- [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)   
- [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
+ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)   
+ [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   

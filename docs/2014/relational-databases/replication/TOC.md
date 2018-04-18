@@ -145,7 +145,7 @@
 #### [Filter Published Data](filter-published-data.md)
 #### [Replicate Identity Columns](replicate-identity-columns.md)
 #### [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)
-#### [Replicate Partitioned Tables and Indexes](replicate-partitioned-tables-and-indexes.md)
+#### [Replicate Partitioned Tables and Indexes](../indexes/indexes.md)
 ##### [Manage Partitions for a Merge Publication with Parameterized Filters](manage-partitions-for-a-merge-publication-with-parameterized-filters.md)
 #### [Create, Modify, and Delete Publications and Articles](create-modify-and-delete-publications-and-articles-replication.md)
 ##### [Create a Publication](create-a-publication.md)

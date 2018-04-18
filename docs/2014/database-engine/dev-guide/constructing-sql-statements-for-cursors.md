@@ -24,7 +24,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Constructing SQL Statements for Cursors
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses server cursors to implement the cursor functionality defined in the ODBC specification. An ODBC application controls the cursor behavior by using [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set different statement attributes. These are the attributes and their defaults.  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver uses server cursors to implement the cursor functionality defined in the ODBC specification. An ODBC application controls the cursor behavior by using [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set different statement attributes. These are the attributes and their defaults.  
   
 |Attribute|Default|  
 |---------------|-------------|  
@@ -72,7 +72,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- ODBC applications receiving this message can call [SQLGetStmtAttr](../../../2014/database-engine/dev-guide/sqlgetstmtattr.md) to determine the current cursor settings.  
+ ODBC applications receiving this message can call [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) to determine the current cursor settings.  
   
  An attempt to execute a procedure with multiple SELECT statements when using server cursors generates the following error:  
   

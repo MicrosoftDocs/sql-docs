@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [History Cleanup Task &#40;Maintenance Plan&#41;](../../2014/database-engine/history-cleanup-task-maintenance-plan.md)  
+-   [History Cleanup Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/history-cleanup-task-maintenance-plan.md)  
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   

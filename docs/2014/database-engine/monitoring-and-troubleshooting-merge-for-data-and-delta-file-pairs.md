@@ -48,6 +48,6 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
  The blog [State Transition of Checkpoint Files in Databases with Memory-Optimized Tables](http://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) describes state transition of data and delta file pairs from inception to garbage collection.  
   
 ## See Also  
- [Creating and Managing Storage for Memory-Optimized Objects](../../2014/database-engine/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Creating and Managing Storage for Memory-Optimized Objects](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

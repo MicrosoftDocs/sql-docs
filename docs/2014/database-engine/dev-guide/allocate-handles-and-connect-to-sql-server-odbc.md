@@ -30,19 +30,19 @@ manager: "jhubbard"
   
 3.  Call [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) with a `HandleType` of SQL_HANDLE_ENV to initialize ODBC and allocate an environment handle.  
   
-4.  Call [SQLSetEnvAttr](../../../2014/database-engine/dev-guide/sqlsetenvattr.md) with `Attribute` set to SQL_ATTR_ODBC_VERSION and `ValuePtr` set to SQL_OV_ODBC3 to indicate the application will use ODBC 3.x-format function calls.  
+4.  Call [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) with `Attribute` set to SQL_ATTR_ODBC_VERSION and `ValuePtr` set to SQL_OV_ODBC3 to indicate the application will use ODBC 3.x-format function calls.  
   
-5.  Optionally, call [SQLSetEnvAttr](../../../2014/database-engine/dev-guide/sqlsetenvattr.md) to set other environment options, or call [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) to get environment options.  
+5.  Optionally, call [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) to set other environment options, or call [SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403) to get environment options.  
   
 6.  Call [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396) with a `HandleType` of SQL_HANDLE_DBC to allocate a connection handle.  
   
-7.  Optionally, call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) to set connection options, or call [SQLGetConnectAttr](../../../2014/database-engine/dev-guide/sqlgetconnectattr.md) to get connection options.  
+7.  Optionally, call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) to set connection options, or call [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) to get connection options.  
   
 8.  Call SQLConnect to use an existing data source to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Or  
   
-     Call [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md) to use a connection string to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Call [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) to use a connection string to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      A minimum complete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection string has one of two forms:  
   
@@ -55,15 +55,15 @@ manager: "jhubbard"
   
      \- or -  
   
-     Call [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md) multiple times in an iterative fashion to build the connection string and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Call [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) multiple times in an iterative fashion to build the connection string and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-9. Optionally, call [SQLGetInfo](../../../2014/database-engine/dev-guide/sqlgetinfo.md) to get driver attributes and behavior for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source.  
+9. Optionally, call [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) to get driver attributes and behavior for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source.  
   
 10. Allocate and use statements.  
   
 11. Call SQLDisconnect to disconnect from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and make the connection handle available for a new connection.  
   
-12. Call [SQLFreeHandle](../../../2014/database-engine/dev-guide/sqlfreehandle.md) with a `HandleType` of SQL_HANDLE_DBC to free the connection handle.  
+12. Call [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) with a `HandleType` of SQL_HANDLE_DBC to free the connection handle.  
   
 13. Call `SQLFreeHandle` with a `HandleType` of SQL_HANDLE_ENV to free the environment handle.  
   

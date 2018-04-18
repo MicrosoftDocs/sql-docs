@@ -203,7 +203,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  For typed XML, the XML is validated against the specified schema. For more information, see [Compare Typed XML to Untyped XML](../../2014/database-engine/compare-typed-xml-to-untyped-xml.md).  
   
 ## Using Bulk Load  
- The enhanced [OPENROWSET (Transact-SQL)](~/t-sql/functions/openrowset-transact-sql.md) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](../../2014/database-engine/load-xml-data.md).  
+ The enhanced [OPENROWSET (Transact-SQL)](~/t-sql/functions/openrowset-transact-sql.md) functionality allows you to bulk load XML documents in the database. You can bulk load XML instances from files into the `xml` type columns in the database. For working samples, see [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). For more information about loading XML documents, see [Load XML Data](../../2014/database-engine/load-xml-data.md).  
   
 ## In This Section  
   

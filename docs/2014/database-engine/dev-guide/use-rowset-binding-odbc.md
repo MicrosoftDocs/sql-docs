@@ -28,9 +28,9 @@ manager: "jhubbard"
   
     -   Optionally, allocate an array of R (or more) column buffers to store data lengths.  
   
-    -   Call [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) to bind the column's data value and data length arrays to the column of the rowset.  
+    -   Call [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) to bind the column's data value and data length arrays to the column of the rowset.  
   
-2.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+2.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
     -   Set SQL_ATTR_ROW_ARRAY_SIZE to the number of rows in the rowset (R).  
   
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 3.  Execute the statement.  
   
-4.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+4.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ### To use row-wise binding  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
     -   The second part is a SQLINTEGER variable to hold the column status indicator.  
   
-2.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+2.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
     -   Set SQL_ATTR_ROW_ARRAY_SIZE to the number of rows in the rowset (R).  
   
@@ -62,11 +62,11 @@ manager: "jhubbard"
   
     -   Set SQL_ATTR_PARAMS_STATUS_PTR to point to an array[R] of SQLUSSMALLINT variables to hold the row-status indicators.  
   
-3.  For each column in the result set, call [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) to point the data value and data length pointer of the column to their variables in the first element of the array of structures allocated in Step 1.  
+3.  For each column in the result set, call [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) to point the data value and data length pointer of the column to their variables in the first element of the array of structures allocated in Step 1.  
   
 4.  Execute the statement.  
   
-5.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+5.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ## See Also  
  [Using Cursors How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/using-cursors-how-to-topics-odbc.md)   

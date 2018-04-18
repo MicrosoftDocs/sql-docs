@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Integrated Kerberos Authentication (OLE DB)
   This sample shows how to get mutual Kerberos authentication by using OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
   
- For more information about SPNs and Kerberos authentication, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../../2014/database-engine/dev-guide/service-principal-name-spn-support-in-client-connections.md).  
+ For more information about SPNs and Kerberos authentication, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## Example  
  You must specify a server. In the .cpp file, change "MyServer" to a machine name that has an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (or later).  

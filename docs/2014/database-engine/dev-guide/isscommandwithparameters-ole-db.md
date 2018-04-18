@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Interfaces &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
- [Using XML Data Types](../../../2014/database-engine/dev-guide/using-xml-data-types.md)   
- [Using User-Defined Types](../../../2014/database-engine/dev-guide/using-user-defined-types.md)  
+ [Using XML Data Types](../../relational-databases/native-client/features/using-xml-data-types.md)   
+ [Using User-Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

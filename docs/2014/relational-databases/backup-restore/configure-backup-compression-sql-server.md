@@ -37,7 +37,7 @@ manager: "jhubbard"
   
          When backing up a database, you can control backup compression for an individual database, file, or log backup.  
   
-    -   [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)  
+    -   [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
          The Maintenance Plan Wizard enables you to control backup compression for each set full or differential database backups or log backups that you schedule.  
   

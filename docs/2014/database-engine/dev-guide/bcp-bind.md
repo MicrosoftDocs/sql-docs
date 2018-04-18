@@ -137,7 +137,7 @@ bcp_bind(hdbc, szName, 0,
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introduced support for SQLXML and SQLUDT data type tokens in the *`eDataType`* paramenter.  
   
  *idxServerCol*  
- Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
+ Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## Returns  
  SUCCEED or FAIL.  

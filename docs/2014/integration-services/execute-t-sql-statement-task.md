@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Execute T-SQL Statement Task &#40;Maintenance Plan&#41;](../../2014/database-engine/execute-t-sql-statement-task-maintenance-plan.md)  
+-   [Execute T-SQL Statement Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/execute-t-sql-statement-task-maintenance-plan.md)  
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   

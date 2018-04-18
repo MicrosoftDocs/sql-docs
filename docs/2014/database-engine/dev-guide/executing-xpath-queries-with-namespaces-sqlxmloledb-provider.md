@@ -55,7 +55,7 @@ manager: "jhubbard"
  This is a sample [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic application that executes an XPath query (x:Employee) against the preceding XSD schema. To resolve the prefix, the namespace binding is specified by using the namespaces property.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md).  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider, which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

@@ -718,6 +718,6 @@ Exit:
   
 ## See Also  
  [BLOBs and OLE Objects](../../../2014/database-engine/dev-guide/blobs-and-ole-objects.md)   
- [Using Large Value Types](../../../2014/database-engine/dev-guide/using-large-value-types.md)  
+ [Using Large Value Types](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

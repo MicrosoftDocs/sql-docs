@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   Cursor type  
   
-     Cursor types are set using the SQL_ATTR_CURSOR_TYPE attribute of [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md). The ODBC cursor types are forward-only, static, keyset-driven, mixed, and dynamic. Setting the cursor type was the original method of specifying cursors in ODBC.  
+     Cursor types are set using the SQL_ATTR_CURSOR_TYPE attribute of [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). The ODBC cursor types are forward-only, static, keyset-driven, mixed, and dynamic. Setting the cursor type was the original method of specifying cursors in ODBC.  
   
 -   Cursor behavior  
   

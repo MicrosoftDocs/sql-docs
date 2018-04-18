@@ -25,7 +25,7 @@ manager: "jhubbard"
  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[tsql](../includes/tsql-md.md)] system stored procedures to create traces on an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. These system stored procedures can be used from within your own applications to create traces manually, instead of using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. This allows you to write custom applications specific to the needs of your enterprise.  
   
 ## SQL Trace Architecture  
- Event Sources can be any source that produces the trace event, such as [!INCLUDE[tsql](../includes/tsql-md.md)] batches or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events, such as deadlocks. For more information about events, see [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md). After an event occurs, if the event class has been included in a trace definition, the event information is gathered by the trace. If filters have been defined for the event class in the trace definition, the filters are applied and the trace event information is passed to a queue. From the queue, the trace information is either written to a file or can be used by SMO in applications, such as [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. The following diagram shows how SQL Trace gathers events during a tracing.  
+ Event Sources can be any source that produces the trace event, such as [!INCLUDE[tsql](../includes/tsql-md.md)] batches or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events, such as deadlocks. For more information about events, see [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md). After an event occurs, if the event class has been included in a trace definition, the event information is gathered by the trace. If filters have been defined for the event class in the trace definition, the filters are applied and the trace event information is passed to a queue. From the queue, the trace information is either written to a file or can be used by SMO in applications, such as [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. The following diagram shows how SQL Trace gathers events during a tracing.  
   
  ![Database Engine event tracing process](../../2014/database-engine/media/tracarch.gif "Database Engine event tracing process")  
   
@@ -137,13 +137,13 @@ manager: "jhubbard"
   
  <sup>1</sup> These data columns are populated by default for all events.  
   
- <sup>2</sup> For more information about the **ObjectType** data column, see [ObjectType Trace Event Column](../../2014/database-engine/objecttype-trace-event-column.md).  
+ <sup>2</sup> For more information about the **ObjectType** data column, see [ObjectType Trace Event Column](../relational-databases/event-classes/objecttype-trace-event-column.md).  
   
 ## SQL Trace Tasks  
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create and run traces using Transact-SQL stored procedures.|[Create and Run Traces Using Transact-SQL Stored Procedures](../../2014/database-engine/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
+|Describes how to create and run traces using Transact-SQL stored procedures.|[Create and Run Traces Using Transact-SQL Stored Procedures](../relational-databases/native-client/ole-db/stored-procedures.md)|  
 |Describes how to create manual traces using stored procedures on an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|[Create Manual Traces using Stored Procedures](../../2014/database-engine/create-manual-traces-using-stored-procedures.md)|  
 |Describes how to save trace results to the file where the trace results are written.|[Save Trace Results to a File](../../2014/database-engine/save-trace-results-to-a-file.md)|  
 |Describes how to improve access to trace data by using space in the **temp** directory.|[Improve Access to Trace Data](../../2014/database-engine/improve-access-to-trace-data.md)|  

@@ -41,6 +41,6 @@ manager: "mblythe"
   
 ## See Also  
  [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
- [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -38,7 +38,7 @@ oTestCommand.Execute , , adExecuteStream
   
 |Connection<br /><br /> property|Default<br /><br /> (if any)|Description|  
 |-----------------------------|----------------------------|-----------------|  
-|Data Provider||Provides the PROGID of the OLE DB provider through which SQLXMLOLEDB executes the commands. Beginning in SQLXML 4.0 and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], this provider is contained within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client; therefore, this property value is restricted to "SQLNCLI11". For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).|  
+|Data Provider||Provides the PROGID of the OLE DB provider through which SQLXMLOLEDB executes the commands. Beginning in SQLXML 4.0 and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], this provider is contained within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client; therefore, this property value is restricted to "SQLNCLI11". For more information, see [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  The SQLXMLOLEDB Provider exposes the following provider-specific command properties.  
   

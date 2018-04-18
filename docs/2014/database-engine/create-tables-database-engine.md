@@ -68,7 +68,7 @@ manager: "jhubbard"
   
      ![AddTableObjects](../../2014/database-engine/media/addtableobjects.gif "AddTableObjects")  
   
-     For more information about these objects, see [Create Foreign Key Relationships](../../2014/database-engine/create-foreign-key-relationships.md), [Create Check Constraints](../../2014/database-engine/create-check-constraints.md) and [Indexes](../../2014/database-engine/indexes.md).  
+     For more information about these objects, see [Create Foreign Key Relationships](../../2014/database-engine/create-foreign-key-relationships.md), [Create Check Constraints](../../2014/database-engine/create-check-constraints.md) and [Indexes](../relational-databases/indexes/indexes.md).  
   
 8.  By default, the table is contained in the **dbo** schema. To specify a different schema for the table, right-click in the Table Designer pane and select **Properties** as shown in the following illustration. From the **Schema** drop-down list, select the appropriate schema.  
   

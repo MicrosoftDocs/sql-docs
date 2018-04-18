@@ -169,10 +169,10 @@ WHERE session_id = @@SPID;
  If SPN de-registration fails during shutdown, this failure is recorded in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, and shutdown continues.  
   
 ## See Also  
- [Service Principal Name &#40;SPN&#41; Support in Client Connections](../dev-guide/service-principal-name-spn-support-in-client-connections.md)   
- [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../dev-guide/service-principal-names-spns-in-client-connections-ole-db.md)   
- [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../dev-guide/service-principal-names-spns-in-client-connections-odbc.md)   
- [SQL Server Native Client Features](../dev-guide/sql-server-native-client-features.md)   
+ [Service Principal Name &#40;SPN&#41; Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
+ [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
+ [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
+ [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Manage Kerberos Authentication Issues in a Reporting Services Environment](http://technet.microsoft.com/library/ff679930.aspx)  
   
   

@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 -   **queryout** copies from a query and must be specified only when bulk copying data from a query.  
   
--   **format** creates a format file based on the option specified (**-n**, `-c`, `-w`, or **-N**) and the table or view delimiters. When bulk copying data, the **bcp** command can refer to a format file, which saves you from re-entering format information interactively. The **format** option requires the **-f** option; creating an XML format file, also requires the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md). You must specify **nul** as the value (**format nul**).  
+-   **format** creates a format file based on the option specified (**-n**, `-c`, `-w`, or **-N**) and the table or view delimiters. When bulk copying data, the **bcp** command can refer to a format file, which saves you from re-entering format information interactively. The **format** option requires the **-f** option; creating an XML format file, also requires the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). You must specify **nul** as the value (**format nul**).  
   
  *owner*  
  Is the name of the owner of the table or view. *owner* is optional if the user performing the operation owns the specified table or view. If *owner* is not specified and the user performing the operation does not own the specified table or view, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] returns an error message, and the operation is canceled.  
@@ -126,7 +126,7 @@ manager: "jhubbard"
  `-c`  
  Performs the operation using a character data type. This option does not prompt for each field; it uses `char` as the storage type, without prefixes and with **\t** (tab character) as the field separator and **\r\n** (newline character) as the row terminator. `-c` is not compatible with `-w`.  
   
- For more information, see [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-character-format-to-import-or-export-data-sql-server.md).  
+ For more information, see [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
  **-C** { **ACP** | **OEM** | **RAW** | *code_page* }  
  Specifies the code page of the data in the data file. *code_page* is relevant only if the data contains `char`, `varchar`, or `text` columns with character values greater than 127 or less than 32.  
@@ -159,7 +159,7 @@ manager: "jhubbard"
  **-f** *format_file*  
  Specifies the full path of a format file. The meaning of this option depends on the environment in which it is used, as follows:  
   
--   If **-f** is used with the **format** option, the specified *format_file* is created for the specified table or view. To create an XML format file, also specify the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md).  
+-   If **-f** is used with the **format** option, the specified *format_file* is created for the specified table or view. To create an XML format file, also specify the **-x** option. For more information, see [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
 -   If used with the **in** or **out** option, **-f** requires an existing format file.  
   
@@ -213,7 +213,7 @@ manager: "jhubbard"
  If *input_file* begins with a hyphen (-) or a forward slash (/), do not include a space between **-i** and the *input_file* value.  
   
  **-k**  
- Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted. For more information, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../2014/database-engine/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+ Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted. For more information, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** *application_intent*  
  Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If **-K** is not specified, the bcp utility will not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -234,12 +234,12 @@ manager: "jhubbard"
  **-n**  
  Performs the bulk-copy operation using the native (database) data types of the data. This option does not prompt for each field; it uses the native values.  
   
- For more information, see [Use Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-native-format-to-import-or-export-data-sql-server.md).  
+ For more information, see [Use Native Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
  **-N**  
  Performs the bulk-copy operation using the native (database) data types of the data for noncharacter data, and Unicode characters for character data. This option offers a higher performance alternative to the `-w` option, and is intended for transferring data from one instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to another using a data file. It does not prompt for each field. Use this option when you are transferring data that contains ANSI extended characters and you want to take advantage of the performance of native mode.  
   
- For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
+ For more information, see [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
  If you export and then import data to the same table schema by using bcp.exe with **-N**, you might see a truncation warning if there is a fixed length, non-Unicode character column (for example, `char(10)`).  
   
@@ -270,7 +270,7 @@ manager: "jhubbard"
  For more information, see Remarks, later in this topic.  
   
  **-r** *row_term*  
- Specifies the row terminator. The default is **\n** (newline character). Use this parameter to override the default row terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md).  
+ Specifies the row terminator. The default is **\n** (newline character). Use this parameter to override the default row terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  If you specify the row terminator in hexadecimal notation in a bcp.exe command, the value will be truncated at 0x00. For example, if you specify 0x410041, 0x41 will be used.  
   
@@ -283,7 +283,7 @@ manager: "jhubbard"
  Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to which to connect. If no server is specified, the **bcp** utility connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when a **bcp** command is run from a remote computer on the network or a local named instance. To connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a server, specify only *server_name*. To connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify *server_name***\\***instance_name*.  
   
  `-t` *field_term*  
- Specifies the field terminator. The default is **\t** (tab character). Use this parameter to override the default field terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md).  
+ Specifies the field terminator. The default is **\t** (tab character). Use this parameter to override the default field terminator. For more information, see [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  If you specify the field terminator in hexadecimal notation in a bcp.exe command, the value will be truncated at 0x00. For example, if you specify 0x410041, 0x41 will be used.  
   
@@ -314,12 +314,12 @@ manager: "jhubbard"
   
  For example, to generate data for types not supported by [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], but were introduced in later versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the -V80 option.  
   
- For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../../2014/database-engine/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ For more information, see [Import Native and Character Format Data from Earlier Versions of SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  `-w`  
  Performs the bulk copy operation using Unicode characters. This option does not prompt for each field; it uses `nchar` as the storage type, no prefixes, **\t** (tab character) as the field separator, and **\n** (newline character) as the row terminator. `-w` is not compatible with `-c`.  
   
- For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
+ For more information, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
  **-x**  
  Used with the **format** and **-f***format_file* options, generates an XML-based format file instead of the default non-XML format file. The **-x** does not work when importing or exporting data. It generates an error if used without both **format** and **-f***format_file*.  
@@ -331,9 +331,9 @@ manager: "jhubbard"
   
  For information about where to find or how to run the **bcp** utility and about the command prompt utilities syntax conventions, see [Command Prompt Utility Reference &#40;Database Engine&#41;](../../2014/database-engine/command-prompt-utility-reference-database-engine.md).  
   
- For information on preparing data for bulk import or export operations, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../2014/database-engine/prepare-data-for-bulk-export-or-import-sql-server.md).  
+ For information on preparing data for bulk import or export operations, see [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
- For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md).  
+ For information about when row-insert operations that are performed by bulk import are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## Native Data File Support  
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the **bcp** utility supports native data files compatible with [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
@@ -512,7 +512,7 @@ bcp "SELECT FirstName, LastName FROM AdventureWorks2012.Person.Person ORDER BY L
 bcp AdventureWorks2012.Sales.Currency format nul -T -c  -f Currency.fmt  
 ```  
   
- For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/non-xml-format-files-sql-server.md).  
+ For more information, see [Non-XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 ### H. Creating an XML format file  
  The following example creates an XML format file named `Currency.xml` for the `Sales.Currency` table in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  
@@ -538,38 +538,38 @@ bcp AdventureWorks2012.Sales.Currency2 in Currency.dat -T -f Currency.xml
 ```  
   
 > [!NOTE]  
->  Format files are useful when the data file fields are different from the table columns; for example, in their number, ordering, or data types. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Format files are useful when the data file fields are different from the table columns; for example, in their number, ordering, or data types. For more information, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## Additional Examples  
  The following topics contain examples of using **bcp**:  
   
--   [Create a Format File &#40;SQL Server&#41;](../../2014/database-engine/create-a-format-file-sql-server.md)  
+-   [Create a Format File &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
--   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+-   [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](../../2014/database-engine/keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Keep Identity Values When Bulk Importing Data &#40;SQL Server&#41;](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../2014/database-engine/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
+-   [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Specify Field and Row Terminators &#40;SQL Server&#41;](../../2014/database-engine/specify-field-and-row-terminators-sql-server.md)  
+-   [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
--   [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../../2014/database-engine/use-a-format-file-to-bulk-import-data-sql-server.md)  
+-   [Use a Format File to Bulk Import Data &#40;SQL Server&#41;](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-character-format-to-import-or-export-data-sql-server.md)  
+-   [Use Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Use Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Use Native Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../../2014/database-engine/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [Use Unicode Native Format to Import or Export Data &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## See Also  
- [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../../2014/database-engine/prepare-data-for-bulk-export-or-import-sql-server.md)   
+ [Prepare Data for Bulk Export or Import &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md)  
+ [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

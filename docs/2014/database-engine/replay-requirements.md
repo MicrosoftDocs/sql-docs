@@ -123,7 +123,7 @@ manager: "jhubbard"
 ## See Also  
  [Replay a Trace Table &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-table-sql-server-profiler.md)   
  [Replay a Trace File &#40;SQL Server Profiler&#41;](../../2014/database-engine/replay-a-trace-file-sql-server-profiler.md)   
- [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md)   
+ [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   
  [SQL Server Distributed Replay](../../2014/database-engine/sql-server-distributed-replay.md)  
   

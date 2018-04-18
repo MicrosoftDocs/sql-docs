@@ -112,7 +112,7 @@ manager: "jhubbard"
 1.  Specify the number of fixed-length and variable-length columns at the leaf level and calculate the space that is required for their storage:  
   
     > [!NOTE]  
-    >  You can extend a nonclustered index by including nonkey columns in addition to the index key columns. These additional columns are only stored at the leaf level of the nonclustered index. For more information, see [Create Indexes with Included Columns](../../database-engine/create-indexes-with-included-columns.md).  
+    >  You can extend a nonclustered index by including nonkey columns in addition to the index key columns. These additional columns are only stored at the leaf level of the nonclustered index. For more information, see [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
     >  You can combine `varchar`, `nvarchar`, `varbinary`, or `sql_variant` columns that cause the total defined table width to exceed 8,060 bytes. The length of each one of these columns must still fall within the limit of 8,000 bytes for a `varchar`, `varbinary`, or `sql_variant` column, and 4,000 bytes for `nvarchar` columns. However, their combined widths may exceed the 8,060 byte limit in a table. This also applies to nonclustered index leaf rows that have included columns.  
@@ -187,7 +187,7 @@ manager: "jhubbard"
   
      Because index rows do not span pages, the number of index rows per page should be rounded down to the nearest whole row. The 2 in the formula is for the row's entry in the page's slot array.  
   
-7.  Calculate the number of reserved free rows per page, based on the [fill factor](../../database-engine/specify-fill-factor-for-an-index.md) specified:  
+7.  Calculate the number of reserved free rows per page, based on the [fill factor](../indexes/specify-fill-factor-for-an-index.md) specified:  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
@@ -254,9 +254,9 @@ manager: "jhubbard"
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
   
 ## See Also  
- [Clustered and Nonclustered Indexes Described](../../database-engine/clustered-and-nonclustered-indexes-described.md)   
- [Create Nonclustered Indexes](../../database-engine/create-nonclustered-indexes.md)   
- [Create Clustered Indexes](../../database-engine/create-clustered-indexes.md)   
+ [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   
+ [Create Nonclustered Indexes](../indexes/indexes.md)   
+ [Create Clustered Indexes](../indexes/create-clustered-indexes.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
  [Estimate the Size of a Clustered Index](estimate-the-size-of-a-clustered-index.md)   
  [Estimate the Size of a Heap](estimate-the-size-of-a-heap.md)   

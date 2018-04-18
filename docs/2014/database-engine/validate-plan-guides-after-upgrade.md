@@ -22,6 +22,6 @@ manager: "jhubbard"
   
 -   Validate existing plan guides by using the [sys.fn_validate_plan_guide](~/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md) function.  
   
--   Use extended events to monitor for misguided plans for some period of time by using the [Plan Guide Unsuccessful](../../2014/database-engine/plan-guide-unsuccessful-event-class.md) event.  
+-   Use extended events to monitor for misguided plans for some period of time by using the [Plan Guide Unsuccessful](../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md) event.  
   
   

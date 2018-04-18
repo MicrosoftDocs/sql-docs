@@ -90,6 +90,6 @@ manager: "jhubbard"
 |Describes how to view the dependencies on a stored procedure.|[View the Dependencies of a Stored Procedure](../../2014/database-engine/view-the-dependencies-of-a-stored-procedure.md)|  
   
 ## Related Content  
- [CLR Stored Procedures](../../2014/database-engine/dev-guide/clr-stored-procedures.md)  
+ [CLR Stored Procedures](../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

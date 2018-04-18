@@ -111,7 +111,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  You should not rely on finding assemblies in the same application domain, because the application domain boundary and the assemblies that go into each domain are defined by the implementation.  
   
 ## See Also  
- [Setting Security for Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [Setting Security for Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)   
  [Defining Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

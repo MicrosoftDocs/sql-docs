@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 2.  Deploy and install SQLXML 4.0 and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-     For more information, see on [SQLXML 4.0 Programming Concepts](../../../2014/database-engine/dev-guide/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md).  
+     For more information, see on [SQLXML 4.0 Programming Concepts](../../../2014/database-engine/dev-guide/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## In This Section  
  [Executing SQL Queries &#40;SQLXMLOLEDB Provider&#41;](../../../2014/database-engine/dev-guide/executing-sql-queries-sqlxmloledb-provider.md)  
@@ -58,6 +58,6 @@ manager: "jhubbard"
  Illustrates the use of the ClientSideXML and xsl properties in applying an XSL transformation.  
   
 ## See Also  
- [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md)  
+ [System Requirements for SQL Server Native Client](../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
   
   

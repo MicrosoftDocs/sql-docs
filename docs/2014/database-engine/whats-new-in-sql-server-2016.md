@@ -24,7 +24,7 @@ manager: "jhubbard"
 ##  <a name="Feature"></a> Database Engine Feature Enhancements  
   
 ###  <a name="MemoryOpt"></a> Memory-Optimized Tables  
- In-Memory OLTP is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] engine. In-Memory OLTP is optimized for OLTP. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md).  
+ In-Memory OLTP is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] engine. In-Memory OLTP is optimized for OLTP. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
 ###  <a name="DataFiles"></a> SQL Server Data Files in Windows Azure  
@@ -58,7 +58,7 @@ manager: "jhubbard"
 ###  <a name="Durability"></a> Delayed Durability  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] introduces the ability to reduce latency by designating some or all transactions as delayed durable. A delayed durable transaction returns control to the client before the transaction log record is written to disk. Durability can be controlled at the database level, COMMIT level, or ATOMIC block level.  
   
- For more information see the topic [Control Transaction Durability](control-transaction-durability.md).  
+ For more information see the topic [Control Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
   
   
 ###  <a name="AlwaysOn"></a> AlwaysOn Enhancements  
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   **Clustered columnstore indexes**  
   
-     Use a clustered columnstore index to improve data compression and query performance for data warehousing workloads that primarily perform bulk loads and read-only queries. Since the clustered columnstore index is updateable, the workload can perform many insert, update, and delete operations. For more information, see [Columnstore Indexes Described](../../2014/database-engine/columnstore-indexes-described.md) and [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md).  
+     Use a clustered columnstore index to improve data compression and query performance for data warehousing workloads that primarily perform bulk loads and read-only queries. Since the clustered columnstore index is updateable, the workload can perform many insert, update, and delete operations. For more information, see [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-overview.md) and [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 -   **SHOWPLAN**  
   
@@ -116,7 +116,7 @@ manager: "jhubbard"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation Event Class  
- The progress report for the online index operation event class now has two new data columns: **PartitionId** and **PartitionNumber**. For more information, see [Progress Report: Online Index Operation Event Class](../../2014/database-engine/progress-report-online-index-operation-event-class.md).  
+ The progress report for the online index operation event class now has two new data columns: **PartitionId** and **PartitionNumber**. For more information, see [Progress Report: Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Database Compatibility Level  
@@ -131,7 +131,7 @@ manager: "jhubbard"
  The `SELECT … INTO` statement is improved and can now operate in parallel. The database compatibility level must be at least 110.  
   
 ### [!INCLUDE[tsql](../includes/tsql-md.md)] Enhancements for In-Memory OLTP  
- For information about the [!INCLUDE[tsql](../includes/tsql-md.md)] changes to support In-Memory OLTP, see [Transact-SQL Support for In-Memory OLTP](../../2014/database-engine/transact-sql-support-for-in-memory-oltp.md).  
+ For information about the [!INCLUDE[tsql](../includes/tsql-md.md)] changes to support In-Memory OLTP, see [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
 ##  <a name="SystemTable"></a> System View Enhancements  

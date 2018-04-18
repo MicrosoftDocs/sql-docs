@@ -115,6 +115,6 @@ manager: "jhubbard"
 -   [Recover a Database Without Restoring Data &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## See Also  
- [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)  
+ [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)  
   
   

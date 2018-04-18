@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Full-Text Index Properties (General Page)
   **To view or change the modifiable properties of a full-text index**  
   
--   [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md)  
+-   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
 ## UIElement List  
  **Full-Text Catalog**  

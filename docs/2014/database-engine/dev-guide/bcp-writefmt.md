@@ -54,7 +54,7 @@ szFormatFile
 ## Remarks  
  The format file specifies the data format of a data file created by bulk copy. Calls to [bcp_columns](../../../2014/database-engine/dev-guide/bcp-columns.md) and [bcp_colfmt](../../../2014/database-engine/dev-guide/bcp-colfmt.md) define the format of the data file. **bcp_writefmt** saves this definition in the file referenced by *szFormatFile*. For more information, see [bcp_init](../../../2014/database-engine/dev-guide/bcp-init.md).  
   
- For more information about the structure of **bcp** data format files, see [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../../../2014/database-engine/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ For more information about the structure of **bcp** data format files, see [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  To load a saved format file, use [bcp_readfmt](../../../2014/database-engine/dev-guide/bcp-readfmt.md).  
   

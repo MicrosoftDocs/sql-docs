@@ -40,7 +40,7 @@ manager: "jhubbard"
  To execute the template command, the XML template dialect — {5d531cb2-e6ed-11d2-b252-00c04f681b71} — must be specified.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for the data provider which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md).  
+>  In the code, you must provide the name of the instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client for the data provider which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

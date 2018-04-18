@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Maintenance Cleanup Task
-  The Maintenance Cleanup task removes files related to maintenance plans, including database backup files and reports created by maintenance plans. For more information, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md) and [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+  The Maintenance Cleanup task removes files related to maintenance plans, including database backup files and reports created by maintenance plans. For more information, see [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md) and [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  By using the Maintenance Cleanup task, a package can remove the backup files or maintenance plan reports on the specified server. The Maintenance Cleanup task includes an option to remove a specific file or remove a group of files in a folder. Optionally you can specify the extension of the files to delete.  
   
@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Maintenance Cleanup Task &#40;Maintenance Plan&#41;](../../2014/database-engine/maintenance-cleanup-task-maintenance-plan.md)  
+-   [Maintenance Cleanup Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## Related Tasks  
  For details about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  

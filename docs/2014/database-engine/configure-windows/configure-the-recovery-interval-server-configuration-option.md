@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure the recovery interval Server Configuration Option
-  This topic describes how to configure the **recovery interval** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **recovery interval** option defines an upper limit on the time recovering a database should take. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the value specified for this option to determine approximately how often [automatic checkpoints](../database-checkpoints-sql-server.md) to issue automatic checkpoints on a given database.  
+  This topic describes how to configure the **recovery interval** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **recovery interval** option defines an upper limit on the time recovering a database should take. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uses the value specified for this option to determine approximately how often [automatic checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md) to issue automatic checkpoints on a given database.  
   
  The default recovery-interval value is 0, which allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to automatically configure the recovery interval. Typically, the default recovery interval results in automatic checkpoints occurring approximately once a minute for active databases and a recovery time of less than one minute. Higher values indicate the approximate maximum recovery time, in minutes. For example, setting the recovery interval to 3 indicates a maximum recovery time of approximately three minutes.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The recovery interval affects only databases that use the default target recovery time (0). To override the server recovery interval on a database, configure a non-default target recovery time on the database. For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../change-the-target-recovery-time-of-a-database-sql-server.md).  
+-   The recovery interval affects only databases that use the default target recovery time (0). To override the server recovery interval on a database, configure a non-default target recovery time on the database. For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -105,8 +105,8 @@ GO
  The setting takes effect immediately without restarting the server.  
   
 ## See Also  
- [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../change-the-target-recovery-time-of-a-database-sql-server.md)   
- [Database Checkpoints &#40;SQL Server&#41;](../database-checkpoints-sql-server.md)   
+ [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
+ [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [show advanced options Server Configuration Option](show-advanced-options-server-configuration-option.md)   

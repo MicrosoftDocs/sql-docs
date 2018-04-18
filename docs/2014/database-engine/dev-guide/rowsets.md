@@ -62,6 +62,6 @@ manager: "jhubbard"
 -   [Updating Data in Rowsets](../../../2014/database-engine/dev-guide/updating-data-in-rowsets.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

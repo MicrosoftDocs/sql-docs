@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
- [Maintenance Plans](../../2014/database-engine/maintenance-plans.md)  
+ [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md)  
   
  [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)  
   

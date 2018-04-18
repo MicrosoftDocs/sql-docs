@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the OLE DB record-enhanced **IErrorInfo**, the custom `ISQLErrorInfo`, and the provider-specific [ISQLServerErrorInfo](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md) error object interfaces.  
   
- For information about tracing errors, see [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805). For information about enhancements to error tracing added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], see [Accessing Diagnostic Information in the Extended Events Log](../../../2014/database-engine/dev-guide/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ For information about tracing errors, see [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805). For information about enhancements to error tracing added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], see [Accessing Diagnostic Information in the Extended Events Log](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## In This Section  
   
@@ -46,6 +46,6 @@ manager: "jhubbard"
 -   [SQL Server Message Results](../../../2014/database-engine/dev-guide/sql-server-message-results.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -293,7 +293,7 @@ GO
 ## See Also  
  [SQL Server, Backup Device Object](../../database-engine/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
- [Maintenance Plans](../../database-engine/maintenance-plans.md)   
+ [Maintenance Plans](../maintenance-plans/maintenance-plans.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-labelonly-transact-sql.md)   

@@ -125,7 +125,7 @@ manager: "jhubbard"
   
 -   [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Back Up and Restore Full-Text Catalogs and Indexes](../indexes/indexes.md)  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   

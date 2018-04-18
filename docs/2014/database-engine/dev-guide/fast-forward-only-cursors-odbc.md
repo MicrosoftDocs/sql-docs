@@ -24,9 +24,9 @@ manager: "jhubbard"
 # Fast Forward-Only Cursors (ODBC)
   When connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports performance optimizations for forward-only, read-only cursors. Fast forward-only cursors are implemented internally by the driver and server in a manner very similar to default result sets. Besides having high performance, fast forward-only cursors also have these characteristics:  
   
--   [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) is not supported. The result set columns must be bound to program variables.  
+-   [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) is not supported. The result set columns must be bound to program variables.  
   
--   The server automatically closes the cursor when the end of the cursor is detected. The application must still call [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md) or [SQLFreeStmt](../../../2014/database-engine/dev-guide/sqlfreestmt.md)(SQL_CLOSE), but the driver does not have to send the close request to the server. This saves a roundtrip across the network to the server.  
+-   The server automatically closes the cursor when the end of the cursor is detected. The application must still call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) or [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE), but the driver does not have to send the close request to the server. This saves a roundtrip across the network to the server.  
   
  The application requests fast forward-only cursors using the driver-specific statement attribute SQL_SOPT_SS_CURSOR_OPTIONS. When set to SQL_CO_FFO, fast forward-only cursors are enabled without autofetch. When set to SQL_CO_FFO_AF, the autofetch option is also enabled. For more information about autofetch, see [Using Autofetch with ODBC Cursors](../../relational-databases/cursors.md).  
   

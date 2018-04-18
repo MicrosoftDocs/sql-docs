@@ -22,7 +22,7 @@ manager: "jhubbard"
     
 ### To use cursors  
   
-1.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the desired cursor attributes:  
+1.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the desired cursor attributes:  
   
      Set the SQL_ATTR_CURSOR_TYPE and SQL_ATTR_CONCURRENCY attributes (this is the preferred option).  
   
@@ -30,15 +30,15 @@ manager: "jhubbard"
   
      Set the SQL_CURSOR_SCROLLABLE and SQL_CURSOR_SENSITIVITY attributes.  
   
-2.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the rowset size by using the SQL_ATTR_ROW_ARRAY_SIZE attribute.  
+2.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the rowset size by using the SQL_ATTR_ROW_ARRAY_SIZE attribute.  
   
 3.  Optionally, call [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) to set a cursor name if positioned updates will be done by using the WHERE CURRENT OF clause.  
   
 4.  Execute the SQL statement.  
   
-5.  Optionally, call [SQLGetCursorName](../../../2014/database-engine/dev-guide/sqlgetcursorname.md) to get the cursor name if positioned updates will be done by using the WHERE CURRENT OF clause and a cursor name was not supplied with [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) in Step 3.  
+5.  Optionally, call [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) to get the cursor name if positioned updates will be done by using the WHERE CURRENT OF clause and a cursor name was not supplied with [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) in Step 3.  
   
-6.  Call [SQLNumResultCols](../../../2014/database-engine/dev-guide/sqlnumresultcols.md) to get the number of columns (C) in the rowset.  
+6.  Call [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) to get the number of columns (C) in the rowset.  
   
      Use column-wise binding.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 7.  Fetch rowsets from the cursor as desired.  
   
-8.  Call [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) to determine if another result set is available.  
+8.  Call [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) to determine if another result set is available.  
   
     -   If it returns SQL_SUCCESS, another result set is available.  
   
@@ -62,11 +62,11 @@ manager: "jhubbard"
   
      Note that when a result set contains compute rows, each compute row is made available as a separate result set. These compute result sets are interspersed within the normal rows and break normal rows into multiple result sets.  
   
-9. Optionally, call [SQLFreeStmt](../../../2014/database-engine/dev-guide/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
+9. Optionally, call [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
   
 10. If another result set is available, go to Step 6.  
   
-     In Step 9, calling [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) on a partially processed result set clears the remainder of the result set. Another way to clear a partially processed result set is to call [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md).  
+     In Step 9, calling [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) on a partially processed result set clears the remainder of the result set. Another way to clear a partially processed result set is to call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
      You can control the type of cursor used by setting either SQL_ATTR_CURSOR_TYPE and SQL_ATTR_CONCURRENCY, or by setting SQL_ATTR_CURSOR_SENSITIVITY and SQL_ATTR_CURSOR_SCROLLABLE. You should not mix the two methods of specifying cursor behavior.  
   

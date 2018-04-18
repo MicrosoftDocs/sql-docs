@@ -28,7 +28,7 @@ manager: "jhubbard"
 -   [Create a Differential Database Backup &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 > [!IMPORTANT]  
->  You can define a database maintenance plan to create database backups. For more information, see [Maintenance Plans](../../database-engine/maintenance-plans.md) and [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md).  
+>  You can define a database maintenance plan to create database backups. For more information, see [Maintenance Plans](../maintenance-plans/maintenance-plans.md) and [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
 >  When you specify a backup task by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can generate the corresponding [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](~/t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  

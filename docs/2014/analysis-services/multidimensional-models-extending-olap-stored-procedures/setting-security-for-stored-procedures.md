@@ -24,6 +24,6 @@ manager: "mblythe"
   
 ## See Also  
  [Multidimensional Model Assemblies Management](../multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Defining Stored Procedures](defining-stored-procedures.md)  
+ [Defining Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

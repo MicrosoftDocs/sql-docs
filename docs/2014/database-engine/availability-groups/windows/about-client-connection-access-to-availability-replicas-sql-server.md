@@ -53,7 +53,7 @@ manager: "jhubbard"
  Only read-intent connections  
  The secondary database(s) are available only for connection for which the `Application Intent` connection property is set to `ReadOnly` (*read-intent connections*).  
   
- For information about this connection property, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ For information about this connection property, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Allow any read-only connection  
  The secondary database(s) are all available for read access connections. This option allows lower versioned clients to connect.  
@@ -69,7 +69,7 @@ manager: "jhubbard"
  Allow only read-write connections  
  When the `Application Intent` connection property is set to **ReadWrite** or is not set, the connection is allowed. Connections for which the `Application Intent` connection string keyword is set to `ReadOnly` are not allowed. Allowing only read-write connections can help prevent your customers from connecting a read-intent work load to the primary replica by mistake.  
   
- For information about this connection property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+ For information about this connection property, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   

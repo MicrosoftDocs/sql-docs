@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Options  
  **Events** column  
- Specify traced events by selecting or clearing the check box in the event column. **Events** are organized by event category. Event classes specified in the template are automatically selected. For more information, see [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md).  
+ Specify traced events by selecting or clearing the check box in the event column. **Events** are organized by event category. Event classes specified in the template are automatically selected. For more information, see [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Data columns  
  Specify traced data columns by checking the box that corresponds with the event and the data column you need. All relevant event columns are checked by default for each event included in the trace.  

@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  When DateTypeCompat == 0, these types will appear in their native form.  
   
- For more information about SSPROP_INIT_DATATYPECOMPATIBILITY, see [Using Connection String Keywords with SQL Server Native Client](../../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+ For more information about SSPROP_INIT_DATATYPECOMPATIBILITY, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  The sqlncli.h file contains variant access macros that simplify dereferencing the member types in the `SSVARIANT` structure. An example is V_SS_DATETIMEOFFSET, which you can use as follows:  
   

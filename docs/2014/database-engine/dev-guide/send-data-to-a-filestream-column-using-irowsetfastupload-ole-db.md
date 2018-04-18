@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  

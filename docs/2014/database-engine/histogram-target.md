@@ -73,7 +73,7 @@ ADD TARGET package0.histogram
 (SET slots = 32, filtering_event_name = 'sqlserver.checkpoint_end', source_type = 0, source = 'database_id')  
 ```  
   
- For more information, see [Find the Objects That Have the Most Locks Taken on Them](../../2014/database-engine/find-the-objects-that-have-the-most-locks-taken-on-them.md), and [Monitor System Activity Using Extended Events](../../2014/database-engine/monitor-system-activity-using-extended-events.md).  
+ For more information, see [Find the Objects That Have the Most Locks Taken on Them](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md), and [Monitor System Activity Using Extended Events](../relational-databases/extended-events/extended-events.md).  
   
 ## Reviewing the Target Output  
  The histogram target serializes data to a calling program or procedure in XML format. The target output does not conform to any schema.  

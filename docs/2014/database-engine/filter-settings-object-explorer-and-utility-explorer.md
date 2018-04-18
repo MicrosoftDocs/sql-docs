@@ -72,6 +72,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)   
- [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)  
+ [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

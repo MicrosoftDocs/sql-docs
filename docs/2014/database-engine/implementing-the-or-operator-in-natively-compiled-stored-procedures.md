@@ -244,6 +244,6 @@ GO
  If you have more than one OR operator in the WHERE clause or JOIN condition, the number of queries you need to execute to simulate the behavior may increase exponentially. This may slow down query performance and may increase memory usage due to the need to use memory-optimized table variables.  
   
 ## See Also  
- [Migration Issues for Natively Compiled Stored Procedures](../../2014/database-engine/migration-issues-for-natively-compiled-stored-procedures.md)  
+ [Migration Issues for Natively Compiled Stored Procedures](../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

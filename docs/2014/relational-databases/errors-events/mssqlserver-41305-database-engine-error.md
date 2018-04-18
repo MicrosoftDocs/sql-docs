@@ -33,12 +33,12 @@ manager: "jhubbard"
 ## Explanation  
  The transaction encountered a validation failure and is now doomed.  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 ## User Action  
  Retry the failed transaction.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

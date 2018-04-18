@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  You inspect objects, settings, and operational data that are stored in the `SSISDB` catalog, by querying the views in the `SSISDB` database. You manage the objects by calling stored procedures in the `SSISDB` database or by using the UI of the `SSISDB` catalog. In many cases, the same task can be performed in the UI or by calling a stored procedure.  
   
- To maintain the `SSISDB` database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../../2014/database-engine/maintenance-plans.md).  
+ To maintain the `SSISDB` database, it is recommended that you apply standard enterprise policies for managing user databases. For information about creating maintenance plans, see [Maintenance Plans](../relational-databases/maintenance-plans/maintenance-plans.md).  
   
  The `SSISDB` catalog and the `SSISDB` database support Windows PowerShell. For more information about using SQL Server with Windows PowerShell, see [SQL Server PowerShell](../powershell/sql-server-powershell.md). For examples of how to use Windows PowerShell to complete tasks such as deploying a project, see the blog entry, [SSIS and PowerShell in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=242539), on blogs.msdn.com.  
   

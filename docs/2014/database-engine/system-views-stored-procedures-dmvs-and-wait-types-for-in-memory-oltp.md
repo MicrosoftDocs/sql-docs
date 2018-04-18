@@ -60,7 +60,7 @@ manager: "jhubbard"
  For details, see wait types that are prefixed with **WAIT_XTP**, and **XTPPROC** in the [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) topic.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../2014/database-engine/in-memory-oltp-in-memory-optimization.md)   
- [Transact-SQL Support for In-Memory OLTP](../../2014/database-engine/transact-sql-support-for-in-memory-oltp.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
+ [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB)
   This sample shows uses an ISequentialStream interface in an ICommandText interface to retrieve a single record from a Filestream column.  
   
- For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/filestream-support-ole-db.md).  
+ For more information on the filestream feature, see [FILESTREAM Support &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## Example  
  Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  

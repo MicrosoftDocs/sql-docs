@@ -49,7 +49,7 @@ manager: "jhubbard"
  When a population has completed, a final merge process is triggered that merges the index fragments together into one master full-text index. This results in improved query performance since only the master index needs to be queried rather than a number of index fragments, and better scoring statistics may be used for relevance ranking. Note that the master merge can be I/O intensive, because large amounts of data must be written and read when index fragments are merged, though it does not block incoming queries.  
   
 > [!IMPORTANT]  
->  Master merging a large amount of data can create a long running transaction, delaying truncation of the transaction log during checkpoint. In this case, under the full recovery model, the transaction log might grow significantly. As a best practice, before reorganizing a large full-text index in a database that uses the full recovery model, ensure that your transaction log contains sufficient space for a long-running transaction. For more information, see [Manage the Size of the Transaction Log File](../../2014/database-engine/manage-the-size-of-the-transaction-log-file.md).  
+>  Master merging a large amount of data can create a long running transaction, delaying truncation of the transaction log during checkpoint. In this case, under the full recovery model, the transaction log might grow significantly. As a best practice, before reorganizing a large full-text index in a database that uses the full recovery model, ensure that your transaction log contains sufficient space for a long-running transaction. For more information, see [Manage the Size of the Transaction Log File](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
   
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
   
 ##  <a name="full"></a> Troubleshooting the Performance of Full Populations  
- To diagnose performance problems, look at the full-text crawl logs. For information about crawl logs, see [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md).  
+ To diagnose performance problems, look at the full-text crawl logs. For information about crawl logs, see [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).  
   
  It is recommended that the following order of troubleshooting be followed if the performance of full populations is not satisfactory.  
   
@@ -192,7 +192,7 @@ GO
   
     -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-         To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+         To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
   
   
@@ -208,7 +208,7 @@ GO
 ## See Also  
  [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range Server Configuration Option](configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
- [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)   
+ [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md)   
  [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md)   
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   

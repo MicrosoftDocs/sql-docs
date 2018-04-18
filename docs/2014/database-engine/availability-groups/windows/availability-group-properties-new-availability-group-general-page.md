@@ -81,7 +81,7 @@ manager: "jhubbard"
  All connections are allowed to the databases in the primary replica. This is the default setting.  
   
  **Allow read/write connections**  
- Connections where the Application Intent connection property is set to **ReadOnly** are disallowed. When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Connections where the Application Intent connection property is set to **ReadOnly** are disallowed. When the Application Intent property is set to **ReadWrite** or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Readable Secondary**  
  Whether an availability replica that is performing the secondary role (that is, a secondary replica) can accept connections from clients, one of:  

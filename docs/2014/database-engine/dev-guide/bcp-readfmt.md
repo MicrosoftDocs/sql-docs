@@ -56,7 +56,7 @@ szFormatFile
   
  To persist a format file, call [bcp_writefmt](../../../2014/database-engine/dev-guide/bcp-writefmt.md). Calls to `bcp_readfmt` can reference saved formats. For more information, see [bcp_init](../../../2014/database-engine/dev-guide/bcp-init.md).  
   
- Alternately, the bulk-copy utility (**bcp**) can save user-defined data formats in files that can be referenced by `bcp_readfmt`. For more information about the **bcp** utility and the structure of **bcp** data format files, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md).  
+ Alternately, the bulk-copy utility (**bcp**) can save user-defined data formats in files that can be referenced by `bcp_readfmt`. For more information about the **bcp** utility and the structure of **bcp** data format files, see [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  The `BCPDELAYREADFMT` value of the *eOption* parameter of [bcp_control](../../../2014/database-engine/dev-guide/bcp-control.md) modifies the behavior of bcp_readfmt.  
   

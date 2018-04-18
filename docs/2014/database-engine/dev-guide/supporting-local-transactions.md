@@ -126,6 +126,6 @@ if (FAILED(hr))
   
 ## See Also  
  [Transactions](../../../2014/database-engine/dev-guide/transactions.md)   
- [Working with Snapshot Isolation](../../../2014/database-engine/dev-guide/working-with-snapshot-isolation.md)  
+ [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

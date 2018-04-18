@@ -118,7 +118,7 @@ idxServerCol
  Is the length, in bytes, of the terminator sequence to be used for this column. If no terminator is present or desired in the data, set this value to 0.  
   
  *idxServerCol*  
- Is the ordinal position of the column in the database table. The first column number is 1. The ordinal position of a column is reported by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
+ Is the ordinal position of the column in the database table. The first column number is 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
  If this value is 0, bulk copy ignores the column in the data file.  
   

@@ -44,6 +44,6 @@ manager: "jhubbard"
 -   [Bulk Copying with the SQL Server ODBC Driver How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
-  The table-valued parameter descriptor fields described in this section are manipulated by using [SQLSetDescField](../../../2014/database-engine/dev-guide/sqlsetdescfield.md) and [SQLSetDescField](../../../2014/database-engine/dev-guide/sqlsetdescfield.md) with the handle for the implementation parameter descriptor (IPD).  
+  The table-valued parameter descriptor fields described in this section are manipulated by using [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) and [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) with the handle for the implementation parameter descriptor (IPD).  
   
 ## Remarks  
  SQL_DESC_AUTO_UNIQUE_VALUE is used for table-valued parameters as well as other features.  

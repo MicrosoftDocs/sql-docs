@@ -138,7 +138,7 @@ manager: "jhubbard"
   
 -   Occasionally re-index merge replication system tables.  
   
-     As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+     As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../indexes/indexes.md).  
   
 -   Monitor synchronization performance using the **Synchronization History** tab in Replication Monitor.  
   

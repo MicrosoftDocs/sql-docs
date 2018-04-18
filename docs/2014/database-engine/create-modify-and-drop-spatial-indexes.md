@@ -67,7 +67,7 @@ manager: "jhubbard"
   
      You can select GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID for tessellation scheme in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When GEOMETRY_AUTO_GRID or GEOGRAPHY_AUTO_GRID is selected, then Level 1, Level 2, Level 3, and Level 4 grid density options are disabled.  
   
-     For more information about these properties, see [Index Properties F1 Help](../../2014/database-engine/index-properties-f1-help.md).  
+     For more information about these properties, see [Index Properties F1 Help](../relational-databases/indexes/index-properties-f1-help.md).  
   
 12. Click **OK**.  
   
@@ -98,9 +98,9 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  To change options that are specific to a spatial index, such as BOUNDING_BOX or GRID, you can either use a CREATE SPATIAL INDEX statement that specifies DROP_EXISTING = ON, or drop the spatial index and create a new one. For an example, see [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-spatial-index-transact-sql.md).  
   
--   [Modify an Index](../../2014/database-engine/modify-an-index.md)  
+-   [Modify an Index](../relational-databases/indexes/modify-an-index.md)  
   
--   [Move an Existing Index to a Different Filegroup](../../2014/database-engine/move-an-existing-index-to-a-different-filegroup.md)  
+-   [Move an Existing Index to a Different Filegroup](../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
 ###  <a name="drop"></a> To drop a spatial index  
@@ -108,7 +108,7 @@ manager: "jhubbard"
  [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
  **To drop an index by using Management Studio**  
- [Delete an Index](../../2014/database-engine/delete-an-index.md)  
+ [Delete an Index](../relational-databases/indexes/delete-an-index.md)  
   
  **To drop a spatial index by using Table Designer in Management Studio**  
  ##### To drop a spatial index in Table Designer  

@@ -48,7 +48,7 @@ manager: "jhubbard"
 ## Setting the Session Language from the Client  
  The session language can be set on the client side by using OLE DB, ODBC or ADO.NET. For OLE DB, use the SSPROP_INIT_CURRENTLANGUAGE property. For more information, see [Initialization and Authorization Properties](../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
   
- For ODBC, use the Language keyword. For more information, see [SQLConfigDataSource](../../database-engine/dev-guide/sqlconfigdatasource.md).  
+ For ODBC, use the Language keyword. For more information, see [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   
  For ADO.NET, use the **Current Language** parameter of the **ConnectionString** object. For more information, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components (MDAC) software development kit (SDK) documentation.  
   

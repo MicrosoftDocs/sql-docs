@@ -209,7 +209,7 @@ manager: "jhubbard"
  [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](../../2014/database-engine/set-up-database-diagram-designer-visual-database-tools.md)   
  [Add Tables to Diagrams &#40;Visual Database Tools&#41;](../../2014/database-engine/add-tables-to-diagrams-visual-database-tools.md)   
  [Create Relationships Between Tables on a Diagram &#40;Visual Database Tools&#41;](../../2014/database-engine/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
- [Create XML Indexes](../../2014/database-engine/create-xml-indexes.md)   
+ [Create XML Indexes](../relational-databases/indexes/indexes.md)   
  [Copy an Image of a Database Diagram to the Clipboard &#40;Visual Database Tools&#41;](../../2014/database-engine/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Work with Diagram Layout &#40;Visual Database Tools&#41;](../../2014/database-engine/work-with-diagram-layout-visual-database-tools.md)  
   

@@ -29,13 +29,13 @@ manager: "jhubbard"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../database-engine/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](../../database-engine/dev-guide/clr-stored-procedures.md).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](../native-client/ole-db/stored-procedures.md).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../database-engine/create-clr-triggers.md).  
   
 -   User-defined aggregate functions. For more information, see [Create User-defined Aggregates](../../database-engine/create-user-defined-aggregates.md).  
   
--   User-defined types. For more information, see [Using User-Defined Types](../../database-engine/dev-guide/using-user-defined-types.md).  
+-   User-defined types. For more information, see [Using User-Defined Types](../native-client/features/using-user-defined-types.md).  
   
  Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   

@@ -60,7 +60,7 @@ manager: "jhubbard"
  In the application, an XPath query is specified directly. Therefore, the XPath dialect {ec2a4293-e898-11d2-b1b7-00c04f680c56} must be included.  
   
 > [!NOTE]  
->  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../../2014/database-engine/dev-guide/system-requirements-for-sql-server-native-client.md).  
+>  In the code, you must provide the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the connection string. Also, this example specifies the use of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) for the data provider which requires additional network client software to be installed. For more information, see [System Requirements for SQL Server Native Client](../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

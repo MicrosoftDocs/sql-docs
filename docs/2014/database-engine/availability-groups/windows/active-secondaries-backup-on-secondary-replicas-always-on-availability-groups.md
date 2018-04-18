@@ -61,7 +61,7 @@ manager: "jhubbard"
   
  **To create a backup job**  
   
--   [Use the Maintenance Plan Wizard](../../use-the-maintenance-plan-wizard.md)  
+-   [Use the Maintenance Plan Wizard](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 -   [Implement Jobs](../../implement-jobs.md)  
   

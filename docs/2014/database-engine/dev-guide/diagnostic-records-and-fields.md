@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  There are two types of diagnostic records: header and status. The header record is record 0; when there are status records, they are records 1 and later. Diagnostic records contain different fields for the header record and the status records. ODBC components can also define their own diagnostic record fields.  
   
- Fields in the header record contain general information about a function's execution, including the return code, row count, number of status records, and type of statement executed. The header record is always created unless an ODBC function returns SQL_INVALID_HANDLE. For a complete list of fields in the header record, see [SQLGetDiagField](../../../2014/database-engine/dev-guide/sqlgetdiagfield.md).  
+ Fields in the header record contain general information about a function's execution, including the return code, row count, number of status records, and type of statement executed. The header record is always created unless an ODBC function returns SQL_INVALID_HANDLE. For a complete list of fields in the header record, see [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md).  
   
  Fields in the status records contain information about specific errors or warnings returned by the ODBC Driver Manager, driver, or data source, including the SQLSTATE, native error number, diagnostic message, column number, and row number. Status records are created only if the function returns SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA, or SQL_STILL_EXECUTING. For a complete list of fields in the status records, see **SQLGetDiagField**.  
   

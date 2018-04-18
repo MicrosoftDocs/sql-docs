@@ -41,11 +41,11 @@ manager: "jhubbard"
   
  SMO also represents as new objects or properties many features and components that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. These new features and components include the following:  
   
--   Table and index partitioning for storage of data on a partition scheme. For more information, see [Partitioned Tables and Indexes](../../../2014/database-engine/partitioned-tables-and-indexes.md).  
+-   Table and index partitioning for storage of data on a partition scheme. For more information, see [Partitioned Tables and Indexes](../../relational-databases/indexes/indexes.md).  
   
 -   HTTP endpoints for managing SOAP requests. For more information, see [Implementing Endpoints](../../../2014/database-engine/dev-guide/implementing-endpoints.md).  
   
--   Snapshot isolation and row level versioning for increased concurrency. For more information, see [Working with Snapshot Isolation](../../../2014/database-engine/dev-guide/working-with-snapshot-isolation.md).  
+-   Snapshot isolation and row level versioning for increased concurrency. For more information, see [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 -   XML Schema collection, XML indexes and XML datatype provide validation and storage of XML data. For more information, see [XML Schema Collections &#40;SQL Server&#41;](../../../2014/database-engine/xml-schema-collections-sql-server.md) and [Using XML Schemas](../../../2014/database-engine/dev-guide/using-xml-schemas.md).  
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   Registered Servers support for registering connection information. For more information, see [Register Servers](../../../2014/database-engine/register-servers.md).  
   
--   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../../2014/database-engine/sql-server-profiler.md), [SQL Trace](../../../2014/database-engine/sql-trace.md), [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md), and [Extended Events](../../../2014/database-engine/extended-events.md).  
+-   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../../2014/database-engine/sql-server-profiler.md), [SQL Trace](../../../2014/database-engine/sql-trace.md), [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md), and [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
 -   Support for certificates and keys for security control. For more information, see [Encryption Hierarchy](../../../2014/database-engine/encryption-hierarchy.md).  
   

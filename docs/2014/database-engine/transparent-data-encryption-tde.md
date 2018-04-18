@@ -206,7 +206,7 @@ WHERE encryption_state = 3;
 GO  
 ```  
   
- For more information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../../2014/database-engine/the-transaction-log-sql-server.md).  
+ For more information about the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  All data written to the transaction log before a change in the database encryption key will be encrypted by using the previous database encryption key.  
   

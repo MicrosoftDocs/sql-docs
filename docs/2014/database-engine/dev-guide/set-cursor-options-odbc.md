@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Set Cursor Options (ODBC)
-  To set cursor options, Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set or [SQLGetStmtAttr](../../../2014/database-engine/dev-guide/sqlgetstmtattr.md) to get the statement options that control cursor behavior.  
+  To set cursor options, Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set or [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) to get the statement options that control cursor behavior.  
   
 |*Attribute*|Specifies|  
 |-----------------|---------------|  

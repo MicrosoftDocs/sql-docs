@@ -2,7 +2,7 @@
 title: "ODBC Driver for Oracle | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # ODBC Driver for Oracle

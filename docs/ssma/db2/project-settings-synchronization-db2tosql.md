@@ -19,7 +19,7 @@ ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Project Settings(Synchronization) (DB2ToSQL)

@@ -1,8 +1,8 @@
----
+﻿---
 title: "What's new in Database Engine - SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "database-engine"
@@ -18,6 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in Database Engine - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

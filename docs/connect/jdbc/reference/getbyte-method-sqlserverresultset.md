@@ -2,7 +2,7 @@
 title: "getByte Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: da3a0122-c842-4e58-9a44-3c2f836d58e8
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getByte Method (SQLServerResultSet)

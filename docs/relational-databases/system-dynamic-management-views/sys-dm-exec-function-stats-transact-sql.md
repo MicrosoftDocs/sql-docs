@@ -1,8 +1,8 @@
----
+﻿---
 title: "sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.service: ""
 ms.component: "dmv's"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -72,8 +73,9 @@ ms.workload: "Inactive"
 |**max_elapsed_time**|**bigint**|Maximum elapsed time, in microseconds, for any completed execution of this function.|  
   
 ## Permissions  
+
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
   
 ## Examples  
  The following example returns information about the top ten functions identified by average elapsed time.  

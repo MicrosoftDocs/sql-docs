@@ -2,7 +2,7 @@
 title: "getObject Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getObject Method (java.lang.String)

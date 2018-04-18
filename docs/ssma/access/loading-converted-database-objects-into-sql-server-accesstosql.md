@@ -39,7 +39,7 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 caps.latest.revision: 16
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Loading Converted Database Objects into SQL Server (AccessToSQL)

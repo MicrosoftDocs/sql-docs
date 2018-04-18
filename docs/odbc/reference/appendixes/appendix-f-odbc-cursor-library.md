@@ -2,7 +2,7 @@
 title: "Appendix F: ODBC Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,7 +21,7 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Appendix F: ODBC Cursor Library

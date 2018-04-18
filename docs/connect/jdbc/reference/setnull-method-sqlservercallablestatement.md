@@ -2,7 +2,7 @@
 title: "setNull Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setNull Method (SQLServerCallableStatement)

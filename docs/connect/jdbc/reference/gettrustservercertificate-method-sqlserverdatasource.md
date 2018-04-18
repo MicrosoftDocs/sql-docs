@@ -2,7 +2,7 @@
 title: "getTrustServerCertificate Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: e4f443cc-b5d7-4859-81df-836a8642ed07
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getTrustServerCertificate Method (SQLServerDataSource)

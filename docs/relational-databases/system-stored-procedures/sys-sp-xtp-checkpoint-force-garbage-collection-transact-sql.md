@@ -2,7 +2,7 @@
 title: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"

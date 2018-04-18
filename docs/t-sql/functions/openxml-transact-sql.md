@@ -2,7 +2,7 @@
 title: "OPENXML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|functions"

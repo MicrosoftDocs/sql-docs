@@ -2,7 +2,7 @@
 title: "DateTimeOffset Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # DateTimeOffset Methods

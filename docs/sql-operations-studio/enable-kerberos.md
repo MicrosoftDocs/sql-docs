@@ -30,7 +30,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Checking if Sql Server has Kerberos Setup
 
 Login to the host machine of Sql Server. From Windows Command Prompt, use the `setspn -L %COMPUTERNAME%` to list all the Service Principal Names for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com which means that Sql Server has registered an SPN and is ready to accept Kerberos authentication. 
-- If you don't have access to the Host of the Sql Server, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>` where <SQLSERVER_NETBIOS> is the computer name of the hsot of the Sql Server.
+- If you don't have access to the Host of the Sql Server, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>` where <SQLSERVER_NETBIOS> is the computer name of the host of the Sql Server.
 
 
 ## Get the Kerberos Key Distribution Center

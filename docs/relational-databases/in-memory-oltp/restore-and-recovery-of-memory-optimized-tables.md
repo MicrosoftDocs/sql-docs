@@ -2,7 +2,7 @@
 title: "Restore and recovery of memory-optimized tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/31/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "in-memory-oltp"

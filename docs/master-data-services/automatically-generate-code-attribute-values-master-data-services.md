@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity’s Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
   
 ## Prerequisites  

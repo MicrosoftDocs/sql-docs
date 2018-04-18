@@ -2,7 +2,7 @@
 title: "Using Bulk Copy with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using Bulk Copy with the JDBC Driver

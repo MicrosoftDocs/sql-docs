@@ -2,7 +2,7 @@
 title: "updateBlob Method (int, java.io.InputStream) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: d0263018-d326-4a7b-bf6f-5f508db899d4
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateBlob Method (int, java.io.InputStream)

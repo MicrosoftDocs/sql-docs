@@ -2,7 +2,7 @@
 title: "Constructing Searched Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -24,7 +24,7 @@ ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Constructing Searched Statements

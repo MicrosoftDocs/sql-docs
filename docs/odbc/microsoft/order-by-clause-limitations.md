@@ -2,7 +2,7 @@
 title: "ORDER BY Clause Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,7 +19,7 @@ ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # ORDER BY Clause Limitations

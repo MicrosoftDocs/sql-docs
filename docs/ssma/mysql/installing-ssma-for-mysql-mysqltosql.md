@@ -21,7 +21,7 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Installing SSMA for MySQL (MySqlToSql)

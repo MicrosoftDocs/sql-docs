@@ -1,6 +1,6 @@
 ---
 title: "Running Business Objects in Component Services | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "component services in RDS [ADO]"
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109

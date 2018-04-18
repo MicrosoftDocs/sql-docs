@@ -21,7 +21,7 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # New Project (SSMA) (AccessToSQL)

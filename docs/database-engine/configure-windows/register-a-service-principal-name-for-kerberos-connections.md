@@ -2,7 +2,7 @@
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

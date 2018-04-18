@@ -2,7 +2,7 @@
 title: "updateAsciiStream Method (java.io.InputStream, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # updateAsciiStream Method (java.lang.String, java.io.InputStream, long)

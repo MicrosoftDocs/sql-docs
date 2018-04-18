@@ -2,7 +2,7 @@
 title: "position Method (java.sql.Blob, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # position Method (java.sql.Blob, long)

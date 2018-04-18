@@ -1,8 +1,8 @@
----
+﻿---
 title: "Use OPENJSON with an Explicit Schema (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.component: "json"
 ms.reviewer: ""
@@ -15,10 +15,12 @@ helpviewer_keywords:
   - "OPENJSON, with explicit schema"
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: douglasl
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

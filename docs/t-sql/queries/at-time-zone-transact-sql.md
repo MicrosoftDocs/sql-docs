@@ -1,7 +1,7 @@
 ---
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "t-sql|queries"

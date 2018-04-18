@@ -1,8 +1,8 @@
----
+﻿---
 title: "backupset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, pdw"
 ms.service: ""
 ms.component: "system-tables"
@@ -27,6 +27,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

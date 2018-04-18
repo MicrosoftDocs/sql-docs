@@ -2,7 +2,7 @@
 title: "Calling SQLSetPos to Insert Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Calling SQLSetPos to Insert Data

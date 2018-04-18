@@ -1,8 +1,8 @@
----
+﻿---
 title: "Memory-Optimized Table Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "dmv's"
@@ -20,6 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Memory-Optimized Table Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

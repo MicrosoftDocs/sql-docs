@@ -2,7 +2,7 @@
 title: "Header Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Header Files

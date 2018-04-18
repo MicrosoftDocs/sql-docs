@@ -2,7 +2,7 @@
 title: "Hardware and Software Requirements (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,7 +21,7 @@ ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Hardware and Software Requirements (ODBC)

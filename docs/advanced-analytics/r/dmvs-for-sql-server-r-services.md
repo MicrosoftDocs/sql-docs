@@ -1,22 +1,13 @@
 ---
-title: "DMVs for SQL Server Machine Learning Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Data Management Views (DMVs) for SQL Server Machine Learning Services | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # DMVs for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +17,7 @@ The article lists the system catalog views and DMVs that are related to machine 
 For information about extended events, see [Extended events for machine learning](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> The product team has provided custom reports that you can use to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Use built-in reports to monitor machine learning sessions and package utilization. For more information, see [Monitor machine learning using custom reports in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## System configuration and system resources
 

@@ -2,7 +2,7 @@
 title: "Microsoft Open Database Connectivity (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # Microsoft Open Database Connectivity (ODBC)

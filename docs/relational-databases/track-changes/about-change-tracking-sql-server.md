@@ -1,8 +1,8 @@
----
+﻿---
 title: "About Change Tracking (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
 ms.component: "track-changes"
@@ -24,6 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # About Change Tracking (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,8 +1,8 @@
 ---
 title: "How to: Retrieve Output Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/11/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,7 +18,7 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Retrieve Output Parameters Using the SQLSRV Driver
@@ -100,7 +100,7 @@ $lastName = "Blythe";
 $salesYTD = 0.0;  
 $params = array(   
                  array($lastName, SQLSRV_PARAM_IN),  
-                 array($salesYTD, SQLSRV_PARAM_OUT)  
+                 array(&$salesYTD, SQLSRV_PARAM_OUT)  
                );  
   
 /* Execute the query. */  
@@ -121,7 +121,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> When binding an output parameter to a bigint value, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+
+## Example  
+This code sample shows how to bind a large bigint value as an output parameter.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_OUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## See Also  
 [How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

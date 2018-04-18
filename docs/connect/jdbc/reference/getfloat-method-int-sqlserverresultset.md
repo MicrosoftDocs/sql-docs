@@ -2,7 +2,7 @@
 title: "getFloat Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getFloat Method (int) (SQLServerResultSet)

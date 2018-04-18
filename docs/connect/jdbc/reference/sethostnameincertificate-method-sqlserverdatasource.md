@@ -2,7 +2,7 @@
 title: "setHostNameInCertificate Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setHostNameInCertificate Method (SQLServerDataSource)

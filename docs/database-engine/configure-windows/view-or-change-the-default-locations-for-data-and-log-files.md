@@ -2,7 +2,7 @@
 title: "View or Change the Default Locations for Data and Log Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "configure-windows"

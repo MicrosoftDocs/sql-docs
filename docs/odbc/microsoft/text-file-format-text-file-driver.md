@@ -2,7 +2,7 @@
 title: "Text File Format (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,7 +21,7 @@ ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Text File Format (Text File Driver)

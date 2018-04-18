@@ -1,8 +1,8 @@
----
+﻿---
 title: "EOMONTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -25,6 +25,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

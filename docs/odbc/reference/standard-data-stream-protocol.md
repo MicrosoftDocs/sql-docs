@@ -2,7 +2,7 @@
 title: "Standard Data Stream Protocol | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -23,7 +23,7 @@ ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Standard Data Stream Protocol

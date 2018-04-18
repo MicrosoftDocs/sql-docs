@@ -2,7 +2,7 @@
 title: "setAsciiStream Method to input stream bytes - long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setAsciiStream Method (java.lang.String, java.io.InputStream, long)

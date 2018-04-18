@@ -2,7 +2,7 @@
 title: "Using Data Buffers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using Data Buffers

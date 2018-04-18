@@ -1,4 +1,4 @@
----
+﻿---
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"
@@ -20,6 +20,7 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

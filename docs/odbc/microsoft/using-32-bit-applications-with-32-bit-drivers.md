@@ -2,7 +2,7 @@
 title: "Using 32-Bit Applications with 32-Bit Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -19,7 +19,7 @@ ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Using 32-Bit Applications with 32-Bit Drivers

@@ -19,7 +19,7 @@ ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Connect to SQL Server (SybaseToSQL)

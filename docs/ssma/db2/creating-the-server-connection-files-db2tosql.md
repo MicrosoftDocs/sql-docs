@@ -19,7 +19,7 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Creating the Server Connection Files (DB2ToSQL)

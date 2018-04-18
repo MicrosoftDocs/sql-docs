@@ -20,6 +20,9 @@ manager: "craigg"
 ms.workload: "On Demand"
 ---
 # What&#39;s New in Master Data Services (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 

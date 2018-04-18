@@ -1,8 +1,8 @@
----
+﻿---
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/30/2018"
+ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.service: ""
 ms.component: "t-sql|statements"
@@ -34,9 +34,10 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Adds a new route to the routing table for the current database. For outgoing messages, [!INCLUDE[ssSB](../../includes/sssb-md.md)] determines routing by checking the routing table in the local database. For messages on conversations that originate in another instance, including messages to be forwarded, [!INCLUDE[ssSB](../../includes/sssb-md.md)] checks the routes in **msdb**.  
   
@@ -85,7 +86,9 @@ WHERE database_id = DB_ID()
  Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
   
  ADDRESS **='***next_hop_address***'**  
- Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
+For SQL Database Managed Instance, `ADDRESS` must be local. 
+
+Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   

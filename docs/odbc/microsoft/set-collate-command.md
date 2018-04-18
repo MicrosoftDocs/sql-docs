@@ -2,7 +2,7 @@
 title: "SET COLLATE Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # SET COLLATE Command

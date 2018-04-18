@@ -1,8 +1,8 @@
 ---
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/11/2017"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -16,7 +16,7 @@ ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # PDOStatement::bindParam
@@ -100,6 +100,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> When binding an output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), using PDO::PARAM_INT with PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE may result in a "value out of range" exception. Therefore, use the default PDO::PARAM_STR instead and provide the size of the resulting string, which is at most 21. It is the maximum number of digits, including the negative sign, of any bigint value. 
+
 ## Example  
 This code sample shows how to use an input/output parameter.  
   
@@ -120,7 +123,7 @@ This code sample shows how to use an input/output parameter.
 ```  
 
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  

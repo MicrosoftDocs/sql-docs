@@ -2,7 +2,7 @@
 title: "Deleting Rows in the Rowset with SQLSetPos | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Deleting Rows in the Rowset with SQLSetPos

@@ -2,7 +2,7 @@
 title: "Using Integrated Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -18,7 +18,7 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Using Integrated Authentication

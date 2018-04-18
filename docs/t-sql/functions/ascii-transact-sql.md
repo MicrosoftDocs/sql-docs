@@ -1,8 +1,8 @@
----
+﻿---
 title: "ASCII (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.service: ""
 ms.component: "t-sql|functions"
@@ -28,6 +28,7 @@ author: "edmacauley"
 ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,16 +45,16 @@ ASCII ( character_expression )
   
 ## Arguments  
 *character_expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the type **char** or **varchar**.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char** or **varchar**.
   
 ## Return types
  **int**  
   
 ## Remarks
-ASCII is an abbreviation for American Standard Code for Information Interchange. It is a character encoding standard used by computers. For a list of ASCII characters, see the **Printable characters** section of [ASCII](https://www.wikipedia.org/wiki/ASCII).
+ASCII stands for **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. It serves as a character encoding standard for modern computers. See the **Printable characters** section of [ASCII](https://www.wikipedia.org/wiki/ASCII) for a list of ASCII characters.
 
 ## Examples  
-The following example assumes an ASCII character set and returns the `ASCII` value for 6 characters.
+This example assumes an ASCII character set, and returns the `ASCII` value for 6 characters.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   

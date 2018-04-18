@@ -2,7 +2,7 @@
 title: "Function Mapping in the Driver Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -20,7 +20,7 @@ ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Function Mapping in the Driver Manager

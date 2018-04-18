@@ -2,7 +2,7 @@
 title: "Manually Prepare a Secondary Database for an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "availability-groups"

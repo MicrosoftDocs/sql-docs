@@ -2,7 +2,7 @@
 title: "Memory-Optimized System-Versioned Temporal Tables Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "tables"
@@ -35,9 +35,6 @@ ms.workload: "Inactive"
 -   Period of activation for the data flush task is not configurable but you can enforce the process by invoking [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).  
   
 -   Consider using clustered columnstore as a storage option for disk-based history table, especially if you plan to run analytics queries on historical data that make use of aggregate or windowing functions. In that case clustered columnstore will be an optimal choice for history table as it provides good data compression and behaves “insert-friendly” which is in alignment with how history data is being generated.  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Performance%20Considerations%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
 ## See Also  
  [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

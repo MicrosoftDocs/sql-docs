@@ -2,7 +2,7 @@
 title: "Fetching a Row of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -21,7 +21,7 @@ ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Fetching a Row of Data

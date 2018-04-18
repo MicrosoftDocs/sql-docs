@@ -1,6 +1,6 @@
 ---
 title: "Using a Recordset Object | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [ADO]"
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1

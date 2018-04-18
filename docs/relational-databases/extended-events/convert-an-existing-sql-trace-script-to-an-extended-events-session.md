@@ -1,16 +1,13 @@
----
+﻿---
 title: "Convert an Existing SQL Trace Script to an Extended Events Session | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
-ms.component: "extended-events"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-  - "xevents"
+ms.technology: "xevents"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -22,6 +19,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Convert an Existing SQL Trace Script to an Extended Events Session
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

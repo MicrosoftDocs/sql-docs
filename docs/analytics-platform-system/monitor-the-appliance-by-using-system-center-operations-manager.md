@@ -1,25 +1,18 @@
 ---
-title: "Monitor Appliance with System Center Operations Manager (APS)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-
+title: Monitor with SCOM - Analytics Platform System | Microsoft Docs
+description: Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System  (APS)appliance.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitor the Appliance by Using System Center Operations Manager
-This describes how to use System Center Operations Manager to monitor SQL Server PDW and HDInsight.  
+
+# Monitor with System Center Operations Manager - Analytics Platform System
+Use System Center Operations Manager (SCOM) to monitor the Analytics Platform System  (APS)appliance.
   
 ## Before You Begin  
   

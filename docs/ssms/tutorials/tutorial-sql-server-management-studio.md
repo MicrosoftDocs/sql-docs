@@ -41,7 +41,7 @@ The SQL Server Management Studio (SSMS) tutorial introduces you to the integrate
 
 These tutorials will help you understand the presentation of information in SSMS and how to take advantage of its features.
   
-The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features avaialable within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
+The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features available within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
 
 Here is what the tutorials cover: 
 

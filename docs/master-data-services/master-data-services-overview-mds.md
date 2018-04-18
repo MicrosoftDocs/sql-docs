@@ -28,7 +28,7 @@ ms.workload: "Active"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
+This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] enables you to manage a master set of your organization's data. You can organize the data into models, create rules for updating the data, and control who updates the data. With Excel, you can share the master data set with other people in your organization. 
   

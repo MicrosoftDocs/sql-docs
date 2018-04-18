@@ -294,7 +294,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example rebuilds a single index on the `Employee` table.  
   
-     [!code-sql[IndexDDL#AlterIndex1](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql)]  
+     [!code-sql[IndexDDL#AlterIndex1](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex1)]  
   
 #### To rebuild all indexes in a table  
   
@@ -304,7 +304,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query The example specifies the keyword `ALL`. This rebuilds all indexes associated with the table. Three options are specified.  
   
-     [!code-sql[IndexDDL#AlterIndex2](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql)]  
+     [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   

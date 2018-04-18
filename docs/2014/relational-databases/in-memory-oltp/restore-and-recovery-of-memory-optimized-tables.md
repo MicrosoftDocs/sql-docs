@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Streaming the data files.  Once the delta-map filter is created, data files are read using as many threads as there are logical CPUs. Each thread reading the data file reads the data rows, checks the associated delta map and only inserts the row into table if this row has not been marked deleted. This part of recovery can be CPU bound in some cases as noted below.  
   
- ![Memory-optimized tables.](../../2014/database-engine/media/memory-optimized-tables.gif "Memory-optimized tables.")  
+ ![Memory-optimized tables.](../../database-engine/media/memory-optimized-tables.gif "Memory-optimized tables.")  
   
  Memory-optimized tables can generally be loaded into memory at the speed of I/O but there are cases when loading data rows into memory will be slower. Specific cases are:  
   

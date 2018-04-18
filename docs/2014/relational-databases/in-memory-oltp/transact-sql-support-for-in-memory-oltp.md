@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   [DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md) (see `NULL` | `NOT NULL`)  
   
- Memory-optimized tables support `PRIMARY KEY` and `NOT NULL` constraints. For information on implementing unsupported constraints, see [Migrating Check and Foreign Key Constraints](../../2014/database-engine/migrating-check-and-foreign-key-constraints.md).  
+ Memory-optimized tables support `PRIMARY KEY` and `NOT NULL` constraints. For information on implementing unsupported constraints, see [Migrating Check and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   
  For information on unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)  
   
--   [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
+-   [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   

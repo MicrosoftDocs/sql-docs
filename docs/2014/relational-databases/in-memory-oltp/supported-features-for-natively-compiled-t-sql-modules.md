@@ -152,7 +152,7 @@ manager: "jhubbard"
 ##  <a name="auditing"></a> Auditing  
  Procedure level auditing is supported in natively compiled stored procedures. Statement level auditing is not supported.  
   
- For more information about auditing, see [Create a Server Audit and Database Audit Specification](../../2014/database-engine/create-a-server-audit-and-database-audit-specification.md).  
+ For more information about auditing, see [Create a Server Audit and Database Audit Specification](../../database-engine/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Table, Query, and Join Hints  
  The following are supported:  
@@ -227,7 +227,7 @@ GO
  The formula to calculate a worst case maximum supported N in TOP N is: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)   
+ [Natively Compiled Stored Procedures](../../database-engine/natively-compiled-stored-procedures.md)   
  [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

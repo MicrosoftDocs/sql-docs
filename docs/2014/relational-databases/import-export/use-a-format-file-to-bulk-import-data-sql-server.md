@@ -45,7 +45,7 @@ manager: "jhubbard"
  The examples in this section illustrate how to use format files to bulk-import data by using the **bcp** command and the BULK INSERT, and INSERT ... SELECT * FROM OPENROWSET(BULK...) statements. Before you can run one of the bulk-import examples, you need to create a sample table, data file, and a format file.  
   
 ### Sample Table  
- The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ The examples require that a table named **myTestFormatFiles** table be created in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. To create this table, in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,7 +135,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 ### Using BULK INSERT  
  The following example uses BULK INSERT to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. This example uses a non-XML format file, `MyTestFormatFiles.Fmt`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,7 +156,7 @@ GO
 ### Using the OPENROWSET Bulk Rowset Provider  
  The following example uses `INSERT ... SELECT * FROM OPENROWSET(BULK...)` to bulk import data from the `myTestFormatFiles-c.Dat` data file into `HumanResources.myTestFormatFiles` table in the `AdventureWorks` sample database. This example uses an XML format file, `MyTestFormatFiles.Xml`. The example deletes any existing table rows before importing the data file.  
   
- In [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ In [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks2012;  

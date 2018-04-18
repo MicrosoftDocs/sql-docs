@@ -258,9 +258,9 @@ manager: "jhubbard"
   
      When data is loaded into a target table, **bcp** ignores the \<ROW> component. Instead, **bcp** loads the data based on the column types of the target table.  
   
--   [!INCLUDE[tsql](../../../includes//tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements (BULK INSERT and OPENROWSET's Bulk rowset provider)  
   
-     When bulk importing data into a table, [!INCLUDE[tsql](../../../includes//tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../../../includes//tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
+     When bulk importing data into a table, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements use the \<ROW> component to generate the input rowset. Also, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements perform appropriate type conversions based on the column types specified under \<ROW> and the corresponding column in the target table. If a mismatch exists between column types as specified in the format file and in the target table, an extra type conversion occurs. This extra type conversion may lead to some discrepancy (that is, a loss of precision) in behavior in BULK INSERT or OPENROWSET's Bulk rowset provider as compared to **bcp**.  
   
      The information in the \<ROW> element allows a row to be constructed without requiring any additional information. For this reason, you can generate a rowset using a SELECT statement (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   
@@ -339,7 +339,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes//sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] example, see [Create a Format File &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordering data fields and table columns differently  
  The following example shows an XML format file that describes a data file containing three fields of character data. The format file maps the data file to a table that contains three columns that are ordered differently from the fields of the data file.  
@@ -374,7 +374,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes//sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] example, see [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ### C. Omitting a data field  
  The following example shows an XML format file that describes a data file containing four fields of character data. The format file maps the data file to a table that contains three columns. The second data field does not correspond to any table column.  
@@ -413,7 +413,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes//sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md).  
+>  For an equivalent [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] example, see [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
 ###  <a name="MapXSItype"></a> D. Mapping \<FIELD> xsi:type to \<COLUMN> xsi:type  
  The following example shows different types of fields and their mappings to columns.  

@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  <sup>1</sup> Limitation is 8060 bytes per row total, counting (n) in variable-length types.  
   
- For information about supported collations, see [Collations and Code Pages](../../2014/database-engine/collations-and-code-pages.md).  
+ For information about supported collations, see [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
  **Date and Time Data Types**  
   
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
- [Implementing LOB Columns in a Memory-Optimized Table](../../2014/database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
+ [Implementing LOB Columns in a Memory-Optimized Table](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [Implementing SQL_VARIANT in a Memory-Optimized Table](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  In this release, the UCP must satisfy the following requirements:  
   
--   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   We recommend that the UCP is hosted by a case-sensitive instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   FILESTREAM data are not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility monitoring.  
   
- For more information, see [Maximum Capacity Specifications for SQL Server](../../2014/getting-started/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ For more information, see [Maximum Capacity Specifications for SQL Server](../../getting-started/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ### Remove Previous Utility Control Points Before Installing a New One  
  If you are installing a utility control point (UCP) on an instance of SQL Server that was ever configured as a UCP, you must remove all managed instances of SQL Server and remove the UCP before doing so. You do this by running the **sp_sysutility_ucp_remove** stored procedure.  
@@ -97,9 +97,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set is supported side-by-side with non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection sets. That is, a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be monitored by other collection sets while it is a member of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Note, however, that all collection sets on the managed instance will upload their data to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility management data warehouse. For more information, see [Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) and [Configure Your Utility Control Point Data Warehouse &#40;SQL Server Utility&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
 ## Wizard Steps  
- ![](../../2014/database-engine/media/create-ucp.gif "Create_UCP")  
+ ![](../../database-engine/media/create-ucp.gif "Create_UCP")  
   
- The following sections provide information about each page in the wizard work flow to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP. To launch the wizard to create a new UCP, open the Utility Explorer pane from the View menu in SSMS, then click on the ![](../../2014/database-engine/media/create-ucp.gif "Create_UCP") **Create UCP** button at the top of the Utility Explorer pane.  
+ The following sections provide information about each page in the wizard work flow to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP. To launch the wizard to create a new UCP, open the Utility Explorer pane from the View menu in SSMS, then click on the ![](../../database-engine/media/create-ucp.gif "Create_UCP") **Create UCP** button at the top of the Utility Explorer pane.  
   
  Click on a link in the list below to navigate to details for a page in the Wizard.  
   
@@ -122,9 +122,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introduction to Create UCP Wizard  
  If you open Utility Explorer and there is no connected utility control point, you must connect to one or create a new one.  
   
- **Connect to existing UCP** - If there is already a utility control point in your deployment, you can connect to it by clicking the ![](../../2014/database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** button at the top of the Utility Explorer pane. To connect to an existing UCP, you must have administrator credentials or be a member of the Utility Reader role. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility and you can only be connected to one UCP from an instance of SSMS.  
+ **Connect to existing UCP** - If there is already a utility control point in your deployment, you can connect to it by clicking the ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** button at the top of the Utility Explorer pane. To connect to an existing UCP, you must have administrator credentials or be a member of the Utility Reader role. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility and you can only be connected to one UCP from an instance of SSMS.  
   
- **Create a new UCP** - To create a new utility control point, click the ![](../../2014/database-engine/media/create-ucp.gif "Create_UCP")**Create UCP** button at the top of the Utility Explorer pane. To create a new UCP, you must specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name and provide administrator credentials in the connection dialog. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ **Create a new UCP** - To create a new utility control point, click the ![](../../database-engine/media/create-ucp.gif "Create_UCP")**Create UCP** button at the top of the Utility Explorer pane. To create a new UCP, you must specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name and provide administrator credentials in the connection dialog. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ##  <a name="Instance_name"></a> Specify Instance  
  Specify the following information about the UCP you are creating:  
@@ -136,7 +136,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  To continue, click **Next**.  
   
 ##  <a name="Connection_dialog"></a> Connection Dialog  
- On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../2014/database-engine/connect-to-server-database-engine.md).  
+ On the Connect to Server dialog box, verify the server type, computer name, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name information. For more information, see [Connect to Server &#40;Database Engine&#41;](../../database-engine/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  If the connection is encrypted, the encrypted connection will be used. If the connection is not encrypted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility will reconnect using an encrypted connection.  
@@ -159,14 +159,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |You must have administrator privileges on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the utility control point will be created.|Log on with an account that has administrator privileges on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version must be 10.50 or higher.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
-|The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
+|The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must not be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enrolled with any other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP, or unenroll the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the UCP where it is currently a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot already be host to a utility control point.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
 |The specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have TCP/IP enabled.|Enable TCP/IP for the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot have a database named "sysutility_mdw."|The create UCP operation will create a utility management data warehouse (UMDW) named "sysutility_mdw." The operation requires that the name does not exist on the computer at the time that validation rules are run. To continue, you must remove or rename any database named "sysutility_mdw." For more information about renaming operations, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).|  
 |Collection sets on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be stopped.|Stop pre-existing collection sets while the UCP is created on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the data collector is disabled, enable it, stop any running collection sets, then re-run validation rules for the Create UCP operation.<br /><br /> To enable the data collector:<br /><br /> In Object Explorer, expand the **Management** node.<br /><br /> Right-click **Data Collection**, and then click **Enable Data Collection**.<br /><br /> To stop a collection set:<br /><br /> In Object Explorer, expand the Management node, expand **Data Collection**, and then expand **System Data Collection Sets**.<br /><br /> Right-click the collection set that you want to stop, and then click **Stop Data Collection Set**.<br /><br /> A message box will display the result of this action, and a red circle on the icon for the collection set indicates that the collection set has stopped.|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service on the specified instance must be started. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start manually. Otherwise, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be configured to start automatically.|Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. If the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start manually. Otherwise, configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically.|  
-|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](../../2014/database-engine/troubleshoot-the-sql-server-utility.md).|  
+|WMI must be configured correctly.|To troubleshoot WMI configuration, see [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md).|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account is a built-in account, like Network Service, re-assign the account to a Windows domain account that is sysadmin.|  
 |If you select the proxy account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account must be a valid Windows domain account.|Specify a valid Windows domain account. To ensure that the account is valid, logon to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the Windows domain account.|  
 |If you select the service account option, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account cannot be a built-in account, like Network Service.|If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a built-in account, like Network Service, re-assign the account to a Windows domain account.|  
@@ -225,6 +225,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## See Also  
  [SQL Server Utility Features and Tasks](sql-server-utility-features-and-tasks.md)   
- [Troubleshoot the SQL Server Utility](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
+ [Troubleshoot the SQL Server Utility](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  The following illustration shows a simplified view of an Extended Events session. For more information, see [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
- ![Detailed extended events architecture](../../2014/database-engine/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
+ ![Detailed extended events architecture](../../database-engine/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
   
  Note the following:  
   

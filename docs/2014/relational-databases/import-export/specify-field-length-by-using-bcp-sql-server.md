@@ -119,7 +119,7 @@ manager: "jhubbard"
  In all of the preceding cases, to create a data file for later reloading into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that keeps the storage space to a minimum, use a length prefix with the default file storage type and the default field length.  
   
 ## See Also  
- [bcp Utility](../../2014/database-engine/bcp-utility.md)   
+ [bcp Utility](../../database-engine/bcp-utility.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
  [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
  [Specify Prefix Length in Data Files by Using bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   

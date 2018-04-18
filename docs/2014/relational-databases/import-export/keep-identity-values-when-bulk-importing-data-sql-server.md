@@ -35,13 +35,13 @@ manager: "jhubbard"
  For more information, see [bcp Utility](../../database-engine/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md), [INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md), and [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
->  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../2014/database-engine/sequence-numbers.md).  
+>  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../database-engine/sequence-numbers.md).  
   
 ## Examples  
  The examples in this topic bulk import data using INSERT ... SELECT * FROM OPENROWSET(BULK...) and keeping default values.  
   
 ### Sample Table  
- The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ The bulk-import examples require that a table named **myTestKeepNulls** table be created in the **AdventureWorks** sample database under the **dbo** schema. To create this table. in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -89,7 +89,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
 ### B. Using BULK INSERT and Keeping Identity Values  
  The following example uses BULK INSERT to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY option to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  
@@ -110,7 +110,7 @@ SELECT * FROM HumanResources.myDepartment;
 ### C. Using OPENROWSET and Keeping Identity Values  
  The following example uses the OPENROWSET bulk rowset provider to bulk import data from the `myDepartment-c.Dat` file into the `AdventureWorks.HumanResources.myDepartment` table. The statement uses the `myDepartment-f-n-x.Xml` format file and includes the KEEPIDENTITY hint to ensure that any identity values in the data file are retained.  
   
- In the [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] Query Editor, execute:  
+ In the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Query Editor, execute:  
   
 ```  
 USE AdventureWorks;  

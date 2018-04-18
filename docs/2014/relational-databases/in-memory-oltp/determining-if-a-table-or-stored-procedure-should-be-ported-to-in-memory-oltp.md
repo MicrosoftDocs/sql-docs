@@ -47,7 +47,7 @@ manager: "jhubbard"
 ## Best Practices  
  The recommended workflow is illustrated in the following flowchart. The yellow nodes represent optional procedures:  
   
- ![AMR workflow](../../2014/database-engine/media/amr-1.gif "AMR workflow")  
+ ![AMR workflow](../../database-engine/media/amr-1.gif "AMR workflow")  
   
  You can use any method to establish a performance baseline, including but not limited to using performance counter logs or the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Activity Monitor. The information to use in your performance baseline and your comparisons are:  
   

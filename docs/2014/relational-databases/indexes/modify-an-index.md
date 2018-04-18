@@ -61,11 +61,11 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.  
   
-     [!code-sql[IndexDDL#CreateIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/createindex.sql)]  
+     [!code-sql[IndexDDL#CreateIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/createindex.sql#createindex4)]  
   
      The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
-     [!code-sql[IndexDDL#AlterIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql)]  
+     [!code-sql[IndexDDL#AlterIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex4)]  
   
 #### To modify index columns  
   

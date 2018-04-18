@@ -140,9 +140,9 @@ manager: "jhubbard"
   
 3.  Copy and paste the following examples into the query window and click **Execute**.  
   
-     [!code-sql[IndexDDL#AlterIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql)]  
+     [!code-sql[IndexDDL#AlterIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex4)]  
   
-     [!code-sql[IndexDDL#AlterIndex2](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql)]  
+     [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   

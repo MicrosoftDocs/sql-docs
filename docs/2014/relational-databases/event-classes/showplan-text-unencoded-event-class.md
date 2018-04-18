@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Showplan Logical and Physical Operators Reference](../../2014/database-engine/showplan-logical-and-physical-operators-reference.md)   
+ [Showplan Logical and Physical Operators Reference](../../database-engine/showplan-logical-and-physical-operators-reference.md)   
  [Showplan All Event Class](showplan-all-event-class.md)   
  [Showplan XML Event Class](showplan-xml-event-class.md)   
  [Showplan XML Statistics Profile Event Class](showplan-xml-statistics-profile-event-class.md)  

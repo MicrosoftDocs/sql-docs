@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 3.  Click **View** and then **Utility Explorer**.  
   
-4.  In the Utility Explorer navigation pane, click ![](../../2014/database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility**.  
+4.  In the Utility Explorer navigation pane, click ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility**.  
   
 5.  In the **Connect to Server** dialog box, specify the UCP instance name, then click **Connect**.  
   

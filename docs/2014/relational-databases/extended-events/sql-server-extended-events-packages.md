@@ -51,7 +51,7 @@ manager: "jhubbard"
 ## Package Contents  
  The following illustration shows the objects that can exist in packages, which are contained in a module. A module can be an executable or a dynamic link library.  
   
- ![The relationship of a module, packages, and object](../../2014/database-engine/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
+ ![The relationship of a module, packages, and object](../../database-engine/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
   
 ### Events  
  Events are monitoring points of interest in the execution path of a program, such as [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. An event firing carries with it the fact that the point of interest was reached, and state information from the time the event was fired.  
@@ -92,7 +92,7 @@ where name = 'keyword_map'
 >  Keywords map closely to the current grouping of SQL Trace events.  
   
 ### Targets  
- Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
+ Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md).  
   
 ### Actions  
  An action is a programmatic response or series of responses to an event. Actions are bound to an event, and each event may have a unique set of actions.  
@@ -214,6 +214,6 @@ where name = 'lock_mode'
 ## See Also  
  [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)  
+ [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   
   

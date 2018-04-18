@@ -119,6 +119,6 @@ manager: "jhubbard"
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/drop-event-session-transact-sql.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql   
  [Extended Events Dynamic Management Views](~/relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)  
+ [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   
   

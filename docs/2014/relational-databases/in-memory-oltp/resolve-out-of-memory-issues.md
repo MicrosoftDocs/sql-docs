@@ -59,7 +59,7 @@ manager: "jhubbard"
   
     ```  
   
-     For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_percentavailable).  
+     For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 -   Reconfigure **max server memory**.  
     For information on configuring **max server memory** see the topic [Optimizing Server Performance Using Memory Configuration Options](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
- For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_percentavailable).  
+ For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 ##### Install additional memory  
  Ultimately the best solution, if possible, is to install additional physical memory. If you do this, remember that you will probably be able to also increase the value of MAX_MEMORY_PERCENT (see the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won’t likely need more memory, allowing you to make most if not all of the newly installed memory available to the resource pool.  

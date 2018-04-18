@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   Add the active partition.  
   
- ![Partition switch.](../../2014/database-engine/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Partition switch.](../../database-engine/media/hekaton-partitioned-tables.gif "Partition switch.")  
 Active Data Maintenance  
   
  The actions starting with Deleting ActiveOrders need to be done during a maintenance window to avoid queries missing data during the time between deleting data and switching in the staging table.  

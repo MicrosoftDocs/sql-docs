@@ -32,7 +32,7 @@ manager: "jhubbard"
   
  The following figure illustrates a table with indexes and rows, which in turn have row headers and bodies:  
   
- ![Memory optimized table.](../../2014/database-engine/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![Memory optimized table.](../../database-engine/media/hekaton-guide-1.gif "Memory optimized table.")  
 Memory-optimized table, consisting of indexes and rows.  
   
  The in-memory size of a table, in bytes, is computed as follows:  
@@ -89,13 +89,13 @@ Memory-optimized table, consisting of indexes and rows.
   
  The following figure illustrates the row structure for a table that has two indexes:  
   
- ![Row structure for a table that has two indexes.](../../2014/database-engine/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
+ ![Row structure for a table that has two indexes.](../../database-engine/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
   
  The begin and end timestamps indicate the period in which a particular row version is valid. Transactions that start in this interval can see this row version. For more details see [Transactions in Memory-Optimized Tables](memory-optimized-tables.md).  
   
  The index pointers point to the next row in the chain belonging to the hash bucket. The following figure illustrates the structure of a table with two columns (name, city), and with two indexes, one on the column name, and one on the column city.  
   
- ![Structure of a table with two columns and indexes.](../../2014/database-engine/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
+ ![Structure of a table with two columns and indexes.](../../database-engine/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
   
  In this figure, the names John and Jane are hashed to the first bucket. Susan is hashed to the second bucket. The cities Beijing and Bogota are hashed to the first bucket. Paris and Prague are hashed to the second bucket.  
   
@@ -221,6 +221,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## See Also  
- [Memory-Optimized Tables](../../2014/database-engine/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
   
   

@@ -142,7 +142,7 @@ manager: "jhubbard"
   
     2.  Select the tools you want to appear in the **Toolbox**, and then click **OK**.  
   
-     Adding maintenance plan tasks to the **Toolbox** also makes them available in the **Maintenance Plan Wizard**. For more information on the individual tasks above, see [Using Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md#ssmsprocedure) under **Start the Maintenance Plan Wizard**.  
+     Adding maintenance plan tasks to the **Toolbox** also makes them available in the **Maintenance Plan Wizard**. For more information on the individual tasks above, see [Using Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md#SSMSProcedure) under **Start the Maintenance Plan Wizard**.  
   
 8.  To define a workflow between tasks:  
   

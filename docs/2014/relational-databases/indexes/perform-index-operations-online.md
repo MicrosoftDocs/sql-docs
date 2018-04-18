@@ -106,7 +106,7 @@ manager: "jhubbard"
   
      The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move.  
   
-     [!code-sql[IndexDDL#DropIndex4](../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql)]  
+     [!code-sql[IndexDDL#DropIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/dropindex.sql#dropindex4)]  
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md).  
   

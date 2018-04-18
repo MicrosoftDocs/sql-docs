@@ -48,6 +48,6 @@ manager: "jhubbard"
   
 ## See Also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)   
- [Create an Extended Events Session Using Query Editor](../../2014/database-engine/create-an-extended-events-session-using-query-editor.md)  
+ [Create an Extended Events Session Using Query Editor](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   
   

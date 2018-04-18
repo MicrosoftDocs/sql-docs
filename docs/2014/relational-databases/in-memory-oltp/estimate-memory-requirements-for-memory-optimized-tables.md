@@ -22,17 +22,17 @@ manager: "jhubbard"
   
 ## Sections in this topic  
   
--   [Example memory-optimized table](memory-optimized-tables.md#bkmk_exampletable)  
+-   [Example memory-optimized table](#bkmk_ExampleTable)  
   
--   [Memory for the table](memory-optimized-tables.md#bkmk_memoryfortable)  
+-   [Memory for the table](#bkmk_MemoryForTable)  
   
--   [Memory for indexes](memory-optimized-tables.md#bkmk_indexmeemory)  
+-   [Memory for indexes](#bkmk_IndexMeemory)  
   
--   [Memory for row versioning](memory-optimized-tables.md#bkmk_memoryforrowversions)  
+-   [Memory for row versioning](#bkmk_MemoryForRowVersions)  
   
--   [Memory for table variables](memory-optimized-tables.md#bkmk_tablevariables)  
+-   [Memory for table variables](#bkmk_TableVariables)  
   
--   [Memory for growth](memory-optimized-tables.md#bkmk_memoryforgrowth)  
+-   [Memory for growth](#bkmk_MemoryForGrowth)  
   
 ##  <a name="bkmk_ExampleTable"></a> Example memory-optimized table  
  Consider the following memory-optimized table schema:  

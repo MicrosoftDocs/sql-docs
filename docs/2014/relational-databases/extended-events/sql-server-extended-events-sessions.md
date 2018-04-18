@@ -29,7 +29,7 @@ manager: "jhubbard"
 ## Session States  
  The following illustration shows the various states of an Extended Events session.  
   
- ![Extended event session state](../../2014/database-engine/media/xesessionstate.gif "Extended event session state")  
+ ![Extended event session state](../../database-engine/media/xesessionstate.gif "Extended event session state")  
   
  Referring to the preceding figure, note that session state changes as the different DDL commands are issued for an event session. The following table describes these changes in state.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  The following illustration shows session content and the relationship between packages and sessions.  
   
- ![Object co-existance and sharing in sessions.](../../2014/database-engine/media/xesessions.gif "Object co-existance and sharing in sessions.")  
+ ![Object co-existance and sharing in sessions.](../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions.")  
   
  Referring to the preceding illustration, note that:  
   

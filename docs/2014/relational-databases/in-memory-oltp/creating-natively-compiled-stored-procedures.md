@@ -55,7 +55,7 @@ go
 |------------|-----------------|  
 |`SCHEMABINDING`|Natively compiled stored procedures must be bound to the schema of the objects it references. This means that table references by the procedure cannot be dropped. Tables referenced in the procedure must include their schema name, and wildcards (\*) are not allowed in queries. `SCHEMABINDING` is only supported for natively compiled stored procedures in this version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Natively compiled stored procedures do not support `EXECUTE AS CALLER`, which is the default execution context. Therefore, specifying the execution context is required. The options `EXECUTE AS OWNER`, `EXECUTE AS`*user*, and `EXECUTE AS SELF` are supported.|  
-|`BEGIN ATOMIC`|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> `TRANSACTION ISOLATION LEVEL`. See [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md) for supported isolation levels.<br /><br /> `LANGUAGE`. The language for the stored procedure must be set to one of the available languages or language aliases.|  
+|`BEGIN ATOMIC`|The natively compiled stored procedure body must consist of exactly one atomic block. Atomic blocks guarantee atomic execution of the stored procedure. If the procedure is invoked outside the context of an active transaction, it will start a new transaction, which commits at the end of the atomic block. Atomic blocks in natively compiled stored procedures have two required options:<br /><br /> `TRANSACTION ISOLATION LEVEL`. See [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) for supported isolation levels.<br /><br /> `LANGUAGE`. The language for the stored procedure must be set to one of the available languages or language aliases.|  
   
  Regarding `EXECUTE AS` and Windows logins, an error can occur because of the impersonation done through `EXECUTE AS`. If a user account uses Windows Authentication, there must be full trust between the service account used for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance and the domain of the Windows login. If there is not full trust, the following error message is returned when creating a natively compiled stored procedure: Msg 15404, Could not obtain information about Windows NT group/user ‘username’, error code 0x5.  
   
@@ -108,6 +108,6 @@ go
  The advantage of this approach is that the application does not go offline. However, more work is required to maintain the references and make sure they always point to the latest version of the stored procedure.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../2014/database-engine/../native-client/ole-db/stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../../database-engine/../native-client/ole-db/stored-procedures.md)  
   
   

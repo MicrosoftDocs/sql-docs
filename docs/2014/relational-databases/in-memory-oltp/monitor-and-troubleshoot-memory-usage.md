@@ -39,7 +39,7 @@ manager: "jhubbard"
   
  The following steps create a database with three memory-optimized tables that you can use in the remainder of this topic. In the example, we mapped the database to a resource pool so that we can control how much memory can be taken by memory-optimized tables.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)].  
+1.  Launch [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 2.  Click **New Query**.  
   
@@ -123,23 +123,23 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_Monitoring"></a> Monitoring Memory Usage  
   
-###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)]  
+###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
   
 #### Consumption at the database level  
  You can monitor memory use at the database level as follows.  
   
-1.  Launch [!INCLUDE[ssManStudioFull](../../../includes//ssmanstudiofull-md.md)] and connect to a server.  
+1.  Launch [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and connect to a server.  
   
 2.  In Object Explorer, right-click the database you want reports on.  
   
 3.  In the context menu select, **Reports** -> **Standard Reports** -> **Memory Usage By Memory Optimized Objects**  
   
- ![HK_MM_SSMS](../../2014/database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
+ ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
  This report shows memory consumption by the database we created above.  
   
- ![HK_MM_SSMS](../../2014/database-engine/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
+ ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
 ###  <a name="bkmk_UsingDMVs"></a> Using DMVs  
  There are a number of DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  

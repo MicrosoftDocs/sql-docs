@@ -85,7 +85,7 @@ ADD TARGET package0.etw_classic_sync_target
  For more information about a full example that shows how to use the ETW target, including how to view the data, see [Monitor System Activity Using Extended Events](monitor-system-activity-using-extended-events.md).  
   
 ## See Also  
- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/alter-event-session-transact-sql.md)  

@@ -1,24 +1,17 @@
 ---
-title: "Power the APS Appliance On or Off (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-
+title: Power the appliance on or off - Analytics Platform System | Microsoft Docs
+description: Power the appliance on or off for Analytics Platform System 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Power the APS Appliance On or Off
+
+# Power the appliance on or off for Analytics Platform System
 This topic describes how to power on or power off your Analytics Platform Systemappliance that is running Parallel Data Warehouse, and optionally running an HDInsight region. Use this topic when a Analytics Platform System appliance is moved, or to power on an appliance after a catastrophic power failure.  
   
 Powering the appliance on and off is not the same as starting and stopping the appliance services. For information on that subject, see [PDW Services Status &#40;Analytics Platform System&#41;](pdw-services-status.md). For information about powering on or off a SQL Server 2008 Parallel Data Warehouse, see the SQL Server 2008 Parallel Data Warehouse help file. For information about powering on or off a SQL Server 2012 AU1 or AU2 Parallel Data Warehouse, see the help file for those versions.  

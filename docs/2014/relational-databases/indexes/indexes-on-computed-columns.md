@@ -115,7 +115,7 @@ manager: "jhubbard"
      Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON when the database compatibility level is set to 90 or higher.  
   
 ##  <a name="BKMK_persisted"></a> Creating Indexes on Persisted Computed Columns  
- You can create an index on a computed column that is defined with a deterministic, but imprecise, expression if the column is marked PERSISTED in the CREATE TABLE or ALTER TABLE statement. This means that the [!INCLUDE[ssDE](../../../includesssde-md.md)] uses these persisted values when it creates an index on the column, and when the index is referenced in a query. This option enables you to create an index on a computed column when [!INCLUDE[ssDE](../../../includesdnprdnshort-md.md)], is both deterministic and precise.  
+ You can create an index on a computed column that is defined with a deterministic, but imprecise, expression if the column is marked PERSISTED in the CREATE TABLE or ALTER TABLE statement. This means that the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] uses these persisted values when it creates an index on the column, and when the index is referenced in a query. This option enables you to create an index on a computed column when [!INCLUDE[ssDE](../../../includesdnprdnshort-md.md)], is both deterministic and precise.  
   
 ## Related Content  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/columnproperty-transact-sql.md)  

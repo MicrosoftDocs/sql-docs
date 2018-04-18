@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Monitor and Troubleshoot Memory Usage
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.  
   
- This topic covers monitoring your [!INCLUDE[hek_2](../../../includeshek-2-md.md)] memory usage.  
+ This topic covers monitoring your [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] memory usage.  
   
 ## Sections in this topic  
   
@@ -242,8 +242,8 @@ memory_object_address pages_ in_bytes bytes_used type
   
  For more information see [sys.dm_os_memory_objects (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### Memory consumed by [!INCLUDE[hek_2](../../../includeshek-2-md.md)] engine across the instance  
- Memory allocated to the [!INCLUDE[hek_2](../../../includeshek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../../includeshek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../../includeshek-2-md.md)] engine.  
+#### Memory consumed by [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine across the instance  
+ Memory allocated to the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine.  
   
 ```tsql  
 -- this DMV accounts for all memory used by the hek_2 engine  

@@ -161,7 +161,7 @@ manager: "jhubbard"
   
 #### To check the fragmentation of an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includesssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -253,7 +253,7 @@ manager: "jhubbard"
   
 #### To reorganize a defragmented index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includesssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -271,7 +271,7 @@ manager: "jhubbard"
   
 #### To reorganize all indexes in a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includesssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -288,7 +288,7 @@ manager: "jhubbard"
   
 #### To rebuild a defragmented index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includesssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   
@@ -298,7 +298,7 @@ manager: "jhubbard"
   
 #### To rebuild all indexes in a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includesssde-md.md)].  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  On the Standard bar, click **New Query**.  
   

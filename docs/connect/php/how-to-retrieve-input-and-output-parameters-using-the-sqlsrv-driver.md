@@ -1,8 +1,8 @@
 ---
 title: "How to: Retrieve I/O Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "04/12/2018"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "php"
@@ -18,7 +18,7 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
@@ -101,7 +101,7 @@ $employeeId = 4;
 $vacationHrs = 8;  
 $params = array(   
                  array($employeeId, SQLSRV_PARAM_IN),  
-                 array($vacationHrs, SQLSRV_PARAM_INOUT)  
+                 array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                );  
   
 /* Execute the query. */  
@@ -123,7 +123,37 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> When binding an input/output parameter to a bigint type, if the value may end up outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), you will need to specify its SQL field type as SQLSRV_SQLTYPE_BIGINT. Otherwise, it may result in a "value out of range" exception.
+
+## Example  
+This code sample shows how to bind a large bigint value as an input/output parameter.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_INOUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## See Also  
 [How to: Specify Parameter Direction Using the SQLSRV Driver](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 

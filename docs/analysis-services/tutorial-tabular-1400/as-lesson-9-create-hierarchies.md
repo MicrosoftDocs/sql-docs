@@ -1,4 +1,4 @@
----
+﻿---
 title: "Analysis Services tutorial lesson 9: Create hierarchies | Microsoft Docs"
 description: 
 ms.prod_service: "analysis-services, azure-analysis-services"
@@ -18,6 +18,7 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
+monikerRange: ">= sql-analysis-services-2017 || = sqlallproducts-allversions"
 ---
 # Create hierarchies
 

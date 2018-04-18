@@ -2,7 +2,7 @@
 title: "Connecting with SQLDriverConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -26,7 +26,7 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # Connecting with SQLDriverConnect

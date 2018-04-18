@@ -19,7 +19,7 @@ ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Advanced Object Selection (SybaseToSQL)

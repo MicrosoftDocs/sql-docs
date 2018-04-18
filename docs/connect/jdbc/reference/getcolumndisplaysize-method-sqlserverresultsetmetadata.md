@@ -2,7 +2,7 @@
 title: "getColumnDisplaySize Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -21,7 +21,7 @@ ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # getColumnDisplaySize Method (SQLServerResultSetMetaData)

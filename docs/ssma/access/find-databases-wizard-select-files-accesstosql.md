@@ -21,7 +21,7 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Find Databases Wizard (Select Files) (AccessToSQL)

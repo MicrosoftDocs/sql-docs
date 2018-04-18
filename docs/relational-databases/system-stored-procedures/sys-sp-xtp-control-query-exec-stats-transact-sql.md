@@ -2,7 +2,7 @@
 title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"

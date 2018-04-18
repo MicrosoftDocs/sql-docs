@@ -2,7 +2,7 @@
 title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-stored-procedures"

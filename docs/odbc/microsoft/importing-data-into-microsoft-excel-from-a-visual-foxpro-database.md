@@ -2,7 +2,7 @@
 title: "Importing Data into Microsoft Excel from a Visual FoxPro Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -22,7 +22,7 @@ ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "On Demand"
 ---
 # Importing Data into Microsoft Excel from a Visual FoxPro Database

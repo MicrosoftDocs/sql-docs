@@ -1,4 +1,4 @@
----
+﻿---
 title: "Job Categories - Manage Job Categories | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -22,6 +22,7 @@ author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
 ms.workload: "Inactive"
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Categories - Manage Job Categories
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

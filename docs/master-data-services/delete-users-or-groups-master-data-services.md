@@ -25,6 +25,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Delete Users or Groups (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Delete users or groups when you no longer want them to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  Note the following behavior when deleting users and groups:  

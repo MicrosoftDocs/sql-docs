@@ -1,26 +1,15 @@
 ---
-title: "Generating an R Stored Procedure for R Code using the sqlrutils Package | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2017"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-  
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Generate an R stored procedure for R Code using the sqlrutils Package | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
-# Generating an R Stored Procedure for R Code using the sqlrutils Package
+# Generate an R stored procedure for R Code using the sqlrutils package
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 The **sqlrutils** package provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. 

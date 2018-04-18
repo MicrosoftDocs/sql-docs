@@ -22,6 +22,9 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Annotate a Transaction (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotate a transaction when you want to provide supporting details about the transaction for historical purposes.  
   
 > [!NOTE]  

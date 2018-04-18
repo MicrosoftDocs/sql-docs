@@ -28,7 +28,7 @@ ms.workload: "Active"
  
  - [**Download SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
  - [**Download SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
- - [**Download Visual Studio**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
+ - [**Download Visual Studio**](https://www.visualstudio.com/downloads/)
 
   
 ## SQL Server Management Studio components  

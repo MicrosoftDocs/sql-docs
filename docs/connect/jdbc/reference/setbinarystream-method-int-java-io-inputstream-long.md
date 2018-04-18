@@ -2,7 +2,7 @@
 title: "setBinaryStream Method (int, java.io.InputStream, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "jdbc"
@@ -16,7 +16,7 @@ ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # setBinaryStream Method (int, java.io.InputStream, long)

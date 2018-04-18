@@ -2,7 +2,7 @@
 title: "What&#39;s New in ODBC 3.8 | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "odbc"
@@ -16,7 +16,7 @@ ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 caps.latest.revision: 24
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Inactive"
 ---
 # What&#39;s New in ODBC 3.8

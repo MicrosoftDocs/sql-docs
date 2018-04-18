@@ -2,7 +2,7 @@
 title: "sys.server_audit_specification_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2016"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "system-catalog-views"

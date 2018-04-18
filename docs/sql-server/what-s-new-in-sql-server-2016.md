@@ -23,7 +23,7 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 caps.latest.revision: 224
 author: "craigg-msft"
 ms.author: "craigg"
-manager: "jhubbard"
+manager: craigg
 ms.workload: "Active"
 ---
 # What's new in SQL Server 2016
@@ -106,7 +106,9 @@ See [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-r
 - [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
 - [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+- [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -19,7 +19,7 @@ ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Migrating SAP ASE databases to SQL Server - Azure SQL Database (SybaseToSQL)

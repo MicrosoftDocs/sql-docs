@@ -1,8 +1,8 @@
----
+﻿---
 title: "Examples of Bulk Access to Data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: "sql"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "import-export"
@@ -23,6 +23,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "craigg"
 ms.workload: "On Demand"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Examples of Bulk Access to Data in Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

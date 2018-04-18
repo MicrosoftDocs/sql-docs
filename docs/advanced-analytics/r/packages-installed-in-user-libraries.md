@@ -1,22 +1,13 @@
 ---
-title: "Avoiding errors on R packages installed in user libraries | Microsoft Docs"
-titleSuffix: "SQL Server"
-ms.custom: ""
-ms.date: "02/20/2018"
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
-author: "jeannt"
-ms.author: "jeannt"
-manager: "cgronlund"
-ms.workload: "Inactive"
+title: Avoid errors when using R packages installed in user libraries | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
 ---
 # Avoiding errors on R packages installed in user libraries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

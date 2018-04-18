@@ -1,25 +1,18 @@
 ---
-title: "Determine Which Cluster Node Failed (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-
+title: Determine failed cluster node - Analytics Platform System | Microsoft Docs
+description: This article describes how to determine the name of the Analytics Platform System (APS) node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Determine Which Cluster Node Failed
-This topic describes how to determine the name of the SQL Server PDW node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
+
+# Determine which cluster node failed for Analytics Platform System
+This topic describes how to determine the name of the Analytics Platform System (APS) node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
   
 ## <a name="Background"></a>Background  
 For high availability in SQL Server PDW, the Control node and the Compute nodes are configured as active or passive components of Windows failover clusters. When an active server fails to respond to critical system requests, the passive server fails over and performs the functions of the server that failed.  

@@ -1,24 +1,17 @@
 ---
-title: "Uninstall Analytics Platform System Hotfixes (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
-caps.latest.revision: 21
-
+title: Uninstall Analytics Platform System hotfixes in  | Microsoft Docs
+description: Uninstall Analytics Platform System hotfixes.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Uninstall Analytics Platform System Hotfixes
+
+# Uninstall Analytics Platform System hotfixes 
 The following steps describe how to uninstall a previously installed Analytics Platform System hotfix.  
   
 ## Before You Begin  

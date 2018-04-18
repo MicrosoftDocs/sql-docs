@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Publication Properties, FTP Snapshot and Internet
   This page allows you to:  
   
--   Set properties for delivering the snapshot through File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../includes/msconame-md.md)] Windows documentation for more information.  
+-   Set properties for delivering the snapshot through File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md) Windows documentation for more information.  
   
     > [!NOTE]  
     >  Changes to any FTP settings require a new snapshot to be generated.  

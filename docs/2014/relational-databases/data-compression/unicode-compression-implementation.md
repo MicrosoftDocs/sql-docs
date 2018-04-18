@@ -56,7 +56,7 @@ manager: "jhubbard"
 ## See Also  
  [Data Compression](data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)   
- [Page Compression Implementation](../relational-databases/data-compression/page-compression-implementation.md)   
+ [Page Compression Implementation](page-compression-implementation.md)   
  [sys.dm_db_persisted_sku_features &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)  
   
   

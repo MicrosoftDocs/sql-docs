@@ -21,7 +21,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Rebuild System Databases
-  System databases must be rebuilt to fix corruption problems in the [master](master-database.md), [model](../../analysis-services/power-pivot-sharepoint/model-database.md), [msdb](msdb-database.md), or [resource](resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  System databases must be rebuilt to fix corruption problems in the [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md), or [resource](resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In This Topic**  
   

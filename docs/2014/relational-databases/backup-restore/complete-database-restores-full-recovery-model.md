@@ -68,7 +68,7 @@ manager: "jhubbard"
  ![Complete database restore to the time of a failure](../../database-engine/media/bnrr-rmfull1-db-failure-pt.gif "Complete database restore to the time of a failure")  
   
 > [!NOTE]  
->  When you restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../../databases/copy-databases-with-backup-and-restore.md).  
+>  When you restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Basic Transact-SQL RESTORE Syntax  
  The basic [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for the restore sequence in the preceding illustration is as follows:  

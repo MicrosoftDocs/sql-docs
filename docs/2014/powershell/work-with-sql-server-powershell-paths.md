@@ -97,6 +97,6 @@ $MyDBVar.State
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Navigate SQL Server PowerShell Paths](navigate-sql-server-powershell-paths.md)   
  [Convert URNs to SQL Server Provider Paths](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
- [SQL Server PowerShell](../database-engine/availability-groups/windows/sql-server-powershell.md)  
+ [SQL Server PowerShell](sql-server-powershell.md)  
   
   

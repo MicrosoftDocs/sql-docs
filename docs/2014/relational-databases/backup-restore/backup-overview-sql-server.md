@@ -102,7 +102,7 @@ manager: "jhubbard"
  Multiple copies (mirrors) of a media set.  
   
 ##  <a name="BackupCompression"></a> Backup Compression  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](../../database-engine/backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] and later versions support compressing backups, and [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions can restore a compressed backup. For more information, see [Backup Compression &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
 ##  <a name="Restrictions"></a> Restrictions on Backup Operations in SQL Server  
  Backup can occur while the database is online and being used. However, the following restrictions exist.  

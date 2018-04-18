@@ -48,7 +48,7 @@ manager: "jhubbard"
 ##  <a name="VisualElement"></a> Database Mail Configuration Object Relationship  
  The illustration shows two profiles, three accounts, and three users. User 1 has access to Profile 1, which uses Account 1 and Account 2. User 3 has access to Profile 2, which uses Account 2 and Account 3. User 2 has access to both Profile 1 and Profile 2.  
   
- ![Relationship of users, profiles, and accounts](../../2014/database-engine/media/databasemailprofileaccount.gif "Relationship of users, profiles, and accounts")  
+ ![Relationship of users, profiles, and accounts](../../database-engine/media/databasemailprofileaccount.gif "Relationship of users, profiles, and accounts")  
   
   
 ##  <a name="DBAccount"></a> Database Mail Account  

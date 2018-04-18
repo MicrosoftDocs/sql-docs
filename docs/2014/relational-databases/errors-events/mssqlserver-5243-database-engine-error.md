@@ -35,6 +35,6 @@ manager: "jhubbard"
   
 ## See Also  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
- [Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md)  
+ [Database Files and Filegroups](../databases/database-files-and-filegroups.md)  
   
   

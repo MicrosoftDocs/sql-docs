@@ -72,7 +72,7 @@ manager: "jhubbard"
   
      Alerts can be configured to notify an operator of a particular database event or operating system condition.  
   
--   [Operators](../../analysis-services/multidimensional-models/operators.md)  
+-   [Operators](../../database-engine/operators.md)  
   
      Operators are aliases for people or groups that can receive electronic notification  
   

@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 -   [Restore Files to a New Location &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md.md)  
+-   [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **To restore files and filegroups over existing files**  
   

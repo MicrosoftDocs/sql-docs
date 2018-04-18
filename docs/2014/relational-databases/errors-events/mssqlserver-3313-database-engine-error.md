@@ -45,7 +45,7 @@ manager: "jhubbard"
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
- [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
+ [Complete Database Restores &#40;Simple Recovery Model&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)   
  [MSSQLSERVER_824](mssqlserver-824-database-engine-error.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
 |---------------------|-----------------|  
 |[master Database](master-database.md)|Records all the system-level information for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[msdb Database](msdb-database.md)|Is used by SQL Server Agent for scheduling alerts and jobs.|  
-|[model Database](../../analysis-services/power-pivot-sharepoint/model-database.md)|Is used as the template for all databases created on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Modifications made to the **model** database, such as database size, collation, recovery model, and other database options, are applied to any databases created afterward.|  
+|[model Database](model-database.md)|Is used as the template for all databases created on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Modifications made to the **model** database, such as database size, collation, recovery model, and other database options, are applied to any databases created afterward.|  
 |[Resource Database](resource-database.md)|Is a read-only database that contains system objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. System objects are physically persisted in the **Resource** database, but they logically appear in the **sys** schema of every database.|  
 |[tempdb Database](tempdb-database.md)|Is a workspace for holding temporary objects or intermediate result sets.|  
   

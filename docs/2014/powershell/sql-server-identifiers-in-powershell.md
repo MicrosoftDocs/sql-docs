@@ -52,7 +52,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Describes how to use the Windows PowerShell escape character for characters not supported in PowerShell paths.|[Escape SQL Server Identifiers](escape-sql-server-identifiers.md)|  
   
 ## See Also  
- [SQL Server PowerShell Provider](../database-engine/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)   
  [Database Identifiers](../relational-databases/databases/database-identifiers.md)  
   

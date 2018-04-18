@@ -206,7 +206,7 @@ GO
 -   [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 ## See Also  
- [Differential Backups &#40;SQL Server&#41;](../../database-engine/differential-backups-sql-server.md)   
+ [Differential Backups &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

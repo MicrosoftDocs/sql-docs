@@ -49,6 +49,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Mail](database-mail.md)   
- [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

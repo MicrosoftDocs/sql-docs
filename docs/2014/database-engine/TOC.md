@@ -1082,7 +1082,7 @@
 ###### [Restore Files to a New Location](../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)
 ###### [Restore Files and Filegroups (SQL Server)](../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)
 ##### [File Restores (Full Recovery Model)](../relational-databases/backup-restore/file-restores-full-recovery-model.md)
-##### [Apply Transaction Log Backups](../relational-databases/backup-restore/../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)
+##### [Apply Transaction Log Backups](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)
 ###### [Restore a Transaction Log Backup (SQL Server)](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)
 ###### [Restore a SQL Server Database to a Point in Time (Full Recovery Model)](../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)
 ###### [Recovery of Related  Databases That Contain Marked Transaction](../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)

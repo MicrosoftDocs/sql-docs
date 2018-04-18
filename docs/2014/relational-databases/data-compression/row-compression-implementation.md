@@ -74,6 +74,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Data Compression](data-compression.md)   
- [Page Compression Implementation](../../database-engine/page-compression-implementation.md)  
+ [Page Compression Implementation](page-compression-implementation.md)  
   
   

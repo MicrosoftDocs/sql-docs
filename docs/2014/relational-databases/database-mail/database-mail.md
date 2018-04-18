@@ -76,7 +76,7 @@ manager: "jhubbard"
 ##  <a name="VisualElement"></a> Database Mail Architecture  
  Database Mail is designed on a queued architecture that uses service broker technologies. When users execute **sp_send_dbmail**, the stored procedure inserts an item into the mail queue and creates a record that contains the e-mail message. Inserting the new entry in the mail queue starts the external Database Mail process (DatabaseMail.exe). The external process reads the e-mail information and sends the e-mail message to the appropriate e-mail server or servers. The external process inserts an item in the Status queue for the outcome of the send operation. Inserting the new entry in the status queue starts an internal stored procedure that updates the status of the e-mail message. Besides storing the sent, or unsent, e-mail message, Database Mail also records any e-mail attachments in the system tables. Database Mail views provide the status of messages for troubleshooting, and stored procedures allow for administration of the Database Mail queue.  
   
- ![msdb sends messages to an SMTP mail server](../../2014/database-engine/media/databasemail.gif "msdb sends messages to an SMTP mail server")  
+ ![msdb sends messages to an SMTP mail server](../../database-engine/media/databasemail.gif "msdb sends messages to an SMTP mail server")  
   
 
   

@@ -71,6 +71,6 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Describes how to open SQL Server Authentication connections by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider. By default, the provider uses Windows Authentication connections made using the credentials of the Windows account running the Windows PowerShell session.|[Manage Authentication in Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## See Also  
- [SQL Server PowerShell](../database-engine/availability-groups/windows/sql-server-powershell.md)  
+ [SQL Server PowerShell](sql-server-powershell.md)  
   
   

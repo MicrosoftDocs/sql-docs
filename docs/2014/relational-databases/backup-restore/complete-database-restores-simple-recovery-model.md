@@ -44,7 +44,7 @@ manager: "jhubbard"
  ![Restoring full and differential database backups](../../database-engine/media/bnrr-rmsimple2-diffdbbu.gif "Restoring full and differential database backups")  
   
 > [!NOTE]  
->  If you plan to restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../../databases/copy-databases-with-backup-and-restore.md).  
+>  If you plan to restore a database backup onto a different server instance, see [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md).  
   
 ###  <a name="TsqlSyntax"></a> Basic Transact-SQL RESTORE Syntax  
  The basic [!INCLUDE[tsql](../../../includes/tsql-md.md)][RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) syntax for restoring a full database backup is:  

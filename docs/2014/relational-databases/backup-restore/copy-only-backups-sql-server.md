@@ -76,7 +76,7 @@ manager: "jhubbard"
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
   
 
   

@@ -228,7 +228,7 @@ GO
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   

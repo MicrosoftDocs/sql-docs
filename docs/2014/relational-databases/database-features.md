@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ||||  
 |-|-|-|  
-|[Databases](../database-engine/dev-guide/cursors.md)|[Back Up and Restore of SQL Server Databases](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
+|[Databases](databases/databases.md)|[Back Up and Restore of SQL Server Databases](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
 |[Tables](../database-engine/tables.md)|[Sequence Numbers](../database-engine/sequence-numbers.md)|[Bulk Import and Export of Data &#40;SQL Server&#41;](../database-engine/bulk-import-and-export-of-data-sql-server.md)|  
 |[In-Memory OLTP &#40;In-Memory Optimization&#41;](../database-engine/in-memory-oltp-in-memory-optimization.md)|[DDL Triggers](../database-engine/ddl-triggers.md)|[Data Compression](data-compression/data-compression.md)|  
 |[Indexes](../database-engine/indexes.md)|[DML Triggers](../database-engine/dml-triggers.md)|[OLE Automation Objects in Transact-SQL](../database-engine/ole-automation-objects-in-transact-sql.md)|  

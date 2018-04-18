@@ -118,7 +118,7 @@ manager: "jhubbard"
   
 -   Restore **master** from a current database backup.  
   
-     If you can start the server instance, you should be able to restore **master** from a full database backup. For more information, see [Restore the master Database &#40;Transact-SQL&#41;](../relational-databases/backup-restore/restore-the-master-database-transact-sql.md).  
+     If you can start the server instance, you should be able to restore **master** from a full database backup. For more information, see [Restore the master Database &#40;Transact-SQL&#41;](../backup-restore/restore-the-master-database-transact-sql.md).  
   
 -   Rebuild **master** completely.  
   

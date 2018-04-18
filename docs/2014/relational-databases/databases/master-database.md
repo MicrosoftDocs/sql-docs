@@ -130,7 +130,7 @@ manager: "jhubbard"
 ## Related Content  
  [Rebuild System Databases](rebuild-system-databases.md)  
   
- [System Databases](../../database-engine/system-databases.md)  
+ [System Databases](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

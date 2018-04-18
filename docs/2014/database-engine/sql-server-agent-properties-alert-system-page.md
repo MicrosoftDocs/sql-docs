@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Operators](../../2014/database-engine/operators.md)   
- [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/database-mail.md)   
- [Database Mail](../../2014/database-engine/database-mail.md)  
+ [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+ [Database Mail](../relational-databases/database-mail/database-mail.md)  
   
   

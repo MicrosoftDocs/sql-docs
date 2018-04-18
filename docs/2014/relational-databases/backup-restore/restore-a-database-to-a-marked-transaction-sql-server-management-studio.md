@@ -54,7 +54,7 @@ manager: "jhubbard"
     |**User Name**|Name of the database user who committed the marked transaction.|  
   
 ## See Also  
- [Restore a Database Backup &#40;SQL Server Management Studio&#41;](../../database-engine/restore-a-database-backup-sql-server-management-studio.md)   
+ [Restore a Database Backup &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
   

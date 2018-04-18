@@ -55,7 +55,7 @@ manager: "jhubbard"
 -   The algorithm for allocating mixed pages in **tempdb** is improved.  
   
 ### Moving the tempdb Data and Log Files  
- To move the **tempdb** data and log files, see [Move System Databases](../../database-engine/system-databases.md).  
+ To move the **tempdb** data and log files, see [Move System Databases](system-databases.md).  
   
 ### Database Options  
  The following table lists the default value for each database option in the **tempdb** database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
@@ -132,7 +132,7 @@ manager: "jhubbard"
 ## Related Content  
  [SORT_IN_TEMPDB Option For Indexes](../../database-engine/sort-in-tempdb-option-for-indexes.md)  
   
- [System Databases](../../database-engine/system-databases.md)  
+ [System Databases](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

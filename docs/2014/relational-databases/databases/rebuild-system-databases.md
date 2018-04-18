@@ -188,6 +188,6 @@ manager: "jhubbard"
  After the rebuild operation is complete, examine the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs for any errors. The default log location is C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs. To locate the log file that contains the results of the rebuild process, change directories to the Logs folder from a command prompt, and then run `findstr /s RebuildDatabase summary*.*`. This search will point you to any log files that contain the results of rebuilding system databases. Open the log files and examine them for relevant error messages.  
   
 ## See Also  
- [System Databases](../../database-engine/system-databases.md)  
+ [System Databases](system-databases.md)  
   
   

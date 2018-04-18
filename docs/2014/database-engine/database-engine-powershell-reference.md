@@ -40,6 +40,6 @@ manager: "jhubbard"
  Query expressions are strings that use syntax similar to XPath to specify a set of criteria that enumerate one or more objects in an object model hierarchy. A Unique Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object. For more information, see [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
 ## See Also  
- [SQL Server PowerShell](../../2014/database-engine/sql-server-powershell.md)  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
   
   

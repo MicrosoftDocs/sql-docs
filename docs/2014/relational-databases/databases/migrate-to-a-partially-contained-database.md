@@ -33,7 +33,7 @@ manager: "jhubbard"
 ##  <a name="prepare"></a> Preparing to Migrate a Database  
  Review the following items when considering migrating a database to the partially contained database model.  
   
--   You should understand the partially contained database model. For more information, see [Contained Databases](../../database-engine/contained-databases.md).  
+-   You should understand the partially contained database model. For more information, see [Contained Databases](contained-databases.md).  
   
 -   You should understand risks that are unique to partially contained databases. For more information, see [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
@@ -116,7 +116,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## See Also  
- [Contained Databases](../../database-engine/contained-databases.md)   
+ [Contained Databases](contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

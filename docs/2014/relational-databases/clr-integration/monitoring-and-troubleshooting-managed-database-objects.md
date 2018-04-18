@@ -24,7 +24,7 @@ manager: "jhubbard"
   This topic provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Profiler Trace Events  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides SQL Trace and event notifications to monitor events that occur in the Database Engine. By recording specified events, SQL Trace helps you troubleshoot performance, audit database activity, gather sample data for a test environment, debug [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements and stored procedures, and gather data for performance analysis tools. For more information, see [SQL Trace](../../database-engine/sql-trace.md) and [Extended Events](../../analysis-services/instances/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides SQL Trace and event notifications to monitor events that occur in the Database Engine. By recording specified events, SQL Trace helps you troubleshoot performance, audit database activity, gather sample data for a test environment, debug [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements and stored procedures, and gather data for performance analysis tools. For more information, see [SQL Trace](../../database-engine/sql-trace.md) and [Extended Events](../../../analysis-services/instances/extended-events.md).  
   
 |Event|Description|  
 |-----------|-----------------|  

@@ -72,12 +72,12 @@ manager: "jhubbard"
  Allows triggers to fire other triggers. Triggers can be nested to a maximum of 32 levels. For more information, see the "Nested Triggers" section in [CREATE TRIGGER &#40;Transact-SQL&#41;](~/t-sql/statements/create-trigger-transact-sql.md).  
   
  **Transform Noise Words**  
- Suppress an error message if noise words, that is stopwords, cause a Boolean operation on a full-text query to return zero rows. For more information, see [transform noise words Server Configuration Option](../configure-windows/transform-noise-words-server-configuration-option.md).  
+ Suppress an error message if noise words, that is stopwords, cause a Boolean operation on a full-text query to return zero rows. For more information, see [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).  
   
  **Two Digit Year Cutoff**  
  Indicates the highest year number that can be entered as a two-digit year. The year listed and the previous 99 years can be entered as a two-digit year. All other years must be entered as a four-digit year.  
   
- For example, the default setting of 2049 indicates that a date entered as '3/14/49' will be interpreted as March 14, 2049, and a date entered as '3/14/50' will be interpreted as March 14, 1950. For more information, see [Configure the two digit year cutoff Server Configuration Option](../configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ For example, the default setting of 2049 indicates that a date entered as '3/14/49' will be interpreted as March 14, 2049, and a date entered as '3/14/50' will be interpreted as March 14, 1950. For more information, see [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## Cursor  
  **Close Cursor on Commit Enabled**  

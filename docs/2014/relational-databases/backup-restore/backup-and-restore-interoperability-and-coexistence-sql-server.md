@@ -63,13 +63,13 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The database mirroring feature will be removed in a future version of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
   
- Database mirroring is a solution for increasing database availability. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model. For more information, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).  
+ Database mirroring is a solution for increasing database availability. Mirroring is implemented on a per-database basis and works only with databases that use the full recovery model. For more information, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 > [!NOTE]  
 >  To distribute copies of a subset of the filegroups in a database, use replication: replicate only those objects in the filegroups you want to copy to other servers. For more information about replication, see [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).  
   
 ### Creating the Mirror Database  
- The mirror database is created by restoring, WITH NORECOVERY, backups of the principal database on the mirror server. The restore must keep the same database name. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+ The mirror database is created by restoring, WITH NORECOVERY, backups of the principal database on the mirror server. The restore must keep the same database name. For more information, see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
  You can create the mirror database by using use a piecemeal restore sequence, where supported. However, you cannot start mirroring until you have restored all the filegroups and, typically, restored log backups to get the mirror database close enough in time with the principal database. For more information, see [Piecemeal Restores &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
   
@@ -123,13 +123,13 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 -   [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   
  [Back Up and Restore Replicated Databases](../../relational-databases/replication/back-up-and-restore-replicated-databases.md)   
- [Active Secondaries: Backup on Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Active Secondaries: Backup on Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

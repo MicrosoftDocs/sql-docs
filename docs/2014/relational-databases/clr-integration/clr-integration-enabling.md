@@ -47,7 +47,7 @@ GO
   
 ## See Also  
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [clr enabled Server Configuration Option](../configure-windows/clr-enabled-server-configuration-option.md)   
+ [clr enabled Server Configuration Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](~/t-sql/statements/grant-transact-sql.md)   
  [Server-Level Roles](../../../2014/database-engine/server-level-roles.md)  

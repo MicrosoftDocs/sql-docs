@@ -44,7 +44,7 @@ manager: "jhubbard"
  [Host Protection Attributes and CLR Integration Programming](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Provides information about the host protection attribute (HPA) values that are disallowed in SAFE and EXTERNAL_ACCESS assemblies.  
   
- [Links in CLR Integration Security](../../../database-engine/dev-guide/clr-integration-security.md)  
+ [Links in CLR Integration Security](../../../database-engine/dev-guide/links-in-clr-integration-security.md)  
  Describes how pieces of user-code can call each other in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Impersonation and CLR Integration Security](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  

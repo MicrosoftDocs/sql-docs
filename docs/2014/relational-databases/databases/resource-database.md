@@ -70,6 +70,6 @@ GO
   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
   
- [Start SQL Server in Single-User Mode](../configure-windows/start-sql-server-in-single-user-mode.md)  
+ [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   

@@ -67,7 +67,7 @@ manager: "jhubbard"
  [CLR Stored Procedures](../../../database-engine/dev-guide/clr-stored-procedures.md)  
  Describes how to implement and use CLR stored procedures.  
   
- [CLR Triggers](../../../database-engine/clr-triggers.md)  
+ [CLR Triggers](../../../database-engine/dev-guide/clr-triggers.md)  
  Describes how to implement and use CLR triggers.  
   
 ## See Also  

@@ -98,7 +98,7 @@ manager: "jhubbard"
 -   Setting the primary filegroup to READ_ONLY.  
   
 ## Related Content  
- [System Databases](../../database-engine/system-databases.md)  
+ [System Databases](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
@@ -108,6 +108,6 @@ manager: "jhubbard"
   
  [Database Mail](../database-mail/database-mail.md)  
   
- [SQL Server Service Broker](../configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

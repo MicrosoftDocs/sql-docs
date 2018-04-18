@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 -   Enabling the schema option for FILESTREAM after an article is created can cause replication to fail if the data in a FILESTREAM column exceeds 2 GB and there is a conflict during replication. If you expect this situation to arise, it is recommended that you drop and re-create the table article with the appropriate FILESTREAM schema option enabled at creation time.  
   
--   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
+-   Merge replication can synchronize FILESTREAM data over an HTTPS connection by using [Web Synchronization](../../relational-databases/replication/web-synchronization-for-merge-replication.md). This data cannot exceed the 50 MB limit for Web Synchronization; otherwise, a run-time error is generated.  
   
 ##  <a name="LogShipping"></a> Log Shipping  
  [Log shipping](log-shipping/about-log-shipping-sql-server.md) supports FILESTREAM. Both the primary and secondary servers must be running [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], or a later version, and have FILESTREAM enabled.  
@@ -102,7 +102,7 @@ manager: "jhubbard"
  Database mirroring does not support FILESTREAM. A FILESTREAM filegroup cannot be created on the principal server. Database mirroring cannot be configured for a database that contains FILESTREAM filegroups.  
   
 ##  <a name="FullText"></a> Full-Text Indexing  
- [Full-text indexing](../../2014/database-engine/populate-full-text-indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../../2014/database-engine/query-with-full-text-search.md), [Configure and Manage Filters for Search](../../2014/database-engine/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ [Full-text indexing](../../database-engine/populate-full-text-indexes.md) works with a FILESTREAM column in the same way that it does with a `varbinary(max)` column. The FILESTREAM table must have a column that contains the file name extension for each FILESTREAM BLOB. For more information, see [Query with Full-Text Search](../../database-engine/query-with-full-text-search.md), [Configure and Manage Filters for Search](../../database-engine/configure-and-manage-filters-for-search.md), and [sys.fulltext_document_types &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  The full-text engine indexes the contents of the FILESTREAM BLOBs. Indexing files such as images might not be useful. When a FILESTREAM BLOB is updated it is reindexed.  
   

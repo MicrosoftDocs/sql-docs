@@ -48,6 +48,6 @@ manager: "jhubbard"
  Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
 ## See Also  
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
+ [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

@@ -114,7 +114,7 @@ manager: "jhubbard"
 ## See Also  
  [CLR Integration Security](clr-integration-security.md)   
  [Host Protection Attributes and CLR Integration Programming](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [CLR Hosted Environment](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)  
+ [CLR Integration Programming Model Restrictions](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
+ [CLR Hosted Environment](../clr-integration-architecture-clr-hosted-environment.md)  
   
   

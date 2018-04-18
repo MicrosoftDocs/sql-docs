@@ -113,7 +113,7 @@ manager: "jhubbard"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these is set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md).  
   
- Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
+ Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
  For more information, see also [Set Up a Mirror Database to Use the Trustworthy Property &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
      The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../database-engine/select-an-account-for-the-sql-server-agent-service.md).  
   
-     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, which is associated with a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], has its own registry hive, and its jobs typically have dependencies on one or more of the settings in this registry hive. To behave as intended, a job requires those registry settings. If you use a script to re-create a job in another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, its registry might not have the correct settings for that job. For re-created jobs to behave correctly on a destination server instance, the original and destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services should have the same registry settings.  
   
@@ -241,7 +241,7 @@ manager: "jhubbard"
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../database-engine/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
--   [Configure Windows Service Accounts and Permissions](../configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
 -   [Configure SQL Server Agent](../../database-engine/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   

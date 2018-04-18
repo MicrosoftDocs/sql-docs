@@ -1,25 +1,18 @@
 ---
-title: "Determine Polling Frequency (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
-caps.latest.revision: 7
-
+title: Determine polling frequency - Analytics Platform System | Microsoft Docs
+description: This article explains how to determine the polling frequency for Analytics Platform System appliance alerts.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
 # Determine Polling Frequency
-This topic explains how to determine the polling frequency for SQL Server PDW appliance alerts.  
+This article explains how to determine the polling frequency for Analytics Platform System appliance alerts.  
   
 ## To Determine the Polling Frequency  
 Since PDW does not currently support proactive notifications when alerts occur, the monitoring solution needs to continuously poll the appliance DLLs.  Internally, PDW polls the components at different intervals:  

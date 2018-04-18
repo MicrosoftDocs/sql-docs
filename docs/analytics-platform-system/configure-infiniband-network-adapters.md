@@ -1,26 +1,18 @@
 ---
-title: "Configure InfiniBand network adapters for Analytics Platform System (APS)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: "mpp-data-warehouse"
-description: "Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW)."
-ms.date: "01/05/2017"
-ms.topic: "article"
-ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
-caps.latest.revision: 15
-
-
+title: Configure InfiniBand - Analytics Platform System | Microsoft Docs
+description: Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes will automatically connect to the active InfiniBand network. 
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
 
 # Configure InfiniBand network adapters for Analytics Platform System
-Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes will automatically connect to the active InfiniBand network.  
+Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes will automatically connect to the active InfiniBand network.  
   
 ## <a name="Basics"></a>Description  
 These instructions show you how to find and then set the correct InfiniBand IP addresses and subnet masks on your InfiniBand-connected server. They also explain how to set your server to use the APS appliance DNS so that your connection will resolve to the active InfiniBand network.  

@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2018"
+ms.date: "04/18/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -70,11 +70,11 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 > [!NOTE]  
 > **Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** V12 was released in December 2014. One aspect of that release was that newly created databases had their compatibility level set to 120. In 2015 SQL Database began support for level 130, although the default remained 120.  
 > 
-> Starting in **mid-June 2016**, in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], the default compatibility level are 130 instead of 120 for **newly created** databases. Existing databases created before mid-June 2016 are not affected, and maintain their current compatibility level (100, 110, or 120). 
+> As of **January 2018**, in SQL Database, the default compatibility level is 140 for newly created databases. We do not update database compatibility level for existing databases. This is up to customers to do at their own discretion. With that said, we highly recommend customers plan on moving to the latest compatibility level in order to leverage the latest improvements.
 > 
-> If you want level 130 for your database generally, but you have reason to prefer the level 110 **cardinality estimation** algorithm, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.  
+> If you want level 140 for your database generally, but you have reason to prefer the level 110 **cardinality estimation** algorithm, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword `LEGACY_CARDINALITY_ESTIMATION = ON`.
 >  
->  For details about how to assess the performance differences of your most important queries, between two compatibility levels on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+>  For details about how to assess the performance differences of your most important queries, between two compatibility levels on [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/). Note that this article refers to compatibility level 130 and SQL Server, but the same methodology applies for moves to 140 for SQL Server and Azure SQL DB.
 
 
  Execute the following query to determine the version of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that you are connected to.  

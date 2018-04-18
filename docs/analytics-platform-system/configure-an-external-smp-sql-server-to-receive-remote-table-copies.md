@@ -1,7 +1,6 @@
 ---
-title: "Configure SQL Server to receive remote table copies - Parallel Data Warehouse | Microsoft Docs
-description: Describes how to configure an external SQL Server instance to receive remote table copies from Parallel Data Warehouse. 
-author: "barbkess" 
+title: Configure SQL Server to receive remote table copies - Parallel Data Warehouse | Microsoft Docs
+description: Describes how to configure an external SMP SQL Server instance to receive remote table copies from Parallel Data Warehouse. 
 author: mzaman1 
 manager: craigg
 ms.prod: sql
@@ -14,7 +13,7 @@ ms.reviewer: martinle
 
 # Configure an external SMP SQL Server to receive remote table copies - Parallel Data Warehouse
 Describes how to configure an external SQL Server instance to receive remote table copies from Parallel Data Warehouse.  
-  
+
 This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  
   
 ## Before You Begin  

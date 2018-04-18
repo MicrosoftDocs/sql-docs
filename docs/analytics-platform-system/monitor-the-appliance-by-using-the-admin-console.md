@@ -1,24 +1,17 @@
 ---
-title: "Monitor the Appliance by Using the Admin Console (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: 26
-
+title: Monitor with Admin Console - Analytics Platform System | Microsoft Docs
+description: For Analytics Platform System, the Admin Console is a web application that surfaces the appliance state, health, and performance information. Users connect to the Admin Console through an internet browser.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Monitor the Appliance by Using the Admin Console
+
+# Monitor the appliance with the Admin Console - Analytics Platform System
 The Admin Console is a SQL Server PDW web application that surfaces the appliance state, health, and performance information. Users connect to the Admin Console through Internet Explorer.  
   
 ## <a name="About"></a>About the Admin Console  

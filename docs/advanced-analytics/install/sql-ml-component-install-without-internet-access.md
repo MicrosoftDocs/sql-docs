@@ -3,7 +3,7 @@ title: Install SQL Server machine learning components without internet access | 
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 04/15/2018
+ms.date: 04/19/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -57,6 +57,12 @@ Microsoft R Open     |no change; use previous|
 Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 Microsoft Python Open     |no change; use previous|
 Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**SQL Server 2017 CU5** |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)|
+Microsoft Python Open     |no change; use previous|
+Microsoft Python Server    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)|
+
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 

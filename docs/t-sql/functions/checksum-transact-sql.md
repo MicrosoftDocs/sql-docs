@@ -1,4 +1,4 @@
-﻿---
+---
 title: "CHECKSUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -28,6 +28,7 @@ ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "Active"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+
 ---
 # CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -44,7 +45,7 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 ## Arguments  
 \*  
-This argument specifies that the checksum computation covers all table columns. `CHECKSUM` returns an error if any column has a noncomparable data type. Noncomparable data types include
+This argument specifies that the checksum computation covers all table columns. `CHECKSUM` returns an error if any column has a noncomparable data type. Noncomparable data types include:
 
 - **cursor**
 - **image**
@@ -52,9 +53,7 @@ This argument specifies that the checksum computation covers all table columns. 
 - **text**
 - **XML**
 
-and
-
-- **sql_variant**, with any one of the preceding data types as its base type.
+Another noncomparable data type is **sql_variant** with any one of the preceding data types as its base type.
   
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type, except a noncomparable data type.

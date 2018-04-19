@@ -136,7 +136,7 @@ GO
  Since semantic indexing is dependent on full-text indexing, semantic indexes are only populated when the associated full-text indexes are populated.  
   
  **Are full-text search and semantic search properly installed and configured?**  
- For more information, see [Install and Configure Semantic Search](../relational-databases/search/install-and-configure-semantic-search.md).  
+ For more information, see [Install and Configure Semantic Search](install-and-configure-semantic-search.md).  
   
  **Is the FDHOST service not available, or is there another condition that would cause full-text indexing to fail?**  
  For more information, see [Troubleshoot Full-Text Indexing](troubleshoot-full-text-indexing.md).  

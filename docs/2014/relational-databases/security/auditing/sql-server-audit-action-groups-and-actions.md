@@ -178,9 +178,9 @@ manager: "jhubbard"
 |AUDIT_ CHANGE_GROUP|This event is raised whenever one of the following commands are issued:<br /><br /> -   CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-   DROP SERVER AUDIT<br />-   CREATE SERVER AUDIT SPECIFICATION<br />-   ALTER SERVER AUDIT SPECIFICATION<br />-   DROP SERVER AUDIT SPECIFICATION<br />-   CREATE DATABASE AUDIT SPECIFICATION<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
   
 ## Related Content  
- [Create a Server Audit and Server Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md)  
   
- [Create a Server Audit and Database Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
+ [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](~/t-sql/statements/create-server-audit-transact-sql.md)  
   

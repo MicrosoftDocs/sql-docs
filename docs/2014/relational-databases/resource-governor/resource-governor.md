@@ -52,11 +52,11 @@ manager: "jhubbard"
 ## Resource Concepts  
  The following three concepts are fundamental to understanding and using Resource Governor:  
   
--   **Resource pools.** A resource pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Two resource pools (internal and default) are created when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined resource pools. For more information, see [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md).  
+-   **Resource pools.** A resource pool, represents the physical resources of the server. You can think of a pool as a virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance inside of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Two resource pools (internal and default) are created when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined resource pools. For more information, see [Resource Governor Resource Pool](resource-governor-resource-pool.md).  
   
--   **Workload groups.** A workload group serves as a container for session requests that have similar classification criteria. A workload allows for aggregate monitoring of the sessions, and defines policies for the sessions. Each workload group is in a resource pool. Two workload groups (internal and default) are created and mapped to their corresponding resource pools when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined workload groups. For more information see, [Resource Governor Workload Group](../relational-databases/resource-governor/resource-governor-workload-group.md).  
+-   **Workload groups.** A workload group serves as a container for session requests that have similar classification criteria. A workload allows for aggregate monitoring of the sessions, and defines policies for the sessions. Each workload group is in a resource pool. Two workload groups (internal and default) are created and mapped to their corresponding resource pools when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is installed. Resource Governor also supports user-defined workload groups. For more information see, [Resource Governor Workload Group](resource-governor-workload-group.md).  
   
--   **Classification.** The Classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function. Resource Governor also supports a classifier user-defined function for implementing classification rules. For more information, see [Resource Governor Classifier Function](../relational-databases/resource-governor/resource-governor-classifier-function.md).  
+-   **Classification.** The Classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function. Resource Governor also supports a classifier user-defined function for implementing classification rules. For more information, see [Resource Governor Classifier Function](resource-governor-classifier-function.md).  
   
 > [!NOTE]  
 >  Resource Governor does not impose any controls on a dedicated administrator connection (DAC). There is no need to classify DAC queries, which run in the internal workload group and resource pool.  
@@ -79,13 +79,13 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to enable Resource Governor.|[Enable Resource Governor](../relational-databases/resource-governor/resource-governor.md)|  
-|Describes how to disable Resource Governor.|[Disable Resource Governor](../relational-databases/resource-governor/disable-resource-governor.md)|  
-|Describes how to create, alter, and drop a resource pool.|[Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md)|  
-|Describes how to create, alter, move, and drop a workload group.|[Resource Governor Workload Group](../relational-databases/resource-governor/resource-governor-workload-group.md)|  
-|Describes how to create and test a classifier user-defined function.|[Resource Governor Classifier Function](../relational-databases/resource-governor/resource-governor-classifier-function.md)|  
-|Describes how to configure Resource Governor using a template.|[Configure Resource Governor Using a Template](../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
-|Describes how to view Resource Governor properties.|[View Resource Governor Properties](../relational-databases/resource-governor/view-resource-governor-properties.md)|  
+|Describes how to enable Resource Governor.|[Enable Resource Governor](resource-governor.md)|  
+|Describes how to disable Resource Governor.|[Disable Resource Governor](disable-resource-governor.md)|  
+|Describes how to create, alter, and drop a resource pool.|[Resource Governor Resource Pool](resource-governor-resource-pool.md)|  
+|Describes how to create, alter, move, and drop a workload group.|[Resource Governor Workload Group](resource-governor-workload-group.md)|  
+|Describes how to create and test a classifier user-defined function.|[Resource Governor Classifier Function](resource-governor-classifier-function.md)|  
+|Describes how to configure Resource Governor using a template.|[Configure Resource Governor Using a Template](configure-resource-governor-using-a-template.md)|  
+|Describes how to view Resource Governor properties.|[View Resource Governor Properties](view-resource-governor-properties.md)|  
   
 ## See Also  
  [Database Engine Instances &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

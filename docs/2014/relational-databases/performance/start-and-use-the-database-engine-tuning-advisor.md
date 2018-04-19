@@ -25,7 +25,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Start and Use the Database Engine Tuning Advisor
-  This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+  This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialize the Database Engine Tuning Advisor  
  On first use, a user who is member of the **sysadmin** fixed server role must initialize the Database Engine Tuning Advisor. This is because several system tables must be created in the `msdb` database to support tuning operations. Initialization also enables users that are members of the **db_owner** fixed database role to tune workloads on tables in databases that they own.  
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 1.  Tune the trace file or table workload. For more information, see [Tune a Database](#Tune) later in this topic.  
   
-2.  Check the tuning log for statements that were not tuned due to inadequate permissions. For more information, see [View and Work with the Output from the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+2.  Check the tuning log for statements that were not tuned due to inadequate permissions. For more information, see [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 3.  Create a new workload by deleting the **LoginName** column from the events that were not tuned, and then save only the untuned events in a new trace file or table. For more information about deleting data columns from a trace, see [Specify Events and Data Columns for a Trace File &#40;SQL Server Profiler&#41;](../../database-engine/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md) or [Modify an Existing Trace &#40;Transact-SQL&#41;](../../database-engine/modify-an-existing-trace-transact-sql.md).  
   
@@ -138,7 +138,7 @@ manager: "jhubbard"
 >  Make sure that tracing has stopped before using a trace table as a workload for Database Engine Tuning Advisor. Database Engine Tuning Advisor does not support using a trace table to which trace events are still being written as a workload.  
   
 ### Use the Database Engine Tuning Advisor Graphical User Interface  
- On the Database Engine Tuning Advisor GUI, you can tune a database by using the plan cache, workload files, or workload tables. You can use the Database Engine Tuning Advisor GUI to easily view the results of your current tuning session and results of previous tuning sessions. For information about user interface options, see [User Interface Descriptions](#UI) later in this topic. For more information about working with the output after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+ On the Database Engine Tuning Advisor GUI, you can tune a database by using the plan cache, workload files, or workload tables. You can use the Database Engine Tuning Advisor GUI to easily view the results of your current tuning session and results of previous tuning sessions. For information about user interface options, see [User Interface Descriptions](#UI) later in this topic. For more information about working with the output after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 ####  <a name="PlanCache"></a> To tune a database by using the plan cache  
   
@@ -504,7 +504,7 @@ database_name.owner_name.table_name
  Contains information regarding this tuning session. To print this log, right-click the log, and then click **Print**.  
   
 ## See Also  
- [View and Work with the Output from the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md)   
+ [View and Work with the Output from the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
  [dta Utility](../../database-engine/dta-utility.md)  
   
   

@@ -126,8 +126,8 @@ manager: "jhubbard"
 ## See Also  
  [Resource Governor](../../2014/database-engine/resource-governor.md)   
  [Enable Resource Governor](../../database-engine/resource-governor.md)   
- [Resource Governor Resource Pool](../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [Resource Governor Workload Group](../relational-databases/resource-governor/resource-governor-workload-group.md)   
- [Resource Governor Classifier Function](../relational-databases/resource-governor/resource-governor-classifier-function.md)  
+ [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [Resource Governor Workload Group](resource-governor-workload-group.md)   
+ [Resource Governor Classifier Function](resource-governor-classifier-function.md)  
   
   

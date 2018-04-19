@@ -101,6 +101,6 @@ GO
   
 ## See Also  
  [Search Document Properties with Search Property Lists](search-document-properties-with-search-property-lists.md)   
- [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)  
   
   

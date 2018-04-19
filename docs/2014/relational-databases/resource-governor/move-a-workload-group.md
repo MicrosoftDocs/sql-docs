@@ -73,9 +73,9 @@ GO
   
 ## See Also  
  [Resource Governor](resource-governor.md)   
- [Enable Resource Governor](../relational-databases/resource-governor/enable-resource-governor.md)   
- [Create a Resource Pool](../relational-databases/resource-governor/create-a-resource-pool.md)   
- [Create a Workload Group](../relational-databases/resource-governor/create-a-workload-group.md)   
+ [Enable Resource Governor](enable-resource-governor.md)   
+ [Create a Resource Pool](create-a-resource-pool.md)   
+ [Create a Workload Group](create-a-workload-group.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](~/t-sql/statements/alter-workload-group-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)  
   

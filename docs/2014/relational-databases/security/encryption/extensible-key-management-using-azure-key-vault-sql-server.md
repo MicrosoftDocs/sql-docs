@@ -22,7 +22,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
-  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to leverage the Azure Key Vault service as an [Extensible Key Management &#40;EKM&#41;](../relational-databases/security/encryption/extensible-key-management-ekm.md) provider to protect its encryption keys.  
+  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to leverage the Azure Key Vault service as an [Extensible Key Management &#40;EKM&#41;](/extensible-key-management-ekm.md) provider to protect its encryption keys.  
   
  Included in this topic:  
   
@@ -41,13 +41,13 @@ manager: "jhubbard"
 -   [Example C: Column Level Encryption by Using an Asymmetric Key from the Key Vault](#ExampleC)  
   
 ##  <a name="Uses"></a> Uses of EKM  
- An organization can use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to protect sensitive data. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption includes [Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md), [Column Level Encryption](~/t-sql/functions/cryptographic-functions-transact-sql.md) (CLE), and [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md). In all of these cases the data is encrypted using a symmetric data encryption key. The symmetric data encryption key is further protected by encrypting it with a hierarchy of keys stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Alternatively, the EKM provider architecture enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to protect the data encryption keys by using an asymmetric key stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an external cryptographic provider. Using EKM provider architecture adds an additional layer of security and allows organizations to separate the management of keys and data.  
+ An organization can use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to protect sensitive data. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption includes [Transparent Data Encryption &#40;TDE&#41;](/transparent-data-encryption.md), [Column Level Encryption](~/t-sql/functions/cryptographic-functions-transact-sql.md) (CLE), and [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md). In all of these cases the data is encrypted using a symmetric data encryption key. The symmetric data encryption key is further protected by encrypting it with a hierarchy of keys stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Alternatively, the EKM provider architecture enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to protect the data encryption keys by using an asymmetric key stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an external cryptographic provider. Using EKM provider architecture adds an additional layer of security and allows organizations to separate the management of keys and data.  
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault lets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] leverage the scalable, high performance, and highly available key vault service as an EKM provider for encryption key protection. The key vault service can be used with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installations on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Virtual Machines and for on-premises servers. The key vault service also provides the option to use tightly controlled and monitored Hardware Security Modules (HSMs) for a higher level of protection for asymmetric encryption keys. For more information about the key vault, see [Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521401).  
   
  The following image summarizes the process flow of EKM using the key vault. The process step numbers in the image are not meant to match the setup step numbers that follow the image.  
   
- ![SQL Server EKM using the Azure Key Vault](../../2014/database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
+ ![SQL Server EKM using the Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
   
 ##  <a name="Step1"></a> Step 1: Set up the Key Vault for use by SQL Server  
  Use the following steps to set up a key vault for use with the [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] for encryption key protection. A vault may already be in use for the organization. When a vault does not exist, the Azure Administrator in your organization that is designated to manage encryption keys can create a vault, generate an asymmetric key in the vault, and then authorize [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use the key. To familiarize yourself with the key vault service review [Get Started with Azure Key Vault](http://go.microsoft.com/fwlink/?LinkId=521402), and the PowerShell [Azure Key Vault Cmdlets](http://go.microsoft.com/fwlink/?LinkId=521403) reference.  
@@ -344,8 +344,8 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)   
- [Extensible Key Management &#40;EKM&#41;](../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Enable TDE Using EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)   
+ [Extensible Key Management &#40;EKM&#41;](/extensible-key-management-ekm.md)   
+ [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)   
  [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)   
  [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)  
   

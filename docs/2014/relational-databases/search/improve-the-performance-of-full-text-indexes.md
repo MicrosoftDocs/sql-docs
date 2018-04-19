@@ -209,7 +209,7 @@ GO
  [Server Memory Server Configuration Options](configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range Server Configuration Option](configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md)   
- [Create and Manage Full-Text Indexes](../relational-databases/search/create-and-manage-full-text-indexes.md)   
+ [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md)   
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Troubleshoot Full-Text Indexing](troubleshoot-full-text-indexing.md)  

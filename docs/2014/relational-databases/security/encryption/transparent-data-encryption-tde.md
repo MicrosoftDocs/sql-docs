@@ -33,16 +33,16 @@ manager: "jhubbard"
 >   
 >  **Related topics:**  
 >   
->  -   [Transparent Data Encryption with Azure SQL Database](../../2014/database-engine/transparent-data-encryption-with-azure-sql-database.md)  
-> -   [Move a TDE Protected Database to Another SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
-> -   [Enable TDE Using EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+>  -   [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+> -   [Move a TDE Protected Database to Another SQL Server](/move-a-tde-protected-database-to-another-sql-server.md)  
+> -   [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)  
   
 ## About TDE  
  Encryption of the database file is performed at the page level. The pages in an encrypted database are encrypted before they are written to disk and decrypted when read into memory. TDE does not increase the size of the encrypted database.  
   
  **Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12  ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../2014/database-engine/transparent-data-encryption-with-azure-sql-database.md).  
+ When using TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12  ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) the server-level certificate stored in the master database is automatically created for you by [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] you must decrypt the database, move the database, and then re-enable TDE on the destination [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. For step-by-step instructions for TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
   
  The preview of status of TDE applies even in the subset of geographic regions where version family V12 of [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] is announced as now being in general availability status. TDE for [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] is not intended for use in production databases until [!INCLUDE[msCoName](../../../includes/msconame-md.md)] announces that TDE is promoted from preview to GA. For more information about [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, see [What's new in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  The following illustration shows the architecture of TDE encryption. Only the database level items (the database encryption key and ALTER DATABASE portions are user-configurable when using TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Displays the hierarchy described in the topic.](../../2014/database-engine/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
+ ![Displays the hierarchy described in the topic.](../../../database-engine/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
   
 ## Using Transparent Data Encryption  
  To use TDE, follow these steps.  
@@ -228,11 +228,11 @@ GO
  TDE can be enabled on a database that has In-Memory OLTP objects. In-Memory OLTP log records are encrypted if TDE is enabled. Data in a MEMORY_OPTIMIZED_DATA filegroup is not encrypted if TDE is enabled.  
   
 ## See Also  
- [Move a TDE Protected Database to Another SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)   
- [Enable TDE Using EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)   
- [Transparent Data Encryption with Azure SQL Database](../../2014/database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [SQL Server Encryption](../relational-databases/security/encryption/sql-server-encryption.md)   
- [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Move a TDE Protected Database to Another SQL Server](/move-a-tde-protected-database-to-another-sql-server.md)   
+ [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)   
+ [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [SQL Server Encryption](/sql-server-encryption.md)   
+ [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](/sql-server-and-database-encryption-keys-database-engine.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../relational-databases/blob/filestream-sql-server.md)  
   

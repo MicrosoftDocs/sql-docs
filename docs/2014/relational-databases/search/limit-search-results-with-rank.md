@@ -202,6 +202,6 @@ qtf is the frequency of the term in the query.
   
   
 ## See Also  
- [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md)  
+ [Query with Full-Text Search](query-with-full-text-search.md)  
   
   

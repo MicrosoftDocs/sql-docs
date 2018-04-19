@@ -165,6 +165,6 @@ manager: "jhubbard"
   
 -   [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
--   [Transparent Data Encryption with Azure SQL Database](../../2014/database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+-   [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   
   

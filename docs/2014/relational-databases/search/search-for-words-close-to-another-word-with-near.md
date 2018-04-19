@@ -143,7 +143,7 @@ GO
   
 -   Impact of proximity terms on ranking by the CONTAINSTABLE function  
   
-     When NEAR is used in the CONTAINSTABLE function, the number of hits in a document relative to its length as well as the distance between the first and last search terms in each of the hits affects the ranking of each document. For a generic proximity term, if the matched search terms are >50 logical terms apart, the rank returned on a document is 0. For a custom proximity term that does not specify an integer as the maximum distance, a document that contains only hits whose gap is >100 logical terms will receive a ranking of 0. For more information about ranking of custom proximity searches, see [Limit Search Results with RANK](../relational-databases/search/limit-search-results-with-rank.md).  
+     When NEAR is used in the CONTAINSTABLE function, the number of hits in a document relative to its length as well as the distance between the first and last search terms in each of the hits affects the ranking of each document. For a generic proximity term, if the matched search terms are >50 logical terms apart, the rank returned on a document is 0. For a custom proximity term that does not specify an integer as the maximum distance, a document that contains only hits whose gap is >100 logical terms will receive a ranking of 0. For more information about ranking of custom proximity searches, see [Limit Search Results with RANK](limit-search-results-with-rank.md).  
   
 -   The **transform noise words** server option  
   
@@ -224,7 +224,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 ## See Also  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
- [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md)   
+ [Query with Full-Text Search](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)  
   
   

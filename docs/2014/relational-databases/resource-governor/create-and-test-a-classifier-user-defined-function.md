@@ -265,7 +265,7 @@ manager: "jhubbard"
  [Enable Resource Governor](enable-resource-governor.md)   
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
- [Configure Resource Governor Using a Template](../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
+ [Configure Resource Governor Using a Template](configure-resource-governor-using-a-template.md)   
  [View Resource Governor Properties](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](~/t-sql/statements/alter-resource-governor-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](~/t-sql/statements/create-resource-pool-transact-sql.md)   

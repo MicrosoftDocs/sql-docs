@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 4.  Read the audit events by using the Windows **Event Viewer**, **Log File Viewe**r, or the fn_get_audit_file function.  
   
- For more information, see [Create a Server Audit and Server Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) and [Create a Server Audit and Database Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ For more information, see [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md) and [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md).  
   
 ## Considerations  
  In the case of a failure during audit initiation, the server will not start. In this case, the server can be started by using the **–f** option at the command line.  
@@ -187,9 +187,9 @@ manager: "jhubbard"
 >  Principals in the sysadmin role can tamper with any audit component and those in the db_owner role can tamper with audit specifications in a database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit will validate that a logon that creates or alters an audit specification has at least the ALTER ANY DATABASE AUDIT permission. However, it does no validation when you attach a database. You should assume all Database Audit Specifications are only as trustworthy as those principals in the sysadmin or db_owner role.  
   
 ## Related Tasks  
- [Create a Server Audit and Server Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md)  
   
- [Create a Server Audit and Database Audit Specification](../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
+ [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md)  
   
  [View a SQL Server Audit Log](view-a-sql-server-audit-log.md)  
   

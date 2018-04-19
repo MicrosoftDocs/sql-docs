@@ -122,7 +122,7 @@ manager: "jhubbard"
      The STOPLIST OFF clause removes stop-word filtering, and it will trigger a population of the table, without filtering any words considered to be noise.  
   
 ## Backup and Imported Full-Text Catalogs  
- For full-text catalogs that are rebuilt or reset during upgrade (and for new full-text catalogs), the fulltext catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must identify every filegroup that contains a full-text index of the catalog and back each of them up, one by one. For more information, see [Back Up and Restore Full-Text Catalogs and Indexes](../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
+ For full-text catalogs that are rebuilt or reset during upgrade (and for new full-text catalogs), the fulltext catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must identify every filegroup that contains a full-text index of the catalog and back each of them up, one by one. For more information, see [Back Up and Restore Full-Text Catalogs and Indexes](back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
  For full-text catalogs that have been imported from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the full-text catalog is still a database file in its own filegroup. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] backup process for full-text catalogs still applies except that the MSFTESQL service does not exist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] process, see [Backing Up and Restoring Full-Text Catalogs](http://go.microsoft.com/fwlink/?LinkId=209154) in SQL Server 2005 Books Online.  
   
@@ -135,7 +135,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use the **Full-Text Upgrade Option** of the **Server Properties** dialog box. For more information, see [Manage and Monitor Full-Text Search for a Server Instance](../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use the **Full-Text Upgrade Option** of the **Server Properties** dialog box. For more information, see [Manage and Monitor Full-Text Search for a Server Instance](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Considerations for Restoring a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Full-Text Catalog to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  One method of upgrading fulltext data from a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is to restore a full database backup to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

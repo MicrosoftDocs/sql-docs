@@ -32,7 +32,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor
-  When the Database Engine Tuning Advisor tunes databases, it creates summaries, recommendations, reports, and tuning logs. You can use the tuning log output to troubleshoot Database Engine Tuning Advisor tuning sessions. You can use the summaries, recommendations, and reports to determine whether you want to implement tuning recommendations or continue tuning until you achieve the query performance improvements that you need for your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For information about how to use the Database Tuning Advisor to create workloads and tune a database, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+  When the Database Engine Tuning Advisor tunes databases, it creates summaries, recommendations, reports, and tuning logs. You can use the tuning log output to troubleshoot Database Engine Tuning Advisor tuning sessions. You can use the summaries, recommendations, and reports to determine whether you want to implement tuning recommendations or continue tuning until you achieve the query performance improvements that you need for your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For information about how to use the Database Tuning Advisor to create workloads and tune a database, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> View Tuning Output  
  The following procedures describe how to view tuning recommendations, summaries, reports, and tuning logs by using the Database Engine Tuning Advisor GUI. For information about user interface options, see [User Interface Descriptions](#UI) later in this topic.  
@@ -44,9 +44,9 @@ manager: "jhubbard"
   
 #### To view tuning recommendations with the Database Engine Tuning Advisor GUI  
   
-1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to Step 2.  
+1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to Step 2.  
   
-2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to view tuning recommendations for an existing tuning session, open it by double-clicking the session name in the **Session Monitor window.**  
+2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to view tuning recommendations for an existing tuning session, open it by double-clicking the session name in the **Session Monitor window.**  
   
      After the new tuning session has finished, or after the tool has loaded the existing session, the **Recommendations** page is displayed.  
   
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 #### To view the tuning summary and reports with the Database Engine Tuning Advisor GUI  
   
-1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to step 2.  
+1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to step 2.  
   
-2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to view tuning summaries and reports for an existing tuning session, open it by double-clicking the session name in the **Session Monitor.**  
+2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to view tuning summaries and reports for an existing tuning session, open it by double-clicking the session name in the **Session Monitor.**  
   
 3.  After the new tuning session has finished, or after the tool has loaded the existing session, click the **Reports** tab.  
   
@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. Make sure that you check **Save tuning log** on the **General** tab when you tune the workload. If you want to use an existing tuning session, skip this step and proceed to Step 2.  
   
-2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to view tuning summaries and reports for an existing tuning session, open it by double-clicking the session name in the **Session Monitor** window.  
+2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to view tuning summaries and reports for an existing tuning session, open it by double-clicking the session name in the **Session Monitor** window.  
   
 3.  After the new tuning session has finished, or after the tool has loaded the existing session, click the **Progress** tab. The **Tuning Log** pane displays the contents of the log. The log contains information about workload events that Database Engine Tuning Advisor was unable to analyze.  
   
@@ -85,9 +85,9 @@ manager: "jhubbard"
   
 #### To manually implement tuning recommendations with the Database Engine Tuning Advisor GUI  
   
-1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command prompt utility. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to Step 2.  
+1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command prompt utility. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to Step 2.  
   
-2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to implement tuning recommendations for an existing tuning session, open it by double-clicking the session name in **Session Monitor**.  
+2.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to implement tuning recommendations for an existing tuning session, open it by double-clicking the session name in **Session Monitor**.  
   
 3.  After the new tuning session has finished, or after the tool has loaded the existing session, click **Apply Recommendations** on the **Actions** menu.  
   
@@ -111,7 +111,7 @@ manager: "jhubbard"
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
     ```  
   
-     where **-E** specifies that your tuning session uses a trusted connection (instead of a login ID and password), **-D** specifies the name of the database you want to tune or a comma-delimited list of multiple databases that the workload uses, **-if** specifies the name and path to a workload file, **-s** specifies a name for your tuning session, and **-a** specifies that you want the **dta** command prompt utility to automatically apply the tuning recommendations after the workload is analyzed without prompting you. For more information about using the **dta** command prompt utility to tune databases, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+     where **-E** specifies that your tuning session uses a trusted connection (instead of a login ID and password), **-D** specifies the name of the database you want to tune or a comma-delimited list of multiple databases that the workload uses, **-if** specifies the name and path to a workload file, **-s** specifies a name for your tuning session, and **-a** specifies that you want the **dta** command prompt utility to automatically apply the tuning recommendations after the workload is analyzed without prompting you. For more information about using the **dta** command prompt utility to tune databases, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 3.  Press ENTER.  
   
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 ##### To evaluate tuning recommendations with the Database Engine Tuning Advisor GUI  
   
-1.  Use the Database Engine Tuning Advisor GUI to tune a database. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to evaluate an existing tuning session, double-click it in **Session Monitor**.  
+1.  Use the Database Engine Tuning Advisor GUI to tune a database. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to evaluate an existing tuning session, double-click it in **Session Monitor**.  
   
 2.  On the **Recommendations** tab, clear the recommended physical design structures that you do not want to use.  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
   
 ##### To export tuning session results from the Database Engine Tuning Advisor GUI for "what-if" analysis with the dta command-line utility  
   
-1.  Use the Database Engine Tuning Advisor GUI to tune a database. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md). If you want to evaluate an existing tuning session, double-click it in the **Session Monitor**.  
+1.  Use the Database Engine Tuning Advisor GUI to tune a database. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md). If you want to evaluate an existing tuning session, double-click it in the **Session Monitor**.  
   
 2.  On the **File** menu, click **Export Session Results** and save it as an XML file.  
   
@@ -150,16 +150,16 @@ manager: "jhubbard"
   
 4.  In the new XML input file that you created in Step 3, specify any tuning options you want in the `TuningOptions` element, edit the `Configuration` element section (add or delete the physical design structures as appropriate for your analysis), save the file, and validate it against the Database Engine Tuning Advisor XML schema. For information about editing this XML file, see [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
-5.  Use the XML file that you created in Step 4 as input to the **dta** command line utility. For information about using XML input files with this tool, see the section "Tune a Database by Using the dta Utility" in [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+5.  Use the XML file that you created in Step 4 as input to the **dta** command line utility. For information about using XML input files with this tool, see the section "Tune a Database by Using the dta Utility" in [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 ### Using the User-specified Configuration Feature with the dta Command Line Utility  
  If you are an experienced XML developer, you can create a Database Engine Tuning Advisor XML input file in which you can specify a workload and a hypothetical configuration of physical database design structures, such as indexes, indexed views, or partitioning. Then you can use the **dta** command-line utility to analyze the effects this hypothetical configuration has on query performance for your database. The following procedure explains this process step by step:  
   
 ##### To use the user-specified configuration feature with the dta command line utility  
   
-1.  Create a tuning workload. For information about performing this task, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+1.  Create a tuning workload. For information about performing this task, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
-2.  Copy and paste the [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](../../database-engine/xml-input-file-sample-with-user-specified-configuration-dta.md) into your XML editor or a text editor. Use this sample to create an XML input file for your tuning session. For information about performing this task, see the section "Create XML Input Files" in [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+2.  Copy and paste the [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](../../database-engine/xml-input-file-sample-with-user-specified-configuration-dta.md) into your XML editor or a text editor. Use this sample to create an XML input file for your tuning session. For information about performing this task, see the section "Create XML Input Files" in [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 3.  Edit the `TuningOptions` and the `Configuration` elements in the sample XML input file. In the `TuningOptions` element, specify what physical design structures you want Database Engine Tuning Advisor to consider during the tuning session. In the `Configuration` element, specify the physical design structures that match the hypothetical configuration of physical database design structures that you want Database Engine Tuning Advisor to analyze. For information about what attributes and child elements you can use with the `TuningOptions` and the `Configuration` parent elements, see [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../database-engine/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
@@ -173,7 +173,7 @@ manager: "jhubbard"
   
      The Database Engine Tuning Advisor XML schema is also available online at [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
-6.  After creating a workload and an XML input file, you are ready to submit the input file to the **dta** command-line utility for analysis. Make sure that you specify an XML output file name for the **-ox** utility argument. This creates an XML output file with a recommended configuration specified in the `Configuration` element. If you want to run Database Engine Tuning Advisor again to check another hypothetical configuration that is based on the output, you can copy and paste the `Configuration` element contents from the output file into a new or your original XML input file. For information about using an XML input file with the **dta** utility, see the section "Tune a Database by Using the dta Utility" in [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+6.  After creating a workload and an XML input file, you are ready to submit the input file to the **dta** command-line utility for analysis. Make sure that you specify an XML output file name for the **-ox** utility argument. This creates an XML output file with a recommended configuration specified in the `Configuration` element. If you want to run Database Engine Tuning Advisor again to check another hypothetical configuration that is based on the output, you can copy and paste the `Configuration` element contents from the output file into a new or your original XML input file. For information about using an XML input file with the **dta** utility, see the section "Tune a Database by Using the dta Utility" in [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
      After tuning is finished, either use the Database Engine Tuning Advisor GUI to view the tuning reports, or open the XML output file to view the `TuningSummary` and the `Configuration` elements to view the Database Engine Tuning Advisor recommendations. For information about viewing the results of your tuning session, see [View Tuning Output](#View) earlier in this topic. Also note that the XML output file may contain Database Engine Tuning Advisor analysis reports.  
   
@@ -182,14 +182,14 @@ manager: "jhubbard"
 ##  <a name="ReviewEvaluateClone"></a> Review, Evaluate, and Clone Tuning Sessions  
  The Database Engine Tuning Advisor creates a new tuning session each time that you start analyzing the effects of a workload on your database or databases. You can use the **Session Monitor** in the Database Engine Tuning Advisor GUI to view or reload all tuning sessions that have run on a given instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Having all the existing tuning sessions available to review makes it easy to: clone sessions based on existing ones, edit existing tuning recommendations and then use Database Engine Tuning Advisor to evaluate the edited session, or perform tuning at regular intervals to monitor the physical design of your databases. For example, you may decide to tune database on a monthly schedule.  
   
- Before you can review any tuning sessions for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must create tuning sessions on the server instance by tuning workloads with the Database Engine Tuning Advisor. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+ Before you can review any tuning sessions for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must create tuning sessions on the server instance by tuning workloads with the Database Engine Tuning Advisor. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 ### Review Existing Tuning Sessions  
  Use the following steps to browse the existing tuning sessions on a given instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##### To review existing tuning sessions  
   
-1.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md).  
+1.  Start the Database Engine Tuning Advisor GUI. For more information, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   
 2.  All existing tuning sessions are displayed in the upper half of the **Session Monitor** window. The number of sessions displayed depends on how many times you have tuned databases on this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Use the scroll bars to view all tuning sessions.  
   
@@ -385,7 +385,7 @@ manager: "jhubbard"
  See the details of the selected report. The columns in the grid vary with each report.  
   
 ## See Also  
- [Start and Use the Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md)   
+ [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
  [dta Utility](../../database-engine/dta-utility.md)  
   
   

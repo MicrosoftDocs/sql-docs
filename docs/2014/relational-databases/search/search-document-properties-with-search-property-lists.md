@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Search Document Properties with Search Property Lists
   The content of document properties was previously indistinguishable from the content of the document body. This limitation restricted full-text queries to generic searches on whole documents. Now, however, you can configure a full-text index to support property-scoped searching on particular properties, such as Author and Title, for supported document types in a `varbinary`, `varbinary(max)` (including `FILESTREAM`), or `image` binary data column. This form of searching is known as *property searching*.  
   
- The associated [filter](../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) determines whether property searching is possible on a specific type of document. For some document types, the associated IFilter extracts some or all of the properties defined for that type of document, as well as the content of the document body. You can configure a full-text index to support property searching only on properties that are extracted by an IFilter during full-text indexing. Among IFilters that extract a number of document properties are the IFilters for Microsoft Office document types (such as .docx, .xlsx, and .pptx). On the other hand, the XML IFilter does not emit properties.  
+ The associated [filter](configure-and-manage-filters-for-search.md) (IFilter) determines whether property searching is possible on a specific type of document. For some document types, the associated IFilter extracts some or all of the properties defined for that type of document, as well as the content of the document body. You can configure a full-text index to support property searching only on properties that are extracted by an IFilter during full-text indexing. Among IFilters that extract a number of document properties are the IFilters for Microsoft Office document types (such as .docx, .xlsx, and .pptx). On the other hand, the XML IFilter does not emit properties.  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> How Full-Text Search Works with Search Properties  
   
@@ -126,11 +126,11 @@ manager: "jhubbard"
   
  **To obtain values for a search property list**  
   
- See [Find Property Set GUIDs and Property Integer IDs for Search Properties](../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ See [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  **To add a property to a search property list with Transact-SQL**  
   
- Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement with the values that you obtained by using one of the methods described in the topic, [Find Property Set GUIDs and Property Integer IDs for Search Properties](../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Use the [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md) statement with the values that you obtained by using one of the methods described in the topic, [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  The following example demonstrates the use of these values when adding a property to a search property list:  
   
@@ -211,7 +211,7 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](../../2014/database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](../../2014/database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -238,7 +238,7 @@ GO
 
   
 ## See Also  
- [Find Property Set GUIDs and Property Integer IDs for Search Properties](../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)  
   
   

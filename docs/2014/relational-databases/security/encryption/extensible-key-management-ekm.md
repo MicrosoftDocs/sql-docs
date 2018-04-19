@@ -133,7 +133,7 @@ DECRYPTION BY EKM_AKey1
 ## Related Tasks  
  [EKM provider enabled Server Configuration Option](configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
- [Enable TDE Using EKM](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+ [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)  
   
  [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
@@ -161,9 +161,9 @@ DECRYPTION BY EKM_AKey1
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Back Up the Service Master Key](service-master-key.md)   
  [Restore the Service Master Key](restore-the-service-master-key.md)   
- [Create a Database Master Key](../relational-databases/security/encryption/create-a-database-master-key.md)   
- [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)   
+ [Create a Database Master Key](/create-a-database-master-key.md)   
+ [Back Up a Database Master Key](/back-up-a-database-master-key.md)   
  [Restore a Database Master Key](restore-a-database-master-key.md)   
- [Create Identical Symmetric Keys on Two Servers](../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
+ [Create Identical Symmetric Keys on Two Servers](/create-identical-symmetric-keys-on-two-servers.md)  
   
   

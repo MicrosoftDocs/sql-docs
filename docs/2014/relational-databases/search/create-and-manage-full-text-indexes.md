@@ -59,7 +59,7 @@ manager: "jhubbard"
   
  Notice that the data has been inverted from the original documents. Inversion occurs because the keywords are mapped to the document IDs. For this reason, a full-text index is often referred to as an inverted index.  
   
- Also notice that the keyword "and" has been removed from the full-text index. This is done because "and" is a stopword, and removing stopwords from a full-text index can lead to substantial savings in disk space thereby improving query performance. For more information about stopwords, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Also notice that the keyword "and" has been removed from the full-text index. This is done because "and" is a stopword, and removing stopwords from a full-text index can lead to substantial savings in disk space thereby improving query performance. For more information about stopwords, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  **Fragment 1**  
   

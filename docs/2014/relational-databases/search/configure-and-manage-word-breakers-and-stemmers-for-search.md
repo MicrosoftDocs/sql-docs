@@ -48,7 +48,7 @@ manager: "jhubbard"
 ##  <a name="lang"></a> Choosing the Language for an Indexed Column  
  When creating a full-text index, we recommend that you specify a language for each indexed column. If a language is not specified for a column, the system default language is used. The language of a column determines which word breaker and stemmer are used for indexing that column. Also, the thesaurus file of that language will be used by full-text queries on the column.  
   
- There are a couple of things to consider when choosing the column language for creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine. For more information, see [Choose a Language When Creating a Full-Text Index](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
+ There are a couple of things to consider when choosing the column language for creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine. For more information, see [Choose a Language When Creating a Full-Text Index](choose-a-language-when-creating-a-full-text-index.md).  
   
  **To view the word breaker language of a column**  
   
@@ -82,7 +82,7 @@ manager: "jhubbard"
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Upgrade Full-Text Search](upgrade-full-text-search.md)  
   
   

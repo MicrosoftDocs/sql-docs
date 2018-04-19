@@ -81,14 +81,14 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create and test a classifier user-defined function.|[Create and Test a Classifier User-Defined Function](../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
+|Describes how to create and test a classifier user-defined function.|[Create and Test a Classifier User-Defined Function](create-and-test-a-classifier-user-defined-function.md)|  
   
 ## See Also  
- [Resource Governor](../relational-databases/resource-governor/resource-governor.md)   
- [Enable Resource Governor](../relational-databases/resource-governor/enable-resource-governor.md)   
+ [Resource Governor](resource-governor.md)   
+ [Enable Resource Governor](enable-resource-governor.md)   
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
- [Configure Resource Governor Using a Template](../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
+ [Configure Resource Governor Using a Template](configure-resource-governor-using-a-template.md)   
  [View Resource Governor Properties](view-resource-governor-properties.md)  
   
   

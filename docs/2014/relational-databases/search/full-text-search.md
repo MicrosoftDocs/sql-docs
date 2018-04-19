@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 -   The filter daemon host process (fdhost.exe).  
   
-     For security reasons, filters are loaded by separate processes called the filter daemon hosts. The fdhost.exe processes are created by an FDHOST launcher service (MSSQLFDLauncher), and they run under the security credentials of the FDHOST launcher service account. Therefore, the FDHOST launcher service must be running for full-text indexing and full-text querying to work. For information about setting the service account for this service, see [Set the Service Account for the Full-text Filter Daemon Launcher](../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
+     For security reasons, filters are loaded by separate processes called the filter daemon hosts. The fdhost.exe processes are created by an FDHOST launcher service (MSSQLFDLauncher), and they run under the security credentials of the FDHOST launcher service account. Therefore, the FDHOST launcher service must be running for full-text indexing and full-text querying to work. For information about setting the service account for this service, see [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
   
  These two processes contain the components of the full-text search architecture. These components and their relationships are summarized in the following illustration. The components are described after the illustration.  
   
@@ -99,9 +99,9 @@ manager: "jhubbard"
   
 -   **Full-text gatherer.** The full-text gatherer works with the full-text crawl threads. It is responsible for scheduling and driving the population of full-text indexes, and also for monitoring full-text catalogs.  
   
--   **Thesaurus files.** These files contain synonyms of search terms. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+-   **Thesaurus files.** These files contain synonyms of search terms. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Stoplist objects.** Stoplist objects contain a list of common words that are not useful for the search. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Stoplist objects.** Stoplist objects contain a list of common words that are not useful for the search. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query processor.** The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index.  
   
@@ -120,9 +120,9 @@ manager: "jhubbard"
   
 -   **Protocol handler.** This component pulls the data from memory for further processing and accesses data from a user table in a specified database. One of its responsibilities is to gather data from the columns being full-text indexed and pass it to the filter daemon host, which will apply filtering and word breaker as required.  
   
--   **Filters.** Some data types require filtering before the data in a document can be full-text indexed, including data in `varbinary`, `varbinary(max)`, `image`, or `xml` columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (.doc) documents, Microsoft Excel (.xls) documents, and XML (.xml) documents. Then the filter extracts chunks of text from the document, removing embedded formatting and retaining the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filters.** Some data types require filtering before the data in a document can be full-text indexed, including data in `varbinary`, `varbinary(max)`, `image`, or `xml` columns. The filter used for a given document depends on its document type. For example, different filters are used for Microsoft Word (.doc) documents, Microsoft Excel (.xls) documents, and XML (.xml) documents. Then the filter extracts chunks of text from the document, removing embedded formatting and retaining the text and, potentially, information about the position of the text. The result is a stream of textual information. For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md).  
   
--   **Word breakers and stemmers.** A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+-   **Word breakers and stemmers.** A word breaker is a language-specific component that finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a language-specific stemmer component that conjugates verbs and performs inflectional expansions. At indexing time, the filter daemon host uses a word breaker and stemmer to perform linguistic analysis on the textual data from a given table column. The language that is associated with a table column in the full-text index determines which word breaker and stemmer are used for indexing the column. For more information, see [Configure and Manage Word Breakers and Stemmers for Search](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  [In This Topic](#top)  
   
@@ -152,13 +152,13 @@ manager: "jhubbard"
   
  Language-specific components include the following:  
   
--   **Word breakers and stemmers.** A word breaker finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a stemmer that conjugates verbs for the same language. For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+-   **Word breakers and stemmers.** A word breaker finds word boundaries based on the lexical rules of a given language (*word breaking*). Each word breaker is associated with a stemmer that conjugates verbs for the same language. For more information, see [Configure and Manage Word Breakers and Stemmers for Search](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
--   **Stoplists.** A system stoplist is provided that contains a basic set stopwords (also known as noise words). A *stopword* is a word that does not help the search and is ignored by full-text queries. For example, for the English locale words such as "a", "and", "is", and "the" are considered stopwords. Typically, you will need to configure one or more thesaurus files and stoplists. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Stoplists.** A system stoplist is provided that contains a basic set stopwords (also known as noise words). A *stopword* is a word that does not help the search and is ignored by full-text queries. For example, for the English locale words such as "a", "and", "is", and "the" are considered stopwords. Typically, you will need to configure one or more thesaurus files and stoplists. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+-   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Filters (iFilters).**  Indexing a document in a `varbinary(max)`, `image`, or `xml` data type column requires a filter to perform extra processing. The filter must be specific to the document type (.doc, .pdf, .xls, .xml, and so forth). For more information, see [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filters (iFilters).**  Indexing a document in a `varbinary(max)`, `image`, or `xml` data type column requires a filter to perform extra processing. The filter must be specific to the document type (.doc, .pdf, .xls, .xml, and so forth). For more information, see [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md).  
   
  Word breakers (and stemmers) and filters run in the filter daemon host process (fdhost.exe).  
   
@@ -166,71 +166,71 @@ manager: "jhubbard"
   
 ##  <a name="reltasks"></a> Related Tasks  
   
--   [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  
+-   [Get Started with Full-Text Search](get-started-with-full-text-search.md)  
   
 -   Writing Full-Text Queries  
   
-    -   [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md)  
+    -   [Query with Full-Text Search](query-with-full-text-search.md)  
   
-    -   [Search for Words Close to Another Word with NEAR](../relational-databases/search/search-for-words-close-to-another-word-with-near.md)  
+    -   [Search for Words Close to Another Word with NEAR](search-for-words-close-to-another-word-with-near.md)  
   
-    -   [Limit Search Results with RANK](../relational-databases/search/limit-search-results-with-rank.md)  
+    -   [Limit Search Results with RANK](limit-search-results-with-rank.md)  
   
-    -   [Improve the Performance of Full-Text Queries](../relational-databases/search/improve-the-performance-of-full-text-queries.md)  
+    -   [Improve the Performance of Full-Text Queries](improve-the-performance-of-full-text-queries.md)  
   
-    -   [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
+    -   [Search Document Properties with Search Property Lists](search-document-properties-with-search-property-lists.md)  
   
-    -   [Find Property Set GUIDs and Property Integer IDs for Search Properties](../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+    -   [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   
 -   Managing Catalogs and Indexes  
   
-    -   [Create and Manage Full-Text Catalogs](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
+    -   [Create and Manage Full-Text Catalogs](create-and-manage-full-text-catalogs.md)  
   
     -   [Create and Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
-    -   [Choose a Language When Creating a Full-Text Index](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)  
+    -   [Choose a Language When Creating a Full-Text Index](choose-a-language-when-creating-a-full-text-index.md)  
   
-    -   [Populate Full-Text Indexes](../relational-databases/search/populate-full-text-indexes.md)  
+    -   [Populate Full-Text Indexes](populate-full-text-indexes.md)  
   
     -   [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md)  
   
-    -   [Improve the Performance of Full-Text Indexes](../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
+    -   [Improve the Performance of Full-Text Indexes](improve-the-performance-of-full-text-indexes.md)  
   
-    -   [Troubleshoot Full-Text Indexing](../relational-databases/search/troubleshoot-full-text-indexing.md)  
+    -   [Troubleshoot Full-Text Indexing](troubleshoot-full-text-indexing.md)  
   
-    -   [Back Up and Restore Full-Text Catalogs and Indexes](../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+    -   [Back Up and Restore Full-Text Catalogs and Indexes](back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   Managing the Linguistic Components  
   
-    -   [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md)  
+    -   [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)  
   
-    -   [Configure and Manage Word Breakers and Stemmers for Search](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
+    -   [Configure and Manage Word Breakers and Stemmers for Search](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
   
-    -   [View or Change Registered Filters and Word Breakers](../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)  
+    -   [View or Change Registered Filters and Word Breakers](view-or-change-registered-filters-and-word-breakers.md)  
   
-    -   [Revert the Word Breakers Used by Search to the Previous Version](../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
+    -   [Revert the Word Breakers Used by Search to the Previous Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
   
-    -   [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+    -   [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
   
-    -   [Customize the Behavior of Word Breakers with a Custom Dictionary](../relational-databases/search/customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
+    -   [Customize the Behavior of Word Breakers with a Custom Dictionary](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
   
-    -   [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
+    -   [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
-    -   [Configure and Manage Thesaurus Files for Full-Text Search](../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
+    -   [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md)  
   
 -   Managing Full-Text Search  
   
-    -   [Manage and Monitor Full-Text Search for a Server Instance](../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)  
+    -   [Manage and Monitor Full-Text Search for a Server Instance](manage-and-monitor-full-text-search-for-a-server-instance.md)  
   
-    -   [Set the Service Account for the Full-text Filter Daemon Launcher](../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
+    -   [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
   
--   [Upgrade Full-Text Search](../relational-databases/search/upgrade-full-text-search.md)Upgrade Full-Text Search  
+-   [Upgrade Full-Text Search](upgrade-full-text-search.md)Upgrade Full-Text Search  
   
  [In This Topic](#top)  
   
 ##  <a name="relcontent"></a> Related Content  
   
--   [Full-Text Search DDL, Functions, Stored Procedures, and Views](../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)  
+-   [Full-Text Search DDL, Functions, Stored Procedures, and Views](full-text-search-ddl-functions-stored-procedures-and-views.md)  
   
  [In This Topic](#top)  
   

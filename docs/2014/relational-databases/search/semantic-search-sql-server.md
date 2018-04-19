@@ -97,23 +97,23 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
 ##  <a name="reltasks"></a> Related Tasks  
- [Install and Configure Semantic Search](../relational-databases/search/install-and-configure-semantic-search.md)  
+ [Install and Configure Semantic Search](install-and-configure-semantic-search.md)  
  Describes the prerequisites for statistical semantic search and how to install or check them.  
   
- [Enable Semantic Search on Tables and Columns](../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
+ [Enable Semantic Search on Tables and Columns](enable-semantic-search-on-tables-and-columns.md)  
  Describes how to enable or disable statistical semantic indexing on selected columns that contain documents or text.  
   
- [Find Key Phrases in Documents with Semantic Search](../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [Find Key Phrases in Documents with Semantic Search](find-key-phrases-in-documents-with-semantic-search.md)  
  Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  
   
- [Find Similar and Related Documents with Semantic Search](../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
+ [Find Similar and Related Documents with Semantic Search](find-similar-and-related-documents-with-semantic-search.md)  
  Describes how to find similar or related documents or text values, and information about how they are similar or related, in columns that are configured for statistical semantic indexing.  
   
- [Manage and Monitor Semantic Search](../relational-databases/search/manage-and-monitor-semantic-search.md)  
+ [Manage and Monitor Semantic Search](manage-and-monitor-semantic-search.md)  
  Describes the process of semantic indexing and the tasks related to monitoring and managing the indexes.  
   
 ##  <a name="relcontent"></a> Related Content  
- [Semantic Search DDL, Functions, Stored Procedures, and Views](../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [Semantic Search DDL, Functions, Stored Procedures, and Views](semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Lists the Transact-SQL statements and the SQL Server database objects added or changed to support statistical semantic search.  
   
   

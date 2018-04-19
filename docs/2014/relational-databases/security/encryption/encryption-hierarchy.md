@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  The following illustration shows that each layer of the encryption hierarchy encrypts the layer beneath it, and displays the most common encryption configurations. The access to the start of the hierarchy is usually protected by a password.  
   
- ![Displays some encryption combinations in a stack.](../../2014/database-engine/media/encryption-hierarchy-stack.gif "Displays some encryption combinations in a stack.")  
+ ![Displays some encryption combinations in a stack.](../../../database-engine/media/encryption-hierarchy-stack.gif "Displays some encryption combinations in a stack.")  
   
  Keep in mind the following concepts:  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  The following illustration shows the same information in an alternative manner.  
   
- ![Displays some encryption combinations in a wheel.](../../2014/database-engine/media/encryption-hierarchy-wheel.gif "Displays some encryption combinations in a wheel.")  
+ ![Displays some encryption combinations in a wheel.](../../../database-engine/media/encryption-hierarchy-wheel.gif "Displays some encryption combinations in a wheel.")  
   
  This diagram illustrates the following additional concepts:  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
  A symmetric key is one key that is used for both encryption and decryption. Encryption and decryption by using a symmetric key is fast, and suitable for routine use with sensitive data in the database.  
   
 ### Transparent Data Encryption  
- Transparent Data Encryption (TDE) is a special case of encryption using a symmetric key. TDE encrypts an entire database using that symmetric key called the database encryption key. The database encryption key is protected by other keys or certificates which are protected either by the database master key or by an asymmetric key stored in an EKM module. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Transparent Data Encryption (TDE) is a special case of encryption using a symmetric key. TDE encrypts an entire database using that symmetric key called the database encryption key. The database encryption key is protected by other keys or certificates which are protected either by the database master key or by an asymmetric key stored in an EKM module. For more information, see [Transparent Data Encryption &#40;TDE&#41;](/transparent-data-encryption.md).  
   
 ## Related Content  
  [Securing SQL Server](../relational-databases/security/securing-sql-server.md)  

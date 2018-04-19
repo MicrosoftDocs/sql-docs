@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/02/2018"
+ms.date: "04/17/2018"
 ms.prod: "sql"
 ms.prod_service: "database-engine, sql-database"
 ms.service: ""
@@ -16,7 +16,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
 ms.workload: "Inactive"
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Targets for Extended Events in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +150,7 @@ The **event_file** target writes event session output from buffer to a disk file
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
 
-::: moniker range="= azuresqldb-current || = sqlallproducts-allversions"
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
 > Azure SQL Database supports the **event_file** target, but only by using a blob in Azure Storage for the output. SQL Database cannot store event output in a file on your local harddrive.

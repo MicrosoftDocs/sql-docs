@@ -1,6 +1,6 @@
 ---
 title: "RDS Returns &quot;Stream Not Read&quot; Error | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.prod_service: "drivers"
 ms.service: ""
 ms.component: "ado"
@@ -11,7 +11,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stream not read error in RDS [ADO]"
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7

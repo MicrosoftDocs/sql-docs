@@ -2,7 +2,7 @@
 title: "Accessing Memory-Optimized Tables Using Interpreted Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/31/2016"
-ms.prod: sql-non-specified
+ms.prod: sql  
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -1,24 +1,17 @@
 ---
-title: "Track Appliance Alerts (Analytics Platform System)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: 14
-
+title: Track appliance alerts - Analytics Platform System | Microsoft Docs
+description: Track appliance alerts in Analytics Platform System.
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# Track Appliance Alerts
+
+# Track appliance alerts in Analytics Platform System
 This topic explains how to use the Admin Console and system views to track alerts in a SQL Server PDW appliance.  
   
 ## To Track Appliance Alerts  

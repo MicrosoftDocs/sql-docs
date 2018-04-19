@@ -42,7 +42,7 @@ manager: "jhubbard"
   
     -   **Full-Text Upgrade Option**  
   
-         This server property controls how full-text indexes are migrated when upgrading a database from [!INCLUDE[ssVersion2005](../../../../includes/ssversion2005-md.md)] to a later version. This property applies to upgrading by attaching a database, restoring a database backup, restoring a file backup, or copying the database by using the Copy Database Wizard.  
+         This server property controls how full-text indexes are migrated when upgrading a database from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] to a later version. This property applies to upgrading by attaching a database, restoring a database backup, restoring a file backup, or copying the database by using the Copy Database Wizard.  
   
          The alternatives are as follows:  
   
@@ -52,15 +52,15 @@ manager: "jhubbard"
         > [!NOTE]  
         >  Rebuild can run in multi-threaded mode, and if more than 10 CPUs are available, rebuild might run faster than import if you allow rebuild to use all of the CPUs.  
   
-         If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../../../includes/ssversion2005-md.md)] databases.  
+         If a full-text catalog is not available, the associated full-text indexes are rebuilt. This option is available for only [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] databases.  
   
          **Rebuild**  
          Full-text catalogs are rebuilt using the new and enhanced word breakers. Rebuilding indexes can take awhile, and a significant amount of CPU and memory might be required after the upgrade.  
   
          **Reset**  
-         Full-text catalogs are reset. [!INCLUDE[ssVersion2005](../../../../includes/ssversion2005-md.md)] full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
+         Full-text catalogs are reset. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] full-text catalog files are removed, but the metadata for full-text catalogs and full-text indexes is retained. After being upgraded, all full-text indexes are disabled for change tracking and crawls are not started automatically. The catalog will remain empty until you manually issue a full population, after the upgrade completes.  
   
-         For information about choosing a full-text upgrade option, see full-[Upgrade Full-Text Search](../relational-databases/search/full-text-search.md).  
+         For information about choosing a full-text upgrade option, see [Upgrade Full-Text Search](../relational-databases/search/upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  The full-text upgrade option can also be set by using the [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** action.  

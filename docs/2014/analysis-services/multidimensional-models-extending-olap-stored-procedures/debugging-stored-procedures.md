@@ -30,7 +30,7 @@ manager: "mblythe"
   
 3.  Use Visual Studio to create a debug build of a stored procedure DLL.  
   
-4.  Deploy the DLL to the server. For more information about deploying the DLL to the server, see [Creating Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md).  
+4.  Deploy the DLL to the server. For more information about deploying the DLL to the server, see [Creating Stored Procedures](creating-stored-procedures.md).  
   
 5.  You need an application that calls the stored procedure that you want to test. If you do not have one ready, you can use the MDX Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create an MDX query that calls the stored procedure that you want to test.  
   

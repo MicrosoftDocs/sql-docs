@@ -51,6 +51,6 @@ manager: "mblythe"
 |`EnumName`|`DBTYPE_WSTR`||  
   
 ## See Also  
- [XML for Analysis Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)  
   
   

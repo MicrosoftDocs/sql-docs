@@ -87,6 +87,6 @@ manager: "mblythe"
 ## See Also  
  [Restore Element &#40;XMLA&#41;](restore-element-xmla.md)   
  [Synchronize Element &#40;XMLA&#41;](synchronize-element-xmla.md)   
- [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

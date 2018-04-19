@@ -160,6 +160,6 @@ GO
 |XACT_ABORT|OFF<br /><br /> Uncaught exceptions cause the atomic block to roll back, but not cause the transaction to abort unless the error is transaction dooming.|  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

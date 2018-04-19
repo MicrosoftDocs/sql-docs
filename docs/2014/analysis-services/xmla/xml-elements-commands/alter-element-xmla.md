@@ -70,6 +70,6 @@ manager: "mblythe"
  Each `Alter` command changes the definition of one major object under the parent object specified by the [ParentObject](../xml-elements-properties/parentobject-element-xmla.md) element.  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

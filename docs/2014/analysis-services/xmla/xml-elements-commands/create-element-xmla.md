@@ -84,6 +84,6 @@ manager: "mblythe"
 ```  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

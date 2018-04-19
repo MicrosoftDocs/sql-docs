@@ -73,7 +73,7 @@ manager: "jhubbard"
  A word-breaking time-out error might occur in a variety of situations. For information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../relational-databases/errors-events/mssqlserver-30053-database-engine-error.md).  
   
 ##  <a name="impact"></a> Understanding the Impact of New Word Breakers  
- Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave slightly differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is significant if a full-text catalog was imported when a database was upgraded to the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. One or more languages used by the full-text indexes in the full-text catalog might now be associated with new word breakers. For more information, see [Upgrade Full-Text Search](full-text-search.md).  
+ Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave slightly differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is significant if a full-text catalog was imported when a database was upgraded to the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. One or more languages used by the full-text indexes in the full-text catalog might now be associated with new word breakers. For more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).  
   
  For a complete list of all the word breakers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
@@ -83,6 +83,6 @@ manager: "jhubbard"
  [sp_fulltext_service &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
  [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Upgrade Full-Text Search](full-text-search.md)  
+ [Upgrade Full-Text Search](upgrade-full-text-search.md)  
   
   

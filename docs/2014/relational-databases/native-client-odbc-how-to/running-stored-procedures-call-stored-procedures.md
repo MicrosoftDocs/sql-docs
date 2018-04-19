@@ -41,7 +41,7 @@ manager: "jhubbard"
 ## See Also  
  [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [Batching Stored Procedure Calls](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
- [Running Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)   
+ [Running Stored Procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Calling a Stored Procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedures](../../analysis-services/multidimensional-models-adomd-net-server/procedures.md)  
   

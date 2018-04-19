@@ -224,7 +224,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 ## See Also  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
- [Query with Full-Text Search](../relational-databases/search/full-text-search.md)   
+ [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](~/t-sql/queries/contains-transact-sql.md)  
   
   

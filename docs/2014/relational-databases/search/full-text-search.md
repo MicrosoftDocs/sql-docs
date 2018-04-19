@@ -18,12 +18,12 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Full-Text Search
-  Full-Text Search in [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] tables. Before you can run full-text queries on a table, the database administrator must create a full-text index on the table. The full-text index includes one or more character-based columns in the table. These columns can have any of the following data types: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, or `varbinary(max)` and FILESTREAM. Each full-text index indexes one or more columns from the table, and each column can use a specific language.  
+  Full-Text Search in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] lets users and applications run full-text queries against character-based data in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables. Before you can run full-text queries on a table, the database administrator must create a full-text index on the table. The full-text index includes one or more character-based columns in the table. These columns can have any of the following data types: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, or `varbinary(max)` and FILESTREAM. Each full-text index indexes one or more columns from the table, and each column can use a specific language.  
   
  Full-text queries perform linguistic searches against text data in full-text indexes by operating on words and phrases based on rules of a particular language such as English or Japanese. Full-text queries can include simple words and phrases or multiple forms of a word or phrase. A full-text query returns any documents that contain at least one match (also known as a *hit*). A match occurs when a target document contains all the terms specified in the full-text query, and meets any other search conditions, such as the distance between the matching terms.  
   
 > [!NOTE]  
->  Full-text search is an optional component of the [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] Database Engine. For more information, see [Install SQL Server 2014](install-windows/install-sql-server.md).  
+>  Full-text search is an optional component of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine. For more information, see [Install SQL Server 2014](install-windows/install-sql-server.md).  
   
 ##  <a name="benefits"></a> What Can I Do with Full-Text Search?  
  Full-text search is applicable to a wide range of business scenarios such as e-businesses—searching for items on a web site; law firms—searching for case histories in a legal-data repository; or human resources departments—matching job descriptions with stored resumes. The basic administrative and development tasks of full-text search are equivalent regardless of business scenarios. However, in a given business scenario, full-text index and queries can be honed to meet business goals. For example, for an e-business maximizing performance might be more important than ranking of results, recall accuracy (how many of the existing matches are actually returned by a full-text query), or supporting multiple languages. For a law firm, returning every possible hit (*total recall* of information) might be the most important consideration.  
@@ -60,7 +60,7 @@ manager: "jhubbard"
     AND product_cost < 200 ;  
     ```  
   
--   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)]:  
+-   Recruitment scenario—searching for job candidates that have experience working with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
     ```  
     SELECT candidate_name,SSN   
@@ -68,7 +68,7 @@ manager: "jhubbard"
     WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
- For more information, see [Query with Full-Text Search](../relational-databases/search/full-text-search.md).  
+ For more information, see [Query with Full-Text Search](query-with-full-text-search.md).  
   
  [In This Topic](#top)  
   
@@ -80,7 +80,7 @@ manager: "jhubbard"
 ##  <a name="architecture"></a> Components and Architecture of Full-Text Search  
  Full-text search architecture consists of the following processes:  
   
--   The [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] process (sqlservr.exe).  
+-   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process (sqlservr.exe).  
   
 -   The filter daemon host process (fdhost.exe).  
   
@@ -93,7 +93,7 @@ manager: "jhubbard"
  [In This Topic](#top)  
   
 ###  <a name="sqlprocess"></a> SQL Server Process  
- The [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] process uses the following components for full-text search:  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process uses the following components for full-text search:  
   
 -   **User tables.** These tables contain the data to be full-text indexed.  
   
@@ -103,9 +103,9 @@ manager: "jhubbard"
   
 -   **Stoplist objects.** Stoplist objects contain a list of common words that are not useful for the search. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **[!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] query processor.** The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index.  
+-   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query processor.** The query processor compiles and executes SQL queries. If a SQL query includes a full-text search query, the query is sent to the Full-Text Engine, both during compilation and during execution. The query result is matched against the full-text index.  
   
--   **Full-Text Engine.** The Full-Text Engine in [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist.  
+-   **Full-Text Engine.** The Full-Text Engine in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is fully integrated with the query processor. The Full-Text Engine compiles and executes full-text queries. As part of query execution, the Full-Text Engine might receive input from the thesaurus and stoplist.  
   
 -   **Index writer (indexer).** The index writer builds the structure that is used to store the indexed tokens.  
   
@@ -148,7 +148,7 @@ manager: "jhubbard"
  [In This Topic](#top)  
   
 ##  <a name="components"></a> Linguistic Components and Language Support in Full-Text Search  
- Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
+ Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.  
   
  Language-specific components include the following:  
   
@@ -156,7 +156,7 @@ manager: "jhubbard"
   
 -   **Stoplists.** A system stoplist is provided that contains a basic set stopwords (also known as noise words). A *stopword* is a word that does not help the search and is ignored by full-text queries. For example, for the English locale words such as "a", "and", "is", and "the" are considered stopwords. Typically, you will need to configure one or more thesaurus files and stoplists. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../../../../../../../../../../includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+-   **Thesaurus files.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] also installs a thesaurus file for each full-text language, as well as a global thesaurus file. The installed thesaurus files are essentially empty, but you can edit them to define synonyms for a specific language or business scenario. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
 -   **Filters (iFilters).**  Indexing a document in a `varbinary(max)`, `image`, or `xml` data type column requires a filter to perform extra processing. The filter must be specific to the document type (.doc, .pdf, .xls, .xml, and so forth). For more information, see [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
@@ -170,7 +170,7 @@ manager: "jhubbard"
   
 -   Writing Full-Text Queries  
   
-    -   [Query with Full-Text Search](../relational-databases/search/full-text-search.md)  
+    -   [Query with Full-Text Search](../relational-databases/search/query-with-full-text-search.md)  
   
     -   [Search for Words Close to Another Word with NEAR](../relational-databases/search/search-for-words-close-to-another-word-with-near.md)  
   

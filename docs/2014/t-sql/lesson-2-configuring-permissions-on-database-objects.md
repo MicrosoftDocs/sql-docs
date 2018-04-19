@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   [Granting Access to a Database](lesson-2-2-granting-access-to-a-database.md)  
   
--   [Creating Views and Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+-   [Creating Views and Stored Procedures](lesson-2-3-creating-views-and-stored-procedures.md)  
   
 -   [Granting Access to a Database Object](lesson-2-4-granting-access-to-a-database-object.md)  
   

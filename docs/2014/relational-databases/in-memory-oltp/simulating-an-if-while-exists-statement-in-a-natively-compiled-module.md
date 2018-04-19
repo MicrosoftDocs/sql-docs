@@ -25,7 +25,7 @@ IF @exists = 1
 ```  
   
 ## See Also  
- [Migration Issues for Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)   
+ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

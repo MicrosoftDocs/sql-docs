@@ -32,6 +32,6 @@ manager: "jhubbard"
   
  [Full-Text Search Upgrade](http://go.microsoft.com/fwlink/?LinkId=112291)  
   
- [Breaking Changes to Full-Text Search](../../relational-databases/search/full-text-search.md)  
+ [Breaking Changes to Full-Text Search](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   
   

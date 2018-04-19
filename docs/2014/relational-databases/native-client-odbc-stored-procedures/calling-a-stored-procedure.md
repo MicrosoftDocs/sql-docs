@@ -90,6 +90,6 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Running Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

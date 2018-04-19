@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 -   [Command Parameters](command-parameters.md)  
   
--   [Preparing Commands](../../analysis-services/multidimensional-models/commands.md)  
+-   [Preparing Commands](preparing-commands.md)  
   
 -   [Commands Generating Multiple-Rowset Results](commands-generating-multiple-rowset-results.md)  
   

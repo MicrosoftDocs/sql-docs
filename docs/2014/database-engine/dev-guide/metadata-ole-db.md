@@ -26,7 +26,7 @@ manager: "jhubbard"
  [Parameter and Rowset Metadata](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
  Provides information about structures and commands related to the OLE DB date and time enhancements.  
   
- [Date and Time and Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [Date and Time and Schema Rowsets](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Contains information about updates to OLE DB schema rowsets.  
   
 ## See Also  

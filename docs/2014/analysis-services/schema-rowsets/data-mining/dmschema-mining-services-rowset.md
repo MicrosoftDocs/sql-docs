@@ -66,6 +66,6 @@ manager: "mblythe"
 |`SERVICE_TYPE_ID`|`DBTYPE_UI4`|Optional.|  
   
 ## See Also  
- [Data Mining Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [Data Mining Schema Rowsets](../../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
   
   

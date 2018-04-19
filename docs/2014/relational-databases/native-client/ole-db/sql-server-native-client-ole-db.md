@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   [Rowsets](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)  
+-   [Stored Procedures](stored-procedures.md)  
   
 -   [BLOBs and OLE Objects](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   

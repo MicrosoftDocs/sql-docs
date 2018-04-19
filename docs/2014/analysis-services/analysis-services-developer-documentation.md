@@ -31,7 +31,7 @@ manager: "mblythe"
  [Multidimensional Model Programming](multidimensional-models/multidimensional-model-programming.md)  
  Describes the development tasks and approaches for integrating multidimensional model objects in a custom solution.  
   
- [Analysis Services Schema Rowsets](../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [Analysis Services Schema Rowsets](schema-rowsets/analysis-services-schema-rowsets.md)  
  Describes the schema rowsets that provide information about server state, server operations, and database objects.  
   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](scripting/analysis-services-scripting-language-assl-for-xmla.md)  

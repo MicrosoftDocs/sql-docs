@@ -732,7 +732,7 @@
 #### [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)
 ##### [Schedule a Package by using SQL Server Agent](schedule-a-package-by-using-sql-server-agent.md)
 ##### [Execute SQL Server Agent Job Task](execute-sql-server-agent-job-task.md)
-### [Deploy and Execute SSIS Packages using Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)
+### [Deploy and Execute SSIS Packages using Stored Procedures](deploy-and-execute-ssis-packages-using-stored-procedures.md)
 ### [Monitoring for Package Executions and Other Operations](monitoring-for-package-executions-and-other-operations.md)
 #### [Active Operations Dialog Box](active-operations-dialog-box.md)
 #### [Reports for the Integration Services Server](reports-for-the-integration-services-server.md)

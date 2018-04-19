@@ -47,7 +47,7 @@ manager: "mblythe"
   
 4.  For **Assembly name**, specify a name for the assembly.  
   
-5.  If this is a debug build of the library that you are going to use to debug stored procedures, select the **Include debug information** check box. For more information about debugging stored procedures, see [Debugging Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md).  
+5.  If this is a debug build of the library that you are going to use to debug stored procedures, select the **Include debug information** check box. For more information about debugging stored procedures, see [Debugging Stored Procedures](debugging-stored-procedures.md).  
   
 6.  You can click **OK** to register the assembly immediately, or on the dialog box toolbar, you can click a command on the **Script** menu to script the registration action to a query window, a file, or the Clipboard.  
   
@@ -70,7 +70,7 @@ manager: "mblythe"
   
 4.  For **Assembly name**, specify a name for the assembly.  
   
-5.  If this is a debug build of the library that you are going to use to debug stored procedures, select the **Include debug information** check box. For more information about debugging stored procedures, see [Debugging Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md).  
+5.  If this is a debug build of the library that you are going to use to debug stored procedures, select the **Include debug information** check box. For more information about debugging stored procedures, see [Debugging Stored Procedures](debugging-stored-procedures.md).  
   
 6.  You can click **OK** to register the assembly immediately, or on the dialog box toolbar, you can click a command on the **Script** menu to script the registration action to a query window, a file, or the Clipboard.  
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   [Only sysadmin users can write job step log files to the file system](../../../2014/sql-server/install/only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md)  
   
--   [Replace usage of the xp_sqlagent_proxy_account extended stored procedure with new stored procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+-   [Replace usage of the xp_sqlagent_proxy_account extended stored procedure with new stored procedures](../../../2014/sql-server/install/replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md)  
   
 -   [SQL Server Agent log shipping job category causes upgrade to fail](../../../2014/sql-server/install/sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md)  
   

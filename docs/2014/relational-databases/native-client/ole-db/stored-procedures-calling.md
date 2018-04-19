@@ -125,6 +125,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## See Also  
- [Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)  
+ [Stored Procedures](stored-procedures.md)  
   
   

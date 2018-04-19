@@ -278,7 +278,7 @@
 #### [Lesson 2: Configuring Permissions on Database Objects](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
 ##### [Creating a Login](../t-sql/lesson-2-1-creating-a-login.md)
 ##### [Granting Access to a Database](../t-sql/lesson-2-2-granting-access-to-a-database.md)
-##### [Creating Views and Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)
+##### [Creating Views and Stored Procedures](../t-sql/lesson-2-3-creating-views-and-stored-procedures)
 ##### [Granting Access to a Database Object](../t-sql/lesson-2-4-granting-access-to-a-database-object.md)
 ##### [Summary: Configuring Permissions on Database Objects](../t-sql/lesson-2-5-summary-configuring-permissions-on-database-objects.md)
 #### [Lesson 3: Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)

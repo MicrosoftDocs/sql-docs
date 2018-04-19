@@ -103,6 +103,6 @@ GO
   
 ## See Also  
  [Manage and Monitor Full-Text Search for a Server Instance](manage-and-monitor-full-text-search-for-a-server-instance.md)   
- [Upgrade Full-Text Search](full-text-search.md)  
+ [Upgrade Full-Text Search](upgrade-full-text-search.md)  
   
   

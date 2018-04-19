@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Call Stored Procedures &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+-   [Call Stored Procedures &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
 -   [Process Return Codes and Output Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
   

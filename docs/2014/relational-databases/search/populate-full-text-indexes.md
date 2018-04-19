@@ -226,7 +226,7 @@ GO
   
 ## See Also  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
- [Get Started with Full-Text Search](../relational-databases/search/full-text-search.md)   
+ [Get Started with Full-Text Search](get-started-with-full-text-search.md)   
  [Create and Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-index-transact-sql.md)  

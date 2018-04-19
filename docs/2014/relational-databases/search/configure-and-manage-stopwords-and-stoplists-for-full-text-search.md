@@ -152,7 +152,7 @@ manager: "jhubbard"
   
   
 ##  <a name="upgrade"></a> Upgrading Noise Words from SQL Server 2005  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] noise words have been replaced by stopwords. When a database is upgraded from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the noise-word files are no longer used. However, the noise-word files are stored in the FTDATA\ FTNoiseThesaurusBak folder, and you can use them later when updating or building the corresponding stoplists. For information about upgrading noise-word files to stoplists, see [Upgrade Full-Text Search](full-text-search.md).  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] noise words have been replaced by stopwords. When a database is upgraded from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the noise-word files are no longer used. However, the noise-word files are stored in the FTDATA\ FTNoiseThesaurusBak folder, and you can use them later when updating or building the corresponding stoplists. For information about upgrading noise-word files to stoplists, see [Upgrade Full-Text Search](upgrade-full-text-search.md).  
   
   
   

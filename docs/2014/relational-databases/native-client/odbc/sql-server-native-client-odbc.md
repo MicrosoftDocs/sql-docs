@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   [Handling Errors and Messages](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
--   [Running Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)  
+-   [Running Stored Procedures](../../native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
 -   [Using Catalog Functions](using-catalog-functions.md)  
   

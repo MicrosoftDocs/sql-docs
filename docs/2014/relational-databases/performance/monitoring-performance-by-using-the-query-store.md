@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 #### By Using the Query Store Page in Management Studio  
   
-1.  In Object Explorer, right-click a database, and then click **Properties**. (Requires [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2016 version of [!INCLUDE[ssManStudio](../../../../includes/ssmanstudio-md.md)].)  
+1.  In Object Explorer, right-click a database, and then click **Properties**. (Requires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 version of [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
   
 2.  In the **Database Properties** dialog box, select the **Query Store** page.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
 
   
 ##  <a name="About"></a> Information in the Query Store  
- Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  
+ Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  
   
  Since the query store retains multiple execution plans per query, it can enforce policies to direct the query processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](~/t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
   
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../2014/database-engine/media/querystore.PNG "QueryStore")  
   
- Selecting **Regressed Queries**, opens the **Regressed Queries** pane in [!INCLUDE[ssManStudio](../../../../includes/ssmanstudio-md.md)]. The Regressed Queries pane shows you the queries, and plans in the query store. Drop down boxes at the top allow you to select queries based on various criteria. Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.  
+ Selecting **Regressed Queries**, opens the **Regressed Queries** pane in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. The Regressed Queries pane shows you the queries, and plans in the query store. Drop down boxes at the top allow you to select queries based on various criteria. Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.  
   
  ![RegressedQueries](../../2014/database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -119,7 +119,7 @@ JOIN sys.query_store_query_text AS Txt
  
   
 ##  <a name="Related"></a> Related Views, Functions, and Procedures  
- The Query Store can be viewed and managed through [!INCLUDE[ssManStudio](../../../../includes/ssmanstudio-md.md)] or by using the following views and procedures.  
+ The Query Store can be viewed and managed through [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] or by using the following views and procedures.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
@@ -497,7 +497,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> Maintaining Query Performance Stability  
- For queries that are executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] used different plans which resulted in different resource utilization and duration. With Query Store you can easily detect when the query performance regressed and determine the optimal plan within a period of interest. Then you can force that optimal plan for future query execution.  
+ For queries that are executed multiple times you may notice that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] used different plans which resulted in different resource utilization and duration. With Query Store you can easily detect when the query performance regressed and determine the optimal plan within a period of interest. Then you can force that optimal plan for future query execution.  
   
  You can also identify inconsistent query performance for a query with parameters (either auto- parameterized or manually parameterized). Among different plans you can identify plan which is fast and optimal enough for all or most of the parameter values and force that plan; keeping predictable performance for the wider set of user scenarios.  
   
@@ -509,7 +509,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  When using `sp_query_store_force_plan` you can only force plans that were recorded by Query Store as a plan for that query. In other words, the only plans available for a query are those that were already used to execute Q1 while Query Store was active.  
   
- **Remove plan forcing for a query.** To rely again on the [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use `sp_query_store_unforce_plan` to unforce the plan that was selected for the query.  
+ **Remove plan forcing for a query.** To rely again on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query optimizer to calculate the optimal query plan, use `sp_query_store_unforce_plan` to unforce the plan that was selected for the query.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

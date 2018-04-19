@@ -110,6 +110,6 @@ manager: "jhubbard"
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](/about-log-shipping-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

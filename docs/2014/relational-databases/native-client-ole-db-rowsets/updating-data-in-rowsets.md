@@ -40,6 +40,6 @@ manager: "jhubbard"
 -   [Resynchronizing Rows](updating-data-in-rowsets-resynchronizing-rows.md)  
   
 ## See Also  
- [Rowsets](../../analysis-services/multidimensional-models-adomd-net-client/rowsets.md)  
+ [Rowsets](rowsets.md)  
   
   

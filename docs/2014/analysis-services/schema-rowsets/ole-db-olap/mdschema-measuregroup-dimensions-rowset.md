@@ -57,6 +57,6 @@ manager: "mblythe"
 |`DIMENSION_VISIBILITY`|`DBTYPE_UI2`|(Optional) A bitmap with one of the following valid values:<br /><br /> -   1 Visible<br />-   2 Not visible<br />-   Default restriction is a value of 1.|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
   
   

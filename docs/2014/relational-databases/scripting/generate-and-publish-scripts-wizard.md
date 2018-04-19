@@ -174,7 +174,7 @@ manager: "jhubbard"
   
 -   **Script defaults** - Includes default objects used to set default values in table columns. The default is **True**. For more information, see [CREATE DEFAULT &#40;Transact-SQL&#41;](~/t-sql/statements/create-default-transact-sql.md).  
   
--   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../../../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
+-   **Script drop and create** - When **Script CREATE**, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements are included to create objects. When **Script DROP**, [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements are included to drop objects. When **Script DROP and CREATE**, the [!INCLUDE[tsql](../../../includes/tsql-md.md)] drop statement is included in the script, followed by the create statement, for each scripted object. The default is **Script CREATE**.  
   
 -   **Script extended properties** - Includes extended properties in the script if the object has extended properties. The default is **True**.  
   

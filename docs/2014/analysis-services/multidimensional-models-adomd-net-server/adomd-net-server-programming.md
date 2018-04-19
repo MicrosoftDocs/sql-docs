@@ -28,7 +28,7 @@ manager: "mblythe"
 |-----------|-----------------|  
 |[ADOMD.NET Server Functionality](adomd-net-server-functionality.md)|Describes the uses for ADOMD.NET server objects.|  
 |[ADOMD.NET Server Object Architecture](adomd-net-server-object-architecture.md)|Describes the object architecture for ADOMD.NET server objects.|  
-|[User Defined Functions and Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)|Walks you through the process of creating a user defined function or stored Procedure.|  
+|[User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|Walks you through the process of creating a user defined function or stored Procedure.|  
   
 ## See Also  
  [ADOMD.NET Client Programming](../multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   

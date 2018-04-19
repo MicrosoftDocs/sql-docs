@@ -29,7 +29,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Custom Attributes for CLR Routines
-  The attributes listed can be applied to common language runtime (CLR) routines, user-defined types, and user-defined aggregates that are registered in [!INCLUDE[msCoName](../../../../includes/ssnoversion-md.md)]. If the attribute is not applied, [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] assumes the default value. The attributes listed are defined in the `Microsoft.SqlServer.Server` namespace.  
+  The attributes listed can be applied to common language runtime (CLR) routines, user-defined types, and user-defined aggregates that are registered in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. If the attribute is not applied, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] assumes the default value. The attributes listed are defined in the `Microsoft.SqlServer.Server` namespace.  
   
 ## The SqlUserDefinedAggregate Attribute  
  The `SqlUserDefinedAggregate` attribute indicates that the method should be registered as a user-defined aggregate. Every user-defined aggregate must be annotated with this attribute.  
@@ -70,7 +70,7 @@ manager: "jhubbard"
  [CLR User-Defined Aggregates](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR User-Defined Functions](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [CLR Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)   
+ [CLR Stored Procedures](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [CLR Triggers](../../../database-engine/dev-guide/clr-triggers.md)  
   
   

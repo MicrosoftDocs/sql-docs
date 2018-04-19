@@ -68,6 +68,6 @@ manager: "mblythe"
  For more information about proactive caching, see [Proactive Caching &#40;Partitions&#41;](../../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

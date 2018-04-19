@@ -62,6 +62,6 @@ manager: "mblythe"
  All object references in the `Sources` and `Target` elements must point to distinct partitions in the same measure group. Otherwise, an error occurs.  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
+ [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
   
   

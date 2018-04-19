@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   [Bookmarks](../../database-engine/bookmarks.md)  
   
--   [Updating Data in Rowsets](../../analysis-services/multidimensional-models-adomd-net-client/rowsets.md)  
+-   [Updating Data in Rowsets](updating-data-in-rowsets.md)  
   
 ## See Also  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  

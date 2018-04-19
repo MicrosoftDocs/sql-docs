@@ -150,6 +150,6 @@ manager: "jhubbard"
  Regardless of the method used to populate the rowset and form the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor block, the cursor block is active until the next row-fetching method is executed on the rowset.  
   
 ## See Also  
- [Rowsets](../../analysis-services/multidimensional-models-adomd-net-client/rowsets.md)  
+ [Rowsets](rowsets.md)  
   
   

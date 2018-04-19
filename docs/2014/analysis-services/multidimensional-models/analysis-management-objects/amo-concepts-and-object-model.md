@@ -26,9 +26,9 @@ ms.author: "owend"
 manager: "mblythe"
 ---
 # AMO Concepts and Object Model
-  This topic provides a definition of Analysis Management Objects (AMO), how AMO is related to other tools and libraries provided in the architecture of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and a conceptual explanation of all major objects in AMO.  
+  This topic provides a definition of Analysis Management Objects (AMO), how AMO is related to other tools and libraries provided in the architecture of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], and a conceptual explanation of all major objects in AMO.  
   
- AMO is a complete collection of management classes for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that can be used programmatically, under the namespace of <xref:Microsoft.AnalysisServices>, in a managed environment. The classes are included in the AnalysisServices.dll file, which is usually found where the [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] setup installs the files, under the folder \100\SDK\Assemblies\\. To use the AMO classes, include a reference to this assembly in your projects.  
+ AMO is a complete collection of management classes for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that can be used programmatically, under the namespace of <xref:Microsoft.AnalysisServices>, in a managed environment. The classes are included in the AnalysisServices.dll file, which is usually found where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs the files, under the folder \100\SDK\Assemblies\\. To use the AMO classes, include a reference to this assembly in your projects.  
   
  By using AMO you are able to create, modify, and delete objects such as cubes, dimensions, mining structures, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases; over all these objects, actions can be performed from your application in the .NET Framework. You can also process and update the information stored in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases.  
   
@@ -81,7 +81,7 @@ manager: "mblythe"
  AMO is especially useful for automating repetitive tasks, for example creating new partitions in a measure group based on new data in the fact table, or re-training a mining model based on new data. These tasks that create new objects are usually performed on a monthly, weekly, or quarterly basis, and the new objects can easily be named, based in the new data, by the application.  
   
 ##### Analysis Services administrators  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] administrators can use AMO to automate the processing of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases. For designing and deploying [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases, you should use [!INCLUDE[ssBIDevStudioFull](../../../../includes/ssbidevstudiofull-md.md)].  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] administrators can use AMO to automate the processing of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases. For designing and deploying [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] databases, you should use [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ##### Developers  
  Developers can use AMO to develop administrative interfaces for specified sets of users. These interfaces can restrict access to [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects and limit users to certain tasks. For example, by using AMO you could create a Backup application that enables a user to see all database objects, select any one of the databases, and backup it to any one of a specified set of devices.  
@@ -106,7 +106,7 @@ manager: "mblythe"
  Object processing and updated availability can be achieved by using AMO to respond to certain events beyond the ordinary flow data and scheduled tasks that use [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ##### Automatic security management  
- Security management can be automated to include new users to roles and permissions, or to remove other users as soon as their time has expired. New interfaces can be created to simplify security management for security administrators. This can be simpler than using [!INCLUDE[ssBIDevStudioFull](../../../../includes/ssbidevstudiofull-md.md)].  
+ Security management can be automated to include new users to roles and permissions, or to remove other users as soon as their time has expired. New interfaces can be created to simplify security management for security administrators. This can be simpler than using [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
 ##### Automatic Backup management  
  Automatic backup management can be done by using [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tasks, or by creating specialized AMO applications that run automatically. By using AMO you can develop Backup interfaces for operators that help them in their daily jobs.  

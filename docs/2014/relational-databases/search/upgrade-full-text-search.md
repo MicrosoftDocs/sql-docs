@@ -190,7 +190,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
  For more information about detaching and attaching a database, see [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), and [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## See Also  
- [Get Started with Full-Text Search](../relational-databases/search/full-text-search.md)   
+ [Get Started with Full-Text Search](get-started-with-full-text-search.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configure and Manage Filters for Search](configure-and-manage-filters-for-search.md)  
   

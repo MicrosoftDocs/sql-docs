@@ -143,7 +143,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to create and run traces using Transact-SQL stored procedures.|[Create and Run Traces Using Transact-SQL Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)|  
+|Describes how to create and run traces using Transact-SQL stored procedures.|[Create and Run Traces Using Transact-SQL Stored Procedures](create-and-run-traces-using-transact-sql-stored-procedures.md)|  
 |Describes how to create manual traces using stored procedures on an instance of the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|[Create Manual Traces using Stored Procedures](../../2014/database-engine/create-manual-traces-using-stored-procedures.md)|  
 |Describes how to save trace results to the file where the trace results are written.|[Save Trace Results to a File](../../2014/database-engine/save-trace-results-to-a-file.md)|  
 |Describes how to improve access to trace data by using space in the **temp** directory.|[Improve Access to Trace Data](../../2014/database-engine/improve-access-to-trace-data.md)|  

@@ -71,7 +71,7 @@ manager: "jhubbard"
 |[Memory-Optimized Tables](memory-optimized-tables.md)|Introduces memory-optimized tables.|  
 |[Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)|Code example showing how to use a memory-optimized table variable instead of a traditional table variable to reduce tempdb use.|  
 |[Indexes on Memory-Optimized Tables](../../database-engine/indexes-on-memory-optimized-tables.md)|Introduces memory-optimized indexes.|  
-|[Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)|Introduces natively compiled stored procedures.|  
+|[Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)|Introduces natively compiled stored procedures.|  
 |[Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)|Understanding and managing memory usage on your system.|  
 |[Creating and Managing Storage for Memory-Optimized Objects](creating-and-managing-storage-for-memory-optimized-objects.md)|Discusses data and delta files, which store information about transactions in memory-optimized tables.|  
 |[Backup, Restore, and Recovery of Memory-Optimized Tables](restore-and-recovery-of-memory-optimized-tables.md)|Discusses backup, restore, and recovery for memory-optimized tables.|  

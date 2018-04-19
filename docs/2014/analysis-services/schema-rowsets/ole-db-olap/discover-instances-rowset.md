@@ -44,6 +44,6 @@ manager: "mblythe"
 |`INSTANCE_NAME`|`DBTYPE_WSTR`|Optional.|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
   
   

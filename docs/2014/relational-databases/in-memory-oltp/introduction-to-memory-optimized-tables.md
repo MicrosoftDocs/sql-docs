@@ -44,7 +44,7 @@ manager: "jhubbard"
   
 -   Through natively compiled stored procedures.  
   
- Memory-optimized tables can be accessed most efficiently from natively compiled stored procedures ([Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)). Memory-optimized tables can also be accessed with (traditional) interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] refers to accessing memory-optimized tables without a natively compiled stored procedure. Some examples of interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] access include accessing a memory-optimized table from a DML trigger, ad hoc [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, view, and table-valued function.  
+ Memory-optimized tables can be accessed most efficiently from natively compiled stored procedures ([Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)). Memory-optimized tables can also be accessed with (traditional) interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] refers to accessing memory-optimized tables without a natively compiled stored procedure. Some examples of interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] access include accessing a memory-optimized table from a DML trigger, ad hoc [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, view, and table-valued function.  
   
  The following table summarizes native and interpreted [!INCLUDE[tsql](../../../includes/tsql-md.md)] access for various objects.  
   

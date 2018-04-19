@@ -144,7 +144,7 @@ manager: "jhubbard"
 |`FailoverPartner`|SSPROP_INIT_FAILOVERPARTNER|The name of the failover server used for database mirroring.|  
 |`FailoverPartnerSPN`|SSPROP_INIT_FAILOVERPARTNERSPN|The SPN for the failover partner. The default value is an empty string. An empty string causes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to use the default, provider-generated SPN.|  
 |`Language`|SSPROPT_INIT_CURRENTLANGUAGE|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] language.|  
-|`MarsConn`|SSPROP_INIT_MARSCONNECTION|Enables or disables multiple active result sets (MARS) on the connection if the server is [!INCLUDE[ssVersion2005](../../../../includes/ssversion2005-md.md)] or later. Possible values are "yes" and "no". The default value is "no".|  
+|`MarsConn`|SSPROP_INIT_MARSCONNECTION|Enables or disables multiple active result sets (MARS) on the connection if the server is [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later. Possible values are "yes" and "no". The default value is "no".|  
 |`Net`|SSPROP_INIT_NETWORKLIBRARY|Synonym for "Network".|  
 |`Network`|SSPROP_INIT_NETWORKLIBRARY|The network library used to establish a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.|  
 |`Network Library`|SSPROP_INIT_NETWORKLIBRARY|Synonym for "Network".|  
@@ -250,7 +250,7 @@ manager: "jhubbard"
 |`Initial Catalog`|DBPROP_INIT_CATALOG|The database name.|  
 |`Initial File Name`|SSPROP_INIT_FILENAME|The name of the primary file (include the full path name) of an attachable database. To use `AttachDBFileName`, you must also specify the database name with the provider string DATABASE keyword. If the database was previously attached, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not reattach it (it uses the attached database as the default for the connection).|  
 |`Integrated Security`|DBPROP_AUTH_INTEGRATED|Accepts the value "SSPI" for Windows Authentication.|  
-|`MARS Connection`|SSPROP_INIT_MARSCONNECTION|Enables or disables multiple active result sets (MARS) on the connection if the server is [!INCLUDE[ssVersion2005](../../../../includes/ssversion2005-md.md)] or later. Recognized values are "true" and "false".The default is "false".|  
+|`MARS Connection`|SSPROP_INIT_MARSCONNECTION|Enables or disables multiple active result sets (MARS) on the connection if the server is [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later. Recognized values are "true" and "false".The default is "false".|  
 |`Network Address`|SSPROP_INIT_NETWORKADDRESS|The network address of an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.<br /><br /> For more information about valid address syntax, see the description of the `Address` ODBC keyword, in this topic.|  
 |`Network Library`|SSPROP_INIT_NETWORKLIBRARY|The network library used to establish a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in the organization.|  
 |`Packet Size`|SSPROP_INIT_PACKETSIZE|Network packet size. The default is 4096.|  

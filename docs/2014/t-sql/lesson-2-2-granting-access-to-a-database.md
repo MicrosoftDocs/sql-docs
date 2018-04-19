@@ -38,6 +38,6 @@ manager: "jhubbard"
      Now, Mary has access to both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the `TestData` database.  
   
 ## Next Task in Lesson  
- [Creating Views and Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+ [Creating Views and Stored Procedures](lesson-2-3-creating-views-and-stored-procedures.md)  
   
   

@@ -45,7 +45,7 @@ manager: "mblythe"
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Analysis Services Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)   
+ [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)   
  [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)  
   

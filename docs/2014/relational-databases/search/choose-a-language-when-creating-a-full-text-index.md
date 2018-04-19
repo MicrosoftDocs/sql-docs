@@ -34,7 +34,7 @@ manager: "jhubbard"
  This section provides an introduction to word breakers and stemmers, and discusses how full-text search uses the LCID of the column-level language.  
   
 ### Introduction to Word Breakers and Stemmers  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than the those previously available in [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions include a complete new family of word breakers and stemmers that are significantly better than the those previously available in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  The Microsoft Natural Language Group (MS NLG) implemented and supports these new linguistic components.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Security  
   
-     The new word breakers are enabled by default in [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)] thanks to security improvements in linguistic components. We highly recommend that external components such as word breakers and filters be signed  to improve the overall security and robustness of [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)]. You can configure full-text to verify that these components are signed as follows:  
+     The new word breakers are enabled by default in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thanks to security improvements in linguistic components. We highly recommend that external components such as word breakers and filters be signed  to improve the overall security and robustness of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. You can configure full-text to verify that these components are signed as follows:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -57,9 +57,9 @@ manager: "jhubbard"
   
      Word breakers have been redesigned, and testing has shown that the new word breakers provide better semantic quality than previous word breakers. This increases the recall accuracy.  
   
--   Coverage for a vast list of languages, word breakers are included in [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)] out of the box and enabled by default .  
+-   Coverage for a vast list of languages, word breakers are included in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] out of the box and enabled by default .  
   
- For a list of the languages for which [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)] includes a word breaker and stemmers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ For a list of the languages for which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes a word breaker and stemmers, see [sys.fulltext_languages &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
 
   
 ##  <a name="nondef"></a> Specifying a Non-default Column-Level Language in a Full-Text Query  
- By default, in [!INCLUDE[ssNoVersion](../../../../../../../includes/ssnoversion-md.md)], full-text search will parse the query terms using the language specified for each column that is included in the full-text clause. To override this behavior, specify a nondefault language at query time. For supported languages whose resources are installed, the LANGUAGE *language_term* clause of a [CONTAINS](~/t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](~/t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) query can be used to specify the language used for word breaking, stemming, thesaurus, and stopword processing of the query terms.  
+ By default, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], full-text search will parse the query terms using the language specified for each column that is included in the full-text clause. To override this behavior, specify a nondefault language at query time. For supported languages whose resources are installed, the LANGUAGE *language_term* clause of a [CONTAINS](~/t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](~/relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](~/t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](~/relational-databases/system-functions/freetexttable-transact-sql.md) query can be used to specify the language used for word breaking, stemming, thesaurus, and stopword processing of the query terms.  
   
 
   

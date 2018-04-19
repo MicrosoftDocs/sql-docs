@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Migration Issues for Natively Compiled Stored Procedures
   This section presents several issues related to creating natively compiled stored procedures.  
   
- For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md).  
+ For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
 -   [Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   

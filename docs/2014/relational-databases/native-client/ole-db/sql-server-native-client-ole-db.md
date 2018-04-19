@@ -39,13 +39,13 @@ manager: "jhubbard"
   
 -   [Commands](../../../database-engine/dev-guide/commands.md)  
   
--   [Rowsets](../../../analysis-services/multidimensional-models-adomd-net-client/rowsets.md)  
+-   [Rowsets](../../../database-engine/dev-guide/rowsets.md)  
   
 -   [Stored Procedures](stored-procedures.md)  
   
 -   [BLOBs and OLE Objects](../../../database-engine/dev-guide/blobs-and-ole-objects.md)  
   
--   [Tables and Indexes](../../relational-databases/indexes/indexes.md)  
+-   [Tables and Indexes](../../../database-engine/dev-guide/tables-and-indexes.md)  
   
 -   [Data Types &#40;OLE DB&#41;](../../../database-engine/dev-guide/data-types-ole-db.md)  
   

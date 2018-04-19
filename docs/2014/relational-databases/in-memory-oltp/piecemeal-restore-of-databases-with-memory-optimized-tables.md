@@ -94,6 +94,6 @@ GO
 ```  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](../../database-engine/backup-restore-and-recovery-of-memory-optimized-tabless.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

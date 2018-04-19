@@ -301,6 +301,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] maintains column-level statistics for memory-optimized tables. In addition, it maintains the actual row count of the table. However, in contrast to disk-based tables, the statistics for memory-optimized tables are not automatically updated. Therefore, statistics need to be manually updated after significant changes in the tables. For more information, see [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
   
 ## See Also  
- [Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

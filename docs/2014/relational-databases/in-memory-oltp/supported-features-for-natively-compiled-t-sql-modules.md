@@ -18,19 +18,19 @@ manager: "jhubbard"
 # Supported Constructs in Natively Compiled Stored Procedures
   This topic contains a list of supported features for natively compiled stored procedures ([CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md)):  
   
--   [Programmability in Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md#pncsp)  
+-   [Programmability in Natively Compiled Stored Procedures](#pncsp)  
   
--   [Supported Operators](../native-client/ole-db/stored-procedures.md#so)  
+-   [Supported Operators](#so)  
   
--   [Built-in Functions in Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md#bfncsp)  
+-   [Built-in Functions in Natively Compiled Stored Procedures](#bfncsp)  
   
--   [Query Surface Area in Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md#qsancsp)  
+-   [Query Surface Area in Natively Compiled Stored Procedures](#qsancsp)  
   
--   [Auditing](../native-client/ole-db/stored-procedures.md#auditing)  
+-   [Auditing](#auditing)  
   
--   [Table, Query, and Join Hints](../native-client/ole-db/stored-procedures.md#tqh)  
+-   [Table, Query, and Join Hints](#tqh)  
   
--   [Limitations on Sorting](../native-client/ole-db/stored-procedures.md#los)  
+-   [Limitations on Sorting](#los)  
   
  For information on data types supported in natively compiled stored procedures, see [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   

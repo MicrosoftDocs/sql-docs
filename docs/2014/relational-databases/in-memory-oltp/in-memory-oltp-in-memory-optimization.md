@@ -68,7 +68,7 @@ manager: "jhubbard"
 |[Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)|Discusses hardware and software requirements and guidelines for using memory-optimized tables.|  
 |[Using In-Memory OLTP in a VM Environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Covers using [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in a virtualized environment.|  
 |[In-Memory OLTP Code Samples](in-memory-oltp-code-samples.md)|Contains code samples that show how to create and use a memory-optimized table.|  
-|[Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)|Introduces memory-optimized tables.|  
+|[Memory-Optimized Tables](memory-optimized-tables.md)|Introduces memory-optimized tables.|  
 |[Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)|Code example showing how to use a memory-optimized table variable instead of a traditional table variable to reduce tempdb use.|  
 |[Indexes on Memory-Optimized Tables](../../database-engine/indexes-on-memory-optimized-tables.md)|Introduces memory-optimized indexes.|  
 |[Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)|Introduces natively compiled stored procedures.|  

@@ -52,7 +52,7 @@ manager: "jhubbard"
 ## Linked Server Details  
  The following illustration shows the basics of a linked server configuration.  
   
- ![Client tier, server tier, and database server tier](../../2014/database-engine/media/lsvr.gif "Client tier, server tier, and database server tier")  
+ ![Client tier, server tier, and database server tier](../../database-engine/media/lsvr.gif "Client tier, server tier, and database server tier")  
   
  Typically, linked servers are used to handle distributed queries. When a client application executes a distributed query through a linked server, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] parses the command and sends requests to OLE DB. The rowset request may be in the form of executing a query against the provider or opening a base table from the provider.  
   

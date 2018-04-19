@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 -   **Indexed view**  
   
-     To create an indexed view, a unique clustered index is defined on one or more view columns. The view is executed and the result set is stored in the leaf level of the index in the same way table data is stored in a clustered index. For more information, see [Create Indexed Views](../../2014/database-engine/create-indexed-views.md).  
+     To create an indexed view, a unique clustered index is defined on one or more view columns. The view is executed and the result set is stored in the leaf level of the index in the same way table data is stored in a clustered index. For more information, see [Create Indexed Views](../../database-engine/create-indexed-views.md).  
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   

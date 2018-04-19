@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   [DBCC SHRINKFILE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
   
--   [Shrink a File](../relational-databases/databases/shrink-a-file.md)  
+-   [Shrink a File](../databases/shrink-a-file.md)  
   
  **To monitor log-file shrink events**  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 -   [sys.database_files &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-files-transact-sql.md) (See the **size**, **max_size**, and **growth** columns for the log file or files.)  
   
 > [!NOTE]  
->  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../relational-databases/databases/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)—use the AUTO_SHRINK option.  
+>  Shrinking database and log files can be set to occur automatically. However, we recommend against automatic shrinking, and the `autoshrink` database property is set to FALSE by default. If `autoshrink` is set to TRUE, automatic shrinking reduces the size of a file only when more than 25 percent of its space is unused. The file is shrunk either to the size at which only 25 percent of the file is unused space or to the original size of the file, whichever is larger. For information about changing the setting of the `autoshrink` property, see [View or Change the Properties of a Database](../databases/view-or-change-the-properties-of-a-database.md)—use the **Auto Shrink** property on the **Options** page—or [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)—use the AUTO_SHRINK option.  
   
   
 ##  <a name="AddOrEnlarge"></a> Add or Enlarge a Log File  
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
   
 ##  <a name="tempdbOptimize"></a> Optimize the Size of the tempdb Transaction Log  
- Restarting a server instance resizes the transaction log of the **tempdb** database to its original, pre-autogrow size. This can reduce the performance of the **tempdb** transaction log. You can avoid this overhead by increasing the size of the **tempdb** transaction log after starting or restarting the server instance. For more information, see [tempdb Database](../relational-databases/databases/tempdb-database.md).  
+ Restarting a server instance resizes the transaction log of the **tempdb** database to its original, pre-autogrow size. This can reduce the performance of the **tempdb** transaction log. You can avoid this overhead by increasing the size of the **tempdb** transaction log after starting or restarting the server instance. For more information, see [tempdb Database](../databases/tempdb-database.md).  
   
   
 ##  <a name="ControlGrowth"></a> Control the Growth of a Transaction Log File  

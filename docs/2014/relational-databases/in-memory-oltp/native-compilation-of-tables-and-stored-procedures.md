@@ -131,7 +131,7 @@ go
  No user interaction is needed to manage these files. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will create and remove the files as necessary.  
   
 ## See Also  
- [Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)   
+ [Memory-Optimized Tables](memory-optimized-tables.md)   
  [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

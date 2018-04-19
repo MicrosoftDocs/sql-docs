@@ -40,18 +40,18 @@ manager: "jhubbard"
   
 -   Use the bulk-logged recovery model.  
   
-     This guideline is for a database that uses the full recovery model. The bulk-logged recovery model is useful when performing bulk operations into an unindexed table (a *heap*). Using bulk-logged recovery helps prevent the transaction log from running out of space because bulk-logged recovery does not perform log row inserts. For more information about the bulk-logged recovery model, see [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md).  
+     This guideline is for a database that uses the full recovery model. The bulk-logged recovery model is useful when performing bulk operations into an unindexed table (a *heap*). Using bulk-logged recovery helps prevent the transaction log from running out of space because bulk-logged recovery does not perform log row inserts. For more information about the bulk-logged recovery model, see [Recovery Models &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
-     We recommend that you change the database to use the bulk-logged recovery model immediately before the bulk import operation. Immediately afterwards, you should reset the database to the full recovery model. For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+     We recommend that you change the database to use the bulk-logged recovery model immediately before the bulk import operation. Immediately afterwards, you should reset the database to the full recovery model. For more information, see [View or Change the Recovery Model of a Database &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
     > [!NOTE]  
     >  more information about how to minimize logging during bulk import operations, see [Prerequisites for Minimal Logging in Bulk Import](prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 -   Back up after bulk importing data.  
   
-     For a database that uses the simple recovery model, we recommend that you take a full or differential backup after the bulk-import operation finishes. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) or [Create a Differential Database Backup &#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
+     For a database that uses the simple recovery model, we recommend that you take a full or differential backup after the bulk-import operation finishes. For more information, see [Create a Full Database Backup &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md) or [Create a Differential Database Backup &#40;SQL Server&#41;](../backup-restore/create-a-differential-database-backup-sql-server.md).  
   
-     For the bulk-logged recovery model or full recovery model, a log backup is enough. For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+     For the bulk-logged recovery model or full recovery model, a log backup is enough. For more information, see [Transaction Log Backups &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md).  
   
 -   Drop table indexes to improve performance for large bulk imports.  
   

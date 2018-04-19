@@ -80,12 +80,12 @@ manager: "jhubbard"
 |1|CHECKPOINT|No checkpoint has occurred since the last log truncation, or the head of the log has not yet moved beyond a virtual log file. (All recovery models)<br /><br /> This is a routine reason for delaying log truncation. For more information, see [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|A log backup is required before the transaction log can be truncated. (Full or bulk-logged recovery models only)<br /><br /> When the next log backup is completed, some log space might become reusable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|A data backup or a restore is in progress (all recovery models).<br /><br /> If a data backup is preventing log truncation, canceling the backup operation might help the immediate problem.|  
-|4|ACTIVE_TRANSACTION|A transaction is active (all recovery models).<br /><br /> A long-running transaction might exist at the start of the log backup. In this case, freeing the space might require another log backup. Note that a long-running transactions prevent log truncation under all recovery models, including the simple recovery model, under which the transaction log is generally truncated on each automatic checkpoint.<br /><br /> A transaction is deferred. A *deferred transaction* is effectively an active transaction whose rollback is blocked because of some unavailable resource. For information about the causes of deferred transactions and how to move them out of the deferred state, see [Deferred Transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/deferred-transactions-sql-server.md). <br /><br />Long-running transactions might also fill up tempdb's transaction log. Tempdb is used implicitly by user transactions for internal objects such as work tables for sorting, work files for hashing, cursor work tables, and row versioning. Even if the user transaction includes only reading data (SELECT queries), internal objects may be created and used under user transactions. Then the tempdb transaction log can be filled.|  
-|5|DATABASE_MIRRORING|Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)<br /><br /> For more information, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).|  
+|4|ACTIVE_TRANSACTION|A transaction is active (all recovery models).<br /><br /> A long-running transaction might exist at the start of the log backup. In this case, freeing the space might require another log backup. Note that a long-running transactions prevent log truncation under all recovery models, including the simple recovery model, under which the transaction log is generally truncated on each automatic checkpoint.<br /><br /> A transaction is deferred. A *deferred transaction* is effectively an active transaction whose rollback is blocked because of some unavailable resource. For information about the causes of deferred transactions and how to move them out of the deferred state, see [Deferred Transactions &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Long-running transactions might also fill up tempdb's transaction log. Tempdb is used implicitly by user transactions for internal objects such as work tables for sorting, work files for hashing, cursor work tables, and row versioning. Even if the user transaction includes only reading data (SELECT queries), internal objects may be created and used under user transactions. Then the tempdb transaction log can be filled.|  
+|5|DATABASE_MIRRORING|Database mirroring is paused, or under high-performance mode, the mirror database is significantly behind the principal database. (Full recovery model only)<br /><br /> For more information, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |6|REPLICATION|During transactional replications, transactions relevant to the publications are still undelivered to the distribution database. (Full recovery model only)<br /><br /> For information about transactional replication, see [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|A database snapshot is being created. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
 |8|LOG_SCAN|A log scan is occurring. (All recovery models)<br /><br /> This is a routine, and typically brief, cause of delayed log truncation.|  
-|9|AVAILABILITY_REPLICA|A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)<br /><br /> For more information, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|9|AVAILABILITY_REPLICA|A secondary replica of an availability group is applying transaction log records of this database to a corresponding secondary database. (Full recovery model)<br /><br /> For more information, see [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |10|—|For internal use only|  
 |11|—|For internal use only|  
 |12|—|For internal use only|  
@@ -104,7 +104,7 @@ manager: "jhubbard"
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   
--   Bulk import operations ([bcp](../../database-engine/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Bulk import operations ([bcp](../../database-engine/bcp-utility.md), [BULK INSERT](~/t-sql/statements/bulk-insert-transact-sql.md), and [INSERT... SELECT](~/t-sql/statements/insert-transact-sql.md)). For more information about when bulk import into a table is minimally logged, see [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  When transactional replication is enabled, BULK INSERT operations are fully logged even under the Bulk Logged recovery model.  
@@ -144,18 +144,18 @@ manager: "jhubbard"
   
  **Backing Up the Transaction Log (Full Recovery Model)**  
   
--   [Back Up a Transaction Log &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Back Up a Transaction Log &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Restoring the Transaction Log (Full Recovery Model)**  
   
--  [Restore a Transaction Log Backup](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
+-  [Restore a Transaction Log Backup](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## See Also  
  [Control Transaction Durability](control-transaction-durability.md)   
- [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
- [View or Change the Properties of a Database](../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
- [Recovery Models &#40;SQL Server&#41;](../relational-databases/backup-restore/recovery-models-sql-server.md)  
+ [View or Change the Properties of a Database](../databases/view-or-change-the-properties-of-a-database.md)   
+ [Recovery Models &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   
   

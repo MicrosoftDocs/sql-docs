@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sp_add_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [Create a Job](../../2014/database-engine/create-a-job.md)   
+ [Create a Job](../../database-engine/create-a-job.md)   
  [sp_start_job &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

@@ -49,7 +49,7 @@ manager: "jhubbard"
   
  The following illustration shows the process for creating an initial clustered index online. The source object (the heap) has no other indexes. The source and target structure activities are shown for each phase; concurrent user select, insert, update, and delete operations are also shown. The preparation, build, and final phases are indicated together with the lock modes used in each phase.  
   
- ![Activities performed during online index operation](../../2014/database-engine/media/online-index.gif "Activities performed during online index operation")  
+ ![Activities performed during online index operation](../../database-engine/media/online-index.gif "Activities performed during online index operation")  
   
 ## Source Structure Activities  
  The following table lists the activities involving the source structures during each phase of the index operation and the corresponding locking strategy.  

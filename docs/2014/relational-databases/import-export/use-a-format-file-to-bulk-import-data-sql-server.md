@@ -25,7 +25,7 @@ manager: "jhubbard"
 >  For a format file to work with a Unicode character data file, all the input fields must be Unicode text strings (that is, either fixed-size or character-terminated Unicode strings).  
   
 > [!NOTE]  
->  If you are unfamiliar with format files, see [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md) and [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md).  
+>  If you are unfamiliar with format files, see [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md) and [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## Format File Options for Bulk-Import Commands  
  The following table summarizes the format-file option of for each of the bulk-import commands.  
@@ -195,6 +195,6 @@ DROP TABLE myTestFormatFiles
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](~/t-sql/functions/openrowset-transact-sql.md)   
  [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
- [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md)  
+ [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

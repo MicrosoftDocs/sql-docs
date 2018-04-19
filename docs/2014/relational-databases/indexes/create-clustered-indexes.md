@@ -96,7 +96,7 @@ manager: "jhubbard"
   
 2.  Right-click the **Tables** folder and click **New Table…**.  
   
-3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../2014/database-engine/create-tables-database-engine.md).  
+3.  Create a new table as you normally would. For more information, see [Create Tables &#40;Database Engine&#41;](../../database-engine/create-tables-database-engine.md).  
   
 4.  Right-click the new table created above and click **Design**.  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
  For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md).  
   
 ## See Also  
- [Create Primary Keys](../../2014/database-engine/create-primary-keys.md)   
- [Create Unique Constraints](../../2014/database-engine/create-unique-constraints.md)  
+ [Create Primary Keys](../../database-engine/create-primary-keys.md)   
+ [Create Unique Constraints](../../database-engine/create-unique-constraints.md)  
   
   

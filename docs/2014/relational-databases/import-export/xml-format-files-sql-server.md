@@ -25,7 +25,7 @@ manager: "jhubbard"
  You can use an XML format file with a **bcp** command, BULK INSERT statement, or INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement. The **bcp** command allows you to automatically generate an XML format file for a table; for more information, see [bcp Utility](../../database-engine/bcp-utility.md).  
   
 > [!NOTE]  
->  Two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*. XML format files provide a flexible and powerful alternative to non-XML format files. For information about non-XML format files, see [Non-XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md).  
+>  Two types of format files are supported for bulk exporting and importing: *non-XML format files* and *XML format files*. XML format files provide a flexible and powerful alternative to non-XML format files. For information about non-XML format files, see [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 
   
@@ -523,7 +523,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ## See Also  
  [Bulk Import and Export of Data &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [Data Types &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)   
- [Non-XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md)   
+ [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

@@ -147,7 +147,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ```  
   
 > [!NOTE]  
->  For information about the structure of XML format files, see [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md).  
+>  For information about the structure of XML format files, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### Examples  
  The examples in this section use the `myTestSkipCol` sample table and the `myTestSkipCol2.dat` sample data file that are created in "Sample Table and Data File," earlier in this topic. To import the data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the examples use the following modified XML format file, `myTestSkipCol2-x.xml`. This is based on the format file that is created in "Creating a Default XML Format File," earlier in this topic.  

@@ -138,7 +138,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 > [!NOTE]  
 >  To distinguish an XML format file, we recommend that you use .xml as the file name extension, for example, MyTable.xml.  
   
- For information about the structure and fields of XML format files, see [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md).  
+ For information about the structure and fields of XML format files, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ### Examples  
  This section contains the following examples that show how to use **bcp** commands to create an XML format file:  
@@ -190,7 +190,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
 </BCPFORMAT>  
 ```  
   
- For information about the syntax of this format file, see [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md). For information about character data, see [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md).  
+ For information about the syntax of this format file, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md). For information about character data, see [Use Character Format to Import or Export Data &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md).  
   
 #### B. Creating an XML format file for native data  
  The following example creates an XML format file, `Department-n.xml`, for the `HumanResources.Department` table. The format file uses native data types. The contents of the generated format file are presented after the command.  
@@ -229,7 +229,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 </BCPFORMAT>  
 ```  
   
- For information about the syntax of this format file, see [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md). For information about how to use native data, see [Use Native Format to Import or Export Data &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md).  
+ For information about the syntax of this format file, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md). For information about how to use native data, see [Use Native Format to Import or Export Data &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## Mapping Data Fields to Table Columns  
  As created by **bcp**, a format file describes all the table columns in order. You can modify a format file to rearrange or omit table rows. This lets you customize a format file to a data file whose fields do not map directly to the table columns. For more information, see the following topics:  
@@ -246,6 +246,6 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  [Use a Format File to Skip a Table Column &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
  [Non-XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
- [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md)  
+ [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

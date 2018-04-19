@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Migrating to In-Memory OLTP
   This section discusses how to migrate database objects to use In-Memory OLTP.  
   
--   [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../database-engine/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
+-   [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   
 -   [Memory Optimization Advisor](memory-optimization-advisor.md)  
   
@@ -46,6 +46,6 @@ manager: "jhubbard"
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)   
- [Estimate Memory Requirements for Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
+ [Estimate Memory Requirements for Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

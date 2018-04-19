@@ -29,13 +29,13 @@ manager: "jhubbard"
   
 ## Contents  
   
--   [Basics](columnstore-indexes-overview.md#basics)  
+-   [Basics](#basics)  
   
--   [Loading Data](columnstore-indexes-overview.md#dataload)  
+-   [Loading Data](#dataload)  
   
--   [Performance Tips](columnstore-indexes-overview.md#performance)  
+-   [Performance Tips](#performance)  
   
--   [Related Tasks and Topics](columnstore-indexes-overview.md#related)  
+-   [Related Tasks and Topics](#related)  
   
 ##  <a name="basics"></a> Basics  
  A *columnstore index* is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports both clustered and nonclustered columnstore indexes. Both use the same in-memory columnstore technology, but they do have differences in purpose and in features they support.  
@@ -123,19 +123,19 @@ manager: "jhubbard"
   
 -   Each column segment is compressed together and stored on physical media.  
   
- ![Column segment](../../2014/database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  nonclustered columnstore index  
  A *nonclustered columnstore index* is a read-only index created on an existing clustered index or heap table. It contains a copy of a subset of columns, up to and including all of the columns in the table.. The table is read-only while it contains a non-clustered columnstore index.  
   
  A nonclustered columnstore index provides a way to have a columnstore index for running analysis queries while at the same time performing read-only operations on the original table.  
   
- ![Nonclustered columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nonclustered columnstore index")  
+ ![Nonclustered columnstore index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Nonclustered columnstore index")  
   
  clustered columnstore index  
  A *clustered columnstore index* is the physical storage for the entire table and is the only index for the table. The clustered index is updateable. You can perform insert, delete, and update operations on the index and you can bulk load data into the index.  
   
- ![Clustered Columnstore Index](../../2014/database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  To reduce fragmentation of the column segments and improve performance, the columnstore index might store some data temporarily into a rowstore table, called a deltastore, plus a B-Tree of IDs for deleted rows. The deltastore operations are handled behind the scenes. To return the correct query results, the clustered columnstore index combines query results from both the columnstore and the deltastore.  
   
@@ -151,14 +151,14 @@ manager: "jhubbard"
 ###  <a name="dataload_nci"></a> Loading Data into a Nonclustered Columnstore Index  
  To load data into a nonclustered columnstore index, first load data into a traditional rowstore table stored as a heap or clustered index, and then create the nonclustered columnstore index with [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md).  
   
- ![Loading data into a columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Loading data into a columnstore index")  
+ ![Loading data into a columnstore index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Loading data into a columnstore index")  
   
  A table with a nonclustered columnstore index is read-only until the index is dropped or disabled. To update the table and the nonclustered columnstore index you can switch partitions in and out. You can also disable the index, update the table, and then rebuild the index.  
   
  For more information see [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a> Loading Data into a Clustered Columnstore Index  
- ![Loading into a clustered columnstore index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+ ![Loading into a clustered columnstore index](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
  As the diagram suggests, to load data into a clustered columnstore index, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
   
     2.  If the number of rows is less than the minimum rows per rowgroup, the rows are added to the deltastore.  
   
- For more information about deltastore tasks and processes, see [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md)  
+ For more information about deltastore tasks and processes, see [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
   
 ##  <a name="performance"></a> Performance Tips  
   
@@ -203,7 +203,7 @@ manager: "jhubbard"
 -   [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  
   
 ### Clustered Columnstore Indexes  
- For common tasks, see [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md).  
+ For common tasks, see [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
 -   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md)  
   

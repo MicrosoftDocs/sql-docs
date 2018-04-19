@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  For more information about memory-optimized tables, see:  
   
--   [Introduction to Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
+-   [Introduction to Memory-Optimized Tables](memory-optimized-tables.md)  
   
      Details what memory-optimized tables are and provides information about data durability, accessing data in memory-optimized tables, and performance and scalability.  
   

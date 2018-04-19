@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  The *computed_column_expression* must be deterministic. A *computed_column_expression* is deterministic when one or more of the following is true:  
   
--   All functions that are referenced by the expression are deterministic and precise. These functions include both user-defined and built-in functions. For more information, see [Deterministic and Nondeterministic Functions](../../2014/database-engine/deterministic-and-nondeterministic-functions.md). Functions might be imprecise if the computed column is PERSISTED. For more information, see [Creating Indexes on Persisted Computed Columns](#BKMK_persisted) later in this topic.  
+-   All functions that are referenced by the expression are deterministic and precise. These functions include both user-defined and built-in functions. For more information, see [Deterministic and Nondeterministic Functions](../../database-engine/deterministic-and-nondeterministic-functions.md). Functions might be imprecise if the computed column is PERSISTED. For more information, see [Creating Indexes on Persisted Computed Columns](#BKMK_persisted) later in this topic.  
   
 -   All columns that are referenced in the expression come from the table that contains the computed column.  
   

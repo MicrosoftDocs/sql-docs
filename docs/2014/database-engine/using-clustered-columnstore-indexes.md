@@ -24,17 +24,17 @@ manager: "jhubbard"
   
 ## Contents  
   
--   [Create a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#create)  
+-   [Create a Clustered Columnstore Index](#create)  
   
--   [Drop a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#drop)  
+-   [Drop a Clustered Columnstore Index](#drop)  
   
--   [Load Data into a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#load)  
+-   [Load Data into a Clustered Columnstore Index](#load)  
   
--   [Change Data in a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#change)  
+-   [Change Data in a Clustered Columnstore Index](#change)  
   
--   [Rebuild a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#rebuild)  
+-   [Rebuild a Clustered Columnstore Index](#rebuild)  
   
--   [Reorganize a Clustered Columnstore Index](../relational-databases/indexes/indexes.md#reorganize)  
+-   [Reorganize a Clustered Columnstore Index](#reorganize)  
   
 ##  <a name="create"></a> Create a Clustered Columnstore Index  
  To create a clustered columnstore index, first create a rowstore table as a heap or clustered index, and then use the [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md) statement to convert the table to a clustered columnstore index. If you want the clustered columnstore index to have the same name as the clustered index, use the DROP_EXISTING option.  

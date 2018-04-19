@@ -44,6 +44,6 @@ manager: "jhubbard"
 -   [Calling Natively Compiled Stored Procedures from Data Access Applications](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
 ## See Also  
- [Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

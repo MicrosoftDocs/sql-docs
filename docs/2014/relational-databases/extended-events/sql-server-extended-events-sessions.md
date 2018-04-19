@@ -73,6 +73,6 @@ manager: "jhubbard"
  The Extended Events architecture provides a flexible system that allows a variety of objects to be used together to solve specific problems.  
   
 ## See Also  
- [Extended Events](../relational-databases/extended-events/extended-events.md)  
+ [Extended Events](extended-events.md)  
   
   

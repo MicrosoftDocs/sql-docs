@@ -137,7 +137,7 @@ GO
 ```  
   
 > [!NOTE]  
->  For information about the syntax of the XML Schema and additional samples of XML format files, see [XML Format Files &#40;SQL Server&#41;](../../database-engine/xml-format-files-sql-server.md).  
+>  For information about the syntax of the XML Schema and additional samples of XML format files, see [XML Format Files &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## See Also  
  [bcp Utility](../../database-engine/bcp-utility.md)   

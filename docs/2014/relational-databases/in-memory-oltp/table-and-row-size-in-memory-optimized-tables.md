@@ -221,6 +221,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## See Also  
- [Memory-Optimized Tables](../../database-engine/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

@@ -110,9 +110,9 @@ manager: "jhubbard"
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [SORT_IN_TEMPDB Option For Indexes](../relational-databases/indexes/indexes.md)   
- [Guidelines for Online Index Operations](../relational-databases/indexes/guidelines-for-online-index-operations.md)   
- [How Online Index Operations Work](../relational-databases/indexes/how-online-index-operations-work.md)   
- [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md)  
+ [SORT_IN_TEMPDB Option For Indexes](../indexes/indexes.md)   
+ [Guidelines for Online Index Operations](../indexes/guidelines-for-online-index-operations.md)   
+ [How Online Index Operations Work](../indexes/how-online-index-operations-work.md)   
+ [Perform Index Operations Online](../perform-index-operations-online.md)  
   
   

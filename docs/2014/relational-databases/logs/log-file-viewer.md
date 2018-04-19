@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to open Log File Viewer depending on the information that you want to view.|[Open Log File Viewer](../../database-engine/log-file-viewer.md)|  
+|Describes how to open Log File Viewer depending on the information that you want to view.|[Open Log File Viewer](open-log-file-viewer.md)|  
 |Describes how to view offline log files through registered servers and how to verify WMI permissions.|[View Offline Log Files](view-offline-log-files.md)|  
 |Provides Log File Viewer F1 Help.|[Log File Viewer F1 Help](log-file-viewer-f1-help.md)|  
   

@@ -50,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Maintenance Plans](maintenance-plans.md)   
- [Database Mail](../../database-engine/dev-guide/database-mail.md)  
+ [Database Mail](../database-mail/database-mail.md)  
   
   

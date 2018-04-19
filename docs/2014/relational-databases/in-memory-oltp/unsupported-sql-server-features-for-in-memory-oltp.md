@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   Multi-versioning and optimistic concurrency control. For more information, see [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Backup and Restore of a database that contains memory-optimized data filegroup. For more information, see [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Backup and Restore of a database that contains memory-optimized data filegroup. For more information, see [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Catalog views, dynamic management views, and extended events for supportability. For more information, see [System Views, Stored Procedures, DMVs and Wait Types for In-Memory OLTP](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. For more information, see [SQL Server PowerShell Overview](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
--   Import and Export Bulk Data by using the bcp utility. For more information, see [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+-   Import and Export Bulk Data by using the bcp utility. For more information, see [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
 -   Crash recovery.  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   Log shipping: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a primary database on a primary server instance to one or more secondary databases on separate secondary server instances. For more information, see [About Log Shipping &#40;SQL Server&#41;](log-shipping/about-log-shipping-sql-server.md).  
   
--   Transactional replication to memory-optimized tables on subscribers is supported with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
+-   Transactional replication to memory-optimized tables on subscribers is supported with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../replication/replication-to-memory-optimized-table-subscribers.md).  
   
 -   Resource Governor: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor is a feature that you can use to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workload and system resource consumption. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use. For more information, see [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) and [Resource Governor](../../database-engine/resource-governor.md).  
   
@@ -76,25 +76,25 @@ manager: "jhubbard"
   
 |Unsupported Feature|Feature Description|  
 |-------------------------|-------------------------|  
-|Data compression for memory-optimized tables.|You can use the data compression feature to help compress the data inside a database, and to help reduce the size of the database. For more information, see [Data Compression](../relational-databases/data-compression/data-compression.md).|  
-|Partitioning of memory-optimized tables and HASH indexes.|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. For more information, see [Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md).|  
+|Data compression for memory-optimized tables.|You can use the data compression feature to help compress the data inside a database, and to help reduce the size of the database. For more information, see [Data Compression](../data-compression/data-compression.md).|  
+|Partitioning of memory-optimized tables and HASH indexes.|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. For more information, see [Partitioned Tables and Indexes](../../database-engine/partitioned-tables-and-indexes.md).|  
 |Transparent Data Encryption (TDE) on the memory-optimized data filegroup of a database.|Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and log files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../database-engine/transparent-data-encryption-tde.md).<br /><br /> TDE can be enabled on a database that has In-Memory OLTP objects. In-Memory OLTP log records are encrypted if TDE is enabled. The checkpoint files for durable tables are not encrypted, even if TDE is enabled on the database.|  
-|Replication|Replication configurations other than transactional replication to memory-optimized tables on subscribers are incompatible with tables or views referencing memory-optimized tables. Replication using sync_mode=’database snapshot’ is not supported if there is a memory-optimized filegroup. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replication|Replication configurations other than transactional replication to memory-optimized tables on subscribers are incompatible with tables or views referencing memory-optimized tables. Replication using sync_mode=’database snapshot’ is not supported if there is a memory-optimized filegroup. For more information, see [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Multiple Active Result Sets (MARS)|Multiple Active Result Sets (MARS) is not supported with memory-optimized tables. This error can also indicate linked server use. Linked server can use MARS. Linked servers are not supported with memory-optimized tables. Instead, connect directly to the server and database that hosts the memory-optimized tables.|  
 |Mirroring|Database mirroring is a solution for increasing the availability of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see [Database Mirroring &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md).|  
 |Rebuild log|Rebuilding the log, either through attach or ALTER DATABASE, is not supported for databases with a MEMORY_OPTIMIZED_DATA filegroup.|  
 |Linked Server|For more information, see [Linked Servers &#40;Database Engine&#41;](../linked-servers/linked-servers-database-engine.md).|  
 |Bulk logging|Regardless of the recovery model of the database, all operations on durable memory-optimized tables are always fully logged.|  
-|Minimal logging|Minimal logging is not supported for memory-optimized tables. For more information about minimal logging, see [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) and [Prerequisites for Minimal Logging in Bulk Import](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
+|Minimal logging|Minimal logging is not supported for memory-optimized tables. For more information about minimal logging, see [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) and [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Change tracking|Change tracking can be enabled on a database with In-Memory OLTP objects. However, changes in memory-optimized tables are not tracked.|  
 |DDL triggers|Both database-level and server-level DDL triggers are not supported with In-Memory OLTP tables and natively compiled stored procedures.|  
 |Change Data Capture (CDC)|CDC should not be enabled on a database that has In-Memory OLTP objects, as it prevents certain operations such as DROP.|  
-|Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../relational-databases/databases/contained-databases.md)|  
+|Database Containment|Database containment is not supported in a database that has natively-compiled stored procedures and memory-optimized tables. For more information, see [Contained Databases](../databases/contained-databases.md)|  
 |Context Connections|Accessing memory-optimized tables using the context connection from inside CLR stored procedures is not supported.|  
 |Cursors|Keyset and dynamic cursors on queries accessing memory-optimized tables. These queries are degraded to static becoming read-only.|  
 |TABLESTAMP|TABLESTAMP is not supported. See [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md) for more information.|  
 |AUTO_CLOSE|AUTO_CLOSE is not supported. For more information, see [Set the AUTO_CLOSE Database Option to OFF](../../database-engine/set-the-auto-close-database-option-to-off.md).|  
-|Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../relational-databases/databases/database-snapshots-sql-server.md).|  
+|Database Snapshots|Database Snapshots are not supported. For more information, see [Database Snapshots &#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md).|  
 |Transactional DDL|Transactional DDL is not supported in In-Memory OLTP.|  
 |Event Notifications|Event notifications are not supported. For more information, see [Event Notifications](../../database-engine/event-notifications.md).|  
 |Fiber mode|Fiber mode is not supported with In-Memory OLTP.|  

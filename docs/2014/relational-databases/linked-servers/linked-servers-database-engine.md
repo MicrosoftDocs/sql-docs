@@ -82,7 +82,7 @@ manager: "jhubbard"
 >  Linked servers can be defined to point back (loop back) to the server on which they are defined. Loopback servers are most useful when testing an application that uses distributed queries on a single server network. Loopback linked servers are intended for testing and are not supported for many operations, such as distributed transactions.  
   
 ## Related Tasks  
- [Create Linked Servers &#40;SQL Server Database Engine&#41;](sql-server-database-engine-overview.md)  
+ [Create Linked Servers &#40;SQL Server Database Engine&#41;](create-linked-servers-sql-server-database-engine.md)  
   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

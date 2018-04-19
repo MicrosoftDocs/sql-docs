@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Log File Viewer F1 Help
   Log File Viewer displays log information from many different components. When Log File Viewer is open, use the **Select logs** pane to select the logs you want to display. Each log displays columns appropriate to that kind of log.  
   
- The logs that are available depend on how Log File Viewer is opened. For more information, see [Open Log File Viewer](../../database-engine/log-file-viewer.md).  
+ The logs that are available depend on how Log File Viewer is opened. For more information, see [Open Log File Viewer](open-log-file-viewer.md).  
   
  The number of rows that are displayed for audit logs can be configured on the **SQL Server Object Explorer/Commands** page of the **Tools/Options** dialog box. For descriptions of the columns that are displayed for audit logs, see [sys.fn_get_audit_file &#40;Transact-SQL&#41;](~/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
@@ -76,8 +76,8 @@ manager: "jhubbard"
  To access log files for instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are offline, you must have read access to both the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace, and to the folder where the log files are stored. For more information, see the Security section of the topic [View Offline Log Files](view-offline-log-files.md).  
   
 ## See Also  
- [Log File Viewer](../../database-engine/log-file-viewer.md)   
- [Open Log File Viewer](../../database-engine/log-file-viewer.md)   
+ [Log File Viewer](log-file-viewer.md)   
+ [Open Log File Viewer](open-log-file-viewer.md)   
  [View Offline Log Files](view-offline-log-files.md)  
   
   

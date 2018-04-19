@@ -37,7 +37,7 @@ manager: "jhubbard"
   
     -   You can add nonkey columns to the leaf level of the nonclustered index to by-pass existing index key limits, 900 bytes and 16 key columns, and execute fully covered, indexed, queries. For more information, see [Create Indexes with Included Columns](create-indexes-with-included-columns.md).  
   
- Both clustered and nonclustered indexes can be unique. This means no two rows can have the same value for the index key. Otherwise, the index is not unique and multiple rows can share the same key value. For more information, see [Create Unique Indexes](indexes.md).  
+ Both clustered and nonclustered indexes can be unique. This means no two rows can have the same value for the index key. Otherwise, the index is not unique and multiple rows can share the same key value. For more information, see [Create Unique Indexes](create-unique-indexes.md).  
   
  Indexes are automatically maintained for a table or view whenever the table data is modified.  
   

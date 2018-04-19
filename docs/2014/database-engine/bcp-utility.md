@@ -526,7 +526,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
 > [!NOTE]  
 >  To use the **-x** switch, you must be using a **bcp** 9.0 client. For information about how to use the **bcp** 9.0 client, see "Remarks."  
   
- For more information, see [XML Format Files &#40;SQL Server&#41;](../../2014/database-engine/xml-format-files-sql-server.md).  
+ For more information, see [XML Format Files &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 ### I. Using a format file to bulk import with bcp  
  To use a previously created format file when importing data into an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use the **-f** switch with the **in** option. For example, the following command bulk copies the contents of a data file, `Currency.dat`, into a copy of the `Sales.Currency` table (`Sales.Currency2`) by using the previously created format file (`Currency.xml`). The example assumes that you are using Windows Authentication and have a trusted connection to the server instance on which you are running the **bcp** command.  

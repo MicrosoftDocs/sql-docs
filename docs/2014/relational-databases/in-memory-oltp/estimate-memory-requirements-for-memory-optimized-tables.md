@@ -159,7 +159,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row (see [Memory for the table](memory-optimized-tables.md#bkmk_memoryfortable) above).  
+ Memory needs for stale rows is then estimated by multiplying the number of stale rows by the size of a memory-optimized table row (see [Memory for the table](#bkmk_MemoryForTable) above).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

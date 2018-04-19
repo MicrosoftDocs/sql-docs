@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  The data source property DBPROP_MULTIPLECONNECTIONS defaults to VARIANT_TRUE. This means the provider will spawn multiple connections in order to support multiple concurrent command and rowset objects. When MARS is enabled, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client can support multiple command and rowset objects on a single connection, so MULTIPLE_CONNECTIONS is set to VARIANT_FALSE by default.  
   
- For more information about enhancements made to the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../2014/database-engine/dev-guide/initialization-and-authorization-properties.md).  
+ For more information about enhancements made to the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
   
 ### SQL Server Native Client OLE DB Provider Example  
  In this example, a data source object is created using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB provider, and MARS is enabled using the DBPROPSET_SQLSERVERDBINIT property set before the session object is created.  
@@ -196,6 +196,6 @@ SQLFetch(hstmt2);
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
- [Using SQL Server Default Result Sets](../../../2014/database-engine/dev-guide/using-sql-server-default-result-sets.md)  
+ [Using SQL Server Default Result Sets](../../../database-engine/dev-guide/using-sql-server-default-result-sets.md)  
   
   

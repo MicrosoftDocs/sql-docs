@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  **To monitor log-file shrink events**  
   
--   [Log File Auto Shrink Event Class](../relational-databases/event-classes/log-file-auto-shrink-event-class.md).  
+-   [Log File Auto Shrink Event Class](../event-classes/log-file-auto-shrink-event-class.md).  
   
  `To monitor log space`  
   

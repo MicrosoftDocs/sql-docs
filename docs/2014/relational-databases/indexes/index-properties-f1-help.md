@@ -133,13 +133,13 @@ manager: "jhubbard"
  Use this page to view or modify filegroup or partition scheme properties for the selected index. Only shows options related to the type of index.  
   
  **Filegroup**  
- Stores the index in the specified filegroup. The list only displays standard (row) filegroups. The default list selection is the PRIMARY filegroup of the database. For more information, see [Database Files and Filegroups](../relational-databases/databases/database-files-and-filegroups.md).  
+ Stores the index in the specified filegroup. The list only displays standard (row) filegroups. The default list selection is the PRIMARY filegroup of the database. For more information, see [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
  **Filestream filegroup**  
- Specifies the filegroup for FILESTREAM data. This list displays only FILESTREAM filegroups. The default list selection is the PRIMARY FILESTREAM filegroup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../relational-databases/blob/filestream-sql-server.md).  
+ Specifies the filegroup for FILESTREAM data. This list displays only FILESTREAM filegroups. The default list selection is the PRIMARY FILESTREAM filegroup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Partition scheme**  
- Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](indexes.md).  
+ Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](../../database-engine/partitioned-tables-and-indexes.md).  
   
  The partition scheme option is unavailable if there are no partition schemes in the database.  
   

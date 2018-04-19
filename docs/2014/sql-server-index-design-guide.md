@@ -51,7 +51,7 @@ manager: "jhubbard"
 ### Index Design Tasks  
  The follow tasks make up our recommended strategy for designing indexes:  
   
-1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](relational-databases/indexes/columnstore-indexes-overview.md).  
+1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Understand the characteristics of the most frequently used queries. For example, knowing that a frequently used query joins two or more tables will help you determine the best type of indexes to use.  
   
@@ -600,6 +600,6 @@ WHERE b = CONVERT(Varbinary(4), 1);
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](relational-databases/indexes/indexes.md)  
+ [Partitioned Tables and Indexes](database-engine/partitioned-tables-and-indexes.md)  
   
   

@@ -57,7 +57,7 @@ ms.workload: "On Demand"
 
 ## <a id="agent"></a> Enable SQL Server Agent
 
-The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled.
+The **sqlagent.enabled** setting enables [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). By default, SQL Server Agent is disabled. If **sqlagent.enabled** is not present in the mssql.conf settings file, then SQL Server internally assumes that SQL Server Agent is enabled.
 
 To change this settings, use the following steps:
 

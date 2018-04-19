@@ -39,7 +39,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 # CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converts an **int** ASCII code to a character.
+This function converts an **int** ASCII code to a character value.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,13 +51,13 @@ CHAR ( integer_expression )
   
 ## Arguments  
 *integer_expression*  
-Is an integer from 0 through 255. `NULL` is returned if the integer expression is not in this range.
+An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range.
   
 ## Return types
 **char(1)**
   
 ## Remarks  
-`CHAR` can be used to insert control characters into character strings. The following table shows some frequently used control characters.
+Use `CHAR` to insert control characters into character strings. This table shows some frequently used control characters.
   
 |Control character|Value|  
 |---|---|
@@ -68,7 +68,7 @@ Is an integer from 0 through 255. `NULL` is returned if the integer expression i
 ## Examples  
   
 ### A. Using ASCII and CHAR to print ASCII values from a string  
-The following example prints the ASCII value and character for each character in the string `New Moon`.
+This example prints the ASCII value and character for each character in the string `New Moon`.
   
 ```sql
 SET TEXTSIZE 0;  
@@ -109,7 +109,7 @@ GO
 ```
   
 ### B. Using CHAR to insert a control character  
-The following example uses `CHAR(13)` to print the name and e-mail address of an employee on separate lines when the results are returned in text. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example uses `CHAR(13)` to print the name and e-mail address of an employee on separate lines, when the query returns its results as text. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -131,7 +131,7 @@ ken0@adventure-works.com
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Using ASCII and CHAR to print ASCII values from a string  
-The following example assumes an ASCII character set and returns the character value for 6 ASCII character numbers.
+This example assumes an ASCII character set. It returns the character value for six different ASCII character number values.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -148,7 +148,7 @@ A    B    a    b    1    2
 ```
   
 ### D. Using CHAR to insert a control character  
-The following example uses `CHAR(13)` to return information about the databases on separate lines when the results are returned in text.
+This example uses `CHAR(13)` to return information from sys.databases on separate lines, when the query returns its results as text.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

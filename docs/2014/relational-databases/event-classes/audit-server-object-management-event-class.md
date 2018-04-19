@@ -51,7 +51,7 @@ manager: "jhubbard"
 |**XactSequence**|**bigint**|Token used to describe the current transaction.|50|Yes|  
   
 ## See Also  
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](../../database-engine/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

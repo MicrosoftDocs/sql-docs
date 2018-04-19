@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   **Clustered columnstore indexes**  
   
-     Use a clustered columnstore index to improve data compression and query performance for data warehousing workloads that primarily perform bulk loads and read-only queries. Since the clustered columnstore index is updateable, the workload can perform many insert, update, and delete operations. For more information, see [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-overview.md) and [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+     Use a clustered columnstore index to improve data compression and query performance for data warehousing workloads that primarily perform bulk loads and read-only queries. Since the clustered columnstore index is updateable, the workload can perform many insert, update, and delete operations. For more information, see [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md) and [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 -   **SHOWPLAN**  
   

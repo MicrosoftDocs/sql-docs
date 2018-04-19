@@ -45,7 +45,7 @@ manager: "jhubbard"
  For information about migration methodologies, see [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)   
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Estimate Memory Requirements for Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

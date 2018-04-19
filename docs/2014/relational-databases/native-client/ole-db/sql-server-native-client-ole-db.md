@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   [Data Source Objects &#40;OLE DB&#41;](../../../database-engine/dev-guide/data-source-objects-ole-db.md)  
   
--   [Commands](../../../analysis-services/multidimensional-models/commands.md)  
+-   [Commands](../../../database-engine/dev-guide/commands.md)  
   
 -   [Rowsets](../../../analysis-services/multidimensional-models-adomd-net-client/rowsets.md)  
   
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   [BLOBs and OLE Objects](../../../database-engine/dev-guide/blobs-and-ole-objects.md)  
   
--   [Tables and Indexes](../../../database-engine/indexes.md)  
+-   [Tables and Indexes](../../relational-databases/indexes/indexes.md)  
   
 -   [Data Types &#40;OLE DB&#41;](../../../database-engine/dev-guide/data-types-ole-db.md)  
   
@@ -59,9 +59,9 @@ manager: "jhubbard"
   
 -   [FILESTREAM Support &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [Transactions](../../../analysis-services/multidimensional-models-adomd-net-client/transactions.md)  
+-   [Transactions](../../../database-engine/dev-guide/transactions.md)  
   
--   [Errors](../../../database-engine/errors.md)  
+-   [Errors](../../../database-engine/dev-guide/errors.md)  
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   

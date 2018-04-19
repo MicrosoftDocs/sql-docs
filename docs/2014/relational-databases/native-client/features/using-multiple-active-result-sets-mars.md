@@ -71,7 +71,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  A batch or stored procedure which starts a manual or implicit transaction when MARS is enabled must complete the transaction before the batch exits. If it does not, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rolls back all changes made by the transaction when the batch finishes. Such a transaction is managed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as a batch-scoped transaction. This is a new type of transaction introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] to enable existing well-behaved stored procedures to be used when MARS is enabled. For more information about batch-scoped transactions, see [Transaction Statements &#40;Transact-SQL&#41;](~/t-sql/language-elements/transactions-transact-sql.md).  
   
- For an example of using MARS from ADO, see [Using ADO with SQL Server Native Client](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
+ For an example of using MARS from ADO, see [Using ADO with SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports MARS through the addition of the SSPROP_INIT_MARSCONNECTION data source initialization property, which is implemented in the DBPROPSET_SQLSERVERDBINIT property set. In addition, a new connection string keyword, `MarsConn`, as been added. It accepts `true` or `false` values; `false` is the default.  

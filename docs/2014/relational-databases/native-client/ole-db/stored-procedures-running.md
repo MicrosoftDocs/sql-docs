@@ -50,6 +50,6 @@ manager: "jhubbard"
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider sets the DBPROP_OUTPUTPARAMETERAVAILABILITY property to DBPROPVAL_OA_ATROWRELEASE to indicate that return codes and output parameters are not returned until the result set is processed or released.  
   
 ## See Also  
- [Stored Procedures](../../../analysis-services/multidimensional-models-adomd-net-server/stored-procedures.md)  
+ [Stored Procedures](stored-procedures.md)  
   
   

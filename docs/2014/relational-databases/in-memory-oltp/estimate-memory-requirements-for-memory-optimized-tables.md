@@ -111,7 +111,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
   
- For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../database-engine/indexes.md).  
+ For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](../../database-engine/hash-indexes.md).  
   
  **Note:** You cannot change the hash index array size on the fly. To change the hash index array size you must drop the table, change the bucket_count value and recreate the table.  
   

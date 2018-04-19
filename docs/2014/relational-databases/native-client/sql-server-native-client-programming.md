@@ -39,7 +39,7 @@ manager: "jhubbard"
  While [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client uses components in Windows DAC, it is not explicitly dependant on a particular version of Windows DAC. You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client with the version of Windows DAC that is installed with any operating system supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## In This Section  
- [What's New in SQL Server Native Client](../../database-engine/dev-guide/sql-server-native-client.md)  
+ [What's New in SQL Server Native Client](sql-server-native-client.md)  
  Lists the significant new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features.  
   
  [When to Use SQL Server Native Client](when-to-use-sql-server-native-client.md)  

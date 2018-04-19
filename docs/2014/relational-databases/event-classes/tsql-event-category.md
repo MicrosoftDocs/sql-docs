@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Exec Prepared SQL Event Class](exec-prepared-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has executed a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.|  
-|[Prepare SQL Event Class](../../database-engine/prepare-sql-event-class.md)|Indicates that SqlClient, ODBC, OLE DB, or DB-Library has prepared a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements for use.|  
+|[Prepare SQL Event Class](prepare-sql-event-class.md)|Indicates that SqlClient, ODBC, OLE DB, or DB-Library has prepared a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements for use.|  
 |[SQL:BatchCompleted Event Class](sql-batchcompleted-event-class.md)|Indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch has completed.|  
 |[SQL:BatchStarting Event Class](sql-batchstarting-event-class.md)|Indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is starting.|  
 |[SQL:StmtCompleted Event Class](sql-stmtcompleted-event-class.md)|Indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.|  

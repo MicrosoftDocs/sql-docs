@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   C Data Type Extensibility. For more information, see [C Data Types in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
   
-     To support this feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return `SQL_C_SS_TIME2` (for `time` types) or `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset`) instead of `SQL_C_BINARY`, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](../../database-engine/dev-guide/date-and-time-improvements.md).  
+     To support this feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return `SQL_C_SS_TIME2` (for `time` types) or `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset`) instead of `SQL_C_BINARY`, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](features/date-and-time-improvements.md).  
   
 -   Calling `SQLGetData` with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
   

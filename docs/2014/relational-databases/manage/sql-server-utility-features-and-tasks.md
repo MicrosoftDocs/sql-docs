@@ -40,7 +40,7 @@ manager: "jhubbard"
 |-|-|  
 |**Description**|**Topic**|  
 |Describes considerations to configure a server to run utility and non-utility collection sets on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
-|Describes how to create a SQL Server utility control point.|[Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../database-engine/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
+|Describes how to create a SQL Server utility control point.|[Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Describes how to connect to a SQL Server Utility.|[Connect to a SQL Server Utility](connect-to-a-sql-server-utility.md)|  
 |Describes how to enroll an instance of SQL Server with a Utility Control Point.|[Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)|  
 |Describes how to use Utility Explorer to manage the SQL Server utility.|[Use Utility Explorer to Manage the SQL Server Utility](use-utility-explorer-to-manage-the-sql-server-utility.md)|  

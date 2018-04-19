@@ -73,7 +73,7 @@ manager: "jhubbard"
      Must be present at execution time. sqlncli11.dll is distributed with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../native-client-odbc-api/sqlprimarykeys.md)   

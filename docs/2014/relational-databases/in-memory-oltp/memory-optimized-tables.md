@@ -36,7 +36,7 @@ manager: "jhubbard"
   
      This section provides several topics related to performing transactions on memory-optimized tables including transaction isolation levels, and cross-container transactions.  
   
--   [Application Pattern for Partitioning Memory-Optimized Tables](../../database-engine/application-pattern-for-partitioning-memory-optimized-tables.md)  
+-   [Application Pattern for Partitioning Memory-Optimized Tables](application-pattern-for-partitioning-memory-optimized-tables.md)  
   
      Detailed code sample that shows how to emulate partitioned tables when using memory-optimized tables.  
   
@@ -52,11 +52,11 @@ manager: "jhubbard"
   
      Details the 8060 byte limit on memory-optimized table rows, and provides an example for calculating table and row sizes.  
   
--   [A Guide to Query Processing for Memory-Optimized Tables](../../database-engine/a-guide-to-query-processing-for-memory-optimized-tables.md)  
+-   [A Guide to Query Processing for Memory-Optimized Tables](a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
      Provides an overview of query processing for both memory-optimized tables, and natively compiled stored procedures.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

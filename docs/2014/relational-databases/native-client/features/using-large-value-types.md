@@ -35,7 +35,7 @@ manager: "jhubbard"
 >  You can also specify **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types as input and output parameter types of stored procedures, function return types, or in [CAST and CONVERT](~/t-sql/functions/cast-and-convert-transact-sql.md) functions.  
   
 > [!NOTE]  
->  If replicating data you may need to configure the [max text repl size server configuration option](../configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) to -1.  
+>  If replicating data you may need to configure the [max text repl size server configuration option](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) to -1.  
   
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** types as DBTYPE_STR, DBTYPE_BYTES, and DBTYPE_WSTR, respectively.  

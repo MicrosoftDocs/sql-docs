@@ -91,6 +91,6 @@ manager: "jhubbard"
 -   [SQL Server In-Memory OLTP Internals Overview](http://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## See Also  
- [Database Features](../relational-databases/database-features.md)  
+ [Database Features](../database-features.md)  
   
   

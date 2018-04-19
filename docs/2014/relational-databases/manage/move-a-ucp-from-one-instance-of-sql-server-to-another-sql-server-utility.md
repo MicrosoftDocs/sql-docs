@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 #### Move a UCP from one instance of SQL Server to another.  
   
-1.  Create a new UCP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will be the new host instance of the UCP. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../database-engine/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+1.  Create a new UCP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will be the new host instance of the UCP. For more information, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
 2.  If non-default policy settings have been set for any instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, make note of the policy thresholds so that you can re-establish them on the new UCP. Default policies are applied when instances are added to the new UCP. If default policies are in effect, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility list view displays **Global** in the **Policy Type** column.  
   

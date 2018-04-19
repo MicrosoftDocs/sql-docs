@@ -125,6 +125,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## See Also  
- [Stored Procedures](../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [Stored Procedures](stored-procedures.md)  
   
   

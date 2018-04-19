@@ -103,7 +103,7 @@ manager: "jhubbard"
   
 -   A NONCLUSTERED index. This type of index is best for indexes with many range queries. You may configure the sort order for each column in the **Sort column and order** list.  
   
- To understand the type of index best for your primary key, see [Hash Indexes](../../database-engine/indexes.md).  
+ To understand the type of index best for your primary key, see [Hash Indexes](../../database-engine/hash-indexes.md).  
   
  Click **Next** after you make your primary key choices.  
   

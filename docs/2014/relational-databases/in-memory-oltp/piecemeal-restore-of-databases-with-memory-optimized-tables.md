@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Piecemeal Restore of Databases With Memory-Optimized Tables
-  Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [Piecemeal Restores &#40;SQL Server&#41;](../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
+  Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md) and [Piecemeal Restores &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  
   
  A memory-optimized filegroup must be backed up and restored together with the primary filegroup:  
   
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
     -   The goal of a piecemeal restore is to bring the critical parts of database online without waiting for all the data. One example is if a database has partitioned data, such that older partitions are only used rarely. You can restore them only on an as-needed basis. Similar for filegroups that contain, for example, historical data.  
   
-    -   Using page repair, you can fix page corruption by specifically restoring the page. For more information, see [Restore Pages &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-pages-sql-server.md).  
+    -   Using page repair, you can fix page corruption by specifically restoring the page. For more information, see [Restore Pages &#40;SQL Server&#41;](../backup-restore/restore-pages-sql-server.md).  
   
 ## Samples  
  The examples use the following schema:  
@@ -94,6 +94,6 @@ GO
 ```  
   
 ## See Also  
- [Backup, Restore, and Recovery of Memory-Optimized Tables](memory-optimized-tables.md)  
+ [Backup, Restore, and Recovery of Memory-Optimized Tables](../../database-engine/backup-restore-and-recovery-of-memory-optimized-tabless.md)  
   
   

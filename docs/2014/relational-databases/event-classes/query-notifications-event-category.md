@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Trace](../../database-engine/sql-trace.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)   
+ [SQL Server Profiler](../../database-engine/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

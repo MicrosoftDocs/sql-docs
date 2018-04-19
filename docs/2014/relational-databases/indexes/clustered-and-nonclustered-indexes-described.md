@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  Indexes are automatically maintained for a table or view whenever the table data is modified.  
   
- See [Indexes](../../database-engine/indexes.md) for additional types of special purpose indexes.  
+ See [Indexes](indexes.md) for additional types of special purpose indexes.  
   
 ## Indexes and Constraints  
  Indexes are automatically created when PRIMARY KEY and UNIQUE constraints are defined on table columns. For example, when you create a table and identify a particular column to be the primary key, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatically creates a PRIMARY KEY constraint and index on that column. For more information, see [Create Primary Keys](../../database-engine/create-primary-keys.md) and [Create Unique Constraints](../../database-engine/create-unique-constraints.md).  

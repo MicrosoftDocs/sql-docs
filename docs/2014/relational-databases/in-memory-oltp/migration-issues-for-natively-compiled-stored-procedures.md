@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   [Implementing an Outer Join](implementing-an-outer-join.md)  
   
--   [Implementing the OR Operator in Natively Compiled Stored Procedures](../../database-engine/implementing-the-or-operator-in-../native-client/ole-db/stored-procedures.md)  
+-   [Implementing the OR Operator in Natively Compiled Stored Procedures](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
 ## See Also  
  [Migrating to In-Memory OLTP](migrating-to-in-memory-oltp.md)  

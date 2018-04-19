@@ -76,7 +76,7 @@ manager: "jhubbard"
  [Sparse Columns Support in SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
  Discusses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support for sparse columns.  
   
- [Date and Time Improvements](../../../database-engine/dev-guide/date-and-time-improvements.md)  
+ [Date and Time Improvements](date-and-time-improvements.md)  
  Discusses support added to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client for the date and time data types.  
   
  [Metadata Discovery](metadata-discovery.md)  

@@ -113,6 +113,6 @@ manager: "jhubbard"
  [SORT_IN_TEMPDB Option For Indexes](../indexes/indexes.md)   
  [Guidelines for Online Index Operations](../indexes/guidelines-for-online-index-operations.md)   
  [How Online Index Operations Work](../indexes/how-online-index-operations-work.md)   
- [Perform Index Operations Online](../perform-index-operations-online.md)  
+ [Perform Index Operations Online](../indexes/perform-index-operations-online.md)  
   
   

@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   The **Extended Events** node of Object Explorer. This enables you to start, stop or delete a session, or to import and export session templates.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider. This is a powerful tool that you can use to create, alter, and manage Extended Events sessions. For more information, see [Use the PowerShell Provider for Extended Events](../../analysis-services/instances/extended-events.md).  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider. This is a powerful tool that you can use to create, alter, and manage Extended Events sessions. For more information, see [Use the PowerShell Provider for Extended Events](use-the-powershell-provider-for-extended-events.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. This enables you to create and execute the code samples that are provided in the Extended Events topics. For more information, see [Object Explorer](../../database-engine/object-explorer.md).  
   
@@ -85,6 +85,6 @@ manager: "jhubbard"
  [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server Extended Events Tables &#40;Transact-SQL&#41;](~/relational-databases/system-tables/system-tables-transact-sql.md)   
  [Use the system_health Session](use-the-ssms-xe-profiler.md)   
- [Use the PowerShell Provider for Extended Events](../../analysis-services/instances/extended-events.md)  
+ [Use the PowerShell Provider for Extended Events](use-the-powershell-provider-for-extended-events.md)  
   
   

@@ -47,6 +47,6 @@ manager: "jhubbard"
 ## See Also  
  [Extended Events](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md)  
+ [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   

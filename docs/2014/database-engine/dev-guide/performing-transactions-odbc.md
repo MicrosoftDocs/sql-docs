@@ -29,6 +29,6 @@ manager: "jhubbard"
   
 -   [Transactions in ODBC](../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
   
--   [Performing Distributed Transactions](../../relational-databases/native-client/odbc/performing-transactions-distributed-transactions.md)  
+-   [Performing Distributed Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

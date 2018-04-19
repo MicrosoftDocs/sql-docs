@@ -61,6 +61,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Files That Manage Solutions and Projects](../../2014/database-engine/files-that-manage-solutions-and-projects.md)   
- [Associate File Extensions to a Code Editor](../../2014/database-engine/associate-file-extensions-to-a-code-editor.md)  
+ [Associate File Extensions to a Code Editor](../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

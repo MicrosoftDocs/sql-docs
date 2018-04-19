@@ -56,6 +56,6 @@ manager: "mblythe"
 |**ORIGIN**|**DBTYPE_I4**|Optional.|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

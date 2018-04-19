@@ -22,7 +22,7 @@ manager: "jhubbard"
   This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
->  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](../database-engine/choose-an-authentication-mode.md).  
+>  To run the code in this tutorial you must have both Mixed Mode security configured and the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database installed. For more information about Mixed Mode security, see [Choose an Authentication Mode](security/choose-an-authentication-mode.md).  
   
 ## Scenario  
  In this scenario, two users need accounts to access purchase order data stored in the [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. The requirements are as follows:  
@@ -320,6 +320,6 @@ GO
 ```  
   
 ## See Also  
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

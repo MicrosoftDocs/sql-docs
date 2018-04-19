@@ -28,6 +28,6 @@ manager: "jhubbard"
  Logon failure: user account restriction. Possible reasons are blank passwords not allowed, login hour restrictions, or a policy restriction has been enforced.  
   
 ## See Also  
- [Database Engine Events and Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [Database Engine Events and Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

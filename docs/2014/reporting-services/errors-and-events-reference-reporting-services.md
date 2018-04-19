@@ -25,7 +25,7 @@ manager: "mblythe"
   This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../2014/reporting-services/reporting-services-log-files-and-sources.md).  
   
 ## Cause and Resolution for Reporting Services Error Messages  
- Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../2014/reporting-services/cause-and-resolution-of-reporting-services-errors.md).  
+ Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../relational-databases/native-client-ole-db-errors/errors.md).  
   
 ## Report Server Events  
  The following report server events are recorded in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application log.  

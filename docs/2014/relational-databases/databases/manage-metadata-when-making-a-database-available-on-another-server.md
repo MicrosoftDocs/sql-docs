@@ -103,7 +103,7 @@ manager: "jhubbard"
 ##  <a name="credentials"></a> Credentials  
  A credential is a record that contains the authentication information that is required to connect to a resource outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Most credentials consist of a Windows login and password.  
   
- For more information about this feature, see [Credentials &#40;Database Engine&#41;](../../database-engine/credentials-database-engine.md).  
+ For more information about this feature, see [Credentials &#40;Database Engine&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy accounts use credentials. To learn the credential ID of a proxy account, use the [sysproxies](~/relational-databases/system-tables/dbo-sysproxies-transact-sql.md) system table.  
@@ -138,11 +138,11 @@ manager: "jhubbard"
   
  For more information, see also:  
   
--   [Encryption Hierarchy](../../database-engine/encryption-hierarchy.md)  
+-   [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md)  
   
 -   [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
--   [Create Identical Symmetric Keys on Two Servers](../../database-engine/create-identical-symmetric-keys-on-two-servers.md)  
+-   [Create Identical Symmetric Keys on Two Servers](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -200,10 +200,10 @@ manager: "jhubbard"
 ##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Properties are set on the Full-Text Engine by [sp_fulltext_service](~/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Make sure that the destination server instance has the required settings for these properties. For more information about these properties, see [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
- Additionally, if the [word breakers and stemmers](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../../database-engine/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../../database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
+ Additionally, if the [word breakers and stemmers](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) component or [full-text search filters](../search/configure-and-manage-filters-for-search.md) component have different versions on the original and destination server instances, full-text index and queries may behave differently. Also, the [thesaurus](../search/full-text-search.md) is stored in instance-specific files. You must either transfer a copy of those files to an equivalent location on the destination server instance or re-create them on new instance.  
   
 > [!NOTE]  
->  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../../database-engine/upgrade-full-text-search.md).  
+>  When you attach a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database that contains full-text catalog files onto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, the catalog files are attached from their previous location along with the other database files, the same as in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Upgrade Full-Text Search](../search/upgrade-full-text-search.md).  
   
  For more information, see also:  
   
@@ -322,7 +322,7 @@ manager: "jhubbard"
   
 -   [GRANT Server Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-permissions-transact-sql.md)  
   
- For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../../database-engine/encryption-hierarchy.md).  
+ For more information about certificates and asymmetric keys, see [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   

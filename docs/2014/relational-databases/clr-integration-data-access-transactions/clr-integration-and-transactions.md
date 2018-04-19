@@ -38,7 +38,7 @@ manager: "jhubbard"
  [Accessing the Current Transaction](accessing-the-current-transaction.md)  
  Describes how to access a transaction currently running in-process on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Using System.Transactions](using-system-transactions.md)  
+ [Using System.Transactions](../native-client-ole-db-transactions/transactions.md)  
  Describes how to use the `System.Transactions` application programming interface (API) in your managed application.  
   
  [Transaction Lifetimes](transaction-lifetimes.md)  

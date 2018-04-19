@@ -41,6 +41,6 @@ manager: "jhubbard"
   
  **To view the Windows application log**  
   
- [View the Windows Application Log &#40;Windows&#41;](../../../2014/database-engine/view-the-windows-application-log-windows.md)  
+ [View the Windows Application Log &#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   

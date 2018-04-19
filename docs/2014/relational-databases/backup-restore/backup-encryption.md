@@ -51,7 +51,7 @@ manager: "jhubbard"
 ##  <a name="Prerequisites"></a> Prerequisites  
  The following are prerequisites for encrypting a backup:  
   
-1.  **Create a Database Master Key for the master database:** The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. For more information, see [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../database-engine/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Create a Database Master Key for the master database:** The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. For more information, see [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Create a certificate or asymmetric Key to use for backup encryption. For more information on creating a certificate, see [CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md). For more information on creating an asymmetric key, see [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
@@ -134,7 +134,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |-----------------|-----------------|  
 |[Create an Encrypted Backup](create-an-encrypted-backup.md)|Describes the basic steps required to create an encrypted backup|  
 |[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
-|[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
+|[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)  

@@ -33,7 +33,7 @@ manager: "jhubbard"
  A UDT can be used as the column definition of a table, as a variable in a [!INCLUDE[tsql](../../../includes/tsql-md.md)] batch, or as an argument of a [!INCLUDE[tsql](../../../includes/tsql-md.md)] function or stored procedure.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports UDTs as binary types with metadata information, which allows you to manage UDTs as objects. UDT columns are exposed as DBTYPE_UDT, and their metadata are exposed through the core OLE DB interface **IColumnRowset**, and the new [ISSCommandWithParameters](../../../database-engine/dev-guide/isscommandwithparameters-ole-db.md) interface.  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports UDTs as binary types with metadata information, which allows you to manage UDTs as objects. UDT columns are exposed as DBTYPE_UDT, and their metadata are exposed through the core OLE DB interface **IColumnRowset**, and the new [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface.  
   
 > [!NOTE]  
 >  The **IRowsetFind::FindNextRow** method does not work with the UDT data type. DB_E_BADCOMPAREOP is returned if the UDT is used as a search column type.  
@@ -205,6 +205,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../../database-engine/dev-guide/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

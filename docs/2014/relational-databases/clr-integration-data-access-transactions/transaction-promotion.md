@@ -30,7 +30,7 @@ manager: "jhubbard"
 ## Distributed Transactions  
  Distributed transactions typically consume significant system resources. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) manages such transactions, and integrates all of the resource managers accessed in these transactions. Transaction promotion, on the other hand, is a special form of a `System.Transactions` transaction that effectively delegates the work to a simple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. `System.Transactions`, `System.Data.SqlClient`, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordinate the work involved in handling the transaction, promoting it to a full distributed transaction as needed.  
   
- The benefit of using transaction promotion is that when a connection is opened with an active `TransactionScope` transaction, and no other connections are opened, the transaction commits as a lightweight transaction, rather than incurring the additional overhead of a full distributed transaction. For more information about `TransactionScope`, see [Using System.Transactions](using-system-transactions.md).  
+ The benefit of using transaction promotion is that when a connection is opened with an active `TransactionScope` transaction, and no other connections are opened, the transaction commits as a lightweight transaction, rather than incurring the additional overhead of a full distributed transaction. For more information about `TransactionScope`, see [Using System.Transactions](../native-client-ole-db-transactions/transactions.md).  
   
 ## See Also  
  [CLR Integration and Transactions](clr-integration-and-transactions.md)  

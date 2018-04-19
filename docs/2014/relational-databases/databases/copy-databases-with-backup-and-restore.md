@@ -84,7 +84,7 @@ manager: "jhubbard"
   
 -   Move the catalog files to a new location during the restore operation, by using the WITH MOVE clause in your RESTORE DATABASE statement. For more information, see [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md).  
   
- For information about alternative options for upgrading full-text indexes, see [Upgrade Full-Text Search](../../database-engine/upgrade-full-text-search.md).  
+ For information about alternative options for upgrading full-text indexes, see [Upgrade Full-Text Search](../search/full-text-search.md).  
   
 ## Database Ownership  
  When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user who initiates the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership. To prevent unauthorized restoration of a database, use media or backup set passwords.  

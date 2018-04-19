@@ -34,11 +34,11 @@ manager: "jhubbard"
 |[SQL:StmtStarting Event Class](../event-classes/sql-stmtstarting-event-class.md), [SQL:StmtCompleted Event Class](../event-classes/sql-stmtcompleted-event-class.md)|Used to monitor the execution of CLR and [!INCLUDE[tsql](../../../includes/tsql-md.md)] routines.|  
   
 ## Performance Counters  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides objects and counters that can be used by System Monitor to monitor activity in computers running an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. An object is any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource, such as a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lock or a Windows process. Each object contains one or more counters that determine various aspects of the objects to monitor. For more information, see [Use SQL Server Objects](../../database-engine/use-sql-server-objects.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides objects and counters that can be used by System Monitor to monitor activity in computers running an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. An object is any [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource, such as a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lock or a Windows process. Each object contains one or more counters that determine various aspects of the objects to monitor. For more information, see [Use SQL Server Objects](../performance-monitor/use-sql-server-objects.md).  
   
 |Object|Description|  
 |------------|-----------------|  
-|[SQL Server, CLR Object](../../database-engine/sql-server-clr-object.md)|Total time spent in CLR execution.|  
+|[SQL Server, CLR Object](../performance-monitor/sql-server-clr-object.md)|Total time spent in CLR execution.|  
   
 ## Windows System Monitor (PERFMON.EXE) Counters  
  The Windows System Monitor (PERFMON.EXE) tool has several performance counters that can be used to monitor CLR integration applications. The .NET CLR performance counters can be filtered by the "sqlservr" process name to track CLR integration applications that are currently running.  

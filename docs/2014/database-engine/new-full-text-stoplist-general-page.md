@@ -18,11 +18,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # New Full-Text Stoplist (General Page)
-  Use this dialog box to create a full-text stoplist. A *stoplist* is a set of commonly used words, called *stopwords*, that are omitted from full-text indexing for tables that use the stoplist. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+  Use this dialog box to create a full-text stoplist. A *stoplist* is a set of commonly used words, called *stopwords*, that are omitted from full-text indexing for tables that use the stoplist. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/full-text-search.md).  
   
  **To use SQL Server Management Studio to create a stoplist**  
   
--   [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
+-   [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/full-text-search.md)  
   
 ## Options  
  **Full-text stoplist name**  
@@ -57,7 +57,7 @@ manager: "jhubbard"
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/full-text-search.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   

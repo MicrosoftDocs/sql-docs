@@ -58,6 +58,6 @@ manager: "mblythe"
 |`CUBE_SOURCE`|`DBTYPE_UI2`|Optional. **Note:**  Only one hierarchy can be included, and only those named sets whose hierarchies exactly match the restriction are returned.|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

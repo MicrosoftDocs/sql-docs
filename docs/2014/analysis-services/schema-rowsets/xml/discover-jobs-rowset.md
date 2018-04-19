@@ -49,6 +49,6 @@ manager: "mblythe"
 |JOB_MIN TOTAL_TIME_MS|DBTYPE_I8|Optional.|  
   
 ## See Also  
- [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

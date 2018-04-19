@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ### View tuning recommendations  
   
-1.  Start [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. See [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in the practice [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
+1.  Start [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. See [Launching Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in the practice [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
   
 2.  Double-click **MySession** in the **Session Monitor** pane. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor loads the session information from your previous tuning session and displays the **Recommendations** tab. Note that [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor made no **Partition Recommendations** because you accepted all the tuning option defaults and **No partitioning** was selected on the **Tuning Options** tab.  
   

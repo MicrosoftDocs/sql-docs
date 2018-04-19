@@ -36,7 +36,7 @@ manager: "jhubbard"
 |[Preventing Invalid Requests](../../../2014/reporting-services/dev-guide/preventing-invalid-requests.md)|Describes techniques for preventing requests that are not valid from being sent to the report server.|  
 |[Using Try and Catch Blocks](../../../2014/reporting-services/dev-guide/using-try-and-catch-blocks.md)|Describes how to further enhance the reliability of your application with try/catch blocks.|  
 |[Handling Warnings and Cases That Do Not Cause Exceptions](../../../2014/reporting-services/dev-guide/handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explains how to handle errors that do not result in an exception being thrown by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[Using the Detail Property to Handle Specific Errors](../../../2014/reporting-services/dev-guide/using-the-detail-property-to-handle-specific-errors.md)|Explains how to programmatically handle specific errors by using the **Detail** property of the **SoapException** object.|  
+|[Using the Detail Property to Handle Specific Errors](../../relational-databases/native-client-ole-db-errors/errors.md)|Explains how to programmatically handle specific errors by using the **Detail** property of the **SoapException** object.|  
   
 ## See Also  
  [Detail Property](../../../2014/reporting-services/dev-guide/detail-property.md)   

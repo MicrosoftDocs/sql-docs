@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  You can also use the following tips and techniques to avoid problems with running packages  
   
--   **Help to ensure data integrity by using transactions**. For more information, see [Integration Services Transactions](../../2014/integration-services/integration-services-transactions.md).  
+-   **Help to ensure data integrity by using transactions**. For more information, see [Integration Services Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md).  
   
 -   **Restart packages from the point of failure by using checkpoints**. For more information, see [Restart Packages by Using Checkpoints](../../2014/integration-services/restart-packages-by-using-checkpoints.md).  
   

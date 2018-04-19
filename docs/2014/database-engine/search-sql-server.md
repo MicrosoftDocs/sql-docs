@@ -19,10 +19,10 @@ manager: "jhubbard"
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides search features for text and documents that go beyond the functionality of the [!INCLUDE[tsql](../includes/tsql-md.md)]`LIKE` keyword.  
   
 ## In This Section  
- [Full-Text Search](../../2014/database-engine/full-text-search.md)  
+ [Full-Text Search](../relational-databases/search/full-text-search.md)  
  Identifies text or documents that contain specific words or phrases, and that meet additional search conditions such as proximity of search terms.  
   
- [Semantic Search &#40;SQL Server&#41;](../../2014/database-engine/semantic-search-sql-server.md)  
+ [Semantic Search &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)  
  Identifies the key phrases in text or documents, discovers similar or related documents, and provides information to explain how documents are similar or related.  
   
 ## See Also  

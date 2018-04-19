@@ -23,7 +23,7 @@ manager: "jhubbard"
   When a database is backed up, the TRUSTWORTHY database property is set to OFF. Therefore, on a new mirror database TRUSTWORTHY is always OFF. If the database needs to be trustworthy after a failover, extra setup steps are necessary after mirroring begins.  
   
 > [!NOTE]  
->  For information about this database property, see [TRUSTWORTHY Database Property](../trustworthy-database-property.md).  
+>  For information about this database property, see [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md).  
   
 ## Procedure  
   
@@ -76,7 +76,7 @@ manager: "jhubbard"
     -   [Establish a Database Mirroring Session Using Windows Authentication &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## See Also  
- [TRUSTWORTHY Database Property](../trustworthy-database-property.md)   
+ [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
  [Set Up an Encrypted Mirror Database](set-up-an-encrypted-mirror-database.md)  
   
   

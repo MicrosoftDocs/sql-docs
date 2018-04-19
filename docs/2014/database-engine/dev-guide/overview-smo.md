@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 -   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../../2014/database-engine/sql-server-profiler.md), [SQL Trace](../../../2014/database-engine/sql-trace.md), [SQL Server Distributed Replay](../../../2014/database-engine/sql-server-distributed-replay.md), and [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
--   Support for certificates and keys for security control. For more information, see [Encryption Hierarchy](../../../2014/database-engine/encryption-hierarchy.md).  
+-   Support for certificates and keys for security control. For more information, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   DDL triggers for adding functionality when DDL events occur. For more information, see [DDL Triggers](../../../2014/database-engine/ddl-triggers.md).  
   

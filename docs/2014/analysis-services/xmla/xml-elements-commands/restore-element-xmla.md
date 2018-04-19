@@ -90,6 +90,6 @@ manager: "mblythe"
  [Batch Element &#40;XMLA&#41;](batch-element-xmla.md)   
  [Parallel Element &#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Synchronize Element &#40;XMLA&#41;](synchronize-element-xmla.md)   
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

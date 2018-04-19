@@ -92,6 +92,6 @@ GO
 ## See Also  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)   
- [Plan Guides](../../../2014/database-engine/plan-guides.md)  
+ [Plan Guides](../../relational-databases/performance/plan-guides.md)  
   
   

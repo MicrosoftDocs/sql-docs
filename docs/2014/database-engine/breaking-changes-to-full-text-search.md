@@ -56,7 +56,7 @@ manager: "jhubbard"
 |[DATABASEPROPERTYEX](~/t-sql/functions/databasepropertyex-transact-sql.md)|Using the **IsFullTextEnabled** property.|The **IsFullTextEnabled** setting indicates whether full-text search is enabled in a given database.|The value of this column has no effect. User databases are always enabled for full-text search.|  
   
 ## See Also  
- [Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md)   
+ [Behavior Changes to Full-Text Search](../relational-databases/search/full-text-search.md)   
  [Full-Text Search](../../2014/database-engine/full-text-search.md)  
   
   

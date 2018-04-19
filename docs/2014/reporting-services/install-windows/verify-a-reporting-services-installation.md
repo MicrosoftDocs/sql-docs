@@ -111,6 +111,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Troubleshoot a Reporting Services Installation](troubleshoot-a-reporting-services-installation.md)   
- [Cause and Resolution of Reporting Services Errors](../cause-and-resolution-of-reporting-services-errors.md)  
+ [Cause and Resolution of Reporting Services Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

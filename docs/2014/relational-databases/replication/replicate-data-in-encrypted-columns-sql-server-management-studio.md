@@ -85,6 +85,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md)   
- [Create Identical Symmetric Keys on Two Servers](../../../2014/database-engine/create-identical-symmetric-keys-on-two-servers.md)  
+ [Create Identical Symmetric Keys on Two Servers](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

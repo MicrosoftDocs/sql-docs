@@ -26,7 +26,7 @@ manager: "mblythe"
   
  Report authors can use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to:  
   
--   Visualize spatial data from a query result set for a map report. After you run the query, use the **Spatial results** tab in the result set pane. For more information, see [View Spatial Data in Object Explorer](../../2014/database-engine/view-spatial-data-in-object-explorer.md).  
+-   Visualize spatial data from a query result set for a map report. After you run the query, use the **Spatial results** tab in the result set pane. For more information, see [View Spatial Data in Object Explorer](../relational-databases/scripting/view-spatial-data-in-object-explorer.md).  
   
  This section contains step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Creating and managing shared schedules can also be performed using Report Manager.  
   

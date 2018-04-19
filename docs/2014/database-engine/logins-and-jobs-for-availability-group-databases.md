@@ -55,9 +55,9 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Login](../../2014/database-engine/create-a-login.md)  
+-   [Create a Login](../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Create a Database User](../../2014/database-engine/create-a-database-user.md).  
+-   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
 -   [Create a Job](../../2014/database-engine/create-a-job.md)  
   

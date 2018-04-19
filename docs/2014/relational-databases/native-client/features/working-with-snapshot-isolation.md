@@ -54,7 +54,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The errors DB_S_ERRORSOCCURRED or DB_E_ERRORSOCCURRED will occur if DBPROPVAL_TI_SNAPSHOT is set when using versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- For information about how snapshot isolation is supported in transactions, see [Supporting Local Transactions](../../../database-engine/dev-guide/supporting-local-transactions.md).  
+ For information about how snapshot isolation is supported in transactions, see [Supporting Local Transactions](../../native-client-ole-db-transactions/transactions.md).  
   
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver provides support for snapshot isolation though enhancements made to the [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) and [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) functions.  
@@ -65,10 +65,10 @@ manager: "jhubbard"
 ### SQLGetInfo  
  The [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) function now supports the SQL_TXN_SS_SNAPSHOT value that has been added to the SQL_TXN_ISOLATION_OPTION info type.  
   
- For information about how snapshot isolation is supported in transactions, see [Cursor Transaction Isolation Level](../../../database-engine/dev-guide/cursor-transaction-isolation-level.md).  
+ For information about how snapshot isolation is supported in transactions, see [Cursor Transaction Isolation Level](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
- [Rowset Properties and Behaviors](../../../database-engine/dev-guide/rowset-properties-and-behaviors.md)  
+ [Rowset Properties and Behaviors](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

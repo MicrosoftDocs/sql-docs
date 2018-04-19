@@ -77,6 +77,6 @@ manager: "mblythe"
  For more information about performing batch operations in XMLA, see [Performing Batch Operations &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

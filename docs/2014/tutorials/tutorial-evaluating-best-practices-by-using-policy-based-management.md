@@ -46,6 +46,6 @@ manager: "jhubbard"
  [Lesson 1: Evaluate Best Practices on an On-Demand Basis](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## See Also  
- [Administer Servers by Using Policy-Based Management](../../2014/database-engine/administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

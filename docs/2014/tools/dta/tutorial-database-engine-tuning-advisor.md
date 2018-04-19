@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## What You Will Learn  
  This tutorial will teach you how to navigate the Database Engine Tuning Advisor GUI, and how to perform some basic tasks with both the GUI and the **dta** utility. It contains the following lessons:  
   
- [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+ [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  In this lesson, you will familiarize yourself with the new Database Engine Tuning Advisor GUI and learn how to set display options and layout.  
   
  [Lesson 2: Using Database Engine Tuning Advisor](lesson-2-using-database-engine-tuning-advisor.md)  
@@ -48,6 +48,6 @@ manager: "jhubbard"
 -   [dta Utility](../../database-engine/dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
   
 ## Next Lesson  
- [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+ [Lesson 1: Basic Navigation in Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -56,6 +56,6 @@ ORDER BY TABLE_ID DESC
 ```  
   
 ## See Also  
- [Analysis Services Schema Rowsets](../analysis-services-schema-rowsets.md)  
+ [Analysis Services Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

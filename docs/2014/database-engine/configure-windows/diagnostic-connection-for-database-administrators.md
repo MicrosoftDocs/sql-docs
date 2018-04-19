@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  Only members of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin role can connect using the DAC.  
   
- The DAC is available and supported through the **sqlcmd** command-prompt utility using a special administrator switch (**-A**). For more information about using **sqlcmd**, see [Use sqlcmd with Scripting Variables](../use-sqlcmd-with-scripting-variables.md). You can also connect prefixing `admin:`to the instance name in the format **sqlcmd -Sadmin:***<instance_name>.* You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:`\<*instance_name*>.  
+ The DAC is available and supported through the **sqlcmd** command-prompt utility using a special administrator switch (**-A**). For more information about using **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). You can also connect prefixing `admin:`to the instance name in the format **sqlcmd -Sadmin:***<instance_name>.* You can also initiate a DAC from a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor by connecting to `admin:`\<*instance_name*>.  
   
 ## Restrictions  
  Because the DAC exists solely for diagnosing server problems in rare circumstances, there are some restrictions on the connection:  
@@ -107,7 +107,7 @@ manager: "jhubbard"
 ## Related Tasks  
   
 ## Related Content  
- [Use sqlcmd with Scripting Variables](../use-sqlcmd-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
  [sqlcmd Utility](../sqlcmd-utility.md)  
   

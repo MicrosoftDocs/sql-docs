@@ -118,6 +118,6 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../database-engine/dev-guide/profiling-odbc-driver-performance-how-to-topics-odbc.md)  
+ [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

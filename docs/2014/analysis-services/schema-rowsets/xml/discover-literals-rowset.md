@@ -49,7 +49,7 @@ manager: "mblythe"
 |`LiteralName`|`DBTYPE_WSTR`|Optional.|  
   
 ## See Also  
- [XML for Analysis Schema Rowsets](xml-for-analysis-schema-rowsets.md)   
+ [XML for Analysis Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)   
  [DISCOVER_KEYWORDS Rowset &#40;XMLA&#41;](discover-keywords-rowset-xmla.md)  
   
   

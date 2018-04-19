@@ -183,7 +183,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Memory-Optimized Tables](memory-optimized-tables.md)   
- [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)   
+ [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)   
  [Requirements for Using Memory-Optimized Tables](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   

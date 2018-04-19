@@ -53,7 +53,7 @@ manager: "jhubbard"
   
  When the query optimizer uses an index, it searches the index key columns, finds the storage location of the rows needed by the query and extracts the matching rows from that location. Generally, searching the index is much faster than searching the table because unlike a table, an index frequently contains very few columns per row and the rows are in sorted order.  
   
- The query optimizer typically selects the most efficient method when executing queries. However, if no indexes are available, the query optimizer must use a table scan. Your task is to design and create indexes that are best suited to your environment so that the query optimizer has a selection of efficient indexes from which to select. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md) to help with the analysis of your database environment and in the selection of appropriate indexes.  
+ The query optimizer typically selects the most efficient method when executing queries. However, if no indexes are available, the query optimizer must use a table scan. Your task is to design and create indexes that are best suited to your environment so that the query optimizer has a selection of efficient indexes from which to select. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [Database Engine Tuning Advisor](../performance/database-engine-tuning-advisor.md) to help with the analysis of your database environment and in the selection of appropriate indexes.  
   
 ## Related Tasks  
  [Create Clustered Indexes](create-clustered-indexes.md)  

@@ -74,7 +74,7 @@ manager: "jhubbard"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](../../database-engine/dev-guide/clr-stored-procedures.md), and [CLR Triggers](../../database-engine/dev-guide/clr-triggers.md).  
+ For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md), and [CLR Triggers](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## Deploying the Assembly to Production Servers  
  Once the CLR database objects have been tested and verified on the test server, they can be distributed to production servers. For more information about debugging managed database objects, see [Debugging CLR Database Objects](debugging-clr-database-objects.md).  

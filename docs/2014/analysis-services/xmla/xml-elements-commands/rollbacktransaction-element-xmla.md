@@ -62,6 +62,6 @@ manager: "mblythe"
  [BeginTransaction Element &#40;XMLA&#41;](begintransaction-element-xmla.md)   
  [Cancel Element &#40;XMLA&#41;](cancel-element-xmla.md)   
  [CommitTransaction Element &#40;XMLA&#41;](committransaction-element-xmla.md)   
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

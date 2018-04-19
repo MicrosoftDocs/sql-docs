@@ -109,6 +109,6 @@ manager: "jhubbard"
  [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md)   
  [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)   
- [Use sqlcmd with Scripting Variables](../../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

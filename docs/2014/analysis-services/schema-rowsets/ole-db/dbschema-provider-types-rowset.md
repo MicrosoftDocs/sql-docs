@@ -63,6 +63,6 @@ manager: "mblythe"
 |`BEST_MATCH`|`DBTYPE_BOOL`||  
   
 ## See Also  
- [OLE DB Schema Rowsets](ole-db-schema-rowsets.md)  
+ [OLE DB Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

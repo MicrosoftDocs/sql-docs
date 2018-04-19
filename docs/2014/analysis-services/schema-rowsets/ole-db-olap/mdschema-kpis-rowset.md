@@ -64,6 +64,6 @@ manager: "mblythe"
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Optional) A bitmap with one of the following valid values:<br /><br /> -   `1` CUBE<br />-   `2` DIMENSION<br /><br /> Default restriction is a value of `1`.|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

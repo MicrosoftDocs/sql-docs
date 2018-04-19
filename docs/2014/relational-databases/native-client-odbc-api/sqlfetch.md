@@ -21,7 +21,7 @@ manager: "jhubbard"
 # SQLFetch
   SQLFetch supports enhanced date and time features.  
   
- For information about how result column values of date/time types are converted, see [Conversions from SQL to C](../../database-engine/dev-guide/conversions-from-sql-to-c.md).  
+ For information about how result column values of date/time types are converted, see [Conversions from SQL to C](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md).  
   
 ## SQLFetch Support for Large CLR UDTs  
  `SQLFetch` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

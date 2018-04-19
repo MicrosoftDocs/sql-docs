@@ -43,7 +43,7 @@ manager: "jhubbard"
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLDescribeCol Support for Large CLR UDTs  
  `SQLDescribeCol` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

@@ -74,6 +74,6 @@ manager: "mblythe"
 |`COLUMN_OLAP_TYPE`|`DBTYPE_WSTR`|Optional|  
   
 ## See Also  
- [OLE DB Schema Rowsets](ole-db-schema-rowsets.md)  
+ [OLE DB Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

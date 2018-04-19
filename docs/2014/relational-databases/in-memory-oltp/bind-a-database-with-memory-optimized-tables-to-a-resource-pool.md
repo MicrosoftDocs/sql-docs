@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  Before you can bind a database to a resource pool both the database and the resource pool must exist. The binding takes effect the next time the database is brought online. See [Database States](../databases/database-states.md) for more information.  
   
- For information about resource pools, see [Resource Governor Resource Pool](../../database-engine/resource-governor-resource-pool.md).  
+ For information about resource pools, see [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md).  
   
 ## Steps to bind a database to a resource pool  
   
@@ -206,10 +206,10 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## See Also  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [Resource Governor](../../database-engine/resource-governor.md)   
- [Resource Governor Resource Pool](../../database-engine/resource-governor-resource-pool.md)   
- [Create a Resource Pool](../../database-engine/create-a-resource-pool.md)   
- [Change Resource Pool Settings](../../database-engine/change-resource-pool-settings.md)   
- [Delete a Resource Pool](../../database-engine/delete-a-resource-pool.md)  
+ [Resource Governor](../resource-governor/resource-governor.md)   
+ [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md)   
+ [Create a Resource Pool](../resource-governor/create-a-resource-pool.md)   
+ [Change Resource Pool Settings](../resource-governor/change-resource-pool-settings.md)   
+ [Delete a Resource Pool](../resource-governor/delete-a-resource-pool.md)  
   
   

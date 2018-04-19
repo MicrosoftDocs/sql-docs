@@ -48,7 +48,7 @@ manager: "jhubbard"
  [SQL Server In-Process Specific Extensions to ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
  Discusses the in-process specific `SqlPipe`, `SqlContext`, `SqlTriggerContext`, and `SqlDataRecord` objects.  
   
- [CLR Integration and Transactions](../../clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [CLR Integration and Transactions](../../native-client-ole-db-transactions/transactions.md)  
  Describes how the new transaction framework provided in the System.Transactions namespace integrates with ADO.NET and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR integration.  
   
  [XML Serialization from CLR Database Objects](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  

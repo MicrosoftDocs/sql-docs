@@ -51,6 +51,6 @@ manager: "jhubbard"
  [How to: Install SQL Server 2008 from the Command Prompt](http://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## See Also  
- [Monitor and Enforce Best Practices by Using Policy-Based Management](../../2014/database-engine/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [Monitor and Enforce Best Practices by Using Policy-Based Management](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

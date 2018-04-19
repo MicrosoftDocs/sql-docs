@@ -92,6 +92,6 @@ manager: "mblythe"
  [Discover Method &#40;XMLA&#41;](xml-elements-methods-discover.md)   
  [Methods &#40;XMLA&#41;](xml-elements-methods.md)   
  [XML Elements &#40;XMLA&#41;](../dev-guide/xml-elements-xmla.md)   
- [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Analysis Services Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

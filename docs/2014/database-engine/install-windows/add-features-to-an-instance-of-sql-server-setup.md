@@ -140,7 +140,7 @@ manager: "jhubbard"
 ## Next Steps  
  Configure your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation  
   
--   To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and activates key services and features. For more information, see [Surface Area Configuration](../surface-area-configuration.md).  
+-   To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and activates key services and features. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md)   

@@ -54,6 +54,6 @@ manager: "mblythe"
   
 ## See Also  
  [DISCOVER_ENUMERATORS Rowset](../xml/discover-enumerators-rowset.md)   
- [Analysis Services Schema Rowsets](../analysis-services-schema-rowsets.md)  
+ [Analysis Services Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

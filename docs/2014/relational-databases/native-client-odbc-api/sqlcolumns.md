@@ -63,12 +63,12 @@ manager: "jhubbard"
 |SS_IS_COMPUTED|Smallint|For a column in a TABLE_TYPE, this is SQL_TRUE if the column is a computed column; otherwise, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE if the column is an identity column; otherwise, SQL_FALSE.|  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLColumns Support for Enhanced Date and Time Features  
- For information about the values returned for date/time types, see [Catalog Metadata](../../database-engine/dev-guide/catalog-metadata.md).  
+ For information about the values returned for date/time types, see [Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md).  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLColumns Support for Large CLR UDTs  
  `SQLColumns` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

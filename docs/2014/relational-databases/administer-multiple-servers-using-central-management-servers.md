@@ -34,6 +34,6 @@ manager: "jhubbard"
  To create a Central Management Server and server groups, use the **Registered Servers** window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Note that the Central Management Server cannot be a member of a group that it maintains. For more information about how to create Central Management Servers and server groups, see [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../database-engine/create-a-central-management-server-and-server-group.md).  
   
 ## See Also  
- [Administer Servers by Using Policy-Based Management](../database-engine/administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

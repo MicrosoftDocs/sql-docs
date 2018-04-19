@@ -82,6 +82,6 @@ manager: "mblythe"
 |`cell`|`MDACTION_COORDINATE_CELL`|  
   
 ## See Also  
- [OLE DB for OLAP Schema Rowsets](ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB for OLAP Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

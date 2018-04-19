@@ -41,13 +41,13 @@ manager: "jhubbard"
   
 |Object name|Description|  
 |-----------------|-----------------|  
-|[SQLAgent:Jobs](../../2014/database-engine/sql-server-agent-jobs-object.md)|Performance information about jobs that have been started, success rates, and current status|  
-|[SQLAgent:JobSteps](../../2014/database-engine/sql-server-agent-jobsteps-object.md)|Status information about job steps|  
-|[SQLAgent:Alerts](../../2014/database-engine/sql-server-agent-alerts-object.md)|Information about number of alerts and notifications|  
-|[SQLAgent:Statistics](../../2014/database-engine/sql-server-agent-statistics-object.md)|General performance information|  
+|[SQLAgent:Jobs](../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Performance information about jobs that have been started, success rates, and current status|  
+|[SQLAgent:JobSteps](../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md)|Status information about job steps|  
+|[SQLAgent:Alerts](../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Information about number of alerts and notifications|  
+|[SQLAgent:Statistics](../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|General performance information|  
   
 ## See Also  
- [Monitor and Tune for Performance](../../2014/database-engine/monitor-and-tune-for-performance.md)   
- [Start System Monitor &#40;Windows&#41;](../../2014/database-engine/start-system-monitor-windows.md)  
+ [Monitor and Tune for Performance](../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Start System Monitor &#40;Windows&#41;](../relational-databases/performance/start-system-monitor-windows.md)  
   
   

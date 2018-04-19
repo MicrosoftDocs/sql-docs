@@ -31,7 +31,7 @@ manager: "jhubbard"
   Before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], when a user's password expired, only an administrator could reset it. Beginning with [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supports handling password expiration programmatically through both the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider and the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, and through changes to the **SQL Server Login** dialog boxes.  
   
 > [!NOTE]  
->  When possible, prompt users to enter their credentials at run time and avoid storing their credentials in a persisted format. If you must persist their credentials, you should encrypt them using the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). For more information about the use of passwords, see [Strong Passwords](../../../database-engine/strong-passwords.md).  
+>  When possible, prompt users to enter their credentials at run time and avoid storing their credentials in a persisted format. If you must persist their credentials, you should encrypt them using the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). For more information about the use of passwords, see [Strong Passwords](../../security/strong-passwords.md).  
   
 ## SQL Server Login Error Codes  
  When a connection cannot be made because of authentication problems, one of the following SQL Server error codes will be available to the application to assist diagnosis and recovery.  
@@ -85,7 +85,7 @@ manager: "jhubbard"
   
  If an attempt to change the password fails unexpectedly, the server returns error code 18468. A standard OLEDB error is returned from the connection attempt.  
   
- For more information about the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
+ For more information about the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports password expiration though a user interface and programmatically.  

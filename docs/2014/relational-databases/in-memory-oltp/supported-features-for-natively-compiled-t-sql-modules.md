@@ -34,7 +34,7 @@ manager: "jhubbard"
   
  For information on data types supported in natively compiled stored procedures, see [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
- For complete information about unsupported constructs, and for information about how to work around some of the unsupported features in natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). For more information about unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ For complete information about unsupported constructs, and for information about how to work around some of the unsupported features in natively compiled stored procedures, see [Migration Issues for Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md). For more information about unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
 ##  <a name="pncsp"></a> Programmability in Natively Compiled Stored Procedures  
  The following are supported:  
@@ -152,7 +152,7 @@ manager: "jhubbard"
 ##  <a name="auditing"></a> Auditing  
  Procedure level auditing is supported in natively compiled stored procedures. Statement level auditing is not supported.  
   
- For more information about auditing, see [Create a Server Audit and Database Audit Specification](../../database-engine/create-a-server-audit-and-database-audit-specification.md).  
+ For more information about auditing, see [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Table, Query, and Join Hints  
  The following are supported:  
@@ -228,6 +228,6 @@ GO
   
 ## See Also  
  [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)   
- [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)  
+ [Migration Issues for Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

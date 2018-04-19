@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Large CLR User-Defined Types (ODBC)
   This topic discusses the changes to ODBC in SQL Server Native Client to support large common language runtime (CLR) user-defined types (UDTs).  
   
- For a sample showing ODBC support for large CLR UDTs, see [Support for Large UDTs](../../../database-engine/dev-guide/support-for-large-udts.md).  
+ For a sample showing ODBC support for large CLR UDTs, see [Support for Large UDTs](../../native-client-odbc-how-to/support-for-large-udts.md).  
   
  For more information about support for large CLR UDTs in SQL Server Native Client, see [Large CLR User-Defined Types](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   

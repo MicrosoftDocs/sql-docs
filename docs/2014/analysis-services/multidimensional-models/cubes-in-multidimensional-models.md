@@ -50,6 +50,6 @@ manager: "mblythe"
 |[Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)|Describes how to define and configure a calculation in an MDX script.|  
 |[Actions in Multidimensional Models](actions-in-multidimensional-models.md)|Describes how to define and configure an action.|  
 |[Perspectives in Multidimensional Models](perspectives-in-multidimensional-models.md)|Describes how to define and configure a perspective.|  
-|[Defining Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|Describes how to work with stored procedures.|  
+|[Defining Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)|Describes how to work with stored procedures.|  
   
   

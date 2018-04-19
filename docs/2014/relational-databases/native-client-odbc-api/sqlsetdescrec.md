@@ -37,7 +37,7 @@ manager: "jhubbard"
 |*StringLengthPtr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> For a table-valued parameter, this is the number of rows to transfer or SQL_DATA_AT_EXEC. This is a pointer to a value that holds the number of rows to transfer with SQLExecDirect.|  
 |*IndicatorPtr*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLSetDescRec Support for Enhanced Date and Time Features  
  The values allowed for date/time types are as follows:  
@@ -51,7 +51,7 @@ manager: "jhubbard"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLSetDescRec Support for Large CLR UDTs  
  `SQLSetDescRec` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

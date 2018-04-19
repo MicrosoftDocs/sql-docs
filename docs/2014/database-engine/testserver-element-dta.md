@@ -48,9 +48,9 @@ manager: "jhubbard"
 |**Child elements**|None.|  
   
 ## Example  
- For a usage example of this element, see [Reduce the Production Server Tuning Load](../../2014/database-engine/reduce-the-production-server-tuning-load.md).  
+ For a usage example of this element, see [Reduce the Production Server Tuning Load](../relational-databases/performance/reduce-the-production-server-tuning-load.md).  
   
 ## See Also  
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../2014/database-engine/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

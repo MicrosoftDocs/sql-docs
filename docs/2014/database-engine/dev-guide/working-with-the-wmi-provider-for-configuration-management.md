@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  The WMI management script can be used to update the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services run.  
   
- Security certificates are supported by the WMI Provider for Configuration Management. For more information about certificates, see [Encryption Hierarchy](../../../2014/database-engine/encryption-hierarchy.md).  
+ Security certificates are supported by the WMI Provider for Configuration Management. For more information about certificates, see [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 ## See Also  
  [SQL Server Configuration Manager](../../../2014/database-engine/sql-server-configuration-manager.md)  

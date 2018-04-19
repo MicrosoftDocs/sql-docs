@@ -41,6 +41,6 @@ manager: "jhubbard"
  Specifies the number of rows to be returned that is specified in the Query Editor script that is created. The default is 1000 rows.  
   
 ## See Also  
- [SQL Server Audit &#40;Database Engine&#41;](../../2014/database-engine/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

@@ -113,7 +113,7 @@ manager: "jhubbard"
 {rpc SalesByCategory}  
 ```  
   
- For a sample application that demonstrates an RPC escape sequence, see [Execute a Stored Procedure &#40;Using RPC Syntax&#41; and Process Return Codes and Output Parameters &#40;OLE DB&#41;](../../../database-engine/dev-guide/execute-stored-procedure-with-rpc-and-process-output.md).  
+ For a sample application that demonstrates an RPC escape sequence, see [Execute a Stored Procedure &#40;Using RPC Syntax&#41; and Process Return Codes and Output Parameters &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### Transact-SQL EXECUTE Statement  
  The ODBC CALL escape sequence and the RPC escape sequence are the preferred methods for calling a stored procedure rather than the [EXECUTE](~/t-sql/language-elements/execute-transact-sql.md) statement. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider uses the RPC mechanism of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to optimize command processing. This RPC protocol increases performance by eliminating much of the parameter processing and statement parsing done on the server.  
@@ -125,6 +125,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## See Also  
- [Stored Procedures](stored-procedures.md)  
+ [Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

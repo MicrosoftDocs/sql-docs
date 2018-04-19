@@ -105,6 +105,6 @@ using (TransactionScope transScope = new TransactionScope())
 ```  
   
 ## See Also  
- [CLR Integration and Transactions](clr-integration-and-transactions.md)  
+ [CLR Integration and Transactions](../native-client-ole-db-transactions/transactions.md)  
   
   

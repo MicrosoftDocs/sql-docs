@@ -77,7 +77,7 @@ manager: "jhubbard"
   
  Before you define jobs to run during CPU idle time, determine the load on the CPU during normal processing. To do this, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] or Performance Monitor to monitor server traffic and collect statistics. You can then use the information you gather to set the CPU idle time percentage and duration.  
   
- Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] or Performance Monitor to monitor CPU usage, see [Monitor CPU Usage](../../2014/database-engine/monitor-cpu-usage.md).  
+ Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] or Performance Monitor to monitor CPU usage, see [Monitor CPU Usage](../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## Related Tasks  
   

@@ -50,6 +50,6 @@ manager: "jhubbard"
  The description pane appears at the bottom of the **Properties** window and shows the property type and a short description of the property. You can turn the description of the property off and on using the **Description** command on the shortcut menu.  
   
 ## See Also  
- [Use the Properties Window in Management Studio](../../2014/database-engine/use-the-properties-window-in-management-studio.md)  
+ [Use the Properties Window in Management Studio](../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

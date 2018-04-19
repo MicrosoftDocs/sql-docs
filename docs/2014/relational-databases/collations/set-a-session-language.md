@@ -46,7 +46,7 @@ manager: "jhubbard"
  To set the session language from the server side, use [SET LANGUAGE](~/t-sql/statements/set-language-transact-sql.md).  
   
 ## Setting the Session Language from the Client  
- The session language can be set on the client side by using OLE DB, ODBC or ADO.NET. For OLE DB, use the SSPROP_INIT_CURRENTLANGUAGE property. For more information, see [Initialization and Authorization Properties](../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
+ The session language can be set on the client side by using OLE DB, ODBC or ADO.NET. For OLE DB, use the SSPROP_INIT_CURRENTLANGUAGE property. For more information, see [Initialization and Authorization Properties](../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
  For ODBC, use the Language keyword. For more information, see [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   

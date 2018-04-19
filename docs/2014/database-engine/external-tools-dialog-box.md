@@ -48,7 +48,7 @@ manager: "jhubbard"
  Specify the variables that are passed to the tool when the tool is selected on the menu. Arguments can specify values that are passed to the tool or command when it is launched. For example, a value can specify a file name or directory. Use the arrow button to select from a list of predefined arguments. You can add more than one. For a complete list of predefined arguments and their definitions, see [Arguments for External Tools](../../2014/database-engine/arguments-for-external-tools.md). You can also enter custom arguments (for example, command line switches), depending on the command or tool you use.  
   
  **Use Output window**  
- Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](../../2014/database-engine/output-window.md).  
+ Opens the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Output window to display output of the command being run. Not all tools present output in a format that can be presented in the Output window. For more information, see [Output Window](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
  **Treat output as Unicode**  
  Interprets the output as Unicode.  

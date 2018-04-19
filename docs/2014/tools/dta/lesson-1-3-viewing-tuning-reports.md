@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ### View tuning reports  
   
-1.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](lesson-1-1-launching-database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in previous practices of this lesson.  
+1.  Start Database Engine Tuning Advisor. See [Launching Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md). Make sure that you connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you used in previous practices of this lesson.  
   
      Double-click **MySession** in the **Session Monitor** pane. Database Engine Tuning Advisor loads the session information from this session.  
   

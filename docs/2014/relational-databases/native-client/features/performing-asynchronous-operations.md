@@ -29,11 +29,11 @@ manager: "jhubbard"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows applications to perform asynchronous database operations. Asynchronous processing enables methods to return immediately without blocking on the calling thread. This allows much of the power and flexibility of multithreading, without requiring the developer to explicitly create threads or handle synchronization. Applications request asynchronous processing when initializing a database connection, or when initializing the result from the execution of a command.  
   
 ## Opening and Closing a Database Connection  
- When using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, applications designed to initialize a data source object asynchronously can set the DBPROPVAL_ASYNCH_INITIALIZE bit in the DBPROP_INIT_ASYNCH property prior to calling **IDBInitialize::Initialize**. When this property is set, the provider returns immediately from the call to **Initialize** with either S_OK, if the operation has completed immediately, or DB_S_ASYNCHRONOUS, if the initialization is continuing asynchronously. Applications can query for the **IDBAsynchStatus** or [ISSAsynchStatus](../../../database-engine/dev-guide/issasynchstatus-ole-db.md)interface on the data source object, and then call **IDBAsynchStatus::GetStatus** or[ISSAsynchStatus::WaitForAsynchCompletion](../../../database-engine/dev-guide/issasynchstatus-waitforasynchcompletion-ole-db.md) to get the status of the initialization.  
+ When using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, applications designed to initialize a data source object asynchronously can set the DBPROPVAL_ASYNCH_INITIALIZE bit in the DBPROP_INIT_ASYNCH property prior to calling **IDBInitialize::Initialize**. When this property is set, the provider returns immediately from the call to **Initialize** with either S_OK, if the operation has completed immediately, or DB_S_ASYNCHRONOUS, if the initialization is continuing asynchronously. Applications can query for the **IDBAsynchStatus** or [ISSAsynchStatus](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)interface on the data source object, and then call **IDBAsynchStatus::GetStatus** or[ISSAsynchStatus::WaitForAsynchCompletion](../../native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) to get the status of the initialization.  
   
  In addition, the SSPROP_ISSAsynchStatus property has been added to the DBPROPSET_SQLSERVERROWSET property set. Providers that support the **ISSAsynchStatus** interface must implement this property with a value of VARIANT_TRUE.  
   
- **IDBAsynchStatus::Abort** or [ISSAsynchStatus::Abort](../../../database-engine/dev-guide/issasynchstatus-abort-ole-db.md) can be called to cancel the asynchronous **Initialize** call. The consumer must explicitly request Asynchronous Data Source Initialization. Otherwise, **IDBInitialize::Initialize** does not return until the data source object is completely initialized.  
+ **IDBAsynchStatus::Abort** or [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) can be called to cancel the asynchronous **Initialize** call. The consumer must explicitly request Asynchronous Data Source Initialization. Otherwise, **IDBInitialize::Initialize** does not return until the data source object is completely initialized.  
   
 > [!NOTE]  
 >  Data source objects used for connection pooling cannot call the **ISSAsynchStatus** interface in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider. The **ISSAsynchStatus** interface is not exposed for pooled data source objects.  
@@ -185,7 +185,7 @@ if (hr == DB_S_ASYNCHRONOUS)
   
 ## See Also  
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
- [Rowset Properties and Behaviors](../../../database-engine/dev-guide/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../../database-engine/dev-guide/issasynchstatus-ole-db.md)  
+ [Rowset Properties and Behaviors](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

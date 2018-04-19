@@ -40,7 +40,7 @@ manager: "jhubbard"
 ## User Action  
  To work around this problem, depending on your environment, one or more of the following steps might reduce or eliminate the error messages:  
   
--   Determine whether you have any hardware bottlenecks. If it is necessary, upgrade your hardware so that it can support the configuration, query, and load requirements of your environment. For more information about bottlenecks, see [Identify Bottlenecks](../../database-engine/identify-bottlenecks.md).  
+-   Determine whether you have any hardware bottlenecks. If it is necessary, upgrade your hardware so that it can support the configuration, query, and load requirements of your environment. For more information about bottlenecks, see [Identify Bottlenecks](../performance/identify-bottlenecks.md).  
   
 -   Check for any logged errors and run any diagnostics provided by your hardware vendor.  
   

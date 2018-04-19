@@ -211,6 +211,6 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 ```  
   
 ## See Also  
- [Handling Errors and Messages](../../../database-engine/dev-guide/handling-errors-and-messages.md)  
+ [Handling Errors and Messages](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

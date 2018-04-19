@@ -65,9 +65,9 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  For output parameters, a buffer must be bound and if the value is too large, the buffer is filled and a SQL_SUCCESS_WITH_INFO message and is returned along with the "string data; right truncation" warning. The data that was truncated is then discarded.  
   
 ## SQLDescribeParam and Table-Valued Parameters  
- An application can retrieve table-valued parameter information for a prepared statement with SQLDescribeParam. For more information, see [Table-Valued Parameter Metadata for Prepared Statements](../../../2014/database-engine/dev-guide/table-valued-parameter-metadata-for-prepared-statements.md).  
+ An application can retrieve table-valued parameter information for a prepared statement with SQLDescribeParam. For more information, see [Table-Valued Parameter Metadata for Prepared Statements](../native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- For more information about table-valued parameters in general, see [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters in general, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLDescribeParam Support for Enhanced Date and Time Features  
  The values returned for date/time types are as follows:  
@@ -81,7 +81,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLDescribeParam Support for Large CLR UDTs  
  `SQLDescribeParam` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

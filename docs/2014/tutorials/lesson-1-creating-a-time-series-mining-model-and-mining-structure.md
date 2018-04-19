@@ -175,7 +175,7 @@ CREATE MINING MODEL [Mining Model Name]
 7.  In the **Save As** dialog box, browse to the appropriate folder, and name the file `Forecasting_MIXED.dmx`.  
   
 ## Executing the Query  
- The final step is to execute the query. After a query is created and saved, it needs to be executed to create the mining model and its mining structure on the server. For more information about executing queries in Query Editor, see [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/database-engine-query-editor-sql-server-management-studio.md).  
+ The final step is to execute the query. After a query is created and saved, it needs to be executed to create the mining model and its mining structure on the server. For more information about executing queries in Query Editor, see [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### To execute the query  
   

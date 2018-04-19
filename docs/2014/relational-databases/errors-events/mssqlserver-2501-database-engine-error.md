@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   Verify the schema name that contains the object. If the object belongs to a schema other than the default (**dbo**) schema, you must specify the table or object name by using the two-part format *schema_name.object_name*.  
   
--   Verify that the object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about how to view object metadata, see [Metadata Visibility Configuration](../../database-engine/metadata-visibility-configuration.md).  
+-   Verify that the object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about how to view object metadata, see [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

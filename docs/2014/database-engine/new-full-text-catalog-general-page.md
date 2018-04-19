@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  **To use SQL Server Management Studio to create a full-text catalog**  
   
--   [Create and Manage Full-Text Catalogs](../../2014/database-engine/create-and-manage-full-text-catalogs.md)  
+-   [Create and Manage Full-Text Catalogs](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## UIElement List  
  **Full-text catalog name**  

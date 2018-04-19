@@ -34,9 +34,9 @@ manager: "jhubbard"
   
  SQLSetStmtAttr can also be used to set SQL_SOPT_SS_NAME_SCOPE. For more information, see the SQL_SOPT_SS_NAME_SCOPE section, later in this topic.  
   
- For more information, see [Table-Valued Parameter Metadata for Prepared Statements](../../database-engine/dev-guide/table-valued-parameter-metadata-for-prepared-statements.md).  
+ For more information, see [Table-Valued Parameter Metadata for Prepared Statements](../native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLSetStmtAttr Support for Sparse Columns  
  SQLSetStmtAttr can be used to set SQL_SOPT_SS_NAME_SCOPE. For more information, see the SQL_SOPT_SS_NAME_SCOPE section, later in this topic.For more information about sparse columns, see [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  

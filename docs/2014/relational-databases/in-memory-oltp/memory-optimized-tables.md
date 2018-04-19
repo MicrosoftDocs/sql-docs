@@ -24,7 +24,7 @@ manager: "jhubbard"
   
      Details what memory-optimized tables are and provides information about data durability, accessing data in memory-optimized tables, and performance and scalability.  
   
--   [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)  
+-   [Native Compilation of Tables and Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
      Details how memory-optimized tables and natively compiled stored procedures are compiled into DLLs, and provides related security considerations.  
   

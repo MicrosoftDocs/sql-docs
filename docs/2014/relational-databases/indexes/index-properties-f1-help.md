@@ -139,7 +139,7 @@ manager: "jhubbard"
  Specifies the filegroup for FILESTREAM data. This list displays only FILESTREAM filegroups. The default list selection is the PRIMARY FILESTREAM filegroup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Partition scheme**  
- Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](../../database-engine/partitioned-tables-and-indexes.md).  
+ Stores the index in a partition scheme. Clicking **Partition Scheme** enables the grid below. The default list selection is the partition scheme that is used for storing the table data. When you select a different partition scheme in the list, the information in the grid is updated. For more information, see [Partitioned Tables and Indexes](../native-client-ole-db-tables-indexes/tables-and-indexes.md).  
   
  The partition scheme option is unavailable if there are no partition schemes in the database.  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
 >  This option is not available for XML indexes, or if the index is a disabled clustered index.  
   
  **Set maximum degree of parallelism**  
- Limits the number of processors to use during parallel plan execution. The default value, 0, uses the actual number of available CPUs. Setting the value to 1 suppresses parallel plan generation; setting the value to a number greater than 1 restricts the maximum number of processors used by a single query execution. This option only becomes available if the dialog box is in the **Rebuild** or **Recreate** state. For more information, see [Set the Max Degree of Parallelism Option for Optimal Performance](../../database-engine/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limits the number of processors to use during parallel plan execution. The default value, 0, uses the actual number of available CPUs. Setting the value to 1 suppresses parallel plan generation; setting the value to a number greater than 1 restricts the maximum number of processors used by a single query execution. This option only becomes available if the dialog box is in the **Rebuild** or **Recreate** state. For more information, see [Set the Max Degree of Parallelism Option for Optimal Performance](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  If a value greater than the number of available CPUs is specified, the actual number of available CPUs is used.  

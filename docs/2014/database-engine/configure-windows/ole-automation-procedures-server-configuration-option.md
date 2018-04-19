@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Ole Automation Procedures Server Configuration Option
-  Use the `Ole Automation Procedures` option to specify whether OLE Automation objects can be instantiated within [!INCLUDE[tsql](../../includes/tsql-md.md)] batches. This option can also be configured using the Policy-Based Management or the **sp_configure** stored procedure. For more information, see [Surface Area Configuration](../surface-area-configuration.md).  
+  Use the `Ole Automation Procedures` option to specify whether OLE Automation objects can be instantiated within [!INCLUDE[tsql](../../includes/tsql-md.md)] batches. This option can also be configured using the Policy-Based Management or the **sp_configure** stored procedure. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
  The `Ole Automation Procedures` option can be set to the following values.  
   
@@ -56,7 +56,7 @@ GO
 ## See Also  
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
- [Surface Area Configuration](../surface-area-configuration.md)   
+ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

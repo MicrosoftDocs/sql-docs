@@ -20,7 +20,7 @@ manager: "jhubbard"
   
  A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. The credential stores the URI path of the storage container and the shared access signature key values. For each storage container used by a data or log file, you must create a SQL Server Credential whose name matches the container path.  
   
- For general information about credentials, see [Credentials &#40;Database Engine&#41;](../database-engine/credentials-database-engine.md).  
+ For general information about credentials, see [Credentials &#40;Database Engine&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
 >  The requirements for creating a SQL Server credential described below are specific to the [SQL Server Data Files in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) feature. For information on creating credentials for backup processes in Azure storage, see [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md).  

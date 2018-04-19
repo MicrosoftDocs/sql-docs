@@ -65,7 +65,7 @@ manager: "jhubbard"
 ## Sending Multiple Statements in a Batch  
  If you include multiple statements in an Execute SQL task, you can group them and run them as a batch. To signal the end of a batch, use the GO command. All the SQL statements between two GO commands are sent in a batch to the OLE DB provider to be run. The SQL command can include multiple batches separated by GO commands.  
   
- There are restrictions on the kinds of SQL statements that you can group in a batch. For more information, see [Batches of Statements](../../2014/database-engine/dev-guide/batches-of-statements.md).  
+ There are restrictions on the kinds of SQL statements that you can group in a batch. For more information, see [Batches of Statements](../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md).  
   
  If the Execute SQL task runs a batch of SQL statements, the following rules apply to the batch:  
   

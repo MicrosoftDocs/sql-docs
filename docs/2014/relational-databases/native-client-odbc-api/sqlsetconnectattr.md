@@ -106,7 +106,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQLPOINTER to a character string|The string contains the name of the primary file for the database to attach. Include the full path name of the file.|  
   
 ## SQL_COPT_SS_BCP  
- SQL_COPT_SS_BCP enables bulk copy functions on a connection. For more information, see [Bulk Copy Functions](../../database-engine/dev-guide/bulk-copy-functions.md).  
+ SQL_COPT_SS_BCP enables bulk copy functions on a connection. For more information, see [Bulk Copy Functions](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md).  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## SQL_COPT_SS_CONNECTION_DEAD  
  This is a read-only attribute.  
   
- For more information about SQL_COPT_SS_CONNECTION_DEAD, see [SQLGetConnectAttr](sqlgetconnectattr.md) and [Connecting to a Data Source &#40;ODBC&#41;](../../database-engine/dev-guide/connecting-to-a-data-source-odbc.md).  
+ For more information about SQL_COPT_SS_CONNECTION_DEAD, see [SQLGetConnectAttr](sqlgetconnectattr.md) and [Connecting to a Data Source &#40;ODBC&#41;](../native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
 ## Example  
  This example logs performance data.  
@@ -357,7 +357,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 ## See Also  
  [SQLSetConnectAttr Function](http://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
- [Bulk Copy Functions](../../database-engine/dev-guide/bulk-copy-functions.md)   
+ [Bulk Copy Functions](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](~/t-sql/statements/set-ansi-warnings-transact-sql.md)   

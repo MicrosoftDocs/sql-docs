@@ -28,7 +28,7 @@ manager: "jhubbard"
  Type the name of the credential for the proxy.  
   
 > [!NOTE]  
->  The credential name provided must be the name of an existing credential. For information on creating credentials, see [Create a Credential](../../2014/database-engine/create-a-credential.md)  
+>  The credential name provided must be the name of an existing credential. For information on creating credentials, see [Create a Credential](../relational-databases/security/authentication-access/create-a-credential.md)  
   
  **...**  
  Launches the **Select Credential** dialog.  

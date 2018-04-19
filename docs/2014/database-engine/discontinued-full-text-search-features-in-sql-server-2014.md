@@ -19,10 +19,10 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Discontinued Full-Text Search Features in SQL Server 2014
-  No full-text search features are discontinued in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], though some have been deprecated. For more information, see [Deprecated Full-Text Search Features in SQL Server 2014](../../2014/database-engine/deprecated-full-text-search-features-in-sql-server-2014.md).  
+  No full-text search features are discontinued in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], though some have been deprecated. For more information, see [Deprecated Full-Text Search Features in SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md).  
   
 ## See Also  
- [Breaking Changes to Full-Text Search](../../2014/database-engine/breaking-changes-to-full-text-search.md)   
+ [Breaking Changes to Full-Text Search](../relational-databases/search/full-text-search.md)   
  [Behavior Changes to Full-Text Search](../../2014/database-engine/behavior-changes-to-full-text-search.md)   
  [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)  
   

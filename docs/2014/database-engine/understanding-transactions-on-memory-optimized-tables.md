@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   [Transaction Isolation Levels](transaction-isolation-levels.md)  
   
--   [Cross-Container Transactions](cross-container-transactions.md)  
+-   [Cross-Container Transactions](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
  For more information, see [Control Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
   

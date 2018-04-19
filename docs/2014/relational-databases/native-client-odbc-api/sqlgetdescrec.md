@@ -38,7 +38,7 @@ manager: "jhubbard"
 |*ScalePtr*|0|SQL_DESC_SCALE|  
 |*NullablePtr*|1|SQL_DESC_NULLABLE|  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLGetDescRec Support for Enhanced Date and Time Features  
  The values returned for date/time types are as follows:  
@@ -52,7 +52,7 @@ manager: "jhubbard"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLGetDescRec Support for Large CLR UDTs  
  `SQLGetDescRec` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

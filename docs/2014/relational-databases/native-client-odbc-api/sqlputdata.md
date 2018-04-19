@@ -48,16 +48,16 @@ manager: "jhubbard"
   
 -   Any value less than 0 is an error and results in a diagnostic record being logged with SQLState HY090 and the messaage "Invalid string or buffer length".  
   
- The *DataPtr* parameter is ignored, but must be set to a non-NULL value. For more information, see the section on Variable TVP row binding in [Binding and Data Transfer of Table-Valued Parameters and Column Values](../../database-engine/dev-guide/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
+ The *DataPtr* parameter is ignored, but must be set to a non-NULL value. For more information, see the section on Variable TVP row binding in [Binding and Data Transfer of Table-Valued Parameters and Column Values](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
  If *StrLen_Or_Ind* has any value other than SQL_DEFAULT_PARAM or a number between 0 and the SQL_PARAMSET_SIZE (that is, the *ColumnSize* parameter of SQLBindParameter), it is an error. This error causes SQLPutData to return SQL_ERROR: SQLSTATE=HY090, "Invalid string or buffer length".  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## SQLPutData Support for Enhanced Date and Time Features  
- Parameter values of date/time types are converted as described in [Conversions from C to SQL](../../database-engine/dev-guide/conversions-from-c-to-sql.md).  
+ Parameter values of date/time types are converted as described in [Conversions from C to SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md).  
   
- For more information, see [Date and Time Improvements &#40;ODBC&#41;](../../database-engine/dev-guide/date-and-time-improvements-odbc.md).  
+ For more information, see [Date and Time Improvements &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## SQLPutData Support for Large CLR UDTs  
  `SQLPutData` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

@@ -28,7 +28,7 @@ manager: "jhubbard"
 |[Full-Text Index Properties &#40;Columns Page&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
 ## See Also  
- [Full-Text Search](../../2014/database-engine/full-text-search.md)   
+ [Full-Text Search](../relational-databases/search/full-text-search.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)   

@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 6.  Enter a password, and then click **Ok**.  
   
-     The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](../../2014/database-engine/back-up-a-database-master-key.md).  
+     The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### To create the SSISDB catalog programmatically  
   

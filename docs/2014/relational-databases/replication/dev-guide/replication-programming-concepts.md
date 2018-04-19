@@ -82,7 +82,7 @@ manager: "jhubbard"
   
 -   [Security and Protection &#40;Replication&#41;](../../../../2014/relational-databases/replication/security-and-protection-replication.md)  
   
--   [Security Center for SQL Server Database Engine and Azure SQL Database](../../../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Security Center for SQL Server Database Engine and Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## Choosing a Development Environment  
  When developing a replication application, there are three basic development environments to consider. Each development environment has access to the same replication functionalities with some exceptions. Replication applications can be developed in each of the following environments.  

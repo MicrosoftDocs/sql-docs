@@ -84,7 +84,7 @@ manager: "jhubbard"
 -   [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)  
   
 ## See Also  
- [Surface Area Configuration](../../../2014/database-engine/surface-area-configuration.md)   
+ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  
   

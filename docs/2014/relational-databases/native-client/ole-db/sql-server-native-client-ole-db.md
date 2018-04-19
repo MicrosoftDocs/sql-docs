@@ -33,43 +33,43 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Creating a SQL Server Native Client OLE DB Provider Application](../../../database-engine/dev-guide/creating-a-sql-server-native-client-ole-db-provider-application.md)  
+-   [Creating a SQL Server Native Client OLE DB Provider Application](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [Data Source Objects &#40;OLE DB&#41;](../../../database-engine/dev-guide/data-source-objects-ole-db.md)  
+-   [Data Source Objects &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [Commands](../../../database-engine/dev-guide/commands.md)  
+-   [Commands](../../native-client-ole-db-commands/commands.md)  
   
--   [Rowsets](../../../database-engine/dev-guide/rowsets.md)  
+-   [Rowsets](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [Stored Procedures](stored-procedures.md)  
+-   [Stored Procedures](../../native-client-odbc-queries/executing-statements/procedures.md)  
   
--   [BLOBs and OLE Objects](../../../database-engine/dev-guide/blobs-and-ole-objects.md)  
+-   [BLOBs and OLE Objects](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
--   [Tables and Indexes](../../../database-engine/dev-guide/tables-and-indexes.md)  
+-   [Tables and Indexes](../../native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Data Types &#40;OLE DB&#41;](../../../database-engine/dev-guide/data-types-ole-db.md)  
+-   [Data Types &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
 -   [Schema Rowset Support &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
--   [Table-Valued Parameters &#40;OLE DB&#41;](../../../database-engine/dev-guide/table-valued-parameters-ole-db.md)  
+-   [Table-Valued Parameters &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Date and Time Improvements &#40;OLE DB&#41;](../../../database-engine/dev-guide/date-and-time-improvements-ole-db.md)  
+-   [Date and Time Improvements &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Large CLR User-Defined Types &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM Support &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [Transactions](../../../database-engine/dev-guide/transactions.md)  
+-   [Transactions](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../../database-engine/dev-guide/errors.md)  
+-   [Errors](../../native-client-ole-db-errors/errors.md)  
   
 -   [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Sparse Columns Support &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41; Reference](../../../database-engine/dev-guide/sql-server-native-client-ole-db-reference.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; Reference](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [OLE DB How-to Topics](../../../database-engine/dev-guide/ole-db-how-to-topics.md)  
+-   [OLE DB How-to Topics](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## See Also  
  [SQL Server Native Client Programming](../sql-server-native-client-programming.md)  

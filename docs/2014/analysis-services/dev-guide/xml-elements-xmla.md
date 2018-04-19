@@ -29,7 +29,7 @@ manager: "mblythe"
 |--------------|-----------------|  
 |[Headers &#40;XMLA&#41;](../xmla/xml-elements-headers/xml-elements-headers.md)|Describes those elements sent in the SOAP header of a SOAP envelope, either by an application or by an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, to manage protocol-level features.|  
 |[Methods &#40;XMLA&#41;](../xmla/xml-elements-methods.md)|Describes the topmost elements sent by an application in a SOAP envelope to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance to retrieve data or metadata, or to perform actions on the instance.|  
-|[Commands &#40;XMLA&#41;](../xmla/xml-elements-commands/xml-elements-commands.md)|Describes the elements sent within an XMLA method to perform a specific action.|  
+|[Commands &#40;XMLA&#41;](../../relational-databases/native-client-ole-db-commands/commands.md)|Describes the elements sent within an XMLA method to perform a specific action.|  
 |[Objects &#40;XMLA&#41;](../xmla/xml-elements-objects.md)|Describes the topmost elements received by an application in a SOAP envelope from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in response to an XMLA method.|  
 |[Properties &#40;XMLA&#41;](../xmla/xml-elements-properties/xml-elements-properties.md)|Describes the child elements for XMLA headers, methods, objects, or commands.|  
   

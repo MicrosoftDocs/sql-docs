@@ -46,7 +46,7 @@ manager: "jhubbard"
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports encryption without validation through the addition of the SSPROP_INIT_TRUST_SERVER_CERTIFICATE data source initialization property, which is implemented in the DBPROPSET_SQLSERVERDBINIT property set. In addition, a new connection string keyword, "TrustServerCertificate", as been added. It accepts yes or no values; no is the default. When using service components, it accepts true or false values; false is the default.  
   
- For more information about enhancements made to the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../../database-engine/dev-guide/initialization-and-authorization-properties.md).  
+ For more information about enhancements made to the DBPROPSET_SQLSERVERDBINIT property set, see [Initialization and Authorization Properties](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports encryption without validation through additions to the [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) and [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) functions. SQL_COPT_SS_TRUST_SERVER_CERTIFICATE has been added to accept either SQL_TRUST_SERVER_CERTIFICATE_YES or SQL_TRUST_SERVER_CERTIFICATE_NO, with SQL_TRUST_SERVER_CERTIFICATE_NO being the default. In addition, a new connection string keyword, "TrustServerCertificate", has been added. It accepts yes or no values; "no" is the default.  

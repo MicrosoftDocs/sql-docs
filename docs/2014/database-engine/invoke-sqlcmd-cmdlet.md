@@ -147,6 +147,6 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 ## See Also  
  [Use the Database Engine cmdlets](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md)   
- [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md)  
+ [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   

@@ -101,7 +101,7 @@ RECEIVE * FROM MyQueue
 > [!NOTE]  
 >  Preparing statements will never cause the subscription to be initiated; only statement execution will achieve this and query notifications are not impacted by the use of OLE DB core services.  
   
- For more information about the DBPROPSET_SQLSERVERROWSET property set, see [Rowset Properties and Behaviors](../../../database-engine/dev-guide/rowset-properties-and-behaviors.md).  
+ For more information about the DBPROPSET_SQLSERVERROWSET property set, see [Rowset Properties and Behaviors](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports query notifications through the addition of three new attributes to the [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) and [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) functions:  

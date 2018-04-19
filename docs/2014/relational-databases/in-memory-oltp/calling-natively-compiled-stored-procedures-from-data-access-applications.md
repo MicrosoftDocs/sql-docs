@@ -391,6 +391,6 @@ int _tmain() {
 ```  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

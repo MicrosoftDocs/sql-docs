@@ -44,7 +44,7 @@ manager: "jhubbard"
 |**Available Columns**|Displays all the columns that are full-text indexed. Select a check box to add a column to the full-text index.|  
 |**Language for Word Breaker**|Displays the language of the word breaker.|  
 |**Data Type Column**|Lists the name of the column in the table that holds the document type of the column listed in **Available Columns** if the column is a `varbinary(max)` or `image` column.|  
-|**Statistical Semantics**|Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../2014/database-engine/semantic-search-sql-server.md).<br /><br /> If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is disabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.|  
+|**Statistical Semantics**|Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is disabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.|  
   
 ## Track Changes  
   

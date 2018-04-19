@@ -51,6 +51,6 @@ manager: "jhubbard"
  Because you will need to implement retry logic when using memory-optimized tables (in many scenarios), and because you will need to work around certain feature limitations, you may want to create a wrapper interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure. For an example, see [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](memory-optimized-tables.md).  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

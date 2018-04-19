@@ -53,6 +53,6 @@ manager: "jhubbard"
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)   
- [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md)  
+ [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md)  
   
   

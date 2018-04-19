@@ -81,7 +81,7 @@ manager: "jhubbard"
  Displays a sample of the font style, size, and color scheme for the selected values in **Show settings for** and **Display items**. You can use this text box to preview the results as you experiment with different formatting options.  
   
 ## See Also  
- [Color Coding in Query Editors](../../2014/database-engine/color-coding-in-query-editors.md)   
+ [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)   
  [Options &#40;Text Editor: Editor Tab and Status Bar Page&#41;](../../2014/database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

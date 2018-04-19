@@ -37,7 +37,7 @@ manager: "mblythe"
 ## Related Sections  
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
  [Developing with ADOMD.NET](../multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   

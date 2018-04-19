@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  All FILESTREAM data container access must be performed in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can also be executed in the same transaction. This maintains consistency between the SQL data and FILESTREAM BLOB data.  
   
- To access the FILESTREAM BLOB by using Win32, [Windows Authorization](../../database-engine/choose-an-authentication-mode.md) must be enabled.  
+ To access the FILESTREAM BLOB by using Win32, [Windows Authorization](../security/choose-an-authentication-mode.md) must be enabled.  
   
 > [!IMPORTANT]  
 >  When the file is opened for write access, the transaction is owned by the FILESTREAM agent. Only Win32 file I/O is allowed until the transaction is released. To release the transaction, the write handle must be closed.  

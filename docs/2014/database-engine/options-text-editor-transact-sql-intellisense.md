@@ -41,6 +41,6 @@ manager: "jhubbard"
  Specifies whether the names of built-in [!INCLUDE[tsql](../includes/tsql-md.md)] functions that are included in completion lists use uppercase letters, such as DATEADD; or lowercase letters, such as dateadd. Select the option that best matches the [!INCLUDE[tsql](../includes/tsql-md.md)] coding conventions that you are using.  
   
 ## See Also  
- [Troubleshooting IntelliSense &#40;SQL Server Management Studio&#41;](../../2014/database-engine/troubleshooting-intellisense-sql-server-management-studio.md)  
+ [Troubleshooting IntelliSense &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/intellisense-sql-server-management-studio.md)  
   
   

@@ -262,6 +262,6 @@ manager: "jhubbard"
  [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   
  [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)   
  [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Use sqlcmd with Scripting Variables](../../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

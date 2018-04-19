@@ -58,6 +58,6 @@ manager: "mblythe"
 |`STRUCTURE_NAME`|`DBTYPE_WSTR`|Optional.|  
   
 ## See Also  
- [Data Mining Schema Rowsets](data-mining-schema-rowsets.md)  
+ [Data Mining Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

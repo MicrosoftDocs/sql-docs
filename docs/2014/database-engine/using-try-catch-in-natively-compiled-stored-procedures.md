@@ -59,6 +59,6 @@ go
 ```  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
   

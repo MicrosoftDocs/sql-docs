@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)   
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)   
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [Solutions &#40;SQL Server Management Studio&#41;](../../2014/database-engine/solutions-sql-server-management-studio.md)  
   
   

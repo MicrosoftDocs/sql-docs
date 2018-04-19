@@ -25,6 +25,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md)   
- [Server Performance and Activity Monitoring](../../2014/database-engine/server-performance-and-activity-monitoring.md)  
+ [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

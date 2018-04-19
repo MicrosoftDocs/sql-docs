@@ -49,7 +49,7 @@
 ###### [Preventing Invalid Requests](preventing-invalid-requests.md)
 ###### [Using Try/Catch Blocks](using-try-and-catch-blocks.md)
 ###### [Handling Warnings and Cases That Do Not Cause Exceptions](handling-warnings-and-cases-that-do-not-cause-exceptions.md)
-###### [Using the Detail Property to Handle Specific Errors](using-the-detail-property-to-handle-specific-errors.md)
+###### [Using the Detail Property to Handle Specific Errors](../../relational-databases/native-client-ole-db-errors/errors.md)
 ##### [Reporting Services SoapException Class](reporting-services-soapexception-class.md)
 ###### [Detail Property](detail-property.md)
 ###### [HelpLink Element](helplink-element.md)

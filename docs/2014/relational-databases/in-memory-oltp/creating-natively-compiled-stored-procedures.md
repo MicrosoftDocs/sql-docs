@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Creating Natively Compiled Stored Procedures
-  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md).  
+  Natively compiled stored procedures do not implement the full [!INCLUDE[tsql](../../includes/tsql-md.md)] programmability and query surface area. There are certain [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs that cannot be used inside natively compiled stored procedures. For more information, see [Supported Constructs in Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md).  
   
  There are, however, several [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are only supported for natively compiled stored procedures:  
   
@@ -108,6 +108,6 @@ go
  The advantage of this approach is that the application does not go offline. However, more work is required to maintain the references and make sure they always point to the latest version of the stored procedure.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../native-client/ole-db/stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

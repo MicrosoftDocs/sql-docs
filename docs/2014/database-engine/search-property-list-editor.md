@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use this dialog box to add or delete search properties in a search property list.  
   
 ## To Use SQL Server Management Studio to Manage Search Property Lists  
- For information about how to create, view, or delete a search property list, and about how to configure a full-text index for property searching, see [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md).  
+ For information about how to create, view, or delete a search property list, and about how to configure a full-text index for property searching, see [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## Options  
  **Property Name**  
@@ -48,14 +48,14 @@ manager: "jhubbard"
   
  **To configure a search property list for a full-text index**  
   
--   [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)  
+-   [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
 ## Permissions  
  See [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md).  
   
 ## See Also  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](~/t-sql/statements/alter-search-property-list-transact-sql.md)   
- [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)   
+ [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
   

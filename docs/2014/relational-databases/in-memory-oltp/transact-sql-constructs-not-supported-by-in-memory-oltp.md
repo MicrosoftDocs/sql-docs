@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  For more information on supported features with memory-optimized tables and natively compiled stored procedures, see:  
   
--   [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Migration Issues for Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
 -   [Transact-SQL Support for In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)  
   

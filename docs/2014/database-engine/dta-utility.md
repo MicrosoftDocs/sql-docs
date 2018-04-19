@@ -132,7 +132,7 @@ dta -d AdventureWorks2012 ...
   
  If multiple database names are specified, then **dta** returns an error. The **-d** argument is optional.  
   
- If you are using an XML input file, you can specify the first database to which **dta** connects by using the `DatabaseToConnect` element that is located under the `TuningOptions` element. For more information, see [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md).  
+ If you are using an XML input file, you can specify the first database to which **dta** connects by using the `DatabaseToConnect` element that is located under the `TuningOptions` element. For more information, see [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  If you are tuning only one database, the **-d** argument provides functionality that is similar to the **-d** argument in the **sqlcmd** utility, but it does not execute the USE *database_name* statement. For more information, see [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md).  
   
@@ -388,6 +388,6 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
   
 ## See Also  
  [Command Prompt Utility Reference &#40;Database Engine&#41;](../../2014/database-engine/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../2014/database-engine/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

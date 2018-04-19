@@ -238,6 +238,6 @@ manager: "jhubbard"
  [Replication Management Objects Concepts](../../../2014/relational-databases/replication/dev-guide/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Use sqlcmd with Scripting Variables](../../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)  
+ [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

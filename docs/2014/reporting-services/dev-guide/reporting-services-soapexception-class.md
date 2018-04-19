@@ -29,7 +29,7 @@ manager: "jhubbard"
 |Public property|Description|  
 |---------------------|-----------------|  
 |**Actor**|The code that caused the exception. The value is the URL to the Web service method.|  
-|**Detail**|Application-specific error information. The value is set by the report server and is in XML format. For more information, see [Detail Property](../../../2014/reporting-services/dev-guide/detail-property.md) and [Using the Detail Property to Handle Specific Errors](../../../2014/reporting-services/dev-guide/using-the-detail-property-to-handle-specific-errors.md).|  
+|**Detail**|Application-specific error information. The value is set by the report server and is in XML format. For more information, see [Detail Property](../../../2014/reporting-services/dev-guide/detail-property.md) and [Using the Detail Property to Handle Specific Errors](../../relational-databases/native-client-ole-db-errors/errors.md).|  
 |**HelpLink**|A URL or URN to a Help file associated with the error. The value is usually set by the Web service and it sets a URL to [!INCLUDE[msCoName](../../includes/msconame-md.md)] Help and Support. Because [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports multiple help links for errors that occur, the report server sets help link information as part of the **Detail** property. For more information, see [HelpLink Element](../../../2014/reporting-services/dev-guide/helplink-element.md).|  
 |**Message**|A descriptive, localized message that describes the error. This text might appear in the application UI.|  
   

@@ -31,6 +31,6 @@ manager: "jhubbard"
 -   An attempt to roll back a transaction not started in the same procedure causes the transaction to hang (preventing any other side-effecting operation from happening). The transaction discontinues until the CLR code goes out of scope. Note that this can be useful when you detect an error inside your procedure and want to make sure the whole transaction terminates.  
   
 ## See Also  
- [CLR Integration and Transactions](clr-integration-and-transactions.md)  
+ [CLR Integration and Transactions](../native-client-ole-db-transactions/transactions.md)  
   
   

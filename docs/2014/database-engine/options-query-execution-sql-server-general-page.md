@@ -34,7 +34,7 @@ manager: "jhubbard"
  Type a word that you use to separate [!INCLUDE[tsql](../includes/tsql-md.md)] statements into batches. The default is GO.  
   
  **By default, open new queries in SQLCMD Mode**  
- Select this check box to open new queries in SQLCMD mode. For more information about SQLCMD mode, see [Edit SQLCMD Scripts with Query Editor](../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md).  
+ Select this check box to open new queries in SQLCMD mode. For more information about SQLCMD mode, see [Edit SQLCMD Scripts with Query Editor](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  When you select this option, be aware of the following limitations:  
   

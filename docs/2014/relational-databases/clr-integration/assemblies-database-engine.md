@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   CLR functions. For more information, see [Create CLR Functions](../../database-engine/create-clr-functions.md).  
   
--   CLR stored procedures. For more information, see [CLR Stored Procedures](../../database-engine/dev-guide/clr-stored-procedures.md).  
+-   CLR stored procedures. For more information, see [CLR Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md).  
   
 -   CLR triggers. For more information, see [Create CLR Triggers](../../database-engine/create-clr-triggers.md).  
   

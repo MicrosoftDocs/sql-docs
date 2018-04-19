@@ -26,19 +26,19 @@ manager: "jhubbard"
 ## Remarks  
  The following bcp functions have been enhanced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] to provide improved metadata discovery:  
   
--   [bcp_columns](../../../database-engine/dev-guide/bcp-columns.md)  
+-   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
--   [bcp_control](../../../database-engine/dev-guide/bcp-control.md)  
+-   [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)  
   
--   [bcp_getcolfmt](../../../database-engine/dev-guide/bcp-getcolfmt.md)  
+-   [bcp_getcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-getcolfmt.md)  
   
--   [bcp_readfmt](../../../database-engine/dev-guide/bcp-readfmt.md)  
+-   [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)  
   
--   [bcp_setcolfmt](../../../database-engine/dev-guide/bcp-setcolfmt.md)  
+-   [bcp_setcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
- You will also see a performance improvement when specifying metadata format using [bcp_setbulkmode](../../../database-engine/dev-guide/bcp-setbulkmode.md).  
+ You will also see a performance improvement when specifying metadata format using [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md).  
   
- [bcp_control](../../../database-engine/dev-guide/bcp-control.md) has a new *eOption* to control the behavior of bcp_readfmt: `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) has a new *eOption* to control the behavior of bcp_readfmt: `BCPDELAYREADFMT`.  
   
  The following ODBC functions have been enhanced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] to provide improved metadata discovery:  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters::GetParameterInfo (see [ICommandWithParameters](../../../database-engine/dev-guide/icommandwithparameters.md) for more information)  
+-   ICommandWithParameters::GetParameterInfo (see [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) for more information)  
   
  You will also see a performance improvement when specifying metadata format using IBCPSession::BCPSetBulkMode  
   

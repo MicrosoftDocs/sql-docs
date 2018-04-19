@@ -47,17 +47,17 @@ manager: "jhubbard"
   
   
 ##  <a name="PerfImpact"></a> Performance Impact of Compressing Backups  
- By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely impact concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by[Resource Governor](../../database-engine/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+ By default, compression significantly increases CPU usage, and the additional CPU consumed by the compression process might adversely impact concurrent operations. Therefore, you might want to create low-priority compressed backups in a session whose CPU usage is limited by[Resource Governor](../resource-governor/resource-governor.md). For more information, see [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  To obtain a good picture of your backup I/O performance, you can isolate the backup I/O to or from devices by evaluating the following sorts of performance counters:  
   
 -   Windows I/O performance counters, such as the physical-disk counters  
   
--   The **Device Throughput Bytes/sec** counter of the [SQLServer:Backup Device](../../database-engine/sql-server-backup-device-object.md) object  
+-   The **Device Throughput Bytes/sec** counter of the [SQLServer:Backup Device](../performance-monitor/sql-server-backup-device-object.md) object  
   
--   The **Backup/Restore Throughput/sec** counter of the [SQLServer:Databases](../../database-engine/sql-server-databases-object.md) object  
+-   The **Backup/Restore Throughput/sec** counter of the [SQLServer:Databases](../performance-monitor/sql-server-databases-object.md) object  
   
- For information about Windows counters, see Windows help. For information about how to work with SQL Server counters, see [Use SQL Server Objects](../../database-engine/use-sql-server-objects.md).  
+ For information about Windows counters, see Windows help. For information about how to work with SQL Server counters, see [Use SQL Server Objects](../performance-monitor/use-sql-server-objects.md).  
   
   
 ##  <a name="CompressionRatio"></a> Calculate the Compression Ratio of a Compressed Backup  

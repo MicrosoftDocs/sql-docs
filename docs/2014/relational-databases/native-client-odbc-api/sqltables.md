@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  Tables, views, and synonyms share a common namespace that is distinct from the namespace used by table types. Although it is not possible to have a table and a view with the same name, it is possible to have a table and a table type with the same in the same catalog and schema.  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../../database-engine/dev-guide/table-valued-parameters-odbc.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## Example  
   

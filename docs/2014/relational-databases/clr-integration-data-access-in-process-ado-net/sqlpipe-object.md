@@ -139,7 +139,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## See Also  
  [SqlDataRecord Object](sqldatarecord-object.md)   
- [CLR Stored Procedures](../../database-engine/dev-guide/clr-stored-procedures.md)   
+ [CLR Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)   
  [SQL Server In-Process Specific Extensions to ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

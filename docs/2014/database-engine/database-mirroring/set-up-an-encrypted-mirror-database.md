@@ -31,7 +31,7 @@ manager: "jhubbard"
  [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-master-key-transact-sql.md)   
- [Encryption Hierarchy](../encryption-hierarchy.md)   
+ [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

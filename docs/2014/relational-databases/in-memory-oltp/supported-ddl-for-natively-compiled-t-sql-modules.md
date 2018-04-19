@@ -43,6 +43,6 @@ manager: "jhubbard"
 -   GRANT and DENY permissions on tables and procedures.  
   
 ## See Also  
- [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

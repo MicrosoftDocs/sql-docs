@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 7.  Click **Browse** to display the list of users or roles. Select the users or roles to whom permissions should be granted.  
   
-8.  In the **Explicit Permissions** grid, select the permissions to grant to the specified user or role. For a description of the permissions, see [Permissions &#40;Database Engine&#41;](../../2014/database-engine/permissions-database-engine.md).  
+8.  In the **Explicit Permissions** grid, select the permissions to grant to the specified user or role. For a description of the permissions, see [Permissions &#40;Database Engine&#41;](../relational-databases/security/permissions-database-engine.md).  
   
  Selecting **Grant** indicates the grantee will be given the specified permission. Selecting **Grant With** indicates that the grantee will also be able to grant the specified permission to other principals.  
   

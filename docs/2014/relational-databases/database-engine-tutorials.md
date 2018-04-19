@@ -27,7 +27,7 @@ manager: "jhubbard"
  [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)  
  This tutorial teaches the fundamental skills of writing the [!INCLUDE[tsql](../includes/tsql-md.md)] statements for creating and managing objects in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
- [Tutorial: Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+ [Tutorial: Database Engine Tuning Advisor](performance/database-engine-tuning-advisor.md)  
  This tutorial introduces you to using the advisor to examine how queries are processed, and then review recommendations for improving query performance.  
   
  [Tutorial: Using the hierarchyid Data Type](tables/tutorial-using-the-hierarchyid-data-type.md)  

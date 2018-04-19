@@ -23,7 +23,7 @@ manager: "jhubbard"
   
 -   [WMI Provider for Server Events Concepts](../../../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
   
--   [WMI Provider Events and Errors](../../../2014/database-engine/dev-guide/wmi-provider-events-and-errors.md)  
+-   [WMI Provider Events and Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
 -   [WMI Provider for Configuration Management Classes](../../../2014/database-engine/dev-guide/wmi-provider-for-configuration-management-classes.md)  
   

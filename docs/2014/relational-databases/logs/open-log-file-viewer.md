@@ -98,7 +98,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Log File Viewer](log-file-viewer.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../../database-engine/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [View Offline Log Files](view-offline-log-files.md)  
   
   

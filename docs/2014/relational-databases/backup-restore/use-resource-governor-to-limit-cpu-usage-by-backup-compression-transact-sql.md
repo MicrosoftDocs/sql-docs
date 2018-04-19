@@ -22,10 +22,10 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
-  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by[Resource Governor](../../database-engine/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
+  By default, backing up using compression significantly increases CPU usage, and the additional CPU consumed by the compression process can adversely impact concurrent operations. Therefore, you might want to create a low-priority compressed backup in a session whose CPU usage is limited by[Resource Governor](../resource-governor/resource-governor.md) when CPU contention occurs. This topic presents a scenario that classifies the sessions of a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user by mapping them to a Resource Governor workload group that limits CPU usage in such cases.  
   
 > [!IMPORTANT]  
->  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../../database-engine/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../../database-engine/resource-governor-workload-group.md).  
+>  In a given Resource Governor scenario, session classification might be based on a user name, an application name, or anything else that can differentiate a connection. For more information, see [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) and [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md).  
   
 ##  <a name="Top"></a> This topic contains the following set of scenarios, which are presented in sequence:  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
      **To create a login**  
   
-    -   [Create a Login](../../database-engine/create-a-login.md)  
+    -   [Create a Login](../security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](~/t-sql/statements/create-login-transact-sql.md)  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
      **To create a user**  
   
-    -   [Create a Database User](../../database-engine/create-a-database-user.md)  
+    -   [Create a Database User](../security/authentication-access/create-a-database-user.md)  
   
     -   [CREATE USER &#40;Transact-SQL&#41;](~/t-sql/statements/create-user-transact-sql.md)  
   
@@ -101,7 +101,7 @@ GO
 ##  <a name="configure_RG"></a> Configuring Resource Governor to Limit CPU Usage  
   
 > [!NOTE]  
->  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../../database-engine/enable-resource-governor.md).  
+>  Ensure that Resource Governor is enabled. For more information, see [Enable Resource Governor](../resource-governor/enable-resource-governor.md).  
   
  In this Resource Governor scenario, configuration comprises the following basic steps:  
   
@@ -116,17 +116,17 @@ GO
 5.  Apply the changes to the Resource Governor in-memory configuration.  
   
 > [!NOTE]  
->  For information about Resource Governor resource pools, workload groups, and classification, see [Resource Governor](../../database-engine/resource-governor.md).  
+>  For information about Resource Governor resource pools, workload groups, and classification, see [Resource Governor](../resource-governor/resource-governor.md).  
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements for these steps are described in the procedure, "To configure Resource Governor for limiting CPU usage," which is followed by a [!INCLUDE[tsql](../../includes/tsql-md.md)] example of the procedure.  
   
  **To configure Resource Governor (SQL Server Management Studio)**  
   
--   [Configure Resource Governor Using a Template](../../database-engine/configure-resource-governor-using-a-template.md)  
+-   [Configure Resource Governor Using a Template](../resource-governor/configure-resource-governor-using-a-template.md)  
   
--   [Create a Resource Pool](../../database-engine/create-a-resource-pool.md)  
+-   [Create a Resource Pool](../resource-governor/create-a-resource-pool.md)  
   
--   [Create a Workload Group](../../database-engine/create-a-workload-group.md)  
+-   [Create a Workload Group](../resource-governor/create-a-workload-group.md)  
   
 ### To configure Resource Governor for limiting CPU usage (Transact-SQL)  
   
@@ -167,7 +167,7 @@ GO
     -   [SUSER_SNAME &#40;Transact-SQL&#41;](~/t-sql/functions/suser-sname-transact-sql.md)  
   
         > [!IMPORTANT]  
-        >  SUSER_NAME is just one of several system functions that can be used in a classifier function. For more information, see [Create and Test a Classifier User-Defined Function](../../database-engine/create-and-test-a-classifier-user-defined-function.md).  
+        >  SUSER_NAME is just one of several system functions that can be used in a classifier function. For more information, see [Create and Test a Classifier User-Defined Function](../resource-governor/create-and-test-a-classifier-user-defined-function.md).  
   
     -   [SET @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/set-local-variable-transact-sql.md).  
   
@@ -276,7 +276,7 @@ GO
  [&#91;Top&#93;](#Top)  
   
 ## See Also  
- [Create and Test a Classifier User-Defined Function](../../database-engine/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../../database-engine/resource-governor.md)  
+ [Create and Test a Classifier User-Defined Function](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   
+ [Resource Governor](../resource-governor/resource-governor.md)  
   
   

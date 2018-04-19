@@ -312,7 +312,7 @@
 ##### [Calculations](multidimensional-models/calculations-in-multidimensional-models.md)
 ###### [Create Calculated Members](multidimensional-models/create-calculated-members.md)
 ###### [Create Named Sets](multidimensional-models/create-named-sets.md)
-###### [Define Assignments and Other Script Commands](multidimensional-models/define-assignments-and-other-script-commands.md)
+###### [Define Assignments and Other Script Commands](../relational-databases/native-client-ole-db-commands/commands.md)
 ###### [Define Time Intelligence Calculations using the Business Intelligence Wizard](multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)
 ##### [KPIs](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)
 ##### [Actions](multidimensional-models/actions-in-multidimensional-models.md)

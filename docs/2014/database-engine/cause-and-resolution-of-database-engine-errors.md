@@ -22,7 +22,7 @@ manager: "jhubbard"
  The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  
   
 ## Reference  
- [Understanding Database Engine Errors](../relational-databases/errors-events/understanding-database-engine-errors.md)  
+ [Understanding Database Engine Errors](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## See Also  
  [Database Engine Events and Errors](../relational-databases/errors-events/database-engine-events-and-errors.md)  

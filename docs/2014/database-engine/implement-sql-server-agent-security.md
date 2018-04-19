@@ -75,6 +75,6 @@ manager: "jhubbard"
  [Predefined Roles](../../2014/reporting-services/predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [Security Center for SQL Server Database Engine and Azure SQL Database](../../2014/database-engine/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

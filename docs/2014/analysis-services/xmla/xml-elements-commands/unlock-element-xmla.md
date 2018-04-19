@@ -64,6 +64,6 @@ manager: "mblythe"
   
 ## See Also  
  [Lock Element &#40;XMLA&#41;](lock-element-xmla.md)   
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

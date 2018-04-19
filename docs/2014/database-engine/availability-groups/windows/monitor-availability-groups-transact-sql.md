@@ -130,7 +130,7 @@ manager: "jhubbard"
  Determines whether the current replica is the preferred backup replica.  
   
 > [!NOTE]  
->  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../sql-server-availability-replica.md).  
+>  For information about performance counters for availability replicas (the **SQLServer:Availability Replica**  performance object), see [SQL Server, Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
 ##  <a name="AvDbs"></a> Monitoring Availability Databases  
  To monitor availability databases, use the following views:  
@@ -167,7 +167,7 @@ manager: "jhubbard"
 >  The primary replica location is the authoritative source for an availability group.  
   
 > [!NOTE]  
->  For information about the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] performance counters for availability databases (the **SQLServer:Database Replica** performance object), see [SQL Server, Database Replica](../../sql-server-database-replica.md). Also, to monitor transaction-log activity on availability databases, use the following counters of the **SQLServer:Databases** performance object: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, and **Log Pool Requests/sec**. For more information, see [SQL Server, Databases Object](../../sql-server-databases-object.md).  
+>  For information about the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] performance counters for availability databases (the **SQLServer:Database Replica** performance object), see [SQL Server, Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Also, to monitor transaction-log activity on availability databases, use the following counters of the **SQLServer:Databases** performance object: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, and **Log Pool Requests/sec**. For more information, see [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoring Availability Group Listeners  
  To monitor the availability group listeners on subnets of the WSFC cluster, use the following views:  
@@ -258,11 +258,11 @@ manager: "jhubbard"
   
  **AlwaysOn performance counters:**  
   
--   [SQL Server, Availability Replica](../../sql-server-availability-replica.md)  
+-   [SQL Server, Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Server, Database Replica](../../sql-server-database-replica.md)  
+-   [SQL Server, Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../sql-server-databases-object.md)  
+-   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Policy-based management for AlwaysOn Availability Groups**  
   

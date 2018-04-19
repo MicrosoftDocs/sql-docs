@@ -41,6 +41,6 @@ manager: "jhubbard"
     -   By default, **Ask before stopping session analysis** is checked to avoid accidentally stopping a tuning session before Database Engine Tuning Advisor has finished analyzing a workload.  
   
 ## Next Lesson  
- [Lesson 2: Using Database Engine Tuning Advisor](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lesson 2: Using Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

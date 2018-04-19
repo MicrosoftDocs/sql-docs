@@ -23,11 +23,11 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Retrieve Result Set Information &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/retrieve-result-set-information-odbc.md)  
+-   [Retrieve Result Set Information &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
--   [Process Results &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/process-results-odbc.md)  
+-   [Process Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   
 ## See Also  
- [ODBC How-to Topics](../../../2014/database-engine/dev-guide/odbc-how-to-topics.md)  
+ [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

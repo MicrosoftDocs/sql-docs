@@ -62,7 +62,7 @@ manager: "jhubbard"
      When a user connects with a specified login name and password from a nontrusted connection, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] performs the authentication itself by checking whether a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login account has been set up and whether the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] For more information, see [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md).  
+    >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] For more information, see [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md).  
   
      **User name**  
      Shows the current user name you are connecting with. This read-only option is only available if you have selected to connect using Windows Authentication. To change **User names**, log in to the computer as a different user.  

@@ -65,6 +65,6 @@ manager: "mblythe"
  The rowset stream returned by this command is terminated if the client application closes the connection to the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance, or if the session on which the `Subscribe` command is executed is terminated.  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider for Server Events Concepts](../2014/database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider Events and Errors](../2014/database-engine/dev-guide/wmi-provider-events-and-errors.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [WMI Provider Events and Errors](relational-databases/native-client-ole-db-errors/errors.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../2014/database-engine/dev-guide/sql-server-management-objects-smo-programming-guide.md)  
   

@@ -273,6 +273,6 @@ GO
 
 [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)
 
-[Use sqlcmd with Scripting Variables](../../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)
+[Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)
 
 [Create an Updatable Subscription to a Transactional Publication (Management Studio)](../../../2014/relational-databases/replication/create-an-updatable-subscription-to-a-transactional-publication.md)

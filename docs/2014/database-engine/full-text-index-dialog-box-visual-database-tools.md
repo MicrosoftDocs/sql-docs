@@ -91,7 +91,7 @@ manager: "jhubbard"
  Displays a list of all of the names of columns in this database that have unique single-column indexes. These columns can be used to create a full-text index.  
   
 ## See Also  
- [Use the Full-Text Indexing Wizard](../../2014/database-engine/use-the-full-text-indexing-wizard.md)   
+ [Use the Full-Text Indexing Wizard](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
   
   

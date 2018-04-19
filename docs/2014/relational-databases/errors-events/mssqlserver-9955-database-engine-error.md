@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 ## See Also  
  [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)   
- [Set the Service Account for the Full-text Filter Daemon Launcher](../../database-engine/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
- [Full-Text Search](../../database-engine/full-text-search.md)  
+ [Set the Service Account for the Full-text Filter Daemon Launcher](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [Full-Text Search](../search/full-text-search.md)  
   
   

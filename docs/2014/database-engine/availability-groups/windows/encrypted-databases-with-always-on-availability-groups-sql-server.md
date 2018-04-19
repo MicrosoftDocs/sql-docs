@@ -54,6 +54,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Transparent Data Encryption &#40;TDE&#41;](../../transparent-data-encryption-tde.md)  
+ [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   

@@ -105,7 +105,7 @@ manager: "jhubbard"
   
 6.  Map the SSISDB user ##MS_SSISServerCleanupJobUser## (SSISDB database) to ##MS_SSISServerCleanupJobLogin##, by using the **Login Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-7.  Restore the master key by using one of the following methods. For more information about encryption, see [Encryption Hierarchy](../../2014/database-engine/encryption-hierarchy.md).  
+7.  Restore the master key by using one of the following methods. For more information about encryption, see [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md).  
   
     -   **Method 1**  
   

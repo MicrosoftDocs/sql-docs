@@ -48,13 +48,13 @@ manager: "jhubbard"
  [User Assistance in SQL Server Management Studio](../../2014/database-engine/user-assistance-in-sql-server-management-studio.md)  
  Describes how to configure user assistance, such as Help, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../2014/database-engine/query-and-text-editors-sql-server-management-studio.md)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
  Describes how to use the rich editing environment in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to edit [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX and XML/A scripts.  
   
- [Edit SQLCMD Scripts with Query Editor](../../2014/database-engine/edit-sqlcmd-scripts-with-query-editor.md)  
+ [Edit SQLCMD Scripts with Query Editor](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
  Describes the capabilities and limitations of using Query Editor in SQLCMD mode.  
   
- [Color Coding in Query Editors](../../2014/database-engine/color-coding-in-query-editors.md)  
+ [Color Coding in Query Editors](../relational-databases/scripting/color-coding-in-query-editors.md)  
  Describes the meaning of the color coding in Code Editor windows.  
   
  [SQL Server Management Studio Keyboard Shortcuts](../../2014/database-engine/sql-server-management-studio-keyboard-shortcuts.md)  

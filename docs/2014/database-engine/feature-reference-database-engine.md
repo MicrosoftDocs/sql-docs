@@ -24,7 +24,7 @@ manager: "jhubbard"
  To access a user interface topic while the tool or application is running, press F1 or click Help while the dialog box, Web page, or wizard is open.  
   
 ## In This Section  
- [Start and Use the Database Engine Tuning Advisor](../../2014/database-engine/start-and-use-the-database-engine-tuning-advisor.md)  
+ [Start and Use the Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
  Provides help for [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor and its related dialog boxes.  
   
  Provides help for the tools, wizards, and services supplied with [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  

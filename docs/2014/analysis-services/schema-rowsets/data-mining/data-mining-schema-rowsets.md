@@ -51,7 +51,7 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
  All the schema rowsets listed here are supported by the server that is running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## See Also  
- [Analysis Services Schema Rowsets](../analysis-services-schema-rowsets.md)   
+ [Analysis Services Schema Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)   
  [Querying the SQL Server System Catalog](https://technet.microsoft.com/en-us/library/ms189082\(v=sql.110\).aspx)   
  [Querying the Data Mining Schema Rowsets &#40;Analysis Services - Data Mining&#41;](../../data-mining/data-mining-schema-rowsets-ssas.md)  
   

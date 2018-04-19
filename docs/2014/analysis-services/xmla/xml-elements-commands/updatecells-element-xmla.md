@@ -66,6 +66,6 @@ manager: "mblythe"
  [Drop Element &#40;XMLA&#41;](drop-element-xmla.md)   
  [Insert Element &#40;XMLA&#41;](insert-element-xmla.md)   
  [Update Element &#40;XMLA&#41;](update-element-xmla.md)   
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

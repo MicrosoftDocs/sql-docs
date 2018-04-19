@@ -181,7 +181,7 @@ manager: "jhubbard"
     |Source of page ID|Topic|  
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[Manage the suspect_pages Table &#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)|  
-    |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../../database-engine/view-the-sql-server-error-log-sql-server-management-studio.md)|  
+    |Error log|[View the SQL Server Error Log &#40;SQL Server Management Studio&#41;](../performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
     |Event traces|[Monitor and Respond to Events](../../database-engine/monitor-and-respond-to-events.md)|  
     |DBCC|[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI provider|[WMI Provider for Server Events Concepts](../../database-engine/dev-guide/wmi-provider-for-server-events-concepts.md)|  

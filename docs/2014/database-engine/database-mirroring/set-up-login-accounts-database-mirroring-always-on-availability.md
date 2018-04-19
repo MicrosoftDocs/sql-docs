@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
--   [Create a Login](../create-a-login.md)  
+-   [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
   

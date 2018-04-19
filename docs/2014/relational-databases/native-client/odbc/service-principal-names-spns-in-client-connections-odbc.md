@@ -17,7 +17,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Service Principal Names (SPNs) in Client Connections (ODBC)
-  This topic describes ODBC attributes and functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../features/service-principal-name-spn-support-in-client-connections.md) and [Get Mutual Kerberos Authentication](../../../database-engine/dev-guide/get-mutual-kerberos-authentication.md).  
+  This topic describes ODBC attributes and functions that support service principal names (SPNs) in client applications. For more information about SPNs in client applications, see [Service Principal Name &#40;SPN&#41; Support in Client Connections](../features/service-principal-name-spn-support-in-client-connections.md) and [Get Mutual Kerberos Authentication](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## Connection String Keywords  
  The following connection string keywords enable client applications to specify an SPN.  

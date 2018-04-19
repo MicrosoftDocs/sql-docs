@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 -   [SQLProcedureColumns](sqlprocedurecolumns.md)  
   
--   [SQLProcedures](sqlprocedures.md)  
+-   [SQLProcedures](../native-client-odbc-queries/executing-statements/procedures.md)  
   
 -   [SQLPutData](sqlputdata.md)  
   

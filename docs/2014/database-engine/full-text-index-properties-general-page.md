@@ -63,14 +63,14 @@ manager: "jhubbard"
  The filegroup to which the full-text index belongs.  
   
  **Full-Text Index Stoplist**  
- The stoplist that is currently associated with the full-text index. A stoplist is a list of [stopwords](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md). The stoplist associated with a full-text index, if any, is applied to full-text queries on that index. You can remove the stoplist from the index by selecting **\<OFF>** from the list, or you can select a different stoplist; **\<SYSTEM>** indicates the system stoplist.  
+ The stoplist that is currently associated with the full-text index. A stoplist is a list of [stopwords](../relational-databases/search/full-text-search.md). The stoplist associated with a full-text index, if any, is applied to full-text queries on that index. You can remove the stoplist from the index by selecting **\<OFF>** from the list, or you can select a different stoplist; **\<SYSTEM>** indicates the system stoplist.  
   
  **To create a stoplist**  
   
--   [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../2014/database-engine/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
+-   [Configure and Manage Stopwords and Stoplists for Full-Text Search](../relational-databases/search/full-text-search.md)  
   
  **Search Property List**  
- The search property list that is currently associated with the full-text index, if any. A search property list specifies a set of document properties that are included in the associated full-text index when it is populated. For more information, see [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md).  
+ The search property list that is currently associated with the full-text index, if any. A search property list specifies a set of document properties that are included in the associated full-text index when it is populated. For more information, see [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  **\<Off>** indicates that there is currently no search property list associated with the index. You can remove the current search property list from the index by selecting **\<Off>** from the list, or you can select a different search property list from the list. Only search property lists in the current database are listed here.  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
  **To create a search property list**  
   
--   [Search Document Properties with Search Property Lists](../../2014/database-engine/search-document-properties-with-search-property-lists.md)  
+-   [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
  **Table Full-Text Item Count**  
  Indicates the number of rows that were full-text indexed successfully.  
@@ -141,6 +141,6 @@ manager: "jhubbard"
 |**Update**|The full-text index is updated whenever the data in the base table is modified.|  
   
 ## See Also  
- [Get Started with Full-Text Search](../../2014/database-engine/get-started-with-full-text-search.md)  
+ [Get Started with Full-Text Search](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

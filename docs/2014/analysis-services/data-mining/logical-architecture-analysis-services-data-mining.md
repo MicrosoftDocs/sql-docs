@@ -82,7 +82,7 @@ manager: "mblythe"
  **Custom stored procedures**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining supports the use of stored procedures to work with data mining objects. You can create your own stored procedures to extend functionality and more easily work with data returned by prediction queries and content queries.  
   
- [Defining Stored Procedures](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Defining Stored Procedures](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
  The following stored procedures are supported for use in performing cross-validation.  
   

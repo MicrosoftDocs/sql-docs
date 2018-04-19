@@ -33,8 +33,8 @@ manager: "jhubbard"
  Type the new password again to confirm the typing.  
   
 ## See Also  
- [Strong Passwords](../../2014/database-engine/strong-passwords.md)   
- [Choose an Authentication Mode](../../2014/database-engine/choose-an-authentication-mode.md)   
+ [Strong Passwords](../relational-databases/security/strong-passwords.md)   
+ [Choose an Authentication Mode](../relational-databases/security/choose-an-authentication-mode.md)   
  [Change Server Authentication Mode](configure-windows/change-server-authentication-mode.md)   
  [Change the Password of the Accounts Used by SQL Server &#40;SQL Server Configuration Manager&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   

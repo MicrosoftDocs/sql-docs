@@ -47,7 +47,7 @@ manager: "jhubbard"
   
  The following topics describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
--   When calling `ICommandWithParameters::SetParameterInfo`, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [ICommandWithParameters](../../database-engine/dev-guide/icommandwithparameters.md).  
+-   When calling `ICommandWithParameters::SetParameterInfo`, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
 -   `SQLDescribeParam` will now consistently return a value that conforms to the ODBC specification. For more information, see [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   

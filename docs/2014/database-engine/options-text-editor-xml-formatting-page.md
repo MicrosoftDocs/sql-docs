@@ -62,6 +62,6 @@ manager: "jhubbard"
  \</dir>  
   
 ## See Also  
- [XML Editor &#40;SQL Server Management Studio&#41;](../../2014/database-engine/xml-editor-sql-server-management-studio.md)  
+ [XML Editor &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/xml-editor-sql-server-management-studio.md)  
   
   

@@ -85,9 +85,9 @@ WHERE session_id = @@SPID;
 -   [Steps to troubleshoot SQL connectivity issues](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## Related Content  
- [Choose an Authentication Mode](../choose-an-authentication-mode.md)  
+ [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Use the sqlcmd Utility](../use-the-sqlcmd-utility.md)  
+ [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
  [Creating a Login](../../t-sql/lesson-2-1-creating-a-login.md)  
   

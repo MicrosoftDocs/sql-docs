@@ -118,7 +118,7 @@ manager: "jhubbard"
   
 -   [Contained databases](../../../relational-databases/databases/contained-databases.md)  
   
--   [Database encryption](../../transparent-data-encryption-tde.md)  
+-   [Database encryption](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Database snapshots](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

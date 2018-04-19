@@ -48,7 +48,7 @@ manager: "jhubbard"
 ## Related Content  
  [Object Hierarchy Syntax &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/object-hierarchy-syntax-transact-sql.md)  
   
- [Surface Area Configuration](../../2014/database-engine/surface-area-configuration.md)  
+ [Surface Area Configuration](../relational-databases/security/surface-area-configuration.md)  
   
  [Ole Automation Procedures Server Configuration Option](configure-windows/ole-automation-procedures-server-configuration-option.md)  
   

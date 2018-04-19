@@ -56,7 +56,7 @@ manager: "jhubbard"
 ## After You Finish This Tutorial  
  After you finish the lessons in this tutorial, refer to the following topics for more information about Database Engine Tuning Advisor:  
   
--   [Database Engine Tuning Advisor](../../database-engine/database-engine-tuning-advisor.md) for descriptions of how to perform tasks with this tool.  
+-   [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) for descriptions of how to perform tasks with this tool.  
   
 -   [dta Utility](../../database-engine/dta-utility.md) for reference material on the command prompt utility and the optional XML file you can use to control the operation of the utility.  
   

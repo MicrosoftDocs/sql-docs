@@ -39,6 +39,6 @@ GO
   
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [Administer Servers by Using Policy-Based Management](../administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

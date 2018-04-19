@@ -23,13 +23,13 @@ manager: "jhubbard"
   This section discusses parameter, column result, and catalog metadata.  
   
 ## In This Section  
- [Parameter and Result Metadata](../../../2014/database-engine/dev-guide/parameter-and-result-metadata.md)  
+ [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
  Describes what is returned in the IPD and IRD fields for date and time data types.  
   
- [Catalog Metadata](../../../2014/database-engine/dev-guide/catalog-metadata.md)  
+ [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Describes the column metadata returned by `SQLColumns` and `SQLProcedureColumns`, and the data type metadata returned by `SQLGetTypeInfo`.  
   
 ## See Also  
- [Date and Time Improvements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/date-and-time-improvements-odbc.md)  
+ [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

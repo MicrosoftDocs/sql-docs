@@ -32,11 +32,11 @@ manager: "jhubbard"
   
 1.  For the user account of each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], create a login on the other instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use a [CREATE LOGIN](~/t-sql/statements/create-login-transact-sql.md) statement with the FROM WINDOWS clause.  
   
-     For more information, see [Create a Login](../../2014/database-engine/create-a-login.md).  
+     For more information, see [Create a Login](../relational-databases/security/authentication-access/create-a-login.md).  
   
 2.  Also, to ensure that the login user has access to the endpoint, use the [GRANT](~/t-sql/statements/grant-transact-sql.md) statement to grant connect permissions on the endpoint to the login. Note that granting connect permissions to the endpoint is unnecessary if the user is an Administrator.  
   
-     For more information, see [Grant a Permission to a Principal](../../2014/database-engine/grant-a-permission-to-a-principal.md).  
+     For more information, see [Grant a Permission to a Principal](../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
 ## Example  
  The following [!INCLUDE[tsql](../includes/tsql-md.md)] example creates a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login for a user account named `Otheruser` that belongs to a domain called `Adomain`. The example then grants this user connect permissions to a pre-existing database mirroring endpoint named `Mirroring_Endpoint`.  

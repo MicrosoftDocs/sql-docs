@@ -21,14 +21,14 @@ manager: "jhubbard"
 ## Related Tasks  
  The following topics discuss how to use the [sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md):  
   
--   [Start the sqlcmd Utility](../../2014/database-engine/start-the-sqlcmd-utility.md)  
+-   [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
   
--   [Use the sqlcmd Utility](../../2014/database-engine/use-the-sqlcmd-utility.md)  
+-   [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
--   [Connect to the Database Engine With sqlcmd](../../2014/database-engine/connect-to-the-database-engine-with-sqlcmd.md)  
+-   [Connect to the Database Engine With sqlcmd](../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)  
   
--   [Run Transact-SQL Script Files Using sqlcmd](../../2014/database-engine/run-transact-sql-script-files-using-sqlcmd.md)  
+-   [Run Transact-SQL Script Files Using sqlcmd](../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
   
--   [Use sqlcmd with Scripting Variables](../../2014/database-engine/use-sqlcmd-with-scripting-variables.md)  
+-   [Use sqlcmd with Scripting Variables](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

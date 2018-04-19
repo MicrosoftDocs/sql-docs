@@ -35,11 +35,11 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Available Columns**|The column name.|  
-|**Language for Word Breaker**|The language whose word breakers and stemmers perform linguistic analysis on all full-text indexed data.<br /><br /> For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../2014/database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md) and [Choose a Language When Creating a Full-Text Index](../../2014/database-engine/choose-a-language-when-creating-a-full-text-index.md).|  
+|**Language for Word Breaker**|The language whose word breakers and stemmers perform linguistic analysis on all full-text indexed data.<br /><br /> For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) and [Choose a Language When Creating a Full-Text Index](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).|  
 |**Type**|The name of the table column that holds the document type of the selected column. This is a read-only property.|  
-|**Statistical Semantics**|Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../../2014/database-engine/semantic-search-sql-server.md).<br /><br /> If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is disabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.|  
+|**Statistical Semantics**|Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is disabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.|  
   
 ## See Also  
- [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md)  
+ [Populate Full-Text Indexes](../relational-databases/search/populate-full-text-indexes.md)  
   
   

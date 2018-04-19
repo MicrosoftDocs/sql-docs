@@ -67,6 +67,6 @@ manager: "mblythe"
  For more information about processing objects, see [Processing Objects &#40;XMLA&#41;](../xml-elements-objects.md).  
   
 ## See Also  
- [Commands &#40;XMLA&#41;](xml-elements-commands.md)  
+ [Commands &#40;XMLA&#41;](../../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

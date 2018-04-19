@@ -151,17 +151,17 @@ manager: "mblythe"
   
  Because full-text queries are a feature provided by the SQL Server engine, you can create parameterized queries, generate custom data sets or term vectors by using full-text search features on a text data source, and use these sources in data mining.  
   
- For more information about how full-text queries interact with the full-text index, see [Query with Full-Text Search](../../database-engine/query-with-full-text-search.md).  
+ For more information about how full-text queries interact with the full-text index, see [Query with Full-Text Search](../../relational-databases/search/full-text-search.md).  
   
  An advantage of using the full-text search features of SQL Server is that you can leverage the linguistic intelligence that is contained in the word breakers and stemmers shipped for all SQL Server languages. By using the supplied word breakers and stemmers, you can ensure that words are separated using the characters appropriate for each language, and that synonyms based on diacritics or orthographic variations (such as the multiple number formats in Japanese) are not overlooked.  
   
  In addition to linguistic intelligence that governs word boundaries, the stemmers for each language can reduce variants of a word to a single term, based on knowledge of the rules for conjugation and orthographic variation in that language. The rules for linguistic analysis differ for each language and are developed based on extensive research on real-life corpora.  
   
- For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../database-engine/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
+ For more information, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  The version of a word that is stored after full-text indexing is a token in compressed form. Subsequent queries to the full-text index generate multiple inflectional forms of a particular word based on the rules of that language, to ensure that all probable matches are made. For example, although the token that is stored might be “run”, the query engine also looks for the terms "running", "ran", and "runner," because these are regularly derived morphological variations of the root word "run".  
   
- You can also create and build a user thesaurus to store synonyms and enable better search results, or categorization of terms. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../database-engine/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ You can also create and build a user thesaurus to store synonyms and enable better search results, or categorization of terms. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data. For more information, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  Requirements for using full-text search include the following:  
   
@@ -184,9 +184,9 @@ manager: "mblythe"
   
 -   Return similarity scores, and the terms that contribute to the score.  
   
- For more information, see [Find Key Phrases in Documents with Semantic Search](../../database-engine/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../database-engine/find-similar-and-related-documents-with-semantic-search.md).  
+ For more information, see [Find Key Phrases in Documents with Semantic Search](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) and [Find Similar and Related Documents with Semantic Search](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
- For more information about the database objects that support semantic indexing, see [Enable Semantic Search on Tables and Columns](../../database-engine/enable-semantic-search-on-tables-and-columns.md).  
+ For more information about the database objects that support semantic indexing, see [Enable Semantic Search on Tables and Columns](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md).  
   
  Requirements for using semantic search include the following:  
   

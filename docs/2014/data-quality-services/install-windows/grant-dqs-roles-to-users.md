@@ -48,6 +48,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Install Data Quality Services](install-data-quality-services.md)   
- [Create a Login](../../database-engine/create-a-login.md)  
+ [Create a Login](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

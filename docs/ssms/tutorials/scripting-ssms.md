@@ -1,5 +1,5 @@
 ---
-Title: "Tutorial: Script objects in Microsoft SQL Server Management Studio"
+Title: "Tutorial: Script objects in SQL Server Management Studio"
 description: "A tutorial for scripting out objects in SSMS"
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
@@ -22,7 +22,7 @@ helpviewer_keywords:
 ---
 
 # Tutorial: Script objects in SQL Server Management Studio
-This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various objects found within Microsoft SQL Server Management Studio (SSMS). In this tutorial, you find examples of how to script the following objects: 
+This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS). In this tutorial, you find examples of how to script the following objects: 
 
 > [!div class="checklist"]
 > * Queries, when you perform actions within the graphical user interface (GUI)
@@ -31,7 +31,7 @@ This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various o
 > * Stored procedures
 > * Extended events
 
-To script any object in Microsoft Object Explorer, right-click it and select the Script Object As option. This tutorial shows you the process.
+To script any object in Object Explorer, right-click it and select the Script Object As option. This tutorial shows you the process.
 
 
 ## Prerequisites
@@ -39,7 +39,8 @@ To complete this tutorial, you need SQL Server Management Studio, access to a SQ
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download [Microsoft AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases)- If necessary, restore databases in SSMS: [Restore a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Download [AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases)
+Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## Script queries from the GUI
@@ -55,10 +56,10 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 4. Configure the backup the way you want. For this tutorial, everything is left at default. However, any changes made in the window also reflect in the script. 
 5. Select **Script** > **Script Action to New Query Window**:
  
-    ![Script back up database--script action](media/scripting-ssms/scriptdbbackup.PNG)
+    ![Script database backup--script action](media/scripting-ssms/scriptdbbackup.PNG)
 6. Review the T-SQL populated in the query window.
 
-    ![Script back up database--review T-SQL](media/scripting-ssms/dbbackupscript.PNG)
+    ![Script database backup--review T-SQL](media/scripting-ssms/dbbackupscript.PNG)
 7. Select **Execute** to execute the query to back up the database via T-SQL. 
 
 

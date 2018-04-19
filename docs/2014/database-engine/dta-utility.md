@@ -169,7 +169,7 @@ dta -d AdventureWorks2012 ...
 |NCL_IDX|Nonclustered indexes only.|  
   
  **-fi**  
- Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../../2014/database-engine/create-filtered-indexes.md).  
+ Specifies that filtered indexes be considered for new recommendations. For more information, see [Create Filtered Indexes](../relational-databases/indexes/indexes.md).  
   
  **-fk** *keep_existing_option*  
  Specifies what existing physical design structures **dta** must retain when generating its recommendation. The following table lists and describes the values that can be specified for this argument:  

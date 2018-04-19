@@ -61,6 +61,6 @@ const wchar_t *pwszFormatFile);
   
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/ibcpsession-ole-db.md)   
- [Performing Bulk Copy Operations](../../../2014/database-engine/dev-guide/performing-bulk-copy-operations.md)  
+ [Performing Bulk Copy Operations](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

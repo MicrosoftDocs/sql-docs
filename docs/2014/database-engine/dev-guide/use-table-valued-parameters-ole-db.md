@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   Shows error handling for SQLNCLI11 errors.  
   
- For more information about table-valued parameters, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-sql-server-native-client.md).  
+ For more information about table-valued parameters, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## Example  
  The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates the database used by the sample.  

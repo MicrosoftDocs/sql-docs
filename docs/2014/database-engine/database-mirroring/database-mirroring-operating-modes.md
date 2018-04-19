@@ -108,7 +108,7 @@ manager: "jhubbard"
  To achieve synchronous operation for a session, the mirror server must synchronize the mirror database with the principal database. When the session begins, the principal server begins sending its active log to the mirror server. The mirror server writes all of the incoming log records to disk as quickly as possible. As soon as all of the received log records have been written to disk, the databases are synchronized. As long as the partners remain in communication, the databases remain synchronized.  
   
 > [!NOTE]  
->  To monitor state changes in a database mirroring session, use the **Database Mirroring State Change** event class. For more information, see [Database Mirroring State Change Event Class](../database-mirroring-state-change-event-class.md).  
+>  To monitor state changes in a database mirroring session, use the **Database Mirroring State Change** event class. For more information, see [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
  After synchronization finishes, every transaction committed on the principal database is also committed on the mirror server, guaranteeing protection of the data. This is achieved by waiting to commit a transaction on the principal database, until the principal server receives a message from the mirror server stating that it has hardened the transaction's log to disk. Note the wait for this message increases the latency of the transaction.  
   

@@ -48,7 +48,7 @@ manager: "jhubbard"
   
 -   Querying the query_plan column of the [sys.dm_exec_query_plan](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) dynamic management function.  
   
--   The [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../../2014/database-engine/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../../2014/database-engine/showplan-xml-statistics-profile-event-class.md), and [Showplan XML For Query Compile](../../../2014/database-engine/showplan-xml-for-query-compile-event-class.md) event classes.  
+-   The [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), and [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) event classes.  
   
  The following example collects the query plan for the statement `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` by querying dynamic management views.  
   

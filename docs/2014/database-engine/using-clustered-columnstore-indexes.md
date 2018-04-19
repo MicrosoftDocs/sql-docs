@@ -18,23 +18,23 @@ manager: "jhubbard"
 # Using Clustered Columnstore Indexes
   Tasks for using clustered columnstore indexes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- For an overview of columnstore indexes, see [Columnstore Indexes Described](../../2014/database-engine/columnstore-indexes-described.md).  
+ For an overview of columnstore indexes, see [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- For information about clustered columnstore indexes, see [Using Clustered Columnstore Indexes](../../2014/database-engine/using-clustered-columnstore-indexes.md).  
+ For information about clustered columnstore indexes, see [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## Contents  
   
--   [Create a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#create)  
+-   [Create a Clustered Columnstore Index](#create)  
   
--   [Drop a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#drop)  
+-   [Drop a Clustered Columnstore Index](#drop)  
   
--   [Load Data into a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#load)  
+-   [Load Data into a Clustered Columnstore Index](#load)  
   
--   [Change Data in a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#change)  
+-   [Change Data in a Clustered Columnstore Index](#change)  
   
--   [Rebuild a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#rebuild)  
+-   [Rebuild a Clustered Columnstore Index](#rebuild)  
   
--   [Reorganize a Clustered Columnstore Index](../../2014/database-engine/using-clustered-columnstore-indexes.md#reorganize)  
+-   [Reorganize a Clustered Columnstore Index](#reorganize)  
   
 ##  <a name="create"></a> Create a Clustered Columnstore Index  
  To create a clustered columnstore index, first create a rowstore table as a heap or clustered index, and then use the [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-columnstore-index-transact-sql.md) statement to convert the table to a clustered columnstore index. If you want the clustered columnstore index to have the same name as the clustered index, use the DROP_EXISTING option.  

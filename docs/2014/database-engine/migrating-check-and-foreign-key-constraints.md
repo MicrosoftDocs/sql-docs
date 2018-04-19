@@ -239,6 +239,6 @@ END
 ```  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../2014/database-engine/migrating-to-in-memory-oltp.md)  
+ [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

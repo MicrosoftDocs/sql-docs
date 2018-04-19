@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  A common cause of these errors is interference between concurrently executing transaction. The common corrective action is to retry the transaction.  
   
- For more information about these error conditions, see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md).  
+ For more information about these error conditions, see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Deadlocks (error code 1205) cannot occur for memory-optimized tables. Locks are not used for memory-optimized tables. However, if the application already contains retry logic for deadlocks, the existing logic could be extended to include the new error codes.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 -   The client application has retry logic for other error codes, such as 1205, which you can extend.  
   
--   Conflicts are rare, and it is important to reduce end-to-end latency by using prepared execution. For more information about executing natively compiled stored procedures directly, see [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md).  
+-   Conflicts are rare, and it is important to reduce end-to-end latency by using prepared execution. For more information about executing natively compiled stored procedures directly, see [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
  The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
   
@@ -125,7 +125,7 @@ END
   
 ## See Also  
  [Understanding Transactions on Memory-Optimized Tables](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md)   
+ [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

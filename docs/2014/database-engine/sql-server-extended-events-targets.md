@@ -37,7 +37,7 @@ manager: "jhubbard"
   
      Many kinds of events occur in pairs, such as lock acquires and lock releases. Use to determine when a specified paired event does not occur in a matched set. This is an asynchronous target.  
   
--   [Event Tracing for Windows (ETW)](../../2014/database-engine/event-tracing-for-windows-target.md)  
+-   [Event Tracing for Windows (ETW)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
      Use to correlate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] events with Windows operating system or application event data. This is a synchronous target.  
   
@@ -50,9 +50,9 @@ manager: "jhubbard"
      Use to hold the event data in memory on a first-in first-out (FIFO) basis, or on a per-event FIFO basis. This is an asynchronous target.  
   
 ## See Also  
- [Extended Events](../../2014/database-engine/extended-events.md)   
- [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../../2014/database-engine/sql-server-extended-events-sessions.md)   
- [SQL Server Extended Events Engine](../../2014/database-engine/sql-server-extended-events-engine.md)  
+ [Extended Events](../relational-databases/extended-events/extended-events.md)   
+ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [SQL Server Extended Events Engine](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

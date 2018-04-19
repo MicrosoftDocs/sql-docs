@@ -97,7 +97,7 @@ GO
   
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
+ [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
   

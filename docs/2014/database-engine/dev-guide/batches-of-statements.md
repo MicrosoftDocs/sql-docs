@@ -32,7 +32,7 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- Batches can be more efficient than submitting statements separately because network traffic is often reduced. Use [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) to get positioned on the next result set when finished with the current result set.  
+ Batches can be more efficient than submitting statements separately because network traffic is often reduced. Use [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) to get positioned on the next result set when finished with the current result set.  
   
  Batches can always be used when the ODBC cursor attributes are set to the defaults of a forward-only, read-only cursor with a rowset size of 1.  
   

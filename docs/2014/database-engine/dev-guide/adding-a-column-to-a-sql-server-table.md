@@ -37,7 +37,7 @@ manager: "jhubbard"
  The new column name is specified as a Unicode character string in the *pwszName* member of the *uName* union in the *dbcid* member of the DBCOLUMNDESC parameter *pColumnDesc*. The *eKind* member must be DBKIND_NAME.  
   
 ## See Also  
- [Tables and Indexes](../../../2014/database-engine/dev-guide/tables-and-indexes.md)   
+ [Tables and Indexes](../../relational-databases/indexes/indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-table-transact-sql.md)  
   
   

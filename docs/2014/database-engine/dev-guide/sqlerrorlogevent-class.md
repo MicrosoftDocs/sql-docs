@@ -96,6 +96,6 @@ Next
   
 ## See Also  
  [SqlErrorLogFile Class](../../../2014/database-engine/dev-guide/sqlerrorlogfile-class.md)   
- [View Offline Log Files](../../../2014/database-engine/view-offline-log-files.md)  
+ [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  
   
   

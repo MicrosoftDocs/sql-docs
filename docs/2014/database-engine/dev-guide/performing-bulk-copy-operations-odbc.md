@@ -43,7 +43,7 @@ manager: "jhubbard"
 ## Minimally Logging Bulk Copies  
  With the Full Recovery model, all row-insert operations performed by bulk load are fully logged in the transaction log. For large data loads, this can cause the transaction log to fill rapidly. Under certain conditions, minimally logging is possible. Minimal logging reduces the possibility of a bulk load operation filling the log space and is also more efficient than full logging.  
   
- For information on using minimal logging, see [Prerequisites for Minimal Logging in Bulk Import](../../../2014/database-engine/prerequisites-for-minimal-logging-in-bulk-import.md).  
+ For information on using minimal logging, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ## Remarks  
  When using bcp.exe in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later, you might see errors in situations where there were no errors prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. This is because in the later versions, bcp.exe no longer performs implicit data type conversion. Prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], bcp.exe converted numeric data to a money data type, if the target table had a money data type. However, in that situation, bcp.exe simply truncated extra fields. Beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], if data types do not match between the file and the target table, bcp.exe will raise an error if there is any data that would have to be truncated to fit into the target table. To resolve this error, fix the data to match the target data type. Optionally, use bcp.exe from a release prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -61,7 +61,7 @@ manager: "jhubbard"
 -   [Converting from DB-Library to ODBC Bulk Copy](../../../2014/database-engine/dev-guide/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
- [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../2014/database-engine/bulk-import-and-export-of-data-sql-server.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

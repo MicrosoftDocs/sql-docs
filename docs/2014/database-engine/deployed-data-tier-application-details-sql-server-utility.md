@@ -44,11 +44,11 @@ manager: "jhubbard"
   
 -   Name - the data-tier application name.  
   
--   Application CPU - Displays the health state of processor utilization for this data-tier application. The health state for this parameter is determined according to CPU utilization policy set for the data-tier application and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../2014/database-engine/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Application CPU - Displays the health state of processor utilization for this data-tier application. The health state for this parameter is determined according to CPU utilization policy set for the data-tier application and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      To view the processor utilization history for this data-tier application, or to view or change the policy limits, click on the **CPU Utilization** tab.  
   
--   Computer CPU - Displays the health state of computer processor utilization. The health state for this parameter is determined according to CPU utilization policy set for the computer and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../2014/database-engine/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Computer CPU - Displays the health state of computer processor utilization. The health state for this parameter is determined according to CPU utilization policy set for the computer and the configuration setting for volatile resource evaluation policy. For more information, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      To view the processor utilization history for this data-tier application, or to view or change the policy limits, click on the **CPU Utilization** tab.  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
   
  To override the default policy thresholds, click on the radio button to **Override the default policy**, specify values for the upper and lower limits, then click **OK**.  
   
- For more information about changing the tolerance for policy violations, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../2014/database-engine/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+ For more information about changing the tolerance for policy violations, see [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
  Property Details tab  
  Property details listed for data-tier applications include the following categories:  
@@ -166,7 +166,7 @@ manager: "jhubbard"
 ## See Also  
  [Managed Instance Details &#40;SQL Server Utility&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Utility Dashboard &#40;SQL Server Utility&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Monitor Instances of SQL Server in the SQL Server Utility](../../2014/database-engine/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server Utility Features and Tasks](../../2014/database-engine/sql-server-utility-features-and-tasks.md)  
+ [Monitor Instances of SQL Server in the SQL Server Utility](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

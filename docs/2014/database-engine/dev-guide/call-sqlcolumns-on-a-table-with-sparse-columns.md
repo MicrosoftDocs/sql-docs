@@ -21,7 +21,7 @@ manager: "jhubbard"
   
  This sample will not work with any version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- For more information about the sparse columns feature, see [Sparse Columns Support in SQL Server Native Client](../../../2014/database-engine/dev-guide/sparse-columns-support-in-sql-server-native-client.md).  
+ For more information about the sparse columns feature, see [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## Example  
  The first listing is the C++ source code. Change "MyServer" to a valid server name. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h. If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  

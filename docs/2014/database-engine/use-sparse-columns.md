@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Filtered indexes  
   
-     Because sparse columns have many null-valued rows, they are especially appropriate for filtered indexes. A filtered index on a sparse column can index only the rows that have populated values. This creates a smaller and more efficient index. For more information, see [Create Filtered Indexes](../../2014/database-engine/create-filtered-indexes.md).  
+     Because sparse columns have many null-valued rows, they are especially appropriate for filtered indexes. A filtered index on a sparse column can index only the rows that have populated values. This creates a smaller and more efficient index. For more information, see [Create Filtered Indexes](../relational-databases/indexes/indexes.md).  
   
  Sparse columns and filtered indexes enable applications, such as [!INCLUDE[winSPServ](../includes/winspserv-md.md)], to efficiently store and access a large number of user-defined properties by using [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   

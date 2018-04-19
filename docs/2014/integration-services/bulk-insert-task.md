@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 -   The destination must be a table or view in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database. If the destination table or view already contains data, the new data is appended to the existing data when the Bulk Insert task runs. If you want to replace the data, run an Execute SQL task that runs a DELETE or TRUNCATE statement before you run the Bulk Insert task. For more information, see [Execute SQL Task](../../2014/integration-services/execute-sql-task.md).  
   
--   You can use a format file in the Bulk Insert task object. If you have a format file that was created by the **bcp** utility, you can specify its path in the Bulk Insert task. The Bulk Insert task supports both XML and nonXML format files. For more information about format files, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../2014/database-engine/format-files-for-importing-or-exporting-data-sql-server.md).  
+-   You can use a format file in the Bulk Insert task object. If you have a format file that was created by the **bcp** utility, you can specify its path in the Bulk Insert task. The Bulk Insert task supports both XML and nonXML format files. For more information about format files, see [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 -   Only members of the sysadmin fixed server role can run a package that contains a Bulk Insert task.  
   

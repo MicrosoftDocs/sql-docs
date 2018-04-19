@@ -230,9 +230,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
  **To use connection strings in applications**  
   
--   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+-   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Using Connection String Keywords with SQL Server Native Client](../../dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
   

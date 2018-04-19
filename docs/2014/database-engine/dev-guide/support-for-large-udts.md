@@ -21,7 +21,7 @@ manager: "jhubbard"
   
  This sample will not work with any version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- For more information about support for large UDTs, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/large-clr-user-defined-types-odbc.md).  
+ For more information about support for large UDTs, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## Example  
  The first code listing is C# source code. Paste it into a file called LargeStringUDT.cs and compile it to a DLL. Copy LargeStringUDT.dll to the root directory of your C drive.  

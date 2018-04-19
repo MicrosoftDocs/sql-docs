@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  Only one full-text index is allowed per table. For a full-text index to be created on a table, the table must have a single, unique nonnull column. You can build a full-text index on columns of type `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, and `varbinary(max)` can be indexed for full-text search. Creating a full-text index on a column whose data type is  `varbinary`, `varbinary(max)`, `image`, or `xml` requires that you specify a type column. A *type column* is a table column in which you store the file extension (.doc, .pdf, .xls, and so forth) of the document in each row.  
   
- The process of creating and maintaining a full-text index is called a *population* (also known as a *crawl*). There are three types of full-text index population: full population, change tracking-based population, and incremental timestamp-based population. For more information, see [Populate Full-Text Indexes](../../2014/database-engine/populate-full-text-indexes.md).  
+ The process of creating and maintaining a full-text index is called a *population* (also known as a *crawl*). There are three types of full-text index population: full population, change tracking-based population, and incremental timestamp-based population. For more information, see [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="tasks"></a> Common Tasks  
  **To create a full-text index**  

@@ -118,7 +118,7 @@ manager: "jhubbard"
  To specify schema options, see [Specify Schema Options](../../../2014/relational-databases/replication/specify-schema-options.md) or <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### Partitioned Tables and Indexes  
- Replication supports the publishing of partitioned tables and indexes. The level of support depends on the type of replication that is used, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](../../../2014/relational-databases/replication/replicate-partitioned-tables-and-indexes.md).  
+ Replication supports the publishing of partitioned tables and indexes. The level of support depends on the type of replication that is used, and the options that you specify for the publication and the articles associated with partitioned tables. For more information, see [Replicate Partitioned Tables and Indexes](../indexes/indexes.md).  
   
 ## Publishing Stored Procedures  
  All types of replication allow you to replicate stored procedure definitions: the CREATE PROCEDURE is copied to each Subscriber. In the case of common language runtime (CLR) stored procedures, the associated assembly is also copied. Changes to procedures are replicated to Subscribers; changes to associated assemblies are not.  

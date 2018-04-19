@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Back Up Database Task &#40;Maintenance Plan&#41;](../../2014/database-engine/back-up-database-task-maintenance-plan.md)  
+-   [Back Up Database Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/options-in-the-back-up-database-task-for-maintenance-plan.md)  
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   

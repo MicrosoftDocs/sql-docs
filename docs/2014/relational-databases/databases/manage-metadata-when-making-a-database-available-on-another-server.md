@@ -123,7 +123,7 @@ manager: "jhubbard"
  When a database is restored on another computer, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user who initiated the restore operation becomes the owner of the new database automatically. When the database is restored, the system administrator or the new database owner can change database ownership.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Distributed Queries and Linked Servers  
- Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../../database-engine/linked-servers-database-engine.md).  
+ Distributed queries and linked servers are supported for OLE DB applications. Distributed queries access data from multiple heterogeneous data sources on either the same or different computers. A linked server configuration enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute commands against OLE DB data sources on remote servers. For more information about these features, see [Linked Servers &#40;Database Engine&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Top&#93;](#information_entities_and_objects)  
   
@@ -207,7 +207,7 @@ manager: "jhubbard"
   
  For more information, see also:  
   
--   [Back Up and Restore Full-Text Catalogs and Indexes](../../database-engine/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Back Up and Restore Full-Text Catalogs and Indexes](../indexes/indexes.md)  
   
 -   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   

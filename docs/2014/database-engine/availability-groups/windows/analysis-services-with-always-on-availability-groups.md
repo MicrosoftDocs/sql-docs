@@ -140,7 +140,7 @@ manager: "jhubbard"
   
      Finish the data source and close the Data Source Wizard.  
   
-6.  Add **MultiSubnetFailover=Yes** to the connection string to provide faster detection and connection to the active server. For more information about this property, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Add **MultiSubnetFailover=Yes** to the connection string to provide faster detection and connection to the active server. For more information about this property, see [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      This property is not visible in the property grid. To add the property, right-click the data source and choose **View Code**. Add `MultiSubnetFailover=Yes` to the connection string.  
   

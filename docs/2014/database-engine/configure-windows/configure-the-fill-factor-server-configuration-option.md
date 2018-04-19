@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Configure the fill factor Server Configuration Option
-  This topic describes how to configure the **fill factor** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Fill factor is provided for fine-tuning index data storage and performance. When an index is created or rebuilt, the fill-factor value determines the percentage of space on each leaf-level page to be filled with data, reserving the rest as free space for future growth. For more information, see [Specify Fill Factor for an Index](../specify-fill-factor-for-an-index.md).  
+  This topic describes how to configure the **fill factor** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Fill factor is provided for fine-tuning index data storage and performance. When an index is created or rebuilt, the fill-factor value determines the percentage of space on each leaf-level page to be filled with data, reserving the rest as free space for future growth. For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
  **In This Topic**  
   
@@ -89,7 +89,7 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](~/t-sql/language-elements/reconfigure-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [Specify Fill Factor for an Index](../specify-fill-factor-for-an-index.md)   
+ [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)   
  [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

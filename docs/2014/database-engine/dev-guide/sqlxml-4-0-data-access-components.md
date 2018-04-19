@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 -   SQL Server Native Client (SQLNCLI11)  
   
-     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md).  
+     Exposes SQLXML 4.0 functionality through a new data access technology that extends and compliments current versions of Microsoft Data Access Components (MDAC). SQLNCLI11 provides full support for features introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 ## In This Section  
  [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../2014/database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)  

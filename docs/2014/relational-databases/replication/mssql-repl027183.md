@@ -56,9 +56,9 @@ manager: "jhubbard"
   
 -   Specify the lowest setting possible for the publication retention period, because replication cannot clean up metadata in the publication and subscription databases until the retention period is reached. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+-   As part of maintenance for merge replication, occasionally check the growth of the system tables associated with merge replication: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, and **MSmerge_past_partition_mappings**. Periodically re-index these tables. For more information, see [Reorganize and Rebuild Indexes](../indexes/indexes.md).  
   
--   Ensure that columns used for filtering are properly indexed and rebuild such indexes if necessary. For more information, see [Reorganize and Rebuild Indexes](../../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+-   Ensure that columns used for filtering are properly indexed and rebuild such indexes if necessary. For more information, see [Reorganize and Rebuild Indexes](../indexes/indexes.md).  
   
 -   Set the **join_unique_key** property for join filters that are based on unique columns. For more information, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
   

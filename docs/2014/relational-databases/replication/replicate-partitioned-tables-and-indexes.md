@@ -22,7 +22,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replicate Partitioned Tables and Indexes
-  Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../../2014/database-engine/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
+  Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../indexes/indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
   
 ## Article Properties for Transactional and Merge Replication  
  The following table lists the objects that are used to partition data.  

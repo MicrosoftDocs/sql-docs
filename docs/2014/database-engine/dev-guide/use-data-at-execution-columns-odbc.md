@@ -22,7 +22,7 @@ manager: "jhubbard"
     
 ### To use data-at-execution text, ntext, or image columns  
   
-1.  For each data-at-execution column, put special values into the buffers previously bound by [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md):  
+1.  For each data-at-execution column, put special values into the buffers previously bound by [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md):  
   
     -   For the last parameter, use SQL_LEN_DATA_AT_EXEC(length) where length is the total length of the text, ntext, or image column data in bytes.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
     -   Call [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) to get the column array pointer. It will return SQL_NEED_DATA if there is another data-at-execution column.  
   
-    -   Call [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md) one or more times to send the column data, until length is sent.  
+    -   Call [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) one or more times to send the column data, until length is sent.  
   
 4.  Call [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) to indicate that all the data for the final data-at-execution column is sent. It will not return SQL_NEED_DATA.  
   

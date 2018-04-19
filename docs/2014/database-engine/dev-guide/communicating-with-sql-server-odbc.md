@@ -40,7 +40,7 @@ manager: "jhubbard"
 -   [Disconnecting from a Data Source](../../../2014/database-engine/dev-guide/disconnecting-from-a-data-source.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
- [SQLSetEnvAttr](../../../2014/database-engine/dev-guide/sqlsetenvattr.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)  
   
   

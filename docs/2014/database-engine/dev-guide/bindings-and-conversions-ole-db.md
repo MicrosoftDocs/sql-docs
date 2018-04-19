@@ -40,7 +40,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and SQLOLEDB implemented OLE conversions, in case standard conversions failed. As a result, some conversions performed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 and later differ from the OLE DB specification.  
   
- Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section in [Data Type Support for OLE DB Date and Time Improvements](../../../2014/database-engine/dev-guide/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section in [Data Type Support for OLE DB Date and Time Improvements](../../relational-databases/native-client/features/date-and-time-improvements.md).  
   
  The following are general conversion rules:  
   

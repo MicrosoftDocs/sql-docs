@@ -68,7 +68,7 @@ HRESULT WaitForAsynchCompletion(
  In addition, the SSPROP_ISSAsynchStatus property has been added to the DBPROPSET_SQLSERVERROWSET property set. Providers that support the [ISSAsynchStatus](../../../2014/database-engine/dev-guide/issasynchstatus-ole-db.md) interface must implement this property with a value of VARIANT_TRUE.  
   
 ## See Also  
- [Performing Asynchronous Operations](../../../2014/database-engine/dev-guide/performing-asynchronous-operations.md)   
+ [Performing Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issasynchstatus-ole-db.md)  
   
   

@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Table-Valued Parameters (OLE DB)
-  This section describes support for table-valued parameters in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. For additional overview information, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-sql-server-native-client.md). For a sample, see [Use Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-ole-db.md).  
+  This section describes support for table-valued parameters in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider. For additional overview information, see [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md). For a sample, see [Use Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-ole-db.md).  
   
 ## Remarks  
  Currently, you can send multirow data to the server as parameters to a procedure with parameter sets (the DBPARAMS parameter in `ICommand::Execute`). With parameter sets, every element of the set has to be sent in a separate remote procedure call (RPC) request to the server. Table-valued parameters provide similar functionality, but there is better integration with the server. This reduces the number of RPC requests and enables set-based operations on the server.  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 -   [OLE DB Table-Valued Parameter Type Support &#40;Properties&#41;](../../../2014/database-engine/dev-guide/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-ole-db.md)  
   
   

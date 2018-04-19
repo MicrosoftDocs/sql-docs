@@ -38,12 +38,12 @@ manager: "jhubbard"
   
 -   **SQLBrowseConnect**  
   
- For more information about making connections to a data source, including the various connection string options available, see [Using Connection String Keywords with SQL Server Native Client](../../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md).  
+ For more information about making connections to a data source, including the various connection string options available, see [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## SQLConnect  
  **SQLConnect** is the simplest connection function. It accepts three parameters: a data source name, a user ID, and a password. Use **SQLConnect** when these three parameters contain all the information needed to connect to the database. To do this, build a list of data sources using **SQLDataSources**; prompt the user for a data source, user ID, and password; and then call **SQLConnect**.  
   
- **SQLConnect** assumes that a data source name, user ID, and password are sufficient to connect to a data source and that the ODBC data source contains all other information the ODBC driver needs to make the connection. Unlike [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md) and [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md), **SQLConnect** does not use a connection string.  
+ **SQLConnect** assumes that a data source name, user ID, and password are sufficient to connect to a data source and that the ODBC data source contains all other information the ODBC driver needs to make the connection. Unlike [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) and [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md), **SQLConnect** does not use a connection string.  
   
 ## SQLDriverConnect  
  **SQLDriverConnect** is used when more information than the data source name, user ID, and password is required. One of the parameters to **SQLDriverConnect** is a connection string containing driver-specific information. You might use **SQLDriverConnect** instead of **SQLConnect** for the following reasons:  

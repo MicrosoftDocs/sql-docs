@@ -244,7 +244,7 @@ manager: "jhubbard"
  [Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Setting Up Database Mirroring &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Back Up and Restore Full-Text Catalogs and Indexes](../back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Back Up and Restore Full-Text Catalogs and Indexes](../../relational-databases/indexes/indexes.md)   
  [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Database Mirroring and Replication &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   

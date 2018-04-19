@@ -121,7 +121,7 @@ HRESULT GetStatus(
  Calling **ISSAsynchStatus::GetStatus** on an initialized data source object or a populated rowset, or passing a value for *eOperation* other than DBASYNCHOP_OPEN, returns S_OK with *pulProgress* and *pulProgressMax* set to the same value. If **ISSAsynchStatus::GetStatus** is called on an object created from the execution of a command that updates, deletes, or inserts rows, both *pulProgress* and *pulProgressMax* indicate the total number of rows affected by the command.  
   
 ## See Also  
- [Performing Asynchronous Operations](../../../2014/database-engine/dev-guide/performing-asynchronous-operations.md)   
+ [Performing Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issasynchstatus-ole-db.md)  
   
   

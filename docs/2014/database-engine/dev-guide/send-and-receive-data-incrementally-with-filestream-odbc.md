@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Send and Receive Data Incrementally with FILESTREAM (ODBC)
   This sample shows how to use the FILESTREAM feature to send and receive data incrementally with SQLPutData and SQLGetData.  
   
- For more information about the FILESTREAM feature, see [FILESTREAM Support &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/filestream-support-odbc.md).  
+ For more information about the FILESTREAM feature, see [FILESTREAM Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
 ## Example  
  Before you compile and run this sample, enable FILESTREAM support ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  

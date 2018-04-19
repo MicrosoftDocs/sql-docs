@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 -   **After pausing database mirroring**  
   
-     On the primary database, take precautions to avoid a full transaction log. For more information, see [The Transaction Log &#40;SQL Server&#41;](../the-transaction-log-sql-server.md).  
+     On the primary database, take precautions to avoid a full transaction log. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 -   **After resuming database mirroring**  
   

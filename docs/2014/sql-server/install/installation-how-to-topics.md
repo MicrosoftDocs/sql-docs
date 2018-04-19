@@ -39,6 +39,6 @@ manager: "jhubbard"
 ## See Also  
  [Planning a SQL Server Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade to SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Installing SQL Server Native Client](../../../2014/database-engine/dev-guide/installing-sql-server-native-client.md)  
+ [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

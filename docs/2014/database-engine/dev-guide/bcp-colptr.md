@@ -56,7 +56,7 @@ idxServerCol
  For more information on large value types, see [bcp_bind](../../../2014/database-engine/dev-guide/bcp-bind.md)**.**  
   
  *idxServerCol*  
- Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
+ Is the ordinal position of the column in the database table to which the data is copied. The first column in a table is column 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## Returns  
  SUCCEED or FAIL.  

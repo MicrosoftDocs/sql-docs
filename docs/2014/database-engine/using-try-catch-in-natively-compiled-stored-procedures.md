@@ -59,6 +59,6 @@ go
 ```  
   
 ## See Also  
- [Natively Compiled Stored Procedures](../../2014/database-engine/natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

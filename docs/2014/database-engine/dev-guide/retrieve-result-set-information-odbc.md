@@ -23,15 +23,15 @@ manager: "jhubbard"
     
 ### To get information about a result set  
   
-1.  Call [SQLNumResultCols](../../../2014/database-engine/dev-guide/sqlnumresultcols.md) to get the number of columns in the result set.  
+1.  Call [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) to get the number of columns in the result set.  
   
 2.  For each column in the result set:  
   
-    -   Call [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) to get information about the result column.  
+    -   Call [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) to get information about the result column.  
   
      Or  
   
-    -   Call [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md) to get specific descriptor information about the result column.  
+    -   Call [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) to get specific descriptor information about the result column.  
   
 ## See Also  
  [Processing Results How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   

@@ -32,7 +32,7 @@ manager: "jhubbard"
 ## SQL Server Audit Components  
  An *audit* is the combination of several elements into a single package for a specific group of server actions or database actions. The components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] audit combine to produce an output that is called an audit, just as a report definition combined with graphics and data elements produces a report.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] audit uses *Extended Events* to help create an audit. For more information about Extended Events, see [Extended Events](../../2014/database-engine/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] audit uses *Extended Events* to help create an audit. For more information about Extended Events, see [Extended Events](../relational-databases/extended-events/extended-events.md).  
   
 ### SQL Server Audit  
  The *SQL Server Audit* object collects a single instance of server or database-level actions and groups of actions to monitor. The audit is at the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance level. You can have multiple audits per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.  
@@ -202,7 +202,7 @@ manager: "jhubbard"
  [c2 audit mode Server Configuration Option](configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explains the C2 security compliance auditing mode in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Security Audit Event Category &#40;SQL Server Profiler&#41;](../../2014/database-engine/security-audit-event-category-sql-server-profiler.md)  
+ [Security Audit Event Category &#40;SQL Server Profiler&#41;](../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Explains the audit events you can use in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. For more information, see [SQL Server Profiler](../../2014/database-engine/sql-server-profiler.md).  
   
  [SQL Trace](../../2014/database-engine/sql-trace.md)  

@@ -51,17 +51,17 @@ manager: "jhubbard"
 ### Index Design Tasks  
  The follow tasks make up our recommended strategy for designing indexes:  
   
-1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](../2014/database-engine/columnstore-indexes-described.md).  
+1.  Understand the characteristics of the database itself. For example, is it an online transaction processing (OLTP) database with frequent data modifications, or a Decision Support System (DSS) or data warehousing (OLAP) database that contains primarily read-only data and must process very large data sets quickly. In [!INCLUDE[ssSQL11](includes/sssql11-md.md)], *xVelocity memory optimized columnstore* index is especially appropriate for typical data warehousing data sets. Columnstore indexes can transform the data warehousing experience for users by enabling faster performance for common data warehousing queries such as filtering, aggregating, grouping, and star-join queries. For more information, see [Columnstore Indexes Described](relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Understand the characteristics of the most frequently used queries. For example, knowing that a frequently used query joins two or more tables will help you determine the best type of indexes to use.  
   
 3.  Understand the characteristics of the columns used in the queries. For example, an index is ideal for columns that have an integer data type and are also unique or nonnull columns. For columns that have well-defined subsets of data, you can use a filtered index in [!INCLUDE[ssKatmai](includes/sskatmai-md.md)] and higher versions. For more information, see [Filtered Index Design Guidelines](#Filtered) in this guide.  
   
-4.  Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the ONLINE index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](../2014/database-engine/set-index-options.md).  
+4.  Determine which index options might enhance performance when the index is created or maintained. For example, creating a clustered index on an existing large table would benefit from the ONLINE index option. The ONLINE option allows for concurrent activity on the underlying data to continue while the index is being created or rebuilt. For more information, see [Set Index Options](relational-databases/indexes/set-index-options.md).  
   
 5.  Determine the optimal storage location for the index. A nonclustered index can be stored in the same filegroup as the underlying table, or on a different filegroup. The storage location of indexes can improve query performance by increasing disk I/O performance. For example, storing a nonclustered index on a filegroup that is on a different disk than the table filegroup can improve performance because multiple disks can be read at the same time.  
   
-     Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](../2014/database-engine/partitioned-tables-and-indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.  
+     Alternatively, clustered and nonclustered indexes can use a partition scheme across multiple filegroups. Partitioning makes large tables or indexes more manageable by letting you access or manage subsets of data quickly and efficiently, while maintaining the integrity of the overall collection. For more information, see [Partitioned Tables and Indexes](relational-databases/indexes/indexes.md). When you consider partitioning, determine whether the index should be aligned, that is, partitioned in essentially the same manner as the table, or partitioned independently.  
   
 ##  <a name="General_Design"></a> General Index Design Guidelines  
  Experienced database administrators can design a good set of indexes, but this task is very complex, time-consuming, and error-prone even for moderately complex databases and workloads. Understanding the characteristics of your database, queries, and data columns can help you design optimal indexes.  
@@ -111,7 +111,7 @@ manager: "jhubbard"
   
      For example, if the index is defined as `LastName`, `FirstName` the index will be useful when the search criterion is `WHERE LastName = 'Smith'` or `WHERE LastName = Smith AND FirstName LIKE 'J%'`. However, the query optimizer would not use the index for a query that searched only on `FirstName (WHERE FirstName = 'Jane')`.  
   
--   Consider indexing computed columns. For more information, see [Indexes on Computed Columns](../2014/database-engine/indexes-on-computed-columns.md).  
+-   Consider indexing computed columns. For more information, see [Indexes on Computed Columns](relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### Index Characteristics  
  After you have determined that an index is appropriate for a query, you can select the type of index that best fits your situation. Index characteristics include the following:  
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 -   Make queries run faster and more efficiently. When queries access several partitions of an index, the query optimizer can process individual partitions at the same time and exclude partitions that are not affected by the query.  
   
- For more information, see [Partitioned Tables and Indexes](../2014/database-engine/partitioned-tables-and-indexes.md).  
+ For more information, see [Partitioned Tables and Indexes](relational-databases/indexes/indexes.md).  
   
 ###  <a name="Sort_Order"></a> Index Sort Order Design Guidelines  
  When defining indexes, you should consider whether the data for the index key column should be stored in ascending or descending order. Ascending is the default and maintains compatibility with earlier versions of [!INCLUDE[ssNoVersion](includes/ssnoversion-md.md)]. The syntax of the CREATE INDEX, CREATE TABLE, and ALTER TABLE statements supports the keywords ASC (ascending) and DESC (descending) on individual columns in indexes and constraints.  
@@ -364,7 +364,7 @@ INCLUDE (FileName);
   
 -   All data types are allowed except `text`, `ntext`, and `image`.  
   
--   Computed columns that are deterministic and either precise or imprecise can be included columns. For more information, see [Indexes on Computed Columns](../2014/database-engine/indexes-on-computed-columns.md).  
+-   Computed columns that are deterministic and either precise or imprecise can be included columns. For more information, see [Indexes on Computed Columns](relational-databases/indexes/indexes-on-computed-columns.md).  
   
 -   As with key columns, computed columns derived from `image`, `ntext`, and `text` data types can be nonkey (included) columns as long as the computed column data type is allowed as a nonkey index column.  
   
@@ -513,7 +513,7 @@ WHERE EndDate IS NOT NULL
     AND StartDate > '20080101' ;  
 ```  
   
- For more information about how to create filtered indexes and how to define the filtered index predicate expression, see [Create Filtered Indexes](../2014/database-engine/create-filtered-indexes.md).  
+ For more information about how to create filtered indexes and how to define the filtered index predicate expression, see [Create Filtered Indexes](relational-databases/indexes/create-filtered-indexes.md).  
   
 #### Filtered Indexes for Heterogeneous Data  
  When a table has heterogeneous data rows, you can create a filtered index for one or more categories of data.  
@@ -600,6 +600,6 @@ WHERE b = CONVERT(Varbinary(4), 1);
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [Partitioned Tables and Indexes](../2014/database-engine/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](database-engine/partitioned-tables-and-indexes.md)  
   
   

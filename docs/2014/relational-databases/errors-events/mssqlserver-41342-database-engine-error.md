@@ -37,6 +37,6 @@ manager: "jhubbard"
  Upgrade your processor. If your processor supports the instruction and you are running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a virtual machine, change the configuration to support the instruction CMPXCHG16B.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

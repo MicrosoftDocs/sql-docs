@@ -126,9 +126,9 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
 ####  <a name="RelatedTasksApps"></a> Related Tasks  
   
--   [SQL Server Native Client Support for High Availability, Disaster Recovery](../../2014/database-engine/dev-guide/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+-   [SQL Server Native Client Support for High Availability, Disaster Recovery](../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Using Connection String Keywords with SQL Server Native Client](../../2014/database-engine/dev-guide/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [Using Connection String Keywords with SQL Server Native Client](../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
 ##  <a name="BypassAGl"></a> Bypassing Availability Group Listeners  
  While availability group listeners enable support for failover redirection and read-only routing, client connections are not required to use them. A client connection can also directly reference the instance of SQL Server instead of connecting to the availability group listener.  

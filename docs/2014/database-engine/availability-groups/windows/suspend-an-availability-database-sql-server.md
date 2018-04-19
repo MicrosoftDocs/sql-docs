@@ -136,7 +136,7 @@ manager: "jhubbard"
   
  **To troubleshoot a full transaction log**  
   
--   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

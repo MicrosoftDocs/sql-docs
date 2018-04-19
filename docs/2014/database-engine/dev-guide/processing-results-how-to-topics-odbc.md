@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Processing Results How-to Topics (ODBC)
-  Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) or [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md).  
+  Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) or [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ## In This Section  
   

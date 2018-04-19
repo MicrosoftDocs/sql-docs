@@ -47,7 +47,7 @@ manager: "jhubbard"
  [Query Spatial Data for Nearest Neighbor](../../2014/database-engine/query-spatial-data-for-nearest-neighbor.md)  
  Describes the common query pattern that is used to find the closest spatial objects to a specific spatial object.  
   
- [Create, Modify, and Drop Spatial Indexes](../../2014/database-engine/create-modify-and-drop-spatial-indexes.md)  
+ [Create, Modify, and Drop Spatial Indexes](../relational-databases/indexes/indexes.md)  
  Provides information about creating, altering, and dropping a spatial index.  
   
 ## Related Content  

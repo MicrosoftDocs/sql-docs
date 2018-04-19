@@ -22,41 +22,41 @@ manager: "jhubbard"
 # ODBC Table-Valued Parameter API Summary
   This topic lists the ODBC functions that were enhanced to support table-valued parameters.  
   
--   [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md)  
+-   [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)  
   
--   [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md)  
+-   [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)  
   
--   [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md)  
+-   [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)  
   
--   [SQLExecDirect](../../../2014/database-engine/dev-guide/sqlexecdirect.md)  
+-   [SQLExecDirect](../../relational-databases/native-client-odbc-api/sqlexecdirect.md)  
   
--   [SQLExecute](../../../2014/database-engine/dev-guide/sqlexecute.md)  
+-   [SQLExecute](../../relational-databases/native-client-odbc-api/sqlexecute.md)  
   
--   [SQLGetDescField](../../../2014/database-engine/dev-guide/sqlgetdescfield.md)  
+-   [SQLGetDescField](../../relational-databases/native-client-odbc-api/sqlgetdescfield.md)  
   
--   [SQLGetDescRec](../../../2014/database-engine/dev-guide/sqlgetdescrec.md)  
+-   [SQLGetDescRec](../../relational-databases/native-client-odbc-api/sqlgetdescrec.md)  
   
--   [SQLGetDiagField](../../../2014/database-engine/dev-guide/sqlgetdiagfield.md)  
+-   [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)  
   
--   [SQLGetStmtAttr](../../../2014/database-engine/dev-guide/sqlgetstmtattr.md)  
+-   [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)  
   
--   [SQLGetTypeInfo](../../../2014/database-engine/dev-guide/sqlgettypeinfo.md)  
+-   [SQLGetTypeInfo](../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
--   [SQLParamData](../../../2014/database-engine/dev-guide/sqlparamdata.md)  
+-   [SQLParamData](../../relational-databases/native-client-odbc-api/sqlparamdata.md)  
   
--   [SQLPrimaryKeys](../../../2014/database-engine/dev-guide/sqlprimarykeys.md)  
+-   [SQLPrimaryKeys](../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)  
   
--   [SQLProcedureColumns](../../../2014/database-engine/dev-guide/sqlprocedurecolumns.md)  
+-   [SQLProcedureColumns](../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)  
   
--   [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md)  
+-   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)  
   
--   [SQLSetDescField](../../../2014/database-engine/dev-guide/sqlsetdescfield.md)  
+-   [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)  
   
--   [SQLSetDescRec](../../../2014/database-engine/dev-guide/sqlsetdescrec.md)  
+-   [SQLSetDescRec](../../relational-databases/native-client-odbc-api/sqlsetdescrec.md)  
   
--   [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md)  
+-   [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
--   [SQLTables](../../../2014/database-engine/dev-guide/sqltables.md)  
+-   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## See Also  
  [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md)  

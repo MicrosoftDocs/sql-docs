@@ -115,7 +115,7 @@ manager: "jhubbard"
  This section discusses restore considerations that are unique to bulk-logged recovery model, which is intended exclusively as a supplement to the full recovery model.  
   
 > [!NOTE]  
->  For an introduction to the bulk-logged recovery model, see [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md).  
+>  For an introduction to the bulk-logged recovery model, see [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md).  
   
  Generally, the bulk-logged recovery model is similar to the full recovery model, and the information described for the full recovery model also applies to both. However, point-in-time recovery and online restore are affected by the bulk-logged recovery model.  
   

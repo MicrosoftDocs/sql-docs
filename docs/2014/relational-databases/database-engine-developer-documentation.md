@@ -26,7 +26,7 @@ manager: "jhubbard"
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Describes the integration of the common language runtime (CLR) component of the .NET Framework for [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This means that you can write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET and [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
- [SQL Server Native Client Programming](../database-engine/dev-guide/sql-server-native-client-programming.md)  
+ [SQL Server Native Client Programming](native-client/sql-server-native-client-programming.md)  
  Describes how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client can be used to create new applications or enhance existing applications to take advantage of new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features such as multiple active result sets (MARS), user-defined data types (UDT), query notifications, snapshot isolation, and XML data type support.  
   
  [SQLXML 4.0 Programming Concepts](../database-engine/dev-guide/sqlxml-4-0-programming-concepts.md)  

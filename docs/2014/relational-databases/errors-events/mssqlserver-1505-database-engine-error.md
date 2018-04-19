@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 ## See Also  
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
- [Create Unique Indexes](../../database-engine/create-unique-indexes.md)   
+ [Create Unique Indexes](../indexes/indexes.md)   
  [Create Unique Constraints](../../database-engine/create-unique-constraints.md)  
   
   

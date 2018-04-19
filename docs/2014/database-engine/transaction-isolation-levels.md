@@ -28,7 +28,7 @@ manager: "jhubbard"
   
  The transaction isolation level can be specified as part of the atomic block of a natively compiled stored procedure. For more information, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](~/t-sql/statements/create-procedure-transact-sql.md). When accessing memory-optimized tables from interpreted [!INCLUDE[tsql](../includes/tsql-md.md)], the isolation level can be specified using table-level hints.  
   
- You must specify the transaction isolation level when you define a natively compiled stored procedure. You must specify the isolation level in table hints when accessing memory-optimized tables from user transactions in interpreted [!INCLUDE[tsql](../includes/tsql-md.md)]. For more information, see [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md).  
+ You must specify the transaction isolation level when you define a natively compiled stored procedure. You must specify the isolation level in table hints when accessing memory-optimized tables from user transactions in interpreted [!INCLUDE[tsql](../includes/tsql-md.md)]. For more information, see [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  The isolation level READ COMMITTED is supported for memory-optimized tables with autocommit transactions. READ COMMITTED is not valid in user transactions or in an atomic block. READ COMMITTED is not supported with explicit or implicit user transactions. Isolation level READ_COMMITTED_SNAPSHOT is supported for memory-optimized tables with autocommit transactions and only if the query does not access any disk-based tables. In addition, transactions that are started using interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] with SNAPSHOT isolation cannot access memory-optimized tables. Transactions that are use interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] with either REPEATABLE READ or SERIALIZABLE isolation must access memory-optimized tables using SNAPSHOT isolation. For more information about this scenario, see [Cross-Container Transactions](../../2014/database-engine/cross-container-transactions.md).  
   
@@ -79,7 +79,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Understanding Transactions on Memory-Optimized Tables](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

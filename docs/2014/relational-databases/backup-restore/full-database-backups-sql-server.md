@@ -97,7 +97,7 @@ GO
   
  **To schedule backup jobs**  
   
- [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)  
+ [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](back-up-and-restore-of-sql-server-databases.md)   

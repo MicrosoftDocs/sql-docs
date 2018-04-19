@@ -28,7 +28,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports memory-based bulk copy operations through the [IRowsetFastLoad](../../../2014/database-engine/dev-guide/irowsetfastload-ole-db.md) interface.  
   
- For more information about using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider for bulk copy operations, see [Performing Bulk Copy Operations](../../../2014/database-engine/dev-guide/performing-bulk-copy-operations.md).  
+ For more information about using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider for bulk copy operations, see [Performing Bulk Copy Operations](../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
  For a sample showing how to use the **IBCPSession** interface, see [IBCPSession::BCPDone &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/ibcpsession-bcpdone-ole-db.md).  
   

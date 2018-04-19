@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Utility Dashboard (SQL Server Utility)
   To see data in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility dashboard, select the top node in the Utility Explorer tree - labeled "Utility<UCP_Name>\\(ComputerName\UCP)." The dashboard includes summary and detail data from all managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and all data-tier applications in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. To refresh data in the dashboard, right-click the top node in the Utility Explorer tree, and select **Refresh**.  
   
- For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../2014/database-engine/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../2014/database-engine/enroll-an-instance-of-sql-server-sql-server-utility.md).  
+ For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
 ## UIElement List  
  Managed Instance Health  
@@ -101,8 +101,8 @@ manager: "jhubbard"
  In the bottom right of the dashboard, the storage utilization pie chart displays the ratio of used space to free space on volumes residing on computers that contain managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Data for this display are refreshed every 15 minutes.  
   
 ## See Also  
- [Use Utility Explorer to Manage the SQL Server Utility](../../2014/database-engine/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../2014/database-engine/enroll-an-instance-of-sql-server-sql-server-utility.md)   
- [Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../../2014/database-engine/modify-a-resource-health-policy-definition-sql-server-utility.md)  
+ [Use Utility Explorer to Manage the SQL Server Utility](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

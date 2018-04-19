@@ -21,39 +21,39 @@ manager: "jhubbard"
 # ODBC API Support for Enhanced Date and Time Features
   The following ODBC APIs support enhanced date and time functionality:  
   
--   [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md)  
+-   [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)  
   
--   [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md)  
+-   [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)  
   
--   [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md)  
+-   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)  
   
--   [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md)  
+-   [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)  
   
--   [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md)  
+-   [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)  
   
--   [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md)  
+-   [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)  
   
--   [SQLFetch](../../../2014/database-engine/dev-guide/sqlfetch.md)  
+-   [SQLFetch](../../relational-databases/native-client-odbc-api/sqlfetch.md)  
   
--   [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md)  
+-   [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)  
   
--   [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md)  
+-   [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)  
   
--   [SQLGetDescField](../../../2014/database-engine/dev-guide/sqlgetdescfield.md)  
+-   [SQLGetDescField](../../relational-databases/native-client-odbc-api/sqlgetdescfield.md)  
   
--   [SQLGetDescRec](../../../2014/database-engine/dev-guide/sqlgetdescrec.md)  
+-   [SQLGetDescRec](../../relational-databases/native-client-odbc-api/sqlgetdescrec.md)  
   
--   [SQLGetTypeInfo](../../../2014/database-engine/dev-guide/sqlgettypeinfo.md)  
+-   [SQLGetTypeInfo](../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
--   [SQLProcedureColumns](../../../2014/database-engine/dev-guide/sqlprocedurecolumns.md)  
+-   [SQLProcedureColumns](../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)  
   
--   [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md)  
+-   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md)  
   
--   [SQLSetDescField](../../../2014/database-engine/dev-guide/sqlsetdescfield.md)  
+-   [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)  
   
--   [SQLSetDescRec](../../../2014/database-engine/dev-guide/sqlsetdescrec.md)  
+-   [SQLSetDescRec](../../relational-databases/native-client-odbc-api/sqlsetdescrec.md)  
   
--   [SQLSpecialColumns](../../../2014/database-engine/dev-guide/sqlspecialcolumns.md)  
+-   [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md)  
   
  The following bulk copy APIs support enhanced date and time functionality:  
   

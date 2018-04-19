@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  ODBC applications should use the ODBC CALL syntax when executing a stored procedure. The driver is optimized to use a remote procedure call mechanism to call the procedure when the ODBC CALL syntax is used. This is more efficient than the mechanism used to send a [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE statement to the server.  
   
- For more information, see [Running Stored Procedures](../../../2014/database-engine/dev-guide/running-stored-procedures.md).  
+ For more information, see [Running Stored Procedures](running-stored-procedures.md).  
   
 ## See Also  
  [Executing Statements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/executing-statements-odbc.md)  

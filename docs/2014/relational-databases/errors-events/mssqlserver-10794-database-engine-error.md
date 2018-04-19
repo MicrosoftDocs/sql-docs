@@ -31,8 +31,8 @@ manager: "jhubbard"
 |Message Text|The *construct* '*feature*' is not supported with *construct*.|  
   
 ## User Action  
- For a list of unsupported features and suggested resolutions, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../database-engine/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ For a list of unsupported features and suggested resolutions, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
- For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md).  
+ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   

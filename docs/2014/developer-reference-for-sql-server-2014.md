@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](http://technet.microsoft.com/library/ms191274.aspx)  
   
- ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Native Client Programming](../2014/database-engine/dev-guide/sql-server-native-client-programming.md)  
+ ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQL Server Native Client Programming](relational-databases/native-client/sql-server-native-client-programming.md)  
   
  ![Small File Folder Icon](../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [SQLXML 4.0 Programming Concepts](../2014/database-engine/dev-guide/sqlxml-4-0-programming-concepts.md)  
   

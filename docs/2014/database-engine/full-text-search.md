@@ -186,7 +186,7 @@ manager: "jhubbard"
   
     -   [Create and Manage Full-Text Catalogs](../../2014/database-engine/create-and-manage-full-text-catalogs.md)  
   
-    -   [Create and Manage Full-Text Indexes](../../2014/database-engine/create-and-manage-full-text-indexes.md)  
+    -   [Create and Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
     -   [Choose a Language When Creating a Full-Text Index](../../2014/database-engine/choose-a-language-when-creating-a-full-text-index.md)  
   

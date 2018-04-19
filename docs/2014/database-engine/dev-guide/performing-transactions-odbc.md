@@ -27,8 +27,8 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Transactions in ODBC](../../../2014/database-engine/dev-guide/transactions-in-odbc.md)  
+-   [Transactions in ODBC](../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
   
--   [Performing Distributed Transactions](../../../2014/database-engine/dev-guide/performing-distributed-transactions.md)  
+-   [Performing Distributed Transactions](../../relational-databases/native-client/odbc/performing-transactions-distributed-transactions.md)  
   
   

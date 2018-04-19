@@ -211,7 +211,7 @@ manager: "jhubbard"
  [Integration Services Tasks](../../2014/integration-services/integration-services-tasks.md)   
  [Transfer SQL Server Objects Task Editor &#40;General Page&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-general-page.md)   
  [Expressions Page](../../2014/integration-services/expressions-page.md)   
- [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../2014/database-engine/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Security Considerations for a SQL Server Installation](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

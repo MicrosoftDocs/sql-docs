@@ -240,7 +240,7 @@ manager: "jhubbard"
  [Create Credential - Authenticate to Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> SQL Server Backup to URL Using Maintenance Plan Wizard  
- Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio has been enhanced to include **URL** as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential. For more information, see  the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Similar to the backup task described previously, the Maintenance Plan Wizard in SQL Server Management Studio has been enhanced to include **URL** as one of the destination options, and other supporting objects required to backup to Windows Azure storage like the SQL Credential. For more information, see  the **Define Backup Tasks** section in [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 ##  <a name="RestoreSSMS"></a> Restoring from Windows Azure storage Using SQL Server Management Studio  
  If you are restoring a database, **URL** is included as the device to restore from. Following steps describe the changes in the Restore task to allow restoring from Windows Azure storage:  

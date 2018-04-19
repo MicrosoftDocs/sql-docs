@@ -23,19 +23,19 @@ manager: "jhubbard"
 ## Topics in This Section  
  This section on transactions in memory-optimized tables includes the following topics:  
   
--   [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
+-   [Guidelines for Transaction Isolation Levels with Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
--   [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+-   [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
--   [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md)  
+-   [Transactions in Memory-Optimized Tables](transactions-in-memory-optimized-tables.md)  
   
--   [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)  
+-   [Transaction Isolation Levels](transaction-isolation-levels.md)  
   
--   [Cross-Container Transactions](../../2014/database-engine/cross-container-transactions.md)  
+-   [Cross-Container Transactions](cross-container-transactions.md)  
   
- For more information, see [Control Transaction Durability](../../2014/database-engine/control-transaction-durability.md).  
+ For more information, see [Control Transaction Durability](../relational-databases/logs/control-transaction-durability.md).  
   
 ## See Also  
- [Memory-Optimized Tables](../../2014/database-engine/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

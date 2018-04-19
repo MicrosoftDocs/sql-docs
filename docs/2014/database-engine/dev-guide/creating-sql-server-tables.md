@@ -215,6 +215,6 @@ SAFE_EXIT:
 ```  
   
 ## See Also  
- [Tables and Indexes](../../../2014/database-engine/dev-guide/tables-and-indexes.md)  
+ [Tables and Indexes](../../relational-databases/indexes/indexes.md)  
   
   

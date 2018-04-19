@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## User Action  
  Modify the key column list to include no more than the specified maximum number of columns.  
   
- For nonclustered indexes, consider using the INCLUDE clause in the CREATE INDEX statement to add columns to the index as nonkey columns. This method avoids exceeding the current index size limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](../../database-engine/create-indexes-with-included-columns.md).  
+ For nonclustered indexes, consider using the INCLUDE clause in the CREATE INDEX statement to add columns to the index as nonkey columns. This method avoids exceeding the current index size limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
 ## See Also  
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 4.  Retrieve any result sets.  
   
- After an application retrieves all the rows in all of the result sets returned by the SQL statement, it can execute another query on the same statement handle. If an application determines that it is not required to retrieve all the rows in a particular result set, it can cancel the rest of the result set by calling either [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) or [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md).  
+ After an application retrieves all the rows in all of the result sets returned by the SQL statement, it can execute another query on the same statement handle. If an application determines that it is not required to retrieve all the rows in a particular result set, it can cancel the rest of the result set by calling either [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) or [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
  If, in an ODBC application, you must execute the same SQL statement multiple times with different data, use a parameter marker denoted by a question mark (?) in the construction of an SQL statement:  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Each parameter marker can then be bound to a program variable by calling [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md).  
+ Each parameter marker can then be bound to a program variable by calling [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
   
  After all SQL statements execute and their result sets process, the application frees the statement handle.  
   
@@ -62,6 +62,6 @@ INSERT INTO MyTable VALUES (?, ?, ?)
 -   [Freeing a Statement Handle](../../../2014/database-engine/dev-guide/freeing-a-statement-handle.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

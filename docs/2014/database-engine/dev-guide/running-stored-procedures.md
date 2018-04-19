@@ -65,7 +65,7 @@ manager: "jhubbard"
 -   [Processing Stored Procedure Results](../../../2014/database-engine/dev-guide/processing-stored-procedure-results.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)   
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

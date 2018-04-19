@@ -22,7 +22,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Rebuild Index Task
-  The Rebuild Index task rebuilds indexes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../../2014/database-engine/reorganize-and-rebuild-indexes.md).  
+  The Rebuild Index task rebuilds indexes in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/indexes.md).  
   
  By using the Rebuild Index task, a package can rebuild indexes in a single database or multiple databases. If the task rebuilds only the indexes in a single database, you can choose the views and tables whose indexes the task rebuilds.  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  For more information about the properties that you can set in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, click the following topic:  
   
- [Rebuild Index Task &#40;Maintenance Plan&#41;](../../2014/database-engine/rebuild-index-task-maintenance-plan.md)  
+ [Rebuild Index Task &#40;Maintenance Plan&#41;](../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## Related Tasks  
  For more about how to set these properties in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](../../2014/integration-services/set-the-properties-of-a-task-or-container.md).  

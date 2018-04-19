@@ -99,7 +99,7 @@ GO
   
  CONTAINSTABLE is useful for the same kinds of matches as CONTAINS, and FREETEXTTABLE is useful for the same kinds of matches as FREETEXT. For more information, see [Overview of the Full-Text Predicates (CONTAINS and FREETEXT)](#OV_ft_predicates), earlier in this topic. When running queries that use the CONTAINSTABLE and FREETEXTTABLE functions you must explicitly join rows that are returned with the rows in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base table.  
   
- Typically, the result of CONTAINSTABLE or FREETEXTTABLE needs to be joined with the base table. In such cases, you need to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more information, see [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md).  
+ Typically, the result of CONTAINSTABLE or FREETEXTTABLE needs to be joined with the base table. In such cases, you need to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more information, see [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md).  
   
  
   

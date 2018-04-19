@@ -31,11 +31,11 @@ manager: "jhubbard"
   
 -   The procedure can have an integer return code.  
   
- Applications must be able to handle all these outputs from stored procedures. The CALL or EXECUTE statement should include parameter markers for the return code and output parameters. Use [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) to bind them all as output parameters and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver will transfer the output values to the bound variables. Output parameters and return codes are the last items returned to the client by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; they are not returned to the application until [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) returns SQL_NO_DATA.  
+ Applications must be able to handle all these outputs from stored procedures. The CALL or EXECUTE statement should include parameter markers for the return code and output parameters. Use [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) to bind them all as output parameters and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver will transfer the output values to the bound variables. Output parameters and return codes are the last items returned to the client by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; they are not returned to the application until [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) returns SQL_NO_DATA.  
   
  ODBC does not support binding [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor parameters. Because all output parameters must be bound before executing a procedure, any [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure that contains an output cursor parameter cannot be called by ODBC applications.  
   
 ## See Also  
- [Running Stored Procedures](../../../2014/database-engine/dev-guide/running-stored-procedures.md)  
+ [Running Stored Procedures](running-stored-procedures.md)  
   
   

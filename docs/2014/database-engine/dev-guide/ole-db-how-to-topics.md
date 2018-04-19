@@ -56,6 +56,6 @@ manager: "jhubbard"
 -   [Use Table-Valued Parameters &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/use-table-valued-parameters-ole-db.md)  
   
 ## See Also  
- [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md)  
+ [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

@@ -26,6 +26,6 @@ manager: "jhubbard"
  [Lesson 2: Creating and Managing Data in a Hierarchical Table](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
 ## See Also  
- [Hierarchical Data &#40;SQL Server&#41;](../../database-engine/hierarchical-data-sql-server.md)  
+ [Hierarchical Data &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  
   
   

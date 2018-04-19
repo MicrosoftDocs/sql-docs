@@ -47,7 +47,7 @@ manager: "jhubbard"
 |TSQL_SPs|Captures detailed information about all executing stored procedures. Use to analyze the component steps of stored procedures. Add the **SP:Recompile** event if you suspect that procedures are being recompiled.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
 |Tuning|Captures information about stored procedures and [!INCLUDE[tsql](../includes/tsql-md.md)] batch execution. Use to produce trace output that [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor can use as a workload to tune databases.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
- For information about the event classes, see [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md).  
+ For information about the event classes, see [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 ## Default Template  
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] automatically designates the **Standard** template as the default template applied to any new trace. However you can change the default template to any other predefined or user-defined template. To change the default template, select the **Use as a default template for selected server type** check box when you create or edit a template by using the **General** tab of the **Trace Template Properties** dialog box.  

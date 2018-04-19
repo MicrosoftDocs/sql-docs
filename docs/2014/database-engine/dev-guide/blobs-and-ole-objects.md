@@ -62,7 +62,7 @@ manager: "jhubbard"
 -   [Streaming Support for BLOB Output Parameters](../../../2014/database-engine/dev-guide/streaming-support-for-blob-output-parameters.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)   
- [Using Large Value Types](../../../2014/database-engine/dev-guide/using-large-value-types.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [Using Large Value Types](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

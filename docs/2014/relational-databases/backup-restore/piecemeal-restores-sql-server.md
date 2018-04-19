@@ -23,7 +23,7 @@ manager: "jhubbard"
 # Piecemeal Restores (SQL Server)
   This topic is relevant only for databases in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contain multiple files or filegroups; and, under the simple model, only for read-only filegroups.  
   
- For information about piecemeal restore and memory-optimized tables, see [Piecemeal Restore of Databases With Memory-Optimized Tables](../../database-engine/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
+ For information about piecemeal restore and memory-optimized tables, see [Piecemeal Restore of Databases With Memory-Optimized Tables](../in-memory-oltp/memory-optimized-tables.md).  
   
  *Piecemeal restore* allows databases that contain multiple filegroups to be restored and recovered in stages. Piecemeal restore involves a series of restore sequences, starting with the primary filegroup and, in some cases, one or more secondary filegroups. Piecemeal restore maintains checks to ensure that the database will be consistent in the end. After the restore sequence is completed, recovered files, if they are valid and consistent with the database, can be brought online directly.  
   
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] piecemeal restore scenario  
   
-     For information on Piecemeal Restores of In-Memory OLTP databases see [Piecemeal Backup and Restore of Databases With Memory-Optimized Tables](../../database-engine/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
+     For information on Piecemeal Restores of In-Memory OLTP databases see [Piecemeal Backup and Restore of Databases With Memory-Optimized Tables](../in-memory-oltp/memory-optimized-tables.md).  
   
 ## Restrictions  
  If a partial restore sequence excludes any [FILESTREAM](../blob/filestream-sql-server.md) filegroup, point-in-time restore is not supported. You can force the restore sequence to continue. However the FILESTREAM filegroups that are omitted from your RESTORE statement can never be restored. To force a point-in-time restore, specify the CONTINUE_AFTER_ERROR option together with the STOPAT, STOPATMARK, or STOPBEFOREMARK option, which you must also specify in your subsequent RESTORE LOG statements. If you specify CONTINUE_AFTER_ERROR, the partial restore sequence succeeds and the FILESTREAM filegroup becomes unrecoverable.  

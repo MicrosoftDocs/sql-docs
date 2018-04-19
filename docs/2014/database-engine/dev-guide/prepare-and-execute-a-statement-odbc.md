@@ -29,9 +29,9 @@ manager: "jhubbard"
   
 3.  Optionally, for each parameter in the prepared statement:  
   
-    -   Call [SQLDescribeParam](../../../2014/database-engine/dev-guide/sqldescribeparam.md) to get parameter information.  
+    -   Call [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to get parameter information.  
   
-    -   Bind each parameter to a program variable by using [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md). Set up any data-at-execution parameters.  
+    -   Bind each parameter to a program variable by using [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Set up any data-at-execution parameters.  
   
 4.  For each execution of a prepared statement:  
   
@@ -39,11 +39,11 @@ manager: "jhubbard"
   
     -   Call [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
   
-    -   If data-at-execution input parameters are used, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md).  
+    -   If data-at-execution input parameters are used, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To prepare a statement with column-wise parameter binding  
   
-1.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+1.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
     -   Set SQL_ATTR_PARAMSET_SIZE to the number of sets (S) of parameters.  
   
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
     -   The second part is a SQLINTEGER variable to hold the status indicator.  
   
-2.  Call [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) to set the following attributes:  
+2.  Call [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to set the following attributes:  
   
     -   Set SQL_ATTR_PARAMSET_SIZE to the number of sets (S) of parameters.  
   

@@ -48,12 +48,12 @@ manager: "jhubbard"
   
 -   [Dropping a SQL Server Table](../../../2014/database-engine/dev-guide/dropping-a-sql-server-table.md)  
   
--   [Creating SQL Server Indexes](../../../2014/database-engine/dev-guide/creating-sql-server-indexes.md)  
+-   [Creating SQL Server Indexes](../../relational-databases/indexes/indexes.md)  
   
 -   [Dropping a SQL Server Index](../../../2014/database-engine/dev-guide/dropping-a-sql-server-index.md)  
   
 ## See Also  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](~/t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/drop-index-transact-sql.md)  

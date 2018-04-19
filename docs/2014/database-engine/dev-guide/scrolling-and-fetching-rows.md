@@ -29,11 +29,11 @@ manager: "jhubbard"
 # Scrolling and Fetching Rows
   To use a scrollable cursor, an ODBC application must:  
   
--   Set the cursor capabilities using [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md).  
+-   Set the cursor capabilities using [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
 -   Open the cursor using **SQLExecute** or **SQLExecDirect**.  
   
--   Scroll and fetch rows using **SQLFetch** or [SQLFetchScroll](../../../2014/database-engine/dev-guide/sqlfetchscroll.md).  
+-   Scroll and fetch rows using **SQLFetch** or [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
  Both **SQLFetch** and **SQLFetchSroll** can fetch blocks of rows at a time. The number of rows returned is specified by using **SQLSetStmtAttr** to set the SQL_ATTR_ROW_ARRAY_SIZE parameter.  
   

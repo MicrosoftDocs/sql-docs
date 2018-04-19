@@ -97,7 +97,7 @@ manager: "jhubbard"
   
      Because rows do not span pages, the number of rows per page should be rounded down to the nearest whole row. The value 2 in the formula is for the row's entry in the slot array of the page.  
   
-8.  Calculate the number of reserved free rows per page, based on the [fill factor](../../database-engine/specify-fill-factor-for-an-index.md) specified:  
+8.  Calculate the number of reserved free rows per page, based on the [fill factor](../indexes/specify-fill-factor-for-an-index.md) specified:  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Row_Size*** + 2)  
   
@@ -220,10 +220,10 @@ manager: "jhubbard"
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
   
 ## See Also  
- [Clustered and Nonclustered Indexes Described](../../database-engine/clustered-and-nonclustered-indexes-described.md)   
+ [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
- [Create Clustered Indexes](../../database-engine/create-clustered-indexes.md)   
- [Create Nonclustered Indexes](../../database-engine/create-nonclustered-indexes.md)   
+ [Create Clustered Indexes](../indexes/indexes.md)   
+ [Create Nonclustered Indexes](../indexes/create-nonclustered-indexes.md)   
  [Estimate the Size of a Nonclustered Index](estimate-the-size-of-a-nonclustered-index.md)   
  [Estimate the Size of a Heap](estimate-the-size-of-a-heap.md)   
  [Estimate the Size of a Database](estimate-the-size-of-a-database.md)  

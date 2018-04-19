@@ -33,7 +33,7 @@ manager: "jhubbard"
   
  Because SET options can be turned on and off at any time by users and applications, developers of stored procedures and triggers should also take care to test their procedures and triggers with the SET options listed above turned both on and off. This ensures that the procedures and triggers work correctly regardless of which options a particular connection may have set on when they invoke the procedure or trigger. Triggers or stored procedures that require a particular setting for one of these options should issue a SET statement at the start of the trigger or stored procedure. This SET statement remains in effect only for the execution of the trigger or stored procedure; when the procedure or trigger ends, the original setting is restored.  
   
- When connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a fourth SET option, CONCAT_NULL_YIELDS_NULL, is also set on. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not set these options on if AnsiNPW=NO is specified in the data source or on either [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md) or [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md).  
+ When connected to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a fourth SET option, CONCAT_NULL_YIELDS_NULL, is also set on. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not set these options on if AnsiNPW=NO is specified in the data source or on either [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) or [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md).  
   
  Like the ISO options noted earlier, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not turn the QUOTED_IDENTIFIER option on if QuotedID=NO is specified in the data source or on either **SQLDriverConnect** or **SQLBrowseConnect**.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Executing Statements &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/executing-statements-odbc.md)   
- [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md)   
- [SQLBrowseConnect](../../../2014/database-engine/dev-guide/sqlbrowseconnect.md)  
+ [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
+ [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   
   

@@ -51,7 +51,7 @@ manager: "jhubbard"
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To modify a partition scheme:**  
   
- This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In order to modify a partition scheme, you must first delete the scheme and then create a new one with the desired properties using the Create Partition Wizard. For more information, see [Create Partitioned Tables and Indexes](../../2014/database-engine/create-partitioned-tables-and-indexes.md)[Using SQL Server Management Studio](../../2014/database-engine/create-partitioned-tables-and-indexes.md#SSMSProcedure) under **Create Partitioned Tables and Indexes**.  
+ This specific action cannot be performed using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. In order to modify a partition scheme, you must first delete the scheme and then create a new one with the desired properties using the Create Partition Wizard. For more information, see [Create Partitioned Tables and Indexes Using SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) under **Create Partitioned Tables and Indexes**.  
   
 #### To delete a partition scheme  
   

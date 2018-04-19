@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  **To view the word breaker language of a column**  
   
--   [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md)  
+-   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   

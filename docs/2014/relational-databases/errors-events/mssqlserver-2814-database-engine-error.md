@@ -74,6 +74,6 @@ manager: "jhubbard"
 3.  If the problem persists, contact Microsoft Customer Support Services.  
   
 ## See Also  
- [SQL:StmtRecompile Event Class](../../database-engine/sql-stmtrecompile-event-class.md)  
+ [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

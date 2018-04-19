@@ -48,12 +48,12 @@ manager: "jhubbard"
 |[Copy Databases to Other Servers](copy-databases-to-other-servers.md)|[View or Change the Properties of a Database](view-or-change-the-properties-of-a-database.md)|  
 |[Database Detach and Attach &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[View a List of Databases on an Instance of SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)|[View or Change the Compatibility Level of a Database](view-or-change-the-compatibility-level-of-a-database.md)|  
-|[Change the Configuration Settings for a Database](change-the-configuration-settings-for-a-database.md)|[Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)|  
+|[Change the Configuration Settings for a Database](change-the-configuration-settings-for-a-database.md)|[Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[Create a Database](create-a-database.md)|[Create a User-Defined Data Type Alias](create-a-user-defined-data-type-alias.md)|  
 |[Delete a Database](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## Related Content  
- [Indexes](../../database-engine/indexes.md)  
+ [Indexes](../indexes/indexes.md)  
   
  [Views](../../database-engine/views.md)  
   

@@ -48,7 +48,7 @@ FOR(
   
 ### How to: Alter a Selective XML Index  
  **Alter a Selective XML Index by Using Transact-SQL**  
- Alter an existing selective XML index by calling the ALTER INDEX statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/alter-index-selective-xml-indexes.md).  
+ Alter an existing selective XML index by calling the ALTER INDEX statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](../relational-databases/indexes/indexes.md).  
   
  **Example**  
   

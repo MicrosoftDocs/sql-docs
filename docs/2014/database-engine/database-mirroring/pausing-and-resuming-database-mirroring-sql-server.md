@@ -45,7 +45,7 @@ manager: "jhubbard"
  When the session is resumed, the principal server immediately begins sending the accumulated log records to the mirror server. After the mirror server confirms that it has queued the log record corresponding to the oldest automatic checkpoint, the principal server truncates the log of the principal database to that checkpoint. The mirror server truncates the redo queue at the same log record. As this process is repeated for each successive checkpoint, the log is truncated in stages, checkpoint by checkpoint.  
   
 > [!NOTE]  
->  For more information about the checkpoints and log truncation, see [Database Checkpoints &#40;SQL Server&#41;](../database-checkpoints-sql-server.md).  
+>  For more information about the checkpoints and log truncation, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ##  <a name="AvoidFullLog"></a> Avoid a Full Transaction Log  
  If the log fills up (either because it reaches its maximum size or the server instance runs out of space), the database cannot perform any more updates. To avoid this problem, you have two alternatives:  

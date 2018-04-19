@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ## See Also  
  [bcp Utility](../../2014/database-engine/bcp-utility.md)   
- [SQL Server Event Class Reference](../../2014/database-engine/sql-server-event-class-reference.md)   
+ [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [sp_bindsession &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](~/t-sql/statements/bulk-insert-transact-sql.md)   

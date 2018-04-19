@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   On a client computer, open Administrative Tools in Control Panel, and double-click **Data Sources (ODBC)**. This will open the ODBC Data Source Administrator, which you can use to create a DSN.  
   
--   In an ODBC application, call [SQLConfigDataSource](../../../2014/database-engine/dev-guide/sqlconfigdatasource.md).  
+-   In an ODBC application, call [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md).  
   
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source contains:  
   

@@ -41,7 +41,7 @@ manager: "jhubbard"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  Alternatively, you can use the[Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)to create backups.  
+    >  Alternatively, you can use the[Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)to create backups.  
   
 -   [Related Tasks](#RelatedTasks)  
   
@@ -197,12 +197,12 @@ GO
   
 -   [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../database-engine/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## See Also  
  [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Maintenance Plans](../../database-engine/maintenance-plans.md)   
+ [Maintenance Plans](../maintenance-plans/maintenance-plans.md)   
  [Full File Backups &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
   
   

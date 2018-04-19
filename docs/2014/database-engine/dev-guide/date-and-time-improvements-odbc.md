@@ -20,7 +20,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Date and Time Improvements (ODBC)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. For an overview of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../../2014/database-engine/dev-guide/date-and-time-improvements.md). For a sample demonstrating ODBC date/time support, see [Use Date and Time Types](../../../2014/database-engine/dev-guide/use-date-and-time-types.md).  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced new date and time data types. This section describes how these new types are exposed as extensions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. For an overview of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client support for the new date and time data types, see [Date and Time Improvements](../../relational-databases/native-client/features/date-and-time-improvements.md). For a sample demonstrating ODBC date/time support, see [Use Date and Time Types](../../../2014/database-engine/dev-guide/use-date-and-time-types.md).  
   
  For more general information about date and time data types, see [datetime &#40;Transact-SQL&#41;](~/t-sql/data-types/datetime-transact-sql.md).  
   
@@ -47,6 +47,6 @@ manager: "jhubbard"
  Lists the ODBC functions that support enhanced date and time functionality.  
   
 ## See Also  
- [SQL Server Native Client &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

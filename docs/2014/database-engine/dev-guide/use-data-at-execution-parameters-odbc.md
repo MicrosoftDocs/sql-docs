@@ -22,7 +22,7 @@ manager: "jhubbard"
     
 ### To use data-at-execution text, ntext, or image parameters  
   
-1.  When calling [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) to bind a program buffer to the statement parameter:  
+1.  When calling [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) to bind a program buffer to the statement parameter:  
   
     -   For the last parameter, use SQL_LEN_DATA_AT_EXEC(*length*) where *length* is the total length of the `text`, `ntext`, or `image` parameter data in bytes.  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
     -   Call [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) to get the program-defined parameter ID. It will return SQL_NEED_DATA if there is another data-at-execution parameter.  
   
-    -   Call [SQLPutData](../../../2014/database-engine/dev-guide/sqlputdata.md) one or more times, to send the parameter data, until length is sent.  
+    -   Call [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) one or more times, to send the parameter data, until length is sent.  
   
 4.  Call [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) to indicate that all the data for the final data-at-execution parameter is sent. It will not return SQL_NEED_DATA.  
   

@@ -101,7 +101,7 @@ manager: "jhubbard"
 |||  
 |-|-|  
 |**Tasks**|**Topic**|  
-|Describes how to create partition functions and partition schemes and then apply these to a table and index.|[Create Partitioned Tables and Indexes](../../2014/database-engine/create-partitioned-tables-and-indexes.md)|  
+|Describes how to create partition functions and partition schemes and then apply these to a table and index.|[Create Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md)|  
 |||  
   
 ## Related Content  

@@ -45,7 +45,7 @@ manager: "jhubbard"
      Determine which events that you want to use in the session. To see all the events that are available, together with the keyword and channel, use the following query:  
   
     > [!NOTE]  
-    >  For information about keywords and channels, see [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md).  
+    >  For information about keywords and channels, see [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
     ```  
     SELECT p.name, c.event, k.keyword, c.channel, c.description FROM  
@@ -219,6 +219,6 @@ ADD TARGET package0.asynchronous_file_target
 ## See Also  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](~/t-sql/statements/create-event-session-transact-sql.md)   
  [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md)  
+ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

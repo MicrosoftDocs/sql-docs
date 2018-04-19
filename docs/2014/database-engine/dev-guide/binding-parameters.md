@@ -27,11 +27,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Binding Parameters
-  Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../../2014/database-engine/dev-guide/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
+  Each parameter marker in an SQL statement must be associated, or bound, to a variable in the application before the statement can be executed. This is done by calling the [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) function. **SQLBindParameter** describes the program variable (address, C data type, and so on) to the driver. It also identifies the parameter marker by indicating its ordinal value and then describes the characteristics of the SQL object it represents (SQL data type, precision, and so on).  
   
  Parameter markers can be bound or rebound at any time before a statement is executed. A parameter binding remains in effect until one of the following occurs:  
   
--   A call to [SQLFreeStmt](../../../2014/database-engine/dev-guide/sqlfreestmt.md) with the *Option* parameter set to SQL_RESET_PARAMS frees all parameters bound to the statement handle.  
+-   A call to [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with the *Option* parameter set to SQL_RESET_PARAMS frees all parameters bound to the statement handle.  
   
 -   A call to **SQLBindParameter** with *ParameterNumber* set to the ordinal of a bound parameter marker automatically releases the previous binding.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   Column-wise binding is done when each individual parameter is bound to its own array of variables.  
   
-     Column-wise binding is specified by calling [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) with *Attribute* set to SQL_ATTR_PARAM_BIND_TYPE and *ValuePtr* set to SQL_PARAM_BIND_BY_COLUMN.  
+     Column-wise binding is specified by calling [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) with *Attribute* set to SQL_ATTR_PARAM_BIND_TYPE and *ValuePtr* set to SQL_PARAM_BIND_BY_COLUMN.  
   
 -   Row-wise binding is done when all of the parameters in the SQL statement are bound as a unit to an array of structures that contain the individual variables for the parameters.  
   

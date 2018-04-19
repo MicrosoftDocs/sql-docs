@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 1.  Retrieve result set information.  
   
-2.  If bound columns are used, for each column you want to bind to, call [SQLBindCol](../../../2014/database-engine/dev-guide/sqlbindcol.md) to bind a program buffer to the column.  
+2.  If bound columns are used, for each column you want to bind to, call [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) to bind a program buffer to the column.  
   
 3.  For each row in the result set:  
   
@@ -32,11 +32,11 @@ manager: "jhubbard"
   
     -   If bound columns are used, use the data now available in the bound column buffers.  
   
-    -   If unbound columns are used, call [SQLGetData](../../../2014/database-engine/dev-guide/sqlgetdata.md) one or more times to get the data for unbound columns after the last bound column. Calls to `SQLGetData` should be in increasing order of column number.  
+    -   If unbound columns are used, call [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) one or more times to get the data for unbound columns after the last bound column. Calls to `SQLGetData` should be in increasing order of column number.  
   
     -   Call `SQLGetData` multiple times to get data from a text or image column.  
   
-4.  When [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) signals the end of the result set by returning SQL_NO_DATA, call [SQLMoreResults](../../../2014/database-engine/dev-guide/sqlmoreresults.md) to determine if another result set is available.  
+4.  When [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) signals the end of the result set by returning SQL_NO_DATA, call [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) to determine if another result set is available.  
   
     -   If it returns SQL_SUCCESS, another result set is available.  
   
@@ -49,12 +49,12 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When a result set contains compute rows, each compute row is made available as a separate result set. These compute result sets are interspersed within the normal rows and break normal rows into multiple result sets.  
   
-5.  Optionally, call [SQLFreeStmt](../../../2014/database-engine/dev-guide/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
+5.  Optionally, call [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
   
 6.  If another result set is available, go to Step 1.  
   
 > [!NOTE]  
->  To cancel processing a result set before [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../../2014/database-engine/dev-guide/sqlclosecursor.md).  
+>  To cancel processing a result set before [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## See Also  
  [Processing Results How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  

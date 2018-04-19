@@ -39,6 +39,6 @@ manager: "jhubbard"
  [OPENXML &#40;Transact-SQL&#41;](~/t-sql/functions/openxml-transact-sql.md)  
   
 ## Related Content  
- [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../2014/database-engine/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+ [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [XQuery Language Reference &#40;SQL Server&#41;](~/xquery/xquery-language-reference-sql-server.md)  
   

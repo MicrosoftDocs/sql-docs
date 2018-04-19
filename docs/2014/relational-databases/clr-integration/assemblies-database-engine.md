@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   User-defined aggregate functions. For more information, see [Create User-defined Aggregates](../../database-engine/create-user-defined-aggregates.md).  
   
--   User-defined types. For more information, see [Using User-Defined Types](../../database-engine/dev-guide/using-user-defined-types.md).  
+-   User-defined types. For more information, see [Using User-Defined Types](../native-client/features/using-user-defined-types.md).  
   
  Assemblies perform the following functions in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   

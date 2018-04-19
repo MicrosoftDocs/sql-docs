@@ -182,10 +182,10 @@ manager: "jhubbard"
 |Lists the system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to monitor performance and activity.|[SQL Server Profiler Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## See Also  
- [Locks Event Category](../../2014/database-engine/locks-event-category.md)   
- [Sessions Event Category](../../2014/database-engine/sessions-event-category.md)   
- [Stored Procedures Event Category](../../2014/database-engine/stored-procedures-event-category.md)   
- [TSQL Event Category](../../2014/database-engine/tsql-event-category.md)   
+ [Locks Event Category](../relational-databases/event-classes/locks-event-category.md)   
+ [Sessions Event Category](../relational-databases/event-classes/sessions-event-category.md)   
+ [Stored Procedures Event Category](../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [TSQL Event Category](../relational-databases/event-classes/tsql-event-category.md)   
  [Server Performance and Activity Monitoring](../../2014/database-engine/server-performance-and-activity-monitoring.md)  
   
   

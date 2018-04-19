@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View the Events for Registered Packages
-  Before you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events session, it is useful to find out what events are available in the registered packages. For more information, see [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md).  
+  Before you create a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events session, it is useful to find out what events are available in the registered packages. For more information, see [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
  Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [SQL Server Extended Events Packages](../../2014/database-engine/sql-server-extended-events-packages.md)   
+ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)  
   

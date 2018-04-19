@@ -86,7 +86,7 @@ Next
 -   Read access to the **Root\Microsoft\SqlServer\ComputerManagement10** WMI namespace. By default, everyone has read access through the Enable Account permission.  
   
     > [!NOTE]  
-    >  For information about how to verify WMI permissions, see the Security section of the topic [View Offline Log Files](../../../2014/database-engine/view-offline-log-files.md).  
+    >  For information about how to verify WMI permissions, see the Security section of the topic [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md).  
   
 -   Read permission to the folder that contains the error logs. By default the error logs are located in the following path (where \<*Drive>* represents the drive where you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and \<*InstanceName*> is the name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
@@ -96,6 +96,6 @@ Next
   
 ## See Also  
  [SqlErrorLogEvent Class](../../../2014/database-engine/dev-guide/sqlerrorlogevent-class.md)   
- [View Offline Log Files](../../../2014/database-engine/view-offline-log-files.md)  
+ [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  
   
   

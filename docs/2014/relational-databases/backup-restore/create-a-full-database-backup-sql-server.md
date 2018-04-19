@@ -297,7 +297,7 @@ GO
   
 -   [Restore a Database to a New Location &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
--   [Use the Maintenance Plan Wizard](../../database-engine/use-the-maintenance-plan-wizard.md)  
+-   [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## See Also  
  [Backup Overview &#40;SQL Server&#41;](backup-overview-sql-server.md)   

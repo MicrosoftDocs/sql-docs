@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Add a Data Source (ODBC)
-  You can add a data source by using ODBC Administrator, programmatically (by using [SQLConfigDataSource](../../../2014/database-engine/dev-guide/sqlconfigdatasource.md)), or by creating a file.  
+  You can add a data source by using ODBC Administrator, programmatically (by using [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)), or by creating a file.  
   
 ### To add a data source by using ODBC Administrator  
   
@@ -33,11 +33,11 @@ manager: "jhubbard"
   
 ### To add a data source programmatically  
   
-1.  Call [SQLConfigDataSource](../../../2014/database-engine/dev-guide/sqlconfigdatasource.md) with the second parameter set to either ODBC_ADD_DSN or ODBC_ADD_SYS_DSN.  
+1.  Call [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) with the second parameter set to either ODBC_ADD_DSN or ODBC_ADD_SYS_DSN.  
   
 ### To add a file data source  
   
-1.  Call [SQLDriverConnect](../../../2014/database-engine/dev-guide/sqldriverconnect.md) with a SAVEFILE=file_name parameter in the connect string. If the connect is successful, the ODBC driver creates a file data source with the connection parameters in the location pointed to by the SAVEFILE parameter.  
+1.  Call [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) with a SAVEFILE=file_name parameter in the connect string. If the connect is successful, the ODBC driver creates a file data source with the connection parameters in the location pointed to by the SAVEFILE parameter.  
   
 ## See Also  
  [Configuring the SQL Server ODBC Driver How-to Topics](../../../2014/database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  

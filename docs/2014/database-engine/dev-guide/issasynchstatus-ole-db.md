@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Interfaces &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
- [Performing Asynchronous Operations](../../../2014/database-engine/dev-guide/performing-asynchronous-operations.md)  
+ [Performing Asynchronous Operations](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

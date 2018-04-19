@@ -44,7 +44,7 @@ FOR
   
 ### How to: Alter a Secondary Selective XML Index  
  **Alter a Secondary Selective XML Index by Using Transact-SQL**  
- 1.  Drop the existing secondary selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/drop-index-selective-xml-indexes.md).  
+ 1.  Drop the existing secondary selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](../relational-databases/indexes/indexes.md).  
   
 2.  Recreate the index with the desired options by calling the CREATE XML INDEX statement. For more information, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/create-xml-index-selective-xml-indexes.  
   
@@ -69,7 +69,7 @@ FOR
   
 ### How to: Drop a Secondary Selective XML Index  
  **Drop a Secondary Selective XML Index by Using Transact-SQL**  
- Drop a secondary selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/drop-index-selective-xml-indexes.md).  
+ Drop a secondary selective XML index by calling the DROP INDEX statement. For more information, see [DROP INDEX &#40;Selective XML Indexes&#41;](../relational-databases/indexes/indexes.md).  
   
  **Example**  
   

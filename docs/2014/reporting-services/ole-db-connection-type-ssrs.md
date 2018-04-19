@@ -64,7 +64,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
 -   [Using the .NET Framework Data Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=112314)  
   
--   [SQL Server Native Client &#40;OLE DB&#41;](../../2014/database-engine/dev-guide/sql-server-native-client-ole-db.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41;](../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
  For more information about specific OLE DB data providers, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../2014/reporting-services/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   

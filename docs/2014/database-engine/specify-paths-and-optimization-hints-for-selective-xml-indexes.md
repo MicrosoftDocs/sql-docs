@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   In the **FOR** clause of a **CREATE** statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
--   In the **ADD** clause of an **ALTER** statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](~/t-sql/statements/alter-index-selective-xml-indexes.md).  
+-   In the **ADD** clause of an **ALTER** statement. For more information, see [ALTER INDEX &#40;Selective XML Indexes&#41;](../relational-databases/indexes/indexes.md).  
   
  For more information about selective XML indexes, see [Selective XML Indexes &#40;SXI&#41;](../../2014/database-engine/selective-xml-indexes-sxi.md).  
   

@@ -37,9 +37,9 @@ manager: "jhubbard"
   
  To determine the characteristics of a result set, an application can call:  
   
--   [SQLNumResultCols](../../../2014/database-engine/dev-guide/sqlnumresultcols.md) to determine how many columns a request returned.  
+-   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) to determine how many columns a request returned.  
   
--   [SQLColAttribute](../../../2014/database-engine/dev-guide/sqlcolattribute.md) or [SQLDescribeCol](../../../2014/database-engine/dev-guide/sqldescribecol.md) to describe a column in the result set.  
+-   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) or [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) to describe a column in the result set.  
   
  A well-designed application is written with the assumption that the result set is unknown and uses the information returned by these functions to bind the columns in the result set. An application can call these functions at any time after a statement is prepared or executed. However, for optimal performance, an application should call **SQLColAttribute**, **SQLDescribeCol**, and **SQLNumResultCols** after a statement is executed.  
   

@@ -140,6 +140,6 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
   
 ## See Also  
  [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
- [Using Multiple Active Result Sets &#40;MARS&#41;](../../database-engine/dev-guide/using-multiple-active-result-sets-mars.md)  
+ [Using Multiple Active Result Sets &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

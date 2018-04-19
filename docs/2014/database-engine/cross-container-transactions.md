@@ -80,7 +80,7 @@ commit
  Stability guarantees the system gives to transaction T about the data read.  
  Stability refers to whether the transaction’s reads are repeatable. That is, if the reads were repeated would they return the same rows and row versions?  
   
- Certain guarantees refer to the logical end time of the transaction. In general, the logical end time is the time the transaction is committed to the database. If memory-optimized tables are accessed by the transaction, the logical end time is technically the beginning of the validation phase. (For more information, see the transaction lifetime discussion in [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md).  
+ Certain guarantees refer to the logical end time of the transaction. In general, the logical end time is the time the transaction is committed to the database. If memory-optimized tables are accessed by the transaction, the logical end time is technically the beginning of the validation phase. (For more information, see the transaction lifetime discussion in [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Regardless of isolation level, a transaction (T) always sees its own updates:  
   
@@ -181,7 +181,7 @@ commit
   
  Cross-container, read-only transactions in autocommit mode are simply rolled back at the end of the transaction. No validation is performed.  
   
- Explicit or implicit cross-container, read-only transactions perform validation at commit time if the transaction accesses memory-optimized tables under REPEATABLE READ or SERIALIZABLE isolation. For details about validation see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md).  
+ Explicit or implicit cross-container, read-only transactions perform validation at commit time if the transaction accesses memory-optimized tables under REPEATABLE READ or SERIALIZABLE isolation. For details about validation see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
 ## See Also  
  [Understanding Transactions on Memory-Optimized Tables](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   

@@ -40,25 +40,25 @@ manager: "jhubbard"
   
 ### To log driver performance data programmatically  
   
-1.  Call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA_LOG and the full path and file name of the performance data log file. For example:  
+1.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA_LOG and the full path and file name of the performance data log file. For example:  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  Call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_START to start logging performance data.  
+2.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_START to start logging performance data.  
   
-3.  Optionally, call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_LOG_NOW and NULL to write a tab-delimited record of performance data to the performance data log file. This can be done multiple times as the application runs.  
+3.  Optionally, call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_LOG_NOW and NULL to write a tab-delimited record of performance data to the performance data log file. This can be done multiple times as the application runs.  
   
-4.  Call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_STOP to stop logging performance data.  
+4.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_STOP to stop logging performance data.  
   
 ### To pull driver performance data into an application  
   
-1.  Call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_START to start profiling performance data.  
+1.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_START to start profiling performance data.  
   
-2.  Call [SQLGetConnectAttr](../../../2014/database-engine/dev-guide/sqlgetconnectattr.md) with SQL_COPT_SS_PERF_DATA and the address of a pointer to a SQLPERF structure. The first such call sets the pointer to the address of a valid SQLPERF structure that contains current performance data. The driver does not continually refresh the data in the performance structure. The application must repeat the call to [SQLGetConnectAttr](../../../2014/database-engine/dev-guide/sqlgetconnectattr.md) any time it needs to refresh the structure with more current performance data.  
+2.  Call [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) with SQL_COPT_SS_PERF_DATA and the address of a pointer to a SQLPERF structure. The first such call sets the pointer to the address of a valid SQLPERF structure that contains current performance data. The driver does not continually refresh the data in the performance structure. The application must repeat the call to [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) any time it needs to refresh the structure with more current performance data.  
   
-3.  Call [SQLSetConnectAttr](../../../2014/database-engine/dev-guide/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_STOP to stop logging performance data.  
+3.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_DATA and SQL_PERF_STOP to stop logging performance data.  
   
 ## Example  
  You will need an ODBC data source called AdventureWorks, whose default database is the AdventureWorks sample database. (You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.) This data source must be based on the ODBC driver that is supplied by the operating system (the driver name is "SQL Server"). If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
@@ -238,6 +238,6 @@ int main() {
   
 ## See Also  
  [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/profiling-odbc-driver-performance-how-to-topics-odbc.md)   
- [Profiling ODBC Driver Performance](../../../2014/database-engine/dev-guide/profiling-odbc-driver-performance.md)  
+ [Profiling ODBC Driver Performance](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

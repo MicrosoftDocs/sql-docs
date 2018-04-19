@@ -52,7 +52,7 @@ idxServerCol
  Is the length of the data in the program variable, not including the length of any length indicator or terminator. Setting *cbData* to SQL_NULL_DATA indicates all rows copied to the server contain a NULL value for the column. Setting it to SQL_VARLEN_DATA indicates that a string terminator or other method is used to determine the length of data copied. If both a length indicator and a terminator exist, the system uses whichever one results in less data being copied.  
   
  *idxServerCol*  
- Is the ordinal position of the column in the table to which the data is copied. The first column is 1. The ordinal position of a column is reported by [SQLColumns](../../../2014/database-engine/dev-guide/sqlcolumns.md).  
+ Is the ordinal position of the column in the table to which the data is copied. The first column is 1. The ordinal position of a column is reported by [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
 ## Returns  
  SUCCEED or FAIL.  

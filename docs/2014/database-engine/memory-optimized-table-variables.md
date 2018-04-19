@@ -62,7 +62,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   The type must have at least one index. As with memory-optimized tables, you can use hash and nonclustered indexes.  
   
-     For a hash index, the bucket count should be about one to two times the number of expected unique index keys. For more information, see [Determining the Correct Bucket Count for Hash Indexes](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md).  
+     For a hash index, the bucket count should be about one to two times the number of expected unique index keys. For more information, see [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 -   The data type and constraint restrictions on memory-optimized tables also apply to memory-optimized table types. For example, in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] default constraints are supported, but check constraints are not.  
   
@@ -185,6 +185,6 @@ GO
  Memory is accounted for as part of the single PGPOOL memory consumer of the database.  
   
 ## See Also  
- [Transact-SQL Support for In-Memory OLTP](../../2014/database-engine/transact-sql-support-for-in-memory-oltp.md)  
+ [Transact-SQL Support for In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

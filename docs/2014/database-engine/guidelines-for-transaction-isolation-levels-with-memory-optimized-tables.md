@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   Long-running transactions should be avoided with memory-optimized tables. Such transactions increase the likelihood of conflicts and subsequent transaction terminations. A long-running transaction also defers garbage collection. The longer a transaction runs, the longer In-Memory OLTP keeps recently deleted row versions, which can decrease lookup performance for new transactions.  
   
- Disk-based tables typically rely on locking and blocking for transaction isolation. Memory-optimized tables rely on multi-versioning and conflict detection to guarantee isolation. For details, see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../../2014/database-engine/transactions-in-memory-optimized-tables.md).  
+ Disk-based tables typically rely on locking and blocking for transaction isolation. Memory-optimized tables rely on multi-versioning and conflict detection to guarantee isolation. For details, see the section on Conflict Detection, Validation, and Commit Dependency Checks in [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Disk-based tables do allow multi-versioning with the isolation levels SNAPSHOT and READ_COMMITTED_SNAPSHOT. For memory-optimized tables all isolation levels are multi-version based, including REPEATABLE READ and SERIALIZABLE.  
   

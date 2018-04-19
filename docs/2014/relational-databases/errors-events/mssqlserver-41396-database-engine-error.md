@@ -39,6 +39,6 @@ manager: "jhubbard"
  Select fewer rows or decrease the complexity of the query by removing joins or aggregate functions.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../database-engine/in-memory-oltp-in-memory-optimization.md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

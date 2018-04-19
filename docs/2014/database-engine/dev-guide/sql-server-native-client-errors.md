@@ -22,6 +22,6 @@ manager: "jhubbard"
  [MSSQLSERVER_50000](../../relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md)  
   
 ## See Also  
- [SQL Server Native Client Programming](../../../2014/database-engine/dev-guide/sql-server-native-client-programming.md)  
+ [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

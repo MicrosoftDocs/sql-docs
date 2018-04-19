@@ -160,7 +160,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ## See Also  
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [The Transaction Log &#40;SQL Server&#41;](../../database-engine/the-transaction-log-sql-server.md)   
+ [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Recovery Models &#40;SQL Server&#41;](recovery-models-sql-server.md)  

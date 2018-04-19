@@ -21,7 +21,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Implicit Cursor Conversions (ODBC)
-  Applications can request a cursor type through [SQLSetStmtAttr](../../../2014/database-engine/dev-guide/sqlsetstmtattr.md) and then execute an SQL statement that is not supported by server cursors of the type requested. A call to **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO and **SQLGetDiagRec** returns:  
+  Applications can request a cursor type through [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) and then execute an SQL statement that is not supported by server cursors of the type requested. A call to **SQLExecute** or **SQLExecDirect** returns SQL_SUCCESS_WITH_INFO and **SQLGetDiagRec** returns:  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  

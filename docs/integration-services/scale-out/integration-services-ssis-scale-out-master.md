@@ -29,10 +29,10 @@ The Scale Out Master service is a Windows service that is responsible for the co
 ## Scale Out views and stored procedures in SSISDB
 
 ### Views:
--   [[catalog].[master_properties(../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
+-   [[catalog].[master_properties]](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)
 -   [[catalog].[worker_agents]](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md).
 
-####Stored procedures:
+### Stored procedures:
 
 -   For managing Scale Out Workers:  
     -   [[catalog].[disable_worker_agent]](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)

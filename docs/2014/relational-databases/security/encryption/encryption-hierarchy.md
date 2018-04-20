@@ -103,12 +103,12 @@ manager: "jhubbard"
  Transparent Data Encryption (TDE) is a special case of encryption using a symmetric key. TDE encrypts an entire database using that symmetric key called the database encryption key. The database encryption key is protected by other keys or certificates which are protected either by the database master key or by an asymmetric key stored in an EKM module. For more information, see [Transparent Data Encryption &#40;TDE&#41;](/transparent-data-encryption.md).  
   
 ## Related Content  
- [Securing SQL Server](../relational-databases/security/securing-sql-server.md)  
+ [Securing SQL Server](../security/securing-sql-server.md)  
   
  [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)  
   
 ## See Also  
- [Permissions Hierarchy &#40;Database Engine&#41;](../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [Securables](../relational-databases/security/securables.md)  
+ [Permissions Hierarchy &#40;Database Engine&#41;](../security/permissions-hierarchy-database-engine.md)   
+ [Securables](../security/securables.md)  
   
   

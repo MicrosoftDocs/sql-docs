@@ -207,7 +207,7 @@ manager: "jhubbard"
   
  For more information, see also:  
   
--   [Back Up and Restore Full-Text Catalogs and Indexes](../indexes/indexes.md)  
+-   [Back Up and Restore Full-Text Catalogs and Indexes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [Database Mirroring and Full-Text Catalogs &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   

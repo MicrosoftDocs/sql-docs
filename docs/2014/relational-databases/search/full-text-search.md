@@ -186,13 +186,13 @@ manager: "jhubbard"
   
     -   [Create and Manage Full-Text Catalogs](create-and-manage-full-text-catalogs.md)  
   
-    -   [Create and Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
+    -   [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes)  
   
     -   [Choose a Language When Creating a Full-Text Index](choose-a-language-when-creating-a-full-text-index.md)  
   
     -   [Populate Full-Text Indexes](populate-full-text-indexes.md)  
   
-    -   [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md)  
+    -   [Manage Full-Text Indexes](../../database-engine/manage-full-text-indexes.md)  
   
     -   [Improve the Performance of Full-Text Indexes](improve-the-performance-of-full-text-indexes.md)  
   
@@ -224,7 +224,7 @@ manager: "jhubbard"
   
     -   [Set the Service Account for the Full-text Filter Daemon Launcher](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
   
--   [Upgrade Full-Text Search](upgrade-full-text-search.md)Upgrade Full-Text Search  
+-   [Upgrade Full-Text Search](upgrade-full-text-search.md)  
   
  [In This Topic](#top)  
   

@@ -65,6 +65,6 @@ manager: "jhubbard"
  [SQL Server, Plan Cache Object](sql-server-plan-cache-object.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Buffer Pool Extension](configure-windows/buffer-pool-extension.md)  
+ [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

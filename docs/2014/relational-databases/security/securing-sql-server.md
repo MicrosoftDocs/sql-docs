@@ -111,7 +111,7 @@ GO
 ## Application Security  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security best practices include writing secure client applications.  
   
- For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](configure-windows/client-network-configuration.md).  
+ For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).  
   
 ## SQL Server Security Tools, Utilities, Views, and Functions  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides tools, utilities, views, and functions that can be used to configure and administer security.  

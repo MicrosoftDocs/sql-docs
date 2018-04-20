@@ -57,7 +57,7 @@ GO
 -   The primary filegroup, for a partitioned table.  
   
 > [!NOTE]  
->  For information about creating a full-text index, see [Create and Manage Full-Text Indexes](../relational-databases/indexes/indexes.md) and [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  For information about creating a full-text index, see [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md) and [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md).  
   
  To find the filegroup of full-text index on a table or view, use the following query, where *object_name* is the name of the table or view:  
   

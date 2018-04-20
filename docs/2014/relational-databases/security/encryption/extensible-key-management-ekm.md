@@ -85,7 +85,7 @@ GO
  An EKM module can support more than one type of authentication. Each provider exposes only one type of authentication to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], that is if the module supports Basic or Other authentication types, it exposes one or the other, but not both.  
   
 #### EKM Device-Specific Basic Authentication Using username/password  
- For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../security/authentication-access/credentials-database-engine.md).  
   
  A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *Identify* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
   
@@ -131,7 +131,7 @@ DECRYPTION BY EKM_AKey1
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not support signing modules with asymmetric keys generated from EKM provider.  
   
 ## Related Tasks  
- [EKM provider enabled Server Configuration Option](configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [EKM provider enabled Server Configuration Option](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)  
   

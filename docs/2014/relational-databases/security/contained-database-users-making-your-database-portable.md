@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 ## Remarks  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contained database users must be enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [contained database authentication Server Configuration Option](configure-windows/contained-database-authentication-server-configuration-option.md).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contained database users must be enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
 -   Contained database users and logins with non-overlapping names can co-exist in your applications.  
   

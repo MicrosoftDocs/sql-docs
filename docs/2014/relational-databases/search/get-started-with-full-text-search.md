@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 2.  Create a full-text index on the table or indexed view.  
   
-     A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine. To create full-text search on a table or view, it must have a unique, single-column, non-nullable index. The Full-Text Engine requires this unique index to map each row in the table to a unique, compressible key. A full-text index can include `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, and `varbinary(max)` columns. For more information, see [Create and Manage Full-Text Indexes](../../database-engine/indexes.md).  
+     A full-text index is a special type of token-based functional index that is built and maintained by the Full-Text Engine. To create full-text search on a table or view, it must have a unique, single-column, non-nullable index. The Full-Text Engine requires this unique index to map each row in the table to a unique, compressible key. A full-text index can include `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, and `varbinary(max)` columns. For more information, see [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md).  
   
  Before learning about creating full-text indexes, it is important to consider how they differ from regular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indexes. The following table lists the differences.  
   
@@ -184,7 +184,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-fulltext-index-transact-sql.md)  
   
--   [Create and Manage Full-Text Indexes](../../database-engine/indexes.md)  
+-   [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md)  
   
 ### To View Information about a Full-Text Index  
   

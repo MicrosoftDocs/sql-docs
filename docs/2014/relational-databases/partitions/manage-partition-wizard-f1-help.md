@@ -37,7 +37,7 @@ manager: "jhubbard"
   
      `Note` If **Manage Partition** is unavailable, you may have selected a table that does not contain partitions. Click **Create Partition** on the **Storage** submenu and use the **Create Partition Wizard** to create partitions in your table.  
   
- For general information about partitions and indexes, see [Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md).  
+ For general information about partitions and indexes, see [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md).  
   
  This section provides the information that is required to manage, modify, and implement partitions using the **Manage Partition Wizard**.  
   
@@ -301,6 +301,6 @@ manager: "jhubbard"
  ![Arrow icon used with Back to Top link](../../media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
 ## See Also  
- [Partitioned Tables and Indexes](../relational-databases/indexes/indexes.md)  
+ [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)  
   
   

@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 ## See Also  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
- [SQL Server Service Broker](configure-windows/sql-server-service-broker.md)   
+ [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

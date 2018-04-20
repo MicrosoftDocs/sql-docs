@@ -106,7 +106,7 @@ manager: "jhubbard"
   
  **To suppress an error message if stopwords cause a Boolean operation on a full-text query to fail**  
   
--   [transform noise words Server Configuration Option](configure-windows/transform-noise-words-server-configuration-option.md)  
+-   [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
 ##  <a name="viewing"></a> Viewing Stoplists and Stoplist Metadata  

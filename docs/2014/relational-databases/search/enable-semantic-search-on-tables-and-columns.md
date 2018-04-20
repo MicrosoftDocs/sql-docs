@@ -38,7 +38,7 @@ manager: "jhubbard"
   
      You can create and enable all these requirements at the same time.  
   
--   You can create a semantic index on columns that have any of the data types that are supported for full-text indexing. For more information, see [Create and Manage Full-Text Indexes](../../database-engine/indexes.md).  
+-   You can create a semantic index on columns that have any of the data types that are supported for full-text indexing. For more information, see [Create and Manage Full-Text Indexes](create-and-manage-full-text-indexes.md).  
   
 -   You can specify any document type that is supported for full-text indexing for `varbinary(max)` columns. For more information, see [How To: Determine Which Document Types Can Be Indexed](#doctypes) in this topic.  
   

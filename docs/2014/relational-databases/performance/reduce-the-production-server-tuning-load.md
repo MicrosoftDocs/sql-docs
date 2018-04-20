@@ -91,7 +91,7 @@ manager: "jhubbard"
 ```  
   
 ## See Also  
- [Considerations for Using Test Servers](../relational-databases/performance/considerations-for-using-test-servers.md)   
- [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Considerations for Using Test Servers](considerations-for-using-test-servers.md)   
+ [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](database-engine-tuning-advisor.md)  
   
   

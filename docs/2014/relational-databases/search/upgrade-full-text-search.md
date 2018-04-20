@@ -154,15 +154,15 @@ manager: "jhubbard"
   
  **To back up a database**  
   
--   [Full Database Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)  
+-   [Full Database Backups &#40;SQL Server&#41;](../backup-restore/full-database-backups-sql-server.md)  
   
--   [Transaction Log Backups &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md) (full recovery model only)  
+-   [Transaction Log Backups &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (full recovery model only)  
   
  **To restore a database backup**  
   
--   [Complete Database Restores &#40;Simple Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  
+-   [Complete Database Restores &#40;Simple Recovery Model&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)  
   
--   [Complete Database Restores &#40;Full Recovery Model&#41;](../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
+-   [Complete Database Restores &#40;Full Recovery Model&#41;](../backup-restore/complete-database-restores-full-recovery-model.md)  
   
 ### Example  
  The following example uses the MOVE clause in the [RESTORE](~/t-sql/statements/restore-statements-transact-sql.md) statement, to restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database named `ftdb1`. The [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database, log, and catalog files are moved to new locations on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] server instance, as follows:  
@@ -187,7 +187,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  If [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot find a full-text catalog file or if the full-text file was moved during the attach operation without specifying a new location, the behavior depends on the selected full-text upgrade option. If the full-text upgrade option is **Import** or **Rebuild**, the attached full-text catalog is rebuilt. If the full-text upgrade option is **Reset**, the attached full-text catalog is reset.  
   
- For more information about detaching and attaching a database, see [Database Detach and Attach &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), and [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ For more information about detaching and attaching a database, see [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](~/relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md), and [sp_detach_db &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## See Also  
  [Get Started with Full-Text Search](get-started-with-full-text-search.md)   

@@ -20,10 +20,10 @@ manager: "jhubbard"
 # Technical Reference (Replication)
   This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Errors and Events**  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Feature Reference**  
  [Configure Distribution Wizard](configure-distribution-wizard.md)  
   
  [New Subscription Wizard &#40;UI Reference&#41;](new-subscription-wizard-ui-reference.md)  
@@ -32,14 +32,14 @@ manager: "jhubbard"
   
  [More…](properties-reference-replication.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Agents**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Agents**  
  [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](replication-distribution-agent.md)  
   
  [More…](replication-agents.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Stored Procedures**  
  [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  [More…](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Tables**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Tables**  
  [MSmerge_conflicts_info &#40;Transact-SQL&#41;](~/relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
  [MSpeer_response &#40;Transact-SQL&#41;](~/relational-databases/system-tables/mspeer-response-transact-sql.md)  
@@ -61,14 +61,14 @@ manager: "jhubbard"
   
  [More…](~/relational-databases/system-tables/replication-tables-transact-sql.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Views**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Views**  
  [syspublications &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions &#40;System View&#41; &#40;Transact-SQL&#41;](~/relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
  [More…](~/relational-databases/system-views/replication-views-transact-sql.md)  
   
- ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Class Library**  
+ ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Replication Class Library**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

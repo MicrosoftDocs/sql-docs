@@ -90,14 +90,14 @@ GO
 |---------------------------|---------|  
 |Server and database users, roles, and processes|[Principals &#40;Database Engine&#41;](authentication-access/principals-database-engine.md)|  
 |Server and database objects security|[Securables](securables.md)|  
-|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security hierarchy|[Permissions Hierarchy &#40;Database Engine&#41;](../../database-engine/permissions-hierarchy-database-engine.md)|  
+|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security hierarchy|[Permissions Hierarchy &#40;Database Engine&#41;](permissions-hierarchy-database-engine.md)|  
   
 ### Encryption and Certificates  
  Encryption does not solve access control problems. However, it enhances security by limiting data loss even in the rare occurrence that access controls are bypassed. For example, if the database host computer is misconfigured and a malicious user obtains sensitive data, such as credit card numbers, that stolen information might be useless if it is encrypted. The following table contains more information about encryption in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |For information about|See|  
 |---------------------------|---------|  
-|The encryption hierarchy in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Encryption Hierarchy](../../database-engine/encryption-hierarchy.md)|  
+|The encryption hierarchy in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Encryption Hierarchy](encryption/encryption-hierarchy.md)|  
 |Implementing secure connections|[Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
 |Encryption functions|[Cryptographic Functions &#40;Transact-SQL&#41;](~/t-sql/functions/cryptographic-functions-transact-sql.md)|  
   
@@ -106,7 +106,7 @@ GO
 |For information about|See|  
 |---------------------------|---------|  
 |Creating a certificate for use by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)|  
-|Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|Using a certificate with database mirroring|[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## Application Security  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security best practices include writing secure client applications.  

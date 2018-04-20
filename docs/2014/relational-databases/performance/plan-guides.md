@@ -95,7 +95,7 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  The values that are supplied for the `@module_or_batch` and `@params` arguments of the `sp_create_plan guide` statement must match the corresponding text submitted in the actual query. For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) and [Use SQL Server Profiler to Create and Test Plan Guides](../relational-databases/performance/plan-guides.md).  
+>  The values that are supplied for the `@module_or_batch` and `@params` arguments of the `sp_create_plan guide` statement must match the corresponding text submitted in the actual query. For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) and [Use SQL Server Profiler to Create and Test Plan Guides](plan-guides.md).  
   
  SQL plan guides can also be created on queries that parameterize to the same form when the PARAMETERIZATION database option is SET to FORCED, or when a TEMPLATE plan guide is created specifying that a parameterized class of queries.  
   
@@ -137,13 +137,13 @@ sp_create_plan_guide
   
 |Task|Topic|  
 |----------|-----------|  
-|Describes how to create a plan guide.|[Create a New Plan Guide](../relational-databases/performance/create-a-new-plan-guide.md)|  
-|Describes how to create a plan guide for parameterized queries.|[Create a Plan Guide for Parameterized Queries](../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
+|Describes how to create a plan guide.|[Create a New Plan Guide](create-a-new-plan-guide.md)|  
+|Describes how to create a plan guide for parameterized queries.|[Create a Plan Guide for Parameterized Queries](create-a-plan-guide-for-parameterized-queries.md)|  
 |Describes how to control query parameterization behavior by using plan guides.|[Specify Query Parameterization Behavior by Using Plan Guides](specify-query-parameterization-behavior-by-using-plan-guides.md)|  
-|Describes how to include a fixed query plan in a plan guide.|[Apply a Fixed Query Plan to a Plan Guide](../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
-|Describes how to specify query hints in a plan guide.|[Attach Query Hints to a Plan Guide](../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
+|Describes how to include a fixed query plan in a plan guide.|[Apply a Fixed Query Plan to a Plan Guide](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
+|Describes how to specify query hints in a plan guide.|[Attach Query Hints to a Plan Guide](attach-query-hints-to-a-plan-guide.md)|  
 |Describes how to view plan guide properties.|[View Plan Guide Properties](view-plan-guide-properties.md)|  
-|Describes how to use SQL Server Profiler to create and test plan guides.|[Use SQL Server Profiler to Create and Test Plan Guides](../relational-databases/performance/plan-guides.md)|  
+|Describes how to use SQL Server Profiler to create and test plan guides.|[Use SQL Server Profiler to Create and Test Plan Guides](plan-guides.md)|  
 |Describes how to validate plan guides.|[Validate Plan Guides After Upgrade](validate-plan-guides-after-upgrade.md)|  
   
 ## See Also  

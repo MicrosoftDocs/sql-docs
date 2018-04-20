@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  **Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
- After it is secured, the database can be restored by using the correct certificate. For more information about certificates, see [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+ After it is secured, the database can be restored by using the correct certificate. For more information about certificates, see [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
  When enabling TDE, you should immediately back up the certificate and the private key associated with the certificate. If the certificate ever becomes unavailable or if you must restore or attach the database on another server, you must have backups of both the certificate and the private key or you will not be able to open the database. The encrypting certificate should be retained even if TDE is no longer enabled on the database. Even though the database is not encrypted, parts of the transaction log may still remain protected, and the certificate may be needed for some operations until the full backup of the database is performed. A certificate that has exceeded its expiration date can still be used to encrypt and decrypt data with TDE.  
   
@@ -96,7 +96,7 @@ GO
  The encryption and decryption operations are scheduled on background threads by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.  
   
 > [!CAUTION]  
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
 ## Commands and Functions  
  The TDE certificates must be encrypted by the database master key to be accepted by the following statements. If they are encrypted by password only, the statements will reject them as encryptors.  
@@ -233,7 +233,7 @@ GO
  [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server Encryption](/sql-server-encryption.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](/sql-server-and-database-encryption-keys-database-engine.md)   
- [Security Center for SQL Server Database Engine and Azure SQL Database](../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md)  
+ [Security Center for SQL Server Database Engine and Azure SQL Database](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

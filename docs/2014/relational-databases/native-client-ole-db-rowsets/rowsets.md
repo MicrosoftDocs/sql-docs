@@ -51,13 +51,13 @@ manager: "jhubbard"
   
 -   [Rowset Properties and Behaviors](rowset-properties-and-behaviors.md)  
   
--   [Rowsets and SQL Server Cursors](../../database-engine/dev-guide/cursors.md)  
+-   [Rowsets and SQL Server Cursors](rowsets-and-sql-server-cursors.md)  
   
--   [Fetching Rows](../native-client-odbc-cursors/fetching-rows.md)  
+-   [Fetching Rows](fetching-rows.md)  
   
 -   [Fetching a Single Row with IRow](fetching-a-single-row-with-irow.md)  
   
--   [Bookmarks](../../database-engine/bookmarks.md)  
+-   [Bookmarks](bookmarks.md)  
   
 -   [Updating Data in Rowsets](updating-data-in-rowsets.md)  
   

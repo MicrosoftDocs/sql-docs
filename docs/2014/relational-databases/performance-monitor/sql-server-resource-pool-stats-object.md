@@ -49,7 +49,7 @@ manager: "jhubbard"
 |Avg Disk Write IO (ms)|Average time, in milliseconds, of a write operation to the disk.|  
   
 ## See Also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Monitor Resource Usage &#40;System Monitor&#41;](/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats Object](sql-server-workload-group-stats-object.md)   
  [Resource Governor](../resource-governor/resource-governor.md)  
   

@@ -59,7 +59,7 @@ manager: "jhubbard"
 |**Write Transactions/sec**|Number of transactions that wrote to the database and committed, in the last second.|  
   
 ## See Also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, Database Replica](../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [Monitor Resource Usage &#40;System Monitor&#41;](/monitor-resource-usage-system-monitor.md)   
+ [SQL Server, Database Replica](/sql-server-database-replica.md)  
   
   

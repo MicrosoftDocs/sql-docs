@@ -44,7 +44,7 @@ manager: "jhubbard"
   
     -   For the Distribution Agent and Merge Agent, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
--   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../../database-engine/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](replication-agent-security-model.md).  
+-   Verify that basic connectivity is working between the computers accessed by the agent, and then connect to each computer with a utility like the [sqlcmd Utility](../../database-engine/sqlcmd-utility.md). When connecting, use the same account under which the agent makes connections. For more information about the permissions required by each agent account, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 -   If the error occurs while creating or applying a snapshot, check the files in the snapshot directory for errors.  
   

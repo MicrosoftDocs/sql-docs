@@ -65,7 +65,7 @@ manager: "jhubbard"
 |`decimal` and `numeric`|-10^38+1 through 10^38-1|  
   
 > [!NOTE]  
->  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../../database-engine/sequence-numbers.md).  
+>  To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../database-engine/sequence-numbers.md).  
   
 ### Merge Replication  
  Identity ranges are managed by the Publisher and propagated to Subscribers by the Merge Agent (in a republishing hierarchy, ranges are managed by the root Publisher and the republishers). The identity values are assigned from a pool at the Publisher. When you add an article with an identity column to a publication in the New Publication Wizard or by using [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), you specify values for:  

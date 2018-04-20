@@ -49,6 +49,6 @@ manager: "jhubbard"
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
  [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
- [SQL Server Configuration Manager](../../../database-engine/sql-server-configuration-manager.md)  
+ [SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)  
   
   

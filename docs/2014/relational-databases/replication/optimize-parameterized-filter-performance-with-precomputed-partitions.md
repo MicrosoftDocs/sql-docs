@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Join filters should not contain dynamic functions (functions such as HOST_NAME() and SUSER_SNAME() that evaluate to a different value depending upon the Subscriber that is synchronizing). Only parameterized row filters should contain dynamic functions.  
   
--   Nondeterministic functions cannot be used in a filter clause. For more information about nondeterministic functions, see [Deterministic and Nondeterministic Functions](../../../database-engine/deterministic-and-nondeterministic-functions.md).  
+-   Nondeterministic functions cannot be used in a filter clause. For more information about nondeterministic functions, see [Deterministic and Nondeterministic Functions](../../database-engine/deterministic-and-nondeterministic-functions.md).  
   
 -   Views referenced in join filter clauses or parameterized filter clauses should not contain dynamic functions.  
   

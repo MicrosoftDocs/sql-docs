@@ -94,6 +94,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Create New Condition or Open Condition Dialog Box, General Page](create-new-condition-or-open-condition-dialog-box-general-page.md)   
- [Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
+ [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
   
   

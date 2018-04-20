@@ -263,8 +263,8 @@ manager: "jhubbard"
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
  [Deprecated Full-Text Search Features in SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Deprecation Announcement Event Class](../relational-databases/event-classes/deprecation-announcement-event-class.md)   
- [Deprecation Final Support Event Class](../relational-databases/event-classes/deprecation-final-support-event-class.md)   
+ [Deprecation Announcement Event Class](../event-classes/deprecation-announcement-event-class.md)   
+ [Deprecation Final Support Event Class](../event-classes/deprecation-final-support-event-class.md)   
  [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Discontinued Full-Text Search Features in SQL Server 2014](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [Use SQL Server Objects](use-sql-server-objects.md)  

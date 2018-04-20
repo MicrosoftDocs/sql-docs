@@ -33,6 +33,6 @@ manager: "jhubbard"
 ## See Also  
  [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql.md)   
  [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitor Resource Usage &#40;System Monitor&#41;](/monitor-resource-usage-system-monitor.md)  
   
   

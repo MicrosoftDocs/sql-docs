@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 -   When publishing a table in more than one publication, you must specify the same identity range management options for both publications. For more information, see "Publishing Tables in More Than One Publication" in [Publish Data and Database Objects](publish-data-and-database-objects.md).  
   
--   To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../../database-engine/sequence-numbers.md).  
+-   To create an automatically incrementing number that can be used in multiple tables or that can be called from applications without referencing any table, see [Sequence Numbers](../../database-engine/sequence-numbers.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Specify an identity column management option on the **Properties** tab of the **Article Properties -\<Article>** dialog box of the New Publication Wizard. For more information about using this wizard, see [Create a Publication](create-a-publication.md). In the New Publication Wizard:  

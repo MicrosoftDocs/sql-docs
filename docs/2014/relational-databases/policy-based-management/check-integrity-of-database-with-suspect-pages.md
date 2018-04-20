@@ -31,6 +31,6 @@ manager: "jhubbard"
 -   Implement the user actions that are defined in [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397).  
   
 ## For More Information  
- [Manage the suspect_pages Table &#40;SQL Server&#41;](../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
+ [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

@@ -43,7 +43,7 @@ manager: "jhubbard"
 |20578|**Replication: agent custom shutdown**|||  
 |22815|**Peer-to-peer conflict detection alert**|Distribution Agent detected a conflict when it tries to apply a change at a peer-to-peer node.|Yes|  
   
- In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md) alerts infrastructure. For more information, see [Create a User-Defined Event](../../../database-engine/create-a-user-defined-event.md).  
+ In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md) alerts infrastructure. For more information, see [Create a User-Defined Event](../../database-engine/create-a-user-defined-event.md).  
   
  **To configure predefined replication alerts**  
   

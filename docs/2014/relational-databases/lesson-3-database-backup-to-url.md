@@ -73,15 +73,15 @@ manager: "jhubbard"
   
     1.  First, get the storage account information. Log in to the Management Portal. Then, click **Storage** and choose your storage account. When a storage account is selected, click **Manage Access Keys** at the bottom of the page. This opens a similar dialog window:  
   
-         ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
+         ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
     2.  Copy the **Storage Account Name** and **Primary Access Key** values to the **Connect to Windows Azure Storage** dialog window in SSMS. Then, click **Connect**. This brings the information about storage account containers to SSMS as shown in the following screenshot:  
   
-         ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
+         ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
  The following screenshot demonstrates the new created database both in on-premises and Windows Azure Storage environment.  
   
- ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
+ ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
  **Note:** If there are any active references to data files in a container, any attempts to delete the associated SQL Server credential fails. Similarly, if there is already a lease on a specific database file in a blob and you want to delete it, first you need to break the lease on the blob. To break the lease, you can use [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
@@ -97,7 +97,7 @@ manager: "jhubbard"
   
 4.  Change the default values of the primary data and transaction log files, in the Database files grid, click the appropriate cell and enter the new value. Also, specify the path for the file location. For Path, type the URL path of the storage container, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For FileName, type the physical file names of the database files (.mdf, .ldf).  
   
-     ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
+     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
      For more information, see [Add Data or Log Files to a Database](databases/add-data-or-log-files-to-a-database.md).  
   

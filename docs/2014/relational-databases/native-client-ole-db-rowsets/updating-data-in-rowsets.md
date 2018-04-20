@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Updating Data in SQL Server Cursors](../../database-engine/dev-guide/cursors.md)  
+-   [Updating Data in SQL Server Cursors](updating-data-in-sql-server-cursors.md)  
   
 -   [Resynchronizing Rows](updating-data-in-rowsets-resynchronizing-rows.md)  
   

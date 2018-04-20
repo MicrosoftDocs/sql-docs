@@ -90,7 +90,7 @@ GO
   
 ## See Also  
  [GETDATE &#40;Transact-SQL&#41;](~/t-sql/functions/getdate-transact-sql.md)   
- [Implement Jobs](../../../database-engine/implement-jobs.md)   
+ [Implement Jobs](../../database-engine/implement-jobs.md)   
  [Parameterized Row Filters](parameterized-row-filters.md)  
   
   

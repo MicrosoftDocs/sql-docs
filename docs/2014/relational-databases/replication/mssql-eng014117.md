@@ -61,7 +61,7 @@ manager: "jhubbard"
   
      After you execute the [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
-     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
+     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
  After verifying that the Distributor instance is registered properly, verify that the distribution database is listed in **msdb..MSdistributiondbs**. If it is not listed:  
   

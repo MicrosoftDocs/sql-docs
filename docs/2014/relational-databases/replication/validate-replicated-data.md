@@ -46,7 +46,7 @@ manager: "jhubbard"
   
 -   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
   
-    -   Data can be updated using the [tablediff utility](../../../database-engine/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+    -   Data can be updated using the [tablediff utility](../../database-engine/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
     -   For more information about reinitializaton, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   

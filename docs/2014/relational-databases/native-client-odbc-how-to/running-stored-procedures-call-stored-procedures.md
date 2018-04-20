@@ -39,7 +39,7 @@ manager: "jhubbard"
 >  If an application submits a procedure using the Transact-SQL EXECUTE syntax (as opposed to the ODBC CALL escape sequence), the SQL Server ODBC driver passes the procedure call to SQL Server as a SQL statement rather than as an RPC. Also, output parameters are not returned if the Transact-SQL EXECUTE statement is used.  
   
 ## See Also  
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [Batching Stored Procedure Calls](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Running Stored Procedures](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Calling a Stored Procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   

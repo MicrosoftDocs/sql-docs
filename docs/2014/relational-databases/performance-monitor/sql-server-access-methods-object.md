@@ -87,6 +87,6 @@ manager: "jhubbard"
 |**Worktables From Cache Ratio**|Percentage of work tables created where the initial two pages of the work table were not allocated but were immediately available from the work table cache. (When a work table is dropped, two pages may remain allocated and they are returned to the work table cache. This increases performance.)|  
   
 ## See Also  
- [Monitor Resource Usage &#40;System Monitor&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitor Resource Usage &#40;System Monitor&#41;](/monitor-resource-usage-system-monitor.md)  
   
   

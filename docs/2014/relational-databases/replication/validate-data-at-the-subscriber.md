@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   The procedures for Replication Monitor are for push subscriptions only because pull subscriptions cannot be synchronized in Replication Monitor. However, you can mark a subscription for validation and view validation results for pull subscriptions in Replication Monitor.  
   
--   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../../database-engine/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
+-   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../database-engine/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

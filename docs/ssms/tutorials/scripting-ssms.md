@@ -22,10 +22,10 @@ helpviewer_keywords:
 ---
 
 # Tutorial: Script objects in SQL Server Management Studio
-This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS). In this tutorial, you find examples of how to script the following objects: 
+This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS). In this tutorial, you find examples of how to script the following objects:
 
 > [!div class="checklist"]
-> * Queries, when you perform actions within the graphical user interface (GUI)
+> * Queries, when you perform actions within the GUI
 > * Databases in two different ways (Script As and Generate Script)
 > * Tables
 > * Stored procedures
@@ -35,7 +35,7 @@ To script any object in Object Explorer, right-click it and select the Script Ob
 
 
 ## Prerequisites
-To complete this tutorial, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database.
+To complete this tutorial, you need SQL Server Management Studio, access to a a server that's running SQL Server, and an AdventureWorks database.
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
@@ -46,8 +46,8 @@ Instructions for restoring databases in SSMS are here: [Restore a database](http
 ## Script queries from the GUI
 You can generate the associated T-SQL code for a task whenever you use the GUI in SSMS to complete it. The following examples show how to do so when you back up a database and when you shrink the transaction log. These same steps can be applied to any action that's completed via the GUI.
 
-### To script T-SQL when you back up a database
-1. Connect to your SQL server.
+### Script T-SQL when you back up a database
+1. Connect to a server that's running SQL Server.
 2. Expand the Databases node.
 3. Right-click the database **Adventureworks2016** > **Tasks** > **Back up**:
 
@@ -63,7 +63,7 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 7. Select **Execute** to execute the query to back up the database via T-SQL. 
 
 
-### To script T-SQL when shrinking the transaction log
+### Script T-SQL when you shrink the transaction log
 1. Right-click the database **AdventureWorks2016** > **Tasks** > **Shrink** > **Files**:
 
      ![Shrink files](media/scripting-ssms/shrinkfiles.png)
@@ -76,18 +76,18 @@ You can generate the associated T-SQL code for a task whenever you use the GUI i
 
     ![Script to clipboard](media/scripting-ssms/scriptactiontoclipboard.png)
 
-4. Open a **New Query** window and paste (right-click in the window, then select **Paste**):
+4. Open a **New Query** window and paste. (Right-click in the window. Then select **Paste**.)
 
     ![Paste script](media/scripting-ssms/paste.png)
 5. Select **Execute** to execute the query and shrink the transaction log. 
 
 
 ## Script databases
-The following section teaches you to script out the database using the Script As and Generate Scripts options. The Script As option recreates the database and its configuration options. The Generate Scripts option lets you script both the schema and the data. In this section, you create two new databases. You use the Script As option to create AdventureWorks2016a. You use the Generate Scripts option to create AdventureWorks2016b.
+The following section teaches you to script out the database using the Script As and Generate Scripts options. The Script As option re-creates the database and its configuration options. The Generate Scripts option lets you script both the schema and the data. In this section, you create two new databases. You use the Script As option to create AdventureWorks2016a. You use the Generate Scripts option to create AdventureWorks2016b.
 
 
-### To use the Script option to script a database
-1. Connect to your SQL server.
+### Script a database by using the Script option
+1. Connect to a server that's running SQL Server.
 2. Expand the Databases node.
 3. Right-click the database **AdventureWorks2016** > **Script Database As** > **Create To** > **New Query Window**:
 
@@ -105,7 +105,7 @@ The following section teaches you to script out the database using the Script As
 1. Select **Execute** to execute the query and create your new AdventureWorks2016a database. 
 
 ### To use the Generate Scripts option to script a database
-1. Connect to your SQL server.
+1. Connect to a server that's running SQL Server.
 2. Expand the Databases node.
 3. Right-click the database **AdventureWorks2016** > **Tasks** > **Generate Scripts**:
 
@@ -128,9 +128,7 @@ The following section teaches you to script out the database using the Script As
    ![Script objects](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > You can script the data for the database when you select *Schema and data* for the Types of data to script option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the import and export wizard.
-   
-   [Import and export wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)
+   > You can script the data for the database when you select *Schema and data* for the Types of data to script option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the [import and export wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
 1. Select **OK** and then select **Next**. 
@@ -140,11 +138,11 @@ The following section teaches you to script out the database using the Script As
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
 7. Select **Execute** to execute the query and create your new AdventureWorks2016b database. 
- 
-## To script tables
-This section covers how to script out tables from your database. Use this option to either create the table or drop and create the table. You can also use this option to script the T-SQL associated with modifying the table. An example is to insert into it or update to it. In this section, you drop a table and then recreate it. 
 
-1. Connect to your SQL server.
+## Script tables
+This section covers how to script out tables from your database. Use this option to either create the table or drop and create the table. You can also use this option to script the T-SQL associated with modifying the table. An example is to insert into it or update to it. In this section, you drop a table and then re-create it. 
+
+1. Connect to a server that's running SQL Server.
 2. Expand your Databases node.
 3. Expand your AdventureWorks database node. 
 4. Expand your Tables node.
@@ -152,15 +150,15 @@ This section covers how to script out tables from your database. Use this option
     
     ![Script table](media/scripting-ssms/scripttable.png)
 
-6. Select **Execute** to execute the query. This action drops the *Errorlog* table and recreates it. 
+6. Select **Execute** to execute the query. This action drops the *Errorlog* table and re-creates it. 
 
     >[!NOTE]
     > The Errorlog table is empty by default in the AdventureWorks2016 database. Therefore, you're not losing any data by dropping the table. However, following these steps on a table with data causes data loss. 
  
-## To script stored procedures
+## Script stored procedures
 This section teaches you to drop and create a stored procedure.  
 
-1. Connect to your SQL server.
+1. Connect to a server that's running SQL Server.
 2. Expand your Databases node.
 3. Expand your Programmability node. 
 4. Expand your Stored Procedure node.
@@ -168,12 +166,12 @@ This section teaches you to drop and create a stored procedure.
     
     ![Script stored procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
 
-## To script extended events
+## Script extended events
 This section covers how to script out extended events.
 
 [Extended events](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events)
 
-1. Connect to your SQL server.
+1. Connect to a server that's running SQL Server.
 2. Expand your Management node.
 3. Expand your Extended Events node.
 4. Expand your Sessions node.

@@ -121,11 +121,11 @@ GO
   
 |For information about|See|  
 |---------------------------|---------|  
-|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../../2014/database-engine/use-sql-server-management-studio.md)|  
-|Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../2014/database-engine/sqlcmd-utility.md)|  
-|Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../2014/database-engine/sql-server-configuration-manager.md)|  
-|Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
-|Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../2014/reporting-services/rskeymgmt-utility-ssrs.md)|  
+|Connecting to, configuring, and controlling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Use SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
+|Connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and running queries at the command prompt|[sqlcmd Utility](../../database-engine/sqlcmd-utility.md)|  
+|Network configuration and control for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Configuration Manager](../../database-engine/sql-server-configuration-manager.md)|  
+|Enabling and disabling features by using Policy-Based Management|[Administer Servers by Using Policy-Based Management](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
+|Manipulating symmetric keys for a report server|[rskeymgmt Utility &#40;SSRS&#41;](../../reporting-services/rskeymgmt-utility-ssrs.md)|  
   
 ### SQL Server Security Catalog Views and Functions  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] exposes security information in several views and functions that are optimized for performance and utility. The following table contains information about security views and functions.  
@@ -137,7 +137,7 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security dynamic management views.|[Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
   
 ## Related Content  
- [Security Considerations for a SQL Server Installation](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
+ [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
  [Security Center for SQL Server Database Engine and Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

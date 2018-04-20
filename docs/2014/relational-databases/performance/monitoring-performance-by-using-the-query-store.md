@@ -86,11 +86,11 @@ JOIN sys.query_store_query_text AS Txt
 ## Using the Regressed Queries Feature  
  After enabling the query store, refresh the database portion of the Object Explorer pane to add the **Query Store** section.  
   
- ![QueryStore](../../2014/database-engine/media/querystore.PNG "QueryStore")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
  Selecting **Regressed Queries**, opens the **Regressed Queries** pane in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. The Regressed Queries pane shows you the queries, and plans in the query store. Drop down boxes at the top allow you to select queries based on various criteria. Select a plan to see the graphical query plan. Buttons are available to view the source query, force, and unforce a query plan, and refresh the display.  
   
- ![RegressedQueries](../../2014/database-engine/media/regressedqueries.PNG "RegressedQueries")  
+ ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
  To force a plan, select a query and plan, and then click **Force Plan.** You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.  
   
@@ -518,9 +518,9 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
 
   
 ## See Also  
- [Monitor and Tune for Performance](../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Performance Monitoring and Tuning Tools](../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
- [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
- [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md)  
+ [Monitor and Tune for Performance](../performance/monitor-and-tune-for-performance.md)   
+ [Performance Monitoring and Tuning Tools](../performance/performance-monitoring-and-tuning-tools.md)   
+ [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
+ [Activity Monitor](../performance-monitor/activity-monitor.md)  
   
   

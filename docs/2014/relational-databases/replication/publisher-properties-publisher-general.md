@@ -22,12 +22,12 @@ manager: "jhubbard"
 # Publisher Properties - Publisher, General
   The **General** page of the **Publisher Properties** dialog box displays read-only information on the Distributor and distribution database that the Publisher uses. To change the Distributor or distribution database for a Publisher:  
   
-1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](../../../2014/relational-databases/replication/disable-publishing-and-distribution.md).  
+1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](disable-publishing-and-distribution.md).  
   
-2.  Reconfigure publishing and distribution. For more information, see [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md).  
+2.  Reconfigure publishing and distribution. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
 ## See Also  
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

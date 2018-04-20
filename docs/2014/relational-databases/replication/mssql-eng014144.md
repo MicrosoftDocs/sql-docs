@@ -41,7 +41,7 @@ manager: "jhubbard"
 2.  Execute [sp_dropsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) in the publication database to drop subscriptions.  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

@@ -39,9 +39,9 @@ manager: "jhubbard"
   
  If you create a transactional publication with updatable subscriptions in the New Publication Wizard, both immediate updating and queued updating are enabled. If you create a publication with stored procedures, you can enable one or both options. When you create a subscription to the publication, you specify which update mode to use. You can then switch between update modes if necessary. For more information, see the following section "Switching between Update Modes".  
   
- To enable updatable subscriptions for transactional publications, [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md)  
+ To enable updatable subscriptions for transactional publications, [Enable Updating Subscriptions for Transactional Publications](enable-updating-subscriptions-for-transactional-publications.md)  
   
- To create updatable subscriptions for transactional publications, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md)  
+ To create updatable subscriptions for transactional publications, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 ## Switching Between Update Modes  
  When using updatable subscriptions you can specify that a subscription should use one update mode and then switch to the other if the application requires it. For example, you can specify that a subscription should use immediate updating, but switch to queued updating if a system failure results in the loss of network connectivity.  
@@ -54,7 +54,7 @@ manager: "jhubbard"
  **To switch between update modes**  
   
  To switch between updating modes, you must enable the publication and subscription for both update modes, and then switch between them if necessary. For more information, see  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../2014/relational-databases/replication/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Switch Between Update Modes for an Updatable Transactional Subscription](switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### Considerations for Using Updatable Subscriptions  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 -   Replication adds the **msrepl_tran_version** column to published tables for tracking purposes. Because of this additional column, all `INSERT` statements should include a column list.  
   
--   To make schema changes on a table in a publication that supports updating subscriptions, all activity on the table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes before making any schema changes. This ensures that outstanding transactions do not conflict with the pending schema change. After the schema changes have propagated to all nodes, activity can resume on the published tables. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
+-   To make schema changes on a table in a publication that supports updating subscriptions, all activity on the table must be stopped at the Publisher and Subscribers, and pending data changes must be propagated to all nodes before making any schema changes. This ensures that outstanding transactions do not conflict with the pending schema change. After the schema changes have propagated to all nodes, activity can resume on the published tables. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 -   If you plan to switch between update modes, the Queue Reader Agent must run at least once after the subscription has been initialized (by default, the Queue Reader Agent runs continuously).  
   
@@ -121,9 +121,9 @@ manager: "jhubbard"
     -   If conflicts are expected: you should not use foreign key constraints at the Publisher or Subscriber if you use "Subscriber wins" conflict resolution; you should not use foreign key constraints at the Subscriber if you use "Publisher wins" conflict resolution.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)   
- [Publication Types for Transactional Replication](../../../2014/relational-databases/replication/publication-types-for-transactional-replication.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

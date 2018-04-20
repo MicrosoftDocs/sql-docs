@@ -37,34 +37,34 @@ manager: "jhubbard"
   
 -   Expiring subscription  
   
-     This status value applies to all types of replication. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../2014/relational-databases/replication/set-thresholds-and-warnings-in-replication-monitor.md).  
+     This status value applies to all types of replication. For more information, see [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 -   Performance critical  
   
-     This status value applies to transactional replication and merge replication. For more information, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md).  
+     This status value applies to transactional replication and merge replication. For more information, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
   
 -   Long-running merge  
   
-     This status value applies to merge replication. For more information, see [Monitor Performance with Replication Monitor](../../../2014/relational-databases/replication/monitor-performance-with-replication-monitor.md).  
+     This status value applies to merge replication. For more information, see [Monitor Performance with Replication Monitor](monitor-performance-with-replication-monitor.md).  
   
  In addition to publication and subscription status, merge replication provides article-level statistics, which give detailed information about: how much longer a merge phase will take to complete; how much time was spent processing a given article; the type of connection a Subscriber is using; and other important information. The statistics are displayed in the Merge Agent window in Replication Monitor. Snapshot and transactional replication provide detailed information on Distribution Agent processing.  
   
  **To view publication and subscription status**  
   
--   Replication Monitor: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   Replication Monitor: [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) and [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
   
  **To view detailed information for agents**  
   
--   Replication Monitor: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-publication-agents.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+-   Replication Monitor: [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-publication-agents.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## Publication Status Values  
  The following table shows publication status values and their corresponding icons in priority order.  
   
 |Status|Icon|  
 |------------|----------|  
-|Error|![UI icon: error](../../../2014/relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|  
-|Performance critical|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Retrying failed command|![UI icon: replication agent retry](../../../2014/relational-databases/replication/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
+|Error|![UI icon: error](media/repl-icon-error.gif "UI icon: error")|  
+|Performance critical|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Retrying failed command|![UI icon: replication agent retry](media/repl-icon-retry.gif "UI icon: replication agent retry")|  
 |OK|none|  
   
 ## Subscription Status Values  
@@ -76,39 +76,39 @@ manager: "jhubbard"
   
 |Status|Icon|  
 |------------|----------|  
-|Error|![UI icon: error](../../../2014/relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|  
-|Performance critical|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Expiring soon/Expired|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Uninitialized subscription|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Retrying failed command|![UI icon: replication agent retry](../../../2014/relational-databases/replication/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Not running|![UI icon: replication agent stopped](../../../2014/relational-databases/replication/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
-|Running|![UI icon: replication agent running](../../../2014/relational-databases/replication/media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Error|![UI icon: error](media/repl-icon-error.gif "UI icon: error")|  
+|Performance critical|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Expiring soon/Expired|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Uninitialized subscription|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Retrying failed command|![UI icon: replication agent retry](media/repl-icon-retry.gif "UI icon: replication agent retry")|  
+|Not running|![UI icon: replication agent stopped](media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Running|![UI icon: replication agent running](media/repl-icon-running.gif "UI icon: replication agent running")|  
   
 ### Merge subscriptions  
   
 |Status|Icon|  
 |------------|----------|  
-|Error|![UI icon: error](../../../2014/relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|  
-|Performance critical|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Long-running merge|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Expiring soon/Expired|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Uninitialized subscription|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Retrying failed command|![UI icon: replication agent retry](../../../2014/relational-databases/replication/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Synchronizing|![UI icon: replication agent running](../../../2014/relational-databases/replication/media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Not Synchronizing|![UI icon: replication agent stopped](../../../2014/relational-databases/replication/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Error|![UI icon: error](media/repl-icon-error.gif "UI icon: error")|  
+|Performance critical|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Long-running merge|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Expiring soon/Expired|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Uninitialized subscription|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Retrying failed command|![UI icon: replication agent retry](media/repl-icon-retry.gif "UI icon: replication agent retry")|  
+|Synchronizing|![UI icon: replication agent running](media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Not Synchronizing|![UI icon: replication agent stopped](media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ### Snapshot subscriptions  
   
 |Status|Icon|  
 |------------|----------|  
-|Error|![UI icon: error](../../../2014/relational-databases/replication/media/repl-icon-error.gif "UI icon: error")|  
-|Expiring soon/Expired|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Uninitialized subscription|![UI icon: warning](../../../2014/relational-databases/replication/media/repl-icon-warn.gif "UI icon: warning")|  
-|Retrying failed command|![UI icon: replication agent retry](../../../2014/relational-databases/replication/media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Synchronizing|![UI icon: replication agent running](../../../2014/relational-databases/replication/media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Not Synchronizing|![UI icon: replication agent stopped](../../../2014/relational-databases/replication/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Error|![UI icon: error](media/repl-icon-error.gif "UI icon: error")|  
+|Expiring soon/Expired|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Uninitialized subscription|![UI icon: warning](media/repl-icon-warn.gif "UI icon: warning")|  
+|Retrying failed command|![UI icon: replication agent retry](media/repl-icon-retry.gif "UI icon: replication agent retry")|  
+|Synchronizing|![UI icon: replication agent running](media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Not Synchronizing|![UI icon: replication agent stopped](media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
  By default, the Distribution Agent runs continuously. Select this option to stop the agent after validation is performed. This allows you to check whether validation was successful before continuing to replicate data to the Subscriber.  
   
 ## See Also  
- [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md)  
+ [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)   
+ [Validate Replicated Data](validate-replicated-data.md)  
   
   

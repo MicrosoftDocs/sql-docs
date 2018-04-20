@@ -39,7 +39,7 @@ manager: "jhubbard"
  Execute [sp_dropdistributiondb &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md) for any distribution databases associated with this Distributor. After all distribution database associations are removed, you can disable distribution.  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Configure Distribution](configure-distribution.md)  
   
   

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
 ## Options  
  **Databases**  
- The **Databases** property grid shows the name and retention properties of the distribution databases on the Distributor. **Transaction Retention** is the length of time transactions are stored for transactional replication (transaction retention is also known as distribution retention). **History Retention** is the length of time history metadata is stored for all types of replication. For more information about distribution retention, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ The **Databases** property grid shows the name and retention properties of the distribution databases on the Distributor. **Transaction Retention** is the length of time transactions are stored for transactional replication (transaction retention is also known as distribution retention). **History Retention** is the length of time history metadata is stored for all types of replication. For more information about distribution retention, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  Click the properties button (**...**) in the **Databases** property grid to launch the **Distribution Database Properties** dialog box.  
   
@@ -34,13 +34,13 @@ manager: "jhubbard"
  Click to create a new distribution database.  
   
  **Delete**  
- Select an existing distribution database in the **Databases** property grid, and click **Delete** to delete the database. You cannot delete the distribution database if there is only one such database; each Distributor must have at least one distribution database. To delete all distribution databases, you must disable distribution on the computer. For more information, see [Disable Publishing and Distribution](../../../2014/relational-databases/replication/disable-publishing-and-distribution.md).  
+ Select an existing distribution database in the **Databases** property grid, and click **Delete** to delete the database. You cannot delete the distribution database if there is only one such database; each Distributor must have at least one distribution database. To delete all distribution databases, you must disable distribution on the computer. For more information, see [Disable Publishing and Distribution](disable-publishing-and-distribution.md).  
   
  **Profile Defaults**  
- Click to access replication agent profiles in the **Agent Profiles** dialog box. For more information about profiles, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Click to access replication agent profiles in the **Agent Profiles** dialog box. For more information about profiles, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)  
   
   

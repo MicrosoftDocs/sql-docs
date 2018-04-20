@@ -37,8 +37,8 @@ manager: "jhubbard"
  Includes information on the Subscriber and Subscriber type.  
   
 ## See Also  
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

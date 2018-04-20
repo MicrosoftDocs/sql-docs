@@ -48,19 +48,19 @@ manager: "jhubbard"
   
 -   The **master** and **msdb** system databases at the Publisher, Distributor and all Subscribers. These databases should be backed up at the same time as each other and the relevant replication database. For example, back up the **master** and **msdb** databases at the Publisher at the same time you back up the publication database. If the publication database is restored, ensure that the **master** and **msdb** database are consistent with the publication database in terms of replication configuration and settings.  
   
- If you perform regular log backups, any replication-related changes should be captured in the log backups. If you do not perform log backups, a backup should be performed whenever a setting relevant to replication is changed. For more information, see [Common Actions Requiring an Updated Backup](../../../2014/relational-databases/replication/common-actions-requiring-an-updated-backup.md).  
+ If you perform regular log backups, any replication-related changes should be captured in the log backups. If you do not perform log backups, a backup should be performed whenever a setting relevant to replication is changed. For more information, see [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md).  
   
 ## Backup and Restore Strategies  
  The strategies for backing up and restoring each node in a replication topology differ according to the type of replication used. For information on backup and restore strategies for each type of replication, see the following topics:  
   
--   [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../../2014/relational-databases/replication/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
+-   [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
--   [Strategies for Backing Up and Restoring Merge Replication](../../../2014/relational-databases/replication/strategies-for-backing-up-and-restoring-merge-replication.md)  
+-   [Strategies for Backing Up and Restoring Merge Replication](strategies-for-backing-up-and-restoring-merge-replication.md)  
   
- As part of any recovery strategy, always keep a current script of your replication settings in a safe location. In the event of server failure or the need to set up a test environment, you can modify the script by changing server name references, and it can be used to help recreate your replication settings. In addition to scripting your current replication settings, you should script the enabling and disabling of replication. For information about scripting replication objects, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+ As part of any recovery strategy, always keep a current script of your replication settings in a safe location. In the event of server failure or the need to set up a test environment, you can modify the script by changing server name references, and it can be used to help recreate your replication settings. In addition to scripting your current replication settings, you should script the enabling and disabling of replication. For information about scripting replication objects, see [Scripting Replication](scripting-replication.md).  
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

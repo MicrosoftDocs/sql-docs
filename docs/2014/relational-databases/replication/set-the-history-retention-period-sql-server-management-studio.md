@@ -19,7 +19,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the History Retention Period (SQL Server Management Studio)
-  Specify the history retention period on the **General** page of the **Distribution Database Properties - \<DistributionDatabase>** dialog box. This setting controls how long replication agent history is stored. This page is available from the **General** page of the **Distributor Properties - \<Distributor>** dialog box. For more information about accessing this dialog box, see [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+  Specify the history retention period on the **General** page of the **Distribution Database Properties - \<DistributionDatabase>** dialog box. This setting controls how long replication agent history is stored. This page is available from the **General** page of the **Distributor Properties - \<Distributor>** dialog box. For more information about accessing this dialog box, see [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### To specify the history retention period  
   
@@ -30,6 +30,6 @@ manager: "jhubbard"
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)  
+ [Configure Distribution](configure-distribution.md)  
   
   

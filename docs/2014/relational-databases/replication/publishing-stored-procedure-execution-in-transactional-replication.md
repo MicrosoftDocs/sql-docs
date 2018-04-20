@@ -48,15 +48,15 @@ EXEC give_raise
   
  **To publish the execution of a stored procedure**  
   
--   SQL Server Management Studio: [Publish the Execution of a Stored Procedure in a Transactional Publication &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/publish-execution-of-stored-procedure-in-transactional-publication.md)  
+-   SQL Server Management Studio: [Publish the Execution of a Stored Procedure in a Transactional Publication &#40;SQL Server Management Studio&#41;](publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter **@type**. For more information about defining articles, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+-   Replication Transact-SQL Programming: execute [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and specify a value of 'serializable proc exec' (recommended) or 'proc exec' for the parameter **@type**. For more information about defining articles, see [Define an Article](define-an-article.md).  
   
 ## Modifying the Procedure at the Subscriber  
  By default, the stored procedure definition at the Publisher is propagated to each Subscriber. However, you can also modify the stored procedure at the Subscriber. This is useful if you want different logic to be executed at the Publisher and Subscriber. For example, consider **sp_big_delete**, a stored procedure at the Publisher that has two functions: it deletes 1,000,000 rows from the replicated table **big_table1** and updates the nonreplicated table **big_table2**. To reduce the demand on network resources, you should propagate the 1 million row delete as a stored procedure by publishing **sp_big_delete**. At the Subscriber, you can modify **sp_big_delete** to delete only the 1 million rows and not perform the subsequent update to **big_table2**.  
   
 > [!NOTE]  
->  By default, any changes made using ALTER PROCEDURE at the Publisher are propagated to the Subscriber. To prevent this, disable the propagation of schema changes before executing ALTER PROCEDURE. For information about schema changes, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+>  By default, any changes made using ALTER PROCEDURE at the Publisher are propagated to the Subscriber. To prevent this, disable the propagation of schema changes before executing ALTER PROCEDURE. For information about schema changes, see [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
 ## Types of Stored Procedure Execution Articles  
  There are two different ways in which the execution of a stored procedure can be published: serializable procedure execution article and procedure execution article.  
@@ -92,6 +92,6 @@ COMMIT TRANSACTION T2
  If you require a setting of XACT_ABORT OFF, specify the **-SkipErrors** parameter for the Distribution Agent. This allows the agent to continue applying changes at the Subscriber even if an error is encountered.  
   
 ## See Also  
- [Article Options for Transactional Replication](../../../2014/relational-databases/replication/article-options-for-transactional-replication.md)  
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

@@ -108,9 +108,9 @@ manager: "jhubbard"
   
  [ALTER USER &#40;Transact-SQL&#41;](~/t-sql/statements/alter-user-transact-sql.md)  
   
- [Create a Login](../relational-databases/security/authentication-access/create-a-login.md)  
+ [Create a Login](authentication-access/create-a-login.md)  
   
- [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md)  
+ [Create a Database User](authentication-access/create-a-database-user.md)  
   
 ## Related Content  
  [Strong Passwords](strong-passwords.md)  

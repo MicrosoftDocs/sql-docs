@@ -33,9 +33,9 @@ manager: "jhubbard"
   
 -   Replication maintenance jobs.  
   
- For more information about starting the Merge Agent and the Distribution Agent, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md). For more information about maintenance jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/run-replication-maintenance-jobs-sql-server-management-studio.md).  
+ For more information about starting the Merge Agent and the Distribution Agent, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) and [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). For more information about maintenance jobs, see [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](run-replication-maintenance-jobs-sql-server-management-studio.md).  
   
- For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To start and stop a Snapshot Agent or Log Reader Agent from Management Studio  
   
@@ -64,8 +64,8 @@ manager: "jhubbard"
 3.  Right-click an agent, and then click **Start Agent** or **Stop Agent**.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)   
- [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)  
+ [Monitoring Replication](monitoring-replication.md)   
+ [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)   
+ [Replication Agents Overview](replication-agents-overview.md)  
   
   

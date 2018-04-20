@@ -45,28 +45,28 @@ manager: "jhubbard"
   
 -   Merge replication. Synchronization means that the Merge Agent uploads changes from the Subscriber to the Publisher and then downloads changes from the Publisher to the Subscriber. Conflicts, if any, are detected and resolved. Data is converged, and the Publisher and all Subscribers eventually end up with the same data values. If conflicts were detected and resolved, work that was committed by some of the users is changed to resolve the conflict according to policies you define.  
   
- Snapshot publications completely refresh the schema at the Subscriber every time synchronization occurs, so all schema changes are applied to the Subscriber. Transactional replication and merge replication also support the most common schema changes. For more information, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+ Snapshot publications completely refresh the schema at the Subscriber every time synchronization occurs, so all schema changes are applied to the Subscriber. Transactional replication and merge replication also support the most common schema changes. For more information, see [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
- To synchronize a push subscription, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+ To synchronize a push subscription, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
- To synchronize a pull subscription, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md).  
+ To synchronize a pull subscription, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
- To set synchronization schedules, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md).  
+ To set synchronization schedules, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
  **To view and resolve synchronization conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## Executing Code During Synchronization  
  Replication supports two methods of executing code during synchronization  
   
--   On demand script execution is supported for transactional replication and merge replication. Using on demand script execution you can specify a SQL script to run during synchronization. The script is copied to the Subscriber and executed using **sqlcmd** at the beginning of the synchronization process. The script does not have access to the replicated changes as they are applied to the Subscriber. For more information, see [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   On demand script execution is supported for transactional replication and merge replication. Using on demand script execution you can specify a SQL script to run during synchronization. The script is copied to the Subscriber and executed using **sqlcmd** at the beginning of the synchronization process. The script does not have access to the replicated changes as they are applied to the Subscriber. For more information, see [Execute Scripts During Synchronization &#40;Replication Transact-SQL Programming&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Business logic handlers are supported for merge replication. Using the business logic handler framework you can write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](../../../2014/relational-databases/replication/execute-business-logic-during-merge-synchronization.md).  
+-   Business logic handlers are supported for merge replication. Using the business logic handler framework you can write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md).  
   
 ## See Also  
- [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md)  
+ [Detect and Resolve Merge Replication Conflicts](detect-and-resolve-merge-replication-conflicts.md)  
   
   

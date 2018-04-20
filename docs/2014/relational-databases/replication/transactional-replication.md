@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  The following illustration shows the principal components of transactional replication.  
   
- ![Transactional replication components and data flow](../../../2014/relational-databases/replication/media/trnsact.gif "Transactional replication components and data flow")  
+ ![Transactional replication components and data flow](media/trnsact.gif "Transactional replication components and data flow")  
   
 ##  <a name="Dataset"></a> Initial Dataset  
  Before a new transactional replication Subscriber can receive incremental changes from a Publisher, the Subscriber must contain tables with the same schema and data as the tables at the Publisher. The initial dataset is typically a snapshot that is created by the Snapshot Agent and distributed and applied by the Distribution Agent. The initial dataset can also be supplied through a backup or other means, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services.  

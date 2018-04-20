@@ -43,7 +43,7 @@ manager: "jhubbard"
 |Topic|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](~/t-sql/statements/create-certificate-transact-sql.md)|Explains the command for creating certificates.|  
-|[Identify the Source of Packages with Digital Signatures](../../2014/integration-services/identify-the-source-of-packages-with-digital-signatures.md)|Shows information about how to use certificates to sign software packages.|  
+|[Identify the Source of Packages with Digital Signatures](../../integration-services/identify-the-source-of-packages-with-digital-signatures.md)|Shows information about how to use certificates to sign software packages.|  
 |[Use Certificates for a Database Mirroring Endpoint &#40;Transact-SQL&#41;](database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Covers information about how to use certificates with Database Mirroring.|  
   
 ## Asymmetric Keys  
@@ -69,7 +69,7 @@ manager: "jhubbard"
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Creates strong names for symmetric keys.|  
   
 ## Related Tasks  
- [Choose an Encryption Algorithm](../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ [Choose an Encryption Algorithm](encryption/choose-an-encryption-algorithm.md)  
   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/create-symmetric-key-transact-sql.md)  
   
@@ -77,6 +77,6 @@ manager: "jhubbard"
   
 ## See Also  
  [sys.certificates &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-certificates-transact-sql.md)   
- [Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)  
+ [Transparent Data Encryption &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   
   

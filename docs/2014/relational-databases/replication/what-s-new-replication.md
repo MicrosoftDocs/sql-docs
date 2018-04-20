@@ -24,6 +24,6 @@ manager: "jhubbard"
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

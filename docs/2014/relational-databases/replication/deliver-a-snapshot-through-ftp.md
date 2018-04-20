@@ -42,21 +42,21 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\ftpserver\home\snapshots. For more information, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+-   The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\ftpserver\home\snapshots. For more information, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
 -   To transfer snapshot files using File Transfer Protocol (FTP), you must first configure an FTP server. For more information, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) documentation.  
   
 ###  <a name="Security"></a> Security  
- To help improve security, we recommend that you implement a virtual private network (VPN) when using FTP snapshot delivery over the Internet. For more information, see [Publish Data over the Internet Using VPN](../../../2014/relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
+ To help improve security, we recommend that you implement a virtual private network (VPN) when using FTP snapshot delivery over the Internet. For more information, see [Publish Data over the Internet Using VPN](publish-data-over-the-internet-using-vpn.md).  
   
- As a security best practice, do not allow anonymous logins to the FTP server. The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\ftpserver\home\snapshots. For more information, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+ As a security best practice, do not allow anonymous logins to the FTP server. The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\ftpserver\home\snapshots. For more information, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
  When possible, prompt users to enter their credentials at runtime. If you store credentials in a script file, you must secure the file.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- After the FTP server is configured, specify directory and security information for this server in the **Publication Properties \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ After the FTP server is configured, specify directory and security information for this server in the **Publication Properties \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify FTP information  
   
@@ -74,11 +74,11 @@ manager: "jhubbard"
   
     -   The default snapshot location for the Distributor associated with this publication.  
   
-         For more information about specifying the default snapshot location, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md).  
+         For more information about specifying the default snapshot location, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md).  
   
     -   An alternate snapshot folder location for this publication. An alternate location is required if the snapshot is compressed.  
   
-         Enter the path in the **Put files in the following folder** textbox on the Snapshot page of the **Publication Properties - \<Publication>** dialog box. For more information about alternate snapshot folder locations, see [Alternate Snapshot Folder Locations](../../../2014/relational-databases/replication/alternate-snapshot-folder-locations.md).  
+         Enter the path in the **Put files in the following folder** textbox on the Snapshot page of the **Publication Properties - \<Publication>** dialog box. For more information about alternate snapshot folder locations, see [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +99,7 @@ manager: "jhubbard"
   
     -   (Optional) **@ftp_password** - the password for the FTP login.  
   
-     This creates a publication that uses FTP. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+     This creates a publication that uses FTP. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To enable FTP snapshot delivery for a merge publication  
   
@@ -115,7 +115,7 @@ manager: "jhubbard"
   
     -   (Optional) **@ftp_password** - the password for the FTP login.  
   
-     This creates a publication that uses FTP. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+     This creates a publication that uses FTP. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To create a pull subscription to a snapshot or transactional publication that uses FTP snapshot delivery  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
     -   At the Subscriber on the subscription database, execute [sp_addpullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 #### To create a pull subscription to a merge publication that uses FTP snapshot delivery  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
   
 2.  At the Subscriber on the subscription database, execute [sp_addmergepullsubscription_agent](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specify **@publisher**, **@publisher_db**, **@publication**, the Windows credentials under which the Distribution Agent at the Subscriber runs for **@job_login** and **@job_password**, and a value of `true` for **@use_ftp**.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) to register the pull subscription. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
 #### To change one or more FTP snapshot delivery settings for a snapshot or transactional publication  
   
@@ -181,9 +181,9 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsubftp.sql#sp_createmergepullsubagent_ftp)]  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md)   
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)   
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)  
   
   

@@ -34,6 +34,6 @@ manager: "jhubbard"
  Click this button to clear all filters that have been defined. To remove a single filter, select the filter row and press the Delete key.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

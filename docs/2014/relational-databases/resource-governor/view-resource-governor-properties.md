@@ -124,7 +124,7 @@ manager: "jhubbard"
 2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
 ## See Also  
- [Resource Governor](../../2014/database-engine/resource-governor.md)   
+ [Resource Governor](../../database-engine/resource-governor.md)   
  [Enable Resource Governor](../../database-engine/resource-governor.md)   
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   

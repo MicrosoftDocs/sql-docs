@@ -107,7 +107,7 @@ ADD SIGNATURE TO TestCreditRatingSP
 GO  
 ```  
   
- For more information on stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../2014/database-engine/stored-procedures-database-engine.md).  
+ For more information on stored procedures, see [Stored Procedures &#40;Database Engine&#41;](../../database-engine/stored-procedures-database-engine.md).  
   
  For more information on signing stored procedures, see [ADD SIGNATURE &#40;Transact-SQL&#41;](~\t-sql\statements\add-signature-transact-sql.md).  
   

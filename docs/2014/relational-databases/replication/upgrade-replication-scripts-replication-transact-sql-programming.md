@@ -25,10 +25,10 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] script files can be used to programmatically configure a replication topology. For more information, see [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md).  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] script files can be used to programmatically configure a replication topology. For more information, see [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md).  
   
 > [!IMPORTANT]  
->  Although you are not required to upgrade scripts that are executed by members of the `sysadmin` role, we recommend that you modify existing scripts as described in this topic. Specify an account that has minimum permissions for each replication agent as described in the "Permissions Required By Agents" section of the topic [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+>  Although you are not required to upgrade scripts that are executed by members of the `sysadmin` role, we recommend that you modify existing scripts as described in this topic. Specify an account that has minimum permissions for each replication agent as described in the "Permissions Required By Agents" section of the topic [Replication Agent Security Model](replication-agent-security-model.md).  
   
  These security improvements, which enable more control over permissions by allowing you to explicitly specify the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows accounts under which replication agent jobs are executed, affect the following stored procedures in existing scripts:  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
      You should now execute [sp_addqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) to manually add the job and supply the Windows credentials under which the Queue Reader Agent runs at the Distributor. In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], this was done automatically when a transactional publication that supported queued updating was created.  
   
- In the security model introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], replication agents always make connections to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with Windows Authentication using the credentials supplied in **@job_name** and **@job_password**. For information about the requirements of Windows accounts used when running replication agent jobs, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+ In the security model introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], replication agents always make connections to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with Windows Authentication using the credentials supplied in **@job_name** and **@job_password**. For information about the requirements of Windows accounts used when running replication agent jobs, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you store credentials in a script file, ensure that the file itself is secured.  
@@ -87,9 +87,9 @@ manager: "jhubbard"
   
 1.  After executing the stored procedure that creates the subscription, ensure that you execute the stored procedure that creates a Distribution Agent job to synchronize the subscription. The stored procedure that you use will depend on the type of subscription.  
   
-    -   For a pull subscription, update the execution of [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Distribution Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+    -   For a pull subscription, update the execution of [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Distribution Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addpullsubscription](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-    -   For a push subscription, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, Windows credentials under which the Distribution Agent runs at the Distributor for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md). This is done after the execution of [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+    -   For a push subscription, execute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, Windows credentials under which the Distribution Agent runs at the Distributor for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md). This is done after the execution of [sp_addsubscription](~/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 ### To upgrade scripts that configure a merge publication  
   
@@ -103,9 +103,9 @@ manager: "jhubbard"
   
 1.  After executing the stored procedure that creates the subscription, ensure that you execute the stored procedure that creates a Merge Agent job to synchronize the subscription. The stored procedure that you use will depend on the type of subscription.  
   
-    -   For a pull subscription, update the execution of [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Merge Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+    -   For a pull subscription, update the execution of [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) to supply the Windows credentials under which the Merge Agent runs at the Subscriber for **@job_name** and **@job_password**. This is done after the execution of [sp_addmergepullsubscription](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-    -   For a push subscription, execute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, the Windows credentials under which the Merge Agent at the Distributor runs for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md). This is done after the execution of [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). For more information, see [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+    -   For a push subscription, execute [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) at the Publisher. Specify **@subscriber**, **@subscriber_db**, **@publication**, the Windows credentials under which the Merge Agent at the Distributor runs for **@job_name** and **@job_password**, and a schedule for this agent job. For more information, see [Specify Synchronization Schedules](specify-synchronization-schedules.md). This is done after the execution of [sp_addmergesubscription](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). For more information, see [Create a Push Subscription](create-a-push-subscription.md).  
   
 ## Example  
  The following is an example of a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] script that creates a transactional publication for the Product table. This publication supports immediate updating with queued updating as failover. Default parameters have been removed for readability.  
@@ -186,13 +186,13 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md)   
- [MSSQL_ENG021797](../../../2014/relational-databases/replication/mssql-eng021797.md)   
- [MSSQL_ENG021798](../../../2014/relational-databases/replication/mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Create a Publication](create-a-publication.md)   
+ [Create a Push Subscription](create-a-push-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)   
+ [MSSQL_ENG021797](mssql-eng021797.md)   
+ [MSSQL_ENG021798](mssql-eng021798.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

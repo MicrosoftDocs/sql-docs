@@ -53,13 +53,13 @@ manager: "jhubbard"
   
 -   The Oracle database is online and you can connect to it using a tool like SQL*Plus.  
   
--   The login replication uses to connect to the Oracle Publisher has sufficient permissions. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+-   The login replication uses to connect to the Oracle Publisher has sufficient permissions. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 -   The TNS names defined during configuration of the Oracle Publisher are listed in the tnsnames.ora file.  
   
 -   The correct Oracle Home and path are used. Even if you have only one set of Oracle binaries installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, ensure that the environment variables related to the Oracle Home are set properly. If you change environment variable values, you must stop and restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the change to take effect.  
   
- For more information about configuring and testing connectivity, see "Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor" in [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ For more information about configuring and testing connectivity, see "Installing and Configuring Oracle Client Networking Software on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor" in [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 ## The Oracle Publisher Is Associated with Another Distributor  
  An Oracle Publisher can only be associated with one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. If a different Distributor is associated with the Oracle Publisher, it must be dropped before another Distributor can be used. If the Distributor is not dropped first, you will receive one of the following error messages:  
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
  "No valid primary key found for source table [\<*TableOwner*>].[\<*TableName*>]"  
   
- For information about requirements for primary keys, see the section "Unique Indexes and Constraints" in the topic [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+ For information about requirements for primary keys, see the section "Unique Indexes and Constraints" in the topic [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## SQL Server Error 21642 Is Raised Regarding a Duplicate Linked Server Login  
  When an Oracle Publisher is initially configured, a linked server entry is created for the connection between the Publisher and the Distributor. The linked server has the same name as the Oracle TNS service name. If you attempt to create a linked server with the same name, the following error message is shown:  
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 5.  Click **OK** on each open dialog box to exit and save changes.  
   
- If you cannot locate sqlplus.exe on the Distributor, install a current version of the Oracle client software at the Distributor. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ If you cannot locate sqlplus.exe on the Distributor, install a current version of the Oracle client software at the Distributor. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 ## SQL Server Error 21620 Is Raised  
  If you are connecting to an Oracle database earlier than version 8.1, Oracle publishing requires that the Oracle client software installed on the Distributor be from version 9. If you are connecting to an Oracle database that is version 8.1 or later, we recommend that the Oracle client software be version 10 or later.  
@@ -127,7 +127,7 @@ manager: "jhubbard"
   
 -   "The CLSID registry key indicating that the Oracle OLEDB Provider for Oracle, OraOLEDB.Oracle, has been registered is not present at the distributor. Make certain that the Oracle OLEDB provider is installed and registered at the distributor."  
   
- If you are using Oracle client software version 10g, the provider is OraOLEDB10.dll; for version 9i, it is OraOLEDB.dll. The provider is installed in %ORACLE_HOME%\BIN (for example, C:\oracle\product\10.1.0\Client_1\bin). If you determine that the Oracle OLEDB provider is not installed on the Distributor, install it from the Oracle client software install disc provided by Oracle. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ If you are using Oracle client software version 10g, the provider is OraOLEDB10.dll; for version 9i, it is OraOLEDB.dll. The provider is installed in %ORACLE_HOME%\BIN (for example, C:\oracle\product\10.1.0\Client_1\bin). If you determine that the Oracle OLEDB provider is not installed on the Distributor, install it from the Oracle client software install disc provided by Oracle. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
  If the Oracle OLEDB provider is installed, make sure that it is registered. To register the provider DLL, execute the following command from the directory in which the DLL is installed, and then stop and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:  
   
@@ -191,7 +191,7 @@ manager: "jhubbard"
  `CREATE TRIGGER`  
   
 ## You Encounter Permissions Issues for the Replication User Schema  
- The replication user schema must have the permissions described in "Creating the User Schema Manually" in [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ The replication user schema must have the permissions described in "Creating the User Schema Manually" in [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 ## Oracle Error ORA-01000  
  Replication uses cursors on the Oracle Publisher during the process of adding articles to a publication. It is possible to exceed the maximum number of cursors available on the Publisher during this process. If this occurs, the following error is raised:  
@@ -227,7 +227,7 @@ manager: "jhubbard"
  "ORA-22285: non-existent directory or file for FILEOPEN operation"  
   
 ## Changes Are Made That Require Reconfiguration of the Publisher  
- Changes to replication metadata tables or procedures require that you drop and reconfigure the Publisher. To reconfigure the Publisher, you must drop the Publisher and configure it again using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Transact-SQL, or RMO. For information about configuring the Publisher, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+ Changes to replication metadata tables or procedures require that you drop and reconfigure the Publisher. To reconfigure the Publisher, you must drop the Publisher and configure it again using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Transact-SQL, or RMO. For information about configuring the Publisher, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
  **To drop an Oracle Publisher (**SQL Server Management Studio**)**  
   
@@ -244,7 +244,7 @@ manager: "jhubbard"
 -   Execute **sp_dropdistpublisher**. For more information, see [sp_dropdistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

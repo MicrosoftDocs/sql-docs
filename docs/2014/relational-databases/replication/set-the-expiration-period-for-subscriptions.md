@@ -21,7 +21,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set the Expiration Period for Subscriptions
-  This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md).  
+  This topic describes how to set the expiration period for subscriptions in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The expiration period for subscriptions determines the period of time before a subscription expires and is removed. For more information, see [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **In This Topic**  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
     -   It is possible to specify that subscriptions never expire, but it is strongly recommended that you do not use this value, because metadata cannot be cleaned up.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Set the expiration period for subscriptions on the **General** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Set the expiration period for subscriptions on the **General** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To set the expiration period for subscriptions  
   
@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 #### To set the expiration period for a subscription to a snapshot or transactional publication  
   
-1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  At the Publisher, execute [sp_addpublication](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specify the desired subscription expiration period, in hours, for **@retention**. The default expiration period is 336 hours. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To set the expiration period for a subscription to a merge publication  
   
@@ -73,7 +73,7 @@ manager: "jhubbard"
   
     -   **3** = year  
   
-     The default expiration period is 14 days. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+     The default expiration period is 14 days. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To change the expiration period for a subscription to a snapshot or transactional publication  
   
@@ -96,7 +96,7 @@ manager: "jhubbard"
 3.  (Optional) At the Publisher, execute [sp_changemergepublication](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specify **retention_period_unit** for **@property** and a new unit for the subscription expiration period for **@value**.  
   
 ## See Also  
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../../../2014/relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)  
   
   

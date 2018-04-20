@@ -54,6 +54,6 @@ manager: "jhubbard"
  This option is available only from the **Generate SQL Script** dialog box.  
   
 ## See Also  
- [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md)  
+ [Scripting Replication](scripting-replication.md)  
   
   

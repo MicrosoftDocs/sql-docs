@@ -140,7 +140,7 @@ manager: "jhubbard"
   
 6.  Click **OK**.  
   
-     ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
+     ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   
  **Next Lesson:**  
   

@@ -67,11 +67,11 @@ manager: "jhubbard"
   
 -   Synonyms  
   
- For information about supported data types, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+ For information about supported data types, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 ## Differences between Oracle and SQL Server  
   
--   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../../2014/getting-started/maximum-capacity-specifications-for-sql-server.md).  
+-   Oracle has different maximum size limits for some objects. Any objects created in the Oracle publication database should adhere to the maximum size limits for the corresponding objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about limits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Maximum Capacity Specifications for SQL Server](../../../getting-started/maximum-capacity-specifications-for-sql-server.md).  
   
 -   By default Oracle object names are created in upper case. Ensure that you supply the names of Oracle objects in upper case when publishing them through a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor if they are upper case on the Oracle database. Failure to specify the objects in the correct case may result in an error message indicating that the object cannot be found.  
   
@@ -86,14 +86,14 @@ manager: "jhubbard"
   
 -   Include a non-LOB column in the row update in addition to the LOB column, or update a non-LOB column of the row as part of the same Oracle transaction. In both cases, the update of the non-LOB column ensures that the trigger fires.  
   
- For more information about LOBs, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+ For more information about LOBs, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 ### Unique Indexes and Constraints  
  For both snapshot and transactional replication, columns contained in unique indexes and constraints (including primary key constraints) must adhere to certain restrictions. If they do not adhere to these restrictions, the constraint or index is not replicated.  
   
 -   The maximum number of columns allowed in an index on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is 16.  
   
--   All columns included in unique constraints must have supported data types. For more information about data types, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+-   All columns included in unique constraints must have supported data types. For more information about data types, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 -   All columns included in unique constraints must be published (they cannot be filtered).  
   
@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   If you create a pull subscription to an Oracle publication with a wizard, you must use the New Subscription Wizard supplied with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. For previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can, however, use the stored procedure and SQL-DMO interfaces to setup pull subscriptions to Oracle publications.  
   
--   If you use stored procedures to propagate changes to Subscribers (the default), be aware that the MCALL syntax is supported, but it has different behavior when the publication is from an Oracle Publisher. Typically MCALL provides a bitmap that shows which columns were updated at the Publisher. With an Oracle publication, the bitmap always shows that all columns were updated. For more information about using stored procedures, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+-   If you use stored procedures to propagate changes to Subscribers (the default), be aware that the MCALL syntax is supported, but it has different behavior when the publication is from an Oracle Publisher. Typically MCALL provides a bitmap that shows which columns were updated at the Publisher. With an Oracle publication, the bitmap always shows that all columns were updated. For more information about using stored procedures, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
 ### Transactional Replication Feature Support  
   
@@ -133,14 +133,14 @@ manager: "jhubbard"
   
 -   Subscribers to Oracle publications cannot be automatically initialized from a backup.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
   
 -   Schema changes to published Oracle tables are not supported. To make schema changes, first drop the publication, make the changes, and then re-create the publication and any subscriptions.  
   
     > [!NOTE]  
-    >  If the schema changes and the subsequent drop and re-creation of the publication and subscriptions are performed at a time when no activity is occurring on the published tables, you can specify the option 'replication support only' for the subscriptions. This allows them to be synchronized without having to copy a snapshot to each Subscriber. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  If the schema changes and the subsequent drop and re-creation of the publication and subscriptions are performed at a time when no activity is occurring on the published tables, you can specify the option 'replication support only' for the subscriptions. This allows them to be synchronized without having to copy a snapshot to each Subscriber. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### Replication Security Model  
  The security model for Oracle publishing is the same as the security model for standard transactional replication, with the following exceptions:  
@@ -161,11 +161,11 @@ manager: "jhubbard"
   
     -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), but the password can be changed.  
   
- For more information about replication security, see [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md).  
+ For more information about replication security, see [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md).  
   
 ## See Also  
- [Administrative Considerations for Oracle Publishers](../../../2014/relational-databases/replication/administrative-considerations-for-oracle-publishers.md)   
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)   
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

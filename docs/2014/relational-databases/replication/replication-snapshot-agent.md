@@ -129,7 +129,7 @@ manager: "jhubbard"
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
   
- For more information, see [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
+ For more information, see [Security Overview &#40;Replication&#41;](security-overview-replication.md).  
   
  **-FieldDelimiter** *field_delimiter*  
  Is the character or character sequence that marks the end of a field in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bulk-copy data file. The default is \n\<x$3>\n.  
@@ -196,7 +196,7 @@ manager: "jhubbard"
 >  Do not change the packet size unless you are certain that it will improve performance. For most applications, the default packet size is best.  
   
  **-ProfileName** *profile_name*  
- Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Specifies an agent profile to use for agent parameters. If **ProfileName** is NULL, the agent profile is disabled. If **ProfileName** is not specified, the default profile for the agent type is used. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-PublisherDB** *publisher_database*  
  Is the name of the publication database. *This parameter is not supported for Oracle Publishers*.  
@@ -242,9 +242,9 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  If you have installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run under a Local System account rather than under a Domain User account (the default), the service can access only the local computer. If the Snapshot Agent that runs under [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is configured to use Windows Authentication Mode when it logs in to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Snapshot Agent fails. The default setting is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
- To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+ To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](dev-guide/replication-agent-executables-concepts.md).  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

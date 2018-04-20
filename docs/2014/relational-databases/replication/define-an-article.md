@@ -52,7 +52,7 @@ manager: "jhubbard"
  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Create publications and define articles with the New Publication Wizard. After a publication is created, view and modify publication properties in the **Publication Properties - \<Publication>** dialog box. For information about creating a publication from an Oracle database, see [Create a Publication from an Oracle Database](../../../2014/relational-databases/replication/create-a-publication-from-an-oracle-database.md).  
+ Create publications and define articles with the New Publication Wizard. After a publication is created, view and modify publication properties in the **Publication Properties - \<Publication>** dialog box. For information about creating a publication from an Oracle database, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
   
 #### To create a publication and define articles  
   
@@ -64,21 +64,21 @@ manager: "jhubbard"
   
 4.  Follow the pages in the New Publication Wizard to:  
   
-    -   Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md).  
+    -   Specify a Distributor if distribution has not been configured on the server. For more information about configuring distribution, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
-         If you specify on the **Distributor** page that the Publisher server will act as its own Distributor (a local Distributor), and the server is not configured as a Distributor, the New Publication Wizard will configure the server. You will specify a default snapshot folder for the Distributor on the **Snapshot Folder** page. The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../../2014/relational-databases/replication/secure-the-snapshot-folder.md).  
+         If you specify on the **Distributor** page that the Publisher server will act as its own Distributor (a local Distributor), and the server is not configured as a Distributor, the New Publication Wizard will configure the server. You will specify a default snapshot folder for the Distributor on the **Snapshot Folder** page. The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](secure-the-snapshot-folder.md).  
   
          If you specify that another server should act as the Distributor, you must enter a password on the **Administrative Password** page for connections made from the Publisher to the Distributor. This password must match the password specified when the Publisher was enabled at the remote Distributor.  
   
-         For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md).  
+         For more information, see [Configure Distribution](configure-distribution.md).  
   
     -   Choose a publication database.  
   
-    -   Select a publication type. For more information, see [Types of Replication](../../../2014/relational-databases/replication/types-of-replication.md).  
+    -   Select a publication type. For more information, see [Types of Replication](types-of-replication.md).  
   
     -   Specify data and database objects to publish; optionally filter columns from table articles, and set article properties.  
   
-    -   Optionally filter rows from table articles. For more information, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md).  
+    -   Optionally filter rows from table articles. For more information, see [Filter Published Data](filter-published-data.md).  
   
     -   Set the Snapshot Agent schedule.  
   
@@ -90,22 +90,22 @@ manager: "jhubbard"
   
          \- Queue Reader Agent for transactional publications that allow updating subscriptions.  
   
-         For more information, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
+         For more information, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
   
-    -   Optionally script the publication. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+    -   Optionally script the publication. For more information, see [Scripting Replication](scripting-replication.md).  
   
     -   Specify a name for the publication.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
- After a publication has been created, articles can be created programmatically using replication stored procedures. The stored procedures used to create an article will depend on the type of publication for which the article is being defined. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+ After a publication has been created, articles can be created programmatically using replication stored procedures. The stored procedures used to create an article will depend on the type of publication for which the article is being defined. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To define an article for a Snapshot or Transactional Publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and any other optional parameters. Use **@source_owner** to specify the schema ownership of the object, if not **dbo**. If the article is not a log-based table article, specify the article type for **@type**; for more information, see [Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-article-types-replication-transact-sql-programming.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and any other optional parameters. Use **@source_owner** to specify the schema ownership of the object, if not **dbo**. If the article is not a log-based table article, specify the article type for **@type**; for more information, see [Specify Article Types &#40;Replication Transact-SQL Programming&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  To horizontally filter rows in a table or view an article, use [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to define the filter clause. For more information, see [Define and Modify a Static Row Filter](../../../2014/relational-databases/replication/define-and-modify-a-static-row-filter.md).  
+2.  To horizontally filter rows in a table or view an article, use [sp_articlefilter](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to define the filter clause. For more information, see [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  To vertically filter columns in a table or view an article, use [sp_articlecolumn](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). For more information, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md).  
+3.  To vertically filter columns in a table or view an article, use [sp_articlecolumn](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 4.  Execute [sp_articleview](~/relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) if the article is filtered.  
   
@@ -118,11 +118,11 @@ manager: "jhubbard"
   
 #### To define an article for a Merge Publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication for **@publication**, a name for the article name for **@article**, and the object being published for **@source_object**. To horizontally filter table rows, specify a value for **@subset_filterclause**. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) and [Define and Modify a Static Row Filter](../../../2014/relational-databases/replication/define-and-modify-a-static-row-filter.md). If the article is not a table article, specify the article type for **@type**. For more information, see [Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-article-types-replication-transact-sql-programming.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication for **@publication**, a name for the article name for **@article**, and the object being published for **@source_object**. To horizontally filter table rows, specify a value for **@subset_filterclause**. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) and [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md). If the article is not a table article, specify the article type for **@type**. For more information, see [Specify Article Types &#40;Replication Transact-SQL Programming&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md).  
+2.  (Optional) At the Publisher on the publication database, execute [sp_addmergefilter](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) to define a join filter between two articles. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
-3.  (Optional) At the Publisher on the publication database, execute [sp_mergearticlecolumn](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) to filter table columns. For more information, see [Define and Modify a Column Filter](../../../2014/relational-databases/replication/define-and-modify-a-column-filter.md).  
+3.  (Optional) At the Publisher on the publication database, execute [sp_mergearticlecolumn](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) to filter table columns. For more information, see [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This example defines an article based on the `Product` table for a transactional publication, where the article is filtered both horizontally and vertically.  
@@ -150,11 +150,11 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)   
- [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Replication System Stored Procedures Concepts](../../../2014/relational-databases/replication/dev-guide/replication-system-stored-procedures-concepts.md)  
+ [Create a Publication](create-a-publication.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)   
+ [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Replication System Stored Procedures Concepts](dev-guide/replication-system-stored-procedures-concepts.md)  
   
   

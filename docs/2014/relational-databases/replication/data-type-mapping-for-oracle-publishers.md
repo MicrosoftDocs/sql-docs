@@ -91,7 +91,7 @@ manager: "jhubbard"
   
  `GRANT READ ON DIRECTORY <directory_name> TO <replication_administrative_user_schema>`  
   
- For more information about large objects types, see the section "Considerations for Large Objects" in [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+ For more information about large objects types, see the section "Considerations for Large Objects" in [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## Specifying Alternative Data Type Mappings  
  Typically, the default data type mapping is appropriate, but for many Oracle data types, you can select a data type mapping from a set of alternative mappings, rather than using the default. There are two ways to specify alternative mappings:  
@@ -100,11 +100,11 @@ manager: "jhubbard"
   
 -   Globally change the default for all future articles using stored procedures (defaults are not changed for existing articles).  
   
- To specify alternative data type mappings, see [Specify Data Type Mappings for an Oracle Publisher](../../../2014/relational-databases/replication/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ To specify alternative data type mappings, see [Specify Data Type Mappings for an Oracle Publisher](specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

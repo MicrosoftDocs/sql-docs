@@ -30,9 +30,9 @@ manager: "jhubbard"
   
  Nonoverlapping partitions can be shared among subscriptions or they can be restricted so that only one subscription receives a given partition. The settings that control partition behavior are described in "Using the Appropriate Filtering Options" later in this topic. Using these settings you can tailor parameterized filtering according to application and performance requirements. In general, overlapping partitions allow for greater flexibility, and nonoverlapping partitions replicated to a single subscription provide better performance.  
   
- Parameterized filters are used on a single table and are typically combined with join filters to extend filtering to related tables. For more information, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
+ Parameterized filters are used on a single table and are typically combined with join filters to extend filtering to related tables. For more information, see [Join Filters](join-filters.md).  
   
- To define or modify a parameterized row filter, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../../2014/relational-databases/replication/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ To define or modify a parameterized row filter, see [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## How Parameterized Filters Work  
  A parameterized row filter uses a WHERE clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: SUSER_SNAME() and HOST_NAME(). User-defined functions can also be used, but they must include SUSER_SNAME() or HOST_NAME() in the body of the function, or evaluate one of these system functions (such as `MyUDF(SUSER_SNAME()`). If a user-defined function includes SUSER_SNAME() or HOST_NAME() in the body of the function, you cannot pass parameters to the function.  
@@ -98,14 +98,14 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  Use one of the following methods to override the HOST_NAME() value:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: specify a value on the **HOST\_NAME\(\) Values** page of the New Subscription Wizard. For more information about creating subscriptions, see [Subscribe to Publications](subscribe-to-publications.md).  
   
 -   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: specify a value for the **@hostname** parameter of [sp_addmergesubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (for push subscriptions) or [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (for pull subscriptions).  
   
--   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+-   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
 ## Initializing a Subscription to a Publication with Parameterized Filters  
- When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## Using the Appropriate Filtering Options  
  There are two key areas over which you have control when using parameterized filters:  
@@ -114,10 +114,10 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   How the data is shared among Subscribers, which must be reflected by the article setting **partition options**.  
   
- To set filtering options, see [Optimize Parameterized Row Filters](../../../2014/relational-databases/replication/optimize-parameterized-row-filters.md).  
+ To set filtering options, see [Optimize Parameterized Row Filters](optimize-parameterized-row-filters.md).  
   
 ### Setting 'use partition groups' and 'keep partition changes'  
- Both the **use partition groups** and **keep partition changes** options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. The **use partition groups** option provides greater performance improvement through the use of the precomputed partitions feature. This option is set to `true` by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../../2014/relational-databases/replication/optimize-parameterized-filter-performance-with-precomputed-partitions.md). If your articles do not meet the requirements for using precomputed partitions, the **keep partition changes** option to is set to `true`.  
+ Both the **use partition groups** and **keep partition changes** options improve the synchronization performance for publications with filtered articles by storing additional metadata in the publication database. The **use partition groups** option provides greater performance improvement through the use of the precomputed partitions feature. This option is set to `true` by default if the articles in your publication adhere to a set of requirements. For more information about these requirements, see [Optimize Parameterized Filter Performance with Precomputed Partitions](optimize-parameterized-filter-performance-with-precomputed-partitions.md). If your articles do not meet the requirements for using precomputed partitions, the **keep partition changes** option to is set to `true`.  
   
 ### Setting 'partition options'  
  You specify a value for the **partition options** property when creating an article, according to the way in which data in the filtered table will be shared by Subscribers. The property can be set to one of four values using [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), and the **Article Properties** dialog box. The property can be set to one of two values using the **Add Filter** or **Edit Filter** dialog boxes, which are available from the New Publication Wizard and the **Publication Properties** dialog box. The following table summarizes the available values:  
@@ -170,21 +170,21 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Articles can exist in only one publication; articles cannot be republished.  
   
--   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../2014/relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ##### Additional Considerations for Join Filters  
   
--   In a join filter hierarchy, an article with an overlapping partition cannot appear above an article with a nonoverlapping partition. In other words, a parent article must use nonoverlapping partitions if the child article does. For information about join filters, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
+-   In a join filter hierarchy, an article with an overlapping partition cannot appear above an article with a nonoverlapping partition. In other words, a parent article must use nonoverlapping partitions if the child article does. For information about join filters, see [Join Filters](join-filters.md).  
   
--   A join filter in which the nonoverlapping partition is a child must have the **join unique key** property set to 1. For more information, see [Join Filters](../../../2014/relational-databases/replication/join-filters.md).  
+-   A join filter in which the nonoverlapping partition is a child must have the **join unique key** property set to 1. For more information, see [Join Filters](join-filters.md).  
   
 -   The article should only have one parameterized filter or join filter. Having a parameterized filter and being the parent in a join filter is allowed. Having a parameterized filter and being the child in a join filter is not allowed. Having more than one join filter is also not allowed.  
   
 -   If two tables at the Publisher have a join filter relationship and the child table has rows that have no corresponding row in the parent table, an insert of the missing parent row will not result in the related rows being downloaded to the Subscriber (the rows would be downloaded with overlapping partitions). For example, if the **SalesOrderDetail** table has rows with no corresponding row in the **SalesOrderHeader** table, and you insert the missing row in **SalesOrderHeader**, the row is downloaded to the Subscriber, but the corresponding rows in **SalesOrderDetail** are not.  
   
 ## See Also  
- [Best Practices for Time-Based Row Filters](../../../2014/relational-databases/replication/best-practices-for-time-based-row-filters.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md)  
+ [Best Practices for Time-Based Row Filters](best-practices-for-time-based-row-filters.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)  
   
   

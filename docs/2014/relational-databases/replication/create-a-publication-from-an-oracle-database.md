@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
--   Before creating a publication, you must install Oracle software on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, and you must configure the Oracle database. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+-   Before creating a publication, you must install Oracle software on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, and you must configure the Oracle database. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Create a snapshot or transactional publication from an Oracle Database with the New Publication Wizard.  
@@ -71,7 +71,7 @@ manager: "jhubbard"
 7.  Click **Connect**, which creates a connection to the Oracle Publisher and configures it for replication. The **Connect to Server** dialog box closes and you are returned to the **Distributor Properties - \<Distributor>** dialog box.  
   
     > [!NOTE]  
-    >  If there are any problems with the network configuration, you will receive an error at this point. If you experience problems connecting to the Oracle database, see the section "The SQL Server Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](../../../2014/relational-databases/replication/troubleshooting-oracle-publishers.md).  
+    >  If there are any problems with the network configuration, you will receive an error at this point. If you experience problems connecting to the Oracle database, see the section "The SQL Server Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -89,17 +89,17 @@ manager: "jhubbard"
   
 6.  On the **Articles** page, select the database objects you want to publish.  
   
-     Optionally, filter out table columns by expanding a table and then clearing the checkbox for one or more columns. Click **Article Properties** to view and modify article properties and to specify alternative data type mappings if necessary. For more information about data type mappings, see [Specify Data Type Mappings for an Oracle Publisher](../../../2014/relational-databases/replication/specify-data-type-mappings-for-an-oracle-publisher.md).  
+     Optionally, filter out table columns by expanding a table and then clearing the checkbox for one or more columns. Click **Article Properties** to view and modify article properties and to specify alternative data type mappings if necessary. For more information about data type mappings, see [Specify Data Type Mappings for an Oracle Publisher](specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 7.  On the **Filter Table Rows** page, optionally apply filters to publish a subset of data from one or more tables.  
   
 8.  On the **Snapshot Agent** page, clear **Create a snapshot immediately** only if you have created all objects and added all required data in the subscription database.  
   
-9. On the **Agent Security** page, specify credentials for the Snapshot Agent (for all publications) and the Log Reader Agent (for transactional publications). The agents run and make connections to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account you specify. The agents make connections to the Oracle database using the context of the account you specified as the replication administrative user schema. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+9. On the **Agent Security** page, specify credentials for the Snapshot Agent (for all publications) and the Log Reader Agent (for transactional publications). The agents run and make connections to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor using the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account you specify. The agents make connections to the Oracle database using the context of the account you specified as the replication administrative user schema. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
-     For more information about the permissions required by each agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
+     For more information about the permissions required by each agent, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
   
-10. On the **Wizard Actions** page, optionally script the publication. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+10. On the **Wizard Actions** page, optionally script the publication. For more information, see [Scripting Replication](scripting-replication.md).  
   
 11. On the **Complete the Wizard** page, specify a name for the publication.  
   
@@ -108,9 +108,9 @@ manager: "jhubbard"
   
 #### To create an Oracle Publication  
   
-1.  Configure the Oracle database as a Publisher. For more information, see [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md).  
+1.  Configure the Oracle database as a Publisher. For more information, see [Configure an Oracle Publisher](configure-an-oracle-publisher.md).  
   
-2.  If a remote Distributor does not exist, configure the remote Distributor. For more information, see [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md).  
+2.  If a remote Distributor does not exist, configure the remote Distributor. For more information, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
   
 3.  At the remote Distributor that the Oracle Publisher will use, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Specify the Transparent Network Substrate (TNS) name of the Oracle database instance for **@publisher** and a value of `ORACLE` or `ORACLE GATEWAY` for **@publisher_type**. `Specify` the security mode used when connecting from the Oracle Publisher to the remote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor as one of the following:  
   
@@ -135,15 +135,15 @@ manager: "jhubbard"
         > [!NOTE]  
         >  The **@job_login** parameter must match the login supplied in step 3. Do not supply publisher security information. The Log Reader agent connects to the Publisher using the security information provided in step 3.  
   
-5.  At the Distributor on the distribution database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+5.  At the Distributor on the distribution database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) to create the publication. For more information, see [Create a Publication](create-a-publication.md).  
   
 6.  At the Distributor on the distribution database, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 4 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. To use Oracle Standard Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the Oracle login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../2014/relational-databases/replication/script-to-grant-oracle-permissions.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)   
+ [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)  
   
   

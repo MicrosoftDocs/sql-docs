@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 -   Use the script generation features that are provided in the replication wizards or  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. For more information, see [Scripting Replication](../scripting-replication.md).  
   
 -   Use Replication Management Objects (RMOs) to programmatically generate the script to create an RMO object.  
   
@@ -152,7 +152,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../../2014/database-engine/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../../database-engine/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
@@ -222,8 +222,8 @@ REM -- The following must be supplied on one line.
 -   Synchronizing a pull subscription  
   
 ## See Also  
- [Replication Programming Concepts](../../../../2014/relational-databases/replication/dev-guide/replication-programming-concepts.md)   
+ [Replication Programming Concepts](replication-programming-concepts.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [Scripting Replication](../../../../2014/relational-databases/replication/scripting-replication.md)  
+ [Scripting Replication](../scripting-replication.md)  
   
   

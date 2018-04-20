@@ -69,7 +69,7 @@ manager: "jhubbard"
  The names of columns that are affected by the permission.  
   
 ## See Also  
- [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md)   
+ [Database-Level Roles](authentication-access/database-level-roles.md)   
  [Security Center for SQL Server Database Engine and Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

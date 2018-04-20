@@ -24,23 +24,23 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Types of Replication](../../../2014/relational-databases/replication/types-of-replication.md)  
+-   [Types of Replication](types-of-replication.md)  
   
--   [Heterogeneous Database Replication](../../../2014/relational-databases/replication/heterogeneous-database-replication.md)  
+-   [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
   
--   [Replication to Memory-Optimized Table Subscribers](../../../2014/relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
+-   [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
   
--   [Replication Agents](../../../2014/relational-databases/replication/replication-agents.md)  
+-   [Replication Agents](replication-agents.md)  
   
--   [Republish Data](../../../2014/relational-databases/replication/republish-data.md)  
+-   [Republish Data](republish-data.md)  
   
--   [Replication over the Internet](../../../2014/relational-databases/replication/replication-over-the-internet.md)  
+-   [Replication over the Internet](replication-over-the-internet.md)  
   
--   [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+-   [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
--   [Monitoring &#40;Replication&#41;](../../../2014/relational-databases/replication/monitoring-replication.md)  
+-   [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   
--   [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md)  
+-   [Scripting Replication](scripting-replication.md)  
   
 ##  <a name="Interoperability"></a> Interoperability of Replication and High Availability Features  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
 -   [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
 ## See Also  
- [SQL Server Replication](../../../2014/relational-databases/replication/sql-server-replication.md)   
- [Technical Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/technical-reference-replication.md)  
+ [SQL Server Replication](sql-server-replication.md)   
+ [Technical Reference &#40;Replication&#41;](technical-reference-replication.md)  
   
   

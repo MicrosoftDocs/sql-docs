@@ -73,7 +73,7 @@ manager: "jhubbard"
   
 -   The resource pool provides and limits the resources required by the application, for example, Application 3.  
   
- ![Resource Governor Functional Components](../../2014/database-engine/media/rg-basic-funct-components.gif "Resource Governor Functional Components")  
+ ![Resource Governor Functional Components](../../database-engine/media/rg-basic-funct-components.gif "Resource Governor Functional Components")  
   
 ## Resource Governor Tasks  
   

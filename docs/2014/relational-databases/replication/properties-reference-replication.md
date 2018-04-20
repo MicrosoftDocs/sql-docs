@@ -20,30 +20,30 @@ manager: "jhubbard"
 # Properties Reference (Replication)
   This section of the documentation provides information on the following replication wizards and dialog boxes:  
   
--   [Configure Distribution Wizard](../../../2014/relational-databases/replication/configure-distribution-wizard.md)  
+-   [Configure Distribution Wizard](configure-distribution-wizard.md)  
   
--   [Distributor Properties](../../../2014/relational-databases/replication/distributor-properties.md)  
+-   [Distributor Properties](distributor-properties.md)  
   
--   [Publisher Properties](../../../2014/relational-databases/replication/publisher-properties.md)  
+-   [Publisher Properties](publisher-properties.md)  
   
--   [Subscriber Properties](../../../2014/relational-databases/replication/subscriber-properties.md)  
+-   [Subscriber Properties](subscriber-properties.md)  
   
--   [New Publication Wizard](../../../2014/relational-databases/replication/new-publication-wizard.md)  
+-   [New Publication Wizard](new-publication-wizard.md)  
   
--   [Publication Properties  - &#60;Publication&#62;](../../../2014/relational-databases/replication/publication-properties-publication.md)  
+-   [Publication Properties  - &#60;Publication&#62;](publication-properties-publication.md)  
   
--   [Article Properties - &#60;Article&#62;](../../../2014/relational-databases/replication/article-properties-article.md)  
+-   [Article Properties - &#60;Article&#62;](article-properties-article.md)  
   
--   [New Subscription Wizard &#40;UI Reference&#41;](../../../2014/relational-databases/replication/new-subscription-wizard-ui-reference.md)  
+-   [New Subscription Wizard &#40;UI Reference&#41;](new-subscription-wizard-ui-reference.md)  
   
--   [Subscription Properties - &#60;Subscription&#62;](../../../2014/relational-databases/replication/subscription-properties-subscription.md)  
+-   [Subscription Properties - &#60;Subscription&#62;](subscription-properties-subscription.md)  
   
--   [Configure Peer-to-Peer Topology Wizard](../../../2014/relational-databases/replication/configure-peer-to-peer-topology-wizard.md)  
+-   [Configure Peer-to-Peer Topology Wizard](configure-peer-to-peer-topology-wizard.md)  
   
--   [Replication Monitor](../../../2014/relational-databases/replication/replication-monitor.md)  
+-   [Replication Monitor](replication-monitor.md)  
   
--   [Microsoft Replication Conflict Viewer and Interactive Resolver](../../../2014/relational-databases/replication/microsoft-replication-conflict-viewer-and-interactive-resolver.md)  
+-   [Microsoft Replication Conflict Viewer and Interactive Resolver](microsoft-replication-conflict-viewer-and-interactive-resolver.md)  
   
--   [SQL Server Management Studio Replication Dialog Boxes](../../../2014/relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md)  
+-   [SQL Server Management Studio Replication Dialog Boxes](sql-server-management-studio-replication-dialog-boxes.md)  
   
   

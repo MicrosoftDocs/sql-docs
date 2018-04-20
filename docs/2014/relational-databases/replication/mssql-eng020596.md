@@ -37,6 +37,6 @@ manager: "jhubbard"
  Login with the appropriate credentials, and execute **sp_dropanonymousagent**.  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

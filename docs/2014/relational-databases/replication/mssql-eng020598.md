@@ -31,20 +31,20 @@ manager: "jhubbard"
 |Message Text|The row was not found at the Subscriber when applying the replicated command.|  
   
 ## Explanation  
- This error is raised in transactional replication if the Distribution Agent attempts to update a row at the Subscriber, but the row has been deleted or the primary key of the row has been changed. By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. For transactional replication, user changes should be made at the Subscriber only if updatable subscriptions or peer-to-peer replication is used. For information about these options, see [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md) and [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md).  
+ This error is raised in transactional replication if the Distribution Agent attempts to update a row at the Subscriber, but the row has been deleted or the primary key of the row has been changed. By default, Subscribers to transactional publications should be treated as read-only, because changes are not propagated back to the Publisher. For transactional replication, user changes should be made at the Subscriber only if updatable subscriptions or peer-to-peer replication is used. For information about these options, see [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md) and [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md).  
   
 ## User Action  
  **To resolve this problem:**  
   
 1.  If replication must continue while you identify the source of the error, specify the parameter **-SkipErrors 20598** for the Distribution Agent. This allows the agent to skip changes that result in error 20598, while allowing other changes to be replicated.  
   
-2.  Identify which rows at the Subscriber have been deleted or have a different primary key than the corresponding rows at the Publisher. You can use the [tablediff Utility](../../../2014/database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases. For information about using this utility with replicated databases, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../../2014/relational-databases/replication/compare-replicated-tables-for-differences-replication-programming.md).  
+2.  Identify which rows at the Subscriber have been deleted or have a different primary key than the corresponding rows at the Publisher. You can use the [tablediff Utility](../../../database-engine/tablediff-utility.md) to determine which rows are different in the publication and subscription databases. For information about using this utility with replicated databases, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
 3.  Correct the rows at the Subscriber using the **tablediff** utility or another method.  
   
 4.  (Optional) Remove the **-SkipErrors** parameter.  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

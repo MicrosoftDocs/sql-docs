@@ -22,22 +22,22 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Security Overview (Replication)
-  Fundamentally, how to help secure your replication environment is a matter of understanding the authentication and authorization options, understanding appropriate uses of replication filtering features, and learning specific measures for how to help secure each piece of the replication environment. The replication environment includes the Distributor, Publisher, Subscribers, and the snapshot folder. This chapter addresses replication security, but replication security is built on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security and Windows security. Therefore, you should understand this foundation and the specifics of replication security. For more information about security, see [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md). For more information about security considerations for Oracle publishing, see the section "Replication Security Model" in the topic [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+  Fundamentally, how to help secure your replication environment is a matter of understanding the authentication and authorization options, understanding appropriate uses of replication filtering features, and learning specific measures for how to help secure each piece of the replication environment. The replication environment includes the Distributor, Publisher, Subscribers, and the snapshot folder. This chapter addresses replication security, but replication security is built on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security and Windows security. Therefore, you should understand this foundation and the specifics of replication security. For more information about security, see [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). For more information about security considerations for Oracle publishing, see the section "Replication Security Model" in the topic [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## In This Section  
- [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../2014/relational-databases/replication/threat-and-vulnerability-mitigation-replication.md)  
+ [Threat and Vulnerability Mitigation &#40;Replication&#41;](threat-and-vulnerability-mitigation-replication.md)  
  Discusses potential threats to a replication topology and describes ways to reduce those threats.  
   
- [Identity and Access Control &#40;Replication&#41;](../../../2014/relational-databases/replication/identity-and-access-control-replication.md)  
+ [Identity and Access Control &#40;Replication&#41;](identity-and-access-control-replication.md)  
  Describes how to use authentication, authorization, and filtering to help secure a replication topology.  
   
- [Secure Development &#40;Replication&#41;](../../../2014/relational-databases/replication/secure-development-replication.md)  
+ [Secure Development &#40;Replication&#41;](secure-development-replication.md)  
  Describes replication security behavior, replication security best practices, and least permissions for replication.  
   
- [Secure Deployment &#40;Replication&#41;](../../../2014/relational-databases/replication/secure-deployment-replication.md)  
+ [Secure Deployment &#40;Replication&#41;](secure-deployment-replication.md)  
  Describes how to better secure all components of a replication topology  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

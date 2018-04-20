@@ -19,7 +19,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Set Queued Updating Conflict Resolution Options (SQL Server Management Studio)
-  Set conflict resolution options for publications that support queued updating subscriptions on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+  Set conflict resolution options for publications that support queued updating subscriptions on the **Subscription Options** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### To set queued updating conflict resolution options  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md)   
- [Queued Updating Conflict Detection and Resolution](../../../2014/relational-databases/replication/queued-updating-conflict-detection-and-resolution.md)  
+ [Enable Updating Subscriptions for Transactional Publications](enable-updating-subscriptions-for-transactional-publications.md)   
+ [Queued Updating Conflict Detection and Resolution](queued-updating-conflict-detection-and-resolution.md)  
   
   

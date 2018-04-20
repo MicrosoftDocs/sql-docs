@@ -55,10 +55,10 @@ manager: "jhubbard"
   
      After you execute the [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
-     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [AlwaysOn Failover Cluster Instances &#40;SQL Server&#41;](../../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
 ## See Also  
  [@@SERVERNAME &#40;Transact-SQL&#41;](~/t-sql/functions/servername-transact-sql.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

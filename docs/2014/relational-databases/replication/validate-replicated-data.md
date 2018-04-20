@@ -31,24 +31,24 @@ manager: "jhubbard"
   
 -   Row count and binary checksum. In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the checksum algorithm. If the row count fails, the checksum is not performed.  
   
- In addition to validating that data at the Subscriber and Publisher match, merge replication provides the ability to validate that data is partitioned correctly for each Subscriber. For more information, see [Validate Partition Information for a Merge Subscriber](../../../2014/relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
+ In addition to validating that data at the Subscriber and Publisher match, merge replication provides the ability to validate that data is partitioned correctly for each Subscriber. For more information, see [Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md).  
   
  **To validate data**  
   
- To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
+ To validate all articles in a subscription, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], stored procedures or Replication Management Objects (RMO). For more information, see [Validate Data at the Subscriber](validate-data-at-the-subscriber.md). To validate individual articles in snapshot and transactional publications, you must use stored procedures.  
   
 ## Data Validation Results  
  When validation is complete, the Distribution Agent or Merge Agent logs messages regarding success or failure (replication does not report which rows failed). These messages can be viewed in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Replication Monitor, and replication system tables. The how-to topic listed above demonstrates how to run validation and view the results.  
   
  To handle validation failures, consider the following:  
   
--   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configure the replication alert named **Replication: Subscriber has failed data validation** so that you are notified of the failure. For more information, see [Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   Is the fact that validation failed an issue for your application? If the validation failure is an issue, manually update the data so that it is synchronized, or reinitialize the subscription:  
   
-    -   Data can be updated using the [tablediff utility](../../../2014/database-engine/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../../2014/relational-databases/replication/compare-replicated-tables-for-differences-replication-programming.md).  
+    -   Data can be updated using the [tablediff utility](../../../database-engine/tablediff-utility.md). For more information about using this utility, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
-    -   For more information about reinitializaton, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+    -   For more information about reinitializaton, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 ## Considerations for Data Validation  
  Take the following issues into consideration when validating data:  
@@ -83,6 +83,6 @@ manager: "jhubbard"
  When binary checksums are used, 32-bit redundancy check (CRC) occurs on a column-by-column basis rather than a CRC on the physical row on the data page. This allows the columns with the table to be in any order physically on the data page, but still compute to the same CRC for the row. Binary checksum validation can be used when there are row or column filters on the publication.  
   
 ## See Also  
- [Best Practices for Replication Administration](../../../2014/relational-databases/replication/best-practices-for-replication-administration.md)  
+ [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

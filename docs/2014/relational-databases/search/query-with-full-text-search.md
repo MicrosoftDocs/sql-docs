@@ -230,7 +230,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### xml data  
  An `xml` data type column stores only XML documents and fragments, and only the XML filter is used for the documents. Therefore, a type column is unnecessary. On `xml` columns, the full-text index indexes the content of the XML elements, but ignores the XML markup. Attribute values are full-text indexed unless they are numeric values. Element tags are used as token boundaries. Well-formed XML or HTML documents and fragments containing multiple languages are supported.  
   
- For more information about querying on an `xml` column, see [Use Full-Text Search with XML Columns](../../2014/database-engine/use-full-text-search-with-xml-columns.md).  
+ For more information about querying on an `xml` column, see [Use Full-Text Search with XML Columns](../../database-engine/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -341,7 +341,7 @@ GO
  [CONTAINSTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](~/t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](~/relational-databases/system-functions/freetexttable-transact-sql.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../2014/database-engine/create-full-text-search-queries-visual-database-tools.md)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](../../database-engine/create-full-text-search-queries-visual-database-tools.md)   
  [Improve the Performance of Full-Text Queries](improve-the-performance-of-full-text-queries.md)  
   
   

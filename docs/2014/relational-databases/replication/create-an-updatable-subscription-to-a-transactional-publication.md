@@ -25,7 +25,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
  
-Configure updatable subscriptions on the **Updatable Subscriptions** page of the **New Subscription Wizard**. This page is only available if you have enabled a transactional publication for updatable subscriptions. For more information about enabling updatable subscriptions, see [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md).   
+Configure updatable subscriptions on the **Updatable Subscriptions** page of the **New Subscription Wizard**. This page is only available if you have enabled a transactional publication for updatable subscriptions. For more information about enabling updatable subscriptions, see [Enable Updating Subscriptions for Transactional Publications](enable-updating-subscriptions-for-transactional-publications.md).   
   
 ## To configure an updatable subscription from the Publisher  
 
@@ -45,7 +45,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * To use queued updating subscriptions, select **Queue changes and commit when possible**. If you select this option, and the publication allows immediate updating subscriptions (the default for publications created with the New Publication Wizard), and the Subscriber is running SQL Server 2005 or a later version, the subscription property **update_mode** is set to queued failover. This mode allows you to switch to immediate updating later if necessary.
 
-    For information about switching update modes, see [Switch Between Update Modes for an Updatable Transactional Subscription](../../../2014/relational-databases/replication/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
+    For information about switching update modes, see [Switch Between Update Modes for an Updatable Transactional Subscription](switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
 7. The **Login for Updatable Subscriptions** page is displayed for subscriptions that use immediate updating or have **update_mode** set to **queued failover**. On the **Login for Updatable Subscriptions** page, specify a linked server over which connections to the Publisher are made for immediate updating subscriptions. Connections are used by the triggers that fire at the Subscriber and propagate changes to the Publisher. Select one of the following options:
 
@@ -53,7 +53,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio, or another method.
 
-    For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../../../2014/relational-databases/replication/secure-the-subscriber.md).
+    For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](secure-the-subscriber.md).
 
 8. Complete the wizard.
 
@@ -82,7 +82,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * To use queued updating subscriptions, select **Queue changes and commit when possible**. If you select this option, and the publication allows immediate updating subscriptions (the default for publications created with the New Publication Wizard), and the Subscriber is running SQL Server 2005 or a later version, the subscription property **update_mode** is set to queued **failover**. This mode allows you to switch to immediate updating later if necessary.
 
-    For information about switching update modes, see [Switch Between Update Modes for an Updatable Transactional Subscription](../../../2014/relational-databases/replication/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
+    For information about switching update modes, see [Switch Between Update Modes for an Updatable Transactional Subscription](switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
 10. The **Login for Updatable Subscriptions** page is displayed for subscriptions that use immediate updating or have **update_mode** set to queued **failover**. On the **Login for Updatable Subscriptions** page, specify a linked server over which connections to the Publisher are made for immediate updating subscriptions. Connections are used by the triggers that fire at the Subscriber and propagate changes to the Publisher. Select one of the following options:
 
@@ -90,16 +90,16 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 
     * **Use a linked server or remote server that you have already defined.** Select this option if you have defined a remote server or linked server between the Subscriber and the Publisher using [sp_addserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), [sp_addlinkedserver (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md), SQL Server Management Studio, or another method.
 
-    For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../../../2014/relational-databases/replication/secure-the-subscriber.md).
+    For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](secure-the-subscriber.md).
 
 11. Complete the wizard.
 
 ## See Also
 
-[Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)
+[Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)
 
-[Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)
+[Create a Publication](create-a-publication.md)
 
-[Create an Updatable Subscription to a Transactional Publication Using Transact-SQL](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md) 
+[Create an Updatable Subscription to a Transactional Publication Using Transact-SQL](create-updatable-subscription-transactional-publication-transact-sql.md) 
  
   

@@ -178,7 +178,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
   
--   [Open Table Designer &#40;Visual Database Tools&#41;](../../2014/database-engine/open-table-designer-visual-database-tools.md)  
+-   [Open Table Designer &#40;Visual Database Tools&#41;](../../database-engine/open-table-designer-visual-database-tools.md)  
   
 ### To Create a Full-Text Index  
   

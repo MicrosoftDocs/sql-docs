@@ -55,7 +55,7 @@ manager: "jhubbard"
   
  The following illustration shows the test server and production server scenario:  
   
- ![Database Engine Tuning Advisor test server usage](../../2014/database-engine/media/testsvr.gif "Database Engine Tuning Advisor test server usage")  
+ ![Database Engine Tuning Advisor test server usage](../../database-engine/media/testsvr.gif "Database Engine Tuning Advisor test server usage")  
   
 > [!NOTE]  
 >  The test server tuning feature is not supported in the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Tuning Advisor graphical user interface (GUI).  

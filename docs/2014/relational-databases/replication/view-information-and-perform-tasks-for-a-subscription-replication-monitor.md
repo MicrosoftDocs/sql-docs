@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      This tab is intended to display information about subscriptions from all publications available at the selected Publisher that have errors, warnings, or the poorest performance. This tab is not displayed for Distributors running versions prior to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
- For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+ For more information about the options on each tab, click the tab in the right pane, and then click **Help** on the menu bar. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 ### To view information and perform tasks for subscriptions in the All Subscriptions tab  
   
@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 2.  To view information about subscriptions, click the **All Subscriptions** tab. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.  
   
-3.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+3.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ### To view information and perform tasks for subscriptions in the Subscription Watch List tab  
   
@@ -48,11 +48,11 @@ manager: "jhubbard"
   
 3.  Select the type of subscription to display from the **Show \<SubscriptionType> Subscriptions** drop-down list. To view only those subscriptions in a given state, such as synchronizing, select an option from the **Show** drop-down list.  
   
-4.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../2014/relational-databases/replication/view-information-and-perform-tasks-for-subscription-agents.md).  
+4.  To view and modify subscription properties, right-click the subscription, and then click **Properties**. You can also access more detailed information and perform tasks on this tab. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](view-information-and-perform-tasks-for-subscription-agents.md).  
   
 ## See Also  
- [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
+ [Monitoring Replication](monitoring-replication.md)  
   
   

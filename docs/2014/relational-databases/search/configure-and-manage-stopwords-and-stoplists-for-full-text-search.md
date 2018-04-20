@@ -84,7 +84,7 @@ manager: "jhubbard"
   
     -   **Create from an existing full-text stoplist**  
   
-     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md).  
+     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](../../database-engine/new-full-text-stoplist-general-page.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -140,7 +140,7 @@ manager: "jhubbard"
   
 4.  Right-click the stoplist whose properties you want to change, and select **Properties**.  
   
-5.  In the [Full-Text Stoplist Properties](../../2014/database-engine/full-text-stoplist-properties.md) dialog box:  
+5.  In the [Full-Text Stoplist Properties](../../database-engine/full-text-stoplist-properties.md) dialog box:  
   
     1.  In the **Action** list box, select one of the following actions: **Add stopword**, **Delete stopword**, **Delete all stopwords**, or **Clear stoplist**.  
   

@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Initialize a Transactional Subscription from a Backup (Replication Transact-SQL Programming)
-  Although a subscription to a transactional publication is typically initialized with a snapshot, a subscription can be initialized from a backup using replication stored procedures. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../../2014/relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+  Although a subscription to a transactional publication is typically initialized with a snapshot, a subscription can be initialized from a backup using replication stored procedures. For more information, see [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### To initialize a transactional subscriber from a backup  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
     -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **@property** and a value of `true` for **@value**.  
   
-2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](create-a-publication.md).  
   
     > [!WARNING]  
     >  To avoid missing subscriber data, when using **sp_addpublication** with `@allow_initialize_from_backup = N'true'`, always use `@immediate_sync = N'true'`.  
@@ -63,9 +63,9 @@ manager: "jhubbard"
   
     -   (Optional for tape devices) **@unload** - specify a value of **1** (default) if the tape should be unloaded from the drive after the restore is complete and **0** if it should not be unloaded.  
   
-6.  (Optional) For a pull subscription, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) and [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) at the Subscriber on the subscription database. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md).  
+6.  (Optional) For a pull subscription, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) and [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) at the Subscriber on the subscription database. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-7.  (Optional) Start the Distribution Agent. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+7.  (Optional) Start the Distribution Agent. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ## See Also  
  [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)   

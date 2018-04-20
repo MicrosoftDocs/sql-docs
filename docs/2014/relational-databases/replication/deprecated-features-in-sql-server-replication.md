@@ -28,6 +28,6 @@ manager: "jhubbard"
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] does not support replication to or from [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
 ## See Also  
- [Replication Backward Compatibility](../../../2014/relational-databases/replication/replication-backward-compatibility.md)  
+ [Replication Backward Compatibility](replication-backward-compatibility.md)  
   
   

@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 |Description|Stored procedure|Properties|Requirements|  
 |-----------------|----------------------|----------------|------------------|  
-|Drop an article|**sp_droparticle**|All parameters.|Articles can be dropped prior to subscriptions being created. Using stored procedures, it is possible to drop a subscription to an article; using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the entire subscription must be dropped, recreated, and synchronized. For more information, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).|  
+|Drop an article|**sp_droparticle**|All parameters.|Articles can be dropped prior to subscriptions being created. Using stored procedures, it is possible to drop a subscription to an article; using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the entire subscription must be dropped, recreated, and synchronized. For more information, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Change a column filter.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Add a row filter.|**sp_articlefilter**|All parameters.|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Drop a row filter.|**sp_articlefilter**|**@article**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
@@ -83,7 +83,7 @@ manager: "jhubbard"
 |Drop an article, where the article is a parent in a join filter or logical record (this has the side effect of dropping the join).|**sp_dropmergearticle**|All parameters|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Drop an article, all other circumstances.|**sp_dropmergearticle**|All parameters|New snapshot.|  
 |Include a column filter that was previously unpublished.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
-|Add, drop, or change a row filter.|**sp_changemergearticle**|**subset_filterclause**|New snapshot.<br /><br /> Reinitialize subscriptions.<br /><br /> If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.<br /><br /> If an article is not involved in any join filters, you can drop the article and add it again with a different row filter, which does not require the entire subscription to be reinitialized. For more information about adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](../../../2014/relational-databases/replication/add-articles-to-and-drop-articles-from-existing-publications.md).|  
+|Add, drop, or change a row filter.|**sp_changemergearticle**|**subset_filterclause**|New snapshot.<br /><br /> Reinitialize subscriptions.<br /><br /> If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.<br /><br /> If an article is not involved in any join filters, you can drop the article and add it again with a different row filter, which does not require the entire subscription to be reinitialized. For more information about adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Change schema options.|**sp_changemergearticle**|**schema_option**|New snapshot.|  
 |Change tracking from column-level to row-level (changing from row-level tracking to column-level tracking does not require any special actions).|**sp_changemergearticle**|A value of **false** for **column_tracking**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
 |Change whether permissions are checked before statements made at the Subscriber are applied at the Publisher.|**sp_changemergearticle**|**check_permissions**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
@@ -91,9 +91,9 @@ manager: "jhubbard"
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../../2014/relational-databases/replication/administration-replication.md)   
- [Create and Apply the Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-snapshot.md)   
- [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md)   
+ [Administration &#40;Replication&#41;](administration-replication.md)   
+ [Create and Apply the Snapshot](create-and-apply-the-snapshot.md)   
+ [Reinitialize Subscriptions](reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   

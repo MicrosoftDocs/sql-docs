@@ -28,20 +28,20 @@ manager: "jhubbard"
   
 4.  Configure the Oracle database as a Publisher at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor.  
   
- For a list of objects that can be replicated from an Oracle database, see [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+ For a list of objects that can be replicated from an Oracle database, see [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
 >  You must be a member of the **sysadmin** fixed server role to enable a Publisher or Distributor and to create an Oracle publication or a subscription from an Oracle publication.  
   
 ## Creating the Replication Administrative User Schema within the Oracle Database  
- Replication agents connect to the Oracle database and perform operations in the context of a user schema that you must create. This schema must be granted a number of permissions, which are listed in the next section. This schema owns all objects created by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication process on the Oracle Publisher, with the exception of a public synonym, **MSSQLSERVERDISTRIBUTOR**. For more information about the objects created in the Oracle database, see [Objects Created on the Oracle Publisher](../../../2014/relational-databases/replication/objects-created-on-the-oracle-publisher.md).  
+ Replication agents connect to the Oracle database and perform operations in the context of a user schema that you must create. This schema must be granted a number of permissions, which are listed in the next section. This schema owns all objects created by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication process on the Oracle Publisher, with the exception of a public synonym, **MSSQLSERVERDISTRIBUTOR**. For more information about the objects created in the Oracle database, see [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Dropping the **MSSQLSERVERDISTRIBUTOR** public synonym and the configured Oracle replication user with the **CASCADE** option removes all replication objects from the Oracle Publisher.  
   
- A sample script has been provided to aid in the setup of the Oracle replication user schema. The script is available in the following directory after installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. It is also included in the topic [Script to Grant Oracle Permissions](../../../2014/relational-databases/replication/script-to-grant-oracle-permissions.md).  
+ A sample script has been provided to aid in the setup of the Oracle replication user schema. The script is available in the following directory after installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. It is also included in the topic [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
- Connect to the Oracle database using an account with DBA privileges and execute the script. This script prompts for the user and password for the replication administrative user schema as well as the default tablespace in which to create the objects (the tablespace must already exist in the Oracle database). For information about specifying other tablespaces for objects, see [Manage Oracle Tablespaces](../../../2014/relational-databases/replication/manage-oracle-tablespaces.md). Choose any user name and strong password, but make note of both because you will be prompted for this information later when you configure the Oracle database as a Publisher. It is recommended that the schema be used only for objects required by replication; do not create tables to be published in this schema.  
+ Connect to the Oracle database using an account with DBA privileges and execute the script. This script prompts for the user and password for the replication administrative user schema as well as the default tablespace in which to create the objects (the tablespace must already exist in the Oracle database). For information about specifying other tablespaces for objects, see [Manage Oracle Tablespaces](manage-oracle-tablespaces.md). Choose any user name and strong password, but make note of both because you will be prompted for this information later when you configure the Oracle database as a Publisher. It is recommended that the schema be used only for objects required by replication; do not create tables to be published in this schema.  
   
 ### Creating the User Schema Manually  
  If you create the replication administrative user schema manually, you must grant the schema the following permissions, either directly or through a database role.  
@@ -107,7 +107,7 @@ manager: "jhubbard"
   
 4.  If the networking configuration was successful, the login will succeed and you will see a `SQL` prompt.  
   
-5.  If you experience problems connecting to the Oracle database, see the section "The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](../../../2014/relational-databases/replication/troubleshooting-oracle-publishers.md).  
+5.  If you experience problems connecting to the Oracle database, see the section "The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
 ### Considerations for Oracle Home  
  Oracle supports side-by-side installation of application binaries, but only one set of binaries can be used by replication at a given time. Each set of binaries is associated with an Oracle Home; the binaries are in the directory %ORACLE_HOME%\bin. You must ensure that the correct set of binaries (specifically the latest version of the client networking software) is used when replication makes connections to the Oracle Publisher.  
@@ -115,7 +115,7 @@ manager: "jhubbard"
  Log into the Distributor with the accounts used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service and set the appropriate environment variables. The %ORACLE_HOME% variable should be set to refer to the installation point you specified when you installed the client networking software. The %PATH% must include the %ORACLE_HOME% \bin directory as the first Oracle entry that is encountered. For information about setting environment variables, see the Windows documentation.  
   
 ## Configuring the Oracle Database as a Publisher at the SQL Server Distributor  
- Oracle Publishers always use a remote Distributor; you must configure an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to act as a Distributor for your Oracle Publisher (an Oracle Publisher can only use one Distributor, but a single Distributor can service more than one Oracle Publisher). After a Distributor is configured, identify the Oracle database instance as a Publisher at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Transact-SQL, or Replication Management Objects (RMO). For more information about configuring a Distributor, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md).  
+ Oracle Publishers always use a remote Distributor; you must configure an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to act as a Distributor for your Oracle Publisher (an Oracle Publisher can only use one Distributor, but a single Distributor can service more than one Oracle Publisher). After a Distributor is configured, identify the Oracle database instance as a Publisher at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor through [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Transact-SQL, or Replication Management Objects (RMO). For more information about configuring a Distributor, see [Configure Distribution](configure-distribution.md).  
   
 > [!NOTE]  
 >  An Oracle Publisher cannot have the same name as its [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor or the same name as any of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers using the same Distributor.  
@@ -124,12 +124,12 @@ manager: "jhubbard"
   
  After the Oracle Publisher is identified at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, replication creates a linked server with the same name as the TNS service name of the Oracle database. This linked server can be used only by replication. If you need to connect to the Oracle Publisher over a linked server connection, create another TNS service name, and then use this name when calling [sp_addlinkedserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- To configure an Oracle Publisher and create a publication, see [Create a Publication from an Oracle Database](../../../2014/relational-databases/replication/create-a-publication-from-an-oracle-database.md).  
+ To configure an Oracle Publisher and create a publication, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
   
 ## See Also  
- [Administrative Considerations for Oracle Publishers](../../../2014/relational-databases/replication/administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md)   
- [Glossary of Terms for Oracle Publishing](../../../2014/relational-databases/replication/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Administrative Considerations for Oracle Publishers](administrative-considerations-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
+ [Glossary of Terms for Oracle Publishing](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

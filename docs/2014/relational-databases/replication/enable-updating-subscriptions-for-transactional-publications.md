@@ -33,15 +33,15 @@ manager: "jhubbard"
  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Enable updating subscriptions for transactional publications on the **Publication Type** page of the New Publication Wizard. For more information about using this wizard, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md). You cannot enable updating subscriptions after a publication is created.  
+ Enable updating subscriptions for transactional publications on the **Publication Type** page of the New Publication Wizard. For more information about using this wizard, see [Create a Publication](create-a-publication.md). You cannot enable updating subscriptions after a publication is created.  
   
- To use updating subscriptions, you must also configure options in the New Subscription Wizard. For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md).  
+ To use updating subscriptions, you must also configure options in the New Subscription Wizard. For more information, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md).  
   
 #### To enable updating subscriptions  
   
 1.  On the **Publication Type** page of the New Publication Wizard, select **Transactional publication with updatable subscriptions**.  
   
-2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
     > [!NOTE]  
     >  The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
@@ -63,9 +63,9 @@ manager: "jhubbard"
   
 3.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 2 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
-4.  Add articles to the publication. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+4.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
-5.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md).  
+5.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md).  
   
 #### To create a publication that supports queued updating subscriptions  
   
@@ -83,15 +83,15 @@ manager: "jhubbard"
   
     -   If you are unsure whether a Queue Reader Agent job exists for the distribution database, execute [sp_helpqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) at the Distributor on the distribution database. If the result set is empty, then a Queue Reader Agent job must be created.  
   
-    -   At the Distributor, execute [sp_addqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. These credentials are used when the Queue Reader Agent connects to the Publisher and Subscriber. For more information, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+    -   At the Distributor, execute [sp_addqreader_agent &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Specify the Windows credentials under which the agent runs for **@job_name** and **@password**. These credentials are used when the Queue Reader Agent connects to the Publisher and Subscriber. For more information, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 3.  Execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **true** for the parameter **@allow_queued_tran** and a value of **pub wins**, **sub reinit**, or **sub wins** for **@conflict_policy**.  
   
 4.  At the Publisher, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 3 for **@publication** and the Windows credentials under which the Snapshot Agent runs for **@snapshot_job_name** and **@password**. If the agent will use SQL Server Authentication when connecting to the Publisher, you must also specify a value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
-5.  Add articles to the publication. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+5.  Add articles to the publication. For more information, see [Define an Article](define-an-article.md).  
   
-6.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md).  
+6.  At the Subscriber, create an updating subscription to this publication. For more information, see [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md).  
   
 #### To change the conflict policy for a publication that allows queued updating subscriptions  
   
@@ -103,12 +103,12 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## See Also  
- [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [Publication Types for Transactional Replication](../../../2014/relational-databases/replication/publication-types-for-transactional-replication.md)   
- [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)   
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../../../2014/relational-databases/replication/create-updatable-subscription-transactional-publication-transact-sql.md)   
- [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)   
+ [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
+ [Publication Types for Transactional Replication](publication-types-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)   
+ [Create a Publication](create-a-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)   
  [Use sqlcmd with Scripting Variables](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

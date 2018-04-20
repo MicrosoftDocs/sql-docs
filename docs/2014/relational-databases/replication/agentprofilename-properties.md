@@ -32,15 +32,15 @@ manager: "jhubbard"
  **Parameter**  
  The agent parameters included in the profile. Profiles do not necessarily specify a value for each parameter. To see all parameters that are valid for a given agent, clear the **Show only parameters used in this profile** check box. For descriptions of each parameter, see:  
   
--   [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
--   [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)  
+-   [Replication Log Reader Agent](replication-log-reader-agent.md)  
   
--   [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](replication-distribution-agent.md)  
   
--   [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)  
+-   [Replication Merge Agent](replication-merge-agent.md)  
   
--   [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
  **Default Value**  
  The default value for each agent parameter.  
@@ -52,8 +52,8 @@ manager: "jhubbard"
  Clear to show all valid parameters for a given agent.  
   
 ## See Also  
- [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
- [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md)  
+ [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)   
+ [Replication Agents Overview](replication-agents-overview.md)   
+ [Replication Agent Profiles](replication-agent-profiles.md)  
   
   

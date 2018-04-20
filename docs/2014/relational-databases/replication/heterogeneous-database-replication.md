@@ -40,7 +40,7 @@ manager: "jhubbard"
 |Data warehousing staging servers|Keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] staging databases synchronized with a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
 |Migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Test your application in real time against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] while replicating the source system's changes. Switch to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when satisfied with the migration.|  
   
- For more information, see [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md).  
+ For more information, see [Oracle Publishing Overview](oracle-publishing-overview.md).  
   
 ## Publishing Data to Non-SQL Server Subscribers  
  The following non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
@@ -49,6 +49,6 @@ manager: "jhubbard"
   
 -   IBM DB2 for AS400, MVS, Unix, Linux, and Windows.  
   
- For more information, see [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md).  
+ For more information, see [Non-SQL Server Subscribers](non-sql-server-subscribers.md).  
   
   

@@ -37,11 +37,11 @@ manager: "jhubbard"
 6.  Initialize the subscriptions.  
   
 > [!NOTE]  
->  If you use merge replication in a republishing topology, all republishing Subscribers must use server subscriptions. For more information about subscription types, see [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md).  
+>  If you use merge replication in a republishing topology, all republishing Subscribers must use server subscriptions. For more information about subscription types, see [Subscribe to Publications](subscribe-to-publications.md).  
   
  In the following illustration, both the Publisher and the republisher are acting as their own local Distributors. If each were set up to use a remote Distributor, each Distributor would need to be on the same side of the slow or expensive communications link as its Publisher. Publishers must be connected to remote Distributors by reliable, high-speed communications links.  
   
- ![Republishing data](../../../2014/relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![Republishing data](media/repl-06a.gif "Republishing data")  
   
  Any server can act as both a Publisher and Subscriber. For example, consider the following diagram in which a publication of a table exists in London and must be distributed to four different cities in the United States: Chicago, New York, San Diego, and Seattle. The server in New York is chosen to subscribe to the published table originating in London, because the New York site meets these conditions:  
   
@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 -   There are good network communications lines from New York to all other Subscriber sites in the United States.  
   
-     ![Republishing data to dispersed locations](../../../2014/relational-databases/replication/media/repl-06.gif "Republishing data to dispersed locations")  
+     ![Republishing data to dispersed locations](media/repl-06.gif "Republishing data to dispersed locations")  
   
  Replication supports the republishing scenarios shown in the following table.  
   
@@ -62,13 +62,13 @@ manager: "jhubbard"
 |Merge publication|Merge subscription/merge publication|Merge subscription|  
 |Merge publication|Merge subscription/transactional publication|Transactional subscription|  
   
- <sup>1</sup>You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+ <sup>1</sup>You should set the `@published_in_tran_pub` property on the merge publication. By default, transactional replication expects tables at the Subscriber to be treated as read-only. If merge replication makes data changes to a table in a transactional subscription, non-convergence of data can occur. To avoid this risk, we recommend that any such table be specified as download-only in the merge publication. This prevents a merge Subscriber from uploading data changes to the table. For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## See Also  
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Initialize a Subscription](../../../2014/relational-databases/replication/initialize-a-subscription.md)   
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)  
+ [Configure Distribution](configure-distribution.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Initialize a Subscription](initialize-a-subscription.md)   
+ [Synchronize Data](synchronize-data.md)  
   
   

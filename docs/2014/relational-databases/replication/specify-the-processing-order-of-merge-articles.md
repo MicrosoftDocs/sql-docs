@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  **To specify the processing order of articles**  
   
--   Replication Transact-SQL programming: [Specify the Processing Order of Merge Table Articles &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/specify-the-processing-order-of-merge-table-articles.md)  
+-   Replication Transact-SQL programming: [Specify the Processing Order of Merge Table Articles &#40;Replication Transact-SQL Programming&#41;](specify-the-processing-order-of-merge-table-articles.md)  
   
 ## How Processing Order is Determined  
  During merge synchronization, articles are, by default, processed in the order required by the dependencies between objects, including the declarative referential integrity (DRI) constraints defined on the base tables. Processing involves enumerating the changes to a table and then applying those changes. If no DRI is present but join filters or logical records exist between table articles, the articles are processed in the order required by the filters and logical records. Articles not related to any other article through DRI, join filters, logical records, or other dependencies are processed according to the article nickname in the [sysmergearticles &#40;Transact-SQL&#41;](~/relational-databases/system-tables/sysmergearticles-transact-sql.md) system table.  
@@ -35,8 +35,8 @@ manager: "jhubbard"
  When referential integrity is maintained through triggers or at the application level, you should specify the order in which the articles should be processed. In the example with triggers, you would specify that the **SalesOrderHeader** table should be processed before **SalesOrderDetail**, because article ordering is based on insert order. Merge replication will automatically reverse the order for deletes. Merge replication will not fail without article ordering, because the Merge Agent continues to process articles if a constraint violation occurs; it then retries any operations that failed after other articles have been processed. Specifying article order simply avoids retries and the additional processing associated with them. If you specify an incorrect order (for example, one that results in detail records being processed before header records), merge replication will retry processing until it succeeds.  
   
 ## See Also  
- [Article Options for Merge Replication](../../../2014/relational-databases/replication/article-options-for-merge-replication.md)   
- [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md)   
- [Join Filters](../../../2014/relational-databases/replication/join-filters.md)  
+ [Article Options for Merge Replication](article-options-for-merge-replication.md)   
+ [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)   
+ [Join Filters](join-filters.md)  
   
   

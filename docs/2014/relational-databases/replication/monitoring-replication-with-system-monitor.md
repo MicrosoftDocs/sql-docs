@@ -40,6 +40,6 @@ manager: "jhubbard"
 |Merge Agent|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|The number of rows per second replicated from the Subscriber to the Publisher.|  
   
 ## See Also  
- [Monitoring &#40;Replication&#41;](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring &#40;Replication&#41;](monitoring-replication.md)  
   
   

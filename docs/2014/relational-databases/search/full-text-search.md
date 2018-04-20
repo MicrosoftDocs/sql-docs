@@ -88,7 +88,7 @@ manager: "jhubbard"
   
  These two processes contain the components of the full-text search architecture. These components and their relationships are summarized in the following illustration. The components are described after the illustration.  
   
- ![full-text search architecture](../../2014/database-engine/media/ifts-arch.gif "full-text search architecture")  
+ ![full-text search architecture](../../database-engine/media/ifts-arch.gif "full-text search architecture")  
   
  [In This Topic](#top)  
   

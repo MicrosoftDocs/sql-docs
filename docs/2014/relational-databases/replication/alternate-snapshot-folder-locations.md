@@ -34,12 +34,12 @@ manager: "jhubbard"
   
  **To specify alternate snapshot locations**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify an Alternate Snapshot Folder Location &#40;SQL Server Management Studio&#41;](specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md)  
   
--   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   Replication [!INCLUDE[tsql](../../includes/tsql-md.md)] programming: [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)  
   
 ## See Also  
- [Initialize a Subscription with a Snapshot](../../../2014/relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../../2014/relational-databases/replication/snapshot-options.md)  
+ [Initialize a Subscription with a Snapshot](initialize-a-subscription-with-a-snapshot.md)   
+ [Snapshot Options](snapshot-options.md)  
   
   

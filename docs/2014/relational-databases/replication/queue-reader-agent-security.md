@@ -20,7 +20,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Queue Reader Agent Security
-  The **Queue Reader Agent Security** dialog box allows you to specify the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Queue Reader Agent runs and makes local connections to the Distributor. The agent connects to the Publisher using the account specified in the **Publisher Properties** dialog box (available from the **Distributor Properties** dialog box); the agent connects to the Subscriber using the same context as the Distribution Agent for the subscription. For more information, see [View and Modify Replication Security Settings](../../../2014/relational-databases/replication/view-and-modify-replication-security-settings.md).  
+  The **Queue Reader Agent Security** dialog box allows you to specify the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Queue Reader Agent runs and makes local connections to the Distributor. The agent connects to the Publisher using the account specified in the **Publisher Properties** dialog box (available from the **Distributor Properties** dialog box); the agent connects to the Subscriber using the same context as the Distribution Agent for the subscription. For more information, see [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md).  
   
  The account must be valid with the correct password specified. Accounts and passwords are not validated until an agent runs.  
   
@@ -32,9 +32,9 @@ manager: "jhubbard"
  Enter the password for the Windows account.  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md)   
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)   
- [Replication Agents Overview](../../../2014/relational-databases/replication/replication-agents-overview.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md)   
+ [Replication Agent Security Model](replication-agent-security-model.md)   
+ [Replication Agents Overview](replication-agents-overview.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
   

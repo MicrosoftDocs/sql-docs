@@ -25,7 +25,7 @@ manager: "jhubbard"
 # Scripting Replication
   All replication components in a topology should be scripted as part of a disaster recovery plan, and scripts can also be used to automate repetitive tasks. A script contains the Transact-SQL system stored procedures necessary to implement the replication component(s) scripted, such as a publication or subscription. Scripts can be created in a wizard (such as the New Publication Wizard) or in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] after you create a component. You can view, modify, and run the script using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or **sqlcmd**. Scripts can be stored with backup files to be used in case a replication topology must be reconfigured.  
   
- A component should be re-scripted if any property changes are made. If you use custom stored procedures with transactional replication, a copy of each procedure should be stored with the scripts; the copy should be updated if the procedure changes (procedures are typically updated due to schema changes or changing application requirements). For more information about custom procedures, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ A component should be re-scripted if any property changes are made. If you use custom stored procedures with transactional replication, a copy of each procedure should be stored with the scripts; the copy should be updated if the procedure changes (procedures are typically updated due to schema changes or changing application requirements). For more information about custom procedures, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
  For merge publications that use parameterized filters, publication scripts contain the stored procedure calls to create data partitions. The script provides a reference for the partitions created and a way in which to re-create one or more partitions if necessary.  
   
@@ -50,13 +50,13 @@ manager: "jhubbard"
   
  For more information about using the replication wizards, see:  
   
--   [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)  
+-   [Configure Publishing and Distribution](configure-publishing-and-distribution.md)  
   
--   [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)  
+-   [Create a Publication](create-a-publication.md)  
   
--   [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md)  
+-   [Create a Push Subscription](create-a-push-subscription.md)  
   
--   [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)  
+-   [Create a Pull Subscription](create-a-pull-subscription.md)  
   
 #### To script an object from a replication wizard  
   

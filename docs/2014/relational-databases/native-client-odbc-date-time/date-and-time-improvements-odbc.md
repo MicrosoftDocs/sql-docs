@@ -28,7 +28,7 @@ manager: "jhubbard"
  [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  Provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
   
- [Metadata &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/metadata-odbc.md)  
+ [Metadata &#40;ODBC&#41;](../../../database-engine/dev-guide/metadata-odbc.md)  
  Describes information returned in the implementation parameter descriptor (IPD) and implementation row descriptor (IRD) fields, as well as column metadata returned by `SQLColumns` and `SQLProcedureColumns`. Also describes data type metadata returned by `SQLGetTypeInfo`.  
   
  [datetime Data Type Conversions &#40;ODBC&#41;](datetime-data-type-conversions-odbc.md)  

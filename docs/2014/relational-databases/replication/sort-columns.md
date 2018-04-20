@@ -35,6 +35,6 @@ manager: "jhubbard"
  Remove all rows from the sorting grid. To remove a single row, select the row and press the Delete key.  
   
 ## See Also  
- [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md)  
+ [Monitoring Replication](monitoring-replication.md)  
   
   

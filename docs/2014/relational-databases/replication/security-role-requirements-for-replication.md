@@ -48,7 +48,7 @@ manager: "jhubbard"
 |Start or stop a replication agent.|Owner of the agent job or **sysadmin** server role on the appropriate server.|  
   
 ## See Also  
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

@@ -46,15 +46,15 @@ manager: "jhubbard"
 -   Replication maintenance jobs.  
   
 ## User Action  
- The Log Reader Agent, Queue Reader Agent, and Distribution Agent typically run continuously, whereas the other agents typically run on demand or on a schedule. If you do not expect an agent to have completed a run, check the status of the agent. For more information, see [Monitor Replication Agents](../../../2014/relational-databases/replication/monitor-replication-agents.md).  
+ The Log Reader Agent, Queue Reader Agent, and Distribution Agent typically run continuously, whereas the other agents typically run on demand or on a schedule. If you do not expect an agent to have completed a run, check the status of the agent. For more information, see [Monitor Replication Agents](monitor-replication-agents.md).  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)   
- [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md)   
- [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md)   
- [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md)  
+ [Replication Agent Administration](replication-agent-administration.md)   
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)   
+ [Replication Distribution Agent](replication-distribution-agent.md)   
+ [Replication Log Reader Agent](replication-log-reader-agent.md)   
+ [Replication Merge Agent](replication-merge-agent.md)   
+ [Replication Queue Reader Agent](replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
   

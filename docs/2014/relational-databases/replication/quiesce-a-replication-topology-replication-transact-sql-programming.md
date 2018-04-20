@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 2.  If any Subscribers use queued updating subscriptions:  
   
-    1.  If the Queue Reader Agent is not running in continuous mode, run the agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+    1.  If the Queue Reader Agent is not running in continuous mode, run the agent. For more information about running agents, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
     2.  To verify that the queue is empty, execute [sp_replqueuemonitor](~/relational-databases/system-stored-procedures/sp-replqueuemonitor-transact-sql.md) at each Subscriber.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 2.  Execute [sp_requestpeerresponse](~/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) on each publication database in the topology.  
   
-3.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+3.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
 4.  Execute [sp_helppeerresponses](~/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) on each publication database in the topology. Ensure that the result set contains responses from each of the other nodes.  
   
@@ -64,7 +64,7 @@ manager: "jhubbard"
   
 1.  Execute [sp_requestpeerresponse](~/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) on the publication database at the node you are checking.  
   
-2.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+2.  If the Log Reader Agent or Distribution Agent is not running in continuous mode, run the agent. The Log Reader Agent must be started before the Distribution Agent. For more information about running agents, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
 3.  Execute [sp_helppeerresponses](~/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) on the publication database at the node you are checking. Ensure that the result set contains responses from each of the other nodes.  
   
@@ -72,13 +72,13 @@ manager: "jhubbard"
   
 1.  Stop activity on all published tables at the Publisher and at all Subscribers.  
   
-2.  Run the Merge Agent for each subscription two times: synchronize all subscriptions once and then synchronize each subscription a second time. This ensures that all changes are replicated to all nodes. For more information about running agents, see [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/start-and-stop-a-replication-agent-sql-server-management-studio.md).  
+2.  Run the Merge Agent for each subscription two times: synchronize all subscriptions once and then synchronize each subscription a second time. This ensures that all changes are replicated to all nodes. For more information about running agents, see [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md) or [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  If conflicts occur during synchronization, it is possible that changes required by conflict resolution will not be propagated to all nodes after running the Merge Agent two times.  
   
 ## See Also  
- [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../../2014/relational-databases/replication/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Measure Latency and Validate Connections for Transactional Replication](../../../2014/relational-databases/replication/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Measure Latency and Validate Connections for Transactional Replication](measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

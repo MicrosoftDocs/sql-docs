@@ -19,16 +19,16 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Detecting and Resolving Conflicts in Logical Records
-  This topic covers the various combinations of conflict detection and conflict resolution approaches possible when using logical records. A conflict in merge replication occurs when more than one node changes the same data, or merge replication encounters certain types of errors, such as a constraint violation, when replicating changes. For more information about conflict detection and resolution, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md).  
+  This topic covers the various combinations of conflict detection and conflict resolution approaches possible when using logical records. A conflict in merge replication occurs when more than one node changes the same data, or merge replication encounters certain types of errors, such as a constraint violation, when replicating changes. For more information about conflict detection and resolution, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../2014/relational-databases/replication/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ To specify the conflict tracking and resolution level for an article, see [Specify the Conflict Tracking and Resolution Level for Merge Articles](specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## Conflict Detection  
  The way in which conflicts are detected for logical records is determined by two article properties: **column_tracking** and **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions also support logical record-level detection.  
   
  The **logical_record_level_conflict_detection** article property can be set to TRUE or FALSE. The value should only be set for the top-level parent article and will be ignored by child articles. If this value is FALSE, merge replication detects conflicts as in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based solely on the value of the **column_tracking** property for the article. If this value is TRUE, merge replication will ignore the **column_tracking** property of the article, and detect a conflict if changes are made anywhere in the logical record. For example, consider this scenario:  
   
- ![Three table logical record with values](../../../2014/relational-databases/replication/media/logical-records-05.gif "Three table logical record with values")  
+ ![Three table logical record with values](media/logical-records-05.gif "Three table logical record with values")  
   
  A conflict is detected if two users change any values for the Customer2 logical record in the **Customers**, **Orders**, or **OrderItems** tables. This example involves changes made via an UPDATE statement, but the conflict can also be detected by changes made with INSERT or DELETE statements.  
   
@@ -72,7 +72,7 @@ manager: "jhubbard"
   
  Because the conflicts are resolved at the logical record level, the winning changes made at the Publisher replace the changes made in the Subscriber tables during replication processing.  
   
- ![Series of tables showing changes to related rows](../../../2014/relational-databases/replication/media/logical-records-06.gif "Series of tables showing changes to related rows")  
+ ![Series of tables showing changes to related rows](media/logical-records-06.gif "Series of tables showing changes to related rows")  
   
 ### Row Level Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -87,7 +87,7 @@ manager: "jhubbard"
   
  Because the conflicts are resolved at the logical record level, during synchronization the winning changes made at the Publisher replace the changes made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../2014/relational-databases/replication/media/logical-records-07.gif "Series of tables showing changes to related rows")  
+ ![Series of tables showing changes to related rows](media/logical-records-07.gif "Series of tables showing changes to related rows")  
   
 ### Logical Record Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -100,9 +100,9 @@ manager: "jhubbard"
   
  Because the conflicts are also resolved at the logical record level, during synchronization the winning change made at the Publisher replaces the change made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../2014/relational-databases/replication/media/logical-records-08.gif "Series of tables showing changes to related rows")  
+ ![Series of tables showing changes to related rows](media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
 ## See Also  
- [Group Changes to Related Rows with Logical Records](../../../2014/relational-databases/replication/group-changes-to-related-rows-with-logical-records.md)  
+ [Group Changes to Related Rows with Logical Records](group-changes-to-related-rows-with-logical-records.md)  
   
   

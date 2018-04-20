@@ -22,17 +22,17 @@ manager: "jhubbard"
   This section provides information to help you plan for a more secure replication topology.  
   
 ## In This Section  
- [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md)  
+ [Replication Agent Security Model](replication-agent-security-model.md)  
  Describes the security model for replication agents.  
   
- [Security Role Requirements for Replication](../../../2014/relational-databases/replication/security-role-requirements-for-replication.md)  
+ [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
  Describes the minimum security permissions and roles required by a replication topology.  
   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)  
  Provides general information that enables you to plan for a more secure replication topology.  
   
 ## See Also  
- [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md)   
- [Secure Deployment &#40;Replication&#41;](../../../2014/relational-databases/replication/secure-deployment-replication.md)  
+ [Security Overview &#40;Replication&#41;](security-overview-replication.md)   
+ [Secure Deployment &#40;Replication&#41;](secure-deployment-replication.md)  
   
   

@@ -53,9 +53,9 @@ manager: "jhubbard"
  A user schema can be thought of as a database user who owns a particular set of database objects. The replication administrative user schema owns all objects created by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication process in the Oracle database, with the exception of the **MSSQLSERVERDISTRIBUTOR** public synonym.  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Objects Created on the Oracle Publisher](../../../2014/relational-databases/replication/objects-created-on-the-oracle-publisher.md)   
- [Non-SQL Server Publishers](../../../2014/relational-databases/replication/non-sql-server-publishers.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)   
+ [Non-SQL Server Publishers](non-sql-server-publishers.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

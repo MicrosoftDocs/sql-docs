@@ -84,7 +84,7 @@ manager: "jhubbard"
 |**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
 |**2**|Specifies that SSL is used, and that the certificate is verified.|  
   
- For more information, see [Security Overview &#40;Replication&#41;](../../../2014/relational-databases/replication/security-overview-replication.md).  
+ For more information, see [Security Overview &#40;Replication&#41;](security-overview-replication.md).  
   
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  Specifies the amount of history logged during a queue reader operation. You can minimize the effect of history logging on performance by selecting **1**.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
  Specifies the failover partner instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] participating in a database mirroring session with the publication database. For more information, see [Database Mirroring and Replication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** *agent_profile_name*  
- Is the name of an agent profile used to supply a set of default values to the agent. For information, see [Replication Agent Profiles](../../../2014/relational-databases/replication/replication-agent-profiles.md).  
+ Is the name of an agent profile used to supply a set of default values to the agent. For information, see [Replication Agent Profiles](replication-agent-profiles.md).  
   
  **-QueryTimeOut** *query_time_out_seconds*  
  Is the number of seconds before the query times out. The default is 1800 seconds.  
@@ -121,9 +121,9 @@ manager: "jhubbard"
  Specifies how queued updating conflicts are resolved. A value of **1** indicates the Publisher wins the conflict, and the current conflicting queued transaction will be rolled back on the Publisher and the originating updating Subscriber; the processing of subsequent queued transactions will continue. A value of **2** indicates the Subscriber wins the conflict, and the queued transaction will override the values on the Publisher. A value of **3** indicates that any conflict will result in Subscriber re-initialization; the Publisher wins the conflict, processing of subsequent queued transactions will be terminated, and the subscription will be reinitialized. The default setting is **1** for transactional publications and **3** for snapshot publications.  
   
 ## Remarks  
- To start the Queue Reader Agent, execute **qrdrsvc.exe** from the command prompt. For information, see [Replication Agent Executables](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md).  
+ To start the Queue Reader Agent, execute **qrdrsvc.exe** from the command prompt. For information, see [Replication Agent Executables](dev-guide/replication-agent-executables-concepts.md).  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)  
+ [Replication Agent Administration](replication-agent-administration.md)  
   
   

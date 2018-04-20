@@ -19,13 +19,13 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
-  Enable a Publisher to use a remote Distributor on the **Publishers** page. This page is available in the Configure Distribution Wizard and the **Distributor Properties - \<Distributor>** dialog box. For more information about using the wizard and accessing the dialog box, see [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md) and [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+  Enable a Publisher to use a remote Distributor on the **Publishers** page. This page is available in the Configure Distribution Wizard and the **Distributor Properties - \<Distributor>** dialog box. For more information about using the wizard and accessing the dialog box, see [Configure Publishing and Distribution](configure-publishing-and-distribution.md) and [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### To enable a Publisher in the Configure Distribution Wizard  
   
 1.  On the **Publishers** page of the Configure Distribution Wizard, click **Add**.  
   
-2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](../../../2014/relational-databases/replication/create-a-publication-from-an-oracle-database.md).  
+2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
   
 3.  In the **Connect to Server** dialog box, specify connection information for the Publisher that will use the remote Distributor, and then click **Connect**.  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click **Add**.  
   
-2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](../../../2014/relational-databases/replication/create-a-publication-from-an-oracle-database.md).  
+2.  Click **Add SQL Server Publisher**. For information about enabling an Oracle Publisher to use a Distributor, see [Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md).  
   
 3.  In the **Connect to Server** dialog box, specify connection information for the Publisher that will use the remote Distributor, and then click **Connect**.  
   
@@ -50,8 +50,8 @@ manager: "jhubbard"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Configure Publishing and Distribution](../../../2014/relational-databases/replication/configure-publishing-and-distribution.md)   
- [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md)   
- [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md)  
+ [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
+ [Configure Distribution](configure-distribution.md)   
+ [Secure the Distributor](secure-the-distributor.md)  
   
   

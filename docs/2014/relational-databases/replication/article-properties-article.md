@@ -23,7 +23,7 @@ manager: "jhubbard"
   The **Article Properties** dialog box is available from the New Publication Wizard and the **Publication Properties** dialog box. It allows you to view and set properties for all types of articles. Some properties can be set only when the publication is created, and others can be set only if the publication has no active subscriptions. Properties that cannot be set are displayed as read-only.  
   
 > [!NOTE]  
->  After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+>  After a publication is created, some property changes require a new snapshot. If a publication has subscriptions, some changes also require all subscriptions to be reinitialized. For more information, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
  Each property in the **Article Properties** dialog box includes a description. Click a property, and its description is displayed at the bottom of the dialog box. This topic provides additional information on a number of properties. The properties are grouped into the following categories:  
   
@@ -69,7 +69,7 @@ manager: "jhubbard"
  This option cannot be changed for articles in publications that are enabled for peer-to-peer transactional replication.  
   
  **Automatically manage identity ranges**  
- Replication, by default, manages all identity columns at the Publisher and each Subscriber. Each replication node is assigned a range of identity values (specified with the **Publisher range size** and **Subscriber range size** options) to ensure that a given value is used at only one node. For more information, see [Replicate Identity Columns](../../../2014/relational-databases/replication/replicate-identity-columns.md).  
+ Replication, by default, manages all identity columns at the Publisher and each Subscriber. Each replication node is assigned a range of identity values (specified with the **Publisher range size** and **Subscriber range size** options) to ensure that a given value is used at only one node. For more information, see [Replicate Identity Columns](replicate-identity-columns.md).  
   
 ## Options for transactional publications  
  **Copy INSERT, UPDATE, and DELETE stored procedures**  
@@ -80,10 +80,10 @@ manager: "jhubbard"
   
  The **delivery statement** options specify whether to use a stored procedure, and if so, which format should be used for parameters passed to the procedure. The **stored procedure** options allow you to use the procedures that replication automatically creates or substitute custom procedures you have created.  
   
- For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ For more information, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
  **Replicate**  
- This option applies to store procedures only. It determines whether to replicate the definition of the stored procedure (the CREATE PROCEDURE statement) or its execution. If you replicate the execution of the procedure, the procedure definition is replicated to the Subscriber when the subscription is initialized; when the procedure is executed at the Publisher, replication executes the corresponding procedure at the Subscriber. This can provide significantly better performance for cases where large batch operations are performed. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](../../../2014/relational-databases/replication/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ This option applies to store procedures only. It determines whether to replicate the definition of the stored procedure (the CREATE PROCEDURE statement) or its execution. If you replicate the execution of the procedure, the procedure definition is replicated to the Subscriber when the subscription is initialized; when the procedure is executed at the Publisher, replication executes the corresponding procedure at the Subscriber. This can provide significantly better performance for cases where large batch operations are performed. For more information, see [Publishing Stored Procedure Execution in Transactional Replication](publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## Options for merge publications  
  The **Article Properties** dialog box for merge publications has two tabs: **Properties** and **Resolver**.  
@@ -98,16 +98,16 @@ manager: "jhubbard"
   
 -   **Download-only to Subscriber, allow Subscriber changes**: changes can be downloaded to the Subscriber, but they cannot be uploaded to the Publisher.  
   
- For more information, see [Optimize Merge Replication Performance with Download-Only Articles](../../../2014/relational-databases/replication/optimize-merge-replication-performance-with-download-only-articles.md).  
+ For more information, see [Optimize Merge Replication Performance with Download-Only Articles](optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Partition options**  
- Specifies the type of partitions that a parameterized filter creates. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ Specifies the type of partitions that a parameterized filter creates. For more information, see the "Setting 'partition options'" section of [Parameterized Row Filters](parameterized-row-filters.md).  
   
  **Tracking level**  
  Determines whether to treat changes to the same row or to the same column as a conflict.  
   
  **Verify INSERT permission**, **Verify UPDATE permission**, and **Verify DELETE permission**  
- Determines whether to check during synchronization that the Subscriber login has INSERT, UPDATE, or DELETE permissions on the published tables in the publication database. The default is **False** because merge replication does not require these permissions to be granted; access to the published tables is controlled through the Publication Access List (PAL). For more information about the PAL, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+ Determines whether to check during synchronization that the Subscriber login has INSERT, UPDATE, or DELETE permissions on the published tables in the publication database. The default is **False** because merge replication does not require these permissions to be granted; access to the published tables is controlled through the Publication Access List (PAL). For more information about the PAL, see [Secure the Publisher](secure-the-publisher.md).  
   
  You can require permissions to be checked if you want to allow one or more Subscribers to upload some changes to published data, but not others. For example, you could add a Subscriber to the PAL, but not give the Subscriber any permissions on the tables in the publication database. You could then set Verify DELETE permissions to **True**: the Subscriber would be able to upload inserts and updates, but not deletes.  
   
@@ -119,21 +119,21 @@ manager: "jhubbard"
   
 ### Resolver tab  
  **Use the default resolver**  
- If you select the default resolver, conflicts are resolved based on the priority assigned to each Subscriber or the first change written to the Publisher, depending on the type of subscriptions used. For more information, see [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md).  
+ If you select the default resolver, conflicts are resolved based on the priority assigned to each Subscriber or the first change written to the Publisher, depending on the type of subscriptions used. For more information, see [Detect and Resolve Merge Replication Conflicts](detect-and-resolve-merge-replication-conflicts.md).  
   
  **Use a custom resolver (registered at the Distributor)**  
- If you choose to use an article resolver (either one supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] or one you have written), you must select a resolver from the list-box. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ If you choose to use an article resolver (either one supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] or one you have written), you must select a resolver from the list-box. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- If the resolver requires any input, specify it in **Enter information needed by the resolver** text box. For more information about input required by [!INCLUDE[msCoName](../../includes/msconame-md.md)] custom resolvers, see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
+ If the resolver requires any input, specify it in **Enter information needed by the resolver** text box. For more information about input required by [!INCLUDE[msCoName](../../includes/msconame-md.md)] custom resolvers, see [Microsoft COM-Based Resolvers](microsoft-com-based-resolvers.md).  
   
  **Allow Subscriber to resolve conflicts interactively during on-demand synchronization**  
- Select this option if Subscribers will use on-demand synchronization (the default for merge replication) and you want to resolve conflicts interactively. Specify on-demand synchronization on the **Synchronization Schedule** page of the New Subscription Wizard. To resolve conflicts interactively, use the Interactive Resolver user interface. For more information, see [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md).  
+ Select this option if Subscribers will use on-demand synchronization (the default for merge replication) and you want to resolve conflicts interactively. Specify on-demand synchronization on the **Synchronization Schedule** page of the New Subscription Wizard. To resolve conflicts interactively, use the Interactive Resolver user interface. For more information, see [Interactive Conflict Resolution](interactive-conflict-resolution.md).  
   
  **Require verification of a digital signature before merging**  
  All COM-based resolvers supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)] are signed. Select this option to verify that the resolver is valid when synchronizing.  
   
 ## Options for Oracle publications  
- The **Article Properties** dialog box for Oracle publications has two tabs: **Properties** and **Data Mapping**. Oracle publications do not support all of the properties that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications support. For more information, see [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md).  
+ The **Article Properties** dialog box for Oracle publications has two tabs: **Properties** and **Data Mapping**. Oracle publications do not support all of the properties that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications support. For more information, see [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### Properties tab  
  **Copy INSERT, UPDATE, and DELETE stored procedures**  
@@ -147,14 +147,14 @@ manager: "jhubbard"
 -   For Subscribers running versions prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], for each schema, add a user to the subscription database with the same name as the schema.  
   
  **Tablespace name**  
- The tablespace in which to create the replication change tracking tables on the Oracle server instance. For more information, see [Manage Oracle Tablespaces](../../../2014/relational-databases/replication/manage-oracle-tablespaces.md).  
+ The tablespace in which to create the replication change tracking tables on the Oracle server instance. For more information, see [Manage Oracle Tablespaces](manage-oracle-tablespaces.md).  
   
  **Statement delivery**  
  The options in this section apply to all tables in transactional publications. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default options unless your application requires different functionality. By default, transactional replication propagates changes to Subscribers through a set of stored procedures that are installed on each Subscriber. When an insert, update, or delete occurs on a table at the Publisher, the operation is translated into a call to a stored procedure at the Subscriber.  
   
  The **delivery statement** options specify whether to use a stored procedure, and if so, which format should be used for parameters passed to the procedure. The **stored procedure** options allow you to use the procedures that replication automatically creates or substitute custom procedures you have created.  
   
- For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md).  
+ For more information, see [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md).  
   
 ### Data Mapping tab  
  **Column name**  
@@ -168,13 +168,13 @@ manager: "jhubbard"
   
 -   For some data types there is only one possible mapping, in which case the column in the property grid is read-only.  
   
--   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](../../../2014/relational-databases/replication/data-type-mapping-for-oracle-publishers.md).  
+-   For some types, there is more than one type that you can select. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use the default mapping unless your application requires a different mapping. For more information, see [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md).  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [Reinitialize a Subscription](../../../2014/relational-databases/replication/reinitialize-a-subscription.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)   
+ [Reinitialize a Subscription](reinitialize-a-subscription.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

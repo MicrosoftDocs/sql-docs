@@ -46,7 +46,7 @@ manager: "jhubbard"
     |Select the network protocol|Select the appropriate protocols you would like to support. Most applications use TCP.|  
     |Specify the host information to identify the database listener|The host is the name or DNS alias of the computer on which the Oracle listener is running, which is typically the same computer on which the database resides. For some protocols, you must provide additional information. For example, if you select TCP, you must supply the port on which the listener is listening for connection requests to the target database. The default TCP configuration uses port 1521.|  
   
-3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../2014/relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### Setting directory permissions  
  The account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) where the Oracle client networking software is installed.  
@@ -77,7 +77,7 @@ manager: "jhubbard"
 >  If you have more than one Oracle home on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor, ensure that the Distribution Agent is using the most recent Oracle OLE DB provider. In some cases, Oracle does not update the OLE DB provider by default when you update the client components on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor. Uninstall the old OLE DB provider and install the latest OLE DB provider. For more information about installing and uninstalling the provider, see the Oracle documentation.  
   
 ## Considerations for Oracle Subscribers  
- In addition to the considerations covered in the topic [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md), consider the following issues when replicating to Oracle Subscribers:  
+ In addition to the considerations covered in the topic [Non-SQL Server Subscribers](non-sql-server-subscribers.md), consider the following issues when replicating to Oracle Subscribers:  
   
 -   Oracle treats both empty strings and NULL values as NULL. This is important if you define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] column as NOT NULL, and are replicating the column to an Oracle Subscriber. To avoid failures when applying changes to the Oracle Subscriber, you must do one of the following:  
   
@@ -141,7 +141,7 @@ manager: "jhubbard"
 |`xml`|NCLOB|  
   
 ## See Also  
- [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Merge Agent  
   
- We recommend that you provide an appropriate login for these agents, follow the principle of granting the minimal rights that are required, and protect the storage of all passwords. For information about the permissions that are required for each agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+ We recommend that you provide an appropriate login for these agents, follow the principle of granting the minimal rights that are required, and protect the storage of all passwords. For information about the permissions that are required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
  Besides appropriately managing logins and passwords, you should understand the role of the publication access list (PAL). The PAL is used to enable logins to access to publication data while restricting ad hoc access to the database at the Publisher.  
   
@@ -49,29 +49,29 @@ manager: "jhubbard"
   
 -   You must associate the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login with a database user in the publication database before adding the login to the PAL.  
   
--   Follow the principle of least privilege by allowing logins in the PAL only the permissions the logins must have to perform replication tasks. Do not add the logins to any fixed database roles or server roles that are not required for replication. For more information about the permissions that are required, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md) and [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md).  
+-   Follow the principle of least privilege by allowing logins in the PAL only the permissions the logins must have to perform replication tasks. Do not add the logins to any fixed database roles or server roles that are not required for replication. For more information about the permissions that are required, see [Replication Agent Security Model](replication-agent-security-model.md) and [Replication Security Best Practices](replication-security-best-practices.md).  
   
 -   If a remote Distributor is used, accounts in the PAL must be available at both the Publisher and the Distributor. The account must be either a domain account or a local account that is defined at both servers. The passwords associated with both logins must be the same.  
   
 -   If the PAL contains Windows accounts and the domain uses Active Directory, the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs must have permissions to read from Active Directory. If you experience issues with Windows accounts, make sure that the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs has sufficient permissions. For more information, see the Windows documentation.  
   
- To manage the PAL, see [Manage Logins in the Publication Access List](../../../2014/relational-databases/replication/manage-logins-in-the-publication-access-list.md).  
+ To manage the PAL, see [Manage Logins in the Publication Access List](manage-logins-in-the-publication-access-list.md).  
   
 ## Snapshot Agent  
- There is one Snapshot Agent for each publication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+ There is one Snapshot Agent for each publication. For more information, see [Create a Publication](create-a-publication.md).  
   
 ## FTP Snapshot Delivery  
- If you specify that snapshots should be made available through an FTP share rather than a UNC share, you must specify a login and password when configuring FTP access. For more information, see [Deliver a Snapshot Through FTP](../../../2014/relational-databases/replication/deliver-a-snapshot-through-ftp.md).  
+ If you specify that snapshots should be made available through an FTP share rather than a UNC share, you must specify a login and password when configuring FTP access. For more information, see [Deliver a Snapshot Through FTP](deliver-a-snapshot-through-ftp.md).  
   
 ## Log Reader Agent  
- There is one Log Reader Agent for each database published for transactional replication. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+ There is one Log Reader Agent for each database published for transactional replication. For more information, see [Create a Publication](create-a-publication.md).  
   
 ## Queue Reader Agent  
- There is one Queue Reader Agent for all Publishers and publications (that allow queued updating subscriptions) associated with a given Distributor. For more information, see [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md).  
+ There is one Queue Reader Agent for all Publishers and publications (that allow queued updating subscriptions) associated with a given Distributor. For more information, see [Enable Updating Subscriptions for Transactional Publications](enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

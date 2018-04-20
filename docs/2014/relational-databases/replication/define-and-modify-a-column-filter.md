@@ -39,12 +39,12 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Some columns cannot be filtered; for more information, see [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md). If you modify a column filter after subscriptions have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md).  
+-   Some columns cannot be filtered; for more information, see [Filter Published Data](filter-published-data.md). If you modify a column filter after subscriptions have been initialized, you must generate a new snapshot and reinitialize all subscriptions after making the change. For more information about requirements for property changes, see [Change Publication and Article Properties](change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Define column filters on the **Articles** page of the New Publication Wizard. For more information about using the New Publication Wizard, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+ Define column filters on the **Articles** page of the New Publication Wizard. For more information about using the New Publication Wizard, see [Create a Publication](create-a-publication.md).  
   
- Define and modify column filters on the **Articles** page of the **Publication Properties - \<Publication>** dialog box. For more information about publication and article properties, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Define and modify column filters on the **Articles** page of the **Publication Properties - \<Publication>** dialog box. For more information about publication and article properties, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To define a column filter  
   
@@ -64,11 +64,11 @@ manager: "jhubbard"
  When creating table articles, you can define which columns to include in the article and change the columns after the article has been defined. You can create and modify filtered columns programmatically using replication stored procedures.  
   
 > [!NOTE]  
->  The following procedures assume that the underlying table has not changed. For information on replicating data definition language (DDL) changes to published tables, see [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md).  
+>  The following procedures assume that the underlying table has not changed. For information on replicating data definition language (DDL) changes to published tables, see [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md).  
   
 #### To define a column filter for an article published in a snapshot or transactional publication  
   
-1.  Define the article to filter. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  Define the article to filter. For more information, see [Define an Article](define-an-article.md).  
   
 2.  At the Publisher on the publication database, execute [sp_articlecolumn](~/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). This defines the columns to include or remove from the article.  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 #### To change a column filter to remove columns for an article published in a snapshot or transactional publication  
   
@@ -96,11 +96,11 @@ manager: "jhubbard"
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+4.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 #### To define a column filter for an article published in a merge publication  
   
-1.  Define the article to filter. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  Define the article to filter. For more information, see [Define an Article](define-an-article.md).  
   
 2.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](~/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md). This defines the columns to include or remove from the article.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 #### To change a column filter to remove columns for an article published in a merge publication  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
-3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](../../../2014/relational-databases/replication/reinitialize-subscriptions.md).  
+3.  Reinitialize subscriptions. For more information, see [Reinitialize Subscriptions](reinitialize-subscriptions.md).  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  In this transactional replication example, the `DaysToManufacture` column is removed from an article based on the `Product` table.  
@@ -134,8 +134,8 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_AddMergeArticle](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## See Also  
- [Change Publication and Article Properties](../../../2014/relational-databases/replication/change-publication-and-article-properties.md)   
- [Filter Published Data](../../../2014/relational-databases/replication/filter-published-data.md)   
- [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md)  
+ [Change Publication and Article Properties](change-publication-and-article-properties.md)   
+ [Filter Published Data](filter-published-data.md)   
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)  
   
   

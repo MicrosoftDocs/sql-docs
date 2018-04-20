@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Publication Properties, Publication Access List
   The **Publication Access List** page of the **Publication Properties** dialog box allows you to add and remove logins, accounts, and groups from the publication access list (PAL). The PAL is the primary mechanism for securing the Publisher. When you create a publication, replication creates a PAL for the publication. The PAL, which functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list, contains a list of logins, accounts, and groups that are granted access to the publication.  
   
- When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the login of the Subscriber is compared against the authentication information in the PAL. This provides additional security for the Publisher by preventing the Publisher and Distributor login from being used by a client tool to perform modifications on the Publisher directly. For more information, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+ When a Subscriber connects to the Publisher or Distributor and requests access to a publication, the login of the Subscriber is compared against the authentication information in the PAL. This provides additional security for the Publisher by preventing the Publisher and Distributor login from being used by a client tool to perform modifications on the Publisher directly. For more information, see [Secure the Publisher](secure-the-publisher.md).  
   
 ## Options  
  **Add**  
@@ -33,8 +33,8 @@ manager: "jhubbard"
  Remove all entries from the list.  
   
 ## See Also  
- [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md)   
- [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md)   
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)  
+ [Create a Publication](create-a-publication.md)   
+ [View and Modify Publication Properties](view-and-modify-publication-properties.md)   
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)  
   
   

@@ -21,7 +21,7 @@ manager: "jhubbard"
   Securing connectivity between an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## See Also  
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
   

@@ -18,7 +18,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Web Server Information
-  Web server information is required to use the Web synchronization option for merge replication. For information about configuring Web synchronization, see [Configure Web Synchronization](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
+  Web server information is required to use the Web synchronization option for merge replication. For information about configuring Web synchronization, see [Configure Web Synchronization](configure-web-synchronization.md).  
   
 ## Options  
  **Web server address**  
@@ -28,10 +28,10 @@ manager: "jhubbard"
  Specify the type of authentication used to connect to the Web server. It is recommended to use Basic Authentication for connections to the IIS server in conjunction with Secure Sockets Layer (SSL). If you select Basic Authentication, enter the login and password that will be used to connect from the Subscriber to the IIS server.  
   
 ## See Also  
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [Non-SQL Server Subscribers](../../../2014/relational-databases/replication/non-sql-server-subscribers.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

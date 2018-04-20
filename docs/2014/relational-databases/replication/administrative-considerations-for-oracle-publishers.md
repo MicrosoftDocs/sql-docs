@@ -56,13 +56,13 @@ manager: "jhubbard"
 -   Performing non-logged operations.  
   
 ## Dropping or modifying replication objects  
- You must drop and reconfigure the Publisher if you drop or modify any Publisher level tracking tables, triggers, sequences, or stored procedures. For a partial list of these objects, see [Objects Created on the Oracle Publisher](../../../2014/relational-databases/replication/objects-created-on-the-oracle-publisher.md).  
+ You must drop and reconfigure the Publisher if you drop or modify any Publisher level tracking tables, triggers, sequences, or stored procedures. For a partial list of these objects, see [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
- For information about dropping and reconfiguring the Publisher, see the section "Changes are made that require reconfiguration of the Publisher" in the topic [Troubleshooting Oracle Publishers](../../../2014/relational-databases/replication/troubleshooting-oracle-publishers.md).  
+ For information about dropping and reconfiguring the Publisher, see the section "Changes are made that require reconfiguration of the Publisher" in the topic [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
 ## See Also  
- [Configure an Oracle Publisher](../../../2014/relational-databases/replication/configure-an-oracle-publisher.md)   
- [Design Considerations and Limitations for Oracle Publishers](../../../2014/relational-databases/replication/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../2014/relational-databases/replication/oracle-publishing-overview.md)  
+ [Configure an Oracle Publisher](configure-an-oracle-publisher.md)   
+ [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle Publishing Overview](oracle-publishing-overview.md)  
   
   

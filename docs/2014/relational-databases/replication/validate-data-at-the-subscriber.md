@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  Validating data is a three-part process:  
   
-1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../2014/relational-databases/replication/start-the-replication-monitor.md).  
+1.  A single subscription or all subscriptions to a publication are *marked* for validation. Mark subscriptions for validation in the **Validate Subscription**, **Validate Subscriptions**, and **Validate All Subscriptions** dialog boxes, which are available from the **Local Publications** folder and the **Local Subscriptions** folder in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also mark subscriptions from the **All Subscriptions** tab, the **Subscription Watch List** tab, and the publications node in Replication Monitor. For information about starting Replication Monitor, see [Start the Replication Monitor](start-the-replication-monitor.md).  
   
 2.  A subscription is validated the next time it is synchronized by the Distribution Agent (for transactional replication) or the Merge Agent (for merge replication). The Distribution Agent typically runs continuously, in which case validation occurs immediately; the Merge Agent typically runs on demand, in which case validation occurs after you run the agent.  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
 -   The procedures for Replication Monitor are for push subscriptions only because pull subscriptions cannot be synchronized in Replication Monitor. However, you can mark a subscription for validation and view validation results for pull subscriptions in Replication Monitor.  
   
--   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../../2014/database-engine/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](../../../2014/relational-databases/replication/compare-replicated-tables-for-differences-replication-programming.md).  
+-   The validation results indicate whether validation succeeded or failed, but do not specify which rows failed validation if a failure occurred. To compare data at the Publisher and Subscriber, use the [tablediff Utility](../../../database-engine/tablediff-utility.md). For more information about using this utility with replicated data, see [Compare Replicated Tables for Differences &#40;Replication Programming&#41;](compare-replicated-tables-for-differences-replication-programming.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -211,9 +211,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When you execute [sp_publication_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) is executed for each article in the publication. To successfully execute [sp_publication_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base tables.  
   
-2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
   
 #### To validate data for a single article in a transactional publication  
   
@@ -226,9 +226,9 @@ manager: "jhubbard"
     > [!NOTE]  
     >  To successfully execute [sp_article_validation &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), you must have SELECT permissions on all columns in the published base table.  
   
-2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  (Optional) Start the Distribution Agent for each subscription if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+3.  Check the agent output for the result of the validation. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
   
 #### To validate data for a single subscriber to a transactional publication  
   
@@ -251,9 +251,9 @@ manager: "jhubbard"
   
 6.  (Optional) Repeat steps 1 through 5 for each article being validated.  
   
-7.  (Optional) Start the Distribution Agent if it is not already running. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+7.  (Optional) Start the Distribution Agent if it is not already running. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-8.  Check the agent output for the result of the validation. For more information, see [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md).  
+8.  Check the agent output for the result of the validation. For more information, see [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
   
 #### To validate data in all subscriptions to a merge publication  
   
@@ -265,9 +265,9 @@ manager: "jhubbard"
   
      This marks all subscriptions for validation.  
   
-2.  Start the merge agent for each subscription. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  Start the merge agent for each subscription. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-3.  Check the agent output for the result of the validation. For more information, see [Validate Data at the Subscriber](../../../2014/relational-databases/replication/validate-data-at-the-subscriber.md).  
+3.  Check the agent output for the result of the validation. For more information, see [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  
   
 #### To validate data in selected subscriptions to a merge publication  
   
@@ -279,14 +279,14 @@ manager: "jhubbard"
   
      This marks the selected subscription for validation.  
   
-2.  Start the merge agent for each subscription. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+2.  Start the merge agent for each subscription. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 3.  Check the agent output for the result of the validation.  
   
 4.  Repeat steps 1 through 3 for each subscription being validated.  
   
 > [!NOTE]  
->  A subscription to a merge publication can also be validated at the end of a synchronization by specifying the **-Validate** parameter when running the [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md).  
+>  A subscription to a merge publication can also be validated at the end of a synchronization by specifying the **-Validate** parameter when running the [Replication Merge Agent](replication-merge-agent.md).  
   
 #### To validate data in a subscription using Merge Agent parameters  
   
@@ -296,7 +296,7 @@ manager: "jhubbard"
   
     -   Specifying **rowcount validation** or **rowcount and checksum validation** for the **-ProfileName** parameter.  
   
-     For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md).  
+     For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) or [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
  Replication enables you to use Replication Management Objects (RMO) to programmatically validate that data at the Subscriber matches data at the Publisher. The objects you use depend on the type of replication topology. Transactional replication requires validation of all subscriptions to a publication.  
@@ -322,7 +322,7 @@ manager: "jhubbard"
   
      This marks the articles for validation.  
   
-5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
+5.  If not already running, start the Distribution Agent to synchronize each subscription. For more information, see [Synchronize a Push Subscription](synchronize-a-push-subscription.md) or [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md). The result of the validation operation is written to the agent history. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 #### To validate data in all subscriptions to a merge publication  
   
@@ -334,7 +334,7 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> method. Pass the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
+5.  Run the Merge Agent for each subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 #### To validate data in a single subscription to a merge publication  
   
@@ -346,7 +346,7 @@ manager: "jhubbard"
   
 4.  Call the <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> method. Pass the name of the Subscriber and subscription database being validated and the desired <xref:Microsoft.SqlServer.Replication.ValidationOption>.  
   
-5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](../../../2014/relational-databases/replication/monitoring-replication.md).  
+5.  Run the Merge Agent for the subscription to start validation, or wait for the next scheduled agent run. For more information, see [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) and [Synchronize a Push Subscription](synchronize-a-push-subscription.md). The result of the validation operation is written to the agent history, which you view by using Replication Monitor. For more information, see [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="RMOExample"></a> Example (RMO)  
  This example marks all subscriptions to a transactional publication for rowcount validation.  

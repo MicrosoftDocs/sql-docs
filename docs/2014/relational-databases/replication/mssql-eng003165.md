@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases](../../../2014/relational-databases/replication/back-up-and-restore-replicated-databases.md)   
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Back Up and Restore Replicated Databases](back-up-and-restore-replicated-databases.md)   
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

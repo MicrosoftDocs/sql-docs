@@ -140,7 +140,7 @@ GO
 ```  
   
  **Add a semantic index by using SQL Server Management Studio**  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../database-engine/manage-full-text-indexes.md).  
   
 ###  <a name="addreq"></a> Requirements and Restrictions for Altering an Existing Index  
   
@@ -179,7 +179,7 @@ GO
     ```  
   
  **Drop a semantic index by using SQL Server Management Studio**  
- You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../2014/database-engine/manage-full-text-indexes.md).  
+ You can change the columns that are enabled for semantic and full-text indexing on the **Full-Text Index Columns** page of the **Full-Text Index Properties** dialog box. For more information, see [Manage Full-Text Indexes](../../database-engine/manage-full-text-indexes.md).  
   
 ###  <a name="dropreq"></a> Requirements and Restrictions for Dropping a Semantic Index  
   

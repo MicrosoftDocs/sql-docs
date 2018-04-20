@@ -52,13 +52,13 @@ manager: "jhubbard"
   
  **To set the queued updating conflict resolution policy**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   Replication Transact-SQL programming: [Enable Updating Subscriptions for Transactional Publications](../../../2014/relational-databases/replication/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Replication Transact-SQL programming: [Enable Updating Subscriptions for Transactional Publications](enable-updating-subscriptions-for-transactional-publications.md)  
   
  **To view data conflicts**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### Publisher Wins  
  When the conflict resolution is set to the Publisher wins, transactional consistency is maintained based on the data at the Publisher. The conflicting transaction is rolled back at the Subscriber that initiated it.  
@@ -76,6 +76,6 @@ manager: "jhubbard"
  Conflict detection under the Subscriber wins policy means the last Subscriber transaction to update the Publisher wins. In this case, when a conflict is detected, the transaction sent by the Subscriber is still used and the Publisher is updated. This policy is suitable for applications where such changes do not compromise data integrity.  
   
 ## See Also  
- [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

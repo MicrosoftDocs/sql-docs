@@ -26,7 +26,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Replication Agent Profiles
-  When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. For merge subscriptions that use Web synchronization, profiles are downloaded and stored at the Subscriber. If the profile is changed, the profile at the Subscriber is updated the next time the Merge Agent runs. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md).  
+  When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. For merge subscriptions that use Web synchronization, profiles are downloaded and stored at the Subscriber. If the profile is changed, the profile at the Subscriber is updated the next time the Merge Agent runs. For more information about Web synchronization, see [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. An agent profile allows you to change key parameters easily for all agents associated with that profile. For example, if you have 20 Snapshot Agents and need to change the query timeout value (the **-QueryTimeout** parameter), you can update the profile used by the Snapshot Agents and all agents of that type will begin using the new value automatically the next time they run.  
   
@@ -37,10 +37,10 @@ manager: "jhubbard"
   
  **To use and modify agent profiles**  
   
--   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
+-   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
   
 ## Snapshot Agent Profiles  
- The following table shows the parameters defined in the default profile for the Snapshot Agent. For more information on these parameters, see [Replication Snapshot Agent](../../../2014/relational-databases/replication/replication-snapshot-agent.md).  
+ The following table shows the parameters defined in the default profile for the Snapshot Agent. For more information on these parameters, see [Replication Snapshot Agent](replication-snapshot-agent.md).  
   
 ||default|  
 |-|-------------|  
@@ -50,7 +50,7 @@ manager: "jhubbard"
 |**-QueryTimeout**|1800|  
   
 ## Log Reader Agent Profiles  
- The following table shows the parameters defined in the profiles for the Log Reader Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Log Reader Agent](../../../2014/relational-databases/replication/replication-log-reader-agent.md).  
+ The following table shows the parameters defined in the profiles for the Log Reader Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Log Reader Agent](replication-log-reader-agent.md).  
   
 ||default|verbose history|  
 |-|-------------|---------------------|  
@@ -62,7 +62,7 @@ manager: "jhubbard"
 |**-ReadBatchSize**|500|500|  
   
 ## Distribution Agent Profiles  
- The following table shows the parameters defined in the profiles for the Distribution Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md).  
+ The following table shows the parameters defined in the profiles for the Distribution Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Distribution Agent](replication-distribution-agent.md).  
   
 ||default|verbose history|Windows Synchronization Manager|Continue on data consistency errors|Distribution Profile for OLEDB streaming|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
@@ -83,7 +83,7 @@ manager: "jhubbard"
 |**-UseOledbStreaming**|NULL|NULL|NULL|NULL|**-UseOledbStreaming**|  
   
 ## Merge Agent Profiles  
- The following table shows the parameters defined in the profiles for the Merge Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md).  
+ The following table shows the parameters defined in the profiles for the Merge Agent. Each column in the table represents a named profile. For more information on these parameters, see [Replication Merge Agent](replication-merge-agent.md).  
   
 ||default|verbose history|Windows Synchronization Manager|rowcount validation|rowcount and checksum validation|slow link|high volume server-to-server|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
@@ -114,7 +114,7 @@ manager: "jhubbard"
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
 ## Queue Reader Agent Profiles  
- The following table shows the parameters defined in the default profile for the Queue Reader Agent. For more information on these parameters, see [Replication Queue Reader Agent](../../../2014/relational-databases/replication/replication-queue-reader-agent.md).  
+ The following table shows the parameters defined in the default profile for the Queue Reader Agent. For more information on these parameters, see [Replication Queue Reader Agent](replication-queue-reader-agent.md).  
   
 ||default|  
 |-|-------------|  
@@ -124,8 +124,8 @@ manager: "jhubbard"
 |**-QueryTimeout**|1800|  
   
 ## See Also  
- [Replication Agent Administration](../../../2014/relational-databases/replication/replication-agent-administration.md)   
- [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+ [Replication Agent Administration](replication-agent-administration.md)   
+ [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
+ [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)  
   
   

@@ -30,7 +30,7 @@ manager: "jhubbard"
  Select this check box to allow users in the **db_owner** fixed database role to create merge publications in the database.  
   
 ## See Also  
- [View and Modify Distributor and Publisher Properties](../../../2014/relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

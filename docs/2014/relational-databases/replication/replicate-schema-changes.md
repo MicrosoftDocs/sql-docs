@@ -52,7 +52,7 @@ manager: "jhubbard"
 -   The ALTER TABLE … DROP COLUMN statement is always replicated to all Subscribers whose subscription contains the columns being dropped, even if you disable the replication of schema changes.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- If you do not want to replicate schema changes for a publication, disable the replication of schema changes in the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ If you do not want to replicate schema changes for a publication, disable the replication of schema changes in the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To disable replication of schema changes  
   
@@ -67,11 +67,11 @@ manager: "jhubbard"
   
 #### To create a snapshot or transactional publication that does not replicate schema changes  
   
-1.  At the Publisher on the publication database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  At the Publisher on the publication database, execute [sp_addpublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To create a merge publication that does not replicate schema changes  
   
-1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value of **0** for **@replicate_ddl**. For more information, see [Create a Publication](create-a-publication.md).  
   
 #### To temporarily disable replicating schema changes for a snapshot or transactional publication  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
 3.  (Optional) Re-enable replicating schema changes by executing [sp_changemergepublication &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying a value of **replicate_ddl** for **@property** and a value of **1** for **@value**.  
   
 ## See Also  
- [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md)   
- [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md)  
+ [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)   
+ [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  
   
   

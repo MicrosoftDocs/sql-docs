@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   The application programming interface (API) reference: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instructions on how to implement a business logic handler: [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instructions on how to implement a business logic handler: [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## Uses for Business Logic Handlers  
  The merge synchronization process can invoke business logic handlers to perform:  
@@ -57,7 +57,7 @@ manager: "jhubbard"
      This is useful for applications that need to override specific data values or operations. For example, an application could transform a row delete into a special update that sets a **status** column in the row to a value of "deleted" and then tracks the identity of the client performing the delete. This might be useful for auditing or workflow purposes.  
   
 ### Custom Conflict Resolution  
- Merge replication provides conflict detection and resolution, allowing you to accept a default resolution strategy or choose custom resolution for conflicts. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md). The business logic handler can be invoked during the processing of conflicting data changes and can perform one of two actions:  
+ Merge replication provides conflict detection and resolution, allowing you to accept a default resolution strategy or choose custom resolution for conflicts. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md). The business logic handler can be invoked during the processing of conflicting data changes and can perform one of two actions:  
   
 -   Accept default resolution  
   
@@ -88,9 +88,9 @@ manager: "jhubbard"
 -   An Internet Information Services (IIS) server if Web synchronization is used. Use a pull subscription synchronized with Web synchronization, and the business logic handler will execute at the IIS Server.  
   
 ## See Also  
- [Merge Replication](../../../2014/relational-databases/replication/merge-replication.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)   
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../2014/relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [Merge Replication](merge-replication.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Synchronize Data](synchronize-data.md)   
+ [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

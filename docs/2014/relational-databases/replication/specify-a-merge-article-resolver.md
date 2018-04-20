@@ -40,9 +40,9 @@ manager: "jhubbard"
   
 -   Merge replication allows the following types of article resolvers:  
   
-    -   The default resolver. The behavior of the default resolver depends on whether the subscription is a client subscription or a server subscription. For more information about specifying subscription type, see [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
+    -   The default resolver. The behavior of the default resolver depends on whether the subscription is a client subscription or a server subscription. For more information about specifying subscription type, see [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   A custom resolver you have written, which can be a business logic handler (written in managed code) or a custom COM-based resolver. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md). If you need to implement custom logic that is executed for each replicated row, not just for conflicting rows, see [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   A custom resolver you have written, which can be a business logic handler (written in managed code) or a custom COM-based resolver. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md). If you need to implement custom logic that is executed for each replicated row, not just for conflicting rows, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   A standard COM-based resolver, which is included with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ manager: "jhubbard"
     -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) server for a pull subscription that uses Web synchronization  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- After the resolver is registered, specify that an article should use the resolver on the **Resolver** tab of the **Article Properties - \<Article>** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ After the resolver is registered, specify that an article should use the resolver on the **Resolver** tab of the **Article Properties - \<Article>** dialog box, which is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify a resolver  
   
@@ -79,9 +79,9 @@ manager: "jhubbard"
   
 1.  If you plan to register your own custom conflict resolver, create one of the following types:  
   
-    -   Managed code-based resolver as a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Managed code-based resolver as a business logic handler. For more information, see [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Stored procedure-based resolver and COM-based resolver. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](../../../2014/relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+    -   Stored procedure-based resolver and COM-based resolver. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  To determine if the desired resolver is already registered, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) at the Publisher on any database. This displays a description of the custom resolver as well as the class identifier (CLSID) for each COM-based resolver registered at the Distributor or information on the managed assembly for each business logic handler registered at the Distributor.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 2.  At the Publisher, execute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) and note the name of the desired custom resolver in the **value** field of result set.  
   
-3.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the resolver from step 2 for **@article_resolver** and any required input to the custom resolver using the **@resolver_info** parameter. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input for resolvers supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)], see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
+3.  At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the resolver from step 2 for **@article_resolver** and any required input to the custom resolver using the **@resolver_info** parameter. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input for resolvers supplied by [!INCLUDE[msCoName](../../includes/msconame-md.md)], see [Microsoft COM-Based Resolvers](microsoft-com-based-resolvers.md).  
   
 #### To specify or change a custom resolver for an existing merge article  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 3.  At the Publisher on the publication database, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify a value of **article_resolver**, including the full path for business logic handlers, for **@property**, and the name of the desired custom resolver from step 2 for **@value**.  
   
-4.  To change any required input for the custom resolver, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify a value of **resolver_info** for **@property** and any required input to the custom resolver for **@value**. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input, see [Microsoft COM-Based Resolvers](../../../2014/relational-databases/replication/microsoft-com-based-resolvers.md).  
+4.  To change any required input for the custom resolver, execute [sp_changemergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) again. Specify a value of **resolver_info** for **@property** and any required input to the custom resolver for **@value**. For stored procedure-based custom resolvers, **@resolver_info** is the name of the stored procedure. For more information about required input, see [Microsoft COM-Based Resolvers](microsoft-com-based-resolvers.md).  
   
 #### To unregister a custom conflict resolver  
   
@@ -142,7 +142,7 @@ manager: "jhubbard"
  [!code-sql[HowTo#sp_changemerge_resolver](../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../../../2014/relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

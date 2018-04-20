@@ -30,24 +30,24 @@ manager: "jhubbard"
   
 -   Properties that apply to merge subscriptions.  
   
- If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md) and [Create a Push Subscription](../../../2014/relational-databases/replication/create-a-push-subscription.md).  
+ If an option is displayed as read-only, it can only be set when the subscription is created. If you want to set options that are not available in the New Subscription Wizard, create the subscription with stored procedures. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md) and [Create a Push Subscription](create-a-push-subscription.md).  
   
 ## Options for all subscriptions  
  **Security**  
  Click the **Agent process account** row, and then click the properties button (**...**) to change the account under which the Distribution Agent or Merge Agent runs at the Distributor. To change the account under which the Distribution Agent or Merge Agent makes connections to the Subscriber, click **Subscriber connection**, and then click the properties button (**...**).  
   
- For more information about the permissions required for each agent, see [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+ For more information about the permissions required for each agent, see [Replication Agent Security Model](replication-agent-security-model.md).  
   
 ## Options for transactional subscriptions  
  **Prevent transaction looping**  
- Determines whether the Distribution Agent sends transactions that originated at the Subscriber back to the Subscriber. This option is used for bidirectional transactional replication. For more information, see [Bidirectional Transactional Replication](../../../2014/relational-databases/replication/bidirectional-transactional-replication.md).  
+ Determines whether the Distribution Agent sends transactions that originated at the Subscriber back to the Subscriber. This option is used for bidirectional transactional replication. For more information, see [Bidirectional Transactional Replication](bidirectional-transactional-replication.md).  
   
  **Updatable subscription**  
- Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](../../../2014/relational-databases/replication/updatable-subscriptions-for-transactional-replication.md).  
+ Determines whether Subscriber changes are replicated back to the Publisher. Changes can be replicated using queued updating or immediate updating. The option **Subscriber update method** determines which method to use. For more information, see [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md).  
   
 ## Options for merge subscriptions  
  **Partition definition (HOST_NAME)**  
- For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ For a publication that uses parameterized filters, merge replication evaluates one of two system functions (or both if the filter references both functions) during synchronization to determine the data that a Subscriber should receive: **SUSER_SNAME()** or **HOST_NAME()**. By default, **HOST_NAME()** returns the name of the computer on which the Merge Agent is running, but you can override this value in the New Subscription Wizard. For more information on parameterized filters and overriding **HOST_NAME()**, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
  **Subscription type** and **Priority**  
  Displays whether the subscription is a client or server subscription (this cannot be changed after the subscription has been created). Server subscriptions can republish data to other Subscribers and can be assigned a priority for conflict resolution.  
@@ -55,11 +55,11 @@ manager: "jhubbard"
  If you selected a subscription type of server in the New Subscription Wizard, the Subscriber is given a priority that is used during conflict resolution.  
   
  **Resolve conflicts interactively**  
- Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](../../../2014/relational-databases/replication/interactive-conflict-resolution.md).  
+ Determines whether to use the Interactive Resolver user interface to resolve conflicts during merge synchronization. This requires a value of **Enable** for **Use Windows Synchronization Manager**. For more information, see [Interactive Conflict Resolution](interactive-conflict-resolution.md).  
   
 ## See Also  
- [View and Modify Pull Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [View and Modify Push Subscription Properties](../../../2014/relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Subscribe to Publications](../../../2014/relational-databases/replication/subscribe-to-publications.md)  
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)   
+ [View and Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

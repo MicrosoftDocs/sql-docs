@@ -25,21 +25,21 @@ manager: "jhubbard"
   
  The following information is relevant to replication in all environments:  
   
--   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](../../../2014/relational-databases/replication/securing-replication-over-the-internet.md).  
+-   Encrypt the connections between computers in a replication topology using an industry standard method, such as Virtual Private Networks (VPN), Secure Sockets Layer (SSL), or IP Security (IPSEC). For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). For information about using VPN and SSL for replicating data over the Internet, see [Securing Replication Over the Internet](securing-replication-over-the-internet.md).  
   
      If you use SSL to secure the connections between computers in a replication topology, specify a value of **1** or **2** for the **-EncryptionLevel** parameter of each replication agent (a value of **2** is recommended). A value of **1** specifies that encryption is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer; a value of **2** specifies that the certificate is verified. Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   
-    -   [Work with Replication Agent Profiles](../../../2014/relational-databases/replication/work-with-replication-agent-profiles.md)  
+    -   [Work with Replication Agent Profiles](work-with-replication-agent-profiles.md)  
   
-    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/dev-guide/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](dev-guide/replication-agent-executables-concepts.md)  
   
--   Run each replication agent under a different Windows account, and use Windows Authentication for all replication agent connections. For more information about specifying accounts, see [Manage Logins and Passwords in Replication](../../../2014/relational-databases/replication/manage-logins-and-passwords-in-replication.md).  
+-   Run each replication agent under a different Windows account, and use Windows Authentication for all replication agent connections. For more information about specifying accounts, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
   
--   Grant only the required permissions to each agent. For more information, see the "Permissions Required by Agents" section of [Replication Agent Security Model](../../../2014/relational-databases/replication/replication-agent-security-model.md).  
+-   Grant only the required permissions to each agent. For more information, see the "Permissions Required by Agents" section of [Replication Agent Security Model](replication-agent-security-model.md).  
   
--   Ensure all Merge Agent and Distribution Agent accounts are in the publication access list (PAL). For more information, see [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md).  
+-   Ensure all Merge Agent and Distribution Agent accounts are in the publication access list (PAL). For more information, see [Secure the Publisher](secure-the-publisher.md).  
   
 -   Follow the principle of least privilege by allowing accounts in the PAL only the permissions they need to perform replication tasks. Do not add the logins to any fixed server roles that are not required for replication.  
   
@@ -63,14 +63,14 @@ manager: "jhubbard"
   
     -   Ensure that a given agent (for example the Distribution Agent for a subscription) makes connections under the same account at each computer.  
   
-    -   In situations that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../2014/relational-databases/replication/transfer-snapshots-through-ftp.md).  
+    -   In situations that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
   
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
- [Replication over the Internet](../../../2014/relational-databases/replication/replication-over-the-internet.md)   
- [Secure the Subscriber](../../../2014/relational-databases/replication/secure-the-subscriber.md)   
- [Secure the Distributor](../../../2014/relational-databases/replication/secure-the-distributor.md)   
- [Secure the Publisher](../../../2014/relational-databases/replication/secure-the-publisher.md)   
- [Security and Protection &#40;Replication&#41;](../../../2014/relational-databases/replication/security-and-protection-replication.md)  
+ [Replication over the Internet](replication-over-the-internet.md)   
+ [Secure the Subscriber](secure-the-subscriber.md)   
+ [Secure the Distributor](secure-the-distributor.md)   
+ [Secure the Publisher](secure-the-publisher.md)   
+ [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)  
   
   

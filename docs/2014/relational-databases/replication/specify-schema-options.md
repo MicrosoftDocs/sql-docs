@@ -51,7 +51,7 @@ manager: "jhubbard"
 -   For the complete list of schema options, see the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) and [sp_addmergearticle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Specify schema options, such as whether to copy constraints and triggers to Subscribers, on the **Properties** tab of the **Article Properties - \<Article>** dialog box. This tab is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../2014/relational-databases/replication/create-a-publication.md) and [View and Modify Publication Properties](../../../2014/relational-databases/replication/view-and-modify-publication-properties.md).  
+ Specify schema options, such as whether to copy constraints and triggers to Subscribers, on the **Properties** tab of the **Article Properties - \<Article>** dialog box. This tab is available in the New Publication Wizard and the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](create-a-publication.md) and [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### To specify schema options  
   
@@ -80,11 +80,11 @@ manager: "jhubbard"
   
 #### To specify schema options when defining an article for a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, the type of database object for **@type**, and the [| (Bitwise OR)](~/t-sql/language-elements/bitwise-or-transact-sql.md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addarticle](~/relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, the type of database object for **@type**, and the [| (Bitwise OR)](~/t-sql/language-elements/bitwise-or-transact-sql.md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](define-an-article.md).  
   
 #### To specify schema options when defining an article for a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and the [| (Bitwise OR)](~/t-sql/language-elements/bitwise-or-transact-sql.md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+1.  At the Publisher on the publication database, execute [sp_addmergearticle](~/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, a name for the article for **@article**, the database object being published for **@source_object**, and the [| (Bitwise OR)](~/t-sql/language-elements/bitwise-or-transact-sql.md) result of one or more schema options for **@schema_option**. For more information, see [Define an Article](define-an-article.md).  
   
 #### To change schema options for an existing article in a snapshot or transactional publication  
   
@@ -100,7 +100,7 @@ manager: "jhubbard"
   
 4.  At the Publisher on the publication database, execute [sp_changearticle](~/relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
-5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 #### To change schema options for an existing article in a merge publication  
   
@@ -116,10 +116,10 @@ manager: "jhubbard"
   
 4.  At the Publisher on the publication database, execute [sp_changemergearticle](~/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specify the name of the publication to which the article belongs for **@publication**, the name of the article for **@article**, a value of **schema_option** for **@property**, and the hexadecimal result from step 3 for **@value**.  
   
-5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Run the Snapshot Agent to generate a new snapshot. For more information, see [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 ## See Also  
- [Publish Data and Database Objects](../../../2014/relational-databases/replication/publish-data-and-database-objects.md)   
- [Article Options for Transactional Replication](../../../2014/relational-databases/replication/article-options-for-transactional-replication.md)  
+ [Publish Data and Database Objects](publish-data-and-database-objects.md)   
+ [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

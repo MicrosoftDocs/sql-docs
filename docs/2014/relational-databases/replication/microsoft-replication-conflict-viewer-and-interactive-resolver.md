@@ -21,20 +21,20 @@ manager: "jhubbard"
 # Microsoft Replication Conflict Viewer and Interactive Resolver
   This section includes information on the Replication Conflict Viewer for merge replication and transactional replication, and the Interactive Resolver for merge replication:  
   
--   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../../2014/relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../../2014/relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
--   [Microsoft Replication Interactive Conflict Resolver](../../../2014/relational-databases/replication/microsoft-replication-interactive-conflict-resolver.md)  
+-   [Microsoft Replication Interactive Conflict Resolver](microsoft-replication-interactive-conflict-resolver.md)  
   
--   [Define Filters](../../../2014/relational-databases/replication/define-filters.md)  
+-   [Define Filters](define-filters.md)  
   
 ## See Also  
- [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
- [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../../2014/relational-databases/replication/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Conflict Detection in Peer-to-Peer Replication](../../../2014/relational-databases/replication/conflict-detection-in-peer-to-peer-replication.md)   
- [Queued Updating Conflict Detection and Resolution](../../../2014/relational-databases/replication/queued-updating-conflict-detection-and-resolution.md)   
- [Properties Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/properties-reference-replication.md)  
+ [View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Conflict Detection in Peer-to-Peer Replication](conflict-detection-in-peer-to-peer-replication.md)   
+ [Queued Updating Conflict Detection and Resolution](queued-updating-conflict-detection-and-resolution.md)   
+ [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
   
   

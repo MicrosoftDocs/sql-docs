@@ -24,7 +24,7 @@ manager: "jhubbard"
  Peer-to-peer replication in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions provides the option to enable conflict detection across a peer-to-peer topology. This option would help prevent the issues that are caused by undetected conflicts, including inconsistent application behavior and lost updates. With this option enabled, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved and the data is made consistent across the topology.  
   
 > [!NOTE]  
->  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row that is originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../2014/relational-databases/replication/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../2014/relational-databases/replication/detect-and-resolve-merge-replication-conflicts.md).  
+>  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row that is originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](detect-and-resolve-merge-replication-conflicts.md).  
   
 ## Understanding Conflicts and Conflict Detection  
  In a single database, changes that are made to the same row by different applications do not cause a conflict. This is because transactions are serialized, and locks are used to handle concurrent changes. In an asynchronous distributed system such as peer-to-peer replication, transactions act independently on each node; and there is no mechanism to serialize transactions across multiple nodes. A protocol like two-phase commit could be used, but this affects performance significantly.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
      If you configure conflict detection by using stored procedures, you can specify whether the Distribution Agent should stop applying changes when a conflict is detected. The default is for the agent to stop. We recommend that you use the default setting.  
   
 ## Handling Conflicts  
- When a conflict occurs in peer-to-peer replication, the Peer-to-peer conflict detection alert is raised. We recommend that you configure this alert so that you are notified when a conflict occurs. For more information about alerts, see [Use Alerts for Replication Agent Events](../../../2014/relational-databases/replication/use-alerts-for-replication-agent-events.md).  
+ When a conflict occurs in peer-to-peer replication, the Peer-to-peer conflict detection alert is raised. We recommend that you configure this alert so that you are notified when a conflict occurs. For more information about alerts, see [Use Alerts for Replication Agent Events](use-alerts-for-replication-agent-events.md).  
   
  After the Distribution Agent stops and the alert is raised, use one of the following approaches to handle the conflicts that occurred:  
   
@@ -88,9 +88,9 @@ manager: "jhubbard"
   
     2.  Restart the Distribution Agent.  
   
-    3.  Verify the conflicts that were detected by using the conflict viewer and determine the rows that were involved, the type of conflict, and the winner. The conflict is resolved based on the originator ID value that you specified during configuration: the row that originated at the node with the highest ID wins the conflict. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
+    3.  Verify the conflicts that were detected by using the conflict viewer and determine the rows that were involved, the type of conflict, and the winner. The conflict is resolved based on the originator ID value that you specified during configuration: the row that originated at the node with the highest ID wins the conflict. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Run validation to ensure that the conflicting rows converged correctly. For more information, see [Validate Replicated Data](../../../2014/relational-databases/replication/validate-replicated-data.md).  
+    4.  Run validation to ensure that the conflicting rows converged correctly. For more information, see [Validate Replicated Data](validate-replicated-data.md).  
   
         > [!NOTE]  
         >  If data is inconsistent after this step, you must manually update rows on the node that has the highest priority, and then let the changes propagate from this node. If there are no further conflicting changes in the topology, all nodes will be brought to a consistent state.  
@@ -98,6 +98,6 @@ manager: "jhubbard"
     5.  Execute [sp_changepublication](~/relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and `false` for the @value parameter.  
   
 ## See Also  
- [Peer-to-Peer Transactional Replication](../../../2014/relational-databases/replication/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

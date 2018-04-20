@@ -41,7 +41,7 @@ manager: "jhubbard"
      The next time a relevant schema change is made, this script executes on each Subscriber within the same transaction as the DDL command. After the schema change is made, the script is unregistered. You must re-register the script to have it executed after a subsequent schema change.  
   
 ## See Also  
- [Specify How Changes Are Propagated for Transactional Articles](../../../2014/relational-databases/replication/specify-how-changes-are-propagated-for-transactional-articles.md)   
- [Make Schema Changes on Publication Databases](../../../2014/relational-databases/replication/make-schema-changes-on-publication-databases.md)  
+ [Specify How Changes Are Propagated for Transactional Articles](specify-how-changes-are-propagated-for-transactional-articles.md)   
+ [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  
   
   

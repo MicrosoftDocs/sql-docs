@@ -41,7 +41,7 @@ manager: "jhubbard"
 LoginID = SUSER_SNAME()  
 ```  
   
- This filter ensures that each employee's subscription only contains data from the **HumanResources.Employee** table that is relevant to that employee (which in this case is a single row). For more information, see [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md).  
+ This filter ensures that each employee's subscription only contains data from the **HumanResources.Employee** table that is relevant to that employee (which in this case is a single row). For more information, see [Parameterized Row Filters](parameterized-row-filters.md).  
   
  The next step is to extend this filter to each of the related tables, using syntax similar to that used to specify a join between two tables. The first join filter clause is:  
   
@@ -57,7 +57,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
  This ensures the subscription contains only the detail data related to the order data for each sales person. This example shows a single table being joined at each point; it is also possible to join more than one table at each point.  
   
- Join filters can be added one at a time through the New Publication Wizard and the **Publication Properties** dialog box, or they can be added programmatically. They can also be generated automatically through the New Publication Wizard: you specify a row filter for a table and join filters are applied to all related tables. For more information, see [Define and Modify a Join Filter Between Merge Articles](../../../2014/relational-databases/replication/define-and-modify-a-join-filter-between-merge-articles.md), [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](../../../2014/relational-databases/replication/automatically-generate-join-filters-between-merge-articles.md), and [Define an Article](../../../2014/relational-databases/replication/define-an-article.md).  
+ Join filters can be added one at a time through the New Publication Wizard and the **Publication Properties** dialog box, or they can be added programmatically. They can also be generated automatically through the New Publication Wizard: you specify a row filter for a table and join filters are applied to all related tables. For more information, see [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md), [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md), and [Define an Article](define-an-article.md).  
   
 ## Optimizing Join Filter Performance  
  Join filter performance can be optimized by following these guidelines:  
@@ -85,7 +85,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      It is strongly recommended that all such logic be expressed in a join filter rather than a subquery. If your application requires a row filter to use a subsquery, ensure that the subquery only references lookup data that does not change.  
   
 ## See Also  
- [Filter Published Data for Merge Replication](../../../2014/relational-databases/replication/filter-published-data-for-merge-replication.md)   
- [Parameterized Row Filters](../../../2014/relational-databases/replication/parameterized-row-filters.md)  
+ [Filter Published Data for Merge Replication](filter-published-data-for-merge-replication.md)   
+ [Parameterized Row Filters](parameterized-row-filters.md)  
   
   

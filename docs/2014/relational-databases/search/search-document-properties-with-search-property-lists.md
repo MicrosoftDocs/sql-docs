@@ -37,7 +37,7 @@ manager: "jhubbard"
   
  The following illustration shows a logical view of a search property list that specifies two properties, Title and Keywords. The property-list name for Keywords is "Tags". These properties belong to the same property set, whose GUID is F29F85E0-4FF9-1068-AB91-08002B27B3D9. The property integer identifiers are 2 for Title and 5 for Tags (Keywords). The Full-Text Engine arbitrarily maps each property to an internal property ID that is unique to the search property list. The internal property ID for the Title property is 1, and the internal property ID for the Tags property is 2.  
   
- ![Mapping of search property list to internal table](../../2014/database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
+ ![Mapping of search property list to internal table](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
   
  The internal property ID is likely to be different from the property integer identifier of the property. If a given property is registered for multiple search property lists, a different internal property ID might be assigned for each search property list. For example, the internal property ID might be 4 in one search property list, 1 in another, 3 in another, and so on. In contrast, the property integer identifier is intrinsic to the property, and it remains the same wherever the property is used.  
   
@@ -48,7 +48,7 @@ manager: "jhubbard"
   
  The following illustration shows a logical view of how search terms appear in a full-text index that is associated with the search property list shown in the preceding illustration. A sample document, Document 1 contains three properties—Title, Author, and Keywords—as well as the document body. For the properties Title and Keywords, which are specified in the search property list, search terms are associated with their corresponding internal property IDs in the full-text index. In contrast, the content of the Author property is indexed as if it were part of the document body. This means registering a property increases the size of the full-text index somewhat, depending on the amount of content stored in the property.  
   
- ![Full-text index that uses a search property list](../../2014/database-engine/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
+ ![Full-text index that uses a search property list](../../database-engine/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
  Search terms in the Title property—"Favorite," "Biking," and "Trails"—are associated with the internal property ID assigned to Title for this index, 1. Search terms in the Keywords property—"biking" and "mountain"—are associated with the internal property ID assigned to Tags for this index, 2. For search terms n the Author property—"Jane" and "Doe"—and search terms in the document body, the internal property ID is 0. Note that the term "biking" occurs in the Title property, in the Keywords (Tags) property, and in the document body. A property search for "biking" in the Title or Keywords (Tags) property would return this document in the results. A generic full-text query for "biking" would also return this document, just as if the index were not configured for property searching. A property search for "biking" in the Author property would not return this document.  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
   
     -   **Create from an existing search property list**  
   
-     For more information, see [New Search Property List](../../2014/database-engine/new-search-property-list.md).  
+     For more information, see [New Search Property List](../../database-engine/new-search-property-list.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -211,7 +211,7 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](../../2014/database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](../../database-engine/search-property-list-editor.md). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

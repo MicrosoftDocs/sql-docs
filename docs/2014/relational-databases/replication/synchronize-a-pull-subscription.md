@@ -20,11 +20,11 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # Synchronize a Pull Subscription
-  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](../../../2014/relational-databases/replication/replication-agents-overview.md), or Replication Management Objects (RMO).  
+  This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](replication-agents-overview.md), or Replication Management Objects (RMO).  
   
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
- Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule. For more information about specifying synchronization schedules, see [Specify Synchronization Schedules](../../../2014/relational-databases/replication/specify-synchronization-schedules.md).  
+ Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule. For more information about specifying synchronization schedules, see [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
  Synchronize a subscription on demand from the **Local Subscriptions** folder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -41,14 +41,14 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](../../../2014/relational-databases/replication/replication-agents.md).  
+ Pull subscriptions can be synchronized programmatically and on-demand by invoking the appropriate replication agent executable file from the command prompt. The replication agent executable file that is invoked will depend on the type of publication to which the pull subscription belongs. For more information, see [Replication Agents](replication-agents.md).  
   
 > [!NOTE]  
 >  Replication agents connect to the local server using the Windows Authentication credentials of the user who started the agent from the command prompt. These Windows credentials are also used when connecting to remote servers using Windows Integrated Authentication.  
   
 #### To start the distribution agent from the command prompt or from a batch file  
   
-1.  From the command prompt or in a batch file, start the [Replication Distribution Agent](../../../2014/relational-databases/replication/replication-distribution-agent.md) by running **distrib.exe**, specifying the following command-line arguments:  
+1.  From the command prompt or in a batch file, start the [Replication Distribution Agent](replication-distribution-agent.md) by running **distrib.exe**, specifying the following command-line arguments:  
   
     -   **-Publisher**  
   
@@ -88,7 +88,7 @@ manager: "jhubbard"
   
 #### To start the merge agent from the command prompt or from a batch file  
   
-1.  From the command prompt or in a batch file, start the [Replication Merge Agent](../../../2014/relational-databases/replication/replication-merge-agent.md) by running **replmerg.exe**, specifying the following command-line arguments:  
+1.  From the command prompt or in a batch file, start the [Replication Merge Agent](replication-merge-agent.md) by running **replmerg.exe**, specifying the following command-line arguments:  
   
     -   **-Publisher**  
   
@@ -231,8 +231,8 @@ manager: "jhubbard"
  [!code-vb[HowTo#rmo_vb_SyncMergePullSub_NoJobWebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepullsub_nojobwebsync)]  
   
 ## See Also  
- [Synchronize Data](../../../2014/relational-databases/replication/synchronize-data.md)   
- [Create a Pull Subscription](../../../2014/relational-databases/replication/create-a-pull-subscription.md)   
- [Replication Security Best Practices](../../../2014/relational-databases/replication/replication-security-best-practices.md)  
+ [Synchronize Data](synchronize-data.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Replication Security Best Practices](replication-security-best-practices.md)  
   
   

@@ -61,15 +61,15 @@ manager: "jhubbard"
   
      After you execute the [sp_addserver &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
-     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../2014/database-engine/always-on-failover-cluster-instances-sql-server.md).  
+     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../../database-engine/always-on-failover-cluster-instances-sql-server.md).  
   
  After verifying that the Distributor instance is registered properly, verify that the distribution database is listed in **msdb..MSdistributiondbs**. If it is not listed:  
   
-1.  Script out the distribution configuration. For more information, see [Scripting Replication](../../../2014/relational-databases/replication/scripting-replication.md).  
+1.  Script out the distribution configuration. For more information, see [Scripting Replication](scripting-replication.md).  
   
-2.  Disable distribution and then re-enable it. For more information, see [Configure Distribution](../../../2014/relational-databases/replication/configure-distribution.md).  
+2.  Disable distribution and then re-enable it. For more information, see [Configure Distribution](configure-distribution.md).  
   
 ## See Also  
- [Errors and Events Reference &#40;Replication&#41;](../../../2014/relational-databases/replication/errors-and-events-reference-replication.md)  
+ [Errors and Events Reference &#40;Replication&#41;](errors-and-events-reference-replication.md)  
   
   

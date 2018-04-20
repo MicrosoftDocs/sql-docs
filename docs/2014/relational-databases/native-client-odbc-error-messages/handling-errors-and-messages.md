@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   [SQLSTATE &#40;ODBC Error Codes&#41;](sqlstate-odbc-error-codes.md)  
   
--   [Error Messages](../../database-engine/error-messages.md)  
+-   [Error Messages](error-messages.md)  
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  

@@ -39,7 +39,7 @@ manager: "mblythe"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[XML for Analysis Schema Rowsets](../xml/xml-for-analysis-schema-rowsets.md)|Describes the XMLA rowsets supported by the XMLA provider.|  
+|[XML for Analysis Schema Rowsets](xml/xml-for-analysis-schema-rowsets.md)|Describes the XMLA rowsets supported by the XMLA provider.|  
 |[OLE DB Schema Rowsets](ole-db/ole-db-schema-rowsets.md)|Describes the OLE DB schema rowsets supported by the XMLA provider.|  
 |[OLE DB for OLAP Schema Rowsets](ole-db-olap/ole-db-for-olap-schema-rowsets.md)|Describes the OLE DB for OLAP schema rowsets supported by the XMLA provider.|  
 |[Data Mining Schema Rowsets](data-mining/data-mining-schema-rowsets.md)|Describes the data mining schema rowsets supported by the XMLA provider.|  

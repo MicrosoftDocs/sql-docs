@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  Sometimes, an application uses a table-valued parameter with dynamic SQL and the type name of the table-valued parameter must be supplied. If this is the case and the table-valued parameter is not defined in the current default schema for the connection, SQL_CA_SS_TYPE_CATALOG_NAME and SQL_CA_SS_TYPE_SCHEMA_NAME must be set by using SQLSetDescField. Because table type definitions and table-valued parameters must be in the same database, SQL_CA_SS_TYPE_CATALOG_NAME must not be set if the application uses table-valued parameters. Otherwise, SQLSetDescField will report an error.  
   
- Sample code for this scenario is in the procedure `demo_fixed_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/table-valued-parameters-odbc.md).  
+ Sample code for this scenario is in the procedure `demo_fixed_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## Table-Valued Parameter with Row Streaming (Send Data as a TVP Using Data-At-Execution)  
  In this scenario, the application supplies rows to the driver as it requests them and they are streamed to the server. This avoids having to buffer all rows in memory. This is representative of bulk insert/update scenarios. Table-valued parameters provide a performance point somewhere between parameter arrays and bulk copy. That is, table-valued parameters are about as easy to program as parameter arrays, but they provide greater flexibility at the server.  
@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  When all table-valued parameter columns have been processed, the driver returns to the table-valued parameter to process further rows of table-valued parameter data. Therefore, for data-at-execution table-valued parameters, the driver does not follow the usual sequential scan of bound parameters. A bound table-valued parameter will be polled until SQLPutData is called with *StrLen_Or_IndPtr* equal to 0, at which time the driver skips table-valued parameter columns and moves to the next actual stored procedure parameter.  When SQLPutData passes an indicator value greater than or equal to 1, the driver processes table-valued parameter columns and rows sequentially until it has values for all bound rows and columns. Then the driver returns to the table-valued parameter. Between receiving the token for the table-valued parameter from SQLParamData and calling SQLPutData(hstmt, NULL, n) for a table-valued parameter, the application must set table-valued parameter constituent column data and indicator buffer contents for the next row or rows to be passed to the server.  
   
- Sample code for this scenario is in the routine `demo_variable_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/table-valued-parameters-odbc.md).  
+ Sample code for this scenario is in the routine `demo_variable_TVP_binding` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## Retrieving Table-Valued Parameter Metadata from the System Catalog  
  When an application calls SQLProcedureColumns for a procedure that has table-valued parameter parameters, DATA_TYPE is returned as SQL_SS_TABLE and TYPE_NAME is the name of the table type for the table-valued parameter. Two additional columns are added to the result set returned by SQLProcedureColumns: SS_TYPE_CATALOG_NAME returns the name of the catalog where the table type of the table-value parameter is defined, and SS_TYPE_SCHEMA_NAME returns the name of the schema where the where the table type of the table-value parameter is defined. In conformance with the ODBC specification, SS_TYPE_CATALOG_NAME and SS_TYPE_SCHEMA_NAME appear before all driver specific columns that were added in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and after all columns mandated by ODBC itself.  
@@ -67,7 +67,7 @@ manager: "jhubbard"
   
  An application uses SQLColumns to determine the columns for a table type in the same way it does for persistent tables, but must first set SQL_SOPT_SS_NAME_SCOPE to indicate that it is working with table types rather than actual tables. SQLPrimaryKeys can also be used with table types, again using SQL_SOPT_SS_NAME_SCOPE.  
   
- Sample code for this scenario is in the routine `demo_metadata_from_catalog_APIs` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/table-valued-parameters-odbc.md).  
+ Sample code for this scenario is in the routine `demo_metadata_from_catalog_APIs` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## Retrieving Table-Valued Parameter Metadata for a Prepared Statement  
  In this scenario, an application uses SQLNumParameters and SQLDescribeParam to retrieve metadata for table-valued parameters.  
@@ -80,9 +80,9 @@ manager: "jhubbard"
   
  An application uses SQLColumns to retrieve column metadata for a table-valued parameter in this scenario, too, because SQLDescribeParam does not return metadata for the columns of a table-valued parameter column.  
   
- Sample code for this use case is in the routine `demo_metadata_from_prepared_statement` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/table-valued-parameters-odbc.md).  
+ Sample code for this use case is in the routine `demo_metadata_from_prepared_statement` in [Use Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-how-to/table-valued-parameters-odbc.md)  
+ [Table-Valued Parameters &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

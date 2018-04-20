@@ -28,7 +28,7 @@ manager: "jhubbard"
   
 -   The server automatically closes the cursor when the end of the cursor is detected. The application must still call [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) or [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE), but the driver does not have to send the close request to the server. This saves a roundtrip across the network to the server.  
   
- The application requests fast forward-only cursors using the driver-specific statement attribute SQL_SOPT_SS_CURSOR_OPTIONS. When set to SQL_CO_FFO, fast forward-only cursors are enabled without autofetch. When set to SQL_CO_FFO_AF, the autofetch option is also enabled. For more information about autofetch, see [Using Autofetch with ODBC Cursors](../../../database-engine/dev-guide/cursors.md).  
+ The application requests fast forward-only cursors using the driver-specific statement attribute SQL_SOPT_SS_CURSOR_OPTIONS. When set to SQL_CO_FFO, fast forward-only cursors are enabled without autofetch. When set to SQL_CO_FFO_AF, the autofetch option is also enabled. For more information about autofetch, see [Using Autofetch with ODBC Cursors](using-autofetch-with-odbc-cursors.md).  
   
  Fast forward-only cursors with autofetch can be used to retrieve a small result set with only one roundtrip to the server. In these steps, *n* is the number of rows to be returned:  
   

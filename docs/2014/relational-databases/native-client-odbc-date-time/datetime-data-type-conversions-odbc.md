@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 -   The format of date strings is 'yyyy-mm-dd'  
   
- Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for ODBC Date and Time Improvements](../../database-engine/dev-guide/date-and-time-improvements.md).  
+ Conversions from strings allow flexibility in white space and field width. For more information, see the "Data Formats: Strings and Literals" section of [Data Type Support for ODBC Date and Time Improvements](data-type-support-for-odbc-date-and-time-improvements.md).  
   
  The following are general conversion rules:  
   

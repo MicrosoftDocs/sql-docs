@@ -53,7 +53,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 -   [Constructing an SQL Statement &#40;ODBC&#41;](constructing-an-sql-statement-odbc.md)  
   
--   [Constructing SQL Statements for Cursors](../../database-engine/dev-guide/cursors.md)  
+-   [Constructing SQL Statements for Cursors](constructing-sql-statements-for-cursors.md)  
   
 -   [Using Statement Parameters](using-statement-parameters.md)  
   

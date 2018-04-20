@@ -28,6 +28,6 @@ manager: "jhubbard"
 -   [Sending Data as a Table-Valued Parameter Using Data-At-Execution &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
   
 ## See Also  
- [Table-Valued Parameters &#40;ODBC&#41;](../../../2014/database-engine/dev-guide/table-valued-parameters-odbc.md)  
+ [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -57,6 +57,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Behavior Changes to Full-Text Search](../relational-databases/search/full-text-search.md)   
- [Full-Text Search](../../2014/database-engine/full-text-search.md)  
+ [Full-Text Search]((../relational-databases/search/full-text-search.md)  
   
   

@@ -52,7 +52,7 @@ manager: "jhubbard"
  Do not use SET FMTONLY OFF with bulk copy operations. SET FMTONLY OFF may cause your bulk copy operation to fail or give unexpected results.  
   
 ## SQL Server Native Client OLE DB Provider  
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements two methods for performing bulk copy operations with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The first method involves using the [IRowsetFastLoad](../../../database-engine/dev-guide/irowsetfastload-ole-db.md) interface for memory-based bulk copy operations; and the second involves using the [IBCPSession](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md) interface for file-based bulk copy operations.  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements two methods for performing bulk copy operations with a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The first method involves using the [IRowsetFastLoad](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md) interface for memory-based bulk copy operations; and the second involves using the [IBCPSession](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md) interface for file-based bulk copy operations.  
   
 ### Using Memory Based Bulk Copy Operations  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider implements the **IRowsetFastLoad** interface to expose support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] memory-based bulk copy operations. The **IRowsetFastLoad** interface implements the [IRowsetFastLoad::Commit](../../native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) and [IRowsetFastLoad::InsertRow](../../native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md) methods.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
  [SQL Server Native Client Features](sql-server-native-client-features.md)   
  [Data Source Properties &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../import-export/bulk-import-and-export-of-data-sql-server.md)   
- [IRowsetFastLoad &#40;OLE DB&#41;](../../../database-engine/dev-guide/irowsetfastload-ole-db.md)   
+ [IRowsetFastLoad &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Optimizing Bulk Import Performance](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   

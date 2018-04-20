@@ -124,7 +124,7 @@
 ##### [Handling Errors and Warnings](../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md)
 ##### [Defining and Identifying Objects](../xmla/xml-elements-objects.md)
 ##### [Managing Transactions](../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md)
-##### [Canceling Commands]((../xmla/xml-elements-commands/xml-elements-commands.md))
+##### [Canceling Commands]((../xmla/xml-elements-commands.md))
 ##### [Performing Batch Operations](../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)
 ##### [Creating and Altering Objects](../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md)
 ##### [Locking and Unlocking Databases](../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md)

@@ -1,21 +1,18 @@
 ---
-title: Updated - Analytics Platform System for SQL Server docs | Microsoft Docs
+title: Updated - Analytics Platform System docs | Microsoft Docs
 description: Display snippets of updated content for recently changed in documentation, for Analytics Platform System for Microsoft SQL Server.
 
+author: mzaman1 
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-
-ms.component: aps-pdw
-ms.date: 02/03/2018
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
+
 # New and Recently Updated: Analytics Platform System for SQL Server
-
-
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.
 

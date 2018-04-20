@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Lock:Cancel Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Lock:Cancel** event class indicates that acquisition of a lock on a resource has been canceled; for example, due to a query being canceled.  
   
 ## Lock:Cancel Event Class Data Columns  

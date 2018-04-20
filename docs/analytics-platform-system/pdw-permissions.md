@@ -1,25 +1,18 @@
 ---
-title: "PDW Permissions (SQL Server PDW)"
-author: "barbkess" 
-ms.author: "barbkess"
-manager: "craigg"	  
-ms.prod: "analytics-platform-system"
-ms.prod_service: "mpp-data-warehouse"
-ms.service: ""
-ms.component:
-ms.technology: "mpp-data-warehouse"
-ms.custom: ""
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: "sql"
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: 23
-
+title: Permissions in Parallel Data Warehouse | Microsoft Docs
+description: This article describes the requirements and options for managing database permissions for Parallel Data Warehouse.  
+author: mzaman1 
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
 ---
-# PDW Permissions
-This topic describes the requirements and options for managing database permissions for SQL Server PDW.  
+
+# Managing permissions in Parallel Data Warehouse
+This article describes the requirements and options for managing database permissions for SQL Server PDW.  
   
 ## <a name="BackupRestoreBasics"></a>Database Engine Permission Basics  
 Database Engine permissions on SQL Server PDW are managed at the server level through logins, and at the database level through database users and user-defined database roles.  

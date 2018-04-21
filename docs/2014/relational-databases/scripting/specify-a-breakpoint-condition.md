@@ -44,6 +44,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Specify a Hit Count](specify-a-hit-count.md)   
- [Specify a Breakpoint Action](../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Specify a Breakpoint Action](specify-a-breakpoint-action.md)  
   
   

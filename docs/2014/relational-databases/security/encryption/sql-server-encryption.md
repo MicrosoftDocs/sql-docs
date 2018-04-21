@@ -28,7 +28,7 @@ manager: "jhubbard"
 >  Although encryption is a valuable tool to help ensure security, it should not be considered for all data or connections. When you are deciding whether to implement encryption, consider how users will access data. If users access data over a public network, data encryption might be required to increase security. However, if all access involves a secure intranet configuration, encryption might not be required. Any use of encryption should also include a maintenance strategy for passwords, keys, and certificates.  
   
 ## In This Section  
- [Encryption Hierarchy](../../../database-engine/encryption-hierarchy.md)  
+ [Encryption Hierarchy](encryption-hierarchy.md)  
  Information about the encryption hierarchy in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)  
@@ -66,6 +66,6 @@ manager: "jhubbard"
 ## See Also  
  [sys.key_encryptions &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -172,7 +172,7 @@ manager: "jhubbard"
   
 ### Limitations on Publishing Objects  
   
--   The maximum number of articles and columns that can be published differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../../getting-started/maximum-capacity-specifications-for-sql-server.md).  
+-   The maximum number of articles and columns that can be published differs by publication type. For more information, see the "Replication Objects" section of [Maximum Capacity Specifications for SQL Server](../../getting-started/maximum-capacity-specifications-for-sql-server.md).  
   
 -   Stored procedures, views, triggers, and user-defined functions that are defined as WITH ENCRYPTION cannot be published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  
   

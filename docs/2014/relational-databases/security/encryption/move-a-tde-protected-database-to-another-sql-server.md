@@ -320,6 +320,6 @@ manager: "jhubbard"
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](~/t-sql/statements/create-database-sql-server-transact-sql.md)  
   
 ## See Also  
- [Database Detach and Attach &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
+ [Database Detach and Attach &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

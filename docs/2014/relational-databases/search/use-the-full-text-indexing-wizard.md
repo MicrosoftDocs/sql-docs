@@ -100,7 +100,7 @@ manager: "jhubbard"
      **Select full-text stoplist**  
      Specify a stoplist to use for the full-text index, or disable stoplist use.  
   
-     In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, stopwords are managed in databases using objects called stoplists. A *stoplist* is a list of stopwords that, when associated with a full-text index, is applied to full-text queries on that index. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../database-engine/full-text-search.md).  
+     In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, stopwords are managed in databases using objects called stoplists. A *stoplist* is a list of stopwords that, when associated with a full-text index, is applied to full-text queries on that index. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
      Select one of the following values:  
   

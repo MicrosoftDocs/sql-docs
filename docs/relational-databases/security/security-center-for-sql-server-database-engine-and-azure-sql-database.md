@@ -34,7 +34,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  **Legend**  
   
- ![security-center-legend](../../database-engine/media/security-center-legend.PNG "security-center-legend")  
+ ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
 ##  <a name="Who"></a> Authentication: Who are you?  
   

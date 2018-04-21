@@ -47,7 +47,7 @@ manager: "jhubbard"
 |Describes how to delete a workload group.|[Delete a Workload Group](delete-a-workload-group.md)|  
   
 ## See Also  
- [Resource Governor](../../database-engine/resource-governor.md)   
+ [Resource Governor](resource-governor.md)   
  [Enable Resource Governor](enable-resource-governor.md)   
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Classifier Function](resource-governor-classifier-function.md)   

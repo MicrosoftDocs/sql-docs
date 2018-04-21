@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 ## In This Section  
   
--   [Supporting Local Transactions](../../analysis-services/multidimensional-models-adomd-net-client/transactions.md)  
+-   [Supporting Local Transactions](supporting-local-transactions.md)  
   
 -   [Supporting Distributed Transactions](supporting-distributed-transactions.md)  
   

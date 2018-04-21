@@ -77,6 +77,6 @@ manager: "jhubbard"
  [Automated Administration Across an Enterprise](../../database-engine/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server Profiler](../../analysis-services/instances/sql-server-profiler.md)  
+ [SQL Server Profiler](../../database-engine/sql-server-profiler.md)  
   
   

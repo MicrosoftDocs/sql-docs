@@ -115,7 +115,7 @@ manager: "jhubbard"
 |Describes how to delete a resource pool.|[Delete a Resource Pool](delete-a-resource-pool.md)|  
   
 ## See Also  
- [Resource Governor](../../database-engine/resource-governor.md)   
+ [Resource Governor](resource-governor.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](resource-governor-classifier-function.md)   
  [Configure Resource Governor Using a Template](configure-resource-governor-using-a-template.md)   

@@ -97,7 +97,7 @@ manager: "jhubbard"
   
   
 ### Associating a Stoplist with the Full-Text Index  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduces stoplists. A *stoplist* is a list of stopwords, also known as noise words. A stoplist is associated with each full-text index, and the words in that stoplist are applied to full-text queries on that index. By default, the system stoplist is associated with a new full-text index. However, you can create and use your own stoplist instead. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../database-engine/full-text-search.md).  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduces stoplists. A *stoplist* is a list of stopwords, also known as noise words. A stoplist is associated with each full-text index, and the words in that stoplist are applied to full-text queries on that index. By default, the system stoplist is associated with a new full-text index. However, you can create and use your own stoplist instead. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  For example, the following [CREATE FULLTEXT STOPLIST](~/t-sql/statements/create-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist3 by copying from the system stoplist:  
   

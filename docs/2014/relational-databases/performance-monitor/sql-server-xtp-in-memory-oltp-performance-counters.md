@@ -28,6 +28,6 @@ manager: "jhubbard"
 |[XTP Phantom Processor](sql-server-xtp-phantom-processor.md)|The XTP Phantom Processor performance object contains counters related to the XTP engine's phantom processing subsystem. This component is responsible for detecting phantom rows in transactions running at the SERIALIZABLE isolation level.|  
 |[XTP Storage](sql-server-xtp-storage.md)|The XTP Storage performance object contains counters related to XTP storage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[XTP Transaction Log](sql-server-xtp-transaction-log.md)|The XTP Transaction Log performance object contains counters related to XTP transaction logging in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[XTP Transactions](../../analysis-services/multidimensional-models-adomd-net-client/transactions.md)|The XTP Transactions performance object contains counters related to XTP engine transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[XTP Transactions](sql-server-xtp-transactions.md)|The XTP Transactions performance object contains counters related to XTP engine transactions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
   

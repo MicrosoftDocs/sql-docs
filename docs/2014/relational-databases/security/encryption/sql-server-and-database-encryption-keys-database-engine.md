@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  [Create Identical Symmetric Keys on Two Servers](create-identical-symmetric-keys-on-two-servers.md)  
   
- [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../database-engine/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [Enable TDE Using EKM](enable-tde-on-sql-server-using-ekm.md)  
   
@@ -90,7 +90,7 @@ manager: "jhubbard"
  [Restore a Database Master Key](restore-a-database-master-key.md)  
   
 ## See Also  
- [Back Up and Restore Reporting Services Encryption Keys](../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  

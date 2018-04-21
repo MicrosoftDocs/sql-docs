@@ -48,6 +48,6 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 -   [Using IMultipleResults to Process Multiple Result Sets](using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## See Also  
- [Commands](../../analysis-services/multidimensional-models/commands.md)  
+ [Commands](commands.md)  
   
   

@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 2.  Press the CTRL+SHIFT+SPACE keyboard shortcut.  
   
- For more information, see [Configure IntelliSense &#40;SQL Server Management Studio&#41;](../../database-engine/intellisense-sql-server-management-studio.md).  
+ For more information, see [Configure IntelliSense &#40;SQL Server Management Studio&#41;](configure-intellisense-sql-server-management-studio.md).  
   
 > [!NOTE]  
 >  The **Parameter Info** option is available only for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor and the XML Query Editor.  

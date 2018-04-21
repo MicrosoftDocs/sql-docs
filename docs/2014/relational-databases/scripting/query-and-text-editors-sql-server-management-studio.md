@@ -117,13 +117,13 @@ manager: "jhubbard"
 |Describes how to set formatting options, such as hidden text or indentation.|[Manage Code Formatting](manage-code-formatting.md)|  
 |Describes how to navigate through the text in an editor window by using features such as incremental search or go to.|[Navigate Code and Text](navigate-code-and-text.md)|  
 |Describes how to set color coding options for various classes of syntax, which makes it easier to read complex statements.|[Color Coding in Query Editors](color-coding-in-query-editors.md)|  
-|Describes how to use code outlining to hide parts of complex scripts that you are not currently working on.|[Code Outlining](../../database-engine/code-outlining.md)|  
+|Describes how to use code outlining to hide parts of complex scripts that you are not currently working on.|[Code Outlining](code-outlining.md)|  
 |Describes how to drag text from one location in a script and drop it in a new location.|[Drag and Drop Text](drag-and-drop-text.md)|  
 |Describes how to do global search and replace, such as when changing column names.|[Search and Replace](search-and-replace.md)|  
 |Describes how to set bookmarks in order to more easily find important pieces of code.|[Manage Bookmarks](../native-client-ole-db-rowsets/bookmarks.md)|  
 |Describes how to print scripts or the results in a window or grid.|[Print Code and Results](print-code-and-results.md)|  
 |Describes how to use the sqlcmd features in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.|[Edit SQLCMD Scripts with Query Editor](edit-sqlcmd-scripts-with-query-editor.md)|  
-|Describes how to use IntelliSense features such as auto-completing object names as you type them, or ensuring breakpoints are placed in valid locations.|[IntelliSense &#40;SQL Server Management Studio&#41;](../../database-engine/intellisense-sql-server-management-studio.md)|  
+|Describes how to use IntelliSense features such as auto-completing object names as you type them, or ensuring breakpoints are placed in valid locations.|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |Describes how to use code snippets in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. Snippets are templates for commonly used statements or blocks, and can be customized or extended to include site-specific snippets.|[Transact-SQL Code Snippets](transact-sql-code-snippets.md)|  
 |Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code and view debugging information such as the values in variables and parameters.|[Transact-SQL Debugger](transact-sql-debugger.md)|  
 |Describes how to set custom colors for different instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and have those colors set as the background of the status bar in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows.|[Status Bar &#40;Database Engine Query Editor&#41;](status-bar-database-engine-query-editor.md)|  

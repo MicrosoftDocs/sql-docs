@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 -   In order to avoid conflicts with the transactions used by replication, explicit transactions should not be used in custom procedures.  
   
--   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../../integration-services/sql-server-integration-services.md).  
+-   The schema at the Subscriber is typically identical to the schema at the Publisher, but can also be a subset of the Publisher schema if column filtering is used. However, if you need to transform the schema as the data is moved such that the schema on the Subscriber is not a subset of the schema on the Publisher, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is the recommended solution. For more information, see [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).  
   
 -   If you make schema changes to a published table, the custom procedures must be regenerated. For more information, see [Regenerate Custom Transactional Procedures to Reflect Schema Changes](regenerate-custom-transactional-procedures-to-reflect-schema-changes.md).  
   

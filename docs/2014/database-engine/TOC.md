@@ -1851,7 +1851,7 @@
 ###### [XTP Transactions](../relational-databases/performance-monitor/sql-server-xtp-transactions.md)
 #### [Administer Multiple Servers Using Central Management Servers](../relational-databases/administer-multiple-servers-using-central-management-servers.md)
 #### [SQL Server Configuration Manager](sql-server-configuration-manager.md)
-#### [Activity Monitor](activity-monitor.md)
+#### [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md)
 ##### [Open Activity Monitor (SQL Server Management Studio)](../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)
 ### [High Availability Solutions](high-availability-solutions-sql-server.md)
 #### [Windows Server Failover Clustering (WSFC) with SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)

@@ -86,7 +86,7 @@ manager: "jhubbard"
      Rebuilding performs internal optimizations that improve the query performance of the upgraded full-text index in some cases. Specifically, if you have full-text catalogs that contain full-text indexes for which the full-text key column of the base table is an integer data type, rebuilding achieves ideal performance of full-text queries after upgrade. In this case, we highly recommend you to use the **Rebuild** option.  
   
     > [!NOTE]  
-    >  For full-text indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], we recommend that the column serving as the full-text key be an integer data type. For more information, see [Improve the Performance of Full-Text Indexes](../../database-engine/indexes.md).  
+    >  For full-text indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], we recommend that the column serving as the full-text key be an integer data type. For more information, see [Improve the Performance of Full-Text Indexes](improve-the-performance-of-full-text-indexes.md).  
   
 -   What is the priority for getting your server instance online?  
   

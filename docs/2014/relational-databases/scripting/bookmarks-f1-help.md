@@ -22,6 +22,6 @@ manager: "jhubbard"
 # Bookmarks F1 Help
   This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Manage Bookmarks](../../database-engine/bookmarks.md)  
+ [Manage Bookmarks](manage-bookmarks.md)  
   
   

@@ -807,7 +807,7 @@
 #### [WMI Provider for Server Events Classes and Properties](wmi-provider-for-server-events-classes-and-properties.md)
 #### [Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
 #### [Sample: Using the WMI Event Provider with the .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)
-### [WMI Provider Events and Errors](../../relational-databases/native-client-ole-db-errors/wmi-provider-events-and-errors.md)
+### [WMI Provider Events and Errors](wmi-provider-events-and-errors.md)
 #### [WMI Error 0x8007052f](wmi-error-0x8007052f.md)
 ### [WMI Provider for Configuration Management Classes](wmi-provider-for-configuration-management-classes.md)
 #### [CInstance Class](cinstance-class.md)

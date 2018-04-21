@@ -52,6 +52,6 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     ```  
   
 ## See Also  
- [Commands](../../analysis-services/multidimensional-models/commands.md)  
+ [Commands](commands.md)  
   
   

@@ -47,6 +47,6 @@ hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);
 ```  
   
 ## See Also  
- [Tables and Indexes](../../database-engine/indexes.md)  
+ [Tables and Indexes](tables-and-indexes.md)  
   
   

@@ -28,6 +28,6 @@ manager: "jhubbard"
  Consumers specify the table name as a Unicode character string in the *pwszName* member of the *uName* union in the *pTableID* parameter. The *eKind* member of *pTableID* must be DBKIND_NAME.  
   
 ## See Also  
- [Tables and Indexes](../../database-engine/indexes.md)  
+ [Tables and Indexes](tables-and-indexes.md)  
   
   

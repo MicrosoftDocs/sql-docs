@@ -376,6 +376,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](../../database-engine/full-text-search.md)  
+ [Behavior Changes to Full-Text Search](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

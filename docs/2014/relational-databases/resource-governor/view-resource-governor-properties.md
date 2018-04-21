@@ -29,7 +29,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  In addition to viewing the properties of Resource Governor entities, you can perform several configuration tasks using the **Resource Governor Properties** page. For more information, see these topics:  
   
--   [Enable Resource Governor](../../database-engine/resource-governor.md)  
+-   [Enable Resource Governor](enable-resource-governor.md)  
   
 -   [Disable Resource Governor](disable-resource-governor.md)  
   
@@ -124,8 +124,8 @@ manager: "jhubbard"
 2.  To view the current configuration of resource governor entities, use the [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
   
 ## See Also  
- [Resource Governor](../../database-engine/resource-governor.md)   
- [Enable Resource Governor](../../database-engine/resource-governor.md)   
+ [Resource Governor](resource-governor.md)   
+ [Enable Resource Governor](enable-resource-governor.md)   
  [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [Resource Governor Workload Group](resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](resource-governor-classifier-function.md)  

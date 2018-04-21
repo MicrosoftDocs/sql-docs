@@ -159,7 +159,7 @@ Web synchronization is supported on IIS beginning with version 5.0. The Configur
     -   If the computer running IIS is separated from the Distributor by a firewall and an FTP share is used for snapshot delivery, the ports used for FTP must be opened. For more information, see [Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md).  
   
 > [!IMPORTANT]  
->  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+>  Opening ports in your firewall can leave your server exposed to malicious attacks. Make sure that you understand firewall systems before you open ports. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ## See Also  
  [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  

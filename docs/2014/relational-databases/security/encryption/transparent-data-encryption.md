@@ -29,7 +29,7 @@ manager: "jhubbard"
  TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the master database of the server or an asymmetric key protected by an EKM module. TDE protects data "at rest", meaning the data and log files. It provides the ability to comply with many laws, regulations, and guidelines established in various industries. This enables software developers to encrypt data by using AES and 3DES encryption algorithms without changing existing applications.  
   
 > [!IMPORTANT]  
->  TDE does not provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  TDE does not provide encryption across communication channels. For more information about how to encrypt data across communication channels, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 >   
 >  **Related topics:**  
 >   
@@ -128,7 +128,7 @@ GO
  Viewing the metadata involved with TDE requires the VIEW DEFINITION permission on the certificate.  
   
 ## Considerations  
- While a re-encryption scan for a database encryption operation is in progress, maintenance operations to the database are disabled. You can use the single user mode setting for the database to perform the maintenance operation. For more information, see [Set a Database to Single-user Mode](../databases/set-a-database-to-single-user-mode.md).  
+ While a re-encryption scan for a database encryption operation is in progress, maintenance operations to the database are disabled. You can use the single user mode setting for the database to perform the maintenance operation. For more information, see [Set a Database to Single-user Mode](../../databases/set-a-database-to-single-user-mode.md).  
   
  You can find the state of the database encryption using the sys.dm_database_encryption_keys dynamic management view. For more information, see the "Catalog Views and Dynamic Management Views"section earlier in this topic).  
   
@@ -206,14 +206,14 @@ WHERE encryption_state = 3;
 GO  
 ```  
   
- For more information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md).  
+ For more information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] log file architecture, see [The Transaction Log &#40;SQL Server&#41;](../../logs/the-transaction-log-sql-server.md).  
   
  All data written to the transaction log before a change in the database encryption key will be encrypted by using the previous database encryption key.  
   
  After a database encryption key has been modified twice, a log backup must be performed before the database encryption key can be modified again.  
   
 ### Transparent Data Encryption and the tempdb System Database  
- The tempdb system database will be encrypted if any other database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is encrypted by using TDE. This might have a performance effect for unencrypted databases on the same instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about the tempdb system database, see [tempdb Database](../databases/tempdb-database.md).  
+ The tempdb system database will be encrypted if any other database on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is encrypted by using TDE. This might have a performance effect for unencrypted databases on the same instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information about the tempdb system database, see [tempdb Database](../../databases/tempdb-database.md).  
   
 ### Transparent Data Encryption and Replication  
  Replication does not automatically replicate data from a TDE-enabled database in an encrypted form. You must separately enable TDE if you want to protect the distribution and subscriber databases. Snapshot replication, as well as the initial distribution of data for transactional and merge replication, can store data in unencrypted intermediate files; for example, the bcp files.  During transactional or merge replication, encryption can be enabled to protect the communication channel. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

@@ -31,9 +31,9 @@ manager: "jhubbard"
 |IColumnsInfo::GetColumnInfo|For more information, see[Parameter and Rowset Metadata](metadata-parameter-and-rowset.md).|  
 |IDBSchemaRowset::GetRowset|For details of the affected schema rowsets, see[Date and Time and Schema Rowsets](../native-client-ole-db-rowsets/rowsets.md).|  
 |IRowsetFastLoad|This interface supports the new date/time types, but there is no change to its interface.|  
-|ITableDefinition::CreateTable|For more information, see [Data Type Support for OLE DB Date and Time Improvements](../native-client-odbc-date-time/date-and-time-improvements.md).|  
+|ITableDefinition::CreateTable|For more information, see [Data Type Support for OLE DB Date and Time Improvements](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## See Also  
- [Date and Time Improvements &#40;OLE DB&#41;](../native-client/features/date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

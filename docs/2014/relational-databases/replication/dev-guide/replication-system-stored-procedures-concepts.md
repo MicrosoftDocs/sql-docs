@@ -152,7 +152,7 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### Using the sqlcmd Utility from the Command Line  
- The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../../database-engine/sqlcmd-utility.md):  
+ The following example shows how the command line is used to execute the `instdistpub.sql` script file using the [sqlcmd utility](../../../database-engine/sqlcmd-utility.md):  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  

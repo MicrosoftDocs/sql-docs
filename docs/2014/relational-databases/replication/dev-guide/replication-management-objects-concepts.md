@@ -149,7 +149,7 @@ manager: "jhubbard"
   
 -   The <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> method opens the connection to the server. This method must be called before calling any methods that access the server on any RMO programming objects using the connection.  
   
--   Because RMO and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) both use the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class for connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the same connection can be used by both RMO and SMO objects. For more information, see [Connecting to an Instance of SQL Server](../../../../database-engine/dev-guide/connecting-to-an-instance-of-sql-server.md).  
+-   Because RMO and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) both use the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class for connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the same connection can be used by both RMO and SMO objects. For more information, see [Connecting to an Instance of SQL Server](../../../database-engine/dev-guide/connecting-to-an-instance-of-sql-server.md).  
   
 -   All authentication information to make the connection and successfully log on to the server is supplied in the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> object.  
   

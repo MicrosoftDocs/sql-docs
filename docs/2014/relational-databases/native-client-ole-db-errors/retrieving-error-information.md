@@ -216,6 +216,6 @@ void DumpErrorInfo
 ```  
   
 ## See Also  
- [Errors](../../database-engine/errors.md)  
+ [Errors](errors.md)  
   
   

@@ -44,6 +44,6 @@ manager: "jhubbard"
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider member functions do not return the success code S_FALSE. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider member functions always return S_OK to indicate success.  
   
 ## See Also  
- [Errors](../../database-engine/errors.md)  
+ [Errors](errors.md)  
   
   

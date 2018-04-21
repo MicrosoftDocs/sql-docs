@@ -26,7 +26,7 @@ manager: "mblythe"
  **XML for Analysis metadata**  
  The XML for Analysis schema rowsets provide a method for retrieving low-level information about the server. Information available includes the data sources available on the server, the keywords reserved by the provider, the literals supported by the provider, and more. You can even use an XML for Analysis schema rowset to discover all schema rowsets supported by the provider.  
   
- For more information: [XML for Analysis Schema Rowsets](../xml/schema-rowsets/xml-for-analysis-schema-rowsets.md)  
+ For more information: [XML for Analysis Schema Rowsets](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
  **OLE DB metadata**  
  The OLE DB schema rowsets provide an industry-standard method for retrieving information from a variety of providers.  

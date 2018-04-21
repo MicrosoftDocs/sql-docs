@@ -136,7 +136,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Server-Level Roles](server-level-roles.md)   
- [Database-Level Roles](../security/authentication-access/database-level-roles.md)   
- [Application Roles](../security/authentication-access/application-roles.md)  
+ [Database-Level Roles](../authentication-access/database-level-roles.md)   
+ [Application Roles](../authentication-access/application-roles.md)  
   
   

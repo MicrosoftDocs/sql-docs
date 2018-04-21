@@ -84,13 +84,13 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](~/t-sql/functions/is-srvrolemember-transact-sql.md)|Function|Determines membership of server role.|  
   
 ## See Also  
- [Database-Level Roles](../security/authentication-access/database-level-roles.md)   
+ [Database-Level Roles](../authentication-access/database-level-roles.md)   
  [Security Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Security Functions &#40;Transact-SQL&#41;](~/t-sql/functions/security-functions-transact-sql.md)   
  [Securing SQL Server](../securing-sql-server.md)   
  [GRANT Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
  [REVOKE Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [DENY Server Principal Permissions &#40;Transact-SQL&#41;](~/t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
- [Create a Server Role](../security/authentication-access/create-a-server-role.md)  
+ [Create a Server Role](../authentication-access/create-a-server-role.md)  
   
   

@@ -69,7 +69,7 @@ manager: "jhubbard"
   
   
 ##  <a name="full"></a> Troubleshooting the Performance of Full Populations  
- To diagnose performance problems, look at the full-text crawl logs. For information about crawl logs, see [Populate Full-Text Indexes](../relational-databases/indexes/indexes.md).  
+ To diagnose performance problems, look at the full-text crawl logs. For information about crawl logs, see [Populate Full-Text Indexes](../indexes/indexes.md).  
   
  It is recommended that the following order of troubleshooting be followed if the performance of full populations is not satisfactory.  
   
@@ -192,7 +192,7 @@ GO
   
     -   If the base table is very fragmented, scanning might be inefficient. For information about computing out-of-row data and index fragmentation, see [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) and [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-         To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+         To reduce fragmentation, you can reorganize or rebuild the clustered index. For more information, see [Reorganize and Rebuild Indexes](../indexes/reorganize-and-rebuild-indexes.md).  
   
   
   

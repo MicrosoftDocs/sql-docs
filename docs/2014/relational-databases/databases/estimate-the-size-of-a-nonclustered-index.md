@@ -254,9 +254,9 @@ manager: "jhubbard"
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../database-engine/use-sparse-columns.md).  
   
 ## See Also  
- [Clustered and Nonclustered Indexes Described](clustered-and-nonclustered-indexes-described.md)   
- [Create Nonclustered Indexes](create-nonclustered-indexes.md)   
- [Create Clustered Indexes](create-clustered-indexes.md)   
+ [Clustered and Nonclustered Indexes Described](../indexes/clustered-and-nonclustered-indexes-described.md)   
+ [Create Nonclustered Indexes](../indexes/create-nonclustered-indexes.md)   
+ [Create Clustered Indexes](../indexes/create-clustered-indexes.md)   
  [Estimate the Size of a Table](estimate-the-size-of-a-table.md)   
  [Estimate the Size of a Clustered Index](estimate-the-size-of-a-clustered-index.md)   
  [Estimate the Size of a Heap](estimate-the-size-of-a-heap.md)   

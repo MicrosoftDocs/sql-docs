@@ -36,7 +36,7 @@ manager: "jhubbard"
  For more information about credentials, see the [sys.credentials](~/relational-databases/system-catalog-views/sys-credentials-transact-sql.md) catalog view.  
   
 ## Related Content  
- [Create a Credential](../security/authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
+ [Create a Credential](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;Transact-SQL&#41;](~/t-sql/statements/create-credential-transact-sql.md)  
   
  [Securing SQL Server](../securing-sql-server.md)  
   

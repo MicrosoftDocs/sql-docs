@@ -85,7 +85,7 @@ GO
  An EKM module can support more than one type of authentication. Each provider exposes only one type of authentication to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], that is if the module supports Basic or Other authentication types, it exposes one or the other, but not both.  
   
 #### EKM Device-Specific Basic Authentication Using username/password  
- For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../security/authentication-access/credentials-database-engine.md).  
+ For those EKM modules that support Basic authentication using a *username/password* pair, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides transparent authentication using credentials. For more information about credentials, see [Credentials &#40;Database Engine&#41;](../authentication-access/credentials-database-engine.md).  
   
  A credential can be created for an EKM provider and mapped to a login (both Windows and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] accounts) to access an EKM module on per-login basis. The *Identify* field of the credential contains the username; the *secret* field contains a password to connect to an EKM module.  
   
@@ -131,7 +131,7 @@ DECRYPTION BY EKM_AKey1
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not support signing modules with asymmetric keys generated from EKM provider.  
   
 ## Related Tasks  
- [EKM provider enabled Server Configuration Option](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [EKM provider enabled Server Configuration Option](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Enable TDE Using EKM](/enable-tde-on-sql-server-using-ekm.md)  
   
@@ -156,9 +156,9 @@ DECRYPTION BY EKM_AKey1
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](~/t-sql/statements/open-symmetric-key-transact-sql.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Back Up the Service Master Key](service-master-key.md)   
  [Restore the Service Master Key](restore-the-service-master-key.md)   
  [Create a Database Master Key](/create-a-database-master-key.md)   

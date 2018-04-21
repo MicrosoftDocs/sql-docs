@@ -52,7 +52,7 @@ manager: "jhubbard"
   
  **To view the word breaker language of a column**  
   
--   [Manage Full-Text Indexes](../relational-databases/indexes/indexes.md)  
+-   [Manage Full-Text Indexes](../indexes/indexes.md)  
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
 ##  <a name="tshoot"></a> Troubleshooting Word-Breaking Time-out Errors  
- A word-breaking time-out error might occur in a variety of situations. For information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../relational-databases/errors-events/mssqlserver-30053-database-engine-error.md).  
+ A word-breaking time-out error might occur in a variety of situations. For information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).  
   
 ##  <a name="impact"></a> Understanding the Impact of New Word Breakers  
  Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave slightly differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is significant if a full-text catalog was imported when a database was upgraded to the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. One or more languages used by the full-text indexes in the full-text catalog might now be associated with new word breakers. For more information, see [Upgrade Full-Text Search](upgrade-full-text-search.md).  

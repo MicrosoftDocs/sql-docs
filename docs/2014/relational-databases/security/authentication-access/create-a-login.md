@@ -281,7 +281,7 @@ manager: "jhubbard"
   
 -   To have the login join a role, see [Join a Role](join-a-role.md).  
   
--   To authorize a login to use a database, see [Create a Database User](../security/authentication-access/create-a-database-user.md).  
+-   To authorize a login to use a database, see [Create a Database User](../authentication-access/create-a-database-user.md).  
   
 -   To grant a permission to a login, see [Grant a Permission to a Principal](grant-a-permission-to-a-principal.md).  
   

@@ -54,7 +54,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*wLineNumber*|When applicable, the line number of a stored procedure on which the error occurred.|  
   
 ## See Also  
- [Errors](../../database-engine/errors.md)   
+ [Errors](errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](~/t-sql/language-elements/raiserror-transact-sql.md)  
   
   

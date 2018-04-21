@@ -85,13 +85,13 @@ manager: "jhubbard"
   
      For data file, type: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. For log file, type: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
   
-     ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
+     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
 9. Click **OK**.  
   
  When the restore is done, log in to the Management Portal. You should be able to see the .mdf and .ldf files in the container as follows:  
   
- ![SQL 14 CTP2](../../tutorials/media/ss-was-tutlesson-8-9.gif "SQL 14 CTP2")  
+ ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-9.gif "SQL 14 CTP2")  
   
  **Next Lesson:**  
   

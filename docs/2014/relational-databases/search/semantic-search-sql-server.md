@@ -92,7 +92,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
  The FileTable feature in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] makes unstructured files and documents first-class citizens of the relational database. As a result, database developers can manipulate documents together with structured data in Transact-SQL set-based operations.  
   
- For more information about the FileTable feature, see [FileTables &#40;SQL Server&#41;](../relational-databases/blob/filetables-sql-server.md). For information about the FILESTREAM feature, which is another option for storing documents in the database, see [FILESTREAM &#40;SQL Server&#41;](../relational-databases/blob/filestream-sql-server.md).  
+ For more information about the FileTable feature, see [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md). For information about the FILESTREAM feature, which is another option for storing documents in the database, see [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
   
   

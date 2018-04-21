@@ -78,7 +78,7 @@ GO
   
  **To back up files and filegroups**  
   
--   [Back Up Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Back Up Files and Filegroups &#40;SQL Server&#41;](../backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](~/t-sql/statements/backup-transact-sql.md)  
   
@@ -91,11 +91,11 @@ GO
   
  **To restore a filegroup**  
   
--   [Restore Files and Filegroups &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
+-   [Restore Files and Filegroups &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore Files and Filegroups over Existing Files &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [Restore Files and Filegroups over Existing Files &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
--   [Restore Files to a New Location &#40;SQL Server&#41;](../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Restore Files to a New Location &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
   
